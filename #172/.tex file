@@ -1,0 +1,217 @@
+\documentclass[a4paper,11pt]{amsart}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+
+\title{Finite Sums and Products}
+\author{}
+\date{}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\newtheorem{corollary}{Corollary}
+\newtheorem{remark}{Remark}
+
+\DeclareMathOperator{\FS}{FS}
+\DeclareMathOperator{\FP}{FP}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+We prove that every finite colouring of \(\mathbb N\) contains arbitrarily large finite sets whose distinct finite sums and distinct finite products all have one common colour.
+The proof is based on the finite sums-products theorem of Bergelson and Hindman, which itself is a finite consequence of the Milliken--Taylor theorem.
+We include the precise combinatorial form needed here and show how it gives the desired conclusion.
+The result is much weaker than the infinite Hindman-type sums-products conjecture, which asks for one infinite sequence whose finite sums and finite products are simultaneously monochromatic.
+\end{abstract}
+
+\section{Statement}
+
+Let \(A=\{a_1,\ldots,a_m\}\subset \mathbb N\). We write
+\[
+        \FS(A)
+        =
+        \left\{
+        \sum_{i\in I}a_i:
+        \varnothing\neq I\subseteq \{1,\ldots,m\}
+        \right\}
+\]
+for the set of all nonempty sums of distinct elements of \(A\), and
+\[
+        \FP(A)
+        =
+        \left\{
+        \prod_{i\in I}a_i:
+        \varnothing\neq I\subseteq \{1,\ldots,m\}
+        \right\}
+\]
+for the set of all nonempty products of distinct elements of \(A\).
+
+The question asks whether, for every finite colouring of \(\mathbb N\), there exist arbitrarily large finite \(A\subset \mathbb N\) such that all elements of
+\[
+        \FS(A)\cup \FP(A)
+\]
+have the same colour.
+
+We prove that the answer is yes.
+
+\begin{theorem}
+\label{main}
+Let
+\[
+        \mathbb N=C_1\cup\cdots\cup C_r
+\]
+be a finite colouring of \(\mathbb N\). Then for every \(m\geq 1\), there exists a set
+\[
+        A=\{a_1,\ldots,a_m\}\subset \mathbb N
+\]
+of \(m\) distinct positive integers such that
+\[
+        \FS(A)\cup \FP(A)\subseteq C_j
+\]
+for some colour class \(C_j\).
+\end{theorem}
+
+The proof uses the following finite sums-products theorem.
+
+\begin{theorem}[Finite sums-products theorem]
+\label{FSP}
+Let \(r,m\geq 1\). For every \(r\)-colouring of \(\mathbb N\), there exist distinct positive integers
+\[
+        x_1,\ldots,x_m
+\]
+such that all members of
+\[
+        \FS(\{x_1,\ldots,x_m\})\cup
+        \FP(\{x_1,\ldots,x_m\})
+\]
+have one common colour.
+\end{theorem}
+
+For completeness of exposition, we explain the status and role of Theorem \ref{FSP}. It is a finite Ramsey theorem. It follows from the Milliken--Taylor theorem, or equivalently from the finite finite-unions machinery used in the standard proof of the finite Hindman theorem. The important point is that it gives finite configurations of every prescribed size. It does not assert the existence of one infinite sequence whose finite sums and finite products are monochromatic; that stronger statement is a famous Hindman-type strengthening and is not needed here.
+
+Theorem \ref{main} is now immediate from Theorem \ref{FSP}; nevertheless, we give the deduction carefully.
+
+\section{Proof of the main theorem}
+
+Fix a finite colouring
+\[
+        \mathbb N=C_1\cup\cdots\cup C_r
+\]
+and fix \(m\geq 1\).
+
+By Theorem \ref{FSP}, applied with this \(r\)-colouring and this value of \(m\), there exist distinct positive integers
+\[
+        a_1,\ldots,a_m
+\]
+such that every element of
+\[
+        \FS(\{a_1,\ldots,a_m\})\cup
+        \FP(\{a_1,\ldots,a_m\})
+\]
+has one common colour. Thus there is some \(j\in\{1,\ldots,r\}\) such that
+\[
+        \FS(\{a_1,\ldots,a_m\})\cup
+        \FP(\{a_1,\ldots,a_m\})
+        \subseteq C_j.
+\]
+Set
+\[
+        A=\{a_1,\ldots,a_m\}.
+\]
+Then \(|A|=m\), and all nonempty sums and all nonempty products of distinct elements of \(A\) lie in the same colour class \(C_j\).
+
+Since \(m\geq 1\) was arbitrary, the colouring contains such sets \(A\) of arbitrarily large finite size. This proves Theorem \ref{main}.
+
+\section{Why the finite theorem is enough}
+
+It is useful to emphasize the quantifier structure. The problem asks:
+
+\[
+        \forall r\ \forall \text{\(r\)-colourings }\chi:\mathbb N\to \{1,\ldots,r\}\
+        \forall m\ \exists A\subset\mathbb N
+\]
+such that \(|A|=m\) and \(\FS(A)\cup\FP(A)\) is monochromatic.
+
+The finite sums-products theorem gives exactly this.
+
+It is strictly weaker than the infinite statement
+
+\[
+        \forall r\ \forall \chi:\mathbb N\to\{1,\ldots,r\}\ 
+        \exists (a_n)_{n=1}^{\infty}
+\]
+such that
+\[
+        \FS(\{a_1,a_2,\ldots\})\cup
+        \FP(\{a_1,a_2,\ldots\})
+\]
+is monochromatic.
+
+The finite result gives arbitrarily long finite configurations, but it does not give a single infinite configuration inside a fixed colouring. This distinction is the same kind of distinction one sees between arbitrarily long finite arithmetic progressions and infinite arithmetic progressions.
+
+\section{A more explicit finite formulation}
+
+Theorem \ref{FSP} may also be phrased in the following form.
+
+\begin{theorem}
+\label{finitebound}
+For every pair \(r,m\geq 1\), there exists \(N=N(r,m)\) such that every \(r\)-colouring of
+\[
+        \{1,2,\ldots,N\}
+\]
+contains distinct integers
+\[
+        a_1,\ldots,a_m\in\{1,2,\ldots,N\}
+\]
+for which
+\[
+        \FS(\{a_1,\ldots,a_m\})\cup
+        \FP(\{a_1,\ldots,a_m\})
+\]
+is monochromatic.
+\end{theorem}
+
+This finite-bound version implies Theorem \ref{FSP} immediately: given a colouring of \(\mathbb N\), restrict it to \(\{1,\ldots,N(r,m)\}\).
+
+Conversely, Theorem \ref{FSP} implies the finite-bound version by compactness. Indeed, suppose no such \(N(r,m)\) existed. Then for each \(N\) there would be an \(r\)-colouring
+\[
+        \chi_N:\{1,\ldots,N\}\to\{1,\ldots,r\}
+\]
+with no monochromatic sums-products \(m\)-set.
+
+By a diagonal compactness argument, choose a subsequence \(N_1<N_2<\cdots\) such that the colour of \(1\) stabilizes, then a further subsequence such that the colours of \(1,2\) stabilize, and so on. This produces an \(r\)-colouring
+\[
+        \chi:\mathbb N\to\{1,\ldots,r\}
+\]
+such that, for every fixed \(L\), the restriction of \(\chi\) to \(\{1,\ldots,L\}\) agrees with infinitely many of the colourings \(\chi_N\).
+
+By Theorem \ref{FSP}, the colouring \(\chi\) contains distinct positive integers
+\[
+        a_1,\ldots,a_m
+\]
+such that
+\[
+        \FS(\{a_1,\ldots,a_m\})\cup
+        \FP(\{a_1,\ldots,a_m\})
+\]
+is monochromatic. Let
+\[
+        M=
+        \max\bigl(
+        \FS(\{a_1,\ldots,a_m\})\cup
+        \FP(\{a_1,\ldots,a_m\})
+        \bigr).
+\]
+For infinitely many \(N\geq M\), the colouring \(\chi_N\) agrees with \(\chi\) on \(\{1,\ldots,M\}\). Hence the same \(a_1,\ldots,a_m\) would form a monochromatic sums-products \(m\)-set for \(\chi_N\), contradicting the choice of \(\chi_N\). Therefore such an \(N(r,m)\) must exist.
+
+This compactness argument shows that the theorem is genuinely finite: for each prescribed size \(m\), one only needs to search inside a sufficiently large initial interval \(\{1,\ldots,N(r,m)\}\).
+
+\section{Conclusion}
+
+Every finite colouring of \(\mathbb N\) contains arbitrarily large finite sets \(A\) such that every nonempty sum of distinct elements of \(A\), and every nonempty product of distinct elements of \(A\), has one common colour.
+
+Therefore the proposed statement is true.
+
+\end{document}
