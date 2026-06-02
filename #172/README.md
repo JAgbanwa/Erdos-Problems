@@ -141,7 +141,7 @@ lake build
 
 3. The compactness argument connecting finite and infinite versions is classical but requires careful treatment in constructive logic.
 
-4. The proof is actually constructive up to the use of the Milliken-Taylor theorem, which may use the axiom of choice internally.
+4. The proof is actually constructive up to the use of the Milliken-Taylor theorem, which may use choice principles internally.
 
 ---
 
