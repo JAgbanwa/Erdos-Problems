@@ -23,17 +23,18 @@ Put
 \[
         u_m=\frac{m}{2^m}.
 \]
-We prove the stronger statement that every positive integer \(n\) has a distinct
-finite expansion
+We first prove, unconditionally, that infinitely many positive integers \(n\)
+admit a representation
 \[
-        u_n=\sum_{a\in A}u_a,
-        \qquad |A|\geq 2,
+        u_n=\sum_{k=1}^t u_{a_k},
+        \qquad t\geq 2,
 \]
-where \(A\) is a finite set of positive integers.
+with \(a_1,\ldots,a_t\) distinct positive integers.
 
 \begin{lemma}
-\label{later}
-If \(n\geq 3\) and
+\label{monotone}
+For \(m\geq 2\), the sequence \(m/2^m\) is strictly decreasing.
+Consequently, if \(n\geq 3\) and
 \[
         \frac n{2^n}=\sum_{a\in A}\frac a{2^a}
 \]
@@ -42,146 +43,19 @@ with \(A\) finite and all summands positive, then every \(a\in A\) satisfies
 \end{lemma}
 
 \begin{proof}
-For \(m\geq 2\), the sequence \(m/2^m\) is strictly decreasing, since
+The inequality
 \[
         \frac{m+1}{2^{m+1}}<\frac m{2^m}
-        \quad\Longleftrightarrow\quad
-        m+1<2m.
 \]
-Thus a summand with \(a<n\) would already exceed \(n/2^n\), and a summand with
-\(a=n\) would exhaust the whole left side.
-\end{proof}
-
-For \(n\geq 2\), search for a set of offsets \(J\subseteq \{1,2,\ldots\}\) such
-that
-\[
-        n=\sum_{j\in J}\frac{n+j}{2^j}.
-\]
-The following residual graph is the useful way to do this.  Before deciding the
-offset \(j\), let \(y_j\) be the residual multiplied by \(2^{j-1}\).  Thus
-\[
-        y_1=n.
-\]
-At offset \(j\), either omit \(n+j\), giving
-\[
-        y_{j+1}=2y_j,
-\]
-or include \(n+j\), giving
-\[
-        y_{j+1}=2y_j-(n+j).
-\]
-We always choose the unique nonnegative move below the next tail, equivalently
-\[
-        y_{j+1}\equiv 2y_j\pmod {n+j},
-        \qquad 0\leq y_{j+1}<n+j.
-\]
-If \(y_{j+1}=0\), the chosen offsets give a finite representation.
-
-The only point requiring proof is that this graph always reaches zero.
-
-\begin{lemma}[Halving-Euclid graph lemma]
-\label{halving}
-Let \(h,d\) be positive integers.  Repeatedly apply the following rule:
-\[
-        (h,d)\mapsto
-        \begin{cases}
-        (h-d,\,2d+1),& h>d,\\
-        (2h,\,d-h+1),& h<d.
-        \end{cases}
-\]
-Then the process reaches a pair \((r,r)\).
-\end{lemma}
-
-\begin{proof}
-This is the standard terminating form of the step-two Josephus graph.  For
-completeness we recall the descent.
-
-Work level-by-level on the directed graph whose level \(m\) consists of the
-pairs \((h,d)\) with \(h+d=m\).  The displayed rule sends level \(m\) to level
-\(m+1\), except that a diagonal vertex \((r,r)\) is terminal.  Reverse the
-arrows.  A vertex \((h,d)\) on level \(m+1\) has predecessors
-\[
-        \left(h+\frac{d-1}{2},\,\frac{d-1}{2}\right)
-        \quad\text{if }d\text{ is odd},
-\]
-and
-\[
-        \left(\frac h2,\,d+\frac h2-1\right)
-        \quad\text{if }h\text{ is even}.
-\]
-Both predecessors, when they exist, lie on level \(m\), and direct substitution
-shows that these are exactly the possible predecessors.
-
-Now assign to a vertex its Josephus ancestry word: moving backwards, write
-\(R\) for the odd-\(d\) predecessor and \(L\) for the even-\(h\) predecessor,
-always taking the predecessor with smaller larger-coordinate, breaking ties by
-the smaller first coordinate.  The preceding formulas show that this backward
-move strictly decreases the lexicographic pair
-\[
-        \bigl(\max(h,d),\,h+d\bigr)
-\]
-unless the vertex is on the diagonal.  Therefore backward descent from any
-non-diagonal vertex is finite and ends on one of the boundary vertices
-\((s,0)\) or \((0,s)\).  Reversing the descent, every forward path starting from
-a positive pair is a finite initial segment of a path from a boundary vertex to
-a diagonal vertex.  Hence every such forward path reaches a diagonal.
+is equivalent to \(m+1<2m\), which holds for \(m\geq 2\).
+Thus for \(n\geq 3\), any summand with \(a<n\) would already exceed
+\(n/2^n\), while a summand with \(a=n\) would exhaust the whole left side and
+leave no room for the remaining positive summands.
 \end{proof}
 
 \begin{theorem}
-\label{alln}
-For every positive integer \(n\), there are \(t\geq 2\) and distinct positive
-integers \(a_1,\ldots,a_t\) such that
-\[
-        \frac n{2^n}=\sum_{k=1}^t\frac{a_k}{2^{a_k}}.
-\]
-\end{theorem}
-
-\begin{proof}
-First,
-\[
-        \frac1{2}=\frac4{2^4}+\frac5{2^5}+\frac6{2^6},
-\]
-so \(n=1\) is settled.
-
-Let \(n\geq 2\).  Run the residual recurrence above, and write
-\[
-        h_j=y_j,\qquad d_j=n+j-y_j.
-\]
-Then \(h_1=n\), \(d_1=1\), and the recurrence for \(y_j\) is exactly the
-Halving-Euclid rule of Lemma \ref{halving}.  Hence for some \(j\) we have
-\[
-        h_j=d_j.
-\]
-Since \(h_j+d_j=n+j\), this says \(2y_j=n+j\).  At offset \(j\), include the
-term \(n+j\); the next residual is
-\[
-        y_{j+1}=2y_j-(n+j)=0.
-\]
-Thus the offsets included along the way form a finite set \(J\), and
-\[
-        n=\sum_{j\in J}\frac{n+j}{2^j}.
-\]
-Multiplying by \(2^{-n}\), we obtain
-\[
-        \frac n{2^n}=\sum_{j\in J}\frac{n+j}{2^{n+j}}.
-\]
-The integers \(n+j\) are distinct.  For \(n\geq 2\) the construction cannot
-stop with a single term: a single term would force
-\[
-        \frac n{2^n}=\frac a{2^a},
-\]
-and the only equality among positive terms of \(m/2^m\) is
-\(1/2=2/2^2\).  Hence \(t=|J|\geq 2\).
-\end{proof}
-
-\begin{corollary}
-There are infinitely many such \(n\).  In fact, all positive integers \(n\)
-work.
-\end{corollary}
-
-\begin{remark}
-There is also a very small explicit infinite family.  For every \(r\geq 2\),
-put
+\label{infinite-family}
+For every integer \(r\geq 2\), let
 \[
         n_r=2^{r+1}-r-2.
 \]
@@ -191,85 +65,257 @@ Then
         =
         \sum_{j=1}^{r}\frac{n_r+j}{2^{n_r+j}}.
 \]
-Indeed,
+In particular, infinitely many \(n\) have the required finite distinct
+representation.
+\end{theorem}
+
+\begin{proof}
+For any positive integer \(n\),
+\[
+        \sum_{j=1}^{r}\frac{n+j}{2^{n+j}}
+        =
+        \frac1{2^n}\sum_{j=1}^{r}\frac{n+j}{2^j}.
+\]
+Now
+\[
+        \sum_{j=1}^{r}\frac1{2^j}=1-\frac1{2^r}
+\]
+and
+\[
+        \sum_{j=1}^{r}\frac j{2^j}
+        =
+        2-\frac{r+2}{2^r}.
+\]
+Therefore
 \[
         \sum_{j=1}^{r}\frac{n+j}{2^j}
         =
         n\left(1-\frac1{2^r}\right)
         +
-        2-\frac{r+2}{2^r},
+        2-\frac{r+2}{2^r}.
 \]
-which equals \(n\) exactly when \(n=2^{r+1}-r-2\).
+This equals \(n\) precisely when
+\[
+        n=2^{r+1}-r-2.
+\]
+Thus, for \(n=n_r\),
+\[
+        \frac{n_r}{2^{n_r}}
+        =
+        \sum_{j=1}^{r}\frac{n_r+j}{2^{n_r+j}}.
+\]
+The indices \(n_r+1,\ldots,n_r+r\) are distinct, and the integers \(n_r\) are
+strictly increasing for \(r\geq 2\).
+\end{proof}
+
+The first cases are
+\[
+        \frac4{2^4}
+        =
+        \frac5{2^5}+\frac6{2^6},
+\]
+and
+\[
+        \frac{11}{2^{11}}
+        =
+        \frac{12}{2^{12}}+\frac{13}{2^{13}}+\frac{14}{2^{14}}.
+\]
+
+\section{The all-\(n\) question}
+
+The construction above proves infinitely many cases.  It does not prove that
+every \(n\) works.  Here is the exact finite reformulation.
+
+\begin{proposition}
+\label{subset-condition}
+Let \(n\geq 3\).  Then \(u_n\) has a finite distinct representation by at least
+two other terms if and only if there is a finite set
+\[
+        J\subseteq \{1,2,\ldots\},\qquad |J|\geq 2,
+\]
+such that
+\[
+        n=\sum_{j\in J}\frac{n+j}{2^j}.
+\]
+Equivalently,
+\[
+        n\left(1-\sum_{j\in J}2^{-j}\right)
+        =
+        \sum_{j\in J}j2^{-j}.
+\]
+\end{proposition}
+
+\begin{proof}
+By Lemma \ref{monotone}, every summand in a representation of \(u_n\) has the
+form \(u_{n+j}\) with \(j\geq 1\).  Thus
+\[
+        \frac n{2^n}
+        =
+        \sum_{j\in J}\frac{n+j}{2^{n+j}}
+\]
+for a finite set \(J\).  Multiplying by \(2^n\) gives
+\[
+        n=\sum_{j\in J}\frac{n+j}{2^j}.
+\]
+Separating the terms involving \(n\) gives the displayed equivalent identity.
+The converse is obtained by reversing the same calculation.
+\end{proof}
+
+It is useful to spell out the residual graph that would settle the all-\(n\)
+question.  Fix \(n\geq 2\).  Suppose decisions have been made for offsets
+\(1,\ldots,j\), and let \(J_j\subseteq \{1,\ldots,j\}\) be the selected
+offsets.  Define
+\[
+        y_{j+1}
+        =
+        2^j\left(
+        n-\sum_{i\in J_j}\frac{n+i}{2^i}
+        \right).
+\]
+Then \(y_1=n\).  At offset \(j\), omitting \(n+j\) gives
+\[
+        y_{j+1}=2y_j,
+\]
+while including \(n+j\) gives
+\[
+        y_{j+1}=2y_j-(n+j).
+\]
+The invariant
+\[
+        0\leq y_j<n+j
+\]
+is preserved if at each step \(y_{j+1}\) is chosen as the least nonnegative
+residue of \(2y_j\) modulo \(n+j\).  Indeed,
+\[
+        0\leq 2y_j<2(n+j),
+\]
+so this residue is one of the two allowed moves above.  If some \(y_{j+1}=0\),
+then the selected offsets give the identity in Proposition
+\ref{subset-condition}.
+
+Writing
+\[
+        h_j=y_j,\qquad d_j=n+j-y_j,
+\]
+one obtains \(h_j+d_j=n+j\).  If \(h_j>d_j\), then the next move is
+\[
+        (h_j,d_j)\mapsto (h_j-d_j,\,2d_j+1),
+\]
+whereas if \(h_j<d_j\), the next move is
+\[
+        (h_j,d_j)\mapsto (2h_j,\,d_j-h_j+1).
+\]
+If \(h_j=d_j\), then \(2y_j=n+j\), and including \(n+j\) makes the next
+residual zero.
+
+\begin{remark}
+Thus the assertion that every \(n\geq 2\) works would follow from the
+termination statement that the above recurrence, started at \((h_1,d_1)=(n,1)\),
+eventually reaches a diagonal pair.  This note does not prove that termination
+statement, so no claim that all \(n\) work is made here.
 \end{remark}
 
-\section{Continuum many infinite representations}
+\section{Infinite subsums}
 
-The theorem gives a splitting rule for every term.  We need a slightly stronger
-form: the children can be forced arbitrarily far out.
+We now prove the requested infinite-representation statement independently of
+the finite all-\(n\) question.
 
 \begin{lemma}
-\label{large-split}
-For every \(m\geq 1\) and every \(B\), there is a finite set
+\label{tail}
+For \(N\geq 1\),
 \[
-        C\subseteq \{B+1,B+2,\ldots\}
+        \sum_{m=N}^{\infty}\frac m{2^m}
+        =
+        \frac{N+1}{2^{N-1}}.
 \]
-with \(|C|\geq 2\) such that
+Consequently,
 \[
-        u_m=\sum_{c\in C}u_c.
+        \sum_{m=a+1}^{\infty}\frac m{2^m}
+        =
+        \frac{a+2}{2^a}
+        >
+        \frac a{2^a}
+\]
+for every \(a\geq 1\).
+\end{lemma}
+
+\begin{proof}
+The identity follows from the usual differentiated geometric series, or by
+checking that the right side has the same successive differences as the tail:
+\[
+        \frac{N+1}{2^{N-1}}-\frac{N+2}{2^N}
+        =
+        \frac N{2^N}.
+\]
+The inequality is immediate from \(a+2>a\).
+\end{proof}
+
+\begin{lemma}[Overlap subsum theorem]
+\label{overlap}
+Let \((b_m)\) be a positive summable sequence with total \(S\), and put
+\[
+        T_m=\sum_{k=m}^{\infty}b_k.
+\]
+Assume that
+\[
+        b_m<T_{m+1}
+\]
+for every \(m\).  Then every point of the open interval \((0,S)\) has at least
+\(2^{\aleph_0}\) representations as a subsum
+\[
+        x=\sum_{m\in A}b_m.
 \]
 \end{lemma}
 
 \begin{proof}
-Start with any finite splitting of \(u_m\), supplied by Theorem \ref{alln}.
-If some leaf \(c\leq B\), split \(u_c\) again.  Each replacement uses only
-indices strictly larger than the index being replaced.  Since there are only
-finitely many indices at most \(B\), after finitely many rounds all remaining
-leaves exceed \(B\).  The sum is preserved at each replacement.
+We recall the standard nested-interval argument.  After a finite set of
+decisions before index \(m\), the possible remaining values form an interval of
+length \(T_m\).  At index \(m\), the two choices give the intervals
+\[
+        [0,T_{m+1}]
+        \qquad\text{and}\qquad
+        [b_m,b_m+T_{m+1}],
+\]
+translated by the already chosen partial sum.  These intervals overlap in a
+nondegenerate interval because \(b_m<T_{m+1}\).
+
+Fix \(x\in(0,S)\).  Starting from the full interval \([0,S]\), recursively
+choose deeper and deeper finite cylinders containing \(x\).  Since every tail
+interval has nondegenerate overlap at its next split and the tail lengths tend
+to zero, each cylinder containing \(x\) has a later descendant at which \(x\)
+lies in the overlap of the two child cylinders.  Keeping both children at each
+such branching stage embeds the full binary tree into the set of subsum
+representations of \(x\).  Distinct infinite paths through this tree differ at
+the first branch where they choose different children, hence give distinct
+subsets.  The set of infinite binary paths has cardinality \(2^{\aleph_0}\).
 \end{proof}
 
 \begin{theorem}
-There is a rational number \(x\) with at least \(2^{\aleph_0}\) distinct
+There exists a rational number \(x\) with at least \(2^{\aleph_0}\) distinct
 representations
 \[
         x=\sum_{k=1}^{\infty}\frac{a_k}{2^{a_k}},
 \]
-with all \(a_k\) distinct.  One may take
+where the \(a_k\) are distinct positive integers.  For example, one may take
 \[
-        x=\frac12.
+        x=1.
 \]
 \end{theorem}
 
 \begin{proof}
-Build a rooted tree of indices.  The root is \(1\).  Having constructed finitely
-many vertices, choose for each current leaf \(m\) a splitting set \(C(m)\) as in
-Lemma \ref{large-split}, with all elements larger than every index already used
-anywhere in the tree.  Declare the elements of \(C(m)\) to be the children of
-\(m\).  This makes all labels in the tree distinct, and each vertex has at
-least two children.  Also,
+Apply Lemma \ref{overlap} to
 \[
-        u_m=\sum_{c\in C(m)}u_c
+        b_m=\frac m{2^m}.
 \]
-at every vertex.
-
-For each infinite path \(P=(v_0,v_1,v_2,\ldots)\) starting at the root, form the
-set \(A_P\) consisting of all siblings of \(v_{i+1}\) among the children of
-\(v_i\), for all \(i\geq 0\).  The finite telescoping identity gives
+By Lemma \ref{tail}, each term is strictly smaller than the remaining tail, and
+the total sum is
 \[
-        u_{v_0}
-        =
-        \sum_{\substack{a\in A_P\\ a\leq N}}u_a
-        + u_{v_N}
-        + \text{terms from deeper siblings},
+        \sum_{m=1}^{\infty}\frac m{2^m}=2.
 \]
-and since \(v_N\to\infty\), we have \(u_{v_N}\to 0\).  Passing to the limit,
-\[
-        \sum_{a\in A_P}u_a=u_1=\frac12.
-\]
-Different infinite paths first separate at some vertex; at that split, one
-representation contains a sibling that the other does not.  Hence the
-representations are distinct.  Since a finitely branching tree with at least two
-children at every vertex has \(2^{\aleph_0}\) infinite paths, \(1/2\) has at
-least continuum-many representations.
+Therefore every \(x\in(0,2)\), in particular the rational number \(x=1\), has
+at least continuum-many subsum representations.  Listing the selected set
+\(A\subseteq \mathbb N\) increasingly as \(A=\{a_1<a_2<\cdots\}\) gives the
+required form.
 \end{proof}
 
 \end{document}
