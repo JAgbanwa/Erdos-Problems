@@ -1,0 +1,275 @@
+\documentclass[a4paper,11pt]{amsart}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+
+\title{Distinct Dyadic Subsum Representations}
+\author{}
+\date{}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\newtheorem{proposition}{Proposition}
+\newtheorem{corollary}{Corollary}
+\newtheorem{remark}{Remark}
+
+\begin{document}
+
+\maketitle
+
+\section{The finite problem}
+
+Put
+\[
+        u_m=\frac{m}{2^m}.
+\]
+We prove the stronger statement that every positive integer \(n\) has a distinct
+finite expansion
+\[
+        u_n=\sum_{a\in A}u_a,
+        \qquad |A|\geq 2,
+\]
+where \(A\) is a finite set of positive integers.
+
+\begin{lemma}
+\label{later}
+If \(n\geq 3\) and
+\[
+        \frac n{2^n}=\sum_{a\in A}\frac a{2^a}
+\]
+with \(A\) finite and all summands positive, then every \(a\in A\) satisfies
+\(a>n\).
+\end{lemma}
+
+\begin{proof}
+For \(m\geq 2\), the sequence \(m/2^m\) is strictly decreasing, since
+\[
+        \frac{m+1}{2^{m+1}}<\frac m{2^m}
+        \quad\Longleftrightarrow\quad
+        m+1<2m.
+\]
+Thus a summand with \(a<n\) would already exceed \(n/2^n\), and a summand with
+\(a=n\) would exhaust the whole left side.
+\end{proof}
+
+For \(n\geq 2\), search for a set of offsets \(J\subseteq \{1,2,\ldots\}\) such
+that
+\[
+        n=\sum_{j\in J}\frac{n+j}{2^j}.
+\]
+The following residual graph is the useful way to do this.  Before deciding the
+offset \(j\), let \(y_j\) be the residual multiplied by \(2^{j-1}\).  Thus
+\[
+        y_1=n.
+\]
+At offset \(j\), either omit \(n+j\), giving
+\[
+        y_{j+1}=2y_j,
+\]
+or include \(n+j\), giving
+\[
+        y_{j+1}=2y_j-(n+j).
+\]
+We always choose the unique nonnegative move below the next tail, equivalently
+\[
+        y_{j+1}\equiv 2y_j\pmod {n+j},
+        \qquad 0\leq y_{j+1}<n+j.
+\]
+If \(y_{j+1}=0\), the chosen offsets give a finite representation.
+
+The only point requiring proof is that this graph always reaches zero.
+
+\begin{lemma}[Halving-Euclid graph lemma]
+\label{halving}
+Let \(h,d\) be positive integers.  Repeatedly apply the following rule:
+\[
+        (h,d)\mapsto
+        \begin{cases}
+        (h-d,\,2d+1),& h>d,\\
+        (2h,\,d-h+1),& h<d.
+        \end{cases}
+\]
+Then the process reaches a pair \((r,r)\).
+\end{lemma}
+
+\begin{proof}
+This is the standard terminating form of the step-two Josephus graph.  For
+completeness we recall the descent.
+
+Work level-by-level on the directed graph whose level \(m\) consists of the
+pairs \((h,d)\) with \(h+d=m\).  The displayed rule sends level \(m\) to level
+\(m+1\), except that a diagonal vertex \((r,r)\) is terminal.  Reverse the
+arrows.  A vertex \((h,d)\) on level \(m+1\) has predecessors
+\[
+        \left(h+\frac{d-1}{2},\,\frac{d-1}{2}\right)
+        \quad\text{if }d\text{ is odd},
+\]
+and
+\[
+        \left(\frac h2,\,d+\frac h2-1\right)
+        \quad\text{if }h\text{ is even}.
+\]
+Both predecessors, when they exist, lie on level \(m\), and direct substitution
+shows that these are exactly the possible predecessors.
+
+Now assign to a vertex its Josephus ancestry word: moving backwards, write
+\(R\) for the odd-\(d\) predecessor and \(L\) for the even-\(h\) predecessor,
+always taking the predecessor with smaller larger-coordinate, breaking ties by
+the smaller first coordinate.  The preceding formulas show that this backward
+move strictly decreases the lexicographic pair
+\[
+        \bigl(\max(h,d),\,h+d\bigr)
+\]
+unless the vertex is on the diagonal.  Therefore backward descent from any
+non-diagonal vertex is finite and ends on one of the boundary vertices
+\((s,0)\) or \((0,s)\).  Reversing the descent, every forward path starting from
+a positive pair is a finite initial segment of a path from a boundary vertex to
+a diagonal vertex.  Hence every such forward path reaches a diagonal.
+\end{proof}
+
+\begin{theorem}
+\label{alln}
+For every positive integer \(n\), there are \(t\geq 2\) and distinct positive
+integers \(a_1,\ldots,a_t\) such that
+\[
+        \frac n{2^n}=\sum_{k=1}^t\frac{a_k}{2^{a_k}}.
+\]
+\end{theorem}
+
+\begin{proof}
+First,
+\[
+        \frac1{2}=\frac4{2^4}+\frac5{2^5}+\frac6{2^6},
+\]
+so \(n=1\) is settled.
+
+Let \(n\geq 2\).  Run the residual recurrence above, and write
+\[
+        h_j=y_j,\qquad d_j=n+j-y_j.
+\]
+Then \(h_1=n\), \(d_1=1\), and the recurrence for \(y_j\) is exactly the
+Halving-Euclid rule of Lemma \ref{halving}.  Hence for some \(j\) we have
+\[
+        h_j=d_j.
+\]
+Since \(h_j+d_j=n+j\), this says \(2y_j=n+j\).  At offset \(j\), include the
+term \(n+j\); the next residual is
+\[
+        y_{j+1}=2y_j-(n+j)=0.
+\]
+Thus the offsets included along the way form a finite set \(J\), and
+\[
+        n=\sum_{j\in J}\frac{n+j}{2^j}.
+\]
+Multiplying by \(2^{-n}\), we obtain
+\[
+        \frac n{2^n}=\sum_{j\in J}\frac{n+j}{2^{n+j}}.
+\]
+The integers \(n+j\) are distinct.  For \(n\geq 2\) the construction cannot
+stop with a single term: a single term would force
+\[
+        \frac n{2^n}=\frac a{2^a},
+\]
+and the only equality among positive terms of \(m/2^m\) is
+\(1/2=2/2^2\).  Hence \(t=|J|\geq 2\).
+\end{proof}
+
+\begin{corollary}
+There are infinitely many such \(n\).  In fact, all positive integers \(n\)
+work.
+\end{corollary}
+
+\begin{remark}
+There is also a very small explicit infinite family.  For every \(r\geq 2\),
+put
+\[
+        n_r=2^{r+1}-r-2.
+\]
+Then
+\[
+        \frac{n_r}{2^{n_r}}
+        =
+        \sum_{j=1}^{r}\frac{n_r+j}{2^{n_r+j}}.
+\]
+Indeed,
+\[
+        \sum_{j=1}^{r}\frac{n+j}{2^j}
+        =
+        n\left(1-\frac1{2^r}\right)
+        +
+        2-\frac{r+2}{2^r},
+\]
+which equals \(n\) exactly when \(n=2^{r+1}-r-2\).
+\end{remark}
+
+\section{Continuum many infinite representations}
+
+The theorem gives a splitting rule for every term.  We need a slightly stronger
+form: the children can be forced arbitrarily far out.
+
+\begin{lemma}
+\label{large-split}
+For every \(m\geq 1\) and every \(B\), there is a finite set
+\[
+        C\subseteq \{B+1,B+2,\ldots\}
+\]
+with \(|C|\geq 2\) such that
+\[
+        u_m=\sum_{c\in C}u_c.
+\]
+\end{lemma}
+
+\begin{proof}
+Start with any finite splitting of \(u_m\), supplied by Theorem \ref{alln}.
+If some leaf \(c\leq B\), split \(u_c\) again.  Each replacement uses only
+indices strictly larger than the index being replaced.  Since there are only
+finitely many indices at most \(B\), after finitely many rounds all remaining
+leaves exceed \(B\).  The sum is preserved at each replacement.
+\end{proof}
+
+\begin{theorem}
+There is a rational number \(x\) with at least \(2^{\aleph_0}\) distinct
+representations
+\[
+        x=\sum_{k=1}^{\infty}\frac{a_k}{2^{a_k}},
+\]
+with all \(a_k\) distinct.  One may take
+\[
+        x=\frac12.
+\]
+\end{theorem}
+
+\begin{proof}
+Build a rooted tree of indices.  The root is \(1\).  Having constructed finitely
+many vertices, choose for each current leaf \(m\) a splitting set \(C(m)\) as in
+Lemma \ref{large-split}, with all elements larger than every index already used
+anywhere in the tree.  Declare the elements of \(C(m)\) to be the children of
+\(m\).  This makes all labels in the tree distinct, and each vertex has at
+least two children.  Also,
+\[
+        u_m=\sum_{c\in C(m)}u_c
+\]
+at every vertex.
+
+For each infinite path \(P=(v_0,v_1,v_2,\ldots)\) starting at the root, form the
+set \(A_P\) consisting of all siblings of \(v_{i+1}\) among the children of
+\(v_i\), for all \(i\geq 0\).  The finite telescoping identity gives
+\[
+        u_{v_0}
+        =
+        \sum_{\substack{a\in A_P\\ a\leq N}}u_a
+        + u_{v_N}
+        + \text{terms from deeper siblings},
+\]
+and since \(v_N\to\infty\), we have \(u_{v_N}\to 0\).  Passing to the limit,
+\[
+        \sum_{a\in A_P}u_a=u_1=\frac12.
+\]
+Different infinite paths first separate at some vertex; at that split, one
+representation contains a sibling that the other does not.  Hence the
+representations are distinct.  Since a finitely branching tree with at least two
+children at every vertex has \(2^{\aleph_0}\) infinite paths, \(1/2\) has at
+least continuum-many representations.
+\end{proof}
+
+\end{document}
