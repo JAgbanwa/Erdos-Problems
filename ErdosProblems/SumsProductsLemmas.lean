@@ -45,6 +45,7 @@ lemma pigeonhole_on_union {α : Type*} [DecidableEq α] {s₁ s₂ : Finset α} 
 
 /-! ## Color Classes and Partitions -/
 
+/-- The set of natural numbers assigned color `i` by the coloring `χ`. -/
 def ColorClass (χ : Coloring r) (i : Fin r) : Set ℕ :=
   {x : ℕ | χ x = i}
 

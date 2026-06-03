@@ -1,8 +1,5 @@
 import ErdosProblems.SumsProductsLemmas
 
-import Mathlib.Combinatorics.Pigeonhole
-import Mathlib.Order.RelClasses
-
 /-!
 # Proof Strategy for Erdős Problem 172
 

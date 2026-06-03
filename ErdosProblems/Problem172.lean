@@ -1,8 +1,5 @@
 import ErdosProblems.ProofStrategy
 
-import Mathlib.Data.Finset.Card
-import Mathlib.Tactic
-
 /-!
 # Erdős Problem #172 - Finite Sums and Products
 
