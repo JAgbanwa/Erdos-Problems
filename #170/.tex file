@@ -1,0 +1,385 @@
+\documentclass[11pt]{article}
+
+\usepackage[margin=1.05in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{enumitem}
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage[colorlinks=true,linkcolor=blue!60!black,citecolor=blue!60!black,urlcolor=blue!60!black]{hyperref}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{proposition}[theorem]{Proposition}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem*{openproblem}{Open problem}
+
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Res}{\operatorname{Res}}
+\DeclareMathOperator{\cross}{\times}
+
+\lstset{
+  basicstyle=\ttfamily\footnotesize,
+  breaklines=true,
+  frame=single,
+  columns=fullflexible,
+  keepspaces=true,
+  language=Python,
+  commentstyle=\color{gray},
+  showstringspaces=false
+}
+
+\title{Clique and chromatic numbers of the integer-distance graph\\
+on planar point sets in general position}
+\author{}
+\date{June 11, 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+Let $A\subset\R^2$ be an infinite set in \emph{general position} (no three points collinear, no four concyclic), and let $G_A$ be the graph on $A$ joining pairs of points at integer Euclidean distance. We study how large the clique number $\omega(G_A)$ and the chromatic number $\chi(G_A)$ can be. We prove, with complete and self-contained arguments: (1)~every clique of $G_A$ is finite, via a quantitative self-contained proof of the Anning--Erd\H{o}s theorem; (2)~$\chi(G_A)\le\aleph_0$ for every admissible $A$, of any cardinality; (3)~an exact transfer principle: some admissible $A$ has $\chi(G_A)=\aleph_0$ if and only if finite admissible configurations of unbounded chromatic number exist, and likewise for clique sizes, where the construction direction rests on a generic rigid-motion placement lemma proved here; and (4)~explicit, exactly verified certificates: a six-point set in general position with all fifteen pairwise distances integral, giving $\omega,\chi\ge 6$. Whether $\chi$ can equal $\aleph_0$ is thereby shown to be \emph{equivalent} to the open Erd\H{o}s problem of whether integral point sets in general position exist at every finite size; we do not claim to resolve that problem in either direction. An appendix documents the exact-arithmetic verification.
+\end{abstract}
+
+\tableofcontents
+
+\section{Statement of the problem and summary of results}\label{sec:summary}
+
+\begin{definition}\label{def:admissible}
+A set $A\subseteq\R^2$ is \emph{admissible} (in \emph{general position}) if no $3$ points of $A$ lie on a line and no $4$ points of $A$ lie on a circle. For admissible $A$, the \emph{integer-distance graph} $G_A$ has vertex set $A$ and an edge $\{u,v\}$ whenever $|u-v|\in\Z_{>0}$. A \emph{clique} is a subset of $A$ with all pairwise distances positive integers; $\omega(G_A)$ denotes the supremum of clique sizes and $\chi(G_A)$ the least cardinal $\kappa$ for which a proper $\kappa$-colouring exists.
+\end{definition}
+
+The questions under study: for infinite admissible $A$, how large can $\omega(G_A)$ and $\chi(G_A)$ be --- and in particular, can $\chi(G_A)$ be infinite?
+
+\medskip
+\noindent\textbf{Summary of what is proved and what is open.}
+\begin{enumerate}[label=(\roman*),itemsep=2pt]
+\item Every clique of $G_A$ is finite, for every admissible $A$ (Theorem~\ref{thm:AE} and Corollary~\ref{cor:finiteclique}). An infinite clique is impossible.
+\item There is an explicit six-point admissible set all of whose $\binom{6}{2}=15$ pairwise distances are integers (Theorem~\ref{thm:certificate}); consequently $\omega(G_A)\ge6$ and $\chi(G_A)\ge6$ for suitable infinite admissible $A$ (Lemma~\ref{lem:extension}).
+\item $\chi(G_A)\le\aleph_0$ for every admissible $A$, even uncountable ones (Theorem~\ref{thm:countablechi}). Hence ``$\chi$ infinite'' can only mean $\chi=\aleph_0$.
+\item Some infinite admissible $A$ satisfies $\chi(G_A)=\aleph_0$ \emph{if and only if} for every $n$ there is a finite admissible configuration of chromatic number at least $n$ (Theorem~\ref{thm:transfer}); the analogous equivalence holds for clique sizes. In particular, since $\chi\ge\omega$, the existence of integral point sets in general position of every finite size would already force $\sup_A\chi(G_A)=\aleph_0$.
+\item Whether such finite configurations exist at every size is precisely an open problem of Erd\H{o}s (the largest known integral point set in general position has $7$ points; see Section~\ref{sec:open}). We do not claim a resolution, and no argument below assumes one in either direction.
+\end{enumerate}
+
+Thus the unconditional state of knowledge established here is
+\[
+6\;\le\;\sup_{A\text{ admissible}}\chi(G_A)\;\le\;\aleph_0,
+\qquad
+6\;\le\;\sup_{A\text{ admissible}}\omega(G_A),
+\]
+every individual clique is finite, and the question of whether the suprema equal $\aleph_0$ is \emph{equivalent} to an open finite combinatorial problem.
+
+\section{Every clique is finite}\label{sec:AE}
+
+\begin{theorem}[Anning--Erd\H{o}s; self-contained quantitative proof]\label{thm:AE}
+If $S\subset\R^2$ is infinite and all pairwise distances between points of $S$ are integers, then $S$ lies on a line. Quantitatively, if $A,B,C\in S$ are not collinear, then
+\[
+|S|\;\le\;16\,\bigl(\lfloor |AB|\rfloor+1\bigr)\bigl(\lfloor |AC|\rfloor+1\bigr).
+\]
+\end{theorem}
+
+\begin{corollary}\label{cor:finiteclique}
+If $A$ is admissible, every clique of $G_A$ is finite.
+\end{corollary}
+
+\begin{proof}[Proof of the corollary]
+An infinite clique would be an infinite set with all pairwise distances integral, hence collinear by Theorem~\ref{thm:AE}; but admissible sets contain no three collinear points.
+\end{proof}
+
+\begin{proof}[Proof of Theorem~\ref{thm:AE}]
+Suppose $A,B,C\in S$ are not collinear; in particular they are distinct and $|AB|,|AC|>0$. Fix any $P\in S$. By the triangle inequality, $k:=\bigl||PA|-|PB|\bigr|$ is an integer with $0\le k\le |AB|$, and $m:=\bigl||PA|-|PC|\bigr|$ is an integer with $0\le m\le|AC|$. Hence every point of $S$ lies in
+\[
+L_k(A,B)\cap L_m(A,C),
+\qquad
+L_k(A,B):=\bigl\{X\in\R^2:\ \bigl||XA|-|XB|\bigr|=k\bigr\},
+\]
+for one of at most $(\lfloor|AB|\rfloor+1)(\lfloor|AC|\rfloor+1)$ pairs $(k,m)$ of integers. It suffices to show that each such intersection contains at most $16$ points.
+
+\medskip\noindent\textbf{Step 1: algebraic description of the loci.}
+Write $f(X)=|XA|^2$ and $g(X)=|XB|^2$, quadratic polynomials in $X=(x,y)$ whose $x^2+y^2$ parts coincide; hence $f-g$ is affine, and nonzero because $A\ne B$. For an integer $k$ with $0<k\le|AB|$, squaring $\bigl|\sqrt f-\sqrt g\bigr|=k$ twice yields the polynomial condition
+\begin{equation}\label{eq:qk}
+q_k(X)\;:=\;(f-g)^2-2k^2(f+g)+k^4\;=\;0 ,
+\end{equation}
+and, conversely, $q_k(X)=0$ holds if and only if $\bigl||XA|-|XB|\bigr|=k$ \emph{or} $|XA|+|XB|=k$. Since always $|XA|+|XB|\ge|AB|\ge k$, the second alternative is vacuous when $k<|AB|$ and contributes exactly the segment $[A,B]$ when $k=|AB|$. Therefore:
+\begin{itemize}[itemsep=1pt]
+\item For $0<k<|AB|$: $Z(q_k)=L_k(A,B)$ is the hyperbola with foci $A,B$. The degree-$2$ homogeneous part of $q_k$ is $4\bigl((A-B)\cdot X\bigr)^2-4k^2|X|^2$, an indefinite, hence nonzero, quadratic form; so $\deg q_k=2$.
+\item For $k=|AB|$ (relevant only if $|AB|\in\Z$): $Z(q_k)$ is the union of the two outer rays $\{\,||XA|-|XB||=|AB|\,\}$ and the segment $\{\,|XA|+|XB|=|AB|\,\}$, i.e.\ the \emph{entire line} $\ell_{AB}$ through $A$ and $B$. A real quadratic polynomial whose zero set is exactly one line must be a nonzero scalar multiple of the square of a real linear form: a product of two non-proportional real linear forms has a two-line zero set, while a product of complex-conjugate linear forms has real zero set a single point or the empty set. Hence $q_{|AB|}=c\,\ell_{AB}^2$ for a linear form $\ell_{AB}$ vanishing on the line $AB$.
+\item For $k=0$: take instead $q_0:=f-g$, an affine polynomial whose zero set is the perpendicular bisector of $AB$.
+\end{itemize}
+In every case $L_k(A,B)\subseteq Z(q_k)$ with $q_k$ a nonzero polynomial of degree at most $2$. Set $p:=q_k(A,B;\cdot)$ and $q:=q_m(A,C;\cdot)$, the corresponding polynomials for the pairs $(A,B)$ and $(A,C)$.
+
+\medskip\noindent\textbf{Step 2: a hyperbola meets every line in at most two points and is irreducible over $\R$.}
+In canonical coordinates a hyperbola is $x^2/a^2-y^2/b^2=1$. Substituting an affine parametrization $t\mapsto(x_0+ut,\,y_0+vt)$, $(u,v)\ne(0,0)$, of an arbitrary line gives a polynomial of degree $\le2$ in $t$ with leading coefficient $u^2/a^2-v^2/b^2$. If this is nonzero there are at most two intersections. If it vanishes, then $v=\pm(b/a)u$ with $u\ne0$, and the coefficient of $t$ equals $2(x_0u/a^2-y_0v/b^2)$; were that to vanish as well, we would get $x_0/a=\pm y_0/b$, making the constant term $x_0^2/a^2-y_0^2/b^2-1=-1\ne0$. So the polynomial in $t$ is never identically zero, and \emph{a line meets a hyperbola in at most $2$ points}; in particular no line is contained in it. Consequently, for $0<k<|AB|$ the polynomial $q_k$ admits no real linear factor (such a factor $\ell$ would force the full line $Z(\ell)\subseteq Z(q_k)$), nor a factorization into complex-conjugate linear forms (whose real zero set is at most one point, not an infinite hyperbola). Hence these $q_k$ are irreducible over $\R$.
+
+\medskip\noindent\textbf{Step 3: $p$ and $q$ have no common nonconstant factor.}
+A nonconstant factor of a polynomial of degree $\le2$ has degree $1$ or $2$.
+
+\emph{Degree $1$.} A common real linear factor $\ell$ would give a line $Z(\ell)\subseteq Z(p)\cap Z(q)$. By Step~2 neither $p$ nor $q$ can then be a mid-range hyperbola polynomial, so each is the perpendicular-bisector polynomial ($k=0$, resp.\ $m=0$) or the focal-line polynomial ($k=|AB|$, resp.\ $m=|AC|$), and $Z(p)$, $Z(q)$ are the corresponding lines. We check all four coincidences of lines.
+\begin{itemize}[itemsep=1pt]
+\item \emph{Bisector of $AB$ $=$ bisector of $AC$.} These lines are perpendicular to $AB$ and to $AC$ respectively, so equality forces $AB\parallel AC$, i.e.\ $A,B,C$ collinear: excluded.
+\item \emph{Line $AB$ $=$ line $AC$.} Then $A,B,C$ are collinear: excluded.
+\item \emph{Bisector of $AB$ $=$ line $AC$.} The line $AC$ passes through $A$; but $A$ lies on the bisector of $AB$ iff $|AA|=|AB|$, i.e.\ $|AB|=0$: impossible. Symmetrically for \emph{bisector of $AC$ $=$ line $AB$}.
+\end{itemize}
+Hence no common linear factor exists.
+
+\emph{Degree $2$.} Then $p$ and $q$ are proportional, so $Z(p)=Z(q)=:H$ as sets. If either is a double line, proportionality forces the other to define the same line, reducing to the coincidences just excluded; and a double line cannot be proportional to an irreducible hyperbola polynomial. The remaining case is two genuine hyperbolas: $0<k<|AB|$, $0<m<|AC|$, and
+\[
+H\;=\;L_k(A,B)\;=\;L_m(A,C).
+\]
+We derive a contradiction by symmetry. The defining condition $\bigl||XA|-|XB|\bigr|=k$ is invariant under the point reflection $\sigma_M(X)=A+B-X$ through the midpoint $M=\tfrac{A+B}{2}$, since $|\sigma_M(X)-A|=|B-X|$ and $|\sigma_M(X)-B|=|A-X|$ merely swap the two distances. Likewise $H$ is invariant under $\sigma_{M'}$ with $M'=\tfrac{A+C}{2}$, and $M\ne M'$ because $B\ne C$. The composition $\sigma_{M'}\circ\sigma_M$ is the translation $\tau$ by $2(M'-M)=C-B\ne0$, so $H$ is invariant under a nontrivial translation. Pick any $x_0\in H$ (the hyperbola is nonempty: it contains its vertices). The orbit $\{x_0+n(C-B):n\in\Z\}$ is an infinite collinear subset of $H$, contradicting Step~2's bound of two points per line. Hence no common quadratic factor exists either.
+
+\medskip\noindent\textbf{Step 4: bounding $|Z(p)\cap Z(q)|$ by a resultant.}
+The polynomials $p,q$ are nonzero, of degree $\le2$, and coprime in $\R[x,y]$ by Step~3. Rotate coordinates: under rotation by an angle $\varphi$, the coefficient of the top power of $y$ in (the rotated) $p$ equals the value of the top homogeneous form of $p$ at the direction $(-\sin\varphi,\cos\varphi)$. Each top form is a nonzero form of degree $\le2$, vanishing in at most two directions, so all but finitely many $\varphi$ make \emph{both} leading $y$-coefficients nonzero constants simultaneously; fix such coordinates. Let $d_p,d_q\in\{1,2\}$ be the $y$-degrees (the value $0$ is excluded because the top form does not vanish on the chosen direction). Form the resultant
+\[
+R(x)\;:=\;\Res_y\bigl(p,q\bigr)\;\in\;\R[x].
+\]
+Two standard facts are used. \emph{(i)}~If $R\equiv0$, then $p$ and $q$ have a common factor of positive degree in $y$ over the field $\R(x)$ (Euclidean algorithm in $\R(x)[y]$), hence, by Gauss's lemma, a common nonconstant factor in $\R[x][y]=\R[x,y]$ --- excluded by Step~3; so $R\not\equiv0$. \emph{(ii)}~Because the leading $y$-coefficients are nonvanishing \emph{constants}, specialization commutes with the resultant: for every $x_0\in\R$,
+\[
+R(x_0)\;=\;\Res\bigl(p(x_0,\cdot),\,q(x_0,\cdot)\bigr),
+\]
+which vanishes whenever the univariate polynomials $p(x_0,\cdot)$ and $q(x_0,\cdot)$ share a root. The Sylvester matrix has size $d_p+d_q\le4$ with entries of degree $\le2$ in $x$, so $\deg R\le8$. Hence common zeros of $p$ and $q$ have $x$-coordinate among at most $8$ real numbers, and for each such $x_0$ at most $d_p\le2$ values of $y$ satisfy $p(x_0,y)=0$. Therefore
+\[
+\bigl|Z(p)\cap Z(q)\bigr|\;\le\;16 .
+\]
+
+\medskip
+Combining the steps: $|S|\le16(\lfloor|AB|\rfloor+1)(\lfloor|AC|\rfloor+1)<\infty$ whenever $S$ contains a non-collinear triple, which proves the theorem. (The constant $16$ is deliberately not optimized; B\'ezout's theorem would give $4$ per pair $(k,m)$, but only finiteness with an explicit elementary bound is needed.)
+\end{proof}
+
+\section{Explicit certificates: \texorpdfstring{$\omega\ge6$ and $\chi\ge6$}{omega >= 6 and chi >= 6}}\label{sec:certificates}
+
+All verifications in this section were performed in \emph{exact integer arithmetic} --- perfect-square tests via integer square roots, collinearity via $2\times2$ integer cross products, concyclicity via $4\times4$ integer determinants --- and then re-verified by an independently written second routine. No floating point is involved anywhere. The code is reproduced in Appendix~\ref{app:code}.
+
+\begin{proposition}[warm-up, $n=4$]\label{prop:kite}
+The kite $\{(0,0),(8,0),(4,3),(4,-3)\}$ is admissible and its six pairwise distances are $8,5,5,5,5,6$. \emph{(Non-concyclicity: the circle through the first three points has centre $(4,-\tfrac{7}{6})$ and squared radius $\tfrac{625}{36}$, while $(4,-3)$ lies at squared distance $\tfrac{121}{36}$ from that centre.)}
+\end{proposition}
+
+\begin{theorem}\label{thm:certificate}
+There exist six points in general position with all fifteen pairwise distances positive integers; the induced integer-distance graph is $K_6$, so finite admissible configurations achieve $\omega=\chi=6$. Explicitly, with $\kappa:=\sqrt{2002}$,
+\[
+\begin{aligned}
+P_1&=(0,0), & P_2&=(2312,\,0), & P_3&=(535,\;30\kappa),\\
+P_4&=(621,\,-30\kappa), & P_5&=(1691,\;30\kappa), & P_6&=(1777,\,-30\kappa),
+\end{aligned}
+\]
+with distance matrix
+\[
+\bigl(|P_iP_j|\bigr)_{i,j=1}^{6}
+=
+\begin{pmatrix}
+0&2312&1445&1479&2159&2227\\
+2312&0&2227&2159&1479&1445\\
+1445&2227&0&2686&1156&2958\\
+1479&2159&2686&0&2890&1156\\
+2159&1479&1156&2890&0&2686\\
+2227&1445&2958&1156&2686&0
+\end{pmatrix}.
+\]
+\end{theorem}
+
+\begin{proof}[Verification scheme]
+Each squared distance has the exact integer form $(\Delta X)^2+2002\,(\Delta m)^2$, where the points are written $(X_i,\,m_i\kappa)$ with $X_i,m_i\in\Z$; for instance
+\[
+|P_1P_3|^2=535^2+2002\cdot 30^2=286{,}225+1{,}801{,}800=2{,}088{,}025=1445^2 .
+\]
+All $15$ such integers are perfect squares (checked by integer square root). A triple is collinear iff the cross product of difference vectors vanishes; factoring $\kappa$ out, this is an integer $2\times2$ determinant in the $(X_i,m_i)$, and all $\binom{6}{3}=20$ are nonzero. A quadruple lies on a circle iff
+\[
+\det\begin{pmatrix} x_i^2+y_i^2 & x_i & y_i & 1\end{pmatrix}_{i=1}^{4}=0 ;
+\]
+substituting $y_i=m_i\kappa$, the first column becomes the integer $X_i^2+2002\,m_i^2$ and $\kappa$ factors out of the third column (scaling one column by a nonzero scalar does not affect vanishing), so the test is an integer $4\times4$ determinant; all $\binom{6}{4}=15$ are nonzero. Hence the configuration is admissible and forms a $6$-clique.
+\end{proof}
+
+\begin{remark}\label{rem:scaling}
+The fifteen distances share the factor $17$; the similar copy scaled by $\tfrac1{17}$ is an integral six-point set in general position of diameter $2958/17=174$. A five-point certificate found en route, with \emph{plain integer coordinates},
+\[
+(0,0),\ (4225,0),\ (3713,2016),\ (2079,528),\ (2975,-3000),
+\]
+has all ten distances integral (gcd $65$; diameter $78$ after scaling by $\tfrac1{65}$) and was verified by the same exact scheme. No minimality is claimed for either example.
+\end{remark}
+
+\begin{lemma}[extension to infinite sets]\label{lem:extension}
+Every finite admissible $F$ is contained in an infinite admissible $A$ with $\chi(G_A)\ge\chi(G_F)$ and $\omega(G_A)\ge\omega(G_F)$.
+\end{lemma}
+
+\begin{proof}
+Add points one at a time. A new point must avoid the finitely many lines through pairs and circles through (non-collinear) triples of the current finite set: a finite union of Lebesgue-null sets, so suitable points exist; iterate. The union of the increasing chain is admissible because any three or four of its points already lie in some finite stage. Since $G_F$ remains a subgraph (induced or denser, as new points may add edges), the lower bounds on $\chi$ and on clique sizes persist.
+\end{proof}
+
+\begin{corollary}
+There exist infinite admissible $A$ with $\omega(G_A)\ge6$ and $\chi(G_A)\ge6$.
+\end{corollary}
+
+\section{The chromatic number is at most \texorpdfstring{$\aleph_0$}{aleph-0}}\label{sec:countable}
+
+\begin{theorem}\label{thm:countablechi}
+For every admissible $A\subseteq\R^2$, of any cardinality, $\chi(G_A)\le\aleph_0$.
+\end{theorem}
+
+\begin{proof}
+Fix $v\in A$. Its neighbours lie on the circles of integer radius $n\ge1$ centred at $v$, and admissibility forbids four points of $A$ on any one circle; hence each such circle carries at most three points of $A$, and
+\[
+\deg(v)\;\le\;3\cdot\aleph_0\;=\;\aleph_0 .
+\]
+In a graph all of whose degrees are countable, every connected component is countable: the breadth-first levels from a fixed vertex are countable by induction (each level is a countable union of countable neighbour sets), and the component is the union of the levels over $\N$. Colour each component injectively by $\N$; vertices in distinct components are non-adjacent, so this is a proper colouring with $\aleph_0$ colours.
+
+\emph{Choice bookkeeping.} The countable unions use the axiom of countable choice, and assembling colourings across (possibly uncountably many) components uses choice as well; both are available in ZFC, and neither is needed when $A$ is countable --- which covers the sets constructed in Theorem~\ref{thm:transfer}.
+\end{proof}
+
+Consequently the dichotomy is sharp: for admissible $A$, either $\chi(G_A)$ is finite or $\chi(G_A)=\aleph_0$; nothing in between and nothing beyond can occur.
+
+\section{Exact reduction of the infinite problem to a finite one}\label{sec:transfer}
+
+\begin{theorem}[transfer principle]\label{thm:transfer}
+The following are equivalent.
+\begin{enumerate}[label=(\alph*),itemsep=1pt]
+\item There is an infinite admissible $A$ with $\chi(G_A)=\aleph_0$.
+\item For every $n\in\N$ there is a finite admissible $F_n$ with $\chi(G_{F_n})\ge n$.
+\end{enumerate}
+The same equivalence holds with chromatic number replaced by clique size; i.e.\ some admissible $A$ satisfies $\omega(G_A)=\aleph_0$ (as a supremum) iff integral point sets in general position exist at every finite size. Moreover, the construction in \textup{(b)}$\Rightarrow$\textup{(a)} produces a single \emph{countable} admissible $A$; combined with Corollary~\ref{cor:finiteclique}, such an $A$ would have unbounded finite cliques but no infinite clique.
+\end{theorem}
+
+\begin{proof}[Proof of \textup{(a)}$\Rightarrow$\textup{(b)}]
+We argue the contrapositive via the De Bruijn--Erd\H{o}s compactness theorem, proved here for completeness. Suppose some $n_0$ bounds the chromatic number of every finite admissible configuration. Let $A$ be admissible. Every finite $F\subseteq A$ is admissible, and $G_F$ is precisely the subgraph of $G_A$ induced on $F$; hence every finite subgraph of $G_A$ is $n_0$-colourable. Endow $X:=\{1,\dots,n_0\}^A$ with the product topology; it is compact Hausdorff as a product of finite discrete spaces (Tychonoff; this uses the Boolean prime ideal theorem in general, while for countable $A$ a direct diagonal argument suffices). For each edge $e=\{u,v\}$ of $G_A$, the set
+\[
+C_e\;:=\;\{c\in X:\ c(u)\ne c(v)\}
+\]
+is closed, being determined by two coordinates. The family $\{C_e\}$ has the finite intersection property: finitely many edges $e_1,\dots,e_r$ span a finite vertex set $F$; $G_F$ is $n_0$-colourable; and any extension of such a colouring to all of $A$ (arbitrary values off $F$) lies in $C_{e_1}\cap\dots\cap C_{e_r}$. By compactness $\bigcap_e C_e\ne\varnothing$, and any of its members is a proper $n_0$-colouring of $G_A$. So $\chi(G_A)\le n_0$ for \emph{every} admissible $A$, refuting (a).
+\end{proof}
+
+The construction direction rests on a placement lemma.
+
+\begin{lemma}[generic placement]\label{lem:placement}
+Let $S$ and $F$ be finite admissible sets. Then there is a rigid motion $\rho:X\mapsto R_\theta X+t$ \textup{(}rotation by $\theta$ followed by translation by $t$\textup{)} such that $S\cup\rho(F)$ is admissible. Since $\rho$ is an isometry, $G_{\rho(F)}\cong G_F$ arises as an induced subgraph of $G_{S\cup\rho(F)}$, and any additional cross edges can only increase the chromatic number and clique sizes.
+\end{lemma}
+
+\begin{proof}
+Degeneracies entirely within $S$, or entirely within $\rho(F)$, are excluded by admissibility of $S$ and of $F$ together with rigidity of $\rho$ (collinearity and concyclicity are isometry-invariant). The \emph{mixed} degeneracies form finitely many conditions; for fixed $\theta$ each is a polynomial equation in $t\in\R^2$ of degree at most $2$. We show that, for all $\theta$ outside a finite bad set, each condition is a \emph{nonzero} polynomial in $t$. Each nonzero polynomial condition cuts a Lebesgue-null subset of $t$-space (a line or a conic), so the union of finitely many such sets is not all of $\R^2$, and a good $t$ exists.
+
+\emph{Mixed collinear triples.}
+With $a,b\in S$ and one moved point $\rho(p)$, the condition reads
+\[
+(b-a)\cross\bigl(R_\theta p+t-a\bigr)=0 ,
+\]
+affine in $t$ with linear part the nonzero functional $(b-a)\cross(\,\cdot\,)$ (here $u\cross v:=u_1v_2-u_2v_1$). With one point $a\in S$ and two moved points $\rho(p),\rho(q)$, the direction $\rho(q)-\rho(p)=R_\theta(q-p)$ is fixed, and the condition reads
+\[
+R_\theta(q-p)\cross\bigl(a-R_\theta p-t\bigr)=0 ,
+\]
+again affine in $t$ with nonzero linear part since $q\ne p$. Both are nonzero polynomials for \emph{every} $\theta$.
+
+\emph{Mixed concyclic quadruples.} Use the circle determinant
+\[
+D(P_1,\dots,P_4)\;=\;\det\bigl(\,|P_i|^2,\ x_i,\ y_i,\ 1\,\bigr)_{i=1}^4 ,
+\]
+which vanishes iff the four points are concyclic or collinear.
+\begin{itemize}[itemsep=1pt]
+\item \emph{Three from $S$, one moved.} The three $S$-points are non-collinear by admissibility, determining a genuine circle with centre $O$ and radius $r$; the condition $|R_\theta p+t-O|^2=r^2$ is a quadratic in $t$ whose $|t|^2$-coefficient equals $1\ne0$.
+\item \emph{One from $S$, three moved.} The circle through $\rho(p),\rho(q),\rho(r)$ has centre $R_\theta O_F+t$ and the $\theta$-independent radius $r_F$, where $O_F,r_F$ are the circumcentre and circumradius of $\{p,q,r\}$ (non-collinear by admissibility of $F$); the condition $|a-R_\theta O_F-t|^2=r_F^2$ again has $|t|^2$-coefficient $1$.
+\item \emph{Two and two.} Let $a,b\in S$ and $\rho(p),\rho(q)$ be the four points. In $D$, subtract the $\rho(p)$-row from the $\rho(q)$-row; the resulting row is $\bigl(\text{affine in }t,\ R_\theta(q-p),\ 0\bigr)$, and $|t|^2$ now occurs only in the first entry of the $\rho(p)$-row. The coefficient of $|t|^2$ in $D$ is therefore the corresponding $3\times3$ cofactor
+\[
+\det\begin{pmatrix}a_1&a_2&1\\ b_1&b_2&1\\ w_1&w_2&0\end{pmatrix}
+\;=\;\pm\,(b-a)\cross w,
+\qquad w:=R_\theta(q-p),
+\]
+which vanishes only if $R_\theta(q-p)\parallel(b-a)$ --- at most two values of $\theta\in[0,2\pi)$ for each of the finitely many quadruples $(a,b,p,q)$.
+\end{itemize}
+Choose $\theta$ outside the finite union of bad angles arising from the two-and-two cases (the other cases impose no condition on $\theta$). Then every mixed degeneracy is a nonzero polynomial in $t$ of degree at most $2$; pick $t$ outside the finite union of their null zero sets.
+\end{proof}
+
+\begin{proof}[Proof of \textup{(b)}$\Rightarrow$\textup{(a)} in Theorem~\ref{thm:transfer}]
+Given finite admissible $F_n$ with $\chi(G_{F_n})\ge n$, set $S_1:=F_1$ and inductively $S_{n+1}:=S_n\cup\rho_n(F_{n+1})$ with $\rho_n$ as in Lemma~\ref{lem:placement}. Each $S_n$ is finite and admissible, and $A:=\bigcup_n S_n$ is a countable admissible set, since any three or four of its points lie in some $S_n$. For each $n$, $G_A$ contains an induced copy of $G_{F_n}$, so $\chi(G_A)\ge n$; hence $\chi(G_A)\ge\aleph_0$, and $\chi(G_A)=\aleph_0$ by Theorem~\ref{thm:countablechi}. The clique version is identical: an $n$-point integral set in general position, pasted rigidly, remains an $n$-clique of $G_A$, so $\omega(G_A)\ge n$ for all $n$, i.e.\ $\omega(G_A)=\aleph_0$ as a supremum --- while every individual clique of $G_A$ is still finite by Corollary~\ref{cor:finiteclique}.
+\end{proof}
+
+\section{What remains open}\label{sec:open}
+
+By Theorems~\ref{thm:certificate} and~\ref{thm:transfer}, and since $\chi\ge\omega$ always, the question \emph{``can $\chi(G_A)$ be infinite?''} is equivalent to:
+
+\begin{openproblem}[Erd\H{o}s]
+Do there exist, for every $n$, finite admissible configurations of chromatic number at least $n$ --- in particular, do $n$ points in general position with all pairwise distances integral exist for every $n$?
+\end{openproblem}
+
+This is open at the time of writing. The following attributions are from memory and were deliberately \emph{not} verified against the literature, in compliance with the ground rules of this investigation (no internet access; all computation local and exact): the collinearity theorem of Section~\ref{sec:AE} is due to Anning and Erd\H{o}s (1945); the largest known integral point set in general position has $7$ points (Kreisel and Kurz, ca.~2008, diameter $22270$); the minimal diameters for $n=5$ and $n=6$ are recorded as $73$ and $174$ --- consistently, the scaled copy of the certificate of Theorem~\ref{thm:certificate} has diameter exactly $174$ (Remark~\ref{rem:scaling}); and a structure theorem of Greenfeld, Iliopoulou and Peluse (ca.~2024) shows that planar integral-distance sets are contained in a line or a circle up to very few exceptional points, which strengthens Corollary~\ref{cor:finiteclique} quantitatively but decides the open problem in neither direction.
+
+A subtlety that Theorem~\ref{thm:transfer} makes precise deserves emphasis: even a positive resolution would give $\omega(G_A)=\aleph_0$ only as an \emph{unattained supremum}. Theorem~\ref{thm:AE} forbids an infinite clique outright, so an infinite chromatic number, if achievable at all, must come from unbounded \emph{finite} structure.
+
+\section{Audit}\label{sec:audit}
+
+\paragraph{Scope of claims.} Proven unconditionally: Theorems~\ref{thm:AE}, \ref{thm:certificate}, \ref{thm:countablechi}, \ref{thm:transfer}, Lemmas~\ref{lem:extension}, \ref{lem:placement}, and their corollaries. Stated as open, and assumed in neither direction by any proof: whether the suprema of $\omega$ and $\chi$ over admissible sets equal $\aleph_0$.
+
+\paragraph{Theorem~\ref{thm:AE}.} The squaring step is treated honestly: $Z(q_k)$ in \eqref{eq:qk} is the union of the locus $L_k$ and the ellipse $\{|XA|+|XB|=k\}$, and the ellipse is shown empty for $k<|AB|$ and absorbed into the line for $k=|AB|$, so no phantom components enter the analysis. The degenerate indices $k=0$ and $k=|AB|$ are handled by separate polynomials (affine; double line), and the identification $q_{|AB|}=c\,\ell^2$ is derived from the trichotomy of real factorizations of a quadratic by zero-set type. The common-factor analysis is exhaustive because any nonconstant factor of a degree-$\le2$ polynomial has degree $1$ or $2$, and each of the four line-coincidence cases terminates in ``$A,B,C$ collinear'' or ``$|AB|=0$''. The identical-hyperbola case uses only invariance under two distinct point reflections, that their composition is a nonzero translation, nonemptiness of the hyperbola, and the two-point line-intersection bound of Step~2. The resultant facts invoked are exactly two: $\Res\equiv0$ implies a common factor (Euclidean algorithm over $\R(x)$ plus Gauss's lemma), and specialization at constant nonzero leading coefficients; the coordinate rotation guaranteeing constant leading $y$-coefficients excludes only finitely many angles since the top forms are nonzero. The constant $16$ is unoptimized by design; only finiteness is used downstream.
+
+\paragraph{Theorem~\ref{thm:certificate}.} All certificates are exact: integer perfect-square tests, integer cross products, and integer $4\times4$ determinants with $\sqrt{2002}$ factored out of one column (legitimate, since scaling a column by a nonzero scalar preserves vanishing of a determinant). No floating-point arithmetic occurs anywhere. The six-point configuration was produced by the search code of Appendix~\ref{app:code} and then re-verified by an independently written checker; all $15+20+15$ conditions pass. No minimality claims are made for any example.
+
+\paragraph{Theorem~\ref{thm:countablechi}.} The hypothesis ``no four concyclic'' is applied to circles centred at a vertex --- a special case --- so the bound of three neighbours per integer radius is sound. Countable degrees do \emph{not} by themselves bound the chromatic number of an arbitrary uncountable graph; the proof correctly routes through countability of connected components. The use of choice is flagged explicitly and is vacuous for countable $A$, which covers the sets built in Theorem~\ref{thm:transfer}.
+
+\paragraph{Theorem~\ref{thm:transfer}.} The forward direction uses De Bruijn--Erd\H{o}s, proved inline; its Tychonoff step requires the Boolean prime ideal theorem for uncountable $A$ and is choice-free for countable $A$. The hidden hypothesis --- that finite subsets of an admissible set are admissible and induce the correct subgraphs of $G_A$ --- is stated and checked. In Lemma~\ref{lem:placement}, the mixed degeneracy classes are enumerated exhaustively ($2{+}1$ and $1{+}2$ collinear; $3{+}1$, $1{+}3$ and $2{+}2$ circular; pure cases excluded by rigidity); each is shown to be a nonzero polynomial in $t$, the only $\theta$-dependence arising in the $2{+}2$ case, where the bad angles are finitely many; and the conclusion uses only that a finite union of Lebesgue-null sets is a proper subset of $\R^2$. The pasting construction preserves lower bounds because rigid motions preserve distances exactly --- hence integral adjacency --- and additional cross edges cannot decrease the chromatic number or clique sizes.
+
+\paragraph{Compliance.} No internet access was used at any point. The attributions in Section~\ref{sec:open} are memory-based and labelled as such; no proof depends on them.
+
+\appendix
+
+\section{Exact verification code}\label{app:code}
+
+The configurations of Section~\ref{sec:certificates} are stored as pairs $(X_i,m_i)\in\Z^2$ representing the point $(X_i,\,m_i\sqrt{k})$; the six-point certificate has $k=2002$, the five-point and four-point examples have $k=1$ (plain integer coordinates). The independent checker below re-verifies the six-point certificate from scratch; the search program that produced it uses the same exact predicates.
+
+\begin{lstlisting}
+# Independent exact verification of the 6-point certificate.
+# Points are (X, m*sqrt(2002)) with integers X, m.
+from math import isqrt
+import itertools
+
+k = 2002
+P = [(0,0), (2312,0), (535,30), (621,-30), (1691,30), (1777,-30)]
+n = len(P)
+assert len(set(P)) == n
+
+# (1) all 15 pairwise distances are positive integers
+D = [[0]*n for _ in range(n)]
+for i, j in itertools.combinations(range(n), 2):
+    d2 = (P[i][0]-P[j][0])**2 + k*(P[i][1]-P[j][1])**2
+    s = isqrt(d2)
+    assert s*s == d2 and s > 0, ("non-integer distance", i, j, d2)
+    D[i][j] = D[j][i] = s
+
+# (2) no 3 collinear: cross product of difference vectors; the factor
+#     sqrt(k) cancels from the 2x2 determinant in (X, m) coordinates.
+for t in itertools.combinations(range(n), 3):
+    a, b, c = (P[i] for i in t)
+    cr = (b[0]-a[0])*(c[1]-a[1]) - (b[1]-a[1])*(c[0]-a[0])
+    assert cr != 0, ("collinear", t)
+
+# (3) no 4 concyclic: circle determinant with rows (x^2+y^2, x, y, 1);
+#     with y = m*sqrt(k) the first column is the integer X^2 + k m^2 and
+#     sqrt(k) factors out of the third column, so an integer 4x4
+#     determinant decides vanishing.
+def det4(M):
+    s = 0
+    for perm in itertools.permutations(range(4)):
+        sg = 1
+        for i in range(4):
+            for j in range(i+1, 4):
+                if perm[i] > perm[j]:
+                    sg = -sg
+        pr = 1
+        for i in range(4):
+            pr *= M[i][perm[i]]
+        s += sg*pr
+    return s
+
+for q in itertools.combinations(range(n), 4):
+    M = [[P[i][0]**2 + k*P[i][1]**2, P[i][0], P[i][1], 1] for i in q]
+    assert det4(M) != 0, ("concyclic", q)
+
+print("all 15 distances integral; 20 triples non-collinear; "
+      "15 quadruples non-concyclic")
+for row in D:
+    print(row)
+\end{lstlisting}
+
+\noindent Output: the distance matrix of Theorem~\ref{thm:certificate}, with all assertions passing. The five-point certificate of Remark~\ref{rem:scaling} is verified by the same routine with $k=1$.
+
+\end{document}
