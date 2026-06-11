@@ -1,4 +1,4 @@
-# Erdős Problem 170 — Sums of distinct terms $k/2^k$
+# Erdős Problem 261 — Sums of distinct terms $k/2^k$
 
 This folder contains a self-contained write-up of the three-part problem about representing numbers as sums of **distinct** terms $f(k)=k/2^k$.
 
@@ -7,7 +7,7 @@ This folder contains a self-contained write-up of the three-part problem about r
 | File | Description |
 |------|-------------|
 | [`.tex file`](.tex%20file) | Full LaTeX source (theorems, proofs, audit, verification appendix) |
-| [`problem170.pdf`](problem170.pdf) | Compiled PDF |
+| [`problem261.pdf`](problem261.pdf) | Compiled PDF |
 | [`verify.py`](verify.py) | Standalone exact-arithmetic verification script |
 
 ## Problem statement
@@ -30,9 +30,9 @@ See the PDF for complete proofs, the corridor-digraph reformulation of Question 
 ## Build PDF
 
 ```bash
-cd "#170"
-pdflatex ".tex file"
-pdflatex ".tex file"
+cd "#261"
+pdflatex -jobname=problem261 ".tex file"
+pdflatex -jobname=problem261 ".tex file"
 ```
 
 ## Verify computations

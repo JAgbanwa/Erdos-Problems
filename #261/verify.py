@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Exact-arithmetic verification for Erdős Problem 170 write-up."""
+"""Exact-arithmetic verification for Erdős Problem 261 write-up."""
 from fractions import Fraction as F
 
 
