@@ -1,9 +1,4 @@
-import Mathlib.Analysis.InnerProductSpace.PiL2
-import Mathlib.Geometry.Euclidean.Sphere.Basic
-import Mathlib.LinearAlgebra.AffineSpace.FiniteDimensional
-import Mathlib.Combinatorics.SimpleGraph.Coloring.VertexColoring
-import Mathlib.Combinatorics.SimpleGraph.Connectivity.Connected
-import Mathlib.Tactic
+import Mathlib
 
 /-!
 # Erdős Problem #130 — Clique and chromatic numbers of the integer-distance graph
@@ -73,18 +68,31 @@ lemma InGenPos.mono {A B : Set Plane} (hAB : A ⊆ B) (hB : InGenPos B) : InGenP
   ⟨fun p hp q hq r hr => hB.1 p (hAB hp) q (hAB hq) r (hAB hr),
    fun p hp q hq r hr s hs => hB.2 p (hAB hp) q (hAB hq) r (hAB hr) s (hAB hs)⟩
 
+-- the linters below are disabled because one branch of each `first` in `distGraph`
+-- is intentionally dead code, kept for compatibility across Mathlib versions
+set_option linter.unusedTactic false in
+set_option linter.unreachableTactic false in
 /-- The *integer-distance graph* `G_A` on an admissible set `A`: vertices are the
 points of `A`, edges join pairs at positive integer distance. -/
 def distGraph (A : Set Plane) : SimpleGraph A where
   Adj u v := IntegerDist u.1 v.1
   symm := by
-    rintro u v ⟨n, hn, h⟩
-    exact ⟨n, hn, by rwa [dist_comm]⟩
+    have h : ∀ u v : A, IntegerDist u.1 v.1 → IntegerDist v.1 u.1 := by
+      rintro u v ⟨n, hn, hd⟩
+      exact ⟨n, hn, by rwa [dist_comm]⟩
+    -- `symm` is `Symmetric Adj` in some Mathlib versions, `Std.Symm Adj` in others
+    first
+    | exact h
+    | exact ⟨h⟩
   loopless := by
-    refine ⟨?_⟩
-    rintro u ⟨n, hn, h⟩
-    rw [dist_self] at h
-    exact hn.ne' (by exact_mod_cast h.symm)
+    have h : ∀ u : A, ¬ IntegerDist u.1 u.1 := by
+      rintro u ⟨n, hn, hd⟩
+      rw [dist_self] at hd
+      exact hn.ne' (by exact_mod_cast hd.symm)
+    -- `loopless` is `Irreflexive Adj` in some Mathlib versions, `Std.Irrefl Adj` in others
+    first
+    | exact ⟨h⟩
+    | exact h
 
 /-! ## Exact-arithmetic infrastructure (Appendix A)
 
@@ -458,29 +466,40 @@ def AnningErdosStatement : Prop :=
   ∀ S : Set Plane, (∀ p ∈ S, ∀ q ∈ S, p ≠ q → IntegerDist p q) →
     S.Infinite → Collinear ℝ S
 
+/-- Removing one point keeps an infinite set infinite.  (Version-stable form of
+`Set.Infinite.diff`/`Set.Infinite.sdiff`.) -/
+lemma infinite_diff_singleton {α : Type*} {s : Set α} (hs : s.Infinite) (a : α) :
+    (s \ {a}).Infinite := by
+  intro h
+  refine hs ((h.union (Set.finite_singleton a)).subset fun x hx => ?_)
+  by_cases hxa : x = a
+  · exact Or.inr (hxa ▸ rfl)
+  · exact Or.inl ⟨hx, hxa⟩
+
 /-- An infinite set contains three pairwise distinct elements. -/
 lemma exists_three_of_infinite {α : Type*} {s : Set α} (hs : s.Infinite) :
     ∃ a ∈ s, ∃ b ∈ s, ∃ c ∈ s, a ≠ b ∧ a ≠ c ∧ b ≠ c := by
   obtain ⟨a, ha⟩ := hs.nonempty
-  obtain ⟨b, hb⟩ := (hs.diff (Set.finite_singleton a)).nonempty
-  obtain ⟨c, hc⟩ := (hs.diff ((Set.finite_singleton a).insert b)).nonempty
-  simp only [Set.mem_diff, Set.mem_insert_iff, Set.mem_singleton_iff, not_or] at hb hc
-  exact ⟨a, ha, b, hb.1, c, hc.1, fun h => hb.2 h.symm, fun h => hc.2.2 h.symm,
-    fun h => hc.2.1 h.symm⟩
+  obtain ⟨b, hb⟩ := (infinite_diff_singleton hs a).nonempty
+  obtain ⟨c, hc⟩ :=
+    (infinite_diff_singleton (infinite_diff_singleton hs a) b).nonempty
+  exact ⟨a, ha, b, hb.1, c, hc.1.1,
+    fun h => hb.2 h.symm, fun h => hc.1.2 h.symm, fun h => hc.2 h.symm⟩
 
 /-- An infinite set contains four pairwise distinct elements. -/
 lemma exists_four_of_infinite {α : Type*} {s : Set α} (hs : s.Infinite) :
     ∃ a ∈ s, ∃ b ∈ s, ∃ c ∈ s, ∃ d ∈ s,
       a ≠ b ∧ a ≠ c ∧ a ≠ d ∧ b ≠ c ∧ b ≠ d ∧ c ≠ d := by
   obtain ⟨a, ha⟩ := hs.nonempty
-  obtain ⟨b, hb⟩ := (hs.diff (Set.finite_singleton a)).nonempty
-  obtain ⟨c, hc⟩ := (hs.diff ((Set.finite_singleton a).insert b)).nonempty
-  obtain ⟨d, hd⟩ := (hs.diff (((Set.finite_singleton a).insert b).insert c)).nonempty
-  simp only [Set.mem_diff, Set.mem_insert_iff, Set.mem_singleton_iff, not_or]
-    at hb hc hd
-  exact ⟨a, ha, b, hb.1, c, hc.1, d, hd.1,
-    fun h => hb.2 h.symm, fun h => hc.2.2 h.symm, fun h => hd.2.2.2 h.symm,
-    fun h => hc.2.1 h.symm, fun h => hd.2.2.1 h.symm, fun h => hd.2.1 h.symm⟩
+  obtain ⟨b, hb⟩ := (infinite_diff_singleton hs a).nonempty
+  obtain ⟨c, hc⟩ :=
+    (infinite_diff_singleton (infinite_diff_singleton hs a) b).nonempty
+  obtain ⟨d, hd⟩ :=
+    (infinite_diff_singleton
+      (infinite_diff_singleton (infinite_diff_singleton hs a) b) c).nonempty
+  exact ⟨a, ha, b, hb.1, c, hc.1.1, d, hd.1.1.1,
+    fun h => hb.2 h.symm, fun h => hc.1.2 h.symm, fun h => hd.1.1.2 h.symm,
+    fun h => hc.2 h.symm, fun h => hd.1.2 h.symm, fun h => hd.2 h.symm⟩
 
 /-- **Corollary 2.2.**  Assuming Anning–Erdős, every clique of the integer-distance
 graph of an admissible set is finite: an infinite clique would be an infinite
