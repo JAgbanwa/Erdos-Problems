@@ -6,11 +6,11 @@ import Mathlib.Combinatorics.SimpleGraph.Connectivity.Connected
 import Mathlib.Tactic
 
 /-!
-# Erdős Problem #170 — Clique and chromatic numbers of the integer-distance graph
+# Erdős Problem #130 — Clique and chromatic numbers of the integer-distance graph
 # on planar point sets in general position
 
 Formalization of the results of the paper *"Clique and chromatic numbers of the
-integer-distance graph on planar point sets in general position"* (folder `#170`).
+integer-distance graph on planar point sets in general position"* (folder `#130`).
 
 Let `A ⊆ ℝ²` be a set in *general position* (no 3 points collinear, no 4 concyclic)
 and let `G_A` be the graph joining pairs of points of `A` at integer Euclidean
@@ -43,7 +43,7 @@ a perfect-square test, non-collinearity an integer `2×2` cross product, and
 non-concyclicity an integer `4×4` determinant with `√k` factored out of one column.
 -/
 
-namespace ErdosProblem170
+namespace ErdosProblem130
 
 open EuclideanGeometry Real
 
@@ -641,4 +641,4 @@ theorem erdosOpenProblem_up_to_six : ∀ n ≤ 6, IntegralGenPosConfigs n :=
 
 end
 
-end ErdosProblem170
+end ErdosProblem130
