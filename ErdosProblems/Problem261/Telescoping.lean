@@ -16,6 +16,10 @@ lemma f_pos (k : ℕ) (hk : 0 < k) : 0 < f k := by
   unfold f
   exact div_pos (Nat.cast_pos.mpr hk) (pow_pos (by norm_num) k)
 
+@[simp] lemma G_one : G 1 (by decide : 0 < 1) = 2 := by
+  unfold G
+  norm_num
+
 lemma G_sub_G_succ (m : ℕ) (hm : 0 < m) :
     G m hm - G (m + 1) (Nat.succ_pos m) = f m := by
   unfold G f

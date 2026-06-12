@@ -25,9 +25,9 @@ Formalization of the paper in folder `#261`.
 | Corridor digraph | `reachSet`, `CorridorReachableToZero` | **defined** |
 | `n ≤ 2000` reachability | `reachable_all_le_2000` | **proved** (`native_decide`) |
 | All `n` (Open Problem) | `AllNRepresentable` | **stated** |
-| Sequence continuum (Theorem 5.4) | `sequenceSolutions_two` | **stated** (`sorry`) |
-| Set continuum (Theorem 5.5) | `setSolutions_exist` | **stated** (`sorry`) |
-| Unique set solution at `x=2` | `unique_set_solution_two` | **stated** (`sorry`) |
+| Sequence continuum (Theorem 5.4) | `sequenceSolutions_two` | **proved** |
+| Set continuum (Theorem 5.5) | `setSolutions_exist` | **proved** |
+| Unique set solution at `x=2` | `unique_set_solution_two` | **proved** |
 
 The algebraic and computational parts of the paper are fully formalized in exact rational
 and native-decide arithmetic. The continuum-cardinality theorems and the full
