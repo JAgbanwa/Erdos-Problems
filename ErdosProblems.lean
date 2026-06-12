@@ -1,5 +1,6 @@
 import ErdosProblems.FiniteSumsProducts
 import ErdosProblems.Problem130
 import ErdosProblems.Problem172
+import ErdosProblems.Problem261
 import ErdosProblems.ProofStrategy
 import ErdosProblems.SumsProductsLemmas
