@@ -23,7 +23,7 @@ lemma G_sub_G_succ (m : ℕ) (hm : 0 < m) :
   ring_nf
   rcases m with _ | m
   · exact hm.false.elim
-  · simp [Nat.add_sub_cancel, pow_succ]
+  · simp [pow_succ]
     ring
 
 /-- Block sum `∑_{k=m}^{M} f(k) = G(m) - G(M+1)` (paper \eqref{eq:block}). -/

@@ -103,29 +103,39 @@ lemma familyBlock_blockSum (s : ℕ) (hs : 3 ≤ s) :
       G (nFamily s + 1) (nFamily_succ_pos s hs) -
         G (2 ^ s - 1) (two_pow_sub_one_pos s hs) := by
   simp only [familyBlock]
-  rw [blockSum (nFamily s + 1) (2 ^ s - 2) (nFamily_succ_pos s hs)
-    (familyBlock_upper s hs), show (2 ^ s - 2 + 1 : ℕ) = 2 ^ s - 1 by omega]
+  have hM : 2 ^ s - 2 + 1 = 2 ^ s - 1 := by
+    have hle : 2 ≤ 2 ^ s := by
+      calc 2 ≤ 2 ^ 3 := by decide
+        _ ≤ 2 ^ s := Nat.pow_le_pow_right (by decide) hs
+    omega
+  have h := blockSum (nFamily s + 1) (2 ^ s - 2) (nFamily_succ_pos s hs)
+    (familyBlock_upper s hs)
+  simp only [G] at h ⊢
+  rw [hM]
+  exact h
 
 /-- The rigid power-of-two identity underlying Theorem 1. -/
-lemma familyPowerNat (s : ℕ) (_hs : 3 ≤ s) :
+lemma familyPowerNat (s : ℕ) (hs : 3 ≤ s) :
     (2 : ℕ) * 2 ^ (2 ^ s - 2) = 2 ^ s * 2 ^ (nFamily s) := by
-  have hexp : s + nFamily s = 2 ^ s - 1 := by
-    simp [nFamily]; omega
+  have hexp : s + nFamily s + 1 = 2 ^ s := nFamily_add s (Nat.le_trans (by decide : 1 ≤ 3) hs)
+  have hinner : (2 ^ s - 2) + 1 = 2 ^ s - 1 := by omega
   calc
-    (2 : ℕ) * 2 ^ (2 ^ s - 2) = 2 ^ ((2 ^ s - 2) + 1) := by
-      rw [mul_comm, ← pow_succ]
-    _ = 2 ^ (2 ^ s - 1) := by congr 1; omega
-    _ = 2 ^ (s + nFamily s) := by rw [hexp]
+    (2 : ℕ) * 2 ^ (2 ^ s - 2) = 2 ^ ((2 ^ s - 2) + 1) := by rw [mul_comm, ← pow_succ]
+    _ = 2 ^ (2 ^ s - 1) := by congr 1; exact hinner
+    _ = 2 ^ (s + nFamily s) := by congr 1; omega
     _ = 2 ^ s * 2 ^ (nFamily s) := pow_add 2 s (nFamily s)
 
 lemma familySum_eq (s : ℕ) (hs : 3 ≤ s) :
     fSum (familyBlock s) = (nFamily s : ℚ) / (2 ^ nFamily s : ℚ) := by
   rw [fSum_eq, familyBlock_blockSum s hs]
-  simp only [G, nFamily]
+  have hexp : s + nFamily s + 1 = 2 ^ s := nFamily_add s (Nat.le_trans (by decide : 1 ≤ 3) hs)
   have hp := familyPowerNat s hs
+  simp only [G, nFamily]
   field_simp
   ring_nf
-  exact_mod_cast hp
+  norm_cast
+  rw [← hexp, hp]
+  ring
 
 /-- **Theorem 1.** Block-sum identity for the explicit family (paper Theorem 4.1). -/
 theorem familyRepresentation (s : ℕ) (hs : 3 ≤ s) :
@@ -164,9 +174,119 @@ theorem secondFamily_representation_thirteen :
     fSum {2718, 2730} = fSum (Finset.Icc 2719 2729) := by
   rw [fSum_pair (by decide), fSum_eq]; simp [f]; native_decide
 
+lemma secondFamily_b_sub_a (E : ℕ) :
+    secondFamilyB E - secondFamilyA E + 1 = E := by
+  simp [secondFamilyA, secondFamilyB]; omega
+
+lemma two_pow_odd_mod_three (E : ℕ) (hodd : Odd E) : 2 ^ E % 3 = 2 := by
+  rcases hodd with ⟨k, rfl⟩
+  induction k with
+  | zero => decide
+  | succ k ih =>
+      rw [pow_add, pow_mul, mul_mod, ih, show 2 ^ 2 % 3 = 1 from by decide]
+      omega
+
+lemma two_pow_ge_five {E : ℕ} (hE : 5 ≤ E) : 5 ≤ 2 ^ E := by
+  calc 5 ≤ 2 ^ 5 := by decide
+    _ ≤ 2 ^ E := Nat.pow_le_pow_right (by decide) hE
+
+lemma secondFamily_div_three (E : ℕ) (hodd : Odd E) : 3 ∣ 2 ^ E - 5 := by
+  have h := two_pow_odd_mod_three E hodd
+  omega
+
+lemma secondFamily_power (E : ℕ) (hE : 5 ≤ E) (hodd : Odd E) :
+    3 * secondFamilyB E + 2 = 2 ^ E := by
+  have hdiv := secondFamily_div_three E hodd
+  have hle : 5 ≤ 2 ^ E := two_pow_ge_five hE
+  simp only [secondFamilyB]
+  have h := Nat.mul_div_cancel' hdiv
+  calc
+    3 * ((2 ^ E - 5) / 3 + 1) + 2 = 3 * ((2 ^ E - 5) / 3) + 3 + 2 := by ring
+    _ = (2 ^ E - 5) + 5 := by rw [h]
+    _ = 2 ^ E := Nat.sub_add_cancel hle
+
+lemma secondFamily_a_pos (E : ℕ) (hE : 5 ≤ E) (hodd : Odd E) : 0 < secondFamilyA E := by
+  have hpow := secondFamily_power E hE hodd
+  have hle : 5 ≤ 2 ^ E := two_pow_ge_five hE
+  have hdiv := secondFamily_div_three E hodd
+  have h := Nat.mul_div_cancel' hdiv
+  have hb : 1 ≤ (2 ^ E - 5) / 3 + 1 := by
+    have : 0 < 2 ^ E - 5 := Nat.sub_pos_of_lt (lt_of_lt_of_le (by decide : 5 < 2 ^ 5) hle)
+    omega
+  simp only [secondFamilyA, secondFamilyB]
+  rw [h]
+  omega
+
+lemma secondFamily_b_pos (E : ℕ) (hE : 5 ≤ E) (hodd : Odd E) : 0 < secondFamilyB E := by
+  have hle : 5 ≤ 2 ^ E := two_pow_ge_five hE
+  have hdiv := secondFamily_div_three E hodd
+  have h := Nat.mul_div_cancel' hdiv
+  have : 0 < 2 ^ E - 5 := Nat.sub_pos_of_lt (lt_of_lt_of_le (by decide : 5 < 2 ^ 5) hle)
+  simp only [secondFamilyB]
+  rw [h]
+  omega
+
+lemma secondFamily_interior_lower (E : ℕ) (hE : 5 ≤ E) (hodd : Odd E) :
+    secondFamilyA E + 1 ≤ secondFamilyB E - 1 := by
+  have hle : 5 ≤ 2 ^ E := two_pow_ge_five hE
+  have hdiv := secondFamily_div_three E hodd
+  have h := Nat.mul_div_cancel' hdiv
+  simp only [secondFamilyA, secondFamilyB, h]
+  omega
+
+lemma secondFamily_interior_blockSum (E : ℕ) (hE : 5 ≤ E) (hodd : Odd E) :
+    (secondFamilyInterior E).sum f =
+      G (secondFamilyA E + 1) (Nat.succ_pos (secondFamilyA E)) -
+        G (secondFamilyB E) (secondFamily_b_pos E hE hodd) := by
+  simp only [secondFamilyInterior]
+  exact blockSum (secondFamilyA E + 1) (secondFamilyB E - 1)
+    (Nat.succ_pos (secondFamilyA E)) (secondFamily_interior_lower E hE hodd)
+
+lemma secondFamily_ratIdentity {a b E : ℕ} (hapos : 0 < a) (hbpos : 0 < b)
+    (hdiff : b - a + 1 = E) (hpow : 3 * b + 2 = 2 ^ E) :
+    (a : ℚ) / 2 ^ a + (b : ℚ) / 2 ^ b =
+      ((a + 2 : ℚ)) / 2 ^ a - ((b + 1 : ℚ)) / 2 ^ (b - 1) := by
+  have hpow' : 3 * b + 2 = 2 ^ (b - a + 1) := hdiff ▸ hpow
+  have ha : 0 < (2 : ℚ) ^ a := pow_pos (by norm_num) a
+  have hb : 0 < (2 : ℚ) ^ b := pow_pos (by norm_num) b
+  have hc : 0 < (2 : ℚ) ^ (b - 1) := pow_pos (by norm_num) (b - 1)
+  field_simp [ha.ne', hb.ne', hc.ne']
+  norm_cast
+  rw [hpow']
+  omega
+
+lemma secondFamily_GIdentity {a b E : ℕ} (hapos : 0 < a) (hbpos : 0 < b)
+    (hG1 : 0 < a + 1) (hG2 : 0 < b + 1) (hdiff : b - a + 1 = E) (hpow : 3 * b + 2 = 2 ^ E) :
+    G a hapos - G (a + 1) hG1 + (G b hbpos - G (b + 1) hG2) = G (a + 1) hG1 - G b hbpos := by
+  have hsucc : ∀ n, n + 1 - 1 = n := fun n => by omega
+  simp only [G, hsucc, show (a + 1) + 1 = a + 2 from rfl, show (b + 1) + 1 = b + 2 from rfl]
+  have hleft :
+      (a + 1 : ℚ) / 2 ^ (a - 1) - (a + 2 : ℚ) / 2 ^ a +
+        ((b + 1 : ℚ) / 2 ^ (b - 1) - (b + 2 : ℚ) / 2 ^ b) =
+      (a : ℚ) / 2 ^ a + (b : ℚ) / 2 ^ b := by
+    have ha' : 0 < (2 : ℚ) ^ a := pow_pos (by norm_num) a
+    have hb' : 0 < (2 : ℚ) ^ b := pow_pos (by norm_num) b
+    have hc' : 0 < (2 : ℚ) ^ (b - 1) := pow_pos (by norm_num) (b - 1)
+    have hd' : 0 < (2 : ℚ) ^ (a - 1) := pow_pos (by norm_num) (a - 1)
+    field_simp [ha'.ne', hb'.ne', hc'.ne', hd'.ne']
+    ring
+  rw [hleft]
+  exact secondFamily_ratIdentity hapos hbpos hdiff hpow
+
 /-- Remark 2: odd `E ≥ 5` yields a two-point / block identity (paper Remark 2). -/
 theorem secondFamily_representation (E : ℕ) (hE : 5 ≤ E) (hodd : Odd E) :
     fSum {secondFamilyA E, secondFamilyB E} = fSum (secondFamilyInterior E) := by
-  sorry
+  have hne : secondFamilyA E ≠ secondFamilyB E := by
+    simp [secondFamilyA, secondFamilyB]
+    have hle := two_pow_ge_five hE
+    omega
+  have hapos := secondFamily_a_pos E hE hodd
+  have hbpos := secondFamily_b_pos E hE hodd
+  have hdiff := secondFamily_b_sub_a E
+  have hpow := secondFamily_power E hE hodd
+  rw [fSum_pair hne, fSum_eq, secondFamily_interior_blockSum E hE hodd]
+  rw [← G_sub_G_succ (secondFamilyA E) hapos, ← G_sub_G_succ (secondFamilyB E) hbpos]
+  exact secondFamily_GIdentity hapos hbpos (Nat.succ_pos (secondFamilyA E))
+    (Nat.succ_pos (secondFamilyB E)) hdiff hpow
 
 end ErdosProblem261
