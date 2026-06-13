@@ -1,27 +1,302 @@
-import ErdosProblems.Problem261.Basic
-import ErdosProblems.Problem261.Telescoping
-import ErdosProblems.Problem261.Q1
-
 import Mathlib.Algebra.BigOperators.Group.Finset.Basic
+import Mathlib.Data.Finset.Basic
 import Mathlib.Data.Finset.Disjoint
+import Mathlib.Data.Finset.Sum
+import Mathlib.Data.Nat.Cast.Defs
+import Mathlib.Data.Rat.Defs
 import Mathlib.Algebra.Ring.Parity
 import Mathlib.SetTheory.Cardinal.Basic
 import Mathlib.SetTheory.Cardinal.Continuum
 import Mathlib.Tactic
 
 /-!
-# Question 3 — continuum-many infinite representations
+Self-contained Erdős Problem 261 Q3 for online Lean compilers (e.g. lean4web MathlibDemo).
 
-Paper Theorems 5.4 and 5.5 (sequence and set readings).
-
-For the online Lean compiler (lean4web / MathlibDemo), paste `lean4web/Problem261_Q3.lean`
-instead — that file inlines prerequisites and imports only Mathlib.
+Paste this entire file into the editor. It imports only Mathlib, not `ErdosProblems`.
 -/
 
 namespace ErdosProblem261
 
 open scoped BigOperators
 open Cardinal
+
+
+/-- The term `f(k) = k / 2^k` as a rational number. -/
+def f (k : ℕ) : ℚ := (k : ℚ) / (2 ^ k : ℚ)
+
+/-- The telescoping companion `G(m) = (m+1) / 2^{m-1}` for `m ≥ 1`. -/
+def G (m : ℕ) (_hm : 0 < m) : ℚ := (m + 1 : ℚ) / (2 ^ (m - 1) : ℚ)
+
+/-- Sum of `f` over a finite set of indices. -/
+def fSum (S : Finset ℕ) : ℚ := S.sum f
+
+/-- A finite representation of `n / 2^n` by at least two distinct positive indices. -/
+def HasFiniteRepresentation (n : ℕ) (S : Finset ℕ) : Prop :=
+  2 ≤ S.card ∧
+    (∀ k ∈ S, 0 < k) ∧
+    fSum S = (n : ℚ) / (2 ^ n : ℚ)
+
+/-- Question (1): there exist at least two distinct indices with the required sum. -/
+def Question1 (n : ℕ) : Prop :=
+  ∃ S : Finset ℕ, HasFiniteRepresentation n S
+
+/-- The explicit infinite family parameter `n_s = 2^s - s - 1`. -/
+def nFamily (s : ℕ) : ℕ := 2 ^ s - s - 1
+
+/-- The block of indices used in Theorem 1: `{n_s+1, …, 2^s - 2}`. -/
+def familyBlock (s : ℕ) : Finset ℕ :=
+  Finset.Icc (nFamily s + 1) (2 ^ s - 2)
+
+/-- The second-family parameters for odd `E ≥ 5`. -/
+def secondFamilyB (E : ℕ) : ℕ := (2 ^ E - 5) / 3 + 1
+
+def secondFamilyA (E : ℕ) : ℕ := secondFamilyB E + 1 - E
+
+/-- The interior `(a+1, …, b-1)` in Remark 2. -/
+def secondFamilyInterior (E : ℕ) : Finset ℕ :=
+  Finset.Icc (secondFamilyA E + 1) (secondFamilyB E - 1)
+
+lemma fSum_pair {a b : ℕ} (hab : a ≠ b) :
+    fSum {a, b} = f a + f b := by
+  simp [fSum, Finset.sum_pair hab]
+
+lemma f_pos (k : ℕ) (hk : 0 < k) : 0 < f k := by
+  unfold f
+  exact div_pos (Nat.cast_pos.mpr hk) (pow_pos (by norm_num) k)
+
+@[simp] lemma G_one : G 1 (by decide : 0 < 1) = 2 := by
+  unfold G
+  norm_num
+
+lemma G_sub_G_succ (m : ℕ) (hm : 0 < m) :
+    G m hm - G (m + 1) (Nat.succ_pos m) = f m := by
+  unfold G f
+  field_simp
+  ring_nf
+  rcases m with _ | m
+  · exact hm.false.elim
+  · simp [pow_succ]
+    ring
+
+/-- Block sum `∑_{k=m}^{M} f(k) = G(m) - G(M+1)` (paper \eqref{eq:block}). -/
+lemma blockSum (m M : ℕ) (hm : 0 < m) (hM : m ≤ M) :
+    (Finset.Icc m M).sum f = G m hm - G (M + 1) (Nat.succ_pos M) := by
+  induction hM with
+  | refl =>
+      simp [Finset.Icc_self, G_sub_G_succ m hm]
+  | @step M hle ih =>
+      have hIcc :
+          Finset.Icc m (M + 1) = insert (M + 1) (Finset.Icc m M) := by
+        ext x
+        simp only [Finset.mem_Icc, Finset.mem_insert]
+        constructor
+        · intro ⟨hm1, hx⟩
+          rcases le_iff_eq_or_lt.mp hx with (rfl | hxlt)
+          · exact Or.inl rfl
+          · exact Or.inr ⟨hm1, Nat.le_of_lt_succ hxlt⟩
+        · intro hx
+          rcases hx with (rfl | ⟨hm1, hx⟩)
+          · exact ⟨Nat.le_trans hle (Nat.le_succ M), le_rfl⟩
+          · exact ⟨hm1, Nat.le_succ_of_le hx⟩
+      rw [hIcc, Finset.sum_insert]
+      · rw [ih]; linarith [G_sub_G_succ (M + 1) (Nat.succ_pos M)]
+      · simp [Finset.mem_Icc]
+
+@[simp] lemma fSum_eq (S : Finset ℕ) : fSum S = S.sum f := rfl
+
+lemma two_pow_ge_add_three (s : ℕ) (hs : 3 ≤ s) : s + 3 ≤ 2 ^ s := by
+  induction s, hs using Nat.le_induction with
+  | base => decide
+  | succ s hs ih =>
+      rw [pow_succ, mul_comm]
+      nlinarith [ih, pow_pos (show (0 : ℕ) < 2 by decide) s]
+
+lemma nFamily_sub_valid (s : ℕ) (hs : 3 ≤ s) : s + 1 ≤ 2 ^ s := by
+  have := two_pow_ge_add_three s hs
+  omega
+
+lemma succ_le_pow (n : ℕ) (hn : 1 ≤ n) : n + 1 ≤ 2 ^ n := by
+  induction n, hn using Nat.le_induction with
+  | base => decide
+  | succ n hn ih =>
+      rw [pow_succ]
+      omega
+
+lemma nFamily_add (s : ℕ) (hs : 1 ≤ s) : nFamily s + s + 1 = 2 ^ s := by
+  simp [nFamily]
+  have : s + 1 ≤ 2 ^ s := succ_le_pow s hs
+  omega
+
+lemma nFamily_succ_pos (s : ℕ) (hs : 3 ≤ s) : 0 < nFamily s + 1 := by
+  have := nFamily_add s (Nat.le_trans (by decide : 1 ≤ 3) hs)
+  omega
+
+lemma two_pow_sub_one_pos (s : ℕ) (hs : 3 ≤ s) : 0 < 2 ^ s - 1 := by
+  have := two_pow_ge_add_three s hs
+  omega
+
+lemma familyBlock_upper (s : ℕ) (hs : 3 ≤ s) : nFamily s + 1 ≤ 2 ^ s - 2 := by
+  simp [nFamily]
+  have := two_pow_ge_add_three s hs
+  omega
+
+lemma nat_two_mul_sub_succ (x s : ℕ) (hx0 : 1 ≤ x) (hx1 : s + 1 ≤ x) :
+    2 * x - (s + 2) = x - (s + 1) + (x - 1) := by omega
+
+lemma two_pow_sub_succ_eq (s : ℕ) (hs : 1 ≤ s) :
+    2 * 2 ^ s - (s + 1) = 2 ^ s - s + (2 ^ s - 1) := by
+  induction s, hs using Nat.le_induction with
+  | base => decide
+  | succ s hs _ =>
+      have h1 : 1 ≤ 2 ^ s * 2 := by
+        have hpow : 2 ≤ 2 ^ s := by
+          calc 2 = 2 ^ 1 := by decide
+            _ ≤ 2 ^ s := Nat.pow_le_pow_right (by decide) hs
+        omega
+      have h2 : s + 1 ≤ 2 ^ s * 2 := by
+        have := succ_le_pow s hs
+        omega
+      simpa only [pow_succ] using nat_two_mul_sub_succ (2 ^ s * 2) s h1 h2
+
+lemma two_pow_sub_strictMono {s t : ℕ} (hs : 1 ≤ s) (hst : s < t) : 2 ^ s - s < 2 ^ t - t := by
+  have step : ∀ s, 1 ≤ s → 2 ^ s - s < 2 ^ (s + 1) - (s + 1) := by
+    intro s hs
+    have hpos : 0 < 2 ^ s - 1 := by
+      have h2 : 2 ≤ 2 ^ s := by
+        calc 2 ≤ 2 ^ 1 := by decide
+          _ ≤ 2 ^ s := Nat.pow_le_pow_right (by decide) hs
+      exact Nat.sub_pos_of_lt (Nat.lt_of_lt_of_le (by decide : 1 < 2) h2)
+    have hEq := two_pow_sub_succ_eq s hs
+    rw [pow_succ, mul_comm, hEq]
+    exact Nat.lt_add_of_pos_right hpos
+  rcases Nat.exists_eq_add_of_lt hst with ⟨d, rfl⟩
+  suffices ∀ d, 2 ^ s - s < 2 ^ (s + d + 1) - (s + d + 1) from this d
+  intro d
+  induction d with
+  | zero => exact step s hs
+  | succ d ih => exact lt_trans ih (step (s + d + 1) (by omega))
+
+lemma two_pow_sub_ge_one {s : ℕ} (hs : 3 ≤ s) : 1 ≤ 2 ^ s - s := by
+  have := two_pow_ge_add_three s hs
+  omega
+
+lemma nFamily_strictMono {s t : ℕ} (hs : 3 ≤ s) (hst : s < t) :
+    nFamily s < nFamily t := by
+  simp only [nFamily]
+  have hmono := two_pow_sub_strictMono (Nat.le_trans (by decide : 1 ≤ 3) hs) hst
+  have hs1 := two_pow_sub_ge_one hs
+  have ht1 := two_pow_sub_ge_one (Nat.le_trans hs (Nat.le_of_lt hst))
+  omega
+
+lemma scale_max_lt_nFamily {s t : ℕ} (hs : 3 ≤ s) (ht : 3 ≤ t) (hlt : s < t) :
+    2 ^ s - 2 < nFamily t := by
+  have hns := nFamily_add s (Nat.le_trans (by decide : 1 ≤ 3) hs)
+  have hbase : 2 ^ s - 2 < nFamily (s + 1) := by
+    simp only [nFamily, hns]
+    omega
+  rcases Nat.eq_or_lt_of_le (Nat.succ_le_of_lt hlt) with rfl | htlt
+  · exact hbase
+  · exact Nat.lt_trans hbase (nFamily_strictMono (Nat.le_trans hs (by omega)) htlt)
+
+lemma nFamily_eq_iff {s t : ℕ} (hs : 3 ≤ s) (ht : 3 ≤ t) :
+    nFamily s = nFamily t ↔ s = t := by
+  simp only [nFamily]
+  constructor
+  · intro h
+    by_contra hne
+    rcases lt_or_gt_of_ne hne with hlt | hgt
+    · exact (nFamily_strictMono hs hlt).ne h
+    · exact (nFamily_strictMono ht hgt).ne h.symm
+  · intro h; rw [h]
+
+lemma familyBlock_two_le (s : ℕ) (hs : 3 ≤ s) : 2 ≤ (familyBlock s).card := by
+  have hp := two_pow_ge_add_three s hs
+  have h1 : nFamily s + 1 ∈ familyBlock s := by
+    simp [familyBlock, nFamily, Finset.mem_Icc]; omega
+  have h2 : nFamily s + 2 ∈ familyBlock s := by
+    simp [familyBlock, nFamily, Finset.mem_Icc]; omega
+  have hsub : ({nFamily s + 1, nFamily s + 2} : Finset ℕ) ⊆ familyBlock s := by
+    intro x hx; simp at hx
+    rcases hx with hx | hx <;> simp [familyBlock, nFamily, Finset.mem_Icc, hx] <;> omega
+  have hcard : ({nFamily s + 1, nFamily s + 2} : Finset ℕ).card = 2 := by
+    rw [Finset.card_pair (by omega)]
+  exact Nat.le_trans (by rw [hcard]) (Finset.card_le_card hsub)
+
+lemma familyBlock_pos (s : ℕ) (hs : 3 ≤ s) {k : ℕ} (hk : k ∈ familyBlock s) : 0 < k := by
+  simp [familyBlock, nFamily, Finset.mem_Icc] at hk
+  have := two_pow_ge_add_three s hs; omega
+
+lemma familyBlock_blockSum (s : ℕ) (hs : 3 ≤ s) :
+    (familyBlock s).sum f =
+      G (nFamily s + 1) (nFamily_succ_pos s hs) -
+        G (2 ^ s - 1) (two_pow_sub_one_pos s hs) := by
+  simp only [familyBlock]
+  have hM : 2 ^ s - 2 + 1 = 2 ^ s - 1 := by
+    have hle : 2 ≤ 2 ^ s := by
+      calc 2 ≤ 2 ^ 3 := by decide
+        _ ≤ 2 ^ s := Nat.pow_le_pow_right (by decide) hs
+    omega
+  have h := blockSum (nFamily s + 1) (2 ^ s - 2) (nFamily_succ_pos s hs)
+    (familyBlock_upper s hs)
+  rw [h]
+  simp only [G, hM]
+
+/-- The rigid power-of-two identity underlying Theorem 1. -/
+lemma familyPowerNat (s : ℕ) (hs : 3 ≤ s) :
+    (2 : ℕ) * 2 ^ (2 ^ s - 2) = 2 ^ s * 2 ^ (nFamily s) := by
+  have hexp : nFamily s + s + 1 = 2 ^ s := nFamily_add s (Nat.le_trans (by decide : 1 ≤ 3) hs)
+  have hinner : (2 ^ s - 2) + 1 = 2 ^ s - 1 := by
+    have hle : 2 ≤ 2 ^ s := by
+      calc 2 ≤ 2 ^ 3 := by decide
+        _ ≤ 2 ^ s := Nat.pow_le_pow_right (by decide) hs
+    omega
+  calc
+    (2 : ℕ) * 2 ^ (2 ^ s - 2) = 2 ^ ((2 ^ s - 2) + 1) := by rw [pow_succ, mul_comm]
+    _ = 2 ^ (2 ^ s - 1) := by rw [hinner]
+    _ = 2 ^ (s + nFamily s) := by congr 1; omega
+    _ = 2 ^ s * 2 ^ (nFamily s) := pow_add 2 s (nFamily s)
+
+lemma familySum_eq (s : ℕ) (hs : 3 ≤ s) :
+    fSum (familyBlock s) = (nFamily s : ℚ) / (2 ^ nFamily s : ℚ) := by
+  rw [fSum_eq, familyBlock_blockSum s hs]
+  have hp := familyPowerNat s hs
+  have hsucc₁ : nFamily s + 1 - 1 = nFamily s := by omega
+  have hsucc₂ : 2 ^ s - 1 - 1 = 2 ^ s - 2 := by
+    have hle : 2 ≤ 2 ^ s := by
+      calc 2 ≤ 2 ^ 3 := by decide
+        _ ≤ 2 ^ s := Nat.pow_le_pow_right (by decide : 1 ≤ 2) hs
+    omega
+  have hG₁ : G (nFamily s + 1) (nFamily_succ_pos s hs) =
+      (nFamily s + 2 : ℚ) / 2 ^ (nFamily s) := by
+    simp only [G]
+    rw [show (nFamily s + 1 - 1 : ℕ) = nFamily s from hsucc₁]
+    simp only [nFamily]
+    field_simp
+    norm_cast
+  have hG₂ : G (2 ^ s - 1) (two_pow_sub_one_pos s hs) =
+      (2 ^ s : ℚ) / 2 ^ (2 ^ s - 2) := by
+    simp only [G, hsucc₂]
+    field_simp
+    norm_cast
+    have htop : (2 ^ s - 1 + 1 : ℕ) = 2 ^ s := by
+      have hle : 1 ≤ 2 ^ s := by
+        calc (1 : ℕ) ≤ 2 ^ 3 := by decide
+          _ ≤ 2 ^ s := Nat.pow_le_pow_right (by decide) hs
+      exact Nat.sub_add_cancel hle
+    omega
+  rw [hG₁, hG₂]
+  have hcore : (2 : ℚ) / 2 ^ (nFamily s) = (2 ^ s : ℚ) / 2 ^ (2 ^ s - 2) := by
+    field_simp
+    norm_cast
+    rw [mul_comm (2 ^ (nFamily s))]
+    exact hp
+  have hnum :
+      ((nFamily s + 2 : ℚ) / 2 ^ (nFamily s) - (nFamily s : ℚ) / 2 ^ (nFamily s)) =
+        (2 : ℚ) / 2 ^ (nFamily s) := by
+    field_simp [pow_pos (by norm_num : (0 : ℚ) < 2 ^ (nFamily s))]
+    ring
+  linarith [hcore, hnum]
+
 
 /-- Term `n_s / 2^{n_s}` for scales `s ≥ 3`. -/
 noncomputable def xStarTerm (s : ℕ) : ℚ :=
@@ -85,7 +360,7 @@ lemma swapBlock_sum (s : ℕ) (hs : 3 ≤ s) (b : Bool) :
     fSum (swapBlock s b) = (nFamily s : ℚ) / (2 ^ nFamily s : ℚ) := by
   unfold swapBlock
   split_ifs with h
-  · exact (familyRepresentation s hs).2.2
+  · exact familySum_eq s hs
   · simp [fSum, f, nFamily]
 
 /-- A finite set of swap choices indexed by scales `≥ 3`. -/
