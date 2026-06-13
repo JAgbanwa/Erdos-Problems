@@ -103,7 +103,7 @@ lemma scale_max_lt_nFamily {s t : ℕ} (hs : 3 ≤ s) (ht : 3 ≤ t) (hlt : s < 
     2 ^ s - 2 < nFamily t := by
   have hns := nFamily_add s (Nat.le_trans (by decide : 1 ≤ 3) hs)
   have hbase : 2 ^ s - 2 < nFamily (s + 1) := by
-    simp only [nFamily, hns]
+    simp only [nFamily]
     omega
   rcases Nat.eq_or_lt_of_le (Nat.succ_le_of_lt hlt) with rfl | htlt
   · exact hbase
