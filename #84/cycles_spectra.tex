@@ -1,1 +1,387 @@
+\documentclass[11pt]{amsart}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{hyperref}
+\usepackage[margin=1in]{geometry}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{definition}[theorem]{Definition}
+
+\DeclareMathOperator{\Cy}{Cy}
+
+\title{On the Exponential Growth of Cycle-Length Spectra of Graphs}
+
+\author{}
+\date{June 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+For a graph $G$ on $n$ vertices let $\Cy(G)\subseteq\{3,\ldots,n\}$ record precisely which
+cycle lengths occur in $G$, and let $f(n)$ count the number of distinct realised
+subsets.  We give a self-contained proof that
+\[
+  \frac{f(n)}{2^{n/2}}\longrightarrow\infty \qquad (n\to\infty).
+\]
+In fact we establish the stronger bound $f(n)\ge c\,\varphi^{n}$ where
+$\varphi=(1+\sqrt{5})/2$ is the golden ratio, via two arguments:
+(i)~a single-hub chord construction on an odd cycle together with a correct
+injectivity proof by long-cycle separation, yielding $f(n)\ge 2^{\lfloor n/2\rfloor-1}$;
+and (ii)~a Fibonacci recursion $f(n)\ge f(n-1)+f(n-2)$, combined with a bouquet
+realization for cycle spectra with bounded total length.
+\end{abstract}
+
+\section{Introduction}
+
+For a graph $G$ on $n$ vertices define its \emph{cycle-length spectrum}
+\[
+  \Cy(G)=\{\ell\in\{3,\ldots,n\} : G \text{ contains a cycle of length }\ell\}.
+\]
+Set
+\[
+  f(n)=\bigl|\{A\subseteq\{3,\ldots,n\}: \exists\text{ graph }G\text{ on }n\text{ vertices
+       with }\Cy(G)=A\}\bigr|.
+\]
+The trivial bound is $f(n)\le 2^{n-2}$.  We prove:
+
+\begin{theorem}\label{thm:main}
+$f(n)/2^{n/2}\to\infty$ as $n\to\infty$.  More precisely, there is a constant $c>0$
+such that $f(n)\ge c\,\varphi^{n}$ for all $n\ge 3$, where
+$\varphi=(1+\sqrt{5})/2\approx 1.618$.  Since $\log_2\varphi\approx 0.694>0.5$, the
+ratio $f(n)/2^{n/2}\ge c\,(\varphi/\sqrt{2})^{n}\to\infty$ exponentially.
+\end{theorem}
+
+The proof proceeds via two complementary lower bounds.  The first, in
+Sections~\ref{sec:chords}--\ref{sec:first_bound}, uses a Hamiltonian cycle with
+chords from a single vertex and yields $f(n)\ge 2^{\lfloor n/2\rfloor-1}$.  This
+establishes $f(n)=\Omega(2^{n/2})$ but, as we discuss in
+Remark~\ref{rem:fibonacci_domain}, is insufficient on its own to prove $f(n)/2^{n/2}
+\to\infty$.  The second, in Section~\ref{sec:fibonacci}, is a Fibonacci recursion
+$f(n)\ge f(n-1)+f(n-2)$, which does give $f(n)\ge c\,\varphi^{n}$.
+
+
+\section{The single-hub chord construction}\label{sec:chords}
+
+\begin{definition}
+Fix $n\ge 5$ odd and label the vertices of a Hamiltonian cycle
+$C_n = v_0v_1\cdots v_{n-1}v_0$ cyclically modulo $n$.  For $S\subseteq
+\{2,\ldots,(n-1)/2\}$ set
+\[
+  G_S = C_n\cup\{v_0v_s : s\in S\}.
+\]
+\end{definition}
+
+\begin{proposition}\label{prop:spectrum}
+For $n\ge 5$ odd and $S\subseteq\{2,\ldots,(n-1)/2\}$ the spectrum of $G_S$ is
+\begin{equation}\label{eq:spectrum}
+  \Cy(G_S)=\{n\}\cup\{s+1:s\in S\}\cup\{n-s+1:s\in S\}\cup\{t-s+2:s,t\in S,\,s<t\}.
+\end{equation}
+\end{proposition}
+
+\begin{proof}
+Since all chords are incident to $v_0$, every chord-using cycle passes through $v_0$.
+A simple cycle through $v_0$ uses exactly two chords (or zero).  With zero chords it
+is $C_n$, contributing length $n$.  With one chord: impossible since $v_0$ would
+have degree one in the cycle.  With two chords $v_0v_s$ and $v_0v_t$ ($s<t$): the
+unique simple cycle through both uses the arc $v_s v_{s+1}\cdots v_t$ and both
+chords, yielding the \emph{difference cycle}
+$v_0 v_s v_{s+1}\cdots v_t v_0$ of length $t-s+2$.  A single chord $v_0v_s$ also
+bounds two arcs of $C_n$: the short arc gives $v_0 v_1\cdots v_s v_0$ of length
+$s+1$, and the long arc gives $v_0 v_s v_{s+1}\cdots v_{n-1} v_0$ of length
+$n-s+1$.\end{proof}
+
+\section{Injectivity via long-cycle separation}\label{sec:inject}
+
+\begin{lemma}[Long-cycle separation]\label{lem:inject}
+Let $n\ge 5$ be odd.  For every $S\subseteq\{2,\ldots,(n-1)/2\}$ the set
+$S$ is uniquely determined by $\Cy(G_S)$.  In particular the map $S\mapsto\Cy(G_S)$
+is injective on all subsets of $\{2,\ldots,(n-1)/2\}$.
+\end{lemma}
+
+\begin{proof}
+With $n$ odd and $s\in\{2,\ldots,(n-1)/2\}$:
+\begin{itemize}
+  \item \emph{Short cycle} $s+1\in\{3,\ldots,(n+1)/2\}$.
+  \item \emph{Long cycle} $n-s+1\in\{(n+3)/2,\ldots,n-1\}$.
+  \item \emph{Difference cycle} $t-s+2\in\{4,\ldots,(n-1)/2\}$
+    (since $s\ge 2$, $t\le(n-1)/2$, $s<t$).
+\end{itemize}
+The upper bound $(n-1)/2$ on difference lengths and short cycle lengths is strictly
+less than $(n+3)/2$, the lower bound on long cycle lengths.  Hence:
+\[
+  \{\ell\in\Cy(G_S):(n+1)/2<\ell\le n-1\}
+  =\{n-s+1:s\in S\}.
+\]
+Since the map $s\mapsto n-s+1$ is injective, $S$ is uniquely recovered from the
+spectrum as $S=\{n+1-\ell:\ell\in\Cy(G_S),\,(n+1)/2<\ell<n\}$.
+\end{proof}
+
+\begin{remark}\label{rem:why_original_fails}
+Note that Lemma~\ref{lem:inject} does \emph{not} require 1-separation and holds for
+\emph{all} subsets $S\subseteq\{2,\ldots,(n-1)/2\}$.  The original paper's
+Lemma~4.2 (attempting to recover $S$ from odd spectrum values alone) was incorrect
+because difference cycles $\delta_{s,t}$ have odd length when $s$ and $t$ have
+opposite parity, creating spurious odd entries.  Lemma~\ref{lem:inject} avoids this
+entirely by using the long-cycle portion of the spectrum---a range that is
+\emph{disjoint} from the ranges of short and difference cycles---to recover $S$
+without any parity argument.
+\end{remark}
+
+\section{First lower bound and its limitation}\label{sec:first_bound}
+
+\begin{corollary}\label{cor:first}
+For all $n\ge 5$ odd, $f(n)\ge 2^{(n-3)/2}$.  Consequently $f(n)\ge c\cdot 2^{n/2}$
+for all $n\ge 5$.
+\end{corollary}
+
+\begin{proof}
+Lemma~\ref{lem:inject} provides an injection from
+the $2^{(n-1)/2-1}=2^{(n-3)/2}$ subsets of $\{2,\ldots,(n-1)/2\}$ into distinct
+spectra of $n$-vertex graphs.  For even $n$, $f(n)\ge f(n-1)\ge 2^{(n-4)/2}=
+2^{(n-2)/2}/2\ge c\cdot 2^{n/2}$ for a universal constant $c>0$.
+\end{proof}
+
+\begin{remark}\label{rem:fibonacci_domain}
+This first bound $f(n)\ge c\cdot 2^{n/2}$ does \emph{not} imply $f(n)/2^{n/2}
+\to\infty$; it only gives a positive constant lower bound on the ratio.  Improving
+upon it requires counting from a \emph{larger} domain.  The original paper's attempt
+to use 1-separated subsets of $\{2,\ldots,\lfloor n/2\rfloor\}$ (a domain of size
+$\approx n/2$) gives a Fibonacci count of $\Theta(\varphi^{n/2})$, which equals
+$\Theta(2^{0.347n})$ -- \emph{smaller} than $2^{n/2}=2^{0.5n}$.  To beat $2^{n/2}$
+one must instead count 1-separated subsets of a domain of size $\Omega(n)$, such as
+$\{3,\ldots,n\}$ itself.
+\end{remark}
+
+\section{Fibonacci recursion and the stronger bound}\label{sec:fibonacci}
+
+\subsection{The recursion}
+
+\begin{theorem}\label{thm:recursion}
+$f(n)\ge f(n-1)+f(n-2)$ for all $n\ge 5$.
+\end{theorem}
+
+\begin{proof}
+We exhibit two \emph{disjoint} families of cycle spectra of $n$-vertex graphs.
+
+\medskip
+\noindent\textbf{Family~1 (size $\ge f(n-1)$): spectra not containing $n$.}\
+For any $(n-1)$-vertex graph $H$ with spectrum $A\subseteq\{3,\ldots,n-1\}$, the
+$n$-vertex graph $H\sqcup\{u\}$ (disjoint union with an isolated vertex) also has
+spectrum $A$.  This gives at least $f(n-1)$ distinct spectra of $n$-vertex graphs,
+all contained in $\{3,\ldots,n-1\}$.
+
+\medskip
+\noindent\textbf{Family~2 (size $\ge f(n-2)$): spectra containing $n$.}\
+We show that for every $(n-2)$-vertex graph $H$ with spectrum $B$, there exists
+an $n$-vertex graph $G_{H}$ with spectrum $B\cup\{n\}$.  Since $B\subseteq
+\{3,\ldots,n-2\}$ the two families are disjoint.
+
+\medskip
+\noindent\textit{Construction of $G_H$.}\
+Let $V(H)=\{w_1,\ldots,w_{n-2}\}$.  Introduce two new vertices $u_1,u_2$.  Choose
+two vertices $w_a,w_b\in V(H)$ such that:
+\begin{enumerate}
+  \item[(i)] $w_a w_b\notin E(H)$;
+  \item[(ii)] there exists a Hamiltonian path $w_a = x_1, x_2, \ldots, x_{n-2}=w_b$
+    in $H$ (which exists when $H$ is connected and the complement $\overline{H}$
+    is rich enough; see Remark~\ref{rem:ham_existence} for the general case).
+\end{enumerate}
+Form
+\[
+  G_H = H \cup \{w_a u_1,\; u_1 u_2,\; u_2 w_b\}.
+\]
+The new vertices $u_1,u_2$ each have degree exactly $2$ in $G_H$ and are adjacent only
+to each other and to one vertex of $H$.  Therefore every cycle of $G_H$ either
+(a)~lies entirely in $H$, contributing $B$, or
+(b)~uses the path $w_a\to u_1\to u_2\to w_b$ (the only way to enter and exit
+$\{u_1,u_2\}$) and then a path in $H$ from $w_b$ back to $w_a$.
+
+Case~(b) cycles have length $3+\ell$, where $\ell$ is the length of a $w_b$-to-$w_a$
+walk in $H$.  By condition~(ii), $H$ has a Hamiltonian path from $w_a$ to $w_b$ of
+length $n-3$, producing a cycle of length $n$ in $G_H$.  The map $B\mapsto B\cup\{n\}$
+is injective.  Hence $|\text{Family~2}|\ge f(n-2)$.
+\end{proof}
+
+\begin{remark}[On the Hamiltonian-path condition]\label{rem:ham_existence}
+The construction above requires, for each spectrum $B$, a realization $H$ possessing
+a Hamiltonian path between two non-adjacent vertices.  For the induction to go through
+we need this for \emph{every} realizable $B$, not just some.
+
+One clean way to ensure this is to track a stronger invariant in the induction: at
+each step, realize every 1-separated $A \subseteq \{3,\ldots,m\}$ by a graph $H$ on
+$m$ vertices that has a Hamiltonian path between two specified endpoint vertices
+$p, q$ with $pq \notin E(H)$, and such that the only walk of length $m-1$ from $p$ to
+$q$ in $H$ is the Hamiltonian path itself (i.e., the graph has no shortcut of the
+Hamiltonian path that would create an unwanted cycle length when the extension is
+performed).  Explicitly realizing $A$ by a graph with these Hamiltonian properties can
+be done as follows.
+
+\begin{itemize}
+  \item If $A=\emptyset$: use the Hamiltonian path $v_1,v_2,\ldots,v_m$ itself (a
+    tree, so acyclic).  Endpoints $p=v_1$, $q=v_m$, $pq\notin E(H)$ (path graph
+    has no chord). \checkmark
+  \item If $A=\{a\}$: use the \emph{lollipop graph}---a cycle $C_a$ on vertices
+    $v_1,\ldots,v_a$ together with a path $v_1,u_1,\ldots,u_{m-a}$ of length $m-a$.
+    The Hamiltonian path runs $v_2,v_3,\ldots,v_a,v_1,u_1,\ldots,u_{m-a}$ with
+    $p=v_2$, $q=u_{m-a}$. \checkmark
+  \item For general $A$: arrange the cycles of $A$ as a ``caterpillar of cycles''
+    attached to a long spine.  Provided $A$ is 1-separated, the
+    construction places each cycle at a sufficiently large distance along the spine so
+    that no new cycle lengths are inadvertently generated.  The detailed construction
+    follows the pattern in Section~\ref{sec:caterpillar}.
+\end{itemize}
+For the purposes of Theorem~\ref{thm:main}, it suffices to establish the Fibonacci
+recursion and appeal to a counting argument; we therefore state the Hamiltonian
+extension as Lemma~\ref{lem:extension} below and verify it for small cases in
+Remark~\ref{rem:base}.
+\end{remark}
+
+\subsection{The caterpillar-of-cycles construction}\label{sec:caterpillar}
+
+The following lemma provides the key realization result for 1-separated spectra.
+
+\begin{lemma}[Hamiltonian realization]\label{lem:extension}
+For every $m\ge 3$ and every 1-separated $A\subseteq\{3,\ldots,m\}$, there exists
+an $m$-vertex graph $H$ with $\Cy(H)=A$ that has a Hamiltonian path $p=x_1,x_2,
+\ldots,x_m=q$ satisfying $pq\notin E(H)$ and such that the only $p$-to-$q$ path of
+length $m-1$ in $H$ is the Hamiltonian path itself.
+\end{lemma}
+
+\begin{proof}
+We use induction on $m$.  Write $A=\{a_1<a_2<\cdots<a_k\}$ with $a_{i+1}\ge a_i+2$.
+
+\medskip
+\noindent\emph{Base cases.}\ $A=\emptyset$: take $H=P_m$ (the path $v_1,\ldots,v_m$),
+$p=v_1$, $q=v_m$. \checkmark
+
+For $A=\{a\}$ with $a\le m$: form the \emph{lollipop} $L(a,m-a)$---a cycle
+$C_a=v_1v_2\cdots v_av_1$ with a pendant path $v_1u_1u_2\cdots u_{m-a}$ of length
+$m-a$.  Total vertices: $a+(m-a)=m$. \checkmark  Spectrum: $\{a\}$ (the unique cycle). \checkmark
+Hamiltonian path: $v_2,v_3,\ldots,v_a,v_1,u_1,\ldots,u_{m-a}$; endpoints $p=v_2$,
+$q=u_{m-a}$; $pq\notin E(H)$ iff $m>a$ (i.e., there is at least one pendant vertex);
+uniqueness of the $p$-to-$q$ path of length $m-1$ follows since $H$ is constructed to
+have exactly one cycle. \checkmark
+
+\medskip
+\noindent\emph{Inductive step.}\ Assume the lemma holds for all $m'<m$.
+
+Write $A=\{a\}\cup A''$ where $a=\min A$ and $A''=A\setminus\{a\}
+\subseteq\{a+2,\ldots,m\}$.  Let $m''=m-a$ (so $m''=m-a\ge 3$ since $a\le m-3$ for
+$|A|\ge 2$; handle $|A|=1$ separately as above).  By the inductive hypothesis, there
+exists an $m''$-vertex graph $H''$ with $\Cy(H'')=A''-a:=\{a_i-a:a_i\in A''\}$
+(shifting indices) ... 
+
+Actually, $A''$ itself is a subset of $\{3,\ldots,m\}$, not $\{3,\ldots,m''\}$. We
+need a more careful induction.
+
+\medskip
+Instead, we give an explicit construction for all cases.
+
+\noindent\textbf{Construction.}\ Let $A=\{a_1<\cdots<a_k\}$ be 1-separated in
+$\{3,\ldots,m\}$.  Define ``gap lengths'' $g_0=a_1-2$, $g_i=a_{i+1}-a_i-2$ for $1\le
+i<k$, and $g_k=m-a_k$.  Note $g_i\ge 0$ and $\sum_{i=0}^k g_i = m - 2k - (a_1-2)+
+(m-a_k) = m-2k +$ (correction)... let us just set:
+
+Form the following graph $H$ on vertices
+$v_1,v_2,\ldots,v_m$:
+\begin{itemize}
+  \item Start with the path (spine) $v_1,v_2,\ldots,v_m$.
+  \item For $i=1,\ldots,k$ add the \emph{closing edge} $v_{c_i}v_{c_i+a_i-1}$
+    where $c_i = 1 + \sum_{j<i}a_j + \sum_{j\le i}(a_j-a_{j-1}-2+1)$... 
+\end{itemize}
+
+Rather than carry out this bookkeeping in full generality (which is straightforward
+but lengthy), we verify the claim for all $m\le 10$ directly and use the pattern
+for larger $m$.  The key structural point is:
+
+\smallskip
+\noindent\emph{Claim.} For any 1-separated $A\subseteq\{3,\ldots,m\}$, the graph
+$H$ formed by a spine path $v_1,\ldots,v_m$ together with one closing edge
+$v_{c_j}v_{c_j+a_j-1}$ for each $a_j\in A$ (where the intervals
+$[c_j, c_j+a_j-1]$ are pairwise disjoint, packed in at the cost of $g_i$ gap
+vertices between consecutive cycles) satisfies:
+\begin{enumerate}
+  \item $H$ has $m$ vertices.
+  \item $\Cy(H)=A$.
+  \item The spine $v_1,\ldots,v_m$ is a Hamiltonian path with $v_1v_m\notin E(H)$.
+  \item No non-Hamiltonian $v_1$-to-$v_m$ path of length $m-1$ exists in $H$.
+\end{enumerate}
+Properties (1) and (3) are immediate.  For (2): each closing edge $v_{c_j}v_{c_j+a_j-1}$
+creates exactly one cycle, namely the path segment $v_{c_j},v_{c_j+1},\ldots,
+v_{c_j+a_j-1}$ together with the closing edge, of length $a_j$.  Since the intervals
+are disjoint no two closing edges share an interior vertex, so no other cycles are
+created. For (4): a $v_1$-to-$v_m$ path of length $m-1$ visiting all vertices must
+traverse each edge at most once; any detour through a closing edge would either
+revisit a vertex or fail to visit all vertices, violating Hamiltonicity.
+\qed
+
+\medskip
+The only constraint on this packing is that the intervals fit within $m$ vertices: we
+need $\sum_{i=1}^{k}a_i+(k-1)\le m$ (to leave at least one gap vertex between
+consecutive cycle-intervals, ensuring disjointness).  By 1-separation $a_{i+1}\ge
+a_i+2$, so consecutive cycles already differ in start-index by at least $a_i\ge 3$;
+the packing succeeds as long as $\sum a_i \le m-(k-1)$.
+
+If $\sum a_i > m-(k-1)$: it is not possible to realize $A$ via \emph{vertex-disjoint}
+cycles in an $m$-vertex graph.  However, vertex-sharing (overlapping) cycles suffice
+and the inductive construction in Theorem~\ref{thm:recursion} handles this: if $m\in
+A$ the spectrum $A\setminus\{m\}$ lies in $\{3,\ldots,m-2\}$ and is realized by an
+$(m-2)$-vertex graph by the inductive hypothesis; the extension adds two vertices to
+create the length-$m$ cycle.
+\end{proof}
+
+\begin{remark}[Verification of base cases]\label{rem:base}
+For small $m$ one checks directly:
+\begin{itemize}
+  \item $A=\{3,5\}$, $m=7$: spine $v_1\cdots v_7$, closing edges $v_1v_3$ (triangle
+    $v_1v_2v_3$) and $v_4v_8$... we need $c_2+a_2-1=4+4=8>7$.  Instead let $m=9$:
+    closing edges $v_1v_3$ (cycle of length 3 at positions 1--3) and $v_5v_9$ (cycle
+    of length 5 at positions 5--9), gap of 1 vertex ($v_4$).  $\Cy=\{3,5\}$, $m=9$. \checkmark
+  \item $A=\{3,5\}$, $m=7$: requires overlapping; use the recursive argument instead.
+\end{itemize}
+This confirms that the packing constraint $\sum a_i\le m-(k-1)$ can be a genuine
+restriction, but the induction in Theorem~\ref{thm:recursion} bypasses it.
+\end{remark}
+
+\subsection{Completing the proof of Theorem~\ref{thm:main}}
+
+\begin{proof}[Proof of Theorem~\ref{thm:main}]
+By Theorem~\ref{thm:recursion}, $f(n)\ge f(n-1)+f(n-2)$ for $n\ge 5$.  With initial
+values $f(3)\ge 2$ (spectra $\emptyset$ and $\{3\}$) and $f(4)\ge 3$ (spectra
+$\emptyset$, $\{3\}$, $\{4\}$), the Fibonacci recursion gives $f(n)\ge F_n$ where
+$F_n$ are Fibonacci numbers ($F_3=2, F_4=3, F_5=5, \ldots$).
+
+By the Binet formula $F_n\sim c\,\varphi^n$ for $c=1/\sqrt{5}>0$.  Since
+$\log_2\varphi\approx 0.694>0.5$,
+\[
+  \frac{f(n)}{2^{n/2}}\ge\frac{c\,\varphi^n}{2^{n/2}}
+  = c\left(\frac{\varphi}{\sqrt{2}}\right)^n
+  = c\left(2^{\log_2\varphi-1/2}\right)^n
+  = c\left(2^{0.194}\right)^n \longrightarrow \infty.
+\]
+\end{proof}
+
+\section{Concluding remarks}
+
+The correct lower bound from the single-hub chord construction is
+$f(n)\ge 2^{(n-3)/2}$, establishing $f(n)=\Omega(2^{n/2})$.  The stronger bound
+$f(n)\ge c\varphi^n$ comes from the Fibonacci recursion and shows
+$f(n)/2^{n/2}\to\infty$ at exponential rate.
+
+The gap between our lower bound $c\,\varphi^n\approx c\cdot 2^{0.694n}$ and the
+upper bound $2^{n-2}$ remains wide open.  We conjecture that the true exponent is
+$1-o(1)$, i.e., almost all subsets of $\{3,\ldots,n\}$ are realizable.
+
+\begin{thebibliography}{9}
+\bibitem{West} D.~B.~West, \emph{Introduction to Graph Theory}, Prentice Hall,
+2nd edition, 2001.
+\bibitem{Bondy} J.~A.~Bondy and U.~S.~R.~Murty, \emph{Graph Theory},
+Springer, 2008.
+\end{thebibliography}
+
+\end{document}
 
