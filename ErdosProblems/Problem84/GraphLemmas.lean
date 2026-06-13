@@ -3,6 +3,8 @@ import ErdosProblems.Problem84.Basic
 import Mathlib.Combinatorics.SimpleGraph.Acyclic
 import Mathlib.Combinatorics.SimpleGraph.Circulant
 import Mathlib.Combinatorics.SimpleGraph.Paths
+import Mathlib.Combinatorics.SimpleGraph.Walk.Decomp
+import Mathlib.Combinatorics.SimpleGraph.Walk.Traversal
 import Mathlib.Combinatorics.SimpleGraph.Finite
 import Mathlib.Data.Fin.SuccPred
 import Mathlib.Combinatorics.SimpleGraph.Hasse
@@ -25,22 +27,21 @@ lemma newVertex_not_old (m : ℕ) : ¬ (newVertex m).val < m := by
 
 lemma isOldVertex_iff_ne_new {m : ℕ} (v : Fin (m + 1)) :
     v.val < m ↔ v ≠ newVertex m := by
-  rcases v with ⟨k, hk⟩
+  obtain ⟨k, hk⟩ := v
   simp only [newVertex, Fin.ext_iff]
   constructor
   · intro hlt heq
-    have : k = m := heq
+    have hm : k = m := congrArg Fin.val heq
     omega
-  · intro hne hlt
-    by_contra hge
-    exact hne (Fin.ext (Nat.eq_of_le_of_lt_succ hge hlt))
+  · intro hne
+    omega
 
 /-- Embed `Fin m` into the initial segment of `Fin (m + 1)`. -/
 def embedOld (m : ℕ) (v : Fin m) : Fin (m + 1) :=
   Fin.castAdd 1 v
 
 lemma embedOld_injective (m : ℕ) : Function.Injective (embedOld m) :=
-  Fin.castAdd_injective 1
+  Fin.castAdd_injective m 1
 
 lemma embedOld_val (m : ℕ) (v : Fin m) : (embedOld m v).val = v.val := rfl
 
@@ -55,12 +56,16 @@ def addIsolatedVertex {m : ℕ} (G : SimpleGraph (Fin m)) : SimpleGraph (Fin (m 
     else False
   symm := by
     intro i j h
-    simp only [Adj] at h ⊢
-    by_cases hi : i.val < m <;> by_cases hj : j.val < m <;> simp_all [G.symm]
+    by_cases hi : i.val < m
+    · by_cases hj : j.val < m
+      · exact G.adj_symm h
+      · exact h
+    · exact h
   loopless := by
     intro i h
-    simp only [Adj] at h
-    by_cases hi : i.val < m <;> simp_all [G.loopless]
+    by_cases hi : i.val < m
+    · exact G.loopless (Fin.castLT i hi) h
+    · exact h
 
 lemma addIsolatedVertex_embedOld_adj {m : ℕ} (G : SimpleGraph (Fin m)) (i j : Fin m) :
     (addIsolatedVertex G).Adj (embedOld m i) (embedOld m j) ↔ G.Adj i j := by
@@ -76,8 +81,8 @@ def addMaxCycle {m : ℕ} (G : SimpleGraph (Fin m)) (hm : 3 ≤ m) : SimpleGraph
   Adj i j :=
     let ai := i.val
     let aj := j.val
-    if hi : ai < m then
-      if hj : aj < m then G.Adj (Fin.castLT i hi) (Fin.castLT j hj) else False
+    if ai < m ∧ aj < m then
+      G.Adj ⟨i, by omega⟩ ⟨j, by omega⟩
     else if ai = m ∧ aj = m + 1 then True
     else if aj = m ∧ ai = m + 1 then True
     else if ai = m ∧ aj = 0 then True
@@ -88,7 +93,11 @@ def addMaxCycle {m : ℕ} (G : SimpleGraph (Fin m)) (hm : 3 ≤ m) : SimpleGraph
   symm := by
     intro i j; unfold Adj; grind
   loopless := by
-    intro i h; unfold Adj at h; split_ifs at h <;> try exact h
+    intro i h
+    unfold Adj at h
+    split_ifs at h
+    · exact G.loopless _ h
+    all_goals exact h
 
 /-- The first new vertex in `Fin (m + 2)`. -/
 def maxVertex (m : ℕ) : Fin (m + 2) :=
@@ -96,17 +105,17 @@ def maxVertex (m : ℕ) : Fin (m + 2) :=
 
 /-- The second new vertex in `Fin (m + 2)`. -/
 def maxVertexSucc (m : ℕ) : Fin (m + 2) :=
-  ⟨m + 1, Nat.lt_succ_self _⟩
+  ⟨m + 1, by omega⟩
 
 lemma addIsolatedVertex_newVertex_adj' {m : ℕ} (G : SimpleGraph (Fin m)) (v : Fin (m + 1)) :
     ¬ (addIsolatedVertex G).Adj (newVertex m) v := by
   intro h
-  simp [addIsolatedVertex, newVertex, newVertex_not_old] at h
+  by_cases hv : v.val < m <;> simp [addIsolatedVertex, newVertex, newVertex_not_old] at h <;> tauto
 
 lemma addIsolatedVertex_newVertex_adj {m : ℕ} (G : SimpleGraph (Fin m)) (v : Fin (m + 1)) :
     ¬ (addIsolatedVertex G).Adj v (newVertex m) := by
   intro h
-  simp [addIsolatedVertex, newVertex, newVertex_not_old] at h
+  by_cases hv : v.val < m <;> simp [addIsolatedVertex, newVertex, newVertex_not_old] at h <;> tauto
 
 lemma addIsolatedVertex_degree_newVertex {m : ℕ} (G : SimpleGraph (Fin m)) :
     (addIsolatedVertex G).degree (newVertex m) = 0 := by
@@ -119,21 +128,30 @@ lemma IsPath.count_support_eq_one {V : Type*} [DecidableEq V] {G : SimpleGraph V
     p.support.count w = 1 :=
   List.count_eq_one_of_mem hp.support_nodup hw
 
-lemma Walk.start_mem_support {V : Type*} {G : SimpleGraph V} {u v : V} (p : G.Walk u v) :
-    u ∈ p.support := by
-  cases p <;> simp [Walk.mem_support_cons]
+lemma addIsolatedVertex_notMem_cycle_support {m : ℕ} (G : SimpleGraph (Fin m)) {u : Fin (m + 1)}
+    (p : (addIsolatedVertex G).Walk u u) (hp : p.IsCycle) :
+    newVertex m ∉ p.support := by
+  intro hmem
+  have hdeg := addIsolatedVertex_degree_newVertex G
+  have hcount := IsPath.count_support_eq_one p hp.isPath_tail hmem
+  rw [hdeg] at hcount
+  cases p with
+  | nil => exact hp.not_nil rfl
+  | cons _ _ => simp at hcount
 
 lemma addIsolatedVertex_notMem_support {m : ℕ} (G : SimpleGraph (Fin m)) {u v : Fin (m + 1)}
-    (p : (addIsolatedVertex G).Walk u v) (hp : p.IsPath) :
+    (hu : u.val < m) (p : (addIsolatedVertex G).Walk u v) (hp : p.IsPath) :
     newVertex m ∉ p.support := by
   intro hmem
   induction p with
-  | nil => simp [Walk.nil_support] at hmem
+  | nil =>
+    rw [mem_support_nil_iff] at hmem
+    exact absurd hmem (ne_of_lt hu)
   | cons h q ih =>
-    simp only [Walk.mem_support_cons] at hmem
+    rw [mem_support_iff] at hmem
     rcases hmem with rfl | hmem
     · exact addIsolatedVertex_newVertex_adj' G _ h
-    · exact ih q.isPath_of_cons hmem
+    · exact ih (IsPath.of_cons hp) hmem
 
 lemma mapWalk_embedOld {m : ℕ} (G : SimpleGraph (Fin m)) {u v : Fin m} (p : G.Walk u v) :
     (p.map (embedOldHom G)).length = p.length := by
@@ -162,11 +180,10 @@ lemma walk_oldVertex_eq_map {m : ℕ} (G : SimpleGraph (Fin m)) {u v : Fin (m + 
   | cons h q ih =>
     have holdq : ∀ w ∈ q.support, w.val < m := by
       intro w hw
-      exact hold w (Walk.mem_support_cons_of_mem h hw)
+      rw [support_cons, List.mem_cons] at hw
+      exact hold w (by rw [mem_support_iff]; exact Or.inr hw)
     have hend : (q.getVert q.length).val < m :=
-      hold (q.getVert q.length) (by
-        rw [Walk.mem_support_iff_getVert]
-        exact ⟨q.length, by simp [Walk.getVert_length]⟩)
+      hold q.end q.end_mem_support
     obtain ⟨u'', v'', q', rfl, rfl, hq⟩ := ih hend holdq
     have h' : G.Adj u'' v'' := by
       rw [← addIsolatedVertex_embedOld_adj G u'' v'']
@@ -181,16 +198,21 @@ lemma cycleSpectrum_bot (n : ℕ) : cycleSpectrum (⊥ : SimpleGraph (Fin n)) = 
   exact hp.ne_bot rfl
 
 lemma pathGraph_IsAcyclic (n : ℕ) : (pathGraph n).IsAcyclic := by
+  intro u c hc
+  have h3 : 3 ≤ c.length := hc.three_le_length
+  have hle : c.length ≤ n := by simpa [Fintype.card_fin] using IsCycle.length_le_card hc
   match n with
-  | 0 | 1 => intro u c; exact Fin.elim0 u
-  | n + 2 => intro u c hc; grind
+  | 0 => exact Fin.elim0 u
+  | 1 | 2 => omega
+  | 3 => fin_cases u; all_goals grind [pathGraph_adj, hc]
+  | n + 4 => exact pathGraph_IsAcyclic (n + 3) u c hc
 
 lemma cycleSpectrum_pathGraph (n : ℕ) :
     cycleSpectrum (pathGraph n) = ∅ := by
   ext ℓ
   simp [cycleSpectrum, Set.mem_setOf_eq]
   intro u p hp
-  exact (pathGraph_IsAcyclic n u p hp).elim
+  exact pathGraph_IsAcyclic n u p hp
 
 lemma cycleSpectrum_addIsolatedVertex {m : ℕ} (G : SimpleGraph (Fin m)) :
     cycleSpectrum (addIsolatedVertex G) = cycleSpectrum G := by
@@ -199,14 +221,17 @@ lemma cycleSpectrum_addIsolatedVertex {m : ℕ} (G : SimpleGraph (Fin m)) :
   constructor
   · rintro ⟨u, p, hp, rfl⟩
     have htail := hp.isPath_tail
+    have hu : u.val < m := by
+      by_contra hge
+      have heq : u = newVertex m := Fin.ext (by simp [newVertex, Nat.not_lt.mp hge])
+      subst heq
+      exact addIsolatedVertex_notMem_cycle_support G p hp Walk.start_mem_support
     have hold : ∀ w ∈ p.support, w.val < m := by
       intro w hw
-      by_contra hw'
-      push_neg at hw'
-      have hw'eq : w = newVertex m := Fin.ext (by simp [newVertex, hw'])
-      rw [hw'eq] at hw
-      exact addIsolatedVertex_notMem_support G p htail hw
-    have hu : u.val < m := hold u (Walk.start_mem_support p)
+      by_contra hge
+      have heq : w = newVertex m := Fin.ext (by simp [newVertex, Nat.not_lt.mp hge])
+      rw [heq] at hw
+      exact addIsolatedVertex_notMem_support G hu p htail hw
     obtain ⟨u', v', p', rfl, rfl, rfl⟩ := walk_oldVertex_eq_map G hu hu p hold
     exact ⟨u', p', hp, rfl⟩
   · rintro ⟨u, p, hp, rfl⟩
@@ -220,7 +245,7 @@ def embedMaxOld (m : ℕ) (v : Fin m) : Fin (m + 2) :=
 lemma embedMaxOld_val (m : ℕ) (v : Fin m) : (embedMaxOld m v).val = v.val := rfl
 
 lemma embedMaxOld_injective (m : ℕ) : Function.Injective (embedMaxOld m) :=
-  fun _ _ h => Fin.ext h
+  Fin.castAdd_injective m 2
 
 lemma addMaxCycle_embedOld_adj {m : ℕ} (G : SimpleGraph (Fin m)) (hm : 3 ≤ m) (i j : Fin m) :
     (addMaxCycle G hm).Adj (embedMaxOld m i) (embedMaxOld m j) ↔ G.Adj i j := by
@@ -259,11 +284,10 @@ lemma walk_oldMax_eq_map {m : ℕ} (G : SimpleGraph (Fin m)) (hm : 3 ≤ m)
   | cons h q ih =>
     have holdq : ∀ w ∈ q.support, w.val < m := by
       intro w hw
-      exact hold w (Walk.mem_support_cons_of_mem h hw)
+      rw [support_cons, List.mem_cons] at hw
+      exact hold w (by rw [mem_support_iff]; exact Or.inr hw)
     have hend : (q.getVert q.length).val < m :=
-      hold (q.getVert q.length) (by
-        rw [Walk.mem_support_iff_getVert]
-        exact ⟨q.length, by simp [Walk.getVert_length]⟩)
+      hold q.end q.end_mem_support
     obtain ⟨u'', v'', q', rfl, rfl, hq⟩ := ih hend holdq
     have h' : G.Adj u'' v'' := by
       rw [← addMaxCycle_embedOld_adj G hm u'' v'']
@@ -274,6 +298,7 @@ lemma walk_oldMax_eq_map {m : ℕ} (G : SimpleGraph (Fin m)) (hm : 3 ≤ m)
 lemma addMaxCycle_neighborFinset_maxVertex {m : ℕ} (G : SimpleGraph (Fin m)) (hm : 3 ≤ m) :
     (addMaxCycle G hm).neighborFinset (maxVertex m) =
       {(0 : Fin (m + 2)), maxVertexSucc m} := by
+  haveI : NeZero (m + 2) := ⟨by omega⟩
   ext v
   simp [SimpleGraph.neighborFinset, SimpleGraph.mem_neighborSet, addMaxCycle, maxVertex,
     maxVertexSucc, Fin.ext_iff]
@@ -286,7 +311,7 @@ lemma addMaxCycle_degree_maxVertex {m : ℕ} (G : SimpleGraph (Fin m)) (hm : 3 �
 
 lemma addMaxCycle_neighborFinset_maxVertexSucc {m : ℕ} (G : SimpleGraph (Fin m)) (hm : 3 ≤ m) :
     (addMaxCycle G hm).neighborFinset (maxVertexSucc m) =
-      {maxVertex m, (Fin.last (m - 1)).castAdd 2} := by
+      {maxVertex m, embedMaxOld m (Fin.last (m - 1))} := by
   ext v
   simp [SimpleGraph.neighborFinset, SimpleGraph.mem_neighborSet, addMaxCycle, maxVertex,
     maxVertexSucc, Fin.ext_iff]
@@ -342,8 +367,8 @@ lemma addMaxCycle_support_old_of_cycle_ne {m : ℕ} (G : SimpleGraph (Fin m)) (h
   simp only [maxVertex, maxVertexSucc, Fin.ext_iff] at hw' ⊢
   have hk' : k = m ∨ k = m + 1 := by omega
   rcases hk' with rfl | rfl
-  · exact (addMaxCycle_notMem_maxVertex_support G hm p hp.isPath_tail hlen hw).elim
-  · exact (addMaxCycle_notMem_maxVertexSucc_support G hm p hp.isPath_tail hlen hw).elim
+  · exact addMaxCycle_notMem_maxVertex_support G hm p hp.isPath_tail hlen hw
+  · exact addMaxCycle_notMem_maxVertexSucc_support G hm p hp.isPath_tail hlen hw
 
 lemma pathGraph_castAdd_adj {n k : ℕ} {i j : Fin n} :
     (pathGraph (n + k)).Adj (Fin.castAdd k i) (Fin.castAdd k j) ↔ (pathGraph n).Adj i j := by
@@ -386,14 +411,13 @@ lemma pathGraph_hamiltonianPath (m : ℕ) (hm : 3 ≤ m) :
     ∃ p : (pathGraph m).Walk (0 : Fin m) (Fin.last (m - 1)),
       p.IsPath ∧ p.length = m - 1 := by
   haveI : NeZero m := ⟨by omega⟩
-  refine ⟨(pathGraph_fwdWalk (m - 1)).cast (by omega), ?_, ?_⟩
-  · simpa [Walk.isPath_cast] using pathGraph_fwdWalk_isPath (m - 1)
-  · simpa [Walk.length_cast] using pathGraph_fwdWalk_length (m - 1)
+  exact ⟨pathGraph_fwdWalk (m - 1), pathGraph_fwdWalk_isPath (m - 1), pathGraph_fwdWalk_length (m - 1)⟩
 
 lemma addMaxCycle_adj_max_zero {m : ℕ} (G : SimpleGraph (Fin m)) (hm : 3 ≤ m) :
     (addMaxCycle G hm).Adj (maxVertex m) (0 : Fin (m + 2)) := by
   haveI : NeZero (m + 2) := ⟨by omega⟩
-  simp [addMaxCycle, maxVertex]
+  unfold addMaxCycle maxVertex
+  split_ifs <;> try omega
 
 lemma addMaxCycle_adj_max_succ {m : ℕ} (G : SimpleGraph (Fin m)) (hm : 3 ≤ m) :
     (addMaxCycle G hm).Adj (maxVertex m) (maxVertexSucc m) := by
@@ -415,13 +439,13 @@ lemma addMaxCycle_maxWalk {m : ℕ} (G : SimpleGraph (Fin m)) (hm : 3 ≤ m)
   have hadj1 := addMaxCycle_adj_max_zero G hm
   have hadj2 := addMaxCycle_adj_max_succ G hm
   have hadj3 := addMaxCycle_adj_succ_last G hm
-  refine ⟨Walk.cons hadj1 <|
-    Walk.cons hadj2 <|
-    Walk.cons hadj3 p1.reverse, ?_, ?_⟩
-  · simp [Walk.isCycle_def, Walk.isPath_def, Walk.length_cons, Walk.length_reverse,
-      hlen, Walk.length_map]
+  let G' := addMaxCycle G hm
+  let tail := Walk.cons (G'.adj_symm hadj3) (Walk.cons (G'.adj_symm hadj2) (Walk.cons (G'.adj_symm hadj1) Walk.nil))
+  refine ⟨p1.append tail, ?_, ?_⟩
+  · simp [Walk.isCycle_def, Walk.isPath_def, Walk.length_append, Walk.length_cons, Walk.length_nil,
+      hlen, Walk.length_map, hp0.support_nodup]
     grind
-  · simp [Walk.length_cons, Walk.length_reverse, hlen, Walk.length_map]
+  · simp [Walk.length_append, Walk.length_cons, Walk.length_nil, hlen, Walk.length_map]
 
 lemma cycleSpectrum_addMaxCycle_pathGraph (m : ℕ) (hm : 3 ≤ m) :
     cycleSpectrum (addMaxCycle (pathGraph m) hm) = {m + 2} := by
@@ -431,23 +455,22 @@ lemma cycleSpectrum_addMaxCycle_pathGraph (m : ℕ) (hm : 3 ≤ m) :
   ext ℓ
   simp only [cycleSpectrum, Set.mem_setOf_eq, Set.mem_singleton_iff]
   constructor
-  · rintro ⟨u, p, hp, rfl⟩
-    by_cases hnew : ∃ w ∈ p.support, m ≤ w.val
-    · have hlen' : p.length = m + 2 := by
-        by_contra hne
-        push_neg at hnew
-        have hold := addMaxCycle_support_old_of_cycle_ne (pathGraph m) hm p hp hne
-        have hu : u.val < m := hold u (Walk.start_mem_support p)
-        obtain ⟨u', v', p', rfl, rfl, rfl⟩ :=
-          walk_oldMax_eq_map (pathGraph m) hm hu hu p hold
-        exact (pathGraph_IsAcyclic m u' p' hp).elim
-      exact hlen'
-    · push_neg at hnew
-      have hold : ∀ w ∈ p.support, w.val < m := fun w hw => hnew w hw
-      have hu : u.val < m := hold u (Walk.start_mem_support p)
-      obtain ⟨u', v', p', rfl, rfl, rfl⟩ :=
-        walk_oldMax_eq_map (pathGraph m) hm hu hu p hold
-      exact (pathGraph_IsAcyclic m u' p' hp).elim
+  · rintro ⟨u, p, hp, hlen⟩
+    by_cases hlen' : p.length = m + 2
+    · exact hlen'.symm.trans hlen
+    · exfalso
+      by_cases hnew : ∃ w ∈ p.support, m ≤ w.val
+      · rcases hnew with ⟨w, hw, _⟩
+        have := addMaxCycle_support_old_of_cycle_ne (pathGraph m) hm p hp hlen'
+        exact Nat.lt_irrefl m (this w hw)
+      · push_neg at hnew
+        have hold : ∀ w ∈ p.support, w.val < m := fun w hw => Nat.lt_of_not_ge (hnew w hw)
+        have hu : u.val < m := hold u Walk.start_mem_support
+        obtain ⟨u', v', p', heq, hv', hmap⟩ := walk_oldMax_eq_map (pathGraph m) hm hu hu p hold
+        have hueq : u' = v' := by apply embedMaxOld_injective m; rw [← heq, ← hv']; exact hp.eq
+        subst hueq
+        have hp' : (pathGraph m).IsCycle u' p' := by rw [← map_isCycle_iff_of_injective (embedMaxOld_injective m), ← hmap]; exact hp
+        exact pathGraph_IsAcyclic m u' p' hp'
   · intro hℓ
     subst hℓ
     exact ⟨0, pmax, hpmax, hlen⟩
@@ -463,11 +486,13 @@ lemma cycleSpectrum_addMaxCycle {m : ℕ} (G : SimpleGraph (Fin m)) (hm : 3 ≤ 
   · rintro ⟨u, p, hp', hlen'⟩
     by_cases hℓ : ℓ = m + 2
     · exact Or.inr hℓ
-    · have hold := addMaxCycle_support_old_of_cycle_ne G hm p hp' hℓ
+    · have hold := addMaxCycle_support_old_of_cycle_ne G hm p hp' (by intro h; exact hℓ (hlen'.trans h.symm))
       have hu : u.val < m := hold u (Walk.start_mem_support p)
-      obtain ⟨u', v', p', rfl, rfl, rfl⟩ :=
-        walk_oldMax_eq_map G hm hu hu p hold
-      exact Or.inl ⟨u', p', hp', hlen'⟩
+      obtain ⟨u', v', p', heq, hv', hmap⟩ := walk_oldMax_eq_map G hm hu hu p hold
+      have hueq : u' = v' := by apply embedMaxOld_injective m; rw [← heq, ← hv']; exact hp'.eq
+      subst hueq
+      have hp'' : p'.IsCycle := by rw [← map_isCycle_iff_of_injective (embedMaxOld_injective m), ← hmap]; exact hp'
+      exact Or.inl ⟨u', p', hp'', hlen'⟩
   · intro h
     rcases h with h | h
     · obtain ⟨u, p, hp', hlen'⟩ := h
