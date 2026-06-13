@@ -15,7 +15,7 @@ open scoped BigOperators
 
 /-- Chord offsets available for odd `n ≥ 5`: `{2,…,(n-1)/2}`. -/
 def chordOffsets (n : ℕ) : Finset ℕ :=
-  if h : Odd n ∧ 5 ≤ n then Finset.Icc 2 ((n - 1) / 2) else ∅
+  if _ : Odd n ∧ 5 ≤ n then Finset.Icc 2 ((n - 1) / 2) else ∅
 
 lemma mem_chordOffsets {n s : ℕ} (hn : Odd n) (h5 : 5 ≤ n) :
     s ∈ chordOffsets n ↔ 2 ≤ s ∧ s ≤ (n - 1) / 2 := by
@@ -26,7 +26,7 @@ lemma card_chordOffsets (n : ℕ) (hn : Odd n) (h5 : 5 ≤ n) :
   have hn' : 2 ≤ (n - 1) / 2 := by
     rcases hn with ⟨k, rfl⟩
     omega
-  simp [chordOffsets, hn, h5, Nat.card_Icc, hn']
+  simp [chordOffsets, hn, h5, Nat.card_Icc]
 
 /-- Difference-cycle lengths contributed by pairs of chords. -/
 def differenceCycles (S : Finset ℕ) : Set ℕ :=
@@ -44,13 +44,12 @@ def longCycleRange (n : ℕ) : Set ℕ :=
 def recoverChordSet (n : ℕ) (Cy : Set ℕ) : Set ℕ :=
   {s | n - s + 1 ∈ Cy ∩ longCycleRange n}
 
-lemma map_sub_add_one_injective (n : ℕ) :
-    Function.Injective fun s : ℕ => n - s + 1 := by
-  intro a b hab
-  have hab' : n - a = n - b := by linarith
-  have ha : a ≤ n := by omega
-  have hb : b ≤ n := by omega
-  exact (Nat.sub_right_inj ha hb).mp hab'
+lemma mem_image_coe {S : Finset ℕ} {f : ℕ → ℕ} {x : ℕ} :
+    x ∈ (S.image f : Set ℕ) ↔ ∃ a ∈ S, f a = x := by
+  simp
+
+lemma map_sub_add_one_injective_eq {n a b : ℕ}
+    (ha : a ≤ n) (hb : b ≤ n) (heq : n - a + 1 = n - b + 1) : a = b := by omega
 
 lemma longCycleRange_disjoint_short (n : ℕ) (hn : Odd n) (h5 : 5 ≤ n) (s : ℕ)
     (hs : s ∈ chordOffsets n) :
@@ -79,21 +78,34 @@ lemma longCycles_chordSpectrum (n : ℕ) (S : Finset ℕ) (hS : S ⊆ chordOffse
     (hn : Odd n) (h5 : 5 ≤ n) :
     chordSpectrum n S ∩ longCycleRange n = (S.image fun s => n - s + 1 : Set ℕ) := by
   ext ℓ
-  simp only [chordSpectrum, differenceCycles, longCycleRange, Set.mem_inter_iff,
-    Set.mem_union, Set.mem_image, Set.mem_setOf_eq, Set.mem_singleton_iff]
   constructor
-  · intro ⟨hCy, hlong⟩
-    rcases hCy with hℓ | ⟨s, hs, rfl⟩ | ⟨s, hs, rfl⟩ | ⟨s, hs, t, ht, hst, rfl⟩
-    · subst hℓ
-      rcases hn with ⟨k, rfl⟩
-      simp only [longCycleRange, Set.mem_setOf_eq] at hlong
-      omega
-    · exact (longCycleRange_disjoint_short n hn h5 s (hS hs) hlong).elim
-    · exact ⟨s, hs, rfl⟩
-    · exact (longCycleRange_disjoint_difference n hn h5 (hS hs) (hS ht) hst hlong).elim
   · intro h
+    have hCy := h.1
+    have hlong := h.2
+    simp only [chordSpectrum, differenceCycles, Set.mem_union,
+      Set.mem_setOf_eq, Set.mem_singleton_iff, mem_image_coe] at hCy
+    rcases hCy with hCy1 | hdiff
+    · rcases hCy1 with hCy12 | hlongImg
+      · rcases hCy12 with hℓ | hshort
+        · subst hℓ
+          rcases hn with ⟨k, rfl⟩
+          simp only [longCycleRange, Set.mem_setOf_eq] at hlong
+          omega
+        · obtain ⟨s, hs, rfl⟩ := hshort
+          exact (longCycleRange_disjoint_short n hn h5 s (hS hs) hlong).elim
+      · obtain ⟨s, hs, heq⟩ := hlongImg
+        rw [mem_image_coe]
+        exact ⟨s, hs, heq⟩
+    · obtain ⟨s, hs, t, ht, hst, rfl⟩ := hdiff
+      exact (longCycleRange_disjoint_difference n hn h5 (hS hs) (hS ht) hst hlong).elim
+  · intro h
+    rw [mem_image_coe] at h
     obtain ⟨s, hs, rfl⟩ := h
-    refine ⟨Or.inr (Or.inr (Or.inl ⟨s, hs, rfl⟩)), mem_longCycleRange_of_mem n S hs hn h5 hS⟩
+    constructor
+    · simp only [chordSpectrum, differenceCycles, Set.mem_union, Set.mem_setOf_eq,
+        Set.mem_singleton_iff, mem_image_coe]
+      exact Or.inl (Or.inr ⟨s, hs, rfl⟩)
+    · exact mem_longCycleRange_of_mem n S hs hn h5 hS
 
 lemma recoverChordSet_chordSpectrum (n : ℕ) (S : Finset ℕ) (hn : Odd n) (h5 : 5 ≤ n)
     (hS : S ⊆ chordOffsets n) :
@@ -102,19 +114,30 @@ lemma recoverChordSet_chordSpectrum (n : ℕ) (S : Finset ℕ) (hn : Odd n) (h5 
   simp only [recoverChordSet, Set.mem_setOf_eq, Set.mem_inter_iff]
   constructor
   · intro h
-    have h' : n - s + 1 ∈ chordSpectrum n S ∩ longCycleRange n := by
-      simpa [Set.mem_inter_iff] using h
-    rw [longCycles_chordSpectrum n S hS hn h5] at h'
+    have h' : n - s + 1 ∈ (S.image fun s => n - s + 1 : Set ℕ) := by
+      rw [← longCycles_chordSpectrum n S hS hn h5]
+      exact ⟨h.1, h.2⟩
+    rw [mem_image_coe] at h'
     obtain ⟨s', hs', heq⟩ := h'
-    exact (map_sub_add_one_injective n heq).symm ▸ hs'
+    have hs'le : s' ≤ n := by
+      have := hS hs'
+      rw [mem_chordOffsets hn h5] at this
+      omega
+    have hsle : s ≤ n := by
+      have := h.2
+      simp only [longCycleRange, Set.mem_setOf_eq] at this
+      omega
+    exact (map_sub_add_one_injective_eq hsle hs'le heq.symm) ▸ hs'
   · intro hs
-    refine ⟨mem_longCycleRange_of_mem n S hs hn h5 hS, ?_⟩
-    have h' : n - s + 1 ∈ (S.image fun t => n - t + 1 : Set ℕ) := ⟨s, hs, rfl⟩
-    rw [← longCycles_chordSpectrum n S hS hn h5]
-    exact h'
+    constructor
+    · simp only [chordSpectrum, differenceCycles, Set.mem_union, Set.mem_setOf_eq,
+        Set.mem_singleton_iff, mem_image_coe]
+      left; right
+      exact ⟨s, hs, rfl⟩
+    · exact mem_longCycleRange_of_mem n S hs hn h5 hS
 
 theorem chordSpectrum_injectiveOn (n : ℕ) (hn : Odd n) (h5 : 5 ≤ n) :
-    Set.InjOn (fun S : Finset ℕ => chordSpectrum n S) ((chordOffsets n).powerset : Set (Finset ℕ)) := by
+    Set.InjOn (fun S : Finset ℕ => chordSpectrum n S) (chordOffsets n).powerset := by
   intro S hS T hT hspec
   have hS' : S ⊆ chordOffsets n := Finset.mem_powerset.mp hS
   have hT' : T ⊆ chordOffsets n := Finset.mem_powerset.mp hT
@@ -122,6 +145,6 @@ theorem chordSpectrum_injectiveOn (n : ℕ) (hn : Odd n) (h5 : 5 ≤ n) :
   have hrec := congrArg (recoverChordSet n) hspec
   rw [recoverChordSet_chordSpectrum n S hn h5 hS',
       recoverChordSet_chordSpectrum n T hn h5 hT'] at hrec
-  exact hrec s
+  exact Set.ext_iff.mp hrec s
 
 end ErdosProblem84
