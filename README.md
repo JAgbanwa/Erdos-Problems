@@ -8,4 +8,11 @@ Let $A\subset\mathbb{R}^2$ be an infinite set which contains no three points on 
 
 How large can the chromatic number and clique number of this graph be? In particular, can the chromatic number be infinite?
 
+The folder [#84](https://github.com/JAgbanwa/Erdos-Problems/tree/main/%2384) aims to (partially) answer this question:
+
+The cycle set of a graph $G$ on $n$ vertices is a set $A\subseteq \{3,\ldots,n\}$ such that there is a cycle in $G$ of length $\ell$ if and only if $\ell \in A$. Let $f(n)$ count the number of possible such $A$.
+
+Prove that $f(n)=o(2^n)$.
+
+Prove that $f(n)/2^{n/2}\to \infty$.
 
