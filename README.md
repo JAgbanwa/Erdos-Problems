@@ -16,6 +16,6 @@ Prove that $f(n)=o(2^n)$.
 
 Prove that $f(n)/2^{n/2}\to \infty$.
 
-#81
+[#81](https://github.com/JAgbanwa/Erdos-Problems/tree/main/%2381)
  
 Let $G$ be a chordal graph on $n$ vertices - that is, $G$ has no induced cycles of length greater than $3$. Can the edges of $G$ be partitioned into $n^2/6+O(n)$ many cliques?
