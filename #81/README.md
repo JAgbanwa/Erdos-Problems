@@ -1,1 +1,1 @@
-
+The [Lean formalization](https://github.com/JAgbanwa/Erdos-Problems/blob/main/%2381/Lean%20formalisation%20of%20theorems) of this [paper](https://zenodo.org/records/20736085) was formalized by Wouter van Doorn.
