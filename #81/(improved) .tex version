@@ -1,0 +1,587 @@
+\documentclass[12pt,a4paper]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{mathtools}
+\usepackage[margin=2.5cm]{geometry}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{cleveref}
+\usepackage{enumitem}
+\usepackage{booktabs}
+\usepackage{setspace}
+\usepackage{mdframed}
+\onehalfspacing
+
+\hypersetup{colorlinks=true,linkcolor=blue,citecolor=blue}
+
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{construction}[theorem]{Construction}
+\newtheorem{openproblem}[theorem]{Open Problem}
+
+\newmdenv[backgroundcolor=blue!5,linecolor=blue!40,linewidth=1pt,
+  innertopmargin=6pt,innerbottommargin=6pt]{backgroundbox}
+\newmdenv[backgroundcolor=yellow!15,linecolor=orange!70,linewidth=1pt,
+  innertopmargin=6pt,innerbottommargin=6pt]{conditionalbox}
+\newmdenv[backgroundcolor=red!7,linecolor=red!55,linewidth=1pt,
+  innertopmargin=6pt,innerbottommargin=6pt]{warningbox}
+\newmdenv[backgroundcolor=green!7,linecolor=green!50!black,linewidth=1pt,
+  innertopmargin=6pt,innerbottommargin=6pt]{newresultbox}
+
+\newcommand{\cp}{\mathrm{cp}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Sp}{\mathrm{Sp}}
+\newcommand{\Nplus}{N^{+}}
+\newcommand{\EOZ}{Erd\H{o}s--Ordman--Zalcstein}
+
+\begin{document}
+
+\title{\textbf{A Conditional $n^2/6+O(n)$ Bound for Clique\\
+Edge-Partitions of Chordal Graphs}}
+\author{Jamal Agbanwa}
+\date{\today}
+\maketitle\thispagestyle{empty}
+
+\begin{abstract}
+Erd\H{o}s, Ordman, and Zalcstein~\cite{EOZ1993} showed that partitioning
+the edges of a chordal graph on $n$ vertices into cliques may require as
+many as $n^2/6$ cliques, exhibited a split graph achieving this, and proved
+an upper bound of $(1-c)n^2/4$ for some $c>0$.  They left open whether
+$n^2/6+O(n)$ cliques always suffice.
+
+This note records a self-contained exact computation for the \EOZ{}
+split family and a conditional upper bound under wCDH.
+\begin{enumerate}[label=(\arabic*),leftmargin=2em]
+  \item \textbf{(Self-contained exact computation.)} We give an explicit
+    LP dual certificate showing that the \EOZ{} lower-bound family
+    $G_m=\Sp(K_m,I_{2m})$ satisfies $\cp(G_m)=\frac{3m^2+m}{2}=
+    \frac{n^2}{6}+\frac{n}{6}$ exactly for $n=3m$, together with a
+    matching $1$-factorisation construction.
+    We make no novelty claim for the existence of this lower-bound family;
+    the purpose is to give a self-contained exact computation for the
+    specific family used here.
+
+  \item \textbf{(Conditional upper bound.)} If $G$ satisfies the
+    \emph{weak Clique-Drop Hypothesis} (wCDH) --- namely, if there exists
+    a maximum clique $K$ such that $\omega(G-E(K))\ge\omega(G)-1$ ---
+    then $\cp(G)\le n^2/6+O(n)$.  We prove this in full; the exact bound
+    is $(2n-1)^2/24+2$.  The hypothesis is not universal: it fails for
+    $G_m$ itself, so the open problem remains.
+\end{enumerate}
+The conditional theorem has been independently verified in the proof
+assistant Lean~\cite{Wouter2026}.
+\end{abstract}
+
+\begin{newresultbox}
+\noindent\textbf{Contribution summary.}
+\begin{itemize}[nosep]
+  \item Known (EOZ~\cite{EOZ1993}): $\cp(G)\le(1-c)n^2/4$; example
+    achieving $n^2/6$; open problem $\cp(G)\le n^2/6+O(n)$?
+  \item This note: self-contained exact computation $\cp(G_m)=n^2/6+n/6$
+    via LP duality; conditional $n^2/6+O(n)$ bound for wCDH graphs
+    (Lean-verified by W.~van Doorn~\cite{Wouter2026}).
+\end{itemize}
+\end{newresultbox}
+
+\tableofcontents\newpage
+
+%%────────────────────────────────────────────────────────────────────────────
+\section{Introduction and background}
+\label{sec:intro}
+
+A \emph{clique edge-partition} (CEP) of a graph $G=(V,E)$ is a collection
+of complete subgraphs whose edge sets partition $E(G)$; $\cp(G)$ denotes
+the minimum number of cliques used.  A graph is \emph{chordal} if every
+induced cycle has length exactly~$3$; equivalently it admits a
+\emph{perfect elimination ordering} (PEO), a linear ordering $v_1,\dots,v_n$
+such that $\Nplus(v_i):=N(v_i)\cap\{v_{i+1},\dots,v_n\}$ is a clique for
+every $i$.
+
+\subsection*{The \EOZ{} results and open problem}
+
+The problem of bounding $\cp(G)$ for chordal graphs was studied by
+\EOZ{}~\cite{EOZ1993}.  They proved:
+
+\begin{backgroundbox}
+\noindent\textbf{Known results~\cite{EOZ1993}.}
+\begin{enumerate}[label=(\roman*),nosep]
+  \item There exists a chordal graph on $n$ vertices requiring $n^2/6$
+    cliques in any CEP.  The example is a split graph (and threshold graph).
+  \item For every chordal graph $G$ on $n$ vertices,
+    $\cp(G)\le(1-c)n^2/4$ for some absolute constant $c>0$.
+\end{enumerate}
+They left open: is $\cp(G)\le n^2/6+O(n)$ for every chordal $G$?
+\end{backgroundbox}
+
+Let $f(n):=\max\{\cp(G): G\text{ chordal on }n\text{ vertices}\}$.  The
+\EOZ{} results give $n^2/6-O(n)\le f(n)\le (1-c)n^2/4$.  The open problem
+is whether $f(n)=n^2/6+O(n)$.
+
+\subsection*{Our contributions}
+
+We do not resolve the open problem.  We record two points.
+
+\textbf{Self-contained exact computation.} The \EOZ{} paper exhibits a
+split graph achieving $n^2/6$.  We give an LP dual certificate that
+determines $\cp(G_m)$ exactly (\cref{sec:lower}), and a matching explicit
+CEP construction.  The exact value is $\cp(G_m)=(3m^2+m)/2=n^2/6+n/6$
+for $n=3m$.  We make no novelty claim for the existence of this
+lower-bound family; we present a self-contained exact computation.
+
+\textbf{Conditional upper bound.} We introduce a structural hypothesis
+(wCDH, \cref{def:wcdh}) under which $\cp(G)\le n^2/6+O(n)$ can be proved
+via a two-step compression argument (\cref{sec:conditional}).  Since wCDH
+fails for $G_m$, the condition excludes the lower-bound family, and the open
+problem remains for the wCDH-failing class.  The conditional theorem has
+been independently formalized in Lean by W.~van Doorn~\cite{Wouter2026}.
+
+\textbf{Warmup: the $n^2/4$ bound.} As preparation for the two-step
+compression we also give a self-contained proof of the weaker $n^2/4$
+bound via the PEO (\cref{sec:upper}).  This is weaker than what EOZ prove,
+but the proof technique --- single-clique compression combined with the PEO
+edge bound --- is the template for the conditional theorem.
+
+%%────────────────────────────────────────────────────────────────────────────
+\section{Preliminaries}
+\label{sec:prelim}
+
+\begin{definition}[Notation]
+Write $\omega(G)$ for the clique number of $G$.  For $K\subseteq V(G)$,
+write $G-E(K)$ for the graph obtained by deleting all edges within $K$.
+\end{definition}
+
+\begin{definition}[CEP LP and dual]
+The fractional CEP LP and its dual are:
+\begin{align}
+  &\min\;\textstyle\sum_K x_K
+   \;\text{ s.t. }\;\textstyle\sum_{K\ni e}x_K=1\;\forall e,\;x_K\ge 0,
+   \tag{P}\label{eq:P}\\
+  &\max\;\textstyle\sum_e y_e
+   \;\text{ s.t. }\;\textstyle\sum_{e\in E(K)}y_e\le 1\;\forall K,\;y_e\in\R.
+   \tag{D}\label{eq:D}
+\end{align}
+Since \eqref{eq:P} uses equalities, $y_e$ is unrestricted in~\eqref{eq:D}.
+Weak duality gives $\cp(G)\ge\operatorname{opt}(\text{D})$.
+\end{definition}
+
+%%────────────────────────────────────────────────────────────────────────────
+\section{Warmup: the $n^2/4$ upper bound}
+\label{sec:upper}
+
+This bound is weaker than EOZ's $(1-c)n^2/4$ result.  We include it because
+the two lemmas below are reused in the conditional theorem.
+
+\begin{lemma}[PEO edge bound]
+\label{lem:edge-bound}
+If $G$ is chordal on $n$ vertices with $\omega=\omega(G)$, then
+$|E(G)|\le(\omega-1)n-\binom{\omega}{2}$.
+\end{lemma}
+
+\begin{proof}
+Let $v_1,\dots,v_n$ be a PEO.  Since $\Nplus(v_i)$ is a clique,
+$d_i^+:=|\Nplus(v_i)|\le\omega-1$.  Also $d_i^+\le n-i$.  Summing with
+$k=\omega-1$:
+\[
+  |E(G)|=\sum_i d_i^+\le\sum_{j=0}^{n-1}\min(k,j)
+  =\tfrac{k(k+1)}{2}+(n-1-k)k=kn-\tfrac{k(k+1)}{2}
+  =(\omega-1)n-\tbinom{\omega}{2}.\qquad\square
+\]
+\end{proof}
+
+\begin{lemma}[Single-clique compression]
+\label{lem:compress1}
+For any graph $G$: $\cp(G)\le 1+|E(G)|-\binom{\omega(G)}{2}$.
+\end{lemma}
+
+\begin{proof}
+Use one maximum clique $K$ (covering $\binom{\omega}{2}$ edges) and one
+edge-clique per remaining edge.  No remaining edge has both endpoints in $K$
+(it would already be covered), so no edge-clique conflicts with $K$.
+\end{proof}
+
+\begin{theorem}[Elementary weaker upper bound]
+\label{thm:upper-n4}
+For every chordal graph $G$ on $n$ vertices,
+$\cp(G)\le\lfloor(n-1)^2/4\rfloor+1\le n^2/4+O(n)$.
+\end{theorem}
+
+\begin{proof}
+Combining \cref{lem:edge-bound,lem:compress1}:
+$\cp(G)\le 1+(\omega-1)n-2\binom{\omega}{2}=1+(\omega-1)(n-\omega)$.
+Setting $x=\omega-1$, the concave quadratic $x(n-1-x)$ is maximised at
+$x=(n-1)/2$ with value $\lfloor(n-1)^2/4\rfloor$.
+\end{proof}
+
+\begin{remark}
+\EOZ{} prove the stronger bound $(1-c)n^2/4$ for an absolute $c>0$, using
+a more refined argument.  The PEO proof above gives the weaker $n^2/4$
+bound but introduces the compression technique used in \cref{sec:conditional}.
+\end{remark}
+
+%%────────────────────────────────────────────────────────────────────────────
+\section{The \EOZ{} lower-bound family and its exact clique-partition number}
+\label{sec:lower}
+
+\EOZ{} \cite{EOZ1993} exhibit a split graph achieving $n^2/6$.  We identify
+this as $G_m=\Sp(K_m,I_{2m})$ and determine $\cp(G_m)$ exactly.
+
+\begin{definition}
+For $m\ge 1$, let $G_m=\Sp(K_m,I_{2m})$: vertex set $U\cup W$,
+$|U|=m$, $|W|=2m$, $U$ induces $K_m$, $W$ is independent, all
+$2m^2$ edges of $U\times W$ present.
+\end{definition}
+
+\begin{lemma}
+\label{lem:split-chordal}
+$G_m$ is chordal with $|E(G_m)|=(5m^2-m)/2$.  Every clique is
+\emph{Type~A} ($\subseteq U$) or \emph{Type~B} ($\{w\}\cup Q$,
+$w\in W$, $Q\subseteq U$).
+\end{lemma}
+
+\begin{proof}
+Let $C$ be an induced cycle in $G_m$ of length at least~$4$.  Since $W$ is
+independent, no two vertices of $W$ are consecutive on $C$.  Hence $C$
+contains at least two vertices of $U$.
+
+If $C$ contains two non-consecutive vertices of $U$, then these two vertices
+are adjacent (since $U$ induces a clique $K_m$), giving a chord of $C$, a
+contradiction.  Thus every pair of $U$-vertices on $C$ must be consecutive.
+
+An induced cycle of length at least~$4$ cannot have exactly one vertex of $U$
+(then two $W$-vertices would be consecutive, impossible).  If it has exactly
+two $U$-vertices and they are non-consecutive, we get a chord; if they are
+consecutive, the remaining path between them passes entirely through $W$, forcing
+two consecutive $W$-vertices --- again impossible.  If it has at least three
+$U$-vertices, some two are non-consecutive, giving a chord.  In every case
+we reach a contradiction, so no induced cycle of length at least~$4$ exists
+and $G_m$ is chordal.
+
+The edge count $|E(G_m)|=(5m^2-m)/2$ and the clique classification follow
+immediately from the definition.
+\end{proof}
+
+\subsection{Lower bound via LP duality}
+
+\begin{theorem}[Exact lower bound]
+\label{thm:lb}
+$\cp(G_m)\ge(3m^2+m)/2$.
+\end{theorem}
+
+\begin{proof}
+We exhibit a feasible dual solution to~\eqref{eq:D} with objective
+$(3m^2+m)/2$.  Set
+\[
+  y_e:=\begin{cases}+1&e\text{ is a }UW\text{-edge,}\\
+  -1&e\text{ is a }UU\text{-edge.}\end{cases}
+\]
+\textbf{Objective:} $\sum_e y_e=2m^2\cdot(+1)+\binom{m}{2}\cdot(-1)
+=2m^2-\tfrac{m(m-1)}{2}=\tfrac{3m^2+m}{2}$.
+
+\textbf{Feasibility.}  For Type~A cliques of size $r$:
+$\sum y_e=-\binom{r}{2}\le 0\le 1$.  For Type~B cliques with $|Q|=s$:
+$\sum y_e=s-\binom{s}{2}=\tfrac{s(3-s)}{2}$, which equals $1$ for
+$s\in\{1,2\}$ and is $\le 0$ for $s\ge 3$.
+
+By weak LP duality, $\cp(G_m)\ge\tfrac{3m^2+m}{2}$.
+\end{proof}
+
+\subsection{Upper bound via $1$-factorisation}
+
+\begin{lemma}[$1$-factorisation~{\cite{Diestel}}]
+\label{lem:1fac}
+For $m\ge 2$, $E(K_m)$ decomposes into $m-1$ perfect matchings (even $m$)
+or $m$ near-perfect matchings (odd $m$).
+\end{lemma}
+
+\begin{construction}[Optimal CEP of $G_m$]
+\label{con:cep}
+Fix a $1$-factorisation $M_1,\dots,M_r$ of $K_m$.  Assign $M_k$ to
+$w_k\in W$; for each $\{u_a,u_b\}\in M_k$, add the triangle
+$\{w_k,u_a,u_b\}$.  Cover each remaining $UW$-edge by a $2$-clique.
+\end{construction}
+
+\begin{proposition}
+\label{prop:upper-split}
+Construction~\ref{con:cep} is a valid CEP of $G_m$ of size $(3m^2+m)/2$.
+\end{proposition}
+
+\begin{proof}
+Each $UU$-edge belongs to exactly one matching $M_k$ and hence one
+triangle; covered $UW$-edges are in their triangle; remaining $UW$-edges
+each get a $2$-clique.  No edge is double-counted.  Size:
+$\binom{m}{2}+(m^2+m)=(3m^2+m)/2$.
+\end{proof}
+
+\begin{theorem}[Exact value]
+\label{thm:exact}
+$\cp(G_m)=\dfrac{3m^2+m}{2}=\dfrac{n^2}{6}+\dfrac{n}{6}$ for $n=3m$,
+for every $m\ge 1$.
+\end{theorem}
+
+\begin{proof}
+For $m=1$: $G_1=\Sp(K_1,I_2)$ is a two-edge star with $\cp(G_1)=2=(3\cdot1+1)/2$.
+For $m\ge 2$: lower bound from \cref{thm:lb}, upper bound from
+\cref{prop:upper-split}.  The formula in $n$ uses $m=n/3$.
+\end{proof}
+
+\begin{corollary}
+\label{cor:tight}
+Any asymptotic bound $\cp(G)\le cn^2+O(n)$ for chordal graphs must have
+$c\ge 1/6$.  In particular, $f(3m)\ge(3m)^2/6+(3m)/6$.
+\end{corollary}
+
+%%────────────────────────────────────────────────────────────────────────────
+\section{A conditional $n^2/6$ theorem}
+\label{sec:conditional}
+
+\subsection{The weak Clique-Drop Hypothesis}
+
+\begin{definition}[wCDH]
+\label{def:wcdh}
+A chordal graph $G$ with $\omega=\omega(G)$ satisfies the
+\emph{weak Clique-Drop Hypothesis} (wCDH) if there exists a maximum
+clique $K\subseteq V(G)$ such that
+\[
+  \omega(G-E(K))\;\ge\;\omega-1.
+\]
+\end{definition}
+
+For graphs satisfying wCDH, the gap between $n^2/4$ and $n^2/6$ can be
+bridged:
+
+\begin{lemma}[Two-step compression]
+\label{lem:two-step}
+Let $G$ be any graph with $|E(G)|\le M$ and $\omega(G)=\omega$.  Suppose
+$G-E(K)$ satisfies $\omega(G-E(K))\ge\omega-1$ for some maximum clique
+$K$.  Then
+\[
+  \cp(G)\;\le\;2+M-\tbinom{\omega}{2}-\tbinom{\omega-1}{2}.
+\]
+\end{lemma}
+
+\begin{proof}
+Use $K$ (one CEP element) covering $\binom{\omega}{2}$ edges; the
+remainder $G':=G-E(K)$ has $|E(G')|\le M-\binom{\omega}{2}$ and
+$\omega(G')\ge\omega-1$.  By \cref{lem:compress1} applied to $G'$:
+\[
+  \cp(G')\le 1+\bigl(M-\tbinom{\omega}{2}\bigr)-\tbinom{\omega-1}{2}.
+\]
+Hence $\cp(G)\le 1+\cp(G')\le 2+M-\binom{\omega}{2}-\binom{\omega-1}{2}$.
+\end{proof}
+
+\subsection{The conditional theorem}
+
+\begin{theorem}[Conditional $n^2/6$ bound]
+\label{thm:conditional}
+Let $G$ be a chordal graph on $n$ vertices satisfying wCDH.  Then
+\[
+  \cp(G)\;\le\;\frac{(2n-1)^2}{24}+2\;=\;\frac{n^2}{6}+O(n).
+\]
+\end{theorem}
+
+\begin{proof}
+Let $\omega=\omega(G)$ and $M=|E(G)|$.  By wCDH, \cref{lem:two-step} applies:
+\[
+  \cp(G)\;\le\;2+M-\tbinom{\omega}{2}-\tbinom{\omega-1}{2}
+  =2+M-(\omega-1)^2,
+\]
+using $\binom{\omega}{2}+\binom{\omega-1}{2}=(\omega-1)^2$.  By
+\cref{lem:edge-bound}, $M\le(\omega-1)n-\binom{\omega}{2}$.  Substituting
+and setting $x:=\omega-1$:
+\begin{align*}
+  \cp(G)&\le 2+(\omega-1)n-\tbinom{\omega}{2}-(\omega-1)^2
+  =2+(\omega-1)\!\left[n+1-\tfrac{3\omega}{2}\right]\\
+  &=2+x\!\left(n-\tfrac{1}{2}-\tfrac{3x}{2}\right).
+\end{align*}
+The function $h(x)=x(n-\frac{1}{2}-\frac{3x}{2})$ is a concave quadratic
+maximised at $x^*=(2n-1)/6$, with $h(x^*)=(2n-1)^2/24$.  Hence
+$\cp(G)\le 2+(2n-1)^2/24=n^2/6+O(n)$.
+\end{proof}
+
+\begin{remark}[Lean verification]
+The proof of \cref{thm:conditional} has been independently formalized in
+the proof assistant Lean~4 by W.~van Doorn~\cite{Wouter2026}.
+\end{remark}
+
+%%────────────────────────────────────────────────────────────────────────────
+\section{Status of wCDH}
+\label{sec:wcdh}
+
+\subsection{wCDH is not universal among chordal graphs}
+
+\begin{proposition}[wCDH fails for $G_m$, $m\ge 3$]
+\label{prop:wcdh-fails}
+For $m\ge 3$, $G_m$ does not satisfy wCDH: for every maximum clique $K$,
+\[
+  \omega(G_m-E(K))=2<m=\omega(G_m)-1.
+\]
+\end{proposition}
+
+\begin{proof}
+Every maximum clique of $G_m$ has the form $K=\{w\}\cup U$ for $w\in W$.
+Removing $E(K)$ deletes all within-$U$ edges and all edges from $w$ to $U$.
+In $G':=G_m-E(K)$: $U$ is independent, $w$ is isolated, and each
+$w'\in W\setminus\{w\}$ is still adjacent to all of $U$.  Any clique in
+$G'$ has at most one vertex from $U$ (since $U$ is independent), so
+$\omega(G')=2$.  Since $2<m$ for $m\ge 3$, wCDH fails.
+\end{proof}
+
+\begin{remark}
+\cref{prop:wcdh-fails} shows that the open case --- graphs where every
+maximum clique removal drops $\omega$ by at least $2$ --- is precisely
+the class containing the \EOZ{} lower-bound family.  The wCDH-failing class
+is therefore not merely a technicality; it is where the hardest instances live.
+\end{remark}
+
+\subsection{wCDH holds for trees}
+
+\begin{proposition}
+Every tree with at least two vertices satisfies wCDH\@: $\omega=2$, and
+removing any edge leaves $\omega\ge 1=\omega-1$.
+\end{proposition}
+
+\begin{proof}
+A tree has no triangles, so $\omega(G)=2$ and every edge is a maximum clique.
+For any edge $K=\{u,v\}$, the graph $G-\{uv\}$ is a forest on the same vertex
+set.  A tree on $n\ge 2$ vertices has $n-1$ edges, so after deleting one edge
+the resulting forest has $n-2$ edges.  If $n=2$ then $G=K_2$ and the remaining
+graph has no edges, giving $\omega(G-\{uv\})=1=\omega(G)-1$, so wCDH holds
+with equality.  If $n\ge 3$ then $n-2\ge 1$, so at least one edge remains and
+$\omega(G-\{uv\})\ge 2>1=\omega(G)-1$.  In both cases wCDH is satisfied.
+\end{proof}
+
+%%────────────────────────────────────────────────────────────────────────────
+\section{Two failed approaches}
+\label{sec:failed}
+
+We document two natural attempts at an unconditional $n^2/6$ bound.
+
+\subsection{Triangle--Forest partition (false)}
+
+\noindent\textbf{Claimed lemma.} Every chordal $G$ admits edge-disjoint
+triangles and a forest partitioning $E(G)$.
+
+\begin{example}[$K_5$ counterexample]
+$K_5$ is chordal.  Any two edge-disjoint triangles in $K_5$ leave four edges
+forming a $4$-cycle (not a forest).  Three edge-disjoint triangles are
+impossible: their union has all-even degrees, but $K_5$ minus one edge has two
+odd-degree vertices.
+\end{example}
+
+\subsection{PEO triangle-packing algorithm (flawed bookkeeping)}
+
+\begin{example}[$K_4$ and $G_3$ counterexamples]
+A PEO algorithm matching pairs within $R_i=\{v_k\in\Nplus(v_i):v_iv_k
+\notin\mathrm{PRECOV}\}$ produces $T=1$ triangle for $K_4$.  The claimed
+bound $T\ge(m-n)/3=(6-4)/3$ holds, but for $G_3=\Sp(K_3,I_6)$ the
+algorithm yields $T=3$ while $(m-n)/3=(21-9)/3=4>3$.  Moreover, the
+bound $\cp(G)\le m/3+2n/3$ this implies gives $13$ for $G_3$, but
+$\cp(G_3)=15>13$.
+\end{example}
+
+%%────────────────────────────────────────────────────────────────────────────
+\section{Summary}
+\label{sec:summary}
+
+\begin{theorem}[What is known]
+\label{thm:final}
+Let $f(n):=\max\{\cp(G):G\text{ chordal on }n\text{ vertices}\}$.  Then:
+\[
+  \frac{n^2}{6}-O(n)\;\le\;f(n)\;\le\;\frac{n^2}{4}+O(n),
+\]
+and more precisely $f(3m)\ge(3m)^2/6+(3m)/6$ for all $m\ge 1$.
+\EOZ{}~\cite{EOZ1993} prove the stronger upper bound $(1-c)n^2/4$.
+\end{theorem}
+
+\begin{openproblem}[\EOZ{} \cite{EOZ1993}]
+\label{op:main}
+Is $f(n)=n^2/6+O(n)$?
+\end{openproblem}
+
+\begin{remark}[What wCDH reduces the problem to]
+\cref{thm:conditional} settles the open problem for wCDH-satisfying chordal
+graphs.  The remaining open case is graphs where every maximum clique
+removal drops the clique number by at least $2$ --- precisely the class
+containing $G_m$ (\cref{prop:wcdh-fails}).
+\end{remark}
+
+\begin{table}[ht]
+\centering\renewcommand{\arraystretch}{1.5}
+\begin{tabular}{@{}p{6.2cm}lll@{}}
+\toprule
+Statement & Bound & Status & Source\\
+\midrule
+Upper bound, all chordal $G$
+  & $\le(1-c)n^2/4$ & Proved & EOZ~\cite{EOZ1993}\\
+Upper bound (weaker, PEO proof)
+  & $\le n^2/4+O(n)$ & Proved & \cref{thm:upper-n4}\\
+Lower-bound example $G_m$ known
+  & $\ge n^2/6$ & Known & EOZ~\cite{EOZ1993}\\
+Exact value $\cp(G_m)=n^2/6+n/6$, $n=3m$
+  & $=n^2/6+n/6$ & Self-contained computation & \cref{thm:exact}\\
+Upper bound for wCDH graphs
+  & $\le n^2/6+O(n)$ & Conditional (Lean-verified~\cite{Wouter2026}) & \cref{thm:conditional}\\
+wCDH universal? & --- & \textbf{False} & \cref{prop:wcdh-fails}\\
+Upper bound, all chordal $G$
+  & $\le n^2/6+O(n)$ & \textbf{Open} & \cref{op:main}\\
+Triangle--Forest partition & --- & False & \cref{sec:failed}\\
+\bottomrule
+\end{tabular}
+\caption{Status of the results used or proved in this note.}
+\label{tab:results}
+\end{table}
+
+\section*{Acknowledgements}
+The author thanks W.~van Doorn for a careful reading of the post on
+\texttt{erdosproblems.com}, for identifying the overlap with \cite{EOZ1993},
+and for independently formalizing the conditional theorem in Lean~\cite{Wouter2026}.
+Claude Sonnet~4.6 was used substantially during the development and drafting
+of this note.  The author takes responsibility for the final formulation,
+for distinguishing known material from claimed contributions, and for all
+remaining errors.
+
+\begin{thebibliography}{9}
+
+\bibitem{EOZ1993}
+P.~Erd\H{o}s, E.\,T.~Ordman, and Y.~Zalcstein,
+Clique partitions of chordal graphs,
+\textit{Combin.\ Probab.\ Comput.}\ \textbf{2} (1993), 409--415.
+
+\bibitem{ChenEOZ1994}
+G.-T.~Chen, P.~Erd\H{o}s, and E.\,T.~Ordman,
+Clique partitions of split graphs,
+in \textit{Combinatorics, Graph Theory, Algorithms and Applications}
+(Beijing, 1993), World Sci., 1994, pp.~21--30.
+
+\bibitem{Diestel}
+R.~Diestel,
+\textit{Graph Theory}, 5th ed., Springer, Berlin, 2017.
+
+\bibitem{FulkersonGross}
+D.\,R.~Fulkerson and O.\,A.~Gross,
+Incidence matrices and interval graphs,
+\textit{Pacific J.\ Math.}\ \textbf{15} (1965), 835--855.
+
+\bibitem{Golumbic}
+M.\,C.~Golumbic,
+\textit{Algorithmic Graph Theory and Perfect Graphs}, 2nd ed.,
+Elsevier, Amsterdam, 2004.
+
+\bibitem{Wouter2026}
+W.~van Doorn,
+Lean~4 formalization of the conditional $n^2/6+O(n)$ bound for
+wCDH-satisfying chordal graphs,
+personal communication, 2026.
+
+\end{thebibliography}
+
+\end{document}
