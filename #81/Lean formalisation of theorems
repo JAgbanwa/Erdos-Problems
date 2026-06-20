@@ -21,6 +21,8 @@ set_option grind.warning false
 This file formalizes the proof that any finite simple graph
 `G` on `n` vertices satisfying the weak Clique-Drop Hypothesis (`wCDH`) has
 `cp(G) ≤ 2 + (2n-1)^2 / 24`, where `cp(G)` is the minimum size of a clique edge-partition.
+ This formalization was obtained by Aristotle from Harmonic (aristotle-harmonic@harmonic.fun).
+ Lean version: leanprover/lean4:v4.28.0
 -/
 
 namespace WCDH
