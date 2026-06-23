@@ -27,3 +27,5 @@ Problem(s) to try sometime:
 [111](https://www.erdosproblems.com/forum/thread/111)
 
 [538](https://www.erdosproblems.com/538)
+
+[68](https://www.erdosproblems.com/68)
