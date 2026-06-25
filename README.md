@@ -22,7 +22,7 @@ Let $G$ be a chordal graph on $n$ vertices - that is, $G$ has no induced cycles 
 
 Problem(s) to try sometime:
 
-[197](https://www.erdosproblems.com/197) (busy with this now)
+[197](https://www.erdosproblems.com/197) (possibly solved pending feedback)
 
 [111](https://www.erdosproblems.com/forum/thread/111)
 
