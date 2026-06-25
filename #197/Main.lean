@@ -1,4 +1,3 @@
-
 import Mathlib
 open scoped BigOperators
 open scoped Classical
