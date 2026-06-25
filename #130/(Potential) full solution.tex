@@ -1,0 +1,385 @@
+\documentclass[11pt,a4paper]{amsart}
+
+\usepackage[margin=1in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{enumitem}
+\usepackage{booktabs}
+\usepackage[colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue]{hyperref}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{question}[theorem]{Question}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{example}[theorem]{Example}
+
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\dist}{\operatorname{dist}}
+\newcommand{\clique}{\operatorname{cl}}
+\newcommand{\GP}{\operatorname{GP}}
+
+\title[Integer-distance graphs in planar general position]{Integer-distance graphs in planar general position:\ rigorous bounds and the finite-block reduction}
+\author{Jamal Agbanwa}
+\date{June 25, 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+Let $A\subset \R^2$ be an infinite set with no three points on a line and no four points on a circle.  Join two points of $A$ when their Euclidean distance is an integer.  We prove, in a self-contained way, that every connected component of this graph is countable, and hence the chromatic number is at most $\aleph_0$.  We also prove that no infinite clique can occur.  Thus every actual clique is finite, although the supremum of finite clique sizes may be finite or countably infinite.  Finally we isolate the exact finite obstruction: the existence of an example with chromatic number $\aleph_0$ is equivalent to the existence of finite general-position point sets whose associated integer-distance graphs have arbitrarily large chromatic number.  This last equivalence is included to separate the unconditional part from an additional finite realisation problem.
+\end{abstract}
+
+\section{Definitions and main conclusions}
+
+Throughout, $A\subset \R^2$ is assumed to have the following two general-position properties:
+\begin{enumerate}[label=(\roman*)]
+    \item no three points of $A$ are collinear;
+    \item no four points of $A$ are concyclic.
+\end{enumerate}
+Here ``concyclic'' means lying on one Euclidean circle.  Lines are not counted as circles.
+
+\begin{definition}
+Given such a set $A$, define $\Gamma(A)$ to be the graph with vertex set $A$ in which two distinct points $P,Q\in A$ are adjacent exactly when
+\[
+        |P-Q|\in \Z_{>0}.
+\]
+Thus $\Gamma(A)$ is the integer-distance graph induced by $A$.
+\end{definition}
+
+The rigorous unconditional conclusions proved in this note are the following.
+
+\begin{theorem}[Countable upper bound for the chromatic number]\label{thm:countable-upper}
+For every $A\subset \R^2$ satisfying the two general-position assumptions,
+\[
+        \chi(\Gamma(A))\leq \aleph_0.
+\]
+More precisely, every connected component of $\Gamma(A)$ is countable.
+\end{theorem}
+
+\begin{theorem}[No infinite clique]\label{thm:no-infinite-clique}
+For every $A\subset \R^2$ satisfying the two general-position assumptions, $\Gamma(A)$ contains no infinite clique.  Equivalently, there is no infinite subset $B\subseteq A$ such that every two distinct points of $B$ are at integral distance.
+\end{theorem}
+
+Consequently, if $\omega(\Gamma(A))$ denotes the supremum of the cardinalities of cliques in $\Gamma(A)$, then
+\[
+        \omega(\Gamma(A))\in \N\cup\{\aleph_0\}.
+\]
+The alternative $\omega(\Gamma(A))=\aleph_0$ would mean that finite cliques of arbitrarily large size occur, not that an infinite clique occurs.
+
+The following finite-block reduction explains exactly what is still needed in order to prove that the chromatic number can be infinite.
+
+\begin{theorem}[Finite-block criterion for infinite chromatic number]\label{thm:finite-block}
+The following two assertions are equivalent.
+\begin{enumerate}[label=(\alph*)]
+    \item There exists an infinite set $A\subset \R^2$ satisfying the two general-position assumptions such that
+    \[
+        \chi(\Gamma(A))=\aleph_0.
+    \]
+    \item For every $k\geq 1$, there exists a finite set $B_k\subset \R^2$ satisfying the two general-position assumptions such that
+    \[
+        \chi(\Gamma(B_k))\geq k.
+    \]
+\end{enumerate}
+Similarly, $\omega(\Gamma(A))=\aleph_0$ is obtainable by the same disjoint-block construction if and only if there exist finite general-position integral-distance cliques of arbitrarily large size.
+\end{theorem}
+
+Theorem~\ref{thm:finite-block} is important because it prevents a hidden gap: proving $\chi(\Gamma(A))=\aleph_0$ is not a consequence of Theorems~\ref{thm:countable-upper} and~\ref{thm:no-infinite-clique}.  It requires finite examples with unbounded chromatic number.  In particular, the stronger claim that one may use disjoint copies of $K_1,K_2,K_3,\ldots$ requires a separate theorem producing finite integral-distance point sets of all sizes in the stated general position.
+
+\section{Local countability and countable colourability}
+
+\begin{lemma}[Countable degree]\label{lem:countable-degree}
+Every vertex of $\Gamma(A)$ has degree at most $\aleph_0$.
+\end{lemma}
+
+\begin{proof}
+Fix $P\in A$.  If $Q\in A$ is adjacent to $P$, then $|P-Q|=m$ for some positive integer $m$.  For each fixed $m\in\Z_{>0}$, all such points $Q$ lie on the circle
+\[
+        C(P,m)=\{X\in\R^2: |X-P|=m\}.
+\]
+By the no-four-concyclic assumption, $C(P,m)$ contains at most three points of $A$.  Hence the neighbourhood of $P$ is contained in the countable union
+\[
+        \bigcup_{m=1}^{\infty} (A\cap C(P,m)),
+\]
+where each set in the union has cardinality at most $3$.  Therefore $P$ has at most countably many neighbours.
+\end{proof}
+
+\begin{lemma}[Countable components]\label{lem:countable-components}
+Every connected component of $\Gamma(A)$ is countable.
+\end{lemma}
+
+\begin{proof}
+Let $C$ be the connected component of a vertex $P\in A$.  For $j\geq 0$, let
+\[
+        S_j=\{Q\in C: \text{the graph distance from }P\text{ to }Q\text{ is }j\}.
+\]
+Then $S_0=\{P\}$ is finite.  By Lemma~\ref{lem:countable-degree}, $S_1$ is countable.  If $S_j$ is countable, then
+\[
+        S_{j+1}\subseteq \bigcup_{Q\in S_j} N_{\Gamma(A)}(Q),
+\]
+where each neighbourhood $N_{\Gamma(A)}(Q)$ is countable.  A countable union of countable sets is countable, so $S_{j+1}$ is countable.  By induction, every $S_j$ is countable.  Finally,
+\[
+        C=\bigcup_{j=0}^{\infty} S_j,
+\]
+so $C$ is countable.
+\end{proof}
+
+\begin{proof}[Proof of Theorem~\ref{thm:countable-upper}]
+By Lemma~\ref{lem:countable-components}, every component of $\Gamma(A)$ is countable.  Each countable graph admits a proper colouring with colours in $\N$: for instance, enumerate its vertices and colour greedily, always choosing the least colour not used by earlier-coloured neighbours.  Since different connected components have no edges between them, the same countable palette can be reused on every component.  Hence $\chi(\Gamma(A))\leq \aleph_0$.
+\end{proof}
+
+\section{Excluding infinite cliques}
+
+The next lemma is the geometric core of the no-infinite-clique result.  It is an elementary form of the usual Erd\H{o}s--Anning argument.
+
+\begin{lemma}[Two fixed distance differences have finite intersection]\label{lem:finite-difference-intersection}
+Let $P,Q,R\in\R^2$ be non-collinear.  For fixed real numbers $a,b$, the set of points $X\in\R^2$ satisfying
+\[
+        |X-P|-|X-Q|=a,
+        \qquad
+        |X-P|-|X-R|=b
+\]
+is finite.
+\end{lemma}
+
+\begin{proof}
+Apply a rigid motion to put
+\[
+        P=(0,0),\qquad Q=(q,0),\qquad R=(u,v),
+\]
+where $q>0$ and $v\neq 0$.  Write $X=(x,y)$ and
+\[
+        s=|X-P|=(x^2+y^2)^{1/2}.
+\]
+If $X$ satisfies the two displayed equations, then
+\[
+        |X-Q|=s-a,
+        \qquad
+        |X-R|=s-b.
+\]
+Squaring the first identity gives
+\[
+        (x-q)^2+y^2=(s-a)^2.
+\]
+Since $s^2=x^2+y^2$, this simplifies to
+\begin{equation}\label{eq:first-linear}
+        2qx=2as-a^2+q^2.
+\end{equation}
+Similarly, squaring the second identity gives
+\begin{equation}\label{eq:second-linear}
+        2(ux+vy)=2bs-b^2+u^2+v^2.
+\end{equation}
+Equation~\eqref{eq:first-linear} expresses $x$ as an affine function of $s$:
+\[
+        x=\lambda s+c,
+        \qquad
+        \lambda=\frac{a}{q},
+        \qquad
+        c=\frac{q^2-a^2}{2q}.
+\]
+Substituting this into~\eqref{eq:second-linear}, and using $v\neq 0$, expresses $y$ as an affine function of $s$:
+\[
+        y=\mu s+d
+\]
+for suitable real constants $\mu,d$ depending only on $P,Q,R,a,b$.
+
+Thus every solution $X$ arises from a real number $s$ satisfying
+\[
+        s^2=x^2+y^2=(\lambda s+c)^2+(\mu s+d)^2.
+\]
+Equivalently,
+\begin{equation}\label{eq:quadratic-s}
+        (1-\lambda^2-\mu^2)s^2-2(\lambda c+\mu d)s-(c^2+d^2)=0.
+\end{equation}
+Unless this quadratic polynomial is identically zero, it has at most two real roots, and hence there are at most two corresponding points $X$.
+
+It remains only to rule out the possibility that~\eqref{eq:quadratic-s} is the zero polynomial.  If it were identically zero, then its constant term would give $c^2+d^2=0$, hence $c=d=0$.  From $c=0$ we obtain $a=\pm q$, and then $\lambda=\pm 1$.  The leading coefficient condition $1-\lambda^2-\mu^2=0$ then forces $\mu=0$.  But, from the formula obtained above after substituting into~\eqref{eq:second-linear}, the simultaneous conditions $c=0$ and $\mu=0$ imply
+\[
+        b=u\lambda,
+        \qquad
+        d=\frac{u^2+v^2-b^2}{2v}=\frac{v}{2},
+\]
+contradicting $d=0$ because $v\neq 0$.  Therefore~\eqref{eq:quadratic-s} is not identically zero.  The solution set is finite.
+\end{proof}
+
+\begin{proof}[Proof of Theorem~\ref{thm:no-infinite-clique}]
+Suppose, for contradiction, that $\Gamma(A)$ contains an infinite clique $B$.  Choose three distinct points $P,Q,R\in B$.  Because $A$ has no three collinear points, these three points are non-collinear.
+
+For every $X\in B$, the three distances $|X-P|,|X-Q|,|X-R|$ are integers, except that one of them may be $0$ when $X$ equals one of $P,Q,R$.  Removing the finitely many points $P,Q,R$ does not affect infinitude.  For all remaining $X\in B$, the two differences
+\[
+        |X-P|-|X-Q|,
+        \qquad
+        |X-P|-|X-R|
+\]
+are integers.  Moreover, by the triangle inequality,
+\[
+        -|P-Q|\leq |X-P|-|X-Q|\leq |P-Q|,
+\]
+so the first difference can take only finitely many integer values.  Similarly,
+\[
+        -|P-R|\leq |X-P|-|X-R|\leq |P-R|,
+\]
+so the second difference can take only finitely many integer values.
+
+Hence, by the pigeonhole principle, there is an infinite subset $B'\subseteq B\setminus\{P,Q,R\}$ and fixed integers $a,b$ such that every $X\in B'$ satisfies
+\[
+        |X-P|-|X-Q|=a,
+        \qquad
+        |X-P|-|X-R|=b.
+\]
+This contradicts Lemma~\ref{lem:finite-difference-intersection}, which says that the set of such $X$ is finite.  Therefore no infinite clique exists.
+\end{proof}
+
+\section{The finite-block criterion}
+
+We now prove Theorem~\ref{thm:finite-block}.  First we record the compactness principle needed for the converse direction.
+
+\begin{lemma}[Finite obstruction principle]\label{lem:finite-obstruction}
+Let $G$ be a graph all of whose connected components are countable.  If there is a fixed integer $k$ such that every finite subgraph of $G$ is $k$-colourable, then $G$ is $k$-colourable.
+\end{lemma}
+
+\begin{proof}
+It is enough to colour one connected component at a time, reusing the same colour set $\{1,\ldots,k\}$ on different components.  Let $C$ be a countable component, and enumerate its vertices as
+\[
+        v_1,v_2,v_3,\ldots .
+\]
+For each $n$, the induced subgraph on $\{v_1,\ldots,v_n\}$ is $k$-colourable by hypothesis.  Consider the tree whose level-$n$ vertices are proper $k$-colourings of the induced subgraph on $\{v_1,\ldots,v_n\}$, with one colouring joined to another when the latter extends the former.  This tree has finite branching and has at least one vertex on every level.  By K\H{o}nig's infinity lemma, it has an infinite branch.  The union of the colourings along this branch is a proper $k$-colouring of $C$.
+
+Doing this for every countable component gives a proper $k$-colouring of $G$.
+\end{proof}
+
+\begin{lemma}[Generic separation of one finite block]\label{lem:generic-placement}
+Let $F,B\subset\R^2$ be finite sets, each having no three collinear points and no four concyclic points.  Assume also that $B$ is already equipped with whatever internal integer distances it is meant to have.  Then, for every $R>0$, there is a rigid motion $T$ of the plane such that:
+\begin{enumerate}[label=(\roman*)]
+    \item every point of $T(B)$ has norm larger than $R$;
+    \item $F\cup T(B)$ has no three collinear points and no four concyclic points;
+    \item no distance between a point of $F$ and a point of $T(B)$ is an integer.
+\end{enumerate}
+The internal distances inside $T(B)$ are exactly the same as the internal distances inside $B$.
+\end{lemma}
+
+\begin{proof}
+A rigid motion has the form
+\[
+        T_{\theta,t}(X)=\rho_\theta X+t,
+\]
+where $\rho_\theta$ is rotation through angle $\theta$ and $t\in\R^2$ is a translation vector.  Restrict $t$ to a non-empty open annulus $U=\{t\in\R^2:R'<|t|<R'+1\}$ with $R'$ large enough that every point of $T_{\theta,t}(B)$ has norm larger than $R$ for every $\theta$ and every $t\in U$.
+
+The parameter space $S^1\times U$ is a Baire space.  We remove from it the following forbidden parameter sets.
+
+First, for each $P\in F$, $Q\in B$, and $m\in\Z_{>0}$, remove the set of parameters satisfying
+\[
+        |P-T_{\theta,t}(Q)|=m.
+\]
+For fixed $P,Q,m$, this is a closed set with empty interior; as $t$ varies, it is given by a genuine circle condition, not by an identity.  Since there are only countably many triples $(P,Q,m)$, these cross-integrality restrictions remove a countable union of nowhere dense sets.
+
+Second, remove the parameters for which a mixed triple from $F\cup T_{\theta,t}(B)$ is collinear.  Triples lying entirely inside $F$ or entirely inside $T_{\theta,t}(B)$ are harmless by hypothesis.  For a fixed mixed triple, collinearity is the vanishing of a non-zero real-analytic determinant in $(\theta,t)$.  It is not identically zero, because translating the new block in a generic direction plainly destroys that single collinearity condition.  Hence each such bad set is closed and nowhere dense.  There are finitely many mixed triples.
+
+Third, remove the parameters for which a mixed quadruple from $F\cup T_{\theta,t}(B)$ is concyclic.  Again, quadruples lying entirely inside one of the two sets are harmless.  For a fixed mixed quadruple, concyclicity is the vanishing of the standard circle determinant
+\[
+\det
+\begin{pmatrix}
+ x_1^2+y_1^2 & x_1 & y_1 & 1\\
+ x_2^2+y_2^2 & x_2 & y_2 & 1\\
+ x_3^2+y_3^2 & x_3 & y_3 & 1\\
+ x_4^2+y_4^2 & x_4 & y_4 & 1
+\end{pmatrix}=0.
+\]
+As a function of $(\theta,t)$ this is a real-analytic function, and for a mixed quadruple it is not identically zero: moving the translated block generically changes the circle determined by any three of the points or moves the fourth point away from it.  Thus each such bad set is closed and nowhere dense.  There are finitely many mixed quadruples.
+
+After removing all forbidden sets, we have removed only a countable union of closed nowhere dense subsets of the Baire space $S^1\times U$.  The complement is therefore non-empty.  Any parameter in this complement gives the desired rigid motion.  Rigid motions preserve all internal distances inside $B$.
+\end{proof}
+
+\begin{proof}[Proof of Theorem~\ref{thm:finite-block}]
+First assume that there exists an infinite $A$ satisfying the two general-position assumptions with $\chi(\Gamma(A))=\aleph_0$.  If the chromatic numbers of all finite induced subgraphs of $\Gamma(A)$ were bounded by some fixed $k$, then Lemma~\ref{lem:finite-obstruction}, together with Lemma~\ref{lem:countable-components}, would imply that $\Gamma(A)$ is $k$-colourable.  This contradicts $\chi(\Gamma(A))=\aleph_0$.  Therefore, for every $k$, some finite $B_k\subseteq A$ satisfies $\chi(\Gamma(B_k))\geq k$.  Since $B_k\subseteq A$, it inherits the no-three-collinear and no-four-concyclic properties.
+
+Conversely, assume that for every $k\geq 1$ there exists a finite general-position set $B_k\subset\R^2$ with $\chi(\Gamma(B_k))\geq k$.  We construct an infinite set $A$ by placing rigid copies of the $B_k$ one after another.  Suppose that copies of $B_1,\ldots,B_{k-1}$ have already been placed and that their union is $F_{k-1}$.  Apply Lemma~\ref{lem:generic-placement} to $F_{k-1}$ and $B_k$, choosing the new copy far away and avoiding all cross-integer distances, all new collinear triples, and all new concyclic quadruples.  Continuing inductively gives
+\[
+        A=\bigcup_{k=1}^{\infty} T_k(B_k)
+\]
+with no three collinear points and no four concyclic points.
+
+Because the construction forbids integer distances between different blocks, the graph $\Gamma(A)$ is the disjoint union of the graphs $\Gamma(T_k(B_k))$, each of which is isomorphic to $\Gamma(B_k)$.  Hence
+\[
+        \chi(\Gamma(A))=\sup_{k\geq 1}\chi(\Gamma(B_k))=\aleph_0.
+\]
+This proves the equivalence.
+
+The clique statement is identical, replacing ``chromatic number at least $k$'' by ``contains a clique of size at least $k$''.  If finite general-position integral-distance cliques of all sizes exist, they may be placed as separated blocks, giving $\omega=\aleph_0$ but still no actual infinite clique by Theorem~\ref{thm:no-infinite-clique}.  Conversely, if a single example has $\omega=\aleph_0$, then its finite cliques give finite examples of arbitrarily large size.
+\end{proof}
+
+\section{A concrete finite lower-bound example}
+
+The following example shows that the restrictions do not force the clique number or chromatic number to be tiny.  It is not intended to be optimal.
+
+\begin{example}[A general-position integral $K_5$]\label{ex:K5}
+Let $s=\sqrt{195}$ and define
+\[
+\begin{aligned}
+P_1&=(0,0),\\
+P_2&=(21,0),\\
+P_3&=\left(-\frac{19}{2},\frac{3s}{2}\right),\\
+P_4&=\left(\frac{93}{2},\frac{3s}{2}\right),\\
+P_5&=(68,4s).
+\end{aligned}
+\]
+Then all ten pairwise distances are integers:
+\[
+\begin{array}{c|cccccccccc}
+\text{pair} & 12&13&14&15&23&24&25&34&35&45\\
+\midrule
+\text{distance} &21&23&51&88&37&33&73&56&85&41.
+\end{array}
+\]
+Thus these five points span a $K_5$ in the integer-distance graph.
+
+To check general position, write each point as $(x_i,y_i s)$ with $x_i,y_i\in\mathbb Q$.  For collinearity of $P_i,P_j,P_k$, the determinant
+\[
+        \det\begin{pmatrix}x_i&y_i&1\\x_j&y_j&1\\x_k&y_k&1\end{pmatrix}
+\]
+would have to vanish.  For the ten triples, these rational determinants are respectively
+\[
+\frac{63}{2},\frac{63}{2},84,-84,-140,84,-84,-\frac{385}{2},\frac{63}{2},140,
+\]
+so none vanishes.
+
+For concyclicity of $P_i,P_j,P_k,P_\ell$, the determinant
+\[
+\det\begin{pmatrix}
+ x_i^2+195y_i^2&x_i&y_i&1\\
+ x_j^2+195y_j^2&x_j&y_j&1\\
+ x_k^2+195y_k^2&x_k&y_k&1\\
+ x_\ell^2+195y_\ell^2&x_\ell&y_\ell&1
+\end{pmatrix}
+\]
+would have to vanish.  For the five quadruples, these determinants are
+\[
+        -28224,\quad -137760,\quad -62496,\quad 241920,\quad 194880,
+\]
+so no four of the five points are concyclic.
+
+Therefore there exists a finite general-position set whose integer-distance graph has clique number and chromatic number at least $5$.
+\end{example}
+
+By applying Lemma~\ref{lem:generic-placement} repeatedly to the set in Example~\ref{ex:K5} and to singleton blocks, one obtains infinite sets $A$ satisfying the two general-position assumptions with $\chi(\Gamma(A))\geq 5$ and $\omega(\Gamma(A))\geq 5$.  The exact largest finite lower bound obtainable by elementary explicit examples is not addressed here.
+
+\section{Final form of the answer}
+
+For every infinite $A\subset\R^2$ with no three collinear points and no four concyclic points, the integer-distance graph $\Gamma(A)$ satisfies
+\[
+        \chi(\Gamma(A))\leq \aleph_0.
+\]
+Thus an uncountable chromatic number is impossible.
+
+Moreover, $\Gamma(A)$ contains no infinite clique.  Hence every actual clique is finite.  The clique number in the supremum sense may only be a finite integer or $\aleph_0$; the value $\aleph_0$ would mean finite cliques of arbitrarily large size, not an infinite clique.
+
+Finally, the question whether $\chi(\Gamma(A))$ can equal $\aleph_0$ is exactly equivalent to the finite-block problem of producing finite general-position point sets whose integer-distance graphs have arbitrarily large chromatic number.  Any proof of finite general-position integral-distance cliques of all sizes would immediately imply both $\chi=\aleph_0$ and $\omega=\aleph_0$ by the separated-block construction, but that finite assertion is an additional input and is not proved by the countability and no-infinite-clique arguments above.
+
+\end{document}
