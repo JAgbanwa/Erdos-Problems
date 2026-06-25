@@ -1,0 +1,376 @@
+\documentclass[11pt,a4paper]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage[margin=1in]{geometry}
+\usepackage{enumitem}
+\usepackage{microtype}
+\usepackage{xcolor}
+\usepackage[colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue]{hyperref}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{remark}[theorem]{Remark}
+
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\pos}{\operatorname{pos}}
+
+\title{A Dyadic Partition Avoiding Monotone Three-Term Arithmetic Progressions}
+\author{}
+\date{}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+We prove, self-containedly, that the positive integers can be partitioned into two sets, each of which admits a permutation with no increasing monotone three-term arithmetic progression. The construction is explicit: split the positive integers into dyadic blocks, colour the blocks according to the parity of their index, and list each block in decreasing order. We also prove that one set is not enough, so the number two is sharp for this one-sided notion.
+\end{abstract}
+
+\section{Definitions and statement}
+
+Throughout the note
+\[
+  \N=\{1,2,3,\ldots\}.
+\]
+A \emph{permutation} of an infinite set \(S\subseteq \N\) means a sequence
+\[
+  (s_0,s_1,s_2,\ldots)
+\]
+which lists every element of \(S\) exactly once.
+Equivalently, it is a bijection from \(\N_0=\{0,1,2,\ldots\}\) onto \(S\).
+For such a permutation \(\pi=(s_i)_{i\geq 0}\), write
+\[
+  \pos_\pi(t)=\text{the unique index }i\text{ such that }s_i=t.
+\]
+
+\begin{definition}[One-sided monotone three-term arithmetic progression]
+Let \(S\subseteq \N\), and let \(\pi\) be a permutation of \(S\). A triple \((x,y,z)\in S^3\) is called a one-sided monotone three-term arithmetic progression in \(\pi\) if
+\[
+  x<y<z,\qquad x+z=2y,
+\]
+and
+\[
+  \pos_\pi(x)<\pos_\pi(y)<\pos_\pi(z).
+\]
+Thus the three values form an increasing three-term arithmetic progression, and they occur in the permutation in that same increasing order.
+\end{definition}
+
+\begin{remark}[Terminology]
+Some authors use ``monotone'' to mean either increasing or decreasing in the permutation. This note proves the one-sided, increasing-order version stated in the definition above. Under that convention the result below gives an exact answer: one set is impossible, while two sets suffice.
+\end{remark}
+
+\begin{theorem}[Main theorem]
+The set \(\N\) can be partitioned into two sets \(A\) and \(B\) such that each of \(A\) and \(B\) admits a permutation avoiding one-sided monotone three-term arithmetic progressions.
+\end{theorem}
+
+The proof is constructive and occupies Sections \ref{sec:construction}--\ref{sec:proof}. Section \ref{sec:sharpness} proves that no single permutation of \(\N\) can have the same avoidance property, so the number of parts in the theorem is best possible for the one-sided convention.
+
+\section{The dyadic construction}\label{sec:construction}
+
+For each integer \(m\geq 0\), define the dyadic block
+\[
+  I_m=\{2^m,2^m+1,\ldots,2^{m+1}-1\}.
+\]
+The blocks \(I_0,I_1,I_2,\ldots\) are pairwise disjoint and satisfy
+\[
+  \N=\bigcup_{m\geq 0} I_m.
+\]
+Now define
+\[
+  A=\bigcup_{r\geq 0} I_{2r},
+  \qquad
+  B=\bigcup_{r\geq 0} I_{2r+1}.
+\]
+Thus
+\[
+  A=\{1\}\cup\{4,5,6,7\}\cup\{16,17,\ldots,31\}\cup\cdots,
+\]
+and
+\[
+  B=\{2,3\}\cup\{8,9,\ldots,15\}\cup\{32,33,\ldots,63\}\cup\cdots.
+\]
+Clearly \(A\cap B=\varnothing\) and \(A\cup B=\N\).
+
+We next define the two permutations.
+For \(A\), list the even-indexed dyadic blocks in increasing block index, but list each individual block in decreasing order:
+\[
+  \pi_A:
+  \quad
+  1;
+  \quad
+  7,6,5,4;
+  \quad
+  31,30,\ldots,16;
+  \quad
+  127,126,\ldots,64;
+  \quad\cdots.
+\]
+For \(B\), do the same with the odd-indexed blocks:
+\[
+  \pi_B:
+  \quad
+  3,2;
+  \quad
+  15,14,\ldots,8;
+  \quad
+  63,62,\ldots,32;
+  \quad
+  255,254,\ldots,128;
+  \quad\cdots.
+\]
+
+Formally, if \(C=A\), the blocks occurring in \(\pi_C\) are
+\[
+  I_0,I_2,I_4,\ldots,
+\]
+and if \(C=B\), the blocks occurring in \(\pi_C\) are
+\[
+  I_1,I_3,I_5,\ldots.
+\]
+In either case, every element of each block is listed exactly once, and the order inside \(I_m\) is
+\[
+  2^{m+1}-1,
+  2^{m+1}-2,
+  \ldots,
+  2^m.
+\]
+Therefore \(\pi_A\) is a permutation of \(A\), and \(\pi_B\) is a permutation of \(B\).
+
+\section{A dyadic localization lemma}
+
+The main point of the construction is that a three-term arithmetic progression whose largest element lies in a dyadic block \(I_m\), and whose three elements all lie in blocks of the same parity as \(m\), has its middle element forced into \(I_m\) unless all three elements already lie in \(I_m\).
+
+\begin{lemma}[Dyadic localization]\label{lem:localization}
+Let \(x<y<z\) be positive integers satisfying
+\[
+  x+z=2y.
+\]
+Assume \(z\in I_m\) for some \(m\geq 0\), and assume that \(x,y,z\) all lie in dyadic blocks whose indices have the same parity as \(m\). If \(x\notin I_m\), then
+\[
+  y\in I_m.
+\]
+\end{lemma}
+
+\begin{proof}
+Since \(z\in I_m\), we have
+\[
+  2^m\leq z\leq 2^{m+1}-1.
+\]
+Because \(x<z\), the dyadic block containing \(x\) has index at most \(m\). Since \(x\notin I_m\), its block index is strictly less than \(m\). By hypothesis, this block index has the same parity as \(m\). Hence the block index of \(x\) is at most \(m-2\). In particular, this case can occur only when \(m\geq 2\), and then
+\[
+  x\leq 2^{m-1}-1.
+\]
+Using \(y=(x+z)/2\) and \(x<z\), we have \(y<z\). Since \(z\in I_m\), this gives
+\[
+  y<z<2^{m+1}.
+\]
+Also, since \(x\geq 1\) and \(z\geq 2^m\),
+\[
+  y=\frac{x+z}{2}\geq \frac{1+2^m}{2}>2^{m-1}.
+\]
+Therefore
+\[
+  2^{m-1}<y<2^{m+1}.
+\]
+The integers in this open interval lie only in the two adjacent dyadic blocks
+\[
+  I_{m-1}=\{2^{m-1},\ldots,2^m-1\}
+  \quad\text{and}\quad
+  I_m=\{2^m,\ldots,2^{m+1}-1\}.
+\]
+More precisely, since \(y>2^{m-1}\) and \(y<2^{m+1}\), either \(y\in I_{m-1}\) or \(y\in I_m\).
+But the index \(m-1\) has parity opposite to that of \(m\), while by hypothesis the block containing \(y\) has the same parity as \(m\). Hence \(y\notin I_{m-1}\), and therefore \(y\in I_m\).
+\end{proof}
+
+\begin{remark}
+The lemma is the only numerical estimate needed. It is exactly where the dyadic sizes matter: skipping every other dyadic block creates a large enough gap that the midpoint of a progression is forced back into the largest occupied block.
+\end{remark}
+
+\section{Proof of the main theorem}\label{sec:proof}
+
+We now prove that the permutations \(\pi_A\) and \(\pi_B\) constructed above avoid one-sided monotone three-term arithmetic progressions.
+
+\begin{proof}[Proof of the main theorem]
+It is enough to prove the assertion for an arbitrary one of the two sets \(A,B\), since the proofs are identical.
+Let \(C\) denote either \(A\) or \(B\), and let \(\pi_C\) be the corresponding permutation.
+Thus \(C\) is a union of dyadic blocks whose indices all have one fixed parity, and \(\pi_C\) lists those blocks in increasing block index while listing each individual block in decreasing numerical order.
+
+Suppose, for contradiction, that \(\pi_C\) contains a one-sided monotone three-term arithmetic progression. Then there exist
+\[
+  x<y<z,
+  \qquad
+  x+z=2y,
+\]
+with \(x,y,z\in C\), such that
+\[
+  \pos_{\pi_C}(x)<\pos_{\pi_C}(y)<\pos_{\pi_C}(z).
+\]
+Let \(m\) be the dyadic block index of \(z\), so that \(z\in I_m\). Since \(z\in C\), the index \(m\) has the parity assigned to \(C\). Since \(x,y\in C\) as well, the dyadic blocks containing \(x\) and \(y\) also have this same parity.
+
+There are two cases.
+
+\medskip
+\noindent\textbf{Case 1: \(x\in I_m\).}
+Since
+\[
+  x<y<z
+\]
+and both \(x\) and \(z\) lie in the interval \(I_m\), the middle value \(y\) also lies in \(I_m\). Inside \(I_m\), however, the permutation \(\pi_C\) lists elements in decreasing numerical order. Therefore
+\[
+  z\text{ occurs before }y\text{, and }y\text{ occurs before }x.
+\]
+Equivalently,
+\[
+  \pos_{\pi_C}(z)<\pos_{\pi_C}(y)<\pos_{\pi_C}(x),
+\]
+which contradicts
+\[
+  \pos_{\pi_C}(x)<\pos_{\pi_C}(y)<\pos_{\pi_C}(z).
+\]
+
+\medskip
+\noindent\textbf{Case 2: \(x\notin I_m\).}
+By Lemma \ref{lem:localization}, we have \(y\in I_m\). Thus \(y,z\in I_m\), while \(x\) lies in an earlier dyadic block belonging to the same colour class \(C\).
+Because \(\pi_C\) lists the dyadic blocks of \(C\) in increasing block index, every element of the block containing \(x\) occurs before every element of \(I_m\). Hence
+\[
+  \pos_{\pi_C}(x)<\pos_{\pi_C}(y)
+  \quad\text{and}\quad
+  \pos_{\pi_C}(x)<\pos_{\pi_C}(z).
+\]
+But inside \(I_m\) the elements are listed in decreasing numerical order, and \(y<z\). Therefore
+\[
+  \pos_{\pi_C}(z)<\pos_{\pi_C}(y).
+\]
+Consequently it is impossible that
+\[
+  \pos_{\pi_C}(x)<\pos_{\pi_C}(y)<\pos_{\pi_C}(z).
+\]
+This again contradicts the assumed monotone progression.
+
+Both cases lead to contradictions. Therefore \(\pi_C\) contains no one-sided monotone three-term arithmetic progression. Since \(C\) was either \(A\) or \(B\), both \(\pi_A\) and \(\pi_B\) have the required avoidance property. This proves the theorem.
+\end{proof}
+
+\section{Sharpness: one set is impossible}\label{sec:sharpness}
+
+The preceding construction shows that two sets suffice. We now prove that, for the one-sided convention, one set cannot suffice: every permutation of \(\N\) contains an increasing monotone three-term arithmetic progression.
+
+\begin{proposition}\label{prop:one-set-impossible}
+Every permutation of \(\N\) contains a one-sided monotone three-term arithmetic progression.
+\end{proposition}
+
+\begin{proof}
+Let
+\[
+  \pi=(a_0,a_1,a_2,\ldots)
+\]
+be an arbitrary permutation of \(\N\). Put
+\[
+  a=a_0.
+\]
+Since \(\pi\) lists every positive integer, the integer \(a+1\) appears somewhere in the sequence. Therefore there exists at least one index \(j>0\) such that
+\[
+  a_j>a.
+\]
+Choose \(j\) minimal with this property, and put
+\[
+  b=a_j.
+\]
+By minimality of \(j\), every term strictly between \(a_0\) and \(a_j\) is at most \(a\):
+\[
+  0<i<j \implies a_i\leq a.
+\]
+Now define
+\[
+  c=2b-a.
+\]
+Since \(b>a\), we have
+\[
+  c=2b-a>b>a,
+\]
+so \(c\) is a positive integer and
+\[
+  a<b<c.
+\]
+Also
+\[
+  a+c=a+(2b-a)=2b,
+\]
+so \((a,b,c)\) is a three-term arithmetic progression.
+
+It remains only to check that \(c\) occurs after \(b\) in the permutation. Let \(k\) be the unique index such that
+\[
+  a_k=c.
+\]
+Since \(c>a=a_0\), we have \(k\neq 0\). If \(k<j\), then \(0<k<j\) and \(a_k=c>a\), contradicting the minimal choice of \(j\). Hence \(k>j\). Therefore the three terms occur in the order
+\[
+  a=a_0,
+  \qquad
+  b=a_j,
+  \qquad
+  c=a_k,
+\]
+with
+\[
+  0<j<k.
+\]
+Thus the permutation contains the one-sided monotone three-term arithmetic progression
+\[
+  a<b<c,
+  \qquad
+  a+c=2b,
+\]
+appearing in increasing order. Since \(\pi\) was arbitrary, every permutation of \(\N\) contains such a progression.
+\end{proof}
+
+\begin{corollary}
+For the one-sided convention of Definition 1, the least number of parts in a partition of \(\N\) such that each part can be permuted to avoid one-sided monotone three-term arithmetic progressions is exactly \(2\).
+\end{corollary}
+
+\begin{proof}
+Proposition \ref{prop:one-set-impossible} shows that one part is impossible. The main theorem shows that two parts are possible. Hence the least number is exactly \(2\).
+\end{proof}
+
+\section{Summary of the construction}
+
+The partition is
+\[
+  \boxed{
+  A=\bigcup_{r\geq 0}\{2^{2r},2^{2r}+1,\ldots,2^{2r+1}-1\}}
+\]
+and
+\[
+  \boxed{
+  B=\bigcup_{r\geq 0}\{2^{2r+1},2^{2r+1}+1,\ldots,2^{2r+2}-1\}}.
+\]
+The avoiding permutations are obtained by concatenating the appropriate dyadic blocks in increasing block index and reversing the order inside each block. Explicitly,
+\[
+  \pi_A=
+  1;
+  \ 7,6,5,4;
+  \ 31,30,\ldots,16;
+  \ 127,126,\ldots,64;
+  \cdots,
+\]
+and
+\[
+  \pi_B=
+  3,2;
+  \ 15,14,\ldots,8;
+  \ 63,62,\ldots,32;
+  \ 255,254,\ldots,128;
+  \cdots.
+\]
+The proof rests on two elementary facts:
+\begin{enumerate}[label=(\roman*)]
+  \item If \(x<y<z\) is a three-term arithmetic progression with \(z\in I_m\), and if \(x,y,z\) all lie in blocks of the same parity as \(m\), then either all three terms lie in \(I_m\), or else \(y,z\in I_m\) and \(x\) lies in an earlier same-parity block.
+  \item Inside every block the order is decreasing, so whenever \(y<z\) are in the same block, \(z\) appears before \(y\).
+\end{enumerate}
+Together these facts rule out the only possible way an increasing arithmetic progression could appear in increasing order.
+
+\end{document}
