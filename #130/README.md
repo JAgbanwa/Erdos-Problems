@@ -1,6 +1,3 @@
-This [document](https://github.com/JAgbanwa/Erdos-Problems/blob/main/%23130/an_erdos_problem_130-2.pdf) was an earlier partial result by Claude Sonnet 4.6 (High) with this as a 
-[formalization](https://github.com/JAgbanwa/Erdos-Problems/blob/main/%23130/Lean%20formalization).
-
 GPT 5.5 Pro claims [this](https://github.com/JAgbanwa/Erdos-Problems/blob/main/%23130/_130_proper.pdf) ([.tex version](https://github.com/JAgbanwa/Erdos-Problems/blob/main/%23130/(Potential)%20full%20solution.tex)) as a solution to Erdös problem #130 which is [formalised](https://github.com/JAgbanwa/Erdos-Problems/tree/main/%23130/RequestProject) in Lean thanks to Aristotle. 
 
 ```
@@ -21,3 +18,8 @@ Structure (all files under `RequestProject/`):
 Soundness: every fully-proved theorem depends only on the standard axioms `propext`, `Classical.choice`, `Quot.sound` (verified via `#print axioms`); no `sorry`/`sorryAx` and no added axioms or `@[implemented_by]`.
 
 Two `sorry`s remain, both confined to the deep analytic part of Section 4: Lemma 4.2 (`generic_separation`, the Baire-category generic placement of a finite block) and the converse direction `finite_block_converse` that it powers. These are stated faithfully and documented; they correspond exactly to the additional finite-realisation/Baire-category input that the paper deliberately separates from the unconditional results. Consequently the full equivalence `finite_block_criterion` depends on `sorryAx` (only through the converse), while everything else is complete and axiom-clean.
+
+                                                                     *************************************
+                                                                     
+This [document](https://github.com/JAgbanwa/Erdos-Problems/blob/main/%23130/an_erdos_problem_130-2.pdf) was an earlier partial result by Claude Sonnet 4.6 (High) with this as a 
+[formalization](https://github.com/JAgbanwa/Erdos-Problems/blob/main/%23130/Lean%20formalization).
