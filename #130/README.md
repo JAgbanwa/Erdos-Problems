@@ -3,7 +3,9 @@ This [document](https://github.com/JAgbanwa/Erdos-Problems/blob/main/%23130/an_e
 
 GPT 5.5 Pro claims [this](https://github.com/JAgbanwa/Erdos-Problems/blob/main/%23130/_130_proper.pdf) as a solution to Erdös problem #130 which is formalised in Lean thanks to Aristotle. 
 
-ARISTOTLE.md
+```
+Co-authored-by: Aristotle (Harmonic) <aristotle-harmonic@harmonic.fun>
+```
 
 I formalized the paper *Integer-distance graphs in planar general position: rigorous bounds and the finite-block reduction* in Lean 4 / Mathlib. The whole project builds successfully.
 
