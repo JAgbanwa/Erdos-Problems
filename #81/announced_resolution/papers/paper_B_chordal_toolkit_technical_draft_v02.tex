@@ -1,0 +1,512 @@
+\documentclass[11pt]{article}
+
+\usepackage[margin=1.05in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{hyperref}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{booktabs}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue!50!black,
+    citecolor=blue!50!black,
+    urlcolor=blue!50!black
+}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{remark}[theorem]{Remark}
+
+\newcommand{\cp}{\operatorname{cp}}
+\newcommand{\CoreCap}{\operatorname{Cap}}
+\newcommand{\calT}{\mathcal T}
+\newcommand{\calV}{\mathcal V}
+\newcommand{\calA}{\mathcal A}
+\newcommand{\RR}{\mathbb R}
+\newcommand{\E}{E}
+\newcommand{\V}{V}
+
+\title{Local and Structural Reductions for Chordal Clique Partitions}
+\author{Juan Pablo Traverso Gianini\\
+Independent researcher, Santiago, Chile\\
+\texttt{jtraverso@gmail.com}\\
+\href{https://orcid.org/0009-0003-6068-4096}{ORCID: 0009-0003-6068-4096}}
+\date{Technical Draft v0.2 --- \today}
+
+\begin{document}
+
+\maketitle
+
+\begin{center}
+{\small Paper B in the series on clique partitions in split and chordal graphs. This is a technical working draft, not yet a public preprint.}
+\end{center}
+
+\noindent\textbf{Keywords.}
+Clique partitions; chordal graphs; clique trees; triangle packings; fractional packings; local reductions; finite certificates.
+
+\medskip
+
+\noindent\textbf{MSC 2020.}
+05C70, 05C35, 05C65, 05C69.
+
+\begin{abstract}
+We develop the local and structural toolkit used in a companion paper to prove a fractional triangle-packing theorem for chordal graphs. The tools are organized around clique-tree representations of chordal graphs. We isolate a heavy-bag principle, correct local leaf inequalities, a \(K_{1,4}/K_{1,5}\) threshold, spectral good-leaf criteria for tree-like tails, ear-budget reductions, promotion lemmas for long-core and overload configurations, a bounded \(L_4\) type certificate, a type blow-up realization lemma, and a Core-Fan Allocation Theorem formulated as a quadratic Hall/Farkas capacity statement. This draft is intended as the technical repository of lemmas cited by the global fractional theorem in Paper C.
+\end{abstract}
+
+\tableofcontents
+
+\section{Introduction}
+
+This paper is the technical toolkit paper in the series. It does not prove the final chordal clique partition theorem. Instead, it proves and packages the local and structural reductions used by the global recursive argument in Paper C.
+
+The target result of the series is the asymptotic chordal clique partition theorem:
+\[
+    \max\{\cp(G):G\text{ chordal}, |V(G)|=n\}
+    =
+    \left(\frac16+o(1)\right)n^2.
+\]
+Paper A proves the corresponding sharp split graph theorem and supplies the extremal construction. Paper C proves the fractional triangle theorem for chordal graphs using the tools developed here. Paper D applies fractional-to-integral triangle-packing rounding to obtain the final clique partition theorem.
+
+\subsection*{Purpose of this draft}
+
+The purpose of this draft is to make the dependencies of Paper C explicit. Each major tool is stated in a form that can be cited directly. Some proofs are complete at the level of this draft; others are given as proof schemes with a verification checklist. The most sensitive items are:
+\[
+    L_4\text{ certificate},\qquad
+    \text{Core-Fan/Farkas allocation},\qquad
+    \text{promotion completeness}.
+\]
+These are marked explicitly below.
+
+\section{Chordal preliminaries}
+
+A graph \(G\) is chordal if every cycle of length at least four has a chord. Equivalently, \(G\) admits a clique-tree representation: there is a tree \(\calT\) whose nodes are maximal cliques of \(G\), and for each \(v\in V(G)\) the set of clique-tree nodes containing \(v\) forms a connected subtree.
+
+We use the intersection-subtree notation. Each vertex \(v\in V(G)\) corresponds to a connected subtree
+\[
+    \calT_v\subseteq \calT.
+\]
+For a clique-tree node \(t\), set
+\[
+    C(t)=\{v:t\in\calT_v\}.
+\]
+Adjacency is represented by subtree intersection:
+\[
+    uv\in E(G)
+    \quad\Longleftrightarrow\quad
+    \calT_u\cap\calT_v\neq\varnothing.
+\]
+The bag coverage is
+\[
+    M(t)=|C(t)|,
+\]
+and the maximum coverage is
+\[
+    M_*=\max_{t\in V(\calT)}M(t).
+\]
+
+\section{Heavy bags}
+
+\begin{lemma}[Heavy-Bag Lemma]\label{lem:heavy-bag}
+Let \(G\) be chordal with clique-tree representation \(\calT\). Then
+\[
+    |E(G)|\le M_*\,n.
+\]
+More generally, for nonnegative vertex weights \(x_v\),
+\[
+    \sum_{\calT_u\cap\calT_v\neq\varnothing}x_ux_v
+    \le
+    M_*\sum_vx_v.
+\]
+\end{lemma}
+
+\begin{proof}
+For each intersecting pair of subtrees \((\calT_u,\calT_v)\), assign the pair to one node \(t\in\calT_u\cap\calT_v\). At node \(t\), the total weight of pairs assigned to \(t\) is bounded by the product of the total assigned mass through \(t\) and the bag mass, hence by \(M_*\) times the mass assigned to that node. Summing over nodes gives the weighted inequality. The unweighted edge bound follows by setting all \(x_v=1\), up to the harmless diagonal convention.
+\end{proof}
+
+\begin{remark}
+The lemma says that a chordal graph with no linearly large clique-tree bag is quadratically sparse. Thus any obstruction at scale \(n^2\) must contain a heavy retained core. This is the entry point for all promotion and core-fan arguments.
+\end{remark}
+
+\section{Leaf reductions and the correct strong-leaf inequality}
+
+Consider a leaf clique \(K=A\cup S\), where \(A\) is the private simplicial part and \(S\) is the separator to the rest of the graph. Let
+\[
+    a=|A|,\qquad s=|S|,
+\]
+and let \(r\) denote the outside mass.
+
+\begin{lemma}[Strong-Leaf Inequality]\label{lem:strong-leaf}
+A leaf is good, in the sense that the local simplicial reduction closes the \(1/6\)-potential account, whenever
+\[
+    4s\le a+2r+O(1).
+\]
+If a leaf is not good, then it is strong:
+\[
+    4s>a+2r-O(1).
+\]
+Consequently,
+\[
+    5s>n+r-O(1).
+\]
+\end{lemma}
+
+\begin{proof}[Proof sketch]
+Removing the private simplicial part \(A\) costs at most
+\[
+    as+1
+\]
+cliques in the local partition account. Comparing this with the potential drop
+\[
+    \frac{n^2-(n-a)^2}{6}
+    =
+    \frac{2na-a^2}{6}
+\]
+and substituting \(n=a+s+r\) gives the good-leaf inequality after collecting lower-order constants. If the inequality fails, then
+\[
+    4s>a+2r-O(1).
+\]
+Since \(n=a+s+r\), this implies
+\[
+    5s>n+r-O(1).
+\]
+\end{proof}
+
+\begin{remark}
+The consequence \(s>n/3\) is not valid in general and should not be used. The correct quantitative conclusion is \(5s>n+r-O(1)\).
+\end{remark}
+
+\section{The \(K_{1,4}/K_{1,5}\) threshold}
+
+The shifted local dual calculation uses variables \(q_e=p_e-1/3\), with \(q_e\ge -1/3\). For a star \(K_{1,r}\), place
+\[
+    q_{\text{loop}}=\frac23,
+    \qquad
+    q_{\text{spoke}}=-\frac13.
+\]
+For center mass \(c\) and leaves of unit mass, the local quadratic form is
+\[
+    Q(c)=\frac13(c^2+r)-\frac r3c.
+\]
+The minimum over \(c\) is
+\[
+    Q_{\min}
+    =
+    \frac13\left(r-\frac{r^2}{4}\right).
+\]
+
+\begin{lemma}[\(K_{1,4}/K_{1,5}\) Threshold]\label{lem:k14-k15}
+The local star threshold is sharp:
+\[
+    r\le4
+    \quad\text{is safe,}
+\]
+whereas
+\[
+    r=5
+\]
+forces promotion.
+\end{lemma}
+
+\begin{proof}
+The displayed formula gives \(Q_{\min}\ge0\) precisely for \(r\le4\), and \(Q_{\min}<0\) for \(r\ge5\). Thus a five-spoke star cannot be left as a harmless local terminal obstruction.
+\end{proof}
+
+\section{Spectral good-leaf tails}
+
+For tree-like triangle-free tails, the shifted quadratic form takes the form
+\[
+    Q(x)=
+    \frac13x^\top
+    \left(I-\frac12A_T\right)x,
+\]
+where \(A_T\) is the adjacency matrix of the underlying tree \(T\).
+
+\begin{lemma}[Spectral Good-Leaf Lemma]\label{lem:spectral-good-leaf}
+If
+\[
+    \rho(A_T)>2,
+\]
+then the tail has a good leaf. If all leaves are strong, then the tail reduces to a bounded double-broom family.
+\end{lemma}
+
+\begin{proof}[Proof scheme]
+The form \(Q\) is negative in some direction exactly when \(I-\frac12A_T\) is not positive semidefinite, equivalently when \(\rho(A_T)>2\). A negative direction identifies local mass distribution incompatible with all leaves being bad unless a good leaf exists. If all leaves remain strong, the strong-leaf inequalities force large separator overlap at both ends. Repeated pruning leaves only the bounded double-broom configurations.
+\end{proof}
+
+\paragraph{Verification needed.}
+The final manuscript should include an exact table for the bounded double-broom family \(B(r,k,s)\), with \(r,s\in\{1,2,3\}\), or move that table to an appendix.
+
+\section{Ear budgets}
+
+A simplicial ear of mass \(a\) attached to separator mass \(\sigma\) requires budget
+\[
+    B(a,\sigma)=\frac12a(\sigma-a)_+.
+\]
+
+\begin{lemma}[Ear Budget Lemma]\label{lem:ear-budget}
+Let a family of simplicial ears attach to separator cores with bounded edge multiplicity. Then the total ear budget fits within the available boundary capacity. If a separator edge or subcore is requested with unbounded or linear multiplicity, a common-core promotion is triggered.
+\end{lemma}
+
+\begin{proof}[Proof sketch]
+For one ear, the convex budget \(B(a,\sigma)\) is the maximum local deficit after removing the ear and comparing the simplicial cost with the potential drop. For two ears sharing the same separator,
+\[
+    B(a,\sigma)+B(b,\sigma)\le \frac{\sigma^2}{4}
+\]
+in the balanced worst case. Bounded multiplicity then gives a finite packing of such requests into separator capacity. If the multiplicity exceeds the bounded regime, the shared separator is by definition a common core and is promoted.
+\end{proof}
+
+\section{Promotion lemmas}
+
+\subsection{Long-core and five-window promotion}
+
+\begin{lemma}[Long-Core/Five-Window Promotion]\label{lem:long-core}
+If a bounded-width clique-tree window carries linear long-span mass across five consecutive positions, then one can promote a five-window core. The promotion separates the left and right sides into anchored regions and removes the promoted core edges from child-private accounts.
+\end{lemma}
+
+\begin{proof}[Proof scheme]
+Long-span vertices that cross five consecutive positions share enough common trace to form a retained core. Promoting the central window preserves chordality of the remaining anchored regions. Vertices not retained are assigned to left, right, or one-boundary off-path branches. The retained-core convention excludes core edges from all children, so ownership remains single-valued.
+\end{proof}
+
+\subsection{Overload and common-core promotion}
+
+\begin{lemma}[Overload/Common-Core Promotion]\label{lem:overload}
+If too many ears or trace groups request capacity from the same separator subcore, then that subcore can be promoted to a retained core. After promotion, all adjacent private groups report boundary debits to the promoted core.
+\end{lemma}
+
+\begin{proof}[Proof scheme]
+High multiplicity on a subcore implies that the relevant trace classes share a common separator. Retaining that separator as a core turns the overloaded local requests into core-fan boundary groups. The promoted core owns its internal edges, and each adjacent private group reports a debit of the form used in the Core-Fan Allocation Theorem.
+\end{proof}
+
+\paragraph{Verification needed.}
+Promotion completeness is one of the main referee-sensitive points of the series. The final version must state the exact threshold at which bounded multiplicity ends and promotion begins.
+
+\section{The \(L_4\) finite certificate}
+
+The bounded span-four type system is
+\[
+    \calV_{11}
+    =
+    \{J,1,2,3,4,12,23,34,13,24,14\}.
+\]
+It represents the possible intersection types over a four-position local window, together with the central/core type \(J\).
+
+\begin{theorem}[\(L_4\) Certificate Theorem]\label{thm:l4}
+Every sealed bounded span-four \(L_4\) residue admits a rational type-level fractional triangle certificate over \(\calV_{11}\). In sealed mode, all used edges are internally owned.
+\end{theorem}
+
+\begin{proof}[Proof package]
+The proof is finite and certificate-based. The package must specify:
+\begin{enumerate}[label=(\roman*)]
+    \item the eleven vertex types \(\calV_{11}\);
+    \item the complete list of edge and loop atoms;
+    \item the complete list of feasible triangle types;
+    \item rational weights \(\lambda_\tau\) on triangle types;
+    \item verification that every edge atom has load at most its capacity;
+    \item verification that the target local deficit is met;
+    \item ownership mode \(B=\varnothing\) for sealed use.
+\end{enumerate}
+\end{proof}
+
+\paragraph{Draft status.}
+The certificate is treated as machine-certified in the internal development record. The public draft must include the exact rational certificate and exact verifier. Until that package is included, this theorem should be cited as a certificate theorem with data to be appended.
+
+\section{Type blow-up realization}
+
+\begin{lemma}[Type Blow-Up Realization]\label{lem:type-blowup}
+Let a fixed finite type system have rational triangle-type weights \(\lambda_\tau\) satisfying all type-level edge-capacity inequalities. Then, for every sufficiently large blow-up realizing those types, the type-level certificate lifts to an actual fractional triangle packing with loss \(O_m(n)\), where \(m\) is the number of types.
+\end{lemma}
+
+\begin{proof}
+For each triangle type \(\tau\), distribute its weight uniformly over all actual triangles of that type. For an actual edge of type \(e\), the load induced by \(\tau\) is the type multiplicity contribution divided by the number of actual edges of type \(e\). Since the type-level certificate satisfies the edge inequalities, every actual edge has load at most one, except for degenerate small type classes. The total contribution of degenerate classes is \(O_m(n)\). For fixed \(m\), this is \(o(n^2)\).
+\end{proof}
+
+For \(L_4\), \(m=11\), so the loss is \(O(n)\).
+
+\section{Core-Fan Allocation Theorem}
+
+Boundary groups are indexed by \(\alpha\). Each group has private mass \(u_\alpha\), subcore \(S_\alpha\), size \(s_\alpha=|S_\alpha|\), and exterior mass \(r_\alpha\). Its debit is
+\[
+    T_\alpha
+    =
+    \frac{
+    u_\alpha(4s_\alpha-u_\alpha-2r_\alpha)_+
+    }{12}.
+\]
+
+\begin{theorem}[Core-Fan Allocation Theorem]\label{thm:core-fan}
+For every subfamily \(\calA\) of boundary groups,
+\[
+    \sum_{\alpha\in\calA}T_\alpha
+    \le
+    \CoreCap\left(
+    \bigcup_{\alpha\in\calA}E(S_\alpha)
+    \right).
+\]
+Equivalently, the boundary debits satisfy all Hall-type capacity inequalities for allocation over the retained core.
+\end{theorem}
+
+\begin{proof}[Proof scheme]
+Aggregate identical subcores. Let \(K=\bigcup_{\alpha\in\calA}S_\alpha\), \(S=|K|\), and \(U=\sum_{\alpha\in\calA}u_\alpha\). For each active \(\alpha\), outside mass satisfies the structural lower bound
+\[
+    r_\alpha\ge (U-u_\alpha)+(S-s_\alpha).
+\]
+Thus
+\[
+    T_\alpha
+    \le
+    \frac{
+    u_\alpha(6s_\alpha-2S-2U+u_\alpha)_+
+    }{12}.
+\]
+Writing \(w_\alpha=u_\alpha/U\), \(\bar s=\sum_\alpha w_\alpha s_\alpha\), and
+\[
+    H=2-\sum_\alpha w_\alpha^2\ge1,
+\]
+the active part is bounded by
+\[
+    \sum_{\alpha\in\calA}T_\alpha
+    \le
+    \frac{(3\bar s-S)_+^2}{12H}
+    \le
+    \frac{\bar s^2}{3}.
+\]
+The final inequality compares \(\bar s^2/3\) with the convex combination of core capacities:
+\[
+    \frac{\bar s^2}{3}
+    \le
+    \sum_\alpha w_\alpha \Cap(S_\alpha)
+    \le
+    \CoreCap\left(\bigcup_{\alpha\in\calA}E(S_\alpha)\right).
+\]
+This gives the desired Hall/Farkas inequality.
+\end{proof}
+
+\paragraph{Draft status.}
+This is the central symbolic capacity theorem. The proof above records the intended chain. The final version must spell out the capacity normalization and the convexity step in the last inequality.
+
+\section{Local terminal toolkit}
+
+\begin{theorem}[Local Terminal Toolkit]\label{thm:terminal-toolkit}
+Every bounded local residue arising in the chordal recursion is one of:
+\begin{enumerate}[label=(\roman*)]
+    \item good-leaf reducible;
+    \item ear-budget reducible;
+    \item \(L_4\)-certified in sealed mode;
+    \item long-core/five-window promoted;
+    \item overload/common-core promoted;
+    \item core-fan allocated.
+\end{enumerate}
+\end{theorem}
+
+\begin{proof}[Proof outline]
+If a residue has a good leaf, use Lemma~\ref{lem:strong-leaf}. If it is tree-like and has no good leaf, use Lemma~\ref{lem:spectral-good-leaf} to reduce to bounded double brooms. If ears attach with bounded multiplicity, use Lemma~\ref{lem:ear-budget}; otherwise promote a common core by Lemma~\ref{lem:overload}. If the local residue has a \(K_{1,5}\)-type overload, promote by Lemma~\ref{lem:k14-k15}. If the residue has bounded span at most four, seal it and apply Theorem~\ref{thm:l4}. If long-span mass persists, promote a five-window core by Lemma~\ref{lem:long-core}. The remaining core-attached boundary groups are handled by Theorem~\ref{thm:core-fan}.
+\end{proof}
+
+\section{How Paper C uses this toolkit}
+
+Paper C imports the following results from this paper:
+\[
+    \text{Lemma~\ref{lem:heavy-bag}},
+    \quad
+    \text{Theorem~\ref{thm:terminal-toolkit}},
+    \quad
+    \text{Theorem~\ref{thm:core-fan}},
+    \quad
+    \text{Theorem~\ref{thm:l4}},
+    \quad
+    \text{Lemma~\ref{lem:type-blowup}}.
+\]
+Paper C does not re-prove the \(L_4\) certificate or the Core-Fan capacity theorem. It only realizes allocated debits as fractional triangles and patches all local packings using a global edge-ownership ledger.
+
+
+\section{Discussion and verification roadmap}
+
+This paper is the most verification-sensitive part of the series. Its purpose is not only to state useful local reductions, but also to separate purely symbolic lemmas from finite or computationally assisted certificate claims.
+
+There are five items that should be completed before this draft is promoted to a public preprint.
+
+\begin{enumerate}[label=(\roman*)]
+    \item \textbf{The \(L_4\) certificate package.} The final version should include the rational certificate, the exact verifier, the type list, the edge and loop atoms, the triangle-type list, and the ownership mode used by the certificate. The sealed mode \(B=\varnothing\) should be the default public route.
+    \item \textbf{The double-broom verification.} The spectral good-leaf lemma reduces the all-strong-leaf case to a bounded double-broom family. The final version should include an exact table or a short independent verification of that family.
+    \item \textbf{The Core-Fan normalization.} The proof of the Core-Fan Allocation Theorem must spell out the capacity normalization and the convexity step converting the quadratic bound into the Hall/Farkas inequality.
+    \item \textbf{Promotion completeness.} The long-core and overload promotion lemmas must define precise thresholds separating bounded local behavior from promotion events.
+    \item \textbf{Interface with Paper C.} Every lemma imported by Paper C should be stated in exactly the form used there, especially the Core-Fan Allocation Theorem, the \(L_4\) Certificate Theorem, and the Type Blow-Up Realization Lemma.
+\end{enumerate}
+
+Once these items are formalized, the role of this paper becomes clean: it supplies a finite local toolkit, while Paper C performs the global recursive decomposition and fractional triangle-packing assembly.
+
+\subsection*{Further technical directions}
+
+Several refinements may be worth investigating after the main chordal theorem is stabilized. First, one can ask whether the \(L_4\) certificate can be simplified or replaced by a smaller human-checkable family of local reductions. Second, the promotion thresholds may admit sharper constants than those needed for the asymptotic theorem. Third, the same local toolkit may be useful for intermediate chordal subclasses, such as interval graphs, strongly chordal graphs, and block graphs.
+
+\section{Proof-status audit}
+
+\begin{center}
+\begin{tabular}{lll}
+\toprule
+Item & Status in this draft & Final requirement\\
+\midrule
+Heavy-Bag Lemma & complete & minor polishing\\
+Strong-Leaf Inequality & proof sketch & line-by-line algebra\\
+\(K_{1,4}/K_{1,5}\) & complete & none\\
+Spectral Good-Leaf & proof scheme & double-broom table\\
+Ear Budget & proof sketch & exact multiplicity thresholds\\
+Long-Core Promotion & proof scheme & formal threshold/proof\\
+Overload Promotion & proof scheme & formal threshold/proof\\
+\(L_4\) Certificate & certificate theorem & attach rational data/verifier\\
+Type Blow-Up & complete & minor polishing\\
+Core-Fan/Farkas & proof scheme & capacity normalization\\
+Terminal Toolkit & outline & depends on all above\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\section*{Acknowledgements and use of AI-assisted tools}
+
+The author is deeply grateful to his wife María Paz and to his children Lucas, Juan Cristóbal, Francisca, Raimundo, and Benjamín for their love, patience, and support during the development of this work.
+
+The author used AI-assisted tools, including Gemini 3.5 Pro and ChatGPT, during the development of this work for exploratory search, testing possible approaches, looking for contradictions, organizing proof strategies, improving exposition, and preparing drafts. All mathematical claims, proofs, citations, and final editorial decisions are the sole responsibility of the author. No AI system is listed as an author.
+
+\begin{thebibliography}{9}
+
+\bibitem{ChenErdosOrdman}
+G.-T. Chen, P. Erdős, and E. T. Ordman,
+\emph{Clique partitions of split graphs},
+in \emph{Combinatorics, graph theory, algorithms and applications} (Beijing, 1993), 21--30, 1994.
+
+\bibitem{ErdosOrdmanZalcstein}
+P. Erdős, E. T. Ordman, and Y. Zalcstein,
+\emph{Clique partitions of chordal graphs},
+Combinatorics, Probability and Computing (1993), 409--415.
+
+\bibitem{EGP66}
+P. Erdős, A. W. Goodman, and L. Pósa,
+\emph{The representation of a graph by set intersections},
+Canadian Journal of Mathematics 18 (1966), 106--112.
+
+\bibitem{Gavril}
+F. Gavril,
+\emph{The intersection graphs of subtrees in trees are exactly the chordal graphs},
+Journal of Combinatorial Theory, Series B 16 (1974), 47--56.
+
+\bibitem{HaxellRodl}
+P. E. Haxell and V. Rödl,
+\emph{Integer and fractional packings in dense graphs},
+Combinatorica 21 (2001), 13--38.
+
+\bibitem{Yuster}
+R. Yuster,
+\emph{Integer and fractional packing of families of graphs},
+Combinatorica 28 (2008), 245--251.
+
+\end{thebibliography}
+
+\end{document}

@@ -1,0 +1,617 @@
+\documentclass[11pt]{article}
+
+\usepackage[margin=1.05in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{hyperref}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{booktabs}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue!50!black,
+    citecolor=blue!50!black,
+    urlcolor=blue!50!black
+}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{remark}[theorem]{Remark}
+
+\newcommand{\cp}{\operatorname{cp}}
+\newcommand{\CoreCap}{\operatorname{Cap}}
+\newcommand{\calT}{\mathcal T}
+\newcommand{\calR}{\mathcal R}
+\newcommand{\calA}{\mathcal A}
+\newcommand{\calL}{\mathcal L}
+\newcommand{\rel}{\mathrm{rel}}
+\newcommand{\own}{\operatorname{own}}
+
+\title{A Fractional Triangle Theorem for Chordal Graphs}
+\author{
+Juan Pablo Traverso Gianini\\
+Independent researcher, Santiago, Chile\\
+\texttt{jtraverso@gmail.com}\\
+\href{https://orcid.org/0009-0003-6068-4096}{ORCID: 0009-0003-6068-4096}
+}
+\date{Technical Draft v0.2 --- \today}
+
+\begin{document}
+
+\maketitle
+
+\begin{center}
+{\small Paper C in the series on clique partitions in split and chordal graphs. This is a technical working draft, not yet a public preprint.}
+\end{center}
+
+\noindent\textbf{Keywords.}
+Clique partitions; chordal graphs; clique trees; triangle packings; fractional packings; edge clique partitions; Erdős problems.
+
+\medskip
+
+\noindent\textbf{MSC 2020.}
+05C70, 05C35, 05C65, 05C69.
+
+\begin{abstract}
+We prove, conditionally on the local toolkit formalized in Paper B, a fractional triangle-packing theorem for chordal graphs. For every chordal graph \(G\) on \(n\) vertices,
+\[
+    |E(G)|-2\nu_3^*(G)
+    \le
+    \left(\frac16+o(1)\right)n^2,
+\]
+where \(\nu_3^*(G)\) denotes the maximum total weight of a fractional triangle packing in \(G\). The proof uses a nearest-heavy laminar decomposition of a clique tree into anchored one-boundary branches and two-boundary corridors. Terminal regions are classified using the local toolkit from Paper B. Boundary interactions are converted into debits, allocated over retained cores, and then realized as fractional triangles by a uniform allocation lemma. A global edge-ownership ledger patches all local and boundary triangle weights into one feasible fractional triangle packing. This draft is the global fractional component of the series; the integral clique partition theorem is derived separately in Paper D by fractional-to-integral rounding.
+\end{abstract}
+
+\tableofcontents
+
+\section{Introduction}
+
+The edge clique partition number of a graph \(G\), denoted \(\cp(G)\), is the minimum number of cliques whose edge sets partition \(E(G)\). A triangle packing immediately gives a clique partition upper bound: starting from singleton-edge cliques, every edge-disjoint triangle can be replaced by one triangle clique, saving two cliques. Thus
+\[
+    \cp(G)\le |E(G)|-2\nu_3(G).
+\]
+For dense asymptotic questions it is natural to pass through fractional triangle packings. This paper proves the fractional chordal theorem needed for the chordal clique partition problem.
+
+\subsection*{Role in the series}
+
+The papers are organized as follows.
+
+\begin{enumerate}[label=(\Alph*)]
+    \item Paper A proves the sharp split graph theorem and supplies the lower-bound construction \(K_p\vee\overline{K}_{2p}\).
+    \item Paper B proves the local and structural toolkit for chordal graphs: heavy bags, local reductions, \(L_4\) certificates, promotion lemmas, and the Core-Fan Allocation Theorem.
+    \item Paper C, the present paper, proves the global fractional triangle theorem for chordal graphs using Paper B.
+    \item Paper D applies fractional-to-integral triangle-packing rounding and derives the final chordal clique partition theorem.
+\end{enumerate}
+
+This paper does not prove the split lower bound and does not perform the final integral rounding.
+
+\subsection*{Main theorem}
+
+\begin{theorem}[Fractional Chordal Theorem]\label{thm:fractional-main}
+For every chordal graph \(G\) on \(n\) vertices,
+\[
+    |E(G)|-2\nu_3^*(G)
+    \le
+    \left(\frac16+o(1)\right)n^2.
+\]
+\end{theorem}
+
+At the level of this technical draft, the theorem is proved as an implication from the Paper B toolkit. The main new ingredients in this paper are the anchored recursive decomposition, the uniform realization of boundary debits, the edge-ownership ledger, and the global amortization.
+
+\section{Fractional triangle packings}
+
+Let \(K_3(G)\) denote the set of triangles in \(G\). A fractional triangle packing is a choice of weights
+\[
+    \psi_T\ge0
+    \qquad
+    (T\in K_3(G))
+\]
+such that
+\[
+    \sum_{T\ni e}\psi_T\le1
+    \qquad
+    (e\in E(G)).
+\]
+Define
+\[
+    \nu_3^*(G)=
+    \max\sum_{T\in K_3(G)}\psi_T.
+\]
+It is convenient to define the fractional triangle residual
+\[
+    \tau_3(G)=|E(G)|-2\nu_3^*(G).
+\]
+Theorem~\ref{thm:fractional-main} says
+\[
+    \tau_3(G)\le \left(\frac16+o(1)\right)n^2
+\]
+for chordal graphs.
+
+\section{Chordal graphs and clique trees}
+
+We use the subtree representation of chordal graphs. Let \(\calT\) be a clique tree. Each vertex \(v\in V(G)\) corresponds to a connected subtree
+\[
+    \calT_v\subseteq\calT.
+\]
+For a clique-tree node \(t\), set
+\[
+    C(t)=\{v:t\in\calT_v\}.
+\]
+Then
+\[
+    uv\in E(G)
+    \quad\Longleftrightarrow\quad
+    \calT_u\cap\calT_v\neq\varnothing.
+\]
+The bag coverage is
+\[
+    M(t)=|C(t)|.
+\]
+
+We import the following from Paper B.
+
+\begin{lemma}[Heavy-Bag Lemma, Paper B]\label{lem:import-heavy}
+Let \(M_*=\max_tM(t)\). Then
+\[
+    |E(G)|\le M_*n.
+\]
+More generally,
+\[
+    \sum_{\calT_u\cap\calT_v\neq\varnothing}x_ux_v
+    \le
+    M_*\sum_vx_v
+\]
+for all nonnegative weights \(x_v\).
+\end{lemma}
+
+\section{Anchored regions}
+
+The recursive proof works with anchored regions in the clique tree.
+
+\begin{definition}[One-boundary branch]
+A one-boundary region is a pair
+\[
+    \calR=(R;S),
+\]
+where \(R\subseteq\calT\) is a connected subtree and \(S\) is a retained boundary clique or subcore. Its private set is
+\[
+    P(\calR)
+    =
+    \{v:\calT_v\cap R\neq\varnothing\}\setminus S.
+\]
+Its relative edge set is
+\[
+    E^{\rel}(\calR)
+    =
+    E(G[P(\calR)\cup S])\setminus E(G[S]).
+\]
+\end{definition}
+
+\begin{definition}[Two-boundary corridor]
+A two-boundary region is
+\[
+    \calR=(R;S_L,S_R),
+\]
+with two retained boundary cores. Its private set is
+\[
+    P(\calR)
+    =
+    \{v:\calT_v\cap R\neq\varnothing\}
+    \setminus(S_L\cup S_R),
+\]
+and its relative edge set is
+\[
+    E^{\rel}(\calR)
+    =
+    E(G[P(\calR)\cup S_L\cup S_R])
+    \setminus
+    \left(E(G[S_L])\cup E(G[S_R])\right).
+\]
+\end{definition}
+
+Let
+\[
+    m(\calR)=|P(\calR)|.
+\]
+For a clique-tree node \(t\) internal to \(R\), define private coverage
+\[
+    M_{\calR}(t)
+    =
+    |\{v\in P(\calR):t\in\calT_v\}|.
+\]
+
+Fix \(\eta>0\). A region is \(\eta\)-diffuse if
+\[
+    M_{\calR}^*
+    :=
+    \max_{t\in R^\circ}M_{\calR}(t)
+    \le
+    \eta m(\calR).
+\]
+
+\section{Nearest-heavy laminar recursion}
+
+If \(\calR\) is not diffuse, choose a nearest heavy bag \(b\in R^\circ\) satisfying
+\[
+    M_{\calR}(b)>\eta m(\calR).
+\]
+Retain
+\[
+    C_b=C(b)
+\]
+as a new core and split the tree region \(R\) along the node \(b\). Components on old boundary sides become two-boundary corridors; off-path components become one-boundary branches attached to \(C_b\).
+
+\begin{theorem}[Nearest-Heavy Laminar Decomposition]\label{thm:nearest-heavy}
+For fixed \(\eta>0\), the nearest-heavy recursion produces a finite laminar family of anchored terminal regions and retained cores such that:
+\begin{enumerate}[label=(\roman*)]
+    \item terminal private sets are pairwise disjoint;
+    \item retained core edges are excluded from child-private accounts;
+    \item every edge has a unique ownership account or is unused;
+    \item diffuse terminal errors sum to \(O(\eta n^2)\);
+    \item potential releases telescope under \(F(x)=x^2/6\).
+\end{enumerate}
+\end{theorem}
+
+\begin{proof}
+Removing a heavy node \(b\) from the tree region \(R\) separates \(R\) into connected components. A component can be adjacent to the new core \(C_b\) and to at most one old boundary side, since the path between two old boundary sides passes through \(b\). Hence every child is again a one-boundary or two-boundary region.
+
+The number of internal clique-tree nodes strictly decreases along every child, because \(b\) becomes retained core boundary and is no longer internal. Thus the recursion terminates.
+
+For disjointness, suppose a vertex \(v\) were private in two different child components. Since \(\calT_v\) is connected and intersects both components of \(R-b\), it must contain \(b\), hence \(v\in C_b\). But vertices of \(C_b\) are retained as boundary/core vertices in the children, not private vertices. Contradiction.
+
+The same laminarity gives global disjointness of terminal private masses:
+\[
+    \sum_{\calR\in\calL}m(\calR)\le n.
+\]
+Diffuse terminal regions contribute \(O(\eta m(\calR)^2)\), hence in total
+\[
+    \sum_{\calR\in\calL}O(\eta m(\calR)^2)\le O(\eta n^2).
+\]
+The retained-core convention gives the ownership statement: core edges are owned by the retained core account and excluded from child-private accounts; private-boundary edges are owned by boundary-debit accounts; internal-private edges are owned by the deepest region containing both endpoints privately. This also gives single-valued ownership. Finally, because private masses separated at different recursion nodes are disjoint and retained cores are not deleted as child-private mass, the potential drops telescope under \(F(x)=x^2/6\).
+\end{proof}
+
+\section{Terminal classification}
+
+Paper B supplies the local terminal toolkit.
+
+\begin{theorem}[Local Terminal Toolkit, Paper B]\label{thm:import-toolkit}
+Every bounded local residue arising in the chordal recursion is one of:
+\begin{enumerate}[label=(\roman*)]
+    \item good-leaf reducible;
+    \item ear-budget reducible;
+    \item \(L_4\)-certified in sealed mode;
+    \item long-core/five-window promoted;
+    \item overload/common-core promoted;
+    \item core-fan allocated.
+\end{enumerate}
+\end{theorem}
+
+\begin{theorem}[Terminal Classification]\label{thm:terminal-classification}
+Every terminal region produced by Theorem~\ref{thm:nearest-heavy} is one of:
+\begin{enumerate}[label=(\roman*)]
+    \item an \(\eta\)-diffuse one-boundary branch;
+    \item an \(\eta\)-diffuse two-boundary corridor;
+    \item an atomic core-fan debit call;
+    \item a sealed \(L_4\)-certified window;
+    \item a good-leaf or ear-budget reducible window;
+    \item a promotion event.
+\end{enumerate}
+\end{theorem}
+
+\begin{proof}
+If a terminal region is diffuse, it is of type (i) or (ii). Suppose it is not diffuse. If it had an internal heavy node, the nearest-heavy recursion would split it, contradicting terminality. Hence it has no remaining internal non-diffuse support except bounded local residue or atomic boundary interaction. Atomic one-boundary interactions report a core-fan debit to their retained boundary core. Atomic two-boundary interactions split into left and right debit calls, up to lower-order bilateral residue. Bounded local residues are classified by Theorem~\ref{thm:import-toolkit}. Promotions are not terminal costs: they create retained cores and new child regions.
+\end{proof}
+
+\section{Boundary debits}
+
+Let \(\alpha\) index a boundary trace group. It has private mass \(u_\alpha\), subcore \(S_\alpha\), size
+\[
+    s_\alpha=|S_\alpha|,
+\]
+and exterior mass \(r_\alpha\). The reported debit is
+\[
+    T_\alpha
+    =
+    \frac{
+    u_\alpha(4s_\alpha-u_\alpha-2r_\alpha)_+
+    }{12}.
+\]
+
+We import the following capacity theorem from Paper B.
+
+\begin{theorem}[Core-Fan Allocation Theorem, Paper B]\label{thm:import-core-fan}
+For every subfamily \(\calA\),
+\[
+    \sum_{\alpha\in\calA}T_\alpha
+    \le
+    \CoreCap\left(
+    \bigcup_{\alpha\in\calA}E(S_\alpha)
+    \right).
+\]
+\end{theorem}
+
+Thus boundary debits satisfy all Hall-type capacity inequalities over retained cores.
+
+\section{Uniform boundary-debit realization}
+
+Paper B proves that debits fit in core capacity. Paper C must realize them as actual fractional triangles.
+
+For every group \(\alpha\), define
+\[
+    z_{\alpha,ij}
+    =
+    \frac{T_\alpha}{\binom{s_\alpha}{2}},
+    \qquad
+    ij\subseteq S_\alpha.
+\]
+This allocation distributes \(T_\alpha\) uniformly over core edges of \(S_\alpha\).
+
+\begin{lemma}[Uniform Allocation Calculus]\label{lem:uniform-calculus}
+Let \(v_i\ge0\), \(V=\sum_i v_i<1\), and \(0<q_i\le1-V\). Then
+\[
+    \sum_i
+    \frac{
+    v_i(6q_i+v_i-2)_+
+    }{6q_i^2}
+    \le
+    \frac23.
+\]
+\end{lemma}
+
+\begin{proof}
+The proof splits into two cases.
+
+If \(V\le1/2\), use the one-variable bound
+\[
+    h(v)=\frac{3v}{2(2-v)}
+\]
+and its superadditivity over the active range. Then
+\[
+    \sum_i h(v_i)\le h(V)\le h(1/2)=1/2<2/3.
+\]
+
+If \(V>1/2\), the expression is maximized at the endpoint \(q_i=1-V\). The sum reduces to
+\[
+    F(V)=\frac{V(4-5V)_+}{6(1-V)^2},
+\]
+whose maximum over \(V\in(1/2,1)\) is \(2/3\), attained at \(V=2/3\).
+\end{proof}
+
+\begin{lemma}[Uniform Boundary-Debit Realization]\label{lem:uniform-realization}
+The allocation
+\[
+    z_{\alpha,ij}
+    =
+    \frac{T_\alpha}{\binom{s_\alpha}{2}}
+\]
+realizes all boundary debits by fractional triangles while respecting private-boundary and core-edge capacities.
+\end{lemma}
+
+\begin{proof}
+For each private group \(U_\alpha\) and core edge \(ij\subseteq S_\alpha\), distribute triangle weight over triangles \(uij\) with \(u\in U_\alpha\). The total allocation over \(ij\subseteq S_\alpha\) is \(T_\alpha\). Private-boundary load is bounded by
+\[
+    \frac{2T_\alpha}{s_\alpha}\le \frac{2u_\alpha}{3}<u_\alpha
+\]
+in the active range. Core-edge load is controlled by Lemma~\ref{lem:uniform-calculus}, giving normalized load at most \(2/3+o(1)\). Thus all capacity constraints are respected.
+\end{proof}
+
+\section{Sealed \(L_4\) windows and type blow-up}
+
+Paper B supplies the finite local certificate.
+
+\begin{theorem}[\(L_4\) Certificate Theorem, Paper B]\label{thm:import-l4}
+Every sealed bounded span-four \(L_4\) residue admits a type-level rational fractional triangle certificate on internally owned edges.
+\end{theorem}
+
+\begin{lemma}[Type Blow-Up Realization, Paper B]\label{lem:import-blowup}
+A rational type-level fractional triangle certificate over a fixed finite type system lifts to an actual fractional triangle packing with loss \(O_m(n)=o(n^2)\).
+\end{lemma}
+
+Therefore every sealed \(L_4\) terminal window of size \(|X|\) contributes only \(O(|X|)\) lower-order loss. Since sealed windows have disjoint private interiors in the anchored recursion,
+\[
+    \sum_XO(|X|)=O_\eta(n).
+\]
+
+\section{Edge ownership ledger}
+
+The global patching step requires that no edge be used by two local accounts.
+
+Define the ownership classes:
+\begin{enumerate}[label=(\roman*)]
+    \item internal-private account;
+    \item boundary-debit account;
+    \item retained core account;
+    \item unused.
+\end{enumerate}
+
+\begin{theorem}[Edge Ownership Patching]\label{thm:ownership}
+If every local triangle packing and every boundary-debit triangle packing obeys the ownership ledger, then their sum is a global fractional triangle packing.
+\end{theorem}
+
+\begin{proof}
+Fix an edge \(e\in E(G)\). If \(e\) is internal-private, it is owned by the deepest region containing both endpoints privately. If \(e\) has one private endpoint and one boundary endpoint, it is owned by the boundary-debit account of that region. If both endpoints lie in a retained core, it is owned by that core account. The retained-core convention excludes core edges from descendants. Thus an edge belongs to at most one active account. Since every local packing respects edge capacity inside its account, the sum of all local and boundary packings satisfies
+\[
+    \sum_{T\ni e}\psi_T\le1.
+\]
+\end{proof}
+
+\section{Lower-order ledger}
+
+\begin{lemma}[Lower-Order Ledger]\label{lem:lower-order}
+All losses in the construction are either
+\[
+    O(\eta n^2)
+\]
+or
+\[
+    O_\eta(n).
+\]
+\end{lemma}
+
+\begin{proof}
+Diffuse terminal regions contribute \(O(\eta m(\calR)^2)\), and terminal private masses are disjoint, so their total contribution is \(O(\eta n^2)\). Sealed finite windows and type blow-up losses are linear in their private sizes. Since private interiors are disjoint and the number of window types depends only on \(\eta\), these losses sum to \(O_\eta(n)\). Promotion events are not terminal losses; they create retained cores and child anchored regions.
+\end{proof}
+
+\section{Global amortization and proof of the main theorem}
+
+Let
+\[
+    F(x)=\frac{x^2}{6}.
+\]
+When private mass \(u\) is separated from ambient mass \(N\), the potential release is
+\[
+    F(N)-F(N-u)
+    =
+    \frac{2Nu-u^2}{6}.
+\]
+Because the recursion separates disjoint private masses and retained cores are not deleted as child-private mass, the releases telescope:
+\[
+    \sum_j
+    \left(F(N_j)-F(N_j-u_j)\right)
+    \le
+    F(n)=\frac{n^2}{6}.
+\]
+
+\begin{proof}[Proof of Theorem~\ref{thm:fractional-main}]
+Fix \(\eta>0\). Run the nearest-heavy recursion. Terminal regions are classified by Theorem~\ref{thm:terminal-classification}. Boundary debits are valid by Theorem~\ref{thm:import-core-fan} and realized as actual fractional triangles by Lemma~\ref{lem:uniform-realization}. Sealed \(L_4\) windows are packed using Theorem~\ref{thm:import-l4} and Lemma~\ref{lem:import-blowup}. Good-leaf and ear-budget regions are packed or exported by the Paper B toolkit.
+
+Let \(\psi\) be the sum of all triangle weights produced by these local and boundary accounts. By Theorem~\ref{thm:ownership}, \(\psi\) is a global fractional triangle packing. Therefore
+\[
+    \nu_3^*(G)\ge \sum_T\psi_T.
+\]
+The potential telescope and lower-order ledger give
+\[
+    |E(G)|-2\sum_T\psi_T
+    \le
+    \frac{n^2}{6}
+    +
+    O(\eta n^2)
+    +
+    O_\eta(n).
+\]
+Hence
+\[
+    |E(G)|-2\nu_3^*(G)
+    \le
+    \frac{n^2}{6}
+    +
+    O(\eta n^2)
+    +
+    O_\eta(n).
+\]
+Let \(n\to\infty\) with \(\eta\) fixed, and then let \(\eta\to0\). This gives
+\[
+    |E(G)|-2\nu_3^*(G)
+    \le
+    \left(\frac16+o(1)\right)n^2.
+\]
+\end{proof}
+
+\section{How Paper D uses this theorem}
+
+Paper D uses the fixed-family fractional-to-integral packing theorem for \(\{K_3\}\):
+\[
+    \nu_3(G)\ge\nu_3^*(G)-o(n^2).
+\]
+Therefore
+\[
+    \cp(G)
+    \le
+    |E(G)|-2\nu_3(G)
+    \le
+    |E(G)|-2\nu_3^*(G)+o(n^2).
+\]
+By Theorem~\ref{thm:fractional-main},
+\[
+    \cp(G)
+    \le
+    \left(\frac16+o(1)\right)n^2.
+\]
+Sharpness comes from the split construction \(K_p\vee\overline{K}_{2p}\) proved in Paper A.
+
+
+\section{Discussion and further directions}
+
+Theorem~\ref{thm:fractional-main} is the conceptual center of the series. It separates the chordal clique partition problem into two layers: a fractional triangle-packing statement proved by clique-tree recursion, and a final integral rounding step handled in Paper D. This separation is useful because the fractional theorem is where the chordal structure is used; the final rounding is a general fixed-family packing result.
+
+There are several natural directions.
+
+\begin{enumerate}[label=(\roman*)]
+    \item \textbf{Algorithmic realization.} The nearest-heavy recursion and boundary-debit allocation are constructive in spirit. It would be useful to turn the proof into an explicit algorithm producing near-optimal fractional triangle packings, and then near-optimal clique partitions after rounding.
+    \item \textbf{Finite error terms.} The theorem is asymptotic. The present argument tracks losses as \(O(\eta n^2)+O_\eta(n)\). A sharper finite version would require optimizing the diffusion threshold, local certificate losses, and promotion constants.
+    \item \textbf{Reducing dependence on finite certificates.} Paper C imports the sealed \(L_4\) certificate from Paper B. A more conceptual local argument replacing part of that finite certificate would make the proof more transparent.
+    \item \textbf{Subclasses of chordal graphs.} Interval graphs, block graphs, and strongly chordal graphs may admit shorter proofs or stronger error terms. These subclasses are useful test cases for the recursion.
+    \item \textbf{Beyond chordal graphs.} The proof relies heavily on clique-tree structure. Extending the method beyond chordal graphs would require a substitute for laminar separator ownership, and is not immediate.
+\end{enumerate}
+
+For the present series, the next task is not to broaden the theorem, but to stabilize the formal interface with Paper B: every imported local lemma must be available in the exact form used above.
+
+\section{Proof-status audit}
+
+\begin{center}
+\begin{tabular}{lll}
+\toprule
+Item & Location & Status\\
+\midrule
+Nearest-heavy recursion & Paper C & proof draft complete\\
+Terminal classification & Paper C + Paper B & depends on B toolkit\\
+Core-Fan capacity & Paper B & imported\\
+Uniform allocation & Paper C & proof draft complete\\
+\(L_4\) certificate & Paper B & imported, needs package\\
+Type blow-up & Paper B & imported\\
+Ownership ledger & Paper C & proof draft complete\\
+Lower-order ledger & Paper C & proof draft complete\\
+Fractional theorem & Paper C & conditional assembly\\
+Integral rounding & Paper D & not included here\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\section*{Acknowledgements and use of AI-assisted tools}
+
+The author is deeply grateful to his wife María Paz and to his children Lucas, Juan Cristóbal, Francisca, Raimundo, and Benjamín for their love, patience, and support during the development of this work.
+
+The author used AI-assisted tools, including Gemini 3.5 Pro and ChatGPT, during the development of this work for exploratory search, testing possible approaches, looking for contradictions, organizing proof strategies, improving exposition, and preparing drafts. All mathematical claims, proofs, citations, and final editorial decisions are the sole responsibility of the author. No AI system is listed as an author.
+
+\begin{thebibliography}{9}
+
+\bibitem{ChenErdosOrdman}
+G.-T. Chen, P. Erdős, and E. T. Ordman,
+\emph{Clique partitions of split graphs},
+in \emph{Combinatorics, graph theory, algorithms and applications} (Beijing, 1993), 21--30, 1994.
+
+\bibitem{ErdosOrdmanZalcstein}
+P. Erdős, E. T. Ordman, and Y. Zalcstein,
+\emph{Clique partitions of chordal graphs},
+Combinatorics, Probability and Computing (1993), 409--415.
+
+\bibitem{EGP66}
+P. Erdős, A. W. Goodman, and L. Pósa,
+\emph{The representation of a graph by set intersections},
+Canadian Journal of Mathematics 18 (1966), 106--112.
+
+\bibitem{Gavril}
+F. Gavril,
+\emph{The intersection graphs of subtrees in trees are exactly the chordal graphs},
+Journal of Combinatorial Theory, Series B 16 (1974), 47--56.
+
+\bibitem{HaxellRodl}
+P. E. Haxell and V. Rödl,
+\emph{Integer and fractional packings in dense graphs},
+Combinatorica 21 (2001), 13--38.
+
+\bibitem{Yuster}
+R. Yuster,
+\emph{Integer and fractional packing of families of graphs},
+Combinatorica 28 (2008), 245--251.
+
+\end{thebibliography}
+
+\end{document}

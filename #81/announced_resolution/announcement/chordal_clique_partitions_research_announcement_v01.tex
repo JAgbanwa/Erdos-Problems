@@ -1,0 +1,201 @@
+\documentclass[11pt]{article}
+
+\usepackage[margin=1.1in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{hyperref}
+\usepackage{enumitem}
+\usepackage{xcolor}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue!50!black,
+    citecolor=blue!50!black,
+    urlcolor=blue!50!black
+}
+
+\newtheorem{theorem}{Theorem}
+\newcommand{\cp}{\operatorname{cp}}
+
+\title{A Research Announcement on Clique Partitions of Chordal Graphs}
+\author{
+Juan Pablo Traverso Gianini\\
+Independent researcher, Santiago, Chile\\
+\texttt{jtraverso@gmail.com}\\
+\href{https://orcid.org/0009-0003-6068-4096}{ORCID: 0009-0003-6068-4096}
+}
+\date{Research Announcement Draft v0.1 --- \today}
+
+\begin{document}
+
+\maketitle
+
+\begin{center}
+{\small This is a research announcement. Full proofs are being prepared in companion manuscripts.}
+\end{center}
+
+\noindent\textbf{Primary arXiv category.} math.CO -- Combinatorics.
+
+\medskip
+
+\noindent\textbf{Keywords.}
+Clique partitions; chordal graphs; split graphs; triangle packings; fractional packings; extremal graph theory; Erdős problems.
+
+\medskip
+
+\noindent\textbf{MSC 2020.}
+05C70, 05C35, 05C65, 05C69.
+
+\begin{abstract}
+We announce an asymptotically sharp bound for the edge clique partition number of chordal graphs. Let \(\cp(G)\) denote the minimum number of cliques whose edge sets partition \(E(G)\). We announce that, for every chordal graph \(G\) on \(n\) vertices,
+\[
+    \cp(G)\le \left(\frac16+o(1)\right)n^2.
+\]
+The constant is best possible, as shown by the complete split graph
+\[
+    K_p\vee\overline{K}_{2p},\qquad n=3p.
+\]
+The proof proceeds through a fractional triangle-packing theorem for chordal graphs,
+\[
+    |E(G)|-2\nu_3^*(G)\le \left(\frac16+o(1)\right)n^2,
+\]
+followed by standard fractional-to-integral rounding for fixed graph families. The full proof is being prepared in a sequence of companion manuscripts. This announcement records the main statements, the extremal construction, and the high-level structure of the argument.
+\end{abstract}
+
+\section{Introduction}
+
+Let \(G\) be a finite simple graph. The edge clique partition number \(\cp(G)\) is the minimum number of cliques whose edge sets form a partition of \(E(G)\).
+
+A classical theorem of Erdős, Goodman and Pósa gives a general \(n^2/4\)-type bound for decomposing the edges of an \(n\)-vertex graph into cliques. In the chordal setting, Erdős, Ordman and Zalcstein asked whether the sharper asymptotic bound
+\[
+    \cp(G)\le \frac{n^2}{6}+O(n)
+\]
+holds for every \(n\)-vertex chordal graph.
+
+This announcement records an affirmative asymptotic answer.
+
+\section{Main announced theorem}
+
+\begin{theorem}[Chordal clique partition theorem]
+For chordal graphs,
+\[
+    \max\{\cp(G):G\text{ chordal}, |V(G)|=n\}
+    =
+    \left(\frac16+o(1)\right)n^2.
+\]
+\end{theorem}
+
+The upper bound is the main part of the result. The lower bound is already witnessed inside the class of split graphs.
+
+\section{Sharpness}
+
+Let
+\[
+    G_p=K_p\vee\overline{K}_{2p}.
+\]
+Then \(G_p\) is a split graph, hence chordal, and has \(n=3p\) vertices. This construction gives
+\[
+    \cp(G_p)\ge \frac{n^2}{6}-O(n).
+\]
+Thus the constant \(1/6\) in the announced theorem cannot be improved asymptotically.
+
+The split case is treated separately in a companion manuscript, where the corresponding asymptotic maximum over split graphs is determined.
+
+\section{Fractional reduction}
+
+The proof of the chordal upper bound passes through fractional triangle packings. Let \(\nu_3^*(G)\) denote the maximum total weight of a fractional triangle packing in \(G\). The central fractional statement is the following.
+
+\begin{theorem}[Fractional chordal theorem]
+For every chordal graph \(G\) on \(n\) vertices,
+\[
+    |E(G)|-2\nu_3^*(G)
+    \le
+    \left(\frac16+o(1)\right)n^2.
+\]
+\end{theorem}
+
+This fractional theorem implies the announced clique partition theorem by applying the standard fractional-to-integral packing theorem for the fixed family \(\{K_3\}\), which gives
+\[
+    \nu_3(G)\ge \nu_3^*(G)-o(n^2).
+\]
+Indeed, every edge-disjoint triangle packing gives
+\[
+    \cp(G)\le |E(G)|-2\nu_3(G),
+\]
+because each packed triangle replaces three singleton-edge cliques by one triangle clique.
+
+\section{High-level structure of the proof}
+
+The proof uses the clique-tree representation of chordal graphs. Every vertex of a chordal graph is represented by a connected subtree of a tree, and adjacency corresponds to subtree intersection.
+
+The argument has four main components.
+
+First, a structural decomposition isolates large regions of the clique tree and recursively separates the graph into anchored branches and corridors. The recursion is laminar and is designed so that private vertex sets are disjoint and retained core edges are not counted twice.
+
+Second, local terminal configurations are handled by a finite toolkit of reductions. These include local leaf reductions, bounded-window certificates, promotion mechanisms for high-overlap configurations, and capacity inequalities for boundary groups.
+
+Third, the boundary interactions produced by the recursion are converted into debits assigned to retained cores. These debits are then realized as fractional triangles while respecting edge capacities.
+
+Fourth, an ownership ledger patches all local and boundary packings into a single global fractional triangle packing. The resulting amortization gives
+\[
+    |E(G)|-2\nu_3^*(G)
+    \le
+    \frac{n^2}{6}+O(\eta n^2)+O_\eta(n),
+\]
+and the theorem follows by first taking \(n\to\infty\) and then \(\eta\to0\).
+
+\section{Companion manuscripts}
+
+The proof is being prepared in the following sequence.
+
+\begin{enumerate}[label=(\Alph*)]
+    \item \textbf{Clique partitions of split graphs and the \(1/6\) barrier.}
+    This manuscript proves the split graph theorem and gives the extremal construction.
+    \item \textbf{Local and structural reductions for chordal clique partitions.}
+    This manuscript develops the local toolkit used in the chordal proof.
+    \item \textbf{A fractional triangle theorem for chordal graphs.}
+    This manuscript proves the fractional chordal theorem.
+    \item \textbf{Clique partitions of chordal graphs.}
+    This manuscript derives the announced clique partition theorem from the fractional theorem using fractional-to-integral rounding and the split lower bound.
+\end{enumerate}
+
+The present announcement is intended only to record the main result and the proof architecture. Full details, including the local reduction toolkit and finite certificates, will appear in the companion manuscripts.
+
+\section*{Acknowledgements and use of AI-assisted tools}
+
+The author is deeply grateful to his wife María Paz and to his children Lucas, Juan Cristóbal, Francisca, Raimundo, and Benjamín for their love, patience, and support during the development of this work.
+
+The author used AI-assisted tools, including Gemini 3.5 Pro and ChatGPT, during the development of this work for exploratory search, testing possible approaches, looking for contradictions, organizing proof strategies, improving exposition, and preparing drafts. All mathematical claims, proofs, citations, and final editorial decisions are the sole responsibility of the author. No AI system is listed as an author.
+
+\begin{thebibliography}{9}
+
+\bibitem{ChenErdosOrdman}
+G.-T. Chen, P. Erdős, and E. T. Ordman,
+\emph{Clique partitions of split graphs},
+in \emph{Combinatorics, graph theory, algorithms and applications} (Beijing, 1993), 21--30, 1994.
+
+\bibitem{ErdosOrdmanZalcstein}
+P. Erdős, E. T. Ordman, and Y. Zalcstein,
+\emph{Clique partitions of chordal graphs},
+Combinatorics, Probability and Computing (1993), 409--415.
+
+\bibitem{EGP66}
+P. Erdős, A. W. Goodman, and L. Pósa,
+\emph{The representation of a graph by set intersections},
+Canadian Journal of Mathematics 18 (1966), 106--112.
+
+\bibitem{HaxellRodl}
+P. E. Haxell and V. Rödl,
+\emph{Integer and fractional packings in dense graphs},
+Combinatorica 21 (2001), 13--38.
+
+\bibitem{Yuster}
+R. Yuster,
+\emph{Integer and fractional packing of families of graphs},
+Combinatorica 28 (2008), 245--251.
+
+\end{thebibliography}
+
+\end{document}
