@@ -1,0 +1,569 @@
+\documentclass[a4paper,11pt]{amsart}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{enumitem}
+\usepackage[colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue]{hyperref}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{importedtheorem}[theorem]{Imported theorem}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+
+\newcommand{\Sub}{\operatorname{Sub}}
+\newcommand{\Sym}{\operatorname{Sym}}
+\newcommand{\F}{\mathbb F}
+\newcommand{\OO}{\mathcal O}
+\newcommand{\Prob}{\mathbb P}
+\newcommand{\E}{\mathbb E}
+\newcommand{\gbinom}[2]{\genfrac{[}{]}{0pt}{}{#1}{#2}_2}
+
+\title[Subgroups of the symmetric group]{The logarithmic number of subgroups of the symmetric group}
+\author{}
+\date{}
+
+\begin{document}
+
+\begin{abstract}
+Let
+\[
+        s(n)=|\{H:H\leq S_n\}|.
+\]
+The main asymptotic formula is
+\[
+        \log_2 s(n)=\frac{n^2}{16}+o(n^2),
+        \qquad\text{equivalently}\qquad
+        s(n)=2^{(1/16+o(1))n^2}.
+\]
+The lower bound is elementary and comes from the subgroup lattice of an elementary abelian
+2-subgroup of rank \(\lfloor n/2\rfloor\). The matching upper bound is the deep theorem of
+Pyber on subgroup enumeration in symmetric groups, and is explicitly quoted as an imported
+theorem rather than reproved here. We also prove the exact statistical statement in the elementary
+abelian model: a uniformly random subgroup of \(C_2^{\lfloor n/2\rfloor}\leq S_n\) has order
+\(2^{n/4+o(n)}\). Finally, we record a caution: the leading asymptotic alone does not determine
+the order of a uniformly random subgroup of \(S_n\); a dihedral-block construction gives
+\(2^{n^2/16+O(n)}\) subgroups of order \(2^{n/2+o(n)}\) when \(4\mid n\).
+\end{abstract}
+
+\maketitle
+
+\section{Statement of the problem and scope}
+
+All logarithms are base \(2\). Let
+\[
+        s(n)=|\Sub(S_n)|
+\]
+denote the number of subgroups of the symmetric group on \(n\) letters. The principal theorem is
+as follows.
+
+\begin{theorem}\label{thm:main}
+As \(n\to\infty\),
+\[
+        s(n)=2^{n^2/16+o(n^2)}.
+\]
+Equivalently,
+\[
+        \log_2 s(n)\sim \frac{n^2}{16}.
+\]
+\end{theorem}
+
+The proof has two logically different parts. The lower bound is elementary and is proved in full
+below. The upper bound is a substantial finite-permutation-group theorem of Pyber. Since the
+proof of Pyber's theorem is long and uses nontrivial subgroup-enumeration machinery, it is stated
+in this note as an imported theorem. Thus every local lemma and proposition below is proved from
+first principles, while the global upper bound is quoted precisely as the single external input.
+
+The statistical question is more delicate. The elementary lower-bound model has a clean and fully
+proved order law: a random subspace of \(\F_2^{\lfloor n/2\rfloor}\) has dimension
+\(n/4+o(n)\), hence order \(2^{n/4+o(n)}\). However, this model theorem should not be confused
+with a theorem about a uniformly random subgroup of all of \(S_n\). Section~\ref{sec:dihedral}
+shows that there are also \(2^{n^2/16+O(n)}\) subgroups of \(S_n\) with order
+\(2^{n/2+o(n)}\) for \(4\mid n\). Consequently, the leading logarithmic formula by itself is too
+coarse to determine the global order distribution.
+
+\section{Gaussian binomial coefficients}
+
+For integers \(0\leq d\leq r\), let
+\[
+        \gbinom{r}{d}
+\]
+denote the number of \(d\)-dimensional linear subspaces of \(\F_2^r\). These numbers are the
+Gaussian binomial coefficients over \(\F_2\).
+
+\begin{lemma}[Formula for \(\gbinom{r}{d}\)]\label{lem:gauss-formula}
+For \(0\leq d\leq r\),
+\[
+        \gbinom{r}{d}
+        =
+        \frac{(2^r-1)(2^r-2)\cdots(2^r-2^{d-1})}
+        {(2^d-1)(2^d-2)\cdots(2^d-2^{d-1})}.
+\]
+\end{lemma}
+
+\begin{proof}
+Count ordered bases of \(d\)-dimensional subspaces of \(\F_2^r\) in two ways. An ordered
+linearly independent \(d\)-tuple in \(\F_2^r\) can be chosen in
+\[
+        (2^r-1)(2^r-2)\cdots(2^r-2^{d-1})
+\]
+ways: after \(i\) independent vectors have been chosen, their span has \(2^i\) elements, so the
+next vector has \(2^r-2^i\) choices. On the other hand, each fixed \(d\)-dimensional subspace has
+\[
+        (2^d-1)(2^d-2)\cdots(2^d-2^{d-1})
+\]
+ordered bases, by the same argument inside \(\F_2^d\). Dividing gives the formula.
+\end{proof}
+
+\begin{lemma}[Uniform Gaussian-binomial estimate]\label{lem:gauss-estimate}
+There is an absolute constant
+\[
+        C_2=\prod_{j=1}^{\infty}(1-2^{-j})^{-1}<\infty
+\]
+such that, for all \(0\leq d\leq r\),
+\[
+        2^{d(r-d)}\leq \gbinom{r}{d}\leq C_2\,2^{d(r-d)}.
+\]
+\end{lemma}
+
+\begin{proof}
+Starting from Lemma~\ref{lem:gauss-formula}, factor out the powers of \(2\):
+\[
+        \gbinom{r}{d}
+        =2^{d(r-d)}
+        \prod_{i=0}^{d-1}\frac{1-2^{i-r}}{1-2^{i-d}}.
+\]
+Since \(r\geq d\), one has \(2^{i-r}\leq 2^{i-d}\), hence
+\[
+        1-2^{i-r}\geq 1-2^{i-d}.
+\]
+Each factor in the product is therefore at least \(1\), proving the lower bound.
+
+For the upper bound, use \(1-2^{i-r}\leq 1\). Then
+\[
+        \prod_{i=0}^{d-1}\frac{1-2^{i-r}}{1-2^{i-d}}
+        \leq
+        \prod_{i=0}^{d-1}(1-2^{i-d})^{-1}
+        =
+        \prod_{j=1}^{d}(1-2^{-j})^{-1}
+        \leq
+        \prod_{j=1}^{\infty}(1-2^{-j})^{-1}.
+\]
+The infinite product converges because \(\sum_{j\geq 1}2^{-j}<\infty\). This proves the estimate.
+\end{proof}
+
+\begin{lemma}[Number of subspaces of \(\F_2^r\)]\label{lem:subspace-total}
+Let
+\[
+        G(r)=\sum_{d=0}^{r}\gbinom{r}{d}.
+\]
+Then
+\[
+        G(r)=2^{r^2/4+O(\log r)}.
+\]
+In particular,
+\[
+        \log_2 G(r)=\frac{r^2}{4}+O(\log r).
+\]
+\end{lemma}
+
+\begin{proof}
+The function \(d(r-d)\) is maximized at \(d=r/2\), with maximum \(r^2/4\). Therefore
+Lemma~\ref{lem:gauss-estimate} gives
+\[
+        G(r)
+        \leq
+        \sum_{d=0}^r C_2 2^{d(r-d)}
+        \leq
+        (r+1)C_2 2^{r^2/4}.
+\]
+For the lower bound, take \(d=\lfloor r/2\rfloor\). Then
+\[
+        G(r)\geq \gbinom{r}{\lfloor r/2\rfloor}
+        \geq 2^{\lfloor r/2\rfloor\lceil r/2\rceil}
+        =2^{r^2/4+O(1)}.
+\]
+Combining the two estimates gives the claim.
+\end{proof}
+
+\begin{lemma}[Concentration of the dimension of a random subspace]\label{lem:dimension-concentration}
+Let \(U_r\) be chosen uniformly from all linear subspaces of \(\F_2^r\). Then
+\[
+        \frac{\dim U_r}{r}\to \frac12
+\]
+in probability. Equivalently, for every fixed \(\varepsilon>0\),
+\[
+        \Prob\left(\left|\dim U_r-\frac r2\right|\geq \varepsilon r\right)\to 0.
+\]
+More quantitatively,
+\[
+        \Prob\left(\left|\dim U_r-\frac r2\right|\geq \varepsilon r\right)
+        \leq
+        (r+1)C_2\,2^{-\varepsilon^2r^2+O(1)}.
+\]
+\end{lemma}
+
+\begin{proof}
+For every \(d\),
+\[
+        d(r-d)=\frac{r^2}{4}-\left(d-\frac r2\right)^2.
+\]
+Thus, if \(|d-r/2|\geq \varepsilon r\), Lemma~\ref{lem:gauss-estimate} gives
+\[
+        \gbinom{r}{d}\leq C_2 2^{r^2/4-\varepsilon^2r^2}.
+\]
+There are at most \(r+1\) possible dimensions \(d\), so the number of exceptional subspaces is at
+most
+\[
+        (r+1)C_2 2^{r^2/4-\varepsilon^2r^2}.
+\]
+By Lemma~\ref{lem:subspace-total}, the total number of subspaces is at least
+\(2^{r^2/4+O(1)}\). Dividing the two bounds proves the quantitative estimate and hence the
+probabilistic convergence.
+\end{proof}
+
+\section{The elementary lower bound for \texorpdfstring{\(s(n)\)}{s(n)}}
+
+Let
+\[
+        m=\left\lfloor \frac n2\right\rfloor.
+\]
+Inside \(S_n\), define
+\[
+        E_m=\langle (1\,2),(3\,4),\ldots,(2m-1\,\,2m)\rangle.
+\]
+Then \(E_m\cong C_2^m\), because the displayed transpositions are disjoint and independent.
+
+\begin{proposition}[Elementary lower bound]\label{prop:lower}
+One has
+\[
+        s(n)\geq 2^{n^2/16+O(n)}.
+\]
+In fact,
+\[
+        s(n)\geq G\left(\left\lfloor \frac n2\right\rfloor\right),
+\]
+where \(G(r)\) is the number of subspaces of \(\F_2^r\).
+\end{proposition}
+
+\begin{proof}
+The subgroup \(E_m\) is naturally an \(m\)-dimensional vector space over \(\F_2\): multiplication
+in \(E_m\) corresponds to addition of exponent vectors in \(\F_2^m\). Therefore the subgroups of
+\(E_m\) are exactly the \(\F_2\)-linear subspaces of \(\F_2^m\). Distinct subspaces give distinct
+subgroups of \(S_n\). Hence
+\[
+        s(n)\geq |\Sub(E_m)|=G(m).
+\]
+By Lemma~\ref{lem:subspace-total},
+\[
+        G(m)=2^{m^2/4+O(\log m)}.
+\]
+Since \(m=\lfloor n/2\rfloor\), we have
+\[
+        \frac{m^2}{4}=\frac{n^2}{16}+O(n).
+\]
+Thus
+\[
+        s(n)\geq 2^{n^2/16+O(n)}.
+\]
+\end{proof}
+
+\section{The upper bound and the asymptotic formula}
+
+The following theorem is the non-elementary input.
+
+\begin{importedtheorem}[Pyber's upper bound]\label{thm:pyber-upper}
+As \(n\to\infty\),
+\[
+        s(n)\leq 2^{n^2/16+o(n^2)}.
+\]
+\end{importedtheorem}
+
+\begin{remark}
+Theorem~\ref{thm:pyber-upper} is the difficult half of the subgroup-enumeration theorem for
+symmetric groups. It is not an elementary consequence of the lower-bound construction above. Its
+proof uses substantial information about the structure and enumeration of finite permutation
+groups. In this manuscript it is quoted as a black box; the purpose of the surrounding arguments is
+to make the reduction to this single external theorem completely explicit.
+\end{remark}
+
+\begin{proof}[Proof of Theorem~\ref{thm:main}]
+The lower bound from Proposition~\ref{prop:lower} gives
+\[
+        s(n)\geq 2^{n^2/16+O(n)}=2^{n^2/16+o(n^2)}.
+\]
+The imported upper bound, Theorem~\ref{thm:pyber-upper}, gives
+\[
+        s(n)\leq 2^{n^2/16+o(n^2)}.
+\]
+Combining the two inequalities yields
+\[
+        s(n)=2^{n^2/16+o(n^2)}.
+\]
+Taking logarithms gives
+\[
+        \log_2 s(n)=\frac{n^2}{16}+o(n^2),
+\]
+as claimed.
+\end{proof}
+
+\section{The order law inside the elementary abelian model}\label{sec:model-order}
+
+The lower-bound construction not only gives many subgroups; it also gives a clean order statistic
+inside that model.
+
+\begin{theorem}[Model order theorem]\label{thm:model-order}
+Let \(m=\lfloor n/2\rfloor\), and choose a subgroup \(U_n\leq E_m\) uniformly at random from all
+subgroups of \(E_m\). Then
+\[
+        \log_2 |U_n|=\frac n4+o(n)
+\]
+in probability. Equivalently,
+\[
+        |U_n|=2^{n/4+o(n)}
+\]
+in probability.
+\end{theorem}
+
+\begin{proof}
+Under the identification \(E_m\cong \F_2^m\), the subgroup \(U_n\) is a uniformly random subspace
+of \(\F_2^m\). Its group order is
+\[
+        |U_n|=2^{\dim U_n},
+\]
+so
+\[
+        \log_2 |U_n|=\dim U_n.
+\]
+By Lemma~\ref{lem:dimension-concentration},
+\[
+        \dim U_n=\frac m2+o(m)
+\]
+in probability. Since \(m=n/2+O(1)\), this becomes
+\[
+        \log_2 |U_n|=\frac n4+o(n),
+\]
+which is the claim.
+\end{proof}
+
+\section{Why the global order distribution is a finer question}\label{sec:dihedral}
+
+It is tempting to infer from Theorem~\ref{thm:model-order} that a uniformly random subgroup of
+\(S_n\) itself should have order \(2^{n/4+o(n)}\). That inference is not justified by the leading
+asymptotic formula. The following construction shows why: another natural family has the same
+leading \(2^{n^2/16}\)-scale but a different linear order scale.
+
+\begin{lemma}[A dihedral block group]\label{lem:dihedral-block}
+Let \(D_8\) be the dihedral group of order \(8\), acting faithfully on four points as the symmetry
+group of a square. Its Frattini subgroup \(\Phi(D_8)\), namely the intersection of all maximal
+subgroups of \(D_8\), has order \(2\), and
+\[
+        D_8/\Phi(D_8)\cong C_2^2.
+\]
+\end{lemma}
+
+\begin{proof}
+Write
+\[
+        D_8=\langle r,s:r^4=s^2=1,\;srs=r^{-1}\rangle.
+\]
+The subgroup \(\langle r^2\rangle\) is central of order \(2\). The quotient
+\(D_8/\langle r^2\rangle\) is generated by the images of \(r\) and \(s\), both of order \(2\), and
+these images commute because the commutator relation becomes trivial modulo \(\langle r^2\rangle\).
+Thus the quotient has order \(4\) and is isomorphic to \(C_2^2\).
+
+It remains to identify \(\langle r^2\rangle\) with the Frattini subgroup. Since \(|D_8|=8\), the
+maximal subgroups have order \(4\). They are exactly
+\[
+        \langle r\rangle,
+        \qquad
+        \langle r^2,s\rangle,
+        \qquad
+        \langle r^2,rs\rangle.
+\]
+Indeed, \(\langle r\rangle\) is the unique cyclic subgroup of order \(4\), while every subgroup of
+order \(4\) not equal to \(\langle r\rangle\) contains a reflection and \(r^2\), giving one of the
+two displayed Klein four subgroups according to whether the reflection is \(r^{2j}s\) or
+\(r^{2j+1}s\). Their intersection is precisely \(\langle r^2\rangle\). Hence
+\[
+        \Phi(D_8)=\langle r\rangle\cap \langle r^2,s\rangle\cap\langle r^2,rs\rangle
+        =\langle r^2\rangle.
+\]
+The quotient by \(\Phi(D_8)\) is therefore \(C_2^2\), as proved above.
+\end{proof}
+
+\begin{proposition}[Many subgroups at order scale \(2^{n/2}\)]\label{prop:dihedral-family}
+Suppose \(n=4k\). Then \(S_n\) contains a family \(\mathcal F_n\) of subgroups with
+\[
+        |\mathcal F_n|=2^{n^2/16+O(\log n)}
+\]
+such that all but an exponentially small proportion of the members of \(\mathcal F_n\) satisfy
+\[
+        \log_2 |H|=\frac n2+o(n).
+\]
+\end{proposition}
+
+\begin{proof}
+Partition \(\{1,\ldots,n\}\) into \(k\) fixed blocks of size \(4\). On each block let a copy of
+\(D_8\) act as in Lemma~\ref{lem:dihedral-block}, and set
+\[
+        P_k=D_8^k\leq S_{4k}.
+\]
+Let
+\[
+        N_k=\Phi(D_8)^k\trianglelefteq P_k.
+\]
+Then
+\[
+        N_k\cong C_2^k
+        \qquad\text{and}\qquad
+        P_k/N_k\cong C_2^{2k}.
+\]
+Let
+\[
+        \pi:P_k\to P_k/N_k
+\]
+be the quotient map. For every subspace \(U\leq P_k/N_k\), the inverse image
+\[
+        H_U=\pi^{-1}(U)
+\]
+is a subgroup of \(P_k\), hence a subgroup of \(S_{4k}\). Distinct subspaces \(U\) give distinct
+subgroups \(H_U\), since \(\pi(H_U)=U\). Therefore the number of such subgroups is exactly the
+number of subspaces of \(\F_2^{2k}\), namely
+\[
+        G(2k)=2^{(2k)^2/4+O(\log k)}=2^{k^2+O(\log k)}.
+\]
+Since \(n=4k\), this is
+\[
+        2^{n^2/16+O(\log n)}.
+\]
+
+Moreover, if \(\dim U=d\), then
+\[
+        |H_U|=|N_k|\,|U|=2^k 2^d=2^{k+d}.
+\]
+By Lemma~\ref{lem:dimension-concentration}, a uniformly random subspace \(U\leq\F_2^{2k}\) has
+\[
+        d=k+o(k)
+\]
+in probability. Hence, for all but an exponentially small proportion of the subspaces \(U\),
+\[
+        \log_2 |H_U|=k+d=2k+o(k)=\frac n2+o(n).
+\]
+This proves the claim.
+\end{proof}
+
+\begin{corollary}[The leading formula alone does not give a global order law]\label{cor:order-caution}
+The asymptotic formula
+\[
+        s(n)=2^{n^2/16+o(n^2)}
+\]
+does not by itself imply that a uniformly random subgroup of \(S_n\) has order
+\(2^{n/4+o(n)}\). Indeed, for \(4\mid n\), there is a family of
+\[
+        2^{n^2/16+O(\log n)}
+\]
+subgroups of order scale \(2^{n/2+o(n)}\), as shown in
+Proposition~\ref{prop:dihedral-family}.
+\end{corollary}
+
+\begin{proof}
+Theorem~\ref{thm:model-order} proves the order scale \(2^{n/4+o(n)}\) only for subgroups chosen
+inside a fixed elementary abelian subgroup of rank \(\lfloor n/2\rfloor\). Proposition~\ref{prop:dihedral-family}
+constructs, on the same leading \(2^{n^2/16}\) logarithmic scale, subgroups whose order is instead
+\(2^{n/2+o(n)}\). Therefore the leading exponential count cannot distinguish the global
+probability weights of these different families. A genuine theorem for a uniformly random subgroup
+of \(S_n\) requires finer enumeration than the main logarithmic asymptotic.
+\end{proof}
+
+\section{A useful rank check for elementary abelian 2-subgroups}
+
+The following elementary observation explains why the rank \(\lfloor n/2\rfloor\) appearing in the
+lower bound is the correct maximum possible rank for elementary abelian \(2\)-subgroups of \(S_n\).
+
+\begin{lemma}\label{lem:rank-bound}
+If \(A\leq S_n\) is elementary abelian of exponent \(2\), say \(A\cong C_2^r\), then
+\[
+        r\leq \left\lfloor\frac n2\right\rfloor.
+\]
+\end{lemma}
+
+\begin{proof}
+Let \(A\) act on \(\{1,
+\ldots,n\}\), and decompose the set into \(A\)-orbits
+\[
+        \Omega_1,\ldots,\Omega_t.
+\]
+For each orbit \(\Omega_i\), the image of \(A\) in \(\Sym(\Omega_i)\) is a transitive abelian
+permutation group. A transitive abelian permutation group acts regularly after factoring out its
+kernel: if an element fixes one point of a transitive orbit, then, because the group is abelian, it
+fixes every point of that orbit. Hence the faithful image on \(\Omega_i\) is an elementary abelian
+2-group of order \(|\Omega_i|\). Thus \(|\Omega_i|=2^{a_i}\) for some \(a_i\geq 0\), and the rank of
+the image on \(\Omega_i\) is \(a_i\).
+
+The diagonal action of \(A\) on all its orbits is faithful, so the natural homomorphism from \(A\)
+to the product of its images on the orbits is injective. Therefore
+\[
+        r\leq \sum_{i=1}^t a_i.
+\]
+For each orbit, \(a_i\leq 2^{a_i}/2\) when \(a_i\geq 1\), and the inequality is also true for
+\(a_i=0\). Hence
+\[
+        r\leq \sum_{i=1}^t a_i
+        \leq
+        \frac12\sum_{i=1}^t 2^{a_i}
+        =\frac n2.
+\]
+Since \(r\) is an integer, \(r\leq\lfloor n/2\rfloor\).
+\end{proof}
+
+\section{Verification of the proof}
+
+We finish by isolating exactly what has been proved and where each input enters.
+
+\begin{enumerate}[label=\textup{(\arabic*)},leftmargin=2.5em]
+    \item Lemmas~\ref{lem:gauss-formula}--\ref{lem:dimension-concentration} are fully elementary
+    linear algebra over \(\F_2\). They prove both the count and dimension concentration for
+    subspaces of \(\F_2^r\).
+
+    \item Proposition~\ref{prop:lower} injects the subgroup lattice of
+    \(C_2^{\lfloor n/2\rfloor}\) into \(\Sub(S_n)\). This proves the lower bound
+    \[
+            s(n)\geq 2^{n^2/16+O(n)}.
+    \]
+
+    \item The only imported result is Theorem~\ref{thm:pyber-upper}, Pyber's upper bound
+    \[
+            s(n)\leq 2^{n^2/16+o(n^2)}.
+    \]
+    Combining it with the elementary lower bound proves
+    \[
+            s(n)=2^{n^2/16+o(n^2)}.
+    \]
+
+    \item Theorem~\ref{thm:model-order} is a fully proved statistical theorem for the elementary
+    abelian lower-bound model. It says that a random subgroup of
+    \(C_2^{\lfloor n/2\rfloor}\leq S_n\) has order \(2^{n/4+o(n)}\).
+
+    \item Proposition~\ref{prop:dihedral-family} proves that the global order distribution of a
+    uniformly random subgroup of \(S_n\) cannot be read off from the leading logarithmic formula
+    alone: for \(4\mid n\), there is also a family of \(2^{n^2/16+O(\log n)}\) subgroups with order
+    \(2^{n/2+o(n)}\).
+\end{enumerate}
+
+Thus the asymptotic formula for the number of subgroups is rigorous once Pyber's upper-bound
+theorem is admitted, while the order-distribution question is explicitly separated from the
+coarser logarithmic enumeration.
+
+\begin{thebibliography}{9}
+
+\bibitem{Pyber}
+L. Pyber,
+\emph{The number of subgroups of the symmetric group},
+Combinatorica \textbf{13} (1993), 363--372.
+
+\end{thebibliography}
+
+\end{document}
