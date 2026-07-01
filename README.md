@@ -33,3 +33,5 @@ Problem(s) to try sometime:
 [455](https://www.erdosproblems.com/455)
 
 [112](https://www.erdosproblems.com/112)
+
+[1162](https://www.erdosproblems.com/1162)
