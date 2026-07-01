@@ -16,12 +16,10 @@
 \newcommand{\Sub}{\operatorname{Sub}}
 \newcommand{\Sym}{\operatorname{Sym}}
 \newcommand{\F}{\mathbb F}
-\newcommand{\OO}{\mathcal O}
 \newcommand{\Prob}{\mathbb P}
-\newcommand{\E}{\mathbb E}
 \newcommand{\gbinom}[2]{\genfrac{[}{]}{0pt}{}{#1}{#2}_2}
 
-\title[Subgroups of the symmetric group]{The logarithmic number of subgroups of the symmetric group}
+\title[Subgroups of the symmetric group]{Subgroups of the symmetric group: counting and order statistics}
 \author{}
 \date{}
 
@@ -32,34 +30,40 @@ Let
 \[
         s(n)=|\{H:H\leq S_n\}|.
 \]
-The main asymptotic formula is
+The asymptotic formula is
 \[
         \log_2 s(n)=\frac{n^2}{16}+o(n^2),
         \qquad\text{equivalently}\qquad
         s(n)=2^{(1/16+o(1))n^2}.
 \]
 The lower bound is elementary and comes from the subgroup lattice of an elementary abelian
-2-subgroup of rank \(\lfloor n/2\rfloor\). The matching upper bound is the deep theorem of
-Pyber on subgroup enumeration in symmetric groups, and is explicitly quoted as an imported
-theorem rather than reproved here. We also prove the exact statistical statement in the elementary
-abelian model: a uniformly random subgroup of \(C_2^{\lfloor n/2\rfloor}\leq S_n\) has order
-\(2^{n/4+o(n)}\). Finally, we record a caution: the leading asymptotic alone does not determine
-the order of a uniformly random subgroup of \(S_n\); a dihedral-block construction gives
-\(2^{n^2/16+O(n)}\) subgroups of order \(2^{n/2+o(n)}\) when \(4\mid n\).
+2-subgroup of rank \(\lfloor n/2\rfloor\). The matching upper bound is the theorem of
+Roney-Dougal and Tracey, which proves a strong form of Pyber's 1993 conjecture. We also record
+what is presently available as a genuine global statistical theorem about the order of a uniformly
+random subgroup \(H_n\leq S_n\): for every
+\[
+        \nu<\rho:=\frac12-\frac{\sqrt3}{4},
+\]
+one has \(\log_2 |H_n|\geq \nu n\) with probability tending to \(1\). This follows from their theorem
+that the Sylow \(2\)-subgroup of a random subgroup has order at least \(2^{\nu n}\) with high
+probability. Separately, inside the elementary abelian lower-bound model, a uniformly random
+subgroup of \(C_2^{\lfloor n/2\rfloor}\leq S_n\) has the sharper model law
+\(2^{n/4+o(n)}\). Finally, a dihedral-block construction shows why the leading
+\(2^{n^2/16+o(n^2)}\) enumeration alone does not determine an exact global concentration law for
+\(|H_n|\).
 \end{abstract}
 
 \maketitle
 
-\section{Statement of the problem and scope}
+\section{Statement of the answer}
 
 All logarithms are base \(2\). Let
 \[
         s(n)=|\Sub(S_n)|
 \]
-denote the number of subgroups of the symmetric group on \(n\) letters. The principal theorem is
-as follows.
+denote the number of subgroups of the symmetric group on \(n\) letters.
 
-\begin{theorem}\label{thm:main}
+\begin{theorem}[Asymptotic subgroup count]\label{thm:main}
 As \(n\to\infty\),
 \[
         s(n)=2^{n^2/16+o(n^2)}.
@@ -70,19 +74,43 @@ Equivalently,
 \]
 \end{theorem}
 
-The proof has two logically different parts. The lower bound is elementary and is proved in full
-below. The upper bound is a substantial finite-permutation-group theorem of Pyber. Since the
-proof of Pyber's theorem is long and uses nontrivial subgroup-enumeration machinery, it is stated
-in this note as an imported theorem. Thus every local lemma and proposition below is proved from
-first principles, while the global upper bound is quoted precisely as the single external input.
+The proof has two different parts. The lower bound is elementary and is proved in full below. The
+upper bound is a deep finite-permutation-group theorem of Roney-Dougal and Tracey. Historically,
+Pyber proved a weaker upper bound and conjectured the constant \(1/16\); the exact asymptotic
+was proved by Roney-Dougal and Tracey.
 
-The statistical question is more delicate. The elementary lower-bound model has a clean and fully
-proved order law: a random subspace of \(\F_2^{\lfloor n/2\rfloor}\) has dimension
-\(n/4+o(n)\), hence order \(2^{n/4+o(n)}\). However, this model theorem should not be confused
-with a theorem about a uniformly random subgroup of all of \(S_n\). Section~\ref{sec:dihedral}
-shows that there are also \(2^{n^2/16+O(n)}\) subgroups of \(S_n\) with order
-\(2^{n/2+o(n)}\) for \(4\mid n\). Consequently, the leading logarithmic formula by itself is too
-coarse to determine the global order distribution.
+For the statistical part, throughout the paper \(H_n\) denotes a uniformly random element of the
+finite set \(\Sub(S_n)\). A \emph{section} of a finite group \(G\) means a quotient \(A/B\), where
+\(B\trianglelefteq A\leq G\).
+
+\begin{theorem}[Global order statistic currently supplied by the enumeration theory]\label{thm:global-order}
+Let
+\[
+        \rho=\frac12-\frac{\sqrt3}{4}=0.066987\ldots .
+\]
+For every \(\varepsilon>0\),
+\[
+        \Prob\left(\log_2 |H_n|\geq (\rho-\varepsilon)n\right)\longrightarrow 1.
+\]
+Moreover, deterministically,
+\[
+        \log_2 |H_n|\leq \log_2(n!)\leq n\log_2 n.
+\]
+Thus a uniformly random subgroup of \(S_n\) has exponentially large order with high probability:
+\[
+        |H_n|\geq 2^{(\rho-o(1))n}
+\]
+in the usual lower-tail sense that every smaller linear exponent holds with probability tending to
+\(1\).
+\end{theorem}
+
+\begin{remark}
+Theorem~\ref{thm:global-order} is a real statistical theorem about uniformly random subgroups of
+\(S_n\), but it is not an exact concentration theorem of the form \(\log_2|H_n|\sim c n\). Such an
+exact global order law is a finer question than the leading enumeration
+\(s(n)=2^{n^2/16+o(n^2)}\). The model theorem in Section~\ref{sec:model-order} and the
+construction in Section~\ref{sec:dihedral} explain this distinction.
+\end{remark}
 
 \section{Gaussian binomial coefficients}
 
@@ -104,8 +132,8 @@ For \(0\leq d\leq r\),
 \end{lemma}
 
 \begin{proof}
-Count ordered bases of \(d\)-dimensional subspaces of \(\F_2^r\) in two ways. An ordered
-linearly independent \(d\)-tuple in \(\F_2^r\) can be chosen in
+Count ordered bases of \(d\)-dimensional subspaces of \(\F_2^r\) in two ways. An ordered linearly
+independent \(d\)-tuple in \(\F_2^r\) can be chosen in
 \[
         (2^r-1)(2^r-2)\cdots(2^r-2^{d-1})
 \]
@@ -272,31 +300,34 @@ Thus
 
 \section{The upper bound and the asymptotic formula}
 
-The following theorem is the non-elementary input.
+The next theorem is the non-elementary input, quoted from Roney-Dougal and Tracey \cite[Theorem 1]{RDT} rather than reproved.
 
-\begin{importedtheorem}[Pyber's upper bound]\label{thm:pyber-upper}
-As \(n\to\infty\),
+\begin{importedtheorem}[Roney-Dougal--Tracey enumeration theorem]\label{thm:rdt-enum}
+There exist absolute constants \(\alpha>0\) and \(\beta\) such that, for all integers \(n>1\),
 \[
-        s(n)\leq 2^{n^2/16+o(n^2)}.
+        2^{n^2/16+\alpha n\log n}
+        \leq
+        |\Sub(S_n)|
+        \leq
+        2^{n^2/16+\beta n^{3/2}}.
 \]
 \end{importedtheorem}
 
 \begin{remark}
-Theorem~\ref{thm:pyber-upper} is the difficult half of the subgroup-enumeration theorem for
-symmetric groups. It is not an elementary consequence of the lower-bound construction above. Its
-proof uses substantial information about the structure and enumeration of finite permutation
-groups. In this manuscript it is quoted as a black box; the purpose of the surrounding arguments is
-to make the reduction to this single external theorem completely explicit.
+Pyber's 1993 work gave a weaker upper bound of the form \(2^{\xi n^2+o(n^2)}\), where
+\(\xi=(\log_2 24)/6\), and conjectured the sharper constant \(1/16\). Theorem~\ref{thm:rdt-enum}
+settles that conjecture. Thus the matching upper bound in this note should be attributed to
+Roney-Dougal and Tracey, not to Pyber alone.
 \end{remark}
 
 \begin{proof}[Proof of Theorem~\ref{thm:main}]
-The lower bound from Proposition~\ref{prop:lower} gives
+The elementary lower bound from Proposition~\ref{prop:lower} gives
 \[
         s(n)\geq 2^{n^2/16+O(n)}=2^{n^2/16+o(n^2)}.
 \]
-The imported upper bound, Theorem~\ref{thm:pyber-upper}, gives
+The upper bound in Theorem~\ref{thm:rdt-enum} gives
 \[
-        s(n)\leq 2^{n^2/16+o(n^2)}.
+        s(n)\leq 2^{n^2/16+\beta n^{3/2}}=2^{n^2/16+o(n^2)}.
 \]
 Combining the two inequalities yields
 \[
@@ -308,6 +339,46 @@ Taking logarithms gives
 \]
 as claimed.
 \end{proof}
+
+\section{A global statistical theorem on subgroup order}\label{sec:global-order}
+
+We now state the known global probabilistic input about uniformly random subgroups of \(S_n\), again quoted from Roney-Dougal and Tracey \cite[Theorem 6]{RDT}.
+
+\begin{importedtheorem}[Roney-Dougal--Tracey random subgroup theorem]\label{thm:rdt-random}
+Let \(H_n\) be uniformly random from \(\Sub(S_n)\). Let \(\mu\in[0,1/16)\) and let
+\[
+        \nu\in\left[0,\frac12-\frac{\sqrt3}{4}\right).
+\]
+Then, with probability tending to \(1\) as \(n\to\infty\), the group \(H_n\) has an elementary
+abelian \(2\)-section of order at least \(2^{\mu n}\), and a Sylow \(2\)-subgroup of order at least
+\(2^{\nu n}\).
+\end{importedtheorem}
+
+\begin{proof}[Proof of Theorem~\ref{thm:global-order}]
+Let \(\varepsilon>0\). If \(\varepsilon\geq\rho\), the asserted lower bound is trivial because
+\(|H_n|\geq 1\). If \(0<\varepsilon<\rho\), put \(\nu=\rho-\varepsilon\). Then
+\(0\leq \nu<\rho\), so Theorem~\ref{thm:rdt-random} gives, with probability tending to \(1\), a
+Sylow \(2\)-subgroup \(P_n\leq H_n\) satisfying
+\[
+        |P_n|\geq 2^{\nu n}=2^{(\rho-\varepsilon)n}.
+\]
+Since \(|P_n|\leq |H_n|\), it follows that
+\[
+        \Prob\left(\log_2 |H_n|\geq (\rho-\varepsilon)n\right)\to 1.
+\]
+The deterministic upper bound follows from Lagrange's theorem:
+\[
+        |H_n|\leq |S_n|=n!,
+\]
+and from the elementary inequality \(n!\leq n^n\), which gives \(\log_2(n!)\leq n\log_2 n\).
+\end{proof}
+
+\begin{remark}
+The elementary abelian section conclusion in Theorem~\ref{thm:rdt-random} also implies
+\(|H_n|\geq 2^{\mu n}\) with high probability for every \(\mu<1/16\), since the order of a section
+of a finite group divides the order of the group. The Sylow \(2\)-subgroup assertion gives the
+slightly larger explicit lower-tail constant \(\rho=1/2-\sqrt3/4\).
+\end{remark}
 
 \section{The order law inside the elementary abelian model}\label{sec:model-order}
 
@@ -455,7 +526,7 @@ in probability. Hence, for all but an exponentially small proportion of the subs
 This proves the claim.
 \end{proof}
 
-\begin{corollary}[The leading formula alone does not give a global order law]\label{cor:order-caution}
+\begin{corollary}[The leading formula alone does not give an exact global order law]\label{cor:order-caution}
 The asymptotic formula
 \[
         s(n)=2^{n^2/16+o(n^2)}
@@ -465,8 +536,7 @@ does not by itself imply that a uniformly random subgroup of \(S_n\) has order
 \[
         2^{n^2/16+O(\log n)}
 \]
-subgroups of order scale \(2^{n/2+o(n)}\), as shown in
-Proposition~\ref{prop:dihedral-family}.
+subgroups of order scale \(2^{n/2+o(n)}\), as shown in Proposition~\ref{prop:dihedral-family}.
 \end{corollary}
 
 \begin{proof}
@@ -474,7 +544,7 @@ Theorem~\ref{thm:model-order} proves the order scale \(2^{n/4+o(n)}\) only for s
 inside a fixed elementary abelian subgroup of rank \(\lfloor n/2\rfloor\). Proposition~\ref{prop:dihedral-family}
 constructs, on the same leading \(2^{n^2/16}\) logarithmic scale, subgroups whose order is instead
 \(2^{n/2+o(n)}\). Therefore the leading exponential count cannot distinguish the global
-probability weights of these different families. A genuine theorem for a uniformly random subgroup
+probability weights of these different families. A sharper theorem for a uniformly random subgroup
 of \(S_n\) requires finer enumeration than the main logarithmic asymptotic.
 \end{proof}
 
@@ -491,8 +561,7 @@ If \(A\leq S_n\) is elementary abelian of exponent \(2\), say \(A\cong C_2^r\), 
 \end{lemma}
 
 \begin{proof}
-Let \(A\) act on \(\{1,
-\ldots,n\}\), and decompose the set into \(A\)-orbits
+Let \(A\) act on \(\{1,\ldots,n\}\), and decompose the set into \(A\)-orbits
 \[
         \Omega_1,\ldots,\Omega_t.
 \]
@@ -500,8 +569,8 @@ For each orbit \(\Omega_i\), the image of \(A\) in \(\Sym(\Omega_i)\) is a trans
 permutation group. A transitive abelian permutation group acts regularly after factoring out its
 kernel: if an element fixes one point of a transitive orbit, then, because the group is abelian, it
 fixes every point of that orbit. Hence the faithful image on \(\Omega_i\) is an elementary abelian
-2-group of order \(|\Omega_i|\). Thus \(|\Omega_i|=2^{a_i}\) for some \(a_i\geq 0\), and the rank of
-the image on \(\Omega_i\) is \(a_i\).
+2-group of order \(|\Omega_i|\). Thus \(|\Omega_i|=2^{a_i}\) for some \(a_i\geq 0\), and the rank
+of the image on \(\Omega_i\) is \(a_i\).
 
 The diagonal action of \(A\) on all its orbits is faithful, so the natural homomorphism from \(A\)
 to the product of its images on the orbits is injective. Therefore
@@ -519,7 +588,7 @@ For each orbit, \(a_i\leq 2^{a_i}/2\) when \(a_i\geq 1\), and the inequality is 
 Since \(r\) is an integer, \(r\leq\lfloor n/2\rfloor\).
 \end{proof}
 
-\section{Verification of the proof}
+\section{Verification of the answer}
 
 We finish by isolating exactly what has been proved and where each input enters.
 
@@ -529,40 +598,51 @@ We finish by isolating exactly what has been proved and where each input enters.
     subspaces of \(\F_2^r\).
 
     \item Proposition~\ref{prop:lower} injects the subgroup lattice of
-    \(C_2^{\lfloor n/2\rfloor}\) into \(\Sub(S_n)\). This proves the lower bound
+    \(C_2^{\lfloor n/2\rfloor}\) into \(\Sub(S_n)\). This proves
     \[
             s(n)\geq 2^{n^2/16+O(n)}.
     \]
 
-    \item The only imported result is Theorem~\ref{thm:pyber-upper}, Pyber's upper bound
-    \[
-            s(n)\leq 2^{n^2/16+o(n^2)}.
-    \]
-    Combining it with the elementary lower bound proves
+    \item The non-elementary upper bound is Theorem~\ref{thm:rdt-enum}, due to Roney-Dougal and
+    Tracey. Combining it with the elementary lower bound gives
     \[
             s(n)=2^{n^2/16+o(n^2)}.
     \]
+    This is the requested asymptotic formula.
 
-    \item Theorem~\ref{thm:model-order} is a fully proved statistical theorem for the elementary
-    abelian lower-bound model. It says that a random subgroup of
+    \item The genuine global statistical theorem on order is Theorem~\ref{thm:global-order}: if
+    \(H_n\) is uniformly random in \(\Sub(S_n)\), then for every \(\varepsilon>0\),
+    \[
+            \Prob\left(\log_2|H_n|\geq
+            \left(\frac12-\frac{\sqrt3}{4}-\varepsilon\right)n\right)\to 1.
+    \]
+    This is obtained from the Roney-Dougal--Tracey random subgroup theorem.
+
+    \item Theorem~\ref{thm:model-order} is a fully proved sharper statistical theorem for the
+    elementary abelian lower-bound model. It says that a random subgroup of
     \(C_2^{\lfloor n/2\rfloor}\leq S_n\) has order \(2^{n/4+o(n)}\).
 
-    \item Proposition~\ref{prop:dihedral-family} proves that the global order distribution of a
-    uniformly random subgroup of \(S_n\) cannot be read off from the leading logarithmic formula
-    alone: for \(4\mid n\), there is also a family of \(2^{n^2/16+O(\log n)}\) subgroups with order
-    \(2^{n/2+o(n)}\).
+    \item Proposition~\ref{prop:dihedral-family} and Corollary~\ref{cor:order-caution} explain why
+    the leading logarithmic enumeration alone does not force a unique exact global order scale.
 \end{enumerate}
 
-Thus the asymptotic formula for the number of subgroups is rigorous once Pyber's upper-bound
-theorem is admitted, while the order-distribution question is explicitly separated from the
-coarser logarithmic enumeration.
+Thus the original question is answered as follows: the number of subgroups of \(S_n\) is
+\(2^{n^2/16+o(n^2)}\); there is a global high-probability theorem proving that a uniformly random
+subgroup has exponentially large order, and there is an exact order law in the elementary abelian
+model that supplies the elementary lower bound. A sharper global concentration theorem for
+\(\log_2|H_n|\), if desired, requires finer information than the leading asymptotic count.
 
 \begin{thebibliography}{9}
 
 \bibitem{Pyber}
 L. Pyber,
-\emph{The number of subgroups of the symmetric group},
-Combinatorica \textbf{13} (1993), 363--372.
+\emph{Enumerating finite groups of given order},
+Ann. of Math. (2) \textbf{137} (1993), 203--220.
+
+\bibitem{RDT}
+C. M. Roney-Dougal and G. Tracey,
+\emph{Subgroups of symmetric groups: enumeration and asymptotic properties},
+arXiv:2503.05416, 2025.
 
 \end{thebibliography}
 
