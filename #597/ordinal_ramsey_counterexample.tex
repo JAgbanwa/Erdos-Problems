@@ -1,0 +1,365 @@
+\documentclass[11pt,a4paper]{amsart}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage[hidelinks]{hyperref}
+\usepackage{enumitem}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{remark}[theorem]{Remark}
+
+\newcommand{\wone}{\omega_1}
+\newcommand{\N}{\mathbb N}
+\newcommand{\otp}{\operatorname{otp}}
+\newcommand{\cf}{\operatorname{cf}}
+
+\title[An ordinal Ramsey counterexample]{An ordinal Ramsey counterexample at $\omega_1^2$}
+\author{}
+\date{July 2026}
+
+\begin{document}
+
+\begin{abstract}
+We answer negatively the following infinite variant of an ordinal Ramsey question.  There is a countable graph $G$ with no $K_4$ and no $K_{\aleph_0,\aleph_0}$ such that
+\[
+        \omega_1^2 \nrightarrow (\omega_1\omega,G)^2.
+\]
+The graph $G$ may be taken to be the countable shift graph.  The coloring witnessing the negative relation is explicit: identify $\omega_1^2$ with $\omega_1\times\omega_1$ in lexicographic order and color a pair blue exactly when the two coordinates move in opposite directions.  We also record the finite case: by the finite Erd\H{o}s--Milner theorem,
+\[
+        \omega_1^2 \to (\omega_1\omega,H)^2
+\]
+for every finite graph $H$.
+\end{abstract}
+\maketitle
+
+\section{Conventions and statement of the result}
+
+All graphs in this note are simple and undirected.  Copies of graphs are not required to be induced.  For an ordinal $\alpha$ and a graph $G$, the notation
+\[
+        \alpha\to(\beta,G)^2
+\]
+means that every red/blue coloring of $[\alpha]^2$ contains either a red-homogeneous subset of order type $\beta$, or a blue copy of $G$.
+
+Ordinal multiplication is used throughout.  Thus
+\[
+        \omega_1^2=\omega_1\cdot\omega_1,
+        \qquad
+        \omega_1\omega=\omega_1\cdot\omega.
+\]
+We identify $\omega_1^2$ with $\omega_1\times\omega_1$ ordered lexicographically:
+\[
+        (\xi,\eta)<_{\rm lex}(\zeta,\theta)
+        \quad\Longleftrightarrow\quad
+        \xi<\zeta\text{ or }(\xi=\zeta\text{ and }\eta<\theta).
+\]
+The set $\{\xi\}\times\omega_1$ is called the $\xi$-th vertical block.
+
+The main theorem is the following.
+
+\begin{theorem}\label{thm:main-negative}
+There is a countable graph $G$ containing neither $K_4$ nor $K_{\aleph_0,\aleph_0}$ such that
+\[
+        \omega_1^2\nrightarrow(\omega_1\omega,G)^2.
+\]
+Indeed, $G$ may be chosen to be the countable shift graph.
+\end{theorem}
+
+The finite case is different.
+
+\begin{theorem}\label{thm:finite-case}
+For every finite graph $H$,
+\[
+        \omega_1^2\to(\omega_1\omega,H)^2.
+\]
+In particular, the positive relation holds for every finite graph $H$ with no $K_4$.
+\end{theorem}
+
+The proof of Theorem~\ref{thm:main-negative} is completely explicit and self-contained.  The proof of Theorem~\ref{thm:finite-case} is an immediate application of the classical finite Erd\H{o}s--Milner theorem; see Section~\ref{sec:finite-case}.
+
+\section{The coloring of $\omega_1^2$}
+
+Let
+\[
+        X=\omega_1\times\omega_1
+\]
+with the lexicographic order.  Define a red/blue coloring $c$ of $[X]^2$ as follows.  For distinct vertices
+\[
+        x=(\xi,\eta),\qquad y=(\zeta,\theta),
+\]
+color $\{x,y\}$ blue if, after possibly interchanging $x$ and $y$,
+\[
+        \xi<\zeta\quad\text{and}\quad \eta>\theta.
+\]
+Equivalently, a pair is blue exactly when the first coordinates and second coordinates are ordered in opposite directions.  All remaining pairs are colored red.
+
+We first show that this coloring has no red copy of $\omega_1\omega$.
+
+\begin{lemma}\label{lem:sections-small-order-type}
+Let $A\subseteq\omega_1\times\omega_1$.  For $\xi<\omega_1$, put
+\[
+        A_\xi=\{\eta<\omega_1:(\xi,\eta)\in A\}.
+\]
+If $A_\xi$ is countable for all but at most one $\xi<\omega_1$, then $A$, with the inherited lexicographic order, has order type at most $\omega_1\cdot2$.
+\end{lemma}
+
+\begin{proof}
+The inherited lexicographic order on $A$ is the ordinal sum
+\[
+        \sum_{\xi<\omega_1}\otp(A_\xi),
+\]
+where empty sections contribute $0$.  If every section is countable, then every proper initial partial sum is countable: indeed, before a fixed $\xi<\omega_1$ there are only countably many earlier indices, and a countable ordinal sum of countable ordinals is countable.  Hence the full sum is at most $\omega_1$.
+
+Now suppose exactly one section, say $A_{\xi_0}$, is uncountable.  The part before $\xi_0$ is countable, because $\xi_0$ itself is a countable ordinal.  The section $A_{\xi_0}$ has order type at most $\omega_1$.  The part after $\xi_0$ is an ordinal sum of $\omega_1$ many countable ordinals, and therefore has order type at most $\omega_1$.  Thus the whole order type is at most
+\[
+        \text{countable}+\omega_1+\omega_1=\omega_1\cdot2.
+\]
+This proves the claim.
+\end{proof}
+
+\begin{lemma}\label{lem:no-red-omega1omega}
+The coloring $c$ has no red-homogeneous subset of order type $\omega_1\omega$.
+\end{lemma}
+
+\begin{proof}
+Let $A\subseteq X$ be red-homogeneous.  We claim that $A$ has at most one uncountable vertical section.
+
+Suppose otherwise.  Choose $\xi<\zeta<\omega_1$ such that both
+\[
+        A_\xi=\{\eta:(\xi,\eta)\in A\},
+        \qquad
+        A_\zeta=\{\theta:(\zeta,
+        \theta)\in A\}
+\]
+are uncountable.  An uncountable subset of $\omega_1$ is unbounded in $\omega_1$.  Choose any $\theta\in A_\zeta$.  Since $A_\xi$ is unbounded, choose $\eta\in A_\xi$ with $\eta>\theta$.  Then
+\[
+        \xi<\zeta,
+        \qquad
+        \eta>\theta,
+\]
+so the pair $\{(\xi,\eta),(\zeta,\theta)\}$ is blue by definition of $c$, contradicting the red-homogeneity of $A$.
+
+Therefore $A$ has at most one uncountable vertical section.  By Lemma~\ref{lem:sections-small-order-type}, $A$ has order type at most $\omega_1\cdot2$.  Since
+\[
+        \omega_1\cdot2 < \omega_1\cdot\omega,
+\]
+$A$ cannot have order type $\omega_1\omega$.
+\end{proof}
+
+\section{The forbidden graph: the countable shift graph}
+
+\begin{definition}
+The countable shift graph $S_\omega$ has vertex set
+\[
+        V(S_\omega)=\{(i,j): i<j<\omega\}.
+\]
+Two distinct vertices $(i,j)$ and $(k,\ell)$ are adjacent if and only if, after possibly interchanging them,
+\[
+        j=k.
+\]
+Equivalently, the edges are exactly
+\[
+        (i,j)\sim(j,k)
+        \qquad(i<j<k<\omega).
+\]
+\end{definition}
+
+We record the two structural properties needed for the Ramsey counterexample.
+
+\begin{lemma}\label{lem:shift-triangle-free}
+The shift graph $S_\omega$ is triangle-free.  In particular, it contains no $K_4$.
+\end{lemma}
+
+\begin{proof}
+Fix a vertex $v=(i,j)$.  Its neighbors are precisely
+\[
+        L_v=\{(h,i):h<i\}
+        \qquad\text{and}\qquad
+        R_v=\{(j,k):j<k<\omega\}.
+\]
+Two vertices of $L_v$ are not adjacent: if $h<h'<i$, then adjacency of $(h,i)$ and $(h',i)$ would require $i=h'$, impossible because $h'<i$.  Two vertices of $R_v$ are not adjacent: if $j<k<k'$, then adjacency of $(j,k)$ and $(j,k')$ would require $k=j$, impossible.  Finally, a vertex $(h,i)\in L_v$ and a vertex $(j,k)\in R_v$ are not adjacent, since adjacency would require either $i=j$ or $k=h$, while
+\[
+        h<i<j<k.
+\]
+Thus the neighborhood of every vertex is independent.  Hence no vertex can lie in a triangle, and $S_\omega$ is triangle-free.
+\end{proof}
+
+\begin{lemma}\label{lem:shift-no-biclique}
+The shift graph $S_\omega$ contains no copy of $K_{\aleph_0,\aleph_0}$.
+\end{lemma}
+
+\begin{proof}
+We first observe that two vertices of $S_\omega$ with distinct second coordinates have only finitely many common neighbors.
+
+Let
+\[
+        u=(a,b),\qquad v=(c,d),
+\]
+where $a<b<\omega$, $c<d<\omega$, and $b\ne d$.  A vertex $w=(x,y)$ is adjacent to $u$ precisely when
+\[
+        y=a\quad\text{or}\quad x=b,
+\]
+and it is adjacent to $v$ precisely when
+\[
+        y=c\quad\text{or}\quad x=d.
+\]
+Thus a common neighbor must satisfy one of the following four systems:
+\[
+\begin{array}{ll}
+        y=a\text{ and }y=c, & y=a\text{ and }x=d,\\
+        x=b\text{ and }y=c, & x=b\text{ and }x=d.
+\end{array}
+\]
+The fourth system is impossible because $b\ne d$.  The second and third systems determine at most one vertex each.  The first system is impossible unless $a=c$, and if $a=c$ then it permits only vertices $(x,a)$ with $x<a$, of which there are finitely many.  Hence $u$ and $v$ have finitely many common neighbors.
+
+Now suppose toward a contradiction that $S_\omega$ contains a $K_{\aleph_0,\aleph_0}$ with bipartition $(A,B)$.  The side $A$ is infinite.  For any fixed $n<\omega$, there are only finitely many vertices of $S_\omega$ with second coordinate $n$, namely $(0,n),\dots,(n-1,n)$.  Therefore $A$ contains two vertices with distinct second coordinates.  These two vertices have only finitely many common neighbors by the preceding paragraph.  But every vertex of $B$ is a common neighbor of them, and $B$ is infinite.  This contradiction proves the lemma.
+\end{proof}
+
+It remains to show that the coloring from Lemma~\ref{lem:no-red-omega1omega} has no blue copy of $S_\omega$.
+
+\begin{lemma}[Infinite Ramsey theorem, finite-uniform form]\label{lem:ordinary-ramsey}
+For every $m<\omega$ and every finite coloring of $[\omega]^m$, there is an infinite subset of $\omega$ whose $m$-element subsets all have the same color.
+\end{lemma}
+
+\begin{proof}
+We prove the result by induction on $m$.  The cases $m=0$ and $m=1$ are immediate from the infinite pigeonhole principle.  Assume the theorem holds for $m$ and consider a finite coloring $d$ of $[\omega]^{m+1}$.
+
+Set $M_{-1}=\omega$.  Construct recursively an increasing sequence
+\[
+        n_0<n_1<n_2<\cdots
+\]
+and infinite sets
+\[
+        M_0\supseteq M_1\supseteq M_2\supseteq\cdots
+\]
+with $n_s<\min M_s$ as follows.  Having chosen $M_{s-1}$, let $n_s=\min M_{s-1}$ and consider the induced coloring of $[M_{s-1}\setminus(n_s+1)]^m$ given by
+\[
+        F\longmapsto d(\{n_s\}\cup F).
+\]
+By the induction hypothesis, there is an infinite $M_s\subseteq M_{s-1}\setminus(n_s+1)$ on which this induced coloring is constant.  Denote the resulting color by $e(s)$.
+
+Since there are only finitely many colors, choose an infinite set $S\subseteq\omega$ such that $e(s)$ is constant for $s\in S$.  Then $\{n_s:s\in S\}$ is homogeneous for $d$: if
+\[
+        s_0<s_1<\cdots<s_m
+\]
+are in $S$, then $\{n_{s_1},\dots,n_{s_m}\}\subseteq M_{s_0}$, and by the construction at stage $s_0$ the color of
+\[
+        \{n_{s_0},n_{s_1},\dots,n_{s_m}\}
+\]
+is $e(s_0)$, independent of the chosen $(m+1)$-set.  This completes the induction.
+\end{proof}
+
+\begin{lemma}\label{lem:no-blue-shift}
+The blue graph of the coloring $c$ contains no copy of $S_\omega$.
+\end{lemma}
+
+\begin{proof}
+Suppose toward a contradiction that there is a blue embedding
+\[
+        \varphi:S_\omega\hookrightarrow X.
+\]
+Write
+\[
+        \varphi(i,j)=(\xi_{ij},\eta_{ij})
+        \qquad(i<j<\omega).
+\]
+For every triple $i<j<k<\omega$, the vertices $(i,j)$ and $(j,k)$ are adjacent in $S_\omega$.  Hence their images are blue-adjacent in $X$.  Therefore exactly one of the following two alternatives holds:
+\[
+\begin{array}{ll}
+        \text{type }0: & \xi_{ij}<\xi_{jk}\text{ and }\eta_{ij}>\eta_{jk},\\[2mm]
+        \text{type }1: & \xi_{jk}<\xi_{ij}\text{ and }\eta_{jk}>\eta_{ij}.
+\end{array}
+\]
+Color the triple $\{i,j,k\}$ by its type.  By Lemma~\ref{lem:ordinary-ramsey}, there is an infinite set
+\[
+        M=\{m_0<m_1<m_2<\cdots\}\subseteq\omega
+\]
+whose triples all have the same type.
+
+If all triples from $M$ have type $0$, then for each $t<\omega$ the triple
+\[
+        m_t<m_{t+1}<m_{t+2}
+\]
+gives
+\[
+        \eta_{m_t m_{t+1}}>\eta_{m_{t+1}m_{t+2}}.
+\]
+Hence
+\[
+        \eta_{m_0m_1}>\eta_{m_1m_2}>\eta_{m_2m_3}>\cdots
+\]
+is an infinite strictly decreasing sequence of ordinals, impossible.
+
+If all triples from $M$ have type $1$, then similarly
+\[
+        \xi_{m_0m_1}>\xi_{m_1m_2}>\xi_{m_2m_3}>\cdots
+\]
+is an infinite strictly decreasing sequence of ordinals, again impossible.
+
+Both cases are impossible.  Therefore no blue copy of $S_\omega$ exists.
+\end{proof}
+
+\begin{proof}[Proof of Theorem~\ref{thm:main-negative}]
+Let $G=S_\omega$.  By Lemma~\ref{lem:shift-triangle-free}, $G$ contains no $K_4$.  By Lemma~\ref{lem:shift-no-biclique}, $G$ contains no $K_{\aleph_0,\aleph_0}$.  The coloring $c$ of $[\omega_1^2]^2$ has no red copy of $\omega_1\omega$ by Lemma~\ref{lem:no-red-omega1omega}, and no blue copy of $G$ by Lemma~\ref{lem:no-blue-shift}.  Hence
+\[
+        \omega_1^2\nrightarrow(\omega_1\omega,G)^2.
+\]
+\end{proof}
+
+\section{The finite case}\label{sec:finite-case}
+
+The infinite counterexample above cannot be finite.  The relevant positive theorem is the following finite form of the Erd\H{o}s--Milner ordinal Ramsey theorem.
+
+\begin{theorem}[Finite Erd\H{o}s--Milner theorem]\label{thm:finite-erdos-milner}
+For every finite integer $r\ge1$,
+\[
+        \omega_1^2\to(\omega_1\omega,r)^2.
+\]
+Equivalently, every red/blue coloring of $[\omega_1^2]^2$ contains either a red-homogeneous subset of order type $\omega_1\omega$, or a blue complete graph on $r$ vertices.
+\end{theorem}
+
+\begin{remark}
+Theorem~\ref{thm:finite-erdos-milner} is a classical theorem of ordinal partition calculus.  It is usually quoted as a finite Erd\H{o}s--Milner theorem.  The present note uses it only in this standard finite form.  The negative construction in Theorem~\ref{thm:main-negative} is independent of this theorem.
+\end{remark}
+
+\begin{proof}[Proof of Theorem~\ref{thm:finite-case}]
+Let $H$ be a finite graph and put $r=|V(H)|$.  Given a red/blue coloring of $[\omega_1^2]^2$, Theorem~\ref{thm:finite-erdos-milner} gives either a red-homogeneous subset of order type $\omega_1\omega$, or a blue $K_r$.  In the second case, because graph copies are not required to be induced, a blue $K_r$ contains a blue copy of every graph on $r$ vertices, and therefore contains a blue copy of $H$.  Thus
+\[
+        \omega_1^2\to(\omega_1\omega,H)^2
+\]
+for every finite graph $H$.
+\end{proof}
+
+\section{Conclusion}
+
+The proposed infinite assertion is false.  The countable shift graph $S_\omega$ satisfies
+\[
+        K_4\nsubseteq S_\omega,
+        \qquad
+        K_{\aleph_0,\aleph_0}\nsubseteq S_\omega,
+\]
+but nevertheless
+\[
+        \omega_1^2\nrightarrow(\omega_1\omega,S_\omega)^2.
+\]
+The witnessing coloring is explicit and uses the inversion relation on $\omega_1\times\omega_1$.
+
+For finite graphs the answer is positive: every finite graph $H$ satisfies
+\[
+        \omega_1^2\to(\omega_1\omega,H)^2.
+\]
+Thus the obstruction is genuinely infinite, even though the counterexample graph is only countable and is sparse enough to avoid both $K_4$ and $K_{\aleph_0,\aleph_0}$.
+
+\begin{thebibliography}{9}
+
+\bibitem{ErdosMilner}
+P. Erd\H{o}s and E. C. Milner,
+\emph{A theorem in the partition calculus},
+Canadian Mathematical Bulletin \textbf{15} (1972), 501--505.
+
+\end{thebibliography}
+
+\end{document}
