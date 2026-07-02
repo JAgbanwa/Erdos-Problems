@@ -1,0 +1,21 @@
+# Summary of changes for run d3c84333-720b-4a57-b85b-726ee9189fb5
+I fixed all the issues you saw on the newer-Mathlib online compiler. The changes are in `RequestProject/Main.lean`; the project still builds cleanly (no `sorry`/`admit`/`axiom`), and the main results (`Erdos566.not_proposedBound`, `Erdos566.thm4`, `Erdos566.ramsey_pathGraph_K2`) depend only on `propext`, `Classical.choice`, `Quot.sound`.
+What was wrong and how it was fixed:
+1. `B.symm` "Function expected" (and the resulting unsolved `B.Adj v u` goal). In newer Mathlib the `SimpleGraph.symm` field has type `Std.Symm B.Adj` rather than a plain function, so `B.symm h` no longer applies. I replaced `simp_all [B.symm h]` with `simp_all [h.symm]`, using `SimpleGraph.Adj.symm`, which works in both versions.
+2. `introN failed` on the `Std.Symm …` goal (the `matchingGraph` definition). The graph's `symm` field type changed from `Symmetric Adj` (a Pi type) to `Std.Symm Adj` (a structure), and these need different proof syntax. I supply the field via a `first | … | …` block that provides both a `Symmetric`-style term and a `Std.Symm`-style constructor, so the definition elaborates under either version. Two localized `set_option`s keep the unavoidable "unreachable branch" linter notes from surfacing; a comment explains this.
+3. Deprecated `Set.ncard_diff_singleton_of_mem`. I removed the dependency entirely and instead close the step with the version-stable `Set.ncard_lt_ncard` applied to the strict subset `F.verts \ {m} ⊂ F.verts`, avoiding the renamed lemma.
+4. Deprecated `push_neg`. All three occurrences now use `push Not`, the suggested replacement.
+I confirmed the file contains no remaining `push_neg`, `ncard_diff_singleton_of_mem`, `B.symm`, or `sorry`, and that everything builds without errors.
+# Summary of changes for run e1f01ccc-1519-4ea7-9ce4-755fc95cec86
+I formalized, in Lean 4 (Mathlib), the full contents of the note *"A disproof of a uniform linear Ramsey bound from a (2,3)-sparsity hypothesis"*, which resolves Erdős problem #566 negatively. Everything is in `RequestProject/Main.lean`, builds successfully, contains no `sorry`/`admit`/`axiom`, and the main results depend only on the standard axioms `propext`, `Classical.choice`, `Quot.sound`.
+Setup/definitions:
+- `Ramsey G H` = the Ramsey number `R(G,H)`, defined as the least `N` such that every red/blue colouring of `K_N` (encoded by its red graph `c : SimpleGraph (Fin N)`, blue graph `cᶜ`) contains a red copy of `G` (`G ⊑ c`) or a blue copy of `H` (`H ⊑ cᶜ`).
+- `Is23Sparse G` = every subgraph `F` with `|V(F)| ≥ 2` has `|E(F)| ≤ 2|V(F)| − 3` (quantified over all `G.Subgraph`).
+- `NoIsolated H`, `numEdges H`, and the matching `matchingGraph m` = `m·K₂`.
+Results proved (matching the note):
+- Lemma 2 (`pathGraph_is23Sparse`): every path `Pₙ` is `(2,3)`-sparse. This uses a self-contained, path-specific substitute for the note's forest edge bound (Lemma 1): mapping each edge of a subgraph to its larger endpoint gives an injection into the vertices missing the smallest one, so any nonempty subgraph of a path has strictly fewer edges than vertices.
+- Proposition 3 (`ramsey_ge_of_lt_card`): if `H` has an edge then no `N < |V(G)|` satisfies the Ramsey property (the all-red colouring of `K_{N}` is a witness), giving `R(G,H) ≥ |V(G)|`.
+- Corollary 5 (`ramsey_pathGraph_K2`): `R(Pₙ, K₂) = n`.
+- The disproof (`not_proposedBound`): the proposed uniform bound `∃ C > 0, ∀ (2,3)-sparse G, ∀ H with no isolated vertices, R(G,H) ≤ C·numEdges H` is false.
+- Theorem 4 (`thm4`): for every real `C` and every `m ≥ 1` there is a `(2,3)`-sparse graph (a path `Pₙ`) and a graph `H = mK₂` with exactly `m` edges and no isolated vertices such that `C·m < R(Pₙ, mK₂)`. This required proving the finite Ramsey upper bound `ramsey_ub` (in any 2-colouring of a complete graph on `≥ n + 2m` vertices there is a red `Pₙ` or blue `mK₂`, by induction: delete the endpoints of a blue edge and recurse, else everything is red), which makes the Ramsey number genuinely finite, together with the `R ≥ n` lower bound.
+The proposed inequality `R(G,H) ≪ m` is therefore false as stated, with the obstruction already appearing for paths and even for `m = 1` (`H = K₂`), exactly as in the note.
