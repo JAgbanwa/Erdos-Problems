@@ -66,7 +66,7 @@ lemma K2_isContained_of_edge {β : Type} (B : SimpleGraph β) (hB : B.edgeSet.No
     have h : B.Adj u v := by rwa [SimpleGraph.mem_edgeSet] at he
     refine ⟨Hom.toCopy ⟨![u, v], ?_⟩ ?_⟩
     · intro a b hab
-      fin_cases a <;> fin_cases b <;> simp_all [B.symm h]
+      fin_cases a <;> fin_cases b <;> simp_all [h.symm]
     · intro a b hab
       fin_cases a <;> fin_cases b <;> simp_all [h.ne, h.ne']
 /-- `Pₙ` embeds into the complete graph `K_n` on `n` vertices. -/
@@ -126,13 +126,8 @@ lemma edgeSet_ncard_lt_verts_ncard (n : ℕ) (F : (pathGraph n).Subgraph) (hne :
       obtain ⟨a2, _, ha2, _, he2eq⟩ := edge_char n F e2 he2
       have : a1 = a2 := by apply Fin.ext; rw [h12] at ha1; omega
       rw [he1eq, he2eq, this, h12]
-  rw [Set.ncard_diff_singleton_of_mem hm_mem] at hsub
-  obtain ⟨w, hw⟩ := hne
-  have hpos : 0 < F.verts.ncard := by
-    have : F.verts.ncard ≠ 0 := by
-      intro h0; rw [Set.ncard_eq_zero hfin] at h0; rw [h0] at hw; exact hw
-    omega
-  omega
+  refine lt_of_le_of_lt hsub (Set.ncard_lt_ncard ?_ hfin)
+  exact (Set.ssubset_iff_of_subset Set.sdiff_subset).2 ⟨m, hm_mem, by simp⟩
 /-- **Lemma 2.**  Every path `Pₙ` is `(2,3)`-sparse. -/
 lemma pathGraph_is23Sparse (n : ℕ) : Is23Sparse (pathGraph n) := by
   intro F hcard
@@ -170,7 +165,7 @@ lemma ramsey_pathGraph_K2 (n : ℕ) (_hn : 2 ≤ n) :
   apply le_antisymm
   · exact Nat.sInf_le (n_mem_ramseySet_pathGraph_K2 n)
   · by_contra h
-    push_neg at h
+    push Not at h
     have hmem : sInf (ramseySet (pathGraph n) (pathGraph 2)) ∈
         ramseySet (pathGraph n) (pathGraph 2) :=
       Nat.sInf_mem ⟨n, n_mem_ramseySet_pathGraph_K2 n⟩
@@ -212,10 +207,19 @@ We now formalise the full counterexample of the note: for every constant `C` and
 there are graphs `G` (a path, hence `(2,3)`-sparse) and `H` (the matching `m·K₂`, with exactly `m`
 edges and no isolated vertices) with `R(G,H) > C·m`.  The matching is `mK₂`, realised on the vertex
 type `Fin m × Bool` with `(i,a)` adjacent to `(j,b)` iff `i = j` and `a ≠ b`. -/
+/- The `symm` field below is provided via `first | ... | ...` so that the
+definition elaborates both when the field type is `Symmetric Adj` (older Mathlib)
+and when it is `Std.Symm Adj` (newer Mathlib); the `set_option`s silence the
+resulting "unreachable branch" linter notes. -/
+set_option linter.unreachableTactic false in
+set_option linter.unusedTactic false in
 /-- The matching `m·K₂`: `m` disjoint edges, on the vertex type `Fin m × Bool`. -/
 def matchingGraph (m : ℕ) : SimpleGraph (Fin m × Bool) where
   Adj p q := p.1 = q.1 ∧ p.2 ≠ q.2
-  symm := by rintro p q ⟨h1, h2⟩; exact ⟨h1.symm, (Ne.symm h2)⟩
+  symm := by
+    first
+    | exact fun p q hpq => ⟨hpq.1.symm, Ne.symm hpq.2⟩
+    | exact ⟨fun p q hpq => ⟨hpq.1.symm, Ne.symm hpq.2⟩⟩
   loopless := ⟨by rintro p ⟨_, h2⟩; exact h2 rfl⟩
 /-- `mK₂` has exactly `m` edges. -/
 lemma numEdges_matchingGraph (m : ℕ) : numEdges (matchingGraph m) = m := by
@@ -350,7 +354,7 @@ lemma ramsey_ub (n : ℕ) : ∀ (m : ℕ) (V : Type) [Fintype V] (c : SimpleGrap
         · exact hne
         · exact huv
     · left
-      push_neg at hedge
+      push Not at hedge
       have hc : c = ⊤ := by
         ext a b; simp only [SimpleGraph.top_adj]
         exact ⟨fun h => c.ne_of_adj h, fun h => by by_contra hcon; exact hedge a b ⟨h, hcon⟩⟩
@@ -366,7 +370,7 @@ lemma mem_ramseySet_pathGraph_matching (n m : ℕ) :
 lemma ramsey_pathGraph_matching_ge (n m : ℕ) (hm : 1 ≤ m) :
     n ≤ Ramsey (pathGraph n) (matchingGraph m) := by
   by_contra h
-  push_neg at h
+  push Not at h
   have hmem : sInf (ramseySet (pathGraph n) (matchingGraph m)) ∈
       ramseySet (pathGraph n) (matchingGraph m) :=
     Nat.sInf_mem ⟨n + 2 * m, mem_ramseySet_pathGraph_matching n m⟩
