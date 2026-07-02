@@ -1,0 +1,219 @@
+\documentclass[11pt]{amsart}
+
+\usepackage[a4paper,margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{enumitem}
+\usepackage{microtype}
+\usepackage[colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue]{hyperref}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+
+
+\newcommand{\vtx}{\mathrm v}
+\newcommand{\edg}{\mathrm e}
+\newcommand{\N}{\mathbb N}
+
+\title[A disproof of a uniform linear Ramsey bound]{A Disproof of a Uniform Linear Ramsey Bound from a \texorpdfstring{$(2,3)$}{(2,3)}-Sparsity Hypothesis}
+\author{}
+\date{July 2, 2026}
+
+\begin{document}
+
+\begin{abstract}
+We show that the proposed estimate
+\[
+        R(G,H) \ll m
+\]
+cannot hold uniformly over all graphs $G$ satisfying the condition that every $k$-vertex subgraph has at most $2k-3$ edges, even when $H$ has exactly $m$ edges and no isolated vertices.  In fact, the obstruction already occurs when $G$ is a path.  For every constant $C>0$ and every positive integer $m$, there are such graphs $G,H$ with $H$ having $m$ edges and no isolated vertices but
+\[
+        R(G,H)>Cm.
+\]
+Thus the proposed statement is false as written.  The reason is elementary but decisive: the sparsity condition controls the density of $G$, not the number of vertices of $G$, while Ramsey numbers always satisfy a lower bound of order $|V(G)|$ whenever $H$ has an edge.
+\end{abstract}
+
+\maketitle
+
+\section{Conventions and statement of the problem}
+
+All graphs in this note are finite and simple.  For a graph $X$, write $V(X)$ for its vertex set and $\edg(X)$ for its number of edges.  If $X$ has no isolated vertices and $\edg(X)=m$, then necessarily $|V(X)|\le 2m$.
+
+For finite graphs $G$ and $H$, the Ramsey number $R(G,H)$ is the least positive integer $N$ such that every red-blue edge-colouring of the complete graph $K_N$ contains either a red copy of $G$ or a blue copy of $H$.
+
+We call a graph $G$ \emph{$(2,3)$-sparse} if
+\[
+        \edg(F)\le 2|V(F)|-3
+\]
+for every subgraph $F\subseteq G$ with $|V(F)|\ge 2$.  The restriction $|V(F)|\ge 2$ is the natural interpretation of the displayed inequality.  If one insists on applying the inequality to one-vertex subgraphs, then no nonempty graph satisfies it, since a one-vertex graph has $0$ edges but $0\le 2\cdot 1-3=-1$ is false.  Under that literal interpretation the question is vacuous.  Hence throughout we use the non-vacuous convention $|V(F)|\ge 2$.
+
+The question asks whether the following uniform assertion is true:
+
+\begin{quote}
+There is an absolute constant $C$ such that for every $(2,3)$-sparse graph $G$ and every graph $H$ with $m$ edges and no isolated vertices, one has
+\[
+        R(G,H)\le Cm.
+\]
+\end{quote}
+
+We prove that this assertion is false.
+
+\section{Two elementary lemmas}
+
+We first record two completely standard facts, with proofs included for completeness.
+
+\begin{lemma}\label{lem:forest-edge-count}
+Let $F$ be a forest with $k\ge 1$ vertices and $c\ge 1$ connected components.  Then
+\[
+        \edg(F)=k-c.
+\]
+In particular, every forest with $k\ge 1$ vertices has at most $k-1$ edges.
+\end{lemma}
+
+\begin{proof}
+Each connected component of a forest is a tree.  We prove that a tree on $r\ge 1$ vertices has exactly $r-1$ edges.  This is clear for $r=1$.  For $r\ge 2$, every finite tree has a leaf.  Removing a leaf and its unique incident edge gives a tree on $r-1$ vertices.  By induction, that smaller tree has $r-2$ edges, and therefore the original tree has $r-1$ edges.
+
+Now let the connected components of $F$ have vertex numbers $r_1,\ldots,r_c$.  Since each component is a tree, the total number of edges is
+\[
+        \sum_{i=1}^c (r_i-1)
+        =\sum_{i=1}^c r_i-c
+        =k-c.
+\]
+Since $c\ge 1$, this gives $\edg(F)=k-c\le k-1$.
+\end{proof}
+
+\begin{lemma}\label{lem:paths-sparse}
+For every integer $n\ge 2$, the path $P_n$ on $n$ vertices is $(2,3)$-sparse.
+\end{lemma}
+
+\begin{proof}
+Let $F\subseteq P_n$ be any subgraph with $k=|V(F)|\ge 2$.  Since $P_n$ is a tree, every subgraph of $P_n$ is a forest.  By Lemma~\ref{lem:forest-edge-count},
+\[
+        \edg(F)\le k-1.
+\]
+For $k\ge 2$ we have
+\[
+        k-1\le 2k-3,
+\]
+because this inequality is equivalent to $k\ge 2$.  Therefore
+\[
+        \edg(F)\le 2k-3.
+\]
+As $F$ was arbitrary, $P_n$ is $(2,3)$-sparse.
+\end{proof}
+
+\begin{proposition}\label{prop:trivial-lower-bound}
+Let $A$ and $B$ be finite graphs, and suppose $B$ has at least one edge.  Then
+\[
+        R(A,B)\ge |V(A)|.
+\]
+\end{proposition}
+
+\begin{proof}
+Let $a=|V(A)|$.  Consider the complete graph $K_{a-1}$ and colour every one of its edges red.  This colouring has no blue edge at all, hence it contains no blue copy of $B$, since $B$ has at least one edge.  It also contains no red copy of $A$, because $K_{a-1}$ has only $a-1$ vertices, while every copy of $A$ uses $a$ distinct vertices.  Hence there exists a red-blue colouring of $K_{a-1}$ with neither a red copy of $A$ nor a blue copy of $B$.  By the definition of the Ramsey number, $R(A,B)>a-1$, and therefore $R(A,B)\ge a$.
+\end{proof}
+
+\section{The counterexample}
+
+\begin{theorem}\label{thm:main-counterexample}
+For every constant $C>0$ and every positive integer $m$, there exist finite simple graphs $G$ and $H$ such that:
+\begin{enumerate}[label=\textup{(\roman*)}]
+    \item $G$ is $(2,3)$-sparse;
+    \item $H$ has exactly $m$ edges and no isolated vertices;
+    \item $R(G,H)>Cm$.
+\end{enumerate}
+Consequently, there is no absolute constant $C$ for which $R(G,H)\le Cm$ holds for all $(2,3)$-sparse graphs $G$ and all graphs $H$ with $m$ edges and no isolated vertices.
+\end{theorem}
+
+\begin{proof}
+Fix $C>0$ and a positive integer $m$.  Choose an integer $n\ge 2$ with
+\[
+        n>Cm.
+\]
+Let
+\[
+        G=P_n,
+\]
+the path on $n$ vertices.  By Lemma~\ref{lem:paths-sparse}, $G$ is $(2,3)$-sparse.
+
+Let
+\[
+        H=mK_2,
+\]
+the matching consisting of $m$ pairwise disjoint edges.  Then $H$ has exactly $m$ edges.  It has no isolated vertices, since every vertex of $mK_2$ is incident with exactly one edge.
+
+Since $H$ has at least one edge, Proposition~\ref{prop:trivial-lower-bound} gives
+\[
+        R(G,H)\ge |V(G)|=n.
+\]
+By our choice of $n$, this yields
+\[
+        R(G,H)>Cm.
+\]
+This proves the asserted counterexample.
+
+If an absolute constant $C$ satisfying $R(G,H)\le Cm$ for all such $G,H$ existed, the construction above with that same $C$ would produce graphs $G,H$ for which $R(G,H)>Cm$, a contradiction.  Hence no such absolute constant exists.
+\end{proof}
+
+\section{The failure already occurs for one edge}
+
+The preceding theorem uses a matching with an arbitrary prescribed number $m$ of edges.  In fact, the obstruction is even simpler: taking $m=1$ already rules out a uniform bound.
+
+\begin{corollary}\label{cor:path-k2}
+For every $n\ge 2$,
+\[
+        R(P_n,K_2)=n.
+\]
+Thus the proposed estimate $R(G,H)\ll m$ fails even when $H=K_2$ and $m=1$.
+\end{corollary}
+
+\begin{proof}
+First, Proposition~\ref{prop:trivial-lower-bound} gives
+\[
+        R(P_n,K_2)\ge |V(P_n)|=n.
+\]
+For the reverse inequality, consider an arbitrary red-blue colouring of $K_n$.  If at least one edge is blue, then that edge is a blue copy of $K_2$.  If no edge is blue, then every edge of $K_n$ is red.  In that case the red graph is the whole $K_n$, and $K_n$ contains a Hamilton path on its $n$ vertices, which is a red copy of $P_n$.  Therefore every red-blue colouring of $K_n$ contains either a red $P_n$ or a blue $K_2$, so
+\[
+        R(P_n,K_2)\le n.
+\]
+Combining the two inequalities gives $R(P_n,K_2)=n$.
+
+Since $n$ is arbitrary while $m=\edg(K_2)=1$ is fixed, no estimate $R(G,H)\le C m$ with an absolute constant $C$ can hold uniformly over the class of all $(2,3)$-sparse graphs $G$.
+\end{proof}
+
+\section{Why the proposed hypothesis is insufficient}
+
+The proof above isolates the exact defect in the proposed statement.  The condition
+\[
+        \edg(F)\le 2|V(F)|-3
+\]
+for every subgraph $F\subseteq G$ controls only the density of $G$.  It gives no upper bound on $|V(G)|$ in terms of $m=\edg(H)$.  But Proposition~\ref{prop:trivial-lower-bound} says that, as soon as $H$ has an edge,
+\[
+        R(G,H)\ge |V(G)|.
+\]
+Therefore a linear bound depending only on $m$ is impossible unless some additional hypothesis controls $|V(G)|$ in terms of $m$ or unless the implied constant is allowed to depend on the particular fixed graph $G$.
+
+This obstruction is not caused by complicated dense graphs.  It appears for paths, which are trees, hence acyclic, connected, and much sparser than the displayed $(2,3)$-sparsity condition requires.
+
+\begin{remark}
+This note disproves the uniform assertion represented by an unsubscripted estimate $R(G,H)\ll m$, namely an estimate with an absolute implied constant independent of both $G$ and $H$.  A different statement of the form $R(G,H)\ll_G m$, where $G$ is fixed in advance and the implied constant is allowed to depend on $G$, is not the statement disproved here.
+\end{remark}
+
+\section{Verification of the hypotheses}
+
+For completeness, we summarize the checks in the counterexample of Theorem~\ref{thm:main-counterexample}.
+
+\begin{enumerate}[label=\textup{(\arabic*)}]
+    \item The graph $G=P_n$ satisfies the subgraph edge condition: every subgraph of a path is a forest, a forest on $k$ vertices has at most $k-1$ edges, and $k-1\le 2k-3$ for all $k\ge 2$.
+    \item The graph $H=mK_2$ has exactly $m$ edges.
+    \item The graph $H=mK_2$ has no isolated vertices, because each of its $2m$ vertices has degree $1$.
+    \item The Ramsey lower bound is valid because an all-red colouring of $K_{n-1}$ has no blue edge and therefore no blue copy of any graph with at least one edge, while it has too few vertices to contain a red copy of $P_n$.
+    \item Since $n$ can be chosen larger than $Cm$ for any prescribed constant $C$, the ratio $R(G,H)/m$ is unbounded over the allowed pairs $(G,H)$.
+\end{enumerate}
+
+Thus the problem, as stated with a uniform implied constant, has a complete negative answer.
+
+\end{document}
