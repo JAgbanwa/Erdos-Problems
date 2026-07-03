@@ -69,7 +69,7 @@ The plaintext complete package and encryption key are not stored in this reposit
 
 ## Historical Materials
 
-Earlier sealed archives and draft folders may remain in this repository for timestamp/history purposes. The current public release should be read from `public_release/`.
+Earlier sealed archives may remain in this repository for timestamp/history purposes. The current public release should be read from `public_release/`. Obsolete root-level draft paper and note folders have been removed to avoid confusion with the final public package.
 
 ## Lean Formalisation
 
