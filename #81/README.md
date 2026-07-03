@@ -30,4 +30,12 @@ The current public release package is available in [`announced_resolution/`](ann
 - SHA-256 hashes and citation/license metadata;
 - the encrypted complete author package as a timestamped integrity record.
 
+Direct links:
+
+- [Final announcement PDF](announced_resolution/public_release/THREE_PAPER_SERIES_ANNOUNCEMENT_FINAL.pdf)
+- [Final announcement Markdown](announced_resolution/public_release/THREE_PAPER_SERIES_ANNOUNCEMENT_FINAL.md)
+- [Paper I PDF](announced_resolution/public_release/PAPER_I/01_MANUSCRIPT/PAPER_I_v1.1.pdf)
+- [Paper II PDF](announced_resolution/public_release/PAPER_II/01_MANUSCRIPT/PAPER_II_v0.8.pdf)
+- [Paper III PDF](announced_resolution/public_release/PAPER_III/01_MANUSCRIPT/PAPER_III_v1.0.4.pdf)
+
 Status: announced resolved; pending peer review and independent verification.

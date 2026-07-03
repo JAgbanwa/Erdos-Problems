@@ -20,6 +20,14 @@ The current release is organized in:
 public_release/
 ```
 
+Direct links:
+
+- [Final announcement PDF](public_release/THREE_PAPER_SERIES_ANNOUNCEMENT_FINAL.pdf)
+- [Final announcement Markdown](public_release/THREE_PAPER_SERIES_ANNOUNCEMENT_FINAL.md)
+- [Paper I PDF](public_release/PAPER_I/01_MANUSCRIPT/PAPER_I_v1.1.pdf)
+- [Paper II PDF](public_release/PAPER_II/01_MANUSCRIPT/PAPER_II_v0.8.pdf)
+- [Paper III PDF](public_release/PAPER_III/01_MANUSCRIPT/PAPER_III_v1.0.4.pdf)
+
 It contains the final three-paper public package:
 
 ```text
