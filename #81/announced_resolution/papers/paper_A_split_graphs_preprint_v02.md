@@ -1,0 +1,350 @@
+# Clique Partitions of Split Graphs and the $1/6$ Barrier
+
+<div class="center">
+
+**Juan Pablo Traverso Gianini**  
+Independent researcher, Santiago, Chile  
+[jtraverso@gmail.com](mailto:jtraverso@gmail.com)  
+[ORCID: 0009-0003-6068-4096](https://orcid.org/0009-0003-6068-4096)
+
+Preprint v0.2.  
+Paper A in the series on clique partitions in split and chordal graphs.
+
+</div>
+
+**Keywords.** Clique partitions; split graphs; chordal graphs; triangle packings; fractional packings; Erdős problems.
+
+**MSC 2020.** 05C70, 05C35, 05C65, 05C69.
+
+## Abstract
+
+We determine the asymptotic maximum of the edge clique partition number over split graphs. If $G$ is a split graph on $n$ vertices, then
+$$
+\operatorname{cp}(G)\le \left(\frac16+o(1)\right)n^2.
+$$
+The constant is best possible: the complete split graph
+$$
+K_p\vee\overline{K}_{2p}, \qquad n=3p,
+$$
+has clique partition number $n^2/6+O(n)$. The proof reduces the problem to a fractional triangle-packing inequality adapted to the split structure. After a first packing phase over triangles meeting the independent side, the remaining problem inside the clique is dualized and reduced to an envelope lemma for fractional triangle covers of complete graphs. This proves
+$$
+\max\{\operatorname{cp}(G):G\text{ split}, |V(G)|=n\}
+=
+\left(\frac16+o(1)\right)n^2.
+$$
+
+# Introduction
+
+The edge clique partition number $\operatorname{cp}(G)$ is the smallest number of cliques whose edge sets partition $E(G)$. We consider this parameter for split graphs. A graph $G=(C\cup I,E)$ is split if $C$ induces a clique and $I$ induces an independent set.
+
+Erdős, Ordman and Zalcstein asked whether the edges of every $n$-vertex chordal graph can be partitioned into $n^2/6+O(n)$ cliques. Split graphs form a natural subclass of chordal graphs, and the standard lower-bound example for the chordal problem is already split. The main result of this note proves the conjectured asymptotic bound for this subclass.
+
+
+## Background: from the $1/4$ bound to the $1/6$ barrier
+
+A classical theorem of Erdős, Goodman and Pósa asserts that the edges of every $n$-vertex graph can be covered by at most $\lfloor n^2/4\rfloor$ cliques, and this bound is tight for balanced complete bipartite graphs. The problem studied here belongs to the same circle of questions, but in the more restrictive setting of edge clique partitions and chordal graph classes.
+
+Erdős, Ordman and Zalcstein asked whether every $n$-vertex chordal graph admits an edge clique partition with
+$$
+\frac{n^2}{6}+O(n)
+$$
+parts. The complete split graph $K_p\vee\overline{K}_{2p}$ shows that the constant $1/6$, if true for chordal graphs, is best possible. This paper proves the corresponding sharp asymptotic statement for the split subclass.
+
+## Scope of this paper
+
+This paper proves the split graph case. The extension to general chordal graphs requires additional clique-tree decomposition, local reduction, and fractional packing machinery, and is treated separately in subsequent papers in this series.
+
+The main result is the following.
+
+<div class="theorem">
+
+**Theorem 1** (Split graph theorem). *Let $G$ be a split graph on $n$ vertices. Then*
+$$
+\operatorname{cp}(G)\le \left(\frac16+o(1)\right)n^2 .
+$$
+*Moreover, the constant $1/6$ is asymptotically sharp over split graphs:*
+$$
+\max\{\operatorname{cp}(G):G\text{ split}, |V(G)|=n\}
+=
+\left(\frac16+o(1)\right)n^2 .
+$$
+
+</div>
+
+The constant is sharp already for split graphs. Indeed, if $C$ has size $p$, $I$ has size $2p$, and all edges between $C$ and $I$ are present, then $n=3p$ and every edge clique partition has at least $$2p^2-\binom p2
+    =
+    \frac{n^2}{6}+O(n)$$ parts; the proof is included in Section <a href="#sec:sharpness" data-reference-type="ref" data-reference="sec:sharpness">7</a>.
+
+The proof has two parts. First, we reduce the problem to a fractional triangle packing statement. Second, we prove a purely fractional inequality on $K_k$, which we call the Envelope Lemma.
+
+Throughout the proof, $o(n^2)$ terms arise only from the standard asymptotic equivalence between fractional and integral packings of a fixed graph family.
+
+# Co-neighborhood loads
+
+Let $$G=(C\cup I,E)$$ be a split graph with $$|C|=k,\qquad |I|=m,\qquad n=k+m.$$ For $v\in I$, write $$d_v=|N(v)|.$$ Let $$I_{\ge2}:=\{v\in I:d_v\ge2\}.$$ Vertices in $I$ of degree $0$ do not contribute to $E(G)$. Vertices in $I$ of degree $1$ contribute edges which cannot belong to a triangle using a vertex of $I$; they will be kept as a separate residual term. Let $b_1$ denote the number of vertices of $I$ of degree $1$, and put $$b_{\ge2}:=\sum_{v\in I_{\ge2}} d_v .$$ Then $$|E(G)|=\binom{k}{2}+b_{\ge2}+b_1.$$
+
+For $xy\in \binom C2$, define the co-neighborhood load $$A_{xy}:=
+    \sum_{\substack{v\in I_{\ge2}\\ x,y\in N(v)}}
+    \frac{1}{d_v-1}.$$
+
+<div class="lemma">
+
+**Lemma 1** (Load identity). *$$\sum_{xy\in \binom C2}A_{xy}=\frac{b_{\ge2}}2.$$*
+
+</div>
+
+<div class="proof">
+
+*Proof.* For a fixed $v\in I_{\ge2}$, $$\sum_{\{x,y\}\subseteq N(v)}\frac1{d_v-1}
+    =
+    \binom{d_v}{2}\frac1{d_v-1}
+    =
+    \frac{d_v}{2}.$$ Summing over $v\in I_{\ge2}$ gives the claim. ◻
+
+</div>
+
+# A fractional triangle packing
+
+If $\nu_\triangle(G)$ denotes the maximum number of edge-disjoint triangles in $G$, then $$\operatorname{cp}(G)\le |E(G)|-2\nu_\triangle(G).$$ Indeed, an edge-disjoint triangle covered as one clique saves two parts compared with covering its three edges separately.
+
+We use the following standard consequence of the Haxell–Rödl theorem, in the form proved by Yuster for arbitrary fixed graph families: if $\mathcal F$ is fixed, then $$\nu^*_{\mathcal F}(G)-\nu_{\mathcal F}(G)=o(|V(G)|^2).$$ For $\mathcal F=\{K_3\}$, this says $$\nu_\triangle^*(G)-\nu_\triangle(G)=o(n^2).$$ Consequently, it suffices to construct an ordinary fractional triangle packing $\nu_{\mathrm{con}}\le\nu_\triangle^*(G)$, since then $$\operatorname{cp}(G)\le |E(G)|-2\nu_{\mathrm{con}}+o(n^2).$$
+
+Define $$H:=\{e\in \binom C2:A_e\ge1\},
+    \qquad
+    L:=\{e\in \binom C2:A_e<1\}.$$
+
+## Phase 1
+
+For $xy\in \binom C2$, set $$\lambda_{xy}:=\min\left(1,\frac1{A_{xy}}\right),$$ with the convention that $\lambda_{xy}=1$ when $A_{xy}=0$.
+
+For each triangle $vxy$, where $v\in I_{\ge2}$ and $x,y\in N(v)$, assign weight $$w(vxy):=\frac{\lambda_{xy}}{d_v-1}.$$ For edges $xy\in H$, this uniformly scales down all triangles using the clique edge $xy$. Such scaling can only decrease the load on bipartite edges, so feasibility on the $I$-$C$ edges is preserved.
+
+The total load on a clique edge $xy\in\binom C2$ is $$\lambda_{xy}A_{xy}=\min(A_{xy},1).$$ The total load on a bipartite edge $vx$, where $x\in N(v)$, is at most $$\sum_{y\in N(v)\setminus\{x\}}\frac{\lambda_{xy}}{d_v-1}
+    \le
+    \sum_{y\in N(v)\setminus\{x\}}\frac1{d_v-1}=1.$$ Thus Phase 1 is an ordinary feasible fractional triangle packing in $G$, with value $$\nu_1=|H|+\sum_{e\in L}A_e.$$
+
+## Phase 2
+
+On each $e\in L$, the residual capacity is $1-A_e$. Let $\nu_2$ be the maximum fractional packing of triangles contained entirely in $L$, with edge capacities $1-A_e$. Then $$\nu_{\mathrm{con}}=
+    |H|+\sum_{e\in L}A_e+\nu_2.$$
+
+The primal LP for $\nu_2$ is $$\max \sum_T w_T$$ subject to $$\sum_{T\ni e}w_T\le 1-A_e,\qquad e\in L,$$ and $w_T\ge0$. The dual is $$\nu_2=
+    \min
+    \sum_{e\in L}(1-A_e)x_e$$ subject to $$\sum_{e\in T}x_e\ge1$$ for every triangle $T\subseteq L$, with $x_e\ge0$.
+
+Put $$y_e=1-x_e.$$ Then the relevant feasible region is $$0\le y_e\le1,
+    \qquad
+    \sum_{e\in T}y_e\le2$$ for every triangle $T\subseteq L$. Hence $$-2\nu_2
+    =
+    -2\sum_{e\in L}(1-A_e)
+    +
+    \max_y
+    2\sum_{e\in L}(1-A_e)y_e .$$
+
+Combining the above identities with the load identity gives $$|E(G)|-2\nu_{\mathrm{con}}
+    =
+    b_{\ge2}+b_1-\binom{k}{2}
+    +
+    \max_y
+    \sum_{e\in L}2(1-A_e)y_e .$$
+
+Equivalently, extending $y$ to all edges of $\binom C2$, it suffices to prove for all $y$ satisfying $$0\le y_e\le1,\qquad y(T)\le2,$$ that $$Q(y):=
+    -\binom{k}{2}
+    +
+    2\sum_{e\in \binom C2}y_e
+    +
+    \sum_{v\in I_{\ge2}}
+    \left[
+        d_v
+        -
+        \frac{2}{d_v-1}
+        \sum_{e\subseteq N(v)}y_e
+    \right]
+    +
+    b_1
+    \le
+    \frac{n^2}{6}+O(n).$$
+
+# Reduction to the Envelope Lemma
+
+For $S\subseteq C$, define $$Y(S):=\sum_{e\subseteq S}y_e$$ and, for $|S|\ge2$, $$\phi_y(S):=
+    |S|-\frac{2}{|S|-1}Y(S).$$ Then the contribution of a vertex $v\in I_{\ge2}$ is $\phi_y(N(v))$.
+
+Set $$\mu=\max\left(
+        1,\,
+        \max_{\substack{S\subseteq C\\ |S|\ge2}}\phi_y(S)
+    \right).$$ Then every vertex of $I$ contributes at most $\mu$, including the degree-one vertices. Therefore $$Q(y)
+    \le
+    -\binom{k}{2}+2Y(C)+\mu m.$$
+
+Thus it is enough to prove $$-\binom{k}{2}+2Y(C)
+    \le
+    \mu k-\frac32\mu^2+O(k),$$ because then $$Q(y)
+    \le
+    \mu(k+m)-\frac32\mu^2+O(n)
+    =
+    \mu n-\frac32\mu^2+O(n)
+    \le
+    \frac{n^2}{6}+O(n).$$
+
+We now prove the required inequality.
+
+# The Envelope Lemma
+
+Put $$z_e=1-y_e.$$ Then $y(T)\le2$ is equivalent to $$z(T)\ge1$$ for every triangle $T\subseteq K_k$. For $S\subseteq C$, define $$Z(S):=\sum_{e\subseteq S}z_e.$$ Since $$Y(S)=\binom{|S|}{2}-Z(S),$$ we get $$\phi_y(S)
+    =
+    \frac{2Z(S)}{|S|-1}.$$
+
+Thus $$\mu=
+    \max_{\substack{S\subseteq C\\ |S|\ge2}}
+    \frac{2Z(S)}{|S|-1}.$$
+
+<div class="lemma">
+
+**Lemma 2** (Envelope Lemma). *Let $z:E(K_k)\to[0,1]$ satisfy $$z(T)\ge1$$ for every triangle $T\subseteq K_k$. For $S\subseteq V(K_k)$, write $$Z(S)=\sum_{e\subseteq S}z_e,$$ and define $$\mu=
+    \max_{\substack{S\subseteq V(K_k)\\ |S|\ge2}}
+    \frac{2Z(S)}{|S|-1}.$$ Then $$Z(K_k)
+    \ge
+    \frac12\binom{k}{2}
+    -
+    \frac12\mu k
+    +
+    \frac34\mu^2
+    -
+    O(k).$$*
+
+</div>
+
+<div class="proof">
+
+*Proof.* Let $S\subseteq C$ attain $\mu$. Write $$s=|S|,
+    \qquad
+    R=C\setminus S,
+    \qquad
+    r=|R|,
+    \qquad
+    k=s+r.$$ Then $$Z(S)=\frac{\mu(s-1)}2.$$ Since $z_e\le1$, we have $\mu\le s$. Also, summing $z(T)\ge1$ over all triangles of $K_k$ gives $$(k-2)Z(K_k)\ge\binom{k}{3},$$ and hence $\mu\ge k/3+O(1)$. Thus $k\le3\mu+O(1)$.
+
+We use two crossing estimates. First, fix $w\in R$. For every $ab\subseteq S$, $$z_{ab}+z_{aw}+z_{bw}\ge1.$$ Summing over all $ab\subseteq S$, $$Z(S)+(s-1)Z(w,S)\ge\binom{s}{2}.$$ Since $Z(S)=\mu(s-1)/2$, $$Z(w,S)\ge\frac{s-\mu}{2}.$$ Summing over $w\in R$, $$Z(S,R)\ge\frac{r(s-\mu)}2.$$
+
+Second, fix $u\in S$. For every $ab\subseteq R$, $$z_{ua}+z_{ub}+z_{ab}\ge1.$$ Summing over all $ab\subseteq R$, $$(r-1)Z(u,R)+Z(R)\ge\binom r2.$$ Summing over $u\in S$, we obtain $$Z(S,R)\ge
+    \frac{sr}{2}
+    -
+    \frac{s}{r-1}Z(R),$$ with the cases $r\le1$ absorbed by the $O(k)$ term.
+
+Furthermore, the restrictions are inherited inside $R$, so $$Z(R)\ge\frac{r(r-1)}6.$$ For $r<3$, this estimate is vacuous up to an $O(k)$ contribution and will be absorbed by the final error term. Similarly, all effects caused by replacing $r-1$ with $r$, $s-1$ with $s$, and $k\le3\mu+O(1)$ with $k\le3\mu$, are $O(k)$ after rescaling back.
+
+By the definition of $\mu$, $$Z(R)\le\frac{\mu(r-1)}2.$$
+
+Normalize $$a=\frac{s}{\mu},
+    \qquad
+    c=\frac{r}{\mu},
+    \qquad
+    u=\frac{Z(R)}{\mu^2}.$$ Up to $O(1/\mu)$ errors, $$a\ge1,\qquad c\ge0,\qquad a+c\le3,$$ and $$\frac{c^2}{6}\le u\le\frac c2.$$ The estimates above give $$\frac{Z(K_k)}{\mu^2}
+    \ge
+    \frac a2
+    +
+    u
+    +
+    \max\left\{
+        \frac{c(a-1)}2,
+        \frac{ac}{2}-\frac{a}{c}u
+    \right\}
+    -
+    O(1/\mu).$$ It remains to prove that the right hand side is at least $$\frac{(a+c)^2}{4}-\frac{a+c}{2}+\frac34-O(1/\mu).$$
+
+Let $$A=\frac{c(a-1)}2,
+    \qquad
+    B(u)=\frac{ac}{2}-\frac{a}{c}u.$$ We minimize $$u+\max\{A,B(u)\}$$ over $c^2/6\le u\le c/2$.
+
+If $c\le a$, the minimum occurs at the intersection $$u_0=\frac{c^2}{2a}.$$ Then $$\frac{Z(K_k)}{\mu^2}
+    \ge
+    \frac a2+\frac{c^2}{2a}+\frac{c(a-1)}2-O(1/\mu).$$ The difference between this expression and the desired envelope is $$\frac{a(a-1)(3-a)+(2-a)c^2}{4a}.$$ If $1\le a\le2$, this is nonnegative. If $2<a\le3-c$, then $c\le3-a$, and $$a(a-1)(3-a)+(2-a)c^2
+    \ge
+    a(a-1)(3-a)-(a-2)(3-a)^2$$ $$=
+    (3-a)\bigl[a(a-1)-(a-2)(3-a)\bigr].$$ The bracket equals $$2(a^2-3a+3)>0,$$ so the expression is nonnegative.
+
+If $c>a$, the minimum occurs at $u=c^2/6$. We obtain $$\frac{Z(K_k)}{\mu^2}
+    \ge
+    \frac a2+\frac{ac}{3}+\frac{c^2}{6}-O(1/\mu).$$ The difference with the desired envelope is $$\frac{-3a^2-2ac+12a-c^2+6c-9}{12}.$$ Let $$M(a,c)=-3a^2-2ac+12a-c^2+6c-9.$$ On the domain $1\le a<c$, $a+c\le3$, this is concave, so its minimum occurs on the boundary. On $c=a$, $$M(a,a)=-6a^2+18a-9\ge0$$ for $1\le a\le3/2$. On $c=3-a$, $$M(a,3-a)=2a(3-a)\ge0.$$ On $a=1$, $$M(1,c)=c(4-c)\ge0.$$ Thus the difference is nonnegative in all cases.
+
+Therefore $$Z(K_k)
+    \ge
+    \frac12\binom{k}{2}
+    -
+    \frac12\mu k
+    +
+    \frac34\mu^2
+    -
+    O(k).$$ ◻
+
+</div>
+
+# Conclusion
+
+The Envelope Lemma gives $$-\binom{k}{2}+2Y(C)
+    \le
+    \mu k-\frac32\mu^2+O(k).$$ Hence $$Q(y)
+    \le
+    \mu n-\frac32\mu^2+O(n)
+    \le
+    \frac{n^2}{6}+O(n).$$ Therefore $$\operatorname{cp}(G)
+    \le
+    \left(\frac16+o(1)\right)n^2.$$
+
+
+# Discussion and further directions
+
+The split graph theorem isolates the extremal source of the $1/6$ barrier. In the complete split construction $K_p\vee\overline{K}_{2p}$, the independent side creates many incident edges that can only be compressed through cliques using edges of the clique side, and the available clique-side edges become the limiting resource.
+
+Several directions remain natural.
+
+1. **Chordal graphs.** The main motivation is the chordal problem of Erdős, Ordman and Zalcstein. The split theorem supplies the sharp lower-bound example for the chordal class, but the full chordal upper bound requires additional clique-tree machinery.
+
+2. **Fractional versus integral structure.** The proof passes through fractional triangle packings and uses the asymptotic equivalence between fractional and integral packings for fixed graph families. It would be interesting to understand whether a more direct integral proof exists in the split setting.
+
+3. **Finite error terms.** The theorem is asymptotic. Determining the best possible $O(n)$ term, or exact extremal values for finite $n$, remains a separate problem.
+
+4. **Constructive algorithms.** The proof is phrased in packing and duality language. An explicit algorithmic version producing near-optimal clique partitions for split graphs would be a useful companion result.
+
+5. **Intermediate subclasses.** Between split graphs and chordal graphs lie subclasses such as interval graphs, block graphs, and strongly chordal graphs. These may provide useful test cases for the chordal machinery.
+
+
+# Sharpness and relation to Erdős Problem \#81
+
+The constant $1/6$ arises from the extremum of $$\mu n-\frac32\mu^2.$$ It is therefore intrinsic to the fractional envelope inequality. Two model configurations meet the envelope asymptotically: the uniform fractional triangle-cover $z_e=1/3$, and a degenerate bipartite-cut configuration in which the complement of the high-density block is small.
+
+The result is directly related to Erdős Problem \#81, which asks whether the edges of every $n$-vertex chordal graph can be partitioned into $$\frac{n^2}{6}+O(n)$$ cliques. Split graphs form a subclass of chordal graphs. Thus the theorem above proves the conjectured asymptotic upper bound for this subclass.
+
+The constant is sharp already for split graphs. Let $$C$$ be a clique of size $p$, let $I$ be an independent set of size $q=2p$, and join every vertex of $I$ to every vertex of $C$. Then $n=3p$. We claim that any edge clique partition of this graph has at least $$qp-\binom{p}{2}
+    =
+    \frac32p^2+O(p)
+    =
+    \frac{n^2}{6}+O(n)$$ parts.
+
+Indeed, a clique contains at most one vertex of $I$. For a fixed $v\in I$, the cliques containing $v$ induce a partition of $C$ into blocks $S_{v,1},\ldots,S_{v,t_v}$, since the $p$ edges from $v$ to $C$ must be covered exactly once. Hence $$\sum_j |S_{v,j}|=p.$$ The number of cliques containing $v$ is $t_v$, and $$p-t_v=\sum_j (|S_{v,j}|-1)
+    \le
+    \sum_j \binom{|S_{v,j}|}{2}.$$ The right-hand side counts clique edges of $C$ consumed by cliques containing $v$. Across all $v\in I$, such consumed clique edges are disjoint, since the partition is edge-disjoint. Therefore $$\sum_{v\in I}(p-t_v)\le \binom{p}{2}.$$ Thus $$\sum_{v\in I}t_v
+    \ge
+    qp-\binom{p}{2}.$$ These are already distinct cliques in the partition, proving the lower bound.
+
+Consequently, $$\max\{\operatorname{cp}(G):G\text{ split on }n\text{ vertices}\}
+    =
+    \left(\frac16+o(1)\right)n^2.$$ Thus the note settles Erdős Problem \#81 for split graphs, while the full chordal case remains open.
+
+# Acknowledgements and use of AI-assisted tools
+
+The author is deeply grateful to his wife María Paz and to his children Lucas, Juan Cristóbal, Francisca, Raimundo, and Benjamín for their love, patience, and support during the development of this work.
+
+The author used AI-assisted tools, including Gemini 3.5 Pro and ChatGPT, during the development of this work for exploratory search, testing possible approaches, looking for contradictions, organizing proof strategies, improving exposition, and preparing drafts. All mathematical claims, proofs, citations, and final editorial decisions are the sole responsibility of the author. No AI system is listed as an author.
+
+
+
+# References
+
+- G.-T. Chen, P. Erdős, and E. T. Ordman, *Clique partitions of split graphs*, in *Combinatorics, graph theory, algorithms and applications* (Beijing, 1993), 21--30, 1994.
+- P. Erdős, E. T. Ordman, and Y. Zalcstein, *Clique partitions of chordal graphs*, Combinatorics, Probability and Computing, 1993, 409--415.
+- P. Erdős, A. W. Goodman, and L. Pósa, *The representation of a graph by set intersections*, Canadian Journal of Mathematics 18 (1966), 106--112.
+- P. E. Haxell and V. Rödl, *Integer and fractional packings in dense graphs*, Combinatorica 21 (2001), 13--38.
+- R. Yuster, *Integer and fractional packing of families of graphs*, Combinatorica 28 (2008), 245--251.
+- T. F. Bloom, *Erdős Problem #81*, https://www.erdosproblems.com/81.
