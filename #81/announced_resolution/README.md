@@ -1,119 +1,79 @@
-# Erdos Problem #81 - Announced Resolution and Timestamped Milestone
+# Erdos Problem #81 - Three-Paper Public Release
 
-This repository records a timestamped research milestone concerning Erdos Problem #81, originally posed by Erdos, Ordman, and Zalcstein, on the edge clique partition number of chordal graphs.
+This repository records the public release package for Juan Pablo Traverso Gianini's announced resolution of Erdos Problem #81 on clique partitions of chordal graphs.
 
-## Announced Result
+## Main Result
 
-The announced asymptotic result is
+The announced asymptotic theorem is
 
 ```text
 max{cp(G): G chordal, |V(G)| = n} = (1/6 + o(1)) n^2.
 ```
 
-Equivalently, every chordal graph G on n vertices satisfies
+The constant `1/6` is sharp.
+
+## Current Public Release
+
+The current release is organized in:
 
 ```text
-cp(G) <= (1/6 + o(1)) n^2.
+public_release/
 ```
 
-The constant 1/6 is sharp, already for the complete split graph
+It contains the final three-paper public package:
 
 ```text
-K_p join overline{K}_{2p}, where n = 3p.
+public_release/
+  00_SERIES_DOCUMENTS/
+  PAPER_I/
+  PAPER_II/
+  PAPER_III/
+  THREE_PAPER_SERIES_ANNOUNCEMENT_FINAL.md
+  THREE_PAPER_SERIES_ANNOUNCEMENT_FINAL.tex
+  THREE_PAPER_SERIES_ANNOUNCEMENT_FINAL.pdf
 ```
 
-## Status
+Each paper folder contains:
 
-This repository contains:
+- manuscript sources and PDF;
+- public audit records;
+- reproducibility scripts and outputs;
+- integrity artifacts.
 
-1. a public research announcement;
-2. a preprint draft for the split graph case;
-3. public technical drafts for the chordal toolkit, the fractional chordal theorem, and the final rounding step;
-4. the original encrypted timestamped archive of the technical drafts.
-
-The chordal manuscripts are currently technical drafts and remain subject to further formal verification, polishing, and peer review. This repository is intended to record priority and provide an auditable public milestone.
-
-## Proof Strategy
-
-The announced proof proceeds through a fractional triangle-packing theorem for chordal graphs:
+The public-only integrity manifest is:
 
 ```text
-|E(G)| - 2 nu_3^*(G) <= (1/6 + o(1)) n^2.
+public_release/00_PUBLIC_INTEGRITY/
 ```
 
-Together with standard fractional-to-integral triangle-packing rounding for the fixed family {K_3}, this implies the announced chordal clique partition bound.
+This integrity folder was generated only from the public release files. It intentionally does not include the private internal working record.
 
-The full technical proof is organized as a four-part manuscript sequence.
-
-## Manuscript Sequence
-
-### Paper A - Clique Partitions of Split Graphs and the 1/6 Barrier
-
-Status: preprint draft.
-
-Main result:
+The current announcement is mirrored separately for convenience in:
 
 ```text
-max{cp(G): G split, |V(G)| = n} = (1/6 + o(1)) n^2.
+announcement/THREE_PAPER_SERIES_ANNOUNCEMENT_FINAL.md
+announcement/THREE_PAPER_SERIES_ANNOUNCEMENT_FINAL.tex
+announcement/THREE_PAPER_SERIES_ANNOUNCEMENT_FINAL.pdf
 ```
 
-Role: establishes the split graph case and the sharp lower-bound construction K_p join overline{K}_{2p}.
+## Sealed Complete Package
 
-### Paper B - Local and Structural Reductions for Chordal Clique Partitions
-
-Status: public technical draft.
-
-Role: develops the local chordal toolkit used in the fractional theorem.
-
-Contents: heavy-bag principle, local reductions, bounded-window certificates, promotion mechanisms, type blow-up realization, and core-fan allocation.
-
-### Paper C - A Fractional Triangle Theorem for Chordal Graphs
-
-Status: public technical draft.
-
-Main announced result:
+The complete author package, including internal working records, is archived only in encrypted form:
 
 ```text
-|E(G)| - 2 nu_3^*(G) <= (1/6 + o(1)) n^2.
+sealed/THREE_PAPER_SERIES_COMPLETE_PACKAGE.zip.enc
+sealed/THREE_PAPER_SERIES_COMPLETE_PACKAGE.zip.enc.sha256
 ```
 
-Role: provides the global chordal decomposition, boundary-debit realization, edge-ownership patching, and amortization framework.
+The plaintext complete package and encryption key are not stored in this repository.
 
-### Paper D - Clique Partitions of Chordal Graphs
+## Historical Materials
 
-Status: public technical draft.
+Earlier sealed archives and draft folders may remain in this repository for timestamp/history purposes. The current public release should be read from `public_release/`.
 
-Main announced result:
+## Lean Formalisation
 
-```text
-cp(G) <= (1/6 + o(1)) n^2.
-```
-
-Role: derives the clique partition theorem from Paper C using fractional-to-integral rounding and the split lower bound from Paper A.
-
-## Public Drafts and Timestamped Sealed Archive
-
-The current public technical drafts are available in:
-
-```text
-papers/paper_B_chordal_toolkit_technical_draft_v02.*
-papers/paper_C_fractional_chordal_technical_draft_v02.*
-papers/paper_D_chordal_clique_partition_technical_draft_v02.*
-```
-
-The original encrypted timestamped archive is retained in:
-
-```text
-sealed/papers_B_C_D_technical_drafts_v02_encrypted.zip.enc
-```
-
-This file was generated by encrypting a local plaintext ZIP bundle with OpenSSL AES-256-CBC using PBKDF2.
-
-The SHA-256 hashes are recorded in:
-
-```text
-manifest_sha256.txt
-```
+A Lean formalisation contribution is being tracked separately through pull request review.
 
 ## Author
 
@@ -129,13 +89,4 @@ Documents, manuscripts, PDFs, LaTeX, Markdown files, and research announcements 
 
 Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)
 
-This means the material may be shared with attribution, but may not be used commercially or distributed in modified form.
-
-Any future verification scripts or source code may be licensed separately.
-
-## Suggested Citation
-
-Traverso Gianini, Juan Pablo.  
-*A Research Announcement on Clique Partitions of Chordal Graphs*.  
-Research announcement draft, 2026.  
-ORCID: https://orcid.org/0009-0003-6068-4096
+Any verification scripts or source code may be licensed separately where explicitly stated.

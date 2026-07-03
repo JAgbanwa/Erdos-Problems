@@ -22,12 +22,12 @@ The announced proof proceeds through a fractional triangle-packing theorem for c
 
 followed by fractional-to-integral rounding for the fixed family `{K_3}`.
 
-Public materials are available in [`announced_resolution/`](announced_resolution/), including:
+The current public release package is available in [`announced_resolution/`](announced_resolution/). It mirrors the public release repository and includes:
 
-- a research announcement;
-- Paper A, a preprint draft for the split graph case;
-- Papers B, C, and D as public technical drafts;
+- the final research announcement in Markdown, LaTeX, and PDF;
+- the three-paper public release package under `public_release/`;
+- manuscript sources, PDFs, public audit records, reproducibility scripts, and outputs;
 - SHA-256 hashes and citation/license metadata;
-- the original encrypted timestamped archive as a historical record.
+- the encrypted complete author package as a timestamped integrity record.
 
-Status: announced resolved; pending peer review and full public verification of the companion manuscripts.
+Status: announced resolved; pending peer review and independent verification.
