@@ -45,3 +45,5 @@ Problem(s) to try sometime:
 [714](https://www.erdosproblems.com/714)
 
 [560](https://www.erdosproblems.com/560)
+
+[531](https://www.erdosproblems.com/531)
