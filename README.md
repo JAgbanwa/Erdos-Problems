@@ -41,3 +41,5 @@ Problem(s) to try sometime:
 [156](https://www.erdosproblems.com/156)
 
 [102](https://www.erdosproblems.com/1158)
+
+[714](https://www.erdosproblems.com/714)
