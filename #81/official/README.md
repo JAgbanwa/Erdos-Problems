@@ -1,5 +1,8 @@
 # Erdős Problem #81 — Chordal Clique Partitions
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21273144.svg)](https://doi.org/10.5281/zenodo.21273144)
+[![License: CC BY-NC 4.0](https://img.shields.io/badge/License-CC_BY--NC_4.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc/4.0/)
+
 Erdős Problem #81 asks whether the edge clique-partition number of every
 n-vertex chordal graph is at most `n^2/6 + O(n)`. **The problem remains open.**
 
@@ -28,7 +31,7 @@ axiom.
 - [Paper I — PDF (Spanish)](preprints/PAPER_I/01_manuscript/PAPER_I_preprint_v1.0_es.pdf)
 - [Full package (manuscript, ledger, reproducibility, integrity, Lean)](preprints/PAPER_I/)
 - [Lean 4 formalization](preprints/PAPER_I/05_formalization/lean/)
-- [Plain-language explainer (four levels)](preprints/PAPER_I/PaperI_explained_4_levels.html)
+- [Plain-language explainer (four levels, rendered)](https://htmlpreview.github.io/?https://github.com/jtraverso/erdos-81-chordal-clique-partitions/blob/main/preprints/PAPER_I/PaperI_explained_4_levels.html)
 
 ## What Paper I proves — and what it does not
 
@@ -67,7 +70,8 @@ PaperI.paperI_main depends on axioms: [propext, Classical.choice, Quot.sound]
 
 ## Citation
 
-See `CITATION.cff`, `CITATION.bib`, and `CITATION.md` in this directory.
+Archived on Zenodo — DOI [10.5281/zenodo.21273144](https://doi.org/10.5281/zenodo.21273144).
+See also `CITATION.cff`, `CITATION.bib`, and `CITATION.md` in this directory.
 
 ## License
 
