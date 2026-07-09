@@ -1,0 +1,625 @@
+\documentclass[11pt]{article}
+
+\usepackage[a4paper,margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{enumitem}
+\usepackage[colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue]{hyperref}
+\usepackage{microtype}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{remark}[theorem]{Remark}
+
+\newcommand{\NN}{\mathbb N}
+\newcommand{\FS}{\operatorname{FS}}
+\newcommand{\cl}[1]{\overline{#1}}
+
+\title{A Rigorous Lower Bound and Finiteness Proof for a Two-Colour Finite-Sums Ramsey Number}
+\author{}
+\date{}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+Let $F(k)$ be the least integer $N$ such that every two-colouring of $\{1,\ldots,N\}$ contains a $k$-element set $A$ for which all non-empty subset sums of $A$ are defined inside $\{1,\ldots,N\}$ and have the same colour. We prove, in ZFC, that
+\[
+        4^{k-1}\leq F(k)<\infty .
+\]
+The lower bound is obtained from the colouring $n\mapsto \nu_2(n)\pmod 2$. The upper bound is qualitative: it follows from Hindman's finite-sums theorem, proved here by the Galvin--Glazer ultrafilter argument, followed by a compactness extraction.
+\end{abstract}
+
+\section{Definition and statement of the result}
+
+Throughout, $\NN=\{1,2,3,\ldots\}$. If $A$ is a finite set of positive integers, define
+\[
+    \FS(A):=\left\{\sum_{a\in S}a:\varnothing\neq S\subseteq A\right\}.
+\]
+
+\begin{definition}
+For $k\geq 1$, let $F(k)$ be the least integer $N$, if it exists, such that every colouring
+\[
+    \chi:\{1,\ldots,N\}\to \{0,1\}
+\]
+contains a $k$-element set $A\subseteq \NN$ satisfying
+\[
+    \FS(A)\subseteq \{1,\ldots,N\}
+\]
+and such that $\chi$ is constant on $\FS(A)$.
+\end{definition}
+
+The condition $\FS(A)\subseteq\{1,\ldots,N\}$ is essential: the colouring is only defined up to $N$. Equivalently, since all elements of $A$ are positive,
+\[
+    \FS(A)\subseteq\{1,\ldots,N\}
+    \quad\Longleftrightarrow\quad
+    \sum_{a\in A}a\leq N.
+\]
+
+The main result proved in this note is the following.
+
+\begin{theorem}\label{thm:main}
+For every integer $k\geq 1$, the number $F(k)$ exists and satisfies
+\[
+    4^{k-1}\leq F(k)<\infty .
+\]
+\end{theorem}
+
+The result is an estimate rather than an exact evaluation. The lower bound is explicit and elementary. The finiteness proof is non-quantitative and uses Hindman's theorem; it gives no practical numerical upper bound.
+
+\section{The explicit lower bound}
+
+Let $\nu_2(n)$ denote the exponent of $2$ in the prime factorisation of $n$. Thus $\nu_2(n)=t$ means that $2^t\mid n$ but $2^{t+1}\nmid n$.
+
+We shall use the two-colouring
+\[
+    \chi(n):=\nu_2(n)\pmod 2.
+\]
+The lower bound follows from a structural lemma about finite-sums sets under this colouring.
+
+\begin{lemma}\label{lem:evenval}
+Let $A$ be a $k$-element set of positive integers. Suppose that every non-empty subset sum of $A$ has even $2$-adic valuation; that is,
+\[
+    \nu_2\left(\sum_{a\in S}a\right)\equiv 0\pmod 2
+\]
+for every non-empty $S\subseteq A$. Then
+\[
+    \sum_{a\in A}a\geq 4^{k-1}.
+\]
+\end{lemma}
+
+\begin{proof}
+We argue by induction on $k$.
+
+For $k=1$, the claim is immediate, since a positive integer is at least $1=4^0$.
+
+Assume $k\geq 2$, and assume the lemma has been proved for all sets of size $k-1$. Let $A$ be a $k$-element set satisfying the hypothesis.
+
+First remove a harmless common factor. Since every singleton sum belongs to $\FS(A)$, each $a\in A$ has even $2$-adic valuation. Therefore every $a\in A$ is of the form $4^{e_a}u_a$ with $u_a$ odd. Let
+\[
+    e:=\min_{a\in A} e_a.
+\]
+Set
+\[
+    A_0:=\{a/4^e:a\in A\}.
+\]
+Then $A_0$ still has $k$ elements. Moreover, for every non-empty $S\subseteq A$,
+\[
+    \nu_2\left(\sum_{a\in S} \frac{a}{4^e}\right)
+    =
+    \nu_2\left(\sum_{a\in S}a\right)-2e,
+\]
+so every non-empty subset sum of $A_0$ also has even $2$-adic valuation. Finally, by the choice of $e$, at least one element of $A_0$ is odd, and
+\[
+    \sum_{a\in A}a=4^e\sum_{b\in A_0}b\geq \sum_{b\in A_0}b.
+\]
+Thus it is enough to prove the desired bound in the case where $A$ contains at least one odd element.
+
+Assume from now on that $A$ contains at least one odd element. Since every singleton has even $2$-adic valuation, every non-odd element of $A$ is divisible by $4$.
+
+There cannot be three odd elements in $A$. Indeed, among any three odd integers, two are congruent modulo $4$. The sum of those two integers is then congruent to $2$ modulo $4$, and therefore has $2$-adic valuation exactly $1$, contradicting the hypothesis.
+
+So $A$ contains either one or two odd elements.
+
+\medskip
+\noindent\textbf{Case 1: exactly one odd element.}
+Write
+\[
+    A=\{u\}\cup 4B,
+\]
+where $u$ is odd and $B$ is a $(k-1)$-element set of positive integers. For every non-empty $T\subseteq B$,
+\[
+    4\sum_{b\in T}b
+\]
+is a non-empty subset sum of $A$, hence has even $2$-adic valuation. Since it is divisible by $4$, dividing by $4$ subtracts $2$ from its valuation. Therefore
+\[
+    \nu_2\left(\sum_{b\in T}b\right)
+\]
+is even. By the induction hypothesis,
+\[
+    \sum_{b\in B}b\geq 4^{k-2}.
+\]
+Consequently,
+\[
+    \sum_{a\in A}a
+    =u+4\sum_{b\in B}b
+    \geq 1+4\cdot 4^{k-2}
+    >4^{k-1}.
+\]
+
+\medskip
+\noindent\textbf{Case 2: exactly two odd elements.}
+Let these two odd elements be $u$ and $v$. Since $u+v$ is a non-empty subset sum of $A$, its $2$-adic valuation is even. Also $u+v$ is even. Hence $\nu_2(u+v)\geq 2$, so
+\[
+    4\mid u+v.
+\]
+Define
+\[
+    B:=\left\{\frac{u+v}{4}\right\}
+       \cup
+       \left\{\frac{x}{4}:x\in A\setminus\{u,v\}\right\}.
+\]
+We first check that $B$ really has $k-1$ distinct elements. The elements $x/4$ with $x\in A\setminus\{u,v\}$ are distinct because the corresponding $x$ are distinct. It remains only to check that $(u+v)/4$ is not equal to one of them. If $(u+v)/4=x/4$ for some $x\in A\setminus\{u,v\}$, then $x=u+v$, and the subset sum
+\[
+    u+v+x=2(u+v)
+\]
+would have $2$-adic valuation $\nu_2(u+v)+1$, which is odd because $\nu_2(u+v)$ is even. This contradicts the hypothesis. Thus $B$ has exactly $k-1$ elements.
+
+Now we verify that every non-empty subset sum of $B$ has even $2$-adic valuation. Such a subset sum has one of two forms. Either it is
+\[
+    \sum_{x\in T}\frac{x}{4}
+\]
+for some non-empty $T\subseteq A\setminus\{u,v\}$, or it is
+\[
+    \frac{u+v}{4}+\sum_{x\in T}\frac{x}{4}
+\]
+for some possibly empty $T\subseteq A\setminus\{u,v\}$.
+
+In the first case, multiplying by $4$ gives the subset sum $\sum_{x\in T}x$ of $A$. This has even $2$-adic valuation and is divisible by $4$, so after division by $4$ the valuation remains even.
+
+In the second case, multiplying by $4$ gives the subset sum
+\[
+    u+v+\sum_{x\in T}x
+\]
+of $A$. This again has even $2$-adic valuation and is divisible by $4$, since $u+v$ and every $x\in A\setminus\{u,v\}$ are divisible by $4$. Thus division by $4$ again preserves the parity of the valuation.
+
+Therefore $B$ satisfies the induction hypothesis. Hence
+\[
+    \sum_{b\in B}b\geq 4^{k-2}.
+\]
+But by construction,
+\[
+    \sum_{a\in A}a=4\sum_{b\in B}b.
+\]
+Therefore
+\[
+    \sum_{a\in A}a\geq 4\cdot 4^{k-2}=4^{k-1}.
+\]
+
+The induction is complete.
+\end{proof}
+
+\begin{corollary}\label{cor:lower}
+For every $k\geq 1$,
+\[
+    F(k)\geq 4^{k-1}.
+\]
+\end{corollary}
+
+\begin{proof}
+Colour $\NN$ by
+\[
+    \chi(n)=\nu_2(n)\pmod 2.
+\]
+Suppose $A$ is a $k$-element set whose non-empty subset sums are monochromatic under this colouring. Let
+\[
+    t:=\min_{a\in A}\nu_2(a).
+\]
+All singleton sums have the same colour, so each $\nu_2(a)$ has the same parity. Since $t$ is one of these valuations, every $\nu_2(a)-t$ is even. Thus
+\[
+    A':=\{a/2^t:a\in A\}
+\]
+is a $k$-element set of positive integers.
+
+For every non-empty $S\subseteq A$,
+\[
+    \nu_2\left(\sum_{a\in S}\frac{a}{2^t}\right)
+    =
+    \nu_2\left(\sum_{a\in S}a\right)-t.
+\]
+The first term on the right has the common colour parity of all subset sums, and $t$ has that same parity because singleton sums are among the subset sums. Hence the difference is even. By Lemma~\ref{lem:evenval},
+\[
+    \sum_{a\in A'}a\geq 4^{k-1}.
+\]
+Therefore
+\[
+    \sum_{a\in A}a=2^t\sum_{a\in A'}a\geq 4^{k-1}.
+\]
+
+Now restrict this colouring to $\{1,\ldots,4^{k-1}-1\}$. If a valid $k$-element set $A$ existed there, then $\FS(A)$ would have to be contained in that interval, so in particular
+\[
+    \sum_{a\in A}a\leq 4^{k-1}-1,
+\]
+contradicting the inequality just proved. Hence no such set is forced below $4^{k-1}$, and so $F(k)\geq 4^{k-1}$.
+\end{proof}
+
+\section{Ultrafilters and the Galvin--Glazer proof of Hindman's theorem}
+
+The lower bound above is elementary. To prove finiteness of $F(k)$, we use Hindman's finite-sums theorem. For completeness, we give a self-contained proof of the needed infinite theorem using the standard ultrafilter method.
+
+\subsection{The semigroup \texorpdfstring{$\beta\NN$}{beta N}}
+
+An \emph{ultrafilter} on $\NN$ is a collection $p$ of subsets of $\NN$ satisfying:
+\begin{enumerate}[label=(\roman*)]
+    \item $\varnothing\notin p$;
+    \item if $A,B\in p$, then $A\cap B\in p$;
+    \item if $A\in p$ and $A\subseteq B\subseteq \NN$, then $B\in p$;
+    \item for every $A\subseteq\NN$, exactly one of $A$ and $\NN\setminus A$ lies in $p$.
+\end{enumerate}
+For $n\in\NN$, the \emph{principal ultrafilter at $n$} is
+\[
+    p_n:=\{A\subseteq\NN:n\in A\}.
+\]
+An ultrafilter is \emph{non-principal} if it is not principal at any $n\in\NN$.
+
+Let $\beta\NN$ denote the set of all ultrafilters on $\NN$. For $A\subseteq\NN$, write
+\[
+    \cl A:=\{p\in\beta\NN:A\in p\}.
+\]
+The sets $\cl A$ form the usual clopen basis for the topology on $\beta\NN$: indeed,
+\[
+    \beta\NN\setminus\cl A=\cl{\NN\setminus A},
+    \qquad
+    \cl A\cap\cl B=\cl{A\cap B}.
+\]
+
+\begin{lemma}[Ultrafilter extension]\label{lem:ultrafilterextension}
+Let $\mathcal F$ be a family of subsets of $\NN$ with the finite-intersection property. Then there exists an ultrafilter $p$ on $\NN$ such that $\mathcal F\subseteq p$.
+\end{lemma}
+
+\begin{proof}
+Let $\mathcal G$ be the filter generated by $\mathcal F$; explicitly, $B\in\mathcal G$ if and only if $B$ contains an intersection of finitely many members of $\mathcal F$. The finite-intersection property ensures that $\varnothing\notin\mathcal G$.
+
+Consider the set of all proper filters on $\NN$ containing $\mathcal G$, ordered by inclusion. The union of any chain of such filters is again a proper filter containing $\mathcal G$. Hence, by Zorn's lemma, there is a maximal proper filter $p$ containing $\mathcal G$.
+
+We prove that $p$ is an ultrafilter. Let $A\subseteq\NN$. If $A\in p$, there is nothing to prove. Suppose $A\notin p$. If $\NN\setminus A\notin p$, then every $B\in p$ must meet $A$; otherwise $B\subseteq\NN\setminus A$ would force $\NN\setminus A\in p$ by upward closure. Hence the family $p\cup\{A\}$ has the finite-intersection property and generates a proper filter strictly larger than $p$, contradicting maximality. Therefore $\NN\setminus A\in p$. Thus exactly one of $A$ and $\NN\setminus A$ lies in $p$, so $p$ is an ultrafilter.
+\end{proof}
+
+\begin{proposition}\label{prop:compactbeta}
+With this topology, $\beta\NN$ is compact and Hausdorff.
+\end{proposition}
+
+\begin{proof}
+First, $\beta\NN$ is Hausdorff. If $p\neq q$, then some $A\subseteq\NN$ belongs to one of $p,q$ but not the other. Say $A\in p$ and $A\notin q$. Then $\NN\setminus A\in q$, so $p\in\cl A$, $q\in\cl{\NN\setminus A}$, and the two basic open sets $\cl A$ and $\cl{\NN\setminus A}$ are disjoint.
+
+It remains to prove compactness. It is enough to show that every cover of $\beta\NN$ by basic clopen sets has a finite subcover, because every open cover has a refinement by basic clopen sets.
+
+Suppose $\{\cl{A_i}:i\in I\}$ is a basic clopen cover with no finite subcover. Then for every finite $J\subseteq I$, the set
+\[
+    \NN\setminus\bigcup_{j\in J}A_j
+    =\bigcap_{j\in J}(\NN\setminus A_j)
+\]
+is non-empty. Indeed, if it were empty, then $\bigcup_{j\in J}A_j=\NN$; since an ultrafilter containing a finite union contains at least one member of that finite union, the sets $\cl{A_j}$ with $j\in J$ would already cover $\beta\NN$, contrary to the assumption. Therefore the family $\{\NN\setminus A_i:i\in I\}$ has the finite-intersection property. By Lemma~\ref{lem:ultrafilterextension}, there exists an ultrafilter $p$ containing every $\NN\setminus A_i$. Then no $A_i$ belongs to $p$, so $p\notin\cl{A_i}$ for every $i\in I$, contradicting that the sets $\cl{A_i}$ cover $\beta\NN$. Thus every basic clopen cover has a finite subcover, and $\beta\NN$ is compact.
+\end{proof}
+
+For $A\subseteq\NN$ and $n\in\NN$, put
+\[
+    A-n:=\{m\in\NN:m+n\in A\}.
+\]
+Addition on $\NN$ extends to $\beta\NN$ as follows:
+\[
+    A\in p+q
+    \quad\Longleftrightarrow\quad
+    \{n\in\NN:A-n\in q\}\in p.
+\]
+
+\begin{proposition}\label{prop:betasemigroup}
+With the operation just defined, $\beta\NN$ is a compact Hausdorff right-topological semigroup extending ordinary addition on principal ultrafilters.
+\end{proposition}
+
+\begin{proof}
+Compactness and Hausdorffness are Proposition~\ref{prop:compactbeta}. We first check that $p+q$ is an ultrafilter whenever $p,q\in\beta\NN$.
+
+Fix $q\in\beta\NN$ and define
+\[
+    T_q(A):=\{n\in\NN:A-n\in q\}.
+\]
+The map $T_q$ respects the empty set, the whole space, complements, finite intersections, and supersets:
+\[
+    T_q(\varnothing)=\varnothing,
+    \qquad
+    T_q(\NN)=\NN,
+    \qquad
+    T_q(\NN\setminus A)=\NN\setminus T_q(A),
+    \qquad
+    T_q(A\cap B)=T_q(A)\cap T_q(B),
+\]
+and $A\subseteq B$ implies $T_q(A)\subseteq T_q(B)$. Therefore
+\[
+    p+q:=\{A\subseteq\NN:T_q(A)\in p\}
+\]
+is an ultrafilter.
+
+If $p_m,p_n$ are principal ultrafilters at $m,n\in\NN$, then
+\[
+    A\in p_m+p_n
+    \Longleftrightarrow
+    A-m\in p_n
+    \Longleftrightarrow
+    m+n\in A.
+\]
+Thus $p_m+p_n=p_{m+n}$, so the operation extends ordinary addition.
+
+Now we prove associativity. Let $p,q,r\in\beta\NN$ and $A\subseteq\NN$. Then
+\begin{align*}
+A\in (p+q)+r
+&\Longleftrightarrow
+\{n:A-n\in r\}\in p+q \\
+&\Longleftrightarrow
+\{m:(\{n:A-n\in r\})-m\in q\}\in p.
+\end{align*}
+But
+\[
+(\{n:A-n\in r\})-m
+=
+\{n:A-(m+n)\in r\}
+=
+\{n:(A-m)-n\in r\}.
+\]
+Therefore
+\[
+(\{n:A-n\in r\})-m\in q
+\quad\Longleftrightarrow\quad
+A-m\in q+r.
+\]
+Hence
+\begin{align*}
+A\in (p+q)+r
+&\Longleftrightarrow
+\{m:A-m\in q+r\}\in p \\
+&\Longleftrightarrow
+A\in p+(q+r).
+\end{align*}
+Thus addition is associative.
+
+Finally, fix $q\in\beta\NN$. For every $A\subseteq\NN$,
+\[
+    \{p\in\beta\NN:A\in p+q\}
+    =
+    \cl{\{n\in\NN:A-n\in q\}}.
+\]
+This is clopen. Therefore the map $p\mapsto p+q$ is continuous. Thus $\beta\NN$ is right-topological.
+\end{proof}
+
+\begin{lemma}[Ellis--Numakura idempotent lemma]\label{lem:ellis}
+Every non-empty compact Hausdorff right-topological semigroup contains an idempotent element.
+\end{lemma}
+
+\begin{proof}
+Let $S$ be a non-empty compact Hausdorff right-topological semigroup. We first choose a minimal non-empty compact subsemigroup. Partially order the non-empty compact subsemigroups of $S$ by inclusion. If $\{K_i:i\in I\}$ is a descending chain of such subsemigroups, then every finite subfamily has non-empty intersection. Since compact subsets of a Hausdorff space are closed, compactness of $S$ gives
+\[
+    \bigcap_{i\in I}K_i\neq\varnothing.
+\]
+This intersection is again a compact subsemigroup. Hence Zorn's lemma gives a minimal non-empty compact subsemigroup; call it $K$.
+
+Fix $a\in K$. Since right multiplication by $a$ is continuous, the set
+\[
+    Ka:=\{xa:x\in K\}
+\]
+is compact and non-empty. It is also a subsemigroup: if $x a,y a\in Ka$, then by associativity
+\[
+    (xa)(ya)=x(ay)a,
+\]
+and $x(ay)\in K$ because $K$ is a subsemigroup. Thus $(xa)(ya)\in Ka$. By minimality of $K$, we have $Ka=K$.
+
+Since $a\in K=Ka$, there exists $e\in K$ such that $ea=a$. Now define
+\[
+    E:=\{x\in K:xa=a\}.
+\]
+This set is non-empty because $e\in E$. It is compact because it is the inverse image of the closed set $\{a\}$ under the continuous right-translation map $x\mapsto xa$. It is also a subsemigroup: if $x,y\in E$, then
+\[
+    (xy)a=x(ya)=xa=a.
+\]
+Therefore $E$ is a non-empty compact subsemigroup of $K$. By minimality of $K$, $E=K$. In particular, $a\in E$, so
+\[
+    a^2=a.
+\]
+Thus $a$ is an idempotent.
+\end{proof}
+
+\begin{corollary}\label{cor:idempotent}
+There exists a non-principal idempotent ultrafilter $p\in\beta\NN$; that is,
+\[
+    p+p=p.
+\]
+\end{corollary}
+
+\begin{proof}
+By Proposition~\ref{prop:betasemigroup}, $\beta\NN$ is a non-empty compact Hausdorff right-topological semigroup. Lemma~\ref{lem:ellis} gives an idempotent ultrafilter $p$.
+
+It cannot be principal. If $p$ were the principal ultrafilter at $n\in\NN$, then $p+p$ would be the principal ultrafilter at $2n$. Since $n\geq1$, $2n\neq n$, so $p+p\neq p$. Hence $p$ is non-principal.
+\end{proof}
+
+We shall use one elementary consequence of non-principality.
+
+\begin{lemma}\label{lem:large}
+If $p$ is a non-principal ultrafilter on $\NN$ and $A\in p$, then $A$ is infinite and therefore contains arbitrarily large integers.
+\end{lemma}
+
+\begin{proof}
+If a finite set $E$ belonged to $p$, then, because
+\[
+    E=\bigcup_{n\in E}\{n\},
+\]
+the ultrafilter property would force $\{n\}\in p$ for some $n\in E$. Indeed, if no singleton $\{n\}$ belonged to $p$, then each complement $\NN\setminus\{n\}$ would belong to $p$, and intersecting these complements over $n\in E$ would show $\NN\setminus E\in p$, contradicting $E\in p$.
+
+But if $\{n\}\in p$, then for every $B\subseteq\NN$, the ultrafilter property gives
+\[
+    B\in p\quad\Longleftrightarrow\quad n\in B,
+\]
+so $p$ is principal at $n$. This contradicts the assumption. Therefore no finite set lies in $p$. Hence every $A\in p$ is infinite, and every infinite subset of $\NN$ is unbounded.
+\end{proof}
+
+\subsection{Hindman's theorem}
+
+\begin{theorem}[Hindman's finite-sums theorem]\label{thm:hindman}
+For every finite colouring
+\[
+    \chi:\NN\to\{1,\ldots,r\},
+\]
+there exists a strictly increasing sequence
+\[
+    x_1<x_2<x_3<\cdots
+\]
+of positive integers and a colour $c$ such that every non-empty finite sum
+\[
+    x_{i_1}+\cdots+x_{i_m},\qquad i_1<\cdots<i_m,
+\]
+has colour $c$.
+\end{theorem}
+
+\begin{proof}
+Let $p\in\beta\NN$ be a non-principal idempotent ultrafilter, whose existence is guaranteed by Corollary~\ref{cor:idempotent}. Let the colour classes be
+\[
+    C_i:=\chi^{-1}(i),\qquad i=1,
+\ldots,r.
+\]
+Because $p$ is an ultrafilter and
+\[
+    \NN=C_1\cup\cdots\cup C_r,
+\]
+exactly one of the sets $C_i$ belongs to $p$. Denote this set by $C$.
+
+Define
+\[
+    C^*:=\{n\in C:C-n\in p\}.
+\]
+Since $p+p=p$ and $C\in p$, the definition of addition gives
+\[
+    D:=\{n\in\NN:C-n\in p\}\in p.
+\]
+Thus
+\[
+    C^*=C\cap D\in p.
+\]
+
+We now prove the fundamental shift property:
+\[
+    n\in C^* \quad\Longrightarrow\quad C^*-n\in p.       \tag{1}
+\]
+Indeed, if $n\in C^*$, then $C-n\in p$. Also, since $C-n\in p=p+p$,
+\[
+    \{m:(C-n)-m\in p\}\in p.
+\]
+But
+\[
+    (C-n)-m=C-(n+m).
+\]
+Therefore
+\[
+    \{m:C-(n+m)\in p\}\in p.
+\]
+This set is exactly $D-n$. Hence
+\[
+    C^*-n=(C-n)\cap(D-n)\in p.
+\]
+This proves (1).
+
+We construct $x_1,x_2,\ldots$ recursively. Choose any $x_1\in C^*$; this is possible because $C^*\in p$ and therefore $C^*$ is non-empty.
+
+Suppose $x_1<\cdots<x_t$ have already been chosen so that every non-empty finite sum of these $t$ integers lies in $C^*$. Let
+\[
+    \FS_t:=\left\{\sum_{i\in I}x_i:\varnothing\neq I\subseteq\{1,\ldots,t\}\right\}.
+\]
+For each $s\in\FS_t$, we have $s\in C^*$, so by (1),
+\[
+    C^*-s\in p.
+\]
+Consequently
+\[
+    E_t:=C^*\cap\bigcap_{s\in\FS_t}(C^*-s)\in p.
+\]
+By Lemma~\ref{lem:large}, $E_t$ contains arbitrarily large integers. Choose
+\[
+    x_{t+1}>x_t
+\]
+with $x_{t+1}\in E_t$.
+
+Then $x_{t+1}\in C^*$, and for every $s\in\FS_t$,
+\[
+    s+x_{t+1}\in C^*,
+\]
+because $x_{t+1}\in C^*-s$. Therefore every non-empty finite sum from $x_1,\ldots,x_{t+1}$ lies in $C^*$. By induction, this holds for all $t$.
+
+Since $C^*\subseteq C$, every non-empty finite sum from the infinite sequence has the single colour corresponding to $C$.
+\end{proof}
+
+\section{From Hindman's theorem to the finite number \texorpdfstring{$F(k)$}{F(k)}}
+
+We now prove the qualitative upper bound $F(k)<\infty$.
+
+\begin{lemma}\label{lem:finiteextraction}
+For every $k\geq 1$, there exists an integer $N$ such that every two-colouring of $\{1,\ldots,N\}$ contains a $k$-element set $A$ with $\FS(A)\subseteq\{1,\ldots,N\}$ and with $\FS(A)$ monochromatic.
+\end{lemma}
+
+\begin{proof}
+Suppose, for contradiction, that no such $N$ exists for some fixed $k$. Then for every $N\geq1$ there is a bad colouring
+\[
+    \chi_N:\{1,\ldots,N\}\to\{0,1\}
+\]
+with no valid monochromatic $k$-term finite-sums set.
+
+We first construct an infinite colouring
+\[
+    \chi:\NN\to\{0,1\}
+\]
+such that every finite initial segment of $\chi$ agrees with some bad finite colouring of sufficiently large length.
+
+Start with the infinite set $I_0:=\NN$. At stage $m\geq1$, assume $I_{m-1}$ is an infinite set of indices $N$ such that $N\geq m-1$ and such that the colourings $\chi_N$ agree with the already chosen values $\chi(1),\ldots,\chi(m-1)$ on $\{1,\ldots,m-1\}$. Infinitely many elements of $I_{m-1}$ are at least $m$. Among those $N$, the value $\chi_N(m)$ is either $0$ or $1$; one of these two values occurs for infinitely many such $N$. Define $\chi(m)$ to be that value, and let $I_m$ be the infinite set of corresponding indices.
+
+This recursive construction has the following consequence: for every $M\geq1$, there exists some $N\geq M$ such that
+\[
+    \chi_N(n)=\chi(n)\qquad(1\leq n\leq M).       \tag{2}
+\]
+Indeed, any $N\in I_M$ works.
+
+Apply Hindman's theorem, Theorem~\ref{thm:hindman}, to the infinite colouring $\chi$. There exist distinct positive integers
+\[
+    x_1<x_2<x_3<\cdots
+\]
+such that all non-empty finite sums from this sequence have the same colour. Put
+\[
+    A:=\{x_1,
+\ldots,x_k\}
+\]
+and
+\[
+    M:=x_1+\cdots+x_k.
+\]
+Then $\FS(A)\subseteq\{1,\ldots,M\}$ and $\FS(A)$ is monochromatic under $\chi$.
+
+Choose $N\geq M$ such that $\chi_N$ agrees with $\chi$ on $\{1,\ldots,M\}$, as guaranteed by (2). Then $\FS(A)$ is also monochromatic under $\chi_N$, and it is contained in $\{1,\ldots,N\}$. This contradicts the fact that $\chi_N$ was chosen to be bad.
+
+Therefore such an $N$ must exist.
+\end{proof}
+
+\begin{corollary}\label{cor:finite}
+For every $k\geq1$, $F(k)<\infty$.
+\end{corollary}
+
+\begin{proof}
+Lemma~\ref{lem:finiteextraction} shows that the set of integers $N$ satisfying the defining property of $F(k)$ is non-empty. It is also upward closed: if $N$ has the property and $M\geq N$, then any colouring of $\{1,\ldots,M\}$ restricts to a colouring of $\{1,\ldots,N\}$, where the desired set $A$ already exists. Thus the least such $N$ exists.
+\end{proof}
+
+\section{Conclusion}
+
+Combining Corollary~\ref{cor:lower} and Corollary~\ref{cor:finite}, we obtain Theorem~\ref{thm:main}:
+\[
+    4^{k-1}\leq F(k)<\infty .
+\]
+
+The estimate has two different strengths. The lower bound is explicit and shows that $F(k)$ grows at least exponentially in $k$. The upper bound is qualitative: it proves that $F(k)$ is always finite, but it does not provide a manageable numerical upper bound. Quantitative estimates for finite-sums Ramsey numbers are substantially more delicate than ordinary Schur or Ramsey bounds.
+
+\end{document}
