@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Paper I — Fractional Triangle Packings in Split Graphs</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --eggshell:#fdfcfc; --taupe:#f5f3f1; --stone:#ebe8e4; --ink:#000000; --graphite:#44403b;
+    --smoke:#777169; --ash:#a59f97; --violet:#0447ff; --ember:#ff4704;
+    --font:"Inter",ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+    --maxw:1000px;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--eggshell);color:var(--ink);font-family:var(--font);
+    font-size:16px;line-height:1.5;letter-spacing:0.16px;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
+  body[data-lang="en"] .es{display:none} body[data-lang="es"] .en{display:none}
+  a{color:var(--ink)}
+
+  .topbar{display:flex;align-items:center;justify-content:space-between;height:58px;max-width:var(--maxw);margin:0 auto;padding:0 24px}
+  .topbar .brand{font-weight:500;font-size:16px;letter-spacing:0}
+  .langtog{display:inline-flex;border:1px solid #e5e5e5;border-radius:9999px;padding:3px;background:var(--eggshell)}
+  .langtog button{background:none;border:0;font:inherit;font-size:13px;font-weight:500;color:var(--smoke);
+    padding:5px 13px;border-radius:9999px;cursor:pointer;letter-spacing:0}
+  .langtog button[aria-pressed="true"]{background:var(--ink);color:#fff}
+
+  .levels{position:sticky;top:0;z-index:30;background:rgba(253,252,252,.9);backdrop-filter:blur(8px);
+    border-bottom:1px solid var(--stone)}
+  .levels .inner{display:flex;gap:8px;max-width:var(--maxw);margin:0 auto;padding:10px 24px;overflow-x:auto}
+  .levels button{background:var(--eggshell);border:1px solid #e5e5e5;font:inherit;cursor:pointer;color:var(--ink);
+    padding:7px 15px;border-radius:9999px;white-space:nowrap;letter-spacing:0;font-size:13.5px;font-weight:500;display:flex;gap:7px;align-items:center}
+  .levels button .n{font-size:11px;color:var(--ash);font-variant-numeric:tabular-nums}
+  .levels button[aria-selected="true"]{background:var(--ink);color:#fff;border-color:var(--ink)}
+  .levels button[aria-selected="true"] .n{color:#8fa9ff}
+
+  main{padding:0 0 60px}
+  .hero{display:grid;grid-template-columns:1fr 200px;gap:28px;align-items:center;padding:64px 0 40px}
+  .hero .kick{font-size:12px;letter-spacing:0.14em;text-transform:uppercase;color:var(--smoke);margin:0 0 18px}
+  .hero h1{font-weight:300;font-size:48px;line-height:1.08;letter-spacing:-0.96px;margin:0 0 18px;max-width:16ch}
+  .hero p{margin:0;color:var(--smoke);font-size:18px;max-width:52ch;line-height:1.5}
+  .hero .by{margin-top:18px;font-size:13px;color:var(--ash)}
+  .sphere{width:180px;height:180px;border-radius:50%;justify-self:center;
+    background:radial-gradient(circle at 34% 30%, #6a86ff 0%, #0447ff 34%, #ff4704 78%, #ffb59e 100%)}
+  @media (max-width:720px){ .hero{grid-template-columns:1fr} .sphere{width:120px;height:120px} .hero h1{font-size:34px;letter-spacing:-0.6px} }
+
+  section.level{display:none} section.level.active{display:block;animation:fade .28s ease}
+  @keyframes fade{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+  .forwhom{font-size:13px;color:var(--smoke);display:inline-flex;gap:8px;align-items:center;
+    border:1px solid var(--stone);border-radius:9999px;padding:6px 15px;margin:26px 0 4px}
+  .forwhom b{color:var(--ink);font-weight:500}
+
+  h2{font-weight:300;font-size:36px;line-height:1.17;letter-spacing:-0.72px;margin:34px 0 12px}
+  h3{font-weight:500;font-size:20px;letter-spacing:0;margin:26px 0 6px}
+  p{margin:0 0 15px;max-width:72ch;color:var(--graphite)}
+  .lead{color:var(--ink)}
+  .hl{color:var(--violet);font-weight:500}
+
+  .card{background:var(--taupe);border-radius:20px;padding:28px;margin:22px 0}
+  .card h4{font-weight:500;margin:0 0 3px;font-size:16px;letter-spacing:0}
+  .card .cap{font-size:14px;color:var(--smoke);margin:0 0 16px;max-width:70ch;letter-spacing:0.14px}
+  .chartbox{position:relative;width:100%;height:320px}
+  .svgbox{width:100%}
+  .legend{display:flex;flex-wrap:wrap;gap:14px;margin:0 0 10px;font-size:12.5px;color:var(--smoke)}
+  .legend span{display:flex;align-items:center;gap:6px}
+  .sw{width:14px;height:3px;border-radius:2px} .sw.sq{height:12px;border-radius:3px}
+
+  .concepts{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px;margin:20px 0}
+  .concept{background:var(--taupe);border-radius:20px;padding:22px}
+  .concept h4{font-weight:500;font-size:16px;margin:0 0 4px}
+  .concept p{font-size:14px;color:var(--smoke);margin:0 0 12px;max-width:none;letter-spacing:0.14px}
+  .gg{background:var(--eggshell);border:1px solid var(--stone);border-radius:14px;padding:6px}
+  .duo{display:flex;gap:8px} .duo>div{flex:1}
+  .glabel{text-align:center;font-size:12px;color:var(--smoke);margin-top:4px}
+
+  .theorem{background:var(--eggshell);border:1px solid var(--stone);border-radius:20px;padding:20px 24px;margin:22px 0}
+  .theorem .lbl{font-family:"Inter";font-size:11px;letter-spacing:0.1em;text-transform:uppercase;color:var(--smoke);font-weight:500}
+  .formula{font-size:23px;text-align:center;margin:12px 0;color:var(--ink);font-weight:300;letter-spacing:-0.3px;overflow-x:auto}
+
+  .kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px;margin:20px 0}
+  .kpi{background:var(--taupe);border-radius:20px;padding:20px}
+  .kpi .v{font-size:30px;font-weight:300;letter-spacing:-0.6px}
+  .kpi .k{font-size:13px;color:var(--smoke);margin-top:4px;letter-spacing:0.13px}
+
+  .twocol{display:grid;grid-template-columns:210px 1fr;gap:26px;align-items:start;margin:20px 0}
+  .twocol .side .tag{font-size:11px;letter-spacing:0.12em;text-transform:uppercase;color:var(--graphite);font-weight:500}
+  .twocol .side p{font-size:14px;color:var(--smoke)}
+  @media (max-width:720px){ .twocol{grid-template-columns:1fr} }
+
+  .play{background:var(--eggshell);border:1px solid var(--stone);border-radius:20px;padding:20px 22px;margin:18px 0}
+  .play .row{display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+  .play label{font-size:13px;color:var(--smoke);min-width:70px}
+  .play input[type=range]{flex:1;min-width:170px;accent-color:var(--violet)}
+  .play .out{font-size:20px;font-weight:500;min-width:52px;text-align:right;font-variant-numeric:tabular-nums}
+  .readout{display:flex;gap:26px;flex-wrap:wrap;margin-top:14px}
+  .readout div{font-size:12.5px;color:var(--smoke);letter-spacing:0.13px} .readout b{font-size:22px;font-weight:300;color:var(--ink);display:block;font-variant-numeric:tabular-nums;margin-top:2px}
+
+  .note{font-size:14px;color:var(--graphite);background:var(--taupe);border-radius:20px;padding:18px 22px;margin:18px 0}
+  .note b{color:var(--ink);font-weight:500}
+  ul{margin:0 0 15px;padding-left:20px;color:var(--graphite)} li{margin:5px 0;max-width:72ch}
+  code{font-family:"Geist Mono",ui-monospace,Menlo,Consolas,monospace;font-size:.88em;color:var(--graphite)}
+  hr{border:0;border-top:1px solid var(--stone);margin:34px 0}
+  footer{border-top:1px solid var(--stone);margin-top:44px;padding:26px 0 80px;color:var(--smoke);font-size:13px}
+  .refs{font-size:12.5px;color:var(--ash);list-style:none;padding:0} .refs li{margin:6px 0}
+  @media (max-width:640px){ h2{font-size:28px} .chartbox{height:280px} }
+</style>
+</head>
+<body data-lang="en">
+
+<div class="topbar">
+  <span class="brand">◆ Paper I</span>
+  <span class="langtog" role="group" aria-label="Language">
+    <button data-lang-btn="en" aria-pressed="true">EN</button>
+    <button data-lang-btn="es" aria-pressed="false">ES</button>
+  </span>
+</div>
+
+<div class="levels"><div class="inner" role="tablist" aria-label="Level">
+  <button role="tab" aria-selected="true" data-lv="0"><span class="n">00</span><span class="en">Foundations</span><span class="es">Fundamentos</span></button>
+  <button role="tab" aria-selected="false" data-lv="1"><span class="n">01</span><span class="en">Curious reader</span><span class="es">Lector curioso</span></button>
+  <button role="tab" aria-selected="false" data-lv="2"><span class="n">02</span><span class="en">Undergraduate</span><span class="es">Universitario</span></button>
+  <button role="tab" aria-selected="false" data-lv="3"><span class="n">03</span><span class="en">Doctoral</span><span class="es">Doctorado</span></button>
+  <button role="tab" aria-selected="false" data-lv="4"><span class="n">04</span><span class="en">Specialist</span><span class="es">Especialista</span></button>
+</div></div>
+
+<main><div class="wrap">
+
+  <header class="hero">
+    <div>
+      <p class="kick">Erdős Problem #81 · Paper I</p>
+      <h1><span class="en">Fractional triangle packings in split graphs</span><span class="es">Empaquetamientos fraccionales de triángulos en split graphs</span></h1>
+      <p><span class="en">One theorem, read at five depths — from the meaning of a graph to the research frontier.</span><span class="es">Un teorema, leído en cinco niveles — desde qué es un grafo hasta la frontera de investigación.</span></p>
+      <p class="by">J. P. Traverso Gianini · MSC 05C70 · preprint v1.0</p>
+    </div>
+    <div class="sphere" aria-hidden="true"></div>
+  </header>
+
+  <!-- LEVEL 0 — FOUNDATIONS -->
+  <section class="level active" id="lv0">
+    <span class="forwhom"><b><span class="en">Level 0</span><span class="es">Nivel 0</span></b> · <span class="en">the basic concepts, with pictures. Start here.</span><span class="es">los conceptos básicos, con dibujos. Empieza aquí.</span></span>
+
+    <h2><span class="en">The building blocks</span><span class="es">Los bloques básicos</span></h2>
+    <p class="lead"><span class="en">Before the theorem, five ideas. Each picture is a real small graph, not decoration.</span><span class="es">Antes del teorema, cinco ideas. Cada dibujo es un grafo pequeño real, no decoración.</span></p>
+
+    <div class="concepts">
+      <div class="concept">
+        <h4><span class="en">1 · Graph</span><span class="es">1 · Grafo</span></h4>
+        <p><span class="en">Dots (<b>vertices</b>) joined by lines (<b>edges</b>). That is all a graph is. Here n = 5 vertices.</span><span class="es">Puntos (<b>vértices</b>) unidos por líneas (<b>aristas</b>). Eso es un grafo. Aquí n = 5 vértices.</span></p>
+        <div class="gg" id="g_graph"></div>
+      </div>
+      <div class="concept">
+        <h4><span class="en">2 · Clique</span><span class="es">2 · Clique</span></h4>
+        <p><span class="en">A group where <b>every</b> vertex is joined to every other. The 4 violet dots form a clique — all 6 edges present.</span><span class="es">Un grupo donde <b>cada</b> vértice se une a todos los demás. Los 4 puntos violeta forman un clique — las 6 aristas presentes.</span></p>
+        <div class="gg" id="g_clique"></div>
+      </div>
+      <div class="concept">
+        <h4><span class="en">3 · Clique partition</span><span class="es">3 · Partición en cliques</span></h4>
+        <p><span class="en">Split <b>all</b> the edges into cliques, each edge in exactly one. Here: two triangles. The question of #81 is: how few cliques are ever needed?</span><span class="es">Dividir <b>todas</b> las aristas en cliques, cada arista en exactamente uno. Aquí: dos triángulos. La pregunta de #81: ¿con cuán pocos cliques basta?</span></p>
+        <div class="gg" id="g_part"></div>
+      </div>
+      <div class="concept">
+        <h4><span class="en">4 · Chordal graph</span><span class="es">4 · Grafo cordal</span></h4>
+        <p><span class="en">A graph is <b>chordal</b> if every cycle of 4+ vertices has a shortcut (a <b>chord</b>). Left: a 4-cycle with no chord — not chordal. Right: add the orange chord — chordal.</span><span class="es">Un grafo es <b>cordal</b> si todo ciclo de 4+ vértices tiene un atajo (una <b>cuerda</b>). Izquierda: un 4-ciclo sin cuerda — no cordal. Derecha: agrega la cuerda naranja — cordal.</span></p>
+        <div class="duo"><div><div class="gg" id="g_c4a"></div><div class="glabel"><span class="en">✗ not chordal</span><span class="es">✗ no cordal</span></div></div><div><div class="gg" id="g_c4b"></div><div class="glabel"><span class="en">✓ chordal</span><span class="es">✓ cordal</span></div></div></div>
+      </div>
+      <div class="concept">
+        <h4><span class="en">5 · Split graph</span><span class="es">5 · Split graph</span></h4>
+        <p><span class="en">The star of this paper: vertices split into a <b>clique K</b> (violet, all joined) and an <b>independent set I</b> (no edges among them), plus cross links. Every split graph is chordal.</span><span class="es">La estrella de este paper: vértices divididos en un <b>clique K</b> (violeta, todos unidos) y un <b>conjunto independiente I</b> (sin aristas entre ellos), más enlaces cruzados. Todo split graph es cordal.</span></p>
+        <div class="gg" id="g_split"></div>
+      </div>
+      <div class="concept">
+        <h4><span class="en">6 · Triangle &amp; packing</span><span class="es">6 · Triángulo y empaquetamiento</span></h4>
+        <p><span class="en">A <b>triangle</b> is the smallest clique with an inside. A <b>packing</b> picks triangles that don't share an edge — the fractional version (weights) is what this paper measures.</span><span class="es">Un <b>triángulo</b> es el clique más chico con interior. Un <b>empaquetamiento</b> elige triángulos que no comparten arista — la versión fraccional (pesos) es lo que mide este paper.</span></p>
+        <div class="gg" id="g_tri"></div>
+      </div>
+    </div>
+
+    <hr/>
+    <div class="note">
+      <div class="en"><p style="margin:0"><b>How they connect.</b> This paper works on <b>split graphs</b> (concept 5). It measures the <b>fractional triangle packing</b> (concept 6) and asks how many edges are left over — the "deficit". That deficit is the key to <b>clique partitions</b> (concept 3) of <b>chordal graphs</b> (concept 4), which is exactly Erdős Problem #81. The next four levels build up from intuition to the frontier — pick your depth above.</p></div>
+      <div class="es"><p style="margin:0"><b>Cómo se conectan.</b> Este paper trabaja sobre <b>split graphs</b> (concepto 5). Mide el <b>empaquetamiento fraccional de triángulos</b> (concepto 6) y pregunta cuántas aristas quedan sin cubrir — el "déficit". Ese déficit es la llave de las <b>particiones en cliques</b> (concepto 3) de los <b>grafos cordales</b> (concepto 4), que es justo el Problema #81 de Erdős. Los cuatro niveles siguientes suben desde la intuición hasta la frontera — elige tu profundidad arriba.</p></div>
+    </div>
+
+    <div class="note" style="border:1px solid var(--stone);background:var(--eggshell)">
+      <div class="en"><p style="margin:0"><b>Who was Erdős, and what is an "Erdős problem"?</b> Paul Erdős (1913–1996) was a Hungarian mathematician — one of the most prolific in history, with around 1,500 papers and more than 500 collaborators. Famously itinerant, he spent his life travelling from colleague to colleague, and posing sharp, memorable open problems — often attaching a small cash prize for whoever solved one. Those questions, hundreds of them across combinatorics, number theory and graph theory, are known as the <b>Erdős problems</b>; many remain open today and are now catalogued online. This page is about problem <b>#81</b>, on clique partitions of chordal graphs.</p></div>
+      <div class="es"><p style="margin:0"><b>¿Quién fue Erdős y qué es un "problema de Erdős"?</b> Paul Erdős (1913–1996) fue un matemático húngaro — uno de los más prolíficos de la historia, con cerca de 1.500 artículos y más de 500 colaboradores. Célebre por su vida itinerante, pasó sus días viajando de colega en colega y planteando problemas abiertos afilados y memorables — a menudo con un pequeño premio en efectivo para quien resolviera alguno. Esas preguntas, cientos de ellas en combinatoria, teoría de números y teoría de grafos, se conocen como los <b>problemas de Erdős</b>; muchos siguen abiertos hoy y están catalogados en línea. Esta página trata del problema <b>#81</b>, sobre particiones en cliques de grafos cordales.</p></div>
+    </div>
+  </section>
+
+  <!-- LEVEL 1 -->
+  <section class="level" id="lv1">
+    <span class="forwhom"><b><span class="en">Level 1</span><span class="es">Nivel 1</span></b> · <span class="en">for a curious reader — pictures and ideas.</span><span class="es">para un lector curioso — imágenes e ideas.</span></span>
+    <h2><span class="en">Which fraction of n²?</span><span class="es">¿Qué fracción de n²?</span></h2>
+    <div class="en"><p class="lead">For chordal graphs, the number of cliques needed in the worst case grows like a fraction of n². The whole question is which fraction. That is Erdős Problem #81.</p></div>
+    <div class="es"><p class="lead">Para grafos cordales, el número de cliques necesarios en el peor caso crece como una fracción de n². Toda la pregunta es qué fracción. Ese es el Problema #81 de Erdős.</p></div>
+
+    <div class="card">
+      <h4><span class="en">The landscape of the answer</span><span class="es">El paisaje de la respuesta</span></h4>
+      <p class="cap"><span class="en">Every result is a value of c, where the hardest graphs need about c·n² cliques. The game is to squeeze the ceiling down to the floor.</span><span class="es">Cada resultado es un valor de c, donde los grafos más difíciles necesitan cerca de c·n² cliques. El juego es bajar el techo hasta el piso.</span></p>
+      <div id="landscape1" class="svgbox"></div>
+    </div>
+
+    <div class="play">
+      <div class="row"><label><span class="en">Graph size n</span><span class="es">Tamaño n</span></label><input type="range" id="n1" min="10" max="240" value="90" step="1"/><span class="out" id="n1out">90</span></div>
+      <div class="readout">
+        <div><span class="en">Answer (1/6)</span><span class="es">Respuesta (1/6)</span><b id="r16">—</b></div>
+        <div><span class="en">Old ceiling (~1/4)</span><span class="es">Techo antiguo (~1/4)</span><b id="r14">—</b></div>
+        <div><span class="en">Fewer by</span><span class="es">Menos por</span><b id="rdiff">—</b></div>
+      </div>
+    </div>
+
+    <div class="en"><p>The best examples force about n²/6 (the floor); proofs long guaranteed only ~n²/4 (the ceiling). Erdős #81 conjectures the truth is 1/6. This paper studies a smoothed version and proves its answer is exactly 1/6.</p></div>
+    <div class="es"><p>Los mejores ejemplos fuerzan cerca de n²/6 (el piso); las demostraciones garantizaban solo ~n²/4 (el techo). Erdős #81 conjetura que la verdad es 1/6. Este paper estudia una versión suavizada y prueba que su respuesta es exactamente 1/6.</p></div>
+
+    <div class="card">
+      <h4><span class="en">A tight family of examples</span><span class="es">Una familia de ejemplos ajustada</span></h4>
+      <p class="cap"><span class="en">Violet: the worst graphs measured — they rise like n²/6 + a small bump. Dashed: the guarantee. Same curve; only the bump differs.</span><span class="es">Violeta: los peores grafos medidos — suben como n²/6 + una joroba pequeña. Punteado: la garantía. Misma curva; solo cambia la joroba.</span></p>
+      <div class="chartbox"><canvas id="env1" role="img" aria-label="Achieved deficit rises like n^2/6, below the guarantee n^2/6 + n."></canvas></div>
+    </div>
+  </section>
+
+  <!-- LEVEL 2 -->
+  <section class="level" id="lv2">
+    <span class="forwhom"><b><span class="en">Level 2</span><span class="es">Nivel 2</span></b> · <span class="en">for a mathematics undergraduate.</span><span class="es">para un universitario de matemática.</span></span>
+    <h2><span class="en">The objects</span><span class="es">Los objetos</span></h2>
+    <div class="en"><p>A split graph G splits its vertices into a clique K (all adjacent) and an independent set I. Write n = |V(G)|, p = |K|. A fractional triangle packing gives each triangle a weight ≥ 0 with total weight ≤ 1 on any edge; the maximum total is ν₃*(G). Fractions make it a linear program.</p></div>
+    <div class="es"><p>Un split graph G divide sus vértices en un clique K (todos adyacentes) y un conjunto independiente I. Sea n = |V(G)|, p = |K|. Un empaquetamiento fraccional da a cada triángulo peso ≥ 0 con peso total ≤ 1 en cualquier arista; el máximo total es ν₃*(G). Las fracciones lo vuelven un programa lineal.</p></div>
+
+    <div class="theorem">
+      <span class="lbl"><span class="en">Theorem 1.1</span><span class="es">Teorema 1.1</span></span>
+      <div class="formula">|E(G)| − 2·ν₃*(G) ≤ n²/6 + n</div>
+      <p style="margin:6px 0 0;font-size:14px;color:var(--smoke)"><span class="en">The left side is the packing deficit — edges left after the best fractional packing. It never exceeds n²/6 + n.</span><span class="es">El lado izquierdo es el déficit — aristas que quedan tras el mejor empaquetamiento fraccional. Nunca supera n²/6 + n.</span></p>
+    </div>
+
+    <div class="kpis">
+      <div class="kpi"><div class="v">n²/6</div><div class="k"><span class="en">leading term (constant 1/6)</span><span class="es">término líder (constante 1/6)</span></div></div>
+      <div class="kpi"><div class="v">+ n</div><div class="k"><span class="en">linear correction, not optimized</span><span class="es">corrección lineal, no optimizada</span></div></div>
+      <div class="kpi"><div class="v">exact</div><div class="k"><span class="en">finite proof, no limits</span><span class="es">prueba finita, sin límites</span></div></div>
+    </div>
+
+    <h2><span class="en">Two-phase packing</span><span class="es">Empaquetamiento en dos fases</span></h2>
+    <div class="en"><p>Each clique edge carries total weight ≤ 1. Phase I uses triangles reaching into I, loading each edge to min{κ, 1}. Phase II packs clique-only triangles into the leftover r = max{1 − κ, 0}.</p></div>
+    <div class="es"><p>Cada arista de clique lleva peso total ≤ 1. La Fase I usa triángulos que llegan a I, cargando cada arista hasta min{κ, 1}. La Fase II empaqueta triángulos solo-clique en lo que sobra, r = max{1 − κ, 0}.</p></div>
+
+    <div class="card">
+      <h4><span class="en">Phase-I load + residual = full capacity</span><span class="es">Carga Fase I + residual = capacidad total</span></h4>
+      <p class="cap"><span class="en">The two phases exactly tile each edge's capacity of 1 (flat top) — so the combined packing is feasible.</span><span class="es">Las dos fases tapizan exactamente la capacidad 1 de cada arista (borde plano) — así el empaquetamiento combinado es factible.</span></p>
+      <div class="legend" id="leg_cap"></div>
+      <div class="chartbox"><canvas id="cap2" role="img" aria-label="Phase I load plus residual equals 1."></canvas></div>
+    </div>
+
+    <div class="card">
+      <h4><span class="en">Achieved deficit vs. the guarantee</span><span class="es">Déficit alcanzado vs. la garantía</span></h4>
+      <p class="cap"><span class="en">Violet: extremal family K_p ∨ K̄_{2p} = exact chordal max ⌊(2n+1)²/24⌋. Dashed: bound n²/6 + n. Gap is only 5n/6.</span><span class="es">Violeta: familia extremal K_p ∨ K̄_{2p} = máximo cordal exacto ⌊(2n+1)²/24⌋. Punteado: cota n²/6 + n. La brecha es solo 5n/6.</span></p>
+      <div class="legend" id="leg_env2"></div>
+      <div class="chartbox"><canvas id="env2" role="img" aria-label="Achieved deficit vs bound."></canvas></div>
+    </div>
+  </section>
+
+  <!-- LEVEL 3 -->
+  <section class="level" id="lv3">
+    <span class="forwhom"><b><span class="en">Level 3</span><span class="es">Nivel 3</span></b> · <span class="en">for a doctoral mathematician.</span><span class="es">para un matemático de doctorado.</span></span>
+    <div class="twocol">
+      <div class="side"><p class="tag">Cover-first</p>
+        <div class="en"><p>Weak duality ν₃* ≤ τ₃* is free; the strong equality is used only where noted. Work with Φ = |E| − 2τ₃*.</p></div>
+        <div class="es"><p>La dualidad débil ν₃* ≤ τ₃* es gratis; la igualdad fuerte se usa solo donde se indica. Se trabaja con Φ = |E| − 2τ₃*.</p></div>
+      </div>
+      <div>
+        <h2 style="margin-top:0"><span class="en">Fixed polytope + concavity</span><span class="es">Polítopo fijo + concavidad</span></h2>
+        <div class="en"><p>The Phase-I residual leaves a cover problem with value M(κ) = min over the fixed polytope P_p of Σ (1 − κ_e) z_e. The region P_p depends only on p — never on the neighborhood profile; only the objective moves. Since the min of a linear objective over a fixed polytope is concave in the objective, a mixed profile is bounded below by pure-profile values:</p></div>
+        <div class="es"><p>El residual de la Fase I deja un problema de cubrimiento con valor M(κ) = mín sobre el polítopo fijo P_p de Σ (1 − κ_e) z_e. La región P_p depende solo de p — nunca del perfil de vecindades; solo se mueve el objetivo. Como el mín de un objetivo lineal sobre un polítopo fijo es cóncavo en el objetivo, un perfil mixto se acota por valores de perfiles puros:</p></div>
+        <div class="formula" style="font-size:19px">M(κ) ≥ Σ_S λ_S · M(κ^S) ≥ min_S M(κ^S)</div>
+      </div>
+    </div>
+    <div class="en"><p>A pure profile has enough symmetry that averaging an optimal cover over its stabilizer collapses it to three edge-orbit variables — candidates U (uniform), D (separated), H (hot-set).</p></div>
+    <div class="es"><p>Un perfil puro tiene suficiente simetría: promediar un cubrimiento óptimo sobre su estabilizador lo reduce a tres variables de órbita — candidatos U (uniforme), D (separado), H (hot-set).</p></div>
+
+    <div class="card">
+      <h4><span class="en">Three-orbit program vs. benchmark (p = 12, q = 5)</span><span class="es">Programa de tres órbitas vs. benchmark (p = 12, q = 5)</span></h4>
+      <p class="cap"><span class="en">The optimum M(κ^S) is the lower envelope of U, D, H. What the proof needs: it never drops below the floor R − p/2.</span><span class="es">El óptimo M(κ^S) es la envolvente inferior de U, D, H. Lo que la prueba necesita: nunca cae bajo el piso R − p/2.</span></p>
+      <div class="legend" id="leg_orbit"></div>
+      <div class="chartbox"><canvas id="orbit3" role="img" aria-label="Cover candidates and minimum vs split size s."></canvas></div>
+    </div>
+    <div class="card">
+      <h4><span class="en">Benchmark R(p,q) = (2p² − 2pq − q²)/12</span><span class="es">Benchmark R(p,q) = (2p² − 2pq − q²)/12</span></h4>
+      <p class="cap"><span class="en">Positive where the clique dominates (violet), negative where independent-degree dominates (orange); dashed line q = (√3 − 1)p.</span><span class="es">Positivo donde domina el clique (violeta), negativo donde domina el grado independiente (naranja); línea punteada q = (√3 − 1)p.</span></p>
+      <div class="legend" id="leg_hm"></div>
+      <div id="heat3" class="svgbox"></div>
+    </div>
+    <div class="en"><p>Each candidate satisfies candidate − R ≥ −p/2, so M(κ) ≥ R − p/2. Inserted into |E| − 2V_com = C(p,2) − 2M(κ) + b₁ and converted to n, this gives Theorem 1.1.</p></div>
+    <div class="es"><p>Cada candidato cumple candidato − R ≥ −p/2, así M(κ) ≥ R − p/2. Insertado en |E| − 2V_com = C(p,2) − 2M(κ) + b₁ y convertido a n, da el Teorema 1.1.</p></div>
+  </section>
+
+  <!-- LEVEL 4 -->
+  <section class="level" id="lv4">
+    <span class="forwhom"><b><span class="en">Level 4</span><span class="es">Nivel 4</span></b> · <span class="en">for a specialist — what is new, exact, and conditional.</span><span class="es">para un especialista — qué es nuevo, exacto y condicional.</span></span>
+    <h2><span class="en">What is genuinely new</span><span class="es">Qué es genuinamente nuevo</span></h2>
+    <div class="en"><p>The reusable mechanism is the fixed-polytope affine reduction: because the residual cover polytope is invariant under the neighborhood profile and only the objective is affine in it, concavity reduces an arbitrary mixture to pure profiles — without symmetrizing the graph. Orbit averaging is a separate step, applied only to pure profiles.</p></div>
+    <div class="es"><p>El mecanismo reutilizable es la reducción afín de polítopo fijo: como el polítopo residual es invariante bajo el perfil de vecindades y solo el objetivo es afín en él, la concavidad reduce una mezcla arbitraria a perfiles puros — sin simetrizar el grafo. El promediado de órbita es un paso separado, solo en perfiles puros.</p></div>
+
+    <div class="card">
+      <h4><span class="en">The sub-leading term is Θ(n), not Θ(n²)</span><span class="es">El término sub-líder es Θ(n), no Θ(n²)</span></h4>
+      <p class="cap"><span class="en">Excess of ⌊(2n+1)²/24⌋ over n²/6, log–log. Points track slope 1 (O(n)) and diverge from slope 2; fitted slope 1.00, excess/n → 1/6.</span><span class="es">Exceso de ⌊(2n+1)²/24⌋ sobre n²/6, log–log. Los puntos siguen pendiente 1 (O(n)) y se despegan de pendiente 2; pendiente 1.00, exceso/n → 1/6.</span></p>
+      <div class="legend" id="leg_ord"></div>
+      <div class="chartbox"><canvas id="ord4" role="img" aria-label="Log-log excess follows slope 1."></canvas></div>
+    </div>
+
+    <div class="card">
+      <h4><span class="en">Integer maximum and argmax — move n</span><span class="es">Máximo entero y argmax — mueve n</span></h4>
+      <p class="cap"><span class="en">f(p) = p(2n+1−3p)/2 is concave in p; its peak equals ⌊(2n+1)²/24⌋ at p*(n) = round((2n+1)/6) ≈ n/3. Drag n.</span><span class="es">f(p) = p(2n+1−3p)/2 es cóncava en p; su cima es ⌊(2n+1)²/24⌋ en p*(n) = round((2n+1)/6) ≈ n/3. Mueve n.</span></p>
+      <div class="play">
+        <div class="row"><label>n</label><input type="range" id="npar" min="9" max="90" value="30" step="3"/><span class="out" id="nparout">30</span></div>
+        <div class="readout"><div>argmax p*<b id="pstarout">10</b></div><div><span class="en">peak = ⌊(2n+1)²/24⌋</span><span class="es">cima = ⌊(2n+1)²/24⌋</span><b id="peakout">155</b></div></div>
+      </div>
+      <div class="chartbox"><canvas id="par4" role="img" aria-label="Parabola f(p) peaking at p*(n)."></canvas></div>
+    </div>
+
+    <h2><span class="en">Scope and honesty</span><span class="es">Alcance y honestidad</span></h2>
+    <div class="note">
+      <div class="en"><p style="margin:0"><b>This paper proves the finite fractional inequality for split graphs, unconditionally.</b> It does not by itself resolve Erdős #81. The exact chordal fractional theorem ⌊(2n+1)²/24⌋ and the integral asymptotic cp = (1/6 + o(1))n² for chordal graphs are separate — resting on finite strong LP duality (the one cited result, Schrijver) and an external packing-gap input. Those are the conditional links.</p></div>
+      <div class="es"><p style="margin:0"><b>Este paper prueba la desigualdad fraccional finita para split graphs, incondicionalmente.</b> No resuelve por sí solo Erdős #81. El teorema fraccional cordal exacto ⌊(2n+1)²/24⌋ y el asintótico entero cp = (1/6 + o(1))n² para cordales son separados — descansan en dualidad fuerte LP finita (el único resultado citado, Schrijver) y un input externo de packing-gap. Esos son los eslabones condicionales.</p></div>
+    </div>
+    <h3><span class="en">Machine-checked status</span><span class="es">Estado verificado por máquina</span></h3>
+    <div class="en"><p>The arithmetic core is formally verified in Lean 4 / Mathlib, sorry-free. Structural nodes are being formalized; the residual strong-duality step is isolated as the single cited lemma.</p></div>
+    <div class="es"><p>El núcleo aritmético está verificado formalmente en Lean 4 / Mathlib, sorry-free. Los nodos estructurales se están formalizando; el paso de dualidad fuerte residual está aislado como el único lema citado.</p></div>
+    <ul class="refs">
+      <li>[1] Erdős, Ordman, Zalcstein, <i>Clique partitions of chordal graphs</i>, CPC 2 (1993) 409–415.</li>
+      <li>[2] Chen, Erdős, Ordman, <i>Clique partitions of split graphs</i> (1994) 21–30.</li>
+      <li>[3] Bloom, <i>Erdős Problem #81</i>, erdosproblems.com/81.</li>
+      <li>[4] Schrijver, <i>Theory of Linear and Integer Programming</i>, Wiley, 1986.</li>
+    </ul>
+  </section>
+
+  <footer>
+    <span class="en">Interactive explainer of Paper I. All curves computed exactly from the paper's formulas (verified in rational arithmetic). Charts via Chart.js.</span>
+    <span class="es">Explainer interactivo de Paper I. Todas las curvas se calculan exactamente de las fórmulas del paper (verificadas en aritmética racional). Gráficos con Chart.js.</span>
+  </footer>
+</div></main>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
+<script>
+(function(){
+  var C={ink:'#000000',graphite:'#44403b',smoke:'#777169',ash:'#a59f97',stone:'#ebe8e4',
+    violet:'#0447ff',ember:'#ff4704',egg:'#fdfcfc'};
+  function rgba(h,a){var n=parseInt(h.slice(1),16);return 'rgba('+((n>>16)&255)+','+((n>>8)&255)+','+(n&255)+','+a+')';}
+  function legend(id,items){var e=document.getElementById(id);if(!e)return;
+    e.innerHTML=items.map(function(x){return '<span><span class="'+(x[2]?'sw sq':'sw')+'" style="background:'+x[1]+'"></span>'+x[0]+'</span>';}).join('');}
+  Chart.defaults.font.family="Inter, system-ui, sans-serif"; Chart.defaults.color=C.smoke;
+
+  // ---- concept graph drawer ----
+  function graph(id,nodes,edges,w,h){var el=document.getElementById(id);if(!el)return;
+    var s='<svg viewBox="0 0 '+w+' '+h+'" width="100%" role="img" aria-label="graph diagram">';
+    edges.forEach(function(e){var a=nodes[e[0]],b=nodes[e[1]],c=e[2]||C.ink,wd=e[3]||2;
+      s+='<line x1="'+a[0]+'" y1="'+a[1]+'" x2="'+b[0]+'" y2="'+b[1]+'" stroke="'+c+'" stroke-width="'+wd+'"/>';});
+    nodes.forEach(function(nd){var f=nd[2]||C.egg,st=nd[3]||C.ink;
+      s+='<circle cx="'+nd[0]+'" cy="'+nd[1]+'" r="11" fill="'+f+'" stroke="'+st+'" stroke-width="2"/>';});
+    s+='</svg>';el.innerHTML=s;}
+  function concepts(){
+    graph('g_graph',[[55,45],[180,35],[270,80],[110,140],[230,145]],
+      [[0,1],[1,2],[0,3],[3,4],[2,4],[1,3]],320,180);
+    var V=C.violet;
+    graph('g_clique',[[70,45,rgba('#0447ff',0.14),V],[210,45,rgba('#0447ff',0.14),V],[70,150,rgba('#0447ff',0.14),V],[210,150,rgba('#0447ff',0.14),V]],
+      [[0,1,V,2.5],[0,2,V,2.5],[0,3,V,2.5],[1,2,V,2.5],[1,3,V,2.5],[2,3,V,2.5]],280,190);
+    graph('g_part',[[60,45],[170,40],[105,120],[235,135],[275,55]],
+      [[0,1,V,2.5],[0,2,V,2.5],[1,2,V,2.5],[2,3,C.ember,2.5],[3,4,C.ember,2.5],[2,4,C.ember,2.5]],320,175);
+    graph('g_c4a',[[45,45],[135,45],[135,135],[45,135]],[[0,1],[1,2],[2,3],[3,0]],180,180);
+    graph('g_c4b',[[45,45],[135,45],[135,135],[45,135]],[[0,1],[1,2],[2,3],[3,0],[0,2,C.ember,2.5]],180,180);
+    graph('g_split',[[80,50,rgba('#0447ff',0.14),V],[190,50,rgba('#0447ff',0.14),V],[300,50,rgba('#0447ff',0.14),V],[110,165],[200,165],[290,165]],
+      [[0,1,V,2.5],[0,2,V,2.5],[1,2,V,2.5],[0,3],[1,3],[1,4],[2,4],[2,5]],360,210);
+    graph('g_tri',[[60,45],[160,35],[110,120],[250,140],[290,50]],
+      [[0,1,V,2.5],[0,2,V,2.5],[1,2,V,2.5],[1,4,C.ember,2.5],[3,4,C.ember,2.5],[1,3,C.ember,2.5]],320,180);
+  }
+
+  // ---- chart data ----
+  var envN=[3,6,9,12,15,18,21,24,27,30],envA=[2,7,15,26,40,57,77,100,126,155],envB=[4.5,12,22.5,36,52.5,72,94.5,120,148.5,180];
+  var orbS=[2,3,4,5,6,7,8,9,10,11,12],
+      orbU=[20.333,19.5,18.667,17.833,17,16.167,15.333,14.5,13.667,12.833,12],
+      orbD=[41,31.5,24,18.5,15,13.5,14,16.5,21,27.5,36],
+      orbH=[17.667,16.5,16,16.167,17,18.5,20.667,23.5,null,null,null],
+      orbM=[17.667,16.5,16,16.167,15,13.5,14,14.5,13.667,12.833,12],orbBench=5.917,orbR=11.917;
+  var ordN=[3,6,12,25,50,100,200,400,800,1600,3200,6400],ordE=[0.5,1,2,3.833,8.333,16.333,33.333,66.333,133.333,266.333,533.333,1066.333];
+  var made={},parChart=null;
+  function base(xt,yt,ylog,xlog){return {x:{type:xlog?'logarithmic':'linear',title:{display:true,text:xt},grid:{display:!!xlog,color:C.stone}},y:{type:ylog?'logarithmic':'linear',title:{display:true,text:yt},grid:{color:C.stone}}};}
+  var B={
+    env:function(id){new Chart(document.getElementById(id),{type:'line',data:{labels:envN,datasets:[
+      {label:'bound',data:envB,borderColor:C.ink,backgroundColor:rgba('#0447ff',0.06),borderDash:[6,4],borderWidth:2,pointRadius:0,fill:'-1',tension:0.1},
+      {label:'achieved',data:envA,borderColor:C.violet,backgroundColor:C.violet,borderWidth:3,pointRadius:3,pointBackgroundColor:C.violet,fill:false,tension:0.1}]},
+      options:{responsive:true,maintainAspectRatio:false,interaction:{mode:'index',intersect:false},plugins:{legend:{display:false},tooltip:{callbacks:{title:function(t){return 'n = '+t[0].label;}}}},
+      scales:{x:{title:{display:true,text:'n = |V(G)|'},grid:{display:false}},y:{title:{display:true,text:'|E| − 2ν₃*'},grid:{color:C.stone},beginAtZero:true}}}});},
+    cap:function(id){var K=[],L=[],R=[];for(var i=0;i<=24;i++){var k=i/12;K.push(k.toFixed(2));L.push(Math.min(k,1));R.push(Math.max(1-k,0));}
+      new Chart(document.getElementById(id),{type:'line',data:{labels:K,datasets:[
+      {label:'ℓ',data:L,borderColor:C.violet,backgroundColor:rgba('#0447ff',0.15),borderWidth:2.5,pointRadius:0,fill:true,tension:0},
+      {label:'r',data:R,borderColor:C.ember,backgroundColor:rgba('#ff4704',0.13),borderWidth:2.5,pointRadius:0,fill:true,tension:0},
+      {label:'cap',data:K.map(function(){return 1;}),borderColor:C.smoke,borderDash:[5,4],borderWidth:1.5,pointRadius:0,fill:false,tension:0}]},
+      options:{responsive:true,maintainAspectRatio:false,interaction:{mode:'index',intersect:false},plugins:{legend:{display:false},tooltip:{callbacks:{title:function(t){return 'κ = '+t[0].label;}}}},
+      scales:{x:{title:{display:true,text:'clique-edge load κ'},grid:{display:false},ticks:{maxTicksLimit:9}},y:{stacked:true,title:{display:true,text:'weight on edge'},grid:{color:C.stone},min:0,suggestedMax:1.1}}}});},
+    orbit:function(id){var flat=function(v){return orbS.map(function(){return v;});};
+      var mk=function(l,d,c,dash,w,pt){return {label:l,data:d,borderColor:c,backgroundColor:c,borderDash:dash,borderWidth:w,pointRadius:pt?3:0,pointBackgroundColor:c,tension:0.25,spanGaps:false,fill:false};};
+      new Chart(document.getElementById(id),{type:'line',data:{labels:orbS,datasets:[
+      mk('M',orbM,C.violet,[],3,true),mk('U',orbU,C.ember,[6,4],1.5,false),mk('D',orbD,C.smoke,[2,3],1.5,false),
+      mk('H',orbH,C.ash,[7,3,2,3],1.5,false),mk('floor',flat(orbBench),C.ink,[5,4],2,false),mk('R',flat(orbR),C.ash,[2,4],1,false)]},
+      options:{responsive:true,maintainAspectRatio:false,interaction:{mode:'index',intersect:false},plugins:{legend:{display:false},tooltip:{callbacks:{title:function(t){return 's = '+t[0].label+' (o = '+(12-parseInt(t[0].label))+')';}}}},
+      scales:{x:{title:{display:true,text:'split size s = |S|'},grid:{display:false}},y:{title:{display:true,text:'cover value'},grid:{color:C.stone},beginAtZero:true,suggestedMax:42}}}});},
+    ord:function(id){var pt=function(a){return ordN.map(function(v,i){return {x:v,y:a[i]};});};var r1=ordN.map(function(v){return v/6;}),r2=ordN.map(function(v){return v*v/18;});
+      new Chart(document.getElementById(id),{type:'line',data:{datasets:[
+      {label:'O(n²)',data:pt(r2),borderColor:C.ink,borderDash:[3,3],borderWidth:2,pointRadius:0,tension:0},
+      {label:'O(n)',data:pt(r1),borderColor:C.smoke,borderDash:[6,4],borderWidth:1.5,pointRadius:0,tension:0},
+      {label:'excess',data:pt(ordE),borderColor:C.violet,backgroundColor:C.violet,borderWidth:0,pointRadius:5,pointBackgroundColor:C.violet,showLine:false}]},
+      options:{responsive:true,maintainAspectRatio:false,parsing:false,interaction:{mode:'nearest',intersect:false},plugins:{legend:{display:false},tooltip:{callbacks:{title:function(t){return 'n = '+t[0].parsed.x;},label:function(t){return t.dataset.label+': '+t.parsed.y.toLocaleString(undefined,{maximumFractionDigits:1});}}}},
+      scales:base('n (log)','excess over n²/6 (log)',true,true)}});},
+    par:function(id){parChart=new Chart(document.getElementById(id),{type:'line',data:{labels:[],datasets:[
+      {label:'f(p)',data:[],borderColor:C.violet,backgroundColor:C.violet,borderWidth:2.5,pointRadius:0,tension:0.3,fill:false},
+      {label:'peak',data:[],borderColor:C.ink,backgroundColor:C.ink,pointRadius:7,showLine:false}]},
+      options:{responsive:true,maintainAspectRatio:false,interaction:{mode:'nearest',intersect:false},plugins:{legend:{display:false},tooltip:{filter:function(t){return t.dataset.label!=='peak';},callbacks:{title:function(t){return 'p = '+t[0].label;}}}},
+      scales:{x:{title:{display:true,text:'clique size p'},grid:{display:false}},y:{title:{display:true,text:'f(p) = p(2n+1−3p)/2'},grid:{color:C.stone}}}}});updatePar(30);}
+  };
+  function updatePar(n){var pmax=Math.floor(2*n/3)+1,P=[],F=[];for(var p=0;p<=pmax;p++){P.push(p);F.push(p*(2*n+1-3*p)/2);}
+    var pst=Math.round((2*n+1)/6),peak=Math.floor(Math.pow(2*n+1,2)/24);
+    parChart.data.labels=P;parChart.data.datasets[0].data=F;parChart.data.datasets[1].data=P.map(function(p){return p===pst?peak:null;});parChart.update();
+    document.getElementById('pstarout').textContent=pst;document.getElementById('peakout').textContent=peak;}
+
+  function landscape(id){var el=document.getElementById(id);if(!el)return;
+    var L=70,Rr=590,c0=0.15,c1=0.26,ay=168;function X(c){return L+(c-c0)/(c1-c0)*(Rr-L);}
+    var s='<svg viewBox="0 0 650 250" width="100%" role="img" aria-label="Number line of the constant c.">';
+    s+='<rect x="'+X(1/6)+'" y="60" width="'+(X(0.25)-X(1/6))+'" height="'+(ay-60)+'" fill="'+rgba('#0447ff',0.05)+'"/>';
+    s+='<line x1="'+L+'" y1="'+ay+'" x2="'+Rr+'" y2="'+ay+'" stroke="'+C.graphite+'" stroke-width="1.5"/>';
+    for(var t=0.16;t<=0.2600001;t+=0.02){var x=X(t);s+='<line x1="'+x+'" y1="'+ay+'" x2="'+x+'" y2="'+(ay+6)+'" stroke="'+C.ash+'"/><text x="'+x+'" y="'+(ay+20)+'" text-anchor="middle" font-size="11" fill="'+C.smoke+'" font-family="Inter">'+t.toFixed(2)+'</text>';}
+    s+='<text x="330" y="244" text-anchor="middle" font-size="12" fill="'+C.smoke+'" font-family="Inter">constant c   where   max cp(G) ≈ c·n²</text>';
+    function lol(c,dy,color,val,role,anch,tx){var x=X(c);s+='<line x1="'+x+'" y1="'+ay+'" x2="'+x+'" y2="'+dy+'" stroke="'+color+'" stroke-width="2"/><circle cx="'+x+'" cy="'+dy+'" r="6" fill="'+color+'"/><text x="'+(x+tx)+'" y="'+(dy-16)+'" text-anchor="'+anch+'" font-size="15" font-weight="500" fill="'+color+'" font-family="Inter">'+val+'</text><text x="'+(x+tx)+'" y="'+(dy-1)+'" text-anchor="'+anch+'" font-size="11.5" fill="'+C.smoke+'" font-family="Inter">'+role+'</text>';}
+    lol(1/6,92,C.violet,'1/6 ≈ 0.167','EOZ lower · #81 target','middle',0);
+    lol(3/16,50,C.ember,'3/16','split upper (CEO)','start',8);
+    lol(0.25,112,C.graphite,'1/4 (−ε)','chordal upper (EOZ)','end',-8);
+    s+='<text x="'+((X(1/6)+X(0.25))/2)+'" y="150" text-anchor="middle" font-size="11.5" fill="'+C.graphite+'" font-family="Inter">← Erdős #81: prove the truth is 1/6 →</text></svg>';
+    el.innerHTML=s;}
+  function heat(id){var el=document.getElementById(id);if(!el)return;
+    var mid=[253,252,252],pos=[4,71,255],neg=[255,71,4],left=46,top=12,cell=24,PN=16,QN=16,absmax=54;
+    function mix(a,b,t){return 'rgb('+Math.round(a[0]+(b[0]-a[0])*t)+','+Math.round(a[1]+(b[1]-a[1])*t)+','+Math.round(a[2]+(b[2]-a[2])*t)+')';}
+    function cc(R){var t=Math.max(-1,Math.min(1,R/absmax));return t>=0?mix(mid,pos,t):mix(mid,neg,-t);}
+    var W=left+PN*cell+14,H=top+QN*cell+34,s='<svg viewBox="0 0 '+W+' '+H+'" width="100%" role="img" aria-label="Heatmap of R(p,q).">';
+    for(var p=1;p<=PN;p++)for(var q=0;q<=QN;q++){var R=(2*p*p-2*p*q-q*q)/12,x=left+(p-1)*cell,y=top+(QN-q)*cell;s+='<rect x="'+x+'" y="'+y+'" width="'+cell+'" height="'+cell+'" fill="'+cc(R)+'" stroke="#fdfcfc" stroke-width="1"/>';}
+    var k=Math.sqrt(3)-1,pts=[];for(var pp=1;pp<=PN;pp+=0.5){var qq=k*pp;if(qq<=QN)pts.push((left+(pp-0.5)*cell)+','+(top+(QN-qq+0.5)*cell));}
+    s+='<polyline points="'+pts.join(' ')+'" fill="none" stroke="'+C.ink+'" stroke-width="1.5" stroke-dasharray="5,4"/>';
+    for(var q2=0;q2<=QN;q2+=2){var y=top+(QN-q2)*cell+cell/2;s+='<text x="'+(left-8)+'" y="'+(y+4)+'" text-anchor="end" font-size="11" fill="'+C.smoke+'" font-family="Inter">'+q2+'</text>';}
+    for(var p2=2;p2<=PN;p2+=2){var x=left+(p2-1)*cell+cell/2;s+='<text x="'+x+'" y="'+(top+QN*cell+cell+12)+'" text-anchor="middle" font-size="11" fill="'+C.smoke+'" font-family="Inter">'+p2+'</text>';}
+    s+='<text x="'+(left+PN*cell/2)+'" y="'+H+'" text-anchor="middle" font-size="12" fill="'+C.smoke+'" font-family="Inter">clique size p</text>';
+    s+='<text transform="translate(13,'+(top+QN*cell/2)+') rotate(-90)" text-anchor="middle" font-size="12" fill="'+C.smoke+'" font-family="Inter">independent-degree count q</text></svg>';
+    el.innerHTML=s;}
+
+  var LG={env:function(){legend('leg_env2',[['achieved',C.violet],['bound n²/6+n',C.ink]]);},
+    cap:function(){legend('leg_cap',[['ℓ = min{κ,1}',C.violet],['r = max{1−κ,0}',C.ember],['capacity = 1',C.smoke]]);},
+    orbit:function(){legend('leg_orbit',[['M = min{U,D,H}',C.violet],['U',C.ember],['D',C.smoke],['H',C.ash],['R−p/2 floor',C.ink]]);},
+    hm:function(){legend('leg_hm',[['R > 0',C.violet,1],['R < 0',C.ember,1],['zero contour',C.ink,1]]);},
+    ord:function(){legend('leg_ord',[['excess D(n)−n²/6',C.violet],['O(n) ref',C.smoke],['O(n²) ref',C.ink]]);}};
+
+  function initLevel(lv){if(made[lv])return;made[lv]=true;
+    if(lv==='0'){concepts();}
+    if(lv==='1'){landscape('landscape1');B.env('env1');}
+    if(lv==='2'){B.cap('cap2');LG.cap();B.env('env2');LG.env();}
+    if(lv==='3'){B.orbit('orbit3');LG.orbit();heat('heat3');LG.hm();}
+    if(lv==='4'){B.ord('ord4');LG.ord();B.par('par4');}}
+
+  var n1=document.getElementById('n1');
+  function upd1(){var n=+n1.value;document.getElementById('n1out').textContent=n;
+    var a=Math.round(n*n/6),b=Math.round(n*n/4);
+    document.getElementById('r16').textContent=a.toLocaleString();document.getElementById('r14').textContent=b.toLocaleString();document.getElementById('rdiff').textContent=(b-a).toLocaleString();}
+  n1.addEventListener('input',upd1);upd1();
+  var npar=document.getElementById('npar');
+  npar.addEventListener('input',function(){document.getElementById('nparout').textContent=npar.value;if(parChart)updatePar(+npar.value);});
+
+  var segs=document.querySelectorAll('.levels button');
+  function selLevel(lv){segs.forEach(function(b){b.setAttribute('aria-selected',b.dataset.lv===lv?'true':'false');});
+    document.querySelectorAll('.level').forEach(function(s){s.classList.remove('active');});
+    document.getElementById('lv'+lv).classList.add('active');initLevel(lv);window.scrollTo({top:0});}
+  segs.forEach(function(b){b.addEventListener('click',function(){selLevel(b.dataset.lv);});});
+  var langbtns=document.querySelectorAll('[data-lang-btn]');
+  langbtns.forEach(function(b){b.addEventListener('click',function(){document.body.dataset.lang=b.dataset.langBtn;
+    langbtns.forEach(function(x){x.setAttribute('aria-pressed',x===b?'true':'false');});});});
+
+  initLevel('0');
+})();
+</script>
+</body>
+</html>

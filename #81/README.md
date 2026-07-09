@@ -1,41 +1,33 @@
-The [Lean formalization](https://github.com/JAgbanwa/Erdos-Problems/blob/main/%2381/Lean%20formalisation%20of%20theorems) of this [paper](https://zenodo.org/records/20736085) was formalized by Wouter van Doorn.
+# Erdős Problem #81 — Chordal Clique Partitions
 
-## Announced resolution milestone
+Erdős Problem #81 asks whether the edge clique-partition number of every
+n-vertex chordal graph is at most `n^2/6 + O(n)`. **The problem remains open.**
 
-In June 2026, Juan Pablo Traverso Gianini announced an asymptotic resolution of the Erdős--Ordman--Zalcstein chordal clique partition problem:
+This folder holds public materials from an ongoing research program on the
+problem. **No item here resolves Erdős #81**; each is individually scoped and
+verified, and further findings will be added as they are completed.
 
-```text
-max{cp(G): G chordal, |V(G)| = n} = (1/6 + o(1)) n^2.
-```
+Problem reference: https://www.erdosproblems.com/81
 
-The announced lower-bound construction is the complete split graph
+## Official materials
 
-```text
-K_p join overline{K}_{2p}, where n = 3p.
-```
+See [`official/`](official/).
 
-The announced proof proceeds through a fractional triangle-packing theorem for chordal graphs,
+Currently published:
 
-```text
-|E(G)| - 2 nu_3^*(G) <= (1/6 + o(1)) n^2,
-```
+- **Paper I — *Affine Profile Reduction for Fractional Triangle Packings in
+  Split Graphs.*** Proves `|E(G)| − 2·ν₃*(G) ≤ n²/6 + n` for split graphs, by a
+  finite analytic argument, machine-verified in Lean 4 (sorry-free, axiom-clean).
+  [PDF](official/preprints/PAPER_I/01_manuscript/PAPER_I_preprint_v1.0.pdf) ·
+  [package](official/preprints/PAPER_I/) ·
+  [Lean](official/preprints/PAPER_I/05_formalization/lean/)
 
-followed by fractional-to-integral rounding for the fixed family `{K_3}`.
+Paper I establishes the finite fractional bound for **split** graphs only. It
+does not establish an integral clique-partition theorem, an asymptotic transfer
+result, or a theorem for all chordal graphs. See the package README for the
+exact scope.
 
-The current public release package is available in [`announced_resolution/`](announced_resolution/). It mirrors the public release repository and includes:
+## Status
 
-- the final research announcement in Markdown, LaTeX, and PDF;
-- the three-paper public release package under `public_release/`;
-- manuscript sources, PDFs, public audit records, reproducibility scripts, and outputs;
-- SHA-256 hashes and citation/license metadata;
-- the encrypted complete author package as a timestamped integrity record.
-
-Direct links:
-
-- [Final announcement PDF](announced_resolution/public_release/THREE_PAPER_SERIES_ANNOUNCEMENT_FINAL.pdf)
-- [Final announcement Markdown](announced_resolution/public_release/THREE_PAPER_SERIES_ANNOUNCEMENT_FINAL.md)
-- [Paper I PDF](announced_resolution/public_release/PAPER_I/01_MANUSCRIPT/PAPER_I_v1.1.pdf)
-- [Paper II PDF](announced_resolution/public_release/PAPER_II/01_MANUSCRIPT/PAPER_II_v0.8.pdf)
-- [Paper III PDF](announced_resolution/public_release/PAPER_III/01_MANUSCRIPT/PAPER_III_v1.0.4.pdf)
-
-Status: announced resolved; pending peer review and independent verification.
+These are preprints and formalization artifacts; they are not externally
+peer-reviewed. Erdős #81 itself remains open.

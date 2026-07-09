@@ -1,0 +1,36 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}\usepackage{amsmath,amssymb}\usepackage{fancyvrb}\usepackage[table]{xcolor}
+\usepackage{parskip}
+\definecolor{pass}{RGB}{20,120,40}
+\begin{document}
+\begin{center}{\Large\textbf{Computational Control Certificate}}\\[2pt]
+{\large \textbf{CTRL-01} --- Vertex-copy inequality}\\[2pt]
+Erd\H{o}s \#81, Paper II --- internal validation evidence\\
+\end{center}
+\vspace{0.3em}
+\noindent\textbf{Reference.} Paper II, Lemma 3.1\\
+\textbf{Date.} 2026-07-07 \qquad \textbf{Verdict.} \textcolor{pass}{\textbf{PASS}}
+
+\subsection*{Statement audited}
+$\Phi_\tau(G_{v\to u})+\Phi_\tau(G_{u\to v})\ \ge\ 2\,\Phi_\tau(G)$ for nonadjacent $u,v$, where $\Phi_\tau(G)=|E(G)|-2\tau_3^*(G)$.
+
+\subsection*{Method}
+Random graphs on $4\le n\le 7$ vertices; for one random nonadjacent pair per graph, the three values of $\tau_3^*$ are computed by an exact linear program (per-triangle covering constraints) and the inequality is checked. Seed fixed for reproducibility.
+
+\subsection*{Verbatim output}
+\begin{Verbatim}[fontsize=\small,frame=single]
+Random graphs n=4..7, one random nonadjacent pair each (seed 20260707)
+instances tested        : 1174
+inequality violations   : 0
+min slack (lhs-rhs)      : -0.0000  (>=0 required; 0 => tight)
+RESULT: PASS
+
+\end{Verbatim}
+
+\subsection*{Reproducibility}
+The exact script \texttt{control.py} and its verbatim output \texttt{results.txt} are included in this
+folder. Re-running \texttt{python3 control.py} reproduces \texttt{results.txt}. This certificate reports a
+computational check on finite instances; it is supporting evidence, not a substitute for the analytic
+proof in Paper II. File integrity is recorded in \texttt{SHA256SUMS.txt} (this folder) and in the master
+\texttt{SHA256SUMS.txt} of the package.
+\end{document}
