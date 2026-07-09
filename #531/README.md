@@ -1,0 +1,13 @@
+# Summary of changes for run 01bead96-aa55-4ec5-b3d6-e630670b5672
+I formalized the paper *"A Rigorous Lower Bound and Finiteness Proof for a Two-Colour Finite-Sums Ramsey Number"* in Lean 4 / Mathlib, in `RequestProject/Main.lean`. The project builds cleanly with **no `sorry`/`admit`**, and the main theorem depends only on the standard axioms `propext`, `Classical.choice`, `Quot.sound`.
+**Setup.** `Good k N` states that every two-colouring `χ : ℕ → Bool` admits a `k`-element set `A` of positive integers with `∑_{a∈A} a ≤ N` (equivalently all non-empty subset sums lie in `{1,…,N}`) on which `χ` is constant over the non-empty subset sums. `F k := sInf {N | Good k N}`.
+**Main result — `F_estimate (k) (hk : 1 ≤ k) : 4 ^ (k-1) ≤ F k ∧ Good k (F k)`**, which is exactly the paper's Theorem 1.2 `4^{k-1} ≤ F(k) < ∞`: the second conjunct (the infimum is attained) witnesses finiteness, and the first is the explicit lower bound.
+**Lower bound (Section 2).**
+- `lower_structural` (Lemma 2.1): a non-empty set of positive integers all of whose non-empty subset sums have even 2-adic valuation has sum `≥ 4^{|A|-1}`, proved by strong induction on the total sum, split into the no-odd / one-odd / two-odd element cases. Supporting lemmas: `four_dvd_of_even_val`, `divFourPack` (dividing a 4-divisible set by 4), `evenSS_merge` (merging two odd elements), `odd_count_le_two`, plus 2-adic valuation helpers `val2_odd`, `val2_four_mul`, `val2_two_mul`, `val2_pow_two_mul`.
+- `sum_ge_of_monochromatic` (Corollary 2.2) reduces a monochromatic set to the even case by dividing out the minimal power of 2, and `good_lower` instantiates the `ν₂ mod 2` colouring to conclude `Good k N → 4^{k-1} ≤ N`.
+**Finiteness (Sections 3–4).** Rather than re-deriving the ultrafilter machinery, I used Mathlib's Hindman finite-sums theorem, and built the surrounding argument:
+- `exists_nonprincipal_idempotent`: a non-principal idempotent ultrafilter on `ℕ`, via the Ellis–Numakura idempotent lemma applied to the compact subsemigroup of ultrafilters finer than the cofinite filter.
+- `exists_pos_FS_stream`: from a colouring, a stream of **positive** integers whose non-empty finite sums are all one colour.
+- `hindman_mono`: a `k`-element positive monochromatic subset-sum set for a single colouring, obtained by a strictly increasing block construction.
+- `good_exists` (Lemma 4.1 / Corollary 4.2): the uniform bound `∃ N, Good k N`, obtained by a compactness extraction implemented as a non-principal ultrafilter limit of the hypothetical bad colourings.
+All statements are faithful to the informal claims; docstrings explain each component. Everything is committed and pushed to `origin/main`.
