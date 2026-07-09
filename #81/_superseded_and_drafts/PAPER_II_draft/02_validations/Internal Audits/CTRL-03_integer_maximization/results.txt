@@ -1,0 +1,13 @@
+n range: 1..3000
+max_p Phi_tau(S_p,n-p) == floor((2n+1)^2/24) : mismatches = 0
+nonsaturated-branch values exceeding floor      : 0
+n | floor((2n+1)^2/24) | max_p Phi | argmax p
+    3 |         2 |       2.0 | 1
+   10 |        18 |      18.0 | 4
+   30 |       155 |     155.0 | 10
+   99 |      1650 |    1650.0 | 33
+  300 |     15050 |   15050.0 | 100
+ 1000 |    166833 |  166833.0 | 334
+ 3000 |   1500500 | 1500500.0 | 1000
+(8n+1)/24 > 1 for n>=3 (nonsaturated gap): True
+RESULT: PASS

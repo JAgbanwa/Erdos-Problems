@@ -1,0 +1,44 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}\usepackage{amsmath,amssymb}\usepackage{fancyvrb}\usepackage[table]{xcolor}
+\usepackage{parskip}
+\definecolor{pass}{RGB}{20,120,40}
+\begin{document}
+\begin{center}{\Large\textbf{Computational Control Certificate}}\\[2pt]
+{\large \textbf{CTRL-03} --- Exact integer maximization}\\[2pt]
+Erd\H{o}s \#81, Paper II --- internal validation evidence\\
+\end{center}
+\vspace{0.3em}
+\noindent\textbf{Reference.} Paper II, Proposition 7.1\\
+\textbf{Date.} 2026-07-07 \qquad \textbf{Verdict.} \textcolor{pass}{\textbf{PASS}}
+
+\subsection*{Statement audited}
+$\displaystyle\max_{p+q=n}\Phi_\tau(S_{p,q})=\left\lfloor\frac{(2n+1)^2}{24}\right\rfloor$, attained in the branch $q\ge p-1$, and the nonsaturated branch $q\le p-1$ never exceeds this value.
+
+\subsection*{Method}
+Exact rational/integer arithmetic (no floating LP) using the branch formulas of Corollary 6.3, for every $n$ with $1\le n\le 3000$; the nonsaturated-branch values are checked against the floor, and the gap $(8n+1)/24>1$ is verified for $n\ge3$.
+
+\subsection*{Verbatim output}
+\begin{Verbatim}[fontsize=\small,frame=single]
+n range: 1..3000
+max_p Phi_tau(S_p,n-p) == floor((2n+1)^2/24) : mismatches = 0
+nonsaturated-branch values exceeding floor      : 0
+n | floor((2n+1)^2/24) | max_p Phi | argmax p
+    3 |         2 |       2.0 | 1
+   10 |        18 |      18.0 | 4
+   30 |       155 |     155.0 | 10
+   99 |      1650 |    1650.0 | 33
+  300 |     15050 |   15050.0 | 100
+ 1000 |    166833 |  166833.0 | 334
+ 3000 |   1500500 | 1500500.0 | 1000
+(8n+1)/24 > 1 for n>=3 (nonsaturated gap): True
+RESULT: PASS
+
+\end{Verbatim}
+
+\subsection*{Reproducibility}
+The exact script \texttt{control.py} and its verbatim output \texttt{results.txt} are included in this
+folder. Re-running \texttt{python3 control.py} reproduces \texttt{results.txt}. This certificate reports a
+computational check on finite instances; it is supporting evidence, not a substitute for the analytic
+proof in Paper II. File integrity is recorded in \texttt{SHA256SUMS.txt} (this folder) and in the master
+\texttt{SHA256SUMS.txt} of the package.
+\end{document}

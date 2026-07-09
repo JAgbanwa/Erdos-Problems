@@ -1,0 +1,28 @@
+name = "paperI-verification"
+version = "0.1.0"
+keywords = ["math"]
+defaultTargets = ["PaperI", "FiniteLPDuality", "DeltaNu", "WCDH_check"]
+
+[leanOptions]
+pp.unicode.fun = true
+relaxedAutoImplicit = false
+weak.linter.mathlibStandardSet = true
+maxSynthPendingDepth = 3
+
+[[require]]
+name = "mathlib"
+scope = "leanprover-community"
+rev = "v4.28.0"
+
+[[lean_lib]]
+name = "PaperI"
+globs = ["PaperI.+"]
+
+[[lean_lib]]
+name = "FiniteLPDuality"
+
+[[lean_lib]]
+name = "DeltaNu"
+
+[[lean_lib]]
+name = "WCDH_check"

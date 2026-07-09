@@ -1,0 +1,37 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}\usepackage{amsmath,amssymb}\usepackage{fancyvrb}\usepackage[table]{xcolor}
+\usepackage{parskip}
+\definecolor{pass}{RGB}{20,120,40}
+\begin{document}
+\begin{center}{\Large\textbf{Computational Control Certificate}}\\[2pt]
+{\large \textbf{CTRL-04} --- Terminal characterization}\\[2pt]
+Erd\H{o}s \#81, Paper II --- internal validation evidence\\
+\end{center}
+\vspace{0.3em}
+\noindent\textbf{Reference.} Paper II, Lemma 5.1\\
+\textbf{Date.} 2026-07-07 \qquad \textbf{Verdict.} \textcolor{pass}{\textbf{PASS}}
+
+\subsection*{Statement audited}
+A finite chordal graph in which every two \emph{nonadjacent simplicial} vertices have equal open neighborhoods is complete-split ($K_p\vee\overline{K_q}$).
+
+\subsection*{Method}
+Exhaustive enumeration of \emph{all} labelled graphs on $1\le n\le 6$ vertices; each is tested for chordality (MCS/PEO), the hypothesis (H) on nonadjacent simplicial pairs is checked, and every graph satisfying (H) is tested for the complete-split property. Purely combinatorial (no LP).
+
+\subsection*{Verbatim output}
+\begin{Verbatim}[fontsize=\small,frame=single]
+Exhaustive over ALL labelled graphs on n=1..6 vertices
+graphs enumerated              : 33867
+chordal graphs                 : 3271
+chordal & satisfy hypothesis(H): 25
+of those, NOT complete-split   : 0  (violations of Lemma 5.1)
+RESULT: PASS
+
+\end{Verbatim}
+
+\subsection*{Reproducibility}
+The exact script \texttt{control.py} and its verbatim output \texttt{results.txt} are included in this
+folder. Re-running \texttt{python3 control.py} reproduces \texttt{results.txt}. This certificate reports a
+computational check on finite instances; it is supporting evidence, not a substitute for the analytic
+proof in Paper II. File integrity is recorded in \texttt{SHA256SUMS.txt} (this folder) and in the master
+\texttt{SHA256SUMS.txt} of the package.
+\end{document}
