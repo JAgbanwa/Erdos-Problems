@@ -105,7 +105,7 @@ theorem divFourPack (T : Finset ℕ) (hdvd : ∀ x ∈ T, 4 ∣ x) (hpos : ∀ x
     -- Since $\sum_{a \in S} a = 4 \sum_{a \in S} a / 4$, we have $\sum_{a \in S} a = 4 \sum_{b \in S'} b$.
     have h_sum_eq' : ∑ a ∈ S, a = 4 * ∑ b ∈ S', b := by
       rw [ h_sum_eq, Finset.mul_sum _ _ _ ] ; exact Finset.sum_congr rfl fun x hx => by rw [ Nat.mul_div_cancel' ( hdvd x ( hS.1 hx ) ) ] ;
-    have := hss S hS.1 hS.2.1; simp_all +decide [ Nat.even_add ] ;
+    have := hss S hS.1 hS.2.1; simp_all +decide;
     rw [ show ( 4 : ℕ ) = 2 ^ 2 by norm_num, padicValNat.mul, padicValNat.pow ] at this <;> simp_all +decide [ parity_simps ];
     exact Exists.elim hS.2.1 fun x hx => ⟨ x, hx, Nat.le_of_dvd ( hpos x ( hS.1 hx ) ) ( hdvd x ( hS.1 hx ) ) ⟩
 /-
@@ -113,14 +113,14 @@ Merging two elements `u, v` of `A` into their sum `u + v` preserves the property
 even subset sums.  (Used for the two-odd-element case: replacing `u, v` by `u + v`.)
 -/
 theorem evenSS_merge (A : Finset ℕ) (u v : ℕ) (hu : u ∈ A) (hv : v ∈ A) (huv : u ≠ v)
-    (hnotin : u + v ∉ A \ {u, v}) (hss : HasEvenSS A) :
+    (_hnotin : u + v ∉ A \ {u, v}) (hss : HasEvenSS A) :
     HasEvenSS (insert (u + v) (A \ {u, v})) := by
   intro S hS_sub hS_nonempty
   -- Define S' as described
   set S' := (S.erase (u + v)) ∪ (if (u+v) ∈ S then ({u, v} : Finset ℕ) else ∅) with hS'_eq;
   -- We must show `∑ a ∈ S', a = ∑ a ∈ S, a`.
   have hsum_eq : ∑ a ∈ S', a = ∑ a ∈ S, a := by
-    by_cases h : u + v ∈ S <;> simp_all +decide [ Finset.sum_union ];
+    by_cases h : u + v ∈ S <;> simp_all +decide;
     rw [ Finset.sum_insert, Finset.sum_insert ] <;> simp_all +decide [ Finset.subset_iff ];
     · rw [ ← add_assoc, ← Finset.sum_erase_add _ _ h, add_comm ];
     · grind;
@@ -139,10 +139,10 @@ theorem odd_count_le_two (A : Finset ℕ) (hss : HasEvenSS A) :
     rcases Finset.two_lt_card.mp ( not_le.mp h_contra ) with ⟨ x, hx, y, hy, hxy ⟩ ; use x, y ; aesop;
   -- Among three odd numbers, two are congruent mod 4 (residues are 1 or 3), so their sum is ≡ 2 (mod 4), i.e. equals 2 * m with m odd, giving padicValNat 2 (sum) = 1 by val2_two_mul/padicValNat.mul and val2_odd.
   obtain ⟨a, b, hab⟩ : ∃ a b : ℕ, a ∈ ({x, y, z} : Finset ℕ) ∧ b ∈ ({x, y, z} : Finset ℕ) ∧ a ≠ b ∧ padicValNat 2 (a + b) = 1 := by
-    obtain ⟨ k₁, rfl ⟩ := hxy; obtain ⟨ k₂, rfl ⟩ := hyz; obtain ⟨ k₃, rfl ⟩ := hxz.1; simp_all +decide [ Nat.even_add ] ;
+    obtain ⟨ k₁, rfl ⟩ := hxy; obtain ⟨ k₂, rfl ⟩ := hyz; obtain ⟨ k₃, rfl ⟩ := hxz.1; simp_all +decide;
     norm_num [ show 2 * k₁ + 1 + ( 2 * k₂ + 1 ) = 2 * ( k₁ + k₂ + 1 ) by ring, show 2 * k₁ + 1 + ( 2 * k₃ + 1 ) = 2 * ( k₁ + k₃ + 1 ) by ring, show 2 * k₂ + 1 + ( 2 * k₃ + 1 ) = 2 * ( k₂ + k₃ + 1 ) by ring, padicValNat.mul ];
     lia;
-  have := hss { a, b } ?_ ?_ <;> simp_all +decide [ Finset.sum_pair ];
+  have := hss { a, b } ?_ ?_ <;> simp_all +decide;
   grind
 /-
 **Lemma 2.1.**  If `A` is a non-empty set of positive integers all of whose non-empty
@@ -211,7 +211,7 @@ theorem lower_structural (A : Finset ℕ) (hne : A.Nonempty) (hpos : ∀ a ∈ A
         -- Since $u + v$ is even and has even 2-adic valuation, it must be divisible by 4.
         have huv_div4 : 4 ∣ (u + v) := by
           have huv_even : Even (padicValNat 2 (u + v)) := by
-            convert hss { u, v } ( by aesop_cat ) ( by aesop_cat ) using 1 ; simp +decide [ *, Finset.sum_pair ];
+            convert hss { u, v } ( by aesop_cat ) ( by aesop_cat ) using 1 ; simp +decide [ * ];
           apply four_dvd_of_even_val (u + v) (by linarith [hpos u hu, hpos v hv]) huv_even (by
           grind);
         -- Since $u + v \notin A \setminus \{u, v\}$, we can apply the evenSS_merge lemma.
@@ -220,11 +220,11 @@ theorem lower_structural (A : Finset ℕ) (hne : A.Nonempty) (hpos : ∀ a ∈ A
           have huv_sum : padicValNat 2 (u + v + (u + v)) = padicValNat 2 (u + v) + 1 := by
             rw [ ← two_mul, padicValNat.mul ] <;> norm_num ; linarith [ hpos u hu, hpos v hv ];
             grind;
-          have := hss { u + v, u, v } ?_ ?_ <;> simp_all +decide [ Finset.sum_pair, parity_simps ];
-          · obtain ⟨ k, hk ⟩ := huv_div4; simp_all +decide [ Nat.even_iff, Nat.add_mod, Nat.mul_mod ] ;
-            rw [ show 4 * k = 2 ^ 2 * k by ring, padicValNat.mul, padicValNat.pow ] at this <;> simp_all +decide [ Nat.even_iff ];
-            · have := hss { u, v } ?_ ?_ <;> simp_all +decide [ Finset.sum_pair, parity_simps ];
-              · rw [ show 4 * k = 2 ^ 2 * k by ring, padicValNat.mul, padicValNat.pow ] at this <;> simp_all +decide [ Nat.even_iff ];
+          have := hss { u + v, u, v } ?_ ?_ <;> simp_all +decide [ parity_simps ];
+          · obtain ⟨ k, hk ⟩ := huv_div4; simp_all +decide [ Nat.even_iff ] ;
+            rw [ show 4 * k = 2 ^ 2 * k by ring, padicValNat.mul, padicValNat.pow ] at this <;> simp_all +decide;
+            · have := hss { u, v } ?_ ?_ <;> simp_all +decide [ parity_simps ];
+              · rw [ show 4 * k = 2 ^ 2 * k by ring, padicValNat.mul, padicValNat.pow ] at this <;> simp_all +decide;
                 · exact absurd this ( by rw [ Nat.odd_iff.mp ‹_› ] ; norm_num );
                 · grind;
               · exact Finset.insert_subset_iff.mpr ⟨ hu, Finset.singleton_subset_iff.mpr hv ⟩;
@@ -246,8 +246,8 @@ theorem lower_structural (A : Finset ℕ) (hne : A.Nonempty) (hpos : ∀ a ∈ A
         have h_ind : 4 ^ ((T.image (· / 4)).card - 1) ≤ ∑ b ∈ T.image (· / 4), b := by
           apply ih (∑ b ∈ T.image (· / 4), b);
           · have h_sum_T : ∑ a ∈ T, a = ∑ a ∈ A, a := by
-              rw [ Finset.sum_insert ] <;> simp +decide [ *, Finset.sum_sdiff ];
-              rw [ ← n, ← Finset.sum_sdiff ( Finset.insert_subset hu ( Finset.singleton_subset_iff.mpr hv ) ) ] ; simp +decide [ *, Finset.sum_pair ];
+              rw [ Finset.sum_insert ] <;> simp +decide [ * ];
+              rw [ ← n, ← Finset.sum_sdiff ( Finset.insert_subset hu ( Finset.singleton_subset_iff.mpr hv ) ) ] ; simp +decide [ * ];
               ring;
             linarith [ show ∑ a ∈ A, a > 0 from Finset.sum_pos hpos hA ];
           · exact ⟨ _, Finset.mem_image_of_mem _ ( Finset.mem_insert_self _ _ ) ⟩;
@@ -255,7 +255,7 @@ theorem lower_structural (A : Finset ℕ) (hne : A.Nonempty) (hpos : ∀ a ∈ A
           · exact hT_divFourPack.2.2.2;
           · rfl;
         have hT_sum : ∑ a ∈ T, a = ∑ a ∈ A, a := by
-          rw [ Finset.sum_insert ] <;> simp +decide [ *, Finset.sum_sdiff ];
+          rw [ Finset.sum_insert ] <;> simp +decide [ * ];
           rw [ ← n, ← Finset.sum_sdiff ( Finset.insert_subset hu ( Finset.singleton_subset_iff.mpr hv ) ) ] ; simp +decide [ *, Finset.sum_insert, Finset.sum_singleton ];
           ring;
         grind +splitImp
@@ -355,6 +355,25 @@ theorem exists_nonprincipal_idempotent :
   obtain ⟨U, hUs, hidem⟩ := exists_idempotent_in_compact_add_subsemigroup
     (fun r => Ultrafilter.continuous_add_left r) s hne hcompact hsub
   exact ⟨U, hidem, hUs⟩
+/-- A non-empty finite sum of entries of a stream `b` lies in `FS b`.  This is Mathlib's
+`Hindman.FS.finset_sum` reproved locally, so as not to depend on that particular (auto-generated,
+and in some Mathlib versions renamed) declaration name. -/
+theorem fs_finset_sum_mem (b : Stream' ℕ) (s : Finset ℕ) (hs : s.Nonempty) :
+    (∑ i ∈ s, b.get i) ∈ FS b := by
+  refine FS_iter_tail_sub_FS _ (s.min' hs) ?_
+  induction s using Finset.eraseInduction with | H s ih => _
+  rw [← Finset.add_sum_erase _ _ (s.min'_mem hs), ← Stream'.head_drop]
+  rcases (s.erase (s.min' hs)).eq_empty_or_nonempty with h | h
+  · rw [h, Finset.sum_empty, add_zero]
+    exact FS.head _
+  · apply FS.cons
+    rw [Stream'.tail_eq_drop, Stream'.drop_drop, add_comm]
+    refine Set.mem_of_subset_of_mem ?_ (ih _ (s.min'_mem hs) h)
+    have : s.min' hs + 1 ≤ (s.erase (s.min' hs)).min' h :=
+      Nat.succ_le_of_lt (Finset.min'_lt_of_mem_erase_min' _ _ <| Finset.min'_mem _ _)
+    obtain ⟨d, hd⟩ := Nat.exists_eq_add_of_le this
+    rw [hd, ← Stream'.drop_drop, add_comm]
+    exact FS_iter_tail_sub_FS _ _
 /-- Applying Hindman's theorem (via a non-principal idempotent ultrafilter) to a two-colouring
 `χ` produces a stream `b` of **positive** integers and a colour `cval` such that every non-empty
 finite sum of entries of `b` receives colour `cval`. -/
@@ -383,7 +402,7 @@ theorem exists_pos_FS_stream (χ : ℕ → Bool) :
     have : b.get i ∈ s₀ := hb (FS.singleton b i)
     exact this.2
   · intro s hs
-    have : (∑ i ∈ s, b.get i) ∈ s₀ := hb (FS.finset_sum b s hs)
+    have : (∑ i ∈ s, b.get i) ∈ s₀ := hb (fs_finset_sum_mem b s hs)
     exact this.1
 /-
 For a single two-colouring `χ`, Hindman's theorem yields a `k`-element set `A` of positive
@@ -404,7 +423,10 @@ theorem hindman_mono (k : ℕ) (χ : ℕ → Bool) :
     have h_y_ge_P : ∀ t, y t ≥ P (M t) + 1 := by
       have h_y_ge_P : ∀ t, y t ≥ (M (t + 1) - M t) := by
         exact fun t => le_trans ( by norm_num ) ( Finset.sum_le_sum fun _ _ => hb1 _ );
-      grind;
+      intro t
+      have hM : M (t + 1) = M t + P (M t) + 1 := rfl
+      have h := h_y_ge_P t
+      omega
     refine' lt_of_lt_of_le _ ( h_y_ge_P ( t + 1 ) );
     exact Nat.lt_succ_of_le ( Finset.sum_le_sum_of_subset ( Finset.subset_iff.mpr fun i hi => Finset.mem_range.mpr ( by linarith [ Finset.mem_Ico.mp hi ] ) ) );
   refine' ⟨ Finset.image y ( Finset.range k ), _, _, cval, _ ⟩ <;> norm_num [ Finset.card_image_of_injective _ hy_mono.injective ];
@@ -424,13 +446,13 @@ theorem hindman_mono (k : ℕ) (χ : ℕ → Bool) :
 is finite. -/
 theorem good_exists (k : ℕ) : ∃ N, Good k N := by
   by_contra hcon
-  push_neg at hcon
+  push Not at hcon
   have hbad : ∀ N, ∃ χ : ℕ → Bool, ∀ A : Finset ℕ, A.card = k → (∀ a ∈ A, 0 < a) →
       (∑ a ∈ A, a) ≤ N → ∀ c : Bool, ∃ S : Finset ℕ, S ⊆ A ∧ S.Nonempty ∧ χ (∑ a ∈ S, a) ≠ c := by
     intro N
     have h := hcon N
     unfold Good at h
-    push_neg at h
+    push Not at h
     exact h
   choose χ_ hχ using hbad
   set U : Ultrafilter ℕ := hyperfilter ℕ with hU
