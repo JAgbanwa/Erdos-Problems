@@ -1,0 +1,119 @@
+{
+  "section": "F",
+  "paper_ref": "Paper II, Theorem 1.1 (global maximum)",
+  "F1_exhaustive_n_le_7": {
+    "per_n": [
+      {
+        "n": 1,
+        "max_phi": 0.0,
+        "floor": 0,
+        "match": true,
+        "argmax_complete_split": true
+      },
+      {
+        "n": 2,
+        "max_phi": 1.0,
+        "floor": 1,
+        "match": true,
+        "argmax_complete_split": true
+      },
+      {
+        "n": 3,
+        "max_phi": 2.0,
+        "floor": 2,
+        "match": true,
+        "argmax_complete_split": true
+      },
+      {
+        "n": 4,
+        "max_phi": 3.0,
+        "floor": 3,
+        "match": true,
+        "argmax_complete_split": true
+      },
+      {
+        "n": 5,
+        "max_phi": 5.0,
+        "floor": 5,
+        "match": true,
+        "argmax_complete_split": true
+      },
+      {
+        "n": 6,
+        "max_phi": 7.0,
+        "floor": 7,
+        "match": true,
+        "argmax_complete_split": true
+      },
+      {
+        "n": 7,
+        "max_phi": 9.0,
+        "floor": 9,
+        "match": true,
+        "argmax_complete_split": true
+      }
+    ],
+    "PASS": true,
+    "note": "all non-isomorphic chordal graphs via networkx atlas"
+  },
+  "F2_sampled_n_8_to_12": {
+    "per_n": [
+      {
+        "n": 8,
+        "floor": 12,
+        "samples": 3000,
+        "max_sampled_phi": 9.0,
+        "sampled_exceed_floor": 0,
+        "nonchordal_built": 0,
+        "completesplit_attains_floor": true,
+        "best_cs_p": 3
+      },
+      {
+        "n": 9,
+        "floor": 15,
+        "samples": 3000,
+        "max_sampled_phi": 10.666667,
+        "sampled_exceed_floor": 0,
+        "nonchordal_built": 0,
+        "completesplit_attains_floor": true,
+        "best_cs_p": 3
+      },
+      {
+        "n": 10,
+        "floor": 18,
+        "samples": 3000,
+        "max_sampled_phi": 11.0,
+        "sampled_exceed_floor": 0,
+        "nonchordal_built": 0,
+        "completesplit_attains_floor": true,
+        "best_cs_p": 4
+      },
+      {
+        "n": 11,
+        "floor": 22,
+        "samples": 3000,
+        "max_sampled_phi": 13.333333,
+        "sampled_exceed_floor": 0,
+        "nonchordal_built": 0,
+        "completesplit_attains_floor": true,
+        "best_cs_p": 4
+      },
+      {
+        "n": 12,
+        "floor": 26,
+        "samples": 3000,
+        "max_sampled_phi": 15.0,
+        "sampled_exceed_floor": 0,
+        "nonchordal_built": 0,
+        "completesplit_attains_floor": true,
+        "best_cs_p": 4
+      }
+    ],
+    "PASS": true,
+    "K_per_n": 3000,
+    "seed": 20260709,
+    "note": "random chordal sample + full complete-split family; NOT exhaustive"
+  },
+  "runtime_sec": 50.66,
+  "PASS": true
+}

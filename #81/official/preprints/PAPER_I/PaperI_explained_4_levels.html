@@ -19,7 +19,9 @@
   body{margin:0;background:var(--eggshell);color:var(--ink);font-family:var(--font);
     font-size:16px;line-height:1.5;letter-spacing:0.16px;-webkit-font-smoothing:antialiased}
   .wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
-  body[data-lang="en"] .es{display:none} body[data-lang="es"] .en{display:none}
+  #rlen,#rles,#rlv0,#rlv1,#rlv2,#rlv3,#rlv4{position:absolute;opacity:0;pointer-events:none}
+  #rlen:checked ~ * .es{display:none}
+  #rles:checked ~ * .en{display:none}
   a{color:var(--ink)}
 
   .topbar{display:flex;align-items:center;justify-content:space-between;height:58px;max-width:var(--maxw);margin:0 auto;padding:0 24px}
@@ -107,24 +109,33 @@
   footer{border-top:1px solid var(--stone);margin-top:44px;padding:26px 0 80px;color:var(--smoke);font-size:13px}
   .refs{font-size:12.5px;color:var(--ash);list-style:none;padding:0} .refs li{margin:6px 0}
   @media (max-width:640px){ h2{font-size:28px} .chartbox{height:280px} }
+  #rlv0:checked ~ main #lv0,#rlv1:checked ~ main #lv1,#rlv2:checked ~ main #lv2,#rlv3:checked ~ main #lv3,#rlv4:checked ~ main #lv4{display:block;animation:fade .28s ease}
+  #rlv0:checked ~ .levels label[for=rlv0],#rlv1:checked ~ .levels label[for=rlv1],#rlv2:checked ~ .levels label[for=rlv2],#rlv3:checked ~ .levels label[for=rlv3],#rlv4:checked ~ .levels label[for=rlv4]{background:var(--ink);color:#fff;border-color:var(--ink)}
+  #rlv0:checked ~ .levels label[for=rlv0] .n,#rlv1:checked ~ .levels label[for=rlv1] .n,#rlv2:checked ~ .levels label[for=rlv2] .n,#rlv3:checked ~ .levels label[for=rlv3] .n,#rlv4:checked ~ .levels label[for=rlv4] .n{color:#8fa9ff}
+  .levels label{background:var(--eggshell);border:1px solid #e5e5e5;cursor:pointer;color:var(--ink);padding:7px 15px;border-radius:9999px;white-space:nowrap;font-size:13.5px;font-weight:500;display:flex;gap:7px;align-items:center}
+  .levels label .n{font-size:11px;color:var(--ash)}
+  .langtog label{background:none;font-size:13px;font-weight:500;color:var(--smoke);padding:5px 13px;border-radius:9999px;cursor:pointer}
+  #rlen:checked ~ .topbar label[for=rlen],#rles:checked ~ .topbar label[for=rles]{background:var(--ink);color:#fff}
 </style>
 </head>
-<body data-lang="en">
+<body>
+<input type="radio" name="lg" id="rlen" checked><input type="radio" name="lg" id="rles">
+<input type="radio" name="lvl" id="rlv0" checked><input type="radio" name="lvl" id="rlv1"><input type="radio" name="lvl" id="rlv2"><input type="radio" name="lvl" id="rlv3"><input type="radio" name="lvl" id="rlv4">
 
 <div class="topbar">
   <span class="brand">◆ Paper I</span>
   <span class="langtog" role="group" aria-label="Language">
-    <button data-lang-btn="en" aria-pressed="true">EN</button>
-    <button data-lang-btn="es" aria-pressed="false">ES</button>
+    <label for="rlen">EN</label>
+    <label for="rles">ES</label>
   </span>
 </div>
 
-<div class="levels"><div class="inner" role="tablist" aria-label="Level">
-  <button role="tab" aria-selected="true" data-lv="0"><span class="n">00</span><span class="en">Foundations</span><span class="es">Fundamentos</span></button>
-  <button role="tab" aria-selected="false" data-lv="1"><span class="n">01</span><span class="en">Curious reader</span><span class="es">Lector curioso</span></button>
-  <button role="tab" aria-selected="false" data-lv="2"><span class="n">02</span><span class="en">Undergraduate</span><span class="es">Universitario</span></button>
-  <button role="tab" aria-selected="false" data-lv="3"><span class="n">03</span><span class="en">Doctoral</span><span class="es">Doctorado</span></button>
-  <button role="tab" aria-selected="false" data-lv="4"><span class="n">04</span><span class="en">Specialist</span><span class="es">Especialista</span></button>
+<div class="levels"><div class="inner" aria-label="Level">
+  <label for="rlv0"><span class="n">00</span><span class="en">Foundations</span><span class="es">Fundamentos</span></label>
+  <label for="rlv1"><span class="n">01</span><span class="en">Curious reader</span><span class="es">Lector curioso</span></label>
+  <label for="rlv2"><span class="n">02</span><span class="en">Undergraduate</span><span class="es">Universitario</span></label>
+  <label for="rlv3"><span class="n">03</span><span class="en">Doctoral</span><span class="es">Doctorado</span></label>
+  <label for="rlv4"><span class="n">04</span><span class="en">Specialist</span><span class="es">Especialista</span></label>
 </div></div>
 
 <main><div class="wrap">
@@ -140,7 +151,7 @@
   </header>
 
   <!-- LEVEL 0 — FOUNDATIONS -->
-  <section class="level active" id="lv0">
+  <section class="level" id="lv0">
     <span class="forwhom"><b><span class="en">Level 0</span><span class="es">Nivel 0</span></b> · <span class="en">the basic concepts, with pictures. Start here.</span><span class="es">los conceptos básicos, con dibujos. Empieza aquí.</span></span>
 
     <h2><span class="en">The building blocks</span><span class="es">Los bloques básicos</span></h2>
@@ -471,14 +482,9 @@
   var npar=document.getElementById('npar');
   npar.addEventListener('input',function(){document.getElementById('nparout').textContent=npar.value;if(parChart)updatePar(+npar.value);});
 
-  var segs=document.querySelectorAll('.levels button');
-  function selLevel(lv){segs.forEach(function(b){b.setAttribute('aria-selected',b.dataset.lv===lv?'true':'false');});
-    document.querySelectorAll('.level').forEach(function(s){s.classList.remove('active');});
-    document.getElementById('lv'+lv).classList.add('active');initLevel(lv);window.scrollTo({top:0});}
-  segs.forEach(function(b){b.addEventListener('click',function(){selLevel(b.dataset.lv);});});
-  var langbtns=document.querySelectorAll('[data-lang-btn]');
-  langbtns.forEach(function(b){b.addEventListener('click',function(){document.body.dataset.lang=b.dataset.langBtn;
-    langbtns.forEach(function(x){x.setAttribute('aria-pressed',x===b?'true':'false');});});});
+  // Tab/language visibility is pure CSS (works without JS). JS only lazily draws each level's charts.
+  var lvlRadios=document.querySelectorAll('input[name="lvl"]');
+  lvlRadios.forEach(function(r){r.addEventListener('change',function(){if(r.checked){initLevel(r.id.replace('rlv',''));window.scrollTo({top:0});}});});
 
   initLevel('0');
 })();

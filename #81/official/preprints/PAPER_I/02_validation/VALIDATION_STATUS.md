@@ -37,3 +37,13 @@ This release does not certify:
 - an asymptotic transfer result;
 - a theorem for all chordal graphs;
 - novelty, priority, or peer-reviewed publication.
+
+## Independent AI adversarial audit (added 2026-07-10)
+
+An independent AI adversarial audit (`PAPER_I_EXT_AUDIT_2026-07-10`, deep protocol)
+returned **PASS**: analytic proof independently re-derived; Lean certificate
+re-elaborated in a fresh tree (`paperI_main` + `residual_duality`, axioms
+`[propext, Classical.choice, Quot.sound]`, no `sorryAx`); 622-split-graph
+falsification with no violation. Report under
+`02_IA_ADVERSARIAL_AUDITS/20_EVIDENCE/ERDOZ81-P1-FRAC-THM-01/PAPER_I_EXT_AUDIT_2026-07-10/`.
+This is an intermediate assurance tier (independent AI reviewer), **not** human peer review.

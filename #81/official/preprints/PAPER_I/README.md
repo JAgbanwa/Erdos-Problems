@@ -12,6 +12,10 @@ This directory is the canonical public package for Paper I, preprint v1.0.
 Historical drafts, superseded proofs, private audit records, sealed materials,
 and unverified formalizations should remain outside this release directory.
 
+## Interactive explainer
+
+A five-level bilingual (EN/ES) explainer of the theorem: [`PaperI_explained_4_levels.html`](PaperI_explained_4_levels.html) — [rendered preview](https://htmlpreview.github.io/?https://github.com/jtraverso/erdos-81-chordal-clique-partitions/blob/main/preprints/PAPER_I/PaperI_explained_4_levels.html).
+
 ## Directory structure
 
 ```text
@@ -32,6 +36,8 @@ and unverified formalizations should remain outside this release directory.
 - `05_formalization/lean/gate_logs/print_axioms_residual_and_main.log`
 
 ## Validation boundary
+
+An independent AI adversarial audit (deep protocol, `PAPER_I_EXT_AUDIT_2026-07-10`) returned **PASS** — it independently re-derived the analytic proof, re-ran the Lean build and `#print axioms` in a fresh source tree, and falsification-tested the theorem, with no defeater found; see `02_validation/02_IA_ADVERSARIAL_AUDITS/`. This is an intermediate assurance tier (independent AI reviewer), **not** external human peer review.
 
 The main theorem is recorded by the project as `FINAL_PASS / FROZEN / CLEAN`
 and was approved for preprint release by the editor and researcher. The public

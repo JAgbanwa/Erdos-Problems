@@ -1,0 +1,25 @@
+P5 -- Terminal characterization (Lemma 5.1) + C_4 necessity
+==============================================================
+python/networkx : 3.14.4 / nx 3.6.1
+--------------------------------------------------------------
+(D) Lemma 5.1 -- EXHAUSTIVE over all labelled chordal graphs n<=6:
+   n  #chordal  #satisfy(H)  #(H & CS) all H are CS?
+   1         1            1          1          True
+   2         2            2          2          True
+   3         8            5          5          True
+   4        61           12         12          True
+   5       822           27         27          True
+   6     18154           58         58          True
+  Lemma 5.1 counterexamples (H but NOT complete-split): 0
+  H5a (all (H)-graphs are complete-split)  : HOLDS
+--------------------------------------------------------------
+(C) Simpliciality necessity (Lemma 4.3):
+  non-simplicial-target copies breaking chordality : 204
+  a C_4 arises among them                          : True
+  H5b (necessity confirmed via C_4)                : HOLDS
+  example: {"n": 4, "G_edges": [[0, 1], [0, 2]], "copy": "v3->u0", "H_edges": [[0, 1], [0, 2], [1, 3], [2, 3]]}
+--------------------------------------------------------------
+VERDICT: VERIFIED: (D) every chordal graph satisfying (H) is complete-split (n<=6 exhaustive, 0 counterexamples); (C) simpliciality is necessary -- non-simplicial-target copies break chordality and a C_4 arises.
+
+Note: n<=6 is EXHAUSTIVE (all labelled chordal graphs, incl. disconnected),
+so (D) is conclusive for those n. See p5_results.csv.

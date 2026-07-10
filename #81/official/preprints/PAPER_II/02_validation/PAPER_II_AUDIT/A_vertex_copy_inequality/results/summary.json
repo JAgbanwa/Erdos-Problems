@@ -1,0 +1,49 @@
+{
+  "section": "A",
+  "paper_ref": "Paper II, Section 3 (Lemma 3.1, eqs 3.3-3.4)",
+  "claims": {
+    "I": "Phi(G_{v->u})+Phi(G_{u->v}) >= 2 Phi(G)",
+    "II": "e(G_{v->u})+e(G_{u->v}) = 2 e(G)",
+    "III": "tau3*(G_{v->u})+tau3*(G_{u->v}) <= 2 tau3*(G)",
+    "dual": "tau3*(G)==nu3*(G)"
+  },
+  "tolerance": 1e-07,
+  "per_n": {
+    "2": {
+      "graphs": 2,
+      "nonadjacent_pairs_tested": 1
+    },
+    "3": {
+      "graphs": 4,
+      "nonadjacent_pairs_tested": 6
+    },
+    "4": {
+      "graphs": 11,
+      "nonadjacent_pairs_tested": 33
+    },
+    "5": {
+      "graphs": 34,
+      "nonadjacent_pairs_tested": 170
+    },
+    "6": {
+      "graphs": 156,
+      "nonadjacent_pairs_tested": 1170
+    },
+    "7": {
+      "graphs": 1044,
+      "nonadjacent_pairs_tested": 10962
+    }
+  },
+  "violations": [],
+  "min_slack_I": -7.105427357601002e-15,
+  "max_abs_err_II": 0.0,
+  "max_slack_III_violation": 0.0,
+  "max_abs_dualgap": 2.6645352591003757e-15,
+  "totals": {
+    "graphs_tested": 1251,
+    "pairs_tested": 12342,
+    "max_n_reached": 7,
+    "runtime_sec": 142.24
+  },
+  "PASS": true
+}

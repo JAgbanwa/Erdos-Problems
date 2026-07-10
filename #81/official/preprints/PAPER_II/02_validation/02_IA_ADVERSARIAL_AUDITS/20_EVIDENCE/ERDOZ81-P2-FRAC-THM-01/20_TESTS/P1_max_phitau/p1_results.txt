@@ -1,0 +1,36 @@
+P1 -- max Phi_tau over chordal graphs vs floor((2n+1)^2/24)
+================================================================
+master_seed        : 20260710
+python/networkx    : 3.14.4 / nx 3.6.1
+platform           : Windows-11-10.0.26200-SP0
+tau3* solver       : scipy linprog HiGHS (auditor's own cover LP)
+----------------------------------------------------------------
+KILL-SWITCH:
+  H1a upper bound (no Phi_tau > M(n))       : HOLDS (0 violations)
+  H1b exhaustive max == M(n) for n<=6       : True
+  H1c maximiser is complete-split (n<=6)    : True
+  complete-split scan == M(n) for n<=60     : True
+  VERDICT                                    : VERIFIED (n<=6 exhaustive) + SUPPORTED (larger n): no chordal graph exceeds M(n); exhaustive max = M(n) and is attained by a complete-split; complete-split scan matches M(n) for n<=60.
+----------------------------------------------------------------
+Exhaustive results (n<=6, ALL labelled chordal graphs):
+   n  #chordal  max Phi  M(n)  =?  CS max  shape=CS
+   1         1      0.0     0   Y     0.0         Y
+   2         2      1.0     1   Y     1.0         Y
+   3         8      2.0     2   Y     2.0         Y
+   4        61      3.0     3   Y     3.0         Y
+   5       822      5.0     5   Y     5.0         Y
+   6     18154      7.0     7   Y     7.0         Y
+----------------------------------------------------------------
+Complete-split scan (n=1..60): max_p Phi_tau(S_{p,q}) vs M(n)
+  mismatches: 0
+Random chordal (n=7..16, 400 each): max Phi observed vs M(n)
+  n= 7: max_phi=    8.0  M(n)=   9  (<=M? Y)
+  n= 8: max_phi=    9.0  M(n)=  12  (<=M? Y)
+  n= 9: max_phi=   12.0  M(n)=  15  (<=M? Y)
+  n=10: max_phi=   12.0  M(n)=  18  (<=M? Y)
+  n=11: max_phi=   14.0  M(n)=  22  (<=M? Y)
+  n=12: max_phi=   16.0  M(n)=  26  (<=M? Y)
+  n=13: max_phi=17.6667  M(n)=  30  (<=M? Y)
+  n=14: max_phi=19.6667  M(n)=  35  (<=M? Y)
+
+Note: n<=6 is EXHAUSTIVE (conclusive for those n). Larger n is supporting evidence only. See p1_results.csv.
