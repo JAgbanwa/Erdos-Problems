@@ -112,5 +112,4 @@ if __name__=="__main__":
     json.dump(s,open(os.path.join(RES,"summary.json"),"w"),indent=2)
     print(json.dumps({k:s[k] for k in ["totals","min_slack_I","max_abs_err_II",
         "max_slack_III_violation","max_abs_dualgap","PASS"]},indent=2))
-    print("RESULT:", "PASS" if s["PASS"] else "FAIL", "| violations:", len(s["violations"]))
-    sys.exit(0 if s["PASS"] else 1)
+    print("RESU

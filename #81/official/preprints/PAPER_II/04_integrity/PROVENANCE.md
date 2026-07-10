@@ -15,4 +15,4 @@
   third-party build reproduction yet.
 - **Integrity.** `SHA256SUMS.txt` was regenerated over the final release tree.
 
-Release date: 2026-07-10.
+Release d

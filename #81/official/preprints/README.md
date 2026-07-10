@@ -5,6 +5,8 @@ Problem #81 research program.
 
 - `PAPER_I/` — *Affine Profile Reduction for Fractional Triangle Packings in
   Split Graphs* (preprint v1.0).
+- `PAPER_II/` — *Complete-Split Extremizers for a Fractional Triangle-Cover
+  Functional on Chordal Graphs* (preprint v1.0).
 
 Each preprint package uses the release structure:
 
@@ -16,4 +18,4 @@ Each preprint package uses the release structure:
 05_formalization/
 ```
 
-Paper-specific validation and integrity material lives inside each package.
+Paper-specific validation and integrity material lives ins

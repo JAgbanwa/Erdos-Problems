@@ -233,11 +233,4 @@ def main():
                          ["p5_terminal.py", "p5_results.txt", "p5_results.csv",
                           "P5_report.pdf", "audit_lib.py"])
     print("P5 done.")
-    print(f"  lemma51_counterexamples={len(counterexamples)} necessity_examples={len(necessity_examples)} "
-          f"c4={c4_confirmed}")
-    print(f"  verdict: {verdict}")
-    print(f"  zip sha256={dg}")
-
-
-if __name__ == "__main__":
-    main()
+    print(f"

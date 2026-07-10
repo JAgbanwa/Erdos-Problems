@@ -78,4 +78,4 @@ graphs on n vertices.
 
 Send me back (or just let sync carry) the six `results/summary.json` files (and any
 run logs). I will then generate the per-section English PDF certification reports,
-the SHA-256 manifests, the per-section zips, and the master manifest + master zip.
+the

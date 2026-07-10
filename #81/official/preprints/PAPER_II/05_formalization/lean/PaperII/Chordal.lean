@@ -52,6 +52,4 @@ structure ChordalStructure (G : SimpleGraph V) : Type where
   simplicial_hereditary : ∀ (W : Set V), W.Nonempty → ∃ v : W, IsSimplicial (G.induce W) v
   /-- A3b: a connected noncomplete graph has two nonadjacent simplicial vertices. -/
   two_nonadj_simplicial : G.Connected → (¬ ∀ u v : V, u ≠ v → G.Adj u v) →
-      ∃ x y : V, x ≠ y ∧ ¬ G.Adj x y ∧ IsSimplicial G x ∧ IsSimplicial G y
-
-end PaperII
+      ∃ x y : V, x ≠ y ∧ ¬ G.Adj x y �

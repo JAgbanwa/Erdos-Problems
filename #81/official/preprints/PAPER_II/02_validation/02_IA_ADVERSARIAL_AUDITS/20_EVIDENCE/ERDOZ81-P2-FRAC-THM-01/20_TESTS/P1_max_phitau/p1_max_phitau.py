@@ -309,13 +309,4 @@ def main():
               meta, sections)
     zp, sp, dg = package(HERE, "P1_max_phitau",
                          ["p1_max_phitau.py", "p1_results.txt", "p1_results.csv",
-                          "P1_report.pdf", "audit_lib.py"])
-    print("P1 done.")
-    print(f"  violations={n_viol} exh_tight={exh_all_tight} cs_tight={cs_all_tight} "
-          f"shape_ok={exh_shape_ok}")
-    print(f"  verdict: {verdict}")
-    print(f"  zip sha256={dg}")
-
-
-if __name__ == "__main__":
-    main()
+  

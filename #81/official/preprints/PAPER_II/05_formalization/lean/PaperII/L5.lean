@@ -22,6 +22,4 @@ theorem exists_both_simplicial_pair (G : SimpleGraph V) (hchord : ChordalStructu
       ¬ G.Adj x y ∧ G.neighborSet x ≠ G.neighborSet y := by
   by_contra h
   push_neg at h
-  exact hnc (isCompleteSplit_of_isTerminal G hchord h)
-
-end PaperII
+  exact hnc (isCompleteSplit_of_isTerminal G

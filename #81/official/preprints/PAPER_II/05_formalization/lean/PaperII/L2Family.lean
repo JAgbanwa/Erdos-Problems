@@ -47,6 +47,4 @@ theorem moveGraph_sourceClass (G : SimpleGraph V) [DecidableRel G.Adj] (A B : Fi
   funext a b
   unfold moveRel classCopyRel sourceClass
   simp only [mem_filter, mem_univ, true_and]
-  by_cases ha : G.neighborFinset a = A <;> by_cases hb : G.neighborFinset b = A <;> simp [ha, hb]
-
-end PaperII
+  by_cases ha : G.neighborFinset a = A <;> by_cases hb : G.nei

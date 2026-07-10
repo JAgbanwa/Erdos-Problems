@@ -480,14 +480,4 @@
     document.getElementById('r16').textContent=a.toLocaleString();document.getElementById('r14').textContent=b.toLocaleString();document.getElementById('rdiff').textContent=(b-a).toLocaleString();}
   n1.addEventListener('input',upd1);upd1();
   var npar=document.getElementById('npar');
-  npar.addEventListener('input',function(){document.getElementById('nparout').textContent=npar.value;if(parChart)updatePar(+npar.value);});
-
-  // Tab/language visibility is pure CSS (works without JS). JS only lazily draws each level's charts.
-  var lvlRadios=document.querySelectorAll('input[name="lvl"]');
-  lvlRadios.forEach(function(r){r.addEventListener('change',function(){if(r.checked){initLevel(r.id.replace('rlv',''));window.scrollTo({top:0});}});});
-
-  initLevel('0');
-})();
-</script>
-</body>
-</html>
+  npar.addEventListener('inpu

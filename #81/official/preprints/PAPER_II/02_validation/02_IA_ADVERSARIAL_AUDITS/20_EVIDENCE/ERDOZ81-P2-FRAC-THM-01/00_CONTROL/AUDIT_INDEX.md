@@ -31,5 +31,4 @@ The exact fractional-cover theorem is **corroborated on all three axes**: analyt
 proof reproduced, Lean certificate re-elaborated (build OK, `IsChordal`,
 sorry-free), and exhaustive small-case computation finds the max `= ⌊(2n+1)²/24⌋`
 attained by a complete-split, with **no** counterexample. No over-claim
-(`cp`/#81 out of scope). Residuals: clean-room Mathlib rebuild and commit-SHA
-match (see `OPEN_RISKS.md`).
+(`cp`/#81 out of scope). Residuals: clean-room Mathlib rebuild and commit-

@@ -102,6 +102,4 @@ sections = [
           "peer-review or publication status."},
 ]
 
-build_pdf(PDF, "External Adversarial Audit -- Paper II (exact fractional-cover theorem)",
-          meta, sections)
-print("FINAL_AUDIT_REPORT.pdf written:", os.path.exists(PDF))
+build_pdf(PDF, "External Adversarial Audit -- Paper II (exact fractional-c

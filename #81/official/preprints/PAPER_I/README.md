@@ -61,5 +61,4 @@ Get-FileHash -Algorithm SHA256 <path-to-file>
 ## Licensing
 
 This package inherits the repository-level license. If the package is
-distributed outside the repository, copy the complete repository `LICENSE`
-file into this directory before redistribution.
+distributed outside the repository, copy the complete reposi

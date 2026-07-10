@@ -49,4 +49,4 @@ This is not a paper defect — the manuscript is explicit and correct on this po
 **ALL VERIFIED — no counterexample.** The orbit LP closed form, the losslessness of the
 orbit symmetrization (full LP = 3-orbit LP), and the affine/concavity reduction with its
 uniform bound `R(p,q) − p/2` are all confirmed numerically. Combined with Script 01's
-exact algebra, Gates B, C, E are computationally corroborated (bounded ranges).
+exact algebra, Gates B, C, E 

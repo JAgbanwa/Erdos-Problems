@@ -127,7 +127,4 @@ def md_to_pdf(md_text, out_path, title=None):
 if __name__ == "__main__":
     import sys
     src, dst = sys.argv[1], sys.argv[2]
-    ttl = sys.argv[3] if len(sys.argv) > 3 else None
-    with open(src, "r", encoding="utf-8") as f:
-        md_to_pdf(f.read(), dst, ttl)
-    print("wrote", dst)
+    ttl = sys.argv[3] if len(sys.a

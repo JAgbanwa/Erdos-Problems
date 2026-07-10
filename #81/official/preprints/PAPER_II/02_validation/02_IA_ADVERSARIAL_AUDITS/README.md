@@ -14,4 +14,4 @@ none failed (Gate H = VERIFIED_WITH_RESIDUAL_RISK on build provenance only). See
 
 **Level of assurance.** Independent AI adversarial audit — an intermediate tier,
 stronger than self-audit. It is **not** external human peer review or journal
-refereeing (same boundary as Paper I).
+refereeing (same bounda

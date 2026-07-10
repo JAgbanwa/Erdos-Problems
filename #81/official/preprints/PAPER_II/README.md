@@ -75,6 +75,4 @@ Paper II proves the exact finite extremum of the fractional cover functional. It
 does **not** prove an integral clique-partition bound and does **not** settle
 Erdős Problem #81, which remains open via a separate asymptotic route.
 
-## Licensing
-
-This package inherits the repository-level license (see `LICENSE`).
+## Li

@@ -46,4 +46,4 @@ rebuild** reproduces `Build completed successfully` with `paperI_main` (and the 
 node `residual_duality`) depending only on Lean/Mathlib's three standard foundational
 axioms. The finite LP strong duality used in Prop B.1 is derived inside the development
 (`residual_duality` ← `covering_packing_duality` ← finite Farkas), not postulated as a
-project axiom, consistent with the manuscript's Appendix C.
+project axio

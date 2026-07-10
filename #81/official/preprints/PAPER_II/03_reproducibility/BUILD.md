@@ -15,4 +15,4 @@ lake exe cache get      # fetch Mathlib build cache (optional but recommended)
 lake build
 ```
 The toolchain and dependency versions are pinned (`lean-toolchain`,
-`lake-manifest.json`).
+`lake-

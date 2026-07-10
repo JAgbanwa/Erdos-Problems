@@ -13,7 +13,7 @@ the problem will be published here as they are completed and verified.
 
 Problem reference: https://www.erdosproblems.com/81
 
-## Published preprint
+## Published preprints
 
 **Paper I — *Affine Profile Reduction for Fractional Triangle Packings in Split
 Graphs.*** For every split graph `G`, it proves
@@ -32,6 +32,25 @@ axiom.
 - [Full package (manuscript, ledger, reproducibility, integrity, Lean)](preprints/PAPER_I/)
 - [Lean 4 formalization](preprints/PAPER_I/05_formalization/lean/)
 - [Plain-language explainer (four levels, rendered)](https://htmlpreview.github.io/?https://github.com/jtraverso/erdos-81-chordal-clique-partitions/blob/main/preprints/PAPER_I/PaperI_explained_4_levels.html)
+
+**Paper II — *Complete-Split Extremizers for a Fractional Triangle-Cover
+Functional on Chordal Graphs.*** For every integer `n ≥ 1`, over chordal graphs
+on `n` vertices it determines the exact maximum
+
+```text
+max ( |E(G)| − 2·τ₃*(G) ) = ⌊(2n+1)²/24⌋,
+```
+
+attained by a complete-split graph `S_{p,q} = K_p ∨ K̄_q`. Finite and cover-first
+(no integral packing, no strong LP duality, no asymptotic packing theorem);
+machine-verified in Lean 4 (Mathlib v4.28.0): sorry-free, unconditional on the
+standard `IsChordal` definition, axioms reducing to Lean's three standard ones.
+
+- [Paper II — PDF (English)](preprints/PAPER_II/01_manuscript/PAPER_II_preprint_v1.0.pdf)
+- [Paper II — PDF (Spanish)](preprints/PAPER_II/01_manuscript/PAPER_II_preprint_v1.0_es.pdf)
+- [Full package (manuscript, ledger, validation, reproducibility, integrity, Lean)](preprints/PAPER_II/)
+- [Lean 4 formalization](preprints/PAPER_II/05_formalization/lean/)
+- [Plain-language explainer (four levels, rendered)](https://htmlpreview.github.io/?https://github.com/jtraverso/erdos-81-chordal-clique-partitions/blob/main/preprints/PAPER_II/PaperII_explained_4_levels.html)
 
 ## What Paper I proves — and what it does not
 
@@ -61,12 +80,22 @@ The recorded `#print axioms` output is in
 PaperI.paperI_main depends on axioms: [propext, Classical.choice, Quot.sound]
 ```
 
+Paper II is likewise checked from `preprints/PAPER_II/05_formalization/lean/`
+(`lake exe cache get` then `lake build`), with recorded output in that package's
+`gate_logs/`:
+
+```text
+PaperII.theorem_1_2 depends on axioms: [propext, Classical.choice, Quot.sound]
+```
+
 ## Scope and disclaimers
 
 - These are preprints and formalization artifacts; they are **not externally
   peer-reviewed** and have not undergone specialist priority review.
 - Each item is deliberately scoped. Paper I concerns the finite fractional
-  bound for split graphs only.
+  packing bound for split graphs; Paper II concerns the exact fractional-cover
+  extremum for chordal graphs. Neither establishes an integral clique-partition
+  bound, an asymptotic transfer, or a resolution of Erdős #81.
 
 ## Citation
 
@@ -87,5 +116,4 @@ Sub-packages contain their own integrity manifests.
 
 ## Author
 
-Juan Pablo Traverso Gianini — Independent researcher, Santiago, Chile
-ORCID: https://orcid.org/0009-0003-6068-4096 — jtraverso@gmail.com
+Juan Pablo Traverso Gianini — Independent research

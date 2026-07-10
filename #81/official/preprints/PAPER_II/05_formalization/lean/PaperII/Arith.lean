@@ -102,8 +102,4 @@ theorem nonsat_domination_identity (p q : ℤ) :
 
 /-- Hence the nonsaturated deficit is bounded: `8(C(p,2)+pq) ≤ (2n+1)²` (for `p,q ≥ 0`). -/
 theorem nonsat_le (p q : ℤ) (hp : 0 ≤ p) (hq : 0 ≤ q) :
-    4 * (p * (p - 1)) + 8 * (p * q) ≤ (2 * (p + q) + 1) ^ 2 := by
-  have h := nonsat_domination_identity p q
-  nlinarith [sq_nonneg q, hp, hq]
-
-end PaperII
+    4 * (p * (p - 1)) + 8 * (p * q) ≤ (2 * (p + q) +

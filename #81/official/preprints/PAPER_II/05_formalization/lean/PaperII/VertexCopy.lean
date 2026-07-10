@@ -37,6 +37,4 @@ theorem copyVertex_adj_of_ne (G : SimpleGraph V) (v u a b : V) (ha : a ≠ v) (h
 /-- In `G_{v→u}` the copied vertex `v` is not adjacent to its target `u`. -/
 theorem not_copyVertex_adj (G : SimpleGraph V) (v u : V) :
     ¬ (copyVertex G v u).Adj u v := by
-  unfold copyVertex; exact G.not_adj_replaceVertex_same u v
-
-end PaperII
+  unfold copyVertex; exact G.not_a

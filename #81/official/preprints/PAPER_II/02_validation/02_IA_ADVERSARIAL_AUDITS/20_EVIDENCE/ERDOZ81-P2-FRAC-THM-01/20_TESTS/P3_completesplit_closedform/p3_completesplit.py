@@ -225,11 +225,4 @@ def main():
     zp, sp, dg = package(HERE, "P3_completesplit_closedform",
                          ["p3_completesplit.py", "p3_results.txt", "p3_results.csv",
                           "P3_report.pdf", "audit_lib.py"])
-    print("P3 done.")
-    print(f"  cells={n_tested} tau_fail={tau_fail} phi_fail={phi_fail} boundary_fail={boundary_fail}")
-    print(f"  verdict: {verdict}")
-    print(f"  zip sha256={dg}")
-
-
-if __name__ == "__main__":
-    main()
+    p

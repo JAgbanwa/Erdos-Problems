@@ -18,4 +18,4 @@ fractional triangle-cover functional over chordal graphs,
 ## Boundary
 Not externally peer-reviewed; novelty/priority review incomplete; independent
 third-party reproduction of the Lean build recommended and pending; external
-adversarial audit of Paper II pending. Does not settle Erdős Problem #81.
+adversarial audit of Paper II pending. Does not settle 

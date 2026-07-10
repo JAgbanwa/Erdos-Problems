@@ -12,4 +12,4 @@ equation, the theorem statement, and the formal-verification claims are the same
 only the prose is translated.
 
 These files form one release set. Changes to any one of them require a new
-version and a renewed cross-format (and cross-language) consistency check.
+version and a renewed cross-format (and cross-language) consi

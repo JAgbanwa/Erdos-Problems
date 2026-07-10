@@ -1086,14 +1086,4 @@ AI-assisted tools were used during exploratory, computational, adversarial, orga
 
 1. P. Erdős, E. T. Ordman, and Y. Zalcstein, “Clique partitions of chordal graphs,” *Combinatorics, Probability and Computing* **2** (1993), no. 4, 409–415.
 
-2. M. C. Golumbic, *Algorithmic Graph Theory and Perfect Graphs*, second edition, Annals of Discrete Mathematics 57, Elsevier, Amsterdam, 2004.
-
-3. J. R. S. Blair and B. Peyton, “An introduction to chordal graphs and clique trees,” in *Graph Theory and Sparse Matrix Computation*, IMA Volumes in Mathematics and its Applications 56, Springer, New York, 1993, pp. 1–29.
-
-4. M. S. Cavers, *Clique Partitions and Coverings of Graphs*, M.Math. essay, University of Waterloo, 2005.
-
-5. L. de Moura, S. Kong, J. Avigad, F. van Doorn, and J. von Raumer, “The Lean theorem prover (system description),” in *Automated Deduction—CADE-25*, Lecture Notes in Computer Science 9195, Springer, 2015, pp. 378–388.
-
-6. The Mathlib Community, “The Lean mathematical library,” in *Proceedings of the 9th ACM SIGPLAN International Conference on Certified Programs and Proofs*, ACM, 2020, pp. 367–381.
-
-7. J. P. Traverso Gianini, *Erdős #81 Chordal Clique Partitions: Public Preprints and Formalization Artifacts*, public project repository, 2026, https://github.com/jtraverso/erdos-81-chordal-clique-partitions.
+2. M. C. Golumbic, *Algor

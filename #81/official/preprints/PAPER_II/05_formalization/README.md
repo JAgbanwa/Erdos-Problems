@@ -15,4 +15,4 @@ SHA-256).
 - Certificate: `sorry`-free; `#print axioms PaperII.theorem_1_2` =
   `[propext, Classical.choice, Quot.sound]`.
 
-See `../03_reproducibility/BUILD_VERIFICATION.md` and `lean/gate_logs/`.
+See `../03_reproducibility/BUILD_VERIFICATION.md` and `l

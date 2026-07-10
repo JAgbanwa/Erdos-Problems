@@ -555,15 +555,4 @@ theorem dirac_gen :
       · push_neg at hcomp
         obtain ⟨a, b, hab, hnadj⟩ := hcomp
         exact dirac_step_separator G hG hab hnadj ih_ind
-      · exact dirac_step_disconnected G hconn hne ih_ind
-
-
-/-- **Dirac-1 (A3a).** A nonempty chordal graph has a simplicial vertex.
-Proof: induction on `|V|`; complete graph — any vertex; disconnected — recurse into a
-component; connected non-complete — a minimal separator `S` (a clique by the engine) and a component
-`C`, the standard argument yields a simplicial vertex of `G` inside `C`. -/
-theorem dirac_simplicial (G : SimpleGraph V) (hG : IsChordal G) (hne : Nonempty V) :
-    ∃ v : V, IsSimplicial G v :=
-  dirac_gen (Fintype.card V) G rfl hG hne
-
-end PaperII
+      · exact dira

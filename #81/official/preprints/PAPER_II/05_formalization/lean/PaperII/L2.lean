@@ -432,16 +432,4 @@ theorem phiTau_le_max_classCopy (G : SimpleGraph V) [DecidableRel G.Adj] {A B : 
     phiTau G ≤ max (phiTau (classCopy G A B)) (phiTau (classCopy G B A)) := by
   have hconv : ∀ j, j + 2 ≤ (sourceClass G A).card + (sourceClass G B).card →
       2 * fseq G A B (j + 1) ≤ fseq G A B j + fseq G A B (j + 2) := by
-    intro j hj
-    have hmid := fseq_midpoint G hA hB hAB hAd hBd (k := j + 1) (by omega) (by omega)
-    have h1 : j + 1 - 1 = j := by omega
-    have h2 : j + 1 + 1 = j + 2 := by omega
-    rw [h1, h2] at hmid
-    exact hmid
-  have hmain := convexSeq_le_max_endpoints
-    ((sourceClass G A).card + (sourceClass G B).card) (fseq G A B) hconv
-    (sourceClass G A).card (by omega)
-  rw [fseq_a, fseq_zero, fseq_top] at hmain
-  exact hmain
-
-end PaperII
+    intro j hj

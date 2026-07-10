@@ -65,7 +65,4 @@ def manifest():
     print("wrote SHA256_MANIFEST.txt")
 
 if __name__ == "__main__":
-    render_script_reports()
-    render_top_reports()
-    zip_scripts()
-    manifest()
+    render_script_r

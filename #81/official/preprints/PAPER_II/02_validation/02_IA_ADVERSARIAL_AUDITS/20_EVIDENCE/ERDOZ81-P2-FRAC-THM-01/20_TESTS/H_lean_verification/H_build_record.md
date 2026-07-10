@@ -33,4 +33,4 @@
 - The SHA-256 match to commit `5f2d448` could **not** be verified in this
   environment: git history was unreachable (repo root resolved to `C:/` with no
   `HEAD`; object `5f2d448` not found) and the v1.0 release package does not bundle
-  the `lean/` tree. `lean_source_sha256.txt` records exactly what was built here.
+  the `lean/` tree. `lean_source_sha256.txt` re

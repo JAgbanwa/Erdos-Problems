@@ -8,5 +8,4 @@
 Verify from the package root:
 
 ```bash
-sha256sum -c 04_integrity/SHA256SUMS.txt
-```
+sha256sum -c 04_integrity/SHA256SUM

@@ -55,6 +55,4 @@ def classCopy (G : SimpleGraph V) [DecidableRel G.Adj] (A B : Finset V) : Simple
 
 instance (G : SimpleGraph V) [DecidableRel G.Adj] (A B : Finset V) :
     DecidableRel (classCopy G A B).Adj := fun a b => by
-  unfold classCopy; rw [SimpleGraph.fromRel_adj]; infer_instance
-
-end PaperII
+  unfold classCopy; r

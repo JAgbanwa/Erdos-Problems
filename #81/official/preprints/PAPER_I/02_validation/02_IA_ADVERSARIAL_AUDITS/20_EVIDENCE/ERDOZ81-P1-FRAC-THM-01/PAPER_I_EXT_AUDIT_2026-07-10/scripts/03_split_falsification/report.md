@@ -43,5 +43,4 @@ Split graph model: clique `K_p` plus independent vertices with neighborhoods
 `K_p ∨ K̄_{2p}` attains `n²/6 + n/6` exactly, matching the manuscript's §9 discussion
 (the leading constant `1/6` is tight; the additive `+n` is not optimized — observed
 peak `n/6`). **Limit:** a bounded computational search is supporting/typed evidence for
-a universal (`∀`) claim, never a proof; the analytic proof (Scripts 01–02 + Gate H)
-carries the universal statement.
+a universal (`∀`) claim, never a proof; the analytic proof (Scripts 01–0

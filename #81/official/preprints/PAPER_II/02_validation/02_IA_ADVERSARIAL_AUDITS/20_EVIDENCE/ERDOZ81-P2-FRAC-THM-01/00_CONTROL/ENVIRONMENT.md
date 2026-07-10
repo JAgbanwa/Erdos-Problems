@@ -42,4 +42,4 @@
 ## Trusted computing base
 Python + scipy/HiGHS + networkx (math checks); elan/lake/Lean 4 + Mathlib +
 the Lean kernel (formal check). No independently-checkable proof certificate is
-emitted beyond Lean's own kernel check and `#print axioms`.
+emitted beyond L

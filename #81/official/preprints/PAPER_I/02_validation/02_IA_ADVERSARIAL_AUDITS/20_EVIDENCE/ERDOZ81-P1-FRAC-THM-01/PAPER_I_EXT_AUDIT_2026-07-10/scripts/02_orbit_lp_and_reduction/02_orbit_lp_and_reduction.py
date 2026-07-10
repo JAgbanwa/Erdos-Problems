@@ -172,9 +172,4 @@ def run():
     P(f"(B)  affine reduction + uniform bound: {'VERIFIED' if (b_fail_red==0 and b_fail_bound==0) else 'FAILED'}")
     P(f"OVERALL: {'ALL VERIFIED (no counterexample)' if ok else 'DISCREPANCY'}")
     P("="*78)
-    with open(os.path.join(os.path.dirname(__file__), "results.txt"), "w", encoding="utf-8") as f:
-        f.write(log.getvalue())
-    return ok
-
-if __name__ == "__main__":
-    run()
+    with 

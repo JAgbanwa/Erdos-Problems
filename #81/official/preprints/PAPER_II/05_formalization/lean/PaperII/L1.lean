@@ -251,10 +251,4 @@ theorem phiTau_copyVertex_add (G : SimpleGraph V) [DecidableRel G.Adj] {u v : V}
     (huv : ¬ G.Adj u v) (hne : u ≠ v) :
     2 * phiTau G ≤ phiTau (copyVertex G v u) + phiTau (copyVertex G u v) := by
   have hcover := tau3star_copyVertex_add G huv hne
-  have hE : ((copyVertex G v u).edgeFinset.card : ℝ)
-          + ((copyVertex G u v).edgeFinset.card : ℝ)
-          = 2 * (G.edgeFinset.card : ℝ) := by exact_mod_cast edgeCard_copyVertex_add G huv
-  simp only [phiTau]
-  linarith [hE, hcover]
-
-end PaperII
+  have h

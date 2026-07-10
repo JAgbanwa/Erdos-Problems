@@ -71,5 +71,4 @@ with open(os.path.join(HERE, "AuditCheck_source_note.txt"), "w", encoding="utf-8
             "#check @PaperII.IsChordal\n#print PaperII.IsChordal\n")
 zp, sp, dg = package(HERE, "H_lean_verification",
                      [f for f in files if os.path.exists(os.path.join(HERE, f))])
-print("H_report.pdf written:", os.path.exists(PDF))
-print("H zip sha256:", dg)
+print(

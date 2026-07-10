@@ -38,7 +38,4 @@ theorem completeSplit_card_edgeFinset (p q : ℕ) :
   have h_sum_degrees : ∑ v : Fin p ⊕ Fin q, (completeSplit p q).degree v = 2 * (completeSplit p q).edgeFinset.card := by
     rw [ SimpleGraph.sum_degrees_eq_twice_card_edges ];
   simp_all +decide [ completeSplit_degree_inl, completeSplit_degree_inr ];
-  rw [ Nat.choose_two_right ];
-  grind
-
-end PaperII
+  rw [ Nat.c

@@ -12,4 +12,4 @@
 - Exact/rational arithmetic where noted; see each audit's `requirements.txt`.
 
 ## Manuscript
-- LaTeX (pandoc -> LuaHBTeX for the PDF); Latin Modern fonts.
+- LaTeX (pandoc -> LuaHBTeX for the PDF); Latin 

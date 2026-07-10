@@ -30,7 +30,4 @@ theorem not_adj_of_isClone (G : SimpleGraph V) {u v : V} (h : IsClone G u v) :
 
 /-- `IsClone` is symmetric. -/
 theorem isClone_comm (G : SimpleGraph V) {u v : V} (h : IsClone G u v) : IsClone G v u := by
-  unfold IsClone at h ⊢
-  exact h.symm
-
-end PaperII
+  unfold IsClone at h 

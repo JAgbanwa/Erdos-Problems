@@ -225,11 +225,4 @@ def main():
                          ["p2_vertex_copy.py", "p2_results.txt", "p2_results.csv",
                           "P2_report.pdf", "audit_lib.py"])
     print("P2 done.")
-    print(f"  graphs={n_graphs} pairs={total_pairs} ineq_viol={tot_a} cor_viol={tot_b} "
-          f"edge_fail={tot_edge}")
-    print(f"  verdict: {verdict}")
-    print(f"  zip sha256={dg}")
-
-
-if __name__ == "__main__":
-    main()
+    

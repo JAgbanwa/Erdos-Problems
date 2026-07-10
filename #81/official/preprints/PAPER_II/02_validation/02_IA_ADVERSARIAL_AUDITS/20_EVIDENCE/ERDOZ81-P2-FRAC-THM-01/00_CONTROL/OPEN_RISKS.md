@@ -11,4 +11,4 @@ Severity: CRITICAL / MAJOR / MODERATE / MINOR / OBSERVATION.
 
 **No CRITICAL/MAJOR risk found.** No mathematical defect, no counterexample, no
 over-claim. All residuals are provenance/reproducibility items on the formal
-certificate, not on the mathematics.
+certificate, not on the 

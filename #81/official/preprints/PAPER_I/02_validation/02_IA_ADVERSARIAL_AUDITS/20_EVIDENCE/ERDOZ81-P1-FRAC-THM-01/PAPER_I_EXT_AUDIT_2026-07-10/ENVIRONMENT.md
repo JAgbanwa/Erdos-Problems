@@ -54,5 +54,4 @@ This is an environment workaround only; it does not affect the Lean sources or r
 ## Reproducibility
 
 Each `scripts/NN_*/` folder holds the script, `results.txt` (full output), an English
-`report.md`/`.pdf`, a `.zip` of the folder, and its `.sha256`. A top-level
-`SHA256_MANIFEST.txt` lists digests of all files.
+`report.md`/`.pdf`, a `.zip` of the folder, and its `.sha256`. A top-

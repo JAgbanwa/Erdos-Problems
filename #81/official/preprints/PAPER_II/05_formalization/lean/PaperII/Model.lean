@@ -63,7 +63,4 @@ noncomputable def tau3star (G : SimpleGraph V) [DecidableRel G.Adj] : ℝ :=
 noncomputable def phiTau (G : SimpleGraph V) [DecidableRel G.Adj] : ℝ :=
   (G.edgeFinset.card : ℝ) - 2 * tau3star G
 
-theorem tau3star_nonneg (G : SimpleGraph V) [DecidableRel G.Adj] : 0 ≤ tau3star G :=
-  tauStar_nonneg _
-
-end PaperII
+theorem tau3star_nonneg (G : SimpleGraph V) [Decidable

@@ -11,4 +11,4 @@ Provenance: these logs were produced by the **independent** AI adversarial audit
 (`PAPER-II-EXT-AUDIT-001`), which re-elaborated the proof in its own environment —
 i.e. they are a third-party reproduction, not the development build. Residual noted
 by the auditor: the rebuild used the project's pinned Mathlib cache (not from-scratch).
-See `../../../02_validation/02_IA_ADVERSARIAL_AUDITS/`.
+See `../../../02_validation/02_IA_ADVERSARI

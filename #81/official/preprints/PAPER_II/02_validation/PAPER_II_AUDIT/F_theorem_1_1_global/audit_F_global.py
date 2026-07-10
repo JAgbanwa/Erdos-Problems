@@ -124,6 +124,4 @@ def main():
 
 if __name__=="__main__":
     print(f"[Section F] global Theorem 1.1: exhaustive n<=7, sampled 8..{SMAX} (K={K})")
-    s=main(); json.dump(s,open(os.path.join(RES,"summary.json"),"w"),indent=2)
-    print("RESULT:", "PASS" if s["PASS"] else "FAIL")
-    sys.exit(0 if s["PASS"] else 1)
+    s=main(); json.dump(s,open(os.path.join

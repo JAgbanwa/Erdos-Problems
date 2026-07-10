@@ -104,5 +104,4 @@ proof, the formal certificate, and the exhaustive small-case computation agree.
 Recommended (non-blocking) closures: (1) reproduce `lake build` + `#print axioms`
 at commit `5f2d448` in a clean-room environment with a from-scratch Mathlib to
 discharge the independence residual; (2) publish the `lean/` tree with a SHA-256
-manifest inside the release package so the commit match is externally checkable.
-This internal adversarial audit confers **no** peer-review or publication status.
+manifest inside the release package so the commit match i

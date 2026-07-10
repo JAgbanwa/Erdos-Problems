@@ -81,5 +81,4 @@ def main():
 if __name__=="__main__":
     print(f"[Section E] integer maximization, n=1..{NMAX} (exact rational)")
     s=main(); json.dump(s,open(os.path.join(RES,"summary.json"),"w"),indent=2)
-    print("RESULT:", "PASS" if s["PASS"] else "FAIL")
-    sys.exit(0 if s["PASS"] else 1)
+    pri

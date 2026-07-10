@@ -78,7 +78,4 @@ theorem convexSeq_le_max_endpoints (N : ℕ) (f : ℕ → ℝ)
   · have : (N : ℝ) * f j ≤ (N : ℝ) * f 0 := by
       have : ((N : ℝ) - j) * f 0 + (j : ℝ) * f N ≤ (N : ℝ) * f 0 := by nlinarith [hjpos]
       linarith [hkey]
-    have := le_of_mul_le_mul_left this hNpos
-    exact le_trans this (le_max_left _ _)
-
-end PaperII
+    have := le_of_mu

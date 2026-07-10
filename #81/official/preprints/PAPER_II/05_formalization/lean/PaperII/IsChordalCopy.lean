@@ -213,10 +213,4 @@ theorem chordal_classCopy (H : SimpleGraph V) [DecidableRel H.Adj] (A B : Finset
     have hlenH : 4 ≤ (c.transfer H hEsub).length := by
       rw [SimpleGraph.Walk.length_transfer]; exact hlen
     obtain ⟨x, y, hx, hy, hadj, hedge⟩ := hH (c.transfer H hEsub) hcH hlenH
-    rw [SimpleGraph.Walk.support_transfer] at hx hy
-    rw [SimpleGraph.Walk.edges_transfer] at hedge
-    refine ⟨x, y, hx, hy, ?_, hedge⟩
-    rw [classCopy_adj_of_neighborFinset_ne H A B (hcop x hx) (hcop y hy)]
-    exact hadj
-
-end PaperII
+    rw [SimpleGraph.Walk.supp

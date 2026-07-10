@@ -323,11 +323,3 @@ theorem rconn_component (H : SimpleGraph V) {S : Finset V} {u : V} {D : Finset V
 The component of `u` inside `S` is separated from the rest: any `S`-neighbor of a component
 vertex is again in the component.
 -/
-theorem component_sep (H : SimpleGraph V) {S : Finset V} {u : V} {D : Finset V}
-    (hDdef : ∀ w, w ∈ D ↔ (w ∈ S ∧ RReach H S u w)) :
-    ∀ d ∈ D, ∀ w, w ∈ S → H.Adj d w → w ∈ D := by
-  intro d hd w hw hadj;
-  rw [ hDdef ] at hd ⊢;
-  exact ⟨ hw, hd.2.tail ⟨ hd.1, hw, hadj ⟩ ⟩
-
-end PaperII

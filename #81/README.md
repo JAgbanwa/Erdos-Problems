@@ -20,12 +20,25 @@ Currently published:
   finite analytic argument, machine-verified in Lean 4 (sorry-free, axiom-clean).
   [PDF](official/preprints/PAPER_I/01_manuscript/PAPER_I_preprint_v1.0.pdf) ·
   [package](official/preprints/PAPER_I/) ·
-  [Lean](official/preprints/PAPER_I/05_formalization/lean/)
+  [Lean](official/preprints/PAPER_I/05_formalization/lean/) ·
+  [explainer](https://htmlpreview.github.io/?https://github.com/jtraverso/erdos-81-chordal-clique-partitions/blob/main/preprints/PAPER_I/PaperI_explained_4_levels.html)
 
-Paper I establishes the finite fractional bound for **split** graphs only. It
-does not establish an integral clique-partition theorem, an asymptotic transfer
-result, or a theorem for all chordal graphs. See the package README for the
-exact scope.
+- **Paper II — *Complete-Split Extremizers for a Fractional Triangle-Cover
+  Functional on Chordal Graphs.*** Determines the exact maximum over **chordal**
+  graphs on `n` vertices: `max ( |E(G)| − 2·τ₃*(G) ) = ⌊(2n+1)²/24⌋`, attained by a
+  complete-split graph, by a finite analytic argument, machine-verified in Lean 4
+  (sorry-free, axiom-clean, unconditional on the standard `IsChordal` definition).
+  [PDF](official/preprints/PAPER_II/01_manuscript/PAPER_II_preprint_v1.0.pdf) ·
+  [package](official/preprints/PAPER_II/) ·
+  [Lean](official/preprints/PAPER_II/05_formalization/lean/) ·
+  [explainer](https://htmlpreview.github.io/?https://github.com/jtraverso/erdos-81-chordal-clique-partitions/blob/main/preprints/PAPER_II/PaperII_explained_4_levels.html)
+
+Both papers are fractional-functional results (a triangle-**packing** bound on
+split graphs, ν₃*; an exact triangle-**cover** extremum on chordal graphs, τ₃*).
+Neither establishes an integral clique-partition bound `cp(G)`, an asymptotic
+transfer, or a resolution of Erdős #81, which remains open. Each has an
+independent AI adversarial audit (PASS) but is not externally peer-reviewed. See
+each package README for the exact scope.
 
 ## Status
 

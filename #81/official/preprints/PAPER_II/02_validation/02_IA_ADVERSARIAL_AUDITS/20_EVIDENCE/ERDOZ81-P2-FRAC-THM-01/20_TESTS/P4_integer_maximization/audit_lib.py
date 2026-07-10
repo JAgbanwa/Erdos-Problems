@@ -126,6 +126,4 @@ def package(folder, zip_basename, files):
     digest = sha256_of(zip_path)
     sha_path = zip_path + ".sha256"
     # newline="" avoids Windows CRLF translation so `sha256sum -c` accepts the file
-    with open(sha_path, "w", encoding="utf-8", newline="") as f:
-        f.write(f"{digest}  {zip_basename}.zip\n")
-    return zip_path, sha_path, digest
+    with open(sha_path, "w

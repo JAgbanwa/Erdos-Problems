@@ -54,8 +54,4 @@ theorem phiTau_completeSplit_sat_eq_Fsat (p q : ℕ) (hp : 2 ≤ p) (hq : p - 1 
   have key : (2 : ℝ) * ((p : ℝ) * q - (p.choose 2 : ℝ)) = (2 : ℝ) * ((Fsat (p + q) p : ℤ) : ℝ) := by
     rw [h2]
     simp only [twoFsat]
-    push_cast
-    nlinarith [hchoose]
-  linarith [key]
-
-end PaperII
+    push_cas

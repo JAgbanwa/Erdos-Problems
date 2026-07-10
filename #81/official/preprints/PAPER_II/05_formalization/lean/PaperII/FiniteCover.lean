@@ -118,10 +118,4 @@ theorem tauStar_nonneg : 0 ≤ tauStar A := by
   rw [tauStar]
   exact Finset.sum_nonneg fun i _ => (optimalCover_mem A).1 i |>.1
 
-theorem tauStar_le_card : tauStar A ≤ Fintype.card ι := by
-  have h := tauStar_le_cost A (oneCover_mem A)
-  simpa [coverCost, oneCover] using h
-
-end FiniteCover
-
-end PaperII
+theorem tauStar_le_card : tauStar A ≤ Fintype.card ι :

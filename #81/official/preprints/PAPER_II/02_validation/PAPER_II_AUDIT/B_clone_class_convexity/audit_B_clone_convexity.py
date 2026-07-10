@@ -186,7 +186,4 @@ def main():
     return S
 
 if __name__=="__main__":
-    print(f"[Section B] clone-class ops (WMAX={WMAX},SMAX={SMAX},NMAX={NMAX})")
-    s=main(); json.dump(s,open(os.path.join(RES,"summary.json"),"w"),indent=2)
-    print("RESULT:", "PASS" if s["PASS"] else "FAIL")
-    sys.exit(0 if s["PASS"] else 1)
+    print(f"[Section B] clone-class ops (WMAX={WMAX},SMAX={SM

@@ -47,4 +47,4 @@ Hence each orbit candidate satisfies `≥ R(p,q) − p/2`, so `min{U,D,H} ≥ R 
 **ALL EXACT (CALCULATION_VERIFIED).** The manuscript's algebra behind the quantitative
 bound and the final conversion contains no transcription or algebraic error on any of
 the checked identities. This is the exact-algebra half of Gate E; the LP-optimality half
-(that `M(κ^S)=min{U,D,H}`) is checked numerically in Script 02.
+(that `M(κ^S)=m

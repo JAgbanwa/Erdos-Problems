@@ -15,4 +15,4 @@ The `20_EVIDENCE/*/audits/INDEPENDENT_AUDIT_RECORD_v1.0.pdf` files are the earli
 (lighter) independent audit records from the original release.
 
 **Level of assurance.** Independent AI adversarial audit — an intermediate tier,
-stronger than self-audit. It is **not** external human peer review or journal refereeing.
+stronger than self-audit. It is **not** external human peer review or jou

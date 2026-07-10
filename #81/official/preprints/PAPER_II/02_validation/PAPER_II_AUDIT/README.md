@@ -37,4 +37,4 @@ This directory also carries `MASTER_manifest_sha256.txt` (over the six zips + th
 pip install -r requirements.txt
 python3 <Section>/audit_*.py     # writes <Section>/results/summary.json
 ```
-Verify integrity:  `sha256sum -c <Section>/manifest_sha256.txt`  and  `sha256sum -c MASTER_manifest_sha256.txt`
+Verify integrity:  `sha256sum -c <Section>/manifest_sha256.txt`  and  `sh

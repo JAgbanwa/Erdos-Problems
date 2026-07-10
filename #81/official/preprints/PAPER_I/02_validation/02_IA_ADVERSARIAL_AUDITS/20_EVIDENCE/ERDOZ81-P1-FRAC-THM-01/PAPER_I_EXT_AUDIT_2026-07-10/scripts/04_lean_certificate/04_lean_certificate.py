@@ -145,7 +145,4 @@ def run():
     P("="*78)
     with open(os.path.join(HERE, "results.txt"), "w", encoding="utf-8") as f:
         f.write(log.getvalue())
-    return overall, dict(h1=h1,h2=h2,h3=h3,h4=h4,h5=h5,axioms_main=axioms_main,build_exit=build_exit)
-
-if __name__ == "__main__":
-    print(run()[0])
+   

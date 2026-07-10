@@ -53,5 +53,4 @@ cd ../03_split_falsification      && python 03_split_falsification.py
 #   then: cd scripts/04_lean_certificate && python 04_lean_certificate.py
 python _lib/package.py            # render PDFs, zip + SHA, manifest
 ```
-Requires Python 3.14 (sympy, scipy/HiGHS, numpy, reportlab); Lean v4.28.0 + Mathlib
-v4.28.0 for Gate H. Master seed `20260710`.
+Requires Python 3.14 (sympy, scipy/HiGHS, numpy, reportlab); Lean v4.28.0

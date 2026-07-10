@@ -19,4 +19,4 @@ attained by a complete-split `S_{p,q}`.
 
 Theorem-closing claims: G (assembly) resting on B–F; H is the independent formal
 certificate of the same statement. All are checkable and were checked (H pending
-axioms-log capture at time of drafting).
+axioms-log capture a

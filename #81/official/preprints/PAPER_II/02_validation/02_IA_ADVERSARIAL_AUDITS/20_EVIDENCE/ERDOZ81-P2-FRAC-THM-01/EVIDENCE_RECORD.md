@@ -22,4 +22,4 @@ Final verdict: **PASS**. All specification gates A–J checked; none failed.
    exact source of commit `5f2d448`, verified per file by SHA-256 (see PROVENANCE.md).
 
 ## Level
-Independent AI adversarial audit — intermediate assurance tier; NOT human peer review.
+Independent AI adversarial audit — intermediate assurance tier;

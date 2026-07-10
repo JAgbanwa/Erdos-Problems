@@ -313,10 +313,4 @@ theorem tau3star_completeSplit_unsat (p q : ℕ) (hp : 3 ≤ p) (hq : q ≤ p - 
   push_cast at h ⊢
   linarith
 
-/-- L9 saturated branch `p ≥ 2, q ≥ p-1`: `τ₃* = C(p,2)`. -/
-theorem tau3star_completeSplit_sat (p q : ℕ) (hp : 2 ≤ p) (hq : p - 1 ≤ q) :
-    tau3star (completeSplit p q) = (p.choose 2 : ℝ) := by
-  exact le_antisymm (tau3star_completeSplit_le_choose p q)
-    (tau3star_completeSplit_sat_ge p q hp hq)
-
-end PaperII
+/-- L9 satura

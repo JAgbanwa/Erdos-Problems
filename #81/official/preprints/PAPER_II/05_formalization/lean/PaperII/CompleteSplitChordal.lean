@@ -102,8 +102,4 @@ when `p ≤ 1` via `(2q-3)² ≥ 0`.
 -/
 theorem deg_le_floor_int (p q : ℤ) (hp0 : 0 ≤ p) (hp1 : p ≤ 1) (hq : 0 ≤ q) :
     p * q ≤ (2 * (p + q) + 1) ^ 2 / 24 := by
-  rw [ Int.le_ediv_iff_mul_le ] <;> interval_cases p <;> norm_num;
-  · positivity;
-  · linarith [ sq_nonneg ( 2 * q - 3 ) ]
-
-end PaperII
+  rw [ Int.le_ediv_iff_mul_le ] <;

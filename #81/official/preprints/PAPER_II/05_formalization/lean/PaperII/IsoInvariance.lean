@@ -79,8 +79,4 @@ theorem tau3star_iso (G : SimpleGraph V) (G' : SimpleGraph W)
 /-- `Φ_τ` is invariant under graph isomorphism. -/
 theorem phiTau_iso (G : SimpleGraph V) (G' : SimpleGraph W)
     [DecidableRel G.Adj] [DecidableRel G'.Adj] (e : G ≃g G') :
-    phiTau G' = phiTau G := by
-  unfold phiTau
-  rw [tau3star_iso G G' e, e.card_edgeFinset_eq]
-
-end PaperII
+    phiTau G' = phiTau G :=

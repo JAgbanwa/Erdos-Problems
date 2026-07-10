@@ -11,4 +11,4 @@
 - `SHA256SUMS.txt`, `MANIFEST.json` -- integrity of the validation artifacts.
 
 Computation here is corroboration of the analytic proof and the formalization; it
-is not itself a proof.
+is not its

@@ -151,9 +151,4 @@ def run():
     P(f"VERDICT: {verdict}")
     P("NOTE: bounded search is supporting evidence for a universal claim, not a proof.")
     P("="*78)
-    with open(os.path.join(os.path.dirname(__file__), "results.txt"), "w", encoding="utf-8") as f:
-        f.write(log.getvalue())
-    return len(bad), ks3_fail, max_ratio
-
-if __name__ == "__main__":
-    run()
+    with open(os.path.join(os.path.dirname(__file__), "re

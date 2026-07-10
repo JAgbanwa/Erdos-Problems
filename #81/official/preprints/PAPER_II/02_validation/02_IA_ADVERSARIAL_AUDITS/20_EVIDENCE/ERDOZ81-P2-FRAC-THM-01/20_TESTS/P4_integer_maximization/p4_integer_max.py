@@ -198,11 +198,4 @@ def main():
                          ["p4_integer_max.py", "p4_results.txt", "p4_results.csv",
                           "P4_report.pdf", "audit_lib.py"])
     print("P4 done.")
-    print(f"  max_fail={max_fail} ident_fail={ident_fail} attain_fail={attain_fail} "
-          f"residue_fail={residue_fail}")
-    print(f"  verdict: {verdict}")
-    print(f"  zip sha256={dg}")
-
-
-if __name__ == "__main__":
-    main()
+    print(f"  max_fail={max_fail} i

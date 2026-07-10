@@ -170,10 +170,4 @@ theorem cloneClassCount_classCopy_lt (G : SimpleGraph V) [DecidableRel G.Adj] (A
   -- h is not injective on the image, so the card strictly drops
   have hle : ((univ.image f).image h).card ≤ (univ.image f).card := Finset.card_image_le
   have hne : ((univ.image f).image h).card ≠ (univ.image f).card := by
-    intro heq
-    have hinj := Finset.injOn_of_card_image_eq heq
-    have : A = B := hinj hAmem hBmem (by rw [hhA, hhB])
-    exact hAB this
-  exact lt_of_le_of_ne hle hne
-
-end PaperII
+    intro he

@@ -35,4 +35,4 @@
 ## Scope
 
 Paper II is the exact fractional-cover theorem only. It does not prove a
-clique-partition bound and does not settle Erdős Problem #81.
+clique-partition bound and

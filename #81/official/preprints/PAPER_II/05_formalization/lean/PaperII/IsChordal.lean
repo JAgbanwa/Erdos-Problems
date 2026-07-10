@@ -32,6 +32,3 @@ theorem chordal_induce {W : Type*} (G : SimpleGraph V) (hG : IsChordal G) (f : W
   intro v c hc hlen; have := hG ( c.map ( show H →g G from ⟨ f, by aesop_cat ⟩ ) ) ?_ ?_ <;> simp_all +decide ;
   · obtain ⟨ x, hx, y, hy, hxy, h ⟩ := this; use x, hx, y, hy, hxy; contrapose! h; aesop;
   · convert hc.map _;
-    exact f.injective
-
-end PaperII

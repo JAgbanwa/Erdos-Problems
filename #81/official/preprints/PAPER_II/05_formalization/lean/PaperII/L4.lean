@@ -40,7 +40,4 @@ variable {V}
 is chordal. A direct application of the threaded hypothesis (no new proof content). -/
 def chordalStructure_classCopy (hA2 : A2Transfer V) (H : SimpleGraph V) [DecidableRel H.Adj]
     (A B : Finset V) (hchord : ChordalStructure H) (hclique : H.IsClique (B : Set V)) :
-    ChordalStructure (classCopy H A B) :=
-  hA2 H A B hchord hclique
-
-end PaperII
+    ChordalStructure (classCopy H A B) :

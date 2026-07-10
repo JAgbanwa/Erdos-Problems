@@ -149,6 +149,4 @@ computational checks, and the formal certificate mutually consistent and free of
 detected error, circularity, or over-claim. Human expert / journal peer review remains
 the appropriate next tier; this AI audit confers no publication status.
 
-*Distinctions maintained: "analytic proof correct" (Gates A–G, I), "Lean certificate
-holds" (Gate H), and "computation found no counterexample" (Scripts 02–03) are reported
-separately; all three point the same way for Paper I.*
+*Distinctions maintained: "analytic proof correct" (Gates A–G, I), "Lean certif

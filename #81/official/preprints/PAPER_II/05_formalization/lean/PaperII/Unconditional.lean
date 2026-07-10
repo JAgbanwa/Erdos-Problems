@@ -84,7 +84,4 @@ theorem theorem_1_2 (n : ℕ) (hn : 1 ≤ n) :
   refine ⟨?_, ?_⟩
   · intro W _ _ G _ hcard hchord
     exact hUp G hcard (chordalStructure_of_isChordal hchord)
-  · obtain ⟨W, fW, dW, G, dRW, hcard, ⟨hCS⟩, hval⟩ := hEx
-    exact ⟨W, fW, dW, G, dRW, hcard, hCS.isChordal, hval⟩
-
-end PaperII
+  · obtain ⟨W, fW, dW, G, dRW, hcard, ⟨hCS⟩, hval

@@ -251,10 +251,4 @@ theorem packWeight_through_le_one (p q : ℕ) {wA wB : ℝ}
   · convert sum_packWeight_filter p q wA wB ( fun s => s(Sum.inl b, Sum.inr a) ∈ triEdges p q s ) |> fun h => h.trans_le _ using 1;
     · simp +decide [ Sym2.eq_swap ];
     · convert hradial using 1;
-      rw [ card_triA_through_radial, card_triB_through_radial ] ; ring;
-  · by_cases hab : a = b;
-    · simp +decide [ hab, triEdges ];
-    · rw [ sum_packWeight_filter ];
-      rw [ card_triA_through_inr, card_triB_through_inr ] <;> aesop
-
-end PaperII
+  

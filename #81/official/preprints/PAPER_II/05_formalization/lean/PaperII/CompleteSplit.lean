@@ -47,6 +47,4 @@ instance (p q : ℕ) : DecidableRel (completeSplit p q).Adj := fun x y =>
 @[simp] theorem completeSplit_inr_inr (p q : ℕ) (a b : Fin q) :
     ¬ (completeSplit p q).Adj (Sum.inr a) (Sum.inr b) := by
   rw [completeSplit, SimpleGraph.fromRel_adj]
-  rintro ⟨-, (h | h)⟩ <;> exact h
-
-end PaperII
+  

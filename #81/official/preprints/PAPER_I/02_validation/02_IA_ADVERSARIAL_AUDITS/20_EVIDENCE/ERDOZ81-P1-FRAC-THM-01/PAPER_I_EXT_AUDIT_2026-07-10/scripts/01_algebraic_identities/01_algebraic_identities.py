@@ -102,9 +102,4 @@ def run():
     verdict = "ALL EXACT (CALCULATION_VERIFIED)" if npass == ntot else "DISCREPANCY FOUND"
     P(f"VERDICT: {verdict}")
     P("="*74)
-    with open(os.path.join(os.path.dirname(__file__), "results.txt"), "w", encoding="utf-8") as f:
-        f.write(log.getvalue())
-    return npass, ntot
-
-if __name__ == "__main__":
-    run()
+    with open(os.path.join(os.path.dirname(__file__), "results.txt"), "w", encoding="utf

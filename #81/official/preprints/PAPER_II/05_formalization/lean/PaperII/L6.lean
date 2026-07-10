@@ -99,8 +99,4 @@ theorem symmetrization (hA2 : A2Transfer V) (G : SimpleGraph V) [DecidableRel G.
     have hchord' : ChordalStructure (classCopy G A B) :=
       chordalStructure_classCopy hA2 G A B hchord hcliqueB
     obtain ⟨p, q, hpq, hle'⟩ := symmetrization hA2 (classCopy G A B) hchord'
-    exact ⟨p, q, hpq, le_trans hle hle'⟩
-  termination_by cloneClassCount G
-  decreasing_by exact hlt
-
-end PaperII
+    exact ⟨p, q

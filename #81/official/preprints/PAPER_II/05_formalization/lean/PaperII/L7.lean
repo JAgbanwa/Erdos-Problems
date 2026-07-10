@@ -202,9 +202,4 @@ theorem terminal_characterization (H : SimpleGraph V) (hchord : ChordalStructure
       by_cases hwC : w ∈ H.neighborSet x
       · exact hx hc hwC (fun h => hwc h.symm)
       · have hNw : H.neighborSet w = H.neighborSet x := (h2 w hwC).2
-        have hcw : c ∈ H.neighborSet w := by rw [hNw]; exact hc
-        exact ((H.mem_neighborSet w c).1 hcw).symm
-    · -- The complement of `C` is independent (Step 1).
-      exact fun a ha b hb => h1 a b ha hb
-
-end PaperII
+        have hcw : c ∈ 

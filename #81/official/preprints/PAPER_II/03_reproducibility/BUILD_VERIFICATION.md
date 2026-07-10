@@ -25,4 +25,4 @@ peer-review or publication claim and is currently pending.
 ## Computational audits
 Each folder in `02_validation/PAPER_II_AUDIT/<section>/` contains a script and a
 `requirements.txt`; run the script to recompute that section's claims and compare
-against the recorded report and manifest.
+against the rec

@@ -398,4 +398,4 @@ Therefore the maximum equals `⌊(2n+1)²/24⌋`. This is Theorem 1.2. `∎`
 **Open items (do not affect Theorem 1.2):** none. The passage to `cp(G)` and Erdős #81 (which needs
 Haxell–Rödl and an open `O(n)` transfer) is **out of scope** here and belongs to a separate paper.
 
-**Honest caveats before submission:** (a) the reduction (L1, L5–L7) is now machine-checked in Lean, which largely discharges the earlier need for a line-by-line human proof-read; an independent human read remains desirable for exposition and for confidence independent of the proof assistant; (b) novelty/bibliography check on the exact functional `Φ_τ`; (c) an independent environment should reproduce `lake build` + `#print axioms` at commit `5f2d448` (not the environment that produced it).
+**Honest caveats before submission:** (a) the reduction (L1, L5–L7) is now machine-checked in Le

@@ -128,7 +128,4 @@ theorem theorem_1_2_of_chordalStructure (n : ℕ) (hn : 1 ≤ n)
       _ = (((2 * (n : ℤ) + 1) ^ 2 / 24 : ℤ) : ℝ) := by rw [hn']
   · obtain ⟨p, q, hpq, hval⟩ := exists_completeSplit_eq_floor n hn
     refine ⟨Fin p ⊕ Fin q, inferInstance, inferInstance, completeSplit p q, inferInstance, ?_,
-      ⟨chordalStructure_completeSplit p q⟩, hval⟩
-    rw [Fintype.card_sum, Fintype.card_fin, Fintype.card_fin, hpq]
-
-end PaperII
+     

@@ -65,9 +65,4 @@ theorem tauStar_congr (A : CoverSystem ι κ) (A' : CoverSystem ι' κ')
   · -- symmetric direction
     obtain ⟨hmem, hcost⟩ := feasible_transport A' A σ.symm π.symm hsupp' (optimalCover_mem A')
     calc tauStar A ≤ coverCost (fun i => (optimalCover A') (σ.symm.symm i)) := tauStar_le_cost A hmem
-      _ = coverCost (optimalCover A') := hcost
-      _ = tauStar A' := rfl
-
-end Relabel
-
-end PaperII
+      _ = coverCost (optimalCover 
