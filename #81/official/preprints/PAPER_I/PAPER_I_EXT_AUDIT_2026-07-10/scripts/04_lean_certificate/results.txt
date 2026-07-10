@@ -1,0 +1,44 @@
+==============================================================================
+04 — LEAN FORMAL CERTIFICATE AUDIT (Paper I, Gate H)
+==============================================================================
+
+(H1) statement match
+   paperI_main present            : True
+   states Phi <= n^2/6 + n        : True
+   Phi = edgeCount - 2*nu3star    : True
+
+(H2) source cleanliness (real sorry/admit/native_decide/axiom; comments excluded)
+   DeltaNu.lean                      : clean
+   FiniteLPDuality.lean              : clean
+   WCDH_check.lean                   : clean
+   PaperI/PaperI_Statement.lean      : clean
+   PaperI/PaperI_Arith.lean          : clean
+
+(H3) SHA-256 of released lean tree vs 04_integrity/SHA256SUMS.txt
+   DeltaNu.lean                      : MATCH
+   FiniteLPDuality.lean              : MATCH
+   WCDH_check.lean                   : MATCH
+   PaperI/PaperI_Statement.lean      : MATCH
+   PaperI/PaperI_Arith.lean          : MATCH
+   lean-toolchain                    : MATCH
+   lakefile.toml                     : MATCH
+   lake-manifest.json                : MATCH
+
+(H4) independent fresh-tree build result
+   build log                    : C:\Users\jtrav\l\build2.log
+   BUILD EXIT                    : 0
+   #print axioms paperI_main     : [propext, Classical.choice, Quot.sound]
+   #print axioms residual_duality: [propext, Classical.choice, Quot.sound]
+   sorryAx present anywhere      : False
+
+(H5) cross-check vs released gate_logs/print_axioms_residual_and_main.log
+   recorded paperI_main axioms   : [propext, Classical.choice, Quot.sound]
+   matches independent build     : True
+------------------------------------------------------------------------------
+(H1) statement match             : PASS
+(H2) source sorry/axiom clean    : PASS
+(H3) SHA vs recorded manifest    : PASS
+(H4) independent build + axioms  : PASS  
+(H5) recorded gate log axioms    : PASS
+GATE H OVERALL                   : PASS
+==============================================================================

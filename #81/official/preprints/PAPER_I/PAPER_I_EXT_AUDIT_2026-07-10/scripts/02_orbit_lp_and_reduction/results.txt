@@ -1,0 +1,29 @@
+==============================================================================
+02 — ORBIT LP / SYMMETRIZATION / AFFINE REDUCTION (Paper I, Gates B,C)
+==============================================================================
+
+(C0) q=0 branch:  M(0) = 0 (p<=2) or p(p-1)/6 (p>=3)  and  M(0) >= R(p,0)-p/2
+   p=2: M(0)=0.0000 expect=0.0000 R(p,0)-p/2=-0.3333  ok=True
+   p=3: M(0)=1.0000 expect=1.0000 R(p,0)-p/2=0.0000  ok=True
+   p=4: M(0)=2.0000 expect=2.0000 R(p,0)-p/2=0.6667  ok=True
+   p=5: M(0)=3.3333 expect=3.3333 R(p,0)-p/2=1.6667  ok=True
+   p=6: M(0)=5.0000 expect=5.0000 R(p,0)-p/2=3.0000  ok=True
+   p=7: M(0)=7.0000 expect=7.0000 R(p,0)-p/2=4.6667  ok=True
+   p=8: M(0)=9.3333 expect=9.3333 R(p,0)-p/2=6.6667  ok=True
+
+(C1) orbit LP  ==  closed form min{U,D}/min{U,D,H}   (pure profiles, q>=1)
+   instances=660  mismatches=0
+
+(C2) full C(p,2)-variable residual-cover LP  ==  closed form  (orbit averaging lossless)
+   instances=280  mismatches=0  max|fullLP-formula|=5.33e-15
+
+(B) mixed profiles:  M(kappa) >= min_s M(kappa^S)  and  M(kappa) >= R(p,q)-p/2
+   trials=400  reduction-violations(M<min_pure)=0  bound-violations(M<R-p/2)=0
+   min slack (M(kappa) - (R(p,q)-p/2)) over trials = 0.0000  (>=0 required)
+------------------------------------------------------------------------------
+(C0) q=0 branch M(0) & bound          : VERIFIED (0 fail)
+(C1) orbit LP = closed form          : VERIFIED (0 mismatch)
+(C2) orbit symmetrization lossless   : VERIFIED (0 mismatch)
+(B)  affine reduction + uniform bound: VERIFIED
+OVERALL: ALL VERIFIED (no counterexample)
+==============================================================================
