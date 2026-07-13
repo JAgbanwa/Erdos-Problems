@@ -51,3 +51,5 @@ Problem(s) to try sometime:
 [62](https://www.erdosproblems.com/62)
 
 [117](https://www.erdosproblems.com/117)
+
+[1210](https://www.erdosproblems.com/1210)
