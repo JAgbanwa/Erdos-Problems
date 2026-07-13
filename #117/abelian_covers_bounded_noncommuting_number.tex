@@ -1,0 +1,1352 @@
+\documentclass[11pt]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage[a4paper,margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{enumitem}
+\usepackage{microtype}
+\usepackage[hidelinks]{hyperref}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{remark}[theorem]{Remark}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+
+\newcommand{\F}{\mathbb{F}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\nc}{\omega_{\mathrm{nc}}}
+\newcommand{\ac}{\operatorname{ac}}
+\newcommand{\Span}{\operatorname{span}}
+\newcommand{\rank}{\operatorname{rank}}
+\newcommand{\Aut}{\operatorname{Aut}}
+\newcommand{\id}{\mathrm{id}}
+\newcommand{\dd}{\mathop{}\!\mathrm{d}}
+
+\title{Abelian Subgroup Covers Under a Bound on Pairwise Noncommuting Sets}
+\author{}
+\date{}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+For a group $G$, let $\nc(G)$ denote the largest cardinality of a set of pairwise noncommuting elements, and let $\ac(G)$ denote the least number of abelian subgroups whose union is $G$.  We study
+\[
+ h(n)=\sup\{\ac(G):\nc(G)\le n\}.
+\]
+A completely elementary argument gives
+\[
+ 2^{\lfloor (n-1)/2\rfloor}+1\le h(n)\le U_n\qquad(n\ge3),
+\]
+where $U_1=U_2=1$ and $U_n=nU_{n-2}$ for $n\ge3$.  Thus
+\[
+ U_{2r}=2^{r-1}r!,\qquad U_{2r+1}=(2r+1)!!,
+\]
+and consequently
+\[
+ \exp\!\left(\frac{\log 2}{2}n-O(1)\right)
+ \le h(n)\le
+ \exp\!\left(\frac12n\log n-\frac12n+O(\log n)\right).
+\]
+The lower bound is realized by explicit extraspecial $2$-groups: for every $r\ge1$ we construct a group $E_r$ satisfying
+\[
+ \nc(E_r)=2r+1,
+ \qquad
+ \ac(E_r)=2^r+1.
+\]
+We also prove $h(1)=h(2)=1$, $h(3)=3$, and $h(4)=4$, and show that $h(n)\ge n$ for every even $n\ge4$.  Finally, invoking the quantitative centre theorem of Neumann--Pyber, one obtains the sharp order of growth
+\[
+ h(n)=2^{\Theta(n)}.
+\]
+All arguments other than the two explicitly cited centre theorems of B.~H.~Neumann and Pyber are proved in full.
+\end{abstract}
+
+\section{Definitions and statement of the result}
+
+Throughout, groups need not be finite.  Covering and chromatic numbers are understood as cardinal numbers until finiteness is proved.
+
+\begin{definition}
+Let $G$ be a group.  Its \emph{noncommuting number} is the cardinal
+\[
+ \nc(G)=\sup\bigl\{|X|:X\subseteq G\text{ and }xy\ne yx
+     \text{ for all distinct }x,y\in X\bigr\}.
+\]
+Its \emph{abelian covering number} is the least cardinal
+\[
+ \ac(G)=\min\left\{|\mathcal A|:\mathcal A\text{ is a family of abelian
+ subgroups of }G\text{ and }G=\bigcup_{A\in\mathcal A}A\right\}.
+\]
+Such a family always exists, for example the family of cyclic subgroups
+$\{\langle g\rangle:g\in G\}$.  For $n\ge1$, set
+\[
+ h(n)=\sup\{\ac(G):G\text{ a group and }\nc(G)\le n\}.
+\]
+The elementary upper bound proved below shows that this supremum is a finite
+integer; it is therefore exactly the minimal integer asked for in the problem.
+\end{definition}
+
+The hypothesis in the problem is exactly $\nc(G)\le n$: a subset with no commuting pair is precisely a pairwise noncommuting subset.
+
+Define a sequence $(U_n)_{n\ge1}$ by
+\begin{equation}\label{eq:Un-recurrence}
+ U_1=U_2=1,
+ \qquad
+ U_n=nU_{n-2}\quad(n\ge3).
+\end{equation}
+
+\begin{theorem}[Main theorem]\label{thm:main}
+The following assertions hold.
+\begin{enumerate}[label=\textup{\rm(\roman*)}]
+\item For every $n\ge3$,
+\begin{equation}\label{eq:elementary-main-bounds}
+ 2^{\lfloor (n-1)/2\rfloor}+1\le h(n)\le U_n.
+\end{equation}
+\item For $r\ge1$,
+\begin{equation}\label{eq:Un-explicit}
+ U_{2r}=2^{r-1}r!,
+ \qquad
+ U_{2r+1}=(2r+1)!!=\frac{(2r+1)!}{2^r r!}.
+\end{equation}
+Consequently,
+\begin{equation}\label{eq:elementary-asymptotic}
+ \frac{\log 2}{2}n-O(1)
+ \le \log h(n)
+ \le \frac12n\log n-\frac12n+O(\log n).
+\end{equation}
+\item For every even $n\ge4$, one also has $h(n)\ge n$.
+\item The first four values are
+\begin{equation}\label{eq:small-values}
+ h(1)=h(2)=1,
+ \qquad
+ h(3)=3,
+ \qquad
+ h(4)=4.
+\end{equation}
+\item There is an absolute constant $C>1$ such that
+\begin{equation}\label{eq:sharp-exponential}
+ h(n)\le C^n
+ \qquad(n\ge1).
+\end{equation}
+In particular,
+\[
+ h(n)=2^{\Theta(n)}.
+\]
+\end{enumerate}
+\end{theorem}
+
+Parts \textup{(i)}--\textup{(iv)} will be proved entirely from first principles.  Part \textup{(v)} will be deduced from the two external centre theorems stated explicitly in \S\ref{sec:pyber}; the reduction from their published forms to the precise form needed here is proved in full.
+
+\section{The noncommuting graph}
+
+\begin{definition}
+The \emph{noncommuting graph} $\Gamma(G)$ of a group $G$ is the simple graph with vertex set $G$ in which two distinct vertices are adjacent exactly when they do not commute.
+\end{definition}
+
+Thus $\nc(G)=\omega(\Gamma(G))$, where $\omega$ denotes clique number.
+
+\begin{proposition}\label{prop:cover-equals-chromatic}
+For every group $G$,
+\[
+ \ac(G)=\chi(\Gamma(G)),
+\]
+where either side is allowed to be infinite.
+\end{proposition}
+
+\begin{proof}
+Suppose first that
+\[
+ G=A_1\cup\cdots\cup A_k
+\]
+with each $A_i$ an abelian subgroup.  For every $g\in G$, choose one index $i(g)$ for which $g\in A_{i(g)}$, and color $g$ with color $i(g)$.  If two elements receive the same color, then they lie in one abelian subgroup and therefore commute.  Hence adjacent vertices of $\Gamma(G)$ receive different colors, so
+\[
+ \chi(\Gamma(G))\le k.
+\]
+Taking the minimum over all abelian subgroup covers gives
+\[
+ \chi(\Gamma(G))\le\ac(G).
+\]
+
+Conversely, suppose that $\Gamma(G)$ has a proper coloring with color classes $S_i$.  Every two elements of a fixed $S_i$ commute.  We claim that the subgroup $\langle S_i\rangle$ is abelian.  Indeed, every element of $\langle S_i\rangle$ is a finite product of integral powers of elements of $S_i$; since all elements of $S_i$ commute pairwise, any two such products may be reordered term by term and hence commute.  Thus $\langle S_i\rangle$ is abelian.  Since the color classes cover $G$, the subgroups $\langle S_i\rangle$ cover $G$.  Therefore
+\[
+ \ac(G)\le\chi(\Gamma(G)).
+\]
+Combining the two inequalities proves the proposition.
+\end{proof}
+
+The proposition is conceptually useful: the problem asks for a chromatic bound in terms of clique number, but only for the special class of noncommuting graphs of groups.
+
+\section{Centralizer lemmas}
+
+For $x\in G$, write
+\[
+ C_G(x)=\{g\in G:gx=xg\},
+\qquad
+ Z(G)=\bigcap_{x\in G}C_G(x).
+\]
+
+\begin{lemma}[A nonabelian group contains a noncommuting triple]\label{lem:triple}
+If $x,y\in G$ do not commute, then the three elements
+\[
+ x,\qquad y,\qquad xy
+\]
+are pairwise noncommuting.  Consequently, if $\nc(G)\le2$, then $G$ is abelian.
+\end{lemma}
+
+\begin{proof}
+By assumption, $x$ and $y$ do not commute.  If $x$ commuted with $xy$, then
+\[
+ x(xy)=(xy)x.
+\]
+Cancelling one copy of $x$ on the left gives $xy=yx$, a contradiction.  Similarly, if $y$ commuted with $xy$, then
+\[
+ y(xy)=(xy)y,
+\]
+and right cancellation of $y$ would again give $yx=xy$.  Hence the three displayed elements are pairwise noncommuting.
+
+If $G$ were nonabelian, there would be noncommuting $x,y\in G$, and the first part would give a pairwise noncommuting set of cardinality $3$.  Thus $\nc(G)\le2$ forces $G$ to be abelian.
+\end{proof}
+
+The next lemma is the key point in the elementary upper bound.  It improves the obvious loss of one unit to a loss of two units.
+
+\begin{lemma}[Centralizer drop by two]\label{lem:centralizer-drop}
+Let $G$ be a group with $\nc(G)<\infty$, and let $x\in G\setminus Z(G)$.  Then
+\[
+ \nc(C_G(x))\le \nc(G)-2.
+\]
+\end{lemma}
+
+\begin{proof}
+Set $m=\nc(G)$.  Let $T\subseteq C_G(x)$ be an arbitrary pairwise noncommuting set.  Since $x$ is not central, choose $y\in G$ such that $xy\ne yx$.
+
+For each $t\in T$, at least one of $t$ and $xt$ fails to commute with $y$.  Indeed, if both $t$ and $xt$ commuted with $y$, then both would lie in the subgroup $C_G(y)$, and hence
+\[
+ x=(xt)t^{-1}\in C_G(y),
+\]
+contrary to the choice of $y$.  Choose $\varepsilon_t\in\{0,1\}$ such that
+\[
+ u_t=x^{\varepsilon_t}t
+\]
+does not commute with $y$.
+
+We first verify that the elements $u_t$, $t\in T$, are pairwise noncommuting.  If $s,t\in T$ are distinct, then $s,t\in C_G(x)$, and therefore
+\[
+ u_su_t=x^{\varepsilon_s+\varepsilon_t}st,
+ \qquad
+ u_tu_s=x^{\varepsilon_s+\varepsilon_t}ts.
+\]
+Since $st\ne ts$, it follows that $u_su_t\ne u_tu_s$.
+
+Each $u_t$ commutes with $x$, because both $x$ and $t$ commute with $x$.  Consequently,
+\begin{align*}
+ u_t(xy)=(xy)u_t
+ &\iff xu_ty=xyu_t\\
+ &\iff u_ty=yu_t.
+\end{align*}
+The final condition is false by the choice of $u_t$.  Thus every $u_t$ fails to commute with both $y$ and $xy$.
+
+Finally, $y$ and $xy$ do not commute.  This follows either from Lemma~\ref{lem:triple}, or directly: if $y(xy)=(xy)y$, then cancellation gives $yx=xy$.
+
+It follows that
+\[
+ \{u_t:t\in T\}\cup\{y,xy\}
+\]
+is a pairwise noncommuting subset of $G$.  Therefore
+\[
+ |T|+2\le m.
+\]
+Since $T$ was arbitrary, $\nc(C_G(x))\le m-2$.
+\end{proof}
+
+\begin{lemma}[A maximal noncommuting set covers by centralizers]\label{lem:centralizer-cover}
+Let $X=\{x_1,\dots,x_m\}$ be a maximal, with respect to inclusion, pairwise noncommuting subset of a group $G$.  Then
+\[
+ G=\bigcup_{i=1}^m C_G(x_i).
+\]
+In particular, the conclusion holds when $X$ has maximum possible cardinality.
+\end{lemma}
+
+\begin{proof}
+Let $g\in G$.  If $g$ failed to commute with every $x_i$, then
+\[
+ X\cup\{g\}
+\]
+would be a strictly larger pairwise noncommuting set, contradicting the maximality of $X$.  Hence $g\in C_G(x_i)$ for at least one $i$.
+\end{proof}
+
+The following strengthening is not required for the elementary recurrence, but it identifies the centre as the common centralizer of a maximum noncommuting set.
+
+\begin{lemma}[Common centralizer of a maximum set]\label{lem:common-centralizer}
+Let $X=\{x_1,\dots,x_m\}$ be a pairwise noncommuting subset of maximum possible cardinality in $G$.  Then
+\[
+ \bigcap_{i=1}^m C_G(x_i)=Z(G).
+\]
+\end{lemma}
+
+\begin{proof}
+The inclusion
+\[
+ Z(G)\subseteq\bigcap_{i=1}^m C_G(x_i)
+\]
+is immediate.  Suppose, for a contradiction, that there exists
+\[
+ z\in\bigcap_{i=1}^m C_G(x_i)\setminus Z(G).
+\]
+Choose $y\in G$ such that $zy\ne yz$.
+
+For each $i$, at least one of $x_i$ and $zx_i$ fails to commute with $y$.  Otherwise both would lie in the subgroup $C_G(y)$, and then
+\[
+ z=(zx_i)x_i^{-1}\in C_G(y),
+\]
+a contradiction.  Choose $\varepsilon_i\in\{0,1\}$ such that
+\[
+ u_i=z^{\varepsilon_i}x_i
+\]
+does not commute with $y$.
+
+Because $z$ commutes with every $x_i$, for $i\ne j$ one has
+\[
+ u_i u_j=z^{\varepsilon_i+\varepsilon_j}x_ix_j,
+ \qquad
+ u_j u_i=z^{\varepsilon_i+\varepsilon_j}x_jx_i.
+\]
+The elements $x_i$ and $x_j$ do not commute, so neither do $u_i$ and $u_j$.  Thus
+\[
+ \{y,u_1,\dots,u_m\}
+\]
+is a pairwise noncommuting set of size $m+1$, contradicting the maximality of $|X|=m$.  Therefore the common centralizer is exactly $Z(G)$.
+\end{proof}
+
+\section{The elementary upper bound}
+
+We first record the elementary properties of the recurrence \eqref{eq:Un-recurrence}.
+
+\begin{lemma}\label{lem:Un-properties}
+The sequence $(U_n)$ is nondecreasing and satisfies, for every $r\ge1$,
+\[
+ U_{2r}=2^{r-1}r!,
+ \qquad
+ U_{2r+1}=(2r+1)!!=\frac{(2r+1)!}{2^r r!}.
+\]
+Moreover,
+\[
+ \log U_n=\frac12n\log n-\frac12n+O(\log n).
+\]
+\end{lemma}
+
+\begin{proof}
+Iterating the recurrence separately on the two parity classes gives
+\begin{align*}
+ U_{2r}
+ &= (2r)(2r-2)\cdots 4\,U_2
+  = \prod_{j=2}^r 2j
+  =2^{r-1}r!,\\
+ U_{2r+1}
+ &= (2r+1)(2r-1)\cdots 3\,U_1
+  =(2r+1)!!.
+\end{align*}
+The standard identity
+\[
+ (2r+1)!!=\frac{(2r+1)!}{2^r r!}
+\]
+follows by separating the even and odd factors in $(2r+1)!$.
+
+It remains to check monotonicity across adjacent parity classes.  Put
+\[
+ A_r=\frac{U_{2r+1}}{U_{2r}},
+ \qquad
+ B_r=\frac{U_{2r+2}}{U_{2r+1}}.
+\]
+One has $A_1=3>1$ and $B_1=4/3>1$.  Using the recurrence,
+\[
+ \frac{A_{r+1}}{A_r}=\frac{2r+3}{2r+2}>1,
+ \qquad
+ \frac{B_{r+1}}{B_r}=\frac{2r+4}{2r+3}>1.
+\]
+Thus $A_r>1$ and $B_r>1$ for every $r$, proving that $U_{n+1}\ge U_n$.
+
+Finally, the logarithmic form of Stirling's formula,
+\[
+ \log(r!)=r\log r-r+O(\log(r+1)),
+\]
+applied to the two explicit formulas above yields
+\[
+ \log U_n=\frac12n\log n-\frac12n+O(\log n).
+\]
+\end{proof}
+
+\begin{theorem}[Elementary covering theorem]\label{thm:elementary-upper}
+Let $G$ be a group with $\nc(G)=m<\infty$.  Then
+\[
+ \ac(G)\le U_m.
+\]
+Consequently, $h(n)\le U_n$ for every $n\ge1$.
+\end{theorem}
+
+\begin{proof}
+We argue by strong induction on $m$.
+
+If $m\le2$, Lemma~\ref{lem:triple} shows that $G$ is abelian.  Hence $\ac(G)=1=U_m$.
+
+Now assume that $m\ge3$ and that the assertion is known for every smaller noncommuting number.  Choose a maximum pairwise noncommuting set
+\[
+ X=\{x_1,\dots,x_m\}.
+\]
+By Lemma~\ref{lem:centralizer-cover},
+\[
+ G=\bigcup_{i=1}^m C_G(x_i).
+\]
+Every $x_i$ is noncentral, because it fails to commute with every $x_j$ for $j\ne i$.  Hence Lemma~\ref{lem:centralizer-drop} gives
+\[
+ \nc(C_G(x_i))\le m-2.
+\]
+By the induction hypothesis and the monotonicity of $U_n$,
+\[
+ \ac(C_G(x_i))
+ \le U_{\nc(C_G(x_i))}
+ \le U_{m-2}.
+\]
+Thus each of the $m$ centralizers is a union of at most $U_{m-2}$ abelian subgroups.  Taking all these subgroup covers together gives
+\[
+ \ac(G)\le mU_{m-2}=U_m.
+\]
+This completes the induction.
+
+If $\nc(G)\le n$, then monotonicity gives
+\[
+ \ac(G)\le U_{\nc(G)}\le U_n.
+\]
+Taking the supremum over such groups proves $h(n)\le U_n$.
+\end{proof}
+
+\begin{corollary}\label{cor:elementary-upper-asymptotic}
+As $n\to\infty$,
+\[
+ h(n)\le
+ \exp\!\left(\frac12n\log n-\frac12n+O(\log n)\right).
+\]
+\end{corollary}
+
+\begin{proof}
+Combine Theorem~\ref{thm:elementary-upper} with Lemma~\ref{lem:Un-properties}.
+\end{proof}
+
+\section{Symplectic linear algebra over the field of two elements}
+
+The lower-bound construction will be phrased in symplectic language.  We include all required linear algebra.
+
+\begin{definition}
+Let $W$ be a vector space over $\F_2$.  A bilinear form
+\[
+ B:W\times W\longrightarrow\F_2
+\]
+is \emph{alternating} if $B(w,w)=0$ for every $w\in W$, and is \emph{nondegenerate} if the only vector orthogonal to every vector of $W$ is $0$.
+A subspace $L\le W$ is \emph{totally isotropic} if $B(u,v)=0$ for all $u,v\in L$.
+\end{definition}
+
+For a subspace $L\le W$, write
+\[
+ L^\perp=\{w\in W:B(w,\ell)=0\text{ for every }\ell\in L\}.
+\]
+
+\begin{lemma}[Symplectic basis]\label{lem:symplectic-basis}
+Let $(W,B)$ be a finite-dimensional nondegenerate alternating space over $\F_2$.  Then $\dim W$ is even, say $\dim W=2r$, and there exists a basis
+\[
+ e_1,\dots,e_r,f_1,\dots,f_r
+\]
+such that
+\[
+ B(e_i,e_j)=B(f_i,f_j)=0,
+ \qquad
+ B(e_i,f_j)=\delta_{ij}.
+\]
+Consequently, any two nondegenerate alternating spaces over $\F_2$ of the same finite dimension are isometric.
+\end{lemma}
+
+\begin{proof}
+We use induction on $\dim W$.  The zero-dimensional case is immediate.  Suppose $W\ne0$, and choose $e_1\ne0$.  Nondegeneracy gives $f_1\in W$ with $B(e_1,f_1)=1$.  Let
+\[
+ H=\Span\{e_1,f_1\}.
+\]
+The restriction of $B$ to $H$ is nondegenerate.  Indeed, if $ae_1+bf_1$ is orthogonal to both $e_1$ and $f_1$, then
+\[
+ 0=B(ae_1+bf_1,e_1)=bB(f_1,e_1)=b,
+\]
+and
+\[
+ 0=B(ae_1+bf_1,f_1)=aB(e_1,f_1)=a.
+\]
+Here $B(f_1,e_1)=B(e_1,f_1)=1$, because in characteristic $2$ an alternating bilinear form is symmetric: from
+\[
+ 0=B(u+v,u+v)=B(u,v)+B(v,u)
+\]
+one obtains $B(u,v)=B(v,u)$.
+
+The linear map
+\[
+ W\longrightarrow H^*,
+ \qquad
+ w\longmapsto\bigl(h\mapsto B(w,h)\bigr),
+\]
+is surjective because its restriction to $H$ is an isomorphism.  Therefore $\dim H^\perp=\dim W-2$.  Since $H\cap H^\perp=\{0\}$, one has
+\[
+ W=H\oplus H^\perp.
+\]
+The restriction of $B$ to $H^\perp$ is nondegenerate: if $w\in H^\perp$ is orthogonal to all of $H^\perp$, then it is orthogonal to both summands in the displayed direct sum, hence to all of $W$, so $w=0$.
+
+The induction hypothesis applied to $H^\perp$ supplies the remaining pairs $e_i,f_i$.  This proves both the existence of a symplectic basis and the evenness of $\dim W$.
+
+Finally, a linear map taking one symplectic basis to another preserves all pairings of basis vectors, and hence, by bilinearity, preserves the form on the whole space.  Thus spaces of the same dimension are isometric.
+\end{proof}
+
+\begin{lemma}[Dimension of an isotropic subspace]\label{lem:isotropic-dimension}
+Let $(W,B)$ be a $2r$-dimensional nondegenerate alternating space over $\F_2$.  If $L\le W$ is totally isotropic, then
+\[
+ \dim L\le r.
+\]
+\end{lemma}
+
+\begin{proof}
+The linear map
+\[
+ \Phi:W\longrightarrow L^*,
+ \qquad
+ \Phi(w)(\ell)=B(w,\ell),
+\]
+is surjective.  To see this, choose a basis of $L$ and extend it to a basis of $W$; equivalently, use nondegeneracy to identify $W$ with $W^*$ and then restrict linear functionals from $W$ to $L$.  Its kernel is exactly $L^\perp$.  Rank--nullity therefore gives
+\[
+ \dim L^\perp=2r-\dim L.
+\]
+Since $L$ is totally isotropic, $L\subseteq L^\perp$.  Hence
+\[
+ \dim L\le\dim L^\perp=2r-\dim L,
+\]
+which is equivalent to $\dim L\le r$.
+\end{proof}
+
+\begin{lemma}[Rank of the off-diagonal all-ones matrix]\label{lem:matrix-rank}
+Let $M_k$ be the $k\times k$ matrix over $\F_2$ whose diagonal entries are $0$ and whose off-diagonal entries are $1$.  Then
+\[
+ \rank M_k=
+ \begin{cases}
+ k,&k\text{ even},\\
+ k-1,&k\text{ odd}.
+ \end{cases}
+\]
+\end{lemma}
+
+\begin{proof}
+Let $\mathbf{1}=(1,\dots,1)^T$, and for $u=(u_1,\dots,u_k)^T$ put
+\[
+ s=\sum_{i=1}^k u_i\in\F_2.
+\]
+Since $M_k=I_k+J_k$, where $J_k$ is the all-ones matrix,
+\[
+ M_ku=u+s\mathbf{1}.
+\]
+Thus $M_ku=0$ if and only if $u=s\mathbf{1}$.  Consistency with the definition of $s$ requires
+\[
+ s=\sum_{i=1}^k s=ks
+\]
+in $\F_2$.  If $k$ is even, this forces $s=0$, so the kernel is trivial and the rank is $k$.  If $k$ is odd, both $s=0$ and $s=1$ are possible, and the kernel is precisely $\Span\{\mathbf{1}\}$; hence the rank is $k-1$.
+\end{proof}
+
+\section{An explicit family giving the exponential lower bound}
+
+Fix $r\ge1$.  Put
+\[
+ V=\F_2^r\oplus\F_2^r.
+\]
+For $a,b,c,d\in\F_2^r$, define
+\begin{equation}\label{eq:standard-symplectic-form}
+ B((a,b),(c,d))=a\cdot d+b\cdot c,
+\end{equation}
+where $\cdot$ denotes the usual dot product over $\F_2$.
+The form $B$ is alternating, because
+\[
+ B((a,b),(a,b))=a\cdot b+b\cdot a=0,
+\]
+and nondegenerate, because orthogonality to all $(0,d)$ forces $a=0$, while orthogonality to all $(c,0)$ forces $b=0$.
+
+\subsection{The group and its commutation law}
+
+Let
+\[
+ E_r=V\times\F_2.
+\]
+Write elements as triples $(a,b,\varepsilon)$ with $a,b\in\F_2^r$ and $\varepsilon\in\F_2$, and define multiplication by
+\begin{equation}\label{eq:Er-multiplication}
+ (a,b,\varepsilon)(c,d,\eta)
+ =
+ (a+c,\ b+d,\ \varepsilon+\eta+a\cdot d).
+\end{equation}
+
+\begin{proposition}\label{prop:Er-group}
+The operation \eqref{eq:Er-multiplication} makes $E_r$ a group of order $2^{2r+1}$.  The map
+\[
+ \pi:E_r\longrightarrow V,
+ \qquad
+ \pi(a,b,\varepsilon)=(a,b),
+\]
+is a surjective homomorphism, and
+\[
+ Z(E_r)=\ker\pi=\{(0,0,\varepsilon):\varepsilon\in\F_2\}.
+\]
+Moreover, for $g,h\in E_r$,
+\begin{equation}\label{eq:commutation-criterion}
+ gh=hg
+ \quad\Longleftrightarrow\quad
+ B(\pi(g),\pi(h))=0.
+\end{equation}
+\end{proposition}
+
+\begin{proof}
+Let $u=(a,b)$, $v=(c,d)$, and $w=(e,f)$ in $V$, and set
+\[
+ \kappa(u,v)=a\cdot d.
+\]
+Bilinearity gives the cocycle identity
+\begin{align*}
+ \kappa(u,v)+\kappa(u+v,w)
+ &=a\cdot d+(a+c)\cdot f\\
+ &=a\cdot d+a\cdot f+c\cdot f\\
+ &=c\cdot f+a\cdot(d+f)\\
+ &=\kappa(v,w)+\kappa(u,v+w).
+\end{align*}
+This identity is exactly the equality of the third coordinates in
+\[
+ ((u,\varepsilon)(v,\eta))(w,\theta)
+ \quad\text{and}\quad
+ (u,\varepsilon)((v,\eta)(w,\theta)),
+\]
+so the multiplication is associative.
+
+The element $(0,0,0)$ is an identity.  A direct calculation shows that
+\[
+ (a,b,\varepsilon)^{-1}=(a,b,\varepsilon+a\cdot b),
+\]
+because all vector coordinates are in characteristic $2$.  Thus $E_r$ is a group.  Its underlying set has $2^r\cdot2^r\cdot2=2^{2r+1}$ elements.
+
+The formula \eqref{eq:Er-multiplication} immediately shows that $\pi$ is a surjective homomorphism and that $\ker\pi$ is central.  For
+\[
+ g=(a,b,\varepsilon),
+ \qquad
+ h=(c,d,\eta),
+\]
+the first two coordinates of $gh$ and $hg$ agree, while their third coordinates are respectively
+\[
+ \varepsilon+\eta+a\cdot d
+ \quad\text{and}\quad
+ \varepsilon+\eta+c\cdot b.
+\]
+Hence
+\[
+ gh=hg
+ \iff a\cdot d+c\cdot b=0
+ \iff B((a,b),(c,d))=0,
+\]
+which proves \eqref{eq:commutation-criterion}.
+
+If $g\notin\ker\pi$, then $\pi(g)\ne0$.  By nondegeneracy of $B$, there exists $v\in V$ such that $B(\pi(g),v)=1$.  Any lift $h\in E_r$ of $v$ fails to commute with $g$ by \eqref{eq:commutation-criterion}.  Therefore no element outside $\ker\pi$ is central, and $Z(E_r)=\ker\pi$.
+\end{proof}
+
+\subsection{The exact noncommuting number}
+
+\begin{theorem}\label{thm:Er-clique}
+For every $r\ge1$,
+\[
+ \nc(E_r)=2r+1.
+\]
+\end{theorem}
+
+\begin{proof}
+We first prove the upper bound.  Let
+\[
+ g_1,\dots,g_k\in E_r
+\]
+be pairwise noncommuting, and put $v_i=\pi(g_i)\in V$.  By \eqref{eq:commutation-criterion},
+\[
+ B(v_i,v_j)=1
+ \qquad(i\ne j).
+\]
+In particular, the $v_i$ are distinct: if $v_i=v_j$, then $B(v_i,v_j)=B(v_i,v_i)=0$.
+
+Choose a basis of $V$, let $S$ be the matrix of $B$ in that basis, and let $A$ be the $2r\times k$ matrix whose $i$th column is the coordinate vector of $v_i$.  The Gram matrix of $v_1,\dots,v_k$ is
+\[
+ A^TSA=M_k,
+\]
+where $M_k$ is the matrix from Lemma~\ref{lem:matrix-rank}.  Therefore
+\[
+ \rank M_k=\rank(A^TSA)\le\rank S=2r.
+\]
+If $k$ is even, Lemma~\ref{lem:matrix-rank} gives $k\le2r$.  If $k$ is odd, it gives $k-1\le2r$, and hence $k\le2r+1$.  Thus in all cases
+\[
+ k\le2r+1.
+\]
+
+For the matching lower bound, consider
+\[
+ W=\left\{u=(u_1,\dots,u_{2r+1})\in\F_2^{2r+1}:
+            \sum_{i=1}^{2r+1}u_i=0\right\}
+\]
+with the ordinary dot product.  The space $W$ has dimension $2r$.  The restricted dot product is alternating, since for $u\in W$,
+\[
+ u\cdot u=\sum_i u_i^2=\sum_i u_i=0.
+\]
+It is nondegenerate.  Indeed, in the ambient space the orthogonal complement of $W$ is the one-dimensional subspace generated by
+\[
+ \mathbf{1}=(1,\dots,1),
+\]
+because $W=\mathbf{1}^\perp$.  Since $2r+1$ is odd,
+\[
+ \sum_{i=1}^{2r+1}1=1\quad\text{in }\F_2,
+\]
+so $\mathbf{1}\notin W$.  Hence
+\[
+ W\cap W^\perp=\{0\},
+\]
+which is exactly nondegeneracy of the restricted form.
+
+For $1\le i\le2r+1$, let
+\[
+ w_i=\mathbf{1}+e_i,
+\]
+where $e_i$ is the $i$th standard basis vector.  The vector $w_i$ has exactly $2r$ nonzero coordinates, so $w_i\in W$.  If $i\ne j$, then $w_i$ and $w_j$ are simultaneously nonzero in exactly
+\[
+ (2r+1)-2=2r-1
+\]
+coordinates.  Therefore
+\[
+ w_i\cdot w_j=1\quad\text{in }\F_2.
+\]
+
+By Lemma~\ref{lem:symplectic-basis}, the nondegenerate alternating space $W$ is isometric to $(V,B)$.  Transporting the vectors $w_i$ through an isometry gives vectors
+\[
+ v_1,\dots,v_{2r+1}\in V
+\]
+with $B(v_i,v_j)=1$ for $i\ne j$.  Choosing arbitrary lifts $g_i\in E_r$ of the $v_i$, criterion \eqref{eq:commutation-criterion} shows that the $g_i$ are pairwise noncommuting.  Hence
+\[
+ \nc(E_r)\ge2r+1.
+\]
+Together with the upper bound, this proves equality.
+\end{proof}
+
+\subsection{A symplectic spread}
+
+To determine $\ac(E_r)$ exactly, we need a partition of the nonzero vectors of $V$ into maximal totally isotropic subspaces.
+
+\begin{lemma}[Existence of $\F_{2^r}$]\label{lem:finite-field}
+For every $r\ge1$, there exists a field $F$ with exactly $2^r$ elements.  As a vector space over $\F_2$, it has dimension $r$.
+\end{lemma}
+
+\begin{proof}
+Let $q=2^r$, and let $K$ be a splitting field over $\F_2$ of
+\[
+ P(X)=X^q-X.
+\]
+Its derivative is
+\[
+ P'(X)=qX^{q-1}-1=1
+\]
+in characteristic $2$, so $P$ has no repeated roots.  Since $P$ splits in $K$ and has degree $q$, its root set
+\[
+ F=\{x\in K:x^q=x\}
+\]
+has exactly $q$ elements.
+
+The set $F$ is a field.  It contains $0$ and $1$.  If $x,y\in F$, then repeated use of the Frobenius identity $(a+b)^2=a^2+b^2$ gives
+\[
+ (x+y)^q=x^q+y^q=x+y,
+\]
+so $x+y\in F$.  Also
+\[
+ (xy)^q=x^qy^q=xy,
+\]
+so $xy\in F$.  If $x\in F$ is nonzero, then $x^{q-1}=1$, and therefore
+\[
+ (x^{-1})^q=(x^q)^{-1}=x^{-1};
+\]
+hence $x^{-1}\in F$.  Thus $F$ is a field with $q=2^r$ elements.
+
+If $d=[F:\F_2]$, then $F$ has $2^d$ elements as a $d$-dimensional vector space over $\F_2$.  Therefore $2^d=2^r$, so $d=r$.
+\end{proof}
+
+\begin{proposition}[Symplectic spread]\label{prop:symplectic-spread}
+Every $2r$-dimensional nondegenerate alternating space over $\F_2$ possesses $2^r+1$ totally isotropic $r$-dimensional subspaces whose pairwise intersections are $\{0\}$ and whose union is the whole space.
+\end{proposition}
+
+\begin{proof}
+Let $F=\F_{2^r}$, whose existence is supplied by Lemma~\ref{lem:finite-field}.  Choose a nonzero $\F_2$-linear functional
+\[
+ \lambda:F\longrightarrow\F_2.
+\]
+On the $2r$-dimensional $\F_2$-vector space $F^2$, define
+\[
+ \beta((x,y),(x',y'))=\lambda(xy'+x'y).
+\]
+This form is bilinear and alternating.  It is nondegenerate: if $(x,y)\ne(0,0)$ and $x\ne0$, choose $z\in F$ with $\lambda(z)=1$ and take $(x',y')=(0,x^{-1}z)$; then
+\[
+ \beta((x,y),(x',y'))=1.
+\]
+If $x=0$, then $y\ne0$, and taking $(x',y')=(y^{-1}z,0)$ gives the same conclusion.
+
+For each $t\in F$, define
+\[
+ L_t=\{(u,tu):u\in F\},
+\]
+and define
+\[
+ L_\infty=\{(0,u):u\in F\}.
+\]
+Each $L_t$ and $L_\infty$ has dimension $r$ over $\F_2$.  Moreover, for $u,v\in F$,
+\[
+ \beta((u,tu),(v,tv))
+ =\lambda(utv+vtu)=\lambda(0)=0,
+\]
+so $L_t$ is totally isotropic; $L_\infty$ is visibly totally isotropic as well.
+
+If $s\ne t$, then a vector in $L_s\cap L_t$ satisfies
+\[
+ (u,su)=(u,tu),
+\]
+so $(s-t)u=0$.  Since $F$ is a field and $s-t\ne0$, this forces $u=0$.  Thus $L_s\cap L_t=\{0\}$.  Similarly, $L_t\cap L_\infty=\{0\}$.
+
+Finally, every nonzero $(x,y)\in F^2$ belongs to one of these subspaces.  If $x=0$, it lies in $L_\infty$.  If $x\ne0$, then
+\[
+ (x,y)=(x,tx)
+ \quad\text{with}\quad
+ t=yx^{-1},
+\]
+so it lies in $L_t$.  The preceding intersection calculation also shows uniqueness.
+
+Thus the $2^r+1$ subspaces
+\[
+ \{L_t:t\in F\}\cup\{L_\infty\}
+\]
+partition the nonzero vectors of $F^2$.  By Lemma~\ref{lem:symplectic-basis}, any given $2r$-dimensional nondegenerate alternating space is isometric to $(F^2,\beta)$; transporting the displayed family through an isometry proves the proposition.
+\end{proof}
+
+\subsection{The exact abelian covering number}
+
+\begin{theorem}\label{thm:Er-cover}
+For every $r\ge1$,
+\[
+ \ac(E_r)=2^r+1.
+\]
+\end{theorem}
+
+\begin{proof}
+We first establish the lower bound.  Let $A\le E_r$ be abelian.  Since $\pi$ is a homomorphism, $\pi(A)$ is a linear subspace of $V$.  If $u,v\in\pi(A)$, choose $g,h\in A$ with $\pi(g)=u$ and $\pi(h)=v$.  Since $A$ is abelian, $gh=hg$, and criterion \eqref{eq:commutation-criterion} gives
+\[
+ B(u,v)=0.
+\]
+Thus $\pi(A)$ is totally isotropic.  By Lemma~\ref{lem:isotropic-dimension},
+\[
+ \dim\pi(A)\le r,
+\]
+and consequently
+\[
+ |\pi(A)\setminus\{0\}|\le2^r-1.
+\]
+
+Suppose now that
+\[
+ E_r=A_1\cup\cdots\cup A_k
+\]
+with each $A_i$ abelian.  Then the subspaces $\pi(A_i)$ cover $V$: for each $v\in V$, the element $(v,0)\in E_r$ lies in some $A_i$, so $v\in\pi(A_i)$.  Counting nonzero vectors gives
+\[
+ 2^{2r}-1
+ =|V\setminus\{0\}|
+ \le\sum_{i=1}^k|\pi(A_i)\setminus\{0\}|
+ \le k(2^r-1).
+\]
+Therefore
+\[
+ k\ge\frac{2^{2r}-1}{2^r-1}=2^r+1.
+\]
+Hence $\ac(E_r)\ge2^r+1$.
+
+For the reverse inequality, take a symplectic spread
+\[
+ \mathcal{L}=\{L_1,\dots,L_{2^r+1}\}
+\]
+of $V$ supplied by Proposition~\ref{prop:symplectic-spread}.  For every $L\in\mathcal{L}$, the full inverse image
+\[
+ A_L=\pi^{-1}(L)
+\]
+is a subgroup of $E_r$.  It is abelian, because for $g,h\in A_L$ one has $\pi(g),\pi(h)\in L$, and total isotropy gives
+\[
+ B(\pi(g),\pi(h))=0;
+\]
+criterion \eqref{eq:commutation-criterion} then yields $gh=hg$.
+
+Since the members of $\mathcal{L}$ cover $V$, their inverse images cover $E_r$.  Thus $E_r$ is covered by $2^r+1$ abelian subgroups, and
+\[
+ \ac(E_r)\le2^r+1.
+\]
+Together with the lower bound, this proves equality.
+\end{proof}
+
+\begin{corollary}[Exponential lower bound]\label{cor:exponential-lower}
+For every $n\ge3$,
+\[
+ h(n)\ge2^{\lfloor(n-1)/2\rfloor}+1.
+\]
+Consequently,
+\[
+ \log h(n)\ge\frac{\log2}{2}n-O(1).
+\]
+\end{corollary}
+
+\begin{proof}
+Set
+\[
+ r=\left\lfloor\frac{n-1}{2}\right\rfloor.
+\]
+Then $r\ge1$ and
+\[
+ \nc(E_r)=2r+1\le n
+\]
+by Theorem~\ref{thm:Er-clique}.  Therefore the definition of $h(n)$ and Theorem~\ref{thm:Er-cover} give
+\[
+ h(n)\ge\ac(E_r)=2^r+1.
+\]
+Since
+\[
+ \left\lfloor\frac{n-1}{2}\right\rfloor\ge\frac n2-1,
+\]
+the logarithmic estimate follows.
+\end{proof}
+
+Combining Corollaries~\ref{cor:elementary-upper-asymptotic} and~\ref{cor:exponential-lower} proves the completely elementary estimate \eqref{eq:elementary-asymptotic}.
+
+\section{A dihedral lower bound for even parameters}
+
+The symplectic construction is asymptotically stronger, but a dihedral family gives the useful exact lower bound $h(n)\ge n$ for every even $n\ge4$.
+
+\begin{proposition}\label{prop:dihedral}
+Let $q\ge3$ be odd, and let
+\[
+ D_{2q}=\langle r,t:r^q=t^2=1,\ trt=r^{-1}\rangle
+\]
+be the dihedral group of order $2q$.  Then
+\[
+ \nc(D_{2q})=q+1,
+ \qquad
+ \ac(D_{2q})=q+1.
+\]
+\end{proposition}
+
+\begin{proof}
+Every element of $D_{2q}$ has a unique form $r^i$ or $r^it$, with $i\in\Z/q\Z$.  The $q$ elements $r^it$ are the reflections.  For $i,j\in\Z/q\Z$,
+\[
+ (r^it)(r^jt)=r^{i-j},
+ \qquad
+ (r^jt)(r^it)=r^{j-i}.
+\]
+Thus two reflections commute exactly when
+\[
+ r^{2(i-j)}=1.
+\]
+Since $q$ is odd, multiplication by $2$ is invertible modulo $q$, so this condition forces $i=j$.  Hence distinct reflections are pairwise noncommuting.
+
+Let $r^k$ be a rotation and $r^it$ a reflection.  Then
+\[
+ r^k(r^it)=r^{k+i}t,
+ \qquad
+ (r^it)r^k=r^{i-k}t.
+\]
+They commute exactly when $r^{2k}=1$, which, again because $q$ is odd, forces $k=0$.  Therefore every nonidentity rotation fails to commute with every reflection.
+
+It follows that the $q$ reflections together with one nonidentity rotation form a pairwise noncommuting set of size $q+1$.  Conversely, a pairwise noncommuting set can contain at most one rotation, because all rotations lie in the cyclic subgroup $\langle r\rangle$ and commute with one another; it can contain at most all $q$ reflections.  Hence
+\[
+ \nc(D_{2q})=q+1.
+\]
+
+For the covering number, an abelian subgroup contains at most one reflection, since distinct reflections do not commute.  Moreover, an abelian subgroup containing a reflection contains no nonidentity rotation, because no such rotation commutes with a reflection.  Thus covering all $q$ reflections requires at least $q$ abelian subgroups, and none of those subgroups covers a nonidentity rotation.  At least one further abelian subgroup is therefore needed, so
+\[
+ \ac(D_{2q})\ge q+1.
+\]
+On the other hand,
+\[
+ D_{2q}=\langle r\rangle\cup\bigcup_{i\in\Z/q\Z}\langle r^it\rangle,
+\]
+a union of one cyclic rotation subgroup and $q$ cyclic reflection subgroups.  Hence $\ac(D_{2q})\le q+1$, proving equality.
+\end{proof}
+
+\begin{corollary}\label{cor:even-lower}
+If $n\ge4$ is even, then $h(n)\ge n$.
+\end{corollary}
+
+\begin{proof}
+Put $q=n-1$.  Then $q\ge3$ is odd, and Proposition~\ref{prop:dihedral} gives
+\[
+ \nc(D_{2q})=q+1=n,
+ \qquad
+ \ac(D_{2q})=q+1=n.
+\]
+The definition of $h(n)$ therefore yields $h(n)\ge n$.
+\end{proof}
+
+\section{The exact values for the first four parameters}
+
+\begin{theorem}\label{thm:small-values}
+One has
+\[
+ h(1)=h(2)=1,
+ \qquad
+ h(3)=3,
+ \qquad
+ h(4)=4.
+\]
+\end{theorem}
+
+\begin{proof}
+If $\nc(G)\le2$, Lemma~\ref{lem:triple} shows that $G$ is abelian.  Hence
+\[
+ h(1)=h(2)=1.
+\]
+
+For $n=3$, Theorem~\ref{thm:elementary-upper} gives
+\[
+ h(3)\le U_3=3.
+\]
+Taking $r=1$ in Theorems~\ref{thm:Er-clique} and~\ref{thm:Er-cover} gives a group $E_1$ with
+\[
+ \nc(E_1)=3,
+ \qquad
+ \ac(E_1)=3.
+\]
+Thus $h(3)\ge3$, and therefore $h(3)=3$.
+
+For $n=4$, Theorem~\ref{thm:elementary-upper} gives
+\[
+ h(4)\le U_4=4.
+\]
+Taking $q=3$ in Proposition~\ref{prop:dihedral} gives the dihedral group $D_6\cong S_3$ with
+\[
+ \nc(D_6)=4,
+ \qquad
+ \ac(D_6)=4.
+\]
+Thus $h(4)\ge4$, and hence $h(4)=4$.
+\end{proof}
+
+\section{The sharp exponential order}\label{sec:pyber}
+
+The elementary recurrence proves finiteness and gives an explicit
+superexponential upper bound.  To obtain the correct exponential order, we
+use two established group-theoretic results.  They are the only external
+structural inputs in this manuscript.
+
+\begin{theorem}[B.~H.~Neumann]\label{thm:neumann}
+If a group $G$ satisfies $\nc(G)<\infty$, then
+\[
+ [G:Z(G)]<\infty.
+\]
+\end{theorem}
+
+\begin{theorem}[Pyber, finite form]\label{thm:pyber-finite}
+There exists an absolute constant $C>1$ such that every finite group $Q$
+satisfies
+\[
+ [Q:Z(Q)]\le C^{\nc(Q)}.
+\]
+\end{theorem}
+
+Theorem~\ref{thm:neumann} is due to B.~H.~Neumann, while
+Theorem~\ref{thm:pyber-finite} is Pyber's quantitative strengthening in the
+finite case; see \cite{Neumann,Pyber}.  We next give all details needed to
+pass from these statements to arbitrary groups.
+
+\begin{lemma}[Schreier's finite-generation lemma]\label{lem:schreier}
+If $H$ is a finitely generated group and $K\le H$ has finite index, then
+$K$ is finitely generated.
+\end{lemma}
+
+\begin{proof}
+Let $S$ be a finite symmetric generating set for $H$, and choose a finite
+right transversal $T$ for $K$ in $H$ with $1\in T$.  For $h\in H$, let
+$\overline h\in T$ be the unique representative satisfying
+\[
+ Kh=K\overline h.
+\]
+For $t\in T$ and $s\in S$, define the Schreier element
+\[
+ \sigma(t,s)=ts\,\overline{ts}^{-1}\in K.
+\]
+There are only finitely many such elements.
+
+Let $k\in K$, and write
+\[
+ k=s_1s_2\cdots s_m
+ \qquad(s_j\in S).
+\]
+Put
+\[
+ t_j=\overline{s_1s_2\cdots s_j}
+ \quad(0\le j\le m),
+\]
+where $t_0=1$.  Since $k\in K$, one also has $t_m=1$.  A telescoping
+multiplication gives
+\begin{align*}
+ k
+ &= (t_0s_1t_1^{-1})(t_1s_2t_2^{-1})\cdots
+    (t_{m-1}s_mt_m^{-1})\\
+ &=\sigma(t_0,s_1)\sigma(t_1,s_2)\cdots\sigma(t_{m-1},s_m).
+\end{align*}
+Thus the finite set of Schreier elements generates $K$.
+\end{proof}
+
+\begin{lemma}[Separating finitely many elements in a finitely generated
+abelian group]\label{lem:fg-abelian-separation}
+Let $A$ be a finitely generated abelian group, and let
+$S\subseteq A\setminus\{1\}$ be finite.  There exists a finite-index subgroup
+$N\le A$ such that
+\[
+ N\cap S=\varnothing.
+\]
+\end{lemma}
+
+\begin{proof}
+By the structure theorem for finitely generated abelian groups,
+\[
+ A\cong\Z^d\oplus T
+\]
+for some finite abelian group $T$.  Fix $s\in S$.  If the $T$-component of
+$s$ is nontrivial, projection to $T$ is a homomorphism to a finite group that
+does not annihilate $s$.  Otherwise, some coordinate of the $\Z^d$-component
+of $s$ is a nonzero integer $a$.  Choose a prime $p$ not dividing $a$ and
+compose the corresponding coordinate projection with reduction modulo $p$;
+again this is a homomorphism to a finite group that does not annihilate $s$.
+
+Thus, for every $s\in S$, there is a homomorphism
+\[
+ \varphi_s:A\longrightarrow F_s
+\]
+to a finite group such that $\varphi_s(s)\ne1$.  Set
+\[
+ N=\bigcap_{s\in S}\ker\varphi_s.
+\]
+This is a finite-index subgroup of $A$, because it is the kernel of the map
+from $A$ to the finite direct product $\prod_{s\in S}F_s$.  By construction,
+no member of $S$ belongs to $N$.
+\end{proof}
+
+\begin{lemma}[Reduction to a finite group]\label{lem:finite-reduction}
+Let $G$ be a group for which $[G:Z(G)]<\infty$.  Then there exists a finite
+group $Q$ such that
+\[
+ [Q:Z(Q)]=[G:Z(G)]
+ \qquad\text{and}\qquad
+ \nc(Q)\le\nc(G).
+\]
+\end{lemma}
+
+\begin{proof}
+Choose finitely many elements $g_1,\dots,g_d\in G$ whose cosets generate the
+finite quotient $G/Z(G)$, and put
+\[
+ H=\langle g_1,\dots,g_d\rangle.
+\]
+Then
+\[
+ G=HZ(G).
+\]
+We claim that
+\begin{equation}\label{eq:center-H}
+ Z(H)=H\cap Z(G).
+\end{equation}
+The inclusion from right to left is immediate.  Conversely, if $z\in Z(H)$,
+then $z$ commutes with $H$ and also with $Z(G)$.  Since $G=HZ(G)$, it follows
+that $z$ commutes with all of $G$, so $z\in Z(G)$.  This proves
+\eqref{eq:center-H}.  Consequently,
+\begin{equation}\label{eq:index-H}
+ [H:Z(H)]=[G:Z(G)]<\infty.
+\end{equation}
+
+The group $H$ is finitely generated, and $Z(H)$ has finite index in $H$.
+Lemma~\ref{lem:schreier} therefore shows that the abelian group $Z(H)$ is
+finitely generated.
+
+Choose a complete set $R$ of representatives for the nonidentity cosets of
+$Z(H)$ in $H$.  For each $t\in R$, choose $y_t\in H$ such that
+\[
+ c_t=[t,y_t]\ne1;
+\]
+such a choice is possible because $t\notin Z(H)$.  Let
+\[
+ S=\{c_t:t\in R\text{ and }c_t\in Z(H)\}.
+\]
+This is a finite subset of $Z(H)\setminus\{1\}$.  By
+Lemma~\ref{lem:fg-abelian-separation}, there is a finite-index subgroup
+$N\le Z(H)$ such that $N\cap S=\varnothing$.  Since $N$ is central in $H$, it
+is normal in $H$.
+
+Set
+\[
+ Q=H/N.
+\]
+The group $Q$ is finite, because both $[H:Z(H)]$ and $[Z(H):N]$ are finite.
+We claim that
+\begin{equation}\label{eq:center-quotient}
+ Z(Q)=Z(H)/N.
+\end{equation}
+Certainly $Z(H)/N\le Z(Q)$.  For the reverse inclusion, suppose that $xN$ is
+central in $Q$.  Write
+\[
+ x=tz
+\]
+with $z\in Z(H)$ and with either $t=1$ or $t\in R$.  If $t\in R$, then
+\[
+ [x,y_t]=[tz,y_t]=[t,y_t]=c_t,
+\]
+because $z$ is central.  Since $xN$ is central in $Q$, this commutator must
+belong to $N$.  If $c_t\notin Z(H)$, that is impossible because
+$N\le Z(H)$.  If $c_t\in Z(H)$, it is impossible because $c_t\in S$ and
+$N\cap S=\varnothing$.  Hence $t=1$, so $x\in Z(H)$.  This proves
+\eqref{eq:center-quotient}.
+
+Equations \eqref{eq:index-H} and \eqref{eq:center-quotient} give
+\[
+ [Q:Z(Q)]
+ =[H/N:Z(H)/N]
+ =[H:Z(H)]
+ =[G:Z(G)].
+\]
+Finally, if elements of $Q$ are pairwise noncommuting, then arbitrary lifts
+to $H$ are pairwise noncommuting: commuting lifts would have commuting images.
+Therefore
+\[
+ \nc(Q)\le\nc(H)\le\nc(G).
+\]
+\end{proof}
+
+\begin{corollary}[Quantitative centre theorem in the required form]
+\label{cor:neumann-pyber}
+There exists an absolute constant $C>1$ such that every group $G$ with
+$\nc(G)<\infty$ satisfies
+\[
+ [G:Z(G)]\le C^{\nc(G)}.
+\]
+\end{corollary}
+
+\begin{proof}
+By Theorem~\ref{thm:neumann}, $[G:Z(G)]$ is finite.  Apply
+Lemma~\ref{lem:finite-reduction} to obtain a finite group $Q$ with
+\[
+ [Q:Z(Q)]=[G:Z(G)]
+ \quad\text{and}\quad
+ \nc(Q)\le\nc(G).
+\]
+Theorem~\ref{thm:pyber-finite} then gives
+\[
+ [G:Z(G)]
+ =[Q:Z(Q)]
+ \le C^{\nc(Q)}
+ \le C^{\nc(G)}.
+\]
+\end{proof}
+
+\begin{lemma}\label{lem:center-coset-cover}
+If $[G:Z(G)]<\infty$, then
+\[
+ \ac(G)\le [G:Z(G)].
+\]
+\end{lemma}
+
+\begin{proof}
+Choose one representative $g$ from each coset of $Z(G)$ in $G$.  For such a
+representative, define
+\[
+ A_g=\langle g,Z(G)\rangle.
+\]
+The subgroup $A_g$ is abelian: every element of it has the form $g^kz$ with
+$k\in\Z$ and $z\in Z(G)$, and for any $k,\ell\in\Z$ and $z,w\in Z(G)$,
+\[
+ (g^kz)(g^\ell w)=g^{k+\ell}zw=g^{k+\ell}wz=(g^\ell w)(g^kz).
+\]
+Moreover, $A_g$ contains the entire coset $gZ(G)$.  Since the cosets of
+$Z(G)$ cover $G$, the corresponding subgroups $A_g$ cover $G$.  Their number
+is exactly $[G:Z(G)]$.
+\end{proof}
+
+\begin{theorem}\label{thm:exponential-order}
+There exists an absolute constant $C>1$ such that
+\[
+ h(n)\le C^n
+\]
+for every $n\ge1$.  Combined with
+Corollary~\ref{cor:exponential-lower}, this gives
+\[
+ h(n)=2^{\Theta(n)}.
+\]
+\end{theorem}
+
+\begin{proof}
+Let $G$ satisfy $\nc(G)\le n$.  By
+Corollary~\ref{cor:neumann-pyber},
+\[
+ [G:Z(G)]\le C^{\nc(G)}\le C^n.
+\]
+Lemma~\ref{lem:center-coset-cover} therefore gives
+\[
+ \ac(G)\le C^n.
+\]
+Taking the supremum over all such groups yields $h(n)\le C^n$.
+
+On the other hand, Corollary~\ref{cor:exponential-lower} gives, for $n\ge3$,
+\[
+ h(n)\ge2^{\lfloor(n-1)/2\rfloor}+1\ge2^{n/2-1}.
+\]
+Thus there are positive absolute constants $c_1,c_2$ such that
+\[
+ e^{c_1n}\le h(n)\le e^{c_2n}
+\]
+for all sufficiently large $n$, which is precisely $h(n)=2^{\Theta(n)}$.
+\end{proof}
+
+\section{Conclusion}
+
+The problem has a finite answer for every $n$.  The fully explicit elementary bounds are
+\[
+ 2^{\lfloor(n-1)/2\rfloor}+1
+ \le h(n)
+ \le
+ \begin{cases}
+ 2^{r-1}r!,&n=2r,\\[2mm]
+ (2r+1)!!,&n=2r+1,
+ \end{cases}
+ \qquad(n\ge3).
+\]
+In logarithmic form,
+\[
+ \frac{\log2}{2}n-O(1)
+ \le\log h(n)
+ \le\frac12n\log n-\frac12n+O(\log n).
+\]
+The quantitative centre theorem improves the upper bound to $C^n$, and hence the correct order of growth is exponential:
+\[
+ \boxed{h(n)=2^{\Theta(n)}}.
+\]
+The explicit symplectic family $E_r$ shows that no subexponential upper bound is possible.
+
+\begin{thebibliography}{9}
+
+\bibitem{Neumann}
+B.~H.~Neumann,
+\emph{A problem of Paul Erd\H{o}s on groups},
+J. Austral. Math. Soc. \textbf{21} (1976), 467--472.
+
+\bibitem{Pyber}
+L.~Pyber,
+\emph{The number of pairwise noncommuting elements and the index of the centre in a finite group},
+J. London Math. Soc. (2) \textbf{35} (1987), 287--295.
+
+\end{thebibliography}
+
+\end{document}
