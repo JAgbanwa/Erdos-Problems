@@ -55,3 +55,5 @@ Problem(s) to try sometime:
 [1210](https://www.erdosproblems.com/1210)
 
 [654](https://www.erdosproblems.com/654)
+
+[1107](https://www.erdosproblems.com/forum/thread/1107)
