@@ -1,0 +1,725 @@
+\documentclass[11pt]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage[a4paper,margin=30mm]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{microtype}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage[colorlinks=true,linkcolor=blue!55!black,citecolor=blue!55!black,urlcolor=blue!55!black]{hyperref}
+\hypersetup{pdftitle={Universal Monochromatic Arithmetic Progressions with Prescribed Common Difference},pdfauthor={Jamal Agbanwa},pdfsubject={Ramsey theory and arithmetic progressions},pdfkeywords={arithmetic progressions, two-colourings, van der Waerden theorem, Lovasz local lemma}}
+\usepackage[nameinlink,noabbrev]{cleveref}
+
+\setlist[enumerate]{label=(\roman*),leftmargin=2.2em}
+\setlist[itemize]{leftmargin=2.0em}
+\allowdisplaybreaks
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+
+\newcommand{\N}{\mathbb N}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\cD}{\mathcal D}
+\newcommand{\cA}{\mathcal A}
+\newcommand{\DeltaTwo}{\Delta_{2}}
+\newcommand{\PhiTwo}{\Phi}
+\newcommand{\AP}{\operatorname{AP}}
+\newcommand{\col}{\chi}
+
+\title{Universal Monochromatic Arithmetic Progressions\\with Prescribed Common Difference}
+\author{}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+For a function $f\colon\N\to\N$, call $f$ admissible if every two-colouring of $\Z$ has a fixed colour containing an $f(d)$-term arithmetic progression of common difference $d$ for infinitely many positive integers $d$. We show that the request for the ``best'' such function is intrinsically ill-posed: finite modifications preserve admissibility, there is no eventual upper envelope even among nondecreasing unbounded admissible functions, and admissibility can be certified on arbitrarily sparse sets of differences while the values elsewhere are unrestricted. We nevertheless construct a canonical nondecreasing unbounded admissible function by inverting a bounded-difference van der Waerden parameter. We then prove, using a fully detailed asymmetric Lovasz local lemma and a compactness argument, that any function satisfying a natural summability condition is avoidable for all sufficiently large differences. In particular, no admissible function can eventually exceed $(1+\varepsilon)\log_2 d$. Finally, a local-lemma construction yields the quantitative lower bound
+\[
+\Delta_2(k)>\left\lfloor\frac{2^{k-1}}{e k^2}\right\rfloor
+\]
+for the bounded-difference van der Waerden parameter.
+\end{abstract}
+
+\medskip
+\noindent\textbf{Keywords.} Arithmetic progressions, two-colourings, van der Waerden theorem, Lovasz local lemma, compactness.
+
+\section{Formulation and the first obstruction}
+
+Throughout, $\N=\{1,2,3,\ldots\}$. A two-colouring is a map
+\[
+\col\colon\Z\longrightarrow\{0,1\}.
+\]
+For $a\in\Z$, $d\in\N$, and $\ell\in\N$, write
+\[
+P(a,d,\ell):=\{a,a+d,\ldots,a+(\ell-1)d\}.
+\]
+We call this an $\ell$-term arithmetic progression of common difference $d$.
+
+\begin{definition}[Admissibility]\label{def:admissible}
+A function $f\colon\N\to\N$ is \emph{admissible} if, for every two-colouring $\col$ of $\Z$, there exist a colour $c\in\{0,1\}$ and an infinite set $D\subseteq\N$ such that, for every $d\in D$, there is an $a_d\in\Z$ for which
+\[
+\col(a_d)=\col(a_d+d)=\cdots=\col\bigl(a_d+(f(d)-1)d\bigr)=c.
+\]
+\end{definition}
+
+The requirement that one fixed colour work for infinitely many differences causes no ambiguity. If a monochromatic progression exists for each $d$ in an infinite set but its colour is allowed to depend on $d$, then one of the two colours occurs for infinitely many of those differences by the infinite pigeonhole principle.
+
+\begin{proposition}[Finite perturbations do not matter]\label{prop:finite-perturbation}
+Let $f\colon\N\to\N$ be admissible. If $g\colon\N\to\N$ differs from $f$ at only finitely many arguments, then $g$ is admissible.
+\end{proposition}
+
+\begin{proof}
+Let
+\[
+E:=\{d\in\N:f(d)\ne g(d)\};
+\]
+by hypothesis, $E$ is finite. Fix a two-colouring $\col$. Since $f$ is admissible, there are a colour $c$ and an infinite set $D$ such that colour $c$ contains an $f(d)$-term progression of difference $d$ for every $d\in D$. The set $D\setminus E$ is still infinite, and $f(d)=g(d)$ for every $d\in D\setminus E$. Hence the same colour witnesses the admissibility of $g$.
+\end{proof}
+
+\begin{corollary}[No pointwise best function]\label{cor:no-pointwise-best}
+There is no pointwise maximal admissible function.
+\end{corollary}
+
+\begin{proof}
+Given an admissible $f$, choose any $d_0\in\N$ and define $g(d_0)=f(d_0)+1$ and $g(d)=f(d)$ for $d\ne d_0$. By \cref{prop:finite-perturbation}, $g$ is admissible, whereas $g(d_0)>f(d_0)$.
+\end{proof}
+
+Thus the literal question has no largest answer. The remaining sections describe what can nevertheless be guaranteed and how far such guarantees can grow.
+
+\section{Bounded-difference van der Waerden parameters}
+
+We use one classical input: the finite two-colour van der Waerden theorem. Namely, for every $k\ge2$ there exists a least integer $W_2(k)$ such that every two-colouring of $\{1,\ldots,W_2(k)\}$ contains a monochromatic $k$-term arithmetic progression. All remaining assertions are proved in full below.
+
+\begin{definition}[Bounded-difference parameter]\label{def:delta}
+For $k\ge2$, define $\DeltaTwo(k)$ to be the least $D\in\N$ such that every two-colouring of $\Z$ contains a monochromatic $k$-term arithmetic progression whose common difference is at most $D$.
+\end{definition}
+
+\begin{proposition}[Basic properties of $\DeltaTwo$]\label{prop:delta-basic}
+For every $k\ge2$, the number $\DeltaTwo(k)$ is finite. The function $k\mapsto\DeltaTwo(k)$ is nondecreasing and unbounded. Moreover,
+\begin{equation}\label{eq:delta-upper-W}
+\DeltaTwo(k)\le
+\left\lfloor\frac{W_2(k)-1}{k-1}\right\rfloor.
+\end{equation}
+\end{proposition}
+
+\begin{proof}
+Restrict an arbitrary two-colouring of $\Z$ to the interval $\{1,\ldots,W_2(k)\}$. By the defining property of $W_2(k)$, this interval contains a monochromatic progression
+\[
+a,a+d,\ldots,a+(k-1)d.
+\]
+Since $1\le a<a+(k-1)d\le W_2(k)$, we have
+\[
+(k-1)d\le W_2(k)-1,
+\]
+which proves both finiteness and \eqref{eq:delta-upper-W}.
+
+If every colouring contains a monochromatic $(k+1)$-term progression of difference at most $D$, then deleting its last term gives a monochromatic $k$-term progression with the same difference. Hence $\DeltaTwo(k)\le\DeltaTwo(k+1)$.
+
+It remains to prove unboundedness. Fix $D\in\N$. There is a prime $p>D$: indeed, any prime divisor of $(D+1)!+1$ is larger than $D+1$, and hence larger than $D$. Colour an integer red precisely when it is divisible by $p$, and blue otherwise. Suppose $1\le d\le D$. Then $p\nmid d$, so multiplication by $d$ permutes the residue classes modulo $p$. Consequently, for every $a\in\Z$, the $p$ numbers
+\[
+a,a+d,\ldots,a+(p-1)d
+\]
+represent all residue classes modulo $p$. Exactly one is red and the other $p-1$ are blue. Thus no $p$-term progression of difference at most $D$ is monochromatic. Therefore $\DeltaTwo(p)>D$. Since $D$ was arbitrary, $\DeltaTwo$ is unbounded.
+\end{proof}
+
+The next principle isolates the precise mechanism that produces admissible functions.
+
+\begin{theorem}[Certificate-sequence principle]\label{thm:certificate-principle}
+Let
+\[
+2\le k_1<k_2<\cdots,
+\qquad
+1\le B_1\le B_2\le\cdots,
+\qquad
+B_j\longrightarrow\infty.
+\]
+Assume that, for every $j$, every two-colouring of $\Z$ contains a monochromatic $k_j$-term progression of some common difference at most $B_j$. Define
+\begin{equation}\label{eq:F-certificate}
+F(d):=\min\{k_j:d\le B_j\}.
+\end{equation}
+Then $F$ is nondecreasing, unbounded, and admissible.
+\end{theorem}
+
+\begin{proof}
+Because $B_j\to\infty$, the set in \eqref{eq:F-certificate} is nonempty for every $d$, so $F$ is well-defined. If $d_1\le d_2$, then
+\[
+\{j:d_2\le B_j\}\subseteq\{j:d_1\le B_j\},
+\]
+and hence $F(d_1)\le F(d_2)$. Thus $F$ is nondecreasing. Since the $k_j$ tend to infinity and each $B_j$ is finite, $F(d)\to\infty$ as $d\to\infty$.
+
+Fix a two-colouring $\col$. For every $j$, choose a monochromatic $k_j$-term progression $P_j$ with difference $d_j\le B_j$, and let $c_j$ be its colour. From the definition of $F$,
+\begin{equation}\label{eq:F-dj}
+F(d_j)\le k_j.
+\end{equation}
+We distinguish two cases.
+
+First suppose that the set $\{d_j:j\ge1\}$ is infinite. Since there are only two colours, one colour, say $c$, occurs for infinitely many distinct values among the pairs $(d_j,c_j)$. For each of those differences, \eqref{eq:F-dj} permits us to truncate $P_j$ to an $F(d_j)$-term progression of colour $c$. Thus $F$ is admissible in this case.
+
+Now suppose that $\{d_j:j\ge1\}$ is finite. Among the finitely many possible pairs $(d_j,c_j)$, some fixed pair $(d_0,c_0)$ occurs for infinitely many indices $j$. Since $k_j\to\infty$, colour $c_0$ contains progressions of difference $d_0$ of arbitrarily large finite length.
+
+For each $m\in\N$, set $\ell_m:=F(md_0)$. Choose a colour-$c_0$ progression of difference $d_0$ and length at least
+\[
+1+m(\ell_m-1).
+\]
+Taking the terms in positions $0,m,2m,\ldots,(\ell_m-1)m$ produces a colour-$c_0$ progression of length $\ell_m=F(md_0)$ and common difference $md_0$. As $m$ ranges over $\N$, these common differences are distinct. Hence $F$ is admissible also in the second case.
+\end{proof}
+
+\begin{definition}[Canonical inverse function]\label{def:phi}
+Define
+\begin{equation}\label{eq:phi-def}
+\PhiTwo(d):=\min\{k\ge2:d\le\DeltaTwo(k)\}.
+\end{equation}
+\end{definition}
+
+The minimum exists by the monotonicity and unboundedness of $\DeltaTwo$.
+
+\begin{corollary}[A canonical unbounded guarantee]\label{cor:phi-admissible}
+The function $\PhiTwo$ is nondecreasing, unbounded, and admissible. Explicitly, every two-colouring of $\Z$ has a fixed colour containing a $\PhiTwo(d)$-term progression of common difference $d$ for infinitely many $d$.
+\end{corollary}
+
+\begin{proof}
+Apply \cref{thm:certificate-principle} with $k_j=j+1$ and $B_j=\DeltaTwo(j+1)$. The hypothesis is exactly the defining property of $\DeltaTwo(j+1)$, and the resulting function $F$ is precisely $\PhiTwo$.
+\end{proof}
+
+Even monotonicity does not restore a meaningful largest growth rate.
+
+\begin{theorem}[No eventual envelope, even under monotonicity]\label{thm:no-monotone-envelope}
+For every function $H\colon\N\to\N$, there exists a nondecreasing unbounded admissible function $F$ such that
+\[
+F(d)>H(d)
+\]
+for infinitely many, arbitrarily large values of $d$.
+\end{theorem}
+
+\begin{proof}
+We recursively construct a strictly increasing sequence $k_1<k_2<\cdots$ for which the numbers
+\[
+B_j:=\DeltaTwo(k_j)
+\]
+are also strictly increasing. Choose any $k_1\ge2$. Having chosen $k_j$, put $d_j:=B_j+1$. By the unboundedness and monotonicity of $\DeltaTwo$, there exists an integer
+\[
+k_{j+1}>\max\{k_j,H(d_j)\}
+\]
+such that $\DeltaTwo(k_{j+1})\ge d_j$. Thus
+\[
+B_{j+1}\ge d_j=B_j+1,
+\]
+so the $B_j$ are strictly increasing.
+
+Define
+\[
+F(d):=\min\{k_j:d\le B_j\}.
+\]
+By \cref{thm:certificate-principle}, $F$ is nondecreasing, unbounded, and admissible. Moreover, $d_j>B_j$ but $d_j\le B_{j+1}$, so the least index whose $B$-value reaches $d_j$ is $j+1$. Therefore
+\[
+F(d_j)=k_{j+1}>H(d_j).
+\]
+Since the strictly increasing integers $B_j$ tend to infinity, so do the $d_j=B_j+1$. This proves the claim.
+\end{proof}
+
+\section{Sparse certificates and unrestricted values}
+
+The absence of a best function is stronger still when no regularity is imposed. Admissibility may be forced on very sparse finite blocks of differences, while values elsewhere are arbitrary.
+
+\begin{theorem}[Sparse certificate blocks]\label{thm:sparse-certificates}
+Let $2\le k_1<k_2<\cdots$ be any sequence tending to infinity. Choose positive integers $M_j$ so that the finite sets
+\[
+S_j:=\{M_j,2M_j,\ldots,\DeltaTwo(k_j)M_j\}
+\]
+are pairwise disjoint. Suppose $f\colon\N\to\N$ satisfies
+\begin{equation}\label{eq:sparse-values}
+f(d)\le k_j\qquad\text{for every }d\in S_j.
+\end{equation}
+Then $f$ is admissible, irrespective of its values outside $\bigcup_jS_j$.
+\end{theorem}
+
+\begin{proof}
+Fix a two-colouring $\col$ of $\Z$. For every $j$, define the scaled colouring
+\[
+\col_j(n):=\col(M_jn),\qquad n\in\Z.
+\]
+By the definition of $\DeltaTwo(k_j)$, the colouring $\col_j$ contains a monochromatic $k_j$-term progression of some difference $q_j$ satisfying
+\[
+1\le q_j\le\DeltaTwo(k_j).
+\]
+Multiplying every term by $M_j$ gives, in the original colouring $\col$, a monochromatic $k_j$-term progression of difference
+\[
+d_j:=M_jq_j\in S_j.
+\]
+Because the sets $S_j$ are pairwise disjoint, the differences $d_j$ are distinct. One colour occurs for infinitely many indices $j$. For each such $j$, condition \eqref{eq:sparse-values} allows the corresponding $k_j$-term progression to be truncated to an $f(d_j)$-term progression. Hence that one colour witnesses the admissibility of $f$.
+\end{proof}
+
+\begin{remark}[Existence of widely separated blocks]\label{rem:blocks}
+The required $M_j$ can be chosen with arbitrarily large gaps. Having chosen $M_1,\ldots,M_j$, choose
+\[
+M_{j+1}>
+\max_{1\le i\le j}\bigl(\DeltaTwo(k_i)M_i\bigr)+j.
+\]
+Then $S_{j+1}$ lies strictly to the right of all preceding blocks, and the gap before it has length at least $j$.
+\end{remark}
+
+\begin{corollary}[Arbitrary spikes off a sparse certificate set]\label{cor:arbitrary-spikes}
+For every function $H\colon\N\to\N$, there is an admissible function $f$ such that $f(d)>H(d)$ for infinitely many arbitrarily large $d$.
+\end{corollary}
+
+\begin{proof}
+Choose $k_j\to\infty$ and blocks $S_j$ as in \cref{rem:blocks}, so that the complement of $\bigcup_jS_j$ is infinite and unbounded. Define
+\[
+f(d):=
+\begin{cases}
+k_j,&d\in S_j,\\
+H(d)+1,&d\notin\bigcup_jS_j.
+\end{cases}
+\]
+The sets $S_j$ are disjoint, so this definition is unambiguous. By \cref{thm:sparse-certificates}, $f$ is admissible. On the unbounded complement of the certificate blocks, $f(d)=H(d)+1>H(d)$.
+\end{proof}
+
+\section{Local-lemma and compactness machinery}
+
+We next construct colourings that avoid prescribed progression lengths for all sufficiently large differences. To make the argument self-contained, we include complete proofs of the probabilistic and compactness tools used.
+
+\begin{lemma}[Asymmetric Lovasz local lemma]\label{lem:alll}
+Let $A_1,\ldots,A_n$ be events in a probability space. Suppose a graph $G$ on $\{1,\ldots,n\}$ has the following dependency property: for every $i$, the event $A_i$ is independent of the sigma-algebra generated by all $A_j$ with $j\ne i$ and $ij\notin E(G)$. If there are numbers $x_1,\ldots,x_n\in(0,1)$ such that
+\begin{equation}\label{eq:alll-condition}
+\mathbb P(A_i)\le x_i\prod_{ij\in E(G)}(1-x_j)
+\qquad(1\le i\le n),
+\end{equation}
+then
+\[
+\mathbb P\left(\bigcap_{i=1}^n\overline{A_i}\right)
+\ge\prod_{i=1}^n(1-x_i)>0.
+\]
+\end{lemma}
+
+\begin{proof}
+For $s\in\{0,1,\ldots,n-1\}$, consider the following two assertions:
+\begin{align*}
+(\mathrm P_s)\quad&
+\mathbb P\left(\bigcap_{j\in T}\overline{A_j}\right)>0
+\quad\text{for every }T\subseteq\{1,\ldots,n\}\text{ with }|T|\le s,\\
+(\mathrm C_s)\quad&
+\mathbb P\left(A_i\,\middle|\,\bigcap_{j\in S}\overline{A_j}\right)\le x_i
+\quad\text{whenever }i\notin S\text{ and }|S|\le s.
+\end{align*}
+We prove these assertions simultaneously by induction on $s$.
+
+For $s=0$, assertion $(\mathrm P_0)$ is trivial, and $(\mathrm C_0)$ follows from \eqref{eq:alll-condition}, because
+\[
+\mathbb P(A_i)\le x_i\prod_{ij\in E(G)}(1-x_j)\le x_i.
+\]
+
+Assume now that $(\mathrm P_{s-1})$ and $(\mathrm C_{s-1})$ hold, where $1\le s\le n-1$. We first prove $(\mathrm P_s)$. Let $T=\{t_1,\ldots,t_r\}$ with $r\le s$. By the chain rule and $(\mathrm C_{s-1})$,
+\begin{align*}
+\mathbb P\left(\bigcap_{j\in T}\overline{A_j}\right)
+&=\prod_{u=1}^{r}
+\left[
+1-\mathbb P\left(A_{t_u}\,\middle|\,
+\bigcap_{v<u}\overline{A_{t_v}}
+\right)
+\right]\\
+&\ge\prod_{u=1}^{r}(1-x_{t_u})>0,
+\end{align*}
+because every conditioning set in this product has size at most $r-1\le s-1$. Thus $(\mathrm P_s)$ holds.
+
+We next prove $(\mathrm C_s)$. Fix $i\notin S$ with $|S|\le s$, and split
+\[
+S_1:=\{j\in S:ij\in E(G)\},
+\qquad
+S_2:=S\setminus S_1.
+\]
+Assertion $(\mathrm P_s)$ ensures that all conditional probabilities below are defined. Conditional probability and the inclusion
+\[
+A_i\cap\bigcap_{j\in S_1}\overline{A_j}\subseteq A_i
+\]
+give
+\begin{align*}
+&\mathbb P\left(A_i\,\middle|\,
+\bigcap_{j\in S_1}\overline{A_j}\cap
+\bigcap_{j\in S_2}\overline{A_j}\right)\\
+&\qquad\le
+\frac{
+\mathbb P\left(A_i\,\middle|\,\bigcap_{j\in S_2}\overline{A_j}\right)
+}{
+\mathbb P\left(\bigcap_{j\in S_1}\overline{A_j}\,\middle|\,
+\bigcap_{j\in S_2}\overline{A_j}\right)
+}.
+\end{align*}
+By the dependency property, $A_i$ is independent of the sigma-algebra generated by the events indexed by $S_2$, so the numerator is $\mathbb P(A_i)$.
+
+Order $S_1$ as $j_1,\ldots,j_t$. By the chain rule and $(\mathrm C_{s-1})$,
+\begin{align*}
+&\mathbb P\left(\bigcap_{j\in S_1}\overline{A_j}\,\middle|\,
+\bigcap_{j\in S_2}\overline{A_j}\right)\\
+&\quad=
+\prod_{r=1}^t
+\left[
+1-
+\mathbb P\left(
+A_{j_r}\,\middle|\,
+\bigcap_{j\in S_2}\overline{A_j}
+\cap
+\bigcap_{u<r}\overline{A_{j_u}}
+\right)
+\right]\\
+&\quad\ge\prod_{j\in S_1}(1-x_j).
+\end{align*}
+Indeed, each conditioning set in the product has size at most
+\[
+|S_2|+t-1=|S|-1\le s-1.
+\]
+Consequently,
+\begin{align*}
+\mathbb P\left(A_i\,\middle|\,\bigcap_{j\in S}\overline{A_j}\right)
+&\le
+\frac{\mathbb P(A_i)}{\prod_{j\in S_1}(1-x_j)}\\
+&\le x_i\prod_{\substack{ij\in E(G)\\j\notin S_1}}(1-x_j)
+\le x_i.
+\end{align*}
+This proves $(\mathrm C_s)$ and completes the induction.
+
+Finally, the chain rule and $(\mathrm C_{n-1})$ yield
+\begin{align*}
+\mathbb P\left(\bigcap_{i=1}^n\overline{A_i}\right)
+&=\prod_{i=1}^n
+\left[
+1-\mathbb P\left(A_i\,\middle|\,
+\bigcap_{j<i}\overline{A_j}\right)
+\right]\\
+&\ge\prod_{i=1}^n(1-x_i)>0.
+\end{align*}
+\end{proof}
+
+\begin{lemma}[Compactness for finite-coordinate constraints]\label{lem:compactness}
+Let $\mathcal F=\{F_1,F_2,\ldots\}$ be a countable collection of forbidden conditions on two-colourings of $\Z$, where each $F_m$ depends on the colours of only finitely many integers. If every finite subcollection of $\mathcal F$ can be simultaneously avoided, then there is a two-colouring of $\Z$ avoiding every condition in $\mathcal F$.
+\end{lemma}
+
+\begin{proof}
+Enumerate $\Z$ as $z_1,z_2,\ldots$. For each $N$, choose a colouring $\col_N$ avoiding $F_1,\ldots,F_N$. By repeatedly passing to infinite subsequences, first choose an infinite subsequence on which the colour of $z_1$ is constant, then a further infinite subsequence on which the colour of $z_2$ is constant, and so on. Taking the diagonal subsequence and, if necessary, thinning it once more, we obtain indices
+\[
+N_1<N_2<\cdots
+\]
+such that, for every fixed $r$, the values $\col_{N_j}(z_r)$ are constant for all sufficiently large $j$.
+
+Define $\col(z_r)$ to be this eventual constant value. Fix $m$. The condition $F_m$ depends on a finite set of integers, say a subset of $\{z_1,\ldots,z_R\}$. For all sufficiently large $j$, we have both $N_j\ge m$ and
+\[
+\col_{N_j}(z_r)=\col(z_r)\qquad(1\le r\le R).
+\]
+Since $\col_{N_j}$ avoids $F_m$ and $F_m$ depends only on those finitely many coordinates, $\col$ also avoids $F_m$. As $m$ was arbitrary, $\col$ avoids every forbidden condition.
+\end{proof}
+
+\begin{lemma}[Intersection count]\label{lem:intersection-count}
+Let $h_d,h_e\in\N$. Fix a progression
+\[
+P(a,d,h_d)=\{a+id:0\le i<h_d\}.
+\]
+Among all progressions $P(b,e,h_e)$ of difference $e$, at most $h_dh_e$ intersect $P(a,d,h_d)$.
+\end{lemma}
+
+\begin{proof}
+If the two progressions intersect, then
+\[
+a+id=b+je
+\]
+for some $0\le i<h_d$ and $0\le j<h_e$, whence
+\[
+b=a+id-je.
+\]
+Each of the $h_dh_e$ pairs $(i,j)$ determines at most one value of $b$. Different pairs may determine the same $b$, so the number of possible intersecting progressions is at most $h_dh_e$.
+\end{proof}
+
+\begin{lemma}[Elementary logarithmic estimate]\label{lem:log-estimate}
+For $0\le x\le\tfrac12$,
+\[
+\log(1-x)\ge-2x.
+\]
+\end{lemma}
+
+\begin{proof}
+Let $g(x)=\log(1-x)+2x$. Then $g(0)=0$ and
+\[
+g'(x)=2-\frac1{1-x}=\frac{1-2x}{1-x}\ge0
+\]
+for $0\le x\le\tfrac12$. Hence $g(x)\ge0$ on this interval.
+\end{proof}
+
+\section{A general avoidance theorem}
+
+\begin{theorem}[Summable profiles are eventually avoidable]\label{thm:summable-avoidance}
+Let $h\colon\N\to\{2,3,4,\ldots\}$, and suppose that for some $\gamma\in(0,1)$,
+\begin{equation}\label{eq:summability}
+\sum_{d=1}^{\infty}h(d)\,2^{-\gamma h(d)}<\infty.
+\end{equation}
+Then there exist a two-colouring $\col$ of $\Z$ and an integer $D$ such that, for every $d\ge D$, neither colour contains an $h(d)$-term arithmetic progression of common difference $d$.
+\end{theorem}
+
+\begin{proof}
+Write $h_d:=h(d)$ and $x_d:=2^{-\gamma h_d}$. The convergence in \eqref{eq:summability} implies $h_d\to\infty$: otherwise some integer $M$ would satisfy $h_d\le M$ for infinitely many $d$, and along those $d$ the summands would be bounded below by the positive constant $2\,2^{-\gamma M}$.
+
+Choose $D$ sufficiently large that, for every $d\ge D$,
+\begin{equation}\label{eq:D-size-conditions}
+x_d\le\frac12,
+\qquad
+h_d\ge\frac{2}{1-\gamma},
+\end{equation}
+and that
+\begin{equation}\label{eq:tail-small}
+S_D:=\sum_{e\ge D}h_ex_e
+\le\frac{(1-\gamma)\log 2}{4}.
+\end{equation}
+Such a $D$ exists because $h_d\to\infty$ and the series in \eqref{eq:summability} converges.
+
+Temporarily colour every integer independently and uniformly from $\{0,1\}$. For $a\in\Z$ and $d\ge D$, let $A_{a,d}$ be the event that $P(a,d,h_d)$ is monochromatic. There are two possible monochromatic colours, each occurring with probability $2^{-h_d}$, so
+\begin{equation}\label{eq:bad-probability}
+\mathbb P(A_{a,d})=2^{1-h_d}.
+\end{equation}
+Events supported on disjoint sets of integers are independent. Thus the graph joining two events whenever their underlying progressions intersect is a dependency graph in the sense of \cref{lem:alll}.
+
+Consider an arbitrary finite family $\mathcal B$ of the bad events. Assign the parameter $x_d$ to every event of difference $d$. Fix $A_{a,d}\in\mathcal B$. By \cref{lem:intersection-count}, for each $e\ge D$ there are at most $h_dh_e$ events of difference $e$ in $\mathcal B$ that are adjacent to $A_{a,d}$. Since every factor $1-x_e$ lies in $(0,1)$,
+\begin{align}
+ x_d\prod_{B\sim A_{a,d}}(1-x_B)
+&\ge x_d\prod_{e\ge D}(1-x_e)^{h_dh_e}.\label{eq:product-lower-1}
+\end{align}
+The infinite product on the right is well-defined and positive, because $x_e\le\tfrac12$ and $\sum_{e\ge D}h_ex_e<\infty$. By \cref{lem:log-estimate} and \eqref{eq:tail-small},
+\begin{align*}
+\prod_{e\ge D}(1-x_e)^{h_dh_e}
+&=\exp\left(h_d\sum_{e\ge D}h_e\log(1-x_e)\right)\\
+&\ge\exp\left(-2h_d\sum_{e\ge D}h_ex_e\right)\\
+&\ge\exp\left(-\frac{1-\gamma}{2}h_d\log2\right).
+\end{align*}
+Combining this with $x_d=2^{-\gamma h_d}$ gives
+\begin{align}
+ x_d\prod_{B\sim A_{a,d}}(1-x_B)
+&\ge 2^{-\gamma h_d}2^{-(1-\gamma)h_d/2}
+ =2^{-(1+\gamma)h_d/2}.
+\label{eq:product-lower-2}
+\end{align}
+The second condition in \eqref{eq:D-size-conditions} is equivalent to
+\[
+\frac{1+\gamma}{2}h_d\le h_d-1.
+\]
+Therefore \eqref{eq:bad-probability} and \eqref{eq:product-lower-2} imply
+\[
+\mathbb P(A_{a,d})=2^{1-h_d}
+\le x_d\prod_{B\sim A_{a,d}}(1-x_B).
+\]
+The asymmetric local lemma now shows that the finite family $\mathcal B$ can be simultaneously avoided.
+
+The full collection $\{A_{a,d}:a\in\Z,\ d\ge D\}$ is countable, and each event depends on finitely many colours. Since every finite subcollection can be avoided, \cref{lem:compactness} gives one colouring avoiding all of them. In that colouring, no $h(d)$-term progression of difference $d$ is monochromatic for any $d\ge D$.
+\end{proof}
+
+\begin{corollary}[Logarithmic obstruction]\label{cor:log-obstruction}
+For every $\varepsilon>0$, there is a two-colouring $\col$ of $\Z$ and an integer $D$ such that, for every $d\ge D$, neither colour contains a monochromatic progression of difference $d$ and length
+\[
+\left\lceil(1+\varepsilon)\log_2d\right\rceil.
+\]
+Consequently, no admissible function $f$ can satisfy
+\begin{equation}\label{eq:eventual-log-lower}
+f(d)\ge(1+\varepsilon)\log_2d
+\end{equation}
+for all sufficiently large $d$.
+\end{corollary}
+
+\begin{proof}
+Define
+\[
+h(d):=\max\left\{2,\left\lceil(1+\varepsilon)\log_2d\right\rceil\right\}.
+\]
+Choose $\gamma$ with
+\[
+\frac1{1+\varepsilon}<\gamma<1.
+\]
+For $d\ge2$ we have
+\[
+h(d)\le (1+\varepsilon)\log_2d+1
+\]
+and
+\[
+2^{-\gamma h(d)}\le d^{-\gamma(1+\varepsilon)}.
+\]
+Hence
+\[
+h(d)2^{-\gamma h(d)}
+\ll_{\varepsilon,\gamma}
+(\log d)d^{-\gamma(1+\varepsilon)}.
+\]
+The series on the right converges because $\gamma(1+\varepsilon)>1$. Thus \cref{thm:summable-avoidance} applies and proves the first assertion.
+
+If an integer-valued $f$ satisfies \eqref{eq:eventual-log-lower}, then for all sufficiently large $d$,
+\[
+f(d)\ge\left\lceil(1+\varepsilon)\log_2d\right\rceil.
+\]
+The colouring supplied above has no monochromatic progression even of the smaller displayed length, and therefore none of length $f(d)$, for any sufficiently large $d$. Such an $f$ cannot be admissible.
+\end{proof}
+
+\begin{corollary}[Necessary liminf bound]\label{cor:liminf}
+Every admissible function $f$ satisfies
+\[
+\liminf_{d\to\infty}\frac{f(d)}{\log_2d}\le1.
+\]
+\end{corollary}
+
+\begin{proof}
+If the liminf were larger than $1$, then some $\varepsilon>0$ would satisfy
+\[
+f(d)\ge(1+\varepsilon)\log_2d
+\]
+for all sufficiently large $d$, contradicting \cref{cor:log-obstruction}.
+\end{proof}
+
+\section{A quantitative lower bound for \texorpdfstring{$\DeltaTwo(k)$}{Delta2(k)}}
+
+The same machinery gives a simple exponential lower bound for the bounded-difference parameter.
+
+\begin{proposition}\label{prop:delta-lower}
+For every $k\ge2$,
+\begin{equation}\label{eq:delta-lower}
+\DeltaTwo(k)>
+\left\lfloor\frac{2^{k-1}}{e k^2}\right\rfloor.
+\end{equation}
+\end{proposition}
+
+\begin{proof}
+Let
+\[
+D:=\left\lfloor\frac{2^{k-1}}{e k^2}\right\rfloor.
+\]
+If $D=0$, then \eqref{eq:delta-lower} is immediate because $\DeltaTwo(k)\in\N$. Assume $D\ge1$.
+
+Colour the integers independently and uniformly, and for every $a\in\Z$ and $1\le d\le D$ let $A_{a,d}$ be the event that $P(a,d,k)$ is monochromatic. Then
+\[
+\mathbb P(A_{a,d})=2^{1-k}.
+\]
+By \cref{lem:intersection-count}, each event intersects at most $k^2$ events of any fixed difference $e$. Hence its degree in the intersection dependency graph is at most
+\[
+k^2D-1.
+\]
+Put $q:=k^2D$ and assign the common local-lemma parameter $x:=1/q$. Since $k\ge2$ and $D\ge1$, we have $q\ge4$. Furthermore,
+\begin{align*}
+x(1-x)^{q-1}
+&=\frac1q\left(1-\frac1q\right)^{q-1}\\
+&\ge\frac1{eq}.
+\end{align*}
+Indeed,
+\[
+-(q-1)\log\left(1-\frac1q\right)
+=(q-1)\log\left(1+\frac1{q-1}\right)\le1,
+\]
+using $\log(1+t)\le t$ for $t\ge0$.
+
+The definition of $D$ gives
+\[
+e\,2^{1-k}q=e\,2^{1-k}k^2D\le1,
+\]
+and therefore
+\[
+\mathbb P(A_{a,d})=2^{1-k}
+\le\frac1{eq}
+\le x(1-x)^{q-1}.
+\]
+For every finite family of bad events, the asymmetric local lemma supplies a colouring avoiding that family. Applying \cref{lem:compactness} to all events $A_{a,d}$ with $a\in\Z$ and $1\le d\le D$ yields a colouring with no monochromatic $k$-term progression of any difference at most $D$. Hence $\DeltaTwo(k)>D$, proving \eqref{eq:delta-lower}.
+\end{proof}
+
+\begin{corollary}[An explicit inverse estimate]\label{cor:phi-upper}
+For every $d\ge2$,
+\begin{equation}\label{eq:phi-explicit-upper}
+\PhiTwo(d)\le
+\left\lceil
+\log_2d+2\log_2\log_2d+12
+\right\rceil.
+\end{equation}
+In particular,
+\[
+\PhiTwo(d)\le\log_2d+2\log_2\log_2d+O(1).
+\]
+\end{corollary}
+
+\begin{proof}
+Set $L:=\log_2d\ge1$ and
+\[
+k:=\left\lceil L+2\log_2L+12\right\rceil.
+\]
+Then
+\[
+2^{k-1}\ge2^{L+2\log_2L+11}=2048dL^2.
+\]
+Also
+\[
+k\le L+2\log_2L+13.
+\]
+For $L\ge1$, the function $(\log L)/L$ is at most $1/e$. Moreover,
+$e\log2>1$: for example, $e>2$ and
+\[
+\log2=\int_1^2\frac{dt}{t}>\frac12.
+\]
+Consequently,
+\[
+\frac{2\log_2L}{L}
+=\frac{2\log L}{L\log2}
+\le\frac{2}{e\log2}<2.
+\]
+Since $13/L\le13$, we obtain
+\[
+\frac{k}{L}<1+2+13=16.
+\]
+Also $e<3$, as follows directly from the series
+\[
+e=\sum_{n=0}^{\infty}\frac1{n!}
+<2+\sum_{n=2}^{\infty}\frac1{2^{n-1}}=3.
+\]
+It follows that
+\[
+e\left(\frac{k}{L}\right)^2<3\cdot16^2=768<2048.
+\]
+Therefore
+\[
+\frac{2^{k-1}}{ek^2}
+\ge
+\frac{2048dL^2}{ek^2}
+>d.
+\]
+By \cref{prop:delta-lower}, $\DeltaTwo(k)>\lfloor 2^{k-1}/(ek^2)\rfloor\ge d$, and thus $d\le\DeltaTwo(k)$. The definition of $\PhiTwo$ gives $\PhiTwo(d)\le k$, which is \eqref{eq:phi-explicit-upper}.
+\end{proof}
+
+\begin{remark}\label{rem:inverse-meaning}
+The estimate in \cref{cor:phi-upper} is an upper bound on the particular inverse function $\PhiTwo$, not a logarithmic lower guarantee. Lower bounds on $\PhiTwo$ arise from upper bounds on $\DeltaTwo$, such as \eqref{eq:delta-upper-W}, and therefore from quantitative upper bounds for van der Waerden numbers. The logarithmic result of \cref{cor:log-obstruction} is instead a universal obstruction: no admissible function can remain strictly above the coefficient-$1$ logarithmic scale for all sufficiently large differences.
+\end{remark}
+
+\section{Conclusion}
+
+The original extremal request admits no single best function. More precisely:
+\begin{enumerate}
+\item finite changes preserve admissibility, so no pointwise maximum exists;
+\item there is no function that eventually dominates all nondecreasing unbounded admissible functions;
+\item sparse certificate blocks permit arbitrary values away from those blocks;
+\item the canonical inverse $\PhiTwo$ is nevertheless nondecreasing, unbounded, and admissible;
+\item every admissible $f$ obeys
+\[
+\liminf_{d\to\infty}\frac{f(d)}{\log_2d}\le1.
+\]
+\end{enumerate}
+Thus any well-posed refinement must impose additional normalization beyond mere monotonicity, or must ask for a different extremal statistic. The bounded-difference parameter $\DeltaTwo(k)$ provides a natural invariant for such refinements.
+
+\begin{thebibliography}{9}
+
+\bibitem{ErdosLovasz}
+P.~Erd\H{o}s and L.~Lov\'asz,
+\newblock Problems and results on $3$-chromatic hypergraphs and some related questions,
+\newblock in \emph{Infinite and Finite Sets}, Colloq. Math. Soc. J\'anos Bolyai \textbf{10}, North-Holland, 1975, pp.~609--627.
+
+\bibitem{vdW}
+B.~L. van der Waerden,
+\newblock Beweis einer Baudetschen Vermutung,
+\newblock \emph{Nieuw Arch. Wisk.} \textbf{15} (1927), 212--216.
+
+\end{thebibliography}
+
+\end{document}
