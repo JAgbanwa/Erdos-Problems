@@ -1,0 +1,76 @@
+{
+  "section": "E",
+  "paper_ref": "Paper II, Section 7 (Prop 7.1, Theorem 1.1 arithmetic)",
+  "NMAX": 2000,
+  "E1_value_equals_floor": {
+    "violations": 0,
+    "PASS": true
+  },
+  "E2_maximizer_saturated_nearest": {
+    "violations": 0,
+    "PASS": true
+  },
+  "E3_nonsaturated_le_floor": {
+    "violations": 0,
+    "PASS": true
+  },
+  "E4_residue_identity": {
+    "violations": 0,
+    "PASS": true
+  },
+  "examples": [
+    {
+      "n": 1,
+      "floor": 0,
+      "pstar": 1
+    },
+    {
+      "n": 2,
+      "floor": 1,
+      "pstar": 1
+    },
+    {
+      "n": 3,
+      "floor": 2,
+      "pstar": 1
+    },
+    {
+      "n": 5,
+      "floor": 5,
+      "pstar": 2
+    },
+    {
+      "n": 8,
+      "floor": 12,
+      "pstar": 3
+    },
+    {
+      "n": 12,
+      "floor": 26,
+      "pstar": 4
+    },
+    {
+      "n": 13,
+      "floor": 30,
+      "pstar": 5
+    },
+    {
+      "n": 50,
+      "floor": 425,
+      "pstar": 17
+    },
+    {
+      "n": 100,
+      "floor": 1683,
+      "pstar": 34
+    },
+    {
+      "n": 1000,
+      "floor": 166833,
+      "pstar": 334
+    }
+  ],
+  "violations_sample": [],
+  "runtime_sec": 19.9,
+  "PASS": true
+}

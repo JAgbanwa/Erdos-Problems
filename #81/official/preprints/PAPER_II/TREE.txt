@@ -1,0 +1,209 @@
+preprints/PAPER_II/
+├── 01_manuscript/
+│   ├── figures/
+│   │   ├── fig1_completesplit.pdf
+│   │   ├── fig1_completesplit.png
+│   │   ├── fig2_phitau_profile.pdf
+│   │   └── fig2_phitau_profile.png
+│   ├── PAPER_II_preprint_v1.0.md
+│   ├── PAPER_II_preprint_v1.0.pdf
+│   ├── PAPER_II_preprint_v1.0.tex
+│   ├── PAPER_II_preprint_v1.0_es.md
+│   ├── PAPER_II_preprint_v1.0_es.pdf
+│   ├── PAPER_II_preprint_v1.0_es.tex
+│   └── README.md
+├── 02_validation/
+│   ├── 02_IA_ADVERSARIAL_AUDITS/
+│   │   ├── 20_EVIDENCE/
+│   │   │   └── ERDOZ81-P2-FRAC-THM-01/
+│   │   │       ├── 00_CONTROL/
+│   │   │       │   ├── AUDIT_INDEX.md
+│   │   │       │   ├── audit_lib.py
+│   │   │       │   ├── CLAIM_MAP.md
+│   │   │       │   ├── ENVIRONMENT.md
+│   │   │       │   └── OPEN_RISKS.md
+│   │   │       ├── 10_REPORT/
+│   │   │       │   ├── FINAL_AUDIT_REPORT.md
+│   │   │       │   ├── FINAL_AUDIT_REPORT.pdf
+│   │   │       │   └── make_final_pdf.py
+│   │   │       ├── 20_TESTS/
+│   │   │       │   ├── H_lean_verification/
+│   │   │       │   │   ├── AuditCheck_source_note.txt
+│   │   │       │   │   ├── H_build_record.md
+│   │   │       │   │   ├── H_lean_verification.zip
+│   │   │       │   │   ├── H_lean_verification.zip.sha256
+│   │   │       │   │   ├── H_report.pdf
+│   │   │       │   │   ├── lake_build.log
+│   │   │       │   │   ├── lean_source_sha256.txt
+│   │   │       │   │   ├── make_h_report.py
+│   │   │       │   │   └── print_axioms.log
+│   │   │       │   ├── P1_max_phitau/
+│   │   │       │   │   ├── audit_lib.py
+│   │   │       │   │   ├── p1_max_phitau.py
+│   │   │       │   │   ├── P1_max_phitau.zip
+│   │   │       │   │   ├── P1_max_phitau.zip.sha256
+│   │   │       │   │   ├── P1_report.pdf
+│   │   │       │   │   ├── p1_results.csv
+│   │   │       │   │   └── p1_results.txt
+│   │   │       │   ├── P2_vertex_copy/
+│   │   │       │   │   ├── audit_lib.py
+│   │   │       │   │   ├── P2_report.pdf
+│   │   │       │   │   ├── p2_results.csv
+│   │   │       │   │   ├── p2_results.txt
+│   │   │       │   │   ├── p2_vertex_copy.py
+│   │   │       │   │   ├── P2_vertex_copy.zip
+│   │   │       │   │   └── P2_vertex_copy.zip.sha256
+│   │   │       │   ├── P3_completesplit_closedform/
+│   │   │       │   │   ├── audit_lib.py
+│   │   │       │   │   ├── p3_completesplit.py
+│   │   │       │   │   ├── P3_completesplit_closedform.zip
+│   │   │       │   │   ├── P3_completesplit_closedform.zip.sha256
+│   │   │       │   │   ├── P3_report.pdf
+│   │   │       │   │   ├── p3_results.csv
+│   │   │       │   │   └── p3_results.txt
+│   │   │       │   ├── P4_integer_maximization/
+│   │   │       │   │   ├── audit_lib.py
+│   │   │       │   │   ├── p4_integer_max.py
+│   │   │       │   │   ├── P4_integer_maximization.zip
+│   │   │       │   │   ├── P4_integer_maximization.zip.sha256
+│   │   │       │   │   ├── P4_report.pdf
+│   │   │       │   │   ├── p4_results.csv
+│   │   │       │   │   └── p4_results.txt
+│   │   │       │   └── P5_terminal_characterization/
+│   │   │       │       ├── audit_lib.py
+│   │   │       │       ├── P5_report.pdf
+│   │   │       │       ├── p5_results.csv
+│   │   │       │       ├── p5_results.txt
+│   │   │       │       ├── p5_terminal.py
+│   │   │       │       ├── P5_terminal_characterization.zip
+│   │   │       │       └── P5_terminal_characterization.zip.sha256
+│   │   │       └── EVIDENCE_RECORD.md
+│   │   └── README.md
+│   ├── PAPER_II_AUDIT/
+│   │   ├── A_vertex_copy_inequality/
+│   │   │   ├── results/
+│   │   │   │   ├── run.log
+│   │   │   │   └── summary.json
+│   │   │   ├── A_vertex_copy_inequality.zip
+│   │   │   ├── audit_A_vertex_copy.py
+│   │   │   ├── manifest_sha256.txt
+│   │   │   ├── REPORT_A_vertex_copy.md
+│   │   │   └── REPORT_A_vertex_copy.pdf
+│   │   ├── B_clone_class_convexity/
+│   │   │   ├── results/
+│   │   │   │   ├── run.log
+│   │   │   │   └── summary.json
+│   │   │   ├── audit_B_clone_convexity.py
+│   │   │   ├── B_clone_class_convexity.zip
+│   │   │   ├── manifest_sha256.txt
+│   │   │   ├── REPORT_B_clone_convexity.md
+│   │   │   └── REPORT_B_clone_convexity.pdf
+│   │   ├── C_terminal_characterization/
+│   │   │   ├── results/
+│   │   │   │   ├── run.log
+│   │   │   │   └── summary.json
+│   │   │   ├── audit_C_terminal.py
+│   │   │   ├── C_terminal_characterization.zip
+│   │   │   ├── manifest_sha256.txt
+│   │   │   ├── REPORT_C_terminal.md
+│   │   │   └── REPORT_C_terminal.pdf
+│   │   ├── D_completesplit_cover/
+│   │   │   ├── results/
+│   │   │   │   ├── run.log
+│   │   │   │   └── summary.json
+│   │   │   ├── audit_D_completesplit.py
+│   │   │   ├── D_completesplit_cover.zip
+│   │   │   ├── manifest_sha256.txt
+│   │   │   ├── REPORT_D_completesplit.md
+│   │   │   └── REPORT_D_completesplit.pdf
+│   │   ├── E_integer_maximization/
+│   │   │   ├── results/
+│   │   │   │   ├── run.log
+│   │   │   │   └── summary.json
+│   │   │   ├── audit_E_integer_max.py
+│   │   │   ├── E_integer_maximization.zip
+│   │   │   ├── manifest_sha256.txt
+│   │   │   ├── REPORT_E_integer_max.md
+│   │   │   └── REPORT_E_integer_max.pdf
+│   │   ├── F_theorem_1_1_global/
+│   │   │   ├── results/
+│   │   │   │   ├── run.log
+│   │   │   │   └── summary.json
+│   │   │   ├── audit_F_global.py
+│   │   │   ├── F_theorem_1_1_global.zip
+│   │   │   ├── manifest_sha256.txt
+│   │   │   ├── REPORT_F_global.md
+│   │   │   └── REPORT_F_global.pdf
+│   │   ├── MASTER_manifest_sha256.txt
+│   │   ├── PAPER_II_AUDIT_master.zip
+│   │   ├── README.md
+│   │   ├── requirements.txt
+│   │   └── RUN_INSTRUCTIONS.md
+│   ├── MANIFEST.json
+│   ├── PAPER_II_CALCULATION_LEDGER_v1.1.md
+│   ├── README.md
+│   ├── SHA256SUMS.txt
+│   └── VALIDATION_STATUS.md
+├── 03_reproducibility/
+│   ├── BUILD.md
+│   ├── BUILD_VERIFICATION.md
+│   ├── ENVIRONMENT.md
+│   └── README.md
+├── 04_integrity/
+│   ├── PROVENANCE.md
+│   ├── README.md
+│   ├── RELEASE_MANIFEST.json
+│   └── SHA256SUMS.txt
+├── 05_formalization/
+│   ├── lean/
+│   │   ├── gate_logs/
+│   │   │   ├── lake_build.log
+│   │   │   ├── print_axioms.log
+│   │   │   └── README.md
+│   │   ├── PaperII/
+│   │   │   ├── Arith.lean
+│   │   │   ├── Chordal.lean
+│   │   │   ├── CloneCopy.lean
+│   │   │   ├── CloneSimplicial.lean
+│   │   │   ├── CompleteSplit.lean
+│   │   │   ├── CompleteSplitChordal.lean
+│   │   │   ├── ConvexSeq.lean
+│   │   │   ├── CoverRelabel.lean
+│   │   │   ├── Dirac.lean
+│   │   │   ├── Dirac1.lean
+│   │   │   ├── EdgeCount.lean
+│   │   │   ├── FiniteCover.lean
+│   │   │   ├── IsChordal.lean
+│   │   │   ├── IsChordalCopy.lean
+│   │   │   ├── IsoInvariance.lean
+│   │   │   ├── L1.lean
+│   │   │   ├── L10.lean
+│   │   │   ├── L12.lean
+│   │   │   ├── L2.lean
+│   │   │   ├── L2Family.lean
+│   │   │   ├── L3.lean
+│   │   │   ├── L4.lean
+│   │   │   ├── L5.lean
+│   │   │   ├── L6.lean
+│   │   │   ├── L7.lean
+│   │   │   ├── L9.lean
+│   │   │   ├── L9Packing.lean
+│   │   │   ├── Model.lean
+│   │   │   ├── Unconditional.lean
+│   │   │   └── VertexCopy.lean
+│   │   ├── .gitignore
+│   │   ├── lake-manifest.json
+│   │   ├── lakefile.toml
+│   │   ├── lean-toolchain
+│   │   └── PaperII.lean
+│   └── README.md
+├── .gitattributes
+├── .gitignore
+├── CITATION.bib
+├── CITATION.cff
+├── LICENSE
+├── PaperII_explained_4_levels.html
+├── README.md
+├── RELEASE_METADATA.yml
+├── RELEASE_NOTES.md
+└── TREE.txt

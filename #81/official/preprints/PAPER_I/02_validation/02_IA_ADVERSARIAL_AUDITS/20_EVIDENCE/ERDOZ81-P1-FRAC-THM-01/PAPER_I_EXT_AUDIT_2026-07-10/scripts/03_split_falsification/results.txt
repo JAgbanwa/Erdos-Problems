@@ -1,0 +1,29 @@
+==============================================================================
+03 — SPLIT-GRAPH FALSIFICATION OF THEOREM 1.1 (Paper I)
+==============================================================================
+
+(a) small structured enumeration (p<=5, neighborhoods = all subsets, up to 8 indep verts)
+   p=2: n=6 |E|=5 nu3*=1.000 LHS=3.000 bound=12.000 ratio=0.250 ok=True
+   p=3: n=11 |E|=15 nu3*=3.000 LHS=9.000 bound=31.167 ratio=0.289 ok=True
+   p=4: n=20 |E|=38 nu3*=6.000 LHS=26.000 bound=86.667 ratio=0.300 ok=True
+   p=5: n=37 |E|=90 nu3*=10.000 LHS=70.000 bound=265.167 ratio=0.264 ok=True
+
+(b) random split graphs
+
+(c) adversarial dense: N(v)=K for many v (complete split)
+
+(d) extremal family  K_p ∨ Kbar_{2p}  (n=3p): expect LHS = n^2/6 + n/6, nu3*=C(p,2)
+   p=2 n=6: nu3*=1.000 (C(p,2)=1) LHS=7.0000 n^2/6+n/6=7.0000 ok=True
+   p=3 n=9: nu3*=3.000 (C(p,2)=3) LHS=15.0000 n^2/6+n/6=15.0000 ok=True
+   p=4 n=12: nu3*=6.000 (C(p,2)=6) LHS=26.0000 n^2/6+n/6=26.0000 ok=True
+   p=5 n=15: nu3*=10.000 (C(p,2)=10) LHS=40.0000 n^2/6+n/6=40.0000 ok=True
+   p=6 n=18: nu3*=15.000 (C(p,2)=15) LHS=57.0000 n^2/6+n/6=57.0000 ok=True
+   p=7 n=21: nu3*=21.000 (C(p,2)=21) LHS=77.0000 n^2/6+n/6=77.0000 ok=True
+------------------------------------------------------------------------------
+total split graphs tested (a,b,c): 622
+theorem violations (KS1: LHS > n^2/6+n): 0
+max observed ratio LHS/(n^2/6+n): 0.8148 at ('complete-p7-m14', 0.8148148148148148)
+extremal tightness failures (KS3): 0
+VERDICT: NOT FALSIFIED — theorem holds on all tested split graphs; extremal family attains n^2/6+n/6
+NOTE: bounded search is supporting evidence for a universal claim, not a proof.
+==============================================================================

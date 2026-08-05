@@ -1,0 +1,65 @@
+{
+  "section": "B",
+  "paper_ref": "Paper II, Section 4 (Lemmas 4.1-4.3)",
+  "B1_convexity": {
+    "configs_tested": 8670,
+    "min_second_difference": -3.552713678800501e-15,
+    "min_endpoint_margin": 0.0,
+    "violations": [],
+    "PASS": true
+  },
+  "B2_clone_count": {
+    "B2_pairs_tested": 5663,
+    "B2_violations": [],
+    "B2_PASS": true
+  },
+  "B3_chordality_and_necessity": {
+    "B3_pairs_tested": 5663,
+    "B3_violations": [],
+    "B3_PASS": true,
+    "necessity_example_found": true,
+    "necessity_example": {
+      "chordal_G_edges": [
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "source_U": [
+        0
+      ],
+      "target_V": [
+        3
+      ],
+      "target_nbhd": [
+        1,
+        2
+      ],
+      "result_edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "result_is_chordal": false
+    }
+  },
+  "runtime_sec": 58.82,
+  "PASS": true
+}

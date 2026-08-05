@@ -1,0 +1,63 @@
+P3 -- Complete-split cover value & closed form (Prop 6.2 / Cor 6.3)
+==================================================================
+python/networkx : 3.14.4 / nx 3.6.1
+tau3* method    : auditor's own FULL cover-LP (scipy HiGHS), all triangles
+(p,q) grid      : 0..12 x 0..12 (168 nondegenerate cells)
+------------------------------------------------------------------
+KILL-SWITCH:
+  H3a tau3*_LP == closed form        : HOLDS (0 mismatches)
+  H3b Phi_tau closed forms == LP     : HOLDS (0 mismatches)
+  H3c branch boundary q=p-1 agrees   : HOLDS (0 mismatches)
+  VERDICT                            : VERIFIED: closed forms for tau3*(S_{p,q}) and Phi_tau(S_{p,q}) match the direct full cover-LP on the whole (p,q) grid; branch boundary q=p-1 is consistent; degenerate cases handled.
+------------------------------------------------------------------
+Sample (p,q, edges, tau_LP, tau_closed, phi_LP, phi_closed, branch):
+  p=0 q=1: e=  0 tauLP=   0.0 tauCF=   0.0 phiLP=   0.0 phiCF=   0.0 [degen]
+  p=0 q=2: e=  0 tauLP=   0.0 tauCF=   0.0 phiLP=   0.0 phiCF=   0.0 [degen]
+  p=0 q=3: e=  0 tauLP=   0.0 tauCF=   0.0 phiLP=   0.0 phiCF=   0.0 [degen]
+  p=0 q=4: e=  0 tauLP=   0.0 tauCF=   0.0 phiLP=   0.0 phiCF=   0.0 [degen]
+  p=0 q=5: e=  0 tauLP=   0.0 tauCF=   0.0 phiLP=   0.0 phiCF=   0.0 [degen]
+  p=0 q=6: e=  0 tauLP=   0.0 tauCF=   0.0 phiLP=   0.0 phiCF=   0.0 [degen]
+  p=1 q=0: e=  0 tauLP=   0.0 tauCF=   0.0 phiLP=   0.0 phiCF=   0.0 [degen]
+  p=1 q=1: e=  1 tauLP=   0.0 tauCF=   0.0 phiLP=   1.0 phiCF=   1.0 [degen]
+  p=1 q=2: e=  2 tauLP=   0.0 tauCF=   0.0 phiLP=   2.0 phiCF=   2.0 [degen]
+  p=1 q=3: e=  3 tauLP=   0.0 tauCF=   0.0 phiLP=   3.0 phiCF=   3.0 [degen]
+  p=1 q=4: e=  4 tauLP=   0.0 tauCF=   0.0 phiLP=   4.0 phiCF=   4.0 [degen]
+  p=1 q=5: e=  5 tauLP=   0.0 tauCF=   0.0 phiLP=   5.0 phiCF=   5.0 [degen]
+  p=1 q=6: e=  6 tauLP=   0.0 tauCF=   0.0 phiLP=   6.0 phiCF=   6.0 [degen]
+  p=2 q=0: e=  1 tauLP=   0.0 tauCF=   0.0 phiLP=   1.0 phiCF=   1.0 [degen]
+  p=2 q=1: e=  3 tauLP=   1.0 tauCF=   1.0 phiLP=   1.0 phiCF=   1.0 [sat]
+  p=2 q=2: e=  5 tauLP=   1.0 tauCF=   1.0 phiLP=   3.0 phiCF=   3.0 [sat]
+  p=2 q=3: e=  7 tauLP=   1.0 tauCF=   1.0 phiLP=   5.0 phiCF=   5.0 [sat]
+  p=2 q=4: e=  9 tauLP=   1.0 tauCF=   1.0 phiLP=   7.0 phiCF=   7.0 [sat]
+  p=2 q=5: e= 11 tauLP=   1.0 tauCF=   1.0 phiLP=   9.0 phiCF=   9.0 [sat]
+  p=2 q=6: e= 13 tauLP=   1.0 tauCF=   1.0 phiLP=  11.0 phiCF=  11.0 [sat]
+  p=3 q=0: e=  3 tauLP=   1.0 tauCF=   1.0 phiLP=   1.0 phiCF=   1.0 [nonsat]
+  p=3 q=1: e=  6 tauLP=   2.0 tauCF=   2.0 phiLP=   2.0 phiCF=   2.0 [nonsat]
+  p=3 q=2: e=  9 tauLP=   3.0 tauCF=   3.0 phiLP=   3.0 phiCF=   3.0 [sat]
+  p=3 q=3: e= 12 tauLP=   3.0 tauCF=   3.0 phiLP=   6.0 phiCF=   6.0 [sat]
+  p=3 q=4: e= 15 tauLP=   3.0 tauCF=   3.0 phiLP=   9.0 phiCF=   9.0 [sat]
+  p=3 q=5: e= 18 tauLP=   3.0 tauCF=   3.0 phiLP=  12.0 phiCF=  12.0 [sat]
+  p=3 q=6: e= 21 tauLP=   3.0 tauCF=   3.0 phiLP=  15.0 phiCF=  15.0 [sat]
+  p=4 q=0: e=  6 tauLP=   2.0 tauCF=   2.0 phiLP=   2.0 phiCF=   2.0 [nonsat]
+  p=4 q=1: e= 10 tauLP=3.3333 tauCF=3.3333 phiLP=3.3333 phiCF=3.3333 [nonsat]
+  p=4 q=2: e= 14 tauLP=4.6667 tauCF=4.6667 phiLP=4.6667 phiCF=4.6667 [nonsat]
+  p=4 q=3: e= 18 tauLP=   6.0 tauCF=   6.0 phiLP=   6.0 phiCF=   6.0 [sat]
+  p=4 q=4: e= 22 tauLP=   6.0 tauCF=   6.0 phiLP=  10.0 phiCF=  10.0 [sat]
+  p=4 q=5: e= 26 tauLP=   6.0 tauCF=   6.0 phiLP=  14.0 phiCF=  14.0 [sat]
+  p=4 q=6: e= 30 tauLP=   6.0 tauCF=   6.0 phiLP=  18.0 phiCF=  18.0 [sat]
+  p=5 q=0: e= 10 tauLP=3.3333 tauCF=3.3333 phiLP=3.3333 phiCF=3.3333 [nonsat]
+  p=5 q=1: e= 15 tauLP=   5.0 tauCF=   5.0 phiLP=   5.0 phiCF=   5.0 [nonsat]
+  p=5 q=2: e= 20 tauLP=6.6667 tauCF=6.6667 phiLP=6.6667 phiCF=6.6667 [nonsat]
+  p=5 q=3: e= 25 tauLP=8.3333 tauCF=8.3333 phiLP=8.3333 phiCF=8.3333 [nonsat]
+  p=5 q=4: e= 30 tauLP=  10.0 tauCF=  10.0 phiLP=  10.0 phiCF=  10.0 [sat]
+  p=5 q=5: e= 35 tauLP=  10.0 tauCF=  10.0 phiLP=  15.0 phiCF=  15.0 [sat]
+  p=5 q=6: e= 40 tauLP=  10.0 tauCF=  10.0 phiLP=  20.0 phiCF=  20.0 [sat]
+  p=6 q=0: e= 15 tauLP=   5.0 tauCF=   5.0 phiLP=   5.0 phiCF=   5.0 [nonsat]
+  p=6 q=1: e= 21 tauLP=   7.0 tauCF=   7.0 phiLP=   7.0 phiCF=   7.0 [nonsat]
+  p=6 q=2: e= 27 tauLP=   9.0 tauCF=   9.0 phiLP=   9.0 phiCF=   9.0 [nonsat]
+  p=6 q=3: e= 33 tauLP=  11.0 tauCF=  11.0 phiLP=  11.0 phiCF=  11.0 [nonsat]
+  p=6 q=4: e= 39 tauLP=  13.0 tauCF=  13.0 phiLP=  13.0 phiCF=  13.0 [nonsat]
+  p=6 q=5: e= 45 tauLP=  15.0 tauCF=  15.0 phiLP=  15.0 phiCF=  15.0 [sat]
+  p=6 q=6: e= 51 tauLP=  15.0 tauCF=  15.0 phiLP=  21.0 phiCF=  21.0 [sat]
+
+Degenerate cases: p<=1 and S_{2,0} give tau3*=0 (no triangles) -- confirmed. See p3_results.csv for the full grid.

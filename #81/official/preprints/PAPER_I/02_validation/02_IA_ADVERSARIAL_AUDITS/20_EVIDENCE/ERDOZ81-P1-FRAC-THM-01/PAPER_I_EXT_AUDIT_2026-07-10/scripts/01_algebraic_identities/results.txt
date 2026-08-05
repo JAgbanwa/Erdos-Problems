@@ -1,0 +1,21 @@
+==========================================================================
+01 — ALGEBRAIC IDENTITY VERIFICATION (Paper I, Gate E)
+==========================================================================
+[OK ] L48  12(U-R) = q(2o+q) - 2p:  LHS-RHS simplifies to 0
+[OK ] L50  12(D-R) = 12o^2 -6o(2p-q) +(2p-q)^2 -6p:  LHS-RHS simplifies to 0
+[OK ] L51  12u^2-6uv+v^2 = 12(u-v/4)^2 + v^2/4:  LHS-RHS simplifies to 0
+[OK ] L53  12(H-R) = (2s-q)^2 + 2q(p-s) - 2p - 4s:  LHS-RHS simplifies to 0
+[OK ] L58  C(p,2) - 2R + p = (p+q)^2/6 + p/2:  LHS-RHS simplifies to 0
+[OK ] q=0  R(p,0) - p/2 = (p^2-3p)/6:  LHS-RHS simplifies to 0
+[OK ] q=0  M(0)-R(p,0) = -p/6   [M(0)=p(p-1)/6]:  LHS-RHS simplifies to 0
+--------------------------------------------------------------------------
+Sign facts on domain q,o,s >= 0 and s <= p (o = p - s):
+  12(U-R)+2p = q(2o+q) = q*(2*p + q - 2*s)   >= 0 for q,o>=0  ->  U-R >= -p/6 >= -p/2   [OK]
+  12(D-R)+6p - SOS = 0  (==0 => = SOS >=0) -> D-R >= -p/2   [OK]
+  12(H-R)+2p+4s = 2*p*q + q**2 - 6*q*s + 4*s**2  >=0 for q>=0,p>=s ; and -2p-4s>=-6p since s<=p -> H-R >= -p/2  [OK]
+[OK ] L25  V_com = b>=2/2 + M:  LHS-RHS simplifies to 0
+[OK ] L28  |E|-2V_com = C(p,2) - 2M + b1:  LHS-RHS simplifies to 0
+--------------------------------------------------------------------------
+identities checked exactly: 9   passed: 9   failed: 0
+VERDICT: ALL EXACT (CALCULATION_VERIFIED)
+==========================================================================

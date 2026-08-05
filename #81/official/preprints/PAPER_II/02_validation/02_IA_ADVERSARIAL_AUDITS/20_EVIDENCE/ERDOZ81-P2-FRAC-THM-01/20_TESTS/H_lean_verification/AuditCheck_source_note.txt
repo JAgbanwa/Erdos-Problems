@@ -1,0 +1,8 @@
+The auditor checker file is lean/AuditCheck.lean in the Paper II project:
+
+import PaperII.Unconditional
+open PaperII
+#print axioms PaperII.theorem_1_2
+#check @PaperII.theorem_1_2
+#check @PaperII.IsChordal
+#print PaperII.IsChordal
