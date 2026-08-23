@@ -1,0 +1,96 @@
+{
+  "finding": "EXT-V15-M01",
+  "verdict": "PASS",
+  "checks_passed": 16,
+  "checks_total": 16,
+  "failed": [],
+  "checks": [
+    {
+      "pass": true,
+      "label": "no generically named compiler log remains at manuscript_build_logs root",
+      "detail": []
+    },
+    {
+      "pass": true,
+      "label": "all 29 historical root logs are preserved under v1.3_legacy",
+      "detail": 29
+    },
+    {
+      "pass": true,
+      "label": "every relocated historical log is genuinely v1.3 evidence",
+      "detail": ""
+    },
+    {
+      "pass": true,
+      "label": "the v1.5 log directory contains the six current logs",
+      "detail": [
+        "LUALATEX_en_PASS1.txt",
+        "LUALATEX_en_PASS2.txt",
+        "LUALATEX_es_PASS1.txt",
+        "LUALATEX_es_PASS2.txt",
+        "LUALATEX_FINAL_en.log",
+        "LUALATEX_FINAL_es.log"
+      ]
+    },
+    {
+      "pass": true,
+      "label": "every current compiler log names the v1.5 artifact",
+      "detail": ""
+    },
+    {
+      "pass": true,
+      "label": "stale generic consistency result is absent",
+      "detail": ""
+    },
+    {
+      "pass": true,
+      "label": "versioned v1.5 consistency result is PASS 61/61",
+      "detail": ""
+    },
+    {
+      "pass": true,
+      "label": "versioned consistency result binds to the v1.5 English Markdown hash",
+      "detail": ""
+    },
+    {
+      "pass": true,
+      "label": "unchanged manuscript hash: PAPER_III_preprint_v1.5.md",
+      "detail": ""
+    },
+    {
+      "pass": true,
+      "label": "unchanged manuscript hash: PAPER_III_preprint_v1.5_en.tex",
+      "detail": ""
+    },
+    {
+      "pass": true,
+      "label": "unchanged manuscript hash: PAPER_III_preprint_v1.5_en.pdf",
+      "detail": ""
+    },
+    {
+      "pass": true,
+      "label": "unchanged manuscript hash: PAPER_III_preprint_v1.5_es.md",
+      "detail": ""
+    },
+    {
+      "pass": true,
+      "label": "unchanged manuscript hash: PAPER_III_preprint_v1.5_es.tex",
+      "detail": ""
+    },
+    {
+      "pass": true,
+      "label": "unchanged manuscript hash: PAPER_III_preprint_v1.5_es.pdf",
+      "detail": ""
+    },
+    {
+      "pass": true,
+      "label": "Lean archive remains byte-identical",
+      "detail": ""
+    },
+    {
+      "pass": true,
+      "label": "no stale generic compiler-log name survives outside v1.3_legacy",
+      "detail": []
+    }
+  ]
+}

@@ -1,0 +1,582 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+\PassOptionsToPackage{dvipsnames,svgnames,x11names}{xcolor}
+\documentclass[
+  9pt,
+  a4paper,
+]{article}
+\usepackage{xcolor}
+\usepackage[margin=1.9cm]{geometry}
+\usepackage{amsmath,amssymb}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math} % this also loads fontspec
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+\usepackage{lmodern}
+\ifPDFTeX\else
+  % xetex/luatex font selection
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{longtable,booktabs,array}
+\newcounter{none} % for unnumbered tables
+\usepackage{calc} % for calculating minipage widths
+% Correct order of tables after \paragraph or \subparagraph
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd\longtable{\par}{\if@noskipsec\mbox{}\fi\par}{}{}
+\makeatother
+% Allow footnotes in longtable head/foot
+\IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
+\makesavenoteenv{longtable}
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\usepackage{longtable,booktabs,array}
+\setlength{\tabcolsep}{4pt}
+\usepackage{etoolbox}
+\AtBeginEnvironment{longtable}{\footnotesize}
+\emergencystretch=3em
+\sloppy
+\usepackage{bookmark}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same}
+\hypersetup{
+  pdftitle={External AI Adversarial Audit -\/-\/- Paper II{,} preprint\textbackslash\_draft\textbackslash\_v1.2},
+  pdfauthor={Claude Opus 5 (claude-opus-5), Anthropic},
+  colorlinks=true,
+  linkcolor={blue},
+  filecolor={Maroon},
+  citecolor={Blue},
+  urlcolor={Blue},
+  pdfcreator={LaTeX via pandoc}}
+
+\title{External AI Adversarial Audit -\/-\/- Paper II,
+preprint\textbackslash\_draft\textbackslash\_v1.2}
+\author{Claude Opus 5 (claude-opus-5), Anthropic}
+\date{2026-08-21}
+
+\begin{document}
+\maketitle
+
+\section{\texorpdfstring{External AI Adversarial Audit --- Paper II,
+\texttt{preprint\_draft\_v1.2}}{External AI Adversarial Audit --- Paper II, preprint\_draft\_v1.2}}\label{external-ai-adversarial-audit--paper-ii-preprint_draft_v12}
+
+\textbf{Protocol:}
+\texttt{EXTERNAL\_AI\_ADVERSARIAL\_AUDIT\_INSTRUCTIONS\_v1.1}
+\textbf{Protocol SHA-256:}
+\texttt{8ba029f443297927c9a5101b0a349bd33e3772587e56d32cbb70145de24ae505}
+\textbf{Run:} \texttt{run\_2026-08-21\_v1.2} \textbf{Audit class:}
+\texttt{EXTERNAL\_AI\_ADVERSARIAL} \textbf{Paper:} \emph{Complete-Split
+Extremizers for a Fractional Triangle-Cover Functional on Chordal
+Graphs}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\subsection{1. Target identity and controlling
+hashes}\label{1-target-identity-and-controlling-hashes}
+
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}ll@{}}
+\toprule\noalign{}
+Item & SHA-256 \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+This protocol &
+\texttt{8ba029f443297927c9a5101b0a349bd33e3772587e56d32cbb70145de24ae505}
+(verified against its sidecar) \\
+English Markdown (semantic source) &
+\texttt{7215e14bbea8ab2bf208dcdd1efa050cd2b72c997eee2efe504a1e6817c68882} \\
+Frozen Lean archive &
+\texttt{ee2d05cc40d943ca92f8f7bf3e5dd83c2692518ddea5e2ca4f7686ccb1ac3895} \\
+Sealed internal-audit ZIP &
+\texttt{e6f625486db867582da72fff9e71fa0f600dcce40e43ef885ce01756282b24e2} \\
+\end{longtable}
+}
+
+All three protocol anchors match the delivered bytes exactly. Input
+freeze sealed before analysis: \textbf{197 files, 3,411,262 bytes}, with
+the audit-output subtree excluded per protocol Section 2. The target did
+not change during the run.
+
+\subsection{2. Audit class, independence and
+limitations}\label{2-audit-class-independence-and-limitations}
+
+Primary auditor. The adversarial challenger required by protocol Section
+3.1 was run against \textbf{Paper I only}; Paper II\textquotesingle s
+findings therefore come from a single reasoning context. That is a real
+weakening relative to Paper I, and it matters concretely: on Paper I the
+challenger found four Spanish duplications the primary
+auditor\textquotesingle s diff had missed. To compensate, Paper
+II\textquotesingle s duplication and bilingual checks were made
+\textbf{general and mechanical} rather than targeted at known phrases.
+
+Both contexts used in this series are the same model family (Claude Opus
+5) and the same operator launched them. "External" means separation from
+the authoring workflow, \textbf{not} independent human peer review. Full
+disclosure: \texttt{00\_REQUEST/AUDITOR\_DECLARATION.md}.
+
+\subsection{3. Executive verdict}\label{3-executive-verdict}
+
+\begin{quote}
+\mbox{}%
+\subsection{\texorpdfstring{\texttt{PASS\_WITH\_RESIDUALS}}{PASS\_WITH\_RESIDUALS}}\label{pass_with_residuals}
+\end{quote}
+
+\textbf{Meaning.} Under protocol Section 6.2,
+\texttt{PASS\_WITH\_RESIDUALS} means no known mathematical or formal
+defect and no unresolved \texttt{BLOCKER} or \texttt{MAJOR}, but a
+non-claim-critical residual remains. \textbf{No mathematical or formal
+defect was found in Paper II.} The headline theorem survived exhaustive
+falsification, the Lean development clean-builds with the expected axiom
+footprint, and the one open finding is a stale integrity directory.
+
+Counts: \textbf{\texttt{BLOCKER} 0, \texttt{MAJOR} 0, \texttt{MINOR} 1,
+\texttt{NOTE} 1.}
+
+This verdict does \textbf{not} close any release gate that explicitly
+requires one of the residuals in Section 11.
+
+\subsection{4. Gate-by-gate verdicts}\label{4-gate-by-gate-verdicts}
+
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}ll@{}}
+\toprule\noalign{}
+Gate & Verdict \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+G0 --- target, identity, independence & \texttt{PASS} \\
+A --- definitions and claims & \texttt{PASS} \\
+B --- definitions, conventions, the functional & \texttt{PASS} \\
+C --- vertex-copy inequality and symmetrization & \texttt{PASS} \\
+D --- monotonicity, ties, level sets & \texttt{PASS} (termination not
+independently verified) \\
+E --- complete-split value & \texttt{PASS} \\
+F --- integer maximization and corollaries & \texttt{PASS} \\
+G --- exhaustive falsification & \texttt{PASS} \\
+H --- Lean reproduction and conformance & \texttt{PASS} \\
+I --- citations and problem status & \texttt{PASS\_WITH\_RESIDUALS} \\
+J --- scope and overclaim & \texttt{PASS} \\
+K --- prior art and novelty & \texttt{PASS\_WITH\_RESIDUALS} \\
+L --- bilingual and artifact consistency &
+\texttt{PASS\_WITH\_RESIDUALS} \\
+M --- package integrity & \texttt{PASS\_WITH\_RESIDUALS} \\
+\end{longtable}
+}
+
+\textbf{Overall: \texttt{PASS\_WITH\_RESIDUALS}}, no stronger than the
+weakest mandatory gate.
+
+\subsection{5. Claim map}\label{5-claim-map}
+
+\textbf{\texttt{P2-MAIN-V1\_2}} --- the exact chordal maximum. For every
+integer \emph{n} \textgreater= 1, max over chordal \emph{G} with
+\textbar V(G)\textbar{} = \emph{n} of Phi\_tau(G) =
+floor((2n+1)\^{}2/24), with Phi\_tau(G) = \textbar E(G)\textbar{} -
+2*tau3star(G), together with attainment by a complete-split graph.
+Formal: \texttt{PaperII.theorem\_1\_2}. Role: \textbf{final theorem}.
+\textbf{Survived.}
+
+\textbf{\texttt{P2-EXTREMIZER}} --- maximizers, level sets, copy
+defects. Formal: \texttt{Fsat\_argmax\_unique},
+\texttt{Fsat\_argmax\_tie}, \texttt{level\_set\_iff},
+\texttt{copyDefect\_nonneg}, \texttt{copyGamma\_ge\_half\_copyDefect}.
+Role: \textbf{structural bridges}. \textbf{Survived} on the single-step
+inequality; termination and the clone-class lift not independently
+verified.
+
+\textbf{\texttt{P2-ASYM-COR}} --- asymptotic, modular and Paper I
+comparison corollaries. Formal: \texttt{phiTau\_max\_sandwich},
+\texttt{odd\_sq\_emod\_24}, \texttt{phiTau\_max\_closed},
+\texttt{phiTau\_max\_le\_paperI\_bound}. Role: \textbf{byproducts}.
+\textbf{Survived}, all four in exact arithmetic including the negative
+range.
+
+\textbf{\texttt{P2-FORMAL-CONFORMANCE}} --- the v1.2 surface and
+reusable components. Formal: \texttt{PaperII},
+\texttt{Contrib.Submission.Chordal},
+\texttt{Contrib.Submission.GeodesicChordless}. Role: \textbf{byproduct}.
+Built as explicit targets with the expected footprints.
+
+Full map with hypotheses and falsification strategies:
+\texttt{10\_CONTROL/CLAIM\_MAP.md}.
+
+\subsection{6. The Section 4.1 regression controls --- including the one
+Paper II previously
+failed}\label{6-the-section-41-regression-controls--including-the-one-paper-ii-previously-failed}
+
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}ll@{}}
+\toprule\noalign{}
+Control & Result \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+no path resolves into \texttt{superseded/} & \textbf{PASS} --- 0 of
+197 \\
+no unexpected zero-byte file & \textbf{PASS} --- 0 \\
+no stray \texttt{\$o} & \textbf{PASS} --- absent \\
+manuscript sidecar verifies, LF-safe & \textbf{PASS} --- LF-only, 6/6
+entries verify \\
+every archive name and SHA-256 printed in the manuscript exists and
+matches & \textbf{PASS} --- the single printed hash resolves to the
+delivered archive, in both languages \\
+\textbf{no stale \texttt{v1.0.1}, nonexistent freeze filename or hash,
+nonexistent gate-log path, or mislabeled formalization table} &
+\textbf{PASS} --- 0 hits for \texttt{v1.0.1} or
+\texttt{lean\_v1.1\_freeze}; Table 4 is captioned "Lean v1.2"; no
+gate-log path is referenced \\
+\end{longtable}
+}
+
+The last row is the control Paper II failed at v1.1, where the
+manuscript documented a v1.0.1 freeze that was absent from the package,
+along with a nonexistent hash and a nonexistent build-log path.
+\textbf{The defect is corrected}, and it was re-established from scratch
+on the v1.2 bytes rather than carried forward.
+
+\subsection{7. Analytic and computational
+falsification}\label{7-analytic-and-computational-falsification}
+
+Every number below comes from code written for this audit, in exact
+arithmetic, over a stated domain, with \textbf{no random seeds}. Two
+failure routes were sought for the headline claim --- a chordal graph
+exceeding the formula, and the formula being unattainable.
+
+\subsubsection{7.1 The headline claim,
+exhaustively}\label{71-the-headline-claim-exhaustively}
+
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}lllllll@{}}
+\toprule\noalign{}
+\emph{n} & labeled graphs & chordal graphs & max Phi\_tau found &
+floor((2n+1)\^{}2/24) & match & complete-split argmax \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+1 & 1 & 1 & 0 & 0 & yes & (0,1), (1,0) \\
+2 & 2 & 2 & 1 & 1 & yes & (1,1), (2,0) \\
+3 & 8 & 8 & 2 & 2 & yes & (1,2) \\
+4 & 64 & 61 & 3 & 3 & yes & (1,3), (2,2) \\
+5 & 1,024 & 822 & 5 & 5 & yes & (2,3) \\
+6 & 32,768 & 18,154 & 7 & 7 & yes & (2,4) \\
+\textbf{total} & \textbf{33,867} & \textbf{19,048} & --- & --- &
+\textbf{exact at every n} & \textbf{always attained} \\
+\end{longtable}
+}
+
+\textbf{Zero counterexamples.} The maximum is attained by a
+complete-split graph at every \emph{n}, which is the attainment half of
+the claim established by computation rather than assumed. The left
+endpoint \emph{n} = 1 --- where closed forms of this shape usually fail
+--- holds.
+
+\subsubsection{7.2 The vertex-copy inequality, the structural
+core}\label{72-the-vertex-copy-inequality-the-structural-core}
+
+Phi\_tau(G\_\{v-\textgreater u\}) + Phi\_tau(G\_\{u-\textgreater v\})
+\textgreater= 2*Phi\_tau(G) for nonadjacent \emph{u}, \emph{v}
+(\texttt{copyDefect\_nonneg}), tested over \textbf{all} labeled graphs
+on 2..6 vertices and \textbf{all} nonadjacent pairs:
+
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}llll@{}}
+\toprule\noalign{}
+Domain & Instances & Violations & Min defect \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+\emph{n} = 2..6, all nonadjacent pairs & \textbf{251,085} & \textbf{0} &
+0 \\
+\end{longtable}
+}
+
+An observation that supports the manuscript: among the 148,919 chordal
+instances, \textbf{6,090} have \textbf{both} copy directions destroying
+chordality. The manuscript claims preservation only for copying toward a
+\emph{simplicial clone class}. Those 6,090 cases show that restriction
+is \textbf{necessary}, not decorative.
+
+\subsubsection{7.3 The packing/cover identity, not
+assumed}\label{73-the-packingcover-identity-not-assumed}
+
+The abstract asserts nu3star = tau3star. Rather than assume it, both
+optima were computed by \textbf{separate linear programs} on every graph
+tested: \textbf{270,133 graphs across Gates C and G, zero mismatches.}
+
+\subsubsection{7.4 The arithmetic
+corollaries}\label{74-the-arithmetic-corollaries}
+
+Exact integer and rational arithmetic over \emph{n} in {[}-20000,
+20000{]}, deliberately including negatives because
+\texttt{phiTau\_max\_sandwich} is stated for \emph{n} : Z with no lower
+bound.
+
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}ll@{}}
+\toprule\noalign{}
+Claim & Result \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+\texttt{phiTau\_max\_sandwich}: 4n\^{}2+4n-23 \textless{}
+24*floor((2n+1)\^{}2/24) \textless= 4n\^{}2+4n+1 for all \emph{n} in Z &
+\textbf{HOLDS}, all 40,001 values including negatives \\
+bounded remainder: M(n) = n\^{}2/6 + n/6 + theta\_n with theta\_n in
+(-1, 1/24{]} & \textbf{HOLDS}; observed range {[}-1/3, 0{]} \\
+\texttt{odd\_sq\_emod\_24}: (2n+1)\^{}2 == 1 or 9 (mod 24) &
+\textbf{CONFIRMED}; residue set is exactly \{1, 9\} \\
+\texttt{phiTau\_max\_le\_paperI\_bound}: floor((2n+1)\^{}2/24)
+\textless= n\^{}2/6 + n/2 for \emph{n} \textgreater= 1 & \textbf{HOLDS},
+margin 8n - 1 \\
+\end{longtable}
+}
+
+\textbf{The \texttt{n\ \textgreater{}=\ 1} hypothesis is necessary.}
+Tested for \emph{n} \textless= 0: the Paper I comparison \textbf{fails}
+there. The manuscript states the hypothesis; an adversarial check that
+came out in the paper\textquotesingle s favour.
+
+\textbf{Cross-paper (protocol Section 10):} the comparison uses Paper
+I\textquotesingle s \textbf{corrected \texttt{+n/2} surface}, not the
+superseded \texttt{+n} form. Requirement satisfied.
+
+\subsection{8. Lean reproduction}\label{8-lean-reproduction}
+
+Detail: \texttt{20\_EVIDENCE/H\_LEAN\_REPRODUCTION/AUDIT\_RECORD.md}.
+
+\begin{itemize}
+\tightlist
+\item
+  Archive hash verified \textbf{before} extraction; clean room provably
+  free of \texttt{.lake} and \texttt{.olean}; 42 project \texttt{.lean}
+  files, matching the freeze metadata.
+\item
+  Lean 4.28.0 commit \texttt{7e01a1bf5c70fc6167d49c345d3bf80596e9a79b},
+  Mathlib \texttt{8f9d9cff6bd728b17a24e163c9402775d9e6a365}.
+  \texttt{lake\ update} did not mutate the pin.
+\item
+  Protocol Section 9.2 command run verbatim: \textbf{exit 0},
+  \textbf{30m05.109s},
+  \texttt{Build\ completed\ successfully\ (8063\ jobs)}, \textbf{zero
+  errors}.
+\item
+  \textbf{Job-count note, reported rather than glossed:} the manuscript
+  records 8,061 for the main build and 8,032 for the supplement; this
+  run produced 8,063 in one invocation over all seven targets. Different
+  target set, not a discrepancy.
+\item
+  \textbf{Explicit targets versus aggregate root.} The protocol warns
+  that the aggregate \texttt{PaperII} target does not by itself prove
+  \texttt{Extremizer} and \texttt{CopyDefect} are imported. Both are
+  \textbf{explicit build targets}, and \texttt{FreezeAxioms.lean}
+  imports them \textbf{directly}, so the axiom queries do not rely on
+  aggregate-root closure. \textbf{No first axiom attempt failed}, so
+  there is no collision log to preserve for this paper.
+\item
+  \textbf{Axiom footprint.} 16 declarations queried, exit 0. Fourteen
+  report \texttt{{[}propext,\ Classical.choice,\ Quot.sound{]}}. Two
+  report the strictly smaller \texttt{{[}propext,\ Quot.sound{]}}:
+  \texttt{PaperII.phiTau\_max\_le\_paperI\_bound} and
+  \texttt{SimpleGraph.IsChordal.comap}. \textbf{The
+  manuscript\textquotesingle s Table 5 records exactly that reduced
+  footprint} for the former --- accurate reporting at a level of detail
+  that is easy to get wrong. \textbf{No \texttt{sorryAx}, no
+  project-level axiom.}
+\item
+  \textbf{Escape hatches in active code: 0} across all 42 files (2 hits,
+  both prose).
+\end{itemize}
+
+\subsection{9. Citations and open
+status}\label{9-citations-and-open-status}
+
+Detail: \texttt{20\_EVIDENCE/I\_CITATIONS\_STATUS/AUDIT\_RECORD.md}.
+
+\texttt{SUPPORTED}: {[}1{]} Erdős--Ordman--Zalcstein 1993 --- publisher
+record retrieved, abstract obtained \textbf{verbatim}, both constants
+(n\^{}2/6 and (1-c)n\^{}2/4) matching. {[}3{]} Blair--Peyton 1993 ---
+record retrieved and content confirmed. {[}2{]} Golumbic, {[}5{]} Lean,
+{[}6{]} mathlib --- standard citations as printed. {[}7{]} the project
+repository --- retrieved, and its statement of \textbf{Paper
+II\textquotesingle s} result agrees with this manuscript.
+
+\texttt{UNVERIFIED} by direct access: {[}8{]} erdosproblems.com returns
+HTTP 403 to this auditor. The substantive status claim is corroborated
+by the verified {[}1{]} abstract ("It is unknown whether this many
+cliques will always suffice").
+
+\textbf{Distinctions maintained correctly.} Paper II works over chordal
+graphs and determines an \textbf{exact fractional} extremum; {[}1{]}
+concerns the \textbf{integral} clique-partition number and leaves it
+open. The abstract states plainly that the paper "does not prove an
+integral clique-partition theorem" and that its cover-first proof "does
+not use strong LP duality or an asymptotic packing theorem" --- and the
+reference list contains no asymptotic packing result, consistent with
+that claim.
+
+\subsection{10. Prior art, scope, and bilingual
+QA}\label{10-prior-art-scope-and-bilingual-qa}
+
+\textbf{Novelty (Gate K).} No prior result with the same statement was
+found in the corpus searched to 2026-08-21. No retrieved work states an
+exact maximum of \textbar E\textbar{} - 2*tau3star over chordal graphs,
+identifies complete-split extremizers, or uses vertex-copy
+symmetrization. The most recent relevant preprint located (Ning,
+arXiv:2608.11536, 30 July 2026) concerns a different object and still
+cites {[}1{]} as the chordal state of the art. \textbf{This is an
+evidence-bounded negative result, not proof of novelty.}
+
+\textbf{Scope (Gate J).} No resolution claim: a targeted search for
+"settles/resolves/solves" plus a problem object returned only false
+positives ("\textbf{Solv}ing its two branches"). Status is
+\texttt{EDITORIAL\_DRAFT\_WITH\_OPEN\_GATES}, unpublished, with
+independent reproduction, external adversarial audit and peer review
+named as \textbf{open} gates. Novelty is explicitly labelled an internal
+editorial assessment. Table 4 is correctly captioned "Lean v1.2" and
+states "independent reproduction remains pending". The uniqueness claim
+is bounded to the clique size within the complete-split family --- and
+the enumeration confirms that the weaker claim is the right one, since
+ties do occur at \emph{n} = 2 and \emph{n} = 4.
+
+\textbf{Bilingual (Gate L).} Protected content is \textbf{identical}:
+display mathematics 96/96 with zero one-sided blocks after blanking
+translated prose, equation tags 7/7, citation keys identical, headings
+52/52 with identical level sequence. The one asymmetry is the Lean
+tactic name \texttt{simp} appearing once in Spanish prose --- not a
+declaration, no mathematical content.
+
+\textbf{The Paper I defect class is absent.} Paper II was screened
+explicitly for duplicated blocks, since Paper I v1.2 carried five. The
+duplicated-line classes here are \textbf{symmetric} between languages:
+the headline floor formula appears 9 times in each, and the table header
+twice in each because there are \textbf{two} distinct tables (Table 4
+and Table 5) --- verified by reading both regions. An initial flag on
+the Spanish header was an artifact of a 40-character threshold (the
+English header is 38) and was \textbf{dismissed rather than filed}.
+
+\textbf{Rendered pages.} 47 pages (23 EN + 24 ES) rendered and analysed;
+LuaTeX-1.24.0, A4, unencrypted; no blank page, no anomalous black area,
+no malformed structure. The one-page difference is ordinary Spanish text
+expansion, which the duplication screen is what establishes.
+
+\subsection{11. Unresolved findings and residual
+risks}\label{11-unresolved-findings-and-residual-risks}
+
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}llll@{}}
+\toprule\noalign{}
+ID & Gate & Severity & Summary \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+\texttt{EXT-PII-M-001} & M & MINOR & \texttt{04\_integrity/} is stale
+v1.1 content; 1 of 2 sidecar entries unresolvable; no documented
+v1.1-\textgreater v1.2 initialization diff \\
+\texttt{EXT-P2-I-001} & I & NOTE & the official Erdős Problems page
+could not be retrieved (HTTP 403) \\
+\end{longtable}
+}
+
+\textbf{Coverage limits --- declared, not assumed to pass:} termination
+of the repeated-copy process; the discrete-convexity lift to clone
+classes; the two-variable orbit reduction on S\_\{p,q\}; exhaustive
+enumeration beyond \emph{n} = 6; modules outside the seven build
+targets; independent PDF recompilation; institutional bibliographic
+databases and non-English search.
+
+\subsection{12. What this audit does not
+establish}\label{12-what-this-audit-does-not-establish}
+
+\begin{itemize}
+\tightlist
+\item
+  It does \textbf{not} establish that the headline theorem is true. It
+  establishes that a determined adversarial search over 19,048 chordal
+  graphs and 251,085 copy instances, plus an independent formal
+  reproduction, failed to falsify it.
+\item
+  It is \textbf{not} human peer review.
+\item
+  It does \textbf{not} prove global novelty.
+\item
+  It does \textbf{not} verify termination of the copy process or the
+  clone-class lift --- the two structural steps beyond the single-step
+  inequality.
+\item
+  It does \textbf{not} verify that the delivered PDFs were compiled from
+  the delivered TeX.
+\item
+  It does \textbf{not} cover Lean modules outside the seven protocol
+  targets.
+\item
+  Paper II\textquotesingle s findings rest on a \textbf{single reasoning
+  context}; no challenger was run.
+\end{itemize}
+
+\subsection{13. Package and
+reproduction}\label{13-package-and-reproduction}
+
+\texttt{40\_PACKAGE/SHA256\_MANIFEST.txt},
+\texttt{PACKAGE\_MANIFEST.json} and \texttt{TREE.txt} record final
+contents. Every referenced log exists as a directly visible file under
+\texttt{20\_EVIDENCE/*/results/}, not only inside the archive. Scripts
+are Python 3.14 needing only the standard library plus \texttt{Pillow};
+the Lean reproduction needs the pinned toolchain and, on Windows,
+\texttt{core.longpaths} plus a short clean-room root.
+
+\subsection{14. Signature}\label{14-signature}
+
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}ll@{}}
+\toprule\noalign{}
+Item & Value \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+Auditor & Claude Opus 5 (\texttt{claude-opus-5}), Anthropic \\
+Configuration & primary auditor only; no challenger for this paper \\
+Audit date & 2026-08-21 \\
+Protocol &
+\texttt{EXTERNAL\_AI\_ADVERSARIAL\_AUDIT\_INSTRUCTIONS\_v1.1}, SHA-256
+\texttt{8ba029f4...e505} \\
+Target & \texttt{preprint\_draft\_v1.2}, EN Markdown
+\texttt{7215e14b...8882} \\
+\textbf{Verdict} & \textbf{\texttt{PASS\_WITH\_RESIDUALS}} --- no
+mathematical or formal defect; 0 blocker, 0 major, 1 minor, 1 note \\
+\end{longtable}
+}
+
+\end{document}

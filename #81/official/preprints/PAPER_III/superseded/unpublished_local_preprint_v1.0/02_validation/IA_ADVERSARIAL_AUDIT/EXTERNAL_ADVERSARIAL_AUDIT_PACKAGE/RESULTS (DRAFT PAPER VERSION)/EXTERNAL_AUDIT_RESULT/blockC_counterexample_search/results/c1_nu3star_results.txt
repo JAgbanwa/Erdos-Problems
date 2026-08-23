@@ -1,0 +1,8 @@
+METHOD 1 full grid 3<=p<=40, 0<=q<=2p+2, 0<=d<=p: 48469 instances, 48469 certified nu3*=F exactly, 0 failures  [390s]
+METHOD 1 boundary + random large (p up to 10^4, q up to 4p): 610 instances, 610 certified, cumulative failures 0  [4s]
+METHOD 2 raw exact simplex on the actual graph (independent spot-check, no orbit reduction; <= 80 triangles/instance): 266 instances solved (43 larger instances skipped and left to Method 1), 266 exact matches nu3*=F, 0 mismatches  [32s]
+
+========================================================================
+VERDICT C1 (Theorem 3.1 / Corollary 10.4): PASS — every audited instance has nu3* = F, proved by exact certificates
+Total instances: 49345
+========================================================================

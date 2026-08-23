@@ -1,0 +1,101 @@
+{
+  "paper": "PAPER_II",
+  "target": "preprint_draft_v1.2_package_fix",
+  "status": "PASS",
+  "checks_passed": 17,
+  "checks_total": 17,
+  "checks": [
+    {
+      "name": "anchor:01_manuscript/PAPER_II_preprint_draft_v1.2.md",
+      "status": "PASS",
+      "detail": "7215e14bbea8ab2bf208dcdd1efa050cd2b72c997eee2efe504a1e6817c68882"
+    },
+    {
+      "name": "anchor:01_manuscript/PAPER_II_preprint_draft_v1.2_es.md",
+      "status": "PASS",
+      "detail": "d0d1df05eb267a51db2ccc100dd9725dcde9b03dbb95c8a730742e357eb0f4dc"
+    },
+    {
+      "name": "anchor:01_manuscript/PAPER_II_preprint_draft_v1.2_en.tex",
+      "status": "PASS",
+      "detail": "bb5f76c3ce56dbb0bff11242a3a8787f9c8ba3d9f0ad23973fc2f26cc5fc3cf0"
+    },
+    {
+      "name": "anchor:01_manuscript/PAPER_II_preprint_draft_v1.2_es.tex",
+      "status": "PASS",
+      "detail": "d3f0c6301a48d6553ebad222fa685f152119cb61b5efd3e8be55e389f9d606ae"
+    },
+    {
+      "name": "anchor:01_manuscript/PAPER_II_preprint_draft_v1.2_en.pdf",
+      "status": "PASS",
+      "detail": "d05c4cab1262357fddd21e4aab399bdb92d5bcf139172897c80595e781049052"
+    },
+    {
+      "name": "anchor:01_manuscript/PAPER_II_preprint_draft_v1.2_es.pdf",
+      "status": "PASS",
+      "detail": "d525d02a6e911cb23f7e1f28e1de7648441eccea6de206e76e5321161c86c2db"
+    },
+    {
+      "name": "anchor:05_formalization/lean_v1.2_freeze/PAPER_II_lean_v1.2_freeze.zip",
+      "status": "PASS",
+      "detail": "ee2d05cc40d943ca92f8f7bf3e5dd83c2692518ddea5e2ca4f7686ccb1ac3895"
+    },
+    {
+      "name": "anchor:02_validation/01_INTERNAL_AUDITS/30_PACKAGE/INTERNAL_AUDIT_PACKAGE.zip",
+      "status": "PASS",
+      "detail": "e6f625486db867582da72fff9e71fa0f600dcce40e43ef885ce01756282b24e2"
+    },
+    {
+      "name": "anchor:02_validation/02_IA_ADVERSARIAL_AUDITS/run_2026-08-21_v1.2/30_REPORT/FINAL_AUDIT_REPORT.md",
+      "status": "PASS",
+      "detail": "1e7afd3e9394bf83beb7e33ce19ff5227072fcd6b0eb3fd21e571329564e3ded"
+    },
+    {
+      "name": "sidecar:04_integrity/INITIAL_SOURCE_SHA256.txt",
+      "status": "PASS",
+      "detail": "all entries verify; LF-only"
+    },
+    {
+      "name": "sidecar:04_integrity/CURRENT_TARGET_SHA256.txt",
+      "status": "PASS",
+      "detail": "all entries verify; LF-only"
+    },
+    {
+      "name": "stale_pending_v1_1_absent",
+      "status": "PASS",
+      "detail": "README inspected"
+    },
+    {
+      "name": "missing_v1_1_sidecar_path_absent",
+      "status": "PASS",
+      "detail": "sidecar inspected"
+    },
+    {
+      "name": "v1_1_to_v1_2_diff_documented",
+      "status": "PASS",
+      "detail": "INITIALIZATION_DIFF inspected"
+    },
+    {
+      "name": "minor_disposition_documented",
+      "status": "PASS",
+      "detail": "residual matrix inspected"
+    },
+    {
+      "name": "note_preserved",
+      "status": "PASS",
+      "detail": "residual matrix inspected"
+    },
+    {
+      "name": "package_hygiene",
+      "status": "PASS",
+      "detail": "no tmp, zero-byte, dollar-name or compiler residue"
+    }
+  ],
+  "inventory": {
+    "scope": "target excluding all external-audit output and this residual run",
+    "files": 200,
+    "bytes": 3417038,
+    "canonical_manifest_algorithm": "SHA-256 of UTF-8 LF-only lines '<file_sha256><two spaces><relative_posix_path>\\n' sorted case-insensitively by relative POSIX path",
+    "manifest_sha256": "ddc50d1cb1fd16a788d03738806a381043134f1df7a0262808379892902b96ec"
+  }
+}

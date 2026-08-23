@@ -1,0 +1,149 @@
+{
+  "paper": "PAPER_I",
+  "target": "preprint_draft_v1.3_package_fix",
+  "audit_class": "INTERNAL_NOT_EXTERNAL",
+  "excluded_prefixes": [
+    "02_validation/02_IA_ADVERSARIAL_AUDITS",
+    "02_validation/01_INTERNAL_AUDITS/residual_run_2026-08-21_v1.3_pkgfix"
+  ],
+  "inventory": {
+    "files": 219,
+    "bytes": 24495011,
+    "aggregate_sha256": "402fe23d5538851b290c749927ea75052efadc8c5df5cda5aba5fdbe0495a325"
+  },
+  "anchors": {
+    "01_manuscript/PAPER_I_preprint_draft_v1.3.md": "f3094b670c93ff622c3f573cdab61bdd0f5d84007f04b1888b364e0183565bea",
+    "01_manuscript/PAPER_I_preprint_draft_v1.3_es.md": "57ba967fc2de805b7bbb4cf5f937727bde43c2ada80fa794bcbb5a727db05b8b",
+    "01_manuscript/PAPER_I_preprint_draft_v1.3_en.tex": "1a87de70548879ca90a714ec9e1b10c8576b380a749785916e5d59176e479465",
+    "01_manuscript/PAPER_I_preprint_draft_v1.3_es.tex": "f83ee709c1168b5b9afe504e6b6a43763bf3bb2a08f674f2031f83670ba9bb56",
+    "01_manuscript/PAPER_I_preprint_draft_v1.3_en.pdf": "7d04c47692b613c8d6e2cc4471f0205128b4ae06ca11d581a08d020eb2236db0",
+    "01_manuscript/PAPER_I_preprint_draft_v1.3_es.pdf": "3ad16ae86e8fcad358bf964a6ae98ae053b0bde2fdf3140e008cedab78b90c2a",
+    "05_formalization/lean_v1.2_freeze/PAPER_I_lean_v1.2_freeze.zip": "0181506408644fc1f8872d711de5a98a500f4052aa295bcd6f8c82776694fd3a"
+  },
+  "checks": [
+    {
+      "name": "RES-V13-001 no tmp directory",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "no forbidden compiler residue",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "no zero-byte files",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "no stray $o",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "RES-V13-002 correct changelog namespaces",
+      "passed": true,
+      "detail": {
+        "PaperI.assembly_sharp": 1,
+        "PaperI.Split.residual_duality": 1
+      }
+    },
+    {
+      "name": "transposed changelog namespaces absent",
+      "passed": true,
+      "detail": {
+        "PaperI.Split.assembly_sharp": 0,
+        "PaperI.residual_duality": 0
+      }
+    },
+    {
+      "name": "manuscript Appendix C agrees with corrected namespaces",
+      "passed": true,
+      "detail": {
+        "PaperI.assembly_sharp": true,
+        "PaperI.Split.residual_duality": true
+      }
+    },
+    {
+      "name": "FreezeAxioms agrees with corrected namespaces",
+      "passed": true,
+      "detail": {
+        "PaperI.assembly_sharp": true,
+        "PaperI.Split.residual_duality": true
+      }
+    },
+    {
+      "name": "unchanged anchor: 01_manuscript/PAPER_I_preprint_draft_v1.3.md",
+      "passed": true,
+      "detail": "f3094b670c93ff622c3f573cdab61bdd0f5d84007f04b1888b364e0183565bea"
+    },
+    {
+      "name": "unchanged anchor: 01_manuscript/PAPER_I_preprint_draft_v1.3_es.md",
+      "passed": true,
+      "detail": "57ba967fc2de805b7bbb4cf5f937727bde43c2ada80fa794bcbb5a727db05b8b"
+    },
+    {
+      "name": "unchanged anchor: 01_manuscript/PAPER_I_preprint_draft_v1.3_en.tex",
+      "passed": true,
+      "detail": "1a87de70548879ca90a714ec9e1b10c8576b380a749785916e5d59176e479465"
+    },
+    {
+      "name": "unchanged anchor: 01_manuscript/PAPER_I_preprint_draft_v1.3_es.tex",
+      "passed": true,
+      "detail": "f83ee709c1168b5b9afe504e6b6a43763bf3bb2a08f674f2031f83670ba9bb56"
+    },
+    {
+      "name": "unchanged anchor: 01_manuscript/PAPER_I_preprint_draft_v1.3_en.pdf",
+      "passed": true,
+      "detail": "7d04c47692b613c8d6e2cc4471f0205128b4ae06ca11d581a08d020eb2236db0"
+    },
+    {
+      "name": "unchanged anchor: 01_manuscript/PAPER_I_preprint_draft_v1.3_es.pdf",
+      "passed": true,
+      "detail": "3ad16ae86e8fcad358bf964a6ae98ae053b0bde2fdf3140e008cedab78b90c2a"
+    },
+    {
+      "name": "unchanged anchor: 05_formalization/lean_v1.2_freeze/PAPER_I_lean_v1.2_freeze.zip",
+      "passed": true,
+      "detail": "0181506408644fc1f8872d711de5a98a500f4052aa295bcd6f8c82776694fd3a"
+    },
+    {
+      "name": "external PASS_WITH_RESIDUALS report preserved",
+      "passed": true,
+      "detail": "f2ad1605f0a802932c07503bfad429a98b08af26844dd968aad6e3f145aee495"
+    },
+    {
+      "name": "manuscript sidecar LF-only",
+      "passed": true,
+      "detail": {
+        "cr": 0,
+        "lf": 6
+      }
+    },
+    {
+      "name": "six-artifact sidecar verifies",
+      "passed": true,
+      "detail": {
+        "entries": 6,
+        "errors": []
+      }
+    },
+    {
+      "name": "current target manifest verifies",
+      "passed": true,
+      "detail": {
+        "entries": 8,
+        "errors": []
+      }
+    },
+    {
+      "name": "v1.4 absent from active target",
+      "passed": true,
+      "detail": "C:\\ERDOS\\erdos81\\_worktrees\\papers-i-iii-preprint-drafts-v1.1\\preprints\\PAPER_I\\active\\preprint_draft_v1.4"
+    }
+  ],
+  "checks_passed": 20,
+  "checks_total": 20,
+  "status": "PASS"
+}

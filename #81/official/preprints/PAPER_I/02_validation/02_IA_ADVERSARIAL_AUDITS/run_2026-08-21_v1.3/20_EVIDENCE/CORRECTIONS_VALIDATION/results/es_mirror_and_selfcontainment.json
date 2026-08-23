@@ -1,0 +1,178 @@
+{
+ "spec": "RESIDUAL_AUDIT_REQUEST_SPEC.md",
+ "target": "preprint_draft_v1.3",
+ "mirror": {
+  "EN": [
+   {
+    "check": "control 3a  z_e=x_e substitution stated",
+    "needle": "z_e=x_e",
+    "lines": [
+     270
+    ],
+    "expected": "present",
+    "pass": true
+   },
+   {
+    "check": "control 3a  capped-dual polytope named",
+    "needle": "capped-dual",
+    "lines": [
+     270
+    ],
+    "expected": "present",
+    "pass": true
+   },
+   {
+    "check": "control 3b  H-slack sum present",
+    "needle": "\\sum_{e\\in H}",
+    "lines": [
+     308,
+     311,
+     314
+    ],
+    "expected": "present",
+    "pass": true
+   },
+   {
+    "check": "control 4   A.2 restricted",
+    "needle": "\\ge3",
+    "lines": [
+     538,
+     564,
+     656,
+     666,
+     824,
+     888
+    ],
+    "expected": "present",
+    "pass": true
+   },
+   {
+    "check": "control 4   o=0,1,2 routed to A.3",
+    "needle": "o=0,1,2",
+    "lines": [
+     904,
+     906
+    ],
+    "expected": "present",
+    "pass": true
+   },
+   {
+    "check": "control 6   author-hosted CEO scan",
+    "needle": "ordman.net",
+    "lines": [
+     1091
+    ],
+    "expected": "present",
+    "pass": true
+   },
+   {
+    "check": "control 7   Schrijver at chapter level",
+    "needle": "Chapter 7",
+    "lines": [
+     781,
+     1025
+    ],
+    "expected": "present",
+    "pass": true
+   },
+   {
+    "check": "control 8   repository citation removed",
+    "needle": "github.com/jtraverso",
+    "lines": [],
+    "expected": "absent",
+    "pass": true
+   }
+  ],
+  "ES": [
+   {
+    "check": "control 3a  z_e=x_e substitution stated",
+    "needle": "z_e=x_e",
+    "lines": [
+     270
+    ],
+    "expected": "present",
+    "pass": true
+   },
+   {
+    "check": "control 3a  capped-dual polytope named",
+    "needle": "dual acotado",
+    "lines": [
+     270
+    ],
+    "expected": "present",
+    "pass": true
+   },
+   {
+    "check": "control 3b  H-slack sum present",
+    "needle": "\\sum_{e\\in H}",
+    "lines": [
+     308,
+     311,
+     314
+    ],
+    "expected": "present",
+    "pass": true
+   },
+   {
+    "check": "control 4   A.2 restricted",
+    "needle": "\\ge3",
+    "lines": [
+     538,
+     564,
+     656,
+     666,
+     824,
+     888
+    ],
+    "expected": "present",
+    "pass": true
+   },
+   {
+    "check": "control 4   o=0,1,2 routed to A.3",
+    "needle": "o=0,1,2",
+    "lines": [
+     904,
+     906
+    ],
+    "expected": "present",
+    "pass": true
+   },
+   {
+    "check": "control 6   author-hosted CEO scan",
+    "needle": "ordman.net",
+    "lines": [
+     1089
+    ],
+    "expected": "present",
+    "pass": true
+   },
+   {
+    "check": "control 7   Schrijver at chapter level",
+    "needle": "Cap",
+    "lines": [
+     781,
+     1025
+    ],
+    "expected": "present",
+    "pass": true
+   },
+   {
+    "check": "control 8   repository citation removed",
+    "needle": "github.com/jtraverso",
+    "lines": [],
+    "expected": "absent",
+    "pass": true
+   }
+  ]
+ },
+ "self_containment": {
+  "EN": {
+   "violations": 0,
+   "detail": []
+  },
+  "ES": {
+   "violations": 0,
+   "detail": []
+  }
+ }
+}

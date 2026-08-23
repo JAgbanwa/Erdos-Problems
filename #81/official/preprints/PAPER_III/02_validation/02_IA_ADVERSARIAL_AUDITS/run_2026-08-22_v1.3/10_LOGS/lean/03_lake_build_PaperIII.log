@@ -1,0 +1,582 @@
+### start_utc: 2026-08-22T16:25:11Z
+### cmd: lake build PaperIII
+### cwd: C:\ea\P3
+### lean: Lean (version 4.28.0, x86_64-w64-windows-gnu, commit 7e01a1bf5c70fc6167d49c345d3bf80596e9a79b, Release)
+### lake: Lake version 5.0.0-src+7e01a1b (Lean version 4.28.0)
+✔ [8026/8203] Built Nibble.Basic (197s)
+✔ [8027/8203] Built Nibble.Convergence (210s)
+✔ [8028/8203] Built Nibble.Tight.CubeVariance (222s)
+⚠ [8029/8203] Built Nibble.DrossCutArith (262s)
+warning: Nibble/DrossCutArith.lean:152:33: unused variable `hn`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+✔ [8030/8203] Built Nibble.BeckFiala (264s)
+⚠ [8031/8203] Built Nibble.LPDuality (281s)
+warning: Nibble/LPDuality.lean:29:8: automatically included section variable(s) unused in theorem `_private.Nibble.LPDuality.0.LPDuality.zero_isPacking`:
+  [Fintype C]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype C] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: Nibble/LPDuality.lean:68:8: automatically included section variable(s) unused in theorem `_private.Nibble.LPDuality.0.LPDuality.coverOpt_le_value`:
+  [Fintype O]
+  [DecidableEq C]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype O] [DecidableEq C] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: Nibble/LPDuality.lean:105:8: automatically included section variable(s) unused in theorem `_private.Nibble.LPDuality.0.LPDuality.coverMap_apply_row`:
+  [DecidableEq C]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq C] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: Nibble/LPDuality.lean:109:8: automatically included section variable(s) unused in theorem `_private.Nibble.LPDuality.0.LPDuality.coverMap_apply_value`:
+  [DecidableEq C]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq C] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: Nibble/LPDuality.lean:605:8: automatically included section variable(s) unused in theorem `_private.Nibble.LPDuality.0.LPDuality.coverOpt_eq_zero_of_empty_row`:
+  [Fintype O]
+  [DecidableEq C]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype O] [DecidableEq C] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+✔ [8032/8203] Built Nibble.Tight.Pruning (38s)
+✔ [8033/8203] Built Nibble.Conflict (42s)
+✔ [8034/8203] Built Nibble.Greedy (46s)
+✔ [8035/8203] Built Nibble.Regular (51s)
+✔ [8036/8203] Built Nibble.YusterEdgeType (48s)
+✔ [8037/8203] Built Nibble.PadCount (380s)
+✔ [8038/8203] Built Nibble.FlowFeasibility (380s)
+✔ [8039/8203] Built Nibble.Prelude (381s)
+✔ [8040/8203] Built Nibble.YusterEdge (54s)
+✔ [8041/8203] Built Nibble.Round (55s)
+✔ [8042/8203] Built Nibble.Tight.ConflictCount (79s)
+✔ [8043/8203] Built Nibble.Assembly (82s)
+✔ [8044/8203] Built Nibble.Interface (82s)
+✔ [8045/8203] Built Nibble.PadHypergraph (98s)
+✔ [8046/8203] Built Nibble.Survival (127s)
+✔ [8047/8203] Built Nibble.Subgamma (106s)
+✔ [8048/8203] Built Nibble.GoodEvent (105s)
+⚠ [8049/8203] Built Nibble.YusterBridgeFrac (74s)
+warning: Nibble/YusterBridgeFrac.lean:60:0: automatically included section variable(s) unused in theorem `Nibble.YusterE.triangle_powersetCard_two_sup`:
+  [Fintype V]
+  [DecidableRel G.Adj]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] [DecidableRel G.Adj] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: Nibble/YusterBridgeFrac.lean:86:0: automatically included section variable(s) unused in theorem `Nibble.YusterE.mem_powersetCard_two_iff_subset`:
+  [Fintype V]
+  [DecidableEq V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] [DecidableEq V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+✔ [8050/8203] Built Nibble.Tight.Selection (111s)
+✔ [8051/8203] Built Nibble.MarkovVertices (116s)
+⚠ [8052/8203] Built Nibble.YusterNu3 (86s)
+warning: Nibble/YusterNu3.lean:28:0: automatically included section variable(s) unused in theorem `Nibble.YusterE.isMatching_empty`:
+  [Fintype V]
+  [DecidableEq V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] [DecidableEq V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+✔ [8053/8203] Built Nibble.YusterSubDegree (84s)
+✔ [8054/8203] Built Nibble.YusterBridgePacking (75s)
+✔ [8055/8203] Built Nibble.YusterFracUpper (68s)
+✔ [8056/8203] Built Nibble.RoundConflict (56s)
+✔ [8057/8203] Built Nibble.AX1Reduction (77s)
+✔ [8058/8203] Built Nibble.Iteration (56s)
+✔ [8059/8203] Built Nibble.DepLocal (69s)
+✔ [8060/8203] Built Nibble.RegularMost (69s)
+✔ [8061/8203] Built Nibble.YusterSubDegreeChar (62s)
+✔ [8062/8203] Built Nibble.InvariantDegree (38s)
+✔ [8063/8203] Built Nibble.BernoulliSpace (94s)
+✔ [8064/8203] Built Nibble.Covered (107s)
+✔ [8065/8203] Built Nibble.StrongDualityInst (66s)
+✔ [8066/8203] Built Nibble.Assemble (36s)
+✔ [8067/8203] Built Nibble.YusterNibbleApply (45s)
+✔ [8068/8203] Built Nibble.Bennett (120s)
+✔ [8069/8203] Built Nibble.YusterSubRegular (45s)
+✔ [8070/8203] Built Nibble.StarCounterexample (51s)
+✔ [8071/8203] Built Nibble.Pruning (49s)
+✔ [8072/8203] Built Nibble.Measurable (56s)
+✔ [8073/8203] Built Nibble.IterationSeq (43s)
+⚠ [8074/8203] Built Nibble.Discharge (47s)
+warning: Nibble/Discharge.lean:124:35: unused variable `hβ`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+✔ [8075/8203] Built Nibble.YusterSubBridge (48s)
+✔ [8076/8203] Built Nibble.Tight.CubeRetention (62s)
+✔ [8077/8203] Built Nibble.DenseNearRegular (47s)
+⚠ [8078/8203] Built Nibble.ResidualDegree (62s)
+warning: Nibble/ResidualDegree.lean:93:57: unused variable `hp1`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+✔ [8079/8203] Built Nibble.CoveredExpectation (61s)
+✔ [8080/8203] Built Nibble.DischargeSeq (54s)
+✔ [8081/8203] Built Nibble.YusterGap (61s)
+✔ [8082/8203] Built Nibble.Tight.DenseRegDischarge (59s)
+⚠ [8083/8203] Built Nibble.Chebyshev (88s)
+warning: Nibble/Chebyshev.lean:51:0: automatically included section variable(s) unused in theorem `Nibble.measurableSet_survival`:
+  [IsProbabilityMeasure ℙ]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [IsProbabilityMeasure ℙ] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: Nibble/Chebyshev.lean:106:0: automatically included section variable(s) unused in theorem `Nibble.survivalEvent_eq_dep`:
+  [IsProbabilityMeasure ℙ]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [IsProbabilityMeasure ℙ] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: Nibble/Chebyshev.lean:139:0: automatically included section variable(s) unused in theorem `Nibble.measurableSet_A_depSigma`:
+  [IsProbabilityMeasure ℙ]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [IsProbabilityMeasure ℙ] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: Nibble/Chebyshev.lean:198:0: automatically included section variable(s) unused in theorem `Nibble.survivalIndicator_nonneg`:
+  [IsProbabilityMeasure ℙ]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [IsProbabilityMeasure ℙ] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: Nibble/Chebyshev.lean:323:8: automatically included section variable(s) unused in theorem `_private.Nibble.Chebyshev.0.Nibble.measure_edge_hit_toReal_le`:
+  [IsProbabilityMeasure ℙ]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [IsProbabilityMeasure ℙ] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: Nibble/Chebyshev.lean:350:57: unused variable `hp1`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Nibble/Chebyshev.lean:849:57: unused variable `hp1`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+✔ [8084/8203] Built Nibble.YusterAX1 (69s)
+✔ [8085/8203] Built Nibble.AdaptiveRounds (77s)
+✔ [8086/8203] Built Nibble.OneRoundGood (143s)
+✔ [8087/8203] Built Nibble.Tight.CoverProb (150s)
+✔ [8088/8203] Built Nibble.RoundInvariant (146s)
+✔ [8089/8203] Built Nibble.VarianceBound (159s)
+✔ [8090/8203] Built PaperIII.Defs (856s)
+✔ [8091/8203] Built PaperIII.DiracMatching (1083s)
+⚠ [8092/8203] Built PaperIII.DiracHamilton (1093s)
+warning: PaperIII/DiracHamilton.lean:349:5: unused variable `hp`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+✔ [8093/8203] Built Nibble.YusterMost (439s)
+⚠ [8094/8203] Built Nibble.RegularityBadBound (411s)
+warning: Nibble/RegularityBadBound.lean:26:0: automatically included section variable(s) unused in theorem `Nibble.residualDeg_variance_le_sq`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [8095/8203] Built Nibble.RegularityBad (398s)
+warning: Nibble/RegularityBad.lean:32:0: automatically included section variable(s) unused in theorem `Nibble.measurableSet_residual_mem`:
+  [Fintype V]
+  [IsProbabilityMeasure ℙ]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] [IsProbabilityMeasure ℙ] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+✔ [8096/8203] Built Nibble.Tight.SafeDegree (454s)
+✔ [8097/8203] Built Nibble.Tight.TwoEdgeMatch (455s)
+✔ [8098/8203] Built PaperIII.E_B (1504s)
+⚠ [8099/8203] Built PaperIII.E_D (1526s)
+warning: PaperIII/E_D.lean:33:5: unused variable `hirr`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: PaperIII/E_D.lean:108:5: unused variable `hr`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: PaperIII/E_D.lean:109:5: unused variable `hPB`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: PaperIII/E_D.lean:182:8: automatically included section variable(s) unused in theorem `_private.PaperIII.E_D.0.PaperIII.AppendixD.matching_saturates_max_left`:
+  [Fintype R]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype R] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: PaperIII/E_D.lean:183:5: unused variable `hdegU`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: PaperIII/E_D.lean:359:155: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+✔ [8100/8203] Built Nibble.PaperImprovements (239s)
+✔ [8101/8203] Built Nibble.NibbleGapReduction (245s)
+⚠ [8102/8203] Built PaperIII.E_3_1_LP (1523s)
+warning: PaperIII/E_3_1_LP.lean:21:49: unused variable `hB`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: PaperIII/E_3_1_LP.lean:34:5: unused variable `hd`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: PaperIII/E_3_1_LP.lean:49:44: unused variable `hE`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: PaperIII/E_3_1_LP.lean:90:23: unused variable `hrd`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+✔ [8103/8203] Built Nibble.RoundOracleKernel (773s)
+⚠ [8104/8203] Built Nibble.GoodRound (232s)
+warning: Nibble/GoodRound.lean:63:0: automatically included section variable(s) unused in theorem `Nibble.exists_good_round_freedman_uncond`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+✔ [8105/8203] Built PaperIII.Contrib.DiracMathlib (293s)
+✔ [8106/8203] Built PaperIII.Identities (358s)
+✔ [8107/8203] Built PaperIII.Contrib.MatchingMathlib (296s)
+⚠ [8108/8203] Built PaperIII.Duality (668s)
+warning: PaperIII/Duality.lean:119:5: unused variable `e`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: PaperIII/Duality.lean:150:0: automatically included section variable(s) unused in theorem `PaperIII.le_nu3_of_packing`:
+  [DecidableRel H.Adj]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableRel H.Adj] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+✔ [8109/8203] Built PaperIII.SplitEdges (690s)
+✔ [8110/8203] Built Nibble.GoodRetentionFinset (71s)
+✔ [8111/8203] Built Nibble.AdaptiveAssembly (77s)
+✔ [8112/8203] Built Nibble.Tight.CoverWeight (86s)
+⚠ [8113/8203] Built Nibble.RegularityBadFreedman (105s)
+warning: Nibble/RegularityBadFreedman.lean:30:0: automatically included section variable(s) unused in theorem `Nibble.degree_residual_le_original`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: Nibble/RegularityBadFreedman.lean:50:0: automatically included section variable(s) unused in theorem `Nibble.active_residualDeg_proxy_pos`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+✔ [8114/8203] Built PaperIII.AXDefs (118s)
+⚠ [8115/8203] Built PaperIII.E_4_2_algebra (129s)
+warning: PaperIII/E_4_2_algebra.lean:59:49: unused variable `hQ2`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: PaperIII/E_4_2_algebra.lean:60:5: unused variable `hD0`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: PaperIII/E_4_2_algebra.lean:72:49: unused variable `hQ2`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: PaperIII/E_4_2_algebra.lean:73:5: unused variable `hD0`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: PaperIII/E_4_2_algebra.lean:73:19: unused variable `hDP`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: PaperIII/E_4_2_algebra.lean:85:49: unused variable `hQ2`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: PaperIII/E_4_2_algebra.lean:86:5: unused variable `hD0`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+✔ [8116/8203] Built PaperIII.Counting (126s)
+ℹ [8117/8203] Built PaperIII.Factorization (812s)
+info: PaperIII/Factorization.lean:56:51: Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+✔ [8118/8203] Built PaperIII.CorridorDefs (116s)
+✔ [8119/8203] Built Nibble.GoodRetentionClean (83s)
+✔ [8120/8203] Built PaperIII.E_8_Divisible (162s)
+✔ [8121/8203] Built Nibble.Tight.CoverWeightMoments (85s)
+✔ [8122/8203] Built Nibble.GoodRoundFreedman (78s)
+✔ [8123/8203] Built Nibble.NibbleStrategy (113s)
+✔ [8124/8203] Built Nibble.GoodRetentionFreedman (98s)
+✔ [8125/8203] Built Nibble.Tight.PairWeightMean (110s)
+✔ [8126/8203] Built Nibble.Tight.LossVariance (133s)
+✔ [8127/8203] Built PaperIII.AX1Bridge (205s)
+✔ [8128/8203] Built PaperIII.CanonicalTrianglePacking (207s)
+⚠ [8129/8203] Built PaperIII.E_3_1_upper (201s)
+warning: PaperIII/E_3_1_upper.lean:37:23: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+✔ [8130/8203] Built Nibble.NibbleStrategyFreedman (215s)
+✔ [8131/8203] Built Nibble.Tight.PairExcessCodegree (189s)
+✔ [8132/8203] Built Nibble.Tight.FlipStability (135s)
+✔ [8133/8203] Built Nibble.DegreeDecay (218s)
+✔ [8134/8203] Built Nibble.Tight.TightRound (228s)
+✔ [8135/8203] Built PaperIII.CliquePartition (358s)
+✔ [8136/8203] Built Nibble.Tight.SafeDegreeVariance (161s)
+⚠ [8137/8203] Built PaperIII.E_8_Core (355s)
+warning: PaperIII/E_8_Core.lean:733:13: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+✔ [8138/8203] Built Nibble.DegreeDecayFreedman (83s)
+✔ [8139/8203] Built PaperIII.E_6 (427s)
+⚠ [8140/8203] Built PaperIII.E_7 (430s)
+warning: PaperIII/E_7.lean:322:4: Try this: intro a ha x hx H
+warning: PaperIII/E_7.lean:409:5: unused variable `h72`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: PaperIII/E_7.lean:906:5: unused variable `hbrho`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+info: PaperIII/E_7.lean:1759:102: Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+info: PaperIII/E_7.lean:1766:70: Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+info: PaperIII/E_7.lean:1771:114: Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+✔ [8141/8203] Built Nibble.Tight.TightRoundConcrete (85s)
+✔ [8142/8203] Built Nibble.Tight.CoverVariance (86s)
+✔ [8143/8203] Built Nibble.Tight.SharpVariance (106s)
+✔ [8144/8203] Built PaperIII.E_3_1_values (289s)
+✔ [8145/8203] Built Nibble.MostAssemblyFreedman (97s)
+✔ [8146/8203] Built Nibble.Tight.TightRoundCheb (83s)
+✔ [8147/8203] Built Nibble.Tight.ResidualBand (91s)
+✔ [8148/8203] Built Nibble.Tight.SafeRoundCheb (91s)
+✔ [8149/8203] Built PaperIII.ShiftedCenterRobust (141s)
+✔ [8150/8203] Built Nibble.Tight.ResidualBandCheb (89s)
+✔ [8151/8203] Built Nibble.Tight.SharpRoundProof (95s)
+⚠ [8152/8203] Built PaperIII.E_5 (685s)
+warning: PaperIII/E_5.lean:74:4: Try this: intro a ha x hx H
+info: PaperIII/E_5.lean:153:66: Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+info: PaperIII/E_5.lean:154:78: Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+warning: PaperIII/E_5.lean:167:5: unused variable `hq`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: PaperIII/E_5.lean:193:19: unused variable `hq`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+info: PaperIII/E_5.lean:283:215: Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+info: PaperIII/E_5.lean:284:168: Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+info: PaperIII/E_5.lean:291:153: Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+warning: PaperIII/E_5.lean:485:6: Try this: intro a ha x hx H
+info: PaperIII/E_5.lean:528:171: Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+info: PaperIII/E_5.lean:529:157: Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+info: PaperIII/E_5.lean:575:99: Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+✔ [8153/8203] Built Nibble.Tight.RoundExplicit (118s)
+✔ [8154/8203] Built Nibble.Tight.SharpRound (60s)
+ℹ [8155/8203] Built PaperIII.Prop_10_1 (131s)
+info: PaperIII/Prop_10_1.lean:78:50: Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+info: PaperIII/Prop_10_1.lean:88:157: Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+info: PaperIII/Prop_10_1.lean:89:164: Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+info: PaperIII/Prop_10_1.lean:138:131: Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+info: PaperIII/Prop_10_1.lean:370:167: Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+⚠ [8156/8203] Built PaperIII.E_4_agg (357s)
+info: PaperIII/E_4_agg.lean:186:47: Try this:
+  [apply] ring_nf!
+  
+  The `ring!` tactic failed to close the goal. Use `ring_nf!` to obtain a normal form.
+    
+  Note that `ring!` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+info: PaperIII/E_4_agg.lean:202:404: Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+info: PaperIII/E_4_agg.lean:267:48: Try this:
+  [apply] ring_nf!
+  
+  The `ring!` tactic failed to close the goal. Use `ring_nf!` to obtain a normal form.
+    
+  Note that `ring!` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+warning: PaperIII/E_4_agg.lean:222:46: unused variable `hd`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: PaperIII/E_4_agg.lean:347:24: unused variable `e`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: PaperIII/E_4_agg.lean:350:24: unused variable `a`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: PaperIII/E_4_agg.lean:353:24: unused variable `e`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: PaperIII/E_4_agg.lean:356:24: unused variable `e`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+✔ [8157/8203] Built PaperIII.PackingCorollaries (206s)
+✔ [8158/8203] Built Nibble.TightAssembly (100s)
+✔ [8159/8203] Built PaperIII.E_4_2 (80s)
+✔ [8160/8203] Built Nibble.Tight.SharpRoundAssembly (135s)
+⚠ [8161/8203] Built Nibble.TightSchedule (81s)
+warning: Nibble/TightSchedule.lean:40:22: unused variable `hgam8`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Nibble/TightSchedule.lean:51:22: unused variable `hgam8`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [8162/8203] Built PaperIII.E_4_3 (103s)
+warning: PaperIII/E_4_3.lean:88:4: 'push_cast' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+✔ [8163/8203] Built Nibble.TightNibble (83s)
+✔ [8164/8203] Built Nibble.DenseApproxDeg (74s)
+✔ [8165/8203] Built PaperIII.E_8 (117s)
+✔ [8166/8203] Built Nibble.DenseGapAX1 (92s)
+✔ [8167/8203] Built Nibble.SpreadNibble (92s)
+✔ [8168/8203] Built Nibble.PadRounding (93s)
+✔ [8169/8203] Built Nibble.DenseTriangleNibbleDegProof (56s)
+✔ [8170/8203] Built PaperIII.AX1NibbleBridge (78s)
+✔ [8171/8203] Built Nibble.StarExchange (70s)
+✔ [8172/8203] Built PaperIII.Main (132s)
+✔ [8173/8203] Built Nibble.DenseTriangleNibbleDegHalf (94s)
+✔ [8174/8203] Built Nibble.StarMoves (69s)
+✔ [8175/8203] Built Nibble.DoubleSwap (64s)
+✔ [8176/8203] Built Nibble.DenseGlobalLeftoverConst (65s)
+✔ [8177/8203] Built PaperIII.Addenda (78s)
+⚠ [8178/8203] Built PaperIII.MainNibble (87s)
+warning: PaperIII/MainNibble.lean:216:32: unused variable `d₀`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: PaperIII/MainNibble.lean:233:32: unused variable `d₀`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: PaperIII/MainNibble.lean:250:32: unused variable `d₀`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: PaperIII/MainNibble.lean:513:32: unused variable `d₀`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: PaperIII/MainNibble.lean:530:32: unused variable `d₀`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: PaperIII/MainNibble.lean:547:32: unused variable `d₀`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+✔ [8179/8203] Built Nibble.StarCount (53s)
+✔ [8180/8203] Built Nibble.DenseGlobalLeftoverBelowHalf (67s)
+✔ [8181/8203] Built Nibble.StarAugment (49s)
+✔ [8182/8203] Built Nibble.TriangleCapacity (41s)
+✔ [8183/8203] Built Nibble.WitnessPair (46s)
+✔ [8184/8203] Built Nibble.DenseGlobalLeftoverThird (49s)
+✔ [8185/8203] Built Nibble.DenseGlobalLeftoverSharp (45s)
+✔ [8186/8203] Built Nibble.DrossFractional (42s)
+✔ [8187/8203] Built Nibble.FracPackingDense (51s)
+✔ [8188/8203] Built Nibble.UniformRounding (55s)
+✔ [8189/8203] Built Nibble.FracRounding (49s)
+✔ [8190/8203] Built Nibble.NearComplete (46s)
+✔ [8191/8203] Built Nibble.DrossSpread (48s)
+✔ [8192/8203] Built Nibble.DrossGadget (123s)
+✔ [8193/8203] Built Nibble.DrossTransfer (141s)
+✔ [8194/8203] Built Nibble.DrossFlowRoute (164s)
+✔ [8195/8203] Built Nibble.DrossFlowDense (90s)
+✔ [8196/8203] Built Nibble.DrossCutCount (59s)
+✔ [8197/8203] Built Nibble.DrossCutPartners (71s)
+✔ [8198/8203] Built Nibble.DrossCutCert (74s)
+✔ [8199/8203] Built Nibble.DenseTriangleNibbleDegAll (50s)
+✔ [8200/8203] Built Nibble.DenseTriNibbleMaxDeg (48s)
+⚠ [8201/8203] Built PaperIII.PaperImprovements (533s)
+warning: PaperIII/PaperImprovements.lean:165:7: unused variable `q`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: PaperIII/PaperImprovements.lean:177:7: unused variable `q`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: PaperIII/PaperImprovements.lean:427:4: Try `simp at hPair` instead of `simpa using hPair`
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+warning: PaperIII/PaperImprovements.lean:1300:18: unused variable `hβ`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: PaperIII/PaperImprovements.lean:1329:18: unused variable `hβ`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+✔ [8202/8203] Built PaperIII (70s)
+Build completed successfully (8203 jobs).
+
+real	90m7.502s
+user	0m0.015s
+sys	0m0.155s
+EXIT_BUILD=0
+### end_utc: 2026-08-22T17:55:20Z

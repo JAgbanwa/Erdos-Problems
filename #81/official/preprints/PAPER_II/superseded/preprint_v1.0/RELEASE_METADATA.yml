@@ -1,0 +1,36 @@
+release_id: PAPER_II_PREPRINT_V1_0
+project: ERDOZ81 — Paper II
+title: Complete-Split Extremizers for a Fractional Triangle-Cover Functional on Chordal Graphs
+version: "1.0"
+release_date: "2026-07-10"
+author:
+  name: Juan Pablo Traverso Gianini
+  affiliation: Independent researcher, Santiago, Chile
+  orcid: 0009-0003-6068-4096
+status:
+  manuscript: PREPRINT_RELEASE
+  mathematical: FINAL_PASS
+  lifecycle: FROZEN
+  dependency_health: CLEAN
+  formalization:
+    system: Lean 4 / Mathlib v4.28.0
+    theorem: PaperII.theorem_1_2
+    commit: 5f2d448
+    sorry_free: true
+    axioms: [propext, Classical.choice, Quot.sound]
+  validation:
+    - AI_ADVERSARIAL_INTERNAL_AUDIT
+    - LEAN_FORMAL_VERIFICATION
+    - EDITOR_APPROVED
+    - RESEARCHER_APPROVED
+  external_peer_review: false
+  independent_ai_adversarial_audit: PASS   # PAPER-II-EXT-AUDIT-001 (deep protocol); see 02_validation/02_IA_ADVERSARIAL_AUDITS/
+  independent_build_reproduction: PENDING
+  novelty_review: NOT_ASSESSED_INCOMPLETE
+canonical_files:
+  - 01_manuscript/PAPER_II_preprint_v1.0.pdf
+  - 01_manuscript/PAPER_II_preprint_v1.0.tex
+  - 01_manuscript/PAPER_II_preprint_v1.0.md
+  - 01_manuscript/PAPER_II_preprint_v1.0_es.pdf
+  - 02_validation/PAPER_II_CALCULATION_LEDGER_v1.1.md
+  - 05_formalizati

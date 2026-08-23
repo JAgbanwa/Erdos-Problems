@@ -1,0 +1,125 @@
+{
+ "gate": "E6",
+ "bibliography": {
+  "1": "P. Allen, J. Böttcher, O. Cooley, and R. Mycroft, “Tight cycles and regular slices in dense hypergraphs,” *Journal of Combinatorial Theory, Series A* **149** (2017), 30–100.",
+  "2": "B. Barber, D. Kühn, A. Lo, and D. Osthus, “Edge-decompositions of graphs with high minimum degree,” *Advances in Mathematics* **288** (2016), 337–385.",
+  "3": "T. F. Bloom, “Erdős Problem #81,” *Erdős Problems*, https://www.erdosproblems.com/81, accessed July 6, 2026.",
+  "4": "O. V. Borodin, A. V. Kostochka, and D. R. Woodall, “List edge and list total colourings of multigraphs,” *Journal of Combinatorial Theory, Series B* **71** (1997), no. 2, 184–204.",
+  "5": "G.-T. Chen, P. Erdős, and E. T. Ordman, “Clique partitions of split graphs,” in *Combinatorics, Graph Theory, Algorithms and Applications* (Beijing, 1993), World Scientific, 1994, pp. 21–30.",
+  "6": "G. A. Dirac, “Some theorems on abstract graphs,” *Proceedings of the London Mathematical Society* (3) **2** (1952), 69–81.",
+  "7": "F. Dross, “Fractional triangle decompositions in graphs with large minimum degree,” *SIAM Journal on Discrete Mathematics* **30** (2016), no. 1, 36–42.",
+  "8": "P. Erdős, E. T. Ordman, and Y. Zalcstein, “Clique partitions of chordal graphs,” *Combinatorics, Probability and Computing* **2** (1993), no. 4, 409–415.",
+  "9": "D. Gale and L. S. Shapley, “College admissions and the stability of marriage,” *The American Mathematical Monthly* **69** (1962), no. 1, 9–15.",
+  "10": "F. Galvin, “The list chromatic index of a bipartite multigraph,” *Journal of Combinatorial Theory, Series B* **63** (1995), no. 1, 153–158.",
+  "11": "P. E. Haxell and V. Rödl, “Integer and fractional packings in dense graphs,” *Combinatorica* **21** (2001), 13–38.",
+  "12": "P. Keevash, “The existence of designs,” arXiv:1401.3665, revised 2018.",
+  "13": "D. König, “Über Graphen und ihre Anwendung auf Determinantentheorie und Mengenlehre,” *Mathematische Annalen* **77** (1916), 453–465.",
+  "14": "M. Krivelevich, “On a conjecture of Tuza about packing and covering of triangles,” *Discrete Mathematics* **142** (1995), 281–286.",
+  "15": "J. P. Traverso Gianini, “Affine profile reduction for fractional triangle packings in split graphs” (Paper I in the series), preprint, July 2026.",
+  "16": "J. P. Traverso Gianini, “Complete-split extremizers for a fractional triangle-cover functional on chordal graphs” (Paper II in the series), preprint, July 2026.",
+  "17": "R. Yuster, “Integer and fractional packing of families of graphs,” *Random Structures & Algorithms* **26** (2005), 110–118."
+ },
+ "reference_count": 17,
+ "citation_integrity": {
+  "cited_numbers": [
+   0,
+   1,
+   2,
+   3,
+   4,
+   5,
+   6,
+   7,
+   8,
+   9,
+   10,
+   11,
+   12,
+   13,
+   14,
+   15,
+   16,
+   17
+  ],
+  "cited_but_not_listed": [
+   0
+  ],
+  "listed_but_never_cited": [],
+  "clean": false
+ },
+ "named_sources_present": {
+  "Cavers survey": {
+   "EN": 0,
+   "ES": 0
+  },
+  "Erdos #81 record": {
+   "EN": 3,
+   "ES": 2
+  },
+  "Chen-Erdos-Ordman": {
+   "EN": 3,
+   "ES": 3
+  },
+  "Erdos-Ordman-Zalcstein": {
+   "EN": 4,
+   "ES": 5
+  },
+  "Haxell-Rodl": {
+   "EN": 10,
+   "ES": 10
+  },
+  "Yuster": {
+   "EN": 6,
+   "ES": 6
+  },
+  "Barber-Kuhn-Lo-Osthus": {
+   "EN": 2,
+   "ES": 2
+  },
+  "Dross": {
+   "EN": 3,
+   "ES": 3
+  },
+  "Galvin": {
+   "EN": 5,
+   "ES": 5
+  },
+  "Tuza": {
+   "EN": 3,
+   "ES": 3
+  }
+ },
+ "improvement_claim": {
+  "3/16 mentions_EN": 2,
+  "1/6 sharp_EN": 4,
+  "chordal_open_EN": 3,
+  "chordal_open_ES": 3
+ },
+ "auditor_retrieval": {
+  "retrieved_and_matched_against_the_claim_it_supports": [],
+  "not_retrieved": [
+   1,
+   2,
+   3,
+   4,
+   5,
+   6,
+   7,
+   8,
+   9,
+   10,
+   11,
+   12,
+   13,
+   14,
+   15,
+   16,
+   17
+  ],
+  "reason": "No institutional bibliographic database was reachable in this environment, and erdosproblems.com has returned HTTP 403 to this auditor on every attempt across this and prior runs. No reference was independently retrieved in THIS run.",
+  "search_strings_run": [],
+  "databases_consulted": []
+ },
+ "verdict": "INCONCLUSIVE",
+ "verdict_basis": "Structural citation integrity is verifiable and passes: every bracketed citation resolves to a listed reference and every listed reference is cited. The scope separation the request asks about is present and explicit. But the request requires retrieving and checking every cited source against the claim it supports, and conducting an independent specialist search through the audit date; neither was possible here. Novelty therefore cannot PASS, and the request itself forbids passing it on the author's bibliography alone."
+}

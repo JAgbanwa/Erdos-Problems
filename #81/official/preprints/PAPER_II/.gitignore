@@ -7,14 +7,15 @@
 *.fls
 *.fdb_latexmk
 
-# OS/editor files
+# Lean build caches
+.lake/
+*.olean
+*.ilean
+*.trace
+
+# Python and editor caches
+__pycache__/
+*.pyc
 .DS_Store
 Thumbs.db
 *~
-
-# Python cache
-__py
-
-# Python cache
-__pycache__/
-*.pyc

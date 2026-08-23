@@ -1,0 +1,543 @@
+{
+ "pairs": {
+  "EN_md": {
+   "old": {
+    "path": "C:/p3v15/superseded/unpublished_audited_draft_v1.4/01_manuscript/PAPER_III_preprint_draft_v1.4.md",
+    "sha256": "ae9a62736739de578077b0b25ef41468841e25a9e6b10f99986f5db657c7a942"
+   },
+   "new": {
+    "path": "C:/p3v15/01_manuscript/PAPER_III_preprint_v1.5.md",
+    "sha256": "eef0b4e7cd6f3595b485d58dae0282ce05aa7786b5d5fe49e1b55c7e248061ce"
+   },
+   "invariance": {
+    "displayed_formulas": {
+     "old_count": 205,
+     "new_count": 205,
+     "sequence_identical": true,
+     "only_old": [],
+     "only_new": []
+    },
+    "equation_tags": {
+     "old_count": 66,
+     "new_count": 66,
+     "sequence_identical": true,
+     "only_old": [],
+     "only_new": []
+    },
+    "citation_references": {
+     "old_count": 42,
+     "new_count": 42,
+     "sequence_identical": true,
+     "only_old": [],
+     "only_new": []
+    },
+    "theorem_blocks": {
+     "old_count": 34,
+     "new_count": 34,
+     "sequence_identical": true,
+     "only_old": [],
+     "only_new": []
+    },
+    "headings": {
+     "old_count": 144,
+     "new_count": 144,
+     "sequence_identical": true,
+     "only_old": [],
+     "only_new": []
+    }
+   },
+   "invariance_pass": true,
+   "changed_hunks": 14,
+   "changed_lines": 30,
+   "hunks": [
+    {
+     "op": "replace",
+     "classes": [
+      "release_state_promotion"
+     ],
+     "old_lines": 1,
+     "new_lines": 1,
+     "old": [
+      "**Preprint draft:** version 1.4. This manuscript and its accompanying formal artifact form one self-contained review package and the candidate for the first formal public release of Paper III."
+     ],
+     "new": [
+      "**Preprint:** version 1.5. This manuscript and its accompanying formal artifact form the first formal public preprint package for Paper III."
+     ]
+    },
+    {
+     "op": "replace",
+     "classes": [
+      "release_state_promotion"
+     ],
+     "old_lines": 2,
+     "new_lines": 2,
+     "old": [
+      "**Draft package date:** August 22, 2026  ",
+      "**Status:** `INTERNAL_AUDIT_PASS_EXTERNAL_REVIEW_PENDING`; unpublished. The accompanying Lean 4 / Mathlib development and the remaining release gates are summarized in Sections 11.6 and 13. The public aggregate root, canonical triangle-packing gates, theorem-level axiom record, escape-hatch assessme"
+     ],
+     "new": [
+      "**Release date:** August 23, 2026  ",
+      "**Status:** official author preprint; externally AI-audited; not human peer-reviewed. The accompanying Lean 4 / Mathlib development is an immutable source freeze. An independent uninterrupted reproduction compiled the public root and query roots and checked all designated axiom surfaces. The externa"
+     ]
+    },
+    {
+     "op": "replace",
+     "classes": [
+      "release_state_promotion"
+     ],
+     "old_lines": 1,
+     "new_lines": 1,
+     "old": [
+      "**Internal prior-art and novelty assessment.** The internal literature audit found no earlier proof improving the Chen--Erdős--Ordman split-graph coefficient (3/16) to the sharp coefficient (1/6) with linear error. On that internal record, the paper determines the sharp quadratic coefficient for the"
+     ],
+     "new": [
+      "**Prior-art and novelty status.** The internal literature audit, complemented by the external adversarial review, identified no earlier proof improving the Chen--Erdős--Ordman split-graph coefficient (3/16) to the sharp coefficient (1/6) with linear error. On the reviewed corpus, the paper determine"
+     ]
+    },
+    {
+     "op": "replace",
+     "classes": [
+      "release_state_promotion"
+     ],
+     "old_lines": 1,
+     "new_lines": 1,
+     "old": [
+      "All corridor-specific mechanisms are proved in the paper; in particular, the list edge coloring ingredient is established from first principles in Appendix D. An accompanying Lean 4 development contains an unconditional final theorem surface and a selected collection of reusable components. Its form"
+     ],
+     "new": [
+      "All corridor-specific mechanisms are proved in the paper; in particular, the list edge coloring ingredient is established from first principles in Appendix D. An accompanying Lean 4 development contains an unconditional final theorem surface and a selected collection of reusable components. Its form"
+     ]
+    },
+    {
+     "op": "replace",
+     "classes": [
+      "release_state_promotion"
+     ],
+     "old_lines": 1,
+     "new_lines": 1,
+     "old": [
+      "This is the third paper in the series on the Erdős–Ordman–Zalcstein clique-partition problem (Erdős Problem #81 [3]). Paper I proves the finite fractional split-graph bound \\(|E(G)|-2\\nu_3^*(G)\\le n^2/6+n/2\\) [15]. Paper II identifies the complete-split terminal family and determines the exact finit"
+     ],
+     "new": [
+      "This is the third paper in the series on the Erdős–Ordman–Zalcstein clique-partition problem (Erdős Problem #81 [3]). Paper I proves the finite fractional split-graph bound \\(|E(G)|-2\\nu_3^*(G)\\le n^2/6+n/2\\) [15]. Paper II identifies the complete-split terminal family and determines the exact finit"
+     ]
+    },
+    {
+     "op": "replace",
+     "classes": [
+      "N02_simple_bipartite"
+     ],
+     "old_lines": 1,
+     "new_lines": 1,
+     "old": [
+      "Let \\(B\\) be a bipartite graph with maximum degree \\(\\Delta(B)\\). If every edge \\(e\\) is assigned a list \\(L(e)\\) with"
+     ],
+     "new": [
+      "Let \\(B\\) be a simple bipartite graph with maximum degree \\(\\Delta(B)\\). If every edge \\(e\\) is assigned a list \\(L(e)\\) with"
+     ]
+    },
+    {
+     "op": "replace",
+     "classes": [
+      "release_state_promotion"
+     ],
+     "old_lines": 1,
+     "new_lines": 1,
+     "old": [
+      "The final assembly uses explicit bridges to the Haxell--Rödl/Yuster and dense-decomposition formalizations. The cited asymptotic theorems remain in the manuscript for mathematical provenance. The recorded public-root build completed 8,455 jobs with exit code 0; the subsequent query-root build comple"
+     ],
+     "new": [
+      "The final assembly uses explicit bridges to the Haxell--Rödl/Yuster and dense-decomposition formalizations. The cited asymptotic theorems remain in the manuscript for mathematical provenance. The recorded author-side public-root build completed 8,455 jobs with exit code 0; the subsequent query-root "
+     ]
+    },
+    {
+     "op": "replace",
+     "classes": [
+      "release_state_promotion"
+     ],
+     "old_lines": 1,
+     "new_lines": 1,
+     "old": [
+      "The directed canonical-module compilation, public- and query-root builds, eight compatible axiom-query files, escape-hatch assessment, immutable source manifests, and internal audit pass their author-side checks. They do not replace independent reproduction or external adversarial review."
+     ],
+     "new": [
+      "The directed canonical-module compilation, public- and query-root builds, eight compatible axiom-query files, escape-hatch assessment, immutable source manifests, and internal audit pass their author-side checks. The external audit independently reproduced the public and query roots and verified the"
+     ]
+    },
+    {
+     "op": "replace",
+     "classes": [
+      "release_state_promotion"
+     ],
+     "old_lines": 1,
+     "new_lines": 1,
+     "old": [
+      "No computation or regression script is a premise of the proof. The exact-arithmetic and integer-programming checks remain supplementary audits. Independent reproduction of the canonical source package, public tagging, human peer review, and the prior-art assessment remain open release gates."
+     ],
+     "new": [
+      "No computation or regression script is a premise of the proof. The exact-arithmetic and integer-programming checks remain supplementary audits. The completed adversarial review and corpus-bounded prior-art assessment are not substitutes for human peer review or a specialist determination of priority"
+     ]
+    },
+    {
+     "op": "replace",
+     "classes": [
+      "release_state_promotion"
+     ],
+     "old_lines": 1,
+     "new_lines": 1,
+     "old": [
+      "The project began with no `.lake` directory or compiled project object. The desktop application restarted during the first public-root process; the unchanged project was then resumed incrementally and completed successfully. The freeze therefore records `PASS_CLEAN_ORIGIN_RESUMED`, not a single unin"
+     ],
+     "new": [
+      "The author-side project began with no `.lake` directory or compiled project object. The desktop application restarted during the first public-root process; the unchanged project was then resumed incrementally and completed successfully. The immutable freeze therefore records `PASS_CLEAN_ORIGIN_RESUM"
+     ]
+    },
+    {
+     "op": "replace",
+     "classes": [
+      "release_state_promotion"
+     ],
+     "old_lines": 1,
+     "new_lines": 1,
+     "old": [
+      "Before public release, the canonical repository should contain the complete Lean source, toolchain, manifest, build and axiom logs, manuscript sources, and a SHA-256 inventory tied to one public tag and commit. Independent reproduction must start from that tagged package. No public commit identifier"
+     ],
+     "new": [
+      "The canonical repository package contains the complete Lean source, toolchain, manifest, build and axiom logs, manuscript sources, and SHA-256 inventories. The public tag and commit bind those files at repository level; no commit identifier is asserted inside the manuscript itself."
+     ]
+    },
+    {
+     "op": "replace",
+     "classes": [
+      "release_state_promotion"
+     ],
+     "old_lines": 1,
+     "new_lines": 1,
+     "old": [
+      "**Open release gates:** independent reproduction; external adversarial audit; human peer review; a prior-art review covering recent and in-preparation work; and publication of the final public tag and commit."
+     ],
+     "new": [
+      "**Review boundary:** the independent reproduction and external adversarial audit are complete, and the novelty review is corpus-bounded. Human peer review and specialist priority determination have not been performed. The public tag and commit are repository metadata rather than premises of the theo"
+     ]
+    },
+    {
+     "op": "replace",
+     "classes": [
+      "N03_kernel_perfect_induced"
+     ],
+     "old_lines": 1,
+     "new_lines": 1,
+     "old": [
+      "Pick any color \\(c\\) appearing in some list, let \\(S=\\{v:c\\in L(v)\\}\\), and let \\(K\\) be a kernel of \\(D[S]\\). Color every vertex of \\(K\\) with \\(c\\); this is proper on \\(K\\) because \\(K\\) is independent. Delete \\(K\\) from \\(D\\) and delete \\(c\\) from the list of every vertex of \\(S\\setminus K\\). Eve"
+     ],
+     "new": [
+      "Pick any color \\(c\\) appearing in some list, let \\(S=\\{v:c\\in L(v)\\}\\), and let \\(K\\) be a kernel of \\(D[S]\\). Color every vertex of \\(K\\) with \\(c\\); this is proper on \\(K\\) because \\(K\\) is independent. Delete \\(K\\) from \\(D\\) and delete \\(c\\) from the list of every vertex of \\(S\\setminus K\\). The"
+     ]
+    },
+    {
+     "op": "replace",
+     "classes": [
+      "N03_bounded_degree_induction",
+      "N03_two_colour_simple_path"
+     ],
+     "old_lines": 1,
+     "new_lines": 1,
+     "old": [
+      "**Step 1: a proper \\(\\Delta\\)-edge-coloring.** By König's edge coloring theorem [13], \\(B\\) has a proper edge coloring \\(\\varphi:E(B)\\to\\{1,\\ldots,\\Delta\\}\\). For completeness: induct on the number of edges. Remove an edge \\(e=ur\\) and color the rest. At most \\(\\Delta-1\\) colors appear at \\(u\\) and "
+     ],
+     "new": [
+      "**Step 1: a proper \\(\\Delta\\)-edge-coloring.** By König's edge coloring theorem [13], \\(B\\) has a proper edge coloring \\(\\varphi:E(B)\\to\\{1,\\ldots,\\Delta\\}\\). For completeness: induct on the number of edges among bipartite graphs of maximum degree at most \\(\\Delta\\). Remove an edge \\(e=ur\\) and colo"
+     ]
+    }
+   ],
+   "classified_counts": {
+    "release_state_promotion": 11,
+    "N02_simple_bipartite": 1,
+    "N03_kernel_perfect_induced": 1,
+    "N03_bounded_degree_induction": 1,
+    "N03_two_colour_simple_path": 1
+   },
+   "unclassified": [],
+   "containment_pass": true,
+   "clarifications_present": {
+    "N02_simple_in_theorem_2_2": true,
+    "N03_kernel_perfect_sentence": true,
+    "N03_bounded_degree_induction": true,
+    "N03_two_colour_max_degree_two": true,
+    "N03_well_defined_simple_path": true
+   },
+   "clarifications_pass": true,
+   "pass": true
+  },
+  "ES_md": {
+   "old": {
+    "path": "C:/p3v15/superseded/unpublished_audited_draft_v1.4/01_manuscript/PAPER_III_preprint_draft_v1.4_es.md",
+    "sha256": "71046acf88ab1d56237491b5f00d4ce92518615da6a7e09f53dbb963ce793b7e"
+   },
+   "new": {
+    "path": "C:/p3v15/01_manuscript/PAPER_III_preprint_v1.5_es.md",
+    "sha256": "54e310c6b24ae2d2adb87b3c6386c9b76e1000b4e30323587d001e851ac305f5"
+   },
+   "invariance": {
+    "displayed_formulas": {
+     "old_count": 205,
+     "new_count": 205,
+     "sequence_identical": true,
+     "only_old": [],
+     "only_new": []
+    },
+    "equation_tags": {
+     "old_count": 66,
+     "new_count": 66,
+     "sequence_identical": true,
+     "only_old": [],
+     "only_new": []
+    },
+    "citation_references": {
+     "old_count": 42,
+     "new_count": 42,
+     "sequence_identical": true,
+     "only_old": [],
+     "only_new": []
+    },
+    "theorem_blocks": {
+     "old_count": 36,
+     "new_count": 36,
+     "sequence_identical": true,
+     "only_old": [],
+     "only_new": []
+    },
+    "headings": {
+     "old_count": 144,
+     "new_count": 144,
+     "sequence_identical": true,
+     "only_old": [],
+     "only_new": []
+    }
+   },
+   "invariance_pass": true,
+   "changed_hunks": 14,
+   "changed_lines": 30,
+   "hunks": [
+    {
+     "op": "replace",
+     "classes": [
+      "release_state_promotion"
+     ],
+     "old_lines": 1,
+     "new_lines": 1,
+     "old": [
+      "**Borrador de preprint:** versión 1.4. Este manuscrito y su artefacto formal adjunto forman un único paquete autocontenido para revisión y el candidato a la primera liberación pública formal de Paper III."
+     ],
+     "new": [
+      "**Preprint:** versión 1.5. Este manuscrito y su artefacto formal adjunto forman el primer paquete público formal de preprint de Paper III."
+     ]
+    },
+    {
+     "op": "replace",
+     "classes": [
+      "release_state_promotion"
+     ],
+     "old_lines": 2,
+     "new_lines": 2,
+     "old": [
+      "**Fecha del paquete de borrador:** 22 de agosto de 2026  ",
+      "**Estado:** `INTERNAL_AUDIT_PASS_EXTERNAL_REVIEW_PENDING`; no publicado. El desarrollo adjunto en Lean 4 / Mathlib y los gates de release pendientes se resumen en las Secciones 11.6 y 13. Están completos la raíz pública agregada, los gates canónicos de empaquetamiento triangular, el registro de axio"
+     ],
+     "new": [
+      "**Fecha de publicación:** 23 de agosto de 2026  ",
+      "**Estado:** preprint oficial del autor; auditado externamente por IA; sin revisión humana por pares. El desarrollo adjunto en Lean 4 / Mathlib es un freeze inmutable de fuentes. Una reproducción independiente e ininterrumpida compiló la raíz pública y las raíces de consulta y comprobó todas las supe"
+     ]
+    },
+    {
+     "op": "replace",
+     "classes": [
+      "release_state_promotion"
+     ],
+     "old_lines": 1,
+     "new_lines": 1,
+     "old": [
+      "**Evaluación interna de arte previo y novedad.** La auditoría interna de literatura no identificó una demostración anterior que mejore el coeficiente \\(3/16\\) de Chen--Erdős--Ordman para grafos split hasta el coeficiente afilado \\(1/6\\) con error lineal. Según ese registro interno, el artículo deter"
+     ],
+     "new": [
+      "**Estado del arte previo y la novedad.** La auditoría interna de literatura, complementada por la revisión adversarial externa, no identificó una demostración anterior que mejore el coeficiente \\(3/16\\) de Chen--Erdős--Ordman para grafos split hasta el coeficiente afilado \\(1/6\\) con error lineal. E"
+     ]
+    },
+    {
+     "op": "replace",
+     "classes": [
+      "release_state_promotion"
+     ],
+     "old_lines": 1,
+     "new_lines": 1,
+     "old": [
+      "Todos los mecanismos específicos del corredor se demuestran en el artículo; en particular, el ingrediente de coloreo de aristas por listas se establece desde primeros principios en el Apéndice D. Un desarrollo adjunto en Lean 4 contiene una superficie final incondicional del teorema y una colección "
+     ],
+     "new": [
+      "Todos los mecanismos específicos del corredor se demuestran en el artículo; en particular, el ingrediente de coloreo de aristas por listas se establece desde primeros principios en el Apéndice D. Un desarrollo adjunto en Lean 4 contiene una superficie final incondicional del teorema y una colección "
+     ]
+    },
+    {
+     "op": "replace",
+     "classes": [
+      "release_state_promotion"
+     ],
+     "old_lines": 1,
+     "new_lines": 1,
+     "old": [
+      "Este es el tercer artículo de la serie sobre el problema de partición en cliques de Erdős–Ordman–Zalcstein (Problema #81 de Erdős [3]). Paper I prueba la cota fraccional finita para grafos split \\(|E(G)|-2\\nu_3^*(G)\\le n^2/6+n/2\\) [15]. Paper II identifica la familia terminal complete-split y determ"
+     ],
+     "new": [
+      "Este es el tercer artículo de la serie sobre el problema de partición en cliques de Erdős–Ordman–Zalcstein (Problema #81 de Erdős [3]). Paper I prueba la cota fraccional finita para grafos split \\(|E(G)|-2\\nu_3^*(G)\\le n^2/6+n/2\\) [15]. Paper II identifica la familia terminal complete-split y determ"
+     ]
+    },
+    {
+     "op": "replace",
+     "classes": [
+      "N02_simple_bipartite"
+     ],
+     "old_lines": 1,
+     "new_lines": 1,
+     "old": [
+      "Sea \\(B\\) un grafo bipartito de grado máximo \\(\\Delta(B)\\). Si a cada arista \\(e\\) se le asigna una lista \\(L(e)\\) con"
+     ],
+     "new": [
+      "Sea \\(B\\) un grafo bipartito simple de grado máximo \\(\\Delta(B)\\). Si a cada arista \\(e\\) se le asigna una lista \\(L(e)\\) con"
+     ]
+    },
+    {
+     "op": "replace",
+     "classes": [
+      "release_state_promotion"
+     ],
+     "old_lines": 1,
+     "new_lines": 1,
+     "old": [
+      "El ensamblaje final usa puentes explícitos hacia las formalizaciones de Haxell--Rödl/Yuster y de descomposición densa. Los teoremas asintóticos citados se mantienen en el manuscrito por su procedencia matemática. El build registrado de la raíz pública completó 8.455 jobs con exit code 0; el build po"
+     ],
+     "new": [
+      "El ensamblaje final usa puentes explícitos hacia las formalizaciones de Haxell--Rödl/Yuster y de descomposición densa. Los teoremas asintóticos citados se mantienen en el manuscrito por su procedencia matemática. El build registrado del lado del autor para la raíz pública completó 8.455 jobs con exi"
+     ]
+    },
+    {
+     "op": "replace",
+     "classes": [
+      "release_state_promotion"
+     ],
+     "old_lines": 1,
+     "new_lines": 1,
+     "old": [
+      "La compilación dirigida del módulo canónico, los builds de las raíces pública y de consulta, los ocho archivos compatibles de consulta de axiomas, la evaluación de escape hatches, los manifiestos inmutables de fuentes y la auditoría interna pasan sus controles del lado del autor. No sustituyen la re"
+     ],
+     "new": [
+      "La compilación dirigida del módulo canónico, los builds de las raíces pública y de consulta, los ocho archivos compatibles de consulta de axiomas, la evaluación de escape hatches, los manifiestos inmutables de fuentes y la auditoría interna pasan sus controles del lado del autor. La auditoría extern"
+     ]
+    },
+    {
+     "op": "replace",
+     "classes": [
+      "release_state_promotion"
+     ],
+     "old_lines": 1,
+     "new_lines": 1,
+     "old": [
+      "Ningún cálculo ni script de regresión es premisa de la demostración. Las comprobaciones de aritmética exacta y programación entera siguen siendo auditorías suplementarias. Permanecen abiertos como gates de release la reproducción independiente del paquete canónico, el etiquetado público, la revisión"
+     ],
+     "new": [
+      "Ningún cálculo ni script de regresión es premisa de la demostración. Las comprobaciones de aritmética exacta y programación entera siguen siendo auditorías suplementarias. La revisión adversarial completada y la evaluación de arte previo acotada por su corpus no sustituyen una revisión humana por pa"
+     ]
+    },
+    {
+     "op": "replace",
+     "classes": [
+      "release_state_promotion"
+     ],
+     "old_lines": 1,
+     "new_lines": 1,
+     "old": [
+      "El proyecto comenzó sin directorio `.lake` ni objetos compilados del proyecto. La aplicación de escritorio se reinició durante el primer proceso de la raíz pública; el proyecto, sin cambios, se reanudó entonces de manera incremental y terminó correctamente. Por ello, el freeze registra `PASS_CLEAN_O"
+     ],
+     "new": [
+      "El proyecto del lado del autor comenzó sin directorio `.lake` ni objetos compilados del proyecto. La aplicación de escritorio se reinició durante el primer proceso de la raíz pública; el proyecto, sin cambios, se reanudó entonces de manera incremental y terminó correctamente. Por ello, el freeze inm"
+     ]
+    },
+    {
+     "op": "replace",
+     "classes": [
+      "release_state_promotion"
+     ],
+     "old_lines": 1,
+     "new_lines": 1,
+     "old": [
+      "Antes del release público, el repositorio canónico debe contener la fuente Lean completa, el toolchain, el manifiesto, los logs de build y axiomas, las fuentes del manuscrito y un inventario SHA-256 ligados a un único tag y commit públicos. La reproducción independiente debe partir de ese paquete et"
+     ],
+     "new": [
+      "El paquete del repositorio canónico contiene la fuente Lean completa, el toolchain, el manifiesto, los logs de build y axiomas, las fuentes del manuscrito y los inventarios SHA-256. El tag y el commit públicos vinculan esos archivos al nivel del repositorio; el manuscrito no afirma dentro de su text"
+     ]
+    },
+    {
+     "op": "replace",
+     "classes": [
+      "release_state_promotion"
+     ],
+     "old_lines": 1,
+     "new_lines": 1,
+     "old": [
+      "**Gates de release abiertos:** reproducción independiente; auditoría adversarial externa; revisión humana por pares; evaluación de arte previo que cubra trabajos recientes y en preparación; y publicación del tag y el commit públicos finales."
+     ],
+     "new": [
+      "**Límite de la revisión:** la reproducción independiente y la auditoría adversarial externa están completas, y la revisión de novedad está acotada por su corpus. No se han realizado una revisión humana por pares ni una determinación especializada de prioridad. El tag y el commit públicos son metadat"
+     ]
+    },
+    {
+     "op": "replace",
+     "classes": [
+      "N03_kernel_perfect_induced"
+     ],
+     "old_lines": 1,
+     "new_lines": 1,
+     "old": [
+      "Elegimos un color cualquiera \\(c\\) que aparezca en alguna lista, definimos \\(S=\\{v:c\\in L(v)\\}\\) y sea \\(K\\) un kernel de \\(D[S]\\). Coloreamos todo vértice de \\(K\\) con \\(c\\); esto es propio sobre \\(K\\) porque \\(K\\) es independiente. Eliminamos \\(K\\) de \\(D\\) y eliminamos \\(c\\) de la lista de todo v"
+     ],
+     "new": [
+      "Elegimos un color cualquiera \\(c\\) que aparezca en alguna lista, definimos \\(S=\\{v:c\\in L(v)\\}\\) y sea \\(K\\) un kernel de \\(D[S]\\). Coloreamos todo vértice de \\(K\\) con \\(c\\); esto es propio sobre \\(K\\) porque \\(K\\) es independiente. Eliminamos \\(K\\) de \\(D\\) y eliminamos \\(c\\) de la lista de todo v"
+     ]
+    },
+    {
+     "op": "replace",
+     "classes": [
+      "N03_bounded_degree_induction",
+      "N03_two_colour_simple_path"
+     ],
+     "old_lines": 1,
+     "new_lines": 1,
+     "old": [
+      "**Paso 1: un coloreo propio de aristas con \\(\\Delta\\) colores.** Por el teorema de coloreo de aristas de König [13], \\(B\\) tiene un coloreo propio de aristas \\(\\varphi:E(B)\\to\\{1,\\ldots,\\Delta\\}\\). Para completar: procedemos por inducción sobre el número de aristas. Eliminamos una arista \\(e=ur\\) y "
+     ],
+     "new": [
+      "**Paso 1: un coloreo propio de aristas con \\(\\Delta\\) colores.** Por el teorema de coloreo de aristas de König [13], \\(B\\) tiene un coloreo propio de aristas \\(\\varphi:E(B)\\to\\{1,\\ldots,\\Delta\\}\\). Para completar: procedemos por inducción sobre el número de aristas entre grafos bipartitos de grado m"
+     ]
+    }
+   ],
+   "classified_counts": {
+    "release_state_promotion": 11,
+    "N02_simple_bipartite": 1,
+    "N03_kernel_perfect_induced": 1,
+    "N03_bounded_degree_induction": 1,
+    "N03_two_colour_simple_path": 1
+   },
+   "unclassified": [],
+   "containment_pass": true,
+   "clarifications_present": {
+    "N02_simple_in_theorem_2_2": true,
+    "N03_kernel_perfect_sentence": true,
+    "N03_bounded_degree_induction": true,
+    "N03_two_colour_max_degree_two": true,
+    "N03_well_defined_simple_path": true
+   },
+   "clarifications_pass": true,
+   "pass": true
+  }
+ },
+ "E1_pass": true
+}

@@ -1,0 +1,127 @@
+{
+ "run": "run_2026-08-23_v1.4_challenger",
+ "verdict": "PASS",
+ "file_count": 24,
+ "files": [
+  {
+   "path": "00_CONTROL/ADDENDUM_FILED.txt",
+   "sha256": "962c5a39ee30b44d0c440c7f3900ebec648c9d3d313585577e7e2ceff13a5c46",
+   "bytes": 504
+  },
+  {
+   "path": "00_CONTROL/ENVIRONMENT.md",
+   "sha256": "db0f91656977430e268b5beae1c1b1fe9f39f3135b277f5bec0d3b41b139d40c",
+   "bytes": 1125
+  },
+  {
+   "path": "00_CONTROL/PROTOCOL.md",
+   "sha256": "8d75e3ae0bd6a55d6106f0a30b020fa8b66da6e4e8c722410173e2ccabef6d32",
+   "bytes": 2415
+  },
+  {
+   "path": "00_CONTROL/REGRESSION_BOUNDARY.md",
+   "sha256": "35f1ef527c4ccee156dc687c2dac0db26b3e41174d71c43b1930d2c54e94a8db",
+   "bytes": 2838
+  },
+  {
+   "path": "00_CONTROL/TARGET_SHA256_AS_DELIVERED.txt",
+   "sha256": "82a91e6252c3f12eb48857eaa651d8bd0c6802d3a4c014fc9d53ac958a7ff793",
+   "bytes": 613
+  },
+  {
+   "path": "10_LEDGER/APPENDIX_D_PROOF_LEDGER.md",
+   "sha256": "8a4ccaf6014bd2e953886906bc44884a4bc82badd784230f522decca375739da",
+   "bytes": 16591
+  },
+  {
+   "path": "10_LEDGER/FINDINGS_LEDGER.csv",
+   "sha256": "97939981c706849abb05bd5717e889f96c29740a1ab7914922eda8da54c94cc5",
+   "bytes": 1831
+  },
+  {
+   "path": "20_EVIDENCE/A_BILINGUAL/adjudication.json",
+   "sha256": "c27f13de5bbcd7a076a79f3b5a7143941c90249f358b571eefd893c1531ead6d",
+   "bytes": 6377
+  },
+  {
+   "path": "20_EVIDENCE/A_BILINGUAL/adjudication_run.txt",
+   "sha256": "aff50f15a52723dd3bd90012296a5ea96baba5de202fd1fc6ab4c42f0d49bc82",
+   "bytes": 1529
+  },
+  {
+   "path": "20_EVIDENCE/A_BILINGUAL/bilingual_run.txt",
+   "sha256": "7edce14babcc0f0e30531b33123f905ea622c9ac304888942cd3960bf467d8c0",
+   "bytes": 2594
+  },
+  {
+   "path": "20_EVIDENCE/A_BILINGUAL/bilingual_structural_diff.json",
+   "sha256": "a450bac494b2883c9b3c8361a16e674285ea2014b82cd2b1f31d0ee7995b4dea",
+   "bytes": 6305
+  },
+  {
+   "path": "20_EVIDENCE/A_BILINGUAL/v14c_adjudicate.py",
+   "sha256": "95c52507e8f197a46cbf01b743c91e71b4de86caa9dae153da93b37aa7a61d24",
+   "bytes": 6934
+  },
+  {
+   "path": "20_EVIDENCE/A_BILINGUAL/v14c_bilingual.py",
+   "sha256": "0d770ca92179f975c58afac9ec166bd69a5c330e35e9991518a31fb1fb2888a3",
+   "bytes": 7097
+  },
+  {
+   "path": "20_EVIDENCE/A_RENDER/auditor_lualatex_es.log",
+   "sha256": "40305003e6af24b11f46efe3d150e5a7431bda69bff08e0c0c9405d131033c16",
+   "bytes": 79066
+  },
+  {
+   "path": "20_EVIDENCE/A_RENDER/render_qa.txt",
+   "sha256": "d24c253478aa942c4e904dbfbd0d90fa7f9ef5d593b26626335bb9cf66baaf66",
+   "bytes": 2393
+  },
+  {
+   "path": "20_EVIDENCE/B_APPENDIX_D/appendix_D_as_delivered.txt",
+   "sha256": "e1a3d24b8e7c2c12848d4e7bb3c22fc8b566533543fd1c8249db4a89b525c486",
+   "bytes": 6506
+  },
+  {
+   "path": "20_EVIDENCE/B_APPENDIX_D/independent_derivation.md",
+   "sha256": "8a4ccaf6014bd2e953886906bc44884a4bc82badd784230f522decca375739da",
+   "bytes": 16591
+  },
+  {
+   "path": "20_EVIDENCE/B_APPENDIX_D/section_7_2_as_delivered.txt",
+   "sha256": "816d788640c2c743a58271db5cb9c87e730e0da383d10fdf8a3b73bba91952d5",
+   "bytes": 613
+  },
+  {
+   "path": "20_EVIDENCE/C_REGRESSION/regression_boundary.txt",
+   "sha256": "14f34217fc725d7728e24536c5957e63495ce5e341c31cd109da6acf28f7fa49",
+   "bytes": 2159
+  },
+  {
+   "path": "20_EVIDENCE/C_REGRESSION/review_challenger_request.py",
+   "sha256": "fec5373138b823f9e8fa4a9bc76447d05640cd3d51a25e59e1f09ffd45f4dbcb",
+   "bytes": 5553
+  },
+  {
+   "path": "20_EVIDENCE/C_REGRESSION/v14c_seal.py",
+   "sha256": "7e7993065fcfbc89c253809f49799e3c5c8b3569718b00db42c0661114f5c4ba",
+   "bytes": 8807
+  },
+  {
+   "path": "20_EVIDENCE/SHA256_MANIFEST.txt",
+   "sha256": "af940abf80f04e7f8740ca2050cea61235cfa2bcb1e170de6445af7b364b7ed0",
+   "bytes": 1404
+  },
+  {
+   "path": "30_REPORT/FINAL_AUDIT_REPORT.md",
+   "sha256": "a196479b8b2adde5077669ec5e398dfc4d640e006bd97b10ef0f72696bdfb5f3",
+   "bytes": 16589
+  },
+  {
+   "path": "30_REPORT/FINAL_AUDIT_SUMMARY.json",
+   "sha256": "e1e4e7d0b7c4e49bc62e378909ebcf5d32cff7b55c16d1030daa3972b55bdc56",
+   "bytes": 3356
+  }
+ ]
+}

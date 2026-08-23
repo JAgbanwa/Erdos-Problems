@@ -1,0 +1,465 @@
+{
+ "EN": {
+  "hunks": [
+   {
+    "op": "replace",
+    "old_range": [
+     9,
+     9
+    ],
+    "new_range": [
+     9,
+     9
+    ],
+    "sections": [
+     "Linear-Error Clique Partitions of Split Graphs via Structured Triangle Packing"
+    ],
+    "sample": "**Preprint:** version 1.5. This manuscript and its accompanying formal artifact form the first formal public preprint package for Paper III.",
+    "in_core": false
+   },
+   {
+    "op": "replace",
+    "old_range": [
+     11,
+     12
+    ],
+    "new_range": [
+     11,
+     12
+    ],
+    "sections": [
+     "Linear-Error Clique Partitions of Split Graphs via Structured Triangle Packing"
+    ],
+    "sample": "**Release date:** August 23, 2026  ",
+    "in_core": false
+   },
+   {
+    "op": "replace",
+    "old_range": [
+     14,
+     14
+    ],
+    "new_range": [
+     14,
+     14
+    ],
+    "sections": [
+     "Linear-Error Clique Partitions of Split Graphs via Structured Triangle Packing"
+    ],
+    "sample": "**Prior-art and novelty status.** The internal literature audit, complemented by the external adversarial review, identified no earlier proof improvin",
+    "in_core": false
+   },
+   {
+    "op": "replace",
+    "old_range": [
+     44,
+     44
+    ],
+    "new_range": [
+     44,
+     44
+    ],
+    "sections": [
+     "Abstract"
+    ],
+    "sample": "All corridor-specific mechanisms are proved in the paper; in particular, the list edge coloring ingredient is established from first principles in App",
+    "in_core": false
+   },
+   {
+    "op": "replace",
+    "old_range": [
+     58,
+     58
+    ],
+    "new_range": [
+     58,
+     58
+    ],
+    "sections": [
+     "1.1 Clique partitions of split graphs"
+    ],
+    "sample": "This is the third paper in the series on the Erdős–Ordman–Zalcstein clique-partition problem (Erdős Problem #81 [3]). Paper I proves the finite fracti",
+    "in_core": false
+   },
+   {
+    "op": "replace",
+    "old_range": [
+     330,
+     330
+    ],
+    "new_range": [
+     330,
+     330
+    ],
+    "sections": [
+     "2.4 Asymptotic theorems used in the proof"
+    ],
+    "sample": "Let \\(B\\) be a simple bipartite graph with maximum degree \\(\\Delta(B)\\). If every edge \\(e\\) is assigned a list \\(L(e)\\) with",
+    "in_core": false
+   },
+   {
+    "op": "replace",
+    "old_range": [
+     1889,
+     1889
+    ],
+    "new_range": [
+     1889,
+     1889
+    ],
+    "sections": [
+     "11.6 Formal-verification perimeter and current status"
+    ],
+    "sample": "The final assembly uses explicit bridges to the Haxell--Rödl/Yuster and dense-decomposition formalizations. The cited asymptotic theorems remain in th",
+    "in_core": false
+   },
+   {
+    "op": "replace",
+    "old_range": [
+     1908,
+     1908
+    ],
+    "new_range": [
+     1908,
+     1908
+    ],
+    "sections": [
+     "11.6 Formal-verification perimeter and current status"
+    ],
+    "sample": "The directed canonical-module compilation, public- and query-root builds, eight compatible axiom-query files, escape-hatch assessment, immutable sourc",
+    "in_core": false
+   },
+   {
+    "op": "replace",
+    "old_range": [
+     1910,
+     1910
+    ],
+    "new_range": [
+     1910,
+     1910
+    ],
+    "sections": [
+     "11.6 Formal-verification perimeter and current status"
+    ],
+    "sample": "No computation or regression script is a premise of the proof. The exact-arithmetic and integer-programming checks remain supplementary audits. The co",
+    "in_core": false
+   },
+   {
+    "op": "replace",
+    "old_range": [
+     2061,
+     2061
+    ],
+    "new_range": [
+     2061,
+     2061
+    ],
+    "sections": [
+     "13. Reproducibility"
+    ],
+    "sample": "The author-side project began with no `.lake` directory or compiled project object. The desktop application restarted during the first public-root pro",
+    "in_core": false
+   },
+   {
+    "op": "replace",
+    "old_range": [
+     2067,
+     2067
+    ],
+    "new_range": [
+     2067,
+     2067
+    ],
+    "sections": [
+     "13. Reproducibility"
+    ],
+    "sample": "The canonical repository package contains the complete Lean source, toolchain, manifest, build and axiom logs, manuscript sources, and SHA-256 invento",
+    "in_core": false
+   },
+   {
+    "op": "replace",
+    "old_range": [
+     2071,
+     2071
+    ],
+    "new_range": [
+     2071,
+     2071
+    ],
+    "sections": [
+     "13. Reproducibility"
+    ],
+    "sample": "**Review boundary:** the independent reproduction and external adversarial audit are complete, and the novelty review is corpus-bounded. Human peer re",
+    "in_core": false
+   },
+   {
+    "op": "replace",
+    "old_range": [
+     2190,
+     2190
+    ],
+    "new_range": [
+     2190,
+     2190
+    ],
+    "sections": [
+     "D.1 Kernels"
+    ],
+    "sample": "Pick any color \\(c\\) appearing in some list, let \\(S=\\{v:c\\in L(v)\\}\\), and let \\(K\\) be a kernel of \\(D[S]\\). Color every vertex of \\(K\\) with \\(c\\);",
+    "in_core": false
+   },
+   {
+    "op": "replace",
+    "old_range": [
+     2214,
+     2214
+    ],
+    "new_range": [
+     2214,
+     2214
+    ],
+    "sections": [
+     "D.3 The coloring theorem"
+    ],
+    "sample": "**Step 1: a proper \\(\\Delta\\)-edge-coloring.** By König's edge coloring theorem [13], \\(B\\) has a proper edge coloring \\(\\varphi:E(B)\\to\\{1,\\ldots,\\De",
+    "in_core": false
+   }
+  ],
+  "core_hits": 0,
+  "appendix_D_hunks": 2,
+  "pass": true
+ },
+ "ES": {
+  "hunks": [
+   {
+    "op": "replace",
+    "old_range": [
+     9,
+     9
+    ],
+    "new_range": [
+     9,
+     9
+    ],
+    "sections": [
+     "Particiones de cliques con error lineal en grafos split mediante empaquetamiento estructurado de triángulos"
+    ],
+    "sample": "**Preprint:** versión 1.5. Este manuscrito y su artefacto formal adjunto forman el primer paquete público formal de preprint de Paper III.",
+    "in_core": false
+   },
+   {
+    "op": "replace",
+    "old_range": [
+     11,
+     12
+    ],
+    "new_range": [
+     11,
+     12
+    ],
+    "sections": [
+     "Particiones de cliques con error lineal en grafos split mediante empaquetamiento estructurado de triángulos"
+    ],
+    "sample": "**Fecha de publicación:** 23 de agosto de 2026  ",
+    "in_core": false
+   },
+   {
+    "op": "replace",
+    "old_range": [
+     14,
+     14
+    ],
+    "new_range": [
+     14,
+     14
+    ],
+    "sections": [
+     "Particiones de cliques con error lineal en grafos split mediante empaquetamiento estructurado de triángulos"
+    ],
+    "sample": "**Estado del arte previo y la novedad.** La auditoría interna de literatura, complementada por la revisión adversarial externa, no identificó una demo",
+    "in_core": false
+   },
+   {
+    "op": "replace",
+    "old_range": [
+     44,
+     44
+    ],
+    "new_range": [
+     44,
+     44
+    ],
+    "sections": [
+     "Resumen"
+    ],
+    "sample": "Todos los mecanismos específicos del corredor se demuestran en el artículo; en particular, el ingrediente de coloreo de aristas por listas se establec",
+    "in_core": false
+   },
+   {
+    "op": "replace",
+    "old_range": [
+     58,
+     58
+    ],
+    "new_range": [
+     58,
+     58
+    ],
+    "sections": [
+     "1.1 Particiones en cliques de grafos split"
+    ],
+    "sample": "Este es el tercer artículo de la serie sobre el problema de partición en cliques de Erdős–Ordman–Zalcstein (Problema #81 de Erdős [3]). Paper I prueba",
+    "in_core": false
+   },
+   {
+    "op": "replace",
+    "old_range": [
+     330,
+     330
+    ],
+    "new_range": [
+     330,
+     330
+    ],
+    "sections": [
+     "2.4 Teoremas asintóticos usados en la demostración"
+    ],
+    "sample": "Sea \\(B\\) un grafo bipartito simple de grado máximo \\(\\Delta(B)\\). Si a cada arista \\(e\\) se le asigna una lista \\(L(e)\\) con",
+    "in_core": false
+   },
+   {
+    "op": "replace",
+    "old_range": [
+     1886,
+     1886
+    ],
+    "new_range": [
+     1886,
+     1886
+    ],
+    "sections": [
+     "11.6 Perímetro de verificación formal y estado actual"
+    ],
+    "sample": "El ensamblaje final usa puentes explícitos hacia las formalizaciones de Haxell--Rödl/Yuster y de descomposición densa. Los teoremas asintóticos citado",
+    "in_core": false
+   },
+   {
+    "op": "replace",
+    "old_range": [
+     1905,
+     1905
+    ],
+    "new_range": [
+     1905,
+     1905
+    ],
+    "sections": [
+     "11.6 Perímetro de verificación formal y estado actual"
+    ],
+    "sample": "La compilación dirigida del módulo canónico, los builds de las raíces pública y de consulta, los ocho archivos compatibles de consulta de axiomas, la ",
+    "in_core": false
+   },
+   {
+    "op": "replace",
+    "old_range": [
+     1907,
+     1907
+    ],
+    "new_range": [
+     1907,
+     1907
+    ],
+    "sections": [
+     "11.6 Perímetro de verificación formal y estado actual"
+    ],
+    "sample": "Ningún cálculo ni script de regresión es premisa de la demostración. Las comprobaciones de aritmética exacta y programación entera siguen siendo audit",
+    "in_core": false
+   },
+   {
+    "op": "replace",
+    "old_range": [
+     2045,
+     2045
+    ],
+    "new_range": [
+     2045,
+     2045
+    ],
+    "sections": [
+     "13. Reproducibilidad"
+    ],
+    "sample": "El proyecto del lado del autor comenzó sin directorio `.lake` ni objetos compilados del proyecto. La aplicación de escritorio se reinició durante el p",
+    "in_core": false
+   },
+   {
+    "op": "replace",
+    "old_range": [
+     2051,
+     2051
+    ],
+    "new_range": [
+     2051,
+     2051
+    ],
+    "sections": [
+     "13. Reproducibilidad"
+    ],
+    "sample": "El paquete del repositorio canónico contiene la fuente Lean completa, el toolchain, el manifiesto, los logs de build y axiomas, las fuentes del manusc",
+    "in_core": false
+   },
+   {
+    "op": "replace",
+    "old_range": [
+     2055,
+     2055
+    ],
+    "new_range": [
+     2055,
+     2055
+    ],
+    "sections": [
+     "13. Reproducibilidad"
+    ],
+    "sample": "**Límite de la revisión:** la reproducción independiente y la auditoría adversarial externa están completas, y la revisión de novedad está acotada por",
+    "in_core": false
+   },
+   {
+    "op": "replace",
+    "old_range": [
+     2174,
+     2174
+    ],
+    "new_range": [
+     2174,
+     2174
+    ],
+    "sections": [
+     "D.1 Kernels"
+    ],
+    "sample": "Elegimos un color cualquiera \\(c\\) que aparezca en alguna lista, definimos \\(S=\\{v:c\\in L(v)\\}\\) y sea \\(K\\) un kernel de \\(D[S]\\). Coloreamos todo vé",
+    "in_core": false
+   },
+   {
+    "op": "replace",
+    "old_range": [
+     2198,
+     2198
+    ],
+    "new_range": [
+     2198,
+     2198
+    ],
+    "sections": [
+     "D.3 El teorema de coloreo"
+    ],
+    "sample": "**Paso 1: un coloreo propio de aristas con \\(\\Delta\\) colores.** Por el teorema de coloreo de aristas de König [13], \\(B\\) tiene un coloreo propio de ",
+    "in_core": false
+   }
+  ],
+  "core_hits": 0,
+  "appendix_D_hunks": 2,
+  "pass": true
+ },
+ "pass": true
+}

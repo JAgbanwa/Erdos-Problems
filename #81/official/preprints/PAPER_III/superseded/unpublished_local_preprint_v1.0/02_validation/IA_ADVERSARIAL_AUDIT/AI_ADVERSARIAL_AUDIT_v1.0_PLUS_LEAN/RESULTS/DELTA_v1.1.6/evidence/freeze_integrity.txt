@@ -1,0 +1,26 @@
+Lean freeze integrity check (delta audit v1.1.6) — actual sha256 vs FREEZE_MANIFEST_SHA256.txt
+
+  [MATCH] PaperIII/AX.lean
+         actual   = 70aa59bb77af3da82e4c00cf3a7f9ffcb5aefc03b2e89156a27d6da4e5f235a0
+         manifest = 70aa59bb77af3da82e4c00cf3a7f9ffcb5aefc03b2e89156a27d6da4e5f235a0
+  [MATCH] PaperIII/E_8.lean
+         actual   = 363e2cf3055c6646e8d5d3c5df6c6bb3a563ca8549cf8510ef9d290897e13742
+         manifest = 363e2cf3055c6646e8d5d3c5df6c6bb3a563ca8549cf8510ef9d290897e13742
+  [MATCH] PaperIII/E_4_3.lean
+         actual   = d9aab180c8142522b088bb6f5e8df2767f875f1eac54989ec1507225312dde3f
+         manifest = d9aab180c8142522b088bb6f5e8df2767f875f1eac54989ec1507225312dde3f
+  [MATCH] PaperIII/Main.lean
+         actual   = bc82e100f09a1f70b972d18d2ae6897cab9f56c5e68f014d6019a47873b5dd30
+         manifest = bc82e100f09a1f70b972d18d2ae6897cab9f56c5e68f014d6019a47873b5dd30
+  [MATCH] PaperIII/Prop_10_1.lean
+         actual   = 346d1a220d3d27d867521952fe8684497e397e3bcf7e125cbdc55eab714837a4
+         manifest = 346d1a220d3d27d867521952fe8684497e397e3bcf7e125cbdc55eab714837a4
+  [MATCH] PaperIII/Duality.lean
+         actual   = 153d649880284ac28e183484ce8d15821da7a8ac6a6aa529d3dd241a1711f02e
+         manifest = 153d649880284ac28e183484ce8d15821da7a8ac6a6aa529d3dd241a1711f02e
+  [MATCH] PaperIII/Defs.lean
+         actual   = ec6ffd4b79520ee25f66961ecd8787c859284781c993adb4eecbb094f428c845
+         manifest = ec6ffd4b79520ee25f66961ecd8787c859284781c993adb4eecbb094f428c845
+
+ALL 7 KEY FILES MATCH MANIFEST: True
+Manifest total entries: 9092

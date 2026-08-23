@@ -1,0 +1,61 @@
+GATE H REUSE — BYTE-IDENTITY EVIDENCE
+Label: REUSED_BYTE_IDENTICAL_EXTERNAL_EVIDENCE
+Specification: RESIDUAL_AUDIT_REQUEST_SPEC.md, Section 5
+Date: 2026-08-21
+
+Condition 1 — archive hash equals the required value
+  required : 0181506408644fc1f8872d711de5a98a500f4052aa295bcd6f8c82776694fd3a
+  delivered: 0181506408644fc1f8872d711de5a98a500f4052aa295bcd6f8c82776694fd3a
+  RESULT: MATCH
+
+Condition 2 — byte-identical to the archive previously rebuilt externally
+  The delivered v1.3 archive was re-extracted into a fresh directory and every member
+  compared by SHA-256 against the external v1.2 clean room at C:\erdos_audit\P1,
+  which is the tree that produced the reused build.
+  members in delivered archive : 32
+  byte-identical               : 32
+  differing                    : 0
+  missing from the clean room   : 0
+  RESULT: BYTE-IDENTICAL
+
+Condition 3 — nothing governing the build changed
+  lean-toolchain      IDENTICAL   (leanprover/lean4:v4.28.0)
+  lake-manifest.json  IDENTICAL   (mathlib 8f9d9cff6bd728b17a24e163c9402775d9e6a365)
+  lakefile.toml       IDENTICAL
+  FreezeAxioms.lean   IDENTICAL
+  Toolchain actually used for the reused build: Lean 4.28.0,
+  commit 7e01a1bf5c70fc6167d49c345d3bf80596e9a79b.
+  RESULT: UNCHANGED
+
+Condition 4 — the v1.3 manuscript's formal claims check against these unchanged sources
+  Appendix C of the v1.3 manuscript prints four declarations. All four match the
+  auditor's own independently obtained verbatim output, including namespaces:
+    PaperI.Split.paperI_main_sharp  [propext, Classical.choice, Quot.sound]
+    PaperI.paperI_main             [propext, Classical.choice, Quot.sound]
+    PaperI.assembly_sharp          [propext, Classical.choice, Quot.sound]
+    PaperI.Split.residual_duality  [propext, Classical.choice, Quot.sound]
+  Appendix C's stated theorem
+    G.Phi <= (G.n : R)^2/6 + (G.n : R)/2
+  matches the compiled statement
+    PaperI.Split.paperI_main_sharp : forall (G : PaperI.Split), G.Phi <= G.n^2/6 + G.n/2
+  and the companion form matches PaperI.paperI_main.
+  Table 2's five rows are covered by the frozen axiom file, which reported the standard
+  footprint for all 15 of its declarations with exit code 0.
+  RESULT: CONFORMANT
+  (Note: CHANGELOG_v1.3.md transposes two of these namespaces — finding RES-V13-002.
+   The manuscript is correct; only the changelog is wrong.)
+
+Condition 5 — reused evidence cited by direct path and labelled
+  REUSED_BYTE_IDENTICAL_EXTERNAL_EVIDENCE_01_lake_update_cache_get.log
+  REUSED_BYTE_IDENTICAL_EXTERNAL_EVIDENCE_02_lake_build_protocol_9_1.log
+      -> "Build completed successfully (8034 jobs)", EXIT_BUILD=0, real 24m47.960s,
+         zero errors (grep -ciE '^error|error:' returns 0)
+  REUSED_BYTE_IDENTICAL_EXTERNAL_EVIDENCE_03_FreezeAxioms_run.log
+      -> 15 declarations, all [propext, Classical.choice, Quot.sound], EXIT_AXIOMS=0
+  REUSED_BYTE_IDENTICAL_EXTERNAL_EVIDENCE_04_independent_axiom_query.log
+      -> the auditor's own #print axioms and #check output
+  RESULT: CITED AND LABELLED
+
+CONCLUSION: all five conditions of Section 5 are satisfied. No Lean build was rerun in
+this run. This reuse authorizes reuse of the FORMAL evidence only; the manuscript,
+citation, bilingual, PDF and package verdicts were all re-established fresh.

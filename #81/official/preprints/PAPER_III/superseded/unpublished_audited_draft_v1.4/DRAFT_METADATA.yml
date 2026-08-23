@@ -1,0 +1,46 @@
+draft_id: PAPER_III_PREPRINT_DRAFT_V1_4
+paper: PAPER_III
+version: "1.4"
+source_editorial_version: "2.5"
+draft_package_date: "2026-08-22"
+status:
+  manuscript: SYNCHRONIZED_EN_ES_MD_TEX_PDF
+  lifecycle: INTERNAL_RESIDUAL_PASS_EXTERNAL_CHALLENGER_PENDING
+  publication: UNPUBLISHED
+  internal_verdict: PASS
+historical_predecessor:
+  version: "1.3"
+  preservation: IMMUTABLE_AUDITED_TARGET_IN_SEPARATE_DIRECTORY
+canonical_manuscript: 01_manuscript/PAPER_III_preprint_draft_v1.4.md
+formalization:
+  freeze_path: 05_formalization/lean_v1.4_freeze
+  freeze_archive: PAPER_III_lean_v1.4_freeze.zip
+  freeze_sha256: 79ee24c38fd776bc2585a0c3c996e30817f0829fc5064463bdbde0fa2d3d7104
+  lean_source_files: 704
+  source_manifest_entries: 707
+  package_manifest_entries: 751
+  build_classification: PASS_CLEAN_ORIGIN_RESUMED
+  author_clean_uninterrupted_run: PASS_CLEAN_UNINTERRUPTED
+  author_clean_uninterrupted_evidence: 03_reproducibility/author_build_evidence/run_2026-08-23_clean_PASS
+  author_clean_uninterrupted_checks: 69
+  public_root_jobs: 8455
+  query_root_jobs: 8444
+  axiom_query_files: 8
+  axiom_queries: 42
+  distinct_axiom_surfaces: 35
+  internal_e2_residual: PASS_INTERNAL
+  internal_e2_exact_checks: 315183
+internal_audit:
+  run: 02_validation/01_INTERNAL_AUDITS/run_2026-08-22_v1.4
+  checks: 144
+  verdict: PASS
+internal_residual_audit:
+  run: 02_validation/01_INTERNAL_AUDITS/run_2026-08-22_v1.4_editorial_residual
+  findings_addressed:
+    - EXT-V14-M01
+    - EXT-V14-M02
+  verdict: PASS_INTERNAL
+open_gates:
+  - EXTERNAL_CHALLENGER_CONFIRMATION_V1_4
+  - HUMAN_PEER_REVIEW
+  - PUBLIC_IMMUTABLE_TAG_AND_RELEASE

@@ -1,0 +1,16 @@
+F cross-check (theirs vs independent): 20319 cases, 0 mismatches
+mu/C_alpha cross-check on 601 exact rationals in [0,2]: 0 mismatches
+r_p cross-check 0<=t<5000 (incl. boundary conventions chi'(K_0)=chi'(K_1)=0): 0 mismatches
+T(G) cross-check on 2000 random cases: 0 mismatches
+
+Grid blind spots of the internal audit (covered by this deliverable):
+  block02 grid q<=8 (never reaches q=2p for p>=5)  -> Block C1: 0<=q<=2p+2 for p<=40,
+     q up to 4p sampled to p=10^4, all EXACT (theirs was float, tol 1e-7).
+  block03 grid p<=48                               -> Block C2: p<=150 exhaustive,
+     200k random to p=10^9, boundary p=2304, all-integer arithmetic.
+  block04 grid p<=5, q<=6, 3 profile families      -> Block C3: p<=7, q<=8, 9 families
+     + 300 random, exact-nu3 refutation sample, CBC status-checked.
+
+========================================================================
+VERDICT E3: PASS — no defect found in the internal audit formulas at any boundary
+========================================================================

@@ -1,9 +1,9 @@
-# Reproducibility
+# Paper II v1.2 reproducibility
 
-- `ENVIRONMENT.md` -- toolchain and package versions.
-- `BUILD.md` -- how to build the manuscript and the Lean formalization.
-- `BUILD_VERIFICATION.md` -- how to reproduce the formal-verification certificate
-  (`lake build` + `#print axioms`) and the computational audits.
+The immutable Lean source snapshot, recorded main and supplementary builds,
+axiom outputs and reproduction instructions are in
+`../05_formalization/lean_v1.2_freeze/`.
 
-No computation is used as a premise in the proof; the scripts and the build
-corroborate and machine-check the analytic ar
+`PAPER_II_preprint_v1.2_*_pass1.log` and `*_pass2.log` record the final public
+PDF builds. The frozen archive passed an independent clean-room 8,063-job
+build; the release promotion did not modify the formal target.

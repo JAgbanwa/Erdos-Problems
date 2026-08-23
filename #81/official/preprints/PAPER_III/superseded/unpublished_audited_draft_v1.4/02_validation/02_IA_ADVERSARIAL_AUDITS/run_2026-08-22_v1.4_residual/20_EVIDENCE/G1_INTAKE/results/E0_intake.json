@@ -1,0 +1,234 @@
+{
+ "gate": "E0",
+ "paper": "PAPER_III",
+ "target": "preprint_draft_v1.4",
+ "request_sha256": "0dd44c49c43bff8cb6d7880b4d2825c83c1a88cf30d2be2111772b5e418854c0",
+ "excluded_from_target": [
+  "05_formalization/__none__"
+ ],
+ "exclusion_basis": "the audit request states __none__ is a local build workspace, not part of the frozen target, and must not be copied, trusted or used",
+ "target_inventory": {
+  "file_count": 1194,
+  "total_bytes": 49760012
+ },
+ "CURRENT_TARGET_SHA256": {
+  "sidecar": "04_integrity/CURRENT_TARGET_SHA256.txt",
+  "entries": 22,
+  "ok": 22,
+  "mismatch": 0,
+  "missing": 0,
+  "resolved_from": ".",
+  "line_endings": "LF",
+  "verifies": true,
+  "detail": []
+ },
+ "manuscript_sidecar": {
+  "sidecar": "01_manuscript/PAPER_III_preprint_draft_v1.4_SHA256.txt",
+  "entries": 6,
+  "ok": 6,
+  "mismatch": 0,
+  "missing": 0,
+  "resolved_from": "01_manuscript",
+  "line_endings": "LF",
+  "verifies": true,
+  "detail": []
+ },
+ "freeze_zip_sidecar": {
+  "sidecar": "05_formalization/lean_v1.4_freeze/PAPER_III_lean_v1.4_freeze.zip.sha256",
+  "entries": 1,
+  "ok": 1,
+  "mismatch": 0,
+  "missing": 0,
+  "resolved_from": "05_formalization/lean_v1.4_freeze",
+  "line_endings": "LF",
+  "verifies": true,
+  "detail": []
+ },
+ "SOURCE_MANIFEST.sha256": {
+  "sidecar": "05_formalization/lean_v1.4_freeze/SOURCE_MANIFEST.sha256",
+  "entries": 707,
+  "ok": 707,
+  "mismatch": 0,
+  "missing": 0,
+  "resolved_from": "05_formalization/lean_v1.4_freeze",
+  "line_endings": "LF",
+  "verifies": true,
+  "detail": []
+ },
+ "PACKAGE_MANIFEST.sha256": {
+  "sidecar": "05_formalization/lean_v1.4_freeze/PACKAGE_MANIFEST.sha256",
+  "entries": 751,
+  "ok": 751,
+  "mismatch": 0,
+  "missing": 0,
+  "resolved_from": "05_formalization/lean_v1.4_freeze",
+  "line_endings": "LF",
+  "verifies": true,
+  "detail": []
+ },
+ "freeze_zip": {
+  "path": "05_formalization/lean_v1.4_freeze/PAPER_III_lean_v1.4_freeze.zip",
+  "sha256": "79ee24c38fd776bc2585a0c3c996e30817f0829fc5064463bdbde0fa2d3d7104",
+  "bytes": 2818992,
+  "declared_sha256": "79ee24c38fd776bc2585a0c3c996e30817f0829fc5064463bdbde0fa2d3d7104",
+  "matches_request": true,
+  "entries": 751,
+  "files": 751,
+  "crc_first_bad_member": null,
+  "crc_all_ok": true,
+  "path_traversal": [],
+  "absolute_paths": [],
+  "backslash_names": [],
+  "symlink_entries": [],
+  "build_artifacts": [],
+  "lake_dirs": [],
+  "duplicate_names": [],
+  "top_level": [
+   "Ax2",
+   "BKLO",
+   "BUILD_INPUT_METADATA.json",
+   "Contrib",
+   "ESCAPE_HATCH_ASSESSMENT.md",
+   "FREEZE_METADATA.json",
+   "FREEZE_REPORT.md",
+   "FreezeAxioms.lean",
+   "FreezeAxiomsAX1.lean",
+   "FreezeAxiomsAX1Closure.lean",
+   "FreezeAxiomsAX2.lean",
+   "FreezeAxiomsAuditClosure.lean",
+   "FreezeAxiomsByproducts.lean",
+   "FreezeAxiomsCanonical.lean",
+   "FreezeAxiomsObstructions.lean",
+   "LEAN_FINDINGS_CLOSURE_MATRIX.md",
+   "MATHLIB_REPRODUCTION_PROTOCOL.md",
+   "Nibble",
+   "PAPERIII_SORRYFREE_STATUS.md",
+   "PaperIII"
+  ],
+  "mentions_v1_2": [],
+  "mentions_v1_3": 1
+ },
+ "stale_labels": [
+  {
+   "file": "02_validation/00_intake/PAPER_III_preprint_draft_v1.2_BASELINE.md",
+   "label": "v1.2",
+   "count": 3
+  },
+  {
+   "file": "02_validation/00_intake/PAPER_III_preprint_draft_v1.2_BASELINE.md",
+   "label": "lean_v1.2",
+   "count": 2
+  },
+  {
+   "file": "02_validation/00_intake/PROTECTED_ELEMENT_INDEX_v1.3_BASELINE.md",
+   "label": "v1.2",
+   "count": 2
+  },
+  {
+   "file": "02_validation/00_intake/SEMANTIC_CHANGE_CONTROL_v1.3.md",
+   "label": "v1.2",
+   "count": 3
+  },
+  {
+   "file": "02_validation/01_INTERNAL_AUDITS/00_CONTROL/AUDIT_PROTOCOL.md",
+   "label": "v1.2",
+   "count": 1
+  },
+  {
+   "file": "02_validation/01_INTERNAL_AUDITS/00_CONTROL/EXTERNAL_FINDINGS_REGRESSION_MATRIX.md",
+   "label": "v1.1",
+   "count": 4
+  },
+  {
+   "file": "02_validation/01_INTERNAL_AUDITS/10_REPORT/INTERNAL_AUDIT_FINAL_REPORT.md",
+   "label": "v1.1",
+   "count": 1
+  },
+  {
+   "file": "02_validation/01_INTERNAL_AUDITS/20_EVIDENCE/G0_STATIC/AUDIT_RECORD.md",
+   "label": "v1.1",
+   "count": 1
+  },
+  {
+   "file": "02_validation/01_INTERNAL_AUDITS/20_EVIDENCE/G0_STATIC/results/internal_audit_static.json",
+   "label": "v1.1",
+   "count": 1
+  },
+  {
+   "file": "02_validation/01_INTERNAL_AUDITS/20_EVIDENCE/G2_MATHEMATICS/results/run.txt",
+   "label": "v1.2",
+   "count": 1
+  },
+  {
+   "file": "02_validation/02_IA_ADVERSARIAL_AUDITS/run_2026-08-22_v1.3/00_CONTROL/TARGET_SHA256.txt",
+   "label": "v1.2",
+   "count": 1
+  },
+  {
+   "file": "02_validation/02_IA_ADVERSARIAL_AUDITS/run_2026-08-22_v1.3/20_EVIDENCE/E0_INTAKE/AUDIT_RECORD.md",
+   "label": "v1.2",
+   "count": 2
+  },
+  {
+   "file": "02_validation/02_IA_ADVERSARIAL_AUDITS/run_2026-08-22_v1.3/20_EVIDENCE/E0_INTAKE/results/E0_intake.json",
+   "label": "v1.2",
+   "count": 11
+  },
+  {
+   "file": "02_validation/02_IA_ADVERSARIAL_AUDITS/run_2026-08-22_v1.3/20_EVIDENCE/E0_INTAKE/results/E0_intake.json",
+   "label": "v1_2",
+   "count": 1
+  },
+  {
+   "file": "02_validation/02_IA_ADVERSARIAL_AUDITS/run_2026-08-22_v1.3/20_EVIDENCE/E0_INTAKE/results/E0_intake.json",
+   "label": "v1.1",
+   "count": 4
+  },
+  {
+   "file": "02_validation/02_IA_ADVERSARIAL_AUDITS/run_2026-08-22_v1.3/20_EVIDENCE/E0_INTAKE/results/E0_intake.json",
+   "label": "lean_v1.2",
+   "count": 1
+  },
+  {
+   "file": "02_validation/02_IA_ADVERSARIAL_AUDITS/run_2026-08-22_v1.3/20_EVIDENCE/E1_CLAIMS/results/regression_text.json",
+   "label": "v1.2",
+   "count": 8
+  },
+  {
+   "file": "02_validation/02_IA_ADVERSARIAL_AUDITS/run_2026-08-22_v1.3/20_EVIDENCE/E1_CLAIMS/results/regression_text.json",
+   "label": "v1_2",
+   "count": 4
+  },
+  {
+   "file": "02_validation/02_IA_ADVERSARIAL_AUDITS/run_2026-08-22_v1.3/20_EVIDENCE/E1_CLAIMS/results/regression_text.json",
+   "label": "v1.1",
+   "count": 4
+  },
+  {
+   "file": "02_validation/02_IA_ADVERSARIAL_AUDITS/run_2026-08-22_v1.3/20_EVIDENCE/E1_CLAIMS/results/regression_text.json",
+   "label": "draft v1.0",
+   "count": 4
+  },
+  {
+   "file": "02_validation/02_IA_ADVERSARIAL_AUDITS/run_2026-08-22_v1.3/20_EVIDENCE/E1_CLAIMS/results/regression_text.json",
+   "label": "lean_v1.2",
+   "count": 4
+  },
+  {
+   "file": "02_validation/02_IA_ADVERSARIAL_AUDITS/run_2026-08-22_v1.3/20_EVIDENCE/E3_FORMAL_CONFORMANCE/scripts/AuditorE3.lean",
+   "label": "v1.2",
+   "count": 1
+  },
+  {
+   "file": "CHANGELOG_v1.3.md",
+   "label": "v1.2",
+   "count": 1
+  }
+ ],
+ "auditor_manifest": {
+  "path": "00_CONTROL/TARGET_SHA256.txt",
+  "entries": 1194,
+  "sha256_of_manifest": "c4a10eb35de32ed04c5f84147ba8da21cde9d864b1e806852a9b999171b7892b",
+  "algorithm": "UTF-8, LF-only, '<sha256><two spaces><target-relative posix path>\\n', sorted by path, then SHA-256 of the exact bytes"
+ }
+}

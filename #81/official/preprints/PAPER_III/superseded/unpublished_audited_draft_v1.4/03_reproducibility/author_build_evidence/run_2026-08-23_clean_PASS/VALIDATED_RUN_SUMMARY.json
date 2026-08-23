@@ -1,0 +1,370 @@
+{
+  "paper": "PAPER_III",
+  "version": "1.4",
+  "raw_runner_result": "PASS",
+  "raw_runner_failure": null,
+  "validated_result": "PASS_CLEAN_UNINTERRUPTED",
+  "validation_basis": "The received runner reports PASS; all result hashes, command exits, build counts, axiom surfaces, closure checks, dependency pins, source identity and configuration invariance verify independently.",
+  "clean_initial_state": true,
+  "uninterrupted_command_sequence": true,
+  "source_identity": "707/707 freeze source/config hashes match the runner-verified kit manifest",
+  "checks_passed": 69,
+  "checks_total": 69,
+  "failed": [],
+  "checks": [
+    {
+      "pass": true,
+      "label": "32-entry result manifest",
+      "detail": ""
+    },
+    {
+      "pass": true,
+      "label": "result hash: evidence/AXIOM_GATE_SUMMARY.txt",
+      "detail": ""
+    },
+    {
+      "pass": true,
+      "label": "result hash: evidence/CONFIG_HASHES_AFTER.json",
+      "detail": ""
+    },
+    {
+      "pass": true,
+      "label": "result hash: evidence/CONFIG_HASHES_BEFORE.json",
+      "detail": ""
+    },
+    {
+      "pass": true,
+      "label": "result hash: evidence/DEPENDENCIES.json",
+      "detail": ""
+    },
+    {
+      "pass": true,
+      "label": "result hash: evidence/ENVIRONMENT.json",
+      "detail": ""
+    },
+    {
+      "pass": true,
+      "label": "result hash: evidence/IMPORT_CLOSURE.json",
+      "detail": ""
+    },
+    {
+      "pass": true,
+      "label": "result hash: evidence/PRE_CACHE_CLEAN_STATE.txt",
+      "detail": ""
+    },
+    {
+      "pass": true,
+      "label": "result hash: evidence/PUBLIC_ROOT_OBJECTS.txt",
+      "detail": ""
+    },
+    {
+      "pass": true,
+      "label": "result hash: evidence/RAW_ESCAPE_HATCH_SCAN.txt",
+      "detail": ""
+    },
+    {
+      "pass": true,
+      "label": "result hash: logs/01_cache_get.exit.txt",
+      "detail": ""
+    },
+    {
+      "pass": true,
+      "label": "result hash: logs/01_cache_get.log",
+      "detail": ""
+    },
+    {
+      "pass": true,
+      "label": "result hash: logs/02_build_public_root_clean.exit.txt",
+      "detail": ""
+    },
+    {
+      "pass": true,
+      "label": "result hash: logs/02_build_public_root_clean.log",
+      "detail": ""
+    },
+    {
+      "pass": true,
+      "label": "result hash: logs/03_build_query_roots_incremental.exit.txt",
+      "detail": ""
+    },
+    {
+      "pass": true,
+      "label": "result hash: logs/03_build_query_roots_incremental.log",
+      "detail": ""
+    },
+    {
+      "pass": true,
+      "label": "result hash: logs/axioms_01_FreezeAxioms.exit.txt",
+      "detail": ""
+    },
+    {
+      "pass": true,
+      "label": "result hash: logs/axioms_01_FreezeAxioms.log",
+      "detail": ""
+    },
+    {
+      "pass": true,
+      "label": "result hash: logs/axioms_02_FreezeAxiomsAuditClosure.exit.txt",
+      "detail": ""
+    },
+    {
+      "pass": true,
+      "label": "result hash: logs/axioms_02_FreezeAxiomsAuditClosure.log",
+      "detail": ""
+    },
+    {
+      "pass": true,
+      "label": "result hash: logs/axioms_03_FreezeAxiomsAX1.exit.txt",
+      "detail": ""
+    },
+    {
+      "pass": true,
+      "label": "result hash: logs/axioms_03_FreezeAxiomsAX1.log",
+      "detail": ""
+    },
+    {
+      "pass": true,
+      "label": "result hash: logs/axioms_04_FreezeAxiomsAX1Closure.exit.txt",
+      "detail": ""
+    },
+    {
+      "pass": true,
+      "label": "result hash: logs/axioms_04_FreezeAxiomsAX1Closure.log",
+      "detail": ""
+    },
+    {
+      "pass": true,
+      "label": "result hash: logs/axioms_05_FreezeAxiomsAX2.exit.txt",
+      "detail": ""
+    },
+    {
+      "pass": true,
+      "label": "result hash: logs/axioms_05_FreezeAxiomsAX2.log",
+      "detail": ""
+    },
+    {
+      "pass": true,
+      "label": "result hash: logs/axioms_06_FreezeAxiomsByproducts.exit.txt",
+      "detail": ""
+    },
+    {
+      "pass": true,
+      "label": "result hash: logs/axioms_06_FreezeAxiomsByproducts.log",
+      "detail": ""
+    },
+    {
+      "pass": true,
+      "label": "result hash: logs/axioms_07_FreezeAxiomsCanonical.exit.txt",
+      "detail": ""
+    },
+    {
+      "pass": true,
+      "label": "result hash: logs/axioms_07_FreezeAxiomsCanonical.log",
+      "detail": ""
+    },
+    {
+      "pass": true,
+      "label": "result hash: logs/axioms_08_FreezeAxiomsObstructions.exit.txt",
+      "detail": ""
+    },
+    {
+      "pass": true,
+      "label": "result hash: logs/axioms_08_FreezeAxiomsObstructions.log",
+      "detail": ""
+    },
+    {
+      "pass": true,
+      "label": "result hash: RUN_SUMMARY.json",
+      "detail": ""
+    },
+    {
+      "pass": true,
+      "label": "freeze has 707 source/config entries",
+      "detail": ""
+    },
+    {
+      "pass": true,
+      "label": "all 707 freeze entries match the build-kit project manifest",
+      "detail": []
+    },
+    {
+      "pass": true,
+      "label": "only two noncompiled metadata files are extra",
+      "detail": [
+        "CANDIDATE_METADATA.json",
+        "ESCAPE_HATCH_ASSESSMENT.md"
+      ]
+    },
+    {
+      "pass": true,
+      "label": "received ZIP matches its SHA-256 sidecar",
+      "detail": ""
+    },
+    {
+      "pass": true,
+      "label": "project configuration is byte-identical before and after the run",
+      "detail": ""
+    },
+    {
+      "pass": true,
+      "label": "project configuration matches the v1.4 freeze",
+      "detail": ""
+    },
+    {
+      "pass": true,
+      "label": "no initial project .lake directory",
+      "detail": ""
+    },
+    {
+      "pass": true,
+      "label": "no initial compiled project objects",
+      "detail": ""
+    },
+    {
+      "pass": true,
+      "label": "704 Lean source files recorded",
+      "detail": ""
+    },
+    {
+      "pass": true,
+      "label": "zero exit: 01_cache_get.exit.txt",
+      "detail": ""
+    },
+    {
+      "pass": true,
+      "label": "zero exit: 02_build_public_root_clean.exit.txt",
+      "detail": ""
+    },
+    {
+      "pass": true,
+      "label": "zero exit: 03_build_query_roots_incremental.exit.txt",
+      "detail": ""
+    },
+    {
+      "pass": true,
+      "label": "zero exit: axioms_01_FreezeAxioms.exit.txt",
+      "detail": ""
+    },
+    {
+      "pass": true,
+      "label": "zero exit: axioms_02_FreezeAxiomsAuditClosure.exit.txt",
+      "detail": ""
+    },
+    {
+      "pass": true,
+      "label": "zero exit: axioms_03_FreezeAxiomsAX1.exit.txt",
+      "detail": ""
+    },
+    {
+      "pass": true,
+      "label": "zero exit: axioms_04_FreezeAxiomsAX1Closure.exit.txt",
+      "detail": ""
+    },
+    {
+      "pass": true,
+      "label": "zero exit: axioms_05_FreezeAxiomsAX2.exit.txt",
+      "detail": ""
+    },
+    {
+      "pass": true,
+      "label": "zero exit: axioms_06_FreezeAxiomsByproducts.exit.txt",
+      "detail": ""
+    },
+    {
+      "pass": true,
+      "label": "zero exit: axioms_07_FreezeAxiomsCanonical.exit.txt",
+      "detail": ""
+    },
+    {
+      "pass": true,
+      "label": "zero exit: axioms_08_FreezeAxiomsObstructions.exit.txt",
+      "detail": ""
+    },
+    {
+      "pass": true,
+      "label": "single continuous command sequence",
+      "detail": {
+        "max_gap_seconds": 4.198321
+      }
+    },
+    {
+      "pass": true,
+      "label": "clean public root completed 8,455 jobs",
+      "detail": ""
+    },
+    {
+      "pass": true,
+      "label": "query roots completed 8,444 jobs",
+      "detail": ""
+    },
+    {
+      "pass": true,
+      "label": "no active sorry warning in build logs",
+      "detail": ""
+    },
+    {
+      "pass": true,
+      "label": "42 theorem-level axiom outputs",
+      "detail": ""
+    },
+    {
+      "pass": true,
+      "label": "axiom union is foundational-only",
+      "detail": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    {
+      "pass": true,
+      "label": "no sorryAx in axiom output",
+      "detail": ""
+    },
+    {
+      "pass": true,
+      "label": "headline theorem axiom output is present with Lean's quoted declaration format",
+      "detail": ""
+    },
+    {
+      "pass": true,
+      "label": "runner axiom gate reports foundational-only PASS",
+      "detail": ""
+    },
+    {
+      "pass": true,
+      "label": "runner axiom summary has the expected complete coverage",
+      "detail": ""
+    },
+    {
+      "pass": true,
+      "label": "public root reaches final theorem and PublicAPI",
+      "detail": ""
+    },
+    {
+      "pass": true,
+      "label": "canonical closure excludes archived axiom modules",
+      "detail": ""
+    },
+    {
+      "pass": true,
+      "label": "nine dependencies are exact and clean",
+      "detail": ""
+    },
+    {
+      "pass": true,
+      "label": "raw runner reports PASS without adjudication",
+      "detail": ""
+    },
+    {
+      "pass": true,
+      "label": "raw runner classifies the public-root build as clean",
+      "detail": ""
+    },
+    {
+      "pass": true,
+      "label": "raw run duration is recorded",
+      "detail": ""
+    }
+  ]
+}

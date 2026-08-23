@@ -1,0 +1,79 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{booktabs,longtable,array}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{microtype}
+\usepackage{url}
+\usepackage{xurl}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.5em}
+\title{Paper II v1.2 Package-Residual Internal Audit}
+\author{Internal author-side audit --- not external}
+\date{21 August 2026 --- Overall verdict: PASS}
+\begin{document}
+\maketitle
+\textbf{Protocol:} \texttt{PAPER\_II\_INTERNAL\_PACKAGE\_RESIDUAL\_v1.0}.\\
+\textbf{Lean execution:} no.\quad
+\textbf{Manuscript/PDF regeneration:} no; all six artifacts are byte-identical.
+
+\section{Target}
+The audit covers Paper II \texttt{preprint\_draft\_v1.2} after a package-only
+correction to the stale integrity directory identified by the external
+\texttt{PASS\_WITH\_RESIDUALS} report.
+
+\small
+\begin{longtable}{p{.25\linewidth}p{.67\linewidth}}
+\toprule Anchor & SHA-256 \\ \midrule
+English Markdown & \url{7215e14bbea8ab2bf208dcdd1efa050cd2b72c997eee2efe504a1e6817c68882} \\
+Spanish Markdown & \url{d0d1df05eb267a51db2ccc100dd9725dcde9b03dbb95c8a730742e357eb0f4dc} \\
+English PDF & \url{d05c4cab1262357fddd21e4aab399bdb92d5bcf139172897c80595e781049052} \\
+Spanish PDF & \url{d525d02a6e911cb23f7e1f28e1de7648441eccea6de206e76e5321161c86c2db} \\
+Lean archive & \url{ee2d05cc40d943ca92f8f7bf3e5dd83c2692518ddea5e2ca4f7686ccb1ac3895} \\
+External report & \url{1e7afd3e9394bf83beb7e33ce19ff5227072fcd6b0eb3fd21e571329564e3ded} \\
+\bottomrule
+\end{longtable}
+\normalsize
+
+The corrected package freeze contains 200 files and 3,417,038 bytes. Its
+canonical LF-only manifest SHA-256 is
+\url{ddc50d1cb1fd16a788d03738806a381043134f1df7a0262808379892902b96ec}.
+The construction algorithm is published in the R0 summary.
+
+\section{External findings}
+\textbf{EXT-PII-M-001 --- PASS/CLOSED INTERNALLY.} The stale v1.1 integrity
+directory was replaced. Both integrity sidecars are LF-only, resolve only to
+present v1.2 files and verify completely. The v1.1 to v1.2 semantic diff and
+current target perimeter are now explicit.
+
+\textbf{EXT-P2-I-001 --- NOTE PRESERVED.} The external HTTP 403 is a
+nonblocking access limitation. The open-status claim remains supported by the
+primary EOZ source verified in the external audit.
+
+\section{Gate results}
+\small
+\begin{longtable}{p{.08\linewidth}p{.18\linewidth}p{.65\linewidth}}
+\toprule Gate & Verdict & Evidence \\ \midrule
+R0 & PASS & 17/17 correction, anchor, sidecar and hygiene controls. \\
+R1 & PASS & 58/58 canonical static controls. \\
+R2 & PASS & 195 LP; 5,000 maximization; 6,667 argmax; 139 atlas; 931 copy; 22 terminal checks. \\
+R3 & PASS & No exact or near duplicate blocks. \\
+R4 & PASS reuse & Unchanged archive; 8,063-job build and 16 axiom surfaces; no Lean run. \\
+R5 & PASS reuse & Six unchanged hashes; prior 47-page rendered QA reused. \\
+R6 & PASS & Gate manifests, report, archive and sidecar verified. \\
+\bottomrule
+\end{longtable}
+\normalsize
+
+\section{Semantic integrity}
+No manuscript, theorem, definition, assumption, quantifier, constant, equation,
+proof step, citation, novelty claim, translation, figure, LaTeX source, PDF,
+Lean source or formal archive changed. The correction affects only package
+integrity, audit status and residual evidence.
+
+\section{Verdict}
+\textbf{PASS.} All seven internal residual gates pass. There are zero unresolved
+blockers, majors or minors. This author-side result is not human peer review and
+does not prove global novelty. A narrow independent external residual re-audit
+must issue its own plain \texttt{PASS} before Paper II is externally closed.
+\end{document}

@@ -1,0 +1,763 @@
+{
+  "paper": "PAPER_III",
+  "target": "preprint_draft_v1.4",
+  "date": "2026-08-22",
+  "audit_class": "INTERNAL_AUTHOR_SIDE_NON_INDEPENDENT",
+  "lean_rebuild_during_audit": false,
+  "recorded_build_classification": "PASS_CLEAN_ORIGIN_RESUMED",
+  "gate_verdicts": {
+    "G0": "PASS",
+    "G1": "PASS",
+    "G2": "PASS",
+    "G3": "PASS",
+    "G4": "PASS",
+    "G5": "PASS",
+    "G6": "PASS",
+    "G7": "PASS",
+    "G8": "PASS"
+  },
+  "checks_passed": 144,
+  "checks_total": 144,
+  "failed": {},
+  "overall": "PASS",
+  "checks": {
+    "G0": [
+      {
+        "pass": true,
+        "label": "publication artifact exists: md_en",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "publication artifact exists: tex_en",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "publication artifact exists: pdf_en",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "publication artifact exists: md_es",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "publication artifact exists: tex_es",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "publication artifact exists: pdf_es",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "publication SHA-256 sidecar exists",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "publication sidecar is LF-only",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "all six publication hashes verify",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "707-entry source manifest verifies",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "751-entry freeze package manifest verifies",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "formal archive SHA-256 verifies",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "formal archive sidecar agrees",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "formal archive CRC verifies",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "formal archive has 751 entries",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "formal archive is source-only",
+        "detail": ""
+      }
+    ],
+    "G1": [
+      {
+        "pass": true,
+        "label": "English claim surface present: Theorem 1.1",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "English claim surface present: Corollary 1.2",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "English claim surface present: three regimes",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "English claim surface present: sharp quadratic",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "English claim surface present: linear term is necessary",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "English claim surface present: full chordal problem remains open",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "English claim surface present: improves its quadratic coefficient to the sharp value",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "English claim surface present: does not identify the least uniform linear coefficient",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "Spanish claim surface present: Teorema 1.1",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "Spanish claim surface present: Corolario 1.2",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "Spanish claim surface present: tres reg\u00edmenes",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "Spanish claim surface present: coeficiente cuadr\u00e1tico afilado",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "Spanish claim surface present: es necesario un t\u00e9rmino lineal",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "Spanish claim surface present: problema cordal completo sigue abierto",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "Spanish claim surface present: mejora su coeficiente cuadr\u00e1tico hasta el valor afilado",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "Spanish claim surface present: no identifica el menor coeficiente lineal uniforme",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "overbroad English split-case claim absent",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "overbroad Spanish split-case claim absent",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "sharpness limit is explicit in both languages",
+        "detail": ""
+      }
+    ],
+    "G2": [
+      {
+        "pass": true,
+        "label": "fresh non-Lean mathematical regression summary passes",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "78,384 exact margin checks passed",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "E2 residual rederivation package exists",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "E2 residual K-EPS/K-CORRIDOR/K-SPARSE/K-GLOBAL checks pass",
+        "detail": ""
+      }
+    ],
+    "G3": [
+      {
+        "pass": true,
+        "label": "42 theorem-level queries cover 35 distinct surfaces",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "axiom output records surface: BKLO.triangle_decomposition_dense",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "axiom output records surface: Nibble.AX1.ax1Statement_holds",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "axiom output records surface: Nibble.AX1.ax1_of_boxAllocation",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "axiom output records surface: Nibble.AX1.blockCoverResidualCoupled_holds",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "axiom output records surface: Nibble.AX1.boxAllocationResidual_holds",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "axiom output records surface: PaperIII.AX1Assumption_iff_packing_form",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "axiom output records surface: PaperIII.AX1_holds",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "axiom output records surface: PaperIII.AX2_holds",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "axiom output records surface: PaperIII.Byproduct_completeSplit_cp_sharp",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "axiom output records surface: PaperIII.Byproduct_leading_constant_forced",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "axiom output records surface: PaperIII.Corollary_1_2",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "axiom output records surface: PaperIII.Corollary_1_2_sharp",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "axiom output records surface: PaperIII.E_4_3_of_AX1",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "axiom output records surface: PaperIII.E_5_1",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "axiom output records surface: PaperIII.E_5_2",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "axiom output records surface: PaperIII.E_8_clique_packing_of_AX2",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "axiom output records surface: PaperIII.E_8_of_AX1_AX2",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "axiom output records surface: PaperIII.Prop_10_1_low",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "axiom output records surface: PaperIII.Prop_10_1_mid",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "axiom output records surface: PaperIII.PublicAPI_localization_from_eventual_high_degree",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "axiom output records surface: PaperIII.PublicAPI_nu3_achieved",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "axiom output records surface: PaperIII.Theorem_1_1",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "axiom output records surface: PaperIII.Theorem_1_1_of_AX1_AX2",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "axiom output records surface: PaperIII.Theorem_1_1_of_splitPartition_uncond",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "axiom output records surface: PaperIII.ax2_density_necessary_K7_minus_two_triangles",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "axiom output records surface: PaperIII.ax2_divisibility_degree_insufficient",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "axiom output records surface: PaperIII.cor_5_3",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "axiom output records surface: PaperIII.eventual_bound_of_high_degree_of_AX1_AX2",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "axiom output records surface: PaperIII.global_bound_from_eventual_high_degree",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "axiom output records surface: PaperIII.isFracPacking_iff_yuster",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "axiom output records surface: PaperIII.isTrianglePacking_iff_yuster",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "axiom output records surface: PaperIII.nu3Star_eq_yuster",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "axiom output records surface: PaperIII.nu3_eq_yuster",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "axiom output records surface: PaperIII.tau3Star_eq_nu3Star",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "axiom output records surface: PaperIII.tau3Star_eq_yuster_cover",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "public aggregate root imports final theorem module",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "public aggregate root imports PublicAPI",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "PublicAPI imports canonical packing module",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "canonical bridge is queried and recorded: PaperIII.isTrianglePacking_iff_yuster",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "canonical bridge is queried and recorded: PaperIII.nu3_eq_yuster",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "canonical bridge is queried and recorded: PaperIII.isFracPacking_iff_yuster",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "canonical bridge is queried and recorded: PaperIII.nu3Star_eq_yuster",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "canonical bridge is queried and recorded: PaperIII.tau3Star_eq_yuster_cover",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "canonical bridge is queried and recorded: PaperIII.tau3Star_eq_nu3Star",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "canonical bridge is queried and recorded: PaperIII.AX1Assumption_iff_packing_form",
+        "detail": ""
+      }
+    ],
+    "G4": [
+      {
+        "pass": true,
+        "label": "recorded build result is PASS_RESUMED",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "recorded build began from a source-only project state",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "restart/resume limitation is truthfully recorded",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "public and query root builds passed",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "eight-file axiom gate passed",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "public-root log records 8,455 successful jobs",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "query-root log records 8,444 successful jobs",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "recorded builds contain no active sorry warning",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "all eight axiom query processes exited zero",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "axiom summary records 42 surfaces and zero sorryAx",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "recorded axiom union is exactly foundational-only",
+        "detail": "['Classical.choice', 'Quot.sound', 'propext']"
+      },
+      {
+        "pass": true,
+        "label": "recorded import closure reaches final theorem and PublicAPI",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "canonical closure excludes archived project-axiom modules",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "all nine dependencies are clean and pinned",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "Mathlib commit matches manuscript and freeze",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "33-entry recorded-build evidence manifest verifies",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "freeze metadata does not overstate uninterrupted reproduction",
+        "detail": ""
+      }
+    ],
+    "G5": [
+      {
+        "pass": true,
+        "label": "51-check manuscript consistency suite reruns successfully",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "all 51 semantic/format consistency checks pass",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "EN/ES heading counts agree at 144",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "no duplicated long paragraph in en Markdown",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "no duplicated long paragraph in es Markdown",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "full Proposition 7.4 quantitative condition survives translation",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "q=0 benchmark clause survives translation",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "algorithmic non-claim is synchronized",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "publication manuscripts are self-contained and do not cite draft versions",
+        "detail": ""
+      }
+    ],
+    "G6": [
+      {
+        "pass": true,
+        "label": "en PDF page count is 46",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "en PDF fonts are embedded",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "en PDF does not predate final TeX",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "en final TeX logs are retained",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "en TeX logs contain no fatal error",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "en TeX logs contain no undefined references/citations",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "en TeX logs contain no missing character or overfull box",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "es PDF page count is 47",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "es PDF fonts are embedded",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "es PDF does not predate final TeX",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "es final TeX logs are retained",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "es TeX logs contain no fatal error",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "es TeX logs contain no undefined references/citations",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "es TeX logs contain no missing character or overfull box",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "all-page rendered visual QA is recorded",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "manuscript directory has no TeX residue",
+        "detail": ""
+      }
+    ],
+    "G7": [
+      {
+        "pass": true,
+        "label": "English bibliography has 17 numbered references",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "internal novelty statement is explicit",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "independent novelty gate remains explicit",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "full chordal problem is distinguished",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "external E6 prior-art addendum is preserved as carry-forward evidence",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "external review remains a release gate in both languages",
+        "detail": ""
+      }
+    ],
+    "G8": [
+      {
+        "pass": true,
+        "label": "v1.4 manuscript directory contains no duplicate v1.3 artifacts",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "manuscript directory has exactly EN/ES manuscripts plus README",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "manuscript directory has exactly two TeX and two PDF publication artifacts",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "package has no shell-variable-named directory",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "package has no temporary render directory",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "formal freeze contains no compiled Lean artifacts",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "formal freeze contains no symlink/reparse entry",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "package contains no Python bytecode cache directory",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "package contains no transient TeX auxiliary file",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "first-release status is synchronized",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "manuscript does not depend on earlier artifacts",
+        "detail": ""
+      }
+    ]
+  }
+}

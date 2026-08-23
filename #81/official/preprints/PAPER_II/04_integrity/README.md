@@ -1,11 +1,8 @@
-# Integrity
+# Paper II v1.2 integrity
 
-- `SHA256SUMS.txt` -- SHA-256 of every released file (paths relative to the
-  package root).
-- `RELEASE_MANIFEST.json` -- structured manifest of the release.
-- `PROVENANCE.md` -- how the release artifacts were produced and verified.
+`SHA256SUMS.txt` is the canonical current-release manifest. The manuscript
+sidecar covers the six English/Spanish Markdown, TeX and PDF artifacts.
 
-Verify from the package root:
-
-```bash
-sha256sum -c 04_integrity/SHA256SUM
+The audit directories retain their own sealed manifests. The complete previous
+public v1.0 package, including its original integrity records, is preserved
+under `../superseded/preprint_v1.0/`.

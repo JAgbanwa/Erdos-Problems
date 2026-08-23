@@ -1,0 +1,4110 @@
+preprints/PAPER_III/
+|-- 01_manuscript/
+|   |-- figures/
+|   |   |-- fig1_complete_split_extremizer_en.png
+|   |   |-- fig1_complete_split_extremizer_es.png
+|   |   |-- fig2_alpha_regimes_en.png
+|   |   `-- fig2_alpha_regimes_es.png
+|   |-- PAPER_III_preprint_v1.5_en.pdf
+|   |-- PAPER_III_preprint_v1.5_en.tex
+|   |-- PAPER_III_preprint_v1.5_es.md
+|   |-- PAPER_III_preprint_v1.5_es.pdf
+|   |-- PAPER_III_preprint_v1.5_es.tex
+|   |-- PAPER_III_preprint_v1.5_SHA256.txt
+|   |-- PAPER_III_preprint_v1.5.md
+|   `-- README.md
+|-- 02_validation/
+|   |-- 00_intake/
+|   |   |-- EXTERNAL_INCONCLUSIVE_LEAN_CLOSURE_MATRIX_v1.3.md
+|   |   |-- PAPER_III_preprint_draft_v1.2_BASELINE.md
+|   |   |-- PROTECTED_ELEMENT_INDEX_v1.3_BASELINE.md
+|   |   `-- SEMANTIC_CHANGE_CONTROL_v1.3.md
+|   |-- 01_INTERNAL_AUDITS/
+|   |   |-- 00_CONTROL/
+|   |   |   |-- AUDIT_INDEX.md
+|   |   |   |-- AUDIT_PROTOCOL.md
+|   |   |   |-- CITATION_LEDGER.md
+|   |   |   |-- CLAIM_MAP.md
+|   |   |   |-- ENVIRONMENT.md
+|   |   |   |-- EXTERNAL_FINDINGS_REGRESSION_MATRIX.md
+|   |   |   |-- internal_audit_v13.py
+|   |   |   `-- OPEN_RISKS.md
+|   |   |-- 10_REPORT/
+|   |   |   |-- INTERNAL_AUDIT_FINAL_REPORT_BUILD_PASS2.log
+|   |   |   |-- INTERNAL_AUDIT_FINAL_REPORT_BUILD.log
+|   |   |   |-- INTERNAL_AUDIT_FINAL_REPORT.md
+|   |   |   |-- INTERNAL_AUDIT_FINAL_REPORT.pdf
+|   |   |   |-- INTERNAL_AUDIT_FINAL_REPORT.tex
+|   |   |   |-- INTERNAL_AUDIT_SUMMARY.json
+|   |   |   `-- README.md
+|   |   |-- 20_EVIDENCE/
+|   |   |   |-- G0_STATIC/
+|   |   |   |   |-- results/
+|   |   |   |   |   `-- internal_audit_static.json
+|   |   |   |   |-- AUDIT_RECORD.md
+|   |   |   |   |-- COMMAND.txt
+|   |   |   |   `-- SHA256_MANIFEST.txt
+|   |   |   |-- G1_CLAIMS/
+|   |   |   |   |-- AUDIT_RECORD.md
+|   |   |   |   `-- SHA256_MANIFEST.txt
+|   |   |   |-- G2_MATHEMATICS/
+|   |   |   |   |-- block01_algebraic_identities/
+|   |   |   |   |   |-- results/
+|   |   |   |   |   |   `-- identities_results.txt
+|   |   |   |   |   |-- certificate_block01.pdf
+|   |   |   |   |   |-- README.md
+|   |   |   |   |   `-- verify_identities.py
+|   |   |   |   |-- block02_common_profile_LP/
+|   |   |   |   |   |-- results/
+|   |   |   |   |   |   `-- common_profile_LP_results.txt
+|   |   |   |   |   |-- certificate_block02.pdf
+|   |   |   |   |   |-- README.md
+|   |   |   |   |   `-- verify_common_profile_LP.py
+|   |   |   |   |-- block03_unified_margin/
+|   |   |   |   |   |-- results/
+|   |   |   |   |   |   `-- margin_results.txt
+|   |   |   |   |   |-- certificate_block03.pdf
+|   |   |   |   |   |-- README.md
+|   |   |   |   |   `-- verify_margin.py
+|   |   |   |   |-- block04_corridor_ILP/
+|   |   |   |   |   |-- results/
+|   |   |   |   |   |   `-- corridor_ILP_results.txt
+|   |   |   |   |   |-- certificate_block04.pdf
+|   |   |   |   |   |-- README.md
+|   |   |   |   |   `-- verify_corridor_ILP.py
+|   |   |   |   |-- common/
+|   |   |   |   |   |-- audit_formulas.py
+|   |   |   |   |   `-- make_certificate.py
+|   |   |   |   |-- results/
+|   |   |   |   |   |-- common_profile_LP_results.txt
+|   |   |   |   |   |-- corridor_ILP_results.txt
+|   |   |   |   |   |-- identities_results.txt
+|   |   |   |   |   |-- margin_results.txt
+|   |   |   |   |   |-- run_v1.3.txt
+|   |   |   |   |   |-- run.txt
+|   |   |   |   |   `-- summary.json
+|   |   |   |   |-- AUDIT_RECORD.md
+|   |   |   |   |-- COMMAND.txt
+|   |   |   |   `-- SHA256_MANIFEST.txt
+|   |   |   |-- G3_FORMAL_CONFORMANCE/
+|   |   |   |   |-- AUDIT_RECORD.md
+|   |   |   |   `-- SHA256_MANIFEST.txt
+|   |   |   |-- G4_RECORDED_BUILD/
+|   |   |   |   |-- AUDIT_RECORD.md
+|   |   |   |   `-- SHA256_MANIFEST.txt
+|   |   |   |-- G5_BILINGUAL/
+|   |   |   |   |-- AUDIT_RECORD.md
+|   |   |   |   `-- SHA256_MANIFEST.txt
+|   |   |   |-- G6_TEX_PDF/
+|   |   |   |   |-- results/
+|   |   |   |   |   `-- QA_SUMMARY.txt
+|   |   |   |   |-- AUDIT_RECORD.md
+|   |   |   |   |-- COMMANDS.txt
+|   |   |   |   `-- SHA256_MANIFEST.txt
+|   |   |   |-- G7_PRIOR_ART/
+|   |   |   |   |-- AUDIT_RECORD.md
+|   |   |   |   `-- SHA256_MANIFEST.txt
+|   |   |   `-- G8_PACKAGE/
+|   |   |       |-- AUDIT_RECORD.md
+|   |   |       `-- SHA256_MANIFEST.txt
+|   |   |-- 30_PACKAGE/
+|   |   |   |-- INTERNAL_AUDIT_PACKAGE_SHA256.txt
+|   |   |   |-- INTERNAL_AUDIT_PACKAGE.zip
+|   |   |   |-- INTERNAL_AUDIT_SHA256.txt
+|   |   |   `-- README.md
+|   |   |-- E2_RESIDUAL_v1.4/
+|   |   |   |-- 00_CONTROL/
+|   |   |   |   |-- FORMAL_SURFACE_MAP.md
+|   |   |   |   |-- OBLIGATION_MATRIX.md
+|   |   |   |   `-- TARGET_HASHES.sha256
+|   |   |   |-- 10_DERIVATIONS/
+|   |   |   |   |-- INTEGRATION_REGRESSION.md
+|   |   |   |   |-- K_CORRIDOR_DERIVATION.md
+|   |   |   |   |-- K_EPS_DERIVATION.md
+|   |   |   |   |-- K_GLOBAL_DERIVATION.md
+|   |   |   |   `-- K_SPARSE_DERIVATION.md
+|   |   |   |-- 20_SCRIPTS/
+|   |   |   |   |-- RUN_COMMAND.txt
+|   |   |   |   `-- verify_e2_residual.py
+|   |   |   |-- 30_RESULTS/
+|   |   |   |   |-- exact_checks.json
+|   |   |   |   `-- exact_checks.txt
+|   |   |   |-- 40_REPORT/
+|   |   |   |   |-- INTERNAL_E2_RESIDUAL_REPORT.md
+|   |   |   |   `-- INTERNAL_E2_RESIDUAL_SUMMARY.json
+|   |   |   |-- EVIDENCE_MANIFEST.sha256
+|   |   |   `-- README.md
+|   |   |-- run_2026-08-22_v1.4/
+|   |   |   |-- 00_CONTROL/
+|   |   |   |   |-- AUDIT_INDEX.md
+|   |   |   |   |-- AUDIT_PROTOCOL.md
+|   |   |   |   |-- EXTERNAL_FINDINGS_REGRESSION_MATRIX.md
+|   |   |   |   `-- internal_audit_v14.py
+|   |   |   |-- 10_REPORT/
+|   |   |   |   |-- INTERNAL_AUDIT_FINAL_REPORT_BUILD.log
+|   |   |   |   |-- INTERNAL_AUDIT_FINAL_REPORT_PASS1.console.txt
+|   |   |   |   |-- INTERNAL_AUDIT_FINAL_REPORT_PASS2.console.txt
+|   |   |   |   |-- INTERNAL_AUDIT_FINAL_REPORT.md
+|   |   |   |   |-- INTERNAL_AUDIT_FINAL_REPORT.pdf
+|   |   |   |   |-- INTERNAL_AUDIT_FINAL_REPORT.tex
+|   |   |   |   `-- INTERNAL_AUDIT_SUMMARY.json
+|   |   |   |-- 20_EVIDENCE/
+|   |   |   |   |-- G0_STATIC/
+|   |   |   |   |   |-- results/
+|   |   |   |   |   |   |-- internal_audit_console_v1.4.txt
+|   |   |   |   |   |   `-- internal_audit_static_v1.4.json
+|   |   |   |   |   |-- AUDIT_RECORD.md
+|   |   |   |   |   `-- SHA256_MANIFEST.txt
+|   |   |   |   |-- G1_CLAIMS/
+|   |   |   |   |   |-- AUDIT_RECORD.md
+|   |   |   |   |   `-- SHA256_MANIFEST.txt
+|   |   |   |   |-- G2_MATHEMATICS/
+|   |   |   |   |   |-- block01_algebraic_identities/
+|   |   |   |   |   |   |-- README.md
+|   |   |   |   |   |   `-- verify_identities.py
+|   |   |   |   |   |-- block02_common_profile_LP/
+|   |   |   |   |   |   |-- README.md
+|   |   |   |   |   |   `-- verify_common_profile_LP.py
+|   |   |   |   |   |-- block03_unified_margin/
+|   |   |   |   |   |   |-- README.md
+|   |   |   |   |   |   `-- verify_margin.py
+|   |   |   |   |   |-- block04_corridor_ILP/
+|   |   |   |   |   |   |-- README.md
+|   |   |   |   |   |   `-- verify_corridor_ILP.py
+|   |   |   |   |   |-- common/
+|   |   |   |   |   |   |-- audit_formulas.py
+|   |   |   |   |   |   `-- make_certificate.py
+|   |   |   |   |   |-- results/
+|   |   |   |   |   |   |-- common_profile_LP_results.txt
+|   |   |   |   |   |   |-- corridor_ILP_results.txt
+|   |   |   |   |   |   |-- identities_results.txt
+|   |   |   |   |   |   |-- margin_results.txt
+|   |   |   |   |   |   `-- summary_v1.4.json
+|   |   |   |   |   |-- AUDIT_RECORD.md
+|   |   |   |   |   |-- COMMANDS_v1.4.txt
+|   |   |   |   |   `-- SHA256_MANIFEST.txt
+|   |   |   |   |-- G3_FORMAL_CONFORMANCE/
+|   |   |   |   |   |-- AUDIT_RECORD.md
+|   |   |   |   |   `-- SHA256_MANIFEST.txt
+|   |   |   |   |-- G4_RECORDED_BUILD/
+|   |   |   |   |   |-- AUDIT_RECORD.md
+|   |   |   |   |   `-- SHA256_MANIFEST.txt
+|   |   |   |   |-- G5_BILINGUAL/
+|   |   |   |   |   |-- AUDIT_RECORD.md
+|   |   |   |   |   `-- SHA256_MANIFEST.txt
+|   |   |   |   |-- G6_TEX_PDF/
+|   |   |   |   |   |-- AUDIT_RECORD.md
+|   |   |   |   |   `-- SHA256_MANIFEST.txt
+|   |   |   |   |-- G7_PRIOR_ART/
+|   |   |   |   |   |-- AUDIT_RECORD.md
+|   |   |   |   |   `-- SHA256_MANIFEST.txt
+|   |   |   |   `-- G8_PACKAGE/
+|   |   |   |       |-- AUDIT_RECORD.md
+|   |   |   |       `-- SHA256_MANIFEST.txt
+|   |   |   `-- 30_PACKAGE/
+|   |   |       |-- INTERNAL_AUDIT_PACKAGE_v1.4.zip
+|   |   |       |-- INTERNAL_AUDIT_PACKAGE_v1.4.zip.sha256
+|   |   |       `-- INTERNAL_AUDIT_SHA256.txt
+|   |   |-- run_2026-08-22_v1.4_editorial_residual/
+|   |   |   |-- 00_CONTROL/
+|   |   |   |   |-- internal_audit_v14.py
+|   |   |   |   `-- RESIDUAL_INTERNAL_AUDIT_PROTOCOL.md
+|   |   |   |-- 10_REPORT/
+|   |   |   |   |-- CONSISTENCY_RERUN_CONSOLE.txt
+|   |   |   |   |-- FINAL_INTERNAL_RESIDUAL_AUDIT_REPORT.md
+|   |   |   |   `-- FULL_INTERNAL_REGRESSION_CONSOLE.txt
+|   |   |   `-- 20_EVIDENCE/
+|   |   |       |-- G0_STATIC/
+|   |   |       |   `-- results/
+|   |   |       |       `-- internal_audit_static_v1.4.json
+|   |   |       |-- G2_MATHEMATICS/
+|   |   |       |   `-- results/
+|   |   |       |       `-- summary_v1.4.json
+|   |   |       |-- M01_BILINGUAL/
+|   |   |       |   `-- M01_CORRECTION_EVIDENCE.md
+|   |   |       `-- M02_APPENDIX_D/
+|   |   |           `-- APPENDIX_D_REDERIVATION_LEDGER.md
+|   |   `-- run_2026-08-23_v1.5_internal_residual/
+|   |       |-- 00_CONTROL/
+|   |       |   |-- AUDIT_PROTOCOL.md
+|   |       |   `-- internal_residual_audit_v15.py
+|   |       |-- 10_REPORT/
+|   |       |   |-- FINAL_INTERNAL_RESIDUAL_AUDIT_REPORT.md
+|   |       |   `-- FINAL_INTERNAL_RESIDUAL_CONSOLE.txt
+|   |       |-- 20_EVIDENCE/
+|   |       |   `-- internal_residual_results_v1.5.json
+|   |       `-- 30_PACKAGE/
+|   |           |-- INTERNAL_RESIDUAL_MANIFEST.sha256
+|   |           |-- PAPER_III_v1.5_INTERNAL_RESIDUAL_AUDIT.zip
+|   |           `-- PAPER_III_v1.5_INTERNAL_RESIDUAL_AUDIT.zip.sha256
+|   |-- 02_IA_ADVERSARIAL_AUDITS/
+|   |   |-- baseline_v1.3/
+|   |   |   |-- E2_E6_ADDENDUM_v1.3.txt
+|   |   |   `-- FINAL_AUDIT_REPORT_v1.3.md
+|   |   |-- REQUEST_v1.3/
+|   |   |   |-- EXTERNAL_ADVERSARIAL_AUDIT_REQUEST.md
+|   |   |   |-- MATHLIB_REPRODUCTION_PROTOCOL.md
+|   |   |   |-- README.md
+|   |   |   `-- REQUEST_SHA256.txt
+|   |   |-- REQUEST_v1.5_PASS_CLOSURE/
+|   |   |   |-- CLOSURE_PACKET_SHA256.txt
+|   |   |   |-- CURRENT_V1.5_LOGS_SHA256.txt
+|   |   |   |-- EXT_V15_M01_CLOSURE_RESULTS.json
+|   |   |   |-- EXTERNAL_PASS_CLOSURE_REQUEST_v1.5.md
+|   |   |   |-- FINAL_CLOSURE_CONSOLE.txt
+|   |   |   |-- LEGACY_V1.3_LOGS_SHA256.txt
+|   |   |   |-- PAPER_III_v1.5_EXT_V15_M01_PASS_CLOSURE.zip
+|   |   |   |-- PAPER_III_v1.5_EXT_V15_M01_PASS_CLOSURE.zip.sha256
+|   |   |   |-- README.md
+|   |   |   |-- TARGET_UNCHANGED_SHA256.txt
+|   |   |   `-- verify_EXT_V15_M01_closure.py
+|   |   |-- REQUEST_v1.5_RESIDUAL/
+|   |   |   |-- EXTERNAL_RESIDUAL_AUDIT_REQUEST_v1.5.md
+|   |   |   |-- PAPER_III_v1.5_EXTERNAL_RESIDUAL_AUDIT_INSTRUCTIONS.zip
+|   |   |   |-- PAPER_III_v1.5_EXTERNAL_RESIDUAL_AUDIT_INSTRUCTIONS.zip.sha256
+|   |   |   |-- README.md
+|   |   |   `-- REQUEST_SHA256.txt
+|   |   |-- run_2026-08-22_v1.3/
+|   |   |   |-- 00_CONTROL/
+|   |   |   |   |-- AUDIT_PROTOCOL.md
+|   |   |   |   |-- COMMAND_LEDGER.md
+|   |   |   |   |-- ENVIRONMENT.md
+|   |   |   |   `-- TARGET_SHA256.txt
+|   |   |   |-- 10_LOGS/
+|   |   |   |   |-- lean/
+|   |   |   |   |   |-- 01_cache_get.log
+|   |   |   |   |   |-- 02_pre_build_clean_proof.txt
+|   |   |   |   |   |-- 03_lake_build_PaperIII.log
+|   |   |   |   |   |-- 04_FreezeAxioms.log
+|   |   |   |   |   |-- 04_FreezeAxiomsAuditClosure.log
+|   |   |   |   |   |-- 04_FreezeAxiomsAX1.log
+|   |   |   |   |   |-- 04_FreezeAxiomsAX1Closure.log
+|   |   |   |   |   |-- 04_FreezeAxiomsAX2.log
+|   |   |   |   |   |-- 04_FreezeAxiomsByproducts.log
+|   |   |   |   |   |-- 04_FreezeAxiomsCanonical.log
+|   |   |   |   |   |-- 04_FreezeAxiomsObstructions.log
+|   |   |   |   |   |-- 05_query_roots.txt
+|   |   |   |   |   |-- 06_lake_build_query_roots.log
+|   |   |   |   |   |-- 07_FreezeAxioms.log
+|   |   |   |   |   |-- 07_FreezeAxiomsAuditClosure.log
+|   |   |   |   |   |-- 07_FreezeAxiomsAX1.log
+|   |   |   |   |   |-- 07_FreezeAxiomsAX1Closure.log
+|   |   |   |   |   |-- 07_FreezeAxiomsAX2.log
+|   |   |   |   |   |-- 07_FreezeAxiomsByproducts.log
+|   |   |   |   |   |-- 07_FreezeAxiomsCanonical.log
+|   |   |   |   |   |-- 07_FreezeAxiomsObstructions.log
+|   |   |   |   |   `-- 08_AuditorE3.log
+|   |   |   |   |-- literature/
+|   |   |   |   `-- manuscript/
+|   |   |   |-- 20_EVIDENCE/
+|   |   |   |   |-- E0_INTAKE/
+|   |   |   |   |   |-- results/
+|   |   |   |   |   |   `-- E0_intake.json
+|   |   |   |   |   |-- scripts/
+|   |   |   |   |   |   `-- v13_E0_intake.py
+|   |   |   |   |   |-- AUDIT_RECORD.md
+|   |   |   |   |   `-- SHA256_MANIFEST.txt
+|   |   |   |   |-- E1_CLAIMS/
+|   |   |   |   |   |-- results/
+|   |   |   |   |   |   `-- regression_text.json
+|   |   |   |   |   |-- scripts/
+|   |   |   |   |   |   `-- v13_regression_text.py
+|   |   |   |   |   |-- AUDIT_RECORD.md
+|   |   |   |   |   `-- SHA256_MANIFEST.txt
+|   |   |   |   |-- E2_MATHEMATICS/
+|   |   |   |   |   |-- results/
+|   |   |   |   |   |   `-- section9.json
+|   |   |   |   |   |-- scripts/
+|   |   |   |   |   |   `-- v13_E2_section9.py
+|   |   |   |   |   |-- AUDIT_RECORD.md
+|   |   |   |   |   `-- SHA256_MANIFEST.txt
+|   |   |   |   |-- E3_FORMAL_CONFORMANCE/
+|   |   |   |   |   |-- results/
+|   |   |   |   |   |   `-- 08_AuditorE3.log
+|   |   |   |   |   |-- scripts/
+|   |   |   |   |   |   `-- AuditorE3.lean
+|   |   |   |   |   |-- AUDIT_RECORD.md
+|   |   |   |   |   `-- SHA256_MANIFEST.txt
+|   |   |   |   |-- E4_LEAN_REPRODUCTION/
+|   |   |   |   |   |-- results/
+|   |   |   |   |   |   |-- 03_lake_build_PaperIII.log
+|   |   |   |   |   |   |-- 06_lake_build_query_roots.log
+|   |   |   |   |   |   |-- 07_FreezeAxioms.log
+|   |   |   |   |   |   |-- 07_FreezeAxiomsAuditClosure.log
+|   |   |   |   |   |   |-- 07_FreezeAxiomsAX1.log
+|   |   |   |   |   |   |-- 07_FreezeAxiomsAX1Closure.log
+|   |   |   |   |   |   |-- 07_FreezeAxiomsAX2.log
+|   |   |   |   |   |   |-- 07_FreezeAxiomsByproducts.log
+|   |   |   |   |   |   |-- 07_FreezeAxiomsCanonical.log
+|   |   |   |   |   |   |-- 07_FreezeAxiomsObstructions.log
+|   |   |   |   |   |   `-- import_closure.json
+|   |   |   |   |   |-- scripts/
+|   |   |   |   |   |   `-- v13_import_closure.py
+|   |   |   |   |   |-- AUDIT_RECORD.md
+|   |   |   |   |   `-- SHA256_MANIFEST.txt
+|   |   |   |   |-- E5_BILINGUAL_RENDER/
+|   |   |   |   |   |-- results/
+|   |   |   |   |   |   `-- E5_pdf_qa.json
+|   |   |   |   |   |-- scripts/
+|   |   |   |   |   |   `-- v13_E5_pdf_qa.py
+|   |   |   |   |   |-- AUDIT_RECORD.md
+|   |   |   |   |   `-- SHA256_MANIFEST.txt
+|   |   |   |   |-- E6_PRIOR_ART/
+|   |   |   |   |   |-- results/
+|   |   |   |   |   |   `-- prior_art.json
+|   |   |   |   |   |-- scripts/
+|   |   |   |   |   |   `-- v13_E6_E7.py
+|   |   |   |   |   |-- AUDIT_RECORD.md
+|   |   |   |   |   `-- SHA256_MANIFEST.txt
+|   |   |   |   `-- E7_RELEASE_PACKAGE/
+|   |   |   |       |-- results/
+|   |   |   |       |   `-- release_package.json
+|   |   |   |       |-- scripts/
+|   |   |   |       |-- AUDIT_RECORD.md
+|   |   |   |       `-- SHA256_MANIFEST.txt
+|   |   |   |-- 30_REPORT/
+|   |   |   |   |-- AUDIT_SUMMARY.json
+|   |   |   |   |-- FINAL_AUDIT_REPORT.md
+|   |   |   |   |-- FINAL_AUDIT_REPORT.pdf
+|   |   |   |   |-- FINAL_AUDIT_REPORT.tex
+|   |   |   |   |-- FINDINGS_LEDGER.csv
+|   |   |   |   |-- REGRESSION_MATRIX.md
+|   |   |   |   `-- report_header.tex
+|   |   |   `-- 40_PACKAGE/
+|   |   |       |-- EXTERNAL_AUDIT_PACKAGE_SHA256.txt
+|   |   |       |-- EXTERNAL_AUDIT_PACKAGE.zip
+|   |   |       |-- EXTERNAL_AUDIT_SHA256.txt
+|   |   |       `-- README.md
+|   |   |-- run_2026-08-22_v1.4_residual/
+|   |   |   |-- 00_CONTROL/
+|   |   |   |   |-- AUDIT_PROTOCOL.md
+|   |   |   |   |-- COMMAND_LEDGER.md
+|   |   |   |   |-- ENVIRONMENT.md
+|   |   |   |   |-- EXTERNAL_RESIDUAL_AUDIT_REQUEST_v1.4.md
+|   |   |   |   |-- REGRESSION_MATRIX.md
+|   |   |   |   `-- TARGET_SHA256.txt
+|   |   |   |-- 10_LEDGER/
+|   |   |   |   |-- CLAIM_LEDGER.md
+|   |   |   |   `-- FINDINGS_LEDGER.csv
+|   |   |   |-- 20_EVIDENCE/
+|   |   |   |   |-- E2_MATHEMATICS/
+|   |   |   |   |   |-- results/
+|   |   |   |   |   |   |-- full_rederivation.json
+|   |   |   |   |   |   |-- math_delta.json
+|   |   |   |   |   |   `-- section9.json
+|   |   |   |   |   |-- scripts/
+|   |   |   |   |   |   |-- v14_E2_full.py
+|   |   |   |   |   |   |-- v14_E2_section9.py
+|   |   |   |   |   |   `-- v14_math_delta.py
+|   |   |   |   |   `-- SHA256_MANIFEST.txt
+|   |   |   |   |-- G1_INTAKE/
+|   |   |   |   |   |-- results/
+|   |   |   |   |   |   `-- E0_intake.json
+|   |   |   |   |   |-- scripts/
+|   |   |   |   |   |   `-- v14_E0_intake.py
+|   |   |   |   |   `-- SHA256_MANIFEST.txt
+|   |   |   |   |-- G2_CLAIMS/
+|   |   |   |   |   |-- results/
+|   |   |   |   |   |   `-- regression_text.json
+|   |   |   |   |   |-- scripts/
+|   |   |   |   |   |   `-- v14_regression_text.py
+|   |   |   |   |   `-- SHA256_MANIFEST.txt
+|   |   |   |   |-- G3_BILINGUAL/
+|   |   |   |   |   |-- results/
+|   |   |   |   |   |   `-- bilingual_deep.json
+|   |   |   |   |   |-- scripts/
+|   |   |   |   |   |   |-- v14_bilingual_deep.py
+|   |   |   |   |   |   |-- v14_inspect_diffs.py
+|   |   |   |   |   |   |-- v14_table_row_check.py
+|   |   |   |   |   |   `-- v14_tex_pdf_sync.py
+|   |   |   |   |   `-- SHA256_MANIFEST.txt
+|   |   |   |   |-- G4_RENDER/
+|   |   |   |   |   |-- results/
+|   |   |   |   |   |   `-- E5_pdf_qa.json
+|   |   |   |   |   |-- scripts/
+|   |   |   |   |   |   `-- v14_E5_pdf_qa.py
+|   |   |   |   |   `-- SHA256_MANIFEST.txt
+|   |   |   |   |-- G5_LEAN/
+|   |   |   |   |   |-- results/
+|   |   |   |   |   |   |-- 01_cache_get.log
+|   |   |   |   |   |   |-- 02_pre_build_clean.txt
+|   |   |   |   |   |   |-- 03_build_PaperIII.log
+|   |   |   |   |   |   |-- 04_build_query_roots.log
+|   |   |   |   |   |   |-- 05_FreezeAxioms.log
+|   |   |   |   |   |   |-- 05_FreezeAxiomsAuditClosure.log
+|   |   |   |   |   |   |-- 05_FreezeAxiomsAX1.log
+|   |   |   |   |   |   |-- 05_FreezeAxiomsAX1Closure.log
+|   |   |   |   |   |   |-- 05_FreezeAxiomsAX2.log
+|   |   |   |   |   |   |-- 05_FreezeAxiomsByproducts.log
+|   |   |   |   |   |   |-- 05_FreezeAxiomsCanonical.log
+|   |   |   |   |   |   |-- 05_FreezeAxiomsObstructions.log
+|   |   |   |   |   |   `-- 06_AuditorE3.log
+|   |   |   |   |   |-- scripts/
+|   |   |   |   |   `-- SHA256_MANIFEST.txt
+|   |   |   |   |-- G6_AXIOM_BOUNDARY/
+|   |   |   |   |   |-- results/
+|   |   |   |   |   |   `-- import_closure.json
+|   |   |   |   |   |-- scripts/
+|   |   |   |   |   |   `-- v14_import_closure.py
+|   |   |   |   |   `-- SHA256_MANIFEST.txt
+|   |   |   |   |-- G7_CONFORMANCE/
+|   |   |   |   |   |-- results/
+|   |   |   |   |   |   `-- 06_AuditorE3.log
+|   |   |   |   |   |-- scripts/
+|   |   |   |   |   |   `-- AuditorE3.lean
+|   |   |   |   |   `-- SHA256_MANIFEST.txt
+|   |   |   |   |-- G8_PRIOR_ART/
+|   |   |   |   |   |-- results/
+|   |   |   |   |   |   |-- cavers.txt
+|   |   |   |   |   |   |-- haxell_cv.txt
+|   |   |   |   |   |   |-- novelty_refresh_v14.json
+|   |   |   |   |   |   |-- novelty_search_v13_baseline.json
+|   |   |   |   |   |   `-- prior_art.json
+|   |   |   |   |   |-- scripts/
+|   |   |   |   |   |   `-- v14_E6_E7.py
+|   |   |   |   |   `-- SHA256_MANIFEST.txt
+|   |   |   |   `-- G9_REGRESSION/
+|   |   |   |       |-- results/
+|   |   |   |       |-- scripts/
+|   |   |   |       `-- SHA256_MANIFEST.txt
+|   |   |   |-- 30_REPORT/
+|   |   |   |   |-- ADDENDUM_CORPUS_BOUNDED_NOVELTY.md
+|   |   |   |   |-- FINAL_AUDIT_REPORT.md
+|   |   |   |   `-- FINAL_AUDIT_SUMMARY.json
+|   |   |   `-- 40_PACKAGE/
+|   |   |       |-- EXTERNAL_AUDIT_PACKAGE_SHA256.txt
+|   |   |       |-- EXTERNAL_AUDIT_PACKAGE.zip
+|   |   |       |-- EXTERNAL_AUDIT_SHA256.txt
+|   |   |       `-- PACKAGE_MANIFEST.json
+|   |   |-- run_2026-08-23_v1.4_challenger/
+|   |   |   |-- 00_CONTROL/
+|   |   |   |   |-- ADDENDUM_FILED.txt
+|   |   |   |   |-- ENVIRONMENT.md
+|   |   |   |   |-- PROTOCOL.md
+|   |   |   |   |-- REGRESSION_BOUNDARY.md
+|   |   |   |   `-- TARGET_SHA256_AS_DELIVERED.txt
+|   |   |   |-- 10_LEDGER/
+|   |   |   |   |-- APPENDIX_D_PROOF_LEDGER.md
+|   |   |   |   `-- FINDINGS_LEDGER.csv
+|   |   |   |-- 20_EVIDENCE/
+|   |   |   |   |-- A_BILINGUAL/
+|   |   |   |   |   |-- adjudication_run.txt
+|   |   |   |   |   |-- adjudication.json
+|   |   |   |   |   |-- bilingual_run.txt
+|   |   |   |   |   |-- bilingual_structural_diff.json
+|   |   |   |   |   |-- v14c_adjudicate.py
+|   |   |   |   |   `-- v14c_bilingual.py
+|   |   |   |   |-- A_RENDER/
+|   |   |   |   |   |-- auditor_lualatex_es.log
+|   |   |   |   |   `-- render_qa.txt
+|   |   |   |   |-- B_APPENDIX_D/
+|   |   |   |   |   |-- appendix_D_as_delivered.txt
+|   |   |   |   |   |-- independent_derivation.md
+|   |   |   |   |   `-- section_7_2_as_delivered.txt
+|   |   |   |   |-- C_REGRESSION/
+|   |   |   |   |   |-- regression_boundary.txt
+|   |   |   |   |   |-- review_challenger_request.py
+|   |   |   |   |   `-- v14c_seal.py
+|   |   |   |   `-- SHA256_MANIFEST.txt
+|   |   |   |-- 30_REPORT/
+|   |   |   |   |-- FINAL_AUDIT_REPORT.md
+|   |   |   |   `-- FINAL_AUDIT_SUMMARY.json
+|   |   |   `-- 40_PACKAGE/
+|   |   |       |-- EXTERNAL_CHALLENGER_REVIEW_PACKAGE.zip
+|   |   |       |-- EXTERNAL_CHALLENGER_REVIEW_PACKAGE.zip.sha256
+|   |   |       `-- PACKAGE_MANIFEST.json
+|   |   |-- run_2026-08-23_v1.5_residual/
+|   |   |   |-- 00_CONTROL/
+|   |   |   |   |-- ENVIRONMENT.md
+|   |   |   |   `-- PROTOCOL.md
+|   |   |   |-- 10_LEDGER/
+|   |   |   |   |-- FINDINGS_LEDGER.csv
+|   |   |   |   `-- N02_N03_DISPOSITION.md
+|   |   |   |-- 20_EVIDENCE/
+|   |   |   |   |-- E0_INTAKE/
+|   |   |   |   |   |-- E0_intake.json
+|   |   |   |   |   `-- SHA256_MANIFEST.txt
+|   |   |   |   |-- E1_DELTA/
+|   |   |   |   |   |-- E1_delta.json
+|   |   |   |   |   |-- E1_hunk_sections.json
+|   |   |   |   |   |-- N02_N03_as_mathematics.md
+|   |   |   |   |   `-- SHA256_MANIFEST.txt
+|   |   |   |   |-- E3_FORMAL/
+|   |   |   |   |   |-- E3_formal.json
+|   |   |   |   |   `-- SHA256_MANIFEST.txt
+|   |   |   |   |-- E5_BILINGUAL/
+|   |   |   |   |   |-- E5_bilingual.json
+|   |   |   |   |   `-- SHA256_MANIFEST.txt
+|   |   |   |   |-- E5_RENDER/
+|   |   |   |   |   |-- visual/
+|   |   |   |   |   |   |-- en_appD-39.png
+|   |   |   |   |   |   |-- en_appD-40.png
+|   |   |   |   |   |   |-- en_thm22-08.png
+|   |   |   |   |   |   |-- en_title-01.png
+|   |   |   |   |   |   |-- es_appD-40.png
+|   |   |   |   |   |   |-- es_appD-41.png
+|   |   |   |   |   |   |-- es_thm22-08.png
+|   |   |   |   |   |   `-- es_title-01.png
+|   |   |   |   |   |-- auditor_rebuild_en.log
+|   |   |   |   |   |-- auditor_rebuild_es.log
+|   |   |   |   |   |-- E5_render.json
+|   |   |   |   |   `-- SHA256_MANIFEST.txt
+|   |   |   |   |-- E6_PRIORART/
+|   |   |   |   |   |-- E6_priorart.json
+|   |   |   |   |   `-- SHA256_MANIFEST.txt
+|   |   |   |   |-- E7_RELEASE/
+|   |   |   |   |   |-- E7_release.json
+|   |   |   |   |   |-- SHA256_MANIFEST.txt
+|   |   |   |   |   `-- stale_shadowing_sweep.json
+|   |   |   |   |-- SCRIPTS/
+|   |   |   |   |   |-- SHA256_MANIFEST.txt
+|   |   |   |   |   |-- v15_E0_intake.py
+|   |   |   |   |   |-- v15_E1_delta.py
+|   |   |   |   |   |-- v15_E1_sections.py
+|   |   |   |   |   |-- v15_E3_formal.py
+|   |   |   |   |   |-- v15_E3_probe.py
+|   |   |   |   |   |-- v15_E5_bilingual.py
+|   |   |   |   |   |-- v15_E5_render.py
+|   |   |   |   |   |-- v15_E6_E7.py
+|   |   |   |   |   |-- v15_seal.py
+|   |   |   |   |   `-- v15_stale_sweep.py
+|   |   |   |   `-- SHA256_MANIFEST.txt
+|   |   |   |-- 30_REPORT/
+|   |   |   |   |-- FINAL_AUDIT_REPORT.md
+|   |   |   |   `-- FINAL_AUDIT_SUMMARY.json
+|   |   |   `-- 40_PACKAGE/
+|   |   |       |-- PACKAGE_MANIFEST.json
+|   |   |       |-- PAPER_III_v1.5_EXTERNAL_RESIDUAL_AUDIT.zip
+|   |   |       `-- PAPER_III_v1.5_EXTERNAL_RESIDUAL_AUDIT.zip.sha256
+|   |   |-- run_2026-08-23_v1.5_residual_closure/
+|   |   |   |-- 00_CONTROL/
+|   |   |   |   `-- CLOSURE_PROTOCOL.md
+|   |   |   |-- 20_EVIDENCE/
+|   |   |   |   |-- EXT_V15_M01_INDEPENDENT_CHECK.json
+|   |   |   |   |-- SHA256_MANIFEST.txt
+|   |   |   |   |-- v15c_closure.py
+|   |   |   |   `-- v15c_seal.py
+|   |   |   |-- 30_REPORT/
+|   |   |   |   |-- FINAL_CLOSURE_REPORT.md
+|   |   |   |   `-- FINAL_CLOSURE_SUMMARY.json
+|   |   |   `-- 40_PACKAGE/
+|   |   |       |-- PACKAGE_MANIFEST.json
+|   |   |       |-- PAPER_III_v1.5_EXTERNAL_CLOSURE_AUDIT.zip
+|   |   |       `-- PAPER_III_v1.5_EXTERNAL_CLOSURE_AUDIT.zip.sha256
+|   |   |-- EXTERNAL_CHALLENGER_CORRECTION_REVIEW_REQUEST_v1.4.md
+|   |   |-- EXTERNAL_RESIDUAL_AUDIT_REQUEST_v1.4.md
+|   |   |-- PAPER_III_v1.4_EXTERNAL_CHALLENGER_CORRECTION_REVIEW_INSTRUCTIONS.zip
+|   |   |-- PAPER_III_v1.4_EXTERNAL_CHALLENGER_CORRECTION_REVIEW_INSTRUCTIONS.zip.sha256
+|   |   |-- PAPER_III_v1.4_EXTERNAL_RESIDUAL_AUDIT_INSTRUCTIONS.zip
+|   |   `-- PAPER_III_v1.4_EXTERNAL_RESIDUAL_AUDIT_INSTRUCTIONS.zip.sha256
+|   `-- README.md
+|-- 03_reproducibility/
+|   |-- author_build_evidence/
+|   |   |-- run_2026-08-22_CCS_NOTEBOOK456_resumed/
+|   |   |   |-- RESULTS/
+|   |   |   |   |-- evidence/
+|   |   |   |   |   |-- AXIOM_GATE_SUMMARY.txt
+|   |   |   |   |   |-- CONFIG_HASHES_AFTER.json
+|   |   |   |   |   |-- CONFIG_HASHES_BEFORE.json
+|   |   |   |   |   |-- DEPENDENCIES.json
+|   |   |   |   |   |-- ENVIRONMENT.json
+|   |   |   |   |   |-- IMPORT_CLOSURE.json
+|   |   |   |   |   |-- PRE_CACHE_CLEAN_STATE.txt
+|   |   |   |   |   |-- PUBLIC_ROOT_OBJECTS.txt
+|   |   |   |   |   |-- RAW_ESCAPE_HATCH_SCAN.txt
+|   |   |   |   |   `-- RESUME_DISCLOSURE.txt
+|   |   |   |   |-- logs/
+|   |   |   |   |   |-- 01_cache_get.exit.txt
+|   |   |   |   |   |-- 01_cache_get.log
+|   |   |   |   |   |-- 02_build_public_root_clean.log
+|   |   |   |   |   |-- 02_build_public_root_resume.exit.txt
+|   |   |   |   |   |-- 03_build_query_roots_incremental.exit.txt
+|   |   |   |   |   |-- 03_build_query_roots_incremental.log
+|   |   |   |   |   |-- axioms_01_FreezeAxioms.exit.txt
+|   |   |   |   |   |-- axioms_01_FreezeAxioms.log
+|   |   |   |   |   |-- axioms_02_FreezeAxiomsAuditClosure.exit.txt
+|   |   |   |   |   |-- axioms_02_FreezeAxiomsAuditClosure.log
+|   |   |   |   |   |-- axioms_03_FreezeAxiomsAX1.exit.txt
+|   |   |   |   |   |-- axioms_03_FreezeAxiomsAX1.log
+|   |   |   |   |   |-- axioms_04_FreezeAxiomsAX1Closure.exit.txt
+|   |   |   |   |   |-- axioms_04_FreezeAxiomsAX1Closure.log
+|   |   |   |   |   |-- axioms_05_FreezeAxiomsAX2.exit.txt
+|   |   |   |   |   |-- axioms_05_FreezeAxiomsAX2.log
+|   |   |   |   |   |-- axioms_06_FreezeAxiomsByproducts.exit.txt
+|   |   |   |   |   |-- axioms_06_FreezeAxiomsByproducts.log
+|   |   |   |   |   |-- axioms_07_FreezeAxiomsCanonical.exit.txt
+|   |   |   |   |   |-- axioms_07_FreezeAxiomsCanonical.log
+|   |   |   |   |   |-- axioms_08_FreezeAxiomsObstructions.exit.txt
+|   |   |   |   |   `-- axioms_08_FreezeAxiomsObstructions.log
+|   |   |   |   |-- RESULTS_MANIFEST.sha256
+|   |   |   |   `-- RUN_SUMMARY.json
+|   |   |   |-- PAPER_III_v1.4_RESUMED_BUILD_RESULTS_CCS_NOTEBOOK456_20260822_225841.zip
+|   |   |   |-- PAPER_III_v1.4_RESUMED_BUILD_RESULTS_CCS_NOTEBOOK456_20260822_225841.zip.sha256
+|   |   |   `-- README.md
+|   |   |-- run_2026-08-23_CCS_NOTEBOOK456_clean_uninterrupted_adjudicated/
+|   |   |   |-- RESULTS/
+|   |   |   |   |-- evidence/
+|   |   |   |   |   |-- CONFIG_HASHES_BEFORE.json
+|   |   |   |   |   |-- DEPENDENCIES.json
+|   |   |   |   |   |-- ENVIRONMENT.json
+|   |   |   |   |   |-- IMPORT_CLOSURE.json
+|   |   |   |   |   |-- PRE_CACHE_CLEAN_STATE.txt
+|   |   |   |   |   |-- PUBLIC_ROOT_OBJECTS.txt
+|   |   |   |   |   `-- RAW_ESCAPE_HATCH_SCAN.txt
+|   |   |   |   |-- logs/
+|   |   |   |   |   |-- 01_cache_get.exit.txt
+|   |   |   |   |   |-- 01_cache_get.log
+|   |   |   |   |   |-- 02_build_public_root_clean.exit.txt
+|   |   |   |   |   |-- 02_build_public_root_clean.log
+|   |   |   |   |   |-- 03_build_query_roots_incremental.exit.txt
+|   |   |   |   |   |-- 03_build_query_roots_incremental.log
+|   |   |   |   |   |-- axioms_01_FreezeAxioms.exit.txt
+|   |   |   |   |   |-- axioms_01_FreezeAxioms.log
+|   |   |   |   |   |-- axioms_02_FreezeAxiomsAuditClosure.exit.txt
+|   |   |   |   |   |-- axioms_02_FreezeAxiomsAuditClosure.log
+|   |   |   |   |   |-- axioms_03_FreezeAxiomsAX1.exit.txt
+|   |   |   |   |   |-- axioms_03_FreezeAxiomsAX1.log
+|   |   |   |   |   |-- axioms_04_FreezeAxiomsAX1Closure.exit.txt
+|   |   |   |   |   |-- axioms_04_FreezeAxiomsAX1Closure.log
+|   |   |   |   |   |-- axioms_05_FreezeAxiomsAX2.exit.txt
+|   |   |   |   |   |-- axioms_05_FreezeAxiomsAX2.log
+|   |   |   |   |   |-- axioms_06_FreezeAxiomsByproducts.exit.txt
+|   |   |   |   |   |-- axioms_06_FreezeAxiomsByproducts.log
+|   |   |   |   |   |-- axioms_07_FreezeAxiomsCanonical.exit.txt
+|   |   |   |   |   |-- axioms_07_FreezeAxiomsCanonical.log
+|   |   |   |   |   |-- axioms_08_FreezeAxiomsObstructions.exit.txt
+|   |   |   |   |   `-- axioms_08_FreezeAxiomsObstructions.log
+|   |   |   |   |-- RESULTS_MANIFEST.sha256
+|   |   |   |   `-- RUN_SUMMARY.json
+|   |   |   |-- RUNNER_SNAPSHOT/
+|   |   |   |   |-- PROJECT_MANIFEST.sha256
+|   |   |   |   `-- RUN_CLEAN_BUILD.ps1
+|   |   |   |-- ADJUDICATED_RUN_SUMMARY.json
+|   |   |   |-- PAPER_III_v1.4_CLEAN_BUILD_RESULTS_CCS_NOTEBOOK456_20260823_003042.zip
+|   |   |   |-- PAPER_III_v1.4_CLEAN_BUILD_RESULTS_CCS_NOTEBOOK456_20260823_003042.zip.sha256
+|   |   |   |-- POSTCHECK_CONSOLE.txt
+|   |   |   |-- README.md
+|   |   |   `-- verify_clean_run_postcheck.py
+|   |   `-- run_2026-08-23_clean_PASS/
+|   |       |-- BUILD_KIT_IDENTITY/
+|   |       |   `-- PROJECT_MANIFEST.sha256
+|   |       |-- RESULTS/
+|   |       |   |-- evidence/
+|   |       |   |   |-- AXIOM_GATE_SUMMARY.txt
+|   |       |   |   |-- CONFIG_HASHES_AFTER.json
+|   |       |   |   |-- CONFIG_HASHES_BEFORE.json
+|   |       |   |   |-- DEPENDENCIES.json
+|   |       |   |   |-- ENVIRONMENT.json
+|   |       |   |   |-- IMPORT_CLOSURE.json
+|   |       |   |   |-- PRE_CACHE_CLEAN_STATE.txt
+|   |       |   |   |-- PUBLIC_ROOT_OBJECTS.txt
+|   |       |   |   `-- RAW_ESCAPE_HATCH_SCAN.txt
+|   |       |   |-- logs/
+|   |       |   |   |-- 01_cache_get.exit.txt
+|   |       |   |   |-- 01_cache_get.log
+|   |       |   |   |-- 02_build_public_root_clean.exit.txt
+|   |       |   |   |-- 02_build_public_root_clean.log
+|   |       |   |   |-- 03_build_query_roots_incremental.exit.txt
+|   |       |   |   |-- 03_build_query_roots_incremental.log
+|   |       |   |   |-- axioms_01_FreezeAxioms.exit.txt
+|   |       |   |   |-- axioms_01_FreezeAxioms.log
+|   |       |   |   |-- axioms_02_FreezeAxiomsAuditClosure.exit.txt
+|   |       |   |   |-- axioms_02_FreezeAxiomsAuditClosure.log
+|   |       |   |   |-- axioms_03_FreezeAxiomsAX1.exit.txt
+|   |       |   |   |-- axioms_03_FreezeAxiomsAX1.log
+|   |       |   |   |-- axioms_04_FreezeAxiomsAX1Closure.exit.txt
+|   |       |   |   |-- axioms_04_FreezeAxiomsAX1Closure.log
+|   |       |   |   |-- axioms_05_FreezeAxiomsAX2.exit.txt
+|   |       |   |   |-- axioms_05_FreezeAxiomsAX2.log
+|   |       |   |   |-- axioms_06_FreezeAxiomsByproducts.exit.txt
+|   |       |   |   |-- axioms_06_FreezeAxiomsByproducts.log
+|   |       |   |   |-- axioms_07_FreezeAxiomsCanonical.exit.txt
+|   |       |   |   |-- axioms_07_FreezeAxiomsCanonical.log
+|   |       |   |   |-- axioms_08_FreezeAxiomsObstructions.exit.txt
+|   |       |   |   `-- axioms_08_FreezeAxiomsObstructions.log
+|   |       |   |-- RESULTS_MANIFEST.sha256
+|   |       |   `-- RUN_SUMMARY.json
+|   |       |-- PAPER_III_v1.4_CLEAN_BUILD_RESULTS_CCS_NOTEBOOK456_20260823_021132.zip
+|   |       |-- PAPER_III_v1.4_CLEAN_BUILD_RESULTS_CCS_NOTEBOOK456_20260823_021132.zip.sha256
+|   |       |-- README.md
+|   |       |-- VALIDATED_RUN_SUMMARY.json
+|   |       |-- VALIDATION_CONSOLE.txt
+|   |       `-- verify_clean_run.py
+|   |-- manuscript_build_logs/
+|   |   |-- v1.3_legacy/
+|   |   |   |-- LUALATEX_DIRECT_en_PASS1.txt
+|   |   |   |-- LUALATEX_DIRECT_en_PASS2.txt
+|   |   |   |-- LUALATEX_DIRECT_es_PASS1.txt
+|   |   |   |-- LUALATEX_DIRECT_es_PASS2.txt
+|   |   |   |-- LUALATEX_en_PASS1.txt
+|   |   |   |-- LUALATEX_en_PASS2.txt
+|   |   |   |-- LUALATEX_es_PASS1.txt
+|   |   |   |-- LUALATEX_es_PASS2.txt
+|   |   |   |-- LUALATEX_FINAL_en.log
+|   |   |   |-- LUALATEX_FINAL_es.log
+|   |   |   |-- LUALATEX_v1.3_CORRECTION_en_PASS1.txt
+|   |   |   |-- LUALATEX_v1.3_CORRECTION_en_PASS2.txt
+|   |   |   |-- LUALATEX_v1.3_CORRECTION_es_PASS1.txt
+|   |   |   |-- LUALATEX_v1.3_CORRECTION_es_PASS2.txt
+|   |   |   |-- LUALATEX_v1.3_CORRECTION_FINAL_en.log
+|   |   |   |-- LUALATEX_v1.3_CORRECTION_FINAL_es.log
+|   |   |   |-- LUALATEX_v1.3_CORRECTION2_es_PASS1.txt
+|   |   |   |-- LUALATEX_v1.3_CORRECTION2_es_PASS2.txt
+|   |   |   |-- LUALATEX_v1.3_CORRECTION2_FINAL_es.log
+|   |   |   |-- LUALATEX_v1.3_FINAL_en_PASS1.txt
+|   |   |   |-- LUALATEX_v1.3_FINAL_en_PASS2.txt
+|   |   |   |-- LUALATEX_v1.3_FINAL_en.log
+|   |   |   |-- LUALATEX_v1.3_FINAL_es_PASS1.txt
+|   |   |   |-- LUALATEX_v1.3_FINAL_es_PASS2.txt
+|   |   |   |-- LUALATEX_v1.3_FINAL_es.log
+|   |   |   |-- LUALATEX_v1.3_POSTAUDIT_en_PASS1.txt
+|   |   |   |-- LUALATEX_v1.3_POSTAUDIT_en_PASS2.txt
+|   |   |   |-- LUALATEX_v1.3_POSTAUDIT_es_PASS1.txt
+|   |   |   `-- LUALATEX_v1.3_POSTAUDIT_es_PASS2.txt
+|   |   |-- v1.4/
+|   |   |   |-- en_final_pass1_console.log
+|   |   |   |-- en_final_pass2_console.log
+|   |   |   |-- en_pass1_console.log
+|   |   |   |-- en_pass2_console.log
+|   |   |   |-- en_pass3_console.log
+|   |   |   |-- es_final_pass1_console.log
+|   |   |   |-- es_final_pass2_console.log
+|   |   |   |-- es_pass1_console.log
+|   |   |   |-- es_pass2_console.log
+|   |   |   |-- es_pass3_console.log
+|   |   |   |-- es_residual_pass1_console.log
+|   |   |   |-- es_residual_pass2_console.log
+|   |   |   |-- PAPER_III_preprint_draft_v1.4_en.log
+|   |   |   |-- PAPER_III_preprint_draft_v1.4_en.pdf
+|   |   |   |-- PAPER_III_preprint_draft_v1.4_es.log
+|   |   |   `-- PAPER_III_preprint_draft_v1.4_es.pdf
+|   |   `-- v1.5/
+|   |       |-- LUALATEX_en_PASS1.txt
+|   |       |-- LUALATEX_en_PASS2.txt
+|   |       |-- LUALATEX_es_PASS1.txt
+|   |       |-- LUALATEX_es_PASS2.txt
+|   |       |-- LUALATEX_FINAL_en.log
+|   |       `-- LUALATEX_FINAL_es.log
+|   |-- manuscript_render_qa_v1.4/
+|   |   |-- contact_en/
+|   |   |   |-- contact_01_06.jpg
+|   |   |   |-- contact_07_12.jpg
+|   |   |   |-- contact_13_18.jpg
+|   |   |   |-- contact_19_24.jpg
+|   |   |   |-- contact_25_30.jpg
+|   |   |   |-- contact_31_36.jpg
+|   |   |   |-- contact_37_42.jpg
+|   |   |   `-- contact_43_46.jpg
+|   |   |-- contact_es/
+|   |   |   |-- contact_01_06.jpg
+|   |   |   |-- contact_07_12.jpg
+|   |   |   |-- contact_13_18.jpg
+|   |   |   |-- contact_19_24.jpg
+|   |   |   |-- contact_25_30.jpg
+|   |   |   |-- contact_31_36.jpg
+|   |   |   |-- contact_37_42.jpg
+|   |   |   `-- contact_43_47.jpg
+|   |   |-- en/
+|   |   |   |-- page-01.png
+|   |   |   |-- page-02.png
+|   |   |   |-- page-03.png
+|   |   |   |-- page-04.png
+|   |   |   |-- page-05.png
+|   |   |   |-- page-06.png
+|   |   |   |-- page-07.png
+|   |   |   |-- page-08.png
+|   |   |   |-- page-09.png
+|   |   |   |-- page-10.png
+|   |   |   |-- page-11.png
+|   |   |   |-- page-12.png
+|   |   |   |-- page-13.png
+|   |   |   |-- page-14.png
+|   |   |   |-- page-15.png
+|   |   |   |-- page-16.png
+|   |   |   |-- page-17.png
+|   |   |   |-- page-18.png
+|   |   |   |-- page-19.png
+|   |   |   |-- page-20.png
+|   |   |   |-- page-21.png
+|   |   |   |-- page-22.png
+|   |   |   |-- page-23.png
+|   |   |   |-- page-24.png
+|   |   |   |-- page-25.png
+|   |   |   |-- page-26.png
+|   |   |   |-- page-27.png
+|   |   |   |-- page-28.png
+|   |   |   |-- page-29.png
+|   |   |   |-- page-30.png
+|   |   |   |-- page-31.png
+|   |   |   |-- page-32.png
+|   |   |   |-- page-33.png
+|   |   |   |-- page-34.png
+|   |   |   |-- page-35.png
+|   |   |   |-- page-36.png
+|   |   |   |-- page-37.png
+|   |   |   |-- page-38.png
+|   |   |   |-- page-39.png
+|   |   |   |-- page-40.png
+|   |   |   |-- page-41.png
+|   |   |   |-- page-42.png
+|   |   |   |-- page-43.png
+|   |   |   |-- page-44.png
+|   |   |   |-- page-45.png
+|   |   |   `-- page-46.png
+|   |   |-- es/
+|   |   |   |-- page-01.png
+|   |   |   |-- page-02.png
+|   |   |   |-- page-03.png
+|   |   |   |-- page-04.png
+|   |   |   |-- page-05.png
+|   |   |   |-- page-06.png
+|   |   |   |-- page-07.png
+|   |   |   |-- page-08.png
+|   |   |   |-- page-09.png
+|   |   |   |-- page-10.png
+|   |   |   |-- page-11.png
+|   |   |   |-- page-12.png
+|   |   |   |-- page-13.png
+|   |   |   |-- page-14.png
+|   |   |   |-- page-15.png
+|   |   |   |-- page-16.png
+|   |   |   |-- page-17.png
+|   |   |   |-- page-18.png
+|   |   |   |-- page-19.png
+|   |   |   |-- page-20.png
+|   |   |   |-- page-21.png
+|   |   |   |-- page-22.png
+|   |   |   |-- page-23.png
+|   |   |   |-- page-24.png
+|   |   |   |-- page-25.png
+|   |   |   |-- page-26.png
+|   |   |   |-- page-27.png
+|   |   |   |-- page-28.png
+|   |   |   |-- page-29.png
+|   |   |   |-- page-30.png
+|   |   |   |-- page-31.png
+|   |   |   |-- page-32.png
+|   |   |   |-- page-33.png
+|   |   |   |-- page-34.png
+|   |   |   |-- page-35.png
+|   |   |   |-- page-36.png
+|   |   |   |-- page-37.png
+|   |   |   |-- page-38.png
+|   |   |   |-- page-39.png
+|   |   |   |-- page-40.png
+|   |   |   |-- page-41.png
+|   |   |   |-- page-42.png
+|   |   |   |-- page-43.png
+|   |   |   |-- page-44.png
+|   |   |   |-- page-45.png
+|   |   |   |-- page-46.png
+|   |   |   `-- page-47.png
+|   |   `-- contact_es_residual_all.jpg
+|   |-- manuscript_render_qa_v1.5/
+|   |   |-- en/
+|   |   |   |-- page-01.png
+|   |   |   |-- page-02.png
+|   |   |   |-- page-03.png
+|   |   |   |-- page-04.png
+|   |   |   |-- page-05.png
+|   |   |   |-- page-06.png
+|   |   |   |-- page-07.png
+|   |   |   |-- page-08.png
+|   |   |   |-- page-09.png
+|   |   |   |-- page-10.png
+|   |   |   |-- page-11.png
+|   |   |   |-- page-12.png
+|   |   |   |-- page-13.png
+|   |   |   |-- page-14.png
+|   |   |   |-- page-15.png
+|   |   |   |-- page-16.png
+|   |   |   |-- page-17.png
+|   |   |   |-- page-18.png
+|   |   |   |-- page-19.png
+|   |   |   |-- page-20.png
+|   |   |   |-- page-21.png
+|   |   |   |-- page-22.png
+|   |   |   |-- page-23.png
+|   |   |   |-- page-24.png
+|   |   |   |-- page-25.png
+|   |   |   |-- page-26.png
+|   |   |   |-- page-27.png
+|   |   |   |-- page-28.png
+|   |   |   |-- page-29.png
+|   |   |   |-- page-30.png
+|   |   |   |-- page-31.png
+|   |   |   |-- page-32.png
+|   |   |   |-- page-33.png
+|   |   |   |-- page-34.png
+|   |   |   |-- page-35.png
+|   |   |   |-- page-36.png
+|   |   |   |-- page-37.png
+|   |   |   |-- page-38.png
+|   |   |   |-- page-39.png
+|   |   |   |-- page-40.png
+|   |   |   |-- page-41.png
+|   |   |   |-- page-42.png
+|   |   |   |-- page-43.png
+|   |   |   |-- page-44.png
+|   |   |   |-- page-45.png
+|   |   |   `-- page-46.png
+|   |   |-- es/
+|   |   |   |-- page-01.png
+|   |   |   |-- page-02.png
+|   |   |   |-- page-03.png
+|   |   |   |-- page-04.png
+|   |   |   |-- page-05.png
+|   |   |   |-- page-06.png
+|   |   |   |-- page-07.png
+|   |   |   |-- page-08.png
+|   |   |   |-- page-09.png
+|   |   |   |-- page-10.png
+|   |   |   |-- page-11.png
+|   |   |   |-- page-12.png
+|   |   |   |-- page-13.png
+|   |   |   |-- page-14.png
+|   |   |   |-- page-15.png
+|   |   |   |-- page-16.png
+|   |   |   |-- page-17.png
+|   |   |   |-- page-18.png
+|   |   |   |-- page-19.png
+|   |   |   |-- page-20.png
+|   |   |   |-- page-21.png
+|   |   |   |-- page-22.png
+|   |   |   |-- page-23.png
+|   |   |   |-- page-24.png
+|   |   |   |-- page-25.png
+|   |   |   |-- page-26.png
+|   |   |   |-- page-27.png
+|   |   |   |-- page-28.png
+|   |   |   |-- page-29.png
+|   |   |   |-- page-30.png
+|   |   |   |-- page-31.png
+|   |   |   |-- page-32.png
+|   |   |   |-- page-33.png
+|   |   |   |-- page-34.png
+|   |   |   |-- page-35.png
+|   |   |   |-- page-36.png
+|   |   |   |-- page-37.png
+|   |   |   |-- page-38.png
+|   |   |   |-- page-39.png
+|   |   |   |-- page-40.png
+|   |   |   |-- page-41.png
+|   |   |   |-- page-42.png
+|   |   |   |-- page-43.png
+|   |   |   |-- page-44.png
+|   |   |   |-- page-45.png
+|   |   |   |-- page-46.png
+|   |   |   `-- page-47.png
+|   |   |-- contact_en_1.jpg
+|   |   |-- contact_en_2.jpg
+|   |   |-- contact_en_3.jpg
+|   |   |-- contact_es_1.jpg
+|   |   |-- contact_es_2.jpg
+|   |   `-- contact_es_3.jpg
+|   |-- check_manuscript_consistency.py
+|   |-- MANUSCRIPT_CONSISTENCY_RESULTS_v1.5.json
+|   |-- README.md
+|   |-- regenerate_tex_from_markdown.py
+|   |-- RENDERED_PDF_QA_REPORT_v1.4.md
+|   `-- RENDERED_PDF_QA_REPORT_v1.5.md
+|-- 04_integrity/
+|   |-- CURRENT_TARGET_SHA256.txt
+|   |-- EXT_V15_M01_CORRECTION_RECORD.md
+|   |-- README.md
+|   `-- SEMANTIC_INTEGRITY_REPORT_v1.5.md
+|-- 05_formalization/
+|   |-- lean_v1.4_freeze/
+|   |   |-- Ax2/
+|   |   |   |-- Explore/
+|   |   |   |   |-- DrossNet.lean
+|   |   |   |   |-- MFMC.lean
+|   |   |   |   |-- NodupChain.lean
+|   |   |   |   |-- PathBalance.lean
+|   |   |   |   `-- RouteB.lean
+|   |   |   |-- PartA/
+|   |   |   |   |-- Dross.lean
+|   |   |   |   |-- DrossA7Finding.lean
+|   |   |   |   |-- DrossArith.lean
+|   |   |   |   |-- FarkasSplit.lean
+|   |   |   |   |-- Flow.lean
+|   |   |   |   |-- S2Split.lean
+|   |   |   |   |-- Spine.lean
+|   |   |   |   |-- TriangleFreeBound.lean
+|   |   |   |   `-- Wlog.lean
+|   |   |   |-- PartB/
+|   |   |   |   |-- BKLO/
+|   |   |   |   |   |-- AbsorbCalculus.lean
+|   |   |   |   |   |-- Absorber.lean
+|   |   |   |   |   |-- AbsorberCore.lean
+|   |   |   |   |   |-- AbsorberCoreAxCheck.lean
+|   |   |   |   |   |-- ApproxAxCheck.lean
+|   |   |   |   |   |-- ApproxFromPacking.lean
+|   |   |   |   |   |-- BankElim.lean
+|   |   |   |   |   |-- Bridge.lean
+|   |   |   |   |   |-- ConeGadget.lean
+|   |   |   |   |   |-- CycleChunks.lean
+|   |   |   |   |   |-- CycleMatching.lean
+|   |   |   |   |   |-- CycleMoves.lean
+|   |   |   |   |   |-- Defs.lean
+|   |   |   |   |   |-- EndgameDross.lean
+|   |   |   |   |   |-- FlexBank.lean
+|   |   |   |   |   |-- FlexBankBuild.lean
+|   |   |   |   |   |-- FlexGadget.lean
+|   |   |   |   |   |-- FriendshipHub.lean
+|   |   |   |   |   |-- Gadget.lean
+|   |   |   |   |   |-- Necklace.lean
+|   |   |   |   |   |-- NibbleBridge.lean
+|   |   |   |   |   |-- NibbleMaxDegBridge.lean
+|   |   |   |   |   |-- OctExists.lean
+|   |   |   |   |   |-- OctFlex.lean
+|   |   |   |   |   |-- Parity.lean
+|   |   |   |   |   |-- Reroute.lean
+|   |   |   |   |   |-- ReservedSplitParts.lean
+|   |   |   |   |   |-- Transfer.lean
+|   |   |   |   |   `-- Transformer.lean
+|   |   |   |   `-- Axioms.lean
+|   |   |   `-- Basic.lean
+|   |   |-- BKLO/
+|   |   |   |-- Absorber.lean
+|   |   |   |-- AbsorberExists.lean
+|   |   |   |-- AbsorberPartsInterface.lean
+|   |   |   |-- ApexCover.lean
+|   |   |   |-- ApproxTriDecompMinDegDense.lean
+|   |   |   |-- AX2BalancedMerge.lean
+|   |   |   |-- AX2BalancedMergeFixed.lean
+|   |   |   |-- AX2CompleteStep.lean
+|   |   |   |-- AX2CountedMerge.lean
+|   |   |   |-- AX2CountedMergeAllocation.lean
+|   |   |   |-- AX2CountedMergeCaps.lean
+|   |   |   |-- AX2CyclePairing.lean
+|   |   |   |-- AX2CycleRouted.lean
+|   |   |   |-- AX2FibreBalance.lean
+|   |   |   |-- AX2ForeignCapacityAudit.lean
+|   |   |   |-- AX2ForeignFibreBalance.lean
+|   |   |   |-- AX2PartnerClassLedger.lean
+|   |   |   |-- AX2PartnerClassSpread.lean
+|   |   |   |-- AX2PartnerSpreadRepaired.lean
+|   |   |   |-- AX2PrescribedClassFibre.lean
+|   |   |   |-- AX2ResizedSixH.lean
+|   |   |   |-- AX2RoutedLedger.lean
+|   |   |   |-- AX2RoutedResidual.lean
+|   |   |   |-- AX2RoutedResidualCell.lean
+|   |   |   |-- AX2RoutedResidualCellCount.lean
+|   |   |   |-- AX2RoutedResidualCellFree.lean
+|   |   |   |-- AX2RoutedResidualCellResized.lean
+|   |   |   |-- AX2RoutedResidualGen.lean
+|   |   |   |-- AX2RoutedSweepInvariant.lean
+|   |   |   |-- AX2ScaledCompleteStep.lean
+|   |   |   |-- AX2ScaledPerturbation.lean
+|   |   |   |-- AX2SweepWideAudit.lean
+|   |   |   |-- AX2ThreeClassBlock.lean
+|   |   |   |-- AxCheckCoverDown.lean
+|   |   |   |-- Backdeg.lean
+|   |   |   |-- BalancedClasses.lean
+|   |   |   |-- BalancedClassesEighth.lean
+|   |   |   |-- Basic.lean
+|   |   |   |-- BipartiteMatching.lean
+|   |   |   |-- BottomClause.lean
+|   |   |   |-- BoundedLeftover.lean
+|   |   |   |-- BoundedLeftoverConfined.lean
+|   |   |   |-- BoundedLeftoverInterface.lean
+|   |   |   |-- CellGadgets.lean
+|   |   |   |-- CellsGreedy.lean
+|   |   |   |-- CellsSpreadLevels.lean
+|   |   |   |-- CellsStep.lean
+|   |   |   |-- ClassInvolution.lean
+|   |   |   |-- ClassLeftoverBudget.lean
+|   |   |   |-- ClassPairing.lean
+|   |   |   |-- ClassPairingPerturbed.lean
+|   |   |   |-- ClusterCompletion.lean
+|   |   |   |-- ClusterObstruction.lean
+|   |   |   |-- ClusterReservoir.lean
+|   |   |   |-- ClusterWeb.lean
+|   |   |   |-- CodegreeCounting.lean
+|   |   |   |-- Core.lean
+|   |   |   |-- CoreAbsorberConf.lean
+|   |   |   |-- CoreAbsorberExists.lean
+|   |   |   |-- CoreAbsorberTarget.lean
+|   |   |   |-- CornerHexagon.lean
+|   |   |   |-- CornerLimit.lean
+|   |   |   |-- CornerRouting.lean
+|   |   |   |-- Counting.lean
+|   |   |   |-- CoverDown.lean
+|   |   |   |-- CoverDownAbsorberConfinement.lean
+|   |   |   |-- CoverDownBudget.lean
+|   |   |   |-- CoverDownBudgetAccumulate.lean
+|   |   |   |-- CoverDownBudgetInvariant.lean
+|   |   |   |-- CoverDownChooserStep.lean
+|   |   |   |-- CoverDownDiracChooser.lean
+|   |   |   |-- CoverDownEngineR3.lean
+|   |   |   |-- CoverDownEquivalence.lean
+|   |   |   |-- CoverDownFromDecomp.lean
+|   |   |   |-- CoverDownFused.lean
+|   |   |   |-- CoverDownFusedR.lean
+|   |   |   |-- CoverDownGreedyAssembly.lean
+|   |   |   |-- CoverDownGreedyExistence.lean
+|   |   |   |-- CoverDownObstruction.lean
+|   |   |   |-- CoverDownReduction.lean
+|   |   |   |-- CoverDownRefutation.lean
+|   |   |   |-- CoverDownRefutationA.lean
+|   |   |   |-- CoverDownRefutationB.lean
+|   |   |   |-- CoverDownRepaired.lean
+|   |   |   |-- CoverDownStepFaithful.lean
+|   |   |   |-- CoverDownVortexDense.lean
+|   |   |   |-- CoverDownVortexEngine.lean
+|   |   |   |-- CoverDownVortexFaithful.lean
+|   |   |   |-- CoverDownVortexRecursion.lean
+|   |   |   |-- CrossHexGadget.lean
+|   |   |   |-- CrossHexWall.lean
+|   |   |   |-- CrossPatch.lean
+|   |   |   |-- Cycles.lean
+|   |   |   |-- Degeneracy.lean
+|   |   |   |-- DescentStep.lean
+|   |   |   |-- DiracMatching.lean
+|   |   |   |-- DistributiveAbsorptionSkeleton.lean
+|   |   |   |-- Embedding.lean
+|   |   |   |-- EmbeddingConf.lean
+|   |   |   |-- EmbeddingTarget.lean
+|   |   |   |-- EngineR3.lean
+|   |   |   |-- EngineR3Assembly.lean
+|   |   |   |-- EngineR4Assembly.lean
+|   |   |   |-- EquitablePartitionDense.lean
+|   |   |   |-- Erdos81AX2Endgame.lean
+|   |   |   |-- Erdos81AX2Faithful.lean
+|   |   |   |-- Expansion.lean
+|   |   |   |-- Families.lean
+|   |   |   |-- Fano.lean
+|   |   |   |-- FiniteBernoulli.lean
+|   |   |   |-- Gadgets.lean
+|   |   |   |-- GadgetsBlk.lean
+|   |   |   |-- GreedyPairCover.lean
+|   |   |   |-- GridCompetition.lean
+|   |   |   |-- GridLabelling.lean
+|   |   |   |-- GridLabellingCells.lean
+|   |   |   |-- GridPairingClean.lean
+|   |   |   |-- GridPairingCleanCount.lean
+|   |   |   |-- GridPairingStepTwoSided.lean
+|   |   |   |-- GridPairingTwoSided.lean
+|   |   |   |-- GridPairingTwoSidedEighth.lean
+|   |   |   |-- GridRegionCard.lean
+|   |   |   |-- HasAbs.lean
+|   |   |   |-- HexagonWeb.lean
+|   |   |   |-- HexWall.lean
+|   |   |   |-- HostGraph.lean
+|   |   |   |-- Inputs.lean
+|   |   |   |-- InputsVortex.lean
+|   |   |   |-- InputsVortexSat.lean
+|   |   |   |-- InternalCover.lean
+|   |   |   |-- InvolutionMatching.lean
+|   |   |   |-- LevelDivFix.lean
+|   |   |   |-- LevelSampling.lean
+|   |   |   |-- LinkCoverAssembly.lean
+|   |   |   |-- LinkLoad.lean
+|   |   |   |-- Lists.lean
+|   |   |   |-- Main.lean
+|   |   |   |-- MainCoverDownRoute.lean
+|   |   |   |-- MainDenseUnconditional.lean
+|   |   |   |-- MainR4.lean
+|   |   |   |-- MainRepaired.lean
+|   |   |   |-- MainRepaired2.lean
+|   |   |   |-- MainRepaired3.lean
+|   |   |   |-- MainShellCoverDown.lean
+|   |   |   |-- MapTransport.lean
+|   |   |   |-- NearOptimal.lean
+|   |   |   |-- NearOptimalFaithful.lean
+|   |   |   |-- NibbleMaxDeg.lean
+|   |   |   |-- NibbleMaxDegDense.lean
+|   |   |   |-- PackingAbsorb.lean
+|   |   |   |-- PackingReservoir.lean
+|   |   |   |-- PairCovering.lean
+|   |   |   |-- PaperIIIAX2Dense.lean
+|   |   |   |-- ParityFamily.lean
+|   |   |   |-- ParityTools.lean
+|   |   |   |-- PartitionSampling.lean
+|   |   |   |-- PartSeqDenseProof.lean
+|   |   |   |-- PerturbedBlock.lean
+|   |   |   |-- Placement.lean
+|   |   |   |-- PlacementConf.lean
+|   |   |   |-- PlacementTarget.lean
+|   |   |   |-- Refutations.lean
+|   |   |   |-- Reservoir.lean
+|   |   |   |-- ReservoirDesign.lean
+|   |   |   |-- ReservoirDesignClean.lean
+|   |   |   |-- ReservoirDesignEquitable.lean
+|   |   |   |-- ReservoirDesignFull.lean
+|   |   |   |-- ReservoirDesignSharp.lean
+|   |   |   |-- ReservoirDesignSharpEighth.lean
+|   |   |   |-- ReservoirDesignStructured.lean
+|   |   |   |-- ReservoirDesignTwoSided.lean
+|   |   |   |-- ReservoirDesignTwoSidedEighth.lean
+|   |   |   |-- ReservoirLarge.lean
+|   |   |   |-- ReservoirPairing.lean
+|   |   |   |-- ReservoirPairingLarge.lean
+|   |   |   |-- ReservoirPairingRefutation.lean
+|   |   |   |-- ReservoirPairingStructured.lean
+|   |   |   |-- ReservoirRepaired.lean
+|   |   |   |-- ReservoirRepaired2.lean
+|   |   |   |-- ReservoirRepairedSat.lean
+|   |   |   |-- ReservoirSat.lean
+|   |   |   |-- RhoReconcile625.lean
+|   |   |   |-- Sampling.lean
+|   |   |   |-- ScheduleR3.lean
+|   |   |   |-- Section1010Dense.lean
+|   |   |   |-- Section1010Obstruction.lean
+|   |   |   |-- Section1010Refutation.lean
+|   |   |   |-- Section1010Sparse.lean
+|   |   |   |-- Section1011Dense.lean
+|   |   |   |-- Section1012Assembly.lean
+|   |   |   |-- Section1012Defs.lean
+|   |   |   |-- Section1012Dense.lean
+|   |   |   |-- Section1012Hier.lean
+|   |   |   |-- Section1012Reconcile.lean
+|   |   |   |-- Section1012Repaired.lean
+|   |   |   |-- Section1012RhoWindow.lean
+|   |   |   |-- Section1012Tools.lean
+|   |   |   |-- Section102K3.lean
+|   |   |   |-- Section106Set.lean
+|   |   |   |-- Section107Core.lean
+|   |   |   |-- Section10Defs.lean
+|   |   |   |-- Section10DegreeReduction.lean
+|   |   |   |-- Section10Faithful.lean
+|   |   |   |-- Section10Iteration.lean
+|   |   |   |-- Section10Lemma103.lean
+|   |   |   |-- Section10Matchings.lean
+|   |   |   |-- Section10TransformStepProof.lean
+|   |   |   |-- Section10TransformStepWeak.lean
+|   |   |   |-- Section11Cells.lean
+|   |   |   |-- Section11CellsBuild.lean
+|   |   |   |-- Section11CellsChain.lean
+|   |   |   |-- Section11CellsMain.lean
+|   |   |   |-- Section11CellsPlace.lean
+|   |   |   |-- Section11CellsSeq.lean
+|   |   |   |-- Section11CellsSpread.lean
+|   |   |   |-- Section11CellsWire.lean
+|   |   |   |-- Section72K3.lean
+|   |   |   |-- Section9Assembly.lean
+|   |   |   |-- Section9Build.lean
+|   |   |   |-- Section9Chain.lean
+|   |   |   |-- Section9Construct.lean
+|   |   |   |-- Section9Greedy.lean
+|   |   |   |-- Section9ParityK3.lean
+|   |   |   |-- Section9ParityK3Proof.lean
+|   |   |   |-- Section9Vectors.lean
+|   |   |   |-- SetGraph.lean
+|   |   |   |-- SharpLinkMargin.lean
+|   |   |   |-- SharpSweepBudget.lean
+|   |   |   |-- ShellAbsorptionConfinementWall.lean
+|   |   |   |-- ShellAbsorptionDense.lean
+|   |   |   |-- ShellAbsorptionDenseWall.lean
+|   |   |   |-- SpreadMatching.lean
+|   |   |   |-- SpreadPlanGlobal.lean
+|   |   |   |-- StarGreedyBudget.lean
+|   |   |   |-- StarMatchingTriangles.lean
+|   |   |   |-- SubtypeTransport.lean
+|   |   |   |-- Transformer.lean
+|   |   |   |-- Transport.lean
+|   |   |   |-- TransportV.lean
+|   |   |   |-- TriangleCompletion.lean
+|   |   |   |-- TriangleSums.lean
+|   |   |   |-- TriDecompDenseFromInputs.lean
+|   |   |   |-- TwoSidedClassLedger.lean
+|   |   |   |-- TwoSidedClassMatched.lean
+|   |   |   |-- TwoSidedClassMatchedInvariant.lean
+|   |   |   |-- TwoSidedClassMatchedResidual.lean
+|   |   |   |-- TwoSidedCrossSide.lean
+|   |   |   |-- TwoSidedCrossSideExc.lean
+|   |   |   |-- TwoSidedCrossSideSweep.lean
+|   |   |   |-- TwoSidedLedger.lean
+|   |   |   |-- TwoSidedLedgerObstruction.lean
+|   |   |   |-- TwoSidedLinkMargin.lean
+|   |   |   |-- TwoSidedSweep.lean
+|   |   |   |-- TwoSidedUsedClassMatched.lean
+|   |   |   |-- TwoSidedUsedClassMatchedQuarter.lean
+|   |   |   |-- TwoSidedUsedClassMatchedResized.lean
+|   |   |   |-- Veblen.lean
+|   |   |   |-- Vortex.lean
+|   |   |   |-- VortexComposition.lean
+|   |   |   |-- VortexEngine.lean
+|   |   |   |-- VortexEngineFusedR.lean
+|   |   |   |-- VortexEngineFusedR2.lean
+|   |   |   |-- VortexMain.lean
+|   |   |   |-- VortexPartition.lean
+|   |   |   |-- VortexScheduleRefutation.lean
+|   |   |   |-- VortexScheduleRepaired.lean
+|   |   |   `-- WebWall.lean
+|   |   |-- Contrib/
+|   |   |   |-- BeckFiala.lean
+|   |   |   |-- BennettBernstein.lean
+|   |   |   |-- CommonNeighbors.lean
+|   |   |   |-- ConditionalHoeffding.lean
+|   |   |   |-- CorradiCodegree.lean
+|   |   |   |-- DiracHamiltonian.lean
+|   |   |   |-- EvenGraphCycles.lean
+|   |   |   |-- FanoSTS.lean
+|   |   |   |-- FiniteBernoulli.lean
+|   |   |   |-- FreedmanBernstein.lean
+|   |   |   |-- HoeffdingUpper.lean
+|   |   |   |-- HypergeometricTail.lean
+|   |   |   |-- InjectionAboveMean.lean
+|   |   |   |-- LPStrongDuality.lean
+|   |   |   |-- MaxFlowMinCut.lean
+|   |   |   |-- SpreadMatchingDirac.lean
+|   |   |   |-- SumZeroTriangles.lean
+|   |   |   |-- TriangleDecomp.lean
+|   |   |   `-- TriangleFreeMinDegree.lean
+|   |   |-- gate_logs/
+|   |   |   `-- run_2026-08-22_CCS_NOTEBOOK456_resumed/
+|   |   |       |-- evidence/
+|   |   |       |   |-- AXIOM_GATE_SUMMARY.txt
+|   |   |       |   |-- CONFIG_HASHES_AFTER.json
+|   |   |       |   |-- CONFIG_HASHES_BEFORE.json
+|   |   |       |   |-- DEPENDENCIES.json
+|   |   |       |   |-- ENVIRONMENT.json
+|   |   |       |   |-- IMPORT_CLOSURE.json
+|   |   |       |   |-- PRE_CACHE_CLEAN_STATE.txt
+|   |   |       |   |-- PUBLIC_ROOT_OBJECTS.txt
+|   |   |       |   |-- RAW_ESCAPE_HATCH_SCAN.txt
+|   |   |       |   `-- RESUME_DISCLOSURE.txt
+|   |   |       |-- logs/
+|   |   |       |   |-- 01_cache_get.exit.txt
+|   |   |       |   |-- 01_cache_get.log
+|   |   |       |   |-- 02_build_public_root_clean.log
+|   |   |       |   |-- 02_build_public_root_resume.exit.txt
+|   |   |       |   |-- 03_build_query_roots_incremental.exit.txt
+|   |   |       |   |-- 03_build_query_roots_incremental.log
+|   |   |       |   |-- axioms_01_FreezeAxioms.exit.txt
+|   |   |       |   |-- axioms_01_FreezeAxioms.log
+|   |   |       |   |-- axioms_02_FreezeAxiomsAuditClosure.exit.txt
+|   |   |       |   |-- axioms_02_FreezeAxiomsAuditClosure.log
+|   |   |       |   |-- axioms_03_FreezeAxiomsAX1.exit.txt
+|   |   |       |   |-- axioms_03_FreezeAxiomsAX1.log
+|   |   |       |   |-- axioms_04_FreezeAxiomsAX1Closure.exit.txt
+|   |   |       |   |-- axioms_04_FreezeAxiomsAX1Closure.log
+|   |   |       |   |-- axioms_05_FreezeAxiomsAX2.exit.txt
+|   |   |       |   |-- axioms_05_FreezeAxiomsAX2.log
+|   |   |       |   |-- axioms_06_FreezeAxiomsByproducts.exit.txt
+|   |   |       |   |-- axioms_06_FreezeAxiomsByproducts.log
+|   |   |       |   |-- axioms_07_FreezeAxiomsCanonical.exit.txt
+|   |   |       |   |-- axioms_07_FreezeAxiomsCanonical.log
+|   |   |       |   |-- axioms_08_FreezeAxiomsObstructions.exit.txt
+|   |   |       |   `-- axioms_08_FreezeAxiomsObstructions.log
+|   |   |       |-- RESULTS_MANIFEST.sha256
+|   |   |       `-- RUN_SUMMARY.json
+|   |   |-- Nibble/
+|   |   |   |-- Tight/
+|   |   |   |   |-- ConflictCount.lean
+|   |   |   |   |-- CoverProb.lean
+|   |   |   |   |-- CoverVariance.lean
+|   |   |   |   |-- CoverWeight.lean
+|   |   |   |   |-- CoverWeightMoments.lean
+|   |   |   |   |-- CubeRetention.lean
+|   |   |   |   |-- CubeVariance.lean
+|   |   |   |   |-- DenseRegDischarge.lean
+|   |   |   |   |-- FlipStability.lean
+|   |   |   |   |-- LossVariance.lean
+|   |   |   |   |-- PairExcessCodegree.lean
+|   |   |   |   |-- PairWeightMean.lean
+|   |   |   |   |-- Pruning.lean
+|   |   |   |   |-- ResidualBand.lean
+|   |   |   |   |-- ResidualBandCheb.lean
+|   |   |   |   |-- RoundExplicit.lean
+|   |   |   |   |-- SafeBand.lean
+|   |   |   |   |-- SafeDegree.lean
+|   |   |   |   |-- SafeDegreeVariance.lean
+|   |   |   |   |-- SafeRoundCheb.lean
+|   |   |   |   |-- Selection.lean
+|   |   |   |   |-- SharpRound.lean
+|   |   |   |   |-- SharpRoundAssembly.lean
+|   |   |   |   |-- SharpRoundProof.lean
+|   |   |   |   |-- SharpVariance.lean
+|   |   |   |   |-- TightRound.lean
+|   |   |   |   |-- TightRoundCheb.lean
+|   |   |   |   |-- TightRoundConcrete.lean
+|   |   |   |   |-- TwoEdgeMatch.lean
+|   |   |   |   `-- TwoSidedRound.lean
+|   |   |   |-- AdaptiveAssembly.lean
+|   |   |   |-- AdaptiveRounds.lean
+|   |   |   |-- AdaptiveSchedule.lean
+|   |   |   |-- AllVertices.lean
+|   |   |   |-- Assemble.lean
+|   |   |   |-- Assembly.lean
+|   |   |   |-- AX1Closed.lean
+|   |   |   |-- AX1Reduction.lean
+|   |   |   |-- BalancedHalfLocal.lean
+|   |   |   |-- BandFifthRefutation.lean
+|   |   |   |-- Basic.lean
+|   |   |   |-- BeckFiala.lean
+|   |   |   |-- BeckFialaPairs.lean
+|   |   |   |-- Bennett.lean
+|   |   |   |-- BernoulliConfig.lean
+|   |   |   |-- BernoulliSpace.lean
+|   |   |   |-- BlockCoverPortionBudget.lean
+|   |   |   |-- BlockCoverUniformAux.lean
+|   |   |   |-- BlockSplit.lean
+|   |   |   |-- BlowUpFracNibble.lean
+|   |   |   |-- BoundedDiff.lean
+|   |   |   |-- BoxAllocationSpec.lean
+|   |   |   |-- BoxPlacementCount.lean
+|   |   |   |-- BoxPlacementEdge.lean
+|   |   |   |-- BoxPlacementGraph.lean
+|   |   |   |-- BoxPlacementNibble.lean
+|   |   |   |-- CellBoxAllocation.lean
+|   |   |   |-- CellDesignPartner.lean
+|   |   |   |-- Chebyshev.lean
+|   |   |   |-- ClusterTripleLP.lean
+|   |   |   |-- ClusterTripleLPCount.lean
+|   |   |   |-- CoarseCellAssembly.lean
+|   |   |   |-- CoarseCellBlocks.lean
+|   |   |   |-- CoarseCellCoupled.lean
+|   |   |   |-- CoarseCellDiagonalDesign.lean
+|   |   |   |-- CoarseCellLatinFill.lean
+|   |   |   |-- CoarseCellShapeGate.lean
+|   |   |   |-- CompleteHypergraph.lean
+|   |   |   |-- Concentration.lean
+|   |   |   |-- CondHoeffding.lean
+|   |   |   |-- Conflict.lean
+|   |   |   |-- Convergence.lean
+|   |   |   |-- CoreGapAX1.lean
+|   |   |   |-- CoreGapAX1Gate.lean
+|   |   |   |-- CoreGapBlockAlloc.lean
+|   |   |   |-- CoreGapBlockCover.lean
+|   |   |   |-- CoreGapBlockCoverCoupled.lean
+|   |   |   |-- CoreGapBlockCoverGate.lean
+|   |   |   |-- CoreGapBlockCoverRefute.lean
+|   |   |   |-- CoreGapBlockCoverUniform.lean
+|   |   |   |-- CoreGapBlockShape.lean
+|   |   |   |-- CoreGapBlowUp.lean
+|   |   |   |-- CoreGapBlowUpGap.lean
+|   |   |   |-- CoreGapBlowUpSelect.lean
+|   |   |   |-- CoreGapClusterCapacity.lean
+|   |   |   |-- CoreGapClusterHost.lean
+|   |   |   |-- CoreGapClusterLP.lean
+|   |   |   |-- CoreGapClusterPackingRefute.lean
+|   |   |   |-- CoreGapCoverCapacity.lean
+|   |   |   |-- CoreGapDensePairs.lean
+|   |   |   |-- CoreGapDesign.lean
+|   |   |   |-- CoreGapDesignGate.lean
+|   |   |   |-- CoreGapDesignLocal.lean
+|   |   |   |-- CoreGapGridLocalResidual.lean
+|   |   |   |-- CoreGapGridResidual.lean
+|   |   |   |-- CoreGapNearComplete.lean
+|   |   |   |-- CoreGapNearCompleteGate.lean
+|   |   |   |-- CoreGapOpenRange.lean
+|   |   |   |-- CoreGapPackingEdges.lean
+|   |   |   |-- CoreGapPackingSplit.lean
+|   |   |   |-- CoreGapPrune.lean
+|   |   |   |-- CoreGapPruneLocal.lean
+|   |   |   |-- CoreGapRectPack.lean
+|   |   |   |-- CoreGapReducedPair.lean
+|   |   |   |-- CoreGapRegularCover.lean
+|   |   |   |-- CoreGapRegularDecomp.lean
+|   |   |   |-- CoreGapRegularDecompGate.lean
+|   |   |   |-- CoreGapRegularDegrees.lean
+|   |   |   |-- CoreGapRegularDegreesGate.lean
+|   |   |   |-- CoreGapRegularFamily.lean
+|   |   |   |-- CoreGapRegularFamilyGate.lean
+|   |   |   |-- CoreGapRemoval.lean
+|   |   |   |-- CoreGapRemovalGate.lean
+|   |   |   |-- CoreGapSubblock.lean
+|   |   |   |-- CoreGapTripleDegrees.lean
+|   |   |   |-- CoreGapTripleDegreesGate.lean
+|   |   |   |-- CoreGapTripleShape.lean
+|   |   |   |-- CoreGapUniformCodegree.lean
+|   |   |   |-- CoupledDyadicBoxRoute.lean
+|   |   |   |-- CoupledDyadicGate.lean
+|   |   |   |-- CoupledDyadicScaled.lean
+|   |   |   |-- Coverage.lean
+|   |   |   |-- Covered.lean
+|   |   |   |-- CoveredExpectation.lean
+|   |   |   |-- DegreeDecay.lean
+|   |   |   |-- DegreeDecayFreedman.lean
+|   |   |   |-- DegreeDecayGeneric.lean
+|   |   |   |-- DegreeDecayMcDiarmid.lean
+|   |   |   |-- DenseApproxDeg.lean
+|   |   |   |-- DenseGapAX1.lean
+|   |   |   |-- DenseGlobalLeftoverBelowHalf.lean
+|   |   |   |-- DenseGlobalLeftoverConst.lean
+|   |   |   |-- DenseGlobalLeftoverSharp.lean
+|   |   |   |-- DenseGlobalLeftoverThird.lean
+|   |   |   |-- DenseGlobalRoutes.lean
+|   |   |   |-- DenseNearRegular.lean
+|   |   |   |-- DenseNearRegularGate.lean
+|   |   |   |-- DenseTriangleNibbleDegAll.lean
+|   |   |   |-- DenseTriangleNibbleDegHalf.lean
+|   |   |   |-- DenseTriangleNibbleDegProof.lean
+|   |   |   |-- DenseTriNibbleMaxDeg.lean
+|   |   |   |-- DensityBandLocal.lean
+|   |   |   |-- DepLocal.lean
+|   |   |   |-- Discharge.lean
+|   |   |   |-- DischargeSeq.lean
+|   |   |   |-- DoubleSwap.lean
+|   |   |   |-- DrossCutArith.lean
+|   |   |   |-- DrossCutCert.lean
+|   |   |   |-- DrossCutCount.lean
+|   |   |   |-- DrossCutPartners.lean
+|   |   |   |-- DrossCutThresholdTight.lean
+|   |   |   |-- DrossFlowDense.lean
+|   |   |   |-- DrossFlowDenseNibble.lean
+|   |   |   |-- DrossFlowRoute.lean
+|   |   |   |-- DrossFractional.lean
+|   |   |   |-- DrossGadget.lean
+|   |   |   |-- DrossLinkRouting.lean
+|   |   |   |-- DrossResidual.lean
+|   |   |   |-- DrossSplitGraph.lean
+|   |   |   |-- DrossSpread.lean
+|   |   |   |-- DrossTransfer.lean
+|   |   |   |-- Expectation.lean
+|   |   |   |-- FlowFeasibility.lean
+|   |   |   |-- FracNibbleDense.lean
+|   |   |   |-- FracNibbleGate.lean
+|   |   |   |-- FracNibbleLE.lean
+|   |   |   |-- FracNibbleMultiScale.lean
+|   |   |   |-- FracNibbleRefutation.lean
+|   |   |   |-- FracNibbleRepaired.lean
+|   |   |   |-- FracNibbleSlack.lean
+|   |   |   |-- FracNibbleSlackR.lean
+|   |   |   |-- FracPackingDense.lean
+|   |   |   |-- FracRounding.lean
+|   |   |   |-- Freedman.lean
+|   |   |   |-- FreedmanCoeffRefutation.lean
+|   |   |   |-- FreedmanParamsObstruction.lean
+|   |   |   |-- GoodEvent.lean
+|   |   |   |-- GoodRetentionClean.lean
+|   |   |   |-- GoodRetentionFinset.lean
+|   |   |   |-- GoodRetentionFreedman.lean
+|   |   |   |-- GoodRetentionMcDiarmid.lean
+|   |   |   |-- GoodRound.lean
+|   |   |   |-- GoodRoundFreedman.lean
+|   |   |   |-- GoodRoundMcDiarmid.lean
+|   |   |   |-- Greedy.lean
+|   |   |   |-- GreedyFracMatching.lean
+|   |   |   |-- GridDesign.lean
+|   |   |   |-- GridDesignRect.lean
+|   |   |   |-- GridLineDesign.lean
+|   |   |   |-- GridScale.lean
+|   |   |   |-- GridShiftBalance.lean
+|   |   |   |-- GridShiftUnique.lean
+|   |   |   |-- GridTripleDesign.lean
+|   |   |   |-- GridTripleDesignRect.lean
+|   |   |   |-- Interface.lean
+|   |   |   |-- InvariantDegree.lean
+|   |   |   |-- Iteration.lean
+|   |   |   |-- IterationSeq.lean
+|   |   |   |-- K4Obstruction.lean
+|   |   |   |-- KraftPackLocal.lean
+|   |   |   |-- LinkSolve.lean
+|   |   |   |-- LoadBalance.lean
+|   |   |   |-- LowDegreeQuadraticFrac.lean
+|   |   |   |-- LPDuality.lean
+|   |   |   |-- MarkovVertices.lean
+|   |   |   |-- McDiarmid.lean
+|   |   |   |-- McDiarmidFull.lean
+|   |   |   |-- McDiarmidMarginal.lean
+|   |   |   |-- McDiarmidResidual.lean
+|   |   |   |-- McDiarmidResidualCount.lean
+|   |   |   |-- McDiarmidResidualSharp.lean
+|   |   |   |-- McDiarmidStep.lean
+|   |   |   |-- McDiarmidStep2.lean
+|   |   |   |-- McDiarmidTail.lean
+|   |   |   |-- Measurable.lean
+|   |   |   |-- MostAssembly.lean
+|   |   |   |-- MostAssemblyFreedman.lean
+|   |   |   |-- NearComplete.lean
+|   |   |   |-- NearCompleteFrac.lean
+|   |   |   |-- NearCompleteNibble.lean
+|   |   |   |-- NearRegObligationRefutation.lean
+|   |   |   |-- NibbleGapReduction.lean
+|   |   |   |-- NibbleRoundProbLocal.lean
+|   |   |   |-- NibbleStrategy.lean
+|   |   |   |-- NibbleStrategyFreedman.lean
+|   |   |   |-- NibbleStrategyMcDiarmid.lean
+|   |   |   |-- Nu3StarCover.lean
+|   |   |   |-- OneRoundGood.lean
+|   |   |   |-- PadCount.lean
+|   |   |   |-- PadHypergraph.lean
+|   |   |   |-- PadRounding.lean
+|   |   |   |-- PaperImprovements.lean
+|   |   |   |-- ParamsCoreRefutation.lean
+|   |   |   |-- Prelude.lean
+|   |   |   |-- Pruning.lean
+|   |   |   |-- Regular.lean
+|   |   |   |-- RegularityBad.lean
+|   |   |   |-- RegularityBadBound.lean
+|   |   |   |-- RegularityBadFreedman.lean
+|   |   |   |-- RegularityBadMcDiarmid.lean
+|   |   |   |-- RegularityBadTwoSided.lean
+|   |   |   |-- RegularMost.lean
+|   |   |   |-- ResidualBernstein.lean
+|   |   |   |-- ResidualBoundedDiff.lean
+|   |   |   |-- ResidualBoundedDiffSharp.lean
+|   |   |   |-- ResidualCodegree.lean
+|   |   |   |-- ResidualCondVariance.lean
+|   |   |   |-- ResidualDegree.lean
+|   |   |   |-- ResidualDegreeUpper.lean
+|   |   |   |-- ResidualFreedman.lean
+|   |   |   |-- ResidualFreedmanTail.lean
+|   |   |   |-- Round.lean
+|   |   |   |-- RoundConcentration.lean
+|   |   |   |-- RoundConcentrationTwoSided.lean
+|   |   |   |-- RoundConflict.lean
+|   |   |   |-- RoundCover.lean
+|   |   |   |-- RoundCoverFraction.lean
+|   |   |   |-- RoundInvariant.lean
+|   |   |   |-- RoundOracleKernel.lean
+|   |   |   |-- RoundOracleLocal.lean
+|   |   |   |-- RoundProbRefutation.lean
+|   |   |   |-- RoundStepRefutation.lean
+|   |   |   |-- SpreadNecessary.lean
+|   |   |   |-- SpreadNibble.lean
+|   |   |   |-- StarAugment.lean
+|   |   |   |-- StarCount.lean
+|   |   |   |-- StarCounterexample.lean
+|   |   |   |-- StarExchange.lean
+|   |   |   |-- StarMoves.lean
+|   |   |   |-- StrongDualityInst.lean
+|   |   |   |-- Subgamma.lean
+|   |   |   |-- SumEstimate.lean
+|   |   |   |-- SumEstimateTotal.lean
+|   |   |   |-- Survival.lean
+|   |   |   |-- TightAssembly.lean
+|   |   |   |-- TightNibble.lean
+|   |   |   |-- TightSchedule.lean
+|   |   |   |-- TriangleCapacity.lean
+|   |   |   |-- TripleEdges.lean
+|   |   |   |-- TripleEdgesThree.lean
+|   |   |   |-- UniformRounding.lean
+|   |   |   |-- VarianceBound.lean
+|   |   |   |-- VarianceEstimate.lean
+|   |   |   |-- WeightedNibble.lean
+|   |   |   |-- WeightedNibbleGate.lean
+|   |   |   |-- WeightedNibbleRestrict.lean
+|   |   |   |-- WeightedSpreadNibble.lean
+|   |   |   |-- Wiring.lean
+|   |   |   |-- WitnessPair.lean
+|   |   |   |-- Yuster.lean
+|   |   |   |-- YusterAX1.lean
+|   |   |   |-- YusterBridgeFrac.lean
+|   |   |   |-- YusterBridgePacking.lean
+|   |   |   |-- YusterCapture.lean
+|   |   |   |-- YusterCaptureCount.lean
+|   |   |   |-- YusterCounting.lean
+|   |   |   |-- YusterEdge.lean
+|   |   |   |-- YusterEdgeDegree.lean
+|   |   |   |-- YusterEdgeType.lean
+|   |   |   |-- YusterFracUpper.lean
+|   |   |   |-- YusterGap.lean
+|   |   |   |-- YusterMost.lean
+|   |   |   |-- YusterNibble.lean
+|   |   |   |-- YusterNibbleApply.lean
+|   |   |   |-- YusterNu3.lean
+|   |   |   |-- YusterRegular.lean
+|   |   |   |-- YusterRegularMost.lean
+|   |   |   |-- YusterSubBridge.lean
+|   |   |   |-- YusterSubDegree.lean
+|   |   |   |-- YusterSubDegreeChar.lean
+|   |   |   |-- YusterSubRegular.lean
+|   |   |   `-- YusterSzemeredi.lean
+|   |   |-- PaperIII/
+|   |   |   |-- Contrib/
+|   |   |   |   |-- Submission/
+|   |   |   |   |   |-- Dirac.lean
+|   |   |   |   |   `-- Matching.lean
+|   |   |   |   |-- DiracMathlib.lean
+|   |   |   |   `-- MatchingMathlib.lean
+|   |   |   |-- Addenda.lean
+|   |   |   |-- AX.lean
+|   |   |   |-- AX1Bridge.lean
+|   |   |   |-- AX1NibbleBridge.lean
+|   |   |   |-- AX2Bridge.lean
+|   |   |   |-- AXDefs.lean
+|   |   |   |-- AxiomFreeGate.lean
+|   |   |   |-- CanonicalTrianglePacking.lean
+|   |   |   |-- CanonicalTrianglePackingGate.lean
+|   |   |   |-- CleanAssemblyGate.lean
+|   |   |   |-- CliquePartition.lean
+|   |   |   |-- CompleteSplitExact.lean
+|   |   |   |-- CorridorDefs.lean
+|   |   |   |-- Counting.lean
+|   |   |   |-- Defs.lean
+|   |   |   |-- DiracHamilton.lean
+|   |   |   |-- DiracMatching.lean
+|   |   |   |-- Duality.lean
+|   |   |   |-- E_3_1_LP.lean
+|   |   |   |-- E_3_1_upper.lean
+|   |   |   |-- E_3_1_values.lean
+|   |   |   |-- E_4_2_algebra.lean
+|   |   |   |-- E_4_2.lean
+|   |   |   |-- E_4_3.lean
+|   |   |   |-- E_4_agg.lean
+|   |   |   |-- E_5.lean
+|   |   |   |-- E_6.lean
+|   |   |   |-- E_7.lean
+|   |   |   |-- E_8_Core.lean
+|   |   |   |-- E_8_Divisible.lean
+|   |   |   |-- E_8.lean
+|   |   |   |-- E_B.lean
+|   |   |   |-- E_D.lean
+|   |   |   |-- Factorization.lean
+|   |   |   |-- Identities.lean
+|   |   |   |-- Main.lean
+|   |   |   |-- MainNibble.lean
+|   |   |   |-- Obstructions.lean
+|   |   |   |-- OfPartition.lean
+|   |   |   |-- PackingCorollaries.lean
+|   |   |   |-- PaperImprovements.lean
+|   |   |   |-- PaperImprovementsGate.lean
+|   |   |   |-- Prop_10_1.lean
+|   |   |   |-- PublicAPI.lean
+|   |   |   |-- SharpRoundAssembly.lean
+|   |   |   |-- ShiftedCenterRobust.lean
+|   |   |   |-- SplitEdges.lean
+|   |   |   `-- Theorem_1_1_Final.lean
+|   |   |-- BUILD_INPUT_METADATA.json
+|   |   |-- ESCAPE_HATCH_ASSESSMENT.md
+|   |   |-- FREEZE_METADATA.json
+|   |   |-- FREEZE_REPORT.md
+|   |   |-- FreezeAxioms.lean
+|   |   |-- FreezeAxiomsAuditClosure.lean
+|   |   |-- FreezeAxiomsAX1.lean
+|   |   |-- FreezeAxiomsAX1Closure.lean
+|   |   |-- FreezeAxiomsAX2.lean
+|   |   |-- FreezeAxiomsByproducts.lean
+|   |   |-- FreezeAxiomsCanonical.lean
+|   |   |-- FreezeAxiomsObstructions.lean
+|   |   |-- lake-manifest.json
+|   |   |-- lakefile.toml
+|   |   |-- LEAN_FINDINGS_CLOSURE_MATRIX.md
+|   |   |-- lean-toolchain
+|   |   |-- MATHLIB_REPRODUCTION_PROTOCOL.md
+|   |   |-- PACKAGE_MANIFEST.sha256
+|   |   |-- PAPER_III_lean_v1.4_freeze.zip
+|   |   |-- PAPER_III_lean_v1.4_freeze.zip.sha256
+|   |   |-- PAPERIII_SORRYFREE_STATUS.md
+|   |   |-- PaperIII.lean
+|   |   |-- SOURCE_DELTA_v1.3_TO_v1.4.md
+|   |   |-- SOURCE_MANIFEST.sha256
+|   |   `-- TREE.txt
+|   `-- README.md
+|-- figures/
+|   |-- fig1_complete_split_extremizer_en.png
+|   |-- fig1_complete_split_extremizer_es.png
+|   |-- fig2_alpha_regimes_en.png
+|   `-- fig2_alpha_regimes_es.png
+|-- superseded/
+|   |-- unpublished_audited_draft_v1.4/
+|   |   |-- 01_manuscript/
+|   |   |   |-- figures/
+|   |   |   |   |-- fig1_complete_split_extremizer_en.png
+|   |   |   |   |-- fig1_complete_split_extremizer_es.png
+|   |   |   |   |-- fig2_alpha_regimes_en.png
+|   |   |   |   `-- fig2_alpha_regimes_es.png
+|   |   |   |-- PAPER_III_preprint_draft_v1.4_en.pdf
+|   |   |   |-- PAPER_III_preprint_draft_v1.4_en.tex
+|   |   |   |-- PAPER_III_preprint_draft_v1.4_es.md
+|   |   |   |-- PAPER_III_preprint_draft_v1.4_es.pdf
+|   |   |   |-- PAPER_III_preprint_draft_v1.4_es.tex
+|   |   |   |-- PAPER_III_preprint_draft_v1.4_SHA256.txt
+|   |   |   |-- PAPER_III_preprint_draft_v1.4.md
+|   |   |   `-- README.md
+|   |   |-- 02_validation/
+|   |   |   |-- 00_intake/
+|   |   |   |   |-- EXTERNAL_INCONCLUSIVE_LEAN_CLOSURE_MATRIX_v1.3.md
+|   |   |   |   |-- PAPER_III_preprint_draft_v1.2_BASELINE.md
+|   |   |   |   |-- PROTECTED_ELEMENT_INDEX_v1.3_BASELINE.md
+|   |   |   |   `-- SEMANTIC_CHANGE_CONTROL_v1.3.md
+|   |   |   |-- 01_INTERNAL_AUDITS/
+|   |   |   |   |-- 00_CONTROL/
+|   |   |   |   |   |-- AUDIT_INDEX.md
+|   |   |   |   |   |-- AUDIT_PROTOCOL.md
+|   |   |   |   |   |-- CITATION_LEDGER.md
+|   |   |   |   |   |-- CLAIM_MAP.md
+|   |   |   |   |   |-- ENVIRONMENT.md
+|   |   |   |   |   |-- EXTERNAL_FINDINGS_REGRESSION_MATRIX.md
+|   |   |   |   |   |-- internal_audit_v13.py
+|   |   |   |   |   `-- OPEN_RISKS.md
+|   |   |   |   |-- 10_REPORT/
+|   |   |   |   |   |-- INTERNAL_AUDIT_FINAL_REPORT_BUILD_PASS2.log
+|   |   |   |   |   |-- INTERNAL_AUDIT_FINAL_REPORT_BUILD.log
+|   |   |   |   |   |-- INTERNAL_AUDIT_FINAL_REPORT.md
+|   |   |   |   |   |-- INTERNAL_AUDIT_FINAL_REPORT.pdf
+|   |   |   |   |   |-- INTERNAL_AUDIT_FINAL_REPORT.tex
+|   |   |   |   |   |-- INTERNAL_AUDIT_SUMMARY.json
+|   |   |   |   |   `-- README.md
+|   |   |   |   |-- 20_EVIDENCE/
+|   |   |   |   |   |-- G0_STATIC/
+|   |   |   |   |   |   |-- results/
+|   |   |   |   |   |   |   `-- internal_audit_static.json
+|   |   |   |   |   |   |-- AUDIT_RECORD.md
+|   |   |   |   |   |   |-- COMMAND.txt
+|   |   |   |   |   |   `-- SHA256_MANIFEST.txt
+|   |   |   |   |   |-- G1_CLAIMS/
+|   |   |   |   |   |   |-- AUDIT_RECORD.md
+|   |   |   |   |   |   `-- SHA256_MANIFEST.txt
+|   |   |   |   |   |-- G2_MATHEMATICS/
+|   |   |   |   |   |   |-- block01_algebraic_identities/
+|   |   |   |   |   |   |   |-- results/
+|   |   |   |   |   |   |   |   `-- identities_results.txt
+|   |   |   |   |   |   |   |-- certificate_block01.pdf
+|   |   |   |   |   |   |   |-- README.md
+|   |   |   |   |   |   |   `-- verify_identities.py
+|   |   |   |   |   |   |-- block02_common_profile_LP/
+|   |   |   |   |   |   |   |-- results/
+|   |   |   |   |   |   |   |   `-- common_profile_LP_results.txt
+|   |   |   |   |   |   |   |-- certificate_block02.pdf
+|   |   |   |   |   |   |   |-- README.md
+|   |   |   |   |   |   |   `-- verify_common_profile_LP.py
+|   |   |   |   |   |   |-- block03_unified_margin/
+|   |   |   |   |   |   |   |-- results/
+|   |   |   |   |   |   |   |   `-- margin_results.txt
+|   |   |   |   |   |   |   |-- certificate_block03.pdf
+|   |   |   |   |   |   |   |-- README.md
+|   |   |   |   |   |   |   `-- verify_margin.py
+|   |   |   |   |   |   |-- block04_corridor_ILP/
+|   |   |   |   |   |   |   |-- results/
+|   |   |   |   |   |   |   |   `-- corridor_ILP_results.txt
+|   |   |   |   |   |   |   |-- certificate_block04.pdf
+|   |   |   |   |   |   |   |-- README.md
+|   |   |   |   |   |   |   `-- verify_corridor_ILP.py
+|   |   |   |   |   |   |-- common/
+|   |   |   |   |   |   |   |-- audit_formulas.py
+|   |   |   |   |   |   |   `-- make_certificate.py
+|   |   |   |   |   |   |-- results/
+|   |   |   |   |   |   |   |-- common_profile_LP_results.txt
+|   |   |   |   |   |   |   |-- corridor_ILP_results.txt
+|   |   |   |   |   |   |   |-- identities_results.txt
+|   |   |   |   |   |   |   |-- margin_results.txt
+|   |   |   |   |   |   |   |-- run_v1.3.txt
+|   |   |   |   |   |   |   |-- run.txt
+|   |   |   |   |   |   |   `-- summary.json
+|   |   |   |   |   |   |-- AUDIT_RECORD.md
+|   |   |   |   |   |   |-- COMMAND.txt
+|   |   |   |   |   |   `-- SHA256_MANIFEST.txt
+|   |   |   |   |   |-- G3_FORMAL_CONFORMANCE/
+|   |   |   |   |   |   |-- AUDIT_RECORD.md
+|   |   |   |   |   |   `-- SHA256_MANIFEST.txt
+|   |   |   |   |   |-- G4_RECORDED_BUILD/
+|   |   |   |   |   |   |-- AUDIT_RECORD.md
+|   |   |   |   |   |   `-- SHA256_MANIFEST.txt
+|   |   |   |   |   |-- G5_BILINGUAL/
+|   |   |   |   |   |   |-- AUDIT_RECORD.md
+|   |   |   |   |   |   `-- SHA256_MANIFEST.txt
+|   |   |   |   |   |-- G6_TEX_PDF/
+|   |   |   |   |   |   |-- results/
+|   |   |   |   |   |   |   `-- QA_SUMMARY.txt
+|   |   |   |   |   |   |-- AUDIT_RECORD.md
+|   |   |   |   |   |   |-- COMMANDS.txt
+|   |   |   |   |   |   `-- SHA256_MANIFEST.txt
+|   |   |   |   |   |-- G7_PRIOR_ART/
+|   |   |   |   |   |   |-- AUDIT_RECORD.md
+|   |   |   |   |   |   `-- SHA256_MANIFEST.txt
+|   |   |   |   |   `-- G8_PACKAGE/
+|   |   |   |   |       |-- AUDIT_RECORD.md
+|   |   |   |   |       `-- SHA256_MANIFEST.txt
+|   |   |   |   |-- 30_PACKAGE/
+|   |   |   |   |   |-- INTERNAL_AUDIT_PACKAGE_SHA256.txt
+|   |   |   |   |   |-- INTERNAL_AUDIT_PACKAGE.zip
+|   |   |   |   |   |-- INTERNAL_AUDIT_SHA256.txt
+|   |   |   |   |   `-- README.md
+|   |   |   |   |-- E2_RESIDUAL_v1.4/
+|   |   |   |   |   |-- 00_CONTROL/
+|   |   |   |   |   |   |-- FORMAL_SURFACE_MAP.md
+|   |   |   |   |   |   |-- OBLIGATION_MATRIX.md
+|   |   |   |   |   |   `-- TARGET_HASHES.sha256
+|   |   |   |   |   |-- 10_DERIVATIONS/
+|   |   |   |   |   |   |-- INTEGRATION_REGRESSION.md
+|   |   |   |   |   |   |-- K_CORRIDOR_DERIVATION.md
+|   |   |   |   |   |   |-- K_EPS_DERIVATION.md
+|   |   |   |   |   |   |-- K_GLOBAL_DERIVATION.md
+|   |   |   |   |   |   `-- K_SPARSE_DERIVATION.md
+|   |   |   |   |   |-- 20_SCRIPTS/
+|   |   |   |   |   |   |-- RUN_COMMAND.txt
+|   |   |   |   |   |   `-- verify_e2_residual.py
+|   |   |   |   |   |-- 30_RESULTS/
+|   |   |   |   |   |   |-- exact_checks.json
+|   |   |   |   |   |   `-- exact_checks.txt
+|   |   |   |   |   |-- 40_REPORT/
+|   |   |   |   |   |   |-- INTERNAL_E2_RESIDUAL_REPORT.md
+|   |   |   |   |   |   `-- INTERNAL_E2_RESIDUAL_SUMMARY.json
+|   |   |   |   |   |-- EVIDENCE_MANIFEST.sha256
+|   |   |   |   |   `-- README.md
+|   |   |   |   |-- run_2026-08-22_v1.4/
+|   |   |   |   |   |-- 00_CONTROL/
+|   |   |   |   |   |   |-- AUDIT_INDEX.md
+|   |   |   |   |   |   |-- AUDIT_PROTOCOL.md
+|   |   |   |   |   |   |-- EXTERNAL_FINDINGS_REGRESSION_MATRIX.md
+|   |   |   |   |   |   `-- internal_audit_v14.py
+|   |   |   |   |   |-- 10_REPORT/
+|   |   |   |   |   |   |-- INTERNAL_AUDIT_FINAL_REPORT_BUILD.log
+|   |   |   |   |   |   |-- INTERNAL_AUDIT_FINAL_REPORT_PASS1.console.txt
+|   |   |   |   |   |   |-- INTERNAL_AUDIT_FINAL_REPORT_PASS2.console.txt
+|   |   |   |   |   |   |-- INTERNAL_AUDIT_FINAL_REPORT.md
+|   |   |   |   |   |   |-- INTERNAL_AUDIT_FINAL_REPORT.pdf
+|   |   |   |   |   |   |-- INTERNAL_AUDIT_FINAL_REPORT.tex
+|   |   |   |   |   |   `-- INTERNAL_AUDIT_SUMMARY.json
+|   |   |   |   |   |-- 20_EVIDENCE/
+|   |   |   |   |   |   |-- G0_STATIC/
+|   |   |   |   |   |   |   |-- results/
+|   |   |   |   |   |   |   |   |-- internal_audit_console_v1.4.txt
+|   |   |   |   |   |   |   |   `-- internal_audit_static_v1.4.json
+|   |   |   |   |   |   |   |-- AUDIT_RECORD.md
+|   |   |   |   |   |   |   `-- SHA256_MANIFEST.txt
+|   |   |   |   |   |   |-- G1_CLAIMS/
+|   |   |   |   |   |   |   |-- AUDIT_RECORD.md
+|   |   |   |   |   |   |   `-- SHA256_MANIFEST.txt
+|   |   |   |   |   |   |-- G2_MATHEMATICS/
+|   |   |   |   |   |   |   |-- block01_algebraic_identities/
+|   |   |   |   |   |   |   |   |-- README.md
+|   |   |   |   |   |   |   |   `-- verify_identities.py
+|   |   |   |   |   |   |   |-- block02_common_profile_LP/
+|   |   |   |   |   |   |   |   |-- README.md
+|   |   |   |   |   |   |   |   `-- verify_common_profile_LP.py
+|   |   |   |   |   |   |   |-- block03_unified_margin/
+|   |   |   |   |   |   |   |   |-- README.md
+|   |   |   |   |   |   |   |   `-- verify_margin.py
+|   |   |   |   |   |   |   |-- block04_corridor_ILP/
+|   |   |   |   |   |   |   |   |-- README.md
+|   |   |   |   |   |   |   |   `-- verify_corridor_ILP.py
+|   |   |   |   |   |   |   |-- common/
+|   |   |   |   |   |   |   |   |-- audit_formulas.py
+|   |   |   |   |   |   |   |   `-- make_certificate.py
+|   |   |   |   |   |   |   |-- results/
+|   |   |   |   |   |   |   |   |-- common_profile_LP_results.txt
+|   |   |   |   |   |   |   |   |-- corridor_ILP_results.txt
+|   |   |   |   |   |   |   |   |-- identities_results.txt
+|   |   |   |   |   |   |   |   |-- margin_results.txt
+|   |   |   |   |   |   |   |   `-- summary_v1.4.json
+|   |   |   |   |   |   |   |-- AUDIT_RECORD.md
+|   |   |   |   |   |   |   |-- COMMANDS_v1.4.txt
+|   |   |   |   |   |   |   `-- SHA256_MANIFEST.txt
+|   |   |   |   |   |   |-- G3_FORMAL_CONFORMANCE/
+|   |   |   |   |   |   |   |-- AUDIT_RECORD.md
+|   |   |   |   |   |   |   `-- SHA256_MANIFEST.txt
+|   |   |   |   |   |   |-- G4_RECORDED_BUILD/
+|   |   |   |   |   |   |   |-- AUDIT_RECORD.md
+|   |   |   |   |   |   |   `-- SHA256_MANIFEST.txt
+|   |   |   |   |   |   |-- G5_BILINGUAL/
+|   |   |   |   |   |   |   |-- AUDIT_RECORD.md
+|   |   |   |   |   |   |   `-- SHA256_MANIFEST.txt
+|   |   |   |   |   |   |-- G6_TEX_PDF/
+|   |   |   |   |   |   |   |-- AUDIT_RECORD.md
+|   |   |   |   |   |   |   `-- SHA256_MANIFEST.txt
+|   |   |   |   |   |   |-- G7_PRIOR_ART/
+|   |   |   |   |   |   |   |-- AUDIT_RECORD.md
+|   |   |   |   |   |   |   `-- SHA256_MANIFEST.txt
+|   |   |   |   |   |   `-- G8_PACKAGE/
+|   |   |   |   |   |       |-- AUDIT_RECORD.md
+|   |   |   |   |   |       `-- SHA256_MANIFEST.txt
+|   |   |   |   |   `-- 30_PACKAGE/
+|   |   |   |   |       |-- INTERNAL_AUDIT_PACKAGE_v1.4.zip
+|   |   |   |   |       |-- INTERNAL_AUDIT_PACKAGE_v1.4.zip.sha256
+|   |   |   |   |       `-- INTERNAL_AUDIT_SHA256.txt
+|   |   |   |   `-- run_2026-08-22_v1.4_editorial_residual/
+|   |   |   |       |-- 00_CONTROL/
+|   |   |   |       |   |-- internal_audit_v14.py
+|   |   |   |       |   `-- RESIDUAL_INTERNAL_AUDIT_PROTOCOL.md
+|   |   |   |       |-- 10_REPORT/
+|   |   |   |       |   |-- CONSISTENCY_RERUN_CONSOLE.txt
+|   |   |   |       |   |-- FINAL_INTERNAL_RESIDUAL_AUDIT_REPORT.md
+|   |   |   |       |   `-- FULL_INTERNAL_REGRESSION_CONSOLE.txt
+|   |   |   |       `-- 20_EVIDENCE/
+|   |   |   |           |-- G0_STATIC/
+|   |   |   |           |   `-- results/
+|   |   |   |           |       `-- internal_audit_static_v1.4.json
+|   |   |   |           |-- G2_MATHEMATICS/
+|   |   |   |           |   `-- results/
+|   |   |   |           |       `-- summary_v1.4.json
+|   |   |   |           |-- M01_BILINGUAL/
+|   |   |   |           |   `-- M01_CORRECTION_EVIDENCE.md
+|   |   |   |           `-- M02_APPENDIX_D/
+|   |   |   |               `-- APPENDIX_D_REDERIVATION_LEDGER.md
+|   |   |   `-- 02_IA_ADVERSARIAL_AUDITS/
+|   |   |       |-- baseline_v1.3/
+|   |   |       |   |-- E2_E6_ADDENDUM_v1.3.txt
+|   |   |       |   `-- FINAL_AUDIT_REPORT_v1.3.md
+|   |   |       |-- REQUEST_v1.3/
+|   |   |       |   |-- EXTERNAL_ADVERSARIAL_AUDIT_REQUEST.md
+|   |   |       |   |-- MATHLIB_REPRODUCTION_PROTOCOL.md
+|   |   |       |   |-- README.md
+|   |   |       |   `-- REQUEST_SHA256.txt
+|   |   |       |-- run_2026-08-22_v1.3/
+|   |   |       |   |-- 00_CONTROL/
+|   |   |       |   |   |-- AUDIT_PROTOCOL.md
+|   |   |       |   |   |-- COMMAND_LEDGER.md
+|   |   |       |   |   |-- ENVIRONMENT.md
+|   |   |       |   |   `-- TARGET_SHA256.txt
+|   |   |       |   |-- 10_LOGS/
+|   |   |       |   |   |-- lean/
+|   |   |       |   |   |   |-- 01_cache_get.log
+|   |   |       |   |   |   |-- 02_pre_build_clean_proof.txt
+|   |   |       |   |   |   |-- 03_lake_build_PaperIII.log
+|   |   |       |   |   |   |-- 04_FreezeAxioms.log
+|   |   |       |   |   |   |-- 04_FreezeAxiomsAuditClosure.log
+|   |   |       |   |   |   |-- 04_FreezeAxiomsAX1.log
+|   |   |       |   |   |   |-- 04_FreezeAxiomsAX1Closure.log
+|   |   |       |   |   |   |-- 04_FreezeAxiomsAX2.log
+|   |   |       |   |   |   |-- 04_FreezeAxiomsByproducts.log
+|   |   |       |   |   |   |-- 04_FreezeAxiomsCanonical.log
+|   |   |       |   |   |   |-- 04_FreezeAxiomsObstructions.log
+|   |   |       |   |   |   |-- 05_query_roots.txt
+|   |   |       |   |   |   |-- 06_lake_build_query_roots.log
+|   |   |       |   |   |   |-- 07_FreezeAxioms.log
+|   |   |       |   |   |   |-- 07_FreezeAxiomsAuditClosure.log
+|   |   |       |   |   |   |-- 07_FreezeAxiomsAX1.log
+|   |   |       |   |   |   |-- 07_FreezeAxiomsAX1Closure.log
+|   |   |       |   |   |   |-- 07_FreezeAxiomsAX2.log
+|   |   |       |   |   |   |-- 07_FreezeAxiomsByproducts.log
+|   |   |       |   |   |   |-- 07_FreezeAxiomsCanonical.log
+|   |   |       |   |   |   |-- 07_FreezeAxiomsObstructions.log
+|   |   |       |   |   |   `-- 08_AuditorE3.log
+|   |   |       |   |   |-- literature/
+|   |   |       |   |   `-- manuscript/
+|   |   |       |   |-- 20_EVIDENCE/
+|   |   |       |   |   |-- E0_INTAKE/
+|   |   |       |   |   |   |-- results/
+|   |   |       |   |   |   |   `-- E0_intake.json
+|   |   |       |   |   |   |-- scripts/
+|   |   |       |   |   |   |   `-- v13_E0_intake.py
+|   |   |       |   |   |   |-- AUDIT_RECORD.md
+|   |   |       |   |   |   `-- SHA256_MANIFEST.txt
+|   |   |       |   |   |-- E1_CLAIMS/
+|   |   |       |   |   |   |-- results/
+|   |   |       |   |   |   |   `-- regression_text.json
+|   |   |       |   |   |   |-- scripts/
+|   |   |       |   |   |   |   `-- v13_regression_text.py
+|   |   |       |   |   |   |-- AUDIT_RECORD.md
+|   |   |       |   |   |   `-- SHA256_MANIFEST.txt
+|   |   |       |   |   |-- E2_MATHEMATICS/
+|   |   |       |   |   |   |-- results/
+|   |   |       |   |   |   |   `-- section9.json
+|   |   |       |   |   |   |-- scripts/
+|   |   |       |   |   |   |   `-- v13_E2_section9.py
+|   |   |       |   |   |   |-- AUDIT_RECORD.md
+|   |   |       |   |   |   `-- SHA256_MANIFEST.txt
+|   |   |       |   |   |-- E3_FORMAL_CONFORMANCE/
+|   |   |       |   |   |   |-- results/
+|   |   |       |   |   |   |   `-- 08_AuditorE3.log
+|   |   |       |   |   |   |-- scripts/
+|   |   |       |   |   |   |   `-- AuditorE3.lean
+|   |   |       |   |   |   |-- AUDIT_RECORD.md
+|   |   |       |   |   |   `-- SHA256_MANIFEST.txt
+|   |   |       |   |   |-- E4_LEAN_REPRODUCTION/
+|   |   |       |   |   |   |-- results/
+|   |   |       |   |   |   |   |-- 03_lake_build_PaperIII.log
+|   |   |       |   |   |   |   |-- 06_lake_build_query_roots.log
+|   |   |       |   |   |   |   |-- 07_FreezeAxioms.log
+|   |   |       |   |   |   |   |-- 07_FreezeAxiomsAuditClosure.log
+|   |   |       |   |   |   |   |-- 07_FreezeAxiomsAX1.log
+|   |   |       |   |   |   |   |-- 07_FreezeAxiomsAX1Closure.log
+|   |   |       |   |   |   |   |-- 07_FreezeAxiomsAX2.log
+|   |   |       |   |   |   |   |-- 07_FreezeAxiomsByproducts.log
+|   |   |       |   |   |   |   |-- 07_FreezeAxiomsCanonical.log
+|   |   |       |   |   |   |   |-- 07_FreezeAxiomsObstructions.log
+|   |   |       |   |   |   |   `-- import_closure.json
+|   |   |       |   |   |   |-- scripts/
+|   |   |       |   |   |   |   `-- v13_import_closure.py
+|   |   |       |   |   |   |-- AUDIT_RECORD.md
+|   |   |       |   |   |   `-- SHA256_MANIFEST.txt
+|   |   |       |   |   |-- E5_BILINGUAL_RENDER/
+|   |   |       |   |   |   |-- results/
+|   |   |       |   |   |   |   `-- E5_pdf_qa.json
+|   |   |       |   |   |   |-- scripts/
+|   |   |       |   |   |   |   `-- v13_E5_pdf_qa.py
+|   |   |       |   |   |   |-- AUDIT_RECORD.md
+|   |   |       |   |   |   `-- SHA256_MANIFEST.txt
+|   |   |       |   |   |-- E6_PRIOR_ART/
+|   |   |       |   |   |   |-- results/
+|   |   |       |   |   |   |   `-- prior_art.json
+|   |   |       |   |   |   |-- scripts/
+|   |   |       |   |   |   |   `-- v13_E6_E7.py
+|   |   |       |   |   |   |-- AUDIT_RECORD.md
+|   |   |       |   |   |   `-- SHA256_MANIFEST.txt
+|   |   |       |   |   `-- E7_RELEASE_PACKAGE/
+|   |   |       |   |       |-- results/
+|   |   |       |   |       |   `-- release_package.json
+|   |   |       |   |       |-- scripts/
+|   |   |       |   |       |-- AUDIT_RECORD.md
+|   |   |       |   |       `-- SHA256_MANIFEST.txt
+|   |   |       |   |-- 30_REPORT/
+|   |   |       |   |   |-- AUDIT_SUMMARY.json
+|   |   |       |   |   |-- FINAL_AUDIT_REPORT.md
+|   |   |       |   |   |-- FINAL_AUDIT_REPORT.pdf
+|   |   |       |   |   |-- FINAL_AUDIT_REPORT.tex
+|   |   |       |   |   |-- FINDINGS_LEDGER.csv
+|   |   |       |   |   |-- REGRESSION_MATRIX.md
+|   |   |       |   |   `-- report_header.tex
+|   |   |       |   `-- 40_PACKAGE/
+|   |   |       |       |-- EXTERNAL_AUDIT_PACKAGE_SHA256.txt
+|   |   |       |       |-- EXTERNAL_AUDIT_PACKAGE.zip
+|   |   |       |       |-- EXTERNAL_AUDIT_SHA256.txt
+|   |   |       |       `-- README.md
+|   |   |       |-- run_2026-08-22_v1.4_residual/
+|   |   |       |   |-- 00_CONTROL/
+|   |   |       |   |   |-- AUDIT_PROTOCOL.md
+|   |   |       |   |   |-- COMMAND_LEDGER.md
+|   |   |       |   |   |-- ENVIRONMENT.md
+|   |   |       |   |   |-- EXTERNAL_RESIDUAL_AUDIT_REQUEST_v1.4.md
+|   |   |       |   |   |-- REGRESSION_MATRIX.md
+|   |   |       |   |   `-- TARGET_SHA256.txt
+|   |   |       |   |-- 10_LEDGER/
+|   |   |       |   |   |-- CLAIM_LEDGER.md
+|   |   |       |   |   `-- FINDINGS_LEDGER.csv
+|   |   |       |   |-- 20_EVIDENCE/
+|   |   |       |   |   |-- E2_MATHEMATICS/
+|   |   |       |   |   |   |-- results/
+|   |   |       |   |   |   |   |-- full_rederivation.json
+|   |   |       |   |   |   |   |-- math_delta.json
+|   |   |       |   |   |   |   `-- section9.json
+|   |   |       |   |   |   |-- scripts/
+|   |   |       |   |   |   |   |-- v14_E2_full.py
+|   |   |       |   |   |   |   |-- v14_E2_section9.py
+|   |   |       |   |   |   |   `-- v14_math_delta.py
+|   |   |       |   |   |   `-- SHA256_MANIFEST.txt
+|   |   |       |   |   |-- G1_INTAKE/
+|   |   |       |   |   |   |-- results/
+|   |   |       |   |   |   |   `-- E0_intake.json
+|   |   |       |   |   |   |-- scripts/
+|   |   |       |   |   |   |   `-- v14_E0_intake.py
+|   |   |       |   |   |   `-- SHA256_MANIFEST.txt
+|   |   |       |   |   |-- G2_CLAIMS/
+|   |   |       |   |   |   |-- results/
+|   |   |       |   |   |   |   `-- regression_text.json
+|   |   |       |   |   |   |-- scripts/
+|   |   |       |   |   |   |   `-- v14_regression_text.py
+|   |   |       |   |   |   `-- SHA256_MANIFEST.txt
+|   |   |       |   |   |-- G3_BILINGUAL/
+|   |   |       |   |   |   |-- results/
+|   |   |       |   |   |   |   `-- bilingual_deep.json
+|   |   |       |   |   |   |-- scripts/
+|   |   |       |   |   |   |   |-- v14_bilingual_deep.py
+|   |   |       |   |   |   |   |-- v14_inspect_diffs.py
+|   |   |       |   |   |   |   |-- v14_table_row_check.py
+|   |   |       |   |   |   |   `-- v14_tex_pdf_sync.py
+|   |   |       |   |   |   `-- SHA256_MANIFEST.txt
+|   |   |       |   |   |-- G4_RENDER/
+|   |   |       |   |   |   |-- results/
+|   |   |       |   |   |   |   `-- E5_pdf_qa.json
+|   |   |       |   |   |   |-- scripts/
+|   |   |       |   |   |   |   `-- v14_E5_pdf_qa.py
+|   |   |       |   |   |   `-- SHA256_MANIFEST.txt
+|   |   |       |   |   |-- G5_LEAN/
+|   |   |       |   |   |   |-- results/
+|   |   |       |   |   |   |   |-- 01_cache_get.log
+|   |   |       |   |   |   |   |-- 02_pre_build_clean.txt
+|   |   |       |   |   |   |   |-- 03_build_PaperIII.log
+|   |   |       |   |   |   |   |-- 04_build_query_roots.log
+|   |   |       |   |   |   |   |-- 05_FreezeAxioms.log
+|   |   |       |   |   |   |   |-- 05_FreezeAxiomsAuditClosure.log
+|   |   |       |   |   |   |   |-- 05_FreezeAxiomsAX1.log
+|   |   |       |   |   |   |   |-- 05_FreezeAxiomsAX1Closure.log
+|   |   |       |   |   |   |   |-- 05_FreezeAxiomsAX2.log
+|   |   |       |   |   |   |   |-- 05_FreezeAxiomsByproducts.log
+|   |   |       |   |   |   |   |-- 05_FreezeAxiomsCanonical.log
+|   |   |       |   |   |   |   |-- 05_FreezeAxiomsObstructions.log
+|   |   |       |   |   |   |   `-- 06_AuditorE3.log
+|   |   |       |   |   |   |-- scripts/
+|   |   |       |   |   |   `-- SHA256_MANIFEST.txt
+|   |   |       |   |   |-- G6_AXIOM_BOUNDARY/
+|   |   |       |   |   |   |-- results/
+|   |   |       |   |   |   |   `-- import_closure.json
+|   |   |       |   |   |   |-- scripts/
+|   |   |       |   |   |   |   `-- v14_import_closure.py
+|   |   |       |   |   |   `-- SHA256_MANIFEST.txt
+|   |   |       |   |   |-- G7_CONFORMANCE/
+|   |   |       |   |   |   |-- results/
+|   |   |       |   |   |   |   `-- 06_AuditorE3.log
+|   |   |       |   |   |   |-- scripts/
+|   |   |       |   |   |   |   `-- AuditorE3.lean
+|   |   |       |   |   |   `-- SHA256_MANIFEST.txt
+|   |   |       |   |   |-- G8_PRIOR_ART/
+|   |   |       |   |   |   |-- results/
+|   |   |       |   |   |   |   |-- cavers.txt
+|   |   |       |   |   |   |   |-- haxell_cv.txt
+|   |   |       |   |   |   |   |-- novelty_refresh_v14.json
+|   |   |       |   |   |   |   |-- novelty_search_v13_baseline.json
+|   |   |       |   |   |   |   `-- prior_art.json
+|   |   |       |   |   |   |-- scripts/
+|   |   |       |   |   |   |   `-- v14_E6_E7.py
+|   |   |       |   |   |   `-- SHA256_MANIFEST.txt
+|   |   |       |   |   `-- G9_REGRESSION/
+|   |   |       |   |       |-- results/
+|   |   |       |   |       |-- scripts/
+|   |   |       |   |       `-- SHA256_MANIFEST.txt
+|   |   |       |   |-- 30_REPORT/
+|   |   |       |   |   |-- ADDENDUM_CORPUS_BOUNDED_NOVELTY.md
+|   |   |       |   |   |-- FINAL_AUDIT_REPORT.md
+|   |   |       |   |   `-- FINAL_AUDIT_SUMMARY.json
+|   |   |       |   `-- 40_PACKAGE/
+|   |   |       |       |-- EXTERNAL_AUDIT_PACKAGE_SHA256.txt
+|   |   |       |       |-- EXTERNAL_AUDIT_PACKAGE.zip
+|   |   |       |       |-- EXTERNAL_AUDIT_SHA256.txt
+|   |   |       |       `-- PACKAGE_MANIFEST.json
+|   |   |       |-- run_2026-08-23_v1.4_challenger/
+|   |   |       |   |-- 00_CONTROL/
+|   |   |       |   |   |-- ADDENDUM_FILED.txt
+|   |   |       |   |   |-- ENVIRONMENT.md
+|   |   |       |   |   |-- PROTOCOL.md
+|   |   |       |   |   |-- REGRESSION_BOUNDARY.md
+|   |   |       |   |   `-- TARGET_SHA256_AS_DELIVERED.txt
+|   |   |       |   |-- 10_LEDGER/
+|   |   |       |   |   |-- APPENDIX_D_PROOF_LEDGER.md
+|   |   |       |   |   `-- FINDINGS_LEDGER.csv
+|   |   |       |   |-- 20_EVIDENCE/
+|   |   |       |   |   |-- A_BILINGUAL/
+|   |   |       |   |   |   |-- adjudication_run.txt
+|   |   |       |   |   |   |-- adjudication.json
+|   |   |       |   |   |   |-- bilingual_run.txt
+|   |   |       |   |   |   |-- bilingual_structural_diff.json
+|   |   |       |   |   |   |-- v14c_adjudicate.py
+|   |   |       |   |   |   `-- v14c_bilingual.py
+|   |   |       |   |   |-- A_RENDER/
+|   |   |       |   |   |   |-- auditor_lualatex_es.log
+|   |   |       |   |   |   `-- render_qa.txt
+|   |   |       |   |   |-- B_APPENDIX_D/
+|   |   |       |   |   |   |-- appendix_D_as_delivered.txt
+|   |   |       |   |   |   |-- independent_derivation.md
+|   |   |       |   |   |   `-- section_7_2_as_delivered.txt
+|   |   |       |   |   |-- C_REGRESSION/
+|   |   |       |   |   |   |-- regression_boundary.txt
+|   |   |       |   |   |   |-- review_challenger_request.py
+|   |   |       |   |   |   `-- v14c_seal.py
+|   |   |       |   |   `-- SHA256_MANIFEST.txt
+|   |   |       |   |-- 30_REPORT/
+|   |   |       |   |   |-- FINAL_AUDIT_REPORT.md
+|   |   |       |   |   `-- FINAL_AUDIT_SUMMARY.json
+|   |   |       |   `-- 40_PACKAGE/
+|   |   |       |       |-- EXTERNAL_CHALLENGER_REVIEW_PACKAGE.zip
+|   |   |       |       |-- EXTERNAL_CHALLENGER_REVIEW_PACKAGE.zip.sha256
+|   |   |       |       `-- PACKAGE_MANIFEST.json
+|   |   |       |-- EXTERNAL_CHALLENGER_CORRECTION_REVIEW_REQUEST_v1.4.md
+|   |   |       |-- EXTERNAL_RESIDUAL_AUDIT_REQUEST_v1.4.md
+|   |   |       |-- PAPER_III_v1.4_EXTERNAL_CHALLENGER_CORRECTION_REVIEW_INSTRUCTIONS.zip
+|   |   |       |-- PAPER_III_v1.4_EXTERNAL_CHALLENGER_CORRECTION_REVIEW_INSTRUCTIONS.zip.sha256
+|   |   |       |-- PAPER_III_v1.4_EXTERNAL_RESIDUAL_AUDIT_INSTRUCTIONS.zip
+|   |   |       `-- PAPER_III_v1.4_EXTERNAL_RESIDUAL_AUDIT_INSTRUCTIONS.zip.sha256
+|   |   |-- 03_reproducibility/
+|   |   |   |-- author_build_evidence/
+|   |   |   |   |-- run_2026-08-22_CCS_NOTEBOOK456_resumed/
+|   |   |   |   |   |-- RESULTS/
+|   |   |   |   |   |   |-- evidence/
+|   |   |   |   |   |   |   |-- AXIOM_GATE_SUMMARY.txt
+|   |   |   |   |   |   |   |-- CONFIG_HASHES_AFTER.json
+|   |   |   |   |   |   |   |-- CONFIG_HASHES_BEFORE.json
+|   |   |   |   |   |   |   |-- DEPENDENCIES.json
+|   |   |   |   |   |   |   |-- ENVIRONMENT.json
+|   |   |   |   |   |   |   |-- IMPORT_CLOSURE.json
+|   |   |   |   |   |   |   |-- PRE_CACHE_CLEAN_STATE.txt
+|   |   |   |   |   |   |   |-- PUBLIC_ROOT_OBJECTS.txt
+|   |   |   |   |   |   |   |-- RAW_ESCAPE_HATCH_SCAN.txt
+|   |   |   |   |   |   |   `-- RESUME_DISCLOSURE.txt
+|   |   |   |   |   |   |-- logs/
+|   |   |   |   |   |   |   |-- 01_cache_get.exit.txt
+|   |   |   |   |   |   |   |-- 01_cache_get.log
+|   |   |   |   |   |   |   |-- 02_build_public_root_clean.log
+|   |   |   |   |   |   |   |-- 02_build_public_root_resume.exit.txt
+|   |   |   |   |   |   |   |-- 03_build_query_roots_incremental.exit.txt
+|   |   |   |   |   |   |   |-- 03_build_query_roots_incremental.log
+|   |   |   |   |   |   |   |-- axioms_01_FreezeAxioms.exit.txt
+|   |   |   |   |   |   |   |-- axioms_01_FreezeAxioms.log
+|   |   |   |   |   |   |   |-- axioms_02_FreezeAxiomsAuditClosure.exit.txt
+|   |   |   |   |   |   |   |-- axioms_02_FreezeAxiomsAuditClosure.log
+|   |   |   |   |   |   |   |-- axioms_03_FreezeAxiomsAX1.exit.txt
+|   |   |   |   |   |   |   |-- axioms_03_FreezeAxiomsAX1.log
+|   |   |   |   |   |   |   |-- axioms_04_FreezeAxiomsAX1Closure.exit.txt
+|   |   |   |   |   |   |   |-- axioms_04_FreezeAxiomsAX1Closure.log
+|   |   |   |   |   |   |   |-- axioms_05_FreezeAxiomsAX2.exit.txt
+|   |   |   |   |   |   |   |-- axioms_05_FreezeAxiomsAX2.log
+|   |   |   |   |   |   |   |-- axioms_06_FreezeAxiomsByproducts.exit.txt
+|   |   |   |   |   |   |   |-- axioms_06_FreezeAxiomsByproducts.log
+|   |   |   |   |   |   |   |-- axioms_07_FreezeAxiomsCanonical.exit.txt
+|   |   |   |   |   |   |   |-- axioms_07_FreezeAxiomsCanonical.log
+|   |   |   |   |   |   |   |-- axioms_08_FreezeAxiomsObstructions.exit.txt
+|   |   |   |   |   |   |   `-- axioms_08_FreezeAxiomsObstructions.log
+|   |   |   |   |   |   |-- RESULTS_MANIFEST.sha256
+|   |   |   |   |   |   `-- RUN_SUMMARY.json
+|   |   |   |   |   |-- PAPER_III_v1.4_RESUMED_BUILD_RESULTS_CCS_NOTEBOOK456_20260822_225841.zip
+|   |   |   |   |   |-- PAPER_III_v1.4_RESUMED_BUILD_RESULTS_CCS_NOTEBOOK456_20260822_225841.zip.sha256
+|   |   |   |   |   `-- README.md
+|   |   |   |   |-- run_2026-08-23_CCS_NOTEBOOK456_clean_uninterrupted_adjudicated/
+|   |   |   |   |   |-- RESULTS/
+|   |   |   |   |   |   |-- evidence/
+|   |   |   |   |   |   |   |-- CONFIG_HASHES_BEFORE.json
+|   |   |   |   |   |   |   |-- DEPENDENCIES.json
+|   |   |   |   |   |   |   |-- ENVIRONMENT.json
+|   |   |   |   |   |   |   |-- IMPORT_CLOSURE.json
+|   |   |   |   |   |   |   |-- PRE_CACHE_CLEAN_STATE.txt
+|   |   |   |   |   |   |   |-- PUBLIC_ROOT_OBJECTS.txt
+|   |   |   |   |   |   |   `-- RAW_ESCAPE_HATCH_SCAN.txt
+|   |   |   |   |   |   |-- logs/
+|   |   |   |   |   |   |   |-- 01_cache_get.exit.txt
+|   |   |   |   |   |   |   |-- 01_cache_get.log
+|   |   |   |   |   |   |   |-- 02_build_public_root_clean.exit.txt
+|   |   |   |   |   |   |   |-- 02_build_public_root_clean.log
+|   |   |   |   |   |   |   |-- 03_build_query_roots_incremental.exit.txt
+|   |   |   |   |   |   |   |-- 03_build_query_roots_incremental.log
+|   |   |   |   |   |   |   |-- axioms_01_FreezeAxioms.exit.txt
+|   |   |   |   |   |   |   |-- axioms_01_FreezeAxioms.log
+|   |   |   |   |   |   |   |-- axioms_02_FreezeAxiomsAuditClosure.exit.txt
+|   |   |   |   |   |   |   |-- axioms_02_FreezeAxiomsAuditClosure.log
+|   |   |   |   |   |   |   |-- axioms_03_FreezeAxiomsAX1.exit.txt
+|   |   |   |   |   |   |   |-- axioms_03_FreezeAxiomsAX1.log
+|   |   |   |   |   |   |   |-- axioms_04_FreezeAxiomsAX1Closure.exit.txt
+|   |   |   |   |   |   |   |-- axioms_04_FreezeAxiomsAX1Closure.log
+|   |   |   |   |   |   |   |-- axioms_05_FreezeAxiomsAX2.exit.txt
+|   |   |   |   |   |   |   |-- axioms_05_FreezeAxiomsAX2.log
+|   |   |   |   |   |   |   |-- axioms_06_FreezeAxiomsByproducts.exit.txt
+|   |   |   |   |   |   |   |-- axioms_06_FreezeAxiomsByproducts.log
+|   |   |   |   |   |   |   |-- axioms_07_FreezeAxiomsCanonical.exit.txt
+|   |   |   |   |   |   |   |-- axioms_07_FreezeAxiomsCanonical.log
+|   |   |   |   |   |   |   |-- axioms_08_FreezeAxiomsObstructions.exit.txt
+|   |   |   |   |   |   |   `-- axioms_08_FreezeAxiomsObstructions.log
+|   |   |   |   |   |   |-- RESULTS_MANIFEST.sha256
+|   |   |   |   |   |   `-- RUN_SUMMARY.json
+|   |   |   |   |   |-- RUNNER_SNAPSHOT/
+|   |   |   |   |   |   |-- PROJECT_MANIFEST.sha256
+|   |   |   |   |   |   `-- RUN_CLEAN_BUILD.ps1
+|   |   |   |   |   |-- ADJUDICATED_RUN_SUMMARY.json
+|   |   |   |   |   |-- PAPER_III_v1.4_CLEAN_BUILD_RESULTS_CCS_NOTEBOOK456_20260823_003042.zip
+|   |   |   |   |   |-- PAPER_III_v1.4_CLEAN_BUILD_RESULTS_CCS_NOTEBOOK456_20260823_003042.zip.sha256
+|   |   |   |   |   |-- POSTCHECK_CONSOLE.txt
+|   |   |   |   |   |-- README.md
+|   |   |   |   |   `-- verify_clean_run_postcheck.py
+|   |   |   |   `-- run_2026-08-23_clean_PASS/
+|   |   |   |       |-- BUILD_KIT_IDENTITY/
+|   |   |   |       |   `-- PROJECT_MANIFEST.sha256
+|   |   |   |       |-- RESULTS/
+|   |   |   |       |   |-- evidence/
+|   |   |   |       |   |   |-- AXIOM_GATE_SUMMARY.txt
+|   |   |   |       |   |   |-- CONFIG_HASHES_AFTER.json
+|   |   |   |       |   |   |-- CONFIG_HASHES_BEFORE.json
+|   |   |   |       |   |   |-- DEPENDENCIES.json
+|   |   |   |       |   |   |-- ENVIRONMENT.json
+|   |   |   |       |   |   |-- IMPORT_CLOSURE.json
+|   |   |   |       |   |   |-- PRE_CACHE_CLEAN_STATE.txt
+|   |   |   |       |   |   |-- PUBLIC_ROOT_OBJECTS.txt
+|   |   |   |       |   |   `-- RAW_ESCAPE_HATCH_SCAN.txt
+|   |   |   |       |   |-- logs/
+|   |   |   |       |   |   |-- 01_cache_get.exit.txt
+|   |   |   |       |   |   |-- 01_cache_get.log
+|   |   |   |       |   |   |-- 02_build_public_root_clean.exit.txt
+|   |   |   |       |   |   |-- 02_build_public_root_clean.log
+|   |   |   |       |   |   |-- 03_build_query_roots_incremental.exit.txt
+|   |   |   |       |   |   |-- 03_build_query_roots_incremental.log
+|   |   |   |       |   |   |-- axioms_01_FreezeAxioms.exit.txt
+|   |   |   |       |   |   |-- axioms_01_FreezeAxioms.log
+|   |   |   |       |   |   |-- axioms_02_FreezeAxiomsAuditClosure.exit.txt
+|   |   |   |       |   |   |-- axioms_02_FreezeAxiomsAuditClosure.log
+|   |   |   |       |   |   |-- axioms_03_FreezeAxiomsAX1.exit.txt
+|   |   |   |       |   |   |-- axioms_03_FreezeAxiomsAX1.log
+|   |   |   |       |   |   |-- axioms_04_FreezeAxiomsAX1Closure.exit.txt
+|   |   |   |       |   |   |-- axioms_04_FreezeAxiomsAX1Closure.log
+|   |   |   |       |   |   |-- axioms_05_FreezeAxiomsAX2.exit.txt
+|   |   |   |       |   |   |-- axioms_05_FreezeAxiomsAX2.log
+|   |   |   |       |   |   |-- axioms_06_FreezeAxiomsByproducts.exit.txt
+|   |   |   |       |   |   |-- axioms_06_FreezeAxiomsByproducts.log
+|   |   |   |       |   |   |-- axioms_07_FreezeAxiomsCanonical.exit.txt
+|   |   |   |       |   |   |-- axioms_07_FreezeAxiomsCanonical.log
+|   |   |   |       |   |   |-- axioms_08_FreezeAxiomsObstructions.exit.txt
+|   |   |   |       |   |   `-- axioms_08_FreezeAxiomsObstructions.log
+|   |   |   |       |   |-- RESULTS_MANIFEST.sha256
+|   |   |   |       |   `-- RUN_SUMMARY.json
+|   |   |   |       |-- PAPER_III_v1.4_CLEAN_BUILD_RESULTS_CCS_NOTEBOOK456_20260823_021132.zip
+|   |   |   |       |-- PAPER_III_v1.4_CLEAN_BUILD_RESULTS_CCS_NOTEBOOK456_20260823_021132.zip.sha256
+|   |   |   |       |-- README.md
+|   |   |   |       |-- VALIDATED_RUN_SUMMARY.json
+|   |   |   |       |-- VALIDATION_CONSOLE.txt
+|   |   |   |       `-- verify_clean_run.py
+|   |   |   |-- manuscript_build_logs/
+|   |   |   |   |-- v1.4/
+|   |   |   |   |   |-- en_final_pass1_console.log
+|   |   |   |   |   |-- en_final_pass2_console.log
+|   |   |   |   |   |-- en_pass1_console.log
+|   |   |   |   |   |-- en_pass2_console.log
+|   |   |   |   |   |-- en_pass3_console.log
+|   |   |   |   |   |-- es_final_pass1_console.log
+|   |   |   |   |   |-- es_final_pass2_console.log
+|   |   |   |   |   |-- es_pass1_console.log
+|   |   |   |   |   |-- es_pass2_console.log
+|   |   |   |   |   |-- es_pass3_console.log
+|   |   |   |   |   |-- es_residual_pass1_console.log
+|   |   |   |   |   |-- es_residual_pass2_console.log
+|   |   |   |   |   |-- PAPER_III_preprint_draft_v1.4_en.log
+|   |   |   |   |   |-- PAPER_III_preprint_draft_v1.4_en.pdf
+|   |   |   |   |   |-- PAPER_III_preprint_draft_v1.4_es.log
+|   |   |   |   |   `-- PAPER_III_preprint_draft_v1.4_es.pdf
+|   |   |   |   |-- LUALATEX_DIRECT_en_PASS1.txt
+|   |   |   |   |-- LUALATEX_DIRECT_en_PASS2.txt
+|   |   |   |   |-- LUALATEX_DIRECT_es_PASS1.txt
+|   |   |   |   |-- LUALATEX_DIRECT_es_PASS2.txt
+|   |   |   |   |-- LUALATEX_en_PASS1.txt
+|   |   |   |   |-- LUALATEX_en_PASS2.txt
+|   |   |   |   |-- LUALATEX_es_PASS1.txt
+|   |   |   |   |-- LUALATEX_es_PASS2.txt
+|   |   |   |   |-- LUALATEX_FINAL_en.log
+|   |   |   |   |-- LUALATEX_FINAL_es.log
+|   |   |   |   |-- LUALATEX_v1.3_CORRECTION_en_PASS1.txt
+|   |   |   |   |-- LUALATEX_v1.3_CORRECTION_en_PASS2.txt
+|   |   |   |   |-- LUALATEX_v1.3_CORRECTION_es_PASS1.txt
+|   |   |   |   |-- LUALATEX_v1.3_CORRECTION_es_PASS2.txt
+|   |   |   |   |-- LUALATEX_v1.3_CORRECTION_FINAL_en.log
+|   |   |   |   |-- LUALATEX_v1.3_CORRECTION_FINAL_es.log
+|   |   |   |   |-- LUALATEX_v1.3_CORRECTION2_es_PASS1.txt
+|   |   |   |   |-- LUALATEX_v1.3_CORRECTION2_es_PASS2.txt
+|   |   |   |   |-- LUALATEX_v1.3_CORRECTION2_FINAL_es.log
+|   |   |   |   |-- LUALATEX_v1.3_FINAL_en_PASS1.txt
+|   |   |   |   |-- LUALATEX_v1.3_FINAL_en_PASS2.txt
+|   |   |   |   |-- LUALATEX_v1.3_FINAL_en.log
+|   |   |   |   |-- LUALATEX_v1.3_FINAL_es_PASS1.txt
+|   |   |   |   |-- LUALATEX_v1.3_FINAL_es_PASS2.txt
+|   |   |   |   |-- LUALATEX_v1.3_FINAL_es.log
+|   |   |   |   |-- LUALATEX_v1.3_POSTAUDIT_en_PASS1.txt
+|   |   |   |   |-- LUALATEX_v1.3_POSTAUDIT_en_PASS2.txt
+|   |   |   |   |-- LUALATEX_v1.3_POSTAUDIT_es_PASS1.txt
+|   |   |   |   `-- LUALATEX_v1.3_POSTAUDIT_es_PASS2.txt
+|   |   |   |-- manuscript_render_qa_v1.4/
+|   |   |   |   |-- contact_en/
+|   |   |   |   |   |-- contact_01_06.jpg
+|   |   |   |   |   |-- contact_07_12.jpg
+|   |   |   |   |   |-- contact_13_18.jpg
+|   |   |   |   |   |-- contact_19_24.jpg
+|   |   |   |   |   |-- contact_25_30.jpg
+|   |   |   |   |   |-- contact_31_36.jpg
+|   |   |   |   |   |-- contact_37_42.jpg
+|   |   |   |   |   `-- contact_43_46.jpg
+|   |   |   |   |-- contact_es/
+|   |   |   |   |   |-- contact_01_06.jpg
+|   |   |   |   |   |-- contact_07_12.jpg
+|   |   |   |   |   |-- contact_13_18.jpg
+|   |   |   |   |   |-- contact_19_24.jpg
+|   |   |   |   |   |-- contact_25_30.jpg
+|   |   |   |   |   |-- contact_31_36.jpg
+|   |   |   |   |   |-- contact_37_42.jpg
+|   |   |   |   |   `-- contact_43_47.jpg
+|   |   |   |   |-- en/
+|   |   |   |   |   |-- page-01.png
+|   |   |   |   |   |-- page-02.png
+|   |   |   |   |   |-- page-03.png
+|   |   |   |   |   |-- page-04.png
+|   |   |   |   |   |-- page-05.png
+|   |   |   |   |   |-- page-06.png
+|   |   |   |   |   |-- page-07.png
+|   |   |   |   |   |-- page-08.png
+|   |   |   |   |   |-- page-09.png
+|   |   |   |   |   |-- page-10.png
+|   |   |   |   |   |-- page-11.png
+|   |   |   |   |   |-- page-12.png
+|   |   |   |   |   |-- page-13.png
+|   |   |   |   |   |-- page-14.png
+|   |   |   |   |   |-- page-15.png
+|   |   |   |   |   |-- page-16.png
+|   |   |   |   |   |-- page-17.png
+|   |   |   |   |   |-- page-18.png
+|   |   |   |   |   |-- page-19.png
+|   |   |   |   |   |-- page-20.png
+|   |   |   |   |   |-- page-21.png
+|   |   |   |   |   |-- page-22.png
+|   |   |   |   |   |-- page-23.png
+|   |   |   |   |   |-- page-24.png
+|   |   |   |   |   |-- page-25.png
+|   |   |   |   |   |-- page-26.png
+|   |   |   |   |   |-- page-27.png
+|   |   |   |   |   |-- page-28.png
+|   |   |   |   |   |-- page-29.png
+|   |   |   |   |   |-- page-30.png
+|   |   |   |   |   |-- page-31.png
+|   |   |   |   |   |-- page-32.png
+|   |   |   |   |   |-- page-33.png
+|   |   |   |   |   |-- page-34.png
+|   |   |   |   |   |-- page-35.png
+|   |   |   |   |   |-- page-36.png
+|   |   |   |   |   |-- page-37.png
+|   |   |   |   |   |-- page-38.png
+|   |   |   |   |   |-- page-39.png
+|   |   |   |   |   |-- page-40.png
+|   |   |   |   |   |-- page-41.png
+|   |   |   |   |   |-- page-42.png
+|   |   |   |   |   |-- page-43.png
+|   |   |   |   |   |-- page-44.png
+|   |   |   |   |   |-- page-45.png
+|   |   |   |   |   `-- page-46.png
+|   |   |   |   |-- es/
+|   |   |   |   |   |-- page-01.png
+|   |   |   |   |   |-- page-02.png
+|   |   |   |   |   |-- page-03.png
+|   |   |   |   |   |-- page-04.png
+|   |   |   |   |   |-- page-05.png
+|   |   |   |   |   |-- page-06.png
+|   |   |   |   |   |-- page-07.png
+|   |   |   |   |   |-- page-08.png
+|   |   |   |   |   |-- page-09.png
+|   |   |   |   |   |-- page-10.png
+|   |   |   |   |   |-- page-11.png
+|   |   |   |   |   |-- page-12.png
+|   |   |   |   |   |-- page-13.png
+|   |   |   |   |   |-- page-14.png
+|   |   |   |   |   |-- page-15.png
+|   |   |   |   |   |-- page-16.png
+|   |   |   |   |   |-- page-17.png
+|   |   |   |   |   |-- page-18.png
+|   |   |   |   |   |-- page-19.png
+|   |   |   |   |   |-- page-20.png
+|   |   |   |   |   |-- page-21.png
+|   |   |   |   |   |-- page-22.png
+|   |   |   |   |   |-- page-23.png
+|   |   |   |   |   |-- page-24.png
+|   |   |   |   |   |-- page-25.png
+|   |   |   |   |   |-- page-26.png
+|   |   |   |   |   |-- page-27.png
+|   |   |   |   |   |-- page-28.png
+|   |   |   |   |   |-- page-29.png
+|   |   |   |   |   |-- page-30.png
+|   |   |   |   |   |-- page-31.png
+|   |   |   |   |   |-- page-32.png
+|   |   |   |   |   |-- page-33.png
+|   |   |   |   |   |-- page-34.png
+|   |   |   |   |   |-- page-35.png
+|   |   |   |   |   |-- page-36.png
+|   |   |   |   |   |-- page-37.png
+|   |   |   |   |   |-- page-38.png
+|   |   |   |   |   |-- page-39.png
+|   |   |   |   |   |-- page-40.png
+|   |   |   |   |   |-- page-41.png
+|   |   |   |   |   |-- page-42.png
+|   |   |   |   |   |-- page-43.png
+|   |   |   |   |   |-- page-44.png
+|   |   |   |   |   |-- page-45.png
+|   |   |   |   |   |-- page-46.png
+|   |   |   |   |   `-- page-47.png
+|   |   |   |   `-- contact_es_residual_all.jpg
+|   |   |   |-- check_manuscript_consistency.py
+|   |   |   |-- MANUSCRIPT_CONSISTENCY_RESULTS.json
+|   |   |   |-- README.md
+|   |   |   |-- regenerate_tex_from_markdown.py
+|   |   |   `-- RENDERED_PDF_QA_REPORT_v1.4.md
+|   |   |-- 04_integrity/
+|   |   |   |-- CURRENT_TARGET_SHA256.txt
+|   |   |   `-- README.md
+|   |   |-- 05_formalization/
+|   |   |   |-- lean_v1.4_freeze/
+|   |   |   |   |-- Ax2/
+|   |   |   |   |   |-- Explore/
+|   |   |   |   |   |   |-- DrossNet.lean
+|   |   |   |   |   |   |-- MFMC.lean
+|   |   |   |   |   |   |-- NodupChain.lean
+|   |   |   |   |   |   |-- PathBalance.lean
+|   |   |   |   |   |   `-- RouteB.lean
+|   |   |   |   |   |-- PartA/
+|   |   |   |   |   |   |-- Dross.lean
+|   |   |   |   |   |   |-- DrossA7Finding.lean
+|   |   |   |   |   |   |-- DrossArith.lean
+|   |   |   |   |   |   |-- FarkasSplit.lean
+|   |   |   |   |   |   |-- Flow.lean
+|   |   |   |   |   |   |-- S2Split.lean
+|   |   |   |   |   |   |-- Spine.lean
+|   |   |   |   |   |   |-- TriangleFreeBound.lean
+|   |   |   |   |   |   `-- Wlog.lean
+|   |   |   |   |   |-- PartB/
+|   |   |   |   |   |   |-- BKLO/
+|   |   |   |   |   |   |   |-- AbsorbCalculus.lean
+|   |   |   |   |   |   |   |-- Absorber.lean
+|   |   |   |   |   |   |   |-- AbsorberCore.lean
+|   |   |   |   |   |   |   |-- AbsorberCoreAxCheck.lean
+|   |   |   |   |   |   |   |-- ApproxAxCheck.lean
+|   |   |   |   |   |   |   |-- ApproxFromPacking.lean
+|   |   |   |   |   |   |   |-- BankElim.lean
+|   |   |   |   |   |   |   |-- Bridge.lean
+|   |   |   |   |   |   |   |-- ConeGadget.lean
+|   |   |   |   |   |   |   |-- CycleChunks.lean
+|   |   |   |   |   |   |   |-- CycleMatching.lean
+|   |   |   |   |   |   |   |-- CycleMoves.lean
+|   |   |   |   |   |   |   |-- Defs.lean
+|   |   |   |   |   |   |   |-- EndgameDross.lean
+|   |   |   |   |   |   |   |-- FlexBank.lean
+|   |   |   |   |   |   |   |-- FlexBankBuild.lean
+|   |   |   |   |   |   |   |-- FlexGadget.lean
+|   |   |   |   |   |   |   |-- FriendshipHub.lean
+|   |   |   |   |   |   |   |-- Gadget.lean
+|   |   |   |   |   |   |   |-- Necklace.lean
+|   |   |   |   |   |   |   |-- NibbleBridge.lean
+|   |   |   |   |   |   |   |-- NibbleMaxDegBridge.lean
+|   |   |   |   |   |   |   |-- OctExists.lean
+|   |   |   |   |   |   |   |-- OctFlex.lean
+|   |   |   |   |   |   |   |-- Parity.lean
+|   |   |   |   |   |   |   |-- Reroute.lean
+|   |   |   |   |   |   |   |-- ReservedSplitParts.lean
+|   |   |   |   |   |   |   |-- Transfer.lean
+|   |   |   |   |   |   |   `-- Transformer.lean
+|   |   |   |   |   |   `-- Axioms.lean
+|   |   |   |   |   `-- Basic.lean
+|   |   |   |   |-- BKLO/
+|   |   |   |   |   |-- Absorber.lean
+|   |   |   |   |   |-- AbsorberExists.lean
+|   |   |   |   |   |-- AbsorberPartsInterface.lean
+|   |   |   |   |   |-- ApexCover.lean
+|   |   |   |   |   |-- ApproxTriDecompMinDegDense.lean
+|   |   |   |   |   |-- AX2BalancedMerge.lean
+|   |   |   |   |   |-- AX2BalancedMergeFixed.lean
+|   |   |   |   |   |-- AX2CompleteStep.lean
+|   |   |   |   |   |-- AX2CountedMerge.lean
+|   |   |   |   |   |-- AX2CountedMergeAllocation.lean
+|   |   |   |   |   |-- AX2CountedMergeCaps.lean
+|   |   |   |   |   |-- AX2CyclePairing.lean
+|   |   |   |   |   |-- AX2CycleRouted.lean
+|   |   |   |   |   |-- AX2FibreBalance.lean
+|   |   |   |   |   |-- AX2ForeignCapacityAudit.lean
+|   |   |   |   |   |-- AX2ForeignFibreBalance.lean
+|   |   |   |   |   |-- AX2PartnerClassLedger.lean
+|   |   |   |   |   |-- AX2PartnerClassSpread.lean
+|   |   |   |   |   |-- AX2PartnerSpreadRepaired.lean
+|   |   |   |   |   |-- AX2PrescribedClassFibre.lean
+|   |   |   |   |   |-- AX2ResizedSixH.lean
+|   |   |   |   |   |-- AX2RoutedLedger.lean
+|   |   |   |   |   |-- AX2RoutedResidual.lean
+|   |   |   |   |   |-- AX2RoutedResidualCell.lean
+|   |   |   |   |   |-- AX2RoutedResidualCellCount.lean
+|   |   |   |   |   |-- AX2RoutedResidualCellFree.lean
+|   |   |   |   |   |-- AX2RoutedResidualCellResized.lean
+|   |   |   |   |   |-- AX2RoutedResidualGen.lean
+|   |   |   |   |   |-- AX2RoutedSweepInvariant.lean
+|   |   |   |   |   |-- AX2ScaledCompleteStep.lean
+|   |   |   |   |   |-- AX2ScaledPerturbation.lean
+|   |   |   |   |   |-- AX2SweepWideAudit.lean
+|   |   |   |   |   |-- AX2ThreeClassBlock.lean
+|   |   |   |   |   |-- AxCheckCoverDown.lean
+|   |   |   |   |   |-- Backdeg.lean
+|   |   |   |   |   |-- BalancedClasses.lean
+|   |   |   |   |   |-- BalancedClassesEighth.lean
+|   |   |   |   |   |-- Basic.lean
+|   |   |   |   |   |-- BipartiteMatching.lean
+|   |   |   |   |   |-- BottomClause.lean
+|   |   |   |   |   |-- BoundedLeftover.lean
+|   |   |   |   |   |-- BoundedLeftoverConfined.lean
+|   |   |   |   |   |-- BoundedLeftoverInterface.lean
+|   |   |   |   |   |-- CellGadgets.lean
+|   |   |   |   |   |-- CellsGreedy.lean
+|   |   |   |   |   |-- CellsSpreadLevels.lean
+|   |   |   |   |   |-- CellsStep.lean
+|   |   |   |   |   |-- ClassInvolution.lean
+|   |   |   |   |   |-- ClassLeftoverBudget.lean
+|   |   |   |   |   |-- ClassPairing.lean
+|   |   |   |   |   |-- ClassPairingPerturbed.lean
+|   |   |   |   |   |-- ClusterCompletion.lean
+|   |   |   |   |   |-- ClusterObstruction.lean
+|   |   |   |   |   |-- ClusterReservoir.lean
+|   |   |   |   |   |-- ClusterWeb.lean
+|   |   |   |   |   |-- CodegreeCounting.lean
+|   |   |   |   |   |-- Core.lean
+|   |   |   |   |   |-- CoreAbsorberConf.lean
+|   |   |   |   |   |-- CoreAbsorberExists.lean
+|   |   |   |   |   |-- CoreAbsorberTarget.lean
+|   |   |   |   |   |-- CornerHexagon.lean
+|   |   |   |   |   |-- CornerLimit.lean
+|   |   |   |   |   |-- CornerRouting.lean
+|   |   |   |   |   |-- Counting.lean
+|   |   |   |   |   |-- CoverDown.lean
+|   |   |   |   |   |-- CoverDownAbsorberConfinement.lean
+|   |   |   |   |   |-- CoverDownBudget.lean
+|   |   |   |   |   |-- CoverDownBudgetAccumulate.lean
+|   |   |   |   |   |-- CoverDownBudgetInvariant.lean
+|   |   |   |   |   |-- CoverDownChooserStep.lean
+|   |   |   |   |   |-- CoverDownDiracChooser.lean
+|   |   |   |   |   |-- CoverDownEngineR3.lean
+|   |   |   |   |   |-- CoverDownEquivalence.lean
+|   |   |   |   |   |-- CoverDownFromDecomp.lean
+|   |   |   |   |   |-- CoverDownFused.lean
+|   |   |   |   |   |-- CoverDownFusedR.lean
+|   |   |   |   |   |-- CoverDownGreedyAssembly.lean
+|   |   |   |   |   |-- CoverDownGreedyExistence.lean
+|   |   |   |   |   |-- CoverDownObstruction.lean
+|   |   |   |   |   |-- CoverDownReduction.lean
+|   |   |   |   |   |-- CoverDownRefutation.lean
+|   |   |   |   |   |-- CoverDownRefutationA.lean
+|   |   |   |   |   |-- CoverDownRefutationB.lean
+|   |   |   |   |   |-- CoverDownRepaired.lean
+|   |   |   |   |   |-- CoverDownStepFaithful.lean
+|   |   |   |   |   |-- CoverDownVortexDense.lean
+|   |   |   |   |   |-- CoverDownVortexEngine.lean
+|   |   |   |   |   |-- CoverDownVortexFaithful.lean
+|   |   |   |   |   |-- CoverDownVortexRecursion.lean
+|   |   |   |   |   |-- CrossHexGadget.lean
+|   |   |   |   |   |-- CrossHexWall.lean
+|   |   |   |   |   |-- CrossPatch.lean
+|   |   |   |   |   |-- Cycles.lean
+|   |   |   |   |   |-- Degeneracy.lean
+|   |   |   |   |   |-- DescentStep.lean
+|   |   |   |   |   |-- DiracMatching.lean
+|   |   |   |   |   |-- DistributiveAbsorptionSkeleton.lean
+|   |   |   |   |   |-- Embedding.lean
+|   |   |   |   |   |-- EmbeddingConf.lean
+|   |   |   |   |   |-- EmbeddingTarget.lean
+|   |   |   |   |   |-- EngineR3.lean
+|   |   |   |   |   |-- EngineR3Assembly.lean
+|   |   |   |   |   |-- EngineR4Assembly.lean
+|   |   |   |   |   |-- EquitablePartitionDense.lean
+|   |   |   |   |   |-- Erdos81AX2Endgame.lean
+|   |   |   |   |   |-- Erdos81AX2Faithful.lean
+|   |   |   |   |   |-- Expansion.lean
+|   |   |   |   |   |-- Families.lean
+|   |   |   |   |   |-- Fano.lean
+|   |   |   |   |   |-- FiniteBernoulli.lean
+|   |   |   |   |   |-- Gadgets.lean
+|   |   |   |   |   |-- GadgetsBlk.lean
+|   |   |   |   |   |-- GreedyPairCover.lean
+|   |   |   |   |   |-- GridCompetition.lean
+|   |   |   |   |   |-- GridLabelling.lean
+|   |   |   |   |   |-- GridLabellingCells.lean
+|   |   |   |   |   |-- GridPairingClean.lean
+|   |   |   |   |   |-- GridPairingCleanCount.lean
+|   |   |   |   |   |-- GridPairingStepTwoSided.lean
+|   |   |   |   |   |-- GridPairingTwoSided.lean
+|   |   |   |   |   |-- GridPairingTwoSidedEighth.lean
+|   |   |   |   |   |-- GridRegionCard.lean
+|   |   |   |   |   |-- HasAbs.lean
+|   |   |   |   |   |-- HexagonWeb.lean
+|   |   |   |   |   |-- HexWall.lean
+|   |   |   |   |   |-- HostGraph.lean
+|   |   |   |   |   |-- Inputs.lean
+|   |   |   |   |   |-- InputsVortex.lean
+|   |   |   |   |   |-- InputsVortexSat.lean
+|   |   |   |   |   |-- InternalCover.lean
+|   |   |   |   |   |-- InvolutionMatching.lean
+|   |   |   |   |   |-- LevelDivFix.lean
+|   |   |   |   |   |-- LevelSampling.lean
+|   |   |   |   |   |-- LinkCoverAssembly.lean
+|   |   |   |   |   |-- LinkLoad.lean
+|   |   |   |   |   |-- Lists.lean
+|   |   |   |   |   |-- Main.lean
+|   |   |   |   |   |-- MainCoverDownRoute.lean
+|   |   |   |   |   |-- MainDenseUnconditional.lean
+|   |   |   |   |   |-- MainR4.lean
+|   |   |   |   |   |-- MainRepaired.lean
+|   |   |   |   |   |-- MainRepaired2.lean
+|   |   |   |   |   |-- MainRepaired3.lean
+|   |   |   |   |   |-- MainShellCoverDown.lean
+|   |   |   |   |   |-- MapTransport.lean
+|   |   |   |   |   |-- NearOptimal.lean
+|   |   |   |   |   |-- NearOptimalFaithful.lean
+|   |   |   |   |   |-- NibbleMaxDeg.lean
+|   |   |   |   |   |-- NibbleMaxDegDense.lean
+|   |   |   |   |   |-- PackingAbsorb.lean
+|   |   |   |   |   |-- PackingReservoir.lean
+|   |   |   |   |   |-- PairCovering.lean
+|   |   |   |   |   |-- PaperIIIAX2Dense.lean
+|   |   |   |   |   |-- ParityFamily.lean
+|   |   |   |   |   |-- ParityTools.lean
+|   |   |   |   |   |-- PartitionSampling.lean
+|   |   |   |   |   |-- PartSeqDenseProof.lean
+|   |   |   |   |   |-- PerturbedBlock.lean
+|   |   |   |   |   |-- Placement.lean
+|   |   |   |   |   |-- PlacementConf.lean
+|   |   |   |   |   |-- PlacementTarget.lean
+|   |   |   |   |   |-- Refutations.lean
+|   |   |   |   |   |-- Reservoir.lean
+|   |   |   |   |   |-- ReservoirDesign.lean
+|   |   |   |   |   |-- ReservoirDesignClean.lean
+|   |   |   |   |   |-- ReservoirDesignEquitable.lean
+|   |   |   |   |   |-- ReservoirDesignFull.lean
+|   |   |   |   |   |-- ReservoirDesignSharp.lean
+|   |   |   |   |   |-- ReservoirDesignSharpEighth.lean
+|   |   |   |   |   |-- ReservoirDesignStructured.lean
+|   |   |   |   |   |-- ReservoirDesignTwoSided.lean
+|   |   |   |   |   |-- ReservoirDesignTwoSidedEighth.lean
+|   |   |   |   |   |-- ReservoirLarge.lean
+|   |   |   |   |   |-- ReservoirPairing.lean
+|   |   |   |   |   |-- ReservoirPairingLarge.lean
+|   |   |   |   |   |-- ReservoirPairingRefutation.lean
+|   |   |   |   |   |-- ReservoirPairingStructured.lean
+|   |   |   |   |   |-- ReservoirRepaired.lean
+|   |   |   |   |   |-- ReservoirRepaired2.lean
+|   |   |   |   |   |-- ReservoirRepairedSat.lean
+|   |   |   |   |   |-- ReservoirSat.lean
+|   |   |   |   |   |-- RhoReconcile625.lean
+|   |   |   |   |   |-- Sampling.lean
+|   |   |   |   |   |-- ScheduleR3.lean
+|   |   |   |   |   |-- Section1010Dense.lean
+|   |   |   |   |   |-- Section1010Obstruction.lean
+|   |   |   |   |   |-- Section1010Refutation.lean
+|   |   |   |   |   |-- Section1010Sparse.lean
+|   |   |   |   |   |-- Section1011Dense.lean
+|   |   |   |   |   |-- Section1012Assembly.lean
+|   |   |   |   |   |-- Section1012Defs.lean
+|   |   |   |   |   |-- Section1012Dense.lean
+|   |   |   |   |   |-- Section1012Hier.lean
+|   |   |   |   |   |-- Section1012Reconcile.lean
+|   |   |   |   |   |-- Section1012Repaired.lean
+|   |   |   |   |   |-- Section1012RhoWindow.lean
+|   |   |   |   |   |-- Section1012Tools.lean
+|   |   |   |   |   |-- Section102K3.lean
+|   |   |   |   |   |-- Section106Set.lean
+|   |   |   |   |   |-- Section107Core.lean
+|   |   |   |   |   |-- Section10Defs.lean
+|   |   |   |   |   |-- Section10DegreeReduction.lean
+|   |   |   |   |   |-- Section10Faithful.lean
+|   |   |   |   |   |-- Section10Iteration.lean
+|   |   |   |   |   |-- Section10Lemma103.lean
+|   |   |   |   |   |-- Section10Matchings.lean
+|   |   |   |   |   |-- Section10TransformStepProof.lean
+|   |   |   |   |   |-- Section10TransformStepWeak.lean
+|   |   |   |   |   |-- Section11Cells.lean
+|   |   |   |   |   |-- Section11CellsBuild.lean
+|   |   |   |   |   |-- Section11CellsChain.lean
+|   |   |   |   |   |-- Section11CellsMain.lean
+|   |   |   |   |   |-- Section11CellsPlace.lean
+|   |   |   |   |   |-- Section11CellsSeq.lean
+|   |   |   |   |   |-- Section11CellsSpread.lean
+|   |   |   |   |   |-- Section11CellsWire.lean
+|   |   |   |   |   |-- Section72K3.lean
+|   |   |   |   |   |-- Section9Assembly.lean
+|   |   |   |   |   |-- Section9Build.lean
+|   |   |   |   |   |-- Section9Chain.lean
+|   |   |   |   |   |-- Section9Construct.lean
+|   |   |   |   |   |-- Section9Greedy.lean
+|   |   |   |   |   |-- Section9ParityK3.lean
+|   |   |   |   |   |-- Section9ParityK3Proof.lean
+|   |   |   |   |   |-- Section9Vectors.lean
+|   |   |   |   |   |-- SetGraph.lean
+|   |   |   |   |   |-- SharpLinkMargin.lean
+|   |   |   |   |   |-- SharpSweepBudget.lean
+|   |   |   |   |   |-- ShellAbsorptionConfinementWall.lean
+|   |   |   |   |   |-- ShellAbsorptionDense.lean
+|   |   |   |   |   |-- ShellAbsorptionDenseWall.lean
+|   |   |   |   |   |-- SpreadMatching.lean
+|   |   |   |   |   |-- SpreadPlanGlobal.lean
+|   |   |   |   |   |-- StarGreedyBudget.lean
+|   |   |   |   |   |-- StarMatchingTriangles.lean
+|   |   |   |   |   |-- SubtypeTransport.lean
+|   |   |   |   |   |-- Transformer.lean
+|   |   |   |   |   |-- Transport.lean
+|   |   |   |   |   |-- TransportV.lean
+|   |   |   |   |   |-- TriangleCompletion.lean
+|   |   |   |   |   |-- TriangleSums.lean
+|   |   |   |   |   |-- TriDecompDenseFromInputs.lean
+|   |   |   |   |   |-- TwoSidedClassLedger.lean
+|   |   |   |   |   |-- TwoSidedClassMatched.lean
+|   |   |   |   |   |-- TwoSidedClassMatchedInvariant.lean
+|   |   |   |   |   |-- TwoSidedClassMatchedResidual.lean
+|   |   |   |   |   |-- TwoSidedCrossSide.lean
+|   |   |   |   |   |-- TwoSidedCrossSideExc.lean
+|   |   |   |   |   |-- TwoSidedCrossSideSweep.lean
+|   |   |   |   |   |-- TwoSidedLedger.lean
+|   |   |   |   |   |-- TwoSidedLedgerObstruction.lean
+|   |   |   |   |   |-- TwoSidedLinkMargin.lean
+|   |   |   |   |   |-- TwoSidedSweep.lean
+|   |   |   |   |   |-- TwoSidedUsedClassMatched.lean
+|   |   |   |   |   |-- TwoSidedUsedClassMatchedQuarter.lean
+|   |   |   |   |   |-- TwoSidedUsedClassMatchedResized.lean
+|   |   |   |   |   |-- Veblen.lean
+|   |   |   |   |   |-- Vortex.lean
+|   |   |   |   |   |-- VortexComposition.lean
+|   |   |   |   |   |-- VortexEngine.lean
+|   |   |   |   |   |-- VortexEngineFusedR.lean
+|   |   |   |   |   |-- VortexEngineFusedR2.lean
+|   |   |   |   |   |-- VortexMain.lean
+|   |   |   |   |   |-- VortexPartition.lean
+|   |   |   |   |   |-- VortexScheduleRefutation.lean
+|   |   |   |   |   |-- VortexScheduleRepaired.lean
+|   |   |   |   |   `-- WebWall.lean
+|   |   |   |   |-- Contrib/
+|   |   |   |   |   |-- BeckFiala.lean
+|   |   |   |   |   |-- BennettBernstein.lean
+|   |   |   |   |   |-- CommonNeighbors.lean
+|   |   |   |   |   |-- ConditionalHoeffding.lean
+|   |   |   |   |   |-- CorradiCodegree.lean
+|   |   |   |   |   |-- DiracHamiltonian.lean
+|   |   |   |   |   |-- EvenGraphCycles.lean
+|   |   |   |   |   |-- FanoSTS.lean
+|   |   |   |   |   |-- FiniteBernoulli.lean
+|   |   |   |   |   |-- FreedmanBernstein.lean
+|   |   |   |   |   |-- HoeffdingUpper.lean
+|   |   |   |   |   |-- HypergeometricTail.lean
+|   |   |   |   |   |-- InjectionAboveMean.lean
+|   |   |   |   |   |-- LPStrongDuality.lean
+|   |   |   |   |   |-- MaxFlowMinCut.lean
+|   |   |   |   |   |-- SpreadMatchingDirac.lean
+|   |   |   |   |   |-- SumZeroTriangles.lean
+|   |   |   |   |   |-- TriangleDecomp.lean
+|   |   |   |   |   `-- TriangleFreeMinDegree.lean
+|   |   |   |   |-- gate_logs/
+|   |   |   |   |   `-- run_2026-08-22_CCS_NOTEBOOK456_resumed/
+|   |   |   |   |       |-- evidence/
+|   |   |   |   |       |   |-- AXIOM_GATE_SUMMARY.txt
+|   |   |   |   |       |   |-- CONFIG_HASHES_AFTER.json
+|   |   |   |   |       |   |-- CONFIG_HASHES_BEFORE.json
+|   |   |   |   |       |   |-- DEPENDENCIES.json
+|   |   |   |   |       |   |-- ENVIRONMENT.json
+|   |   |   |   |       |   |-- IMPORT_CLOSURE.json
+|   |   |   |   |       |   |-- PRE_CACHE_CLEAN_STATE.txt
+|   |   |   |   |       |   |-- PUBLIC_ROOT_OBJECTS.txt
+|   |   |   |   |       |   |-- RAW_ESCAPE_HATCH_SCAN.txt
+|   |   |   |   |       |   `-- RESUME_DISCLOSURE.txt
+|   |   |   |   |       |-- logs/
+|   |   |   |   |       |   |-- 01_cache_get.exit.txt
+|   |   |   |   |       |   |-- 01_cache_get.log
+|   |   |   |   |       |   |-- 02_build_public_root_clean.log
+|   |   |   |   |       |   |-- 02_build_public_root_resume.exit.txt
+|   |   |   |   |       |   |-- 03_build_query_roots_incremental.exit.txt
+|   |   |   |   |       |   |-- 03_build_query_roots_incremental.log
+|   |   |   |   |       |   |-- axioms_01_FreezeAxioms.exit.txt
+|   |   |   |   |       |   |-- axioms_01_FreezeAxioms.log
+|   |   |   |   |       |   |-- axioms_02_FreezeAxiomsAuditClosure.exit.txt
+|   |   |   |   |       |   |-- axioms_02_FreezeAxiomsAuditClosure.log
+|   |   |   |   |       |   |-- axioms_03_FreezeAxiomsAX1.exit.txt
+|   |   |   |   |       |   |-- axioms_03_FreezeAxiomsAX1.log
+|   |   |   |   |       |   |-- axioms_04_FreezeAxiomsAX1Closure.exit.txt
+|   |   |   |   |       |   |-- axioms_04_FreezeAxiomsAX1Closure.log
+|   |   |   |   |       |   |-- axioms_05_FreezeAxiomsAX2.exit.txt
+|   |   |   |   |       |   |-- axioms_05_FreezeAxiomsAX2.log
+|   |   |   |   |       |   |-- axioms_06_FreezeAxiomsByproducts.exit.txt
+|   |   |   |   |       |   |-- axioms_06_FreezeAxiomsByproducts.log
+|   |   |   |   |       |   |-- axioms_07_FreezeAxiomsCanonical.exit.txt
+|   |   |   |   |       |   |-- axioms_07_FreezeAxiomsCanonical.log
+|   |   |   |   |       |   |-- axioms_08_FreezeAxiomsObstructions.exit.txt
+|   |   |   |   |       |   `-- axioms_08_FreezeAxiomsObstructions.log
+|   |   |   |   |       |-- RESULTS_MANIFEST.sha256
+|   |   |   |   |       `-- RUN_SUMMARY.json
+|   |   |   |   |-- Nibble/
+|   |   |   |   |   |-- Tight/
+|   |   |   |   |   |   |-- ConflictCount.lean
+|   |   |   |   |   |   |-- CoverProb.lean
+|   |   |   |   |   |   |-- CoverVariance.lean
+|   |   |   |   |   |   |-- CoverWeight.lean
+|   |   |   |   |   |   |-- CoverWeightMoments.lean
+|   |   |   |   |   |   |-- CubeRetention.lean
+|   |   |   |   |   |   |-- CubeVariance.lean
+|   |   |   |   |   |   |-- DenseRegDischarge.lean
+|   |   |   |   |   |   |-- FlipStability.lean
+|   |   |   |   |   |   |-- LossVariance.lean
+|   |   |   |   |   |   |-- PairExcessCodegree.lean
+|   |   |   |   |   |   |-- PairWeightMean.lean
+|   |   |   |   |   |   |-- Pruning.lean
+|   |   |   |   |   |   |-- ResidualBand.lean
+|   |   |   |   |   |   |-- ResidualBandCheb.lean
+|   |   |   |   |   |   |-- RoundExplicit.lean
+|   |   |   |   |   |   |-- SafeBand.lean
+|   |   |   |   |   |   |-- SafeDegree.lean
+|   |   |   |   |   |   |-- SafeDegreeVariance.lean
+|   |   |   |   |   |   |-- SafeRoundCheb.lean
+|   |   |   |   |   |   |-- Selection.lean
+|   |   |   |   |   |   |-- SharpRound.lean
+|   |   |   |   |   |   |-- SharpRoundAssembly.lean
+|   |   |   |   |   |   |-- SharpRoundProof.lean
+|   |   |   |   |   |   |-- SharpVariance.lean
+|   |   |   |   |   |   |-- TightRound.lean
+|   |   |   |   |   |   |-- TightRoundCheb.lean
+|   |   |   |   |   |   |-- TightRoundConcrete.lean
+|   |   |   |   |   |   |-- TwoEdgeMatch.lean
+|   |   |   |   |   |   `-- TwoSidedRound.lean
+|   |   |   |   |   |-- AdaptiveAssembly.lean
+|   |   |   |   |   |-- AdaptiveRounds.lean
+|   |   |   |   |   |-- AdaptiveSchedule.lean
+|   |   |   |   |   |-- AllVertices.lean
+|   |   |   |   |   |-- Assemble.lean
+|   |   |   |   |   |-- Assembly.lean
+|   |   |   |   |   |-- AX1Closed.lean
+|   |   |   |   |   |-- AX1Reduction.lean
+|   |   |   |   |   |-- BalancedHalfLocal.lean
+|   |   |   |   |   |-- BandFifthRefutation.lean
+|   |   |   |   |   |-- Basic.lean
+|   |   |   |   |   |-- BeckFiala.lean
+|   |   |   |   |   |-- BeckFialaPairs.lean
+|   |   |   |   |   |-- Bennett.lean
+|   |   |   |   |   |-- BernoulliConfig.lean
+|   |   |   |   |   |-- BernoulliSpace.lean
+|   |   |   |   |   |-- BlockCoverPortionBudget.lean
+|   |   |   |   |   |-- BlockCoverUniformAux.lean
+|   |   |   |   |   |-- BlockSplit.lean
+|   |   |   |   |   |-- BlowUpFracNibble.lean
+|   |   |   |   |   |-- BoundedDiff.lean
+|   |   |   |   |   |-- BoxAllocationSpec.lean
+|   |   |   |   |   |-- BoxPlacementCount.lean
+|   |   |   |   |   |-- BoxPlacementEdge.lean
+|   |   |   |   |   |-- BoxPlacementGraph.lean
+|   |   |   |   |   |-- BoxPlacementNibble.lean
+|   |   |   |   |   |-- CellBoxAllocation.lean
+|   |   |   |   |   |-- CellDesignPartner.lean
+|   |   |   |   |   |-- Chebyshev.lean
+|   |   |   |   |   |-- ClusterTripleLP.lean
+|   |   |   |   |   |-- ClusterTripleLPCount.lean
+|   |   |   |   |   |-- CoarseCellAssembly.lean
+|   |   |   |   |   |-- CoarseCellBlocks.lean
+|   |   |   |   |   |-- CoarseCellCoupled.lean
+|   |   |   |   |   |-- CoarseCellDiagonalDesign.lean
+|   |   |   |   |   |-- CoarseCellLatinFill.lean
+|   |   |   |   |   |-- CoarseCellShapeGate.lean
+|   |   |   |   |   |-- CompleteHypergraph.lean
+|   |   |   |   |   |-- Concentration.lean
+|   |   |   |   |   |-- CondHoeffding.lean
+|   |   |   |   |   |-- Conflict.lean
+|   |   |   |   |   |-- Convergence.lean
+|   |   |   |   |   |-- CoreGapAX1.lean
+|   |   |   |   |   |-- CoreGapAX1Gate.lean
+|   |   |   |   |   |-- CoreGapBlockAlloc.lean
+|   |   |   |   |   |-- CoreGapBlockCover.lean
+|   |   |   |   |   |-- CoreGapBlockCoverCoupled.lean
+|   |   |   |   |   |-- CoreGapBlockCoverGate.lean
+|   |   |   |   |   |-- CoreGapBlockCoverRefute.lean
+|   |   |   |   |   |-- CoreGapBlockCoverUniform.lean
+|   |   |   |   |   |-- CoreGapBlockShape.lean
+|   |   |   |   |   |-- CoreGapBlowUp.lean
+|   |   |   |   |   |-- CoreGapBlowUpGap.lean
+|   |   |   |   |   |-- CoreGapBlowUpSelect.lean
+|   |   |   |   |   |-- CoreGapClusterCapacity.lean
+|   |   |   |   |   |-- CoreGapClusterHost.lean
+|   |   |   |   |   |-- CoreGapClusterLP.lean
+|   |   |   |   |   |-- CoreGapClusterPackingRefute.lean
+|   |   |   |   |   |-- CoreGapCoverCapacity.lean
+|   |   |   |   |   |-- CoreGapDensePairs.lean
+|   |   |   |   |   |-- CoreGapDesign.lean
+|   |   |   |   |   |-- CoreGapDesignGate.lean
+|   |   |   |   |   |-- CoreGapDesignLocal.lean
+|   |   |   |   |   |-- CoreGapGridLocalResidual.lean
+|   |   |   |   |   |-- CoreGapGridResidual.lean
+|   |   |   |   |   |-- CoreGapNearComplete.lean
+|   |   |   |   |   |-- CoreGapNearCompleteGate.lean
+|   |   |   |   |   |-- CoreGapOpenRange.lean
+|   |   |   |   |   |-- CoreGapPackingEdges.lean
+|   |   |   |   |   |-- CoreGapPackingSplit.lean
+|   |   |   |   |   |-- CoreGapPrune.lean
+|   |   |   |   |   |-- CoreGapPruneLocal.lean
+|   |   |   |   |   |-- CoreGapRectPack.lean
+|   |   |   |   |   |-- CoreGapReducedPair.lean
+|   |   |   |   |   |-- CoreGapRegularCover.lean
+|   |   |   |   |   |-- CoreGapRegularDecomp.lean
+|   |   |   |   |   |-- CoreGapRegularDecompGate.lean
+|   |   |   |   |   |-- CoreGapRegularDegrees.lean
+|   |   |   |   |   |-- CoreGapRegularDegreesGate.lean
+|   |   |   |   |   |-- CoreGapRegularFamily.lean
+|   |   |   |   |   |-- CoreGapRegularFamilyGate.lean
+|   |   |   |   |   |-- CoreGapRemoval.lean
+|   |   |   |   |   |-- CoreGapRemovalGate.lean
+|   |   |   |   |   |-- CoreGapSubblock.lean
+|   |   |   |   |   |-- CoreGapTripleDegrees.lean
+|   |   |   |   |   |-- CoreGapTripleDegreesGate.lean
+|   |   |   |   |   |-- CoreGapTripleShape.lean
+|   |   |   |   |   |-- CoreGapUniformCodegree.lean
+|   |   |   |   |   |-- CoupledDyadicBoxRoute.lean
+|   |   |   |   |   |-- CoupledDyadicGate.lean
+|   |   |   |   |   |-- CoupledDyadicScaled.lean
+|   |   |   |   |   |-- Coverage.lean
+|   |   |   |   |   |-- Covered.lean
+|   |   |   |   |   |-- CoveredExpectation.lean
+|   |   |   |   |   |-- DegreeDecay.lean
+|   |   |   |   |   |-- DegreeDecayFreedman.lean
+|   |   |   |   |   |-- DegreeDecayGeneric.lean
+|   |   |   |   |   |-- DegreeDecayMcDiarmid.lean
+|   |   |   |   |   |-- DenseApproxDeg.lean
+|   |   |   |   |   |-- DenseGapAX1.lean
+|   |   |   |   |   |-- DenseGlobalLeftoverBelowHalf.lean
+|   |   |   |   |   |-- DenseGlobalLeftoverConst.lean
+|   |   |   |   |   |-- DenseGlobalLeftoverSharp.lean
+|   |   |   |   |   |-- DenseGlobalLeftoverThird.lean
+|   |   |   |   |   |-- DenseGlobalRoutes.lean
+|   |   |   |   |   |-- DenseNearRegular.lean
+|   |   |   |   |   |-- DenseNearRegularGate.lean
+|   |   |   |   |   |-- DenseTriangleNibbleDegAll.lean
+|   |   |   |   |   |-- DenseTriangleNibbleDegHalf.lean
+|   |   |   |   |   |-- DenseTriangleNibbleDegProof.lean
+|   |   |   |   |   |-- DenseTriNibbleMaxDeg.lean
+|   |   |   |   |   |-- DensityBandLocal.lean
+|   |   |   |   |   |-- DepLocal.lean
+|   |   |   |   |   |-- Discharge.lean
+|   |   |   |   |   |-- DischargeSeq.lean
+|   |   |   |   |   |-- DoubleSwap.lean
+|   |   |   |   |   |-- DrossCutArith.lean
+|   |   |   |   |   |-- DrossCutCert.lean
+|   |   |   |   |   |-- DrossCutCount.lean
+|   |   |   |   |   |-- DrossCutPartners.lean
+|   |   |   |   |   |-- DrossCutThresholdTight.lean
+|   |   |   |   |   |-- DrossFlowDense.lean
+|   |   |   |   |   |-- DrossFlowDenseNibble.lean
+|   |   |   |   |   |-- DrossFlowRoute.lean
+|   |   |   |   |   |-- DrossFractional.lean
+|   |   |   |   |   |-- DrossGadget.lean
+|   |   |   |   |   |-- DrossLinkRouting.lean
+|   |   |   |   |   |-- DrossResidual.lean
+|   |   |   |   |   |-- DrossSplitGraph.lean
+|   |   |   |   |   |-- DrossSpread.lean
+|   |   |   |   |   |-- DrossTransfer.lean
+|   |   |   |   |   |-- Expectation.lean
+|   |   |   |   |   |-- FlowFeasibility.lean
+|   |   |   |   |   |-- FracNibbleDense.lean
+|   |   |   |   |   |-- FracNibbleGate.lean
+|   |   |   |   |   |-- FracNibbleLE.lean
+|   |   |   |   |   |-- FracNibbleMultiScale.lean
+|   |   |   |   |   |-- FracNibbleRefutation.lean
+|   |   |   |   |   |-- FracNibbleRepaired.lean
+|   |   |   |   |   |-- FracNibbleSlack.lean
+|   |   |   |   |   |-- FracNibbleSlackR.lean
+|   |   |   |   |   |-- FracPackingDense.lean
+|   |   |   |   |   |-- FracRounding.lean
+|   |   |   |   |   |-- Freedman.lean
+|   |   |   |   |   |-- FreedmanCoeffRefutation.lean
+|   |   |   |   |   |-- FreedmanParamsObstruction.lean
+|   |   |   |   |   |-- GoodEvent.lean
+|   |   |   |   |   |-- GoodRetentionClean.lean
+|   |   |   |   |   |-- GoodRetentionFinset.lean
+|   |   |   |   |   |-- GoodRetentionFreedman.lean
+|   |   |   |   |   |-- GoodRetentionMcDiarmid.lean
+|   |   |   |   |   |-- GoodRound.lean
+|   |   |   |   |   |-- GoodRoundFreedman.lean
+|   |   |   |   |   |-- GoodRoundMcDiarmid.lean
+|   |   |   |   |   |-- Greedy.lean
+|   |   |   |   |   |-- GreedyFracMatching.lean
+|   |   |   |   |   |-- GridDesign.lean
+|   |   |   |   |   |-- GridDesignRect.lean
+|   |   |   |   |   |-- GridLineDesign.lean
+|   |   |   |   |   |-- GridScale.lean
+|   |   |   |   |   |-- GridShiftBalance.lean
+|   |   |   |   |   |-- GridShiftUnique.lean
+|   |   |   |   |   |-- GridTripleDesign.lean
+|   |   |   |   |   |-- GridTripleDesignRect.lean
+|   |   |   |   |   |-- Interface.lean
+|   |   |   |   |   |-- InvariantDegree.lean
+|   |   |   |   |   |-- Iteration.lean
+|   |   |   |   |   |-- IterationSeq.lean
+|   |   |   |   |   |-- K4Obstruction.lean
+|   |   |   |   |   |-- KraftPackLocal.lean
+|   |   |   |   |   |-- LinkSolve.lean
+|   |   |   |   |   |-- LoadBalance.lean
+|   |   |   |   |   |-- LowDegreeQuadraticFrac.lean
+|   |   |   |   |   |-- LPDuality.lean
+|   |   |   |   |   |-- MarkovVertices.lean
+|   |   |   |   |   |-- McDiarmid.lean
+|   |   |   |   |   |-- McDiarmidFull.lean
+|   |   |   |   |   |-- McDiarmidMarginal.lean
+|   |   |   |   |   |-- McDiarmidResidual.lean
+|   |   |   |   |   |-- McDiarmidResidualCount.lean
+|   |   |   |   |   |-- McDiarmidResidualSharp.lean
+|   |   |   |   |   |-- McDiarmidStep.lean
+|   |   |   |   |   |-- McDiarmidStep2.lean
+|   |   |   |   |   |-- McDiarmidTail.lean
+|   |   |   |   |   |-- Measurable.lean
+|   |   |   |   |   |-- MostAssembly.lean
+|   |   |   |   |   |-- MostAssemblyFreedman.lean
+|   |   |   |   |   |-- NearComplete.lean
+|   |   |   |   |   |-- NearCompleteFrac.lean
+|   |   |   |   |   |-- NearCompleteNibble.lean
+|   |   |   |   |   |-- NearRegObligationRefutation.lean
+|   |   |   |   |   |-- NibbleGapReduction.lean
+|   |   |   |   |   |-- NibbleRoundProbLocal.lean
+|   |   |   |   |   |-- NibbleStrategy.lean
+|   |   |   |   |   |-- NibbleStrategyFreedman.lean
+|   |   |   |   |   |-- NibbleStrategyMcDiarmid.lean
+|   |   |   |   |   |-- Nu3StarCover.lean
+|   |   |   |   |   |-- OneRoundGood.lean
+|   |   |   |   |   |-- PadCount.lean
+|   |   |   |   |   |-- PadHypergraph.lean
+|   |   |   |   |   |-- PadRounding.lean
+|   |   |   |   |   |-- PaperImprovements.lean
+|   |   |   |   |   |-- ParamsCoreRefutation.lean
+|   |   |   |   |   |-- Prelude.lean
+|   |   |   |   |   |-- Pruning.lean
+|   |   |   |   |   |-- Regular.lean
+|   |   |   |   |   |-- RegularityBad.lean
+|   |   |   |   |   |-- RegularityBadBound.lean
+|   |   |   |   |   |-- RegularityBadFreedman.lean
+|   |   |   |   |   |-- RegularityBadMcDiarmid.lean
+|   |   |   |   |   |-- RegularityBadTwoSided.lean
+|   |   |   |   |   |-- RegularMost.lean
+|   |   |   |   |   |-- ResidualBernstein.lean
+|   |   |   |   |   |-- ResidualBoundedDiff.lean
+|   |   |   |   |   |-- ResidualBoundedDiffSharp.lean
+|   |   |   |   |   |-- ResidualCodegree.lean
+|   |   |   |   |   |-- ResidualCondVariance.lean
+|   |   |   |   |   |-- ResidualDegree.lean
+|   |   |   |   |   |-- ResidualDegreeUpper.lean
+|   |   |   |   |   |-- ResidualFreedman.lean
+|   |   |   |   |   |-- ResidualFreedmanTail.lean
+|   |   |   |   |   |-- Round.lean
+|   |   |   |   |   |-- RoundConcentration.lean
+|   |   |   |   |   |-- RoundConcentrationTwoSided.lean
+|   |   |   |   |   |-- RoundConflict.lean
+|   |   |   |   |   |-- RoundCover.lean
+|   |   |   |   |   |-- RoundCoverFraction.lean
+|   |   |   |   |   |-- RoundInvariant.lean
+|   |   |   |   |   |-- RoundOracleKernel.lean
+|   |   |   |   |   |-- RoundOracleLocal.lean
+|   |   |   |   |   |-- RoundProbRefutation.lean
+|   |   |   |   |   |-- RoundStepRefutation.lean
+|   |   |   |   |   |-- SpreadNecessary.lean
+|   |   |   |   |   |-- SpreadNibble.lean
+|   |   |   |   |   |-- StarAugment.lean
+|   |   |   |   |   |-- StarCount.lean
+|   |   |   |   |   |-- StarCounterexample.lean
+|   |   |   |   |   |-- StarExchange.lean
+|   |   |   |   |   |-- StarMoves.lean
+|   |   |   |   |   |-- StrongDualityInst.lean
+|   |   |   |   |   |-- Subgamma.lean
+|   |   |   |   |   |-- SumEstimate.lean
+|   |   |   |   |   |-- SumEstimateTotal.lean
+|   |   |   |   |   |-- Survival.lean
+|   |   |   |   |   |-- TightAssembly.lean
+|   |   |   |   |   |-- TightNibble.lean
+|   |   |   |   |   |-- TightSchedule.lean
+|   |   |   |   |   |-- TriangleCapacity.lean
+|   |   |   |   |   |-- TripleEdges.lean
+|   |   |   |   |   |-- TripleEdgesThree.lean
+|   |   |   |   |   |-- UniformRounding.lean
+|   |   |   |   |   |-- VarianceBound.lean
+|   |   |   |   |   |-- VarianceEstimate.lean
+|   |   |   |   |   |-- WeightedNibble.lean
+|   |   |   |   |   |-- WeightedNibbleGate.lean
+|   |   |   |   |   |-- WeightedNibbleRestrict.lean
+|   |   |   |   |   |-- WeightedSpreadNibble.lean
+|   |   |   |   |   |-- Wiring.lean
+|   |   |   |   |   |-- WitnessPair.lean
+|   |   |   |   |   |-- Yuster.lean
+|   |   |   |   |   |-- YusterAX1.lean
+|   |   |   |   |   |-- YusterBridgeFrac.lean
+|   |   |   |   |   |-- YusterBridgePacking.lean
+|   |   |   |   |   |-- YusterCapture.lean
+|   |   |   |   |   |-- YusterCaptureCount.lean
+|   |   |   |   |   |-- YusterCounting.lean
+|   |   |   |   |   |-- YusterEdge.lean
+|   |   |   |   |   |-- YusterEdgeDegree.lean
+|   |   |   |   |   |-- YusterEdgeType.lean
+|   |   |   |   |   |-- YusterFracUpper.lean
+|   |   |   |   |   |-- YusterGap.lean
+|   |   |   |   |   |-- YusterMost.lean
+|   |   |   |   |   |-- YusterNibble.lean
+|   |   |   |   |   |-- YusterNibbleApply.lean
+|   |   |   |   |   |-- YusterNu3.lean
+|   |   |   |   |   |-- YusterRegular.lean
+|   |   |   |   |   |-- YusterRegularMost.lean
+|   |   |   |   |   |-- YusterSubBridge.lean
+|   |   |   |   |   |-- YusterSubDegree.lean
+|   |   |   |   |   |-- YusterSubDegreeChar.lean
+|   |   |   |   |   |-- YusterSubRegular.lean
+|   |   |   |   |   `-- YusterSzemeredi.lean
+|   |   |   |   |-- PaperIII/
+|   |   |   |   |   |-- Contrib/
+|   |   |   |   |   |   |-- Submission/
+|   |   |   |   |   |   |   |-- Dirac.lean
+|   |   |   |   |   |   |   `-- Matching.lean
+|   |   |   |   |   |   |-- DiracMathlib.lean
+|   |   |   |   |   |   `-- MatchingMathlib.lean
+|   |   |   |   |   |-- Addenda.lean
+|   |   |   |   |   |-- AX.lean
+|   |   |   |   |   |-- AX1Bridge.lean
+|   |   |   |   |   |-- AX1NibbleBridge.lean
+|   |   |   |   |   |-- AX2Bridge.lean
+|   |   |   |   |   |-- AXDefs.lean
+|   |   |   |   |   |-- AxiomFreeGate.lean
+|   |   |   |   |   |-- CanonicalTrianglePacking.lean
+|   |   |   |   |   |-- CanonicalTrianglePackingGate.lean
+|   |   |   |   |   |-- CleanAssemblyGate.lean
+|   |   |   |   |   |-- CliquePartition.lean
+|   |   |   |   |   |-- CompleteSplitExact.lean
+|   |   |   |   |   |-- CorridorDefs.lean
+|   |   |   |   |   |-- Counting.lean
+|   |   |   |   |   |-- Defs.lean
+|   |   |   |   |   |-- DiracHamilton.lean
+|   |   |   |   |   |-- DiracMatching.lean
+|   |   |   |   |   |-- Duality.lean
+|   |   |   |   |   |-- E_3_1_LP.lean
+|   |   |   |   |   |-- E_3_1_upper.lean
+|   |   |   |   |   |-- E_3_1_values.lean
+|   |   |   |   |   |-- E_4_2_algebra.lean
+|   |   |   |   |   |-- E_4_2.lean
+|   |   |   |   |   |-- E_4_3.lean
+|   |   |   |   |   |-- E_4_agg.lean
+|   |   |   |   |   |-- E_5.lean
+|   |   |   |   |   |-- E_6.lean
+|   |   |   |   |   |-- E_7.lean
+|   |   |   |   |   |-- E_8_Core.lean
+|   |   |   |   |   |-- E_8_Divisible.lean
+|   |   |   |   |   |-- E_8.lean
+|   |   |   |   |   |-- E_B.lean
+|   |   |   |   |   |-- E_D.lean
+|   |   |   |   |   |-- Factorization.lean
+|   |   |   |   |   |-- Identities.lean
+|   |   |   |   |   |-- Main.lean
+|   |   |   |   |   |-- MainNibble.lean
+|   |   |   |   |   |-- Obstructions.lean
+|   |   |   |   |   |-- OfPartition.lean
+|   |   |   |   |   |-- PackingCorollaries.lean
+|   |   |   |   |   |-- PaperImprovements.lean
+|   |   |   |   |   |-- PaperImprovementsGate.lean
+|   |   |   |   |   |-- Prop_10_1.lean
+|   |   |   |   |   |-- PublicAPI.lean
+|   |   |   |   |   |-- SharpRoundAssembly.lean
+|   |   |   |   |   |-- ShiftedCenterRobust.lean
+|   |   |   |   |   |-- SplitEdges.lean
+|   |   |   |   |   `-- Theorem_1_1_Final.lean
+|   |   |   |   |-- BUILD_INPUT_METADATA.json
+|   |   |   |   |-- ESCAPE_HATCH_ASSESSMENT.md
+|   |   |   |   |-- FREEZE_METADATA.json
+|   |   |   |   |-- FREEZE_REPORT.md
+|   |   |   |   |-- FreezeAxioms.lean
+|   |   |   |   |-- FreezeAxiomsAuditClosure.lean
+|   |   |   |   |-- FreezeAxiomsAX1.lean
+|   |   |   |   |-- FreezeAxiomsAX1Closure.lean
+|   |   |   |   |-- FreezeAxiomsAX2.lean
+|   |   |   |   |-- FreezeAxiomsByproducts.lean
+|   |   |   |   |-- FreezeAxiomsCanonical.lean
+|   |   |   |   |-- FreezeAxiomsObstructions.lean
+|   |   |   |   |-- lake-manifest.json
+|   |   |   |   |-- lakefile.toml
+|   |   |   |   |-- LEAN_FINDINGS_CLOSURE_MATRIX.md
+|   |   |   |   |-- lean-toolchain
+|   |   |   |   |-- MATHLIB_REPRODUCTION_PROTOCOL.md
+|   |   |   |   |-- PACKAGE_MANIFEST.sha256
+|   |   |   |   |-- PAPER_III_lean_v1.4_freeze.zip
+|   |   |   |   |-- PAPER_III_lean_v1.4_freeze.zip.sha256
+|   |   |   |   |-- PAPERIII_SORRYFREE_STATUS.md
+|   |   |   |   |-- PaperIII.lean
+|   |   |   |   |-- SOURCE_DELTA_v1.3_TO_v1.4.md
+|   |   |   |   |-- SOURCE_MANIFEST.sha256
+|   |   |   |   `-- TREE.txt
+|   |   |   `-- README.md
+|   |   |-- .gitattributes
+|   |   |-- .gitignore
+|   |   |-- CHANGELOG_v1.3.md
+|   |   |-- CHANGELOG_v1.4.md
+|   |   |-- DRAFT_METADATA.yml
+|   |   |-- DRAFT_NOTES.md
+|   |   `-- README.md
+|   `-- unpublished_local_preprint_v1.0/
+|       |-- 01_manuscript/
+|       |   |-- figures/
+|       |   |   `-- .gitkeep
+|       |   |-- paperIII_figures_v0.9.12/
+|       |   |   |-- fig1_complete_split_extremizer_en.png
+|       |   |   |-- fig1_complete_split_extremizer_es.png
+|       |   |   |-- fig2_alpha_regimes_en.png
+|       |   |   `-- fig2_alpha_regimes_es.png
+|       |   |-- PAPER_III_preprint_v1.0_es.md
+|       |   |-- PAPER_III_preprint_v1.0_es.pdf
+|       |   |-- PAPER_III_preprint_v1.0_es.tex
+|       |   |-- PAPER_III_preprint_v1.0.md
+|       |   |-- PAPER_III_preprint_v1.0.pdf
+|       |   `-- PAPER_III_preprint_v1.0.tex
+|       |-- 02_validation/
+|       |   |-- 02_IA_ADVERSARIAL_AUDITS/
+|       |   |   `-- 20_EVIDENCE/
+|       |   |       `-- .gitkeep
+|       |   |-- IA_ADVERSARIAL_AUDIT/
+|       |   |   |-- AI_ADVERSARIAL_AUDIT_v1.0_PLUS_LEAN/
+|       |   |   |   |-- INPUTS/
+|       |   |   |   |   |-- Papers_I_II_III_v1.1.5_near_final_editorial/
+|       |   |   |   |   |   |-- ADVERSARIAL_AI_AUDIT_HANDOFF.md
+|       |   |   |   |   |   |-- CHANGELOG_v1.1.4_to_v1.1.5.md
+|       |   |   |   |   |   |-- MANIFEST.md
+|       |   |   |   |   |   |-- PAPER_I_preprint_v1.1.5_near_final_editorial_en.md
+|       |   |   |   |   |   |-- PAPER_II_preprint_v1.1.5_near_final_editorial_en.md
+|       |   |   |   |   |   |-- PAPER_III_preprint_v1.1.5_near_final_editorial_en.md
+|       |   |   |   |   |   |-- SEMANTIC_INTEGRITY_REPORT_v1.1.5.md
+|       |   |   |   |   |   `-- SHA256.txt
+|       |   |   |   |   `-- Papers_I_II_III_v1.1.6_near_final_editorial/
+|       |   |   |   |       |-- ADVERSARIAL_AI_AUDIT_HANDOFF.md
+|       |   |   |   |       |-- CHANGELOG_v1.1.4_to_v1.1.5.md
+|       |   |   |   |       |-- CHANGELOG_v1.1.5_to_v1.1.6.md
+|       |   |   |   |       |-- DELTA_AUDIT_REQUEST_v1.1.6.md
+|       |   |   |   |       |-- EDITOR_NOTE_PAPER_III_AFTER_ADVERSARIAL_AUDIT.md
+|       |   |   |   |       |-- MANIFEST.md
+|       |   |   |   |       |-- PAPER_I_preprint_v1.1.5_near_final_editorial_en.md
+|       |   |   |   |       |-- PAPER_II_preprint_v1.1.5_near_final_editorial_en.md
+|       |   |   |   |       |-- PAPER_III_preprint_v1.1.6_near_final_editorial_en.md
+|       |   |   |   |       |-- SEMANTIC_INTEGRITY_REPORT_v1.1.5.md
+|       |   |   |   |       |-- SEMANTIC_INTEGRITY_REPORT_v1.1.6.md
+|       |   |   |   |       `-- SHA256.txt
+|       |   |   |   |-- RESULTS/
+|       |   |   |   |   |-- blockA_claim_faithfulness/
+|       |   |   |   |   |   |-- results/
+|       |   |   |   |   |   |-- scripts/
+|       |   |   |   |   |   |-- certificate_blockA.pdf
+|       |   |   |   |   |   `-- README.md
+|       |   |   |   |   |-- blockB_AX1_AX2_literature_scope/
+|       |   |   |   |   |   |-- results/
+|       |   |   |   |   |   |-- scripts/
+|       |   |   |   |   |   |-- certificate_blockB.pdf
+|       |   |   |   |   |   `-- README.md
+|       |   |   |   |   |-- blockC_bulk_sparse_corridor_proof_attack/
+|       |   |   |   |   |   |-- results/
+|       |   |   |   |   |   |-- scripts/
+|       |   |   |   |   |   |-- certificate_blockC.pdf
+|       |   |   |   |   |   `-- README.md
+|       |   |   |   |   |-- blockD_counterexample_and_boundary_search/
+|       |   |   |   |   |   |-- results/
+|       |   |   |   |   |   |-- scripts/
+|       |   |   |   |   |   |-- certificate_blockD.pdf
+|       |   |   |   |   |   `-- README.md
+|       |   |   |   |   |-- blockE_independent_computation/
+|       |   |   |   |   |   |-- results/
+|       |   |   |   |   |   |   `-- verify_paper3_output.txt
+|       |   |   |   |   |   |-- scripts/
+|       |   |   |   |   |   |   `-- verify_paper3.py
+|       |   |   |   |   |   |-- certificate_blockE.pdf
+|       |   |   |   |   |   `-- README.md
+|       |   |   |   |   |-- blockF_audit_the_internal_audit/
+|       |   |   |   |   |   |-- results/
+|       |   |   |   |   |   |-- scripts/
+|       |   |   |   |   |   |-- certificate_blockF.pdf
+|       |   |   |   |   |   `-- README.md
+|       |   |   |   |   |-- blockG_lean_verification/
+|       |   |   |   |   |   |-- results/
+|       |   |   |   |   |   |   |-- AuditGates_PaperIII.lean
+|       |   |   |   |   |   |   |-- axiom_gates.txt
+|       |   |   |   |   |   |   |-- escape_hatch_scan.txt
+|       |   |   |   |   |   |   `-- lake_build.log
+|       |   |   |   |   |   |-- scripts/
+|       |   |   |   |   |   |-- certificate_blockG.pdf
+|       |   |   |   |   |   `-- README.md
+|       |   |   |   |   |-- DELTA_v1.1.6/
+|       |   |   |   |   |   |-- evidence/
+|       |   |   |   |   |   |   |-- freeze_integrity.txt
+|       |   |   |   |   |   |   |-- manuscript_sha256.txt
+|       |   |   |   |   |   |   `-- manuscript_v115_to_v116.diff
+|       |   |   |   |   |   |-- DELTA_AUDIT_RESULT_v1.1.6.md
+|       |   |   |   |   |   `-- DELTA_AUDIT_RESULT_v1.1.6.pdf
+|       |   |   |   |   |-- findings/
+|       |   |   |   |   |   `-- FINDINGS.csv
+|       |   |   |   |   |-- received_inputs/
+|       |   |   |   |   |   |-- PAPER_III_preprint_v1.1.5_near_final_editorial_en.md
+|       |   |   |   |   |   `-- SHA256.txt
+|       |   |   |   |   |-- ADVERSARIAL_AUDIT_REPORT.md
+|       |   |   |   |   |-- ADVERSARIAL_AUDIT_REPORT.pdf
+|       |   |   |   |   |-- ENVIRONMENT.md
+|       |   |   |   |   |-- EXTERNAL_AUDIT_RESULT.zip
+|       |   |   |   |   |-- EXTERNAL_AUDIT_RESULT.zip.sha256
+|       |   |   |   |   |-- README.md
+|       |   |   |   |   |-- received_inputs.sha256
+|       |   |   |   |   `-- SHA256_MANIFEST.txt
+|       |   |   |   |-- SCRIPTS/
+|       |   |   |   |   `-- run_lean_gates.ps1
+|       |   |   |   |-- DELIVERABLE_SPEC.md
+|       |   |   |   |-- LEAN_VERIFICATION_PROTOCOL.md
+|       |   |   |   `-- README.md
+|       |   |   |-- EXTERNAL_ADVERSARIAL_AUDIT_PACKAGE/
+|       |   |   |   |-- CLAIMS/
+|       |   |   |   |   |-- PAPER_v0.9.5/
+|       |   |   |   |   |   |-- en/
+|       |   |   |   |   |   |   |-- PAPER_III_split_lineal_v0.9.5_review_en.md
+|       |   |   |   |   |   |   |-- PAPER_III_split_lineal_v0.9.5_review_en.pdf
+|       |   |   |   |   |   |   `-- PAPER_III_split_lineal_v0.9.5_review_en.tex
+|       |   |   |   |   |   |-- es/
+|       |   |   |   |   |   |   |-- PAPER_III_split_lineal_v0.9.5_review_es.md
+|       |   |   |   |   |   |   |-- PAPER_III_split_lineal_v0.9.5_review_es.pdf
+|       |   |   |   |   |   |   `-- PAPER_III_split_lineal_v0.9.5_review_es.tex
+|       |   |   |   |   |   |-- figures/
+|       |   |   |   |   |   |   |-- fig1_complete_split_extremizer_en.png
+|       |   |   |   |   |   |   |-- fig1_complete_split_extremizer_en.svg
+|       |   |   |   |   |   |   |-- fig1_complete_split_extremizer_es.png
+|       |   |   |   |   |   |   |-- fig1_complete_split_extremizer_es.svg
+|       |   |   |   |   |   |   |-- fig2_alpha_regimes_en.png
+|       |   |   |   |   |   |   |-- fig2_alpha_regimes_en.svg
+|       |   |   |   |   |   |   |-- fig2_alpha_regimes_es.png
+|       |   |   |   |   |   |   `-- fig2_alpha_regimes_es.svg
+|       |   |   |   |   |   |-- PAPER_III_split_lineal_v0.9.5_review_SHA256.txt
+|       |   |   |   |   |   `-- README.txt
+|       |   |   |   |   |-- LEDGER.md
+|       |   |   |   |   `-- STATEMENT_OF_CLAIMS.md
+|       |   |   |   |-- MANIFESTO/
+|       |   |   |   |   |-- ADVERSARIAL_CHECKLIST.md
+|       |   |   |   |   |-- AUDIT_MANDATE.md
+|       |   |   |   |   `-- DELIVERABLE_SPEC.md
+|       |   |   |   |-- OUR_INTERNAL_AUDIT/
+|       |   |   |   |   |-- block01_algebraic_identities/
+|       |   |   |   |   |   |-- results/
+|       |   |   |   |   |   |   `-- identities_results.txt
+|       |   |   |   |   |   |-- certificate_block01.pdf
+|       |   |   |   |   |   |-- README.md
+|       |   |   |   |   |   `-- verify_identities.py
+|       |   |   |   |   |-- block02_common_profile_LP/
+|       |   |   |   |   |   |-- results/
+|       |   |   |   |   |   |   `-- common_profile_LP_results.txt
+|       |   |   |   |   |   |-- certificate_block02.pdf
+|       |   |   |   |   |   |-- README.md
+|       |   |   |   |   |   `-- verify_common_profile_LP.py
+|       |   |   |   |   |-- block03_unified_margin/
+|       |   |   |   |   |   |-- results/
+|       |   |   |   |   |   |   `-- margin_results.txt
+|       |   |   |   |   |   |-- certificate_block03.pdf
+|       |   |   |   |   |   |-- README.md
+|       |   |   |   |   |   `-- verify_margin.py
+|       |   |   |   |   |-- block04_corridor_ILP/
+|       |   |   |   |   |   |-- results/
+|       |   |   |   |   |   |   `-- corridor_ILP_results.txt
+|       |   |   |   |   |   |-- certificate_block04.pdf
+|       |   |   |   |   |   |-- README.md
+|       |   |   |   |   |   `-- verify_corridor_ILP.py
+|       |   |   |   |   |-- common/
+|       |   |   |   |   |   |-- __pycache__/
+|       |   |   |   |   |   |-- audit_formulas.py
+|       |   |   |   |   |   `-- make_certificate.py
+|       |   |   |   |   |-- AUDIT_FINAL_REPORT.md
+|       |   |   |   |   |-- AUDIT_FINAL_REPORT.pdf
+|       |   |   |   |   |-- block01_algebraic_identities.zip
+|       |   |   |   |   |-- block01_algebraic_identities.zip.sha256
+|       |   |   |   |   |-- block02_common_profile_LP.zip
+|       |   |   |   |   |-- block02_common_profile_LP.zip.sha256
+|       |   |   |   |   |-- block03_unified_margin.zip
+|       |   |   |   |   |-- block03_unified_margin.zip.sha256
+|       |   |   |   |   |-- block04_corridor_ILP.zip
+|       |   |   |   |   |-- block04_corridor_ILP.zip.sha256
+|       |   |   |   |   |-- build_audit_artifacts.py
+|       |   |   |   |   |-- make_master_certificate.py
+|       |   |   |   |   |-- README.md
+|       |   |   |   |   `-- SHA256_MANIFEST.txt
+|       |   |   |   |-- RESULTS (DRAFT PAPER VERSION)/
+|       |   |   |   |   |-- EXTERNAL_AUDIT_RESULT/
+|       |   |   |   |   |   |-- __pycache__/
+|       |   |   |   |   |   |-- blockA_faithfulness/
+|       |   |   |   |   |   |   |-- results/
+|       |   |   |   |   |   |   |   |-- blockA_census_results.txt
+|       |   |   |   |   |   |   |   `-- blockA_faithfulness_table.md
+|       |   |   |   |   |   |   |-- certificate_blockA.pdf
+|       |   |   |   |   |   |   |-- check_census.py
+|       |   |   |   |   |   |   `-- README.md
+|       |   |   |   |   |   |-- blockB_external_inputs/
+|       |   |   |   |   |   |   |-- results/
+|       |   |   |   |   |   |   |   `-- blockB_literature_verification.md
+|       |   |   |   |   |   |   |-- certificate_blockB.pdf
+|       |   |   |   |   |   |   `-- README.md
+|       |   |   |   |   |   |-- blockC_counterexample_search/
+|       |   |   |   |   |   |   |-- results/
+|       |   |   |   |   |   |   |   |-- c1_nu3star_results.txt
+|       |   |   |   |   |   |   |   |-- c1_progress.txt
+|       |   |   |   |   |   |   |   |-- c2_margin_results.txt
+|       |   |   |   |   |   |   |   |-- c3_lemmas_results.txt
+|       |   |   |   |   |   |   |   |-- c4_corridor_results.txt
+|       |   |   |   |   |   |   |   |-- c6_appendixB_results.txt
+|       |   |   |   |   |   |   |   `-- c7_cloning_results.txt
+|       |   |   |   |   |   |   |-- c1_nu3star_certificates.py
+|       |   |   |   |   |   |   |-- c2_margin_grid.py
+|       |   |   |   |   |   |   |-- c3_lemmas_packing.py
+|       |   |   |   |   |   |   |-- c4_corridor.py
+|       |   |   |   |   |   |   |-- c6_appendixB.py
+|       |   |   |   |   |   |   |-- c7_cloning_lemma41.py
+|       |   |   |   |   |   |   |-- certificate_blockC.pdf
+|       |   |   |   |   |   |   `-- README.md
+|       |   |   |   |   |   |-- blockD_algebra_rederivation/
+|       |   |   |   |   |   |   |-- results/
+|       |   |   |   |   |   |   |   `-- algebra_results.txt
+|       |   |   |   |   |   |   |-- certificate_blockD.pdf
+|       |   |   |   |   |   |   |-- README.md
+|       |   |   |   |   |   |   `-- rederive_algebra.py
+|       |   |   |   |   |   |-- blockE_audit_the_audit/
+|       |   |   |   |   |   |   |-- results/
+|       |   |   |   |   |   |   |   |-- blockE_findings.md
+|       |   |   |   |   |   |   |   `-- e3_boundary_results.txt
+|       |   |   |   |   |   |   |-- certificate_blockE.pdf
+|       |   |   |   |   |   |   |-- e3_boundary_stress.py
+|       |   |   |   |   |   |   `-- README.md
+|       |   |   |   |   |   |-- findings/
+|       |   |   |   |   |   |   `-- FINDINGS.csv
+|       |   |   |   |   |   |-- ADVERSARIAL_AUDIT_REPORT.md
+|       |   |   |   |   |   |-- ADVERSARIAL_AUDIT_REPORT.pdf
+|       |   |   |   |   |   |-- blockA_faithfulness.zip
+|       |   |   |   |   |   |-- blockA_faithfulness.zip.sha256
+|       |   |   |   |   |   |-- blockB_external_inputs.zip
+|       |   |   |   |   |   |-- blockB_external_inputs.zip.sha256
+|       |   |   |   |   |   |-- blockC_counterexample_search.zip
+|       |   |   |   |   |   |-- blockC_counterexample_search.zip.sha256
+|       |   |   |   |   |   |-- blockD_algebra_rederivation.zip
+|       |   |   |   |   |   |-- blockD_algebra_rederivation.zip.sha256
+|       |   |   |   |   |   |-- blockE_audit_the_audit.zip
+|       |   |   |   |   |   |-- blockE_audit_the_audit.zip.sha256
+|       |   |   |   |   |   |-- build_deliverable.py
+|       |   |   |   |   |   |-- ENVIRONMENT.md
+|       |   |   |   |   |   |-- make_report_pdf.py
+|       |   |   |   |   |   |-- README.md
+|       |   |   |   |   |   |-- received_inputs.sha256
+|       |   |   |   |   |   `-- SHA256_MANIFEST.txt
+|       |   |   |   |   |-- audit_c_fast.py
+|       |   |   |   |   |-- audit_c_ilp_results.txt
+|       |   |   |   |   |-- audit_c_ilp.py
+|       |   |   |   |   |-- AUDIT_PAPER_C.md
+|       |   |   |   |   |-- EXTERNAL_AUDIT_RESULT.zip
+|       |   |   |   |   |-- EXTERNAL_AUDIT_RESULT.zip.sha256
+|       |   |   |   |   `-- verify_ledger_algebra.py
+|       |   |   |   |-- ENVIRONMENT.md
+|       |   |   |   |-- EXTERNAL_ADVERSARIAL_AUDIT_PACKAGE.zip.sha256
+|       |   |   |   |-- README.md
+|       |   |   |   `-- SHA256_MANIFEST.txt
+|       |   |   |-- EXTERNAL_ADVERSARIAL_AUDIT_PACKAGE_WITH_LEAN/
+|       |   |   |   |-- CLAIMS/
+|       |   |   |   |   |-- LEAN_FORMALIZATION/
+|       |   |   |   |   |   |-- lean_snapshot/
+|       |   |   |   |   |   |   `-- lean/
+|       |   |   |   |   |   |       |-- PaperIII/
+|       |   |   |   |   |   |       |   |-- Contrib/
+|       |   |   |   |   |   |       |   |   |-- Submission/
+|       |   |   |   |   |   |       |   |   |   |-- Dirac.lean
+|       |   |   |   |   |   |       |   |   |   |-- Matching.lean
+|       |   |   |   |   |   |       |   |   |   |-- PR_DRAFTS.md
+|       |   |   |   |   |   |       |   |   |   `-- README.md
+|       |   |   |   |   |   |       |   |   |-- DiracMathlib.lean
+|       |   |   |   |   |   |       |   |   `-- MatchingMathlib.lean
+|       |   |   |   |   |   |       |   |-- Addenda.lean
+|       |   |   |   |   |   |       |   |-- AX.lean
+|       |   |   |   |   |   |       |   |-- CliquePartition.lean
+|       |   |   |   |   |   |       |   |-- CorridorDefs.lean
+|       |   |   |   |   |   |       |   |-- Counting.lean
+|       |   |   |   |   |   |       |   |-- Defs.lean
+|       |   |   |   |   |   |       |   |-- DiracHamilton.lean
+|       |   |   |   |   |   |       |   |-- DiracMatching.lean
+|       |   |   |   |   |   |       |   |-- Duality.lean
+|       |   |   |   |   |   |       |   |-- E_3_1_LP.lean
+|       |   |   |   |   |   |       |   |-- E_3_1_upper.lean
+|       |   |   |   |   |   |       |   |-- E_3_1_values.lean
+|       |   |   |   |   |   |       |   |-- E_4_2_algebra.lean
+|       |   |   |   |   |   |       |   |-- E_4_2.lean
+|       |   |   |   |   |   |       |   |-- E_4_3.lean
+|       |   |   |   |   |   |       |   |-- E_4_agg.lean
+|       |   |   |   |   |   |       |   |-- E_5.lean
+|       |   |   |   |   |   |       |   |-- E_6.lean
+|       |   |   |   |   |   |       |   |-- E_7.lean
+|       |   |   |   |   |   |       |   |-- E_8_Core.lean
+|       |   |   |   |   |   |       |   |-- E_8_Divisible.lean
+|       |   |   |   |   |   |       |   |-- E_8.lean
+|       |   |   |   |   |   |       |   |-- E_B.lean
+|       |   |   |   |   |   |       |   |-- E_D.lean
+|       |   |   |   |   |   |       |   |-- Factorization.lean
+|       |   |   |   |   |   |       |   |-- Identities.lean
+|       |   |   |   |   |   |       |   |-- Main.lean
+|       |   |   |   |   |   |       |   |-- Prop_10_1.lean
+|       |   |   |   |   |   |       |   `-- SplitEdges.lean
+|       |   |   |   |   |   |       |-- lake-manifest.json
+|       |   |   |   |   |   |       |-- lakefile.toml
+|       |   |   |   |   |   |       |-- lean-toolchain
+|       |   |   |   |   |   |       `-- PaperIII.lean
+|       |   |   |   |   |   |-- gate.lean
+|       |   |   |   |   |   |-- lakefile.toml
+|       |   |   |   |   |   |-- lean-toolchain
+|       |   |   |   |   |   |-- MODULE_LIST.txt
+|       |   |   |   |   |   |-- README.md
+|       |   |   |   |   |   `-- RELEASE.txt
+|       |   |   |   |   |-- PAPER_v0.9.12/
+|       |   |   |   |   |   |-- paperIII_figures_v0.9.12/
+|       |   |   |   |   |   |   |-- fig1_complete_split_extremizer_en.pdf
+|       |   |   |   |   |   |   |-- fig1_complete_split_extremizer_en.png
+|       |   |   |   |   |   |   |-- fig1_complete_split_extremizer_es.pdf
+|       |   |   |   |   |   |   |-- fig1_complete_split_extremizer_es.png
+|       |   |   |   |   |   |   |-- fig2_alpha_regimes_en.pdf
+|       |   |   |   |   |   |   |-- fig2_alpha_regimes_en.png
+|       |   |   |   |   |   |   |-- fig2_alpha_regimes_es.pdf
+|       |   |   |   |   |   |   `-- fig2_alpha_regimes_es.png
+|       |   |   |   |   |   |-- PAPER_III_split_lineal_v0.9.12_editorial_review_en.md
+|       |   |   |   |   |   |-- PAPER_III_split_lineal_v0.9.12_editorial_review_en.pdf
+|       |   |   |   |   |   |-- PAPER_III_split_lineal_v0.9.12_editorial_review_en.tex
+|       |   |   |   |   |   |-- PAPER_III_split_lineal_v0.9.12_editorial_review_es.md
+|       |   |   |   |   |   |-- PAPER_III_split_lineal_v0.9.12_editorial_review_es.pdf
+|       |   |   |   |   |   |-- PAPER_III_split_lineal_v0.9.12_editorial_review_es.tex
+|       |   |   |   |   |   `-- PAPER_III_split_lineal_v0.9.12_SHA256.txt
+|       |   |   |   |   |-- LEDGER.md
+|       |   |   |   |   `-- STATEMENT_OF_CLAIMS.md
+|       |   |   |   |-- MANIFESTO/
+|       |   |   |   |   |-- ADVERSARIAL_CHECKLIST.md
+|       |   |   |   |   |-- AUDIT_MANDATE.md
+|       |   |   |   |   |-- DELIVERABLE_SPEC.md
+|       |   |   |   |   `-- EXECUTION_PROTOCOL.md
+|       |   |   |   |-- OUR_INTERNAL_AUDIT/
+|       |   |   |   |   |-- block01_algebraic_identities/
+|       |   |   |   |   |   |-- results/
+|       |   |   |   |   |   |   `-- identities_results.txt
+|       |   |   |   |   |   |-- certificate_block01.pdf
+|       |   |   |   |   |   |-- README.md
+|       |   |   |   |   |   `-- verify_identities.py
+|       |   |   |   |   |-- block02_common_profile_LP/
+|       |   |   |   |   |   |-- results/
+|       |   |   |   |   |   |   `-- common_profile_LP_results.txt
+|       |   |   |   |   |   |-- certificate_block02.pdf
+|       |   |   |   |   |   |-- README.md
+|       |   |   |   |   |   `-- verify_common_profile_LP.py
+|       |   |   |   |   |-- block03_unified_margin/
+|       |   |   |   |   |   |-- results/
+|       |   |   |   |   |   |   `-- margin_results.txt
+|       |   |   |   |   |   |-- certificate_block03.pdf
+|       |   |   |   |   |   |-- README.md
+|       |   |   |   |   |   `-- verify_margin.py
+|       |   |   |   |   |-- block04_corridor_ILP/
+|       |   |   |   |   |   |-- results/
+|       |   |   |   |   |   |   `-- corridor_ILP_results.txt
+|       |   |   |   |   |   |-- certificate_block04.pdf
+|       |   |   |   |   |   |-- README.md
+|       |   |   |   |   |   `-- verify_corridor_ILP.py
+|       |   |   |   |   |-- common/
+|       |   |   |   |   |   |-- audit_formulas.py
+|       |   |   |   |   |   `-- make_certificate.py
+|       |   |   |   |   |-- AUDIT_FINAL_REPORT.md
+|       |   |   |   |   |-- AUDIT_FINAL_REPORT.pdf
+|       |   |   |   |   |-- block01_algebraic_identities.zip
+|       |   |   |   |   |-- block01_algebraic_identities.zip.sha256
+|       |   |   |   |   |-- block02_common_profile_LP.zip
+|       |   |   |   |   |-- block02_common_profile_LP.zip.sha256
+|       |   |   |   |   |-- block03_unified_margin.zip
+|       |   |   |   |   |-- block03_unified_margin.zip.sha256
+|       |   |   |   |   |-- block04_corridor_ILP.zip
+|       |   |   |   |   |-- block04_corridor_ILP.zip.sha256
+|       |   |   |   |   |-- build_audit_artifacts.py
+|       |   |   |   |   |-- make_master_certificate.py
+|       |   |   |   |   |-- README.md
+|       |   |   |   |   `-- SHA256_MANIFEST.txt
+|       |   |   |   |-- RESULTS (PREPRINT PAPER VERSION)/
+|       |   |   |   |   |-- EXTERNAL_AUDIT_RESULT_20260725_222145/
+|       |   |   |   |   |   |-- blockA_faithfulness/
+|       |   |   |   |   |   |   |-- results/
+|       |   |   |   |   |   |   |   |-- blockA_progress.txt
+|       |   |   |   |   |   |   |   `-- blockA_results.txt
+|       |   |   |   |   |   |   |-- certificate_blockA.pdf
+|       |   |   |   |   |   |   `-- README.md
+|       |   |   |   |   |   |-- blockB_external_inputs/
+|       |   |   |   |   |   |   |-- results/
+|       |   |   |   |   |   |   |   |-- blockB_progress.txt
+|       |   |   |   |   |   |   |   `-- blockB_results.txt
+|       |   |   |   |   |   |   |-- certificate_blockB.pdf
+|       |   |   |   |   |   |   `-- README.md
+|       |   |   |   |   |   |-- blockC_counterexample_search/
+|       |   |   |   |   |   |   |-- results/
+|       |   |   |   |   |   |   |   |-- blockC_progress.txt
+|       |   |   |   |   |   |   |   `-- blockC_results.txt
+|       |   |   |   |   |   |   |-- certificate_blockC.pdf
+|       |   |   |   |   |   |   `-- README.md
+|       |   |   |   |   |   |-- blockD_algebra_rederivation/
+|       |   |   |   |   |   |   |-- results/
+|       |   |   |   |   |   |   |   |-- blockD_progress.txt
+|       |   |   |   |   |   |   |   `-- blockD_results.txt
+|       |   |   |   |   |   |   |-- certificate_blockD.pdf
+|       |   |   |   |   |   |   `-- README.md
+|       |   |   |   |   |   |-- blockE_audit_the_audit/
+|       |   |   |   |   |   |   |-- internal_audit_copy/
+|       |   |   |   |   |   |   |   |-- block01_algebraic_identities/
+|       |   |   |   |   |   |   |   |   |-- results/
+|       |   |   |   |   |   |   |   |   |   `-- identities_results.txt
+|       |   |   |   |   |   |   |   |   |-- certificate_block01.pdf
+|       |   |   |   |   |   |   |   |   |-- README.md
+|       |   |   |   |   |   |   |   |   `-- verify_identities.py
+|       |   |   |   |   |   |   |   |-- block02_common_profile_LP/
+|       |   |   |   |   |   |   |   |   |-- results/
+|       |   |   |   |   |   |   |   |   |   `-- common_profile_LP_results.txt
+|       |   |   |   |   |   |   |   |   |-- certificate_block02.pdf
+|       |   |   |   |   |   |   |   |   |-- README.md
+|       |   |   |   |   |   |   |   |   `-- verify_common_profile_LP.py
+|       |   |   |   |   |   |   |   |-- block03_unified_margin/
+|       |   |   |   |   |   |   |   |   |-- results/
+|       |   |   |   |   |   |   |   |   |   `-- margin_results.txt
+|       |   |   |   |   |   |   |   |   |-- certificate_block03.pdf
+|       |   |   |   |   |   |   |   |   |-- README.md
+|       |   |   |   |   |   |   |   |   `-- verify_margin.py
+|       |   |   |   |   |   |   |   |-- block04_corridor_ILP/
+|       |   |   |   |   |   |   |   |   |-- results/
+|       |   |   |   |   |   |   |   |   |   `-- corridor_ILP_results.txt
+|       |   |   |   |   |   |   |   |   |-- certificate_block04.pdf
+|       |   |   |   |   |   |   |   |   |-- README.md
+|       |   |   |   |   |   |   |   |   `-- verify_corridor_ILP.py
+|       |   |   |   |   |   |   |   |-- common/
+|       |   |   |   |   |   |   |   |   |-- __pycache__/
+|       |   |   |   |   |   |   |   |   |-- audit_formulas.py
+|       |   |   |   |   |   |   |   |   `-- make_certificate.py
+|       |   |   |   |   |   |   |   |-- AUDIT_FINAL_REPORT.md
+|       |   |   |   |   |   |   |   |-- AUDIT_FINAL_REPORT.pdf
+|       |   |   |   |   |   |   |   |-- block01_algebraic_identities.zip
+|       |   |   |   |   |   |   |   |-- block01_algebraic_identities.zip.sha256
+|       |   |   |   |   |   |   |   |-- block02_common_profile_LP.zip
+|       |   |   |   |   |   |   |   |-- block02_common_profile_LP.zip.sha256
+|       |   |   |   |   |   |   |   |-- block03_unified_margin.zip
+|       |   |   |   |   |   |   |   |-- block03_unified_margin.zip.sha256
+|       |   |   |   |   |   |   |   |-- block04_corridor_ILP.zip
+|       |   |   |   |   |   |   |   |-- block04_corridor_ILP.zip.sha256
+|       |   |   |   |   |   |   |   |-- build_audit_artifacts.py
+|       |   |   |   |   |   |   |   |-- make_master_certificate.py
+|       |   |   |   |   |   |   |   |-- README.md
+|       |   |   |   |   |   |   |   `-- SHA256_MANIFEST.txt
+|       |   |   |   |   |   |   |-- results/
+|       |   |   |   |   |   |   |   |-- block01_algebraic_identities_verify_identities.py.log
+|       |   |   |   |   |   |   |   |-- block02_common_profile_LP_verify_common_profile_LP.py.log
+|       |   |   |   |   |   |   |   |-- block03_unified_margin_verify_margin.py.log
+|       |   |   |   |   |   |   |   |-- block04_corridor_ILP_verify_corridor_ILP.py.log
+|       |   |   |   |   |   |   |   |-- blockE_progress.txt
+|       |   |   |   |   |   |   |   |-- blockE_results.txt
+|       |   |   |   |   |   |   |   |-- rerun_block01.log
+|       |   |   |   |   |   |   |   |-- rerun_block02.log
+|       |   |   |   |   |   |   |   |-- rerun_block03.log
+|       |   |   |   |   |   |   |   `-- rerun_block04.log
+|       |   |   |   |   |   |   |-- certificate_blockE.pdf
+|       |   |   |   |   |   |   `-- README.md
+|       |   |   |   |   |   |-- blockF_lean_formalization/
+|       |   |   |   |   |   |   |-- lean_snapshot/
+|       |   |   |   |   |   |   |   `-- lean/
+|       |   |   |   |   |   |   |       |-- PaperIII/
+|       |   |   |   |   |   |   |       |   |-- Contrib/
+|       |   |   |   |   |   |   |       |   |   |-- Submission/
+|       |   |   |   |   |   |   |       |   |   |   |-- Dirac.lean
+|       |   |   |   |   |   |   |       |   |   |   |-- Matching.lean
+|       |   |   |   |   |   |   |       |   |   |   |-- PR_DRAFTS.md
+|       |   |   |   |   |   |   |       |   |   |   `-- README.md
+|       |   |   |   |   |   |   |       |   |   |-- DiracMathlib.lean
+|       |   |   |   |   |   |   |       |   |   `-- MatchingMathlib.lean
+|       |   |   |   |   |   |   |       |   |-- Addenda.lean
+|       |   |   |   |   |   |   |       |   |-- AX.lean
+|       |   |   |   |   |   |   |       |   |-- CliquePartition.lean
+|       |   |   |   |   |   |   |       |   |-- CorridorDefs.lean
+|       |   |   |   |   |   |   |       |   |-- Counting.lean
+|       |   |   |   |   |   |   |       |   |-- Defs.lean
+|       |   |   |   |   |   |   |       |   |-- DiracHamilton.lean
+|       |   |   |   |   |   |   |       |   |-- DiracMatching.lean
+|       |   |   |   |   |   |   |       |   |-- Duality.lean
+|       |   |   |   |   |   |   |       |   |-- E_3_1_LP.lean
+|       |   |   |   |   |   |   |       |   |-- E_3_1_upper.lean
+|       |   |   |   |   |   |   |       |   |-- E_3_1_values.lean
+|       |   |   |   |   |   |   |       |   |-- E_4_2_algebra.lean
+|       |   |   |   |   |   |   |       |   |-- E_4_2.lean
+|       |   |   |   |   |   |   |       |   |-- E_4_3.lean
+|       |   |   |   |   |   |   |       |   |-- E_4_agg.lean
+|       |   |   |   |   |   |   |       |   |-- E_5.lean
+|       |   |   |   |   |   |   |       |   |-- E_6.lean
+|       |   |   |   |   |   |   |       |   |-- E_7.lean
+|       |   |   |   |   |   |   |       |   |-- E_8_Core.lean
+|       |   |   |   |   |   |   |       |   |-- E_8_Divisible.lean
+|       |   |   |   |   |   |   |       |   |-- E_8.lean
+|       |   |   |   |   |   |   |       |   |-- E_B.lean
+|       |   |   |   |   |   |   |       |   |-- E_D.lean
+|       |   |   |   |   |   |   |       |   |-- Factorization.lean
+|       |   |   |   |   |   |   |       |   |-- Identities.lean
+|       |   |   |   |   |   |   |       |   |-- Main.lean
+|       |   |   |   |   |   |   |       |   |-- Prop_10_1.lean
+|       |   |   |   |   |   |   |       |   `-- SplitEdges.lean
+|       |   |   |   |   |   |   |       |-- gate.lean
+|       |   |   |   |   |   |   |       |-- lake-manifest.json
+|       |   |   |   |   |   |   |       |-- lakefile.toml
+|       |   |   |   |   |   |   |       |-- lean-toolchain
+|       |   |   |   |   |   |   |       `-- PaperIII.lean
+|       |   |   |   |   |   |   |-- results/
+|       |   |   |   |   |   |   |   |-- axioms_report.txt
+|       |   |   |   |   |   |   |   |-- blockF_summary.txt
+|       |   |   |   |   |   |   |   |-- build_log.txt
+|       |   |   |   |   |   |   |   |-- build_progress.txt
+|       |   |   |   |   |   |   |   |-- cache_get_log.txt
+|       |   |   |   |   |   |   |   |-- cache_get_progress.txt
+|       |   |   |   |   |   |   |   |-- gate_progress.txt
+|       |   |   |   |   |   |   |   `-- grep_scan.txt
+|       |   |   |   |   |   |   |-- certificate_blockF.pdf
+|       |   |   |   |   |   |   |-- gate.lean
+|       |   |   |   |   |   |   `-- README.md
+|       |   |   |   |   |   |-- findings/
+|       |   |   |   |   |   |   `-- FINDINGS.csv
+|       |   |   |   |   |   |-- ADVERSARIAL_AUDIT_REPORT_plain_backup.pdf
+|       |   |   |   |   |   |-- ADVERSARIAL_AUDIT_REPORT.md
+|       |   |   |   |   |   |-- ADVERSARIAL_AUDIT_REPORT.pdf
+|       |   |   |   |   |   |-- blockA_faithfulness.zip
+|       |   |   |   |   |   |-- blockA_faithfulness.zip.sha256
+|       |   |   |   |   |   |-- blockB_external_inputs.zip
+|       |   |   |   |   |   |-- blockB_external_inputs.zip.sha256
+|       |   |   |   |   |   |-- blockC_counterexample_search.zip
+|       |   |   |   |   |   |-- blockC_counterexample_search.zip.sha256
+|       |   |   |   |   |   |-- blockD_algebra_rederivation.zip
+|       |   |   |   |   |   |-- blockD_algebra_rederivation.zip.sha256
+|       |   |   |   |   |   |-- blockE_audit_the_audit.zip
+|       |   |   |   |   |   |-- blockE_audit_the_audit.zip.sha256
+|       |   |   |   |   |   |-- blockF_lean_formalization.zip
+|       |   |   |   |   |   |-- blockF_lean_formalization.zip.sha256
+|       |   |   |   |   |   |-- ENVIRONMENT.md
+|       |   |   |   |   |   |-- README.md
+|       |   |   |   |   |   |-- received_inputs.sha256
+|       |   |   |   |   |   `-- SHA256_MANIFEST.txt
+|       |   |   |   |   |-- EXTERNAL_AUDIT_RESULT_20260725_222145.zip
+|       |   |   |   |   `-- EXTERNAL_AUDIT_RESULT_20260725_222145.zip.sha256
+|       |   |   |   |-- ENVIRONMENT.md
+|       |   |   |   |-- README.md
+|       |   |   |   `-- SHA256_MANIFEST.txt
+|       |   |   |-- DELTA_AUDIT_REQUEST_v1.1.6.md
+|       |   |   |-- EXTERNAL_ADVERSARIAL_AUDIT_PACKAGE_WITH_LEAN.zip
+|       |   |   `-- EXTERNAL_ADVERSARIAL_AUDIT_PACKAGE_WITH_LEAN.zip.sha256
+|       |   |-- INTERNAL_AUDIT/
+|       |   |   |-- block01_algebraic_identities/
+|       |   |   |   |-- results/
+|       |   |   |   |   `-- identities_results.txt
+|       |   |   |   |-- certificate_block01.pdf
+|       |   |   |   |-- README.md
+|       |   |   |   `-- verify_identities.py
+|       |   |   |-- block02_common_profile_LP/
+|       |   |   |   |-- results/
+|       |   |   |   |   `-- common_profile_LP_results.txt
+|       |   |   |   |-- certificate_block02.pdf
+|       |   |   |   |-- README.md
+|       |   |   |   `-- verify_common_profile_LP.py
+|       |   |   |-- block03_unified_margin/
+|       |   |   |   |-- results/
+|       |   |   |   |   `-- margin_results.txt
+|       |   |   |   |-- certificate_block03.pdf
+|       |   |   |   |-- README.md
+|       |   |   |   `-- verify_margin.py
+|       |   |   |-- block04_corridor_ILP/
+|       |   |   |   |-- results/
+|       |   |   |   |   `-- corridor_ILP_results.txt
+|       |   |   |   |-- certificate_block04.pdf
+|       |   |   |   |-- README.md
+|       |   |   |   `-- verify_corridor_ILP.py
+|       |   |   |-- common/
+|       |   |   |   |-- audit_formulas.py
+|       |   |   |   `-- make_certificate.py
+|       |   |   |-- AUDIT_FINAL_REPORT.md
+|       |   |   |-- AUDIT_FINAL_REPORT.pdf
+|       |   |   |-- block01_algebraic_identities.zip
+|       |   |   |-- block01_algebraic_identities.zip.sha256
+|       |   |   |-- block02_common_profile_LP.zip
+|       |   |   |-- block02_common_profile_LP.zip.sha256
+|       |   |   |-- block03_unified_margin.zip
+|       |   |   |-- block03_unified_margin.zip.sha256
+|       |   |   |-- block04_corridor_ILP.zip
+|       |   |   |-- block04_corridor_ILP.zip.sha256
+|       |   |   |-- build_audit_artifacts.py
+|       |   |   |-- make_master_certificate.py
+|       |   |   |-- README.md
+|       |   |   `-- SHA256_MANIFEST.txt
+|       |   `-- PAPER_III_AUDIT/
+|       |       `-- .gitkeep
+|       |-- 03_reproducibility/
+|       |   |-- appendix_C_scripts/
+|       |   |   |-- _common.py
+|       |   |   |-- README.md
+|       |   |   |-- verify_divisibility_correction_results.txt
+|       |   |   |-- verify_divisibility_correction.py
+|       |   |   |-- verify_factor_rounding_results.txt
+|       |   |   |-- verify_factor_rounding.py
+|       |   |   |-- verify_fractional_margin_results.txt
+|       |   |   |-- verify_fractional_margin.py
+|       |   |   |-- verify_polarization_results.txt
+|       |   |   |-- verify_polarization.py
+|       |   |   |-- verify_shifted_center_results.txt
+|       |   |   `-- verify_shifted_center.py
+|       |   |-- diagnostics/
+|       |   |   |-- E_8_Disproof.lean
+|       |   |   `-- FINDING_E8_statement_too_strong.md
+|       |   `-- .gitkeep
+|       |-- 04_integrity/
+|       |   |-- .gitkeep
+|       |   `-- SHA256SUMS.txt
+|       |-- 05_formalization/
+|       |   |-- lean/
+|       |   |   |-- gate_logs/
+|       |   |   |   `-- .gitkeep
+|       |   |   |-- PaperIII/
+|       |   |   |   |-- Contrib/
+|       |   |   |   |   |-- Submission/
+|       |   |   |   |   |   |-- Dirac.lean
+|       |   |   |   |   |   |-- Matching.lean
+|       |   |   |   |   |   |-- PR_DRAFTS.md
+|       |   |   |   |   |   `-- README.md
+|       |   |   |   |   |-- DiracMathlib.lean
+|       |   |   |   |   `-- MatchingMathlib.lean
+|       |   |   |   |-- .gitkeep
+|       |   |   |   |-- Addenda.lean
+|       |   |   |   |-- AX.lean
+|       |   |   |   |-- CliquePartition.lean
+|       |   |   |   |-- CorridorDefs.lean
+|       |   |   |   |-- Counting.lean
+|       |   |   |   |-- Defs.lean
+|       |   |   |   |-- DiracHamilton.lean
+|       |   |   |   |-- DiracMatching.lean
+|       |   |   |   |-- Duality.lean
+|       |   |   |   |-- E_3_1_LP.lean
+|       |   |   |   |-- E_3_1_upper.lean
+|       |   |   |   |-- E_3_1_values.lean
+|       |   |   |   |-- E_4_2_algebra.lean
+|       |   |   |   |-- E_4_2.lean
+|       |   |   |   |-- E_4_3.lean
+|       |   |   |   |-- E_4_agg.lean
+|       |   |   |   |-- E_5.lean
+|       |   |   |   |-- E_6.lean
+|       |   |   |   |-- E_7.lean
+|       |   |   |   |-- E_8_Core.lean
+|       |   |   |   |-- E_8_Divisible.lean
+|       |   |   |   |-- E_8.lean
+|       |   |   |   |-- E_B.lean
+|       |   |   |   |-- E_D.lean
+|       |   |   |   |-- Factorization.lean
+|       |   |   |   |-- Identities.lean
+|       |   |   |   |-- Main.lean
+|       |   |   |   |-- Prop_10_1.lean
+|       |   |   |   `-- SplitEdges.lean
+|       |   |   |-- lake-manifest.json
+|       |   |   |-- lakefile.toml
+|       |   |   |-- lean-toolchain
+|       |   |   `-- PaperIII.lean
+|       |   |-- lean_v1.0_freeze/
+|       |   |   |-- gate_logs/
+|       |   |   |   `-- lake_build_full.log
+|       |   |   |-- PaperIII/
+|       |   |   |   |-- Contrib/
+|       |   |   |   |   |-- Submission/
+|       |   |   |   |   |   |-- Dirac.lean
+|       |   |   |   |   |   |-- Matching.lean
+|       |   |   |   |   |   |-- PR_DRAFTS.md
+|       |   |   |   |   |   `-- README.md
+|       |   |   |   |   |-- DiracMathlib.lean
+|       |   |   |   |   `-- MatchingMathlib.lean
+|       |   |   |   |-- Addenda.lean
+|       |   |   |   |-- AX.lean
+|       |   |   |   |-- CliquePartition.lean
+|       |   |   |   |-- CorridorDefs.lean
+|       |   |   |   |-- Counting.lean
+|       |   |   |   |-- Defs.lean
+|       |   |   |   |-- DiracHamilton.lean
+|       |   |   |   |-- DiracMatching.lean
+|       |   |   |   |-- Duality.lean
+|       |   |   |   |-- E_3_1_LP.lean
+|       |   |   |   |-- E_3_1_upper.lean
+|       |   |   |   |-- E_3_1_values.lean
+|       |   |   |   |-- E_4_2_algebra.lean
+|       |   |   |   |-- E_4_2.lean
+|       |   |   |   |-- E_4_3.lean
+|       |   |   |   |-- E_4_agg.lean
+|       |   |   |   |-- E_5.lean
+|       |   |   |   |-- E_6.lean
+|       |   |   |   |-- E_7.lean
+|       |   |   |   |-- E_8_Core.lean
+|       |   |   |   |-- E_8_Divisible.lean
+|       |   |   |   |-- E_8.lean
+|       |   |   |   |-- E_B.lean
+|       |   |   |   |-- E_D.lean
+|       |   |   |   |-- Factorization.lean
+|       |   |   |   |-- Identities.lean
+|       |   |   |   |-- Main.lean
+|       |   |   |   |-- PackingCorollaries.lean
+|       |   |   |   |-- Prop_10_1.lean
+|       |   |   |   |-- ShiftedCenterRobust.lean
+|       |   |   |   `-- SplitEdges.lean
+|       |   |   |-- FREEZE_MANIFEST_SHA256.txt
+|       |   |   |-- lake-manifest.json
+|       |   |   |-- lakefile.toml
+|       |   |   |-- lean-toolchain
+|       |   |   |-- PaperIII.lean
+|       |   |   `-- README_FREEZE.md
+|       |   |-- AXIOM_REPORT.txt
+|       |   |-- EDITOR_REPORT_lean_formalization.md
+|       |   |-- FORMALIZATION_REPORT.md
+|       |   |-- LEAN_STATUS.md
+|       |   |-- LEDGER_INCREMENTAL_v0.9.2_formalization_draft.md
+|       |   |-- LEDGER.md
+|       |   |-- PAPER_III_LEAN_v1.0_FREEZE_sources.zip
+|       |   `-- PAPER_III_LEAN_v1.0_FREEZE_sources.zip.sha256
+|       |-- figures/
+|       |   |-- fig1_complete_split_extremizer_en.png
+|       |   |-- fig1_complete_split_extremizer_es.png
+|       |   |-- fig2_alpha_regimes_en.png
+|       |   `-- fig2_alpha_regimes_es.png
+|       |-- CITATION.bib
+|       |-- CITATION.cff
+|       |-- LICENSE
+|       |-- LICENSE.md
+|       |-- PaperIII_explained_4_levels.html
+|       |-- README.md
+|       |-- RELEASE_METADATA.yml
+|       |-- RELEASE_NOTES.md
+|       `-- TREE.txt
+|-- .gitattributes
+|-- .gitignore
+|-- CHANGELOG_v1.3.md
+|-- CHANGELOG_v1.4.md
+|-- CHANGELOG_v1.5.md
+|-- CITATION.bib
+|-- CITATION.cff
+|-- LICENSE
+|-- LICENSE.md
+|-- PaperIII_explained_4_levels.html
+|-- README.md
+|-- RELEASE_METADATA.yml
+|-- RELEASE_NOTES.md
+`-- TREE.txt

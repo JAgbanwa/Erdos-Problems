@@ -1,8 +1,9 @@
-release_id: PAPER_I_PREPRINT_V1_0
-project: ERDOZ81 — Paper I
+release_id: PAPER_I_PREPRINT_V1_3
+paper: PAPER_I
 title: Affine Profile Reduction for Fractional Triangle Packings in Split Graphs
-version: "1.0"
-release_date: "2026-07-06"
+version: "1.3"
+release_date: "2026-08-22"
+supersedes_public_version: "1.0"
 author:
   name: Juan Pablo Traverso Gianini
   affiliation: Independent researcher, Santiago, Chile
@@ -11,16 +12,25 @@ status:
   manuscript: PREPRINT_RELEASE
   mathematical: FINAL_PASS
   lifecycle: FROZEN
-  dependency_health: CLEAN
-  validation:
-    - AI_ADVERSARIAL_INTERNAL_AUDIT
-    - EDITOR_APPROVED
-    - RESEARCHER_APPROVED
-  independent_ai_adversarial_audit: PASS   # PAPER_I_EXT_AUDIT_2026-07-10 (deep protocol); see 02_validation/02_IA_ADVERSARIAL_AUDITS/
+  internal_audit: PASS
+  independent_ai_adversarial_audit: PASS
   external_peer_review: false
-  novelty_review: NOT_ASSESSED_INCOMPLETE
+  specialist_priority_review: false
+formalization:
+  system: Lean 4 / Mathlib v4.28.0
+  freeze: 05_formalization/lean_v1.2_freeze
+  archive: PAPER_I_lean_v1.2_freeze.zip
+  archive_sha256: 0181506408644fc1f8872d711de5a98a500f4052aa295bcd6f8c82776694fd3a
+  externally_reproduced: true
+  recorded_build_jobs: 8034
+  axiom_surfaces: 15
+  axioms: [propext, Classical.choice, Quot.sound]
 canonical_files:
-  - 01_manuscript/PAPER_I_preprint_v1.0.pdf
-  - 01_manuscript/PAPER_I_preprint_v1.0.tex
-  - 01_manuscript/PAPER_I_preprint_v1.0.md
-  - 02_validation/CALCULATION_LEDGER_FINITE_FRA
+  - 01_manuscript/PAPER_I_preprint_v1.3.md
+  - 01_manuscript/PAPER_I_preprint_v1.3_en.tex
+  - 01_manuscript/PAPER_I_preprint_v1.3_en.pdf
+  - 01_manuscript/PAPER_I_preprint_v1.3_es.md
+  - 01_manuscript/PAPER_I_preprint_v1.3_es.tex
+  - 01_manuscript/PAPER_I_preprint_v1.3_es.pdf
+external_report: 02_validation/02_IA_ADVERSARIAL_AUDITS/run_2026-08-21_v1.3_pkgfix/30_REPORT/FINAL_AUDIT_REPORT.md
+historical_public_package: superseded/preprint_v1.0

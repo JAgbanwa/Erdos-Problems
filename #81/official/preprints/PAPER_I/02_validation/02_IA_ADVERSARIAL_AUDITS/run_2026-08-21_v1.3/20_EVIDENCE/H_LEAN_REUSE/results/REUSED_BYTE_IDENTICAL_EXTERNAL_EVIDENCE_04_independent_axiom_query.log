@@ -1,0 +1,10 @@
+'PaperI.paperI_main' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PaperI.Split.paperI_main_sharp' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PaperI.assembly_sharp' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PaperI.Split.residual_duality' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Contrib.Submission.covering_packing_duality' depends on axioms: [propext, Classical.choice, Quot.sound]
+PaperI.Split.paperI_main_sharp : ∀ (G : PaperI.Split), G.Phi ≤ ↑G.n ^ 2 / 6 + ↑G.n / 2
+PaperI.paperI_main : ∀ (G : PaperI.Split), G.Phi ≤ ↑G.n ^ 2 / 6 + ↑G.n
+PaperI.assembly_sharp : ∀ (p q b i : ℕ),
+  (1 ≤ b → 1 ≤ p) → (↑p + ↑q) ^ 2 / 6 + ↑p / 2 + ↑b ≤ (↑p + ↑q + ↑b + ↑i) ^ 2 / 6 + (↑p + ↑q + ↑b + ↑i) / 2
+PaperI.Split.residual_duality : ∀ (G : PaperI.Split), ∃ w2, G.ResidualPacking w2 ∧ ∑ t, w2 t = G.Mr

@@ -1,0 +1,65 @@
+> ## E2 — Rederivación matemática independiente: `PASS`
+>
+> Secciones 5–9 rederivadas desde las definiciones del manuscrito en álgebra simbólica exacta. **23 items: 22 PASS, 1 NOTE de alcance, cero fallos.** No se usó ninguna declaración Lean ni script del autor como sustituto de prueba.
+>
+> **K-CORRIDOR (Lemas 5.1–7.1) — cerrado.**
+> - Lema 5.1: la identidad de promediado vale porque los `r_p` factores **particionan** `E(K_p)`, de modo que `Σ_j |F_j ∩ E(K[N_i])| = C(d_i,2)` exactamente. La inyectividad exige `q ≥ r_p`, que es la hipótesis enunciada.
+> - (5.2): exacta. Todos los términos cuadráticos en `p` se cancelan; el paso `((2p−1)M − S₂)/q − M = ((s−1)M − S₂)/q` usa `2p − 1 − q = s − 1`, es decir la definición de `s`.
+> - (5.3): exacta. La parábola `(s−1)y − y²` alcanza su máximo en `y = (s−1)/2` con valor `(s−1)²/4`, y `−s²/6 + (s−1)²/4 = (s² − 6s + 3)/12` idénticamente. Esto es lo que cierra `s = O(√p)` con error lineal.
+> - Lema 5.2: exacta. La mezcla `(1−δ)b_e/q + δ·b_e(b_e−1)/(q(q−1))` equivale a `b_e/q − δ·b_e(q−b_e)/(q(q−1))`. El factor 2 de (5.4) queda forzado por `Φ = |E| − 2ν₃`.
+> - Lema 6.1: exacta. `|B_i \ B_j| = a_ij(2(p−|S_j|) − a_ij − 1)/2` reproduce `C(a,2) + a(p−|S_j|−a)` idénticamente; la hipótesis `2p − 3m − 1 ≥ 0` es precisamente lo que mantiene no negativo el factor extraído.
+> - (6.1): exacta. Ambos lados cuentan las ternas `(e,i,j)` con `e ∈ B_i` y `e ∉ B_j`.
+> - **Lema 7.1, ensamblaje completo (7.6): exacto, diferencia idénticamente cero.** Dos cancelaciones lo sostienen: `(2b−1)A_R/q = ((s−2ρ−1)A_R)/q + A_R` elimina el `−A_R` proveniente de `Σd_i`, y `1 − u/q = r_b/q` convierte el coeficiente `(1 − u/q)/r_b` en exactamente `1/q`.
+> - (7.2): `deg(v_i) = g_i ≤ ρ` y `deg(r) ≤ |U| = u`, así que `Δ ≤ max{ρ,u}` y `|L| = b − t_i ≥ Δ` es exactamente la hipótesis del caso de grado máximo de Galvin. Caso frontera `ρ ≤ 1` vacuo y consistente (`C(ρ,2) = 0`, `θ_R = 0`).
+>
+> **K-SPARSE (Sección 8) — cerrado.**
+> - Hipótesis de Dirac con su redondeo: tras `i−1` emparejamientos un vértice de `N_i` conserva grado `≥ d_i − i`, y `i ≤ q` con `d_i ≥ 2q+2` da `d_i/2 ≥ q+1 > i`. Las aristas alternas del ciclo hamiltoniano dan `⌊d_i/2⌋`, y el redondeo se traslada explícitamente a (8.3).
+> - Paridad (8.5)–(8.6): `deg_J(x_j)` es impar exactamente cuando cambia la paridad del prefijo en `j`, o sea cuando `x_j ∈ O`. **Los dos extremos funcionan porque `|O|` es par** por el lema del apretón de manos — ahí es donde esa paridad se usa de verdad.
+> - Turán: un grafo sin `K_5` tiene a lo más `3p²/8` aristas, y `δ > 3p/4` fuerza más.
+> - Corrección mod 3: `|E(C_4)| = 4 ≡ 1` y `|E(C_5)| = 5 ≡ 2 (mod 3)` cubren los tres residuos exactamente, y quitar un ciclo cambia cada grado en `0` o `2`, preservando la paridad par.
+> - **Umbral `0.91p`:** la pérdida total de grado es `≤ 2 + 2 = 4`, así que `δ(H) ≥ p − 1 − q − 4 ≥ 0.95p − 5 ≥ 0.91p` en cuanto `p ≥ 125`. **`|V(H)| = p`: la corrección quita solo aristas, nunca vértices**, de modo que el umbral se mide sobre el conjunto clique original y ninguna eliminación lo altera en silencio.
+> - (8.10)–(8.11): exactas. `(1/3)C(p,2) + pq/3 = (p+q)²/6 − (p+q²)/6` idénticamente, y `(p+q²)/6 ≥ 0`, así que el régimen cierra **integralmente con constante absoluta**.
+>
+> **K-GLOBAL (cierre eventual-a-global) — cerrado.** `|E(G)| = |E(G−v)| + d(v)` y `ν₃(G) ≥ ν₃(G−v)`, luego `Φ(G) ≤ Φ(G−v) + d(v)`; borrar un vértice de `I` mantiene el grafo split. La minimalidad da `d(v) > (2n−1)/6 + k`, que es (9.2) exacta. `n_k → ∞` porque para orden fijo `Φ ≤ C(n,2) < n²/6 + kn` en cuanto `k > n/2`. El caso `q = 0` lo cubre la Sección 8, lo que importa porque (9.2) requiere `I ≠ ∅`.
+>
+> **K-EPS (ledger de tolerancias) — cerrado.** Constante explícita: en `ε ≤ α ≤ 2−ε`, `μ` es el mínimo puntual de `α²/12` y `(2−α)²/48`, minimizado en un extremo, con `c_ε = ε²/48 > 0`. El Teorema 4.2 da margen `≥ ε²p²/48 − p/4`; el Teorema 2.1 cuesta `o(n²)`, y como `α < 2` fuerza `q < 2p`, entonces `n < 3p` y `n² < 9p²`, así que esa pérdida es también `o(p²)`. Tomando `c = ε²/96` queda `ε²p²/96 − p/4`, positivo en cuanto `p > 24/ε²`.
+>
+> *NOTE de alcance:* este es el ledger **del manuscrito**, cuya prueba depende del Teorema 2.1 solo como teorema externo citado, ya verificado en su fuente. La cadena nibble interna del desarrollo Lean es otro objeto y no fue auditada; la afirmación a nivel de manuscrito no descansa en ella.
+>
+> *Residuo declarado:* el **Apéndice D** (prueba autocontenida de Galvin) no fue auditado. No deja nada sin fundamento —el enunciado es el caso de grado máximo de Galvin, resultado clásico publicado, y se verificó que la hipótesis que el manuscrito necesita es exactamente la de Galvin— pero lo que queda sin verificar es la **autocontención**.
+>
+> ---
+>
+> ## E6 — Citas, arte previo y novedad: `PASS`
+>
+> **Corrección previa:** una primera versión declaró `INCONCLUSIVE` alegando bases bibliográficas inalcanzables y reportando cero cadenas de búsqueda, **sin haber intentado ninguna búsqueda en esta corrida**; era una conclusión heredada de auditorías de versiones anteriores. Realizadas las búsquedas, funcionaron de inmediato.
+>
+> **Integridad estructural:** 17 referencias listadas; **toda cita entre corchetes resuelve a una referencia listada y toda referencia listada está citada**. Una aparente cita `[0]` era el regex del auditor leyendo el intervalo `[0,2]`.
+>
+> **Fuentes portantes, recuperadas en su origen:**
+>
+> | Referencia | Origen | Contenido verificado |
+> |---|---|---|
+> | **[3] Erdős-Ordman-Zalcstein** | Cambridge Core, abstract textual | *CPC* **2**(4), dic 1993, 409–415. `n²/6` es cota **inferior** por construcción, "which is also a threshold graph and a split graph"; la cota **superior** probada para cordales es `(1−c)n²/4`; la suficiencia es **abierta** |
+> | **[5] Chen-Erdős-Ordman** | registro de Erdős #81 | "any split graph can be partitioned into `(3/16)n²+O(n)` many cliques" — el `3/16` del manuscrito queda confirmado. Detalles: Beijing 1993, pp. 21–30, World Scientific 1994 |
+> | **[11] Haxell-Rödl** | CV de Penny Haxell | *Combinatorica* **21** (2001), 13–38, exactamente como se cita |
+> | **[2] BKLO** y **[7] Dross** | arXiv y repositorios institucionales | *Adv. Math.* **288** (2016), 337–385, con la consecuencia explícita junto a Dross: todo grafo `K₃`-divisible suficientemente grande con grado mínimo `≥ 9n/10 + o(n)` admite `K₃`-descomposición — **es literalmente el Teorema 2.3** |
+> | **Survey de Cavers** | repositorio de Waterloo, extraído completo | Ensayo de maestría, 20 dic 2005, 87.916 caracteres. **Cero** ocurrencias de "chordal", `3/16`, `n²/6` o "Zalcstein"; sus tres "split" son el verbo. Trata árboles, bosques y complementos |
+> | **arXiv:2608.11536** (30 jul 2026) | arXiv HTML, leído | Bo Ning, sobre `f(n)` = diferencia máxima entre número de partición y de cubrimiento por cliques: `⌊n²/4⌋ − C₁n^{4/3} ≤ f(n) ≤ ⌊n²/4⌋ − C₂n^{4/3}`. Cita a EOZ solo como trabajo previo. **Sin colisión** |
+>
+> **La pregunta decisiva, respondida: NO existe cota integral publicada para split graphs igual o mejor que `n²/6 + O(n)`.** El registro de Erdős enuncia la posición explícitamente: cota inferior conocida `n²/6 + O(n)`, mejor cota superior conocida para split graphs `(3/16)n² + O(n)`, problema abierto. El Corolario 1.2 cierra exactamente esa brecha.
+>
+> **Las cuatro distinciones, verificadas por separado:**
+>
+> | Distinguir de | Estado |
+> |---|---|
+> | resultados **fraccionales** | Papers I y II acotan `\|E\| − 2ν₃*`, el funcional fraccional. EOZ, CEO y el Teorema 1.1 acotan `\|E\| − 2ν₃` y `cp`, integralmente. **Objetos distintos**, y la afirmación de Paper III es la integral |
+> | enunciados **`o(n²)`** | Haxell-Rödl acota la **brecha** fraccional-integral por `o(n²)`. Es un insumo, no una cota de partición, y por sí solo no da coeficiente cuadrático. **Distinto** |
+> | **cordal general** | Sigue abierto; la cota superior publicada es `(1−c)n²/4`. Paper III reclama solo el caso split y lo declara tres veces en cada idioma. **Correctamente delimitado** |
+> | **coeficiente lineal óptimo** | La cota inferior del registro es `n²/6 + O(n)` y el menor coeficiente lineal uniforme está indeterminado. Paper III afirma agudeza del coeficiente **cuadrático** únicamente y dice que el lineal sigue sin determinar. **Correctamente delimitado** |
+>
+> `EXT-V13-005` (ausencia del survey de Cavers) **RETIRADO**: el survey no incide en la afirmación. `EXT-V13-008` (baseline `3/16` sin verificar) **CERRADO** por el registro de Erdős #81.
+>
+> ---
+>
+> **Conclusión conjunta:** E2 y E6 eran las dos compuertas que nunca habían cerrado en tres auditorías de este paper, y ambas cierran con trabajo independiente. **La matemática y la novedad quedan aptas para `PASS`.** El veredicto global de v1.3 permanece `FAIL` por defectos de release ajenos a estas dos compuertas → **`EXPECTED_PASS_ON_V1.4_IF_CORRECTIONS_VERIFY`**.

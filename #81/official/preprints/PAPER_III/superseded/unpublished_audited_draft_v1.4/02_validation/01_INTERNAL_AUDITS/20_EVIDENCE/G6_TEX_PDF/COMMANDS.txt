@@ -1,0 +1,7 @@
+python 03_reproducibility/regenerate_tex_from_markdown.py
+lualatex -interaction=nonstopmode -halt-on-error PAPER_III_preprint_draft_v1.3_en.tex  # twice
+lualatex -interaction=nonstopmode -halt-on-error PAPER_III_preprint_draft_v1.3_es.tex  # twice
+pdftoppm -png -r 110 <each final PDF> <temporary page prefix>
+pdfinfo <each final PDF>
+pdffonts <each final PDF>
+FINAL_VERDICT=PASS

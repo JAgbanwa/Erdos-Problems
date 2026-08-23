@@ -1,0 +1,26 @@
+{
+  "paper": "PAPER_I",
+  "draft_version": "1.2",
+  "freeze_label": "lean_v1.2_freeze",
+  "freeze_date": "2026-08-21",
+  "status": "LOCAL_CORRECTIVE_FREEZE_PREPARED",
+  "source_kind": "CURATED_PUBLISHABLE_CORRECTIVE_FREEZE",
+  "baseline_freeze": "lean_v1.1_freeze",
+  "baseline_archive_sha256": "ab831117f761e93eb00598a4a59104a6bd0f23f8c625eb226322522f2c3f0429",
+  "source_git_head": "12c4f46e4a42958573e180e1f19792d51fbba1c3",
+  "lean_toolchain": "leanprover/lean4:v4.28.0",
+  "lean_commit": "7e01a1bf5c70fc6167d49c345d3bf80596e9a79b",
+  "mathlib_rev": "8f9d9cff6bd728b17a24e163c9402775d9e6a365",
+  "lean_source_files": 16,
+  "build_result": "PASS_RECORDED_BASELINE_8034_JOBS_NOT_RERUN",
+  "axiom_result": "PASS_CORRECTIVE_GATE_15_SURFACES_STANDARD_FOUNDATIONAL_AXIOMS_ONLY",
+  "internal_audit": "PENDING_V1_2_FULL_RERUN",
+  "independent_reproduction": "NOT_RUN",
+  "excluded": [
+    ".lake",
+    "compiled objects",
+    "scratch files",
+    "internal integration drafts",
+    "historical non-freeze source trees"
+  ]
+}

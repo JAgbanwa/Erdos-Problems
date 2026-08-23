@@ -1,32 +1,11 @@
-# ERDOZ81 Paper I — Complete Audit Certificate Package
+# Paper I v1.3 validation
 
-Scope: finite fractional split-graph theorem and its proof assembly.
+This directory preserves the complete author-side and independent AI
+adversarial audit trail for the manuscript and unchanged Lean v1.2 freeze.
 
-Included categories:
+- `01_INTERNAL_AUDITS/`: common-standard internal audit and package residual.
+- `02_IA_ADVERSARIAL_AUDITS/run_2026-08-21_v1.3/`: full external residual audit.
+- `02_IA_ADVERSARIAL_AUDITS/run_2026-08-21_v1.3_pkgfix/`: final independent package regression, verdict `PASS`.
 
-- `01_INTERNAL_AUDITS`: internal adversarial, self-audit, clean-context, and assembly audits.
-- `02_IA_ADVERSARIAL_AUDITS`: external/independent audit PDFs for the quantitative bound, finite fractional theorem, and T4 assembly.
-- `03_CERTIFICATES_AND_ADMISSIONS`: theorem certificates, audit-evidence records, and evidence-admission records.
-- `04_FREEZE_AND_CONFORMANCE`: conformance review, documentation reconciliation, frozen-scope manifest, and Freeze Records.
-
-Excluded:
-
-- UG-07 audit files uploaded by mistake.
-- unrelated project certificates.
-- historical superseded Gate Records unless needed by an admitted audit.
-- raw computational outputs not themselves audit certificates.
-
-Current certified scope:
-
-- `ERDOZ81-P1-BOUND-01`: `FINAL_PASS / FROZEN / CLEAN`
-- `ERDOZ81-P1-FRAC-THM-01`: `FINAL_PASS / FROZEN / CLEAN`
-- `ERDOZ81-P1-ASSEMBLY-01`: `FINAL_PASS / FROZEN / CLEAN`
-
-File counts:
-
-- Internal audits: 17
-- External/independent audits: 3
-- Certificates and admissions: 19
-- Freeze and conformance: 6
-
-See `MANIFEST.json` and `SHA256SUMS.txt` for file-level integrity.
+The external PASS is not human peer review or a specialist priority decision.
+Files inside audit runs retain their historical draft-target names and hashes.

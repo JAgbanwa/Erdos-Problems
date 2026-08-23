@@ -1,21 +1,13 @@
 # Citation
 
-If you use or refer to this research announcement or manuscript sequence, please cite:
+Please cite the individual preprint used:
 
-Juan Pablo Traverso Gianini,  
-*A Research Announcement on Clique Partitions of Chordal Graphs*,  
-Research announcement draft, 2026.  
-ORCID: https://orcid.org/0009-0003-6068-4096
+- Juan Pablo Traverso Gianini, *Affine Profile Reduction for Fractional
+  Triangle Packings in Split Graphs*, preprint v1.3, 2026.
+- Juan Pablo Traverso Gianini, *Complete-Split Extremizers for a Fractional
+  Triangle-Cover Functional on Chordal Graphs*, preprint v1.2, 2026.
+- Juan Pablo Traverso Gianini, *Linear-Error Clique Partitions of Split Graphs
+  via Structured Triangle Packing*, preprint v1.5, 2026.
 
-BibTeX:
-
-```bibtex
-@misc{traverso2026chordalcliquepartitions,
-  author = {Traverso Gianini, Juan Pablo},
-  title = {A Research Announcement on Clique Partitions of Chordal Graphs},
-  year = {2026},
-  note = {Research announcement draft and timestamped manuscript milestone},
-  howpublished = {\url{https://github.com/jtraverso/erdos-81-chordal-clique-partitions}},
-  orcid = {0009-0003-6068-4096}
-}
-```
+Machine-readable metadata is provided in the repository-level `CITATION.cff`
+and in each paper package. The repository DOI remains documented in `README.md`.

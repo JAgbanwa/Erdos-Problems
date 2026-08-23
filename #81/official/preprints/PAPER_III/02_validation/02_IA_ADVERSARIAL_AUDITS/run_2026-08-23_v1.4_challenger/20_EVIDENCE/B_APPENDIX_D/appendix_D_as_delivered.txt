@@ -1,0 +1,58 @@
+# Appendix D. Self-Contained List Edge Coloring
+
+This appendix proves the list edge coloring theorem used in Section 7.2 (stated as Theorem 2.2), so that the corridor argument depends on no external coloring theorem. The result is the maximum-degree case of Galvin's theorem [10]; the gain graph of Section 7.2 is simple and bipartite, which is the case proved here.
+
+## D.1 Kernels
+
+A **kernel** of a digraph \(D\) is an independent set \(K\) of vertices such that every vertex outside \(K\) has an out-neighbor in \(K\). \(D\) is **kernel-perfect** if every induced subdigraph has a kernel. A kernel of a nonempty digraph is nonempty.
+
+### Lemma D.1 — Kernel coloring lemma
+
+Let \(D\) be a kernel-perfect digraph in which every vertex \(v\) has a list \(L(v)\) with \(|L(v)|\ge d^+_D(v)+1\). Then the underlying graph of \(D\) has a proper coloring choosing each color from the corresponding list.
+
+### Proof
+
+Pick any color \(c\) appearing in some list, let \(S=\{v:c\in L(v)\}\), and let \(K\) be a kernel of \(D[S]\). Color every vertex of \(K\) with \(c\); this is proper on \(K\) because \(K\) is independent. Delete \(K\) from \(D\) and delete \(c\) from the list of every vertex of \(S\setminus K\). Every \(v\in S\setminus K\) lost one color but also at least one out-neighbor, namely its out-neighbor in \(K\), so the hypothesis \(|L(v)|\ge d^+(v)+1\) is preserved; vertices outside \(S\) keep their lists while their out-degrees do not increase. Repeat. Every uncolored vertex always has a nonempty list, and each round with \(S\ne\varnothing\) colors the nonempty set \(K\), so every vertex is eventually colored. \(\square\)
+
+## D.2 Stable pairings
+
+Let \(B\) be a bipartite graph with parts \(U\) and \(R\) in which every vertex \(z\) has a linear preference order \(>_z\) on its incident edges. A matching \(M\subseteq E(B)\) is **stable** if every edge \(f\notin M\) has an endpoint \(z\) that is covered by an edge \(e\in M\) with \(e>_zf\).
+
+### Lemma D.2 — Gale--Shapley [9]
+
+For every system of preferences, a stable matching exists.
+
+### Proof
+
+Run deferred acceptance. While some \(u\in U\) is unmatched and has not yet proposed along all of its edges, let \(u\) propose along its most preferred untried edge, say \(f\) with endpoint \(r\in R\). If \(r\) is unmatched, or prefers \(f\) to its currently held edge, then \(r\) accepts \(f\), releasing its previous partner, if any; otherwise \(r\) rejects \(f\). Every edge is proposed at most once, so the process terminates, and it terminates in a matching \(M\).
+
+Let \(f=ur\notin M\). Suppose first that \(u\) proposed along \(f\) at some point. Then \(r\) either rejected \(f\) immediately or accepted it and later released it; in both cases, at that moment \(r\) held or received an edge it strictly prefers to \(f\). Since the edge held by \(r\) only improves during the process, the final edge \(e\in M\) at \(r\) satisfies \(e>_rf\). Suppose instead that \(u\) never proposed along \(f\). An unmatched vertex of \(U\) keeps proposing while untried edges remain, so at termination \(u\) is matched, say to \(e\in M\); and since \(u\) proposes in decreasing order of preference and never reached \(f\), we have \(e>_uf\). In both cases \(f\) has an endpoint whose matched edge is preferred to \(f\). \(\square\)
+
+## D.3 The coloring theorem
+
+### Theorem D.3 — Galvin, maximum-degree case
+
+Let \(B\) be a simple bipartite graph with maximum degree \(\Delta\), and let every edge \(e\) carry a list \(L(e)\) with \(|L(e)|\ge\Delta\). Then \(B\) has a proper edge coloring choosing each color from the corresponding list.
+
+### Proof
+
+**Step 1: a proper \(\Delta\)-edge-coloring.** By König's edge coloring theorem [13], \(B\) has a proper edge coloring \(\varphi:E(B)\to\{1,\ldots,\Delta\}\). For completeness: induct on the number of edges. Remove an edge \(e=ur\) and color the rest. At most \(\Delta-1\) colors appear at \(u\) and at most \(\Delta-1\) at \(r\), so \(u\) misses a color \(\alpha\) and \(r\) misses a color \(\beta\). If they miss a common color, give it to \(e\). Otherwise consider the maximal path \(P\) starting at \(u\) whose edges are colored alternately \(\beta,\alpha\). The path \(P\) cannot end at \(r\): since \(r\) misses \(\beta\), such a path would end with an \(\alpha\)-edge and hence have even length, while every path between the adjacent vertices \(u\) and \(r\) of a bipartite graph has odd length. Swap the colors \(\alpha\) and \(\beta\) along \(P\); by maximality of \(P\) the coloring stays proper, the vertex \(r\) is untouched, and \(u\) now misses \(\beta\). Give \(\beta\) to \(e\).
+
+**Step 2: the orientation.** Define preferences from \(\varphi\): every \(u\in U\) prefers its incident edges with **higher** \(\varphi\)-color, every \(r\in R\) prefers **lower** \(\varphi\)-color. Define a digraph \(D\) on the vertex set \(E(B)\): for distinct edges \(e,f\) sharing an endpoint \(z\), put an arc \(e\to f\) exactly when \(f>_ze\).
+
+Out-degrees: let \(e=ur\) with \(\varphi(e)=c\). The out-neighbors of \(e\) are the edges at \(u\) with color greater than \(c\) — at most \(\Delta-c\), since the colors at \(u\) are pairwise distinct — and the edges at \(r\) with color smaller than \(c\) — at most \(c-1\). Hence
+
+\[
+d^+_D(e)\le(\Delta-c)+(c-1)=\Delta-1.
+\]
+
+**Step 3: kernel-perfectness.** An induced subdigraph of \(D\) is \(D[S]\) for a set \(S\) of edges of \(B\). A kernel of \(D[S]\) is exactly a stable matching of the subgraph \((V(B),S)\) with the inherited preferences: independence in \(D\) means that no two kernel edges share an endpoint, because two edges at a common vertex are always joined by an arc; and the domination condition asks that every \(f\in S\setminus K\) have an arc into \(K\), that is, an endpoint \(z\) and an edge \(e\in K\) at \(z\) with \(e>_zf\), which is stability. Lemma D.2 provides a stable matching, so \(D\) is kernel-perfect.
+
+**Step 4: conclusion.** Every edge has \(|L(e)|\ge\Delta\ge d^+_D(e)+1\), so Lemma D.1 yields a proper coloring of the underlying graph of \(D\) from the lists — that is, a proper list edge coloring of \(B\). \(\square\)
+
+### Remark D.4 — Application
+
+The gain graph of Section 7.2 is simple and bipartite, and hypothesis (7.2) bounds every list by \(b-t_i\ge\max\{\rho,u\}\ge\Delta\) of the gain graph. Theorem D.3 therefore applies verbatim. The multigraph version of Galvin's theorem holds as well [10] and is not needed here.
+
+---
+

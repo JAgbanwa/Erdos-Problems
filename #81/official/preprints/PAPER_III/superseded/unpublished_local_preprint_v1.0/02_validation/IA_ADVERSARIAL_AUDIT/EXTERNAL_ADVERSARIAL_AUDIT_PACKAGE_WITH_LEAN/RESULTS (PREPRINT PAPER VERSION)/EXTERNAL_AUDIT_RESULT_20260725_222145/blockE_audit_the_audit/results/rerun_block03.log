@@ -1,0 +1,22 @@
+========================================================================
+Paper III � Block 03: unified fractional margin (4.5), exact rational grid
+Grid: 3 <= p <= 48, 1 <= q <= 2p, 0 <= d <= p   (alpha = q/p in (0,2])
+========================================================================
+
+Total (p,q,d) cases audited: 78384
+Margin inequality (4.5) F >= qd/2 + (C_a+mu)p^2 - p/2:
+    PASS: 78384/78384
+    FAIL: 0
+
+Branch-minimiser histogram (which of t1,t2,t3 attains the min; ties counted each):
+    t1 (uniform)          : 18167
+    t2 (separated)        : 29078
+    t3 (hot-neighbourhood): 36317
+Third-branch dominance check:
+    cases where t3 is a co-minimiser : 36317
+    cases where t3 is the UNIQUE min : 31303
+    => third branch never breaks the margin (all 78384 margin checks hold): CONFIRMED
+
+========================================================================
+VERDICT: PASS  (78384/78384 exact-rational margin checks)
+========================================================================

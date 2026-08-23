@@ -1,0 +1,134 @@
+{
+ "spec": "FINAL_RESIDUAL_AUDIT_REQUEST_SPEC.md",
+ "control": "A (EXT-PII-M-001)",
+ "checks": {
+  "corrected_integrity_anchors": {
+   "rows": [
+    {
+     "file": "04_integrity/INITIAL_SOURCE_SHA256.txt",
+     "declared": "1d5f8d91cb5d459eb0678e0a9ed2299a5b10b8ad69ae1a0640fa39fe4e220323",
+     "computed": "1d5f8d91cb5d459eb0678e0a9ed2299a5b10b8ad69ae1a0640fa39fe4e220323",
+     "match": true,
+     "line_endings": "LF"
+    },
+    {
+     "file": "04_integrity/INITIALIZATION_DIFF.md",
+     "declared": "4b88e30639bc91cb71ab3ea88adad758604c2c96bae3722e40e2d14a92550c2c",
+     "computed": "4b88e30639bc91cb71ab3ea88adad758604c2c96bae3722e40e2d14a92550c2c",
+     "match": true,
+     "line_endings": "LF"
+    },
+    {
+     "file": "04_integrity/README.md",
+     "declared": "d7ed1d33556de1f0ec2b79ba769b9ed255d4df8101d51fa3aa425f6ccb011e85",
+     "computed": "d7ed1d33556de1f0ec2b79ba769b9ed255d4df8101d51fa3aa425f6ccb011e85",
+     "match": true,
+     "line_endings": "LF"
+    },
+    {
+     "file": "04_integrity/CURRENT_TARGET_SHA256.txt",
+     "declared": "79fd65426d03a77867f6591b7580651c98d3ce14580aed3d1e68e69b477a315d",
+     "computed": "79fd65426d03a77867f6591b7580651c98d3ce14580aed3d1e68e69b477a315d",
+     "match": true,
+     "line_endings": "LF"
+    },
+    {
+     "file": "04_integrity/SEMANTIC_INTEGRITY_REPORT_v1.2.md",
+     "declared": "5c9d6dc4694987fdc4f070b19eb1c3362083834ada009fd6227bb402526d817e",
+     "computed": "5c9d6dc4694987fdc4f070b19eb1c3362083834ada009fd6227bb402526d817e",
+     "match": true,
+     "line_endings": "LF"
+    },
+    {
+     "file": "04_integrity/EXTERNAL_AUDIT_V1.2_RESIDUAL_MATRIX.md",
+     "declared": "a004b4fec8520c14ba55b812d4231c8863088bbc988b2c3fb8a3dd04f4350857",
+     "computed": "a004b4fec8520c14ba55b812d4231c8863088bbc988b2c3fb8a3dd04f4350857",
+     "match": true,
+     "line_endings": "LF"
+    }
+   ],
+   "all_match": true
+  },
+  "INITIAL_SOURCE_SHA256": {
+   "sidecar": "04_integrity/INITIAL_SOURCE_SHA256.txt",
+   "line_endings": "LF",
+   "entries": 3,
+   "ok": 3,
+   "mismatch": 0,
+   "missing": 0,
+   "resolved_from": ".",
+   "verifies": true,
+   "detail": [],
+   "paths": [
+    "02_validation/00_intake/PAPER_II_preprint_v1.1.8_near_final_editorial_en.md",
+    "01_manuscript/PAPER_II_preprint_draft_v1.2.md",
+    "01_manuscript/PAPER_II_preprint_draft_v1.2_es.md"
+   ],
+   "three_entries": true,
+   "no_v11_manuscript_path": true,
+   "lf_only": true
+  },
+  "CURRENT_TARGET_SHA256": {
+   "sidecar": "04_integrity/CURRENT_TARGET_SHA256.txt",
+   "line_endings": "LF",
+   "entries": 9,
+   "ok": 9,
+   "mismatch": 0,
+   "missing": 0,
+   "resolved_from": ".",
+   "verifies": true,
+   "detail": [],
+   "paths": [
+    "01_manuscript/PAPER_II_preprint_draft_v1.2.md",
+    "01_manuscript/PAPER_II_preprint_draft_v1.2_es.md",
+    "01_manuscript/PAPER_II_preprint_draft_v1.2_en.tex",
+    "01_manuscript/PAPER_II_preprint_draft_v1.2_es.tex",
+    "01_manuscript/PAPER_II_preprint_draft_v1.2_en.pdf",
+    "01_manuscript/PAPER_II_preprint_draft_v1.2_es.pdf",
+    "05_formalization/lean_v1.2_freeze/PAPER_II_lean_v1.2_freeze.zip",
+    "02_validation/01_INTERNAL_AUDITS/30_PACKAGE/INTERNAL_AUDIT_PACKAGE.zip",
+    "02_validation/02_IA_ADVERSARIAL_AUDITS/run_2026-08-21_v1.2/30_REPORT/FINAL_AUDIT_REPORT.md"
+   ],
+   "nine_entries": true,
+   "lf_only": true
+  },
+  "integrity_README": {
+   "mentions_v1_2": true,
+   "still_says_pending_for_v1_1": false,
+   "mentions_superseded_dir": false,
+   "text": "# Integrity records -- Paper II v1.2\n\nThis directory binds the current manuscript artifacts, formal archive,\ninitialization history and external-audit correction disposition. It replaces\nthe stale v1.1 integrity records identified by external finding\n`EXT-PII-M-001`.\n\nResolve every path in the SHA-256 sidecars relative to the\n`preprint_draft_v1.2/` package root.\n\n- `INITIAL_SOURCE_SHA256.txt`: verifiable intake and current semantic-source\n  hashes at the v1.2 correction baseline.\n- `CURRENT_TARGET_SHA256.txt`: current manuscript artifacts, formal archive,\n  internal-audit archive and preserved external report.\n- `INITIALIZATION_DIFF.md`: protected semantic-diff statement for v1.1 to\n  v1.2.\n"
+  },
+  "INITIALIZATION_DIFF": {
+   "documents_v11_to_v12": true,
+   "asserts_no_protected_change": true,
+   "text": "# Paper II v1.2 initialization and semantic diff\n\nThe preceding internal target was Paper II v1.1, whose English Markdown\nmanuscript has SHA-256\n`361802b5398eb9e3cc03b4ca5e591ce71987979b02142826054eb5f6a315ded6`.\nThat historical package is retained outside this active target under the\nproject's `superseded/preprint_draft_v1.1/` directory. The current English v1.2\nsemantic source has SHA-256\n`7215e14bbea8ab2bf208dcdd1efa050cd2b72c997eee2efe504a1e6817c68882`.\n\nThe v1.1 to v1.2 changes are limited to:\n\n- replacing stale formal-package names, hashes and paths with the delivered\n  `PAPER_II_lean_v1.2_freeze.zip` archive and its SHA-256;\n- recording the two actual local build results, for the main and supplementary\n  target sets;\n- aligning Tables 4 and 5 with the delivered v1.2 formal perimeter;\n- removing internal version history from the self-contained manuscript;\n- regenerating the synchro"
+  },
+  "all_sidecars": {
+   "checked": 40,
+   "verifying": 39,
+   "failing": [
+    {
+     "sidecar": "02_validation/01_INTERNAL_AUDITS/residual_run_2026-08-21_v1.2_pkgfix/20_EVIDENCE/R5_ARTIFACTS/results/PAPER_II_preprint_draft_v1.2_SHA256.txt",
+     "line_endings": "LF",
+     "entries": 6,
+     "ok": 0,
+     "mismatch": 0,
+     "missing": 6,
+     "resolved_from": "02_validation/01_INTERNAL_AUDITS/residual_run_2026-08-21_v1.2_pkgfix/20_EVIDENCE/R5_ARTIFACTS/results",
+     "verifies": false,
+     "detail": [
+      "MISSING PAPER_II_preprint_draft_v1.2.md",
+      "MISSING PAPER_II_preprint_draft_v1.2_en.tex",
+      "MISSING PAPER_II_preprint_draft_v1.2_en.pdf",
+      "MISSING PAPER_II_preprint_draft_v1.2_es.md"
+     ]
+    }
+   ],
+   "line_ending_summary": {
+    "LF": 18,
+    "CRLF": 22,
+    "MIXED": 0
+   }
+  }
+ }
+}

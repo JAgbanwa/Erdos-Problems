@@ -1,0 +1,11 @@
+=== sorry/admit scan ===
+PaperIII\Contrib\Submission\PR_DRAFTS.md:19:> (classical rotation–extension argument), sorry-free and axiom-clean
+PaperIII\Contrib\Submission\PR_DRAFTS.md:53:> Tutte theorem (a high-min-degree graph has no Tutte violator). Self-contained, sorry-free,
+PaperIII\Contrib\Submission\README.md:19:| `Dirac.lean` | Lean (478 lines) | **Dirac's theorem**: `SimpleGraph.IsHamiltonian_of_minDegree` — a finite simple graph on `n ≥ 3` vertices with `δ ≥ n/2` is Hamiltonian (rotation–extension). Self-contained, sorry-free, axioms `[propext, Classical.choice, Quot.sound]`. |
+PaperIII\Contrib\Submission\README.md:20:| `Matching.lean` | Lean (371 lines) | **Matching from min-degree**: `SimpleGraph.exists_isPerfectMatching_of_minDegree` (even `n`) + near-perfect odd-case variant, via Tutte. Self-contained, sorry-free, same axioms. |
+PaperIII\Contrib\Submission\README.md:43:Clean output (no `error`/`sorry`/warning) = verified. Both currently pass, and
+=== axiom scan ===
+PaperIII\AX.lean:28:axiom AX1 : ∀ ε : ℝ, 0 < ε → ∃ n₀ : ℕ,
+PaperIII\AX.lean:37:axiom AX2 : ∀ ε : ℝ, 0 < ε → ∃ n₀ : ℕ,
+=== escape hatch scan ===
+NO_MATCHES

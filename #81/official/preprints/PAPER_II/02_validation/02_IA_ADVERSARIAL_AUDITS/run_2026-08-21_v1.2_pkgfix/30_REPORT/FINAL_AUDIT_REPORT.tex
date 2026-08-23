@@ -1,0 +1,719 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+\PassOptionsToPackage{dvipsnames,svgnames,x11names}{xcolor}
+\documentclass[
+  10pt,
+]{article}
+\usepackage{xcolor}
+\usepackage[margin=2cm]{geometry}
+\usepackage{amsmath,amssymb}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math} % this also loads fontspec
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+\usepackage{lmodern}
+\ifPDFTeX\else
+  % xetex/luatex font selection
+  \setmainfont[]{Latin Modern Roman}
+  \setmonofont[]{Latin Modern Mono}
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{longtable,booktabs,array}
+\newcounter{none} % for unnumbered tables
+\usepackage{calc} % for calculating minipage widths
+% Correct order of tables after \paragraph or \subparagraph
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd\longtable{\par}{\if@noskipsec\mbox{}\fi\par}{}{}
+\makeatother
+% Allow footnotes in longtable head/foot
+\IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
+\makesavenoteenv{longtable}
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+% Long monospace tokens (hashes, paths, status literals) are unbreakable by default
+% and produce overfull boxes. Allow hyphenation inside monospace and shrink tables.
+\usepackage{etoolbox}
+\setmonofont{Latin Modern Mono}[HyphenChar={-}]
+\AtBeginEnvironment{longtable}{\small}
+\emergencystretch=3em
+\usepackage{bookmark}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same}
+\hypersetup{
+  colorlinks=true,
+  linkcolor={Maroon},
+  filecolor={Maroon},
+  citecolor={Blue},
+  urlcolor={Blue},
+  pdfcreator={LaTeX via pandoc}}
+
+\author{}
+\date{}
+
+\begin{document}
+
+{
+\setcounter{tocdepth}{3}
+\tableofcontents
+}
+\section{Final External Package-Residual Re-audit -- Paper II v1.2,
+corrected in
+place}\label{final-external-package-residual-re-audit-paper-ii-v1.2-corrected-in-place}
+
+\textbf{Specification:}
+\texttt{FINAL\_RESIDUAL\_AUDIT\_REQUEST\_SPEC.md} \textbf{Specification
+SHA-256:}
+
+\begin{verbatim}
+2eadd655d6dd9f1d96127c979ba43a0b2d251da7478cd84ba4bb1868e38cb683
+\end{verbatim}
+
+\textbf{Request ID:}
+\texttt{PAPER\_II\_EXTERNAL\_PACKAGE\_RESIDUAL\_v1.0} \textbf{Run:}
+\texttt{run\_2026-08-21\_v1.2\_pkgfix} \textbf{Audit class:} independent
+external residual adversarial re-audit \textbf{Audit date:} 2026-08-21
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\subsection{1. Executive verdict}\label{executive-verdict}
+
+\begin{quote}
+\mbox{}%
+\subsection{\texorpdfstring{\texttt{PASS}}{PASS}}\label{pass}
+\end{quote}
+
+\texttt{EXT-PII-M-001} is independently \textbf{closed}. The 245-file
+target inventory verifies, \textbf{including the canonical manifest
+hash}, all nine protected anchors match, the package regression found
+\textbf{no new blocker, major or minor}, reused evidence satisfies byte
+identity, and \texttt{EXT-P2-I-001} is preserved as a NOTE.
+
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.5000}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.5000}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Section 7 condition
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Met
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+1. \texttt{EXT-PII-M-001} independently closed & \textbf{yes} \\
+2. 245-file inventory and every manifest entry verify & \textbf{yes} \\
+3. all protected anchors match & \textbf{yes}, 9/9 \\
+4. package regression finds no new blocker, major or minor &
+\textbf{yes}, 0/0/0 \\
+5. reused evidence satisfies byte identity & \textbf{yes} \\
+6. \texttt{EXT-P2-I-001} preserved as a NOTE & \textbf{yes} \\
+\end{longtable}
+}
+
+\textbf{This audit is not human peer review and does not prove global
+novelty.}
+
+The previous \texttt{PASS\_WITH\_RESIDUALS} run is not overwritten or
+relabelled.
+
+\subsection{2. Target freeze -- the manifest reproduced
+exactly}\label{target-freeze-the-manifest-reproduced-exactly}
+
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}llll@{}}
+\toprule\noalign{}
+Quantity & Recomputed & Declared & Result \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+files & \textbf{245} & 245 & \textbf{MATCH} \\
+bytes & \textbf{3,940,779} & 3,940,779 & \textbf{MATCH} \\
+manifest SHA-256 & see below & same & \textbf{MATCH} \\
+\end{longtable}
+}
+
+The recomputed manifest hash, identical to the declared value:
+
+\begin{verbatim}
+4b41f7e2e9415ca55514c6997dc6bff4e952b830282f46012c5214b04f688c1e
+\end{verbatim}
+
+Worth stating plainly, because it contrasts with the Paper I package-fix
+run: this specification \textbf{publishes the manifest algorithm} --
+UTF-8, LF-only lines of the form
+\texttt{\textless{}file\_sha256\textgreater{}\textless{}two\ spaces\textgreater{}\textless{}target-relative\ POSIX\ path\textgreater{}\textbackslash{}n},
+sorted case-insensitively by path, then SHA-256 over the exact manifest
+bytes. Because the algorithm is published, an external party can
+reproduce the summary value, and this auditor did, on the first attempt.
+In the Paper I run the corresponding aggregate was unreproducible under
+sixteen scope-by-convention combinations and had to be recorded as an
+unverifiable control. That is the difference a published algorithm
+makes.
+
+Every file hash, byte count and path was recomputed before analysis.
+\textbf{No file-entry mismatch.} No manifest-summary mismatch either, so
+the two are reported together here rather than separately.
+
+\subsection{3. Protected anchors -- 9 / 9}\label{protected-anchors-9-9}
+
+Each of the nine declared anchors was recomputed from the frozen target
+and \textbf{matched}. Recomputed values, in declaration order:
+
+\begin{verbatim}
+7215e14bbea8ab2bf208dcdd1efa050cd2b72c997eee2efe504a1e6817c68882  English Markdown
+d0d1df05eb267a51db2ccc100dd9725dcde9b03dbb95c8a730742e357eb0f4dc  Spanish Markdown
+bb5f76c3ce56dbb0bff11242a3a8787f9c8ba3d9f0ad23973fc2f26cc5fc3cf0  English LaTeX
+d3f0c6301a48d6553ebad222fa685f152119cb61b5efd3e8be55e389f9d606ae  Spanish LaTeX
+d05c4cab1262357fddd21e4aab399bdb92d5bcf139172897c80595e781049052  English PDF
+d525d02a6e911cb23f7e1f28e1de7648441eccea6de206e76e5321161c86c2db  Spanish PDF
+ee2d05cc40d943ca92f8f7bf3e5dd83c2692518ddea5e2ca4f7686ccb1ac3895  Lean v1.2 archive
+1e7afd3e9394bf83beb7e33ce19ff5227072fcd6b0eb3fd21e571329564e3ded  Previous external report
+779c8453e0ec3666bd8a7564d2e1251b6f2acf586815cd43470c202fa657eb13  Internal residual-audit ZIP
+\end{verbatim}
+
+The previous external report was located at
+\texttt{run\_2026-08-21\_v1.2/30\_REPORT/FINAL\_AUDIT\_REPORT.md}.
+
+All six publication artifacts and the Lean archive are
+\textbf{unchanged}, which is the precondition for the evidence reuse in
+Section 7.
+
+\subsection{\texorpdfstring{4. Control A -- \texttt{EXT-PII-M-001} is
+closed}{4. Control A -- EXT-PII-M-001 is closed}}\label{control-a-ext-pii-m-001-is-closed}
+
+\subsubsection{4.1 The six corrected integrity
+documents}\label{the-six-corrected-integrity-documents}
+
+All six declared anchors match, and every one is \textbf{LF-only}:
+
+All six live in \texttt{04\_integrity/}.
+
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.3333}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.3333}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.3333}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+File
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Anchor
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Result
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+\texttt{INITIAL\_SOURCE\_SHA256.txt} & \texttt{1d5f8d91...0323} & MATCH,
+LF \\
+\texttt{INITIALIZATION\_DIFF.md} & \texttt{4b88e306...0c2c} & MATCH,
+LF \\
+\texttt{README.md} & \texttt{d7ed1d33...0e85} & MATCH, LF \\
+\texttt{CURRENT\_TARGET\_SHA256.txt} & \texttt{79fd6542...a315d} &
+MATCH, LF \\
+\texttt{SEMANTIC\_INTEGRITY\_REPORT\_v1.2.md} &
+\texttt{5c9d6dc4...d817e} & MATCH, LF \\
+\texttt{EXTERNAL\_AUDIT\_V1.2\_} \texttt{RESIDUAL\_MATRIX.md} &
+\texttt{a004b4fe...0857} & MATCH, LF \\
+\end{longtable}
+}
+
+\subsubsection{4.2 Each bullet of the control, checked
+independently}\label{each-bullet-of-the-control-checked-independently}
+
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.5000}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.5000}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Requirement
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Result
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+\texttt{INITIAL\_SOURCE\_SHA256.txt} is LF-only and all \textbf{three}
+entries resolve from the package root and match & \textbf{PASS} -- LF,
+exactly 3 entries, 3/3 resolve and match, 0 missing \\
+it contains no absent \texttt{PAPER\_II\_preprint\_draft\_v1.1.md} path
+& \textbf{PASS} -- no \texttt{preprint\_draft\_v1.1} path present \\
+\texttt{CURRENT\_TARGET\_SHA256.txt} is LF-only and all \textbf{nine}
+entries resolve and match & \textbf{PASS} -- LF, exactly 9 entries, 9/9
+resolve and match \\
+\texttt{04\_integrity/README.md} describes v1.2, not a pending v1.1
+workspace & \textbf{PASS} -- it opens ``Integrity records -- Paper II
+v1.2'', the string ``Pending for v1.1'' is \textbf{gone}, and there is
+no reference to a \texttt{superseded/} directory the package does not
+contain. It states explicitly that it ``replaces the stale v1.1
+integrity records identified by external finding
+\texttt{EXT-PII-M-001}''. \\
+\texttt{INITIALIZATION\_DIFF.md} documents v1.1 to v1.2 and claims no
+protected mathematical change & \textbf{PASS} -- it names the v1.1
+English Markdown hash \texttt{361802b5...ded6} and the v1.2 hash
+\texttt{7215e14b...8882}, records that the historical package is
+retained outside the active target, and asserts no protected change \\
+the semantic-integrity report and residual matrix agree with the actual
+hashes and external findings & \textbf{PASS} -- both match their
+declared anchors and reference \texttt{EXT-PII-M-001} correctly \\
+no sidecar anywhere in the target fails by content & \textbf{PASS} --
+see 4.3 \\
+\end{longtable}
+}
+
+The v1.2 defect was precisely that this directory was stale v1.1 content
+whose \texttt{INITIAL\_SOURCE\_SHA256.txt} named a manuscript absent
+from the package, so one of its two entries could not resolve.
+\textbf{All three entries now resolve and match, and the directory
+describes the target it ships with.}
+
+\subsubsection{4.3 Every sidecar in the target: 40 of 40
+verify}\label{every-sidecar-in-the-target-40-of-40-verify}
+
+40 sidecars were verified by content -- 18 LF, 22 CRLF, none mixed.
+\textbf{All 40 verify with zero mismatches and zero missing files.}
+
+One initially appeared to fail: the copy of
+\texttt{PAPER\_II\_preprint\_draft\_v1.2\_SHA256.txt} under the internal
+run's \texttt{20\_EVIDENCE/R5\_ARTIFACTS/results/}. It is a
+\textbf{byte-identical copy} of the real manuscript sidecar
+(\texttt{fa0d1501...e962} for both), placed in the internal run's
+evidence directory, whose entries are bare filenames and therefore
+resolve only from \texttt{01\_manuscript/}, its documented base.
+Resolved there it verifies \textbf{6/6}. The initial flag was this
+auditor's base-directory resolver not including that directory. Recorded
+so a tool artifact is not left looking like a target defect.
+
+\textbf{Control A verdict: \texttt{PASS}. \texttt{EXT-PII-M-001} is
+closed.}
+
+\subsection{5. Control B -- the internal residual PASS was inspected,
+not
+trusted}\label{control-b-the-internal-residual-pass-was-inspected-not-trusted}
+
+The internal report hashes both match: Markdown
+\texttt{3fac92e6...0fe0}, PDF \texttt{dfdfe4f6...6761}.
+
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.3333}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.3333}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.3333}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Gate
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Spec expectation
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+What the raw evidence shows
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+\textbf{R0} & 17/17 controls, canonical manifest algorithm &
+\texttt{status:\ PASS}, \texttt{checks\_passed:\ 17},
+\texttt{checks\_total:\ 17}, and a
+\texttt{canonical\_manifest\_algorithm} field. Their inventory scope is
+200 files / 3,417,038 bytes -- narrower than this run's 245, because it
+excludes their own residual run; consistent, not contradictory. \\
+\textbf{R1} & 58/58 common static controls & \texttt{status:\ PASS},
+\texttt{checks\_passed:\ 58}, and
+\texttt{audit\_class:\ INTERNAL\_NOT\_EXTERNAL},
+\texttt{lean\_rerun:\ False} -- an honest self-label \\
+\textbf{R2} & exit-zero exact regression over the unchanged Markdown
+hash & \texttt{status:\ PASS}, keyed to
+\texttt{target\_sha256:\ 7215e14b...8882}, the unchanged EN Markdown.
+Real instance counts, not a bare label: 195 complete-split LP instances,
+5,000 exact integer maximizations, 6,667 argmax level checks, 139
+chordal atlas graphs for n \textless= 6, 931 vertex-copy non-edge pairs,
+22 terminal-property graphs. Their own scope note calls bounded
+computation ``corroborating evidence'', which is the correct posture. \\
+\textbf{R3} & zero exact or near duplicate blocks in all six artifacts &
+\texttt{status:\ PASS}, threshold 0.985 on normalized paragraphs of
+\textgreater= 180 characters, zero exact and zero near duplicates in
+every artifact \\
+\textbf{R4} & copied external logs byte-consistent with the previous
+external run; build exit 0, 8,063 jobs, 16 axiom surfaces &
+\textbf{PASS, and verified at the byte level against this auditor's own
+artifacts} -- see 5.1 \\
+\textbf{R5} & all six publication artifacts match the prior anchors &
+\texttt{status:\ PASS\_UNCHANGED\_ARTIFACTS},
+\texttt{manuscript\_artifacts\_changed:\ False},
+\texttt{pdfs\_rebuilt:\ False}, \texttt{figures\_changed:\ False} \\
+\textbf{R6} & report compilation evidence, gate manifests, ZIP members
+and sidecar & ZIP \texttt{779c8453...eb13} matches its own sidecar
+\textbf{and} the specification anchor; \textbf{42 members, all
+byte-identical to the loose files} \\
+\end{longtable}
+}
+
+\subsubsection{5.1 R4 is the one gate this auditor could check against
+its own evidence, and it
+holds}\label{r4-is-the-one-gate-this-auditor-could-check-against-its-own-evidence-and-it-holds}
+
+Specification Section 5 says R4 consists of external raw logs
+\textbf{copied} into the internal run. Those logs are this auditor's own
+output from \texttt{run\_2026-08-21\_v1.2}, so byte-consistency is
+checkable rather than a matter of trust. Comparing by SHA-256:
+
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.5000}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.5000}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Copied file
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Byte-identical to the external original
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+\texttt{01\_lake\_update\_cache\_get.log} & \textbf{yes} \\
+\texttt{02\_lake\_build\_protocol\_9\_2.log} & \textbf{yes} \\
+\texttt{03\_FreezeAxioms\_run.log} & \textbf{yes} \\
+\texttt{EXTERNAL\_H\_AUDIT\_RECORD.md} & no -- their own new record,
+correctly not a copy \\
+\texttt{summary.json} & no -- their own new summary \\
+\end{longtable}
+}
+
+Read from \textbf{their} copies, not from the originals:
+
+\begin{itemize}
+\tightlist
+\item
+  \texttt{Build\ completed\ successfully\ (8063\ jobs).},
+  \texttt{EXIT\_BUILD=0}, \textbf{0} error lines;
+\item
+  \textbf{16} axiom surfaces, \texttt{EXIT\_AXIOMS=0}, \textbf{0}
+  \texttt{sorryAx} and \textbf{0} project axioms;
+\item
+  \textbf{2} surfaces carry the strictly smaller footprint
+  \texttt{{[}propext,\ Quot.sound{]}}:
+  \texttt{PaperII.phiTau\_max\_le\_paperI\_bound} and
+  \texttt{SimpleGraph.IsChordal.comap} -- exactly the two this auditor
+  identified independently in the external run.
+\end{itemize}
+
+Their \texttt{summary.json} records \texttt{lean\_executed:\ False}
+alongside \texttt{external\_build\_exit:\ 0} and
+\texttt{external\_build\_jobs:\ 8063}. That is an accurate and honest
+labelling of reuse rather than execution.
+
+\textbf{Control B verdict: \texttt{PASS}.} The label is backed by raw
+evidence, and the one gate that could be cross-checked against
+independent artifacts matches byte for byte.
+
+\subsection{6. Control C -- general package
+regression}\label{control-c-general-package-regression}
+
+\subsubsection{6.1 Hygiene: clean}\label{hygiene-clean}
+
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.5000}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.5000}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Check
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Result
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+any \texttt{tmp} directory & \textbf{none} \\
+compiler scratch (\texttt{.aux}, \texttt{.toc}, \texttt{.out},
+\texttt{.fls}, \texttt{.fdb\_latexmk}, \texttt{.synctex}, \texttt{.nav},
+\texttt{.snm}, \texttt{.bbl}, \texttt{.blg}, \texttt{.idx},
+\texttt{.ilg}, \texttt{.ind}, \texttt{.lof}, \texttt{.lot},
+\texttt{.spl}, \texttt{.bcf}, \texttt{.run.xml}) & \textbf{none} \\
+zero-byte files & \textbf{none} \\
+stray \texttt{\$o} or any \texttt{\$} in a filename & \textbf{none} \\
+unexpected hidden files & \textbf{none} \\
+\end{longtable}
+}
+
+\subsubsection{6.2 Authorized delta: exact, with zero
+deletions}\label{authorized-delta-exact-with-zero-deletions}
+
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.3333}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.3333}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.3333}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Delta
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Count
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Classification
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+\textbf{changed} & \textbf{6} & exactly the six authorized files (the
+three \texttt{04\_integrity/} documents named above, plus
+\texttt{DRAFT\_METADATA.yml}, \texttt{DRAFT\_NOTES.md} and the root
+\texttt{README.md}) \\
+\textbf{added} & \textbf{48} & the 3 authorized integrity files, plus 45
+files of the authorized internal residual run (under
+\texttt{01\_INTERNAL\_AUDITS/}, directory
+\texttt{residual\_run\_2026-08-21\_v1.2\_pkgfix}) \\
+\textbf{removed} & \textbf{0} & no deletion, as required \\
+\textbf{unauthorized} & \textbf{0} & -- \\
+\end{longtable}
+}
+
+197 files -\textgreater{} 245 files. No manuscript or formal change, so
+evidence reuse is not blocked.
+
+\subsubsection{6.3 Self-containment, stale references,
+status}\label{self-containment-stale-references-status}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Manuscript self-containment: 0 violations} in both languages.
+  Neither manuscript references \texttt{v1.0.1}, a correction matrix, a
+  residual matrix, an audit report, or any \texttt{EXT-PII-*} /
+  \texttt{EXT-P2-*} finding identifier.
+\item
+  \textbf{Stale \texttt{v1.0.1} references: 3, all investigated and none
+  a reappearance.} All three are in
+  \texttt{02\_validation/00\_intake/PAPER\_II\_preprint\_v1.1.8\_near\_final\_editorial\_en.md},
+  a historical intake document from the v1.1.8 era that legitimately
+  contains the old references because it \emph{is} the old document. It
+  appears in neither the changed nor the added list, so it is
+  byte-unchanged from the previous external freeze -- pre-existing, not
+  reintroduced. The specification asks that no stale reference
+  \textbf{reappeared}; none did.
+\item
+  \textbf{Status consistency: exact.} Both \texttt{README.md} and
+  \texttt{DRAFT\_METADATA.yml} carry the literal status
+  \texttt{INTERNAL\_PACKAGE\_RESIDUAL\_PASS\_EXTERNAL\_RESIDUAL\_PENDING},
+  and \texttt{DRAFT\_NOTES.md} states ``a final external residual
+  re-audit is pending''. \texttt{DRAFT\_METADATA.yml} also distinguishes
+  \texttt{local\_build:\ PASS\_RECORDED\_8061\_AND\_8032\_JOBS\_NOT\_RERUN}
+  from
+  \texttt{independent\_reproduction:\ PASS\_EXTERNAL\_CLEAN\_ROOM\_8063\_JOBS}
+  -- recorded evidence and independent reproduction kept apart,
+  correctly.
+\item
+  \textbf{No truncation, placeholder or malformed final report} was
+  found.
+\end{itemize}
+
+\textbf{Control C verdict: \texttt{PASS}.}
+
+\subsection{\texorpdfstring{7. Reused evidence --
+\texttt{REUSED\_BYTE\_IDENTICAL\_EXTERNAL\_EVIDENCE}}{7. Reused evidence -- REUSED\_BYTE\_IDENTICAL\_EXTERNAL\_EVIDENCE}}\label{reused-evidence-reused_byte_identical_external_evidence}
+
+All nine protected anchors match, so the prior external mathematical,
+formal, citation, novelty, bilingual, duplicate and rendered-PDF
+evidence is reused. \textbf{These gates were not rerun.} Specifically
+not rerun: the 30-minute Lean build, the full mathematical
+falsification, and the 47-page rendered analysis.
+
+Reused results, from \texttt{run\_2026-08-21\_v1.2}:
+
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.5000}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.5000}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Reused item
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Recorded result
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+clean Lean build & exit 0, 30m05.109s,
+\texttt{Build\ completed\ successfully\ (8063\ jobs)}, zero errors \\
+axiom footprint & 16 declarations; 14 with
+\texttt{{[}propext,\ Classical.choice,\ Quot.sound{]}}, 2 with the
+smaller \texttt{{[}propext,\ Quot.sound{]}}, which the manuscript's
+Table 5 records accurately; no \texttt{sorryAx}, no project axiom \\
+escape hatches in active code & 0 across 42 project files \\
+headline falsification & 19,048 chordal graphs enumerated exhaustively
+for n \textless= 6; \texttt{max\ Phi\_tau\ =\ floor((2n+1)\^{}2/24)}
+exact at every n; always attained by a complete-split graph \\
+vertex-copy inequality & 251,085 instances, 0 violations, minimum defect
+0 \\
+the identity nu3star = tau3star & 270,133 graphs, two separate linear
+programs, 0 mismatches \\
+arithmetic corollaries & all four confirmed over n in {[}-20000,
+20000{]}, including negative n; the \texttt{n\ \textgreater{}=\ 1}
+hypothesis on the Paper I comparison shown \textbf{necessary} \\
+bilingual and rendered PDF & protected content identical; 47 pages, 0
+anomalies; the Paper I duplication defect class absent \\
+citations & {[}1{]} verified verbatim against the publisher record;
+{[}3{]} Blair-Peyton retrieved \\
+\end{longtable}
+}
+
+\textbf{Prior scope limitations are preserved, not quietly dropped:}
+
+\begin{itemize}
+\tightlist
+\item
+  termination of the repeated-copy process was \textbf{not}
+  independently verified;
+\item
+  the discrete-convexity lift from single vertices to clone classes was
+  \textbf{not} verified;
+\item
+  the two-variable orbit reduction on \texttt{S\_\{p,q\}} was tested
+  only through its consequences;
+\item
+  exhaustive enumeration reached only n = 6;
+\item
+  Lean modules outside the seven protocol targets were never compiled;
+\item
+  the PDFs were not independently recompiled from the delivered TeX;
+\item
+  \textbf{the prior Paper II audit used a single reasoning context.} No
+  adversarial challenger was run for Paper II, in that run or this one.
+  On Paper I the challenger found four Spanish duplications the primary
+  auditor had missed, so this is a real limitation and not a formality.
+\end{itemize}
+
+\subsection{8. Findings}\label{findings}
+
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.2500}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.2500}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.2500}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.2500}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+ID
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Severity
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Status
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Summary
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+\texttt{EXT-PII-M-001} & MINOR & \textbf{CLOSED} & stale v1.1 integrity
+directory; now describes v1.2, all three sidecar entries resolve, six
+corrected documents match their anchors \\
+\texttt{EXT-P2-I-001} & NOTE & \textbf{OPEN} & the official Erdős
+Problems page returns HTTP 403 to this auditor. \textbf{Not repaired},
+and not represented as repaired: no direct authoritative access was
+obtained. The substantive open-status claim is supported by the verified
+primary EOZ source, whose abstract states ``It is unknown whether this
+many cliques will always suffice.'' \\
+\end{longtable}
+}
+
+\textbf{No new blocker, major or minor.}
+
+\subsection{9. What this audit does not
+establish}\label{what-this-audit-does-not-establish}
+
+\begin{itemize}
+\tightlist
+\item
+  It does \textbf{not} establish that the headline theorem is true. The
+  prior external run's exhaustive falsification over 19,048 chordal
+  graphs and 251,085 copy instances, plus an independent formal
+  reproduction, failed to falsify it. That is the strongest claim the
+  evidence supports.
+\item
+  It is \textbf{not} human peer review.
+\item
+  It does \textbf{not} prove global novelty. The prior Gate K conclusion
+  was an evidence-bounded negative search result and remains exactly
+  that; no institutional bibliographic database, citation-graph
+  traversal or non-English search was available in any run.
+\item
+  It does \textbf{not} verify termination of the copy process or the
+  clone-class lift.
+\item
+  It does \textbf{not} re-derive the Lean development in this run; that
+  evidence is reused under byte identity.
+\item
+  Paper II has never been audited by an adversarial challenger.
+\end{itemize}
+
+\subsection{10. Signature}\label{signature}
+
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.5000}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.5000}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Item
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Value
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+Auditor & Claude Opus 5 (\texttt{claude-opus-5}), Anthropic \\
+Configuration & primary auditor; no challenger, for this run or the
+prior Paper II run \\
+Audit date & 2026-08-21 \\
+Specification & \texttt{FINAL\_RESIDUAL\_AUDIT\_REQUEST\_SPEC.md},
+SHA-256 \texttt{2eadd655...b683} \\
+Target & \texttt{preprint\_draft\_v1.2} corrected in place, 245 files,
+3,940,779 bytes, manifest \texttt{4b41f7e2...8c1e} \\
+\textbf{Verdict} & \textbf{\texttt{PASS}} -- \texttt{EXT-PII-M-001}
+closed; 0 new blocker/major/minor; \texttt{EXT-P2-I-001} preserved as a
+NOTE \\
+\end{longtable}
+}
+
+The previous \texttt{PASS\_WITH\_RESIDUALS} run is not overwritten. It
+stands against its own hashes as the record of the state that preceded
+this correction.
+
+\end{document}

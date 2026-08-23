@@ -1,0 +1,75 @@
+CONTROL 6 — VERIFICATION OF THE 3/16 CONSTANT AGAINST THE PRIMARY SOURCE
+Specification: RESIDUAL_AUDIT_REQUEST_SPEC.md, control 6 (EXT-P1-I-001)
+Date: 2026-08-21
+
+PROVENANCE AND CHAIN OF CUSTODY
+  The auditor could not retrieve the scan independently. Four routes were attempted and
+  all failed:
+    - WebFetch https://ordman.net/...        -> certificate expired
+    - curl http://ordman.net/...             -> HTTP 302 to https, certificate expired
+    - internal browser, https                -> navigation denied
+    - web.archive.org snapshot               -> not reachable from this environment
+  The auditor declined to disable certificate validation.
+  The file was therefore SUPPLIED BY THE OWNER, downloaded from the cited URL in their
+  own browser. This is disclosed: it is owner-supplied evidence read and verified by the
+  auditor, NOT an independent retrieval by the auditor.
+  File as received: C:\Users\jtrav\Downloads\CEOClique_Parts.pdf
+  SHA-256: b7d965e6e00cd664ad2249ad7fa3640330009c3c9057301d73f752a718b28262
+  Structure: 6 pages, 842 x 612 pt, Producer "EPSON Scan".
+  It is an IMAGE-ONLY scan: pdftotext extracts 0 lines, so verification was done by
+  rendering at 150 dpi and reading the pages.
+
+IDENTITY OF THE DOCUMENT — CONFIRMED
+  Title      : "CLIQUE PARTITIONS OF SPLIT GRAPHS"
+  Authors    : Guan-Tao Chen (North Dakota State University),
+               Paul Erdos (Mathematical Institute, Hungarian Academy Of Sciences),
+               Edward T. Ordman (Memphis State University)
+  Volume     : handwritten annotation on the first page reads
+               "From: Combinatorics, Graph Theory, Algorithms, and Applications,
+                ed. Yousef Alavi, Don Lick, Jiuqiang Liu; World Scientific Pub Co. Pte Ltd,
+                Singapore, 1994 (Conference Beijing 1-5 June 1993)"
+  Folios     : printed page numbers -21-, -22-, -23-, -24- ...
+               consistent with the manuscript's cited "pp. 21-30".
+  Footnote   : "This work was done at Memphis State University."
+
+THE 3/16 CONSTANT — VERIFIED VERBATIM, TWICE
+  (a) Abstract, page 21:
+      "It is well-known that edge-partitioning a split graph on n vertices may require
+       as many as n^2/6 + n/6 cliques. We show that (3/16)n^2 + O(n) cliques will always
+       suffice. This also improves a prior result for threshold graphs. In the special
+       case where the graph is the difference of cliques, K_n - K_m(bar), at most
+       n^2/6 + O(n) cliques are enough."
+  (b) PINPOINT, page 23, Section 2 "Statement of results":
+      "Theorem 1.  For all split graphs G_n, cp(G_n) <= (3/16) n^2 + O(n)."
+      accompanied by "Corollary 1. The same bound applies to threshold graphs."
+
+  VERDICT: the manuscript's attribution of "3n^2/16 + O(n)" for split graphs to
+  Chen-Erdos-Ordman is SUPPORTED, with pinpoint Theorem 1, page 23.
+
+TWO FURTHER FINDINGS OF INDEPENDENT VALUE
+
+  1. The same source states, page 22, Example 1:
+       "The clique partition number of G_n = K_n - K_2n/3(bar) is n^2/6 + n/6,
+        provided 6 divides n."
+     This is exactly the complete-split benchmark value that this audit verified
+     independently by explicit construction for p = 2..40 in the Paper III Gate F
+     evidence (|E| - 2*nu_3 = n^2/6 + n/6). The primary source and the independent
+     computation agree.
+
+  2. Section 2, page 23, states:
+       "A split graph on n vertices may need n^2/6 + O(n) cliques to partition it.
+        We cannot show that this many will suffice. We will show that (3/16)n^2 + O(n)
+        will always suffice ..."
+     So the authors themselves flag the n^2/6 + O(n) upper bound for GENERAL split
+     graphs as open. Their Theorem 2 obtains n^2/6 + O(n) only for the special form
+     K_n - K_m(bar) (a difference of cliques), not for general split graphs.
+     Consequence for Paper III's novelty positioning: its claimed n^2/6 + O(n) bound for
+     ALL split graphs is genuinely stronger than CEO Theorem 1 and is NOT implied by CEO
+     Theorem 2. No collision; the improvement 3/16 -> 1/6 is well posed against a gap the
+     original authors identified explicitly.
+
+RESIDUAL THAT REMAINS
+  The cited URL is still unusable as printed: ordman.net redirects http to https and its
+  https certificate is expired, so a reader following reference [2] will hit a certificate
+  error. The constant is now verified; the accessibility of the citation is not fixed.
+  Recorded as finding RES-V13-004 (NOTE).

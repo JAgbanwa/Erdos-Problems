@@ -1,0 +1,126 @@
+{
+ "gate": "E4",
+ "check": "transitive import closure of the canonical roots",
+ "author_claim": "No source file imports either legacy module, and neither declaration appears in any recorded theorem footprint.",
+ "axiom_modules": {
+  "Ax2.PartB.Axioms": "bklo_kthree_transfer",
+  "Ax2.PartA.Wlog": "dross_fractional_flow_noHDT"
+ },
+ "roots": {
+  "PaperIII.Theorem_1_1_Final": {
+   "project_modules_in_closure": 393,
+   "unresolved_modules": [],
+   "Ax2_modules_in_closure": [
+    "Ax2.Basic",
+    "Ax2.Explore.DrossNet",
+    "Ax2.Explore.MFMC",
+    "Ax2.Explore.NodupChain",
+    "Ax2.Explore.PathBalance",
+    "Ax2.Explore.RouteB",
+    "Ax2.PartA.DrossArith",
+    "Ax2.PartA.Flow",
+    "Ax2.PartA.Spine",
+    "Ax2.PartB.BKLO.Absorber",
+    "Ax2.PartB.BKLO.Bridge",
+    "Ax2.PartB.BKLO.Defs",
+    "Ax2.PartB.BKLO.Gadget"
+   ],
+   "axiom_modules_reachable": {},
+   "clean": true
+  },
+  "PaperIII.PublicAPI": {
+   "project_modules_in_closure": 402,
+   "unresolved_modules": [],
+   "Ax2_modules_in_closure": [
+    "Ax2.Basic",
+    "Ax2.Explore.DrossNet",
+    "Ax2.Explore.MFMC",
+    "Ax2.Explore.NodupChain",
+    "Ax2.Explore.PathBalance",
+    "Ax2.Explore.RouteB",
+    "Ax2.PartA.DrossArith",
+    "Ax2.PartA.Flow",
+    "Ax2.PartA.Spine",
+    "Ax2.PartB.BKLO.Absorber",
+    "Ax2.PartB.BKLO.Bridge",
+    "Ax2.PartB.BKLO.Defs",
+    "Ax2.PartB.BKLO.Gadget"
+   ],
+   "axiom_modules_reachable": {},
+   "clean": true
+  },
+  "PaperIII.CanonicalTrianglePacking": {
+   "project_modules_in_closure": 11,
+   "unresolved_modules": [],
+   "Ax2_modules_in_closure": [],
+   "axiom_modules_reachable": {},
+   "clean": true
+  },
+  "PaperIII.Obstructions": {
+   "project_modules_in_closure": 37,
+   "unresolved_modules": [],
+   "Ax2_modules_in_closure": [],
+   "axiom_modules_reachable": {},
+   "clean": true
+  },
+  "PaperIII.PaperImprovementsGate": {
+   "project_modules_in_closure": 146,
+   "unresolved_modules": [],
+   "Ax2_modules_in_closure": [],
+   "axiom_modules_reachable": {},
+   "clean": true
+  },
+  "Nibble.AX1Closed": {
+   "project_modules_in_closure": 139,
+   "unresolved_modules": [],
+   "Ax2_modules_in_closure": [],
+   "axiom_modules_reachable": {},
+   "clean": true
+  },
+  "BKLO.MainDenseUnconditional": {
+   "project_modules_in_closure": 224,
+   "unresolved_modules": [],
+   "Ax2_modules_in_closure": [],
+   "axiom_modules_reachable": {},
+   "clean": true
+  },
+  "PaperIII": {
+   "project_modules_in_closure": 429,
+   "unresolved_modules": [],
+   "Ax2_modules_in_closure": [
+    "Ax2.Basic",
+    "Ax2.Explore.DrossNet",
+    "Ax2.Explore.MFMC",
+    "Ax2.Explore.NodupChain",
+    "Ax2.Explore.PathBalance",
+    "Ax2.Explore.RouteB",
+    "Ax2.PartA.DrossArith",
+    "Ax2.PartA.Flow",
+    "Ax2.PartA.Spine",
+    "Ax2.PartB.BKLO.Absorber",
+    "Ax2.PartB.BKLO.Bridge",
+    "Ax2.PartB.BKLO.Defs",
+    "Ax2.PartB.BKLO.Gadget"
+   ],
+   "axiom_modules_reachable": {},
+   "clean": true
+  }
+ },
+ "direct_Ax2_imports": {
+  "PaperIII.Theorem_1_1_Final": [
+   "Ax2.PartB.BKLO.Bridge"
+  ],
+  "PaperIII.PublicAPI": [],
+  "PaperIII.CanonicalTrianglePacking": [],
+  "PaperIII.Obstructions": [],
+  "PaperIII.PaperImprovementsGate": [],
+  "Nibble.AX1Closed": [],
+  "BKLO.MainDenseUnconditional": [],
+  "PaperIII": []
+ },
+ "direct_importers_of_axiom_modules": {
+  "Ax2.PartB.Axioms": [],
+  "Ax2.PartA.Wlog": []
+ },
+ "total_project_modules": 705
+}

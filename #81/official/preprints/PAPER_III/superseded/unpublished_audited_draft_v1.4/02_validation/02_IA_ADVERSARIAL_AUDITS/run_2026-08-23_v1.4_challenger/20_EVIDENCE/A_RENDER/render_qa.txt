@@ -1,0 +1,43 @@
+# Auditor render QA -- Spanish PDF, challenger run 2026-08-23
+
+## Toolchain
+lualatex: major issue: So far, you have not checked for MiKTeX updates.
+This is LuaHBTeX, Version 1.24.0 (MiKTeX 25.12)
+Development id: 7707
+pdftotext version 4.00
+Copyright 1996-2017 Glyph & Cog, LLC
+
+## Rebuild of the sealed ES .tex by the auditor
+pages written: Output written on es.pdf (47 pages
+
+## Diagnostics in the auditor's own log
+  ^!                           0
+  Undefined control sequence   0
+  Missing character            0
+  Overfull                     0
+  Underfull                    5
+  LaTeX Error                  0
+  Fatal                        0
+
+## Page-by-page text comparison, auditor rebuild vs sealed PDF
+  47 of 47 pages text-identical; differing pages: none
+
+## Raster margin scan of the sealed ES PDF (72 dpi, gray, ink < 200)
+  47 pages rastered; pages with ink in left/right/top margin bands: 0; bottom folio band: 0
+
+## Font embedding, sealed ES PDF
+name                                 type              encoding         emb sub uni object ID
+------------------------------------ ----------------- ---------------- --- --- --- ---------
+VUIEWL+LMRoman17-Regular             CID Type 0C       Identity-H       yes yes yes     10  0
+AZPAII+LMRoman12-Regular             CID Type 0C       Identity-H       yes yes yes     11  0
+EWXVOX+LMRoman10-Regular             CID Type 0C       Identity-H       yes yes yes     12  0
+LYYKGA+LMRoman10-Bold                CID Type 0C       Identity-H       yes yes yes     13  0
+PGHAJJ+CascadiaMono-Roman            CID TrueType      Identity-H       yes yes yes     14  0
+FGAFTE+LatinModernMath-Regular       CID Type 0C       Identity-H       yes yes yes     15  0
+JQIREL+LatinModernMath-Regular       CID Type 0C       Identity-H       yes yes yes     16  0
+CQBWHZ+LMRoman12-Bold                CID Type 0C       Identity-H       yes yes yes     18  0
+XNLNPK+LMRoman8-Regular              CID Type 0C       Identity-H       yes yes yes     31  0
+TMHVPV+MSAM10                        Type 1            Builtin          yes yes no     105  0
+TZHYLM+LMRoman8-Bold                 CID Type 0C       Identity-H       yes yes yes    112  0
+VPHYUM+LatinModernMath-Regular       CID Type 0C       Identity-H       yes yes yes    113  0
+RAHTCF+LMRoman10-Italic              CID Type 0C       Identity-H       yes yes yes    314  0

@@ -1,0 +1,1859 @@
+start_utc=2026-08-22T21:09:31.1494510Z
+cwd=C:\p3build2\P3
+command=lake build PaperIII
+✔ [8025/8167] Built Nibble.Basic (50s)
+✔ [8026/8167] Built Nibble.Tight.Pruning (42s)
+⚠ [8027/8167] Built Nibble.LPDuality (98s)
+warning: Nibble/LPDuality.lean:29:8: automatically included section variable(s) unused in theorem `_private.Nibble.LPDuality.0.LPDuality.zero_isPacking`:
+  [Fintype C]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype C] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: Nibble/LPDuality.lean:68:8: automatically included section variable(s) unused in theorem `_private.Nibble.LPDuality.0.LPDuality.coverOpt_le_value`:
+  [Fintype O]
+  [DecidableEq C]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype O] [DecidableEq C] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: Nibble/LPDuality.lean:105:8: automatically included section variable(s) unused in theorem `_private.Nibble.LPDuality.0.LPDuality.coverMap_apply_row`:
+  [DecidableEq C]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq C] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: Nibble/LPDuality.lean:109:8: automatically included section variable(s) unused in theorem `_private.Nibble.LPDuality.0.LPDuality.coverMap_apply_value`:
+  [DecidableEq C]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq C] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: Nibble/LPDuality.lean:605:8: automatically included section variable(s) unused in theorem `_private.Nibble.LPDuality.0.LPDuality.coverOpt_eq_zero_of_empty_row`:
+  [Fintype O]
+  [DecidableEq C]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype O] [DecidableEq C] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+✔ [8028/8167] Built Nibble.Convergence (100s)
+✔ [8029/8167] Built Nibble.Tight.CubeVariance (100s)
+✔ [8030/8167] Built Nibble.Prelude (100s)
+✔ [8031/8167] Built Nibble.Conflict (31s)
+✔ [8032/8167] Built Nibble.Greedy (30s)
+✔ [8033/8167] Built Nibble.YusterEdgeType (35s)
+✔ [8034/8167] Built Nibble.Regular (35s)
+✔ [8035/8167] Built Nibble.YusterEdge (39s)
+✔ [8036/8167] Built PaperIII.Defs (187s)
+⚠ [8037/8167] Built PaperIII.DiracHamilton (190s)
+warning: PaperIII/DiracHamilton.lean:349:5: unused variable `hp`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+✔ [8038/8167] Built PaperIII.DiracMatching (195s)
+✔ [8039/8167] Built Nibble.Subgamma (73s)
+✔ [8040/8167] Built Nibble.GoodEvent (80s)
+✔ [8041/8167] Built Nibble.MarkovVertices (76s)
+✔ [8042/8167] Built Nibble.Tight.Selection (77s)
+✔ [8043/8167] Built Nibble.Survival (113s)
+✔ [8044/8167] Built PaperIII.E_B (261s)
+✔ [8045/8167] Built Nibble.Round (94s)
+✔ [8046/8167] Built Nibble.Assembly (89s)
+✔ [8047/8167] Built Nibble.Interface (97s)
+✔ [8048/8167] Built Nibble.Tight.ConflictCount (113s)
+✔ [8049/8167] Built Nibble.YusterSubDegree (92s)
+⚠ [8050/8167] Built PaperIII.E_D (305s)
+warning: PaperIII/E_D.lean:33:5: unused variable `hirr`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: PaperIII/E_D.lean:108:5: unused variable `hr`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: PaperIII/E_D.lean:109:5: unused variable `hPB`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: PaperIII/E_D.lean:182:8: automatically included section variable(s) unused in theorem `_private.PaperIII.E_D.0.PaperIII.AppendixD.matching_saturates_max_left`:
+  [Fintype R]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype R] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: PaperIII/E_D.lean:183:5: unused variable `hdegU`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: PaperIII/E_D.lean:359:155: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+✔ [8051/8167] Built Nibble.YusterBridgePacking (94s)
+✔ [8052/8167] Built Nibble.YusterFracUpper (97s)
+✔ [8053/8167] Built Nibble.AX1Reduction (70s)
+✔ [8054/8167] Built Nibble.BeckFiala (325s)
+⚠ [8055/8167] Built PaperIII.E_3_1_LP (326s)
+warning: PaperIII/E_3_1_LP.lean:21:49: unused variable `hB`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: PaperIII/E_3_1_LP.lean:34:5: unused variable `hd`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: PaperIII/E_3_1_LP.lean:49:44: unused variable `hE`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: PaperIII/E_3_1_LP.lean:90:23: unused variable `hrd`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+✔ [8056/8169] Built Nibble.RoundConflict (35s)
+✔ [8057/8169] Built Nibble.Iteration (38s)
+✔ [8058/8177] Built Nibble.DepLocal (39s)
+✔ [8059/8177] Built Nibble.BernoulliSpace (63s)
+✔ [8060/8177] Built Nibble.Covered (62s)
+✔ [8061/8185] Built Nibble.RegularMost (51s)
+✔ [8062/8189] Built Nibble.Bennett (85s)
+⚠ [8063/8189] Built PaperIII.Duality (108s)
+warning: PaperIII/Duality.lean:119:5: unused variable `e`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: PaperIII/Duality.lean:150:0: automatically included section variable(s) unused in theorem `PaperIII.le_nu3_of_packing`:
+  [DecidableRel H.Adj]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableRel H.Adj] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+✔ [8064/8189] Built PaperIII.Identities (105s)
+✔ [8065/8189] Built PaperIII.SplitEdges (118s)
+✔ [8066/8195] Built Nibble.InvariantDegree (48s)
+✔ [8067/8195] Built Nibble.Assemble (48s)
+✔ [8068/8199] Built Nibble.YusterSubDegreeChar (69s)
+ℹ [8069/8199] Built PaperIII.Factorization (169s)
+info: PaperIII/Factorization.lean:56:51: Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+✔ [8070/8199] Built Nibble.YusterNibbleApply (46s)
+✔ [8071/8199] Built PaperIII.E_8_Divisible (133s)
+✔ [8072/8199] Built Nibble.StrongDualityInst (77s)
+✔ [8073/8201] Built Nibble.Measurable (73s)
+✔ [8074/8201] Built Nibble.Tight.CubeRetention (71s)
+✔ [8075/8201] Built Nibble.StarCounterexample (62s)
+✔ [8076/8201] Built Nibble.YusterSubRegular (58s)
+✔ [8077/8201] Built Nibble.PadCount (59s)
+✔ [8078/8201] Built Nibble.FlowFeasibility (66s)
+✔ [8079/8203] Built Nibble.IterationSeq (38s)
+⚠ [8080/8203] Built Nibble.Discharge (47s)
+warning: Nibble/Discharge.lean:124:35: unused variable `hβ`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+✔ [8081/8203] Built Nibble.Pruning (50s)
+⚠ [8082/8203] Built Nibble.YusterNu3 (48s)
+warning: Nibble/YusterNu3.lean:28:0: automatically included section variable(s) unused in theorem `Nibble.YusterE.isMatching_empty`:
+  [Fintype V]
+  [DecidableEq V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] [DecidableEq V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [8083/8203] Built Nibble.DrossCutArith (88s)
+warning: Nibble/DrossCutArith.lean:152:33: unused variable `hn`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+✔ [8084/8203] Built PaperIII.AXDefs (116s)
+✔ [8085/8203] Built PaperIII.CorridorDefs (98s)
+✔ [8086/8203] Built Nibble.YusterSubBridge (60s)
+⚠ [8087/8203] Built PaperIII.E_4_2_algebra (109s)
+warning: PaperIII/E_4_2_algebra.lean:59:49: unused variable `hQ2`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: PaperIII/E_4_2_algebra.lean:60:5: unused variable `hD0`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: PaperIII/E_4_2_algebra.lean:72:49: unused variable `hQ2`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: PaperIII/E_4_2_algebra.lean:73:5: unused variable `hD0`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: PaperIII/E_4_2_algebra.lean:73:19: unused variable `hDP`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: PaperIII/E_4_2_algebra.lean:85:49: unused variable `hQ2`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: PaperIII/E_4_2_algebra.lean:86:5: unused variable `hD0`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+✔ [8088/8203] Built PaperIII.Counting (126s)
+⚠ [8089/8203] Built Nibble.ResidualDegree (70s)
+warning: Nibble/ResidualDegree.lean:93:57: unused variable `hp1`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [8090/8203] Built Nibble.YusterBridgeFrac (60s)
+warning: Nibble/YusterBridgeFrac.lean:60:0: automatically included section variable(s) unused in theorem `Nibble.YusterE.triangle_powersetCard_two_sup`:
+  [Fintype V]
+  [DecidableRel G.Adj]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] [DecidableRel G.Adj] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: Nibble/YusterBridgeFrac.lean:86:0: automatically included section variable(s) unused in theorem `Nibble.YusterE.mem_powersetCard_two_iff_subset`:
+  [Fintype V]
+  [DecidableEq V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] [DecidableEq V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+✔ [8091/8203] Built PaperIII.Contrib.MatchingMathlib (110s)
+✔ [8092/8204] Built Nibble.CoveredExpectation (84s)
+✔ [8093/8204] Built PaperIII.Contrib.DiracMathlib (117s)
+⚠ [8094/8204] Built Nibble.Chebyshev (93s)
+warning: Nibble/Chebyshev.lean:51:0: automatically included section variable(s) unused in theorem `Nibble.measurableSet_survival`:
+  [IsProbabilityMeasure ℙ]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [IsProbabilityMeasure ℙ] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: Nibble/Chebyshev.lean:106:0: automatically included section variable(s) unused in theorem `Nibble.survivalEvent_eq_dep`:
+  [IsProbabilityMeasure ℙ]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [IsProbabilityMeasure ℙ] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: Nibble/Chebyshev.lean:139:0: automatically included section variable(s) unused in theorem `Nibble.measurableSet_A_depSigma`:
+  [IsProbabilityMeasure ℙ]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [IsProbabilityMeasure ℙ] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: Nibble/Chebyshev.lean:198:0: automatically included section variable(s) unused in theorem `Nibble.survivalIndicator_nonneg`:
+  [IsProbabilityMeasure ℙ]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [IsProbabilityMeasure ℙ] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: Nibble/Chebyshev.lean:323:8: automatically included section variable(s) unused in theorem `_private.Nibble.Chebyshev.0.Nibble.measure_edge_hit_toReal_le`:
+  [IsProbabilityMeasure ℙ]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [IsProbabilityMeasure ℙ] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: Nibble/Chebyshev.lean:350:57: unused variable `hp1`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Nibble/Chebyshev.lean:849:57: unused variable `hp1`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+✔ [8095/8204] Built Nibble.DenseNearRegular (65s)
+✔ [8096/8205] Built Nibble.PadHypergraph (63s)
+✔ [8097/8205] Built Nibble.DischargeSeq (66s)
+✔ [8098/8205] Built Nibble.YusterGap (50s)
+✔ [8099/8205] Built PaperIII.AX1Bridge (100s)
+✔ [8100/8205] Built Ax2.Basic (114s)
+✔ [8101/8205] Built Nibble.OneRoundGood (83s)
+✔ [8102/8205] Built Nibble.Tight.CoverProb (114s)
+⚠ [8103/8207] Built PaperIII.E_3_1_upper (197s)
+warning: PaperIII/E_3_1_upper.lean:37:23: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+✔ [8104/8207] Built Nibble.BoxPlacementCount (177s)
+✔ [8105/8207] Built PaperIII.CanonicalTrianglePacking (276s)
+✔ [8106/8207] Built Nibble.Tight.DenseRegDischarge (197s)
+✔ [8107/8207] Built Nibble.AdaptiveRounds (169s)
+✔ [8108/8207] Built Nibble.YusterAX1 (113s)
+⚠ [8109/8207] Built PaperIII.E_8_Core (332s)
+warning: PaperIII/E_8_Core.lean:733:13: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+✔ [8110/8207] Built Nibble.RoundInvariant (251s)
+✔ [8111/8207] Built Nibble.VarianceBound (268s)
+⚠ [8112/8207] Built Nibble.CellBoxAllocation (70s)
+warning: Nibble/CellBoxAllocation.lean:46:5: unused variable `hI`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Nibble/CellBoxAllocation.lean:46:23: unused variable `hI'`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Nibble/CellBoxAllocation.lean:46:43: unused variable `hJ`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Nibble/CellBoxAllocation.lean:46:61: unused variable `hJ'`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+info: Nibble/CellBoxAllocation.lean:92:0: 'Nibble.AX1.boxCompat_iff_disjoint_product' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Nibble/CellBoxAllocation.lean:93:0: 'Nibble.AX1.box_allocation_infeasible' depends on axioms: [propext, Classical.choice, Quot.sound]
+✔ [8113/8207] Built Nibble.BoxPlacementEdge (68s)
+✔ [8114/8207] Built Nibble.YusterMost (77s)
+⚠ [8115/8207] Built PaperIII.E_7 (434s)
+warning: PaperIII/E_7.lean:322:4: Try this: intro a ha x hx H
+warning: PaperIII/E_7.lean:409:5: unused variable `h72`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: PaperIII/E_7.lean:906:5: unused variable `hbrho`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+info: PaperIII/E_7.lean:1759:102: Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+info: PaperIII/E_7.lean:1766:70: Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+info: PaperIII/E_7.lean:1771:114: Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+✔ [8116/8207] Built Nibble.Tight.SafeDegree (123s)
+✔ [8117/8207] Built Nibble.Tight.TwoEdgeMatch (177s)
+✔ [8118/8207] Built PaperIII.E_6 (482s)
+✔ [8119/8210] Built Nibble.BoxAllocationSpec (60s)
+✔ [8120/8220] Built Nibble.PaperImprovements (52s)
+✔ [8121/8221] Built PaperIII.AX2Bridge (255s)
+⚠ [8122/8229] Built Nibble.RegularityBadBound (93s)
+warning: Nibble/RegularityBadBound.lean:26:0: automatically included section variable(s) unused in theorem `Nibble.residualDeg_variance_le_sq`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [8123/8233] Built Nibble.RegularityBad (83s)
+warning: Nibble/RegularityBad.lean:32:0: automatically included section variable(s) unused in theorem `Nibble.measurableSet_residual_mem`:
+  [Fintype V]
+  [IsProbabilityMeasure ℙ]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] [IsProbabilityMeasure ℙ] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+✔ [8124/8233] Built Nibble.NibbleGapReduction (66s)
+✔ [8125/8233] Built PaperIII.CliquePartition (526s)
+✔ [8126/8237] Built PaperIII.E_3_1_values (233s)
+⚠ [8127/8237] Built Nibble.BlockSplit (83s)
+warning: Nibble/BlockSplit.lean:29:0: automatically included section variable(s) unused in theorem `Nibble.AX1.enumIdx_lt`:
+  [DecidableEq V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: Nibble/BlockSplit.lean:31:0: automatically included section variable(s) unused in theorem `Nibble.AX1.enumIdx_injective`:
+  [DecidableEq V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+✔ [8128/8242] Built Nibble.CoreGapSubblock (89s)
+⚠ [8129/8244] Built Nibble.BeckFialaPairs (99s)
+warning: Nibble/BeckFialaPairs.lean:30:0: automatically included section variable(s) unused in theorem `Nibble.BeckFiala.mem_pairClosure`:
+  [DecidableEq V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+✔ [8130/8244] Built Nibble.Tight.CoverWeight (113s)
+✔ [8131/8256] Built Nibble.CoreGapUniformCodegree (110s)
+⚠ [8132/8270] Built Nibble.GoodRound (109s)
+warning: Nibble/GoodRound.lean:63:0: automatically included section variable(s) unused in theorem `Nibble.exists_good_round_freedman_uncond`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+✔ [8133/8270] Built Nibble.RoundOracleKernel (269s)
+✔ [8134/8298] Built Nibble.GridScale (134s)
+✔ [8135/8303] Built Nibble.GridLineDesign (59s)
+✔ [8136/8303] Built Nibble.CoreGapPackingEdges (64s)
+✔ [8137/8303] Built BKLO.Basic (52s)
+⚠ [8138/8305] Built Nibble.RegularityBadFreedman (120s)
+warning: Nibble/RegularityBadFreedman.lean:30:0: automatically included section variable(s) unused in theorem `Nibble.degree_residual_le_original`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: Nibble/RegularityBadFreedman.lean:50:0: automatically included section variable(s) unused in theorem `Nibble.active_residualDeg_proxy_pos`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+✔ [8139/8306] Built Nibble.GridShiftUnique (95s)
+✔ [8140/8309] Built PaperIII.ShiftedCenterRobust (207s)
+✔ [8141/8309] Built Nibble.Tight.CoverWeightMoments (99s)
+✔ [8142/8309] Built BKLO.Sampling (73s)
+✔ [8143/8310] Built Nibble.GoodRetentionFinset (98s)
+✔ [8144/8310] Built Nibble.GridTripleDesign (69s)
+✔ [8145/8320] Built Nibble.AdaptiveAssembly (104s)
+⚠ [8146/8329] Built Nibble.CoreGapClusterCapacity (76s)
+warning: Nibble/CoreGapClusterCapacity.lean:36:0: automatically included section variable(s) unused in theorem `Nibble.AX1.card_crossEdges_le`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+✔ [8147/8329] Built BKLO.Transformer (75s)
+✔ [8148/8329] Built BKLO.Inputs (65s)
+⚠ [8149/8329] Built PaperIII.E_5 (769s)
+warning: PaperIII/E_5.lean:74:4: Try this: intro a ha x hx H
+info: PaperIII/E_5.lean:153:66: Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+info: PaperIII/E_5.lean:154:78: Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+warning: PaperIII/E_5.lean:167:5: unused variable `hq`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: PaperIII/E_5.lean:193:19: unused variable `hq`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+info: PaperIII/E_5.lean:283:215: Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+info: PaperIII/E_5.lean:284:168: Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+info: PaperIII/E_5.lean:291:153: Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+warning: PaperIII/E_5.lean:485:6: Try this: intro a ha x hx H
+info: PaperIII/E_5.lean:528:171: Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+info: PaperIII/E_5.lean:529:157: Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+info: PaperIII/E_5.lean:575:99: Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+✔ [8150/8332] Built BKLO.DistributiveAbsorptionSkeleton (52s)
+✔ [8151/8332] Built Nibble.GoodRoundFreedman (107s)
+✔ [8152/8332] Built BKLO.Expansion (82s)
+✔ [8153/8332] Built BKLO.CodegreeCounting (121s)
+✔ [8154/8332] Built BKLO.PartitionSampling (110s)
+✔ [8155/8349] Built Nibble.Tight.LossVariance (116s)
+✔ [8156/8349] Built BKLO.RhoReconcile625 (88s)
+ℹ [8157/8349] Built Nibble.CoreGapBlowUp (86s)
+info: Nibble/CoreGapBlowUp.lean:700:0: 'Nibble.AX1.nu3star_blowUp' depends on axioms: [propext, Classical.choice, Quot.sound]
+✔ [8158/8349] Built Nibble.Tight.PairWeightMean (115s)
+✔ [8159/8354] Built Nibble.GoodRetentionClean (111s)
+✔ [8160/8354] Built BKLO.Absorber (84s)
+✔ [8161/8354] Built BKLO.DiracMatching (88s)
+✔ [8162/8372] Built BKLO.NearOptimal (57s)
+✔ [8163/8380] Built Nibble.Tight.FlipStability (92s)
+✔ [8164/8382] Built Nibble.Tight.PairExcessCodegree (95s)
+✔ [8165/8384] Built Nibble.NibbleStrategy (105s)
+✔ [8166/8384] Built Nibble.Tight.TightRound (117s)
+⚠ [8167/8385] Built BKLO.FiniteBernoulli (127s)
+warning: BKLO/FiniteBernoulli.lean:197:34: unused variable `hp0`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+✔ [8168/8385] Built Nibble.Tight.SafeDegreeVariance (128s)
+✔ [8169/8385] Built BKLO.Refutations (57s)
+✔ [8170/8385] Built BKLO.Core (89s)
+⚠ [8171/8387] Built PaperIII.E_4_agg (446s)
+info: PaperIII/E_4_agg.lean:186:47: Try this:
+  [apply] ring_nf!
+  
+  The `ring!` tactic failed to close the goal. Use `ring_nf!` to obtain a normal form.
+    
+  Note that `ring!` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+info: PaperIII/E_4_agg.lean:202:404: Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+info: PaperIII/E_4_agg.lean:267:48: Try this:
+  [apply] ring_nf!
+  
+  The `ring!` tactic failed to close the goal. Use `ring_nf!` to obtain a normal form.
+    
+  Note that `ring!` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+warning: PaperIII/E_4_agg.lean:222:46: unused variable `hd`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: PaperIII/E_4_agg.lean:347:24: unused variable `e`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: PaperIII/E_4_agg.lean:350:24: unused variable `a`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: PaperIII/E_4_agg.lean:353:24: unused variable `e`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: PaperIII/E_4_agg.lean:356:24: unused variable `e`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+✔ [8172/8387] Built Nibble.Tight.SharpVariance (134s)
+ℹ [8173/8387] Built PaperIII.Prop_10_1 (268s)
+info: PaperIII/Prop_10_1.lean:78:50: Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+info: PaperIII/Prop_10_1.lean:88:157: Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+info: PaperIII/Prop_10_1.lean:89:164: Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+info: PaperIII/Prop_10_1.lean:138:131: Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+info: PaperIII/Prop_10_1.lean:370:167: Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+✔ [8174/8391] Built Nibble.DegreeDecay (113s)
+✔ [8175/8391] Built Nibble.Tight.CoverVariance (120s)
+✔ [8176/8391] Built BKLO.Lists (70s)
+✔ [8177/8391] Built Ax2.Explore.RouteB (165s)
+⚠ [8178/8409] Built Ax2.Explore.NodupChain (163s)
+warning: Ax2/Explore/NodupChain.lean:78:39: unused variable `hst`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+✔ [8180/8455] Built Nibble.Tight.TightRoundConcrete (169s)
+⚠ [8181/8455] Built Ax2.Explore.PathBalance (170s)
+warning: Ax2/Explore/PathBalance.lean:10:8: automatically included section variable(s) unused in theorem `_private.Ax2.Explore.PathBalance.0.Ax2.PathBalance.mem_pairs_iff'`:
+  [Fintype N]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype N] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: Ax2/Explore/PathBalance.lean:25:0: automatically included section variable(s) unused in theorem `Ax2.PathBalance.mem_pairs_iff`:
+  [Fintype N]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype N] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: Ax2/Explore/PathBalance.lean:148:8: automatically included section variable(s) unused in theorem `_private.Ax2.Explore.PathBalance.0.Ax2.PathBalance.pout_iff`:
+  [Fintype N]
+  [DecidableEq N]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype N] [DecidableEq N] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: Ax2/Explore/PathBalance.lean:177:8: automatically included section variable(s) unused in theorem `_private.Ax2.Explore.PathBalance.0.Ax2.PathBalance.pin_iff`:
+  [Fintype N]
+  [DecidableEq N]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype N] [DecidableEq N] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+✔ [8182/8455] Built Ax2.PartA.Flow (170s)
+✔ [8183/8455] Built BKLO.BipartiteMatching (42s)
+✔ [8184/8455] Built Nibble.Tight.SafeRoundCheb (74s)
+✔ [8185/8455] Built Nibble.Tight.TightRoundCheb (74s)
+✔ [8186/8455] Built BKLO.Cycles (80s)
+✔ [8187/8455] Built Nibble.GoodRetentionFreedman (348s)
+✔ [8188/8455] Built PaperIII.PackingCorollaries (348s)
+✔ [8189/8455] Built Ax2.PartA.DrossArith (127s)
+✔ [8190/8455] Built PaperIII.E_4_2 (129s)
+✔ [8191/8455] Built Ax2.PartB.BKLO.Defs (122s)
+✔ [8192/8455] Built Nibble.Tight.ResidualBand (87s)
+✔ [8193/8455] Built Nibble.Tight.SharpRoundProof (88s)
+✔ [8194/8455] Built Nibble.NibbleStrategyFreedman (74s)
+✔ [8195/8455] Built BKLO.Backdeg (84s)
+✔ [8196/8455] Built BKLO.Transport (85s)
+✔ [8197/8455] Built BKLO.Veblen (85s)
+✔ [8198/8455] Built PaperIII.OfPartition (131s)
+✔ [8199/8455] Built Ax2.Explore.MFMC (129s)
+✔ [8200/8455] Built Nibble.Tight.ResidualBandCheb (75s)
+⚠ [8201/8455] Built Ax2.PartA.Spine (116s)
+warning: Ax2/PartA/Spine.lean:83:6: `Finset.filter_card_add_filter_neg_card_eq_card` has been deprecated: Use `Finset.card_filter_add_card_filter_not` instead
+warning: Ax2/PartA/Spine.lean:156:75: unused variable `huv`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+✔ [8202/8455] Built Ax2.PartB.BKLO.Absorber (119s)
+✔ [8203/8455] Built BKLO.HasAbs (54s)
+✔ [8204/8455] Built Nibble.DegreeDecayFreedman (60s)
+⚠ [8205/8455] Built PaperIII.E_4_3 (148s)
+warning: PaperIII/E_4_3.lean:88:4: 'push_cast' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+✔ [8206/8455] Built BKLO.Gadgets (84s)
+✔ [8207/8455] Built BKLO.Degeneracy (57s)
+✔ [8208/8455] Built Nibble.Tight.RoundExplicit (92s)
+✔ [8209/8455] Built Nibble.MostAssemblyFreedman (88s)
+⚠ [8210/8455] Built Ax2.PartB.BKLO.Gadget (101s)
+warning: Ax2/PartB/BKLO/Gadget.lean:40:0: automatically included section variable(s) unused in theorem `Ax2.BKLO.triEdges_card_of_isNClique`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+✔ [8211/8455] Built BKLO.GadgetsBlk (86s)
+✔ [8212/8455] Built BKLO.Embedding (61s)
+✔ [8213/8455] Built Nibble.Tight.SharpRound (54s)
+✔ [8214/8455] Built PaperIII.E_8 (138s)
+✔ [8215/8455] Built BKLO.EmbeddingConf (70s)
+✔ [8216/8455] Built BKLO.TransportV (71s)
+✔ [8217/8455] Built BKLO.Families (90s)
+✔ [8218/8455] Built BKLO.StarMatchingTriangles (127s)
+✔ [8219/8455] Built BKLO.MapTransport (127s)
+✔ [8220/8455] Built BKLO.AbsorberExists (109s)
+✔ [8221/8455] Built BKLO.Placement (128s)
+✔ [8222/8455] Built BKLO.Vortex (140s)
+✔ [8223/8455] Built Nibble.TightAssembly (213s)
+✔ [8224/8455] Built Nibble.Tight.SharpRoundAssembly (213s)
+✔ [8225/8455] Built BKLO.InvolutionMatching (87s)
+✔ [8226/8455] Built BKLO.Main (87s)
+✔ [8227/8455] Built BKLO.PlacementConf (88s)
+✔ [8228/8455] Built PaperIII.Main (245s)
+✔ [8229/8455] Built BKLO.InputsVortex (85s)
+✔ [8230/8455] Built BKLO.SetGraph (85s)
+✔ [8231/8455] Built BKLO.CoverDown (86s)
+✔ [8232/8455] Built BKLO.HostGraph (118s)
+✔ [8233/8455] Built BKLO.CoverDownGreedyAssembly (118s)
+✔ [8234/8455] Built BKLO.Section10Defs (102s)
+⚠ [8235/8455] Built Nibble.TightSchedule (125s)
+warning: Nibble/TightSchedule.lean:40:22: unused variable `hgam8`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Nibble/TightSchedule.lean:51:22: unused variable `hgam8`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+✔ [8236/8455] Built BKLO.CoverDownDiracChooser (65s)
+✔ [8237/8455] Built BKLO.VortexMain (67s)
+✔ [8238/8455] Built BKLO.CoverDownBudget (75s)
+✔ [8239/8455] Built BKLO.NibbleMaxDeg (75s)
+✔ [8240/8455] Built BKLO.VortexEngine (83s)
+✔ [8241/8455] Built BKLO.CoverDownGreedyExistence (75s)
+✔ [8242/8455] Built BKLO.BoundedLeftoverInterface (71s)
+✔ [8243/8455] Built BKLO.EquitablePartitionDense (80s)
+✔ [8244/8455] Built BKLO.CellGadgets (84s)
+✔ [8245/8455] Built PaperIII.Addenda (124s)
+✔ [8246/8455] Built BKLO.Section10Matchings (83s)
+✔ [8247/8455] Built BKLO.Section10Iteration (98s)
+✔ [8248/8455] Built BKLO.CoverDownChooserStep (72s)
+✔ [8249/8455] Built BKLO.InputsVortexSat (72s)
+✔ [8250/8455] Built Nibble.TightNibble (113s)
+✔ [8251/8455] Built BKLO.BoundedLeftover (87s)
+⚠ [8252/8455] Built Ax2.Explore.DrossNet (534s)
+warning: Ax2/Explore/DrossNet.lean:209:8: automatically included section variable(s) unused in theorem `_private.Ax2.Explore.DrossNet.0.Ax2.DrossNet.card4_pairwise`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: Ax2/Explore/DrossNet.lean:231:0: automatically included section variable(s) unused in theorem `Ax2.DrossNet.k4pair_iff_clique`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: Ax2/Explore/DrossNet.lean:246:0: automatically included section variable(s) unused in theorem `Ax2.DrossNet.k4pair_symm`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: Ax2/Explore/DrossNet.lean:868:12: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+warning: Ax2/Explore/DrossNet.lean:1016:81: unused variable `hwΔ`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Ax2/Explore/DrossNet.lean:1538:62: unused variable `hwΔ`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Ax2/Explore/DrossNet.lean:1558:34: unused variable `hwΔ`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Ax2/Explore/DrossNet.lean:1561:31: unused variable `hTB2`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Ax2/Explore/DrossNet.lean:1576:51: unused variable `hwΔ`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Ax2/Explore/DrossNet.lean:1580:36: unused variable `hTB2`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Ax2/Explore/DrossNet.lean:1615:51: unused variable `hwΔ`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Ax2/Explore/DrossNet.lean:1619:36: unused variable `hTB2`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Ax2/Explore/DrossNet.lean:2615:55: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: Ax2/Explore/DrossNet.lean:2652:51: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: Ax2/Explore/DrossNet.lean:2669:33: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: Ax2/Explore/DrossNet.lean:2718:22: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: Ax2/Explore/DrossNet.lean:2785:5: unused variable `h`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Ax2/Explore/DrossNet.lean:2785:49: unused variable `hn20`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Ax2/Explore/DrossNet.lean:2886:5: unused variable `h`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Ax2/Explore/DrossNet.lean:2886:49: unused variable `hn20`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Ax2/Explore/DrossNet.lean:3176:51: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: Ax2/Explore/DrossNet.lean:3193:33: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: Ax2/Explore/DrossNet.lean:3242:22: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: Ax2/Explore/DrossNet.lean:3375:8: automatically included section variable(s) unused in theorem `_private.Ax2.Explore.DrossNet.0.Ax2.DrossNet.heavy_triangle_vertices_distinct`:
+  [Fintype V]
+  [DecidableEq V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] [DecidableEq V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+✔ [8253/8455] Built BKLO.CoverDownObstruction (68s)
+✔ [8254/8455] Built BKLO.PartSeqDenseProof (98s)
+✔ [8255/8455] Built BKLO.Section1012Defs (98s)
+✔ [8256/8455] Built BKLO.Section10DegreeReduction (99s)
+✔ [8257/8455] Built BKLO.Section11CellsChain (79s)
+✔ [8258/8455] Built BKLO.CoreAbsorberExists (84s)
+✔ [8259/8455] Built Nibble.DenseGapAX1 (100s)
+✔ [8260/8455] Built Nibble.DenseApproxDeg (100s)
+✔ [8261/8455] Built Nibble.SpreadNibble (100s)
+✔ [8262/8455] Built Nibble.PadRounding (100s)
+
+=== RESUMED AFTER APP RESTART 2026-08-22T18:15:57.3269521-04:00 ===
+⚠ [8038/8084] Replayed Nibble.LPDuality
+warning: Nibble/LPDuality.lean:29:8: automatically included section variable(s) unused in theorem `_private.Nibble.LPDuality.0.LPDuality.zero_isPacking`:
+  [Fintype C]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype C] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: Nibble/LPDuality.lean:68:8: automatically included section variable(s) unused in theorem `_private.Nibble.LPDuality.0.LPDuality.coverOpt_le_value`:
+  [Fintype O]
+  [DecidableEq C]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype O] [DecidableEq C] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: Nibble/LPDuality.lean:105:8: automatically included section variable(s) unused in theorem `_private.Nibble.LPDuality.0.LPDuality.coverMap_apply_row`:
+  [DecidableEq C]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq C] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: Nibble/LPDuality.lean:109:8: automatically included section variable(s) unused in theorem `_private.Nibble.LPDuality.0.LPDuality.coverMap_apply_value`:
+  [DecidableEq C]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq C] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: Nibble/LPDuality.lean:605:8: automatically included section variable(s) unused in theorem `_private.Nibble.LPDuality.0.LPDuality.coverOpt_eq_zero_of_empty_row`:
+  [Fintype O]
+  [DecidableEq C]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype O] [DecidableEq C] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [8084/8134] Replayed Nibble.TightSchedule
+warning: Nibble/TightSchedule.lean:40:22: unused variable `hgam8`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Nibble/TightSchedule.lean:51:22: unused variable `hgam8`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [8098/8134] Replayed Nibble.Discharge
+warning: Nibble/Discharge.lean:124:35: unused variable `hβ`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [8106/8167] Replayed Nibble.Chebyshev
+warning: Nibble/Chebyshev.lean:51:0: automatically included section variable(s) unused in theorem `Nibble.measurableSet_survival`:
+  [IsProbabilityMeasure ℙ]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [IsProbabilityMeasure ℙ] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: Nibble/Chebyshev.lean:106:0: automatically included section variable(s) unused in theorem `Nibble.survivalEvent_eq_dep`:
+  [IsProbabilityMeasure ℙ]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [IsProbabilityMeasure ℙ] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: Nibble/Chebyshev.lean:139:0: automatically included section variable(s) unused in theorem `Nibble.measurableSet_A_depSigma`:
+  [IsProbabilityMeasure ℙ]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [IsProbabilityMeasure ℙ] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: Nibble/Chebyshev.lean:198:0: automatically included section variable(s) unused in theorem `Nibble.survivalIndicator_nonneg`:
+  [IsProbabilityMeasure ℙ]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [IsProbabilityMeasure ℙ] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: Nibble/Chebyshev.lean:323:8: automatically included section variable(s) unused in theorem `_private.Nibble.Chebyshev.0.Nibble.measure_edge_hit_toReal_le`:
+  [IsProbabilityMeasure ℙ]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [IsProbabilityMeasure ℙ] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: Nibble/Chebyshev.lean:350:57: unused variable `hp1`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Nibble/Chebyshev.lean:849:57: unused variable `hp1`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [8107/8167] Replayed Nibble.ResidualDegree
+warning: Nibble/ResidualDegree.lean:93:57: unused variable `hp1`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [8109/8167] Replayed Nibble.RegularityBad
+warning: Nibble/RegularityBad.lean:32:0: automatically included section variable(s) unused in theorem `Nibble.measurableSet_residual_mem`:
+  [Fintype V]
+  [IsProbabilityMeasure ℙ]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] [IsProbabilityMeasure ℙ] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [8110/8167] Replayed Nibble.RegularityBadFreedman
+warning: Nibble/RegularityBadFreedman.lean:30:0: automatically included section variable(s) unused in theorem `Nibble.degree_residual_le_original`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: Nibble/RegularityBadFreedman.lean:50:0: automatically included section variable(s) unused in theorem `Nibble.active_residualDeg_proxy_pos`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [8114/8167] Replayed Nibble.GoodRound
+warning: Nibble/GoodRound.lean:63:0: automatically included section variable(s) unused in theorem `Nibble.exists_good_round_freedman_uncond`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [8117/8167] Replayed Nibble.RegularityBadBound
+warning: Nibble/RegularityBadBound.lean:26:0: automatically included section variable(s) unused in theorem `Nibble.residualDeg_variance_le_sq`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [8131/8220] Replayed Nibble.DrossCutArith
+warning: Nibble/DrossCutArith.lean:152:33: unused variable `hn`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [8132/8220] Replayed Nibble.YusterNu3
+warning: Nibble/YusterNu3.lean:28:0: automatically included section variable(s) unused in theorem `Nibble.YusterE.isMatching_empty`:
+  [Fintype V]
+  [DecidableEq V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] [DecidableEq V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [8133/8220] Replayed Nibble.YusterBridgeFrac
+warning: Nibble/YusterBridgeFrac.lean:60:0: automatically included section variable(s) unused in theorem `Nibble.YusterE.triangle_powersetCard_two_sup`:
+  [Fintype V]
+  [DecidableRel G.Adj]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] [DecidableRel G.Adj] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: Nibble/YusterBridgeFrac.lean:86:0: automatically included section variable(s) unused in theorem `Nibble.YusterE.mem_powersetCard_two_iff_subset`:
+  [Fintype V]
+  [DecidableEq V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] [DecidableEq V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [8136/8220] Replayed Nibble.CellBoxAllocation
+warning: Nibble/CellBoxAllocation.lean:46:5: unused variable `hI`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Nibble/CellBoxAllocation.lean:46:23: unused variable `hI'`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Nibble/CellBoxAllocation.lean:46:43: unused variable `hJ`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Nibble/CellBoxAllocation.lean:46:61: unused variable `hJ'`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+info: Nibble/CellBoxAllocation.lean:92:0: 'Nibble.AX1.boxCompat_iff_disjoint_product' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Nibble/CellBoxAllocation.lean:93:0: 'Nibble.AX1.box_allocation_infeasible' depends on axioms: [propext, Classical.choice, Quot.sound]
+⚠ [8138/8220] Replayed Nibble.BeckFialaPairs
+warning: Nibble/BeckFialaPairs.lean:30:0: automatically included section variable(s) unused in theorem `Nibble.BeckFiala.mem_pairClosure`:
+  [DecidableEq V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [8139/8265] Replayed Nibble.BlockSplit
+warning: Nibble/BlockSplit.lean:29:0: automatically included section variable(s) unused in theorem `Nibble.AX1.enumIdx_lt`:
+  [DecidableEq V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: Nibble/BlockSplit.lean:31:0: automatically included section variable(s) unused in theorem `Nibble.AX1.enumIdx_injective`:
+  [DecidableEq V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [8145/8265] Replayed Nibble.CoreGapClusterCapacity
+warning: Nibble/CoreGapClusterCapacity.lean:36:0: automatically included section variable(s) unused in theorem `Nibble.AX1.card_crossEdges_le`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+ℹ [8147/8265] Replayed Nibble.CoreGapBlowUp
+info: Nibble/CoreGapBlowUp.lean:700:0: 'Nibble.AX1.nu3star_blowUp' depends on axioms: [propext, Classical.choice, Quot.sound]
+⚠ [8192/8339] Replayed BKLO.FiniteBernoulli
+warning: BKLO/FiniteBernoulli.lean:197:34: unused variable `hp0`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [8194/8354] Replayed PaperIII.DiracHamilton
+warning: PaperIII/DiracHamilton.lean:349:5: unused variable `hp`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [8198/8354] Replayed PaperIII.E_3_1_LP
+warning: PaperIII/E_3_1_LP.lean:21:49: unused variable `hB`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: PaperIII/E_3_1_LP.lean:34:5: unused variable `hd`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: PaperIII/E_3_1_LP.lean:49:44: unused variable `hE`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: PaperIII/E_3_1_LP.lean:90:23: unused variable `hrd`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [8199/8354] Replayed PaperIII.E_D
+warning: PaperIII/E_D.lean:33:5: unused variable `hirr`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: PaperIII/E_D.lean:108:5: unused variable `hr`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: PaperIII/E_D.lean:109:5: unused variable `hPB`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: PaperIII/E_D.lean:182:8: automatically included section variable(s) unused in theorem `_private.PaperIII.E_D.0.PaperIII.AppendixD.matching_saturates_max_left`:
+  [Fintype R]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype R] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: PaperIII/E_D.lean:183:5: unused variable `hdegU`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: PaperIII/E_D.lean:359:155: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+✔ [8202/8358] Built Nibble.DenseTriangleNibbleDegProof (107s)
+⚠ [8206/8358] Replayed PaperIII.Duality
+warning: PaperIII/Duality.lean:119:5: unused variable `e`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: PaperIII/Duality.lean:150:0: automatically included section variable(s) unused in theorem `PaperIII.le_nu3_of_packing`:
+  [DecidableRel H.Adj]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableRel H.Adj] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+ℹ [8208/8358] Replayed PaperIII.Factorization
+info: PaperIII/Factorization.lean:56:51: Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+✔ [8209/8358] Built Nibble.CoreGapAX1 (107s)
+⚠ [8211/8358] Replayed PaperIII.E_4_2_algebra
+warning: PaperIII/E_4_2_algebra.lean:59:49: unused variable `hQ2`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: PaperIII/E_4_2_algebra.lean:60:5: unused variable `hD0`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: PaperIII/E_4_2_algebra.lean:72:49: unused variable `hQ2`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: PaperIII/E_4_2_algebra.lean:73:5: unused variable `hD0`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: PaperIII/E_4_2_algebra.lean:73:19: unused variable `hDP`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: PaperIII/E_4_2_algebra.lean:85:49: unused variable `hQ2`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: PaperIII/E_4_2_algebra.lean:86:5: unused variable `hD0`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+✔ [8214/8358] Built BKLO.CoverDownRefutationA (109s)
+✔ [8215/8358] Built BKLO.Section1012Tools (109s)
+✔ [8216/8358] Built BKLO.Reservoir (109s)
+⚠ [8219/8358] Replayed PaperIII.E_8_Core
+warning: PaperIII/E_8_Core.lean:733:13: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+✔ [8222/8358] Built BKLO.VortexPartition (109s)
+⚠ [8224/8358] Replayed PaperIII.E_3_1_upper
+warning: PaperIII/E_3_1_upper.lean:37:23: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+⚠ [8225/8358] Replayed PaperIII.E_5
+warning: PaperIII/E_5.lean:74:4: Try this: intro a ha x hx H
+info: PaperIII/E_5.lean:153:66: Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+info: PaperIII/E_5.lean:154:78: Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+warning: PaperIII/E_5.lean:167:5: unused variable `hq`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: PaperIII/E_5.lean:193:19: unused variable `hq`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+info: PaperIII/E_5.lean:283:215: Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+info: PaperIII/E_5.lean:284:168: Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+info: PaperIII/E_5.lean:291:153: Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+warning: PaperIII/E_5.lean:485:6: Try this: intro a ha x hx H
+info: PaperIII/E_5.lean:528:171: Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+info: PaperIII/E_5.lean:529:157: Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+info: PaperIII/E_5.lean:575:99: Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+⚠ [8227/8358] Replayed PaperIII.E_7
+warning: PaperIII/E_7.lean:322:4: Try this: intro a ha x hx H
+warning: PaperIII/E_7.lean:409:5: unused variable `h72`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: PaperIII/E_7.lean:906:5: unused variable `hbrho`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+info: PaperIII/E_7.lean:1759:102: Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+info: PaperIII/E_7.lean:1766:70: Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+info: PaperIII/E_7.lean:1771:114: Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+⚠ [8231/8361] Replayed PaperIII.E_4_agg
+info: PaperIII/E_4_agg.lean:186:47: Try this:
+  [apply] ring_nf!
+  
+  The `ring!` tactic failed to close the goal. Use `ring_nf!` to obtain a normal form.
+    
+  Note that `ring!` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+info: PaperIII/E_4_agg.lean:202:404: Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+info: PaperIII/E_4_agg.lean:267:48: Try this:
+  [apply] ring_nf!
+  
+  The `ring!` tactic failed to close the goal. Use `ring_nf!` to obtain a normal form.
+    
+  Note that `ring!` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+warning: PaperIII/E_4_agg.lean:222:46: unused variable `hd`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: PaperIII/E_4_agg.lean:347:24: unused variable `e`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: PaperIII/E_4_agg.lean:350:24: unused variable `a`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: PaperIII/E_4_agg.lean:353:24: unused variable `e`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: PaperIII/E_4_agg.lean:356:24: unused variable `e`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+ℹ [8234/8361] Replayed PaperIII.Prop_10_1
+info: PaperIII/Prop_10_1.lean:78:50: Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+info: PaperIII/Prop_10_1.lean:88:157: Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+info: PaperIII/Prop_10_1.lean:89:164: Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+info: PaperIII/Prop_10_1.lean:138:131: Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+info: PaperIII/Prop_10_1.lean:370:167: Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+✔ [8235/8361] Built BKLO.Section10TransformStepProof (139s)
+✔ [8236/8361] Built BKLO.CoverDownRefutationB (139s)
+✔ [8237/8361] Built BKLO.Section102K3 (139s)
+✔ [8238/8361] Built BKLO.ParityTools (139s)
+✔ [8239/8361] Built BKLO.Section1010Obstruction (139s)
+⚠ [8242/8367] Replayed PaperIII.E_4_3
+warning: PaperIII/E_4_3.lean:88:4: 'push_cast' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+✔ [8258/8387] Built BKLO.Section72K3 (140s)
+⚠ [8261/8387] Replayed Ax2.Explore.NodupChain
+warning: Ax2/Explore/NodupChain.lean:78:39: unused variable `hst`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [8262/8387] Replayed Ax2.Explore.PathBalance
+warning: Ax2/Explore/PathBalance.lean:10:8: automatically included section variable(s) unused in theorem `_private.Ax2.Explore.PathBalance.0.Ax2.PathBalance.mem_pairs_iff'`:
+  [Fintype N]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype N] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: Ax2/Explore/PathBalance.lean:25:0: automatically included section variable(s) unused in theorem `Ax2.PathBalance.mem_pairs_iff`:
+  [Fintype N]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype N] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: Ax2/Explore/PathBalance.lean:148:8: automatically included section variable(s) unused in theorem `_private.Ax2.Explore.PathBalance.0.Ax2.PathBalance.pout_iff`:
+  [Fintype N]
+  [DecidableEq N]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype N] [DecidableEq N] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: Ax2/Explore/PathBalance.lean:177:8: automatically included section variable(s) unused in theorem `_private.Ax2.Explore.PathBalance.0.Ax2.PathBalance.pin_iff`:
+  [Fintype N]
+  [DecidableEq N]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype N] [DecidableEq N] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [8266/8397] Replayed Ax2.PartA.Spine
+warning: Ax2/PartA/Spine.lean:83:6: `Finset.filter_card_add_filter_neg_card_eq_card` has been deprecated: Use `Finset.card_filter_add_card_filter_not` instead
+warning: Ax2/PartA/Spine.lean:156:75: unused variable `huv`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [8269/8397] Replayed Ax2.PartB.BKLO.Gadget
+warning: Ax2/PartB/BKLO/Gadget.lean:40:0: automatically included section variable(s) unused in theorem `Ax2.BKLO.triEdges_card_of_isNClique`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [8270/8397] Replayed Ax2.Explore.DrossNet
+warning: Ax2/Explore/DrossNet.lean:209:8: automatically included section variable(s) unused in theorem `_private.Ax2.Explore.DrossNet.0.Ax2.DrossNet.card4_pairwise`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: Ax2/Explore/DrossNet.lean:231:0: automatically included section variable(s) unused in theorem `Ax2.DrossNet.k4pair_iff_clique`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: Ax2/Explore/DrossNet.lean:246:0: automatically included section variable(s) unused in theorem `Ax2.DrossNet.k4pair_symm`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: Ax2/Explore/DrossNet.lean:868:12: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+warning: Ax2/Explore/DrossNet.lean:1016:81: unused variable `hwΔ`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Ax2/Explore/DrossNet.lean:1538:62: unused variable `hwΔ`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Ax2/Explore/DrossNet.lean:1558:34: unused variable `hwΔ`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Ax2/Explore/DrossNet.lean:1561:31: unused variable `hTB2`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Ax2/Explore/DrossNet.lean:1576:51: unused variable `hwΔ`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Ax2/Explore/DrossNet.lean:1580:36: unused variable `hTB2`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Ax2/Explore/DrossNet.lean:1615:51: unused variable `hwΔ`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Ax2/Explore/DrossNet.lean:1619:36: unused variable `hTB2`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Ax2/Explore/DrossNet.lean:2615:55: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: Ax2/Explore/DrossNet.lean:2652:51: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: Ax2/Explore/DrossNet.lean:2669:33: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: Ax2/Explore/DrossNet.lean:2718:22: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: Ax2/Explore/DrossNet.lean:2785:5: unused variable `h`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Ax2/Explore/DrossNet.lean:2785:49: unused variable `hn20`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Ax2/Explore/DrossNet.lean:2886:5: unused variable `h`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Ax2/Explore/DrossNet.lean:2886:49: unused variable `hn20`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Ax2/Explore/DrossNet.lean:3176:51: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: Ax2/Explore/DrossNet.lean:3193:33: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: Ax2/Explore/DrossNet.lean:3242:22: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: Ax2/Explore/DrossNet.lean:3375:8: automatically included section variable(s) unused in theorem `_private.Ax2.Explore.DrossNet.0.Ax2.DrossNet.heavy_triangle_vertices_distinct`:
+  [Fintype V]
+  [DecidableEq V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] [DecidableEq V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+✔ [8271/8397] Built BKLO.CoverDownBudgetInvariant (54s)
+✔ [8272/8418] Built Nibble.CoreGapRemoval (56s)
+✔ [8274/8425] Built Nibble.StarExchange (60s)
+✔ [8275/8431] Built Nibble.WeightedNibble (70s)
+✔ [8276/8436] Built Nibble.DenseTriangleNibbleDegHalf (79s)
+✔ [8277/8436] Built BKLO.CoverDownRefutation (73s)
+✔ [8278/8444] Built BKLO.Section10Faithful (75s)
+✔ [8279/8444] Built BKLO.TriangleSums (76s)
+✔ [8280/8444] Built BKLO.SubtypeTransport (76s)
+✔ [8281/8444] Built BKLO.CoreAbsorberConf (81s)
+✔ [8283/8455] Built BKLO.CoverDownFused (85s)
+✔ [8284/8455] Built PaperIII.AX1NibbleBridge (117s)
+✔ [8285/8455] Built BKLO.CoverDownBudgetAccumulate (69s)
+✔ [8288/8455] Built Nibble.StarMoves (82s)
+✔ [8289/8455] Built Nibble.CoreGapNearComplete (87s)
+✔ [8290/8455] Built BKLO.ReservoirSat (101s)
+✔ [8291/8455] Built Nibble.WeightedSpreadNibble (89s)
+✔ [8292/8455] Built BKLO.CoverDownRepaired (77s)
+✔ [8293/8455] Built Nibble.FracNibbleRefutation (82s)
+✔ [8294/8455] Built BKLO.Section1012Repaired (74s)
+✔ [8295/8455] Built Nibble.DoubleSwap (83s)
+✔ [8296/8455] Built BKLO.ParityFamily (76s)
+✔ [8297/8455] Built Nibble.DenseGlobalLeftoverConst (87s)
+✔ [8298/8455] Built BKLO.ReservoirRepaired (74s)
+✔ [8299/8455] Built BKLO.Section10TransformStepWeak (106s)
+✔ [8300/8455] Built Nibble.StarCount (78s)
+✔ [8301/8455] Built BKLO.Section10Lemma103 (83s)
+✔ [8302/8455] Built Nibble.CoreGapRegularDegrees (80s)
+✔ [8303/8455] Built BKLO.Section1012Dense (68s)
+✔ [8304/8455] Built Nibble.WeightedNibbleRestrict (73s)
+✔ [8305/8455] Built BKLO.Section9ParityK3 (65s)
+✔ [8306/8455] Built BKLO.Section9Vectors (69s)
+✔ [8307/8455] Built BKLO.CoverDownFromDecomp (80s)
+⚠ [8308/8455] Built PaperIII.MainNibble (128s)
+warning: PaperIII/MainNibble.lean:216:32: unused variable `d₀`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: PaperIII/MainNibble.lean:233:32: unused variable `d₀`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: PaperIII/MainNibble.lean:250:32: unused variable `d₀`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: PaperIII/MainNibble.lean:513:32: unused variable `d₀`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: PaperIII/MainNibble.lean:530:32: unused variable `d₀`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: PaperIII/MainNibble.lean:547:32: unused variable `d₀`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+✔ [8309/8455] Built Nibble.DenseGlobalLeftoverBelowHalf (89s)
+✔ [8310/8455] Built BKLO.ReservoirRepairedSat (86s)
+✔ [8311/8455] Built BKLO.ReservoirRepaired2 (70s)
+✔ [8312/8455] Built BKLO.CoverDownFusedR (85s)
+✔ [8313/8455] Built Nibble.StarAugment (75s)
+✔ [8314/8455] Built BKLO.SpreadMatching (72s)
+✔ [8315/8455] Built BKLO.StarGreedyBudget (66s)
+✔ [8316/8455] Built Nibble.FracNibbleRepaired (69s)
+⚠ [8317/8455] Built Nibble.CoreGapRegularDecomp (75s)
+warning: Nibble/CoreGapRegularDecomp.lean:53:0: automatically included section variable(s) unused in theorem `Nibble.AX1.edgeSelect_adj`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: Nibble/CoreGapRegularDecomp.lean:56:0: automatically included section variable(s) unused in theorem `Nibble.AX1.edgeSelect_le`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+✔ [8318/8455] Built BKLO.Section9Greedy (68s)
+✔ [8319/8455] Built BKLO.Section9Assembly (71s)
+✔ [8320/8455] Built Nibble.TriangleCapacity (68s)
+✔ [8321/8455] Built BKLO.LinkCoverAssembly (66s)
+✔ [8322/8455] Built BKLO.EngineR3 (64s)
+✔ [8323/8455] Built BKLO.NearOptimalFaithful (102s)
+✔ [8324/8455] Built BKLO.VortexEngineFusedR (70s)
+✔ [8325/8455] Built Nibble.CoreGapRegularFamily (66s)
+✔ [8326/8455] Built BKLO.Section1010Dense (84s)
+✔ [8327/8455] Built BKLO.Section9Chain (69s)
+⚠ [8328/8455] Built BKLO.Section1012Assembly (153s)
+warning: BKLO/Section1012Assembly.lean:80:36: unused variable `hε`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: BKLO/Section1012Assembly.lean:108:36: unused variable `hε`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+✔ [8329/8455] Built BKLO.BottomClause (96s)
+ℹ [8330/8455] Built Nibble.FracNibbleSlack (88s)
+info: Nibble/FracNibbleSlack.lean:579:0: 'Nibble.fracNibble_withSlack' depends on axioms: [propext, Classical.choice, Quot.sound]
+✔ [8331/8455] Built Nibble.WitnessPair (72s)
+✔ [8332/8455] Built BKLO.VortexEngineFusedR2 (65s)
+✔ [8333/8455] Built Nibble.CoreGapRegularCover (61s)
+✔ [8334/8455] Built BKLO.Section9Build (63s)
+✔ [8335/8455] Built BKLO.Section106Set (63s)
+✔ [8336/8455] Built BKLO.Section1010Sparse (69s)
+✔ [8337/8455] Built BKLO.Section1011Dense (70s)
+✔ [8338/8455] Built Nibble.CoreGapTripleDegrees (84s)
+✔ [8339/8455] Built Nibble.DenseGlobalLeftoverThird (78s)
+ℹ [8340/8455] Built Nibble.FracNibbleSlackR (87s)
+info: Nibble/FracNibbleSlackR.lean:642:0: 'Nibble.SlackR.fracNibbleR_withSlack' depends on axioms: [propext, Classical.choice, Quot.sound]
+✔ [8341/8455] Built BKLO.MainRepaired (118s)
+✔ [8342/8455] Built BKLO.LevelSampling (107s)
+✔ [8343/8455] Built Nibble.CoreGapPackingSplit (75s)
+✔ [8344/8455] Built Nibble.CoreGapReducedPair (75s)
+✔ [8345/8455] Built BKLO.ReservoirLarge (88s)
+✔ [8346/8455] Built BKLO.Section9Construct (73s)
+✔ [8347/8455] Built BKLO.Section1012RhoWindow (79s)
+✔ [8348/8455] Built Nibble.CoreGapPrune (76s)
+⚠ [8349/8455] Built Nibble.CoreGapRectPack (77s)
+warning: Nibble/CoreGapRectPack.lean:32:0: automatically included section variable(s) unused in theorem `Nibble.AX1.mem_tripleRect_iff`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: Nibble/CoreGapRectPack.lean:47:8: automatically included section variable(s) unused in theorem `_private.Nibble.CoreGapRectPack.0.Nibble.AX1.disjoint_product_left`:
+  [Fintype V]
+  [DecidableEq V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] [DecidableEq V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: Nibble/CoreGapRectPack.lean:55:8: automatically included section variable(s) unused in theorem `_private.Nibble.CoreGapRectPack.0.Nibble.AX1.disjoint_product_right`:
+  [Fintype V]
+  [DecidableEq V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] [DecidableEq V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: Nibble/CoreGapRectPack.lean:82:29: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: Nibble/CoreGapRectPack.lean:93:67: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: Nibble/CoreGapRectPack.lean:94:10: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: Nibble/CoreGapRectPack.lean:94:29: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: Nibble/CoreGapRectPack.lean:82:29: 'exact nBC hy' hy' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: Nibble/CoreGapRectPack.lean:93:67: 'exact nAC hy' hy' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: Nibble/CoreGapRectPack.lean:94:10: 'exact nBC hy hy'' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: Nibble/CoreGapRectPack.lean:94:29: 'exact nBC hy' hy' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+✔ [8350/8455] Built BKLO.Section107Core (93s)
+✔ [8351/8455] Built Nibble.DenseGlobalLeftoverSharp (78s)
+✔ [8352/8455] Built BKLO.DescentStep (76s)
+✔ [8353/8455] Built BKLO.GridLabelling (67s)
+✔ [8354/8455] Built BKLO.BalancedClasses (82s)
+✔ [8355/8455] Built BKLO.Section9ParityK3Proof (83s)
+✔ [8356/8455] Built Nibble.CoarseCellBlocks (68s)
+✔ [8357/8455] Built Nibble.GridTripleDesignRect (68s)
+✔ [8358/8455] Built Nibble.CoreGapPruneLocal (70s)
+✔ [8359/8455] Built Nibble.CoreGapDesign (70s)
+⚠ [8360/8455] Built Nibble.FracNibbleLE (128s)
+warning: Nibble/FracNibbleLE.lean:153:0: automatically included section variable(s) unused in theorem `Nibble.LEUnif.padWtLE_nonneg`:
+  [DecidableEq X]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq X] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: Nibble/FracNibbleLE.lean:201:0: automatically included section variable(s) unused in theorem `Nibble.LEUnif.sum_over_i`:
+  [DecidableEq X]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq X] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+info: Nibble/FracNibbleLE.lean:608:0: 'Nibble.fracNibble_leUniform' depends on axioms: [propext, Classical.choice, Quot.sound]
+✔ [8361/8455] Built Nibble.DrossFractional (65s)
+✔ [8362/8455] Built BKLO.MainRepaired2 (153s)
+✔ [8363/8455] Built BKLO.GridLabellingCells (62s)
+✔ [8364/8455] Built Nibble.BlockCoverUniformAux (60s)
+✔ [8365/8455] Built Nibble.TripleEdges (59s)
+✔ [8366/8455] Built Nibble.GridDesign (64s)
+⚠ [8367/8455] Built Nibble.BoxPlacementGraph (73s)
+warning: Nibble/BoxPlacementGraph.lean:60:0: automatically included section variable(s) unused in theorem `Nibble.AX1.BoxPlace.mem_placeFam`:
+  [Fintype ι]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype ι] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: Nibble/BoxPlacementGraph.lean:74:0: automatically included section variable(s) unused in theorem `Nibble.AX1.BoxPlace.boxDemand_eq_sum`:
+  [Fintype ι]
+  [DecidableEq κ]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype ι] [DecidableEq κ] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: Nibble/BoxPlacementGraph.lean:77:0: automatically included section variable(s) unused in theorem `Nibble.AX1.BoxPlace.boxDemandC_nonneg`:
+  [Fintype ι]
+  [Fintype κ]
+  [DecidableEq κ]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype ι] [Fintype κ] [DecidableEq κ] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: Nibble/BoxPlacementGraph.lean:83:0: automatically included section variable(s) unused in theorem `Nibble.AX1.BoxPlace.sz_mul_le_boxDemandC`:
+  [Fintype ι]
+  [Fintype κ]
+  [DecidableEq κ]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype ι] [Fintype κ] [DecidableEq κ] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: Nibble/BoxPlacementGraph.lean:121:0: automatically included section variable(s) unused in theorem `Nibble.AX1.BoxPlace.plc_nonempty`:
+  [Fintype κ]
+  [DecidableEq κ]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype κ] [DecidableEq κ] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: Nibble/BoxPlacementGraph.lean:128:0: automatically included section variable(s) unused in theorem `Nibble.AX1.BoxPlace.sum_placeFam`:
+  [Fintype ι]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype ι] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: Nibble/BoxPlacementGraph.lean:161:0: automatically included section variable(s) unused in theorem `Nibble.AX1.BoxPlace.placeWt_edge`:
+  [Fintype ι]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype ι] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: Nibble/BoxPlacementGraph.lean:168:0: automatically included section variable(s) unused in theorem `Nibble.AX1.BoxPlace.placeWt_nonneg`:
+  [Fintype ι]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype ι] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: Nibble/BoxPlacementGraph.lean:175:0: automatically included section variable(s) unused in theorem `Nibble.AX1.BoxPlace.placeCard_pos`:
+  [Fintype κ]
+  [DecidableEq κ]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype κ] [DecidableEq κ] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: Nibble/BoxPlacementGraph.lean:199:0: automatically included section variable(s) unused in theorem `Nibble.AX1.BoxPlace.placeFam_edge_size`:
+  hidx
+  hsz1
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit hidx hsz1 in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: Nibble/BoxPlacementGraph.lean:233:0: automatically included section variable(s) unused in theorem `Nibble.AX1.BoxPlace.sum_inv_const`:
+  [Fintype κ]
+  [DecidableEq κ]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype κ] [DecidableEq κ] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: Nibble/BoxPlacementGraph.lean:240:0: automatically included section variable(s) unused in theorem `Nibble.AX1.BoxPlace.slot_count_core`:
+  [Fintype ι]
+  [Fintype κ]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype ι] [Fintype κ] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+✔ [8368/8455] Built BKLO.ScheduleR3 (119s)
+✔ [8369/8455] Built Nibble.FracPackingDense (70s)
+✔ [8370/8455] Built BKLO.ReservoirDesign (106s)
+✔ [8371/8455] Built Nibble.CoreGapGridResidual (53s)
+✔ [8372/8455] Built Nibble.GridDesignRect (54s)
+⚠ [8373/8455] Built Nibble.TripleEdgesThree (59s)
+warning: Nibble/TripleEdgesThree.lean:30:8: automatically included section variable(s) unused in theorem `_private.Nibble.TripleEdgesThree.0.Nibble.AX1.mem_crossPairs`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: Nibble/TripleEdgesThree.lean:114:8: automatically included section variable(s) unused in theorem `_private.Nibble.TripleEdgesThree.0.Nibble.AX1.edgeDensity_mul_le_card_interedges`:
+  [Fintype V]
+  [DecidableEq V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] [DecidableEq V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+✔ [8374/8455] Built BKLO.Section1012Reconcile (128s)
+✔ [8375/8455] Built BKLO.EngineR3Assembly (58s)
+✔ [8376/8455] Built Nibble.UniformRounding (63s)
+⚠ [8377/8455] Built Nibble.BoxPlacementNibble (83s)
+warning: Nibble/BoxPlacementNibble.lean:109:0: automatically included section variable(s) unused in theorem `Nibble.AX1.BoxPlace.defaultAlloc_mem`:
+  [Fintype κ]
+  [DecidableEq κ]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype κ] [DecidableEq κ] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+✔ [8378/8455] Built Nibble.CoreGapTripleShape (52s)
+⚠ [8379/8455] Built BKLO.Section1012Hier (54s)
+warning: BKLO/Section1012Hier.lean:104:59: unused variable `hε`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+✔ [8380/8455] Built BKLO.LinkLoad (88s)
+✔ [8381/8455] Built BKLO.ReservoirDesignStructured (88s)
+✔ [8382/8455] Built BKLO.ReservoirPairing (47s)
+✔ [8383/8455] Built Nibble.FracRounding (52s)
+✔ [8384/8455] Built Nibble.CoreGapBlockShape (55s)
+✔ [8385/8455] Built Nibble.CoreGapDesignLocal (59s)
+✔ [8386/8455] Built BKLO.GridRegionCard (49s)
+✔ [8387/8455] Built BKLO.Section11Cells (55s)
+✔ [8388/8455] Built BKLO.MainRepaired3 (99s)
+✔ [8389/8455] Built BKLO.ReservoirPairingRefutation (59s)
+✔ [8390/8455] Built Nibble.NearComplete (54s)
+✔ [8391/8455] Built Nibble.CoreGapGridLocalResidual (42s)
+✔ [8392/8455] Built BKLO.ReservoirDesignFull (91s)
+✔ [8393/8455] Built BKLO.GridCompetition (41s)
+✔ [8394/8455] Built BKLO.Section11CellsSeq (42s)
+✔ [8395/8455] Built Nibble.DrossSpread (49s)
+✔ [8396/8455] Built BKLO.Section11CellsWire (55s)
+✔ [8397/8455] Built BKLO.CellsSpreadLevels (55s)
+✔ [8398/8455] Built BKLO.CellsStep (55s)
+✔ [8399/8455] Built BKLO.ReservoirDesignClean (61s)
+✔ [8400/8455] Built BKLO.MainR4 (95s)
+⚠ [8401/8455] Built Nibble.CoreGapBlockCover (88s)
+warning: Nibble/CoreGapBlockCover.lean:47:65: unused variable `hδ`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Nibble/CoreGapBlockCover.lean:47:78: unused variable `hδ1`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Nibble/CoreGapBlockCover.lean:57:58: unused variable `hδ`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Nibble/CoreGapBlockCover.lean:69:84: unused variable `hδ1`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Nibble/CoreGapBlockCover.lean:70:5: unused variable `hε₁0`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Nibble/CoreGapBlockCover.lean:166:67: unused variable `hδ0`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+✔ [8402/8455] Built Nibble.DrossGadget (66s)
+✔ [8403/8455] Built BKLO.EngineR4Assembly (47s)
+✔ [8404/8455] Built BKLO.CellsGreedy (54s)
+⚠ [8405/8455] Built Nibble.CoreGapCoverCapacity (43s)
+warning: Nibble/CoreGapCoverCapacity.lean:50:0: automatically included section variable(s) unused in theorem `Nibble.AX1.prod_subset_tripleRect_AB`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: Nibble/CoreGapCoverCapacity.lean:53:0: automatically included section variable(s) unused in theorem `Nibble.AX1.prod_subset_tripleRect_BA`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: Nibble/CoreGapCoverCapacity.lean:56:0: automatically included section variable(s) unused in theorem `Nibble.AX1.prod_subset_tripleRect_AC`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: Nibble/CoreGapCoverCapacity.lean:59:0: automatically included section variable(s) unused in theorem `Nibble.AX1.prod_subset_tripleRect_CA`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: Nibble/CoreGapCoverCapacity.lean:62:0: automatically included section variable(s) unused in theorem `Nibble.AX1.prod_subset_tripleRect_BC`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: Nibble/CoreGapCoverCapacity.lean:65:0: automatically included section variable(s) unused in theorem `Nibble.AX1.prod_subset_tripleRect_CB`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: Nibble/CoreGapCoverCapacity.lean:75:0: automatically included section variable(s) unused in theorem `Nibble.AX1.pairArea_nonneg`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: Nibble/CoreGapCoverCapacity.lean:81:0: automatically included section variable(s) unused in theorem `Nibble.AX1.rect_le_pairArea`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: Nibble/CoreGapCoverCapacity.lean:97:0: automatically included section variable(s) unused in theorem `Nibble.AX1.sum_card_inter_le`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+✔ [8406/8455] Built BKLO.ReservoirPairingLarge (44s)
+✔ [8407/8455] Built Nibble.DrossTransfer (64s)
+✔ [8408/8455] Built BKLO.Section11CellsPlace (51s)
+⚠ [8409/8455] Built Nibble.CoreGapBlockCoverCoupled (79s)
+warning: Nibble/CoreGapBlockCoverCoupled.lean:47:65: unused variable `hδ`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Nibble/CoreGapBlockCoverCoupled.lean:47:78: unused variable `hδ1`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Nibble/CoreGapBlockCoverCoupled.lean:57:58: unused variable `hδ`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Nibble/CoreGapBlockCoverCoupled.lean:69:84: unused variable `hδ1`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Nibble/CoreGapBlockCoverCoupled.lean:70:5: unused variable `hε₁0`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Nibble/CoreGapBlockCoverCoupled.lean:166:67: unused variable `hδ0`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+info: Nibble/CoreGapBlockCoverCoupled.lean:451:0: 'Nibble.AX1.subTripleDesignLocalResidual_of_blockCoverCoupled' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: Nibble/CoreGapBlockCoverCoupled.lean:452:0: 'Nibble.AX1.ax1_of_blockCoverCoupled' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [8410/8455] Built Nibble.CoreGapClusterLP (46s)
+info: Nibble/CoreGapClusterLP.lean:292:0: 'Nibble.AX1.nu3star_regularityReduced_le_cluster_capacity' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Nibble/CoreGapClusterLP.lean:293:0: 'Nibble.AX1.nu3star_regularityReduced_le_dense_cluster_capacity' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+✔ [8411/8455] Built BKLO.ReservoirPairingStructured (35s)
+✔ [8412/8455] Built BKLO.Section11CellsMain (34s)
+✔ [8413/8455] Built Nibble.DrossFlowRoute (41s)
+ℹ [8414/8455] Built Nibble.CoreGapBlockAlloc (42s)
+info: Nibble/CoreGapBlockAlloc.lean:237:0: 'Nibble.AX1.cover_approx_of_gridSubTriple' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Nibble/CoreGapBlockAlloc.lean:238:0: 'Nibble.AX1.tripleRect_disjoint_of_clusters' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Nibble/CoreGapBlockAlloc.lean:239:0: 'Nibble.AX1.nu3star_le_cover_of_family_value' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [8415/8455] Built Nibble.CoreGapClusterHost (43s)
+info: Nibble/CoreGapClusterHost.lean:292:0: 'Nibble.AX1.hostTri_mem_cliqueFinset' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Nibble/CoreGapClusterHost.lean:293:0: 'Nibble.AX1.nu3star_regularityReduced_le_host' depends on axioms: [propext, Classical.choice, Quot.sound]
+✔ [8416/8455] Built BKLO.GridPairingClean (40s)
+✔ [8417/8455] Built BKLO.TwoSidedSweep (40s)
+✔ [8418/8455] Built Nibble.DrossFlowDense (53s)
+✔ [8419/8455] Built Nibble.CoarseCellAssembly (41s)
+✔ [8420/8455] Built BKLO.GridPairingCleanCount (38s)
+ℹ [8421/8455] Built Nibble.ClusterTripleLP (48s)
+info: Nibble/ClusterTripleLP.lean:419:0: 'Nibble.AX1.exists_clusterTripleLP' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Nibble/ClusterTripleLP.lean:420:0: 'Nibble.AX1.exists_sparse_clusterTripleLP' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Nibble/ClusterTripleLP.lean:421:0: 'Nibble.AX1.exists_sparse_clusterTripleLP_nu3star' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Nibble/ClusterTripleLP.lean:422:0: 'Nibble.AX1.nu3star_le_cover_of_family_lp_value' depends on axioms: [propext, Classical.choice, Quot.sound]
+✔ [8422/8455] Built Nibble.DrossCutCount (30s)
+✔ [8423/8455] Built Nibble.ClusterTripleLPCount (27s)
+✔ [8424/8455] Built BKLO.ReservoirDesignEquitable (31s)
+✔ [8425/8455] Built Nibble.DrossCutPartners (29s)
+✔ [8426/8455] Built BKLO.ReservoirDesignSharp (51s)
+✔ [8427/8455] Built Nibble.DrossCutCert (38s)
+✔ [8428/8455] Built BKLO.SharpLinkMargin (29s)
+✔ [8429/8455] Built Nibble.DenseTriangleNibbleDegAll (30s)
+✔ [8430/8455] Built BKLO.SharpSweepBudget (33s)
+✔ [8431/8455] Built Nibble.DenseTriNibbleMaxDeg (27s)
+✔ [8432/8455] Built BKLO.ApproxTriDecompMinDegDense (33s)
+✔ [8433/8455] Built BKLO.ReservoirDesignTwoSided (36s)
+⚠ [8434/8455] Built PaperIII.PaperImprovements (59s)
+warning: PaperIII/PaperImprovements.lean:165:7: unused variable `q`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: PaperIII/PaperImprovements.lean:177:7: unused variable `q`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: PaperIII/PaperImprovements.lean:427:4: Try `simp at hPair` instead of `simpa using hPair`
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+warning: PaperIII/PaperImprovements.lean:1300:18: unused variable `hβ`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: PaperIII/PaperImprovements.lean:1329:18: unused variable `hβ`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+✔ [8435/8455] Built BKLO.MainDenseUnconditional (34s)
+✔ [8436/8455] Built BKLO.TwoSidedLinkMargin (38s)
+⚠ [8437/8455] Built Nibble.CoarseCellCoupled (194s)
+warning: Nibble/CoarseCellCoupled.lean:210:41: unused variable `ha0`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+info: Nibble/CoarseCellCoupled.lean:1120:0: 'Nibble.AX1.blockCoverResidualCoupled_of_boxAllocation' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Nibble/CoarseCellCoupled.lean:1121:0: 'Nibble.AX1.ax1_of_boxAllocation' depends on axioms: [propext, Classical.choice, Quot.sound]
+✔ [8438/8455] Built BKLO.GridPairingTwoSided (19s)
+✔ [8439/8455] Built Nibble.AX1Closed (18s)
+✔ [8440/8455] Built BKLO.GridPairingStepTwoSided (16s)
+✔ [8441/8455] Built BKLO.TwoSidedLedger (20s)
+✔ [8442/8455] Built BKLO.TwoSidedClassLedger (22s)
+✔ [8443/8455] Built BKLO.TwoSidedLedgerObstruction (15s)
+✔ [8444/8455] Built BKLO.TwoSidedCrossSide (20s)
+✔ [8445/8455] Built BKLO.TwoSidedCrossSideSweep (20s)
+✔ [8446/8455] Built BKLO.TwoSidedCrossSideExc (20s)
+✔ [8447/8455] Built BKLO.TwoSidedClassMatched (33s)
+✔ [8448/8455] Built BKLO.TwoSidedClassMatchedResidual (16s)
+✔ [8449/8455] Built BKLO.TwoSidedClassMatchedInvariant (16s)
+✔ [8450/8455] Built BKLO.TwoSidedUsedClassMatched (19s)
+⚠ [8451/8455] Built Ax2.PartB.BKLO.Bridge (58s)
+warning: Ax2/PartB/BKLO/Bridge.lean:24:0: automatically included section variable(s) unused in theorem `Ax2.BKLOBridge.triEdges_eq_cliqueEdges`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [8452/8455] Built PaperIII.Theorem_1_1_Final (44s)
+warning: PaperIII/Theorem_1_1_Final.lean:55:23: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+✔ [8453/8455] Built PaperIII.PublicAPI (23s)
+✔ [8454/8455] Built PaperIII (21s)
+Build completed successfully (8455 jobs).

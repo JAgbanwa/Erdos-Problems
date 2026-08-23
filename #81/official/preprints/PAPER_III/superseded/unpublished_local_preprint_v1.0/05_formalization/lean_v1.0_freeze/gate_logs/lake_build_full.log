@@ -1,0 +1,740 @@
+⚠ [8027/8060] Replayed PaperIII.E_3_1_LP
+warning: PaperIII/E_3_1_LP.lean:21:49: unused variable `hB`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: PaperIII/E_3_1_LP.lean:34:5: unused variable `hd`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: PaperIII/E_3_1_LP.lean:49:44: unused variable `hE`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: PaperIII/E_3_1_LP.lean:90:23: unused variable `hrd`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: PaperIII/E_3_1_LP.lean:102:60: This simp argument is unused:
+  sub_le_iff_le_add
+
+Hint: Omit it from the simp argument list.
+  simp_all +decide [̵ ̵m̵i̵n̵_̵d̵e̵f̵,̵ ̵s̵u̵b̵_̵l̵e̵_̵i̵f̵f̵_̵l̵e̵_̵a̵d̵d̵ ̵]̵[̲m̲i̲n̲_̲d̲e̲f̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [8028/8060] Replayed PaperIII.E_D
+warning: PaperIII/E_D.lean:33:5: unused variable `hirr`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: PaperIII/E_D.lean:59:54: This simp argument is unused:
+  Finset.filter_not
+
+Hint: Omit it from the simp argument list.
+  simp_all +decide [̵ ̵F̵i̵n̵s̵e̵t̵.̵f̵i̵l̵t̵e̵r̵_̵n̵o̵t̵,̵ ̵F̵i̵n̵s̵e̵t̵.̵c̵a̵r̵d̵_̵s̵d̵i̵f̵f̵ ̵]̵[̲F̲i̲n̲s̲e̲t̲.̲c̲a̲r̲d̲_̲s̲d̲i̲f̲f̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: PaperIII/E_D.lean:108:5: unused variable `hr`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: PaperIII/E_D.lean:109:5: unused variable `hPB`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: PaperIII/E_D.lean:116:29: This simp argument is unused:
+  hgA
+
+Hint: Omit it from the simp argument list.
+  simp +decide [̵ ̵D̵A̵A̵c̵c̵e̵p̵t̵e̵d̵,̵ ̵h̵g̵A̵ ̵]̵[̲D̲A̲A̲c̲c̲e̲p̲t̲e̲d̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: PaperIII/E_D.lean:182:8: automatically included section variable(s) unused in theorem `_private.PaperIII.E_D.0.PaperIII.AppendixD.matching_saturates_max_left`:
+  [Fintype R]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype R] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: PaperIII/E_D.lean:183:5: unused variable `hdegU`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: PaperIII/E_D.lean:225:84: This simp argument is unused:
+  Finset.sum_image
+
+Hint: Omit it from the simp argument list.
+  simp_all +decide ̵[̵ ̵F̵i̵n̵s̵e̵t̵.̵s̵u̵m̵_̵i̵m̵a̵g̵e̵ ̵]̵
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: PaperIII/E_D.lean:359:155: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+warning: PaperIII/E_D.lean:386:78: This simp argument is unused:
+  he
+
+Hint: Omit it from the simp argument list.
+  simp +decide [̵ ̵h̵e̵ ̵]̵ ̵at hA_outdeg ⊢
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [8030/8060] Replayed PaperIII.DiracHamilton
+warning: PaperIII/DiracHamilton.lean:349:5: unused variable `hp`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [8032/8060] Replayed PaperIII.E_8_Divisible
+warning: PaperIII/E_8_Divisible.lean:309:10: This simp argument is unused:
+  Sym2.eq_iff
+
+Hint: Omit it from the simp argument list.
+  simp ̵[̵S̵y̵m̵2̵.̵e̵q̵_̵i̵f̵f̵]̵
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: PaperIII/E_8_Divisible.lean:317:34: This simp argument is unused:
+  Sym2.eq_iff
+
+Hint: Omit it from the simp argument list.
+  simp ̵[̵S̵y̵m̵2̵.̵e̵q̵_̵i̵f̵f̵]̵
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: PaperIII/E_8_Divisible.lean:318:34: This simp argument is unused:
+  Sym2.eq_iff
+
+Hint: Omit it from the simp argument list.
+  simp ̵[̵S̵y̵m̵2̵.̵e̵q̵_̵i̵f̵f̵]̵
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: PaperIII/E_8_Divisible.lean:319:34: This simp argument is unused:
+  Sym2.eq_iff
+
+Hint: Omit it from the simp argument list.
+  simp ̵[̵S̵y̵m̵2̵.̵e̵q̵_̵i̵f̵f̵]̵
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: PaperIII/E_8_Divisible.lean:331:10: This simp argument is unused:
+  Sym2.eq_iff
+
+Hint: Omit it from the simp argument list.
+  simp ̵[̵S̵y̵m̵2̵.̵e̵q̵_̵i̵f̵f̵]̵
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: PaperIII/E_8_Divisible.lean:340:34: This simp argument is unused:
+  Sym2.eq_iff
+
+Hint: Omit it from the simp argument list.
+  simp ̵[̵S̵y̵m̵2̵.̵e̵q̵_̵i̵f̵f̵]̵
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: PaperIII/E_8_Divisible.lean:341:34: This simp argument is unused:
+  Sym2.eq_iff
+
+Hint: Omit it from the simp argument list.
+  simp ̵[̵S̵y̵m̵2̵.̵e̵q̵_̵i̵f̵f̵]̵
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: PaperIII/E_8_Divisible.lean:342:34: This simp argument is unused:
+  Sym2.eq_iff
+
+Hint: Omit it from the simp argument list.
+  simp ̵[̵S̵y̵m̵2̵.̵e̵q̵_̵i̵f̵f̵]̵
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: PaperIII/E_8_Divisible.lean:343:34: This simp argument is unused:
+  Sym2.eq_iff
+
+Hint: Omit it from the simp argument list.
+  simp ̵[̵S̵y̵m̵2̵.̵e̵q̵_̵i̵f̵f̵]̵
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [8035/8060] Replayed PaperIII.Duality
+warning: PaperIII/Duality.lean:119:5: unused variable `e`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: PaperIII/Duality.lean:150:0: automatically included section variable(s) unused in theorem `PaperIII.le_nu3_of_packing`:
+  [DecidableRel H.Adj]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableRel H.Adj] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [8037/8060] Replayed PaperIII.Counting
+warning: PaperIII/Counting.lean:25:40: This simp argument is unused:
+  Finset.card_eq_two
+
+Hint: Omit it from the simp argument list.
+  simp +contextual [̵ ̵S̵y̵m̵2̵.̵t̵o̵M̵u̵l̵t̵i̵s̵e̵t̵,̵ ̵F̵i̵n̵s̵e̵t̵.̵c̵a̵r̵d̵_̵e̵q̵_̵t̵w̵o̵ ̵]̵[̲S̲y̲m̲2̲.̲t̲o̲M̲u̲l̲t̲i̲s̲e̲t̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: PaperIII/Counting.lean:41:61: This simp argument is unused:
+  SimpleGraph.adj_comm
+
+Hint: Omit it from the simp argument list.
+  simp_all +decide ̵[̵ ̵S̵i̵m̵p̵l̵e̵G̵r̵a̵p̵h̵.̵a̵d̵j̵_̵c̵o̵m̵m̵ ̵]̵
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: PaperIII/Counting.lean:53:21: This simp argument is unused:
+  Sym2.eq_iff
+
+Hint: Omit it from the simp argument list.
+  simp_all +decide ̵[̵ ̵S̵y̵m̵2̵.̵e̵q̵_̵i̵f̵f̵ ̵]̵
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [8038/8060] Replayed PaperIII.E_4_2_algebra
+warning: PaperIII/E_4_2_algebra.lean:59:49: unused variable `hQ2`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: PaperIII/E_4_2_algebra.lean:60:5: unused variable `hD0`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: PaperIII/E_4_2_algebra.lean:72:49: unused variable `hQ2`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: PaperIII/E_4_2_algebra.lean:73:5: unused variable `hD0`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: PaperIII/E_4_2_algebra.lean:73:19: unused variable `hDP`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: PaperIII/E_4_2_algebra.lean:85:49: unused variable `hQ2`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: PaperIII/E_4_2_algebra.lean:86:5: unused variable `hD0`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+ℹ [8040/8060] Replayed PaperIII.Factorization
+info: PaperIII/Factorization.lean:56:51: Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+⚠ [8043/8060] Replayed PaperIII.E_3_1_upper
+warning: PaperIII/E_3_1_upper.lean:37:23: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+⚠ [8044/8060] Replayed PaperIII.E_5
+warning: PaperIII/E_5.lean:74:4: Try this: intro a ha x hx H
+warning: PaperIII/E_5.lean:85:36: This simp argument is unused:
+  ha
+
+Hint: Omit it from the simp argument list.
+  simp +decide [̵ ̵S̵y̵m̵2̵.̵t̵o̵F̵i̵n̵s̵e̵t̵,̵ ̵h̵a̵ ̵]̵[̲S̲y̲m̲2̲.̲t̲o̲F̲i̲n̲s̲e̲t̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+info: PaperIII/E_5.lean:153:66: Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+info: PaperIII/E_5.lean:154:78: Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+warning: PaperIII/E_5.lean:147:73: This simp argument is unused:
+  Finset.sum_mul _ _ _
+
+Hint: Omit it from the simp argument list.
+  simp_all +decide [̵ ̵F̵i̵n̵s̵e̵t̵.̵s̵u̵m̵_̵a̵d̵d̵_̵d̵i̵s̵t̵r̵i̵b̵,̵[̲F̲i̲n̲s̲e̲t̲.̲s̲u̲m̲_̲a̲d̲d̲_̲d̲i̲s̲t̲r̲i̲b̲,̲ Finset.mul_sum _ _ _, F̵i̵n̵s̵e̵t̵.̵s̵u̵m̵_̵m̵u̵l̵ ̵_̵ ̵_̵ ̵_̵,̵ ̵s̵u̵b̵_̵s̵q̵ ̵]̵s̲u̲b̲_̲s̲q̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: PaperIII/E_5.lean:148:47: This simp argument is unused:
+  ← Finset.sum_mul
+
+Hint: Omit it from the simp argument list.
+  simp +decide [̵ ̵←̵[̲←̲ Finset.mul_sum _ _ _, ←̵ ̵F̵i̵n̵s̵e̵t̵.̵s̵u̵m̵_̵m̵u̵l̵,̵ ̵mul_comm, SplitGraph.M, S̵p̵l̵i̵t̵G̵r̵a̵p̵h̵.̵S̵₂̵ ̵]̵S̲p̲l̲i̲t̲G̲r̲a̲p̲h̲.̲S̲₂̲]̲
+
+Note: Simp arguments with `←` have the additional effect of removing the other direction from the simp set, even if the simp argument itself is unused. If the hint above does not work, try replacing `←` with `-` to only get that effect and silence this warning.
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: PaperIII/E_5.lean:151:25: This simp argument is unused:
+  Finset.sum_div _ _ _
+
+Hint: Omit it from the simp argument list.
+  simp_all +decide [̵ ̵F̵i̵n̵s̵e̵t̵.̵s̵u̵m̵_̵d̵i̵v̵ ̵_̵ ̵_̵ ̵_̵,̵ ̵m̵u̵l̵_̵s̵u̵b̵ ̵]̵[̲m̲u̲l̲_̲s̲u̲b̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: PaperIII/E_5.lean:167:5: unused variable `hq`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: PaperIII/E_5.lean:181:25: This simp argument is unused:
+  Finset.sum_ite
+
+Hint: Omit it from the simp argument list.
+  simp_all +decide ̵[̵ ̵F̵i̵n̵s̵e̵t̵.̵s̵u̵m̵_̵i̵t̵e̵ ̵]̵
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: PaperIII/E_5.lean:193:19: unused variable `hq`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: PaperIII/E_5.lean:217:27: This simp argument is unused:
+  Function.Injective
+
+Hint: Omit it from the simp argument list.
+  simp_all +decide [̵ ̵F̵u̵n̵c̵t̵i̵o̵n̵.̵I̵n̵j̵e̵c̵t̵i̵v̵e̵,̵ ̵E̵q̵u̵i̵v̵.̵s̵y̵m̵m̵_̵a̵p̵p̵l̵y̵_̵e̵q̵ ̵]̵[̲E̲q̲u̲i̲v̲.̲s̲y̲m̲m̲_̲a̲p̲p̲l̲y̲_̲e̲q̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: PaperIII/E_5.lean:229:58: This simp argument is unused:
+  Finset.card_sdiff
+
+Hint: Omit it from the simp argument list.
+  simp +decide [̵ ̵F̵i̵n̵s̵e̵t̵.̵f̵i̵l̵t̵e̵r̵_̵n̵e̵,̵[̲F̲i̲n̲s̲e̲t̲.̲f̲i̲l̲t̲e̲r̲_̲n̲e̲,̲ Finset.filter_and, F̵i̵n̵s̵e̵t̵.̵c̵a̵r̵d̵_̵s̵d̵i̵f̵f̵,̵ ̵Finset.card_singleton, Finset.card_univ,
+  ̲  ̲ ̲ ̲ ̲ ̲I̵n̵t̵.̵s̵u̵b̵N̵a̵t̵N̵a̵t̵_̵e̵q̵_̵c̵o̵e̵ ̵]̵I̲n̲t̲.̲s̲u̲b̲N̲a̲t̲N̲a̲t̲_̲e̲q̲_̲c̲o̲e̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: PaperIII/E_5.lean:229:77: This simp argument is unused:
+  Finset.card_singleton
+
+Hint: Omit it from the simp argument list.
+  simp +decide [̵ ̵F̵i̵n̵s̵e̵t̵.̵f̵i̵l̵t̵e̵r̵_̵n̵e̵,̵[̲F̲i̲n̲s̲e̲t̲.̲f̲i̲l̲t̲e̲r̲_̲n̲e̲,̲ Finset.filter_and, Finset.card_sdiff, F̵i̵n̵s̵e̵t̵.̵c̵a̵r̵d̵_̵s̵i̵n̵g̵l̵e̵t̵o̵n̵,̵ ̵Finset.card_univ,
+  ̲  ̲ ̲ ̲ ̲ ̲I̵n̵t̵.̵s̵u̵b̵N̵a̵t̵N̵a̵t̵_̵e̵q̵_̵c̵o̵e̵ ̵]̵I̲n̲t̲.̲s̲u̲b̲N̲a̲t̲N̲a̲t̲_̲e̲q̲_̲c̲o̲e̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+info: PaperIII/E_5.lean:283:215: Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+info: PaperIII/E_5.lean:284:168: Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+info: PaperIII/E_5.lean:291:153: Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+warning: PaperIII/E_5.lean:283:85: This simp argument is unused:
+  Finset.sum_add_distrib
+
+Hint: Omit it from the simp argument list.
+  simp +decide [̵ ̵←̵[̲←̲ Finset.mul_sum _ _ _, ← Finset.sum_mul, sub_mul, mul_sub,
+  ̲  ̲ ̲ ̲ ̲ ̲ ̲ ̲ ̲ ̲ ̲ ̲F̵i̵n̵s̵e̵t̵.̵s̵u̵m̵_̵a̵d̵d̵_̵d̵i̵s̵t̵r̵i̵b̵,̵ ̵Finset.sum_sub_distrib, Finset.sum_const, Finset.card_univ,
+  ̲  ̲ ̲ ̲ ̲ ̲ ̲ ̲ ̲ ̲ ̲ ̲N̵a̵t̵.̵d̵e̵s̵c̵F̵a̵c̵t̵o̵r̵i̵a̵l̵_̵e̵q̵_̵f̵a̵c̵t̵o̵r̵i̵a̵l̵_̵m̵u̵l̵_̵c̵h̵o̵o̵s̵e̵ ̵]̵N̲a̲t̲.̲d̲e̲s̲c̲F̲a̲c̲t̲o̲r̲i̲a̲l̲_̲e̲q̲_̲f̲a̲c̲t̲o̲r̲i̲a̲l̲_̲m̲u̲l̲_̲c̲h̲o̲o̲s̲e̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: PaperIII/E_5.lean:350:83: This simp argument is unused:
+  Finset.sum_mul
+
+Hint: Omit it from the simp argument list.
+  simp +decide [̵ ̵F̵i̵n̵s̵e̵t̵.̵s̵u̵m̵_̵i̵t̵e̵,̵[̲F̲i̲n̲s̲e̲t̲.̲s̲u̲m̲_̲i̲t̲e̲,̲ Finset.filter_ne, Finset.mul_sum _ _ _̵,̵ ̵F̵i̵n̵s̵e̵t̵.̵s̵u̵m̵_̵m̵u̵l̵ ̵]̵_̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: PaperIII/E_5.lean:381:62: This simp argument is unused:
+  mul_left_comm
+
+Hint: Omit it from the simp argument list.
+  simp +decide [ ̵div_eq_mul_inv, mul_assoc, mul_comm, m̵u̵l̵_̵l̵e̵f̵t̵_̵c̵o̵m̵m̵,̵ ̵Finset.mul_sum _ _ _, Finset.sum_mul ̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: PaperIII/E_5.lean:392:86: This simp argument is unused:
+  Finset.sum_add_distrib
+
+Hint: Omit it from the simp argument list.
+  simp +decide [̵ ̵m̵u̵l̵_̵a̵d̵d̵,̵[̲m̲u̲l̲_̲a̲d̲d̲,̲ mul_assoc, mul_comm, mul_left_comm, Finset.mul_sum _ _ _̵,̵ ̵F̵i̵n̵s̵e̵t̵.̵s̵u̵m̵_̵a̵d̵d̵_̵d̵i̵s̵t̵r̵i̵b̵ ̵]̵_̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: PaperIII/E_5.lean:418:43: This simp argument is unused:
+  IsTrianglePacking
+
+Hint: Omit it from the simp argument list.
+  simp +decide ̵[̵ ̵I̵s̵T̵r̵i̵a̵n̵g̵l̵e̵P̵a̵c̵k̵i̵n̵g̵ ̵]̵
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: PaperIII/E_5.lean:423:63: This simp argument is unused:
+  hb
+
+Hint: Omit it from the simp argument list.
+  simp +decide ̵[̵ ̵h̵b̵ ̵]̵
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: PaperIII/E_5.lean:431:48: This simp argument is unused:
+  Finset.subset_iff
+
+Hint: Omit it from the simp argument list.
+  simp_all +decide ̵[̵ ̵F̵i̵n̵s̵e̵t̵.̵s̵u̵b̵s̵e̵t̵_̵i̵f̵f̵ ̵]̵
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: PaperIII/E_5.lean:437:50: This simp argument is unused:
+  Finset.ext_iff
+
+Hint: Omit it from the simp argument list.
+  simp_all +decide [̵ ̵F̵i̵n̵s̵e̵t̵.̵e̵x̵t̵_̵i̵f̵f̵,̵ ̵S̵y̵m̵2̵.̵f̵o̵r̵a̵l̵l̵ ̵]̵[̲S̲y̲m̲2̲.̲f̲o̲r̲a̲l̲l̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: PaperIII/E_5.lean:457:77: This simp argument is unused:
+  Sym2.eq_swap
+
+Hint: Omit it from the simp argument list.
+  simp_all +decide ̵[̵ ̵S̵y̵m̵2̵.̵e̵q̵_̵s̵w̵a̵p̵ ̵]̵
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: PaperIII/E_5.lean:474:43: This simp argument is unused:
+  Set.ext_iff
+
+Hint: Omit it from the simp argument list.
+  simp_all +decide [̵ ̵F̵i̵n̵s̵e̵t̵.̵e̵x̵t̵_̵i̵f̵f̵,̵ ̵S̵e̵t̵.̵e̵x̵t̵_̵i̵f̵f̵ ̵]̵[̲F̲i̲n̲s̲e̲t̲.̲e̲x̲t̲_̲i̲f̲f̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: PaperIII/E_5.lean:485:6: Try this: intro a ha x hx H
+info: PaperIII/E_5.lean:528:171: Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+info: PaperIII/E_5.lean:529:157: Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+warning: PaperIII/E_5.lean:518:89: This simp argument is unused:
+  he'
+
+Hint: Omit it from the simp argument list.
+  simp +decide ̵[̵ ̵h̵e̵'̵ ̵]̵
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: PaperIII/E_5.lean:521:44: This simp argument is unused:
+  Finset.filter_not
+
+Hint: Omit it from the simp argument list.
+  simp +decide [̵ ̵*̵,̵ ̵F̵i̵n̵s̵e̵t̵.̵f̵i̵l̵t̵e̵r̵_̵n̵o̵t̵,̵ ̵F̵i̵n̵s̵e̵t̵.̵c̵a̵r̵d̵_̵s̵d̵i̵f̵f̵ ̵]̵[̲*̲,̲ ̲F̲i̲n̲s̲e̲t̲.̲c̲a̲r̲d̲_̲s̲d̲i̲f̲f̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: PaperIII/E_5.lean:521:63: This simp argument is unused:
+  Finset.card_sdiff
+
+Hint: Omit it from the simp argument list.
+  simp +decide [̵ ̵*̵,̵ ̵F̵i̵n̵s̵e̵t̵.̵f̵i̵l̵t̵e̵r̵_̵n̵o̵t̵,̵ ̵F̵i̵n̵s̵e̵t̵.̵c̵a̵r̵d̵_̵s̵d̵i̵f̵f̵ ̵]̵[̲*̲,̲ ̲F̲i̲n̲s̲e̲t̲.̲f̲i̲l̲t̲e̲r̲_̲n̲o̲t̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: PaperIII/E_5.lean:530:44: This simp argument is unused:
+  mul_left_comm
+
+Hint: Omit it from the simp argument list.
+  simp +decide [̵ ̵m̵u̵l̵_̵a̵s̵s̵o̵c̵,̵[̲m̲u̲l̲_̲a̲s̲s̲o̲c̲,̲ mul_comm, m̵u̵l̵_̵l̵e̵f̵t̵_̵c̵o̵m̵m̵,̵ ̵Finset.mul_sum _ _ _̵ ̵]̵_̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: PaperIII/E_5.lean:530:59: This simp argument is unused:
+  Finset.mul_sum _ _ _
+
+Hint: Omit it from the simp argument list.
+  simp +decide [̵ ̵m̵u̵l̵_̵a̵s̵s̵o̵c̵,̵[̲m̲u̲l̲_̲a̲s̲s̲o̲c̲,̲ mul_comm, m̵u̵l̵_̵l̵e̵f̵t̵_̵c̵o̵m̵m̵,̵ ̵F̵i̵n̵s̵e̵t̵.̵m̵u̵l̵_̵s̵u̵m̵ ̵_̵ ̵_̵ ̵_̵ ̵]̵m̲u̲l̲_̲l̲e̲f̲t̲_̲c̲o̲m̲m̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+info: PaperIII/E_5.lean:575:99: Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+warning: PaperIII/E_5.lean:576:23: This simp argument is unused:
+  Finset.sum_add_distrib
+
+Hint: Omit it from the simp argument list.
+  simp_all +decide [̵ ̵F̵i̵n̵s̵e̵t̵.̵s̵u̵m̵_̵a̵d̵d̵_̵d̵i̵s̵t̵r̵i̵b̵,̵ ̵F̵i̵n̵s̵e̵t̵.̵m̵u̵l̵_̵s̵u̵m̵[̲F̲i̲n̲s̲e̲t̲.̲m̲u̲l̲_̲s̲u̲m̲ _ _ _, Finset.sum_mul _ _ _, SplitGraph.M, S̵p̵l̵i̵t̵G̵r̵a̵p̵h̵.̵S̵₂̵ ̵]̵S̲p̲l̲i̲t̲G̲r̲a̲p̲h̲.̲S̲₂̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: PaperIII/E_5.lean:576:69: This simp argument is unused:
+  Finset.sum_mul _ _ _
+
+Hint: Omit it from the simp argument list.
+  simp_all +decide [̵ ̵F̵i̵n̵s̵e̵t̵.̵s̵u̵m̵_̵a̵d̵d̵_̵d̵i̵s̵t̵r̵i̵b̵,̵[̲F̲i̲n̲s̲e̲t̲.̲s̲u̲m̲_̲a̲d̲d̲_̲d̲i̲s̲t̲r̲i̲b̲,̲ Finset.mul_sum _ _ _, F̵i̵n̵s̵e̵t̵.̵s̵u̵m̵_̵m̵u̵l̵ ̵_̵ ̵_̵ ̵_̵,̵ ̵SplitGraph.M, S̵p̵l̵i̵t̵G̵r̵a̵p̵h̵.̵S̵₂̵ ̵]̵S̲p̲l̲i̲t̲G̲r̲a̲p̲h̲.̲S̲₂̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: PaperIII/E_5.lean:577:51: This simp argument is unused:
+  Finset.mul_sum _ _ _
+
+Hint: Omit it from the simp argument list.
+  simp +decide [̵ ̵s̵u̵b̵_̵s̵q̵,̵[̲s̲u̲b̲_̲s̲q̲,̲ Finset.sum_add_distrib, F̵i̵n̵s̵e̵t̵.̵m̵u̵l̵_̵s̵u̵m̵ ̵_̵ ̵_̵ ̵_̵,̵ ̵Finset.sum_mul _ _ _, mul_assoc, mul_comm,
+  ̲  ̲ ̲ ̲ ̲ ̲m̵u̵l̵_̵l̵e̵f̵t̵_̵c̵o̵m̵m̵ ̵]̵m̲u̲l̲_̲l̲e̲f̲t̲_̲c̲o̲m̲m̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: PaperIII/E_5.lean:577:73: This simp argument is unused:
+  Finset.sum_mul _ _ _
+
+Hint: Omit it from the simp argument list.
+  simp +decide [̵ ̵s̵u̵b̵_̵s̵q̵,̵[̲s̲u̲b̲_̲s̲q̲,̲ Finset.sum_add_distrib, Finset.mul_sum _ _ _, F̵i̵n̵s̵e̵t̵.̵s̵u̵m̵_̵m̵u̵l̵ ̵_̵ ̵_̵ ̵_̵,̵ ̵mul_assoc, mul_comm,
+  ̲  ̲ ̲ ̲ ̲ ̲m̵u̵l̵_̵l̵e̵f̵t̵_̵c̵o̵m̵m̵ ̵]̵m̲u̲l̲_̲l̲e̲f̲t̲_̲c̲o̲m̲m̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: PaperIII/E_5.lean:577:116: This simp argument is unused:
+  mul_left_comm
+
+Hint: Omit it from the simp argument list.
+  simp +decide [ ̵sub_sq, Finset.sum_add_distrib, Finset.mul_sum _ _ _, Finset.sum_mul _ _ _,
+  ̲  ̲ ̲ ̲ ̲ ̲mul_assoc, mul_comm,̵ ̵m̵u̵l̵_̵l̵e̵f̵t̵_̵c̵o̵m̵m̵ ̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [8046/8060] Replayed PaperIII.E_7
+warning: PaperIII/E_7.lean:74:38: This simp argument is unused:
+  Finset.subset_iff
+
+Hint: Omit it from the simp argument list.
+  simp +decide [̵ ̵F̵i̵n̵s̵e̵t̵.̵c̵a̵r̵d̵_̵s̵d̵i̵f̵f̵,̵ ̵F̵i̵n̵s̵e̵t̵.̵s̵u̵b̵s̵e̵t̵_̵i̵f̵f̵ ̵]̵[̲F̲i̲n̲s̲e̲t̲.̲c̲a̲r̲d̲_̲s̲d̲i̲f̲f̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: PaperIII/E_7.lean:322:4: Try this: intro a ha x hx H
+warning: PaperIII/E_7.lean:409:5: unused variable `h72`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: PaperIII/E_7.lean:906:5: unused variable `hbrho`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+info: PaperIII/E_7.lean:1759:102: Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+info: PaperIII/E_7.lean:1766:70: Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+info: PaperIII/E_7.lean:1771:114: Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+warning: PaperIII/E_7.lean:1771:40: This simp argument is unused:
+  Finset.sum_add_distrib
+
+Hint: Omit it from the simp argument list.
+  simp +decide [̵ ̵h̵_̵c̵h̵o̵o̵s̵e̵_̵i̵d̵e̵n̵t̵i̵t̵y̵,̵ ̵F̵i̵n̵s̵e̵t̵.̵s̵u̵m̵_̵a̵d̵d̵_̵d̵i̵s̵t̵r̵i̵b̵,̵[̲h̲_̲c̲h̲o̲o̲s̲e̲_̲i̲d̲e̲n̲t̲i̲t̲y̲,̲ Finset.mul_sum _ _ _, Finset.sum_div, AR, A̵2̵R̵ ̵]̵A̲2̲R̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [8047/8060] Replayed PaperIII.E_8_Core
+warning: PaperIII/E_8_Core.lean:733:13: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+⚠ [8048/8060] Replayed PaperIII.CliquePartition
+warning: PaperIII/CliquePartition.lean:36:46: This simp argument is unused:
+  Finset.card_le_one
+
+Hint: Omit it from the simp argument list.
+  simp_all +decide ̵[̵ ̵F̵i̵n̵s̵e̵t̵.̵c̵a̵r̵d̵_̵l̵e̵_̵o̵n̵e̵ ̵]̵
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: PaperIII/CliquePartition.lean:114:50: This simp argument is unused:
+  Sym2.eq_swap
+
+Hint: Omit it from the simp argument list.
+  simp_all +decide ̵[̵ ̵S̵y̵m̵2̵.̵e̵q̵_̵s̵w̵a̵p̵ ̵]̵
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+ℹ [8052/8060] Replayed PaperIII.Prop_10_1
+info: PaperIII/Prop_10_1.lean:78:50: Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+info: PaperIII/Prop_10_1.lean:88:157: Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+info: PaperIII/Prop_10_1.lean:89:164: Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+info: PaperIII/Prop_10_1.lean:138:131: Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+info: PaperIII/Prop_10_1.lean:370:167: Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+⚠ [8053/8060] Replayed PaperIII.E_4_agg
+warning: PaperIII/E_4_agg.lean:56:12: This simp argument is unused:
+  SimpleGraph.mem_edgeFinset
+
+Hint: Omit it from the simp argument list.
+  simp_all [Si̵m̵p̵l̵e̵G̵r̵a̵p̵h̵.̵m̵e̵m̵_̵e̵d̵g̵e̵F̵i̵n̵s̵e̵t̵,̵ ̵S̵ym2.forall]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: PaperIII/E_4_agg.lean:56:40: This simp argument is unused:
+  Sym2.forall
+
+Hint: Omit it from the simp argument list.
+  simp_all [SimpleGraph.mem_edgeFinset,̵ ̵S̵y̵m̵2̵.̵f̵o̵r̵a̵l̵l̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: PaperIII/E_4_agg.lean:82:58: This simp argument is unused:
+  Sym2.eq_swap
+
+Hint: Omit it from the simp argument list.
+  simp_all +decide ̵[̵ ̵S̵y̵m̵2̵.̵e̵q̵_̵s̵w̵a̵p̵ ̵]̵
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: PaperIII/E_4_agg.lean:84:27: This simp argument is unused:
+  Finset.sum_ite
+
+Hint: Omit it from the simp argument list.
+  simp_all +decide ̵[̵ ̵F̵i̵n̵s̵e̵t̵.̵s̵u̵m̵_̵i̵t̵e̵ ̵]̵
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: PaperIII/E_4_agg.lean:118:83: This simp argument is unused:
+  Finset.subset_iff
+
+Hint: Omit it from the simp argument list.
+  simp_all +decide ̵[̵ ̵F̵i̵n̵s̵e̵t̵.̵s̵u̵b̵s̵e̵t̵_̵i̵f̵f̵ ̵]̵
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: PaperIII/E_4_agg.lean:121:46: This simp argument is unused:
+  Finset.subset_iff
+
+Hint: Omit it from the simp argument list.
+  simp_all +decide [̵ ̵F̵i̵n̵s̵e̵t̵.̵c̵a̵r̵d̵_̵s̵d̵i̵f̵f̵,̵ ̵F̵i̵n̵s̵e̵t̵.̵s̵u̵b̵s̵e̵t̵_̵i̵f̵f̵ ̵]̵[̲F̲i̲n̲s̲e̲t̲.̲c̲a̲r̲d̲_̲s̲d̲i̲f̲f̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: PaperIII/E_4_agg.lean:146:45: This simp argument is unused:
+  ← Finset.sum_mul
+
+Hint: Omit it from the simp argument list.
+  simp_all +decide [̵ ̵←̵[̲←̲ Finset.mul_sum _ _ _, ←̵ ̵F̵i̵n̵s̵e̵t̵.̵s̵u̵m̵_̵m̵u̵l̵,̵ ̵w̵A̵ ̵]̵w̲A̲]̲
+
+Note: Simp arguments with `←` have the additional effect of removing the other direction from the simp set, even if the simp argument itself is unused. If the hint above does not work, try replacing `←` with `-` to only get that effect and silence this warning.
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+info: PaperIII/E_4_agg.lean:186:47: Try this:
+  [apply] ring_nf!
+  
+  The `ring!` tactic failed to close the goal. Use `ring_nf!` to obtain a normal form.
+    
+  Note that `ring!` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+info: PaperIII/E_4_agg.lean:202:404: Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+warning: PaperIII/E_4_agg.lean:169:34: This simp argument is unused:
+  SplitGraph.Adj
+
+Hint: Omit it from the simp argument list.
+  simp_all +decide [̵ ̵a̵d̵d̵_̵a̵s̵s̵o̵c̵,̵ ̵S̵p̵l̵i̵t̵G̵r̵a̵p̵h̵.̵A̵d̵j̵ ̵]̵[̲a̲d̲d̲_̲a̲s̲s̲o̲c̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: PaperIII/E_4_agg.lean:207:99: This simp argument is unused:
+  mul_assoc
+
+Hint: Omit it from the simp argument list.
+  simp +decide [̵ ̵m̵u̵l̵_̵a̵s̵s̵o̵c̵,̵ ̵m̵u̵l̵_̵c̵o̵m̵m̵,̵[̲m̲u̲l̲_̲c̲o̲m̲m̲,̲
+  ̲  ̲ ̲ ̲ ̲ ̲mul_left_comm, Finset.sum_mul _ _ _̵ ̵]̵_̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: PaperIII/E_4_agg.lean:207:135: This simp argument is unused:
+  Finset.sum_mul _ _ _
+
+Hint: Omit it from the simp argument list.
+  simp +decide [̵ ̵m̵u̵l̵_̵a̵s̵s̵o̵c̵,̵[̲m̲u̲l̲_̲a̲s̲s̲o̲c̲,̲
+  ̲  ̲ ̲ ̲ ̲ ̲mul_comm, m̵u̵l̵_̵l̵e̵f̵t̵_̵c̵o̵m̵m̵,̵ ̵F̵i̵n̵s̵e̵t̵.̵s̵u̵m̵_̵m̵u̵l̵ ̵_̵ ̵_̵ ̵_̵ ̵]̵m̲u̲l̲_̲l̲e̲f̲t̲_̲c̲o̲m̲m̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+info: PaperIII/E_4_agg.lean:267:48: Try this:
+  [apply] ring_nf!
+  
+  The `ring!` tactic failed to close the goal. Use `ring_nf!` to obtain a normal form.
+    
+  Note that `ring!` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+warning: PaperIII/E_4_agg.lean:222:46: unused variable `hd`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: PaperIII/E_4_agg.lean:232:81: This simp argument is unused:
+  Finset.sum_filter
+
+Hint: Omit it from the simp argument list.
+  simp_all +decide ̵[̵ ̵F̵i̵n̵s̵e̵t̵.̵s̵u̵m̵_̵f̵i̵l̵t̵e̵r̵ ̵]̵
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: PaperIII/E_4_agg.lean:254:54: This simp argument is unused:
+  Sym2.eq_swap
+
+Hint: Omit it from the simp argument list.
+  simp +decide ̵[̵ ̵S̵y̵m̵2̵.̵e̵q̵_̵s̵w̵a̵p̵ ̵]̵
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: PaperIII/E_4_agg.lean:261:50: This simp argument is unused:
+  Finset.filter_insert
+
+Hint: Omit it from the simp argument list.
+  simp +decide [̵ ̵F̵i̵n̵s̵e̵t̵.̵f̵i̵l̵t̵e̵r̵_̵i̵n̵s̵e̵r̵t̵,̵ ̵F̵i̵n̵s̵e̵t̵.̵f̵i̵l̵t̵e̵r̵_̵s̵i̵n̵g̵l̵e̵t̵o̵n̵ ̵]̵[̲F̲i̲n̲s̲e̲t̲.̲f̲i̲l̲t̲e̲r̲_̲s̲i̲n̲g̲l̲e̲t̲o̲n̲]̲ at he ⊢
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: PaperIII/E_4_agg.lean:261:72: This simp argument is unused:
+  Finset.filter_singleton
+
+Hint: Omit it from the simp argument list.
+  simp +decide [̵ ̵F̵i̵n̵s̵e̵t̵.̵f̵i̵l̵t̵e̵r̵_̵i̵n̵s̵e̵r̵t̵,̵ ̵F̵i̵n̵s̵e̵t̵.̵f̵i̵l̵t̵e̵r̵_̵s̵i̵n̵g̵l̵e̵t̵o̵n̵ ̵]̵[̲F̲i̲n̲s̲e̲t̲.̲f̲i̲l̲t̲e̲r̲_̲i̲n̲s̲e̲r̲t̲]̲ at he ⊢
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: PaperIII/E_4_agg.lean:270:59: This simp argument is unused:
+  Finset.mul_sum _ _ _
+
+Hint: Omit it from the simp argument list.
+  simp_all +decide [̵ ̵m̵u̵l̵_̵a̵s̵s̵o̵c̵,̵[̲m̲u̲l̲_̲a̲s̲s̲o̲c̲,̲ mul_comm, m̵u̵l̵_̵l̵e̵f̵t̵_̵c̵o̵m̵m̵,̵ ̵F̵i̵n̵s̵e̵t̵.̵m̵u̵l̵_̵s̵u̵m̵ ̵_̵ ̵_̵ ̵_̵ ̵]̵m̲u̲l̲_̲l̲e̲f̲t̲_̲c̲o̲m̲m̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: PaperIII/E_4_agg.lean:291:67: This simp argument is unused:
+  Finset.sum_mul _ _ _
+
+Hint: Omit it from the simp argument list.
+  simp_all +decide [̵ ̵F̵i̵n̵s̵e̵t̵.̵s̵u̵m̵_̵a̵d̵d̵_̵d̵i̵s̵t̵r̵i̵b̵,̵[̲F̲i̲n̲s̲e̲t̲.̲s̲u̲m̲_̲a̲d̲d̲_̲d̲i̲s̲t̲r̲i̲b̲,̲ Finset.mul_sum _ _ _̵,̵ ̵F̵i̵n̵s̵e̵t̵.̵s̵u̵m̵_̵m̵u̵l̵ ̵_̵ ̵_̵ ̵_̵ ̵]̵_̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: PaperIII/E_4_agg.lean:327:50: This simp argument is unused:
+  Finset.sum_ite
+
+Hint: Omit it from the simp argument list.
+  simp_all +decide ̵[̵ ̵F̵i̵n̵s̵e̵t̵.̵s̵u̵m̵_̵i̵t̵e̵ ̵]̵
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: PaperIII/E_4_agg.lean:336:58: This simp argument is unused:
+  Finset.sum_add_distrib
+
+Hint: Omit it from the simp argument list.
+  simp_all +decide [̵ ̵F̵i̵n̵s̵e̵t̵.̵s̵u̵m̵_̵a̵d̵d̵_̵d̵i̵s̵t̵r̵i̵b̵,̵ ̵F̵i̵n̵s̵e̵t̵.̵m̵u̵l̵_̵s̵u̵m̵[̲F̲i̲n̲s̲e̲t̲.̲m̲u̲l̲_̲s̲u̲m̲ _ _ _̵ ̵]̵_̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: PaperIII/E_4_agg.lean:336:82: This simp argument is unused:
+  Finset.mul_sum _ _ _
+
+Hint: Omit it from the simp argument list.
+  simp_all +decide [̵ ̵F̵i̵n̵s̵e̵t̵.̵s̵u̵m̵_̵a̵d̵d̵_̵d̵i̵s̵t̵r̵i̵b̵,̵ ̵F̵i̵n̵s̵e̵t̵.̵m̵u̵l̵_̵s̵u̵m̵ ̵_̵ ̵_̵ ̵_̵ ̵]̵[̲F̲i̲n̲s̲e̲t̲.̲s̲u̲m̲_̲a̲d̲d̲_̲d̲i̲s̲t̲r̲i̲b̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: PaperIII/E_4_agg.lean:342:43: This simp argument is unused:
+  ← Finset.sum_mul
+
+Hint: Omit it from the simp argument list.
+  simp +decide [̵ ̵←̵[̲←̲ Finset.mul_sum _ _ _, ←̵ ̵F̵i̵n̵s̵e̵t̵.̵s̵u̵m̵_̵m̵u̵l̵,̵ ̵w̵E̵ ̵]̵w̲E̲]̲
+
+Note: Simp arguments with `←` have the additional effect of removing the other direction from the simp set, even if the simp argument itself is unused. If the hint above does not work, try replacing `←` with `-` to only get that effect and silence this warning.
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: PaperIII/E_4_agg.lean:347:24: unused variable `e`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: PaperIII/E_4_agg.lean:350:24: unused variable `a`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: PaperIII/E_4_agg.lean:353:24: unused variable `e`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: PaperIII/E_4_agg.lean:356:24: unused variable `e`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [8055/8060] Replayed PaperIII.E_4_3
+warning: PaperIII/E_4_3.lean:82:4: 'push_cast' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+Build completed successfully (8060 jobs).

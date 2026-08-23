@@ -1,0 +1,912 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+\PassOptionsToPackage{dvipsnames,svgnames,x11names}{xcolor}
+\documentclass[
+  10pt,
+]{article}
+\usepackage{xcolor}
+\usepackage[margin=2cm]{geometry}
+\usepackage{amsmath,amssymb}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math} % this also loads fontspec
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+\usepackage{lmodern}
+\ifPDFTeX\else
+  % xetex/luatex font selection
+  \setmainfont[]{Latin Modern Roman}
+  \setmonofont[]{Latin Modern Mono}
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{longtable,booktabs,array}
+\newcounter{none} % for unnumbered tables
+\usepackage{calc} % for calculating minipage widths
+% Correct order of tables after \paragraph or \subparagraph
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd\longtable{\par}{\if@noskipsec\mbox{}\fi\par}{}{}
+\makeatother
+% Allow footnotes in longtable head/foot
+\IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
+\makesavenoteenv{longtable}
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+% Long monospace tokens (hashes, paths, status literals) are unbreakable by default
+% and produce overfull boxes. Allow hyphenation inside monospace and shrink tables.
+\usepackage{etoolbox}
+\setmonofont{Latin Modern Mono}[HyphenChar={-}]
+\AtBeginEnvironment{longtable}{\small}
+\emergencystretch=3em
+\usepackage{bookmark}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same}
+\hypersetup{
+  colorlinks=true,
+  linkcolor={Maroon},
+  filecolor={Maroon},
+  citecolor={Blue},
+  urlcolor={Blue},
+  pdfcreator={LaTeX via pandoc}}
+
+\author{}
+\date{}
+
+\begin{document}
+
+{
+\setcounter{tocdepth}{3}
+\tableofcontents
+}
+\section{External Adversarial Audit -- Paper III preprint draft
+v1.3}\label{external-adversarial-audit-paper-iii-preprint-draft-v1.3}
+
+\textbf{Request:} \texttt{EXTERNAL\_ADVERSARIAL\_AUDIT\_REQUEST.md}
+
+\textbf{Request SHA-256:}
+
+\begin{verbatim}
+a0569fa455d70ee3e8af8ddb4362c52863de69d830bc76975bb6f9d22d9e12c0
+\end{verbatim}
+
+\textbf{Target:}
+\texttt{preprints/PAPER\_III/active/preprint\_draft\_v1.3/}
+\textbf{Run:} \texttt{run\_2026-08-22\_v1.3} \textbf{Dates:} 2026-08-22
+\textbf{Auditor:} Claude (Anthropic), \texttt{claude-opus-5}. \textbf{No
+adversarial challenger.}
+
+Only v1.3 was evaluated. No verdict, PASS, or conclusion from any
+earlier run was inherited.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\subsection{1. Overall verdict}\label{overall-verdict}
+
+\subsubsection{FAIL}\label{fail}
+
+Two gates fail and two are inconclusive. \textbf{No mathematical or
+formal defect was found}, and that distinction carries the whole weight
+of this report: the theorem compiles, its axiom footprint is clean, and
+every inequality this auditor rederived held exactly. The failures are
+in the \textbf{build configuration} and in \textbf{bilingual fidelity}
+-- release-readiness defects in a release candidate.
+
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.3333}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.3333}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.3333}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Gate
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Verdict
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Basis
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+E0 intake, provenance, sealing & \textbf{\texttt{PASS}} & every declared
+hash and manifest verifies; archive structurally clean \\
+E1 mathematical claims and scope & \textbf{\texttt{PASS}} & claims,
+quantifiers and scope separation all confirmed \\
+E2 independent rederivation & \textbf{\texttt{INCONCLUSIVE}} & Sections
+4 and 9 rederived exactly; \texttt{K-EPS}, \texttt{K-CORRIDOR},
+\texttt{K-SPARSE} not attempted \\
+E3 formal statement conformance & \textbf{\texttt{PASS}} & validated
+against an auditor-constructed bridge, not by compilation \\
+E4 Lean reproduction and axioms & \textbf{\texttt{FAIL}} & the public
+aggregate root does not import the canonical theorem path \\
+E5 bilingual, format, render & \textbf{\texttt{FAIL}} & EN/ES divergence
+in the content of a numbered proposition \\
+E6 citations, prior art, novelty & \textbf{\texttt{INCONCLUSIVE}} & no
+source retrieved in this run; no specialist search possible \\
+E7 release-package integrity & \textbf{\texttt{FAIL}} & freeze metadata
+contradicts its own package \\
+\end{longtable}
+}
+
+Findings: \textbf{0 blocking, 0 critical, 3 major, 4 minor.}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\subsection{\texorpdfstring{2. E0 -- intake, provenance and sealing:
+\texttt{PASS}}{2. E0 -- intake, provenance and sealing: PASS}}\label{e0-intake-provenance-and-sealing-pass}
+
+Every integrity chain verifies against the bytes received.
+
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.5000}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.5000}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Check
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Result
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+\texttt{04\_integrity/CURRENT\_TARGET\_SHA256.txt} & \textbf{12/12},
+LF-only \\
+manuscript sidecar & \textbf{6/6}, LF-only \\
+freeze-archive sidecar & \textbf{1/1}, LF-only \\
+\texttt{SOURCE\_MANIFEST.sha256} & \textbf{707/707} \\
+\texttt{PACKAGE\_MANIFEST.sha256} & \textbf{742/742} \\
+freeze ZIP SHA-256 vs the value declared in the request &
+\texttt{2eb0ff20...d300}, \textbf{match} \\
+CRC of all 743 archive members & \textbf{intact} \\
+\end{longtable}
+}
+
+Archive hygiene, every category zero: path traversal, absolute paths,
+backslash names, symlink/reparse entries, compiled project artifacts
+(\texttt{.olean}, \texttt{.ilean}, \texttt{.o}, \texttt{.c}, \ldots),
+\texttt{.lake} directories, duplicate entries.
+
+Auditor's own manifest of the received target: \textbf{875 files,
+16,502,156 bytes}, recorded at \texttt{00\_CONTROL/TARGET\_SHA256.txt}.
+\texttt{05\_formalization/lean\_v1.3\_candidate/} is excluded, as the
+request directs.
+
+Thirteen stale-version strings appear in the tree; twelve are legitimate
+provenance or baseline references, and the two in
+\texttt{FREEZE\_REPORT.md} and \texttt{CHANGELOG\_v1.3.md} are explicit
+statements of what v1.3 descends from. The publication artifacts
+themselves carry \textbf{no} stale label.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\subsection{\texorpdfstring{3. E1 -- claims and scope:
+\texttt{PASS}}{3. E1 -- claims and scope: PASS}}\label{e1-claims-and-scope-pass}
+
+Theorem 1.1 and Corollary 1.2 assert, with an \textbf{existential}
+absolute constant:
+
+\begin{verbatim}
+exists C, for every split graph G on n vertices:  |E(G)| - 2 nu3(G) <= n^2/6 + C n
+exists C, for every split graph G on n vertices:  cp(G)             <= n^2/6 + C n
+\end{verbatim}
+
+The paper claims exactly what the request says it should, and not more.
+It states that Corollary 1.2 ``improves the quadratic coefficient from
+\texttt{3/16} to the sharp value \texttt{1/6}'', that this matches the
+lower bound at quadratic order, and -- three times in English and three
+times in Spanish -- that the corresponding statement for general chordal
+graphs \textbf{remains open}. It separates the sharp quadratic
+coefficient from the ``still-undetermined least uniform linear
+coefficient'', which is the two-sharpness-roles distinction the request
+asks about.
+
+\textbf{Zero} occurrences, in either language, of wording claiming to
+resolve or settle the split case or Erdős Problem \#81. The previously
+recorded overbroad-scope finding is closed.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\subsection{\texorpdfstring{4. E2 -- independent rederivation:
+\texttt{INCONCLUSIVE}}{4. E2 -- independent rederivation: INCONCLUSIVE}}\label{e2-independent-rederivation-inconclusive}
+
+\subsubsection{4.1 What was rederived,
+exactly}\label{what-was-rederived-exactly}
+
+Section 9, the proof of the main theorem, was rederived in exact
+symbolic algebra from the manuscript's own displayed inequalities.
+\textbf{14 of 15 items PASS, one PARTIAL, none fails.}
+
+\texttt{K-COVER} is closed. The case split is exhaustive and
+non-overlapping:
+
+\begin{itemize}
+\tightlist
+\item
+  \texttt{q\ \textgreater{}=\ 2p-1} versus \texttt{q\ \textless{}\ 2p-1}
+  is complementary over the integers, and the second gives
+  \texttt{alpha\ =\ q/p\ \textless{}\ 2\ -\ 1/p\ \textless{}\ 2}, so
+  \texttt{alpha} lies in \texttt{{[}0,2)}.
+\item
+  Every sequence \texttt{alpha\_k} in \texttt{{[}0,2)} has, by
+  Bolzano-Weierstrass on the compact \texttt{{[}0,2{]}}, a convergent
+  subsequence. Interior limit gives the bulk regime with
+  \texttt{eps\ =\ min(L,\ 2-L)/2\ \textgreater{}\ 0}; limit \texttt{0}
+  gives Section 9.2; limit \texttt{2} gives Section 9.3. The three are
+  mutually exclusive and exhaust the possibilities, which is exactly
+  what a contradiction-over-subsequences argument requires.
+\item
+  Inside Section 9.3, \texttt{s\ =\ O(sqrt\ p)} and
+  \texttt{s/sqrt\ p\ -\textgreater{}\ infinity} are complementary by
+  construction, and \texttt{s\ =\ Theta(p)} cannot occur since
+  \texttt{alpha\ -\textgreater{}\ 2} forces \texttt{s\ =\ o(p)}.
+\item
+  The dispersion dichotomy \texttt{D\ \textgreater{}=\ q\ s\^{}2/12} or
+  \texttt{D\ \textless{}\ q\ s\^{}2/12} is trichotomy of the reals.
+\end{itemize}
+
+The numbered inequalities, each verified exactly:
+
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.5000}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.5000}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Item
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Result
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+(9.4) \texttt{p\ \textgreater{}=\ 2304} & \textbf{forced, not chosen}:
+the window \texttt{6\ sqrt\ p\ \textless{}=\ s\ \textless{}=\ p/8} is
+non-empty exactly when \texttt{48\ \textless{}=\ sqrt\ p},
+i.e.~\texttt{p\ \textgreater{}=\ 2304} \\
+(9.5) \texttt{3m\ \textless{}=\ s-3} & valid:
+\texttt{k\ \textgreater{}=\ 1} gives
+\texttt{3m\ \textless{}\ s\ -\ 5/2}, and integrality rounds to
+\texttt{s-3} \\
+(9.10) \texttt{delta\ \textgreater{}=\ 7/8} & both parities; the odd
+case \texttt{(p-s)/p} is binding and attains equality exactly at
+\texttt{s\ =\ p/8} \\
+(9.11) parabola bound & exact: the maximum over the admissible range is
+at \texttt{x=(s-3)/3} and equals \texttt{2s(s-3)/9} identically \\
+(9.12) high-dispersion contradiction & exact: \texttt{5*36/288\ =\ 5/8}
+and \texttt{1/2\ -\ 5/8\ =\ -1/8}, so the sign flip holds at the
+boundary and strictly beyond \\
+\texttt{theta\_R\ \textless{}=\ 8s/(23p)} & exact at the two extreme
+substitutions \texttt{rho\ =\ s/3}, \texttt{s\ =\ p/8} \\
+(9.16) \texttt{kappa\_R\ \textless{}=\ 5s/(4p)} & holds, at about
+\texttt{1.229\ s/p} against the allowed \texttt{1.25\ s/p} -- valid but
+\textbf{not generous} \\
+(9.18) & reduces exactly to \texttt{s\ \textless{}=\ p/8}, consuming the
+whole hypothesis budget \\
+(9.19) completion of the square & \textbf{exact identity}, so the bound
+\texttt{s\^{}2/24} is attained at \texttt{rho\ =\ s/4} and loses
+nothing \\
+(9.20) low-dispersion contradiction & exact: \texttt{36/64\ =\ 9/16} and
+\texttt{1/2\ -\ 9/16\ =\ -1/16} \\
+\end{longtable}
+}
+
+Section 4 was rederived in the same way in the immediately preceding
+audit of the unchanged mathematics and is not re-reported here; Section
+9 is the new work.
+
+The one PARTIAL: the Lemma 7.1 hypothesis chain in the low-dispersion
+branch. The arithmetic checks exactly
+(\texttt{q\ \textgreater{}=\ 15p/8} from \texttt{s\ \textless{}=\ p/8};
+\texttt{b\ =\ p\ -\ rho\ \textgreater{}\ p\ -\ s/3};
+\texttt{b\ \textgreater{}=\ 2} with enormous room since
+\texttt{p\ \textgreater{}=\ 2304}), but the chain
+\texttt{2\ rho\ +\ t\_i\ +\ 1\ \textless{}=\ 3m\ +\ 1\ \textless{}=\ s\ -\ 2}
+needs the definitional facts \texttt{rho\ \textless{}=\ m} and
+\texttt{t\_i\ \textless{}=\ m} from Section 7, which the auditor did not
+rederive.
+
+\subsubsection{4.2 What was not attempted, named
+individually}\label{what-was-not-attempted-named-individually}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{\texttt{K-EPS}}: the AX1/nibble epsilon ledger -- parameter
+  ranges, real/natural conversions, exceptional-set and rounding terms,
+  and the accumulation of all losses inside \texttt{eps\ n\^{}2}.
+\item
+  \textbf{\texttt{K-CORRIDOR}}: Sections 5-7 themselves. Section 9
+  \emph{uses} Lemmas 5.1, 5.2, 6.1 and 7.1 as inputs; this audit
+  verified how Section 9 combines them, not that those lemmas are true.
+\item
+  \textbf{\texttt{K-SPARSE}}: Section 8, which discharges the
+  \texttt{alpha\ -\textgreater{}\ 0} endpoint and supplies
+  \texttt{C\_0}. Section 9.2 is one sentence and defers entirely to it,
+  so Case C of the cover is closed only modulo Section 8.
+\item
+  \textbf{\texttt{K-GLOBAL}}: PARTIAL. The minimal-counterexample frame
+  was read and its structure checked, including the step from minimality
+  to (9.2), and the formal counterpart
+  \texttt{global\_bound\_from\_eventual\_high\_degree} was inspected --
+  it converts an eventual bound with constant 2 into
+  \texttt{Phi\ \textless{}=\ n\^{}2/6\ +\ max(2,N)\ n} for \textbf{all}
+  split graphs. But the auditor did not verify
+  \texttt{Phi(G)\ \textless{}=\ Phi(G-v)\ +\ d(v)} for every vertex of
+  every split graph, nor the small orders.
+\end{itemize}
+
+One \texttt{INCONCLUSIVE} mandatory gate is enough to bar overall
+\texttt{PASS} independently of E4, E5 and E7.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\subsection{\texorpdfstring{5. E3 -- formal conformance:
+\texttt{PASS}}{5. E3 -- formal conformance: PASS}}\label{e3-formal-conformance-pass}
+
+The request demands the four canonical bridges be \emph{independently
+validated, not just compiled}, and compared against an
+auditor-constructed bridge. So the auditor did not cite them: it
+restated the manuscript forms from the manuscript text, proved them with
+its own arguments, and only then asserted the target's statements and
+discharged them with those proofs.
+
+Auditor file \texttt{AuditorE3.lean}, exit 0, every declaration
+reporting \texttt{{[}propext,\ Classical.choice,\ Quot.sound{]}}:
+
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.5000}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.5000}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Auditor theorem
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+What it settles
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+\texttt{auditor\_fracPacking\_iff} & the two fractional-packing
+predicates define the same feasible set; the Nibble side's extra
+capacities on \textbf{non-edges} are vacuous because a 3-clique
+containing both ends of a pair forces adjacency \\
+\texttt{auditor\_nu3Star\_eq} & the two fractional optima are equal \\
+\texttt{auditor\_tau3Star\_eq\_nu3Star} & cover-side and packing-side
+optima coincide, at PaperIII's own names \\
+\texttt{auditor\_AX1\_iff\_manuscript} & \textbf{an \texttt{iff}, both
+directions}: \texttt{AX1Assumption} is equivalent to manuscript Theorem
+2.1 at \texttt{H\ =\ K3}, packing side \\
+\texttt{auditor\_manuscriptAX1\_holds} & that manuscript form holds
+unconditionally in the development \\
+\texttt{auditor\_AX2\_implies\_manuscript} & \texttt{AX2Assumption}
+gives manuscript Theorem 2.3, with \texttt{0.9} checked against
+\texttt{9/10} and \texttt{3\ divides\ card} against
+\texttt{card\ \%\ 3\ =\ 0} \\
+\texttt{auditor\_decomposition\_unfolds} &
+\texttt{HasTriangleDecomposition} is an exact edge decomposition into
+3-cliques, by \texttt{Iff.rfl} \\
+\end{longtable}
+}
+
+The target's own four lemmas -- \texttt{isFracPacking\_iff\_yuster},
+\texttt{nu3Star\_eq\_yuster}, \texttt{tau3Star\_eq\_nu3Star},
+\texttt{AX1Assumption\_iff\_packing\_form} -- were then asserted
+verbatim and discharged \textbf{by the auditor's constructions}, so
+agreement is a theorem, not a comparison of prose. This is the bridge
+that was missing from the previous version and had to be supplied by the
+auditor then; in v1.3 it is in the package, and it is correct.
+
+No inequality direction or feasibility condition is lost at any
+interface: \texttt{nu3} and \texttt{nu3Star} refer to the intended
+objects, and the \texttt{iff} in \texttt{auditor\_AX1\_iff\_manuscript}
+rules out a one-directional weakening.
+
+\textbf{Claim map}, compiled statements verbatim:
+
+\begin{verbatim}
+Theorem_1_1                : exists C, for all G : SplitGraph, Phi <= n^2/6 + C n
+Corollary_1_2              : exists C, for all G : SplitGraph, cp  <= n^2/6 + C n
+Theorem_1_1_of_AX1_AX2     : AX1Assumption -> AX2Assumption -> (the above)
+AX1_holds                  : AX1Assumption
+AX2_holds                  : AX2Assumption
+eventual_bound_of_..._AX1_AX2 : AX1 -> AX2 -> exists N, (eventual high-degree bound with 2n)
+global_bound_from_eventual_high_degree :
+    (eventual bound) -> for all G, Phi <= n^2/6 + max 2 N * n
+\end{verbatim}
+
+The manuscript's Theorem 1.1 therefore traces: AX1/AX2 interfaces
+(conformance proved above) -\textgreater{}
+\texttt{Theorem\_1\_1\_of\_AX1\_AX2} -\textgreater{} discharged by
+\texttt{AX1\_holds} and \texttt{AX2\_holds} -\textgreater{}
+\texttt{Theorem\_1\_1}, with the eventual-to-global step isolated in
+\texttt{global\_bound\_from\_eventual\_high\_degree}.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\subsection{\texorpdfstring{6. E4 -- Lean reproduction and axiom
+boundary:
+\texttt{FAIL}}{6. E4 -- Lean reproduction and axiom boundary: FAIL}}\label{e4-lean-reproduction-and-axiom-boundary-fail}
+
+\subsubsection{6.1 The clean build was
+achieved}\label{the-clean-build-was-achieved}
+
+Protocol followed as written: ZIP hash verified before extraction,
+extracted into a short path, \texttt{lake-manifest.json} /
+\texttt{lakefile.toml} / \texttt{lean-toolchain} confirmed
+byte-identical to the freeze, Lean 4.28.0 and Lake 5.0.0 recorded.
+
+\textbf{All nine pinned dependencies at their exact declared revisions,
+every working tree clean}, including mathlib at
+\texttt{8f9d9cff6bd728b17a24e163c9402775d9e6a365}.
+\texttt{lake\ exe\ cache\ get} exited 0 with nothing to download.
+Project \texttt{.lake/build} \textbf{absent} before and after, with zero
+project \texttt{.olean}/\texttt{.ilean} anywhere -- recorded as a
+listing, not asserted.
+
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.2000}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.2000}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.2000}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.2000}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.2000}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Build
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Jobs
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Exit
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Duration
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Errors
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+\texttt{lake\ build\ PaperIII}, as the protocol prescribes & 8,203 & 0 &
+90 min & 0 \\
+the seven roots the axiom queries actually need & 8,444 & 0 & 105 min &
+0 \\
+\end{longtable}
+}
+
+The eight axiom queries, all exit 0: \textbf{42 surfaces, 0
+\texttt{sorryAx}, 0 non-standard footprints, 0 project axioms.} Includes
+\texttt{Theorem\_1\_1}, \texttt{Corollary\_1\_2}, \texttt{AX1\_holds},
+\texttt{AX2\_holds}, \texttt{Theorem\_1\_1\_of\_AX1\_AX2}, both
+\texttt{PublicAPI} surfaces,
+\texttt{global\_bound\_from\_eventual\_high\_degree},
+\texttt{Nibble.AX1.ax1Statement\_holds},
+\texttt{BKLO.triangle\_decomposition\_dense}, the two obstruction
+certificates and the seven canonical bridges. One surface,
+\texttt{isTrianglePacking\_iff\_yuster}, carries the \textbf{smaller}
+footprint \texttt{{[}propext,\ Quot.sound{]}}.
+
+The archived comparison axioms are genuinely outside the closure, and
+this was checked properly rather than by grep. The auditor first flagged
+that \texttt{Theorem\_1\_1\_Final.lean} imports an \texttt{Ax2} module
+-- it imports \texttt{Ax2.PartB.BKLO.Bridge}, not an axiom-bearing one.
+Building the transitive import graph over all \textbf{704} project
+modules: \texttt{Ax2.PartB.Axioms} and \texttt{Ax2.PartA.Wlog} are
+imported by \textbf{nobody}, and no canonical root's closure reaches
+either. The \texttt{ESCAPE\_HATCH\_ASSESSMENT.md} claim survives
+scrutiny.
+
+\subsubsection{6.2 Why the gate nonetheless
+fails}\label{why-the-gate-nonetheless-fails}
+
+\texttt{PaperIII.lean} is the library root and the project's
+\texttt{defaultTargets}. It imports 36 modules and \textbf{imports
+neither \texttt{PaperIII.Theorem\_1\_1\_Final} nor
+\texttt{PaperIII.PublicAPI}}.
+
+The request's E4 requires: \emph{``confirm that the public aggregate
+root and \texttt{PublicAPI} import the intended canonical theorem
+path.''} That confirmation \textbf{fails}.
+
+The consequence is not theoretical. \texttt{lake\ build\ PaperIII} --
+the command \texttt{MATHLIB\_REPRODUCTION\_PROTOCOL.md} prescribes at
+step 8 -- reported \texttt{Build\ completed\ successfully\ (8203\ jobs)}
+with exit 0 \textbf{without compiling Theorem 1.1}. Run immediately
+afterwards, as step 9 directs, \textbf{seven of the eight} axiom queries
+failed with
+\texttt{object\ file\ \textquotesingle{}PaperIII/Theorem\_1\_1\_Final.olean\textquotesingle{}\ does\ not\ exist}.
+Only \texttt{FreezeAxiomsCanonical} succeeded.
+
+The aggregate root's closure is \textbf{177 of 704} modules;
+\texttt{Theorem\_1\_1\_Final} needs \textbf{393}. An auditor who follows
+the protocol literally and does not read the query logs would report a
+successful clean build of a build that omits the paper's central result.
+
+This also reconciles the three job counts, which are not a discrepancy:
+8,203 for the aggregate target, 8,444 for the canonical roots, and the
+author's recorded 8,719 for a still larger set including aggregates no
+query imports.
+
+\textbf{\texttt{EXT-V13-001} (MAJOR).} Required correction: have
+\texttt{PaperIII.lean} import \texttt{PaperIII.Theorem\_1\_1\_Final} and
+\texttt{PaperIII.PublicAPI}, or change the protocol's prescribed command
+to build the canonical roots explicitly. Either fixes it; the first is
+better, because it makes the default target mean what a reader assumes.
+
+\subsubsection{6.3 The author's build record is a replay, not a
+build}\label{the-authors-build-record-is-a-replay-not-a-build}
+
+\texttt{FREEZE\_METADATA.json} records
+\texttt{Build\ completed\ successfully\ (8719\ jobs)}, exit 0, in
+\textbf{403 seconds}, from
+\texttt{gate\_logs/BUILD\_LOG\_FINAL\_INCREMENTAL.txt}. The log's own
+lines read \texttt{Replayed\ Nibble.LPDuality} from job 8021 onward;
+roughly 180 jobs actually executed. The figure is a replay summary.
+
+The request already says this record is not a substitute for the
+external build, so nothing is overclaimed. But the consequence should be
+stated: \textbf{the author-side package contains no clean-build evidence
+at all.} This audit's two builds supply it.
+
+\textbf{\texttt{EXT-V13-004} (MINOR).}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\subsection{\texorpdfstring{7. E5 -- bilingual, format and render:
+\texttt{FAIL}}{7. E5 -- bilingual, format and render: FAIL}}\label{e5-bilingual-format-and-render-fail}
+
+\subsubsection{7.1 What passes, and it is most of
+it}\label{what-passes-and-it-is-most-of-it}
+
+Both PDFs, every page rendered and inspected at 60 dpi:
+
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}lll@{}}
+\toprule\noalign{}
+& EN & ES \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+pages & 45 & 46 \\
+blank or near-blank pages & \textbf{none} & \textbf{none} \\
+right-margin overflow (clipping) & \textbf{none} & \textbf{none} \\
+bottom-margin overflow & \textbf{none} & \textbf{none} \\
+ink coverage range & 1.22\% - 9.20\% & 1.43\% - 8.58\% \\
+producer & LuaTeX-1.24.0 & LuaTeX-1.24.0 \\
+\end{longtable}
+}
+
+MD -\textgreater{} TeX and MD -\textgreater{} PDF are faithful in both
+languages: \textbf{66/66 equation tags, 20/20 theorem numbers, 17/17
+references, 42/42 formal identifiers} present in the generated TeX and
+in the extracted PDF text.
+
+Structural EN/ES agreement: 144 headings with \textbf{identical level
+sequence}, 66 identical equation tags, 17 identical numbered references,
+identical theorem numbering, identical formal identifiers.
+
+The named regressions are closed. \texttt{A\_\{2J\}} is now uniform --
+\textbf{zero} occurrences of the variant \texttt{A\_\{2,J\}} in either
+language, in Markdown and in TeX. \texttt{{[}3,8{]}} appears 2/2 and
+\texttt{{[}11,17{]}} 2/2, identical across languages, so the
+combined-citation divergence is gone. No stale version label appears in
+any publication artifact.
+
+Two auditor artifacts, recorded so they are not mistaken for defects.
+First, a naive extraction reported 16,368 replacement characters in the
+English PDF text; the extracted bytes are \textbf{CESU-8}, poppler's
+non-standard encoding for astral-plane characters, and decoding them
+correctly leaves \textbf{zero} replacements and recovers exactly the
+intended mathematical italics (\texttt{G}, \texttt{p}, \texttt{q},
+\texttt{nu}, \texttt{alpha}). The PDF text layer is correct. Second, 17
+formal identifiers appeared ``missing'' from the TeX; all 17 are present
+with escaped underscores.
+
+\subsubsection{7.2 The divergence}\label{the-divergence}
+
+\textbf{Proposition 7.4} differs in content between languages.
+
+The English states the full hypotheses, including
+\texttt{h\_i\ \textgreater{}=\ max\{rho,\ q\_J\ -\ r\_b\}} for every
+\texttt{i\ in\ J}, and then the explicit inequality
+
+\begin{verbatim}
+nu3(G) >= C(b,2) + C(rho,2) - ((2b-1)A_J - A_{2J})/(2 q_J)
+          + (1 - theta_R)(q_J - r_b)B_J/q_J
+\end{verbatim}
+
+with \texttt{A\_J\ =\ sum\ t\_i}, \texttt{A\_\{2J\}\ =\ sum\ t\_i\^{}2},
+\texttt{B\_J\ =\ sum\ g\_i}.
+
+The Spanish replaces the hypothesis with ``las hipótesis de factibilidad
+de la Sección 7'' and replaces \textbf{the entire conclusion} with
+``vale la cota exacta \texttt{reserved\_gain\_packing\_bound\_subset}
+mostrada allí'' -- no formula at all. And the pointer is misdirected:
+Section 7 in Spanish contains no such formula. The formula does appear
+in the Spanish Appendix E.1.3, which is \textbf{identical} to the
+English one.
+
+So no mathematics differs and nothing is unrecoverable. But a
+Spanish-only reader cannot read the hypotheses or the conclusion of a
+numbered proposition that an English reader can, and is sent to the
+wrong place. The divergence propagates to the TeX, so it is
+EN\textless-\textgreater ES, not MD\textless-\textgreater TeX.
+
+Section 3 of the request permits minor editorial findings to coexist
+with \texttt{PASS} ``only if they do not create semantic ambiguity,
+provenance failure, or divergence among MD/TeX/PDF or EN/ES''. This is
+such a divergence, so the gate cannot pass.
+
+\textbf{\texttt{EXT-V13-002} (MAJOR).} Required correction: translate
+the English statement of Proposition 7.4 in full, or in both languages
+replace it with a pointer to Appendix E.1.3 -- where the statement
+actually lives -- so the two versions say the same thing.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\subsection{\texorpdfstring{8. E6 -- citations, prior art, novelty:
+\texttt{INCONCLUSIVE}}{8. E6 -- citations, prior art, novelty: INCONCLUSIVE}}\label{e6-citations-prior-art-novelty-inconclusive}
+
+What is verifiable here, and passes: \textbf{citation integrity is
+clean.} 17 references listed, every bracketed citation resolves to a
+listed reference, and every listed reference is cited in the body. (An
+apparent citation \texttt{{[}0{]}} was the auditor's regex reading the
+interval \texttt{{[}0,2{]}}.) Every source the request names by name is
+present and cited: Chen-Erdős-Ordman, Erdős-Ordman-Zalcstein,
+Haxell-Rödl, Yuster, Barber-Kühn-Lo-Osthus, Dross, Galvin, Tuza, and the
+Erdős \#81 record. The \texttt{3/16\ -\textgreater{}\ 1/6} improvement
+claim and the chordal/split separation are both explicit and symmetric
+across languages.
+
+\textbf{The Cavers survey is absent} from the bibliography, in both
+languages -- zero mentions. The request names it among the sources to
+check.
+
+What could not be done: \textbf{not one of the 17 references was
+independently retrieved in this run.} No institutional bibliographic
+database was reachable, and \texttt{erdosproblems.com} has returned HTTP
+403 to this auditor on every attempt. No specialist search through the
+audit date was run, so no search strings or databases can be reported.
+The request states that novelty cannot pass on the author's bibliography
+alone, and it does not here.
+
+Consequently the audit \textbf{cannot} say whether a published result
+already gives the same split-graph \texttt{1/6} quadratic coefficient, a
+stronger statement, or an equivalent method.
+
+\textbf{\texttt{EXT-V13-005} (MINOR)} for the missing Cavers survey; the
+gate itself is \texttt{INCONCLUSIVE} on capability, not on a defect.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\subsection{\texorpdfstring{9. E7 -- release-package integrity:
+\texttt{FAIL}}{9. E7 -- release-package integrity: FAIL}}\label{e7-release-package-integrity-fail}
+
+\textbf{Self-containment passes.} The manuscript does not require an
+earlier internal draft. Its three mentions of the internal audit are
+status disclosures that say the opposite of a dependency: ``the
+author-side internal audit passes. Independent reproduction remains
+open; the candidate is a local formal freeze, not yet a public
+release'', and ``They do not replace independent reproduction or
+external adversarial review.'' Paper III is described consistently as a
+candidate for its first formal public release, symmetrically in both
+languages.
+
+\textbf{The final hash re-verification passes: 12/12, the target did not
+change during the audit.}
+
+\textbf{What fails} is the mandated agreement among ``filenames, hashes,
+build records, formal names, changelog, metadata and reproducibility
+documents''.
+\texttt{05\_formalization/lean\_v1.3\_freeze/FREEZE\_METADATA.json}
+declares
+
+\begin{verbatim}
+"status": "LOCAL_FREEZE_PREPARED_PENDING_INTERNAL_AUDIT"
+"internal_audit": "NOT_STARTED"
+\end{verbatim}
+
+while the same package ships
+\texttt{02\_validation/01\_INTERNAL\_AUDITS/10\_REPORT/INTERNAL\_AUDIT\_FINAL\_REPORT.md}
+with \textbf{overall verdict \texttt{PASS}}, and the manuscript itself
+says the internal audit passes. The metadata contradicts both its own
+package and the manuscript. This is a provenance misstatement in a
+release artifact, which Section 3 excludes from \texttt{PASS}.
+
+\textbf{\texttt{EXT-V13-003} (MAJOR).} Required correction: update
+\texttt{status} and \texttt{internal\_audit} to the package's actual
+state, and add the external reproduction result once this run is
+accepted.
+
+\textbf{\texttt{EXT-V13-006} (MINOR).} \texttt{PaperIII.lean}'s
+docstring still reads ``Scaffold only for now: this file imports Mathlib
+so \texttt{lake\ build} confirms the toolchain \ldots{} before any node
+is formalized'', inaccurate for a root that now imports 36 modules --
+and misleading in exactly the area of \texttt{EXT-V13-001}.
+
+\textbf{\texttt{EXT-V13-007} (MINOR).}
+\texttt{MATHLIB\_REPRODUCTION\_PROTOCOL.md} step 8 prescribes a build
+command that does not cover the modules step 9's queries require. The
+two steps are mutually inconsistent as written.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\subsection{10. Mandatory regression
+matrix}\label{mandatory-regression-matrix}
+
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.3333}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.3333}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.3333}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Item
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Disposition
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Evidence
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+stale integrity or axiom labels & \textbf{partly closed}: publication
+artifacts clean; \texttt{FREEZE\_METADATA.json} stale,
+\texttt{EXT-V13-003}; root docstring stale, \texttt{EXT-V13-006} & E0,
+E7 \\
+overbroad ``resolves the split case'' wording & \textbf{CLOSED}: zero
+occurrences in either language & E1 \\
+\texttt{A\_\{2,J\}} / \texttt{A\_\{2J\}} and combined-citation
+divergence & \textbf{CLOSED}: notation uniform in MD and TeX;
+\texttt{{[}3,8{]}} 2/2 and \texttt{{[}11,17{]}} 2/2 identical EN/ES &
+E5 \\
+incomplete citation retrieval and bounded novelty search & \textbf{OPEN,
+unchanged}: zero references retrieved this run; no specialist search
+possible & E6 \\
+the two archived comparison-route axioms and dependency closure &
+\textbf{CLOSED}: imported by nobody among 704 modules; absent from all
+canonical closures and all 42 footprints & E4 \\
+missing graph/Yuster model bridge & \textbf{CLOSED}: present in v1.3 and
+independently validated against an auditor-built bridge & E3 \\
+\texttt{K-EPS} & \textbf{NOT ATTEMPTED} & E2 \\
+\texttt{K-CORRIDOR} & \textbf{NOT ATTEMPTED} & E2 \\
+\texttt{K-SPARSE} & \textbf{NOT ATTEMPTED} & E2 \\
+\texttt{K-COVER} & \textbf{CLOSED}: split exhaustive and
+non-overlapping, four levels checked & E2 \\
+\texttt{K-GLOBAL} & \textbf{PARTIAL}: frame and formal counterpart
+checked; deletion step and small orders not verified & E2 \\
+manuscript AX1/AX2 vs \texttt{AX1Assumption}/\texttt{AX2Assumption} &
+\textbf{CLOSED}: AX1 by an \texttt{iff}, AX2 by implication with both
+coercions checked & E3 \\
+quantitative tolerances and the hypergraph-to-graph bridge &
+\textbf{bridge CLOSED; tolerances NOT ATTEMPTED} & E3, E2 \\
+independent rederivation of Sections 4-9 & \textbf{Section 4 and Section
+9 rederived; Section 5-8 not} & E2 \\
+\end{longtable}
+}
+
+As the request demands, these are stated separately and not conflated:
+\textbf{semantic correspondence} (E3, proved), \textbf{successful
+compilation} (E4, 8,444 jobs exit 0), \textbf{axiom footprint} (E4, 42
+surfaces clean), and \textbf{independent mathematical rederivation} (E2,
+partial). No mathematical item is marked closed merely because a Lean
+declaration compiles.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\subsection{11. Findings ledger}\label{findings-ledger}
+
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.2500}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.2500}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.2500}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.2500}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+ID
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Severity
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Gate
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Substance
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+\texttt{EXT-V13-001} & MAJOR & E4 & the public aggregate root imports
+neither \texttt{Theorem\_1\_1\_Final} nor \texttt{PublicAPI}; the
+protocol's prescribed build omits the main theorem and breaks 7 of 8
+axiom queries \\
+\texttt{EXT-V13-002} & MAJOR & E5 & Proposition 7.4 diverges
+EN\textless-\textgreater ES: the Spanish drops a hypothesis and the
+entire conclusion, and misdirects the reader to Section 7 \\
+\texttt{EXT-V13-003} & MAJOR & E7 & \texttt{FREEZE\_METADATA.json} says
+the internal audit has not started; the package ships one with verdict
+\texttt{PASS} \\
+\texttt{EXT-V13-004} & MINOR & E4 & the author's recorded build is an
+incremental replay (403 s, \textasciitilde180 jobs), so the package
+carries no clean-build evidence \\
+\texttt{EXT-V13-005} & MINOR & E6 & the Cavers survey, named in the
+request, is absent from the bibliography in both languages \\
+\texttt{EXT-V13-006} & MINOR & E7 & \texttt{PaperIII.lean}'s docstring
+still describes the root as a scaffold \\
+\texttt{EXT-V13-007} & MINOR & E7 &
+\texttt{MATHLIB\_REPRODUCTION\_PROTOCOL.md} steps 8 and 9 are mutually
+inconsistent \\
+\end{longtable}
+}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\subsection{12. What this audit does and does not
+establish}\label{what-this-audit-does-and-does-not-establish}
+
+\textbf{Establishes.} The delivered bytes are exactly what the package
+declares, and did not move during the audit. The archive is structurally
+clean and contains no compiled artifact. Paper III rebuilds cleanly from
+its frozen sources against the exact pinned dependency revisions -- not
+a rebuild of Mathlib from source, as the protocol's claim boundary
+requires. All 42 named surfaces have foundational axiom footprints with
+no \texttt{sorryAx} and no project axiom, and the two archived axioms
+are unreachable from every canonical root. The AX1 and AX2 interfaces
+say what the manuscript says, proved against the auditor's own
+construction with AX1 settled in both directions. Section 9's case split
+is exhaustive and its ten numbered inequalities are exact, with three of
+them tight at their boundaries. Both PDFs render without a blank page, a
+clipped margin or a lost glyph.
+
+\textbf{Does not establish.} The truth of Theorem 1.1. The AX1 epsilon
+budget. Sections 5 through 8. Novelty, or that no published result
+already gives the \texttt{1/6} coefficient. Human peer review. And Paper
+III has never been audited by an adversarial challenger -- on Paper I a
+challenger found four Spanish duplications this auditor's own diff had
+missed, so the absence is material.
+
+\textbf{The failures are release-readiness defects, not mathematics.}
+Three of them are mechanical to fix: two import lines, one translated
+proposition, and two metadata fields. Once fixed, the gates that fail
+here would be re-auditable cheaply, since the target hashes and the
+clean-build evidence in this package remain valid for everything else.
+
+\subsection{13. Signature}\label{signature}
+
+Claude (Anthropic), \texttt{claude-opus-5}, external adversarial auditor
+under \texttt{EXTERNAL\_ADVERSARIAL\_AUDIT\_REQUEST.md}. 2026-08-22.
+Only v1.3 was evaluated; no earlier verdict was inherited.
+
+\textbf{Overall verdict: \texttt{FAIL}} -- E4, E5 and E7 fail; E2 and E6
+are inconclusive; 0 blocking, 0 critical, 3 major, 4 minor; no
+mathematical or formal defect found.
+
+\end{document}

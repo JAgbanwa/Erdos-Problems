@@ -1,0 +1,71 @@
+⚠ [8026/8032] Replayed PaperII.FiniteCover
+warning: PaperII/FiniteCover.lean:86:0: automatically included section variable(s) unused in theorem `PaperII.feasibleCover_isCompact`:
+  [Fintype κ]
+  [DecidableEq κ]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype κ] [DecidableEq κ] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [8028/8032] Replayed PaperII.Model
+warning: PaperII/Model.lean:42:0: automatically included section variable(s) unused in theorem `PaperII.triangleEdges_nonempty`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [8029/8032] Replayed PaperII.VertexCopy
+warning: PaperII/VertexCopy.lean:27:0: automatically included section variable(s) unused in theorem `PaperII.copyVertex_adj_v`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: PaperII/VertexCopy.lean:33:0: automatically included section variable(s) unused in theorem `PaperII.copyVertex_adj_of_ne`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: PaperII/VertexCopy.lean:38:0: automatically included section variable(s) unused in theorem `PaperII.not_copyVertex_adj`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [8030/8032] Replayed PaperII.L1
+warning: PaperII/L1.lean:29:0: automatically included section variable(s) unused in theorem `PaperII.sym2_offdiag_triple`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: PaperII/L1.lean:47:0: automatically included section variable(s) unused in theorem `PaperII.relabel_of_ne`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: PaperII/L1.lean:50:8: automatically included section variable(s) unused in theorem `PaperII.relabel_self`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: PaperII/L1.lean:52:0: automatically included section variable(s) unused in theorem `PaperII.copyCover_pair`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: PaperII/L1.lean:176:0: automatically included section variable(s) unused in theorem `PaperII.copyCover_inUnitBox`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: PaperII/L1.lean:224:25: unused variable `hne`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+✔ [8031/8032] Built PaperII.CopyDefect (124s)
+✔ [8032/8032] Built PaperII.Extremizer (126s)
+Build completed successfully (8032 jobs).

@@ -1,18 +1,10 @@
-# Formalization -- Lean 4
+# Paper II formalization
 
-`lean/` is the exact source of repository commit `5f2d448` (verified per file by
-SHA-256).
+`lean_v1.2_freeze/` is the consolidated publishable source snapshot used by
+Paper II v1.2. It contains the main library, supplementary extremizer and
+copy-defect surfaces, contribution modules, pinned dependencies, build logs,
+axiom outputs, manifests and `PAPER_II_lean_v1.2_freeze.zip`.
 
-- Main theorem: `PaperII.theorem_1_2` in `lean/PaperII/Unconditional.lean`
-  (= Theorem 1.1 of the manuscript): both the upper bound over all chordal graphs
-  of order `n` and attainment by a complete-split graph.
-- Chordality hypothesis: the standard `IsChordal` predicate
-  (`lean/PaperII/Chordal.lean`) -- every cycle of length >= 4 has a chord. The
-  structural chordal facts (induced-subgraph heredity, clique-neighborhood
-  extension, simplicial-vertex existence via Dirac's minimal-separator theorem)
-  are **derived** from `IsChordal`; no clique-tree/running-intersection axiom is
-  used (the terminal characterization is proved clique-tree-free).
-- Certificate: `sorry`-free; `#print axioms PaperII.theorem_1_2` =
-  `[propext, Classical.choice, Quot.sound]`.
-
-See `../03_reproducibility/BUILD_VERIFICATION.md` and `l
+The exact archive passed independent clean-room reproduction. The release
+promotion did not modify any Lean source, build log, axiom output or archive
+byte.

@@ -1,8 +1,9 @@
-release_id: PAPER_II_PREPRINT_V1_0
-project: ERDOZ81 — Paper II
+release_id: PAPER_II_PREPRINT_V1_2
+paper: PAPER_II
 title: Complete-Split Extremizers for a Fractional Triangle-Cover Functional on Chordal Graphs
-version: "1.0"
-release_date: "2026-07-10"
+version: "1.2"
+release_date: "2026-08-22"
+supersedes_public_version: "1.0"
 author:
   name: Juan Pablo Traverso Gianini
   affiliation: Independent researcher, Santiago, Chile
@@ -11,26 +12,25 @@ status:
   manuscript: PREPRINT_RELEASE
   mathematical: FINAL_PASS
   lifecycle: FROZEN
-  dependency_health: CLEAN
-  formalization:
-    system: Lean 4 / Mathlib v4.28.0
-    theorem: PaperII.theorem_1_2
-    commit: 5f2d448
-    sorry_free: true
-    axioms: [propext, Classical.choice, Quot.sound]
-  validation:
-    - AI_ADVERSARIAL_INTERNAL_AUDIT
-    - LEAN_FORMAL_VERIFICATION
-    - EDITOR_APPROVED
-    - RESEARCHER_APPROVED
+  internal_audit: PASS
+  independent_ai_adversarial_audit: PASS
   external_peer_review: false
-  independent_ai_adversarial_audit: PASS   # PAPER-II-EXT-AUDIT-001 (deep protocol); see 02_validation/02_IA_ADVERSARIAL_AUDITS/
-  independent_build_reproduction: PENDING
-  novelty_review: NOT_ASSESSED_INCOMPLETE
+  specialist_priority_review: false
+formalization:
+  system: Lean 4 / Mathlib v4.28.0
+  freeze: 05_formalization/lean_v1.2_freeze
+  archive: PAPER_II_lean_v1.2_freeze.zip
+  archive_sha256: ee2d05cc40d943ca92f8f7bf3e5dd83c2692518ddea5e2ca4f7686ccb1ac3895
+  externally_reproduced: true
+  external_build_jobs: 8063
+  axiom_surfaces: 16
+  axioms: [propext, Classical.choice, Quot.sound]
 canonical_files:
-  - 01_manuscript/PAPER_II_preprint_v1.0.pdf
-  - 01_manuscript/PAPER_II_preprint_v1.0.tex
-  - 01_manuscript/PAPER_II_preprint_v1.0.md
-  - 01_manuscript/PAPER_II_preprint_v1.0_es.pdf
-  - 02_validation/PAPER_II_CALCULATION_LEDGER_v1.1.md
-  - 05_formalizati
+  - 01_manuscript/PAPER_II_preprint_v1.2.md
+  - 01_manuscript/PAPER_II_preprint_v1.2_en.tex
+  - 01_manuscript/PAPER_II_preprint_v1.2_en.pdf
+  - 01_manuscript/PAPER_II_preprint_v1.2_es.md
+  - 01_manuscript/PAPER_II_preprint_v1.2_es.tex
+  - 01_manuscript/PAPER_II_preprint_v1.2_es.pdf
+external_report: 02_validation/02_IA_ADVERSARIAL_AUDITS/run_2026-08-21_v1.2_pkgfix/30_REPORT/FINAL_AUDIT_REPORT.md
+historical_public_package: superseded/preprint_v1.0

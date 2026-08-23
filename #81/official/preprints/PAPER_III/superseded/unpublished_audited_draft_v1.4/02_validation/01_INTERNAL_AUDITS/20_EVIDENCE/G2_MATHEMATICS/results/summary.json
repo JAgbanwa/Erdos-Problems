@@ -1,0 +1,12 @@
+{
+  "paper": "PAPER_III",
+  "gate": "G2_MATHEMATICS",
+  "status": "PASS",
+  "lean_rerun": false,
+  "checks": {
+    "symbolic_identities": {"passed": 12, "total": 12},
+    "common_profile_lp": {"numeric_passed": 351, "exact_cover_passed": 351, "total": 351},
+    "unified_margin": {"passed": 78384, "total": 78384},
+    "corridor_ilp": {"basic_passed": 372, "basic_total": 372, "packing_passed": 180, "packing_total": 180, "corollary_passed": 180, "corollary_total": 180}
+  }
+}

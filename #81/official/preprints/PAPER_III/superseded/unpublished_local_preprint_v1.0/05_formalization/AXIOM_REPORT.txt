@@ -1,0 +1,15 @@
+Paper III — #print axioms report (SORRY-FREE milestone, 2026-07-24)
+Full build: lake build → 8057 jobs, 0 errors, 0 sorries. git object: 0 sorries; only AX1, AX2.
+
+'PaperIII.Theorem_1_1'   : [propext, Classical.choice, PaperIII.AX1, PaperIII.AX2, Quot.sound]
+'PaperIII.Corollary_1_2' : [propext, Classical.choice, PaperIII.AX1, PaperIII.AX2, Quot.sound]
+'PaperIII.E_8'           : [propext, Classical.choice, PaperIII.AX1, PaperIII.AX2, Quot.sound]
+'PaperIII.E_4_3'         : [propext, Classical.choice, PaperIII.AX1, Quot.sound]
+'PaperIII.E_7_1'         : [propext, Classical.choice, Quot.sound]
+'PaperIII.Prop_10_1_low' : [propext, Classical.choice, Quot.sound]   (unconditional)
+'PaperIII.clique_divisible_correction' : [propext, Classical.choice, Quot.sound]
+
+No sorryAx anywhere. Trusted base = exactly the two intended Layer-X axioms
+AX1 (Haxell–Rödl/Yuster) and AX2 (Dross + Barber–Kühn–Lo–Osthus).
+Reusable from-scratch additions (not in Mathlib): DiracHamilton (Hamiltonicity from
+min-degree), DiracMatching (near-perfect matching from min-degree).

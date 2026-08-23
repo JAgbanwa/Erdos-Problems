@@ -1,0 +1,169 @@
+{
+ "protocol": "EXTERNAL_AI_ADVERSARIAL_AUDIT_INSTRUCTIONS_v1.1",
+ "paper": "PAPER_II",
+ "target": "preprint_draft_v1.2",
+ "gates": [
+  "C",
+  "D"
+ ],
+ "claim": "for nonadjacent u,v:  Phi_tau(G_{v->u}) + Phi_tau(G_{u->v}) >= 2 Phi_tau(G), i.e. the copy defect is nonnegative",
+ "method": "exhaustive over all labeled graphs on n vertices and all nonadjacent pairs; Phi_tau via exact rational simplex",
+ "arithmetic": "exact Fraction, deterministic, no seeds",
+ "domain": {
+  "n": [
+   2,
+   6
+  ]
+ },
+ "instances_tested": 251085,
+ "copy_inequality_violations": 0,
+ "min_copy_defect": "0",
+ "min_copy_defect_witness": {
+  "n": 2,
+  "edges": [],
+  "u": 0,
+  "v": 1
+ },
+ "nu_tau_mismatches": 0,
+ "chordal_instances_tested": 148919,
+ "both_directions_break_chordality": 6090,
+ "chordality_break_samples": [
+  {
+   "n": 5,
+   "edges": [
+    [
+     0,
+     2
+    ],
+    [
+     0,
+     4
+    ],
+    [
+     1,
+     2
+    ],
+    [
+     1,
+     3
+    ]
+   ],
+   "u": 0,
+   "v": 1
+  },
+  {
+   "n": 5,
+   "edges": [
+    [
+     0,
+     3
+    ],
+    [
+     0,
+     4
+    ],
+    [
+     1,
+     2
+    ],
+    [
+     1,
+     3
+    ]
+   ],
+   "u": 0,
+   "v": 1
+  },
+  {
+   "n": 5,
+   "edges": [
+    [
+     0,
+     2
+    ],
+    [
+     0,
+     3
+    ],
+    [
+     1,
+     2
+    ],
+    [
+     1,
+     4
+    ]
+   ],
+   "u": 0,
+   "v": 1
+  },
+  {
+   "n": 5,
+   "edges": [
+    [
+     0,
+     3
+    ],
+    [
+     0,
+     4
+    ],
+    [
+     1,
+     2
+    ],
+    [
+     1,
+     4
+    ]
+   ],
+   "u": 0,
+   "v": 1
+  },
+  {
+   "n": 5,
+   "edges": [
+    [
+     0,
+     2
+    ],
+    [
+     0,
+     3
+    ],
+    [
+     1,
+     3
+    ],
+    [
+     1,
+     4
+    ]
+   ],
+   "u": 0,
+   "v": 1
+  }
+ ],
+ "per_n": {
+  "2": {
+   "nonadjacent_pair_instances": 1,
+   "violations": 0
+  },
+  "3": {
+   "nonadjacent_pair_instances": 12,
+   "violations": 0
+  },
+  "4": {
+   "nonadjacent_pair_instances": 192,
+   "violations": 0
+  },
+  "5": {
+   "nonadjacent_pair_instances": 5120,
+   "violations": 0
+  },
+  "6": {
+   "nonadjacent_pair_instances": 245760,
+   "violations": 0
+  }
+ }
+}

@@ -1,0 +1,1319 @@
+start_utc=2026-08-23T02:02:14.8432998Z
+cwd=C:\p3build5\P3
+command=lake build BKLO.MainDenseUnconditional Nibble.AX1Closed PaperIII.CanonicalTrianglePacking PaperIII.Obstructions PaperIII.PaperImprovementsGate PaperIII.PublicAPI PaperIII.Theorem_1_1_Final
+⚠ [3459/3530] Replayed BKLO.Section1012Assembly
+warning: BKLO/Section1012Assembly.lean:80:36: unused variable `hε`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: BKLO/Section1012Assembly.lean:108:36: unused variable `hε`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [3484/3530] Replayed BKLO.FiniteBernoulli
+warning: BKLO/FiniteBernoulli.lean:197:34: unused variable `hp0`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [3500/3530] Replayed BKLO.Section1012Hier
+warning: BKLO/Section1012Hier.lean:104:59: unused variable `hε`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [3580/3660] Replayed Nibble.TightSchedule
+warning: Nibble/TightSchedule.lean:40:22: unused variable `hgam8`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Nibble/TightSchedule.lean:51:22: unused variable `hgam8`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [3632/3660] Replayed Nibble.DrossCutArith
+warning: Nibble/DrossCutArith.lean:152:33: unused variable `hn`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [3635/3660] Replayed Nibble.CellBoxAllocation
+warning: Nibble/CellBoxAllocation.lean:46:5: unused variable `hI`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Nibble/CellBoxAllocation.lean:46:23: unused variable `hI'`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Nibble/CellBoxAllocation.lean:46:43: unused variable `hJ`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Nibble/CellBoxAllocation.lean:46:61: unused variable `hJ'`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+info: Nibble/CellBoxAllocation.lean:92:0: 'Nibble.AX1.boxCompat_iff_disjoint_product' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Nibble/CellBoxAllocation.lean:93:0: 'Nibble.AX1.box_allocation_infeasible' depends on axioms: [propext, Classical.choice, Quot.sound]
+⚠ [3637/3660] Replayed Nibble.LPDuality
+warning: Nibble/LPDuality.lean:29:8: automatically included section variable(s) unused in theorem `_private.Nibble.LPDuality.0.LPDuality.zero_isPacking`:
+  [Fintype C]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype C] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: Nibble/LPDuality.lean:68:8: automatically included section variable(s) unused in theorem `_private.Nibble.LPDuality.0.LPDuality.coverOpt_le_value`:
+  [Fintype O]
+  [DecidableEq C]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype O] [DecidableEq C] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: Nibble/LPDuality.lean:105:8: automatically included section variable(s) unused in theorem `_private.Nibble.LPDuality.0.LPDuality.coverMap_apply_row`:
+  [DecidableEq C]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq C] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: Nibble/LPDuality.lean:109:8: automatically included section variable(s) unused in theorem `_private.Nibble.LPDuality.0.LPDuality.coverMap_apply_value`:
+  [DecidableEq C]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq C] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: Nibble/LPDuality.lean:605:8: automatically included section variable(s) unused in theorem `_private.Nibble.LPDuality.0.LPDuality.coverOpt_eq_zero_of_empty_row`:
+  [Fintype O]
+  [DecidableEq C]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype O] [DecidableEq C] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [3642/3660] Replayed Nibble.BeckFialaPairs
+warning: Nibble/BeckFialaPairs.lean:30:0: automatically included section variable(s) unused in theorem `Nibble.BeckFiala.mem_pairClosure`:
+  [DecidableEq V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [3643/3660] Replayed Nibble.BlockSplit
+warning: Nibble/BlockSplit.lean:29:0: automatically included section variable(s) unused in theorem `Nibble.AX1.enumIdx_lt`:
+  [DecidableEq V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: Nibble/BlockSplit.lean:31:0: automatically included section variable(s) unused in theorem `Nibble.AX1.enumIdx_injective`:
+  [DecidableEq V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+ℹ [3655/3723] Replayed Nibble.FracNibbleSlack
+info: Nibble/FracNibbleSlack.lean:579:0: 'Nibble.fracNibble_withSlack' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [3656/3723] Replayed Nibble.FracNibbleSlackR
+info: Nibble/FracNibbleSlackR.lean:642:0: 'Nibble.SlackR.fracNibbleR_withSlack' depends on axioms: [propext, Classical.choice, Quot.sound]
+⚠ [3657/3723] Replayed Nibble.FracNibbleLE
+warning: Nibble/FracNibbleLE.lean:153:0: automatically included section variable(s) unused in theorem `Nibble.LEUnif.padWtLE_nonneg`:
+  [DecidableEq X]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq X] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: Nibble/FracNibbleLE.lean:201:0: automatically included section variable(s) unused in theorem `Nibble.LEUnif.sum_over_i`:
+  [DecidableEq X]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq X] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+info: Nibble/FracNibbleLE.lean:608:0: 'Nibble.fracNibble_leUniform' depends on axioms: [propext, Classical.choice, Quot.sound]
+⚠ [3658/3723] Replayed Nibble.BoxPlacementGraph
+warning: Nibble/BoxPlacementGraph.lean:60:0: automatically included section variable(s) unused in theorem `Nibble.AX1.BoxPlace.mem_placeFam`:
+  [Fintype ι]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype ι] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: Nibble/BoxPlacementGraph.lean:74:0: automatically included section variable(s) unused in theorem `Nibble.AX1.BoxPlace.boxDemand_eq_sum`:
+  [Fintype ι]
+  [DecidableEq κ]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype ι] [DecidableEq κ] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: Nibble/BoxPlacementGraph.lean:77:0: automatically included section variable(s) unused in theorem `Nibble.AX1.BoxPlace.boxDemandC_nonneg`:
+  [Fintype ι]
+  [Fintype κ]
+  [DecidableEq κ]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype ι] [Fintype κ] [DecidableEq κ] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: Nibble/BoxPlacementGraph.lean:83:0: automatically included section variable(s) unused in theorem `Nibble.AX1.BoxPlace.sz_mul_le_boxDemandC`:
+  [Fintype ι]
+  [Fintype κ]
+  [DecidableEq κ]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype ι] [Fintype κ] [DecidableEq κ] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: Nibble/BoxPlacementGraph.lean:121:0: automatically included section variable(s) unused in theorem `Nibble.AX1.BoxPlace.plc_nonempty`:
+  [Fintype κ]
+  [DecidableEq κ]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype κ] [DecidableEq κ] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: Nibble/BoxPlacementGraph.lean:128:0: automatically included section variable(s) unused in theorem `Nibble.AX1.BoxPlace.sum_placeFam`:
+  [Fintype ι]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype ι] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: Nibble/BoxPlacementGraph.lean:161:0: automatically included section variable(s) unused in theorem `Nibble.AX1.BoxPlace.placeWt_edge`:
+  [Fintype ι]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype ι] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: Nibble/BoxPlacementGraph.lean:168:0: automatically included section variable(s) unused in theorem `Nibble.AX1.BoxPlace.placeWt_nonneg`:
+  [Fintype ι]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype ι] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: Nibble/BoxPlacementGraph.lean:175:0: automatically included section variable(s) unused in theorem `Nibble.AX1.BoxPlace.placeCard_pos`:
+  [Fintype κ]
+  [DecidableEq κ]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype κ] [DecidableEq κ] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: Nibble/BoxPlacementGraph.lean:199:0: automatically included section variable(s) unused in theorem `Nibble.AX1.BoxPlace.placeFam_edge_size`:
+  hidx
+  hsz1
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit hidx hsz1 in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: Nibble/BoxPlacementGraph.lean:233:0: automatically included section variable(s) unused in theorem `Nibble.AX1.BoxPlace.sum_inv_const`:
+  [Fintype κ]
+  [DecidableEq κ]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype κ] [DecidableEq κ] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: Nibble/BoxPlacementGraph.lean:240:0: automatically included section variable(s) unused in theorem `Nibble.AX1.BoxPlace.slot_count_core`:
+  [Fintype ι]
+  [Fintype κ]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype ι] [Fintype κ] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [3659/3723] Replayed Nibble.BoxPlacementNibble
+warning: Nibble/BoxPlacementNibble.lean:109:0: automatically included section variable(s) unused in theorem `Nibble.AX1.BoxPlace.defaultAlloc_mem`:
+  [Fintype κ]
+  [DecidableEq κ]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype κ] [DecidableEq κ] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [3664/3723] Replayed Nibble.CoreGapRegularDecomp
+warning: Nibble/CoreGapRegularDecomp.lean:53:0: automatically included section variable(s) unused in theorem `Nibble.AX1.edgeSelect_adj`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: Nibble/CoreGapRegularDecomp.lean:56:0: automatically included section variable(s) unused in theorem `Nibble.AX1.edgeSelect_le`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [3667/3723] Replayed Nibble.CoreGapRectPack
+warning: Nibble/CoreGapRectPack.lean:32:0: automatically included section variable(s) unused in theorem `Nibble.AX1.mem_tripleRect_iff`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: Nibble/CoreGapRectPack.lean:47:8: automatically included section variable(s) unused in theorem `_private.Nibble.CoreGapRectPack.0.Nibble.AX1.disjoint_product_left`:
+  [Fintype V]
+  [DecidableEq V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] [DecidableEq V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: Nibble/CoreGapRectPack.lean:55:8: automatically included section variable(s) unused in theorem `_private.Nibble.CoreGapRectPack.0.Nibble.AX1.disjoint_product_right`:
+  [Fintype V]
+  [DecidableEq V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] [DecidableEq V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: Nibble/CoreGapRectPack.lean:82:29: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: Nibble/CoreGapRectPack.lean:93:67: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: Nibble/CoreGapRectPack.lean:94:10: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: Nibble/CoreGapRectPack.lean:94:29: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: Nibble/CoreGapRectPack.lean:82:29: 'exact nBC hy' hy' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: Nibble/CoreGapRectPack.lean:93:67: 'exact nAC hy' hy' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: Nibble/CoreGapRectPack.lean:94:10: 'exact nBC hy hy'' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: Nibble/CoreGapRectPack.lean:94:29: 'exact nBC hy' hy' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+⚠ [3681/3723] Replayed Nibble.YusterBridgeFrac
+warning: Nibble/YusterBridgeFrac.lean:60:0: automatically included section variable(s) unused in theorem `Nibble.YusterE.triangle_powersetCard_two_sup`:
+  [Fintype V]
+  [DecidableRel G.Adj]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] [DecidableRel G.Adj] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: Nibble/YusterBridgeFrac.lean:86:0: automatically included section variable(s) unused in theorem `Nibble.YusterE.mem_powersetCard_two_iff_subset`:
+  [Fintype V]
+  [DecidableEq V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] [DecidableEq V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [3683/3723] Replayed Nibble.CoreGapClusterCapacity
+warning: Nibble/CoreGapClusterCapacity.lean:36:0: automatically included section variable(s) unused in theorem `Nibble.AX1.card_crossEdges_le`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [3690/3723] Replayed Nibble.TripleEdgesThree
+warning: Nibble/TripleEdgesThree.lean:30:8: automatically included section variable(s) unused in theorem `_private.Nibble.TripleEdgesThree.0.Nibble.AX1.mem_crossPairs`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: Nibble/TripleEdgesThree.lean:114:8: automatically included section variable(s) unused in theorem `_private.Nibble.TripleEdgesThree.0.Nibble.AX1.edgeDensity_mul_le_card_interedges`:
+  [Fintype V]
+  [DecidableEq V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] [DecidableEq V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [3691/3723] Replayed Nibble.CoreGapBlockCover
+warning: Nibble/CoreGapBlockCover.lean:47:65: unused variable `hδ`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Nibble/CoreGapBlockCover.lean:47:78: unused variable `hδ1`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Nibble/CoreGapBlockCover.lean:57:58: unused variable `hδ`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Nibble/CoreGapBlockCover.lean:69:84: unused variable `hδ1`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Nibble/CoreGapBlockCover.lean:70:5: unused variable `hε₁0`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Nibble/CoreGapBlockCover.lean:166:67: unused variable `hδ0`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [3692/3723] Replayed Nibble.CoreGapCoverCapacity
+warning: Nibble/CoreGapCoverCapacity.lean:50:0: automatically included section variable(s) unused in theorem `Nibble.AX1.prod_subset_tripleRect_AB`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: Nibble/CoreGapCoverCapacity.lean:53:0: automatically included section variable(s) unused in theorem `Nibble.AX1.prod_subset_tripleRect_BA`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: Nibble/CoreGapCoverCapacity.lean:56:0: automatically included section variable(s) unused in theorem `Nibble.AX1.prod_subset_tripleRect_AC`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: Nibble/CoreGapCoverCapacity.lean:59:0: automatically included section variable(s) unused in theorem `Nibble.AX1.prod_subset_tripleRect_CA`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: Nibble/CoreGapCoverCapacity.lean:62:0: automatically included section variable(s) unused in theorem `Nibble.AX1.prod_subset_tripleRect_BC`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: Nibble/CoreGapCoverCapacity.lean:65:0: automatically included section variable(s) unused in theorem `Nibble.AX1.prod_subset_tripleRect_CB`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: Nibble/CoreGapCoverCapacity.lean:75:0: automatically included section variable(s) unused in theorem `Nibble.AX1.pairArea_nonneg`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: Nibble/CoreGapCoverCapacity.lean:81:0: automatically included section variable(s) unused in theorem `Nibble.AX1.rect_le_pairArea`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: Nibble/CoreGapCoverCapacity.lean:97:0: automatically included section variable(s) unused in theorem `Nibble.AX1.sum_card_inter_le`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+ℹ [3693/3723] Replayed Nibble.CoreGapClusterLP
+info: Nibble/CoreGapClusterLP.lean:292:0: 'Nibble.AX1.nu3star_regularityReduced_le_cluster_capacity' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Nibble/CoreGapClusterLP.lean:293:0: 'Nibble.AX1.nu3star_regularityReduced_le_dense_cluster_capacity' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+ℹ [3694/3723] Replayed Nibble.CoreGapBlowUp
+info: Nibble/CoreGapBlowUp.lean:700:0: 'Nibble.AX1.nu3star_blowUp' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [3695/3723] Replayed Nibble.CoreGapClusterHost
+info: Nibble/CoreGapClusterHost.lean:292:0: 'Nibble.AX1.hostTri_mem_cliqueFinset' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Nibble/CoreGapClusterHost.lean:293:0: 'Nibble.AX1.nu3star_regularityReduced_le_host' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [3697/3723] Replayed Nibble.CoreGapBlockAlloc
+info: Nibble/CoreGapBlockAlloc.lean:237:0: 'Nibble.AX1.cover_approx_of_gridSubTriple' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Nibble/CoreGapBlockAlloc.lean:238:0: 'Nibble.AX1.tripleRect_disjoint_of_clusters' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Nibble/CoreGapBlockAlloc.lean:239:0: 'Nibble.AX1.nu3star_le_cover_of_family_value' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [3698/3723] Replayed Nibble.ClusterTripleLP
+info: Nibble/ClusterTripleLP.lean:419:0: 'Nibble.AX1.exists_clusterTripleLP' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Nibble/ClusterTripleLP.lean:420:0: 'Nibble.AX1.exists_sparse_clusterTripleLP' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Nibble/ClusterTripleLP.lean:421:0: 'Nibble.AX1.exists_sparse_clusterTripleLP_nu3star' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Nibble/ClusterTripleLP.lean:422:0: 'Nibble.AX1.nu3star_le_cover_of_family_lp_value' depends on axioms: [propext, Classical.choice, Quot.sound]
+⚠ [3700/3723] Replayed Nibble.CoreGapBlockCoverCoupled
+warning: Nibble/CoreGapBlockCoverCoupled.lean:47:65: unused variable `hδ`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Nibble/CoreGapBlockCoverCoupled.lean:47:78: unused variable `hδ1`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Nibble/CoreGapBlockCoverCoupled.lean:57:58: unused variable `hδ`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Nibble/CoreGapBlockCoverCoupled.lean:69:84: unused variable `hδ1`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Nibble/CoreGapBlockCoverCoupled.lean:70:5: unused variable `hε₁0`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Nibble/CoreGapBlockCoverCoupled.lean:166:67: unused variable `hδ0`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+info: Nibble/CoreGapBlockCoverCoupled.lean:451:0: 'Nibble.AX1.subTripleDesignLocalResidual_of_blockCoverCoupled' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: Nibble/CoreGapBlockCoverCoupled.lean:452:0: 'Nibble.AX1.ax1_of_blockCoverCoupled' depends on axioms: [propext, Classical.choice, Quot.sound]
+⚠ [3704/3723] Replayed Nibble.CoarseCellCoupled
+warning: Nibble/CoarseCellCoupled.lean:210:41: unused variable `ha0`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+info: Nibble/CoarseCellCoupled.lean:1120:0: 'Nibble.AX1.blockCoverResidualCoupled_of_boxAllocation' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Nibble/CoarseCellCoupled.lean:1121:0: 'Nibble.AX1.ax1_of_boxAllocation' depends on axioms: [propext, Classical.choice, Quot.sound]
+⚠ [8315/8379] Replayed Nibble.YusterNu3
+warning: Nibble/YusterNu3.lean:28:0: automatically included section variable(s) unused in theorem `Nibble.YusterE.isMatching_empty`:
+  [Fintype V]
+  [DecidableEq V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] [DecidableEq V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [8377/8444] Replayed PaperIII.E_D
+warning: PaperIII/E_D.lean:33:5: unused variable `hirr`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: PaperIII/E_D.lean:108:5: unused variable `hr`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: PaperIII/E_D.lean:109:5: unused variable `hPB`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: PaperIII/E_D.lean:182:8: automatically included section variable(s) unused in theorem `_private.PaperIII.E_D.0.PaperIII.AppendixD.matching_saturates_max_left`:
+  [Fintype R]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype R] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: PaperIII/E_D.lean:183:5: unused variable `hdegU`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: PaperIII/E_D.lean:359:155: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+⚠ [8378/8444] Replayed PaperIII.E_3_1_LP
+warning: PaperIII/E_3_1_LP.lean:21:49: unused variable `hB`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: PaperIII/E_3_1_LP.lean:34:5: unused variable `hd`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: PaperIII/E_3_1_LP.lean:49:44: unused variable `hE`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: PaperIII/E_3_1_LP.lean:90:23: unused variable `hrd`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [8381/8444] Replayed PaperIII.DiracHamilton
+warning: PaperIII/DiracHamilton.lean:349:5: unused variable `hp`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [8384/8444] Replayed Ax2.Explore.NodupChain
+warning: Ax2/Explore/NodupChain.lean:78:39: unused variable `hst`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [8385/8444] Replayed Ax2.Explore.PathBalance
+warning: Ax2/Explore/PathBalance.lean:10:8: automatically included section variable(s) unused in theorem `_private.Ax2.Explore.PathBalance.0.Ax2.PathBalance.mem_pairs_iff'`:
+  [Fintype N]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype N] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: Ax2/Explore/PathBalance.lean:25:0: automatically included section variable(s) unused in theorem `Ax2.PathBalance.mem_pairs_iff`:
+  [Fintype N]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype N] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: Ax2/Explore/PathBalance.lean:148:8: automatically included section variable(s) unused in theorem `_private.Ax2.Explore.PathBalance.0.Ax2.PathBalance.pout_iff`:
+  [Fintype N]
+  [DecidableEq N]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype N] [DecidableEq N] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: Ax2/Explore/PathBalance.lean:177:8: automatically included section variable(s) unused in theorem `_private.Ax2.Explore.PathBalance.0.Ax2.PathBalance.pin_iff`:
+  [Fintype N]
+  [DecidableEq N]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype N] [DecidableEq N] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [8390/8444] Replayed PaperIII.Duality
+warning: PaperIII/Duality.lean:119:5: unused variable `e`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: PaperIII/Duality.lean:150:0: automatically included section variable(s) unused in theorem `PaperIII.le_nu3_of_packing`:
+  [DecidableRel H.Adj]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableRel H.Adj] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+ℹ [8393/8444] Replayed PaperIII.Factorization
+info: PaperIII/Factorization.lean:56:51: Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+⚠ [8396/8444] Replayed PaperIII.E_5
+warning: PaperIII/E_5.lean:74:4: Try this: intro a ha x hx H
+info: PaperIII/E_5.lean:153:66: Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+info: PaperIII/E_5.lean:154:78: Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+warning: PaperIII/E_5.lean:167:5: unused variable `hq`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: PaperIII/E_5.lean:193:19: unused variable `hq`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+info: PaperIII/E_5.lean:283:215: Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+info: PaperIII/E_5.lean:284:168: Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+info: PaperIII/E_5.lean:291:153: Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+warning: PaperIII/E_5.lean:485:6: Try this: intro a ha x hx H
+info: PaperIII/E_5.lean:528:171: Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+info: PaperIII/E_5.lean:529:157: Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+info: PaperIII/E_5.lean:575:99: Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+⚠ [8399/8444] Replayed PaperIII.E_7
+warning: PaperIII/E_7.lean:322:4: Try this: intro a ha x hx H
+warning: PaperIII/E_7.lean:409:5: unused variable `h72`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: PaperIII/E_7.lean:906:5: unused variable `hbrho`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+info: PaperIII/E_7.lean:1759:102: Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+info: PaperIII/E_7.lean:1766:70: Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+info: PaperIII/E_7.lean:1771:114: Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+ℹ [8401/8444] Replayed PaperIII.Prop_10_1
+info: PaperIII/Prop_10_1.lean:78:50: Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+info: PaperIII/Prop_10_1.lean:88:157: Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+info: PaperIII/Prop_10_1.lean:89:164: Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+info: PaperIII/Prop_10_1.lean:138:131: Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+info: PaperIII/Prop_10_1.lean:370:167: Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+⚠ [8403/8444] Replayed PaperIII.E_3_1_upper
+warning: PaperIII/E_3_1_upper.lean:37:23: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+⚠ [8405/8444] Replayed PaperIII.E_4_agg
+info: PaperIII/E_4_agg.lean:186:47: Try this:
+  [apply] ring_nf!
+  
+  The `ring!` tactic failed to close the goal. Use `ring_nf!` to obtain a normal form.
+    
+  Note that `ring!` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+info: PaperIII/E_4_agg.lean:202:404: Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+info: PaperIII/E_4_agg.lean:267:48: Try this:
+  [apply] ring_nf!
+  
+  The `ring!` tactic failed to close the goal. Use `ring_nf!` to obtain a normal form.
+    
+  Note that `ring!` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+warning: PaperIII/E_4_agg.lean:222:46: unused variable `hd`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: PaperIII/E_4_agg.lean:347:24: unused variable `e`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: PaperIII/E_4_agg.lean:350:24: unused variable `a`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: PaperIII/E_4_agg.lean:353:24: unused variable `e`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: PaperIII/E_4_agg.lean:356:24: unused variable `e`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [8406/8444] Replayed PaperIII.E_4_2_algebra
+warning: PaperIII/E_4_2_algebra.lean:59:49: unused variable `hQ2`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: PaperIII/E_4_2_algebra.lean:60:5: unused variable `hD0`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: PaperIII/E_4_2_algebra.lean:72:49: unused variable `hQ2`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: PaperIII/E_4_2_algebra.lean:73:5: unused variable `hD0`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: PaperIII/E_4_2_algebra.lean:73:19: unused variable `hDP`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: PaperIII/E_4_2_algebra.lean:85:49: unused variable `hQ2`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: PaperIII/E_4_2_algebra.lean:86:5: unused variable `hD0`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [8408/8444] Replayed PaperIII.E_4_3
+warning: PaperIII/E_4_3.lean:88:4: 'push_cast' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+⚠ [8410/8444] Replayed PaperIII.E_8_Core
+warning: PaperIII/E_8_Core.lean:733:13: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+⚠ [8416/8444] Replayed PaperIII.PaperImprovements
+warning: PaperIII/PaperImprovements.lean:165:7: unused variable `q`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: PaperIII/PaperImprovements.lean:177:7: unused variable `q`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: PaperIII/PaperImprovements.lean:427:4: Try `simp at hPair` instead of `simpa using hPair`
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+warning: PaperIII/PaperImprovements.lean:1300:18: unused variable `hβ`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: PaperIII/PaperImprovements.lean:1329:18: unused variable `hβ`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [8420/8444] Replayed Ax2.PartA.Spine
+warning: Ax2/PartA/Spine.lean:83:6: `Finset.filter_card_add_filter_neg_card_eq_card` has been deprecated: Use `Finset.card_filter_add_card_filter_not` instead
+warning: Ax2/PartA/Spine.lean:156:75: unused variable `huv`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [8422/8444] Replayed Ax2.PartB.BKLO.Gadget
+warning: Ax2/PartB/BKLO/Gadget.lean:40:0: automatically included section variable(s) unused in theorem `Ax2.BKLO.triEdges_card_of_isNClique`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [8423/8444] Replayed Ax2.Explore.DrossNet
+warning: Ax2/Explore/DrossNet.lean:209:8: automatically included section variable(s) unused in theorem `_private.Ax2.Explore.DrossNet.0.Ax2.DrossNet.card4_pairwise`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: Ax2/Explore/DrossNet.lean:231:0: automatically included section variable(s) unused in theorem `Ax2.DrossNet.k4pair_iff_clique`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: Ax2/Explore/DrossNet.lean:246:0: automatically included section variable(s) unused in theorem `Ax2.DrossNet.k4pair_symm`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: Ax2/Explore/DrossNet.lean:868:12: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+warning: Ax2/Explore/DrossNet.lean:1016:81: unused variable `hwΔ`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Ax2/Explore/DrossNet.lean:1538:62: unused variable `hwΔ`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Ax2/Explore/DrossNet.lean:1558:34: unused variable `hwΔ`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Ax2/Explore/DrossNet.lean:1561:31: unused variable `hTB2`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Ax2/Explore/DrossNet.lean:1576:51: unused variable `hwΔ`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Ax2/Explore/DrossNet.lean:1580:36: unused variable `hTB2`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Ax2/Explore/DrossNet.lean:1615:51: unused variable `hwΔ`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Ax2/Explore/DrossNet.lean:1619:36: unused variable `hTB2`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Ax2/Explore/DrossNet.lean:2615:55: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: Ax2/Explore/DrossNet.lean:2652:51: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: Ax2/Explore/DrossNet.lean:2669:33: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: Ax2/Explore/DrossNet.lean:2718:22: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: Ax2/Explore/DrossNet.lean:2785:5: unused variable `h`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Ax2/Explore/DrossNet.lean:2785:49: unused variable `hn20`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Ax2/Explore/DrossNet.lean:2886:5: unused variable `h`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Ax2/Explore/DrossNet.lean:2886:49: unused variable `hn20`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Ax2/Explore/DrossNet.lean:3176:51: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: Ax2/Explore/DrossNet.lean:3193:33: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: Ax2/Explore/DrossNet.lean:3242:22: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: Ax2/Explore/DrossNet.lean:3375:8: automatically included section variable(s) unused in theorem `_private.Ax2.Explore.DrossNet.0.Ax2.DrossNet.heavy_triangle_vertices_distinct`:
+  [Fintype V]
+  [DecidableEq V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] [DecidableEq V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [8424/8444] Replayed Ax2.PartB.BKLO.Bridge
+warning: Ax2/PartB/BKLO/Bridge.lean:24:0: automatically included section variable(s) unused in theorem `Ax2.BKLOBridge.triEdges_eq_cliqueEdges`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [8425/8444] Replayed PaperIII.Theorem_1_1_Final
+warning: PaperIII/Theorem_1_1_Final.lean:55:23: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+✔ [8428/8444] Built BKLO.PairCovering (26s)
+✔ [8429/8444] Built BKLO.ApexCover (26s)
+✔ [8430/8444] Built BKLO.PackingAbsorb (33s)
+✔ [8431/8444] Built BKLO.GreedyPairCover (33s)
+ℹ [8432/8444] Built PaperIII.PaperImprovementsGate (70s)
+info: PaperIII/PaperImprovementsGate.lean:10:0: PaperIII.Byproduct_factorization_assignment_packing (G : PaperIII.SplitGraph)
+  (σ : Fin (PaperIII.SplitGraph.rp G.p) ↪ Fin G.q) :
+  ∑ j, ↑(PaperIII.factorEdges G (Classical.choose ⋯) j (σ j)).card ≤ ↑G.nu3'
+info: PaperIII/PaperImprovementsGate.lean:11:0: 'PaperIII.Byproduct_factorization_assignment_packing' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: PaperIII/PaperImprovementsGate.lean:13:0: PaperIII.Byproduct_double_factorization_packing (G : PaperIII.SplitGraph) (hrp : PaperIII.SplitGraph.rp G.p ≤ G.q)
+  (hq2 : 2 ≤ G.q) :
+  1 / ↑G.q * ∑ i, ↑((G.d i).choose 2) +
+      ↑G.doubledFactors / ↑(PaperIII.SplitGraph.rp G.p) * ↑G.dispersionV / (↑G.q * (↑G.q - 1)) ≤
+    ↑G.nu3'
+info: PaperIII/PaperImprovementsGate.lean:14:0: 'PaperIII.Byproduct_double_factorization_packing' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: PaperIII/PaperImprovementsGate.lean:16:0: PaperIII.Byproduct_reserved_gain_packing_bound_subset (G : PaperIII.SplitGraph) (R : Finset (Fin G.p))
+  {J : Finset (Fin G.q)} (hb2 : 2 ≤ G.p - R.card) (hJrb : PaperIII.SplitGraph.rp (G.p - R.card) ≤ J.card)
+  (hbrho : PaperIII.SplitGraph.rp R.card ≤ G.p - R.card)
+  (hhost : ∀ i ∈ J, max R.card (J.card - PaperIII.SplitGraph.rp (G.p - R.card)) ≤ (G.N i \ R).card) :
+  ↑((G.p - R.card).choose 2) + ↑(R.card.choose 2) -
+        (↑(2 * (G.p - R.card) - 1) * ↑(PaperIII.ShiftedCenter.AJ G R J) - ↑(PaperIII.ShiftedCenter.A2J G R J)) /
+          (2 * ↑J.card) +
+      (1 - PaperIII.ShiftedCenter.thetaR G R) * ↑(J.card - PaperIII.SplitGraph.rp (G.p - R.card)) *
+          ↑(PaperIII.ShiftedCenter.BJ G R J) /
+        ↑J.card ≤
+    ↑G.nu3'
+info: PaperIII/PaperImprovementsGate.lean:17:0: 'PaperIII.Byproduct_reserved_gain_packing_bound_subset' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: PaperIII/PaperImprovementsGate.lean:19:0: PaperIII.Byproduct_short_corridor_constant_three_halves {p s : ℕ} (hp : 37 ≤ p) (hs : s ^ 2 ≤ 36 * p) :
+  ↑p / 2 + (↑s ^ 2 - 6 * ↑s + 3) / 12 ≤ 3 / 2 * (3 * ↑p - ↑s)
+info: PaperIII/PaperImprovementsGate.lean:20:0: 'PaperIII.Byproduct_short_corridor_constant_three_halves' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: PaperIII/PaperImprovementsGate.lean:22:0: PaperIII.Byproduct_low_corridor_phi_three_halves (G : PaperIII.SplitGraph) (hp : 37 ≤ G.p) (hs0 : 0 ≤ G.s)
+  (hs : ↑G.s ^ 2 ≤ 36 * ↑G.p) : ↑G.Phi ≤ ↑G.n ^ 2 / 6 + 3 / 2 * ↑G.n
+info: PaperIII/PaperImprovementsGate.lean:23:0: 'PaperIII.Byproduct_low_corridor_phi_three_halves' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: PaperIII/PaperImprovementsGate.lean:25:0: PaperIII.Byproduct_mid_corridor_phi_no_linear_loss (G : PaperIII.SplitGraph) (hp : 2304 ≤ G.p)
+  (hs : 36 * ↑G.p ≤ ↑G.s ^ 2) (hs8 : 8 * ↑G.s ≤ ↑G.p) (hdeg : ∀ (i : Fin G.q), (2 * ↑G.n - 1) / 6 + 1 < ↑(G.d i)) :
+  ↑G.Phi ≤ ↑G.n ^ 2 / 6
+info: PaperIII/PaperImprovementsGate.lean:26:0: 'PaperIII.Byproduct_mid_corridor_phi_no_linear_loss' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: PaperIII/PaperImprovementsGate.lean:28:0: PaperIII.Byproduct_high_ratio_phi_half_linear (G : PaperIII.SplitGraph) (hq : 2 * G.p ≤ G.q + 1) :
+  ↑G.Phi ≤ ↑G.n ^ 2 / 6 + ↑G.n / 2
+info: PaperIII/PaperImprovementsGate.lean:29:0: 'PaperIII.Byproduct_high_ratio_phi_half_linear' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: PaperIII/PaperImprovementsGate.lean:31:0: PaperIII.Byproduct_cp_le_Phi (G : PaperIII.SplitGraph) : ↑G.cp ≤ G.Phi
+info: PaperIII/PaperImprovementsGate.lean:32:0: 'PaperIII.Byproduct_cp_le_Phi' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: PaperIII/PaperImprovementsGate.lean:34:0: PaperIII.Byproduct_low_corridor_cp_three_halves (G : PaperIII.SplitGraph) (hp : 37 ≤ G.p) (hs0 : 0 ≤ G.s)
+  (hs : ↑G.s ^ 2 ≤ 36 * ↑G.p) : ↑G.cp ≤ ↑G.n ^ 2 / 6 + 3 / 2 * ↑G.n
+info: PaperIII/PaperImprovementsGate.lean:35:0: 'PaperIII.Byproduct_low_corridor_cp_three_halves' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: PaperIII/PaperImprovementsGate.lean:37:0: PaperIII.Byproduct_mid_corridor_cp_no_linear_loss (G : PaperIII.SplitGraph) (hp : 2304 ≤ G.p)
+  (hs : 36 * ↑G.p ≤ ↑G.s ^ 2) (hs8 : 8 * ↑G.s ≤ ↑G.p) (hdeg : ∀ (i : Fin G.q), (2 * ↑G.n - 1) / 6 + 1 < ↑(G.d i)) :
+  ↑G.cp ≤ ↑G.n ^ 2 / 6
+info: PaperIII/PaperImprovementsGate.lean:38:0: 'PaperIII.Byproduct_mid_corridor_cp_no_linear_loss' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: PaperIII/PaperImprovementsGate.lean:40:0: PaperIII.Byproduct_high_ratio_cp_half_linear (G : PaperIII.SplitGraph) (hq : 2 * G.p ≤ G.q + 1) :
+  ↑G.cp ≤ ↑G.n ^ 2 / 6 + ↑G.n / 2
+info: PaperIII/PaperImprovementsGate.lean:41:0: 'PaperIII.Byproduct_high_ratio_cp_half_linear' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: PaperIII/PaperImprovementsGate.lean:43:0: PaperIII.Byproduct_localization_from_eventual_high_degree (N : ℕ)
+  (heventual :
+    ∀ (G : PaperIII.SplitGraph),
+      N ≤ G.n → (∀ (i : Fin G.q), (2 * ↑G.n - 1) / 6 + 1 < ↑(G.d i)) → ↑G.Phi ≤ ↑G.n ^ 2 / 6 + 2 * ↑G.n)
+  (G : PaperIII.SplitGraph) : ↑G.Phi ≤ ↑G.n ^ 2 / 6 + max 2 ↑N * ↑G.n
+info: PaperIII/PaperImprovementsGate.lean:44:0: 'PaperIII.Byproduct_localization_from_eventual_high_degree' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: PaperIII/PaperImprovementsGate.lean:46:0: PaperIII.Byproduct_commonProfile_tau3Star_eq_F (p q d : ℕ) (hp : 3 ≤ p) (hq : 1 ≤ q) (hd : d ≤ p) :
+  PaperIII.tau3Star (PaperIII.commonProfile p q d).graph = ↑(PaperIII.SplitGraph.F p q d)
+info: PaperIII/PaperImprovementsGate.lean:47:0: 'PaperIII.Byproduct_commonProfile_tau3Star_eq_F' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: PaperIII/PaperImprovementsGate.lean:49:0: PaperIII.Byproduct_commonProfile_uniform_le_separated_of_quad (p q d : ℕ)
+  (h : 3 * ↑d ^ 2 - 3 * ↑d * ↑p - ↑d * ↑q + ↑p ^ 2 - ↑p ≥ 0) :
+  (PaperIII.SplitGraph.C2 ↑p + ↑q * ↑d) / 3 ≤ PaperIII.SplitGraph.C2 ↑d + PaperIII.SplitGraph.C2 (↑p - ↑d)
+info: PaperIII/PaperImprovementsGate.lean:50:0: 'PaperIII.Byproduct_commonProfile_uniform_le_separated_of_quad' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: PaperIII/PaperImprovementsGate.lean:52:0: PaperIII.Byproduct_commonProfile_uniform_le_hot_of_q_succ_le_d (p q d : ℕ) (h : q + 1 ≤ d) :
+  (PaperIII.SplitGraph.C2 ↑p + ↑q * ↑d) / 3 ≤
+    PaperIII.SplitGraph.C2 ↑d + (↑d * (↑p - ↑d) + PaperIII.SplitGraph.C2 (↑p - ↑d)) / 3
+info: PaperIII/PaperImprovementsGate.lean:53:0: 'PaperIII.Byproduct_commonProfile_uniform_le_hot_of_q_succ_le_d' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: PaperIII/PaperImprovementsGate.lean:55:0: PaperIII.Byproduct_commonProfile_separated_le_hot_of_upper_half (p q d : ℕ) (hhi : p ≤ 2 * d + 1) (hd : d ≤ p) :
+  PaperIII.SplitGraph.C2 ↑d + PaperIII.SplitGraph.C2 (↑p - ↑d) ≤
+    PaperIII.SplitGraph.C2 ↑d + (↑d * (↑p - ↑d) + PaperIII.SplitGraph.C2 (↑p - ↑d)) / 3
+info: PaperIII/PaperImprovementsGate.lean:56:0: 'PaperIII.Byproduct_commonProfile_separated_le_hot_of_upper_half' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: PaperIII/PaperImprovementsGate.lean:58:0: PaperIII.Byproduct_commonProfile_hot_le_separated_of_lower_half (p q d : ℕ) (hlo : 2 * d + 1 ≤ p) (hd : d ≤ p) :
+  PaperIII.SplitGraph.C2 ↑d + (↑d * (↑p - ↑d) + PaperIII.SplitGraph.C2 (↑p - ↑d)) / 3 ≤
+    PaperIII.SplitGraph.C2 ↑d + PaperIII.SplitGraph.C2 (↑p - ↑d)
+info: PaperIII/PaperImprovementsGate.lean:59:0: 'PaperIII.Byproduct_commonProfile_hot_le_separated_of_lower_half' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: PaperIII/PaperImprovementsGate.lean:61:0: PaperIII.Byproduct_commonProfile_tau3Star_eq_uniform_region (p q d : ℕ) (hp : 3 ≤ p) (hq : 1 ≤ q) (hd : d ≤ p)
+  (hAB : 3 * ↑d ^ 2 - 3 * ↑d * ↑p - ↑d * ↑q + ↑p ^ 2 - ↑p ≥ 0) (hAC : q + 1 ≤ d) :
+  PaperIII.tau3Star (PaperIII.commonProfile p q d).graph = ↑((PaperIII.SplitGraph.C2 ↑p + ↑q * ↑d) / 3)
+info: PaperIII/PaperImprovementsGate.lean:62:0: 'PaperIII.Byproduct_commonProfile_tau3Star_eq_uniform_region' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: PaperIII/PaperImprovementsGate.lean:64:0: PaperIII.Byproduct_commonProfile_tau3Star_eq_separated_region (p q d : ℕ) (hp : 3 ≤ p) (hq : 1 ≤ q) (hd : d ≤ p)
+  (hBA : PaperIII.SplitGraph.C2 ↑d + PaperIII.SplitGraph.C2 (↑p - ↑d) ≤ (PaperIII.SplitGraph.C2 ↑p + ↑q * ↑d) / 3)
+  (hBC : p ≤ 2 * d + 1) :
+  PaperIII.tau3Star (PaperIII.commonProfile p q d).graph =
+    ↑(PaperIII.SplitGraph.C2 ↑d + PaperIII.SplitGraph.C2 (↑p - ↑d))
+info: PaperIII/PaperImprovementsGate.lean:65:0: 'PaperIII.Byproduct_commonProfile_tau3Star_eq_separated_region' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: PaperIII/PaperImprovementsGate.lean:67:0: PaperIII.Byproduct_commonProfile_tau3Star_eq_hot_region (p q d : ℕ) (hp : 3 ≤ p) (hq : 1 ≤ q) (hd : d ≤ p)
+  (hCA :
+    PaperIII.SplitGraph.C2 ↑d + (↑d * (↑p - ↑d) + PaperIII.SplitGraph.C2 (↑p - ↑d)) / 3 ≤
+      (PaperIII.SplitGraph.C2 ↑p + ↑q * ↑d) / 3)
+  (hCB : 2 * d + 1 ≤ p) :
+  PaperIII.tau3Star (PaperIII.commonProfile p q d).graph =
+    ↑(PaperIII.SplitGraph.C2 ↑d + (↑d * (↑p - ↑d) + PaperIII.SplitGraph.C2 (↑p - ↑d)) / 3)
+info: PaperIII/PaperImprovementsGate.lean:68:0: 'PaperIII.Byproduct_commonProfile_tau3Star_eq_hot_region' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: PaperIII/PaperImprovementsGate.lean:70:0: PaperIII.Byproduct_commonProfile_tau3Star_eq_uniform_branch (p q d : ℕ) (hp : 3 ≤ p) (hq : 1 ≤ q) (hd : d ≤ p)
+  (hF : PaperIII.SplitGraph.F p q d = (PaperIII.SplitGraph.C2 ↑p + ↑q * ↑d) / 3) :
+  PaperIII.tau3Star (PaperIII.commonProfile p q d).graph = ↑((PaperIII.SplitGraph.C2 ↑p + ↑q * ↑d) / 3)
+info: PaperIII/PaperImprovementsGate.lean:71:0: 'PaperIII.Byproduct_commonProfile_tau3Star_eq_uniform_branch' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: PaperIII/PaperImprovementsGate.lean:73:0: PaperIII.Byproduct_commonProfile_tau3Star_eq_separated_branch (p q d : ℕ) (hp : 3 ≤ p) (hq : 1 ≤ q) (hd : d ≤ p)
+  (hF : PaperIII.SplitGraph.F p q d = PaperIII.SplitGraph.C2 ↑d + PaperIII.SplitGraph.C2 (↑p - ↑d)) :
+  PaperIII.tau3Star (PaperIII.commonProfile p q d).graph =
+    ↑(PaperIII.SplitGraph.C2 ↑d + PaperIII.SplitGraph.C2 (↑p - ↑d))
+info: PaperIII/PaperImprovementsGate.lean:74:0: 'PaperIII.Byproduct_commonProfile_tau3Star_eq_separated_branch' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: PaperIII/PaperImprovementsGate.lean:76:0: PaperIII.Byproduct_commonProfile_tau3Star_eq_hot_branch (p q d : ℕ) (hp : 3 ≤ p) (hq : 1 ≤ q) (hd : d ≤ p)
+  (hF :
+    PaperIII.SplitGraph.F p q d = PaperIII.SplitGraph.C2 ↑d + (↑d * (↑p - ↑d) + PaperIII.SplitGraph.C2 (↑p - ↑d)) / 3) :
+  PaperIII.tau3Star (PaperIII.commonProfile p q d).graph =
+    ↑(PaperIII.SplitGraph.C2 ↑d + (↑d * (↑p - ↑d) + PaperIII.SplitGraph.C2 (↑p - ↑d)) / 3)
+info: PaperIII/PaperImprovementsGate.lean:77:0: 'PaperIII.Byproduct_commonProfile_tau3Star_eq_hot_branch' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: PaperIII/PaperImprovementsGate.lean:79:0: PaperIII.Byproduct_unified_fractional_margin (G : PaperIII.SplitGraph) (hp : 3 ≤ G.p) (hq1 : 1 ≤ G.q)
+  (hq2 : G.q ≤ 2 * G.p) : ↑(G.T + PaperIII.SplitGraph.mu G.α * ↑G.p ^ 2 - ↑G.p / 4) ≤ PaperIII.tau3Star G.graph
+info: PaperIII/PaperImprovementsGate.lean:80:0: 'PaperIII.Byproduct_unified_fractional_margin' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: PaperIII/PaperImprovementsGate.lean:82:0: PaperIII.Byproduct_completeSplit_threshold_linear_bound (hAX1 : PaperIII.AX1Assumption)
+  (hAX2 : PaperIII.AX2Assumption) :
+  ∃ C,
+    ∀ (p : ℕ),
+      ↑(PaperIII.completeSplit p).cp ≤ ↑(PaperIII.completeSplit p).n ^ 2 / 6 + C * ↑(PaperIII.completeSplit p).n
+info: PaperIII/PaperImprovementsGate.lean:83:0: 'PaperIII.Byproduct_completeSplit_threshold_linear_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: PaperIII/PaperImprovementsGate.lean:85:0: PaperIII.Byproduct_completeSplit_vertex_count (p : ℕ) : (PaperIII.completeSplit p).n = 3 * p
+info: PaperIII/PaperImprovementsGate.lean:86:0: 'PaperIII.Byproduct_completeSplit_vertex_count' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: PaperIII/PaperImprovementsGate.lean:88:0: PaperIII.Byproduct_completeSplit_threshold_linear_bound_three_p (hAX1 : PaperIII.AX1Assumption)
+  (hAX2 : PaperIII.AX2Assumption) : ∃ C, ∀ (p : ℕ), ↑(PaperIII.completeSplit p).cp ≤ ↑(3 * p) ^ 2 / 6 + C * ↑(3 * p)
+info: PaperIII/PaperImprovementsGate.lean:89:0: 'PaperIII.Byproduct_completeSplit_threshold_linear_bound_three_p' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: PaperIII/PaperImprovementsGate.lean:91:0: PaperIII.Byproduct_completeSplit_degree (p : ℕ) (i : Fin (PaperIII.completeSplit p).q) :
+  (PaperIII.completeSplit p).d i = p
+info: PaperIII/PaperImprovementsGate.lean:92:0: 'PaperIII.Byproduct_completeSplit_degree' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: PaperIII/PaperImprovementsGate.lean:94:0: PaperIII.Byproduct_completeSplit_edgeCount (p : ℕ) : (PaperIII.completeSplit p).edgeCount = p.choose 2 + 2 * p * p
+info: PaperIII/PaperImprovementsGate.lean:95:0: 'PaperIII.Byproduct_completeSplit_edgeCount' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: PaperIII/PaperImprovementsGate.lean:97:0: PaperIII.Byproduct_rp_le_two_mul (p : ℕ) : PaperIII.SplitGraph.rp p ≤ 2 * p
+info: PaperIII/PaperImprovementsGate.lean:98:0: 'PaperIII.Byproduct_rp_le_two_mul' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: PaperIII/PaperImprovementsGate.lean:100:0: PaperIII.Byproduct_completeSplit_nu3_ge_clique_edges (p : ℕ) : ↑(p.choose 2) ≤ ↑(PaperIII.completeSplit p).nu3'
+info: PaperIII/PaperImprovementsGate.lean:101:0: 'PaperIII.Byproduct_completeSplit_nu3_ge_clique_edges' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: PaperIII/PaperImprovementsGate.lean:103:0: PaperIII.Byproduct_completeSplit_cp_le_exact_value (p : ℕ) :
+  ↑(PaperIII.completeSplit p).cp ≤ 2 * ↑p * ↑p - ↑(p.choose 2)
+info: PaperIII/PaperImprovementsGate.lean:104:0: 'PaperIII.Byproduct_completeSplit_cp_le_exact_value' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: PaperIII/PaperImprovementsGate.lean:106:0: PaperIII.Byproduct_completeSplit_cp_ge_exact_value (p : ℕ) :
+  2 * ↑p * ↑p - ↑(p.choose 2) ≤ ↑(PaperIII.completeSplit p).cp
+info: PaperIII/PaperImprovementsGate.lean:107:0: 'PaperIII.Byproduct_completeSplit_cp_ge_exact_value' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: PaperIII/PaperImprovementsGate.lean:109:0: PaperIII.Byproduct_completeSplit_cp_exact_value (p : ℕ) : ↑(PaperIII.completeSplit p).cp = 2 * ↑p * ↑p - ↑(p.choose 2)
+info: PaperIII/PaperImprovementsGate.lean:110:0: 'PaperIII.Byproduct_completeSplit_cp_exact_value' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: PaperIII/PaperImprovementsGate.lean:112:0: PaperIII.Byproduct_effective_low_corridor_cp_bound (G : PaperIII.SplitGraph) (hp : 37 ≤ G.p) (hs0 : 0 ≤ G.s)
+  (hs : ↑G.s ^ 2 ≤ 36 * ↑G.p) : ↑G.cp ≤ ↑G.n ^ 2 / 6 + 3 / 2 * ↑G.n
+info: PaperIII/PaperImprovementsGate.lean:113:0: 'PaperIII.Byproduct_effective_low_corridor_cp_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: PaperIII/PaperImprovementsGate.lean:115:0: PaperIII.Byproduct_dirac_perfect_matching_even {W : Type} [Fintype W] [DecidableEq W] (G : SimpleGraph W)
+  [DecidableRel G.Adj] (hev : Even (Fintype.card W)) (hcard : Fintype.card W ≤ 2 * G.minDegree) :
+  ∃ M, M.IsPerfectMatching
+info: PaperIII/PaperImprovementsGate.lean:116:0: 'PaperIII.Byproduct_dirac_perfect_matching_even' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: PaperIII/PaperImprovementsGate.lean:118:0: PaperIII.Byproduct_dirac_near_perfect_matching {W : Type} [Fintype W] [DecidableEq W] (G : SimpleGraph W)
+  [DecidableRel G.Adj] (hcard : Fintype.card W ≤ 2 * G.minDegree + 1) :
+  ∃ M, M.IsMatching ∧ Fintype.card W ≤ M.verts.toFinset.card + 1
+info: PaperIII/PaperImprovementsGate.lean:119:0: 'PaperIII.Byproduct_dirac_near_perfect_matching' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: PaperIII/PaperImprovementsGate.lean:121:0: PaperIII.Byproduct_dense_divisible_correction_edges {p : ℕ} (H : SimpleGraph (Fin p)) [DecidableRel H.Adj]
+  (hp : 2000 ≤ p) (hδ : ∀ (v : Fin p), 9 * p ≤ 10 * H.degree v) :
+  ∃ C,
+    ↑C ⊆ H.edgeSet ∧
+      C.card ≤ p + 8 ∧
+        (∀ (v : Fin p), PaperIII.incDeg C v ≤ 6) ∧
+          (∀ (v : Fin p), Even (H.degree v - PaperIII.incDeg C v)) ∧ (H.edgeFinset.card - C.card) % 3 = 0
+info: PaperIII/PaperImprovementsGate.lean:122:0: 'PaperIII.Byproduct_dense_divisible_correction_edges' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: PaperIII/PaperImprovementsGate.lean:124:0: PaperIII.Byproduct_dense_triangleSub_linearSized_data_of_minDeg {V : Type} [Fintype V] [DecidableEq V]
+  (G : SimpleGraph V) [DecidableRel G.Adj] (D : ℕ) (hD : ∀ (x : V), D ≤ G.degree x) (hcardD : Fintype.card V ≤ 2 * D)
+  {μ η d L : ℝ} :
+  0 ≤ η →
+    1 ≤ μ * d →
+      ↑(Fintype.card V) ≤ L * d →
+        (1 - μ) * d ≤ 2 * ↑D - ↑(Fintype.card V) →
+          ↑(Fintype.card V) ≤ (1 + μ) * d →
+            Hypergraph.NearlyRegularMost (Nibble.YusterE.triangleHypergraphSub G) d μ η ∧
+              Hypergraph.CodegreeBounded (Nibble.YusterE.triangleHypergraphSub G) (μ * d) ∧
+                (∀ (E : Nibble.YusterE.EdgeV G),
+                    ↑(Hypergraph.degree (Nibble.YusterE.triangleHypergraphSub G) E) ≤ (1 + μ) * d) ∧
+                  ↑(Fintype.card V) ≤ L * d
+info: PaperIII/PaperImprovementsGate.lean:125:0: 'PaperIII.Byproduct_dense_triangleSub_linearSized_data_of_minDeg' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: PaperIII/PaperImprovementsGate.lean:127:0: PaperIII.Byproduct_triangleSub_degree_eq_common_neighbors {V : Type} [Fintype V] [DecidableEq V] (G : SimpleGraph V)
+  [DecidableRel G.Adj] (E : Nibble.YusterE.EdgeV G) (u v : V) (huv : ↑E = {u, v}) :
+  Hypergraph.degree (Nibble.YusterE.triangleHypergraphSub G) E = (G.neighborFinset u ∩ G.neighborFinset v).card
+info: PaperIII/PaperImprovementsGate.lean:128:0: 'PaperIII.Byproduct_triangleSub_degree_eq_common_neighbors' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: PaperIII/PaperImprovementsGate.lean:130:0: PaperIII.Byproduct_triangleSub_degree_le_card {V : Type} [Fintype V] [DecidableEq V] (G : SimpleGraph V)
+  [DecidableRel G.Adj] (E : Nibble.YusterE.EdgeV G) :
+  Hypergraph.degree (Nibble.YusterE.triangleHypergraphSub G) E ≤ Fintype.card V
+info: PaperIII/PaperImprovementsGate.lean:131:0: 'PaperIII.Byproduct_triangleSub_degree_le_card' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: PaperIII/PaperImprovementsGate.lean:133:0: PaperIII.Byproduct_triangleSub_degree_ge_of_minDeg {V : Type} [Fintype V] [DecidableEq V] (G : SimpleGraph V)
+  [DecidableRel G.Adj] (E : Nibble.YusterE.EdgeV G) {D : ℕ} (hD : ∀ (x : V), D ≤ G.degree x) :
+  2 * D - Fintype.card V ≤ Hypergraph.degree (Nibble.YusterE.triangleHypergraphSub G) E
+info: PaperIII/PaperImprovementsGate.lean:134:0: 'PaperIII.Byproduct_triangleSub_degree_ge_of_minDeg' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: PaperIII/PaperImprovementsGate.lean:136:0: PaperIII.Byproduct_triangleSub_degree_window {V : Type} [Fintype V] [DecidableEq V] (G : SimpleGraph V)
+  [DecidableRel G.Adj] (E : Nibble.YusterE.EdgeV G) (D : ℕ) (hD : ∀ (x : V), D ≤ G.degree x)
+  (h2D : Fintype.card V ≤ 2 * D) {μ d : ℝ} (hlo : (1 - μ) * d ≤ 2 * ↑D - ↑(Fintype.card V))
+  (hhi : ↑(Fintype.card V) ≤ (1 + μ) * d) :
+  (1 - μ) * d ≤ ↑(Hypergraph.degree (Nibble.YusterE.triangleHypergraphSub G) E) ∧
+    ↑(Hypergraph.degree (Nibble.YusterE.triangleHypergraphSub G) E) ≤ (1 + μ) * d
+info: PaperIII/PaperImprovementsGate.lean:137:0: 'PaperIII.Byproduct_triangleSub_degree_window' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: PaperIII/PaperImprovementsGate.lean:139:0: PaperIII.Byproduct_triangleSub_degree_ge_eight_tenths {V : Type} [Fintype V] [DecidableEq V] (G : SimpleGraph V)
+  [DecidableRel G.Adj] (hmin : 9 * Fintype.card V ≤ 10 * G.minDegree) (E : Nibble.YusterE.EdgeV G) :
+  8 * Fintype.card V ≤ 10 * Hypergraph.degree (Nibble.YusterE.triangleHypergraphSub G) E
+info: PaperIII/PaperImprovementsGate.lean:140:0: 'PaperIII.Byproduct_triangleSub_degree_ge_eight_tenths' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: PaperIII/PaperImprovementsGate.lean:142:0: PaperIII.Byproduct_triangleSub_degree_real_window_nine_tenths {V : Type} [Fintype V] [DecidableEq V] (G : SimpleGraph V)
+  [DecidableRel G.Adj] (hmin : 9 * Fintype.card V ≤ 10 * G.minDegree) (E : Nibble.YusterE.EdgeV G) :
+  4 / 5 * ↑(Fintype.card V) ≤ ↑(Hypergraph.degree (Nibble.YusterE.triangleHypergraphSub G) E) ∧
+    ↑(Hypergraph.degree (Nibble.YusterE.triangleHypergraphSub G) E) ≤ ↑(Fintype.card V)
+info: PaperIII/PaperImprovementsGate.lean:143:0: 'PaperIII.Byproduct_triangleSub_degree_real_window_nine_tenths' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: PaperIII/PaperImprovementsGate.lean:145:0: PaperIII.Byproduct_triangleSub_degree_window_of_minDegree_ratio {V : Type} [Fintype V] [DecidableEq V]
+  (G : SimpleGraph V) [DecidableRel G.Adj] {b c : ℕ} (hcpos : 0 < c) (hdense : c ≤ 2 * b)
+  (hmin : b * Fintype.card V ≤ c * G.minDegree) (E : Nibble.YusterE.EdgeV G) :
+  (2 * b - c) * Fintype.card V ≤ c * Hypergraph.degree (Nibble.YusterE.triangleHypergraphSub G) E ∧
+    Hypergraph.degree (Nibble.YusterE.triangleHypergraphSub G) E ≤ Fintype.card V
+info: PaperIII/PaperImprovementsGate.lean:146:0: 'PaperIII.Byproduct_triangleSub_degree_window_of_minDegree_ratio' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: PaperIII/PaperImprovementsGate.lean:148:0: PaperIII.Byproduct_triangleSub_degree_window_mu_one_ninth {V : Type} [Fintype V] [DecidableEq V] (G : SimpleGraph V)
+  [DecidableRel G.Adj] (hmin : 9 * Fintype.card V ≤ 10 * G.minDegree) (E : Nibble.YusterE.EdgeV G) :
+  (1 - 1 / 9) * (9 / 10 * ↑(Fintype.card V)) ≤ ↑(Hypergraph.degree (Nibble.YusterE.triangleHypergraphSub G) E) ∧
+    ↑(Hypergraph.degree (Nibble.YusterE.triangleHypergraphSub G) E) ≤ (1 + 1 / 9) * (9 / 10 * ↑(Fintype.card V))
+info: PaperIII/PaperImprovementsGate.lean:149:0: 'PaperIII.Byproduct_triangleSub_degree_window_mu_one_ninth' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: PaperIII/PaperImprovementsGate.lean:151:0: PaperIII.Byproduct_triangleSub_nearlyRegular_nine_tenths {V : Type} [Fintype V] [DecidableEq V] (G : SimpleGraph V)
+  [DecidableRel G.Adj] (hmin : 9 * Fintype.card V ≤ 10 * G.minDegree) :
+  Hypergraph.NearlyRegular (Nibble.YusterE.triangleHypergraphSub G) (9 / 10 * ↑(Fintype.card V)) (1 / 9)
+info: PaperIII/PaperImprovementsGate.lean:152:0: 'PaperIII.Byproduct_triangleSub_nearlyRegular_nine_tenths' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: PaperIII/PaperImprovementsGate.lean:154:0: PaperIII.Byproduct_dense_triangleSub_linearSized_data_nine_tenths {V : Type} [Fintype V] [DecidableEq V]
+  (G : SimpleGraph V) [DecidableRel G.Adj] (hmin : 9 * Fintype.card V ≤ 10 * G.minDegree) (hcard : 10 ≤ Fintype.card V)
+  {η : ℝ} (hη : 0 ≤ η) :
+  Hypergraph.NearlyRegularMost (Nibble.YusterE.triangleHypergraphSub G) (9 / 10 * ↑(Fintype.card V)) (1 / 9) η ∧
+    Hypergraph.CodegreeBounded (Nibble.YusterE.triangleHypergraphSub G) (1 / 9 * (9 / 10 * ↑(Fintype.card V))) ∧
+      (∀ (E : Nibble.YusterE.EdgeV G),
+          ↑(Hypergraph.degree (Nibble.YusterE.triangleHypergraphSub G) E) ≤
+            (1 + 1 / 9) * (9 / 10 * ↑(Fintype.card V))) ∧
+        ↑(Fintype.card V) ≤ 10 / 9 * (9 / 10 * ↑(Fintype.card V))
+info: PaperIII/PaperImprovementsGate.lean:155:0: 'PaperIII.Byproduct_dense_triangleSub_linearSized_data_nine_tenths' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: PaperIII/PaperImprovementsGate.lean:157:0: PaperIII.Byproduct_dense_triangleSub_full_nibble_input_nine_tenths {V : Type} [Fintype V] [DecidableEq V]
+  (G : SimpleGraph V) [DecidableRel G.Adj] (hmin : 9 * Fintype.card V ≤ 10 * G.minDegree) (hcard : 10 ≤ Fintype.card V)
+  {η : ℝ} (hη : 0 ≤ η) :
+  Hypergraph.IsUniform (Nibble.YusterE.triangleHypergraphSub G) 3 ∧
+    Hypergraph.NearlyRegularMost (Nibble.YusterE.triangleHypergraphSub G) (9 / 10 * ↑(Fintype.card V)) (1 / 9) η ∧
+      Hypergraph.CodegreeBounded (Nibble.YusterE.triangleHypergraphSub G) (1 / 9 * (9 / 10 * ↑(Fintype.card V))) ∧
+        (∀ (E : Nibble.YusterE.EdgeV G),
+            ↑(Hypergraph.degree (Nibble.YusterE.triangleHypergraphSub G) E) ≤
+              (1 + 1 / 9) * (9 / 10 * ↑(Fintype.card V))) ∧
+          ↑(Fintype.card V) ≤ 10 / 9 * (9 / 10 * ↑(Fintype.card V))
+info: PaperIII/PaperImprovementsGate.lean:158:0: 'PaperIII.Byproduct_dense_triangleSub_full_nibble_input_nine_tenths' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: PaperIII/PaperImprovementsGate.lean:160:0: PaperIII.Byproduct_nearlyRegularMost_mono_mu_eta {V : Type} [Fintype V] [DecidableEq V] {H : Finset (Finset V)}
+  {d μ μ' η η' : ℝ} (hd : 0 ≤ d) (hμμ : μ ≤ μ') (hηη : η ≤ η') (hReg : Hypergraph.NearlyRegularMost H d μ η) :
+  Hypergraph.NearlyRegularMost H d μ' η'
+info: PaperIII/PaperImprovementsGate.lean:161:0: 'PaperIII.Byproduct_nearlyRegularMost_mono_mu_eta' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: PaperIII/PaperImprovementsGate.lean:163:0: PaperIII.Byproduct_nearlyRegularMost_mono_eta {V : Type} [Fintype V] [DecidableEq V] {H : Finset (Finset V)}
+  {d μ η η' : ℝ} (hηη : η ≤ η') (hReg : Hypergraph.NearlyRegularMost H d μ η) : Hypergraph.NearlyRegularMost H d μ η'
+info: PaperIII/PaperImprovementsGate.lean:164:0: 'PaperIII.Byproduct_nearlyRegularMost_mono_eta' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: PaperIII/PaperImprovementsGate.lean:166:0: PaperIII.Byproduct_nearlyRegular_to_nearlyRegularMost {V : Type} [Fintype V] [DecidableEq V] {H : Finset (Finset V)}
+  {d μ η : ℝ} (hη : 0 ≤ η) (hReg : Hypergraph.NearlyRegular H d μ) : Hypergraph.NearlyRegularMost H d μ η
+info: PaperIII/PaperImprovementsGate.lean:167:0: 'PaperIII.Byproduct_nearlyRegular_to_nearlyRegularMost' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: PaperIII/PaperImprovementsGate.lean:169:0: PaperIII.Byproduct_codegreeBounded_mono {V : Type} [DecidableEq V] {H : Finset (Finset V)} {C C' : ℝ} (hCC : C ≤ C')
+  (hCod : Hypergraph.CodegreeBounded H C) : Hypergraph.CodegreeBounded H C'
+info: PaperIII/PaperImprovementsGate.lean:170:0: 'PaperIII.Byproduct_codegreeBounded_mono' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: PaperIII/PaperImprovementsGate.lean:172:0: PaperIII.Byproduct_triangleHypergraphSub_codegreeBounded_of_one_le {V : Type} [Fintype V] [DecidableEq V]
+  (G : SimpleGraph V) [DecidableRel G.Adj] {C : ℝ} (hC : 1 ≤ C) :
+  Hypergraph.CodegreeBounded (Nibble.YusterE.triangleHypergraphSub G) C
+info: PaperIII/PaperImprovementsGate.lean:173:0: 'PaperIII.Byproduct_triangleHypergraphSub_codegreeBounded_of_one_le' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: PaperIII/PaperImprovementsGate.lean:175:0: PaperIII.Byproduct_dense_nine_tenths_nu3_lower_bound_of_compatible_nibble {V : Type} [Fintype V] [DecidableEq V]
+  (G : SimpleGraph V) [DecidableRel G.Adj] {β η d₀ : ℝ} (hβ : 0 < β) (hη : 0 < η)
+  (hNib :
+    ∀ {d : ℝ},
+      0 < d →
+        d₀ ≤ d →
+          Hypergraph.NearlyRegularMost (Nibble.YusterE.triangleHypergraphSub G) d (1 / 9) η →
+            Hypergraph.CodegreeBounded (Nibble.YusterE.triangleHypergraphSub G) (1 / 9 * d) →
+              ∃ M,
+                Hypergraph.IsMatching (Nibble.YusterE.triangleHypergraphSub G) M ∧
+                  (1 - β) * (↑(G.cliqueFinset 2).card / 3) ≤ ↑M.card)
+  (hmin : 9 * Fintype.card V ≤ 10 * G.minDegree) (hcard : 10 ≤ Fintype.card V) (hd₀ : d₀ ≤ 9 / 10 * ↑(Fintype.card V)) :
+  (1 - β) * (↑(G.cliqueFinset 2).card / 3) ≤ ↑(Nibble.YusterE.nu3 G)
+info: PaperIII/PaperImprovementsGate.lean:176:0: 'PaperIII.Byproduct_dense_nine_tenths_nu3_lower_bound_of_compatible_nibble' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: PaperIII/PaperImprovementsGate.lean:178:0: PaperIII.Byproduct_dense_nine_tenths_attained_matching_of_compatible_nibble {V : Type} [Fintype V] [DecidableEq V]
+  (G : SimpleGraph V) [DecidableRel G.Adj] {β η d₀ : ℝ} (hβ : 0 < β) (hη : 0 < η)
+  (hNib :
+    ∀ {d : ℝ},
+      0 < d →
+        d₀ ≤ d →
+          Hypergraph.NearlyRegularMost (Nibble.YusterE.triangleHypergraphSub G) d (1 / 9) η →
+            Hypergraph.CodegreeBounded (Nibble.YusterE.triangleHypergraphSub G) (1 / 9 * d) →
+              ∃ M,
+                Hypergraph.IsMatching (Nibble.YusterE.triangleHypergraphSub G) M ∧
+                  (1 - β) * (↑(G.cliqueFinset 2).card / 3) ≤ ↑M.card)
+  (hmin : 9 * Fintype.card V ≤ 10 * G.minDegree) (hcard : 10 ≤ Fintype.card V) (hd₀ : d₀ ≤ 9 / 10 * ↑(Fintype.card V)) :
+  ∃ M,
+    Hypergraph.IsMatching (Nibble.YusterE.triangleHypergraphSub G) M ∧
+      (1 - β) * (↑(G.cliqueFinset 2).card / 3) ≤ ↑M.card
+info: PaperIII/PaperImprovementsGate.lean:179:0: 'PaperIII.Byproduct_dense_nine_tenths_attained_matching_of_compatible_nibble' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: PaperIII/PaperImprovementsGate.lean:181:0: PaperIII.Byproduct_dense_nine_tenths_gap_of_compatible_nibble {V : Type} [Fintype V] [DecidableEq V] (G : SimpleGraph V)
+  [DecidableRel G.Adj] {ε η d₀ : ℝ} (hε : 0 < ε) (hη : 0 < η)
+  (hNib :
+    ∀ {d : ℝ},
+      0 < d →
+        d₀ ≤ d →
+          Hypergraph.NearlyRegularMost (Nibble.YusterE.triangleHypergraphSub G) d (1 / 9) η →
+            Hypergraph.CodegreeBounded (Nibble.YusterE.triangleHypergraphSub G) (1 / 9 * d) →
+              ∃ M,
+                Hypergraph.IsMatching (Nibble.YusterE.triangleHypergraphSub G) M ∧
+                  (1 - 6 * ε) * (↑(G.cliqueFinset 2).card / 3) ≤ ↑M.card)
+  (hmin : 9 * Fintype.card V ≤ 10 * G.minDegree) (hcard : 10 ≤ Fintype.card V) (hd₀ : d₀ ≤ 9 / 10 * ↑(Fintype.card V)) :
+  Nibble.YusterE.nu3star G - ↑(Nibble.YusterE.nu3 G) ≤ ε * ↑(Fintype.card V) ^ 2
+info: PaperIII/PaperImprovementsGate.lean:182:0: 'PaperIII.Byproduct_dense_nine_tenths_gap_of_compatible_nibble' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: PaperIII/PaperImprovementsGate.lean:184:0: PaperIII.Byproduct_dense_graph_only_gap_of_nibble_tolerance (hN : Nibble.NibbleTheoremMost) {V : Type} [Fintype V]
+  [DecidableEq V] (G : SimpleGraph V) [DecidableRel G.Adj] {ε : ℝ} (hε : 0 < ε) :
+  ∃ μ,
+    0 < μ ∧
+      ∃ η,
+        0 < η ∧
+          ∃ d₀,
+            0 < d₀ ∧
+              (d₀ ≤ ↑(Fintype.card V) / (1 + μ) →
+                1 ≤ μ * (↑(Fintype.card V) / (1 + μ)) →
+                  Fintype.card V ≤ 2 * G.minDegree →
+                    ↑(Fintype.card V) / (1 + μ) ≤ ↑G.minDegree →
+                      Nibble.YusterE.nu3star G - ↑(Nibble.YusterE.nu3 G) ≤ ε * ↑(Fintype.card V) ^ 2)
+info: PaperIII/PaperImprovementsGate.lean:185:0: 'PaperIII.Byproduct_dense_graph_only_gap_of_nibble_tolerance' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: PaperIII/PaperImprovementsGate.lean:187:0: PaperIII.Byproduct_triangle_LP_duality {V : Type} [Fintype V] [DecidableEq V] (G : SimpleGraph V) [DecidableRel G.Adj] :
+  Nibble.AX1.tau3Star G ≤ Nibble.YusterE.nu3star G
+info: PaperIII/PaperImprovementsGate.lean:188:0: 'PaperIII.Byproduct_triangle_LP_duality' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: PaperIII/PaperImprovementsGate.lean:190:0: PaperIII.Byproduct_triangleHypergraphE_uniform {V : Type} [Fintype V] [DecidableEq V] (G : SimpleGraph V)
+  [DecidableRel G.Adj] : Hypergraph.IsUniform (Nibble.YusterE.triangleHypergraphE G) 3
+info: PaperIII/PaperImprovementsGate.lean:191:0: 'PaperIII.Byproduct_triangleHypergraphE_uniform' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: PaperIII/PaperImprovementsGate.lean:193:0: PaperIII.Byproduct_triangleHypergraphE_codegree_le_one {V : Type} [Fintype V] [DecidableEq V] (G : SimpleGraph V)
+  [DecidableRel G.Adj] {e e' : Finset V} (hne : e ≠ e') :
+  Hypergraph.codegree (Nibble.YusterE.triangleHypergraphE G) e e' ≤ 1
+info: PaperIII/PaperImprovementsGate.lean:194:0: 'PaperIII.Byproduct_triangleHypergraphE_codegree_le_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: PaperIII/PaperImprovementsGate.lean:196:0: PaperIII.Byproduct_triangleHypergraphE_degree {V : Type} [Fintype V] [DecidableEq V] (G : SimpleGraph V)
+  [DecidableRel G.Adj] (e : Finset V) :
+  Hypergraph.degree (Nibble.YusterE.triangleHypergraphE G) e = {t ∈ G.cliqueFinset 3 | e ∈ Finset.powersetCard 2 t}.card
+info: PaperIII/PaperImprovementsGate.lean:197:0: 'PaperIII.Byproduct_triangleHypergraphE_degree' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: PaperIII/PaperImprovementsGate.lean:199:0: PaperIII.Byproduct_nu3_achieved {V : Type} [Fintype V] [DecidableEq V] (G : SimpleGraph V) [DecidableRel G.Adj] :
+  ∃ M, Hypergraph.IsMatching (Nibble.YusterE.triangleHypergraphE G) M ∧ M.card = Nibble.YusterE.nu3 G
+info: PaperIII/PaperImprovementsGate.lean:200:0: 'PaperIII.Byproduct_nu3_achieved' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: PaperIII/PaperImprovementsGate.lean:202:0: PaperIII.Byproduct_nu3_le_nu3star {V : Type} [Fintype V] [DecidableEq V] (G : SimpleGraph V) [DecidableRel G.Adj] :
+  ↑(Nibble.YusterE.nu3 G) ≤ Nibble.YusterE.nu3star G
+info: PaperIII/PaperImprovementsGate.lean:203:0: 'PaperIII.Byproduct_nu3_le_nu3star' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: PaperIII/PaperImprovementsGate.lean:205:0: PaperIII.Byproduct_nu3star_le_edges_div_three {V : Type} [Fintype V] [DecidableEq V] (G : SimpleGraph V)
+  [DecidableRel G.Adj] : Nibble.YusterE.nu3star G ≤ ↑(G.cliqueFinset 2).card / 3
+info: PaperIII/PaperImprovementsGate.lean:206:0: 'PaperIII.Byproduct_nu3star_le_edges_div_three' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: PaperIII/PaperImprovementsGate.lean:208:0: PaperIII.Byproduct_edge_card_le_card_sq_div_two {V : Type} [Fintype V] [DecidableEq V] (G : SimpleGraph V)
+  [DecidableRel G.Adj] : ↑(G.cliqueFinset 2).card ≤ ↑(Fintype.card V) ^ 2 / 2
+info: PaperIII/PaperImprovementsGate.lean:209:0: 'PaperIII.Byproduct_edge_card_le_card_sq_div_two' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: PaperIII/PaperImprovementsGate.lean:211:0: PaperIII.Byproduct_nu3star_sub_nu3_le_edge_gap_most (hN : Nibble.NibbleTheoremMost) {V : Type} [Fintype V]
+  [DecidableEq V] (G : SimpleGraph V) [DecidableRel G.Adj] {β : ℝ} (hβ : 0 < β) :
+  ∃ μ,
+    0 < μ ∧
+      ∃ η,
+        0 < η ∧
+          ∃ d₀,
+            0 < d₀ ∧
+              ∀ {d : ℝ},
+                0 < d →
+                  d₀ ≤ d →
+                    Hypergraph.NearlyRegularMost (Nibble.YusterE.triangleHypergraphSub G) d μ η →
+                      Hypergraph.CodegreeBounded (Nibble.YusterE.triangleHypergraphSub G) (μ * d) →
+                        Nibble.YusterE.nu3star G - ↑(Nibble.YusterE.nu3 G) ≤ β * ↑(G.cliqueFinset 2).card / 3
+info: PaperIII/PaperImprovementsGate.lean:212:0: 'PaperIII.Byproduct_nu3star_sub_nu3_le_edge_gap_most' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: PaperIII/PaperImprovementsGate.lean:214:0: PaperIII.Byproduct_edge_gap_mono {V : Type} [Fintype V] [DecidableEq V] (G : SimpleGraph V) [DecidableRel G.Adj]
+  {β β' : ℝ} (hβle : β ≤ β')
+  (hgap : Nibble.YusterE.nu3star G - ↑(Nibble.YusterE.nu3 G) ≤ β * ↑(G.cliqueFinset 2).card / 3) :
+  Nibble.YusterE.nu3star G - ↑(Nibble.YusterE.nu3 G) ≤ β' * ↑(G.cliqueFinset 2).card / 3
+info: PaperIII/PaperImprovementsGate.lean:215:0: 'PaperIII.Byproduct_edge_gap_mono' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: PaperIII/PaperImprovementsGate.lean:217:0: PaperIII.Byproduct_nu3star_sub_nu3_le_eps_most_fine_edges (hN : Nibble.NibbleTheoremMost) {V : Type} [Fintype V]
+  [DecidableEq V] (G : SimpleGraph V) [DecidableRel G.Adj] {ε : ℝ} (hε : 0 < ε) :
+  ∃ μ,
+    0 < μ ∧
+      ∃ η,
+        0 < η ∧
+          ∃ d₀,
+            0 < d₀ ∧
+              ∀ {d : ℝ},
+                0 < d →
+                  d₀ ≤ d →
+                    Hypergraph.NearlyRegularMost (Nibble.YusterE.triangleHypergraphSub G) d μ η →
+                      Hypergraph.CodegreeBounded (Nibble.YusterE.triangleHypergraphSub G) (μ * d) →
+                        Nibble.YusterE.nu3star G - ↑(Nibble.YusterE.nu3 G) ≤ ε * ↑(Fintype.card V) ^ 2
+info: PaperIII/PaperImprovementsGate.lean:218:0: 'PaperIII.Byproduct_nu3star_sub_nu3_le_eps_most_fine_edges' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: PaperIII/PaperImprovementsGate.lean:220:0: PaperIII.Byproduct_nu3_lower_bound_attained_most (hN : Nibble.NibbleTheoremMost) {V : Type} [Fintype V] [DecidableEq V]
+  (G : SimpleGraph V) [DecidableRel G.Adj] {β : ℝ} (hβ : 0 < β) :
+  ∃ μ,
+    0 < μ ∧
+      ∃ η,
+        0 < η ∧
+          ∃ d₀,
+            0 < d₀ ∧
+              ∀ {d : ℝ},
+                0 < d →
+                  d₀ ≤ d →
+                    Hypergraph.NearlyRegularMost (Nibble.YusterE.triangleHypergraphSub G) d μ η →
+                      Hypergraph.CodegreeBounded (Nibble.YusterE.triangleHypergraphSub G) (μ * d) →
+                        ∃ M,
+                          Hypergraph.IsMatching (Nibble.YusterE.triangleHypergraphE G) M ∧
+                            (1 - β) * (↑(G.cliqueFinset 2).card / 3) ≤ ↑M.card
+info: PaperIII/PaperImprovementsGate.lean:221:0: 'PaperIII.Byproduct_nu3_lower_bound_attained_most' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: PaperIII/PaperImprovementsGate.lean:223:0: PaperIII.Byproduct_card_EdgeV {V : Type} [Fintype V] [DecidableEq V] (G : SimpleGraph V) [DecidableRel G.Adj] :
+  Fintype.card (Nibble.YusterE.EdgeV G) = (G.cliqueFinset 2).card
+info: PaperIII/PaperImprovementsGate.lean:224:0: 'PaperIII.Byproduct_card_EdgeV' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: PaperIII/PaperImprovementsGate.lean:226:0: PaperIII.Byproduct_triangleHypergraphSub_uniform {V : Type} [Fintype V] [DecidableEq V] (G : SimpleGraph V)
+  [DecidableRel G.Adj] : Hypergraph.IsUniform (Nibble.YusterE.triangleHypergraphSub G) 3
+info: PaperIII/PaperImprovementsGate.lean:227:0: 'PaperIII.Byproduct_triangleHypergraphSub_uniform' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: PaperIII/PaperImprovementsGate.lean:229:0: PaperIII.Byproduct_triangleHypergraphSub_codegree_le_one {V : Type} [Fintype V] [DecidableEq V] (G : SimpleGraph V)
+  [DecidableRel G.Adj] {E E' : Nibble.YusterE.EdgeV G} (hne : E ≠ E') :
+  Hypergraph.codegree (Nibble.YusterE.triangleHypergraphSub G) E E' ≤ 1
+info: PaperIII/PaperImprovementsGate.lean:230:0: 'PaperIII.Byproduct_triangleHypergraphSub_codegree_le_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: PaperIII/PaperImprovementsGate.lean:232:0: PaperIII.Byproduct_triangleHypergraphSub_card {V : Type} [Fintype V] [DecidableEq V] (G : SimpleGraph V)
+  [DecidableRel G.Adj] : (Nibble.YusterE.triangleHypergraphSub G).card = (G.cliqueFinset 3).card
+info: PaperIII/PaperImprovementsGate.lean:233:0: 'PaperIII.Byproduct_triangleHypergraphSub_card' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: PaperIII/PaperImprovementsGate.lean:235:0: PaperIII.Byproduct_sum_degree_triangleHypergraphSub {V : Type} [Fintype V] [DecidableEq V] (G : SimpleGraph V)
+  [DecidableRel G.Adj] : ∑ E, Hypergraph.degree (Nibble.YusterE.triangleHypergraphSub G) E = 3 * (G.cliqueFinset 3).card
+info: PaperIII/PaperImprovementsGate.lean:236:0: 'PaperIII.Byproduct_sum_degree_triangleHypergraphSub' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: PaperIII/PaperImprovementsGate.lean:238:0: PaperIII.Byproduct_triangleHypergraphSub_matching_card_le_nu3 {V : Type} [Fintype V] [DecidableEq V] (G : SimpleGraph V)
+  [DecidableRel G.Adj] {M : Finset (Finset (Nibble.YusterE.EdgeV G))}
+  (hM : Hypergraph.IsMatching (Nibble.YusterE.triangleHypergraphSub G) M) : M.card ≤ Nibble.YusterE.nu3 G
+info: PaperIII/PaperImprovementsGate.lean:239:0: 'PaperIII.Byproduct_triangleHypergraphSub_matching_card_le_nu3' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: PaperIII/PaperImprovementsGate.lean:241:0: PaperIII.Byproduct_triangleHypergraphSub_matching_card_le_nu3_real {V : Type} [Fintype V] [DecidableEq V]
+  (G : SimpleGraph V) [DecidableRel G.Adj] {M : Finset (Finset (Nibble.YusterE.EdgeV G))}
+  (hM : Hypergraph.IsMatching (Nibble.YusterE.triangleHypergraphSub G) M) : ↑M.card ≤ ↑(Nibble.YusterE.nu3 G)
+info: PaperIII/PaperImprovementsGate.lean:242:0: 'PaperIII.Byproduct_triangleHypergraphSub_matching_card_le_nu3_real' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: PaperIII/PaperImprovementsGate.lean:244:0: PaperIII.Byproduct_almostPerfectMatching_uniform (hN : Nibble.NibbleTheoremMost) (r : ℕ) (hr : 2 ≤ r) {β : ℝ}
+  (hβ : 0 < β) :
+  ∃ μ,
+    0 < μ ∧
+      ∃ η,
+        0 < η ∧
+          ∃ d₀,
+            0 < d₀ ∧
+              ∀ {W : Type} [inst : Fintype W] [inst_1 : DecidableEq W] (H : Finset (Finset W)) (d : ℝ),
+                0 < d →
+                  d₀ ≤ d →
+                    Hypergraph.IsUniform H r →
+                      Hypergraph.NearlyRegularMost H d μ η →
+                        Hypergraph.CodegreeBounded H (μ * d) →
+                          ∃ M, Hypergraph.IsMatching H M ∧ (1 - β) * (↑(Fintype.card W) / ↑r) ≤ ↑M.card
+info: PaperIII/PaperImprovementsGate.lean:245:0: 'PaperIII.Byproduct_almostPerfectMatching_uniform' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: PaperIII/PaperImprovementsGate.lean:247:0: PaperIII.Byproduct_nu3star_sub_nu3_le_eps_strict (hN : Nibble.NibbleTheoremMost) {V : Type} [Fintype V] [DecidableEq V]
+  (G : SimpleGraph V) [DecidableRel G.Adj] {ε : ℝ} (hε : 0 < ε) :
+  ∃ μ,
+    0 < μ ∧
+      ∃ η,
+        0 < η ∧
+          ∃ d₀,
+            0 < d₀ ∧
+              ∀ {d : ℝ},
+                0 < d →
+                  d₀ ≤ d →
+                    Hypergraph.NearlyRegular (Nibble.YusterE.triangleHypergraphSub G) d μ →
+                      Hypergraph.CodegreeBounded (Nibble.YusterE.triangleHypergraphSub G) (μ * d) →
+                        Nibble.YusterE.nu3star G - ↑(Nibble.YusterE.nu3 G) ≤ ε * ↑(Fintype.card V) ^ 2
+info: PaperIII/PaperImprovementsGate.lean:248:0: 'PaperIII.Byproduct_nu3star_sub_nu3_le_eps_strict' depends on axioms: [propext, Classical.choice, Quot.sound]
+✔ [8433/8444] Built BKLO.Fano (30s)
+✔ [8434/8444] Built BKLO.TriangleCompletion (37s)
+✔ [8435/8444] Built BKLO.PackingReservoir (15s)
+✔ [8436/8444] Built BKLO.ClusterReservoir (15s)
+✔ [8437/8444] Built BKLO.ClusterCompletion (22s)
+✔ [8438/8444] Built BKLO.ClusterObstruction (16s)
+✔ [8439/8444] Built BKLO.CrossPatch (15s)
+✔ [8440/8444] Built BKLO.CornerRouting (15s)
+✔ [8441/8444] Built BKLO.CornerLimit (21s)
+✔ [8442/8444] Built BKLO.CornerHexagon (18s)
+✔ [8443/8444] Built BKLO.ClusterWeb (15s)
+✔ [8444/8444] Built PaperIII.Obstructions (14s)
+Build completed successfully (8444 jobs).

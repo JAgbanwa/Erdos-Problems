@@ -1,0 +1,16 @@
+Block B external-input faithfulness check (limited)
+
+AX1 local statement: uniformly over graphs, nu3*(G)-nu3(G)=o(|V(G)|^2).
+Local source scan: manuscript and ledger attribute this to Haxell-Rodl / Yuster.
+External web evidence gathered during audit:
+- Wiley page for Haxell-Nagle-Rodl (2003) states integer/fractional packing gap o(|V|^3) for fixed 3-uniform hypergraphs and cites Haxell-Rodl (2001) for graphs.
+- A recent paper excerpt states the Haxell-Rodl theorem for triangle packings as nu*(G)-nu(G)<=epsilon n^2 for all sufficiently large n-vertex graphs.
+
+AX2 local statement: triangle-divisible, large graph, delta >= (0.9+epsilon)n has exact triangle decomposition.
+External web evidence gathered during audit:
+- SIAM page for Dross, Fractional Triangle Decompositions in Graphs with Large Minimum Degree, says delta at least 0.9n gives fractional triangle decomposition and, together with Barber-Kuhn-Lo-Osthus, implies every large enough triangle-divisible graph with delta >= (0.9+epsilon)n admits a triangle decomposition.
+
+Verdict: PLAUSIBLE/limited. I did not retrieve and line-by-line compare the full PDFs, so this is not a final bibliographic certification.
+Sources:
+https://onlinelibrary.wiley.com/doi/abs/10.1002/rsa.10075
+https://epubs.siam.org/doi/10.1137/15M1014310

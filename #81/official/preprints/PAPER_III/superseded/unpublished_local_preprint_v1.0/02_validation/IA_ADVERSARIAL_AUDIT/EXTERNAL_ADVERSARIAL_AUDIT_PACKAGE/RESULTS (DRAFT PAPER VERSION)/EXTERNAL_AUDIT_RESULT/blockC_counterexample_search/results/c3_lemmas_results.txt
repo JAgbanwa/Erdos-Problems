@@ -1,0 +1,21 @@
+Generated 821 distinct split-graph instances.
+Instance loop done in 0s; exact B&B escalations: 0; CBC cross-checks: 0, mismatches: 0
+
+  E-5.1   : applicable   443  confirmed   443  REFUTED 0
+  Cor5.3  : applicable   443  confirmed   443  REFUTED 0
+  L5.2    : applicable   443  confirmed   443  REFUTED 0
+  L7.1    : applicable   525  confirmed   525  REFUTED 0
+
+Forced exact-nu3 sample: 40 instances re-tested against the EXACT optimum  [7s]
+    exact violations: 0
+    bound-target vacuity on the sample: 24 targets <= 0 (trivially met), 94 strictly positive (informative)
+    CBC cross-checks total: 40, mismatches: 0
+
+C5 sharpness K_p v bar-K_2p, p=3..24: PASS — nu3 = C(p,2) certified (packing + clique-edge argument), Phi = n^2/6 + n/6 exact
+    (Phi - n^2/6)/n on the family: 1/6 (= 1/6, the claimed linear term)
+
+C5b exact B&B confirms nu3(K_p v bar-K_2p) == C(p,2) for p=3,4: PASS
+
+========================================================================
+VERDICT C3/C5: PASS — no counterexample to E-5.1 / Cor 5.3 / L5.2 / L7.1 / sharpness
+========================================================================

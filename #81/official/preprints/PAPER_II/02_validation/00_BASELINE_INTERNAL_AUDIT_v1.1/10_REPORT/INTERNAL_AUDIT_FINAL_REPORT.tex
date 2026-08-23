@@ -1,0 +1,53 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{booktabs,longtable,array,microtype}
+\usepackage[T1]{fontenc}\usepackage{lmodern}
+\usepackage[hidelinks]{hyperref}
+\setlength{\parindent}{0pt}\setlength{\parskip}{0.55em}
+\title{Paper II v1.1 Internal Audit Final Report}
+\author{Internal author-side audit}
+\date{21 August 2026 --- Overall verdict: PASS}
+\begin{document}\maketitle
+\textbf{Protocol:} \texttt{INTERNAL\_AUDIT\_STANDARD\_v1.2}.\\
+\textbf{Independence:} internal / not external.\\
+\textbf{Lean execution:} not rerun; frozen evidence reviewed only.
+
+The audit covered claims, exact and bounded mathematical checks, static
+manuscript-to-Lean correspondence, recorded build evidence, bilingual and
+publication artifacts, prior art and package integrity.
+
+\section{Frozen target}
+English SHA-256: \texttt{361802b5398eb9e3cc03b4ca5e591ce7}\linebreak\texttt{1987979b02142826054eb5f6a315ded6}.\\
+Spanish SHA-256: \texttt{26ddd0d08b08e54bfe57e43a9733f456}\linebreak\texttt{f94f617e8cfc98e3604b34a3dc10273e}.\\
+Lean 4.28.0; Mathlib \texttt{8f9d9cff6bd728b17a24e163c9402775d9e6a365}.
+
+\section{Gate results}
+\begin{longtable}{p{.18\linewidth}p{.20\linewidth}p{.52\linewidth}}
+\toprule Gate & Verdict & Evidence \\ \midrule
+G0 Target & PASS & 6 artifact, 45 source and 62 package hashes; archive sidecar. \\
+G1 Claims & PASS & Exact theorem, branches, degeneracies, scope and quantifiers. \\
+G2 Mathematics & PASS after harness correction & 195 cover LPs; $n=1\ldots5000$; 139 chordal graphs; 931 copy pairs. \\
+G3 Formal conformance & PASS & Unconditional \texttt{PaperII.theorem\_1\_2}; auxiliary surfaces matched. \\
+G4 Recorded build & PASS & 8,061 main + 8,032 supplement; 16 axiom outputs; no Lean rerun. \\
+G5 Bilingual & PASS & Headings, formulas, 3 figures, tables and 23 identifiers aligned. \\
+G6 TeX/PDF & PASS & 24/24 pages, embedded fonts, full visual inspection. \\
+G7 Prior art & PASS internal & No earlier same exact finite functional/extremizer result identified. \\
+G8 Package & PASS & Active/superseded and evidence structure consistent. \\
+\bottomrule\end{longtable}
+
+\section{\hspace{0.5em}Harness correction}
+The first G2 attempt over-scoped a saturated-branch argmax statement to include
+the degenerate tie at $n=2$. The harness domain was corrected and the failed
+attempt retained. This was a test-specification correction, not a manuscript
+or mathematical correction. No manuscript artifact required modification.
+
+\section{Prior art and external gates}
+No earlier exact maximum of the fractional functional over chordal graphs was
+identified internally; the integral Erd\H{o}s \#81 problem remains open.
+Specialist prior-art review, independent rebuild, external adversarial audit,
+peer review, tag and release approval remain open.
+
+\section{Overall verdict}
+\textbf{PASS.} All nine blocking internal gates pass. There are zero unresolved
+blocker or major findings.
+\end{document}

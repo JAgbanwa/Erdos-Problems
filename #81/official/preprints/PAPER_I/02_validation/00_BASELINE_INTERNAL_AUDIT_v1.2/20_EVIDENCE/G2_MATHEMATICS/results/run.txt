@@ -1,0 +1,17 @@
+{
+  "paper": "PAPER_I",
+  "claim_gate": "G2_MATHEMATICS",
+  "target_sha256": "da7e48196a03a8698a9c5a503976b43780cb9e5309558f1b7d3e06b4af35ee9e",
+  "status": "PASS",
+  "exact_symbolic_identities": {
+    "passed": 5,
+    "total": 5
+  },
+  "tightness_boundary_regression_instances": 561,
+  "orbit_program_instances": 480,
+  "final_assembly_exact_grid_instances": 99671,
+  "split_graph_lp_falsification_instances": 1179,
+  "complete_split_sharpness_instances": 9,
+  "scope": "Exact identities and exact-rational assembly checks; bounded LP falsification is corroborating evidence, not an unbounded proof."
+}
+EXIT_CODE=0

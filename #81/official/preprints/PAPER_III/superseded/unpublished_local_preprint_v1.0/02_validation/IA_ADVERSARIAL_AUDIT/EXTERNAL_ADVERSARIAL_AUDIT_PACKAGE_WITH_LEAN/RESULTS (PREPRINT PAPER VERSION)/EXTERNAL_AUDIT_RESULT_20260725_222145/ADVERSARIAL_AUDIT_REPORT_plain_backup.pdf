@@ -1,0 +1,80 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [3 0 R] /Count 1 >>
+endobj
+3 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 4 0 R >> >> /Contents 5 0 R >>
+endobj
+4 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+5 0 obj
+<< /Length 2790 >>
+stream
+BT
+/F1 10 Tf
+50 780 Td
+(External Adversarial Audit Report) Tj
+0 -14 Td () Tj
+0 -14 Td (# External Adversarial Audit Report) Tj
+0 -14 Td () Tj
+0 -14 Td (## Executive verdict) Tj
+0 -14 Td () Tj
+0 -14 Td (PASS_WITH_OBSERVATIONS) Tj
+0 -14 Td () Tj
+0 -14 Td (The previous blocker was environmental: Block F had not completed. In this local rerun, Lean completed successfu) Tj
+0 -14 Td () Tj
+0 -14 Td (- `lake exe cache get`: completed successfully.) Tj
+0 -14 Td (- `lake build`: completed successfully, 8058 jobs.) Tj
+0 -14 Td (- `lake env lean gate.lean`: exit 0, expected axiom/signature report.) Tj
+0 -14 Td () Tj
+0 -14 Td (No blocking defect was found in the completed checks. The only observation is coverage-related: Block B was a li) Tj
+0 -14 Td () Tj
+0 -14 Td (## Per-claim table) Tj
+0 -14 Td () Tj
+0 -14 Td (| Claim | Mathematical audit | Lean column | Evidence |) Tj
+0 -14 Td (|---|---|---|---|) Tj
+0 -14 Td (| Theorem 1.1 / E-9 | Axiom-relative; no counterexample found in completed checks | PASS: AX1+AX2 exactly in axi) Tj
+0 -14 Td (| Corollary 1.2 | Axiom-relative; follows Lean gate signature | PASS: AX1+AX2 exactly in axiom report | blockF_l) Tj
+0 -14 Td (| Proposition 10.1 | Internal audit rerun passed | PASS: Layer E clean | blockF_lean_formalization/results/axiom) Tj
+0 -14 Td (| Theorem 3.1 / E-3.1 | Exact F branch scan confirmed on p<=80 grid | PASS: Layer E clean | blockC_counterexampl) Tj
+0 -14 Td (| Theorem 4.2 / E-4.2 | Exact margin scan confirmed on p<=80 grid | PASS: Layer E clean | blockC_counterexample_) Tj
+0 -14 Td (| Lemmas 5.1/5.2/6.1/7.1 | Internal audit rerun passed after dependency install | PASS: Layer E clean | blockE_a) Tj
+0 -14 Td (| Appendix B / D | Static/textual scan plus Lean gate | PASS: Layer E clean | blockF_lean_formalization/results/) Tj
+0 -14 Td (| AX1 / AX2 | Limited bibliographic plausibility check | PASS as declared axioms; no extra axioms | blockB_exter) Tj
+0 -14 Td () Tj
+0 -14 Td (## Findings) Tj
+0 -14 Td () Tj
+0 -14 Td (See `findings/FINDINGS.csv`.) Tj
+0 -14 Td () Tj
+0 -14 Td (## Coverage statement) Tj
+0 -14 Td () Tj
+0 -14 Td (Block C exact grid: p=3..80, q=1..2p, d=0..p for closed-form F and Theorem 4.2 margin inequality. No violations ) Tj
+0 -14 Td () Tj
+0 -14 Td (Block D exact arithmetic: selected coefficient/threshold identities confirmed.) Tj
+0 -14 Td () Tj
+0 -14 Td (Block E: copied internal scripts reran successfully after installing sympy/numpy/scipy/pulp locally.) Tj
+0 -14 Td () Tj
+0 -14 Td (Block F: fully executed locally from `C:\\Users\\jtrav\\Documents\\Codex\\leanrun_erdos81`; logs were written in) Tj
+0 -14 Td () Tj
+0 -14 Td (Block B remains limited: source-page evidence was checked, not full-paper theorem-by-theorem bibliographic certi) Tj
+0 -14 Td () Tj
+0 -14 Td (## Reproduction appendix) Tj
+ET
+endstream
+endobj
+xref
+0 6
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000115 00000 n 
+0000000241 00000 n 
+0000000311 00000 n 
+trailer << /Root 1 0 R /Size 6 >>
+startxref
+3153
+%%EOF

@@ -1,0 +1,38 @@
+{
+  "paper": "PAPER_I",
+  "target": "preprint_draft_v1.3",
+  "protocol": "INTERNAL_AUDIT_STANDARD_v1.3",
+  "audit_class": "INTERNAL_NOT_EXTERNAL",
+  "lean_full_build_rerun": false,
+  "overall_verdict": "PASS",
+  "static_checks_passed": 95,
+  "mathematics": {
+    "exact_identities": 5,
+    "tightness_boundary_instances": 561,
+    "orbit_program_instances": 480,
+    "assembly_instances": 99671,
+    "split_lp_instances": 1179,
+    "sharpness_instances": 9
+  },
+  "duplicate_text_audit": {
+    "artifacts_scanned": 6,
+    "minimum_normalized_paragraph_length": 180,
+    "near_duplicate_threshold": 0.985,
+    "exact_duplicates": 0,
+    "near_duplicates": 0
+  },
+  "gates": {
+    "G0": "PASS",
+    "G1": "PASS_AFTER_CORRECTION",
+    "G2": "PASS",
+    "G3": "PASS",
+    "G4": "PASS_RECORDED_BUILD",
+    "G5": "PASS",
+    "G6": "PASS",
+    "G7": "PASS_INTERNAL",
+    "G8": "PASS"
+  },
+  "unresolved_blockers": 0,
+  "unresolved_major": 0,
+  "external_gates_open": true
+}

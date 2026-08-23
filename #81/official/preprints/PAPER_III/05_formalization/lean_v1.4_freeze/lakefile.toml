@@ -1,0 +1,33 @@
+name = "PaperIIIRelease"
+version = "1.4.0"
+keywords = ["math", "erdos-81", "split-graphs"]
+defaultTargets = ["PaperIII"]
+
+[leanOptions]
+pp.unicode.fun = true
+relaxedAutoImplicit = false
+linter.unusedSimpArgs = false
+
+[[require]]
+name = "mathlib"
+scope = "leanprover-community"
+rev = "v4.28.0"
+
+[[lean_lib]]
+name = "PaperIII"
+
+[[lean_lib]]
+name = "Ax2"
+globs = ["Ax2.+"]
+
+[[lean_lib]]
+name = "Nibble"
+globs = ["Nibble.+"]
+
+[[lean_lib]]
+name = "BKLO"
+globs = ["BKLO.+"]
+
+[[lean_lib]]
+name = "Contrib"
+globs = ["Contrib.+"]

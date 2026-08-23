@@ -1,14 +1,11 @@
-# Validation
+# Paper II v1.2 validation
 
-- `PAPER_II_CALCULATION_LEDGER_v1.1.md` -- line-by-line calculation ledger of the
-  proof (definitions, the vertex-copy inequality, the discrete-convexity lift,
-  the terminal complete-split characterization, the two-variable cover program,
-  and the integer maximization). Every formula matches the manuscript.
-- `PAPER_II_AUDIT/` -- independent per-section computational audits (A-F), each a
-  self-contained script that recomputes the section's claims from scratch, with a
-  report and SHA-256 manifest.
-- `VALIDATION_STATUS.md` -- the validation boundary and status.
-- `SHA256SUMS.txt`, `MANIFEST.json` -- integrity of the validation artifacts.
+This directory preserves the complete author-side and independent AI
+adversarial audit trail for the manuscript and Lean v1.2 freeze.
 
-Computation here is corroboration of the analytic proof and the formalization; it
-is not its
+- `01_INTERNAL_AUDITS/`: common-standard internal audit and package residual.
+- `02_IA_ADVERSARIAL_AUDITS/run_2026-08-21_v1.2/`: full external adversarial audit.
+- `02_IA_ADVERSARIAL_AUDITS/run_2026-08-21_v1.2_pkgfix/`: final independent package regression, verdict `PASS`.
+
+The external PASS is not human peer review or a specialist priority decision.
+Files inside audit runs retain their historical draft-target names and hashes.

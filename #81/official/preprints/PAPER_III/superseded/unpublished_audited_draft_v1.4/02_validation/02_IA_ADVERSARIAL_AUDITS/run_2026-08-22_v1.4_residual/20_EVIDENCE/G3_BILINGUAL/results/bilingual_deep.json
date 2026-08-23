@@ -1,0 +1,87 @@
+{
+ "gate": "3",
+ "check": "deep EN/ES block alignment plus duplication/reordering",
+ "block_counts": {
+  "EN": 144,
+  "ES": 144,
+  "equal": true
+ },
+ "level_sequence_identical": true,
+ "per_block_differences": [
+  {
+   "block": 0,
+   "EN_title": "Linear-Error Clique Partitions of Split Graphs via Structured Triangle",
+   "ES_title": "Particiones de cliques con error lineal en grafos split mediante empaq",
+   "differences": {
+    "inline_math": [
+     1,
+     3
+    ]
+   }
+  },
+  {
+   "block": 69,
+   "EN_title": "Proof",
+   "ES_title": "Demostración",
+   "differences": {
+    "inline_math": [
+     6,
+     5
+    ]
+   }
+  },
+  {
+   "block": 95,
+   "EN_title": "12.5 Higher-clique linear-error packing",
+   "ES_title": "12.5 Empaquetamiento con cliques mayores y error lineal",
+   "differences": {
+    "inline_math": [
+     4,
+     5
+    ]
+   }
+  },
+  {
+   "block": 137,
+   "EN_title": "E.6.3 Uniform nibble interface",
+   "ES_title": "E.6.3 Interfaz uniforme de nibble",
+   "differences": {
+    "table_rows": [
+     1,
+     0
+    ]
+   }
+  }
+ ],
+ "blocks_with_differences": 4,
+ "duplicated_paragraphs": {
+  "EN": [],
+  "ES": []
+ },
+ "ordering": {
+  "eq_tag_sequence_identical": true,
+  "eq_tags_EN": 66,
+  "eq_tags_ES": 66,
+  "theorem_sequence_identical": false,
+  "first_divergence_tag": null,
+  "first_divergence_thm": 6
+ },
+ "md_to_tex": {
+  "EN": {
+   "identifiers": 42,
+   "identifiers_in_tex": 41,
+   "eq_tags": 66,
+   "eq_tags_in_tex": 66,
+   "theorems": 20,
+   "theorems_in_tex": 20
+  },
+  "ES": {
+   "identifiers": 42,
+   "identifiers_in_tex": 41,
+   "eq_tags": 66,
+   "eq_tags_in_tex": 66,
+   "theorems": 20,
+   "theorems_in_tex": 20
+  }
+ }
+}

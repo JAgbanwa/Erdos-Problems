@@ -1,0 +1,26 @@
+## 7.2 The gain graph
+
+Construct a bipartite graph with parts \(U\) and \(R\), joining \(v_i\) to \(r\) when \(r\in G_i\). Assign the list
+
+\[
+L(v_ir)=N_i\cap Q.
+\]
+
+By (7.2), every list satisfies
+
+\[
+|L(v_ir)|=b-t_i
+\ge
+\max\{\rho,u\}
+\ge
+\Delta,
+\]
+
+where \(\Delta\) is the maximum degree of the gain graph, since \(d(v_i)=g_i\le\rho\) and \(d(r)\le|U|=u\). Theorem 2.2, proved self-contained in Appendix D, gives a proper list edge coloring. If \(v_ir\) receives color \(z\in Q\), take the triangle \(v_irz\). This gives
+
+\[
+B_U=\sum_{i\in U}g_i
+\]
+
+edge-disjoint \(IRQ\) triangles.
+

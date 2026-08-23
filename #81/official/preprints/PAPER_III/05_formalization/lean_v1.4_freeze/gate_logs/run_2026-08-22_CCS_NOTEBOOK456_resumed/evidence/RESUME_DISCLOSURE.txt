@@ -1,0 +1,8 @@
+mode=RESUMED_INCREMENTAL
+reason=Codex desktop app restart interrupted the original lake build process.
+source_state=The project was initially copied source-only and cache/build began from a clean state.
+resume_command=lake build PaperIII
+limitation=This is not a single uninterrupted invocation of RUN_CLEAN_BUILD.ps1.
+public_root_result=PASS
+query_roots_result=PASS
+axiom_gate_result=PASS

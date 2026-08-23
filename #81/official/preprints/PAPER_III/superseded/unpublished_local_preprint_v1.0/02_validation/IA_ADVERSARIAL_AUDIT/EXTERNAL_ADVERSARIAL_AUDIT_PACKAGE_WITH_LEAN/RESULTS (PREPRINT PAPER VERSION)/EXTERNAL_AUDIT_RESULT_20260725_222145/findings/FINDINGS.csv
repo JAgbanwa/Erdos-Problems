@@ -1,0 +1,7 @@
+id,claim_ref,block,attack,inputs_or_ranges,outcome,severity,reproduction_cmd,evidence_file
+A-OBS-001,paper-ledger labels,A,case-insensitive label presence scan,all mandatory labels,PLAUSIBLE,minor,see Block A README,blockA_faithfulness/results/blockA_results.txt
+B-COV-001,AX1/AX2,B,bibliographic source-page comparison,"source pages only, not full PDF theorem audit",PLAUSIBLE,minor,see Block B README,blockB_external_inputs/results/blockB_results.txt
+C-CONF-001,C-4/C-6 finite formulas,C,exact Fraction scan,"p=3..80, q=1..2p, d=0..p",CONFIRMED,none,see Block C README,blockC_counterexample_search/results/blockC_results.txt
+D-CONF-001,selected algebra identities,D,exact Fraction identities,coefficients and threshold identities,CONFIRMED,none,see Block D README,blockD_algebra_rederivation/results/blockD_results.txt
+E-CONF-001,OUR_INTERNAL_AUDIT reproducibility,E,re-run copied scripts after local dependency install,all verify_*.py,CONFIRMED,none,see rerun_block*.log,blockE_audit_the_audit/results/blockE_results.txt
+F-CONF-001,Lean formalization,F,lake cache/build/gate plus source scan,frozen bundled snapshot executed from short local path,CONFIRMED,none,lake exe cache get; lake build; lake env lean gate.lean,blockF_lean_formalization/results/blockF_summary.txt

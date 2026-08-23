@@ -1,0 +1,26 @@
+{
+  "paper": "Paper III",
+  "version": "1.4-candidate",
+  "status": "SOURCE_CANDIDATE_PENDING_SECOND_MACHINE_CLEAN_BUILD",
+  "base_freeze": {
+    "version": "1.3",
+    "archive": "PAPER_III_lean_v1.3_freeze.zip",
+    "sha256": "2eb0ff20a9dae6610a46026355374570d5afdfea89837ea7f9dd29da10b9d300",
+    "external_audit_report_sha256": "4b0c6d895155974e7fface2b773d64b8ae0bee796f9da405981a3c79dcdae2c8"
+  },
+  "toolchain": "leanprover/lean4:v4.28.0",
+  "mathlib_revision": "v4.28.0",
+  "mathlib_commit": "8f9d9cff6bd728b17a24e163c9402775d9e6a365",
+  "lean_source_files_expected": 704,
+  "release_corrections": [
+    "PaperIII.lean explicitly imports PaperIII.Theorem_1_1_Final",
+    "PaperIII.lean explicitly imports PaperIII.PublicAPI",
+    "PaperIII.lean no longer describes the aggregate root as a scaffold",
+    "the clean-build protocol builds the public root before all seven query roots",
+    "all eight frozen axiom-query files are executed and checked"
+  ],
+  "author_clean_build": "PENDING_SECOND_MACHINE",
+  "internal_audit": "PENDING_FOR_VERSION_1.4",
+  "external_adversarial_audit": "PENDING_FOR_VERSION_1.4",
+  "public_commit": null
+}

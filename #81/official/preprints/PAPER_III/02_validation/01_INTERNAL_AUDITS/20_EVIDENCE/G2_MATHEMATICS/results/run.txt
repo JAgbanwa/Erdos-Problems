@@ -1,0 +1,13 @@
+Paper III v1.2 internal mathematical audit
+Date: 2026-08-21
+Class: INTERNAL / NOT_EXTERNAL
+Lean rerun: NO
+
+Block 01: PASS -- 12/12 exact symbolic identities.
+Block 02: PASS -- 351/351 direct LPs and 351/351 exact cover certificates.
+Block 03: PASS -- 78,384/78,384 exact-rational margin checks.
+Block 04: PASS -- 372/372 basic ILP checks; 180/180 packing bounds;
+          180/180 corridor corollaries.
+
+Overall G2 verdict: PASS.
+Full verbatim outputs are stored in each block's results directory.

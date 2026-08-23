@@ -1,0 +1,70 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{booktabs,longtable,array}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{microtype}
+\usepackage{url}
+\usepackage{xurl}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.5em}
+\title{Paper I v1.3 Internal Audit Final Report}
+\author{Internal author-side audit --- not external}
+\date{21 August 2026 --- Overall verdict: PASS}
+\begin{document}
+\maketitle
+\textbf{Protocol:} \texttt{INTERNAL\_AUDIT\_STANDARD\_v1.3}.\\
+\textbf{Lean execution:} recorded full build and external clean-room result reviewed; Lean not rerun.
+
+\section{Frozen target}
+\small
+\begin{longtable}{p{.29\linewidth}p{.64\linewidth}}
+\toprule Item & Value \\ \midrule
+English manuscript SHA-256 & \url{f3094b670c93ff622c3f573cdab61bdd0f5d84007f04b1888b364e0183565bea} \\
+Spanish manuscript SHA-256 & \url{57ba967fc2de805b7bbb4cf5f937727bde43c2ada80fa794bcbb5a727db05b8b} \\
+English PDF SHA-256 & \url{7d04c47692b613c8d6e2cc4471f0205128b4ae06ca11d581a08d020eb2236db0} \\
+Spanish PDF SHA-256 & \url{3ad16ae86e8fcad358bf964a6ae98ae053b0bde2fdf3140e008cedab78b90c2a} \\
+Formal archive & \texttt{PAPER\_I\_lean\_v1.2\_freeze.zip} \\
+Formal archive SHA-256 & \url{0181506408644fc1f8872d711de5a98a500f4052aa295bcd6f8c82776694fd3a} \\
+Lean / Mathlib & Lean 4.28.0 / Mathlib \url{8f9d9cff6bd728b17a24e163c9402775d9e6a365} \\
+Recorded build / axioms & exit 0; 8,034 jobs; \texttt{propext}, \texttt{Classical.choice}, \texttt{Quot.sound} \\
+\bottomrule
+\end{longtable}
+\normalsize
+
+\section{Gate results}
+\small
+\begin{longtable}{p{.12\linewidth}p{.19\linewidth}p{.60\linewidth}}
+\toprule Gate & Verdict & Principal evidence \\ \midrule
+G0 & PASS & 95 static, integrity and residual controls; six LF-sealed artifacts. \\
+G1 & PASS after correction & Eight external findings resolved; one residual citation reference found internally, corrected and rerun. \\
+G2 & PASS & 5 identities; 561 boundary; 480 orbit; 99,671 assembly; 1,179 split-LP; 9 sharpness checks. \\
+G3 & PASS & Headline, assembly and residual-duality surfaces match the unchanged archive. \\
+G4 & PASS recorded build & 8,034-job record and 15-surface axiom report reviewed; no Lean rerun. \\
+G5 & PASS & English/Spanish aligned; known-block controls and general exact/near-duplicate scan pass. \\
+G6 & PASS & 19/20 pages; clean logs, embedded fonts and 39 pages visually inspected. \\
+G7 & PASS internal & Primary CEO scan added; scoped novelty wording; specialist gate open. \\
+G8 & PASS & Self-contained v1.3 target, correction matrix and evidence perimeter. \\
+\bottomrule
+\end{longtable}
+\normalsize
+
+\section{Correction disposition}
+The v1.3 manuscript resolves all eight findings in the external v1.2 report:
+Spanish duplication, stale integrity baseline, exposition of (4.7), the domain
+of Appendix A.2, the scope of ``sharp,'' CEO primary-source access, the
+Schrijver pinpoint, and the unused repository reference. During the internal
+rerun, \texttt{P1-IA-V13-001} found one remaining textual occurrence of the
+unverified Schrijver pinpoint. It was corrected in both languages and formats;
+the PDFs, hashes and all downstream gates were regenerated and rerun.
+
+These corrections do not alter a theorem, hypothesis, numerical constant,
+proof step or Lean source. The formal archive is byte-identical to the archive
+already rebuilt independently by the external auditor.
+
+\section{Overall verdict}
+\textbf{PASS.} All nine blocking internal gates pass. There are no unresolved
+internal blockers or major findings. Residual external adversarial validation,
+independent specialist prior-art review, human peer review, tagging and
+publication approval remain open external gates.
+\end{document}

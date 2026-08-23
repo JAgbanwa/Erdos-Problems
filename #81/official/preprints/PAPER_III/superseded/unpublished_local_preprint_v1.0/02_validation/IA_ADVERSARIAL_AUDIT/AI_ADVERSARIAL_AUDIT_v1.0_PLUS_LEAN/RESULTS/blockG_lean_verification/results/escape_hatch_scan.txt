@@ -1,0 +1,15 @@
+== Escape-hatch / axiom scan — Paper III lean_v1.0_freeze ==
+Date: 2026-07-28
+Command: grep for \bsorry\b, \badmit\b, \bunsafe\b, native_decide, and axiom declarations
+Scope: all PaperIII/*.lean source files (excluding .lake/)
+
+--- sorry / admit / unsafe / native_decide ---
+No matches found. ZERO occurrences in source code.
+(String "sorry-free" appears only in Markdown docs, not in .lean code.)
+
+--- axiom declarations ---
+PaperIII/AX.lean:28: axiom AX1   (Haxell-Rödl / Yuster — external literature)
+PaperIII/AX.lean:37: axiom AX2   (Dross + Barber-Kühn-Lo-Osthus — external literature)
+
+RESULT: Exactly TWO project axioms (AX1, AX2), both external literature inputs,
+both documented in AX.lean. No other axioms. No sorry/admit/unsafe/native_decide.

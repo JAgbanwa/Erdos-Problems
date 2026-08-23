@@ -1,0 +1,45 @@
+PaperIII.AX1 : ∀ (ε : ℝ),
+  0 < ε →
+    ∃ n₀,
+      ∀ (V : Type) (x : Fintype V) (x_1 : DecidableEq V) (G : SimpleGraph V) (x_2 : DecidableRel G.Adj),
+        n₀ ≤ Fintype.card V → PaperIII.tau3Star G - ↑(PaperIII.nu3 G) ≤ ε * ↑(Fintype.card V) ^ 2
+PaperIII.AX2 : ∀ (ε : ℝ),
+  0 < ε →
+    ∃ n₀,
+      ∀ (V : Type) (x : Fintype V) (x_1 : DecidableEq V) (H : SimpleGraph V) (x_2 : DecidableRel H.Adj),
+        H.edgeFinset.card % 3 = 0 →
+          (∀ (v : V), Even (H.degree v)) →
+            n₀ ≤ Fintype.card V → (0.9 + ε) * ↑(Fintype.card V) ≤ ↑H.minDegree → PaperIII.HasTriangleDecomposition H
+'PaperIII.AX1' depends on axioms: [propext, Classical.choice, PaperIII.AX1, Quot.sound]
+'PaperIII.AX2' depends on axioms: [propext, Classical.choice, PaperIII.AX2, Quot.sound]
+PaperIII.Theorem_1_1 : ∃ C, ∀ (G : PaperIII.SplitGraph), ↑G.Phi ≤ ↑G.n ^ 2 / 6 + C * ↑G.n
+'PaperIII.Theorem_1_1' depends on axioms: [propext, Classical.choice, PaperIII.AX1, PaperIII.AX2, Quot.sound]
+PaperIII.Corollary_1_2 : ∃ C, ∀ (G : PaperIII.SplitGraph), ↑G.cp ≤ ↑G.n ^ 2 / 6 + C * ↑G.n
+'PaperIII.Corollary_1_2' depends on axioms: [propext, Classical.choice, PaperIII.AX1, PaperIII.AX2, Quot.sound]
+@PaperIII.nu3Star_le_tau3Star : ∀ {W : Type u_1} [inst : Fintype W] [inst_1 : DecidableEq W] (H : SimpleGraph W)
+  [inst_2 : DecidableRel H.Adj], PaperIII.nu3Star H ≤ PaperIII.tau3Star H
+'PaperIII.nu3Star_le_tau3Star' depends on axioms: [propext, Classical.choice, Quot.sound]
+PaperIII.Prop_10_1_low : ∀ (G : PaperIII.SplitGraph),
+  37 ≤ G.p → 0 ≤ G.s → ↑G.s ^ 2 ≤ 36 * ↑G.p → ↑G.Phi ≤ ↑G.n ^ 2 / 6 + 3 / 2 * ↑G.n
+'PaperIII.Prop_10_1_low' depends on axioms: [propext, Classical.choice, Quot.sound]
+PaperIII.Prop_10_1_mid : ∀ (G : PaperIII.SplitGraph),
+  2304 ≤ G.p →
+    36 * ↑G.p ≤ ↑G.s ^ 2 →
+      8 * ↑G.s ≤ ↑G.p → (∀ (i : Fin G.q), (2 * ↑G.n - 1) / 6 + 1 < ↑(G.d i)) → ↑G.Phi ≤ ↑G.n ^ 2 / 6
+'PaperIII.Prop_10_1_mid' depends on axioms: [propext, Classical.choice, Quot.sound]
+PaperIII.E_4_3 : ∀ (ε : ℚ),
+  0 < ε → ∃ n₀, ∀ (G : PaperIII.SplitGraph), n₀ ≤ G.n → ε ≤ G.α → G.α ≤ 2 - ε → ↑G.Phi ≤ ↑G.n ^ 2 / 6
+'PaperIII.E_4_3' depends on axioms: [propext, Classical.choice, PaperIII.AX1, Quot.sound]
+PaperIII.E_8 : ∀ (k : ℕ),
+  ∃ n₀,
+    ∀ (G : PaperIII.SplitGraph),
+      n₀ ≤ G.n →
+        2 * G.q ≤ G.p → (∀ (i : Fin G.q), (2 * ↑G.n - 1) / 6 + ↑k < ↑(G.d i)) → ↑G.Phi ≤ ↑G.n ^ 2 / 6 + 2 * ↑G.n
+'PaperIII.E_8' depends on axioms: [propext, Classical.choice, PaperIII.AX1, PaperIII.AX2, Quot.sound]
+PaperIII.Phi_le_high_ratio : ∀ (G : PaperIII.SplitGraph), 2 * G.p ≤ G.q + 1 → ↑G.Phi ≤ ↑G.n ^ 2 / 6 + ↑G.n / 2
+'PaperIII.Phi_le_high_ratio' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PaperIII.factorization_assignment_packing' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PaperIII.double_factorization_packing' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PaperIII.reserved_gain_packing_bound_subset' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PaperIII.Corollary_12_2_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PaperIII.cp_le_Phi' depends on axioms: [propext, Classical.choice, Quot.sound]

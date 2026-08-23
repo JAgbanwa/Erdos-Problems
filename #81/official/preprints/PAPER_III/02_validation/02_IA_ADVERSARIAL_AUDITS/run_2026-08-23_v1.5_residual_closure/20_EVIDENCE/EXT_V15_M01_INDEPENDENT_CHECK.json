@@ -1,0 +1,164 @@
+{
+ "check1": {
+  "loose_files": [],
+  "subdirs": [
+   "v1.3_legacy",
+   "v1.4",
+   "v1.5"
+  ]
+ },
+ "check2": {
+  "legacy_file_count": 29,
+  "manifest_entries": 29,
+  "hash_mismatches": [],
+  "absent": [],
+  "not_naming_v1_3": [],
+  "naming_v1_5": [],
+  "extra_files_not_in_manifest": []
+ },
+ "check3": {
+  "files": [
+   {
+    "file": "LUALATEX_FINAL_en.log",
+    "sha256": "117d3fa03b2e17567f7ecb010fae9c5d2610d8e9f20c66b0ec8b79757bf91638",
+    "manifest_match": true,
+    "builds": "PAPER_III_preprint_v1.5_en.pdf",
+    "pages": 46,
+    "expected_pages": 46,
+    "prohibited_diagnostics": {},
+    "ok": true
+   },
+   {
+    "file": "LUALATEX_FINAL_es.log",
+    "sha256": "4dc81a3432c5463dfbdc42be5ed199598e4b372cdc299cd5f3e5d2fe8d6b8dca",
+    "manifest_match": true,
+    "builds": "PAPER_III_preprint_v1.5_es.pdf",
+    "pages": 47,
+    "expected_pages": 47,
+    "prohibited_diagnostics": {},
+    "ok": true
+   },
+   {
+    "file": "LUALATEX_en_PASS1.txt",
+    "sha256": "c3885bedf300609ff66c560adf8a721ccb016de762a71c1df41b7a1f53e753c3",
+    "manifest_match": true,
+    "builds": "PAPER_III_preprint_v1.5_en.pdf",
+    "pages": 46,
+    "expected_pages": 46,
+    "prohibited_diagnostics": {},
+    "ok": true
+   },
+   {
+    "file": "LUALATEX_en_PASS2.txt",
+    "sha256": "3b5988528e9159b3b1374fb1114e7011e47dcbe6855d45f569d63a2b02fffa24",
+    "manifest_match": true,
+    "builds": "PAPER_III_preprint_v1.5_en.pdf",
+    "pages": 46,
+    "expected_pages": 46,
+    "prohibited_diagnostics": {},
+    "ok": true
+   },
+   {
+    "file": "LUALATEX_es_PASS1.txt",
+    "sha256": "489143026a7b6ebee9c90a61e3d304f661a96a4e701bd0b232639f4f32b4c14f",
+    "manifest_match": true,
+    "builds": "PAPER_III_preprint_v1.5_es.pdf",
+    "pages": 47,
+    "expected_pages": 47,
+    "prohibited_diagnostics": {},
+    "ok": true
+   },
+   {
+    "file": "LUALATEX_es_PASS2.txt",
+    "sha256": "d7673dec6f2ecc1d8da8dfdc901f24470727a3ae779e72e9ca120576a623b6bf",
+    "manifest_match": true,
+    "builds": "PAPER_III_preprint_v1.5_es.pdf",
+    "pages": 47,
+    "expected_pages": 47,
+    "prohibited_diagnostics": {},
+    "ok": true
+   }
+  ],
+  "manifest_entries": 6,
+  "manifest_mismatches": []
+ },
+ "check4": {
+  "generic_absent": true,
+  "versioned_verdict": "PASS",
+  "checks": 61,
+  "failed": [],
+  "md_en_sha256": "a98e9313bfe5f1f98cc92bb29ba97386e8178e38c0201854cf40bd255066c99a",
+  "md_en_matches_target": true,
+  "versioned_sha256": "04d9e9e95f1e3a9743fa7d286aadfe0f51b4fb7c94b468b13980dc4346d19e7f"
+ },
+ "check5": {
+  "manuscript": {
+   "PAPER_III_preprint_v1.5.md": true,
+   "PAPER_III_preprint_v1.5_en.tex": true,
+   "PAPER_III_preprint_v1.5_en.pdf": true,
+   "PAPER_III_preprint_v1.5_es.md": true,
+   "PAPER_III_preprint_v1.5_es.tex": true,
+   "PAPER_III_preprint_v1.5_es.pdf": true
+  },
+  "lean_zip": true
+ },
+ "check6": {
+  "v1.4 external residual": {
+   "sha256": "2c19bf1ca74f77cc409b8d0102adf01b92d13db885ac81d15d156477abed8842",
+   "unchanged": true
+  },
+  "v1.4 external challenger": {
+   "sha256": "a196479b8b2adde5077669ec5e398dfc4d640e006bd97b10ef0f72696bdfb5f3",
+   "unchanged": true
+  },
+  "v1.5 external residual (CONDITIONAL_PASS, this auditor)": {
+   "sha256": "4f4537816840c62fb23521190fab4fa1a860085e05a4cb956d8afe1eb3b67596",
+   "unchanged": true
+  },
+  "run_2026-08-22_v1.4_residual_package": {
+   "files": 60,
+   "mismatched": 0,
+   "problems": []
+  },
+  "run_2026-08-23_v1.4_challenger_package": {
+   "files": 24,
+   "mismatched": 0,
+   "problems": []
+  },
+  "run_2026-08-23_v1.5_residual_package": {
+   "files": 45,
+   "mismatched": 0,
+   "problems": []
+  }
+ },
+ "extra_A_tree": {
+  "TREE.txt": {
+   "entries": 1572,
+   "unresolvable": 0,
+   "sample_unresolvable": []
+  }
+ },
+ "extra_A_dangling_references": [],
+ "extra_B_broken_links": [],
+ "extra_C_preserved_copies": [
+  {
+   "path": "superseded/unpublished_audited_draft_v1.4/03_reproducibility/MANUSCRIPT_CONSISTENCY_RESULTS.json",
+   "sha256": "2be045e5a9377285ef7d3b7bd1c41664e6959874be15c0edeac3461345d7ce40"
+  }
+ ],
+ "extra_D_pattern_recurrence": [],
+ "checks": {
+  "1_no_loose_files": true,
+  "2_relocated_logs_intact": true,
+  "3_current_logs_correct": true,
+  "4_consistency_json": true,
+  "5_target_unchanged": true,
+  "6_prior_reports_unmodified": true,
+  "A_no_dangling_references": true,
+  "B_links_resolve": true,
+  "C_removed_evidence_preserved": true,
+  "D_pattern_does_not_recur": true
+ },
+ "closure_pass": true,
+ "checks_passed": "10/10"
+}

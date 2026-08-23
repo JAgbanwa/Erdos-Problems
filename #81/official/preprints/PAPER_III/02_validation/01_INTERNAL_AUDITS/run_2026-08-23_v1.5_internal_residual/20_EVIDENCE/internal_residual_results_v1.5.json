@@ -1,0 +1,438 @@
+{
+  "paper": "PAPER_III",
+  "target": "preprint_v1.5",
+  "date": "2026-08-23",
+  "audit_class": "INTERNAL_AUTHOR_SIDE_RESIDUAL_NON_INDEPENDENT",
+  "lean_rebuild_during_audit": false,
+  "baseline": "unpublished externally audited v1.4",
+  "gate_verdicts": {
+    "G0": "PASS",
+    "G1": "PASS",
+    "G2": "PASS",
+    "G3": "PASS",
+    "G4": "PASS",
+    "G5": "PASS",
+    "G6": "PASS",
+    "G7": "PASS",
+    "G8": "PASS"
+  },
+  "checks_passed": 79,
+  "checks_total": 79,
+  "failed": {},
+  "overall": "PASS",
+  "checks": {
+    "G0": [
+      {
+        "pass": true,
+        "label": "v1.5 artifact exists: md_en",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "v1.5 artifact exists: tex_en",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "v1.5 artifact exists: pdf_en",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "v1.5 artifact exists: md_es",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "v1.5 artifact exists: tex_es",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "v1.5 artifact exists: pdf_es",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "v1.5 six-artifact sidecar exists",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "v1.5 sidecar is LF-only",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "all six v1.5 hashes verify",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "active manuscript directory contains no draft-named artifact",
+        "detail": ""
+      }
+    ],
+    "G1": [
+      {
+        "pass": true,
+        "label": "English displayed mathematics is unchanged from audited v1.4",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "Spanish displayed mathematics is unchanged from audited v1.4",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "equation-tag sequences are unchanged",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "heading and theorem order is unchanged",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "citation-reference multisets are unchanged",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "English N02/N03 clarification present: simple bipartite graph with maximum degree",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "English N02/N03 clarification present: remaining digraph is an induced subdigraph of",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "English N02/N03 clarification present: bipartite graphs of maximum degree at most",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "English N02/N03 clarification present: subgraph formed by the \\(\\alpha\\)- and \\(\\beta\\)-colored edges has maximum degree at most two",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "English N02/N03 clarification present: well-defined simple path",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "Spanish N02/N03 clarification present: grafo bipartito simple de grado máximo",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "Spanish N02/N03 clarification present: digrafo restante es un subdigrafo inducido de",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "Spanish N02/N03 clarification present: grafos bipartitos de grado máximo a lo sumo",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "Spanish N02/N03 clarification present: subgrafo formado por las aristas de colores \\(\\alpha\\) y \\(\\beta\\) tiene grado máximo a lo sumo dos",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "Spanish N02/N03 clarification present: camino simple bien definido",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "semantic-integrity report closes without content query",
+        "detail": ""
+      }
+    ],
+    "G2": [
+      {
+        "pass": true,
+        "label": "v1.4 full internal audit PASS is preserved",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "v1.4 final external challenger PASS is preserved",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "external E2 rederivation PASS is preserved",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "external origin and NOTE classification of v1.5 clarifications are preserved",
+        "detail": ""
+      }
+    ],
+    "G3": [
+      {
+        "pass": true,
+        "label": "Lean archive hash remains the audited v1.4 hash",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "Lean archive sidecar agrees",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "Lean archive CRC and 751-entry count verify",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "Lean archive remains source-only",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "707-entry Lean source manifest verifies",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "751-entry Lean package manifest verifies",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "every manifested Lean source is byte-identical to the preserved audited v1.4 source",
+        "detail": ""
+      }
+    ],
+    "G4": [
+      {
+        "pass": true,
+        "label": "independent external clean-room report is present",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "external build job counts are recorded",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "external axiom-surface closure is recorded",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "external uninterrupted-run classification is recorded",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "separate clean author reproduction is preserved",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "Lean was not rebuilt in the v1.5 internal residual",
+        "detail": "static identity review only"
+      }
+    ],
+    "G5": [
+      {
+        "pass": true,
+        "label": "v1.5 consistency suite reruns successfully",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "all 61 v1.5 consistency checks pass",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "bilingual heading counts agree at 144",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "no duplicated long paragraph in English Markdown",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "no duplicated long paragraph in Spanish Markdown",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "split-case scope and open chordal boundary are synchronized",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "novelty claims remain corpus-bounded in both languages",
+        "detail": ""
+      }
+    ],
+    "G6": [
+      {
+        "pass": true,
+        "label": "en PDF has 46 pages",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "en PDF fonts are embedded and subset",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "en PDF does not predate delivered TeX",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "en final compiler log identifies output and has no fatal error",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "en final compiler log has no prohibited diagnostic",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "all 46 en pages were rendered",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "es PDF has 47 pages",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "es PDF fonts are embedded and subset",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "es PDF does not predate delivered TeX",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "es final compiler log identifies output and has no fatal error",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "es final compiler log has no prohibited diagnostic",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "all 47 es pages were rendered",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "all-page visual QA is recorded",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "manuscript directory contains no TeX residue",
+        "detail": ""
+      }
+    ],
+    "G7": [
+      {
+        "pass": true,
+        "label": "external E6 prior-art PASS uses corpus-bounded language",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "prior split bound and sharp coefficient are stated in both languages",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "human-peer-review limitation is explicit",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "formal split-case positioning is precise",
+        "detail": ""
+      }
+    ],
+    "G8": [
+      {
+        "pass": true,
+        "label": "active manuscript directory contains exactly the v1.5 target and README",
+        "detail": "['PAPER_III_preprint_v1.5.md', 'PAPER_III_preprint_v1.5_SHA256.txt', 'PAPER_III_preprint_v1.5_en.pdf', 'PAPER_III_preprint_v1.5_en.tex', 'PAPER_III_preprint_v1.5_es.md', 'PAPER_III_preprint_v1.5_es.pdf', 'PAPER_III_preprint_v1.5_es.tex', 'README.md']"
+      },
+      {
+        "pass": true,
+        "label": "active package contains no draft metadata",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "active package contains no provisional v1.5 control file",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "citation metadata names v1.5",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "HTML explainer has current version and precise scope",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "all local HTML links resolve",
+        "detail": "[]"
+      },
+      {
+        "pass": true,
+        "label": "release README explains audit continuity and links the changelog",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "no generic compiler log shadows the versioned v1.5 logs",
+        "detail": "[]"
+      },
+      {
+        "pass": true,
+        "label": "no generic consistency result shadows the v1.5 result",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "all six current compiler logs are version-scoped and name v1.5",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "historical v1.3 logs are preserved only in an explicitly labelled path",
+        "detail": ""
+      }
+    ]
+  }
+}

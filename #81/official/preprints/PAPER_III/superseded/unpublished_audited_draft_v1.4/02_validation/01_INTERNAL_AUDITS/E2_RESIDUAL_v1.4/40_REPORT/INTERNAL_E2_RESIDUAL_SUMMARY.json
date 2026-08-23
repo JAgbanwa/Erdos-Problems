@@ -1,0 +1,21 @@
+{
+  "paper": "Paper III",
+  "candidate": "v1.4",
+  "gate": "E2 independent mathematical rederivation — author-side residual",
+  "verdict": "PASS_INTERNAL",
+  "external_verdict_changed": false,
+  "manuscript_sha256": "ef410252009f55aa1e0ccbec1873f8d838cf4f9b54e7478befe71459f68440ca",
+  "kernels": {
+    "K-EPS": "PASS_INTERNAL",
+    "K-CORRIDOR": "PASS_INTERNAL",
+    "K-SPARSE": "PASS_INTERNAL",
+    "K-GLOBAL": "PASS_INTERNAL",
+    "K-COVER": "PASS_REGRESSION"
+  },
+  "exact_checks": 315183,
+  "exact_check_failures": 0,
+  "manuscript_changed": false,
+  "lean_changed_by_e2_residual": false,
+  "clean_build_required_separately": true,
+  "external_independent_rederivation_required": true
+}

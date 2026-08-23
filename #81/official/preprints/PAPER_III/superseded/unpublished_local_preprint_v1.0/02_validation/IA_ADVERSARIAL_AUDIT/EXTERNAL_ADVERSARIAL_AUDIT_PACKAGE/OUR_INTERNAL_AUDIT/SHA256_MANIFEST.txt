@@ -1,0 +1,27 @@
+Paper III — INTERNAL_AUDIT — SHA-256 manifest
+============================================================
+
+block01_algebraic_identities
+    verdict         : PASS (12/12 identities)
+    results SHA-256 : 7d5ea305ff7f44013184d2187d7e310efde926881cf24a4424e55667dbfe8519
+    zip SHA-256     : eaf14d9dfbe6871a0dae73902fedf2aabacd2b31fb13df0b3e63b5c1c7c7cae7
+
+block02_common_profile_LP
+    verdict         : PASS (351/351 instances)
+    results SHA-256 : 7fabebbc8a96ff39e2468239a98f8cf3de2d5d0642ef6382391bf4628cc3b509
+    zip SHA-256     : 6afed288c0d5beed04881546eac92fa8b47be3302f923a0450206f93067dcd39
+
+block03_unified_margin
+    verdict         : PASS (78,384/78,384 checks)
+    results SHA-256 : 577450739c3652ed9be447a3b426f23f8e856dd7eac4aa37002bcdb859b5239a
+    zip SHA-256     : 46a438c43896dcf67e6a210d887a9d66963cb7c8f4903076be5d1acdc9999fab
+
+block04_corridor_ILP
+    verdict         : PASS (E-5.1 180/180, Cor5.3 180/180, basic 372/372)
+    results SHA-256 : eeb55cbb2b33abcbeae841b6ed2562b1a3ba039c3dfdbe5f0074d2561b9fa7ce
+    zip SHA-256     : 38ee6759a4a17ff486c7b691c607d7b8b32540969bd4aa4f6688d17ae232bdf3
+
+
+Master report (INTERNAL_AUDIT root)
+    AUDIT_FINAL_REPORT.pdf SHA-256 : 70a4c1e3a19383bc10e7ea1064299dc95b396c37b1f0ad74447b2ccb6db82518
+    AUDIT_FINAL_REPORT.md  SHA-256 : 2cd7bd0e5e4c02bc97d2697c61c55ffb1bf17698048fa6b9346ccf549e3f0fa6

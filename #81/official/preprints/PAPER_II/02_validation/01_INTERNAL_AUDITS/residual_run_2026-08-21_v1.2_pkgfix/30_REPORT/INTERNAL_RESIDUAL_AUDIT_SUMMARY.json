@@ -1,0 +1,28 @@
+{
+  "paper": "PAPER_II",
+  "target": "preprint_draft_v1.2_package_fix",
+  "protocol": "PAPER_II_INTERNAL_PACKAGE_RESIDUAL_v1.0",
+  "audit_class": "INTERNAL_NOT_EXTERNAL",
+  "overall_verdict": "PASS",
+  "target_inventory_manifest_sha256": "ddc50d1cb1fd16a788d03738806a381043134f1df7a0262808379892902b96ec",
+  "manuscript_artifacts_changed": false,
+  "lean_archive_changed": false,
+  "lean_executed": false,
+  "external_findings": {
+    "EXT-PII-M-001": "PASS_CLOSED_INTERNALLY",
+    "EXT-P2-I-001": "NOTE_NONBLOCKING_EXTERNAL_ACCESSIBILITY"
+  },
+  "gates": {
+    "R0": "PASS",
+    "R1": "PASS",
+    "R2": "PASS",
+    "R3": "PASS",
+    "R4": "PASS_RECORDED_AND_EXTERNAL_REUSE",
+    "R5": "PASS_UNCHANGED_ARTIFACTS",
+    "R6": "PASS"
+  },
+  "unresolved_blockers": 0,
+  "unresolved_majors": 0,
+  "unresolved_minors": 0,
+  "external_plain_pass_required": true
+}

@@ -1,0 +1,5 @@
+lualatex -interaction=nonstopmode -halt-on-error PAPER_I_preprint_draft_v1.2_en.tex
+lualatex -interaction=nonstopmode -halt-on-error PAPER_I_preprint_draft_v1.2_en.tex
+lualatex -interaction=nonstopmode -halt-on-error PAPER_I_preprint_draft_v1.2_es.tex
+lualatex -interaction=nonstopmode -halt-on-error PAPER_I_preprint_draft_v1.2_es.tex
+pdfinfo, pdffonts and pdftoppm were then applied to both PDFs; every rendered page was inspected.

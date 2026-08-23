@@ -1,0 +1,86 @@
+{
+ "gate": "E7",
+ "self_containment": {
+  "EN_hits": {
+   "internal audit": 3
+  },
+  "ES_hits": {},
+  "clean": false
+ },
+ "release_status_by_file": {
+  "README.md": {
+   "first formal public release": 0,
+   "candidate": 1,
+   "unpublished": 1,
+   "v1.3": 6,
+   "NOT_STARTED": 0,
+   "PASS": 1
+  },
+  "DRAFT_METADATA.yml": {
+   "first formal public release": 0,
+   "candidate": 2,
+   "unpublished": 1,
+   "v1.3": 4,
+   "NOT_STARTED": 1,
+   "PASS": 7
+  },
+  "DRAFT_NOTES.md": {
+   "first formal public release": 0,
+   "candidate": 1,
+   "unpublished": 0,
+   "v1.3": 3,
+   "NOT_STARTED": 0,
+   "PASS": 0
+  },
+  "CHANGELOG_v1.3.md": {
+   "first formal public release": 0,
+   "candidate": 0,
+   "unpublished": 1,
+   "v1.3": 1,
+   "NOT_STARTED": 0,
+   "PASS": 0
+  },
+  "04_integrity/README.md": {
+   "first formal public release": 0,
+   "candidate": 1,
+   "unpublished": 0,
+   "v1.3": 1,
+   "NOT_STARTED": 0,
+   "PASS": 0
+  },
+  "05_formalization/lean_v1.3_freeze/FREEZE_METADATA.json": {
+   "first formal public release": 0,
+   "candidate": 0,
+   "unpublished": 0,
+   "v1.3": 0,
+   "NOT_STARTED": 1,
+   "PASS": 2
+  },
+  "05_formalization/lean_v1.3_freeze/FREEZE_REPORT.md": {
+   "first formal public release": 0,
+   "candidate": 2,
+   "unpublished": 1,
+   "v1.3": 4,
+   "NOT_STARTED": 0,
+   "PASS": 1
+  }
+ },
+ "metadata_vs_package": {
+  "FREEZE_METADATA.status": "LOCAL_FREEZE_PREPARED_PENDING_INTERNAL_AUDIT",
+  "FREEZE_METADATA.internal_audit": "NOT_STARTED",
+  "FREEZE_METADATA.external_reproduction": "NOT_RUN",
+  "internal_audit_report_present": true,
+  "internal_audit_states_verdict": "PASS",
+  "recorded_build_log": "gate_logs/BUILD_LOG_FINAL_INCREMENTAL.txt",
+  "recorded_build_jobs": 8719,
+  "recorded_build_seconds": 403.424,
+  "contradiction": true
+ },
+ "final_hash_reverification": {
+  "entries": 12,
+  "matching": 12,
+  "mismatches": [],
+  "target_unchanged_during_audit": true
+ },
+ "verdict": "PASS_WITH_FINDINGS"
+}

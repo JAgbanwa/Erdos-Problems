@@ -1,0 +1,161 @@
+{
+ "surfaces": {
+  "README.md": {
+   "present": true,
+   "sha256": "3c114c97783bb67c8081bb877ecb0fc20a27dad19e9b0d515c19cccc5bc8f1a7",
+   "bytes": 4897
+  },
+  "CHANGELOG_v1.5.md": {
+   "present": true,
+   "sha256": "d247e08f3b9837a6e4de582e2c4e93eb8e6665b2caf10ead5062f0e71b5cdd9f",
+   "bytes": 3169
+  },
+  "RELEASE_METADATA.yml": {
+   "present": true,
+   "sha256": "00fdde778005eef773ce2750daf8a22293b33e8a509b5091e84e8ab466a29f4d",
+   "bytes": 2117
+  },
+  "RELEASE_NOTES.md": {
+   "present": true,
+   "sha256": "f936941f9674d4783a68032570b5f1ec4862778325432ae000b8cab619273407",
+   "bytes": 1914
+  },
+  "CITATION.cff": {
+   "present": true,
+   "sha256": "4ae32cde53ce9ffe43033c2cae972a39908af15d1b9a4142f0d3f33673135481",
+   "bytes": 578
+  },
+  "CITATION.bib": {
+   "present": true,
+   "sha256": "d1804c4ed7bb7f4193944b20688528a396d17a2df380dda0756e0b86742a68f1",
+   "bytes": 400
+  },
+  "PaperIII_explained_4_levels.html": {
+   "present": true,
+   "sha256": "f0d9fb80d03735fcc539f3c51cc9750d2f0699ae45e4d53a5da8356850bfa4b1",
+   "bytes": 17497
+  }
+ },
+ "all_surfaces_present": true,
+ "consistency": {
+  "README.md": {
+   "mentions_1_5": true,
+   "mentions_v1_4_as_superseded": true,
+   "author_present": true,
+   "mentions_2026_08_23": true
+  },
+  "CHANGELOG_v1.5.md": {
+   "mentions_1_5": true,
+   "mentions_v1_4_as_superseded": true,
+   "author_present": true,
+   "mentions_2026_08_23": false
+  },
+  "RELEASE_METADATA.yml": {
+   "mentions_1_5": true,
+   "mentions_v1_4_as_superseded": true,
+   "author_present": true,
+   "mentions_2026_08_23": true
+  },
+  "RELEASE_NOTES.md": {
+   "mentions_1_5": true,
+   "mentions_v1_4_as_superseded": false,
+   "author_present": false,
+   "mentions_2026_08_23": false
+  },
+  "CITATION.cff": {
+   "mentions_1_5": true,
+   "mentions_v1_4_as_superseded": false,
+   "author_present": true,
+   "mentions_2026_08_23": true
+  },
+  "CITATION.bib": {
+   "mentions_1_5": true,
+   "mentions_v1_4_as_superseded": false,
+   "author_present": true,
+   "mentions_2026_08_23": false
+  },
+  "PaperIII_explained_4_levels.html": {
+   "mentions_1_5": true,
+   "mentions_v1_4_as_superseded": true,
+   "author_present": true,
+   "mentions_2026_08_23": true
+  }
+ },
+ "all_mention_1_5": true,
+ "quoted_hashes": {
+  "count": 4,
+  "unmatched": []
+ },
+ "all_quoted_hashes_resolve": true,
+ "broken_local_links": [],
+ "links_resolve": true,
+ "html": {
+  "states_split_scope": true,
+  "leaves_full_chordal_open": true,
+  "does_not_claim_full_chordal_solved": true,
+  "reports_lean_status": true,
+  "reports_audit_status": true,
+  "discloses_no_human_peer_review": true,
+  "no_absolute_priority_claim": true
+ },
+ "framing": {
+  "README.md": {
+   "says_first_public": true,
+   "declares_no_superseded_public_version": null,
+   "v1_4_called_unpublished": true,
+   "claims_superseding_public_release": false
+  },
+  "CHANGELOG_v1.5.md": {
+   "says_first_public": true,
+   "declares_no_superseded_public_version": null,
+   "v1_4_called_unpublished": true,
+   "claims_superseding_public_release": false
+  },
+  "RELEASE_NOTES.md": {
+   "says_first_public": true,
+   "declares_no_superseded_public_version": null,
+   "v1_4_called_unpublished": true,
+   "claims_superseding_public_release": false
+  },
+  "RELEASE_METADATA.yml": {
+   "says_first_public": true,
+   "declares_no_superseded_public_version": true,
+   "v1_4_called_unpublished": true,
+   "claims_superseding_public_release": false
+  }
+ },
+ "framing_ok": true,
+ "preserved": {
+  "v1_4_residual_report": {
+   "present": true,
+   "sha256": "2c19bf1ca74f77cc409b8d0102adf01b92d13db885ac81d15d156477abed8842",
+   "unchanged": true
+  },
+  "v1_4_challenger_report": {
+   "present": true,
+   "sha256": "a196479b8b2adde5077669ec5e398dfc4d640e006bd97b10ef0f72696bdfb5f3",
+   "unchanged": true
+  },
+  "v1_4_residual_package": {
+   "files": 60,
+   "mismatched": 0,
+   "problems": []
+  },
+  "v1_4_challenger_package": {
+   "files": 24,
+   "mismatched": 0,
+   "problems": []
+  }
+ },
+ "preserved_ok": true,
+ "checks": {
+  "surfaces_present": true,
+  "all_mention_1_5": true,
+  "quoted_hashes_resolve": true,
+  "links_resolve": true,
+  "html_ok": true,
+  "framing_ok": true,
+  "preserved_ok": true
+ },
+ "E7_pass": true
+}

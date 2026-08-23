@@ -1,0 +1,25 @@
+{
+  "paper": "PAPER_III",
+  "target": "preprint_draft_v1.4",
+  "date": "2026-08-22",
+  "audit_class": "INTERNAL_AUTHOR_SIDE_NON_INDEPENDENT",
+  "protocol": "INTERNAL_AUDIT_STANDARD_v1.3_PLUS_PAPER_III_V1.4_REGRESSIONS",
+  "lean_rebuild_during_audit": false,
+  "recorded_build": {
+    "classification": "PASS_CLEAN_ORIGIN_RESUMED",
+    "public_root_exit_code": 0,
+    "public_root_jobs": 8455,
+    "query_roots_exit_code": 0,
+    "query_roots_jobs": 8444,
+    "axiom_query_files": 8,
+    "axiom_queries": 42,
+    "distinct_surfaces": 35,
+    "lean": "4.28.0",
+    "mathlib_commit": "8f9d9cff6bd728b17a24e163c9402775d9e6a365"
+  },
+  "checks": {"passed": 144, "total": 144},
+  "gate_verdicts": {"G0": "PASS", "G1": "PASS", "G2": "PASS", "G3": "PASS", "G4": "PASS", "G5": "PASS", "G6": "PASS", "G7": "PASS", "G8": "PASS"},
+  "formal_archive_sha256": "79ee24c38fd776bc2585a0c3c996e30817f0829fc5064463bdbde0fa2d3d7104",
+  "overall": "PASS",
+  "external_gates_open": true
+}

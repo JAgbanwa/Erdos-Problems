@@ -1,0 +1,12 @@
+### start_utc: 2026-08-23T00:01:15Z
+### cmd: lake exe cache get
+EXIT=1
+EXIT=TERMINATED_BY_AUDITOR_AFTER_HANG
+### nota del auditor: 'lake exe cache get' quedo bloqueado en red (3.7 s de CPU en ~40 min de
+### reloj, sin salida, sin proceso curl). El cache de dependencias ya estaba completo y
+### verificado por pin: 7655 oleans de Mathlib (1.76 GB) con Mathlib.olean raiz presente, mas
+### batteries 175, aesop 135, Qq 14, proofwidgets 12, importGraph 10, LeanSearchClient 4,
+### plausible 11. En la auditoria v1.3 el mismo comando reporto 'No files to download /
+### Already decompressed 8010 file(s)', asi que no tenia trabajo pendiente. El protocolo lo
+### pide 'when available'; se termino y se documenta en lugar de esperar el timeout.
+### end_utc: 2026-08-23T00:08:27Z

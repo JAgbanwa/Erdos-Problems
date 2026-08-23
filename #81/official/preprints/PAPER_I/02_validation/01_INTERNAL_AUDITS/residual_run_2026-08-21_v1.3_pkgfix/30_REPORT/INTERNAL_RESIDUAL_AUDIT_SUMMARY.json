@@ -1,0 +1,31 @@
+{
+  "paper": "PAPER_I",
+  "target": "preprint_draft_v1.3_package_fix",
+  "protocol": "PAPER_I_INTERNAL_PACKAGE_RESIDUAL_v1.0",
+  "audit_class": "INTERNAL_NOT_EXTERNAL",
+  "overall_verdict": "PASS",
+  "target_inventory_aggregate_sha256": "402fe23d5538851b290c749927ea75052efadc8c5df5cda5aba5fdbe0495a325",
+  "manuscript_artifacts_changed": false,
+  "lean_archive_changed": false,
+  "lean_executed": false,
+  "external_findings": {
+    "RES-V13-001": "PASS_CLOSED",
+    "RES-V13-002": "PASS_CLOSED",
+    "RES-V13-003": "PASS_PREVIOUSLY_CLOSED",
+    "RES-V13-004": "NOTE_NONBLOCKING_EXTERNAL_ACCESSIBILITY"
+  },
+  "gates": {
+    "R0": "PASS_AFTER_HARNESS_CORRECTION",
+    "R1": "PASS",
+    "R2": "PASS",
+    "R3": "PASS",
+    "R4": "PASS_RECORDED_AND_EXTERNAL_REUSE",
+    "R5": "PASS_UNCHANGED_ARTIFACTS",
+    "R6": "PASS"
+  },
+  "unresolved_blockers": 0,
+  "unresolved_majors": 0,
+  "unresolved_minors": 0,
+  "external_plain_pass_required": true
+}
+

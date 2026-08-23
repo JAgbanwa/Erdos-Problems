@@ -1,0 +1,53 @@
+--- Part (i): Phi <= n^2/6 + 2n on adversarial corridor instances ---
+    ('PASS', 36, 0, 'extremal d=p', 'nu3_cert=630', 'needed>=531', '|E|=3222')
+    ('PASS', 36, 0, 'common d=p', 'nu3_cert=630', 'needed>=531', '|E|=3222')
+    ('PASS', 36, 0, 'random m_i<=s', 'nu3_cert=630', 'needed>=531', '|E|=3222')
+    ('PASS', 36, 1, 'extremal d=p', 'nu3_cert=630', 'needed>=6383/12', '|E|=3186')
+    ('PASS', 36, 1, 'common d=p-m', 'nu3_cert=595', 'needed>=5957/12', '|E|=3115')
+    ('PASS', 36, 1, 'random m_i<=s', 'nu3_cert=630', 'needed>=6185/12', '|E|=3153')
+    ('PASS', 36, 36, 'extremal d=p', 'nu3_cert=630', 'needed>=459', '|E|=1926')
+    ('PASS', 36, 36, 'common d=p-m', 'nu3_cert=0', 'needed>=-189', '|E|=630')
+    ('PASS', 36, 36, 'random m_i<=s', 'nu3_cert=357', 'needed>=220', '|E|=1448')
+    ('PASS', 49, 0, 'extremal d=p', 'nu3_cert=1176', 'needed>=4165/4', '|E|=5978')
+    ('PASS', 49, 0, 'common d=p', 'nu3_cert=1176', 'needed>=4165/4', '|E|=5978')
+    ('PASS', 49, 0, 'random m_i<=s', 'nu3_cert=1176', 'needed>=4165/4', '|E|=5978')
+    ('PASS', 49, 1, 'extremal d=p', 'nu3_cert=1176', 'needed>=6253/6', '|E|=5929')
+    ('PASS', 49, 1, 'common d=p-m', 'nu3_cert=1128', 'needed>=2981/3', '|E|=5832')
+    ('PASS', 49, 1, 'random m_i<=s', 'nu3_cert=1176', 'needed>=6091/6', '|E|=5875')
+    ('PASS', 49, 42, 'extremal d=p', 'nu3_cert=1176', 'needed>=3745/4', '|E|=3920')
+    ('PASS', 49, 42, 'common d=p-m', 'nu3_cert=21', 'needed>=-959/4', '|E|=1568')
+    ('PASS', 49, 42, 'random m_i<=s', 'nu3_cert=571', 'needed>=1207/4', '|E|=2651')
+    ('PASS', 64, 0, 'extremal d=p', 'nu3_cert=2016', 'needed>=1840', '|E|=10208')
+    ('PASS', 64, 0, 'common d=p', 'nu3_cert=2016', 'needed>=1840', '|E|=10208')
+    ('PASS', 64, 0, 'random m_i<=s', 'nu3_cert=2016', 'needed>=1840', '|E|=10208')
+    ('PASS', 64, 1, 'extremal d=p', 'nu3_cert=2016', 'needed>=22091/12', '|E|=10144')
+    ('PASS', 64, 1, 'common d=p-m', 'nu3_cert=1953', 'needed>=21329/12', '|E|=10017')
+    ('PASS', 64, 1, 'random m_i<=s', 'nu3_cert=2016', 'needed>=21755/12', '|E|=10088')
+    ('PASS', 64, 48, 'extremal d=p', 'nu3_cert=2016', 'needed>=1696', '|E|=7136')
+    ('PASS', 64, 48, 'common d=p-m', 'nu3_cert=120', 'needed>=-224', '|E|=3296')
+    ('PASS', 64, 48, 'random m_i<=s', 'nu3_cert=1217', 'needed>=1493/2', '|E|=5237')
+    ('PASS', 100, 0, 'extremal d=p', 'nu3_cert=4950', 'needed>=4675', '|E|=24950')
+    ('PASS', 100, 0, 'common d=p', 'nu3_cert=4950', 'needed>=4675', '|E|=24950')
+    ('PASS', 100, 0, 'random m_i<=s', 'nu3_cert=4950', 'needed>=4675', '|E|=24950')
+    ('PASS', 100, 1, 'extremal d=p', 'nu3_cert=4950', 'needed>=56111/12', '|E|=24850')
+    ('PASS', 100, 1, 'common d=p-m', 'nu3_cert=4851', 'needed>=54917/12', '|E|=24651')
+    ('PASS', 100, 1, 'random m_i<=s', 'nu3_cert=4949', 'needed>=55505/12', '|E|=24749')
+    ('PASS', 100, 60, 'extremal d=p', 'nu3_cert=4950', 'needed>=4435', '|E|=18950')
+    ('PASS', 100, 60, 'common d=p-m', 'nu3_cert=780', 'needed>=235', '|E|=10550')
+    ('PASS', 100, 60, 'random m_i<=s', 'nu3_cert=3374', 'needed>=2297', '|E|=14674')
+[5s]
+
+--- Part (ii): Phi <= n^2/6 at p = 2304, s = 288 (the corridor threshold point) ---
+    common m=0: PASS  {'p': 2304, 's': 288, 'm': 0, 'q': 4320, 'n': 6624, 'E': 12606336, 'need': '2646720', 'cert': 2653056, 'hyp_deg': True, 'disj': True, 'mem': True}
+    common m=47: PASS  {'p': 2304, 's': 288, 'm': 47, 'q': 4320, 'n': 6624, 'E': 12403296, 'need': '2545200', 'cert': 2546977, 'hyp_deg': True, 'disj': True, 'mem': True}
+    common m=94: PASS  {'p': 2304, 's': 288, 'm': 94, 'q': 4320, 'n': 6624, 'E': 12200256, 'need': '2443680', 'cert': 2445316, 'hyp_deg': True, 'disj': True, 'mem': True}
+    common m=95: PASS  {'p': 2304, 's': 288, 'm': 95, 'q': 4320, 'n': 6624, 'E': 12195936, 'need': '2441520', 'cert': 2443201, 'hyp_deg': True, 'disj': True, 'mem': True}
+[26s]
+    mixed two-center m=94 overlap=89: PASS  {'p': 2304, 's': 288, 'm': 94, 'overlap': 89, 'E': 12200256, 'need': '2443680', 'cert': 2445077, 'hyp_deg': True, 'disj': True, 'mem': True}
+[6s]
+
+Note: at p = 2304 the window [6 sqrt p, p/8] = [288, 288] (a single point), as the threshold p=2304 predicts.
+
+========================================================================
+VERDICT C4: PASS — all corridor instances certified within the claimed bounds
+========================================================================

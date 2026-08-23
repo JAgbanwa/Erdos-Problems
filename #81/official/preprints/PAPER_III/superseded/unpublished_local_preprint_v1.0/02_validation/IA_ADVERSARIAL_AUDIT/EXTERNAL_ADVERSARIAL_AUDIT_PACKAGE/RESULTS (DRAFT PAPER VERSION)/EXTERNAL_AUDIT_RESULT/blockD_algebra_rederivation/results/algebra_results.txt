@@ -1,0 +1,66 @@
+============================================================================
+EXTERNAL AUDIT — Block D: independent algebra re-derivation (no CAS)
+============================================================================
+
+[PASS] D01 T(G) identity (Thm 4.2 key identity)
+        T = Sd/2 + C_alpha p^2 - p/4  with C_alpha p^2 = (2p^2-2pq-q^2)/12
+[PASS] D02 three cover-vertex values = three branches of F
+        (1/3,1/3,1/3,1/3)->t1 ; (1,0,0,1)->t2 ; (1,0,1/3,1/3)->t3
+[PASS] D02b the three covers are feasible (all five triangle constraints)
+[PASS] D03 C(d,2)+d r+C(r,2) = C(p,2)
+[PASS] D04 (4.5) branch-1 exact residuals
+        low: q(p-d)/6+p/3 >= 0 always; high: + (3q-2p)(q+2p)/48 >= 0 iff alpha>=2/3
+[PASS] D05 (4.5) branch-2 exact residuals
+        high: perfect square (d-(2p+q)/4)^2; low: + (2p-3q)(2p+q)/48 >= 0 iff alpha<=2/3
+[PASS] D06a t3 = d^2/3 - d/3 + p^2/6 - p/6 (exact simplification)
+[PASS] D06a2 branch-3 square completion: residual = (d-(1/2+3q/4))^2/3 + rem(p,q)
+        rem_low = pq/6+p/3-1/12-q/4-3q^2/16 ; rem_high = -p^2/12+pq/4-q^2/8+p/3-q/4-1/12
+[PASS] D06a3 rem_low >= 0 on 1<=q<=2p/3 (concavity + endpoint nonneg-coeff certs)
+        q=1, p=2+u: (23/48) + (1/2)*u ; q=2p/3, p=1+u: (1/9) + (2/9)*u + (1/36)*u^2
+[PASS] D06a4 rem_high >= 0 at q=2p/3; and res3_high(d=p) = (2p-q)^2/16 >= 0 (boundary certificate for q >= (4p-2)/3, where the real minimiser d* exceeds p)
+        q=2p/3, p=1+u: (1/9) + (2/9)*u + (1/36)*u^2 ; boundary identity zero: True ; rem_high at q=(4p-2)/3: (1/36) + (1/18)*p + (1/36)*p^2 (sign settled by the boundary identity + grid)
+[PASS] D06b (4.5) branch-3 pointwise, exact grid 3<=p<=90, 1<=q<=2p, 0<=d<=p
+        violations: []
+[PASS] D07 Appendix A: mu = min(m1,m2) and third-branch dominance on [0,2] (401 exact pts)
+        witness: None
+[PASS] D08 mu continuity at 2/3
+[PASS] D09 (5.2) identity: |E| - 2/q sum C(d_i,2) == n^2/6 + p/2 - s^2/6 + ((s-1)M - S2)/q
+        polynomial identity in (p,s,M,S2) after clearing q
+[PASS] D10 (5.3) parabola completion identity
+        (s-1)Mq - M^2 = q^2 (s-1)^2/4 - (M - q(s-1)/2)^2 ; plus S2 >= M^2/q (Cauchy-Schwarz)
+[PASS] D10b (s-1)^2/4 - s^2/6 = (s^2-6s+3)/12
+[PASS] D10c S2 >= M^2/q on 2000 random exact profiles
+[PASS] D11 (9.5): m_i < s/3 - 5/6 => 3m <= s-3 (exhaustive integer check)
+        integrality: 3m_i <= ceil(s - 5/2) - 1 = s - 3 for integer s
+[PASS] D12 (9.10) delta >= 7/8, both parities: certificate identities + grid p<3000
+        odd: 8(p-s)=7p+(p-8s); even: 8(p+1-s)=7(p-1)+(p+15-8s); grid uses h=min(r_p, q-r_p)
+[PASS] D13 (9.11) nonneg-coefficient certificate in (m, u=s-3-3m)
+        expanded: (2/3)*u + (2/9)*u^2 + (1/3)*m*u
+[PASS] D14a (9.12) s^2 coefficient
+[PASS] D14b p/2 - 5*(36p)/288 = -p/8
+[PASS] D14c (q+2)/(q-1) >= 1 for q>=2 (trivial: q+2 > q-1)
+        2*delta*V/(q(q-1)) >= (7/96) s^2 (q+2)/(q-1) >= (7/96) s^2
+[PASS] D15 (9.16)/(9.17) kappa_R <= 5s/4p and (s-2rho-1)+/q <= 5s/4p (exact grid)
+        p in {2304..2339, 2400, 3000, 5000, 9999, 10000, 20000, 65536, 100003}; violations: []
+[PASS] D15b 8/15 + 16/23 = 424/345 <= 5/4
+[PASS] D16 (9.18): 24p*5s^2 - 192*5s^3 = 120 s^2 (p - 8s) (identity => ineq iff 8s<=p)
+        5s^3/(24p) <= 5s^2/192  <=>  8s <= p (used with s <= p/8)
+[PASS] D17 (9.19) completed square
+[PASS] D18a (9.20) coefficient
+[PASS] D18b p/2 - 36p/64 = -p/16
+[PASS] D19 6 sqrt(p) = p/8 <=> p = 2304 (positive integers, exhaustive to 10^4)
+        solutions: [2304]
+[PASS] D20 Prop 10.1(i): (5.3)-bound <= n^2/6 + 2n for all p in [36,600], 0<=s<=6sqrt(p) (and q >= r_p throughout)
+        violations: []
+[PASS] D21a |B_i \ B_j| = a_ij (2(p-|S_j|) - a_ij - 1)/2, exhaustive p=7, |S|<=4
+[PASS] D21b V-identity V = sum_{i,j} |B_i \ B_j| (400 random exact instances)
+[PASS] D21c Lemma 6.1 inequality on the same instances (when 2p-3m-1>=0)
+[PASS] D23a Lemma 7.1 assembly: A_R coefficient (2b-1-q) = s-2rho-1
+[PASS] D23b Lemma 7.1 assembly: constant block identity
+        C(p,2)+qp-q rho-2C(b,2)-2C(rho,2) == n^2/6+p/2-s^2/6+s rho-2rho^2  (b=p-rho, q=2p-s)
+[PASS] D23c 2*beta_i identity: 2(C(b,2)-C(b-t,2)) = t(2b-1) - t^2
+[PASS] D22 K_p v bar-K_2p: |E| - 2 C(p,2) = n^2/6 + n/6 (polynomial identity)
+
+============================================================================
+SUMMARY: 38/38 checks PASSED
+============================================================================

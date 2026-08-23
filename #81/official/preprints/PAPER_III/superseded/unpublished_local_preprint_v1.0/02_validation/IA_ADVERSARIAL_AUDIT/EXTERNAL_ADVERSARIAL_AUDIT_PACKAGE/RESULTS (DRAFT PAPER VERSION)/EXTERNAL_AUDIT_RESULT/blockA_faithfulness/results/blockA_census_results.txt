@@ -1,0 +1,69 @@
+============================================================================
+Block A — A1 anchor presence check (ledger node -> manuscript string)
+============================================================================
+[PASS] E-3.1  F formula           : \frac{\binom p2+qd}{3}
+[PASS] E-3.1  hypothesis          : For \(p\ge3\)
+[PASS] E-4.1  cloning             : \frac1q\sum_{i=1}^qF(p,q,d_i)
+[PASS] E-4.2  hypothesis          : Assume \(0<q\le2p\)
+[PASS] E-4.2  margin              : T(G)+\mu(\alpha)p^2-\frac p4
+[PASS] E-4.2  mu low              : \alpha^2/12
+[PASS] E-4.2  mu high             : (2-\alpha)^2/48
+[PASS] E-4.2  C_alpha             : C_\alpha=\frac{2-2\alpha-\alpha^2}{12}
+[PASS] E-5.1  hypothesis          : If \(q\ge r_p\)
+[PASS] E-5.1  bound               : \frac1q\sum_i\binom{d_i}{2}
+[PASS] Cor5.3 closed form         : \frac{s^2-6s+3}{12}
+[PASS] E-5.2  delta               : h=\min\{r_p,q-r_p\}
+[PASS] E-5.2  V                   : V=\sum_{e\in E(K)}b_e(q-b_e)
+[PASS] E-6.1  hypothesis          : If \(2p-3m-1\ge0\)
+[PASS] E-6.1  bound               : \frac{2p-3m-1}{4}
+[PASS] E-7.1  (7.1)               : b\ge\chi
+[PASS] E-7.1  (7.2)               : b-t_i\ge\max\{\rho,u\}
+[PASS] E-7.1  theta               : \theta_R=\frac{\max\{\rho-1,0\}}{b}
+[PASS] E-7.1  kappa               : 1-2(1-\theta_R)\frac{u}{q}
+[PASS] E-7.1  bound               : +s\rho-2\rho^2
+[PASS] E-8   degree bound         : \frac{2n-1}{6}+k
+[PASS] E-B   parity set           : |O\cap\{x_1,\ldots,x_j\}|
+[PASS] E-D.1 kernel lemma         : |L(v)|\ge d^+_D(v)+1
+[PASS] E-D.3 Galvin max-degree    : |L(e)|\ge\Delta
+[PASS] E-9   contradiction        : \frac{n_k^2}{6}+kn_k
+[PASS] P10.1 (i) hyp              : 0\le s\le6\sqrt p
+[PASS] P10.1 (i) bound            : \frac{n^2}{6}+2n
+[PASS] P10.1 (ii) hyp p           : p\ge2304
+[PASS] P10.1 (ii) hyp s           : 6\sqrt p\le s\le\frac p8
+[PASS] P10.1 (ii) hyp deg         : d(v)>\frac{2n-1}{6}+1
+[PASS] AX1   statement            : \nu_H^*(G)-\nu_H(G)=o(|V(G)|^2)
+[PASS] AX2   threshold            : \delta(H)\ge(0.9+\varepsilon)|V(H)|
+[PASS] Cor1.2 statement           : \operatorname{cp}(G)
+[PASS] Sharp  family              : K_p\vee\overline K_{2p}
+[PASS] Sharp  value               : \frac{n^2}{6}+\frac n6
+--- anchors present: 35/35
+
+============================================================================
+Block A/B — A3/B3 census: external-theorem mentions with line numbers
+============================================================================
+  Theorem 2.1   : lines [299, 1841]
+  Haxell        : lines [37, 204, 299, 594, 1248, 1725, 1813, 2114]
+  Theorem 2.3   : lines [321, 1142, 1149, 1783]
+  Dross         : lines [329, 2110]
+  Barber        : lines [329, 2102]
+  Theorem 2.2   : lines [309, 930, 2032]
+  Galvin        : lines [319, 1783, 2032, 2062, 2084, 2124]
+  König         : lines [319, 1783, 2068, 2128]
+  Gale          : lines [2050, 2126]
+  Dirac         : lines [1039, 1078, 2108]
+  Turán         : lines [1117, 1992]
+  Borodin       : lines [319, 2104]
+  Yuster        : lines [299, 2118]
+  Keevash       : lines [1883, 2120]
+
+Interpretation (auditor): load-bearing uses —
+  Thm 2.1 (AX1): line ~594 (Section 4.3) and ~1248 (Section 9.1) ONLY -> bulk only, as claimed.
+  Thm 2.3 (AX2): lines ~1142-1149 (Section 8.3) ONLY -> sparse only, as claimed.
+  Thm 2.2: line ~930 (Section 7.2); proved in Appendix D -> not external, as claimed.
+  Dirac: lines ~1039, ~1078 (Section 8) — classical external input NOT covered by AX1/AX2.
+  Turán: Section 8.3 / Appendix B — classical external input NOT covered by AX1/AX2.
+  chi-prime(K_t) 1-factorization (Section 2.3, eq. 2.2): classical, stated without proof;
+    load-bearing for Lemmas 5.1/5.2/7.1 and hence for Proposition 10.1.
+  Borodin-Kostochka-Woodall: mentioned only to say it is NOT needed -> confirmed not load-bearing.
+
+VERDICT (mechanical component): PASS (35/35 anchors)

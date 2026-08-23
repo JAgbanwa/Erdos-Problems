@@ -1,0 +1,76 @@
+{
+  "spec": "FINAL_RESIDUAL_AUDIT_REQUEST_SPEC.md",
+  "spec_sha256": "93cf8e6a06cd47189e98a4939145b21a32a283956c172a2791812a4df5a87484",
+  "paper": "PAPER_I",
+  "target": {
+    "file_count": 308,
+    "total_bytes": 37763479,
+    "declared_aggregate_reproduced": false,
+    "owner_manifest_entries_verified": "219/219",
+    "hash_disagreements": 0,
+    "paths_only_in_owner_manifest": 0
+  },
+  "run": "run_2026-08-21_v1.3_pkgfix",
+  "audit_class": "EXTERNAL_RESIDUAL_ADVERSARIAL_RE_AUDIT",
+  "audit_date": "2026-08-21",
+  "overall_verdict": "PASS",
+  "externally_closed": true,
+  "verdict_basis": "Both open MINOR findings independently closed. Target inventory (308 files, 37,763,479 bytes) and all ten anchors verify; the owner's own 219-entry manifest verifies 219 of 219 with zero disagreements. Package regression found no new blocker, major or minor. Reused formal evidence re-established byte-identical (32 of 32 members). Two disclosed NOTEs remain.",
+  "controls": {
+    "A_RES_V13_001": "PASS",
+    "B_RES_V13_002": "PASS",
+    "C_package_regression": "PASS"
+  },
+  "findings": {
+    "RES-V13-001": "CLOSED",
+    "RES-V13-002": "CLOSED",
+    "RES-V13-004": "OPEN (NOTE)",
+    "PKGFIX-N01": "OPEN (NOTE)"
+  },
+  "unresolved": {
+    "blocker": 0,
+    "major": 0,
+    "minor": 0,
+    "note": 2
+  },
+  "delta_vs_previous_external_freeze": {
+    "previous_files": 221,
+    "current_files": 308,
+    "added": 90,
+    "removed": 3,
+    "changed": 4,
+    "unannounced": 0,
+    "conclusion": "package-only, exactly the four authorized changes"
+  },
+  "reuse": {
+    "label": "REUSED_BYTE_IDENTICAL_EXTERNAL_EVIDENCE",
+    "lean_rebuilt": false,
+    "math_rerun": false,
+    "pdf_recompiled": false,
+    "archive_members_compared": 32,
+    "archive_members_byte_identical": 32,
+    "toolchain_manifest_lakefile_axiomfile": "IDENTICAL"
+  },
+  "sidecars": {
+    "checked": 37,
+    "verifying": 37
+  },
+  "internal_residual_zip": {
+    "sha256": "0ac2fa306a2df8607b2d2d5d54ec4d9cdda8eca4f21dd8e47f1e36d8adae92e6",
+    "matches_sidecar": true,
+    "matches_spec_anchor": true,
+    "members": 87,
+    "members_consistent": true
+  },
+  "not_established": [
+    "truth of Theorem 1.1 (only failure to falsify across three runs)",
+    "human peer review",
+    "global novelty",
+    "PDF recompilation from delivered TeX",
+    "the six Lean modules outside the eight built targets",
+    "formal adequacy of the PaperI.Split model",
+    "an independent second opinion: no challenger was run for v1.3 or this run"
+  ],
+  "prior_report_status": "the earlier PASS_WITH_RESIDUALS report is not relabelled and stands against its own hashes",
+  "package_sha256": "b1e08710eee274d54331b7aeb5e1c8ae3af8146468207e2365f497f823384386"
+}

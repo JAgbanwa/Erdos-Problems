@@ -1,0 +1,38 @@
+id,claim_ref,block,attack,inputs_or_ranges,outcome,severity,reproduction_cmd,evidence_file
+F-A01,Theorem 1.1,A,claim-to-Lean mapping,"manuscript Thm 1.1 vs Theorem_1_1",CONFIRMED,none,,blockA_claim_faithfulness/README.md
+F-A02,Corollary 1.2,A,claim-to-Lean mapping,"manuscript Cor 1.2 vs Corollary_1_2",CONFIRMED,none,,blockA_claim_faithfulness/README.md
+F-A03,Theorem 3.1 common-profile,A,claim-to-Lean mapping,"E_3_1/Corollary_10_4 (3<=p)",CONFIRMED,none,,blockA_claim_faithfulness/README.md
+F-A04,Bulk assembly E-4.3,A,claim-to-Lean mapping,"E_4_3 alpha in [eps,2-eps]",CONFIRMED,none,,blockA_claim_faithfulness/README.md
+F-A05,Sparse assembly section 8,A,claim-to-Lean mapping,"E_8 2q<=p",CONFIRMED,none,,blockA_claim_faithfulness/README.md
+F-A06,Corridor Prop 10.5,A,claim-to-Lean mapping,"Prop_10_1_low/mid",CONFIRMED,none,,blockA_claim_faithfulness/README.md
+F-A07,cp<=Phi (eq 1.1),A,claim-to-Lean mapping,"cp_le_Phi",CONFIRMED,none,,blockA_claim_faithfulness/README.md
+F-A08,Weak duality,A,claim-to-Lean mapping,"nu3Star_le_tau3Star",CONFIRMED,none,,blockA_claim_faithfulness/README.md
+F-A09,Packing corollaries (v1.1),A,claim-to-Lean mapping,"factorization_assignment/double_factorization/reserved_gain",CONFIRMED,none,,blockA_claim_faithfulness/README.md
+F-B01,AX2 threshold scope,B,literature-scope,"AX2 uses proven 0.9+eps, not conjectured 0.75n",CONFIRMED,none,,blockB_AX1_AX2_literature_scope/README.md
+F-B02,AX1 cover-side form,B,literature-scope,"AX1 bundles strong LP duality (nu3*=tau3*) with Haxell-Rodl; disclosed",CONFIRMED,none,,blockB_AX1_AX2_literature_scope/README.md
+F-B03,AX1 literature faithfulness,B,literature-scope,"Haxell-Rodl/Yuster o(n^2) gap, specialized to K3; not overstated",CONFIRMED,none,,blockB_AX1_AX2_literature_scope/README.md
+F-B04,AX2 literature faithfulness,B,literature-scope,"Dross+BKLO exact decomposition; hypotheses match",CONFIRMED,none,,blockB_AX1_AX2_literature_scope/README.md
+F-C01,Minimal-counterexample induction,C,proof attack,"telescoping (n-1)^2/6+(2n-1)/6=n^2/6 exact",CONFIRMED,none,,blockC_bulk_sparse_corridor_proof_attack/README.md
+F-C02,Phi_le_erase_independent,C,proof attack,"nu3 monotone under induced subgraph",CONFIRMED,none,,blockC_bulk_sparse_corridor_proof_attack/README.md
+F-C03,Regime-split exhaustiveness,C,proof attack,"high U sparse U middle = all (p,q)",CONFIRMED,none,"python verify_paper3.py",blockE_independent_computation/results/verify_paper3_output.txt
+F-C04,Bulk margin absorbs AX1 loss,C,proof attack,"mu(alpha)p^2 vs o(n^2)",CONFIRMED,none,,blockC_bulk_sparse_corridor_proof_attack/README.md
+F-C05,Corridor split s^2<=36p vs >36p,C,proof attack,"8s<=p in corridor; p>=2304 from n>=7000",CONFIRMED,none,,blockC_bulk_sparse_corridor_proof_attack/README.md
+F-C06,Non-effective constant C,C,proof attack,"C=max(2,N), N>=7000 finite; disclosed",CONFIRMED,none,,blockC_bulk_sparse_corridor_proof_attack/README.md
+F-D01,Extremizer sharpness,D,counterexample search,"K_p v Kbar_2p: Phi=n^2/6+n/6, p=1..59",CONFIRMED,none,"python verify_paper3.py",blockE_independent_computation/results/verify_paper3_output.txt
+F-D02,Extremizer integral nu3,D,counterexample search,"nu3=C(p,2) via ILP, p=2..5",CONFIRMED,none,"python verify_paper3.py",blockE_independent_computation/results/verify_paper3_output.txt
+F-D03,p=2 d=0 boundary,D,boundary search,"F=1/3 vs tau3*=0 OUTSIDE hypothesis 3<=p; not a defect",CONFIRMED,none,"python verify_paper3.py",blockD_counterexample_and_boundary_search/README.md
+F-D04,Corridor threshold p=2304,D,boundary search,"36p=p^2/64 exact at 2304",CONFIRMED,none,"python verify_paper3.py",blockE_independent_computation/results/verify_paper3_output.txt
+F-D05,No counterexample found,D,counterexample search,"regime coverage 1<=p,q<=199; extremizer extremal",CONFIRMED,none,,blockD_counterexample_and_boundary_search/README.md
+F-E01,E-3.1 formula F(p,q,d),E,independent computation,"464 LP instances p=3..8; F=tau3*=nu3*",CONFIRMED,none,"python verify_paper3.py",blockE_independent_computation/results/verify_paper3_output.txt
+F-E02,mu(alpha) definition,E,independent computation,"continuity at 2/3; mu>=0 on [0,2]",CONFIRMED,none,"python verify_paper3.py",blockE_independent_computation/results/verify_paper3_output.txt
+F-E03,rp(t)=chi'(K_t),E,independent computation,"t=0..39 edge-chromatic number",CONFIRMED,none,"python verify_paper3.py",blockE_independent_computation/results/verify_paper3_output.txt
+F-E04,Total independent checks,E,independent computation,"60541 checks 0 failures",CONFIRMED,none,"python verify_paper3.py",blockE_independent_computation/results/verify_paper3_output.txt
+F-F01,Internal audit non-premise,F,meta-audit,"46481 internal checks; not logical premises",CONFIRMED,none,,blockF_audit_the_internal_audit/README.md
+F-F02,Lean freeze integrity,F,meta-audit,"8060 jobs 0 errors; 2 axioms; 0 sorry/admit",CONFIRMED,none,,blockF_audit_the_internal_audit/README.md
+F-G01,Build success,G,Lean verification,"lake build PaperIII 8060 jobs 0 errors",CONFIRMED,none,"lake build PaperIII",blockG_lean_verification/results/lake_build.log
+F-G02,Escape-hatch scan,G,escape hatch scan,"0 sorry/admit/unsafe/native_decide; 2 axioms AX1 AX2",CONFIRMED,none,,blockG_lean_verification/results/escape_hatch_scan.txt
+F-G03,Theorem_1_1 footprint,G,axiom audit,"[propext Classical.choice AX1 AX2 Quot.sound]",CONFIRMED,none,"lake env lean AuditGates_PaperIII.lean",blockG_lean_verification/results/axiom_gates.txt
+F-G04,Corridor closed,G,axiom audit,"Prop_10_1_low/mid + packing corollaries: standard axioms only, no AX1/AX2",CONFIRMED,none,"lake env lean AuditGates_PaperIII.lean",blockG_lean_verification/results/axiom_gates.txt
+F-G05,Sparse node E_8 depends on AX2 only,G,axiom audit,"E_8 footprint = AX1+AX2 (reuses E_4_3 for alpha in [1/12,1/2]); manuscript 11.6 says AX2 for sparse node",REFUTED,minor,"lake env lean AuditGates_PaperIII.lean",blockG_lean_verification/README.md
+F-G06,Bulk node E_4_3 footprint,G,axiom audit,"E_4_3 = AX1 only (no AX2)",CONFIRMED,none,"lake env lean AuditGates_PaperIII.lean",blockG_lean_verification/results/axiom_gates.txt
+F-G07,AX2 confined to sparse+assembly,G,axiom audit,"AX2 absent from E_4_3 and corridor",CONFIRMED,none,"lake env lean AuditGates_PaperIII.lean",blockG_lean_verification/results/axiom_gates.txt

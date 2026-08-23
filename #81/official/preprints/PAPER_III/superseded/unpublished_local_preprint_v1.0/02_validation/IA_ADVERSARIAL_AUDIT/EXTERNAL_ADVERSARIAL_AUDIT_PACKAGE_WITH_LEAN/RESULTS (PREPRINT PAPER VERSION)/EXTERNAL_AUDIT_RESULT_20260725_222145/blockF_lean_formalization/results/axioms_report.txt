@@ -1,0 +1,57 @@
+'PaperIII.Theorem_1_1' depends on axioms: [propext, Classical.choice, PaperIII.AX1, PaperIII.AX2, Quot.sound]
+'PaperIII.Corollary_1_2' depends on axioms: [propext, Classical.choice, PaperIII.AX1, PaperIII.AX2, Quot.sound]
+'PaperIII.E_4_3' depends on axioms: [propext, Classical.choice, PaperIII.AX1, Quot.sound]
+'PaperIII.E_8' depends on axioms: [propext, Classical.choice, PaperIII.AX1, PaperIII.AX2, Quot.sound]
+'PaperIII.Prop_10_1_low' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PaperIII.Prop_10_1_mid' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PaperIII.E_3_1' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PaperIII.E_4_1' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PaperIII.E_4_2' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PaperIII.E_5_1' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PaperIII.E_5_2' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PaperIII.E_6_1' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PaperIII.E_7_1' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PaperIII.pathCorrection_odd_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PaperIII.AppendixD.konig_edge_coloring' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PaperIII.AppendixD.galvin_max_degree' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PaperIII.clique_divisible_correction' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PaperIII.AX1' depends on axioms: [propext, Classical.choice, PaperIII.AX1, Quot.sound]
+'PaperIII.AX2' depends on axioms: [propext, Classical.choice, PaperIII.AX2, Quot.sound]
+PaperIII.Theorem_1_1 : ∃ C, ∀ (G : PaperIII.SplitGraph), ↑G.Phi ≤ ↑G.n ^ 2 / 6 + C * ↑G.n
+PaperIII.Corollary_1_2 : ∃ C, ∀ (G : PaperIII.SplitGraph), ↑G.cp ≤ ↑G.n ^ 2 / 6 + C * ↑G.n
+PaperIII.Prop_10_1_low : ∀ (G : PaperIII.SplitGraph),
+  36 ≤ G.p → 0 ≤ G.s → ↑G.s ^ 2 ≤ 36 * ↑G.p → ↑G.Phi ≤ ↑G.n ^ 2 / 6 + 2 * ↑G.n
+PaperIII.Prop_10_1_mid : ∀ (G : PaperIII.SplitGraph),
+  2304 ≤ G.p →
+    36 * ↑G.p ≤ ↑G.s ^ 2 →
+      8 * ↑G.s ≤ ↑G.p → (∀ (i : Fin G.q), (2 * ↑G.n - 1) / 6 + 1 < ↑(G.d i)) → ↑G.Phi ≤ ↑G.n ^ 2 / 6
+PaperIII.E_3_1 : ∀ (p q d : ℕ),
+  3 ≤ p → 1 ≤ q → d ≤ p → PaperIII.tau3Star (PaperIII.commonProfile p q d).graph = ↑(PaperIII.SplitGraph.F p q d)
+PaperIII.E_4_2 : ∀ (G : PaperIII.SplitGraph),
+  3 ≤ G.p →
+    1 ≤ G.q → G.q ≤ 2 * G.p → ↑(G.T + PaperIII.SplitGraph.mu G.α * ↑G.p ^ 2 - ↑G.p / 4) ≤ PaperIII.tau3Star G.graph
+PaperIII.E_7_1 : ∀ (G : PaperIII.SplitGraph) (R : Finset (Fin G.p)),
+  2 ≤ G.p - R.card →
+    PaperIII.SplitGraph.rp (G.p - R.card) ≤ G.q →
+      PaperIII.SplitGraph.rp R.card ≤ G.p - R.card →
+        (∀ (i : Fin G.q),
+            max R.card (G.q - PaperIII.SplitGraph.rp (G.p - R.card)) ≤ G.p - R.card - PaperIII.ShiftedCenter.tt G R i) →
+          ↑G.Phi ≤
+            ↑G.n ^ 2 / 6 + ↑G.p / 2 - ↑G.s ^ 2 / 6 + ↑G.s * ↑R.card - 2 * ↑R.card ^ 2 +
+                (1 -
+                    2 * (1 - ↑(max (R.card - 1) 0) / ↑(G.p - R.card)) * ↑(G.q - PaperIII.SplitGraph.rp (G.p - R.card)) /
+                      ↑G.q) *
+                  ↑(PaperIII.ShiftedCenter.BR G R) +
+              ((↑G.s - 2 * ↑R.card - 1) * ↑(PaperIII.ShiftedCenter.AR G R) - ↑(PaperIII.ShiftedCenter.A2R G R)) / ↑G.q
+PaperIII.AX1 : ∀ (ε : ℝ),
+  0 < ε →
+    ∃ n₀,
+      ∀ (V : Type) (x : Fintype V) (x_1 : DecidableEq V) (G : SimpleGraph V) (x_2 : DecidableRel G.Adj),
+        n₀ ≤ Fintype.card V → PaperIII.tau3Star G - ↑(PaperIII.nu3 G) ≤ ε * ↑(Fintype.card V) ^ 2
+PaperIII.AX2 : ∀ (ε : ℝ),
+  0 < ε →
+    ∃ n₀,
+      ∀ (V : Type) (x : Fintype V) (x_1 : DecidableEq V) (H : SimpleGraph V) (x_2 : DecidableRel H.Adj),
+        H.edgeFinset.card % 3 = 0 →
+          (∀ (v : V), Even (H.degree v)) →
+            n₀ ≤ Fintype.card V → (0.9 + ε) * ↑(Fintype.card V) ≤ ↑H.minDegree → PaperIII.HasTriangleDecomposition H
