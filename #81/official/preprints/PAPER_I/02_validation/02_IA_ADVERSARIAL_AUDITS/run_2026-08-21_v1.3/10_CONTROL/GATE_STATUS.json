@@ -1,0 +1,28 @@
+{
+  "spec": "RESIDUAL_AUDIT_REQUEST_SPEC.md",
+  "target": "preprint_draft_v1.3",
+  "mandatory_controls": {
+    "control_1": "PASS",
+    "control_2": "PASS",
+    "control_3": "PASS",
+    "control_4": "PASS",
+    "control_5": "PASS",
+    "control_6": "PASS",
+    "control_7": "PASS",
+    "control_8": "PASS",
+    "control_9": "PASS"
+  },
+  "gates": {
+    "G0_target_freeze": "PASS",
+    "corrections_validation": "PASS",
+    "math_regression": "PASS",
+    "H_lean_reuse": "PASS_REUSED_BYTE_IDENTICAL",
+    "citations_novelty": "PASS",
+    "bilingual_duplicates": "PASS",
+    "pdf_page_qa": "PASS",
+    "package_integrity": "PASS_WITH_RESIDUALS"
+  },
+  "overall": "PASS_WITH_RESIDUALS",
+  "limiting_control": "control_6 (CEO scan unreachable)",
+  "limiting_factor": "two correctable MINOR package defects (tmp/ compiler residue; CHANGELOG namespace transposition)"
+}

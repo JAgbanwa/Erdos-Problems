@@ -1,0 +1,105 @@
+{
+ "gate": "E2",
+ "section": 9,
+ "arithmetic": "exact symbolic (sympy)",
+ "random_seeds": 0,
+ "items": [
+  {
+   "item": "K-COVER, top-level split",
+   "claim": "either q >= 2p-1 (Case A) or alpha = q/p in [0,2) (Cases B-D)",
+   "verdict": "PASS",
+   "detail": "q >= 2p-1 and q < 2p-1 are complementary over the integers, and q < 2p-1 with q, p >= 1 gives alpha = q/p < 2 - 1/p < 2, so alpha lies in [0,2). No cell is left out and the two cells do not overlap."
+  },
+  {
+   "item": "K-COVER, subsequence trichotomy",
+   "claim": "every sequence alpha_k in [0,2) admits a subsequence falling under B, C or D",
+   "verdict": "PASS",
+   "detail": "The sequence (alpha_k) lies in the compact [0,2], so by Bolzano-Weierstrass it has a convergent subsequence with limit L in [0,2]. If L is interior, i.e. 0 < L < 2, then for eps = min(L, 2-L)/2 > 0 the tail satisfies eps <= alpha_k <= 2-eps, which is Case B. If L = 0 it is Case C, and if L = 2 it is Case D. The three limits are mutually exclusive and exhaust [0,2], so the trichotomy is complete. The argument is a contradiction argument over subsequences, so covering every subsequential limit is exactly what is needed."
+  },
+  {
+   "item": "K-COVER, split inside Case D",
+   "claim": "s = O(sqrt p) (D1) or sqrt p << s = o(p) (D2)",
+   "verdict": "PASS",
+   "detail": "Case D fixes s = 2p - q with s = o(p). The two subcases are 's bounded by a constant multiple of sqrt p' and its negation, which is 's/sqrt p -> infinity'. Complementary by construction. s = Theta(p) cannot occur because alpha -> 2 forces s = o(p)."
+  },
+  {
+   "item": "K-COVER, dispersion dichotomy",
+   "claim": "D >= q s^2/12 (high) or D < q s^2/12 (low)",
+   "verdict": "PASS",
+   "detail": "A real number is either at least q s^2/12 or below it. Exhaustive and disjoint by trichotomy of the reals."
+  },
+  {
+   "item": "(9.4) constants",
+   "claim": "p >= 2304 together with 6 sqrt p <= s <= p/8",
+   "verdict": "PASS",
+   "detail": "The window 6 sqrt p <= s <= p/8 is non-empty exactly when 6 sqrt p <= p/8, i.e. 48 <= sqrt p, i.e. p >= 2304. Solving 6 sqrt p = p/8 gives p = [2304]. So the constant 2304 is forced by the two constraints being simultaneously satisfiable; it is not a free choice."
+  },
+  {
+   "item": "(9.5) integrality step",
+   "claim": "m_i < s/3 + 1/6 - k and k >= 1 imply 3m <= s-3 for integer m",
+   "verdict": "PASS",
+   "detail": "With k >= 1, m < s/3 + 1/6 - 1 = s/3 - 5/6, hence 3m < s - 5/2. Since s and m are integers, 3m is an integer strictly below s - 5/2, so 3m <= s - 3. The rounding is valid: the next integer below s - 5/2 is s - 3."
+  },
+  {
+   "item": "(9.10) delta >= 7/8",
+   "claim": "p odd: delta = (p-s)/p; p even: delta = (p+1-s)/(p-1); both >= 7/8 when s <= p/8",
+   "verdict": "PASS",
+   "detail": "Odd p: (p-s)/p - 7/8 = (p/8 - s)/p, which at the extreme s = p/8 equals 0, i.e. exactly zero, so the bound holds with equality at the boundary and strictly inside. Even p: (p+1-s)/(p-1) >= 7/8 iff s <= p/8 + 15/8 = (p+15)/8, and s <= p/8 <= (p+15)/8, so it holds with room to spare. Both parities are covered and the odd case is the binding one."
+  },
+  {
+   "item": "(9.11) ((s-1)M - S2)/q <= 2s(s-3)/9",
+   "claim": "using S2 >= M^2/q and M/q <= m <= (s-3)/3",
+   "verdict": "PASS",
+   "detail": "Write x = M/q. Then ((s-1)M - S2)/q <= (s-1)x - x^2. That parabola has vertex at x = s/2 - 1/2 and is increasing on [0, s/2 - 1/2]. The admissible range ends at x = (s-3)/3, and (s-3)/3 <= (s-1)/2 for all s >= -3, so the maximum over the range is attained at the right endpoint. Evaluating there gives 2*s*(s - 3)/9, and the claimed bound is 2*s*(s - 3)/9; their difference is 0. The step is exact, not an estimate."
+  },
+  {
+   "item": "(9.12) high-dispersion contradiction",
+   "claim": "Phi - n^2/6 <= p/2 - 5s^2/288 - 2s/3 and s^2 >= 36p give <= -p/8 - 2s/3 < 0",
+   "verdict": "PASS",
+   "detail": "At the extreme s = 6 sqrt p, i.e. s^2 = 36p, the manuscript bound evaluates to -4*sqrt(p) - p/8 and the claimed form -p/8 - 2s/3 evaluates to -4*sqrt(p) - p/8; the difference is 0. The coefficient arithmetic is exact: 5*36/288 = 5/8 and 1/2 - 5/8 = -1/8, so p/2 - 5s^2/288 = -p/8 at the boundary and is more negative beyond it, while -2s/3 only helps. Auditor note: a first version of this check used subs(s**2, 36*p), which also rewrites the linear term and reported a spurious FAIL; the corrected substitution is applied to both sides."
+  },
+  {
+   "item": "theta_R <= 8s/(23p)",
+   "claim": "from rho <= m <= (s-3)/3 and s <= p/8",
+   "verdict": "PASS",
+   "detail": "theta_R <= rho/(p-rho) is increasing in rho, so it is largest at rho = s/3, giving (s/3)/(p - s/3). That is largest when s is largest, i.e. s = p/8, where it equals 1/23 = 1/23, matching 8s/(23p) at s = p/8. So the bound 8s/(23p) is exactly the value at the two extreme substitutions."
+  },
+  {
+   "item": "(9.16) kappa_R <= 5s/(4p)",
+   "claim": "kappa_R <= s/q + 2 theta_R with q >= 15p/8 and theta_R <= 8s/(23p)",
+   "verdict": "PASS",
+   "detail": "s/q <= 8s/(15p) since q >= 15p/8. Adding 2 theta_R <= 16s/(23p) gives 424*s/(345*p) = 424/345 s/p, which is about 1.22899 s/p, below the claimed 1.25 s/p. The margin is 29*s/(1380*p), so the bound holds but is not generous."
+  },
+  {
+   "item": "(9.18) 5s^3/(24p) <= 5s^2/192",
+   "claim": "the total positive deviation bound",
+   "verdict": "PASS",
+   "detail": "5s^3/(24p) <= 5s^2/192 reduces to s <= 24p/192 = p/8, and s <= p/8 is exactly hypothesis (9.4). Solving for equality gives s = [p/8]. So the step consumes the whole of the s <= p/8 budget and is tight at the boundary."
+  },
+  {
+   "item": "(9.19) completion of the square",
+   "claim": "s^2/6 - s rho + 2 rho^2 = 2(rho - s/4)^2 + s^2/24",
+   "verdict": "PASS",
+   "detail": "Expanding the difference gives 0. The identity is exact, so the lower bound s^2/24 is attained at rho = s/4 and the step loses nothing."
+  },
+  {
+   "item": "(9.20) low-dispersion contradiction",
+   "claim": "Phi - n^2/6 <= p/2 - s^2/64 and s^2 >= 36p give <= -p/16 < 0",
+   "verdict": "PASS",
+   "detail": "With s^2 = 36p, p/2 - s^2/64 = -p/16, and 36/64 = 9/16 so p/2 - 9p/16 = -p/16 exactly; the difference from the claim is 0."
+  },
+  {
+   "item": "Lemma 7.1 hypotheses in the low-dispersion branch",
+   "claim": "q >= 15p/8, b = p - rho >= p - s/3, b >= 2, q >= r_b, b >= chi'(K_rho), b - t_i >= max{rho, u}",
+   "verdict": "PASS on the arithmetic, PARTIAL on the combinatorial hypotheses",
+   "detail": "q = 2p - s with s <= p/8 gives q >= 2p - p/8 = 15p/8, exact. rho <= m <= (s-3)/3 < s/3 gives b = p - rho > p - s/3, exact. With p >= 2304 and s <= p/8, b > p - p/24 = 23p/24 >= 2, so b >= 2 holds with enormous room. The chain 2 rho + t_i + 1 <= 3m + 1 <= s - 2 follows from (9.5) provided rho <= m and t_i <= m, which is how R = S_j and t_i are defined; the auditor verified the arithmetic but did not re-derive the definitional facts rho <= m and t_i <= m from Section 7, so this row is PARTIAL rather than PASS."
+  }
+ ],
+ "not_covered": {
+  "K-EPS": "the AX1/nibble epsilon ledger: positivity and permitted ranges of every parameter, real/natural conversions, exceptional-set and rounding terms, and the accumulation of all losses inside eps n^2. NOT attempted.",
+  "K-CORRIDOR": "Sections 5-7 themselves: one-factor averaging, the short-corridor inequality and its parity cases, double-factor sampling and the dispersion correction, the polarization identity, and the shifted-center construction. Section 9 USES Lemmas 5.1, 5.2, 6.1 and 7.1 as inputs; this gate verified how Section 9 combines them, not that those lemmas are true. NOT attempted.",
+  "K-SPARSE": "Section 8, which discharges the alpha -> 0 endpoint and supplies the absolute C_0. Section 9.2 is one sentence long and defers entirely to it, so Case C of the cover is closed only modulo Section 8. NOT attempted.",
+  "K-GLOBAL": "the minimal-counterexample induction is the frame of Section 9 and was read and checked for structure, including the step from minimality to (9.2); but the auditor did not verify the base cases at small orders nor that Phi(G) <= Phi(G-v) + d(v) holds for every vertex of every split graph. PARTIAL.",
+  "Sections 4-9 analytic core": "Section 4 and Section 9 were rederived; Sections 5-8 were not."
+ }
+}

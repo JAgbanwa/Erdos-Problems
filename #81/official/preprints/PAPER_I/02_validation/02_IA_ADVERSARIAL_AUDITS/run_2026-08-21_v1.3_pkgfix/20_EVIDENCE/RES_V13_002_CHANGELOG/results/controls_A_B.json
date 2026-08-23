@@ -1,0 +1,70 @@
+{
+ "spec": "FINAL_RESIDUAL_AUDIT_REQUEST_SPEC.md",
+ "target": "preprint_draft_v1.3 (corrected)",
+ "control_A_RES_V13_001": {
+  "files_scanned": 308,
+  "tmp_directories_found": [],
+  "scratch_files_found": [],
+  "zero_byte_files": [],
+  "dollar_stray_files": [],
+  "unexpected_hidden_files": [],
+  "duplicate_internal_report_copies": {
+   "INTERNAL_AUDIT_FINAL_REPORT.pdf": [
+    "02_validation/00_BASELINE_INTERNAL_AUDIT_v1.2/10_REPORT/INTERNAL_AUDIT_FINAL_REPORT.pdf",
+    "02_validation/01_INTERNAL_AUDITS/10_REPORT/INTERNAL_AUDIT_FINAL_REPORT.pdf"
+   ]
+  },
+  "references_to_removed_files": [
+   {
+    "file": "02_validation/01_INTERNAL_AUDITS/residual_run_2026-08-21_v1.3_pkgfix/30_REPORT/INTERNAL_RESIDUAL_AUDIT_REPORT.md",
+    "reference": "tmp/internal_report_v1.3"
+   },
+   {
+    "file": "02_validation/01_INTERNAL_AUDITS/residual_run_2026-08-21_v1.3_pkgfix/30_REPORT/INTERNAL_RESIDUAL_AUDIT_REPORT.md",
+    "reference": "internal_report_v1.3"
+   },
+   {
+    "file": "04_integrity/EXTERNAL_AUDIT_V1.3_RESIDUAL_MATRIX.md",
+    "reference": "tmp/internal_report_v1.3"
+   },
+   {
+    "file": "04_integrity/EXTERNAL_AUDIT_V1.3_RESIDUAL_MATRIX.md",
+    "reference": "internal_report_v1.3"
+   }
+  ],
+  "verdict": "FAIL"
+ },
+ "control_B_RES_V13_002": {
+  "changelog": "CHANGELOG_v1.3.md",
+  "correct_name_counts": {
+   "PaperI.assembly_sharp": 1,
+   "PaperI.Split.residual_duality": 1
+  },
+  "wrong_name_counts": {
+   "PaperI.Split.assembly_sharp": 0,
+   "PaperI.residual_duality": 0
+  },
+  "exactly_one_each_correct": true,
+  "cross_check_authorities": {
+   "manuscript Appendix C (EN)": {
+    "PaperI.assembly_sharp": 3,
+    "PaperI.Split.residual_duality": 4,
+    "PaperI.Split.assembly_sharp": 0,
+    "PaperI.residual_duality": 0
+   },
+   "manuscript Appendix C (ES)": {
+    "PaperI.assembly_sharp": 3,
+    "PaperI.Split.residual_duality": 4,
+    "PaperI.Split.assembly_sharp": 0,
+    "PaperI.residual_duality": 0
+   },
+   "recorded axiom report": {
+    "PaperI.assembly_sharp": 1,
+    "PaperI.Split.residual_duality": 1,
+    "PaperI.Split.assembly_sharp": 0,
+    "PaperI.residual_duality": 0
+   }
+  },
+  "verdict": "PASS"
+ }
+}

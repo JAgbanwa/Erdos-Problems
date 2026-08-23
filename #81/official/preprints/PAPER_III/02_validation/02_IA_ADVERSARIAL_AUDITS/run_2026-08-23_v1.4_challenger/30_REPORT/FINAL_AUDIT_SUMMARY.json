@@ -1,0 +1,100 @@
+{
+ "run": "run_2026-08-23_v1.4_challenger",
+ "target": "Paper III preprint draft v1.4 (corrected)",
+ "date": "2026-08-23",
+ "mandate_sha256": "06051b3fb31ba05b36c83ddae736f108fd04a374b9765531d976d48be2919ac5",
+ "instructions_zip_sha256": "e88cd5e8ff2a742023176a37efd642aacef0bdc66b7b6af1d9f1acb92983419e",
+ "verdict": "PASS",
+ "verdict_rule_applied": "no stronger than the weakest mandatory gate; residuals disclosed, not concealed",
+ "reviews": {
+  "A_EXT-V14-M01": {
+   "result": "CLOSED",
+   "checks": {
+    "en_es_section_2_4_equivalent": true,
+    "propagated_to_tex": true,
+    "rendered_on_pdf_page_8": true,
+    "bilingual_no_loss_or_duplication": true,
+    "es_pdf_47_pages": true,
+    "es_pdf_fonts_embedded": "13/13",
+    "es_pdf_no_clipping": true,
+    "auditor_rebuild_text_identical_pages": "47/47",
+    "auditor_log_fatal_undefined_missingchar_overfull": 0
+   }
+  },
+  "B_EXT-V14-M02": {
+   "result": "CLOSED",
+   "checks_discharged": 6,
+   "appendix_D_self_contained": true,
+   "dependency_order_acyclic": true,
+   "koenig_reproved_not_cited": true,
+   "section_7_2_recomputed_from_definitions": true,
+   "derived_before_opening_author_ledger": true
+  }
+ },
+ "regression_boundary": {
+  "declared_baseline_hashes_match": true,
+  "declared_target_hashes_match": "6/6",
+  "english_artifacts_unchanged": true,
+  "spanish_artifacts_changed": 3,
+  "lean_archive_unchanged": true,
+  "prior_package_reverifies": "60/60",
+  "prior_zip_matches_sidecar": true
+ },
+ "carry_forward": {
+  "E2": "PASS on verified byte identity; corroborated by 205/205 formula agreement",
+  "E6": "PASS on verified byte identity; restated in corpus-bounded form",
+  "Lean": "PASS on byte-identical archive and sealed prior build logs; no rebuild"
+ },
+ "findings": [
+  {
+   "id": "EXT-V14-M01",
+   "severity": "MINOR",
+   "status": "CLOSED"
+  },
+  {
+   "id": "EXT-V14-M02",
+   "severity": "MINOR",
+   "status": "CLOSED"
+  },
+  {
+   "id": "EXT-V14-N01",
+   "severity": "NOTE",
+   "status": "OPEN_ACCEPTED"
+  },
+  {
+   "id": "EXT-V14C-N02",
+   "severity": "NOTE",
+   "status": "OPEN_NEW",
+   "title": "Theorem 2.2 omits 'simple' while Theorem D.3 proves the simple case"
+  },
+  {
+   "id": "EXT-V14C-N03",
+   "severity": "NOTE",
+   "status": "OPEN_NEW",
+   "title": "three standard steps left unstated in Appendix D"
+  }
+ ],
+ "blockers": 0,
+ "criticals": 0,
+ "majors": 0,
+ "minors_open": 0,
+ "notes_open": 3,
+ "prior_report_corrected_by_addendum": {
+  "path": "run_2026-08-22_v1.4_residual/30_REPORT/ADDENDUM_CORPUS_BOUNDED_NOVELTY.md",
+  "reason": "two absolute novelty formulations replaced by corpus-bounded form",
+  "sealed_report_rewritten": false,
+  "sealed_report_sha256": "2c19bf1ca74f77cc409b8d0102adf01b92d13db885ac81d15d156477abed8842"
+ },
+ "prior_conditional_pass_ground_withdrawn": {
+  "ground": "no adversarial challenger had examined the package",
+  "why_withdrawn": "category error: reviewer count is a property of the review programme, not a defect of the target; conditioning closure on a further reviewer makes external closure unreachable",
+  "restated_as": "declared limitation on this review's own weight"
+ },
+ "does_not_establish": [
+  "the truth of Theorem 1.1",
+  "the Lean nibble chain's internal parameter ledger",
+  "novelty beyond the searched corpus",
+  "human peer review",
+  "independence: five external runs share one reasoning context"
+ ]
+}

@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Paper II — Complete-Split Extremizers for a Fractional Triangle-Cover Functional</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --eggshell:#fdfcfc; --taupe:#f5f3f1; --stone:#ebe8e4; --ink:#000000; --graphite:#44403b;
+    --smoke:#777169; --ash:#a59f97; --violet:#0447ff; --ember:#ff4704;
+    --font:"Inter",ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif; --maxw:1000px;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--eggshell);color:var(--ink);font-family:var(--font);
+    font-size:16px;line-height:1.5;letter-spacing:0.16px;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
+  a{color:var(--ink)}
+  /* --- CSS-only language + level state (no JS needed) --- */
+  #lang_en,#lang_es,#lv0,#lv1,#lv2,#lv3,#lv4{position:absolute;opacity:0;pointer-events:none}
+  #lang_en:checked ~ * .es{display:none}
+  #lang_es:checked ~ * .en{display:none}
+  .topbar{display:flex;align-items:center;justify-content:space-between;height:58px;max-width:var(--maxw);margin:0 auto;padding:0 24px}
+  .topbar .brand{font-weight:500;font-size:16px}
+  .langtog{display:inline-flex;border:1px solid #e5e5e5;border-radius:9999px;padding:3px;background:var(--eggshell)}
+  .langtog label{font-size:13px;font-weight:500;color:var(--smoke);padding:5px 13px;border-radius:9999px;cursor:pointer}
+  #lang_en:checked ~ .topbar label[for=lang_en]{background:var(--ink);color:#fff}
+  #lang_es:checked ~ .topbar label[for=lang_es]{background:var(--ink);color:#fff}
+  .levels{position:sticky;top:0;z-index:30;background:rgba(253,252,252,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--stone)}
+  .levels .inner{display:flex;gap:8px;max-width:var(--maxw);margin:0 auto;padding:10px 24px;overflow-x:auto}
+  .levels label{background:var(--eggshell);border:1px solid #e5e5e5;cursor:pointer;color:var(--ink);
+    padding:7px 15px;border-radius:9999px;white-space:nowrap;font-size:13.5px;font-weight:500;display:flex;gap:7px;align-items:center}
+  .levels label .n{font-size:11px;color:var(--ash)}
+  #lv0:checked ~ .levels label[for=lv0],#lv1:checked ~ .levels label[for=lv1],#lv2:checked ~ .levels label[for=lv2],#lv3:checked ~ .levels label[for=lv3],#lv4:checked ~ .levels label[for=lv4]{background:var(--ink);color:#fff;border-color:var(--ink)}
+  #lv0:checked ~ .levels label[for=lv0] .n,#lv1:checked ~ .levels label[for=lv1] .n,#lv2:checked ~ .levels label[for=lv2] .n,#lv3:checked ~ .levels label[for=lv3] .n,#lv4:checked ~ .levels label[for=lv4] .n{color:#8fa9ff}
+  main{padding:0 0 60px}
+  .hero{display:grid;grid-template-columns:1fr 200px;gap:28px;align-items:center;padding:60px 0 34px}
+  .hero .kick{font-size:12px;letter-spacing:0.14em;text-transform:uppercase;color:var(--smoke);margin:0 0 18px}
+  .hero h1{font-weight:300;font-size:44px;line-height:1.09;letter-spacing:-0.9px;margin:0 0 18px;max-width:18ch}
+  .hero p{margin:0;color:var(--smoke);font-size:18px;max-width:52ch}
+  .hero .by{margin-top:18px;font-size:13px;color:var(--ash)}
+  .sphere{width:180px;height:180px;border-radius:50%;justify-self:center;
+    background:radial-gradient(circle at 34% 30%, #6a86ff 0%, #0447ff 34%, #ff4704 78%, #ffb59e 100%)}
+  @media (max-width:720px){ .hero{grid-template-columns:1fr} .sphere{width:120px;height:120px} .hero h1{font-size:32px} }
+  section.level{display:none} 
+  #lv0:checked ~ main .l0,#lv1:checked ~ main .l1,#lv2:checked ~ main .l2,#lv3:checked ~ main .l3,#lv4:checked ~ main .l4{display:block;animation:fade .28s ease}
+  @keyframes fade{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+  .forwhom{font-size:13px;color:var(--smoke);display:inline-flex;gap:8px;align-items:center;border:1px solid var(--stone);border-radius:9999px;padding:6px 15px;margin:22px 0 4px}
+  .forwhom b{color:var(--ink);font-weight:500}
+  h2{font-weight:300;font-size:34px;line-height:1.18;letter-spacing:-0.68px;margin:30px 0 12px}
+  h3{font-weight:500;font-size:20px;margin:24px 0 6px}
+  p{margin:0 0 15px;max-width:72ch;color:var(--graphite)}
+  .hl{color:var(--violet);font-weight:500}
+  .card{background:var(--taupe);border-radius:20px;padding:26px;margin:20px 0}
+  .card h4{font-weight:500;margin:0 0 3px;font-size:16px}
+  .card .cap{font-size:14px;color:var(--smoke);margin:8px 0 0;max-width:70ch}
+  .theorem{background:var(--eggshell);border:1px solid var(--stone);border-radius:20px;padding:20px 24px;margin:20px 0}
+  .theorem .lbl{font-size:11px;letter-spacing:0.1em;text-transform:uppercase;color:var(--smoke);font-weight:500}
+  .formula{font-size:22px;text-align:center;margin:12px 0;color:var(--ink);font-weight:300;overflow-x:auto}
+  .kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px;margin:20px 0}
+  .kpi{background:var(--taupe);border-radius:20px;padding:20px}
+  .kpi .v{font-size:28px;font-weight:300;letter-spacing:-0.6px}
+  .kpi .k{font-size:13px;color:var(--smoke);margin-top:4px}
+  .note{font-size:14px;color:var(--graphite);background:var(--taupe);border-radius:20px;padding:18px 22px;margin:18px 0}
+  .note b{color:var(--ink);font-weight:500}
+  code{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:.88em;color:var(--graphite)}
+  table{border-collapse:collapse;font-size:13.5px;margin:16px 0;width:100%}
+  th,td{border-bottom:1px solid var(--stone);padding:7px 10px;text-align:center;color:var(--graphite)}
+  th{color:var(--smoke);font-weight:500}
+  ul{margin:0 0 15px;padding-left:20px;color:var(--graphite)} li{margin:5px 0;max-width:72ch}
+  hr{border:0;border-top:1px solid var(--stone);margin:32px 0}
+  footer{border-top:1px solid var(--stone);margin-top:40px;padding:24px 0 80px;color:var(--smoke);font-size:13px}
+  .refs{font-size:12.5px;color:var(--ash);list-style:none;padding:0} .refs li{margin:6px 0}
+  @media (max-width:640px){ h2{font-size:26px} }
+</style>
+</head>
+<body>
+<input type="radio" name="lang" id="lang_en" checked>
+<input type="radio" name="lang" id="lang_es">
+<input type="radio" name="lvl" id="lv0" checked>
+<input type="radio" name="lvl" id="lv1">
+<input type="radio" name="lvl" id="lv2">
+<input type="radio" name="lvl" id="lv3">
+<input type="radio" name="lvl" id="lv4">
+
+<div class="topbar">
+  <span class="brand">◆ Paper II</span>
+  <span class="langtog"><label for="lang_en">EN</label><label for="lang_es">ES</label></span>
+</div>
+
+<div class="levels"><div class="inner">
+  <label for="lv0"><span class="n">00</span><span class="en">Foundations</span><span class="es">Fundamentos</span></label>
+  <label for="lv1"><span class="n">01</span><span class="en">Curious reader</span><span class="es">Lector curioso</span></label>
+  <label for="lv2"><span class="n">02</span><span class="en">Undergraduate</span><span class="es">Universitario</span></label>
+  <label for="lv3"><span class="n">03</span><span class="en">Doctoral</span><span class="es">Doctorado</span></label>
+  <label for="lv4"><span class="n">04</span><span class="en">Specialist</span><span class="es">Especialista</span></label>
+</div></div>
+
+<main><div class="wrap">
+  <header class="hero">
+    <div>
+      <p class="kick">Erdős Problem #81 · Paper II</p>
+      <h1><span class="en">Complete-split extremizers for a fractional triangle-cover functional</span><span class="es">Extremizadores complete-split de un funcional de cobertura fraccional de triángulos</span></h1>
+      <p><span class="en">Over all chordal graphs on <i>n</i> vertices, the exact maximum of |E| − 2τ₃* is ⌊(2n+1)²/24⌋ — attained by a complete-split graph. Formally verified in Lean 4.</span><span class="es">Sobre todos los grafos cordales de <i>n</i> vértices, el máximo exacto de |E| − 2τ₃* es ⌊(2n+1)²/24⌋ — alcanzado por un grafo complete-split. Verificado formalmente en Lean 4.</span></p>
+      <p class="by">Juan Pablo Traverso Gianini · preprint v1.0</p>
+    </div>
+    <div class="sphere"></div>
+  </header>
+
+  <!-- LEVEL 0 -->
+  <section class="level l0">
+    <div class="forwhom"><span class="en">For&nbsp;<b>everyone</b> — the objects</span><span class="es">Para&nbsp;<b>todos</b> — los objetos</span></div>
+    <h2><span class="en">Three ideas</span><span class="es">Tres ideas</span></h2>
+    <p><span class="en">A <span class="hl">chordal graph</span> has no "empty" cycle of length four or more: every long cycle has a shortcut (a chord). A <span class="hl">triangle</span> is three mutually-connected points. A <span class="hl">fractional triangle cover</span> puts weights on edges so that every triangle's three edges add up to at least 1; τ₃* is the smallest total weight.</span><span class="es">Un <span class="hl">grafo cordal</span> no tiene ciclos "vacíos" de longitud cuatro o más: todo ciclo largo tiene un atajo (una cuerda). Un <span class="hl">triángulo</span> son tres puntos mutuamente conectados. Un <span class="hl">cubrimiento fraccional de triángulos</span> pone pesos en las aristas para que las tres aristas de cada triángulo sumen al menos 1; τ₃* es el peso total mínimo.</span></p>
+    <div class="card"><h4><span class="en">The star of the paper: a complete-split graph</span><span class="es">La estrella del paper: un grafo complete-split</span></h4>
+      <svg viewBox="0 0 360 210" width="100%" role="img" aria-label="complete-split graph">
+        <line x1="80" y1="55" x2="190" y2="55" stroke="#0447ff" stroke-width="2.5"/><line x1="80" y1="55" x2="135" y2="120" stroke="#0447ff" stroke-width="2.5"/><line x1="190" y1="55" x2="135" y2="120" stroke="#0447ff" stroke-width="2.5"/>
+        <line x1="80" y1="55" x2="110" y2="175" stroke="#a59f97"/><line x1="80" y1="55" x2="200" y2="175" stroke="#a59f97"/><line x1="80" y1="55" x2="290" y2="175" stroke="#a59f97"/>
+        <line x1="190" y1="55" x2="110" y2="175" stroke="#a59f97"/><line x1="190" y1="55" x2="200" y2="175" stroke="#a59f97"/><line x1="190" y1="55" x2="290" y2="175" stroke="#a59f97"/>
+        <line x1="135" y1="120" x2="110" y2="175" stroke="#a59f97"/><line x1="135" y1="120" x2="200" y2="175" stroke="#a59f97"/><line x1="135" y1="120" x2="290" y2="175" stroke="#a59f97"/>
+        <circle cx="80" cy="55" r="11" fill="#dfe6ff" stroke="#0447ff" stroke-width="2"/><circle cx="190" cy="55" r="11" fill="#dfe6ff" stroke="#0447ff" stroke-width="2"/><circle cx="135" cy="120" r="11" fill="#dfe6ff" stroke="#0447ff" stroke-width="2"/>
+        <circle cx="110" cy="175" r="11" fill="#fdfcfc" stroke="#000" stroke-width="2"/><circle cx="200" cy="175" r="11" fill="#fdfcfc" stroke="#000" stroke-width="2"/><circle cx="290" cy="175" r="11" fill="#fdfcfc" stroke="#000" stroke-width="2"/>
+      </svg>
+      <p class="cap"><span class="en">A clique <b>K<sub>p</sub></b> (blue, all connected) joined to an independent set (white, no internal edges): every blue–white pair is linked. This family, written S<sub>p,q</sub> = K<sub>p</sub> ∨ K̄<sub>q</sub>, is exactly where the maximum lives.</span><span class="es">Una clique <b>K<sub>p</sub></b> (azul, todos conectados) unida a un conjunto independiente (blanco, sin aristas internas): cada par azul–blanco está unido. Esta familia, S<sub>p,q</sub> = K<sub>p</sub> ∨ K̄<sub>q</sub>, es justo donde vive el máximo.</span></p>
+    </div>
+  </section>
+
+  <!-- LEVEL 1 -->
+  <section class="level l1">
+    <div class="forwhom"><span class="en">For the&nbsp;<b>curious reader</b></span><span class="es">Para el&nbsp;<b>lector curioso</b></span></div>
+    <h2><span class="en">One clean number</span><span class="es">Un número limpio</span></h2>
+    <p><span class="en">Ask: among all chordal graphs on <i>n</i> vertices, how large can the quantity Φτ = |E| − 2τ₃* get? The answer is a single exact formula, and it is achieved by tuning the clique size <i>p</i> of a complete-split graph.</span><span class="es">Pregunta: entre todos los grafos cordales de <i>n</i> vértices, ¿cuán grande puede ser Φτ = |E| − 2τ₃*? La respuesta es una única fórmula exacta, alcanzada ajustando el tamaño de clique <i>p</i> de un grafo complete-split.</span></p>
+    <div class="theorem"><span class="lbl">Theorem 1.1</span>
+      <div class="formula">max<sub>chordal, |V|=n</sub> ( |E| − 2τ₃* ) = ⌊ (2n+1)² / 24 ⌋</div>
+    </div>
+    <div class="kpis">
+      <div class="kpi"><div class="v">n²/6 + O(n)</div><div class="k"><span class="en">growth rate</span><span class="es">tasa de crecimiento</span></div></div>
+      <div class="kpi"><div class="v">p ≈ (2n+1)/6</div><div class="k"><span class="en">best clique size</span><span class="es">tamaño de clique óptimo</span></div></div>
+      <div class="kpi"><div class="v">S<sub>p,q</sub></div><div class="k"><span class="en">where the max lives</span><span class="es">dónde vive el máximo</span></div></div>
+    </div>
+    <p><span class="en">The leading constant 1/6 is the same one in the Erdős–Ordman–Zalcstein target for chordal clique partitions. This paper pins the exact value of the fractional functional — a clean waypoint on the road to that harder problem.</span><span class="es">La constante principal 1/6 es la misma del objetivo de Erdős–Ordman–Zalcstein para particiones en cliques de grafos cordales. Este paper fija el valor exacto del funcional fraccional — una parada limpia en el camino hacia ese problema más difícil.</span></p>
+  </section>
+
+  <!-- LEVEL 2 -->
+  <section class="level l2">
+    <div class="forwhom"><span class="en">For the&nbsp;<b>undergraduate</b></span><span class="es">Para el&nbsp;<b>universitario</b></span></div>
+    <h2><span class="en">Why the maximum is a complete-split graph</span><span class="es">Por qué el máximo es un complete-split</span></h2>
+    <p><span class="en">The proof is a <span class="hl">symmetrization</span>. Take any chordal graph and repeatedly "copy" one group of look-alike vertices onto another. A short exchange inequality guarantees that at least one of the two copy directions never decreases Φτ:</span><span class="es">La prueba es una <span class="hl">simetrización</span>. Toma cualquier grafo cordal y "copia" repetidamente un grupo de vértices parecidos sobre otro. Una desigualdad de intercambio garantiza que al menos una de las dos direcciones de copia nunca disminuye Φτ:</span></p>
+    <div class="theorem"><span class="lbl">Lemma 3.1</span><div class="formula">Φτ(G<sub>v→u</sub>) + Φτ(G<sub>u→v</sub>) ≥ 2 Φτ(G)</div></div>
+    <p><span class="en">Choosing the copy classes to be <span class="hl">simplicial</span> (their neighborhood is a clique) keeps the graph chordal in either direction. Each step strictly reduces the number of distinct vertex-types, so the process ends — and the only graphs where it can stop are complete-splits. So the maximum over all chordal graphs equals the maximum over the complete-split family, which is a two-variable calculation.</span><span class="es">Elegir las clases de copia <span class="hl">simpliciales</span> (su vecindario es una clique) mantiene el grafo cordal en cualquier dirección. Cada paso reduce estrictamente el número de tipos de vértice distintos, así que el proceso termina — y los únicos grafos donde puede detenerse son los complete-split. Por eso el máximo sobre todos los cordales es igual al máximo sobre la familia complete-split, que es un cálculo de dos variables.</span></p>
+  </section>
+
+  <!-- LEVEL 3 -->
+  <section class="level l3">
+    <div class="forwhom"><span class="en">For the&nbsp;<b>doctoral</b> reader</span><span class="es">Para el&nbsp;<b>doctorado</b></span></div>
+    <h2><span class="en">The terminal calculation</span><span class="es">El cálculo terminal</span></h2>
+    <p><span class="en">On S<sub>p,q</sub>, averaging an optimal cover over Aut = 𝔖<sub>p</sub>×𝔖<sub>q</sub> collapses it to two weights: <i>x</i> on clique edges, <i>y</i> on radial edges, with constraints 3x ≥ 1 (if p ≥ 3) and x + 2y ≥ 1 (if p ≥ 2, q ≥ 1). Solving the two branches and writing q = n−p gives, in the saturated branch,</span><span class="es">En S<sub>p,q</sub>, promediar un cubrimiento óptimo sobre Aut = 𝔖<sub>p</sub>×𝔖<sub>q</sub> lo reduce a dos pesos: <i>x</i> en aristas de clique, <i>y</i> en aristas radiales, con restricciones 3x ≥ 1 (si p ≥ 3) y x + 2y ≥ 1 (si p ≥ 2, q ≥ 1). Resolviendo las dos ramas y con q = n−p se obtiene, en la rama saturada,</span></p>
+    <div class="theorem"><span class="lbl">§6–§7</span><div class="formula">f<sub>n</sub>(p) = p(2n+1−3p)/2 = (2n+1)²/24 − (3/2)(p − (2n+1)/6)²</div></div>
+    <div class="card"><h4><span class="en">The parabola and its integer peak (n = 12)</span><span class="es">La parábola y su pico entero (n = 12)</span></h4>
+      <svg viewBox="0 0 640 250" width="100%" role="img" aria-label="parabola of f(p)">
+        <line x1="55" y1="205" x2="620" y2="205" stroke="#44403b" stroke-width="1.2"/>
+        <line x1="55" y1="30" x2="55" y2="205" stroke="#44403b" stroke-width="1.2"/>
+        <polyline fill="none" stroke="#0447ff" stroke-width="2.5" points="55,205 118,120 181,66 244,44 307,54 370,96 433,170 466,205"/>
+        <line x1="244" y1="44" x2="244" y2="205" stroke="#a59f97" stroke-dasharray="4,4"/>
+        <circle cx="244" cy="44" r="6" fill="#000"/>
+        <text x="244" y="30" text-anchor="middle" font-size="13" fill="#000" font-family="Inter">p* = 4 · value 26</text>
+        <text x="330" y="235" text-anchor="middle" font-size="12" fill="#777169" font-family="Inter">clique size p   (peak at (2n+1)/6 ≈ 4.17)</text>
+      </svg>
+      <p class="cap"><span class="en">Since f<sub>n</sub>(p) is an integer at integer p, the maximum equals the floor ⌊(2n+1)²/24⌋, hit at the integer nearest (2n+1)/6. The mod-6 residue of 2n+1 fixes the exact gap to the continuous peak.</span><span class="es">Como f<sub>n</sub>(p) es entero en p entero, el máximo es la parte entera ⌊(2n+1)²/24⌋, alcanzada en el entero más cercano a (2n+1)/6. El residuo mód 6 de 2n+1 fija la brecha exacta al pico continuo.</span></p>
+    </div>
+    <table><thead><tr><th>n</th><th>⌊(2n+1)²/24⌋</th><th>(p,q)</th></tr></thead><tbody>
+      <tr><td>4</td><td>3</td><td>(2,2)</td></tr><tr><td>7</td><td>9</td><td>(3,4)</td></tr><tr><td>12</td><td>26</td><td>(4,8)</td></tr><tr><td>50</td><td>425</td><td>(17,33)</td></tr><tr><td>100</td><td>1683</td><td>(34,66)</td></tr>
+    </tbody></table>
+  </section>
+
+  <!-- LEVEL 4 -->
+  <section class="level l4">
+    <div class="forwhom"><span class="en">For the&nbsp;<b>specialist</b></span><span class="es">Para el&nbsp;<b>especialista</b></span></div>
+    <h2><span class="en">Statement, formalization, scope</span><span class="es">Enunciado, formalización, alcance</span></h2>
+    <p><span class="en">The result is finite and cover-first: no integral triangle packing, no strong LP duality, no asymptotic packing theorem. Definitions and every step are recorded in the calculation ledger; each section is corroborated by an independent computational audit (A–F).</span><span class="es">El resultado es finito y parte de coberturas: sin empaquetamiento integral de triángulos, sin dualidad LP fuerte, sin teorema asintótico de empaquetamiento. Las definiciones y cada paso están en el ledger de cálculo; cada sección está corroborada por una auditoría computacional independiente (A–F).</span></p>
+    <div class="note"><b><span class="en">Formally verified in Lean 4 / Mathlib v4.28.0.</span><span class="es">Verificado formalmente en Lean 4 / Mathlib v4.28.0.</span></b>
+      <span class="en"> The theorem <code>PaperII.theorem_1_2</code> (repository commit <code>5f2d448</code>) is <code>sorry</code>-free and unconditional: its only chordality hypothesis is the standard <code>IsChordal</code> definition (every cycle of length ≥ 4 has a chord). The structural chordal facts are derived, not assumed, and no clique-tree axiom is used. Axiom report: <code>[propext, Classical.choice, Quot.sound]</code> — no <code>sorryAx</code>, no project-specific axiom.</span>
+      <span class="es"> El teorema <code>PaperII.theorem_1_2</code> (commit <code>5f2d448</code>) es <code>sorry</code>-free e incondicional: su única hipótesis de cordalidad es la definición estándar <code>IsChordal</code> (todo ciclo de longitud ≥ 4 tiene una cuerda). Los hechos estructurales cordales se derivan, no se asumen, y no se usa ningún axioma de árbol de cliques. Reporte de axiomas: <code>[propext, Classical.choice, Quot.sound]</code> — sin <code>sorryAx</code>, sin axiomas del proyecto.</span>
+    </div>
+    <h3><span class="en">Scope</span><span class="es">Alcance</span></h3>
+    <p><span class="en">This paper does <b>not</b> prove an integral clique-partition bound and does <b>not</b> settle Erdős Problem #81 (cp(G) ≤ n²/6 + O(n)), which remains open via a separate asymptotic route. Paper II identifies the complete-split terminal family and the exact fractional value.</span><span class="es">Este paper <b>no</b> prueba una cota de partición en cliques integral y <b>no</b> resuelve el Problema #81 de Erdős (cp(G) ≤ n²/6 + O(n)), que sigue abierto por una ruta asintótica separada. Paper II identifica la familia terminal complete-split y el valor fraccional exacto.</span></p>
+    <ul class="refs">
+      <li>[1] Erdős, Ordman, Zalcstein, <i>Clique partitions of chordal graphs</i>, CPC 2 (1993) 409–415.</li>
+      <li>[2] Golumbic, <i>Algorithmic Graph Theory and Perfect Graphs</i>, 2nd ed., 2004.</li>
+      <li>[3] de Moura et al., <i>The Lean theorem prover</i>, CADE-25, 2015; The Mathlib Community, 2020.</li>
+    </ul>
+  </section>
+
+  <footer>
+    <span class="en">Interactive explainer of Paper II. Tabs and language are pure CSS (work without JavaScript). All values computed exactly from the paper's formulas.</span>
+    <span class="es">Explainer interacti

@@ -1,0 +1,19 @@
+========================================================================
+Paper III � Block 04: corridor integral packing (E-5.1 & Cor 5.3), exact ILP
+nu3(G) computed by 0/1 ILP (PuLP/CBC); bounds checked with exact rationals.
+========================================================================
+
+Split-graph instances audited: 372
+Basic sanity (0 <= Phi, 3*nu3 <= |E|): 372/372 pass
+
+E-5.1  nu3 >= (1/q) sum C(d_i,2)   (applicable when q >= r_p):
+    applicable instances: 180
+    PASS: 180/180   FAIL: 0
+
+Corollary 5.3  Phi <= n^2/6 + p/2 + (s^2-6s+3)/12   (q >= r_p):
+    applicable instances: 180
+    PASS: 180/180   FAIL: 0
+
+========================================================================
+VERDICT: PASS  (E-5.1 180/180, Cor5.3 180/180, basic 372/372)
+========================================================================

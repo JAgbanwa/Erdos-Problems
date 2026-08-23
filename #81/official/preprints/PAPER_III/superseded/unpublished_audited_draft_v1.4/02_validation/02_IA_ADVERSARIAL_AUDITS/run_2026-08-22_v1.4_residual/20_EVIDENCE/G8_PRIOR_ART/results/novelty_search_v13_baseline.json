@@ -1,0 +1,70 @@
+{
+ "gate": "E6",
+ "subgate": "independent specialist search",
+ "date": "2026-08-22",
+ "correction": "a first version of this gate declared INCONCLUSIVE citing unreachable databases WITHOUT having attempted any search in this run; that claim was inherited from earlier audits, which the request forbids. The searches below were then run and succeeded.",
+ "search_strings": [
+  "split graph clique partition number n^2/6 sharp quadratic coefficient Erdos Ordman Zalcstein",
+  "clique partition split graphs upper bound n^2/6 + O(n) proof 2024 2025 2026 improvement 3/16",
+  "\"Chen\" \"Erdos\" \"Ordman\" clique partitions split graphs \"3/16\" theorem"
+ ],
+ "sources_examined": [
+  "erdosproblems.com record for #81 (indexed snippet; direct fetch 403)",
+  "arXiv listings through 2026-08",
+  "Cambridge Core (CPC, JAustMS)",
+  "ScienceDirect",
+  "Springer",
+  "Renyi Institute Erdos paper archive",
+  "ordman.net academic page",
+  "University of Waterloo C&O document repository"
+ ],
+ "collision_test": {
+  "question": "does a published result already give the split-graph 1/6 quadratic coefficient, a stronger statement, or an equivalent method?",
+  "result": "NO SUCH RESULT FOUND",
+  "state_of_the_art_found": {
+   "chordal lower bound": "n^2/6, by the Erdos-Ordman-Zalcstein construction, which is a split and threshold graph",
+   "chordal upper bound in the literature": "(1-c) n^2/4 for some c>0",
+   "split graph upper bound": "3/16 n^2 + O(n), Chen-Erdos-Ordman",
+   "problem status": "OPEN; unknown whether n^2/6 always suffices"
+  }
+ },
+ "most_recent_relevant_paper": {
+  "id": "arXiv:2608.11536v1",
+  "author": "Bo Ning",
+  "date": "2026-07-30",
+  "title": "On the difference between clique partition and clique covering numbers",
+  "main_result": "floor(n^2/4) - C1 n^(4/3) <= f(n) <= floor(n^2/4) - C2 n^(4/3)",
+  "bears_on_paper_III": false,
+  "why": "it concerns f(n), the maximum difference between clique partition and clique covering numbers, and cites Erdos-Ordman-Zalcstein only as prior work; it makes no claim about split-graph clique partition asymptotics",
+  "collision": false
+ },
+ "key_prior_work_confirmed": {
+  "citation": "Chen, Guan-Tao; Erdos, Paul; Ordman, Edward T., 'Clique partitions of split graphs', in Combinatorics, graph theory, algorithms and applications (Beijing, 1993), pp. 21-30, World Scientific, River Edge NJ, 1994",
+  "existence_confirmed": true,
+  "3/16_coefficient_confirmed_at_primary_source": false,
+  "obstacle": "the 1994 World Scientific volume is not openly accessible; the copy at ordman.net/MathResearch/CEOClique_Parts.pdf could not be fetched because the host TLS certificate has expired"
+ },
+ "cavers_survey": {
+  "retrieved": true,
+  "identification": "Michael S. Cavers, 'Clique partitions and coverings of graphs', Masters essay, University of Waterloo, 2005-12-20",
+  "extracted_chars": 87916,
+  "occurrences": {
+   "chordal": 0,
+   "3/16": 0,
+   "n^2/6": 0,
+   "Zalcstein": 0,
+   "split (all three are the verb, splitting trees)": 3,
+   "Ordman": 8
+  },
+  "bears_on_the_split_graph_claim": false,
+  "consequence": "finding EXT-V13-005 WITHDRAWN: absence from the bibliography is not a defect"
+ },
+ "remaining_gap": {
+  "mandate": "retrieve and check every cited source against the claim it supports",
+  "completed": false,
+  "detail": "erdosproblems.com/81 not directly readable (403); the 3/16 coefficient not confirmed at a primary source; the other references not retrieved individually",
+  "new_finding": "EXT-V13-008 (MINOR)"
+ },
+ "verdict": "INCONCLUSIVE",
+ "verdict_basis": "novelty is substantively verified against the searched corpus with no collision found, which is the harder half of this gate; but per-reference retrieval is mandatory and was not completed"
+}

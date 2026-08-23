@@ -1,0 +1,693 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+\PassOptionsToPackage{dvipsnames,svgnames,x11names}{xcolor}
+\documentclass[
+  9pt,
+  a4paper,
+]{article}
+\usepackage{xcolor}
+\usepackage[margin=1.9cm]{geometry}
+\usepackage{amsmath,amssymb}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math} % this also loads fontspec
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+\usepackage{lmodern}
+\ifPDFTeX\else
+  % xetex/luatex font selection
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{longtable,booktabs,array}
+\newcounter{none} % for unnumbered tables
+\usepackage{calc} % for calculating minipage widths
+% Correct order of tables after \paragraph or \subparagraph
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd\longtable{\par}{\if@noskipsec\mbox{}\fi\par}{}{}
+\makeatother
+% Allow footnotes in longtable head/foot
+\IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
+\makesavenoteenv{longtable}
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\usepackage{longtable,booktabs,array}
+\setlength{\tabcolsep}{4pt}
+\usepackage{etoolbox}
+\AtBeginEnvironment{longtable}{\footnotesize}
+\emergencystretch=3em
+\sloppy
+\usepackage{bookmark}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same}
+\hypersetup{
+  pdftitle={Final External Package-Residual Re-audit -\/-\/- Paper I{,} preprint\textbackslash\_draft\textbackslash\_v1.3},
+  pdfauthor={Claude Opus 5 (claude-opus-5), Anthropic},
+  colorlinks=true,
+  linkcolor={blue},
+  filecolor={Maroon},
+  citecolor={Blue},
+  urlcolor={Blue},
+  pdfcreator={LaTeX via pandoc}}
+
+\title{Final External Package-Residual Re-audit -\/-\/- Paper I,
+preprint\textbackslash\_draft\textbackslash\_v1.3}
+\author{Claude Opus 5 (claude-opus-5), Anthropic}
+\date{2026-08-21}
+
+\begin{document}
+\maketitle
+
+\section{\texorpdfstring{Final External Package-Residual Re-audit ---
+Paper I, \texttt{preprint\_draft\_v1.3}
+(corrected)}{Final External Package-Residual Re-audit --- Paper I, preprint\_draft\_v1.3 (corrected)}}\label{final-external-package-residual-re-audit--paper-i-preprint_draft_v13-corrected}
+
+\textbf{Specification:}
+\texttt{FINAL\_RESIDUAL\_AUDIT\_REQUEST\_SPEC.md} \textbf{Specification
+SHA-256:}
+\texttt{93cf8e6a06cd47189e98a4939145b21a32a283956c172a2791812a4df5a87484}
+\textbf{Run:} \texttt{run\_2026-08-21\_v1.3\_pkgfix} \textbf{Audit
+class:} external residual adversarial re-audit \textbf{Audit date:}
+2026-08-21
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\subsection{1. Executive verdict}\label{1-executive-verdict}
+
+\begin{quote}
+\mbox{}%
+\subsection{\texorpdfstring{\texttt{PASS}}{PASS}}\label{pass}
+\end{quote}
+
+\textbf{Paper I v1.3 is externally closed with a plain \texttt{PASS}.}
+
+Both open MINOR findings are independently \textbf{closed}. The
+corrected target\textquotesingle s inventory and all ten anchors verify.
+The package regression found \textbf{no new blocker, major or minor}.
+Reused evidence satisfies byte identity. The two standing NOTEs are
+preserved.
+
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}ll@{}}
+\toprule\noalign{}
+Item & Result \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+\texttt{RES-V13-001} compiler scratch & \textbf{CLOSED} \\
+\texttt{RES-V13-002} transposed changelog namespaces &
+\textbf{CLOSED} \\
+Control A --- no scratch anywhere in the target & \textbf{PASS} \\
+Control B --- changelog names corrected and cross-consistent &
+\textbf{PASS} \\
+Control C --- general package regression & \textbf{PASS} \\
+Anchors & \textbf{10 / 10 match} \\
+Target inventory & \textbf{308 files, 37,763,479 bytes --- exactly as
+declared} \\
+New blocker / major / minor & \textbf{0 / 0 / 0} \\
+Open notes & 2 (\texttt{RES-V13-004}, \texttt{PKGFIX-N01}) \\
+\end{longtable}
+}
+
+\textbf{This audit is not human peer review and does not prove global
+novelty.}
+
+This report does \textbf{not} relabel or supersede the earlier
+\texttt{PASS\_WITH\_RESIDUALS} report, which stands against its own
+hashes.
+
+\subsection{2. Target identity}\label{2-target-identity}
+
+\subsubsection{2.1 Anchors --- 10 / 10}\label{21-anchors--10--10}
+
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}lll@{}}
+\toprule\noalign{}
+Artifact & SHA-256 & Result \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+English Markdown &
+\texttt{f3094b670c93ff622c3f573cdab61bdd0f5d84007f04b1888b364e0183565bea}
+& MATCH \\
+Spanish Markdown &
+\texttt{57ba967fc2de805b7bbb4cf5f937727bde43c2ada80fa794bcbb5a727db05b8b}
+& MATCH \\
+English LaTeX &
+\texttt{1a87de70548879ca90a714ec9e1b10c8576b380a749785916e5d59176e479465}
+& MATCH \\
+Spanish LaTeX &
+\texttt{f83ee709c1168b5b9afe504e6b6a43763bf3bb2a08f674f2031f83670ba9bb56}
+& MATCH \\
+English PDF &
+\texttt{7d04c47692b613c8d6e2cc4471f0205128b4ae06ca11d581a08d020eb2236db0}
+& MATCH \\
+Spanish PDF &
+\texttt{3ad16ae86e8fcad358bf964a6ae98ae053b0bde2fdf3140e008cedab78b90c2a}
+& MATCH \\
+Lean archive &
+\texttt{0181506408644fc1f8872d711de5a98a500f4052aa295bcd6f8c82776694fd3a}
+& MATCH \\
+Previous external report &
+\texttt{f2ad1605f0a802932c07503bfad429a98b08af26844dd968aad6e3f145aee495}
+& MATCH --- located at
+\texttt{run\_2026-08-21\_v1.3/30\_REPORT/FINAL\_AUDIT\_REPORT.md} \\
+Corrected changelog &
+\texttt{0850e518dc35bab0065ddb9f6b2a5850bc8c1d079ce7ed27872d6b09074349ef}
+& MATCH \\
+Internal residual audit ZIP &
+\texttt{0ac2fa306a2df8607b2d2d5d54ec4d9cdda8eca4f21dd8e47f1e36d8adae92e6}
+& MATCH \\
+\end{longtable}
+}
+
+The six publication artifacts and the Lean archive are
+\textbf{unchanged}, which is what licenses the evidence reuse in Section
+5. The Lean archive was re-extracted for the byte-identity check and its
+hash was re-verified afterwards: unchanged, so the target was not
+mutated.
+
+\subsubsection{2.2 Inventory}\label{22-inventory}
+
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}llll@{}}
+\toprule\noalign{}
+Quantity & Recomputed & Declared & Result \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+file count & \textbf{308} & 308 & \textbf{MATCH} \\
+total bytes & \textbf{37,763,479} & 37,763,479 & \textbf{MATCH} \\
+paths into the excluded audit subtree & 0 & --- & correct \\
+\end{longtable}
+}
+
+Every entry was recomputed before analysis, as Section 2 requires.
+
+\textbf{Independent cross-check against the owner\textquotesingle s own
+manifest.} The package contains the owner\textquotesingle s target
+freeze manifest at
+\texttt{02\_validation/01\_INTERNAL\_AUDITS/residual\_run\_2026-08-21\_v1.3\_pkgfix/20\_EVIDENCE/R0\_PACKAGE\_FIX/results/TARGET\_FREEZE\_MANIFEST.sha256}
+(219 entries, CRLF). Resolved against the target root it verifies
+\textbf{219 of 219, with zero mismatches and zero missing files}, and
+there is \textbf{no path present in the owner\textquotesingle s manifest
+and absent from this auditor\textquotesingle s inventory}. The 89
+additional files in the auditor\textquotesingle s inventory are exactly
+the owner\textquotesingle s own pkgfix internal-residual-audit output,
+which their earlier manifest predates. \textbf{The target content is
+independently verified.}
+
+\subsubsection{\texorpdfstring{2.3 One declared control value could not
+be reproduced --- \texttt{PKGFIX-N01}
+(NOTE)}{2.3 One declared control value could not be reproduced --- PKGFIX-N01 (NOTE)}}\label{23-one-declared-control-value-could-not-be-reproduced--pkgfix-n01-note}
+
+The specification declares an aggregate path/hash-list SHA-256 of
+\texttt{f12e1060c0e8693a5702ae9a5c0d143a3025feadcf6a7289e90c061769c748b6}.
+This auditor \textbf{could not reproduce it} under \textbf{16
+combinations} of scope and convention, including: hashing the manifest
+text as \texttt{hash\ \ path\textbackslash{}n},
+\texttt{hash\ *path\textbackslash{}n} and with CRLF;
+\texttt{path\textbackslash{}nhash\textbackslash{}n}; bare concatenations
+in both orders; hashes only; a
+\texttt{hash\textbar{}path\textbar{}bytes} form; backslash path
+separators; sorting by hash instead of path; and each of those over both
+the 308-file scope and the 219-file scope that excludes the pkgfix
+internal-audit output.
+
+It also does not equal the aggregate recorded in the
+owner\textquotesingle s own inventory for the same correction
+(\texttt{402fe23d5538851b290c749927ea75052efadc8c5df5cda5aba5fdbe0495a325}).
+
+\textbf{Classification.} Specification Section 2 says "Recompute every
+entry before analysis. Any mismatch is a \texttt{BLOCKER}." Every entry
+\emph{was} recomputed and \textbf{every entry matches} --- the file
+count, the total byte size, all ten anchors, and all 219 entries of the
+owner\textquotesingle s own manifest. There is therefore \textbf{no
+entry mismatch and no content discrepancy}. What cannot be reproduced is
+a single summary value whose construction algorithm is not published and
+which the owner\textquotesingle s own artifacts do not reproduce either.
+That is a defect in the \textbf{specification\textquotesingle s control
+value}, not in the target package, so it is recorded as a \texttt{NOTE}
+rather than a \texttt{BLOCKER}.
+
+\textbf{If the owner intends this aggregate to function as a hard
+integrity control, the algorithm needs to be published} --- otherwise no
+external party can ever verify it, and it cannot do the job it is there
+to do.
+
+\subsection{\texorpdfstring{3. Control A --- \texttt{RES-V13-001} is
+closed}{3. Control A --- RES-V13-001 is closed}}\label{3-control-a--res-v13-001-is-closed}
+
+Scope: all 308 files of the input target.
+
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}ll@{}}
+\toprule\noalign{}
+Check & Result \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+any directory named \texttt{tmp} & \textbf{none} \\
+\texttt{.aux}, \texttt{.toc}, \texttt{.out}, \texttt{.fls},
+\texttt{.fdb\_latexmk}, \texttt{.synctex(.gz)}, \texttt{.nav},
+\texttt{.snm}, \texttt{.bbl}, \texttt{.blg}, \texttt{.idx},
+\texttt{.ilg}, \texttt{.ind}, \texttt{.lof}, \texttt{.lot},
+\texttt{.spl}, \texttt{.bcf}, \texttt{.run.xml} & \textbf{none} \\
+zero-byte files & \textbf{none} \\
+stray \texttt{\$o} or any \texttt{\$} in a basename & \textbf{none} \\
+unexpected hidden files (beyond \texttt{.gitattributes},
+\texttt{.gitignore}) & \textbf{none} \\
+\end{longtable}
+}
+
+\textbf{Two initial flags were investigated and dismissed rather than
+filed.}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Two files share the basename
+  \texttt{INTERNAL\_AUDIT\_FINAL\_REPORT.pdf}, under
+  \texttt{00\_BASELINE\_INTERNAL\_AUDIT\_v1.2/10\_REPORT/} and
+  \texttt{01\_INTERNAL\_AUDITS/10\_REPORT/}. Their hashes
+  \textbf{differ} (\texttt{193d219b...} and \texttt{45a47049...}): they
+  are two distinct reports from two distinct audit runs, each in its own
+  report directory. Not a duplicate copy --- the initial flag came from
+  matching on basename alone.
+\item
+  The strings \texttt{tmp/internal\_report\_v1.3} and
+  \texttt{internal\_report\_v1.3} occur in two target documents. Both
+  are \textbf{records of the removal}, not dependencies on the removed
+  files:
+  \texttt{04\_integrity/EXTERNAL\_AUDIT\_V1.3\_RESIDUAL\_MATRIX.md} L14
+  reads "Removed \texttt{tmp/internal\_report\_v1.3/} from the active
+  package; the three scratch files were moved outside the target to a
+  recoverable agent-work location", and the internal residual report L36
+  reads "The active package no longer contains
+  \texttt{tmp/internal\_report\_v1.3/}." A correction record must be
+  able to name what it removed. \textbf{No document points to the
+  removed files as though they still existed.}
+\end{enumerate}
+
+Also worth recording: the scratch files were \textbf{moved out of the
+target, not destroyed}, so the correction is reversible.
+
+\textbf{Control A verdict: \texttt{PASS}. \texttt{RES-V13-001} is
+closed.}
+
+\subsection{\texorpdfstring{4. Control B --- \texttt{RES-V13-002} is
+closed}{4. Control B --- RES-V13-002 is closed}}\label{4-control-b--res-v13-002-is-closed}
+
+\texttt{CHANGELOG\_v1.3.md}:
+
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}lll@{}}
+\toprule\noalign{}
+Name & Occurrences & Required \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+\texttt{PaperI.assembly\_sharp} & \textbf{1} & exactly 1 \\
+\texttt{PaperI.Split.residual\_duality} & \textbf{1} & exactly 1 \\
+\texttt{PaperI.Split.assembly\_sharp} (transposed) & \textbf{0} &
+absent \\
+\texttt{PaperI.residual\_duality} (transposed) & \textbf{0} & absent \\
+\end{longtable}
+}
+
+\textbf{Cross-checked against every other authority}, as the
+specification requires. All four agree, and none contains a transposed
+form:
+
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}llll@{}}
+\toprule\noalign{}
+Authority & \texttt{PaperI.assembly\_sharp} &
+\texttt{PaperI.Split.residual\_duality} & transposed forms \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+corrected changelog & 1 & 1 & 0 \\
+manuscript Appendix C, English & 3 & 4 & 0 \\
+manuscript Appendix C, Spanish & 3 & 4 & 0 \\
+recorded axiom report
+(\texttt{R4\_FORMAL\_REUSE/results/AXIOMS\_REPORT.txt}) & 1 & 1 & 0 \\
+\texttt{FreezeAxioms.lean} in the delivered archive & present & present
+& 0 \\
+\textbf{previous external verbatim \texttt{\#print\ axioms} output} &
+present & present & 0 \\
+\end{longtable}
+}
+
+The previous external run\textquotesingle s own verbatim theorem-level
+output was:
+
+\begin{verbatim}
+'PaperI.paperI_main' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PaperI.Split.paperI_main_sharp' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PaperI.assembly_sharp' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PaperI.Split.residual_duality' depends on axioms: [propext, Classical.choice, Quot.sound]
+\end{verbatim}
+
+The changelog now agrees with the compiled reality. \textbf{Control B
+verdict: \texttt{PASS}. \texttt{RES-V13-002} is closed.}
+
+\subsection{5. Control C --- general package
+regression}\label{5-control-c--general-package-regression}
+
+\subsubsection{5.1 Sidecars: 37 of 37
+verify}\label{51-sidecars-37-of-37-verify}
+
+Every sidecar in the input target was verified by content. \textbf{All
+37 verify with zero mismatches and zero missing files.}
+
+One sidecar initially appeared to fail --- the owner\textquotesingle s
+own 219-entry \texttt{TARGET\_FREEZE\_MANIFEST.sha256}, reported as
+missing \texttt{.gitattributes} and \texttt{.gitignore}. That was this
+auditor\textquotesingle s own base-directory resolver stopping five
+levels up when the manifest\textquotesingle s paths are relative to the
+target root, six levels up. Resolved against the target root it verifies
+\textbf{219 of 219}. Recorded because a tool artifact should not be left
+looking like a target defect.
+
+\subsubsection{5.2 The internal residual audit
+ZIP}\label{52-the-internal-residual-audit-zip}
+
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}ll@{}}
+\toprule\noalign{}
+Check & Result \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+SHA-256 &
+\texttt{0ac2fa306a2df8607b2d2d5d54ec4d9cdda8eca4f21dd8e47f1e36d8adae92e6} \\
+matches its own \texttt{.sha256} sidecar & \textbf{yes} \\
+matches the specification anchor & \textbf{yes} \\
+members & 87 \\
+every member byte-identical to the corresponding loose file &
+\textbf{yes, 0 mismatches} \\
+\end{longtable}
+}
+
+\subsubsection{5.3 No unannounced target
+delta}\label{53-no-unannounced-target-delta}
+
+This is the load-bearing check for Section 4\textquotesingle s claim
+that the delta is package-only. The current 308-file target was diffed
+against the \textbf{previous external freeze} (221 files, recorded in
+\texttt{run\_2026-08-21\_v1.3/00\_REQUEST/INPUT\_INVENTORY.json}) and
+every difference was classified against the four authorized changes.
+
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}lll@{}}
+\toprule\noalign{}
+Delta & Count & Classification \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+\textbf{removed} & 3 & all three are the \texttt{tmp/} scratch files ---
+authorized change 1 \\
+\textbf{changed} & 4 & \texttt{CHANGELOG\_v1.3.md} (authorized change 2)
+plus 3 README / metadata / status files (authorized change 4) \\
+\textbf{added} & 90 & all are the correction matrix and the new internal
+residual audit evidence --- authorized change 3 \\
+\textbf{UNANNOUNCED} & \textbf{0} & --- \\
+\end{longtable}
+}
+
+\textbf{Zero unannounced changes in all three categories.} In particular
+there is no manuscript, theorem, proof, citation, figure, LaTeX, PDF,
+formal source, toolchain, dependency or axiom-query change, exactly as
+Section 4 states.
+
+\subsubsection{5.4 Stale strings, truncation,
+self-containment}\label{54-stale-strings-truncation-self-containment}
+
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}ll@{}}
+\toprule\noalign{}
+Check & Result \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+stale \texttt{v1.0.1}, \texttt{lean\_v1.1\_freeze},
+\texttt{PAPER\_I\_LEAN\_v1.1\_FREEZE} in the manuscripts &
+\textbf{none} \\
+truncated Markdown or scripts & \textbf{none}. Ten files were flagged by
+a deliberately crude end-of-file heuristic and each was inspected: a
+YAML list item, a hash sidecar ending in a filename, a Python file
+ending in \texttt{raise}, and similar. All complete. \\
+manuscript self-containment, English & \textbf{0 violations} \\
+manuscript self-containment, Spanish & \textbf{0 violations} \\
+\end{longtable}
+}
+
+The manuscripts reference no version history, no correction matrix, no
+audit report, no changelog and no finding identifier. They remain
+self-contained.
+
+\subsubsection{5.5 The internal residual report was inspected, not taken
+on its
+label}\label{55-the-internal-residual-report-was-inspected-not-taken-on-its-label}
+
+Specification Section 5 asks for the raw gate evidence rather than the
+PASS label. Inspected:
+
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}ll@{}}
+\toprule\noalign{}
+Raw artifact & Content \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+\texttt{R4\_FORMAL\_REUSE/results/BUILD\_EXIT.txt} &
+\texttt{EXIT\_CODE=0} \\
+\texttt{R4\_FORMAL\_REUSE/results/AXIOMS\_EXIT.txt} & \texttt{0} \\
+\texttt{R4\_FORMAL\_REUSE/results/AXIOMS\_REPORT.txt} & the four
+claim-surface declarations with the correct namespaces and
+\texttt{{[}propext,\ Classical.choice,\ Quot.sound{]}} ---
+\textbf{identical to this auditor\textquotesingle s own external
+verbatim output} \\
+\texttt{R4\_FORMAL\_REUSE/results/ESCAPE\_HATCH\_SCAN.txt} & hits are
+all doc comments and prose, consistent with this
+auditor\textquotesingle s independent finding of \textbf{0} escape
+hatches in active code \\
+\end{longtable}
+}
+
+One discrepancy in their scan output was chased down: it shows
+\texttt{FreezeAxioms.lean:8} reading "preprint draft \textbf{v1.1}". The
+\textbf{delivered} archive\textquotesingle s \texttt{FreezeAxioms.lean}
+line 8 reads "preprint draft \textbf{v1.2}", verified both inside the
+archive and in the loose copy. Their scan evidently ran over a different
+working tree. \textbf{The delivered artifact is correct}; no finding.
+
+\textbf{Control C verdict: \texttt{PASS}.}
+
+\subsection{\texorpdfstring{6. Reused evidence ---
+\texttt{REUSED\_BYTE\_IDENTICAL\_EXTERNAL\_EVIDENCE}}{6. Reused evidence --- REUSED\_BYTE\_IDENTICAL\_EXTERNAL\_EVIDENCE}}\label{6-reused-evidence--reused_byte_identical_external_evidence}
+
+Specification Section 6 permits reuse once the eight manuscript and
+formal anchors match, and prohibits unnecessary rework. The anchors
+match, so the following are reused and \textbf{were not rerun}:
+\texttt{lake\ update}, \texttt{lake\ exe\ cache\ get}, the 8,034-job
+Lean build, the frozen and independent axiom queries, the full
+mathematical enumeration, the bilingual and duplicate analysis, the
+citation work, and PDF compilation.
+
+Reused from \texttt{run\_2026-08-21\_v1.3} and, transitively, the
+external \texttt{run\_2026-08-21\_v1.2} clean room:
+
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}ll@{}}
+\toprule\noalign{}
+Reused item & Recorded result \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+clean Lean build & exit 0, 24m47.960s,
+\texttt{Build\ completed\ successfully\ (8034\ jobs)}, zero errors \\
+axiom footprint & \texttt{{[}propext,\ Classical.choice,\ Quot.sound{]}}
+on all four claim surfaces and all 15 frozen declarations \\
+escape hatches in active code & 0 \\
+mathematical regression & 14/14 exact symbolic identities; 6,732
+orbit-LP cases with 0 mismatches; 5,429 split graphs with 0 violations
+of Theorem 1.1; \texttt{(p,q,s)=(2,4,2)} confirmed as equality \\
+duplication analysis & 0 genuine duplicates across all six artifacts; 0
+exact-duplicate pages \\
+citations & the \texttt{3/16} constant verified against the primary
+source with pinpoint \textbf{Theorem 1, page 23} \\
+bilingual chain & all eight corrections present in both languages at
+identical line numbers \\
+\end{longtable}
+}
+
+Byte identity for the formal reuse was re-established in this run, not
+assumed: the archive was re-extracted and all \textbf{32 members}
+compared against the external clean room --- \textbf{32 byte-identical,
+0 differing, 0 missing} --- with \texttt{lean-toolchain},
+\texttt{lake-manifest.json}, \texttt{lakefile.toml} and
+\texttt{FreezeAxioms.lean} each identical.
+
+\subsection{7. Findings}\label{7-findings}
+
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}llll@{}}
+\toprule\noalign{}
+ID & Severity & Status & Summary \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+\texttt{RES-V13-001} & MINOR & \textbf{CLOSED} & compiler scratch
+removed; no \texttt{tmp} directory and no scratch file anywhere in 308
+files \\
+\texttt{RES-V13-002} & MINOR & \textbf{CLOSED} & changelog namespaces
+corrected and cross-consistent with five other authorities \\
+\texttt{RES-V13-004} & NOTE & OPEN & the cited \texttt{ordman.net} URL
+serves an expired certificate, so the printed citation does not resolve
+cleanly. Preserved as the specification directs. The \texttt{3/16}
+constant itself \textbf{is} verified, so this is accessibility, not an
+evidentiary gap. \\
+\texttt{PKGFIX-N01} & NOTE & OPEN & the specification\textquotesingle s
+declared aggregate hash is not reproducible under 16 scope-by-convention
+combinations and differs from the owner\textquotesingle s own recorded
+aggregate. Target content independently verified by other means. See
+Section 2.3. \\
+\end{longtable}
+}
+
+\textbf{No new blocker, major or minor finding.}
+
+\subsection{8. Verdict against the Section 7
+rule}\label{8-verdict-against-the-section-7-rule}
+
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}ll@{}}
+\toprule\noalign{}
+Condition for a plain \texttt{PASS} & Met \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+both MINOR findings independently closed & \textbf{yes} --- Sections 3
+and 4 \\
+the target inventory and anchors verify & \textbf{yes} --- 308 files,
+37,763,479 bytes, 10/10 anchors, and the owner\textquotesingle s
+219-entry manifest verifies 219/219 \\
+the package regression finds no new blocker, major or minor &
+\textbf{yes} --- 0/0/0; two NOTEs only \\
+reused evidence satisfies byte identity & \textbf{yes} --- 32/32 members
+byte-identical \\
+the report preserves the accessibility NOTE & \textbf{yes} ---
+\texttt{RES-V13-004}, Section 7 \\
+the report states this is not human peer review and does not prove
+global novelty & \textbf{yes} --- Sections 1 and 9 \\
+\end{longtable}
+}
+
+\begin{quote}
+\textbf{Paper I v1.3 is externally closed with a plain \texttt{PASS}.}
+\end{quote}
+
+\subsection{9. What this audit does not
+establish}\label{9-what-this-audit-does-not-establish}
+
+\begin{itemize}
+\tightlist
+\item
+  It does \textbf{not} establish that Theorem 1.1 is true. Across three
+  runs, a determined adversarial effort --- exhaustive enumeration,
+  exact symbolic recomputation and an independent formal reproduction
+  --- failed to falsify it. That is the strongest statement the evidence
+  supports.
+\item
+  It is \textbf{not} human peer review.
+\item
+  It does \textbf{not} prove global novelty. No run performed a
+  prior-art search that could; the Gate K conclusion of the v1.2 run was
+  evidence-bounded and remains so.
+\item
+  It does \textbf{not} re-derive the Lean development in this run; Gate
+  H is reused under byte identity.
+\item
+  It does \textbf{not} verify that the delivered PDFs were compiled from
+  the delivered TeX.
+\item
+  It does \textbf{not} cover the six project Lean modules outside the
+  eight built targets.
+\item
+  It does \textbf{not} formally establish that the bespoke
+  \texttt{PaperI.Split} structure models every split graph; that
+  adequacy step is by inspection.
+\item
+  \textbf{Disclosure carried forward:} this auditor produced the
+  findings being verified here, and no adversarial challenger was run
+  for v1.3 or for this package-fix run. An independent second opinion,
+  ideally from a different model family, would be stronger than any of
+  these three runs.
+\end{itemize}
+
+\subsection{10. Signature}\label{10-signature}
+
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}ll@{}}
+\toprule\noalign{}
+Item & Value \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+Auditor & Claude Opus 5 (\texttt{claude-opus-5}), Anthropic \\
+Configuration & primary auditor; no challenger for this run \\
+Audit date & 2026-08-21 \\
+Specification & \texttt{FINAL\_RESIDUAL\_AUDIT\_REQUEST\_SPEC.md},
+SHA-256 \texttt{93cf8e6a...7484} \\
+Target & \texttt{preprint\_draft\_v1.3} corrected, 308 files, 37,763,479
+bytes \\
+\textbf{Verdict} & \textbf{\texttt{PASS}} --- both MINORs closed; 0 new
+blocker/major/minor; 2 disclosed NOTEs \\
+\end{longtable}
+}
+
+The earlier \texttt{PASS\_WITH\_RESIDUALS} report is \textbf{not}
+relabelled. It stands against its own hashes as the record of the state
+that preceded these corrections.
+
+\end{document}

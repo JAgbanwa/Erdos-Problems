@@ -1,0 +1,122 @@
+COMMAND=python block01_algebraic_identities\verify_identities.py
+========================================================================
+Paper III � Block 01: algebraic identities (SymPy exact symbolic audit)
+========================================================================
+
+[PASS] I1  T(G) key identity (Thm 4.2)
+        T = 1/2 Sum d_i + C_alpha p^2 - p/4, alpha=q/p, |E|=C(p,2)+Sum d_i
+        simplify(LHS - RHS) = 0
+
+[PASS] I2  (9.12) s^2 coefficient
+        -1/6 + 2/9 - 7/96 = -5/288
+        simplify(LHS - RHS) = 0
+
+[PASS] I3  (9.19) completed square
+        s^2/6 - s*rho + 2*rho^2 = 2(rho - s/4)^2 + s^2/24
+        simplify(LHS - RHS) = 0
+
+[PASS] I4  (9.19) lower bound >= s^2/24
+        difference equals 2*(rho - s/4)^2 >= 0 (sum of squares certificate)
+        evaluated: True
+
+[PASS] I5  (9.20) coefficient
+        -1/24 + 5/192 = -1/64
+        simplify(LHS - RHS) = 0
+
+[PASS] I6  (9.10) delta>=7/8 (p odd)
+        (p-s)/p - 7/8 = (p/8 - s)/p >= 0 when s<=p/8, p>0
+        evaluated: True
+
+[PASS] I7  (9.10) delta>=7/8 (p even)
+        (p+1-s)/(p-1) - 7/8 = (p + 15 - 8s)/(8(p-1)); p-8s>=0 => numerator>=15>0
+        evaluated: True
+
+[PASS] I8  corridor threshold p=2304
+        36 p = p^2/64  <=>  p in {0, 2304}; positive root = 2304 (i.e. 6*sqrt(p)=p/8)
+        evaluated: True
+
+[PASS] I9  mu continuity at alpha=2/3
+        (2/3)^2/12 = (2-2/3)^2/48
+        simplify(LHS - RHS) = 0
+
+[PASS] I10a C_alpha(q/p) p^2 closed form
+        C_alpha(q/p) p^2 = (2p^2 - 2qp - q^2)/12
+        simplify(LHS - RHS) = 0
+
+[PASS] I10b mu low-branch closed form
+        mu_low(q/p) p^2 = q^2/12
+        simplify(LHS - RHS) = 0
+
+[PASS] I10c mu high-branch closed form
+        mu_high(q/p) p^2 = (2p-q)^2/48
+        simplify(LHS - RHS) = 0
+
+========================================================================
+SUMMARY: 12/12 identity checks PASSED
+========================================================================
+EXIT_CODE=0
+COMMAND=python block02_common_profile_LP\verify_common_profile_LP.py
+========================================================================
+Paper III � Block 02: common-profile LP  nu3*(H(p,q,d)) = F(p,q,d)
+(LP) direct HiGHS packing LP vs F   +   (EXACT) rational cover upper-bound cert.
+========================================================================
+
+Instances audited (3<=p<=8, 0<=q<=8, 0<=d<=p): 351
+
+(LP)    direct HiGHS packing LP optimum vs float(F):
+        PASS (|LP - F| <= 1e-07): 351/351   FAIL: 0
+        max |LP - F| over grid : 3.908e-14
+
+(EXACT) rational feasible-cover upper-bound certificate (nu3* <= F, exact):
+        PASS: 351/351   FAIL: 0
+
+========================================================================
+VERDICT: PASS  (LP 351/351, EXACT 351/351)
+========================================================================
+EXIT_CODE=0
+COMMAND=python block03_unified_margin\verify_margin.py
+========================================================================
+Paper III � Block 03: unified fractional margin (4.5), exact rational grid
+Grid: 3 <= p <= 48, 1 <= q <= 2p, 0 <= d <= p   (alpha = q/p in (0,2])
+========================================================================
+
+Total (p,q,d) cases audited: 78384
+Margin inequality (4.5) F >= qd/2 + (C_a+mu)p^2 - p/2:
+    PASS: 78384/78384
+    FAIL: 0
+
+Branch-minimiser histogram (which of t1,t2,t3 attains the min; ties counted each):
+    t1 (uniform)          : 18167
+    t2 (separated)        : 29078
+    t3 (hot-neighbourhood): 36317
+Third-branch dominance check:
+    cases where t3 is a co-minimiser : 36317
+    cases where t3 is the UNIQUE min : 31303
+    => third branch never breaks the margin (all 78384 margin checks hold): CONFIRMED
+
+========================================================================
+VERDICT: PASS  (78384/78384 exact-rational margin checks)
+========================================================================
+EXIT_CODE=0
+COMMAND=python block04_corridor_ILP\verify_corridor_ILP.py
+========================================================================
+Paper III � Block 04: corridor integral packing (E-5.1 & Cor 5.3), exact ILP
+nu3(G) computed by 0/1 ILP (PuLP/CBC); bounds checked with exact rationals.
+========================================================================
+
+Split-graph instances audited: 372
+Basic sanity (0 <= Phi, 3*nu3 <= |E|): 372/372 pass
+
+E-5.1  nu3 >= (1/q) sum C(d_i,2)   (applicable when q >= r_p):
+    applicable instances: 180
+    PASS: 180/180   FAIL: 0
+
+Corollary 5.3  Phi <= n^2/6 + p/2 + (s^2-6s+3)/12   (q >= r_p):
+    applicable instances: 180
+    PASS: 180/180   FAIL: 0
+
+========================================================================
+VERDICT: PASS  (E-5.1 180/180, Cor5.3 180/180, basic 372/372)
+========================================================================
+EXIT_CODE=0
+ALL_EXIT_CODES=0

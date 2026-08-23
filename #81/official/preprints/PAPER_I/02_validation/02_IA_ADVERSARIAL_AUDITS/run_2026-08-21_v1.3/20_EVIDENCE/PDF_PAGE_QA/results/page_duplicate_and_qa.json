@@ -1,0 +1,300 @@
+{
+ "spec": "RESIDUAL_AUDIT_REQUEST_SPEC.md",
+ "control": "1 (page images) + general regression PDF QA",
+ "method": "exact SHA-256 of PNG bytes for identity; 64x88 grayscale signature with mean-absolute-difference for similarity; ink and dark-area analysis per page",
+ "langs": {
+  "en": {
+   "pages": 19,
+   "exact_duplicate_page_sets": [],
+   "closest_page_pairs_by_signature": [
+    {
+     "mean_abs_gray_diff": 3.85,
+     "pages": [
+      "p-07.png",
+      "p-15.png"
+     ]
+    },
+    {
+     "mean_abs_gray_diff": 4.745,
+     "pages": [
+      "p-10.png",
+      "p-15.png"
+     ]
+    },
+    {
+     "mean_abs_gray_diff": 4.773,
+     "pages": [
+      "p-09.png",
+      "p-15.png"
+     ]
+    },
+    {
+     "mean_abs_gray_diff": 4.775,
+     "pages": [
+      "p-05.png",
+      "p-07.png"
+     ]
+    },
+    {
+     "mean_abs_gray_diff": 4.956,
+     "pages": [
+      "p-04.png",
+      "p-15.png"
+     ]
+    }
+   ],
+   "signature_distance_min": 3.85,
+   "signature_distance_median": 8.496,
+   "strict_threshold": 1.5,
+   "pairs_below_strict_threshold": [],
+   "page_qa": [
+    {
+     "page": "p-01.png",
+     "ink_pct": 2.946,
+     "very_dark_pct": 0.488
+    },
+    {
+     "page": "p-02.png",
+     "ink_pct": 4.132,
+     "very_dark_pct": 0.529
+    },
+    {
+     "page": "p-03.png",
+     "ink_pct": 1.727,
+     "very_dark_pct": 0.315
+    },
+    {
+     "page": "p-04.png",
+     "ink_pct": 1.275,
+     "very_dark_pct": 0.268
+    },
+    {
+     "page": "p-05.png",
+     "ink_pct": 0.845,
+     "very_dark_pct": 0.07
+    },
+    {
+     "page": "p-06.png",
+     "ink_pct": 1.456,
+     "very_dark_pct": 0.157
+    },
+    {
+     "page": "p-07.png",
+     "ink_pct": 0.899,
+     "very_dark_pct": 0.258
+    },
+    {
+     "page": "p-08.png",
+     "ink_pct": 2.396,
+     "very_dark_pct": 0.409
+    },
+    {
+     "page": "p-09.png",
+     "ink_pct": 0.901,
+     "very_dark_pct": 0.069
+    },
+    {
+     "page": "p-10.png",
+     "ink_pct": 1.6,
+     "very_dark_pct": 0.365
+    },
+    {
+     "page": "p-11.png",
+     "ink_pct": 1.755,
+     "very_dark_pct": 0.31
+    },
+    {
+     "page": "p-12.png",
+     "ink_pct": 1.327,
+     "very_dark_pct": 0.282
+    },
+    {
+     "page": "p-13.png",
+     "ink_pct": 3.414,
+     "very_dark_pct": 0.451
+    },
+    {
+     "page": "p-14.png",
+     "ink_pct": 3.221,
+     "very_dark_pct": 0.647
+    },
+    {
+     "page": "p-15.png",
+     "ink_pct": 0.886,
+     "very_dark_pct": 0.121
+    },
+    {
+     "page": "p-16.png",
+     "ink_pct": 1.423,
+     "very_dark_pct": 0.202
+    },
+    {
+     "page": "p-17.png",
+     "ink_pct": 1.461,
+     "very_dark_pct": 0.234
+    },
+    {
+     "page": "p-18.png",
+     "ink_pct": 3.799,
+     "very_dark_pct": 0.819
+    },
+    {
+     "page": "p-19.png",
+     "ink_pct": 3.104,
+     "very_dark_pct": 0.624
+    }
+   ],
+   "near_blank_pages": [],
+   "large_black_pages": []
+  },
+  "es": {
+   "pages": 20,
+   "exact_duplicate_page_sets": [],
+   "closest_page_pairs_by_signature": [
+    {
+     "mean_abs_gray_diff": 4.619,
+     "pages": [
+      "p-11.png",
+      "p-15.png"
+     ]
+    },
+    {
+     "mean_abs_gray_diff": 4.739,
+     "pages": [
+      "p-07.png",
+      "p-15.png"
+     ]
+    },
+    {
+     "mean_abs_gray_diff": 4.83,
+     "pages": [
+      "p-06.png",
+      "p-11.png"
+     ]
+    },
+    {
+     "mean_abs_gray_diff": 5.021,
+     "pages": [
+      "p-07.png",
+      "p-11.png"
+     ]
+    },
+    {
+     "mean_abs_gray_diff": 5.186,
+     "pages": [
+      "p-05.png",
+      "p-15.png"
+     ]
+    }
+   ],
+   "signature_distance_min": 4.619,
+   "signature_distance_median": 8.515,
+   "strict_threshold": 1.5,
+   "pairs_below_strict_threshold": [],
+   "page_qa": [
+    {
+     "page": "p-01.png",
+     "ink_pct": 3.13,
+     "very_dark_pct": 0.532
+    },
+    {
+     "page": "p-02.png",
+     "ink_pct": 4.542,
+     "very_dark_pct": 0.596
+    },
+    {
+     "page": "p-03.png",
+     "ink_pct": 2.178,
+     "very_dark_pct": 0.369
+    },
+    {
+     "page": "p-04.png",
+     "ink_pct": 1.41,
+     "very_dark_pct": 0.294
+    },
+    {
+     "page": "p-05.png",
+     "ink_pct": 1.011,
+     "very_dark_pct": 0.072
+    },
+    {
+     "page": "p-06.png",
+     "ink_pct": 1.353,
+     "very_dark_pct": 0.153
+    },
+    {
+     "page": "p-07.png",
+     "ink_pct": 1.292,
+     "very_dark_pct": 0.306
+    },
+    {
+     "page": "p-08.png",
+     "ink_pct": 2.388,
+     "very_dark_pct": 0.412
+    },
+    {
+     "page": "p-09.png",
+     "ink_pct": 1.236,
+     "very_dark_pct": 0.124
+    },
+    {
+     "page": "p-10.png",
+     "ink_pct": 1.71,
+     "very_dark_pct": 0.413
+    },
+    {
+     "page": "p-11.png",
+     "ink_pct": 1.043,
+     "very_dark_pct": 0.191
+    },
+    {
+     "page": "p-12.png",
+     "ink_pct": 2.269,
+     "very_dark_pct": 0.377
+    },
+    {
+     "page": "p-13.png",
+     "ink_pct": 2.884,
+     "very_dark_pct": 0.391
+    },
+    {
+     "page": "p-14.png",
+     "ink_pct": 3.865,
+     "very_dark_pct": 0.704
+    },
+    {
+     "page": "p-15.png",
+     "ink_pct": 1.13,
+     "very_dark_pct": 0.187
+    },
+    {
+     "page": "p-16.png",
+     "ink_pct": 1.602,
+     "very_dark_pct": 0.212
+    },
+    {
+     "page": "p-17.png",
+     "ink_pct": 1.401,
+     "very_dark_pct": 0.239
+    },
+    {
+     "page": "p-18.png",
+     "ink_pct": 2.868,
+     "very_dark_pct": 0.51
+    },
+    {
+     "page": "p-19.png",
+     "ink_pct": 3.413,
+     "very_dark_pct": 0.838
+    },
+    {
+     "page": "p-20.png",
+     "ink_pct": 1.548,
+     "very_dark_pct": 0.199
+    }
+   ],
+   "near_blank_pages": [],
+   "large_black_pages": []
+  }
+ }
+}

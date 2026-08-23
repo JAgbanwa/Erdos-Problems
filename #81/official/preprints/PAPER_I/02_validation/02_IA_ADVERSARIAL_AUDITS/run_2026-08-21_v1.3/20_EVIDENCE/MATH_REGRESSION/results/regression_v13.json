@@ -1,0 +1,188 @@
+{
+ "spec": "RESIDUAL_AUDIT_REQUEST_SPEC.md",
+ "section": "6 general mathematical regression",
+ "target": "preprint_draft_v1.3",
+ "arithmetic": "exact sympy symbolic and exact Fraction enumeration; no seeds",
+ "symbolic": {
+  "checked": 14,
+  "all_hold": true,
+  "failures": [],
+  "detail": [
+   {
+    "tag": "v13-4.3/4.8",
+    "name": "v1.3 |w_1| = b/2 + sum_H (1-kappa_e) agrees with (4.3) |w_1| = |H| + sum_L kappa_e",
+    "holds": true,
+    "residual": "0",
+    "note": "uses Lemma 3.1: sum_all kappa_e = b_{>=2}/2, i.e. SH + SL = b/2"
+   },
+   {
+    "tag": "v13-4.7",
+    "name": "adding the two v1.3 identities yields (4.7) V_com = b/2 + M(kappa)",
+    "holds": true,
+    "residual": "0",
+    "note": "the sum_H(1-kappa_e) terms cancel exactly; this is the accounting v1.2 omitted"
+   },
+   {
+    "tag": "L3.1",
+    "name": "per-vertex contribution C(d,2)/(d-1) = d/2",
+    "holds": true,
+    "residual": "0",
+    "note": ""
+   },
+   {
+    "tag": "6.3",
+    "name": "A+B+C = (p^2-p-s q)/2 with p = s+o",
+    "holds": true,
+    "residual": "0",
+    "note": ""
+   },
+   {
+    "tag": "7.2",
+    "name": "12(U-R) = q(2o+q) - 2p",
+    "holds": true,
+    "residual": "0",
+    "note": ""
+   },
+   {
+    "tag": "7.4",
+    "name": "12(D-R) = 12o^2 - 6o(2p-q) + (2p-q)^2 - 6p",
+    "holds": true,
+    "residual": "0",
+    "note": ""
+   },
+   {
+    "tag": "7.4c",
+    "name": "12u^2 - 6uv + v^2 = 12(u - v/4)^2 + v^2/4",
+    "holds": true,
+    "residual": "0",
+    "note": ""
+   },
+   {
+    "tag": "7.6",
+    "name": "12(H-R) = (2s-q)^2 + 2q(p-s) - 2p - 4s",
+    "holds": true,
+    "residual": "0",
+    "note": ""
+   },
+   {
+    "tag": "8.2",
+    "name": "binom(p,2) - 2R + p = (p+q)^2/6 + p/2",
+    "holds": true,
+    "residual": "0",
+    "note": ""
+   },
+   {
+    "tag": "8.3",
+    "name": "assembly difference identity",
+    "holds": true,
+    "residual": "0",
+    "note": ""
+   },
+   {
+    "tag": "8.res",
+    "name": "residual regime p=1,q=0",
+    "holds": true,
+    "residual": "0",
+    "note": ""
+   },
+   {
+    "tag": "9.cs",
+    "name": "complete-split family LHS = n^2/6 + n/6 at n = 3p",
+    "holds": true,
+    "residual": "0",
+    "note": ""
+   },
+   {
+    "tag": "A.2-o>=3",
+    "name": "v1.3 A.2 excess (B-2A)/6 is exact at the o>=3 endpoint (0,1/2,1/3)",
+    "holds": true,
+    "residual": "0",
+    "note": "v1.3 now states 'If A>=0 and o>=3', which is exactly this domain"
+   },
+   {
+    "tag": "A.2-o<=2",
+    "name": "at the o<=2 endpoint (0,1/2,0) the excess is (B-2A-2C)/6",
+    "holds": true,
+    "residual": "0",
+    "note": "v1.3 routes o=0,1,2 through A.3 instead; the restriction is now correct"
+   }
+  ]
+ },
+ "orbit_program": {
+  "domain": {
+   "p": [
+    2,
+    18
+   ],
+   "q": [
+    1,
+    44
+   ],
+   "s": [
+    2,
+    "p"
+   ]
+  },
+  "cases": 6732,
+  "closed_form_mismatches": 0,
+  "bound_7_8_violations": 0,
+  "mismatch_detail": []
+ },
+ "tightness_remark": {
+  "mandated_point_2_4_2": {
+   "lp": "-3",
+   "slack": "0",
+   "verdict": "CONFIRMED equality"
+  },
+  "regime_minima": {
+   "o==0": {
+    "min_slack": "0",
+    "at": {
+     "p": 2,
+     "q": 4,
+     "s": 2
+    }
+   },
+   "s==2,o>=1": {
+    "min_slack": "1/4",
+    "at": {
+     "p": 3,
+     "q": 3,
+     "s": 2
+    }
+   },
+   "o==1": {
+    "min_slack": "1/4",
+    "at": {
+     "p": 3,
+     "q": 3,
+     "s": 2
+    }
+   },
+   "o==2": {
+    "min_slack": "1",
+    "at": {
+     "p": 4,
+     "q": 2,
+     "s": 2
+    }
+   },
+   "s>=3,o>=3": {
+    "min_slack": "9/4",
+    "at": {
+     "p": 6,
+     "q": 3,
+     "s": 3
+    }
+   }
+  },
+  "claims": {
+   "s>=3,o>=3 slack>=9/4": true,
+   "s==2,o>=1 slack>=1/4": true,
+   "o==1 slack>=1/4": true,
+   "o==2 slack>=1/4": true,
+   "equality_only_o0_and_q2p": true
+  },
+  "equality_cases": 17
+ }
+}

@@ -1,8 +1,9 @@
-# Reproducibility
+# Paper I v1.3 reproducibility
 
-The theorem is analytic. No computation or finite enumeration is a logical premise
-of the proof.
+The immutable Lean source snapshot, recorded build transcript, theorem-level
+axiom output and reproduction instructions are in
+`../05_formalization/lean_v1.2_freeze/`.
 
-This directory documents how to rebuild the publication PDF from the official
-LaTeX source. Development-time computational regression material is intentionally
-excluded from this release unless it is separately curated and documented.
+`PAPER_I_preprint_v1.3_*_pass1.log` and `*_pass2.log` record the final public
+PDF builds. The mathematical/formal archive is unchanged from the externally
+reproduced audited target.

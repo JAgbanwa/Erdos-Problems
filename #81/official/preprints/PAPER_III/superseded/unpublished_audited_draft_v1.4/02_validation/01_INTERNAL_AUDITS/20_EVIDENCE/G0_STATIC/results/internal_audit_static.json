@@ -1,0 +1,706 @@
+{
+  "paper": "PAPER_III",
+  "target": "preprint_draft_v1.3",
+  "audit_class": "INTERNAL_AUTHOR_SIDE_NON_INDEPENDENT",
+  "lean_rebuild_during_audit": false,
+  "gate_verdicts": {
+    "G0": "PASS",
+    "G1": "PASS",
+    "G2": "PASS",
+    "G3": "PASS",
+    "G4": "PASS",
+    "G5": "PASS",
+    "G6": "PASS",
+    "G7": "PASS",
+    "G8": "PASS"
+  },
+  "checks_passed": 133,
+  "checks_total": 133,
+  "failed": {},
+  "overall": "PASS",
+  "checks": {
+    "G0": [
+      {
+        "pass": true,
+        "label": "publication artifact exists: md_en",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "publication artifact exists: tex_en",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "publication artifact exists: pdf_en",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "publication artifact exists: md_es",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "publication artifact exists: tex_es",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "publication artifact exists: pdf_es",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "publication sidecar is LF-only",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "six publication hashes verify",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "707-entry source manifest verifies",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "742-entry freeze package manifest verifies",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "formal archive has declared SHA-256",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "formal archive sidecar agrees",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "formal archive CRC verifies",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "formal archive has 743 entries",
+        "detail": ""
+      }
+    ],
+    "G1": [
+      {
+        "pass": true,
+        "label": "English claim surface present: Theorem 1.1",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "English claim surface present: Corollary 1.2",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "English claim surface present: three regimes",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "English claim surface present: sharp quadratic",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "English claim surface present: linear term is necessary",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "English claim surface present: full chordal problem remains open",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "Spanish claim surface present: Teorema 1.1",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "Spanish claim surface present: Corolario 1.2",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "Spanish claim surface present: tres regímenes",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "Spanish claim surface present: coeficiente cuadrático afilado",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "Spanish claim surface present: es necesario un término lineal",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "Spanish claim surface present: problema cordal completo sigue abierto",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "overbroad split-case wording removed",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "Spanish overbroad split-case wording removed",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "precise split-case scope stated",
+        "detail": ""
+      }
+    ],
+    "G2": [
+      {
+        "pass": true,
+        "label": "fresh G2 summary exists",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "fresh mathematical regressions pass",
+        "detail": ""
+      }
+    ],
+    "G3": [
+      {
+        "pass": true,
+        "label": "formal declaration occurs in source: PaperIII.isFracPacking_iff_yuster",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "formal surface explicitly queried: PaperIII.isFracPacking_iff_yuster",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "formal surface recorded in axiom output: PaperIII.isFracPacking_iff_yuster",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "formal declaration occurs in source: PaperIII.nu3Star_eq_yuster",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "formal surface explicitly queried: PaperIII.nu3Star_eq_yuster",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "formal surface recorded in axiom output: PaperIII.nu3Star_eq_yuster",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "formal declaration occurs in source: PaperIII.tau3Star_eq_nu3Star",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "formal surface explicitly queried: PaperIII.tau3Star_eq_nu3Star",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "formal surface recorded in axiom output: PaperIII.tau3Star_eq_nu3Star",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "formal declaration occurs in source: PaperIII.AX1Assumption_iff_packing_form",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "formal surface explicitly queried: PaperIII.AX1Assumption_iff_packing_form",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "formal surface recorded in axiom output: PaperIII.AX1Assumption_iff_packing_form",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "formal declaration occurs in source: Nibble.AX1.boxAllocationResidual_holds",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "formal surface explicitly queried: Nibble.AX1.boxAllocationResidual_holds",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "formal surface recorded in axiom output: Nibble.AX1.boxAllocationResidual_holds",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "formal declaration occurs in source: Nibble.AX1.blockCoverResidualCoupled_holds",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "formal surface explicitly queried: Nibble.AX1.blockCoverResidualCoupled_holds",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "formal surface recorded in axiom output: Nibble.AX1.blockCoverResidualCoupled_holds",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "formal declaration occurs in source: Nibble.AX1.ax1_of_boxAllocation",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "formal surface explicitly queried: Nibble.AX1.ax1_of_boxAllocation",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "formal surface recorded in axiom output: Nibble.AX1.ax1_of_boxAllocation",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "formal declaration occurs in source: Nibble.AX1.ax1Statement_holds",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "formal surface explicitly queried: Nibble.AX1.ax1Statement_holds",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "formal surface recorded in axiom output: Nibble.AX1.ax1Statement_holds",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "formal declaration occurs in source: PaperIII.AX1_holds",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "formal surface explicitly queried: PaperIII.AX1_holds",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "formal surface recorded in axiom output: PaperIII.AX1_holds",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "formal declaration occurs in source: PaperIII.E_4_3_of_AX1",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "formal surface explicitly queried: PaperIII.E_4_3_of_AX1",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "formal surface recorded in axiom output: PaperIII.E_4_3_of_AX1",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "formal declaration occurs in source: PaperIII.E_5_1",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "formal surface explicitly queried: PaperIII.E_5_1",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "formal surface recorded in axiom output: PaperIII.E_5_1",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "formal declaration occurs in source: PaperIII.cor_5_3",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "formal surface explicitly queried: PaperIII.cor_5_3",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "formal surface recorded in axiom output: PaperIII.cor_5_3",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "formal declaration occurs in source: PaperIII.E_5_2",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "formal surface explicitly queried: PaperIII.E_5_2",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "formal surface recorded in axiom output: PaperIII.E_5_2",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "formal declaration occurs in source: PaperIII.Prop_10_1_low",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "formal surface explicitly queried: PaperIII.Prop_10_1_low",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "formal surface recorded in axiom output: PaperIII.Prop_10_1_low",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "formal declaration occurs in source: PaperIII.Prop_10_1_mid",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "formal surface explicitly queried: PaperIII.Prop_10_1_mid",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "formal surface recorded in axiom output: PaperIII.Prop_10_1_mid",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "formal declaration occurs in source: PaperIII.E_8_clique_packing_of_AX2",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "formal surface explicitly queried: PaperIII.E_8_clique_packing_of_AX2",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "formal surface recorded in axiom output: PaperIII.E_8_clique_packing_of_AX2",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "formal declaration occurs in source: PaperIII.E_8_of_AX1_AX2",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "formal surface explicitly queried: PaperIII.E_8_of_AX1_AX2",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "formal surface recorded in axiom output: PaperIII.E_8_of_AX1_AX2",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "formal declaration occurs in source: PaperIII.AX2_holds",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "formal surface explicitly queried: PaperIII.AX2_holds",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "formal surface recorded in axiom output: PaperIII.AX2_holds",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "formal declaration occurs in source: PaperIII.eventual_bound_of_high_degree_of_AX1_AX2",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "formal surface explicitly queried: PaperIII.eventual_bound_of_high_degree_of_AX1_AX2",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "formal surface recorded in axiom output: PaperIII.eventual_bound_of_high_degree_of_AX1_AX2",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "formal declaration occurs in source: PaperIII.global_bound_from_eventual_high_degree",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "formal surface explicitly queried: PaperIII.global_bound_from_eventual_high_degree",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "formal surface recorded in axiom output: PaperIII.global_bound_from_eventual_high_degree",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "formal declaration occurs in source: PaperIII.Theorem_1_1_of_AX1_AX2",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "formal surface explicitly queried: PaperIII.Theorem_1_1_of_AX1_AX2",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "formal surface recorded in axiom output: PaperIII.Theorem_1_1_of_AX1_AX2",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "formal declaration occurs in source: PaperIII.Theorem_1_1",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "formal surface explicitly queried: PaperIII.Theorem_1_1",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "formal surface recorded in axiom output: PaperIII.Theorem_1_1",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "aggregate root imports canonical module",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "PublicAPI imports canonical module",
+        "detail": ""
+      }
+    ],
+    "G4": [
+      {
+        "pass": true,
+        "label": "recorded consolidated build exit is zero",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "recorded build reports 8719 successful jobs",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "recorded build has no active sorry warning",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "all eight axiom query files exited zero",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "recorded theorem footprints are exactly foundational-only",
+        "detail": "['Classical.choice', 'Quot.sound', 'propext']"
+      },
+      {
+        "pass": true,
+        "label": "legacy project axioms are disclosed and classified",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "legacy axiom modules are unimported",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "stale v1.1 axiom-file label absent",
+        "detail": ""
+      }
+    ],
+    "G5": [
+      {
+        "pass": true,
+        "label": "Markdown/TeX/PDF consistency suite passes",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "English/Spanish heading counts agree",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "English A_2J notation is normalized",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "combined citation [3,8] is synchronized",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "combined citation [11,17] is synchronized",
+        "detail": ""
+      }
+    ],
+    "G6": [
+      {
+        "pass": true,
+        "label": "en PDF page count is 45",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "en PDF fonts are embedded",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "en final TeX log has no fatal error",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "en final TeX log has no undefined reference/citation",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "en PDF does not predate TeX",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "es PDF page count is 46",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "es PDF fonts are embedded",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "es final TeX log has no fatal error",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "es final TeX log has no undefined reference/citation",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "es PDF does not predate TeX",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "manuscript tree has no TeX residue",
+        "detail": ""
+      }
+    ],
+    "G7": [
+      {
+        "pass": true,
+        "label": "English bibliography has 17 numbered references",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "bounded internal novelty statement present",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "independent novelty gate remains explicit",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "full chordal problem distinguished from split asymptotic result",
+        "detail": ""
+      }
+    ],
+    "G8": [
+      {
+        "pass": true,
+        "label": "no shell-variable-named directory exists",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "temporary render tree removed",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "public freeze contains no compiled Lean artifacts",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "public freeze contains no symlink/reparse entry",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "Paper III first-release status synchronized",
+        "detail": ""
+      },
+      {
+        "pass": true,
+        "label": "manuscripts do not depend on prior version artifacts",
+        "detail": ""
+      }
+    ]
+  }
+}

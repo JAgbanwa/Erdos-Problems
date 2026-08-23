@@ -1,0 +1,45 @@
+=== 1. the two hashes the request declares for the PRIOR AUDIT's own artifacts
+  30_REPORT/FINAL_AUDIT_REPORT.md
+    exists   : True
+    declared : 2c19bf1ca74f77cc409b8d0102adf01b92d13db885ac81d15d156477abed8842
+    computed : 2c19bf1ca74f77cc409b8d0102adf01b92d13db885ac81d15d156477abed8842
+    MATCH    : True
+  10_LEDGER/FINDINGS_LEDGER.csv
+    exists   : True
+    declared : 17db6da295c4e8bed225b20dd676fa09a2b766a4a84ccce0fd74810f35fe2b39
+    computed : 17db6da295c4e8bed225b20dd676fa09a2b766a4a84ccce0fd74810f35fe2b39
+    MATCH    : True
+
+=== 2. the six corrected-target hashes
+  MATCH  PAPER_III_preprint_draft_v1.4.md
+  MATCH  PAPER_III_preprint_draft_v1.4_en.tex
+  MATCH  PAPER_III_preprint_draft_v1.4_en.pdf
+  MATCH  PAPER_III_preprint_draft_v1.4_es.md
+  MATCH  PAPER_III_preprint_draft_v1.4_es.tex
+  MATCH  PAPER_III_preprint_draft_v1.4_es.pdf
+
+=== 3. the Lean archive
+  declared 79ee24c38fd776bc2585a0c3c996e30817f0829fc5064463bdbde0fa2d3d7104
+  computed 79ee24c38fd776bc2585a0c3c996e30817f0829fc5064463bdbde0fa2d3d7104
+  MATCH    True
+
+=== 4. the claim 'the English artifacts are byte-identical to the prior external target'
+  prior audit's own manifest: 1194 entries
+    [EN] PAPER_III_preprint_draft_v1.4.md             unchanged
+    [EN] PAPER_III_preprint_draft_v1.4_en.tex         unchanged
+    [EN] PAPER_III_preprint_draft_v1.4_en.pdf         unchanged
+    [ES] PAPER_III_preprint_draft_v1.4_es.md          CHANGED
+    [ES] PAPER_III_preprint_draft_v1.4_es.tex         CHANGED
+    [ES] PAPER_III_preprint_draft_v1.4_es.pdf         CHANGED
+
+=== 5. are the prior audit's build logs and manifests still present and sealed?
+   present 20_EVIDENCE/G5_LEAN/results/03_build_PaperIII.log
+   present 20_EVIDENCE/G5_LEAN/results/04_build_query_roots.log
+   present 20_EVIDENCE/G5_LEAN/results/02_pre_build_clean.txt
+   present 20_EVIDENCE/G5_LEAN/SHA256_MANIFEST.txt
+   present 40_PACKAGE/EXTERNAL_AUDIT_PACKAGE.zip
+   present 40_PACKAGE/EXTERNAL_AUDIT_PACKAGE_SHA256.txt
+   present 30_REPORT/FINAL_AUDIT_SUMMARY.json
+
+  prior package: 60/60 files verify; problems=[]
+  prior ZIP sidecar matches: True

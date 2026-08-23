@@ -1,0 +1,29 @@
+{
+  "paper": "PAPER_II",
+  "draft_version": "1.2",
+  "freeze_label": "lean_v1.2_freeze",
+  "freeze_date": "2026-08-21",
+  "status": "LOCAL_FREEZE_PREPARED_NOT_AUDITED",
+  "source_kind": "TRACKED_GIT_HEAD_ARCHIVE",
+  "source_git_head": "25df96b06fe4614ae02f25ae968cc1d791c380e9",
+  "source_git_branch": "master",
+  "source_extraction": "git archive HEAD with explicit publishable paths",
+  "source_worktree_note": "Dirty untracked/modified Route-A experiments excluded from archive",
+  "lean_toolchain": "leanprover/lean4:v4.28.0",
+  "lean_commit": "7e01a1bf5c70fc6167d49c345d3bf80596e9a79b",
+  "mathlib_rev": "8f9d9cff6bd728b17a24e163c9402775d9e6a365",
+  "lean_source_files": 42,
+  "main_build_result": "PASS_LOCAL_PREPARATION_8061_JOBS",
+  "supplement_build_result": "PASS_LOCAL_PREPARATION_8032_JOBS",
+  "axiom_result": "PASS_LOCAL_PREPARATION_STANDARD_FOUNDATIONAL_AXIOMS_ONLY",
+  "audit_status": "NOT_STARTED",
+  "independent_reproduction": "NOT_RUN",
+  "excluded": [
+    ".lake",
+    "compiled objects",
+    "PaperII_complete.lean",
+    "ruta-optimizada/",
+    "untracked Route-A modules",
+    "scratch files"
+  ]
+}

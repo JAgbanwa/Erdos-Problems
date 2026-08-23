@@ -1,0 +1,28 @@
+### utc: 2026-08-22T20:12:44Z
+### cmd: lake env lean AuditorE3.lean
+PaperIII.Theorem_1_1 : ∃ C, ∀ (G : PaperIII.SplitGraph), ↑G.Phi ≤ ↑G.n ^ 2 / 6 + C * ↑G.n
+PaperIII.Corollary_1_2 : ∃ C, ∀ (G : PaperIII.SplitGraph), ↑G.cp ≤ ↑G.n ^ 2 / 6 + C * ↑G.n
+PaperIII.Theorem_1_1_of_AX1_AX2 : PaperIII.AX1Assumption →
+  PaperIII.AX2Assumption → ∃ C, ∀ (G : PaperIII.SplitGraph), ↑G.Phi ≤ ↑G.n ^ 2 / 6 + C * ↑G.n
+PaperIII.AX1_holds : PaperIII.AX1Assumption
+PaperIII.AX2_holds : PaperIII.AX2Assumption
+PaperIII.global_bound_from_eventual_high_degree : ∀ (N : ℕ),
+  (∀ (G : PaperIII.SplitGraph),
+      N ≤ G.n → (∀ (i : Fin G.q), (2 * ↑G.n - 1) / 6 + 1 < ↑(G.d i)) → ↑G.Phi ≤ ↑G.n ^ 2 / 6 + 2 * ↑G.n) →
+    ∀ (G : PaperIII.SplitGraph), ↑G.Phi ≤ ↑G.n ^ 2 / 6 + max 2 ↑N * ↑G.n
+PaperIII.eventual_bound_of_high_degree_of_AX1_AX2 : PaperIII.AX1Assumption →
+  PaperIII.AX2Assumption →
+    ∃ N,
+      ∀ (G : PaperIII.SplitGraph),
+        N ≤ G.n → (∀ (i : Fin G.q), (2 * ↑G.n - 1) / 6 + 1 < ↑(G.d i)) → ↑G.Phi ≤ ↑G.n ^ 2 / 6 + 2 * ↑G.n
+PaperIII.AX1Assumption : Prop
+PaperIII.AX2Assumption : Prop
+'AuditorE3.auditor_fracPacking_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+'AuditorE3.auditor_nu3Star_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+'AuditorE3.auditor_tau3Star_eq_nu3Star' depends on axioms: [propext, Classical.choice, Quot.sound]
+'AuditorE3.auditor_AX1_iff_manuscript' depends on axioms: [propext, Classical.choice, Quot.sound]
+'AuditorE3.auditor_manuscriptAX1_holds' depends on axioms: [propext, Classical.choice, Quot.sound]
+'AuditorE3.auditor_AX2_implies_manuscript' depends on axioms: [propext, Classical.choice, Quot.sound]
+'AuditorE3.auditor_manuscriptAX2_holds' depends on axioms: [propext, Classical.choice, Quot.sound]
+'AuditorE3.auditor_decomposition_unfolds' depends on axioms: [propext, Classical.choice, Quot.sound]
+EXIT=0

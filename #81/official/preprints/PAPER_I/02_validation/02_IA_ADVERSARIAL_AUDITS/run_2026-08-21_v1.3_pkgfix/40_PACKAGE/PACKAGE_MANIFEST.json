@@ -1,0 +1,155 @@
+{
+ "spec": "FINAL_RESIDUAL_AUDIT_REQUEST_SPEC.md",
+ "paper": "PAPER_I",
+ "run": "run_2026-08-21_v1.3_pkgfix",
+ "overall_verdict": "PASS",
+ "file_count": 29,
+ "total_bytes": 426028,
+ "files": [
+  {
+   "path": "00_REQUEST/FINAL_RESIDUAL_AUDIT_REQUEST_SPEC.md",
+   "bytes": 6675,
+   "sha256": "93cf8e6a06cd47189e98a4939145b21a32a283956c172a2791812a4df5a87484"
+  },
+  {
+   "path": "00_REQUEST/FINAL_RESIDUAL_AUDIT_REQUEST_SPEC.md.sha256",
+   "bytes": 103,
+   "sha256": "7170e172317d9af38f976f1b20d3d3a19cf1a4fde928aa482ee5aef05c7d9c91"
+  },
+  {
+   "path": "00_REQUEST/INPUT_TARGET_INVENTORY.json",
+   "bytes": 65770,
+   "sha256": "8a73d06abbcb3ad23e61a386b9c04da7e1c0ac061aa9377ab967f47742195cd0"
+  },
+  {
+   "path": "00_REQUEST/INPUT_TARGET_MANIFEST.sha256",
+   "bytes": 46524,
+   "sha256": "317752d2bf7873fe02033dd5fe8a5b0bc3d23821d73a6aecea472455ea148ba6"
+  },
+  {
+   "path": "10_CONTROL/AUDITOR_DECLARATION.md",
+   "bytes": 2306,
+   "sha256": "f6136f2798bc24d40ee2ef64fd90627023823e45908d988017194249c7994f85"
+  },
+  {
+   "path": "10_CONTROL/AUDIT_INDEX.md",
+   "bytes": 1656,
+   "sha256": "6aa300eb099b49f99a55a91bc69a43b9a38b8a32df31b442ef25add3e53e26c5"
+  },
+  {
+   "path": "10_CONTROL/ENVIRONMENT.md",
+   "bytes": 2563,
+   "sha256": "4d4c488341205b1a746811ecdaf0201fb5371f26b3e166b50245f975d0bf827d"
+  },
+  {
+   "path": "10_CONTROL/FINDINGS.csv",
+   "bytes": 3940,
+   "sha256": "0aecd977665f8f1efd8b46a8794b09f6c15d15c6bfd5dd618377f79667842cb0"
+  },
+  {
+   "path": "10_CONTROL/GATE_STATUS.json",
+   "bytes": 348,
+   "sha256": "f7ebebf32c727724009843802441e4d8ec7d30cd7e439543f3e78ad56dcce568"
+  },
+  {
+   "path": "20_EVIDENCE/BYTE_IDENTITY_REUSE/SHA256_MANIFEST.txt",
+   "bytes": 91,
+   "sha256": "956533c9f5b6610bb54034ec7573a91ae46f599e4cbdcf903ae3ba9a347b42fd"
+  },
+  {
+   "path": "20_EVIDENCE/BYTE_IDENTITY_REUSE/results/REUSE_RECORD.txt",
+   "bytes": 2785,
+   "sha256": "9bd647da7b5629be980ab140670f0a7f68450b7032274ec178ccbc97546ac598"
+  },
+  {
+   "path": "20_EVIDENCE/PACKAGE_REGRESSION/SHA256_MANIFEST.txt",
+   "bytes": 176,
+   "sha256": "4f1e0e099d17f77330ee89ee17576d1c0a04bd3f9f16cab580dbd9fb97792a0e"
+  },
+  {
+   "path": "20_EVIDENCE/PACKAGE_REGRESSION/results/control_C.json",
+   "bytes": 15885,
+   "sha256": "ffc892b43042be1fd42bcafb535e4deae4966ea6a6e97ccbe7d53725ec039d0e"
+  },
+  {
+   "path": "20_EVIDENCE/PACKAGE_REGRESSION/scripts/control_C.py",
+   "bytes": 8693,
+   "sha256": "60848f852e418f4ff2ea8d487d22290cdd2d89c9d2b3adefd2d112e6d19a218e"
+  },
+  {
+   "path": "20_EVIDENCE/RES_V13_001_SCRATCH/SHA256_MANIFEST.txt",
+   "bytes": 182,
+   "sha256": "90ce898644e15eeea84f00dd7d82a8ed7da234e9059d31a51afbd9d40d27e122"
+  },
+  {
+   "path": "20_EVIDENCE/RES_V13_001_SCRATCH/results/controls_A_B.json",
+   "bytes": 2203,
+   "sha256": "bc992e193fb247a24072ff714997c5d31c0fbd047fd257bdd5824563bc070881"
+  },
+  {
+   "path": "20_EVIDENCE/RES_V13_001_SCRATCH/scripts/controls_A_B.py",
+   "bytes": 5508,
+   "sha256": "febfae375500dcaf6bc0d74d9fb6e551fa6ecbd310347b324e971480f739ddaf"
+  },
+  {
+   "path": "20_EVIDENCE/RES_V13_002_CHANGELOG/SHA256_MANIFEST.txt",
+   "bytes": 92,
+   "sha256": "173b84bd50961382ee3133a188ea9b40913b44448374af166c7ce2ec1502d56f"
+  },
+  {
+   "path": "20_EVIDENCE/RES_V13_002_CHANGELOG/results/controls_A_B.json",
+   "bytes": 2203,
+   "sha256": "bc992e193fb247a24072ff714997c5d31c0fbd047fd257bdd5824563bc070881"
+  },
+  {
+   "path": "20_EVIDENCE/TARGET_VERIFICATION/SHA256_MANIFEST.txt",
+   "bytes": 194,
+   "sha256": "495fca2d013e409a6d47c196c4bd5cbbab577f40c70776656afd5827e063aac7"
+  },
+  {
+   "path": "20_EVIDENCE/TARGET_VERIFICATION/results/manifest_comparison.json",
+   "bytes": 12722,
+   "sha256": "dc20190aa9c08951fb0986db0187a261887831d712f88ab405ec38e31879359a"
+  },
+  {
+   "path": "20_EVIDENCE/TARGET_VERIFICATION/scripts/compare_manifests.py",
+   "bytes": 4366,
+   "sha256": "7246670daf51a9349a7380ae9bf0bee6f533ac6bf27bb0f9498ee4637a4e6d7d"
+  },
+  {
+   "path": "30_REPORT/FINAL_AUDIT_REPORT.aux",
+   "bytes": 17290,
+   "sha256": "3b86e15da1e451b5fedaa44116d72f13158fbed645e6ca884fcbb971bbdfb18b"
+  },
+  {
+   "path": "30_REPORT/FINAL_AUDIT_REPORT.log",
+   "bytes": 60693,
+   "sha256": "0bbfcd645b9cf6bd0487b2ed9cb1ede6f630a5d1cc00a3afc80d8ce52d9af0c8"
+  },
+  {
+   "path": "30_REPORT/FINAL_AUDIT_REPORT.md",
+   "bytes": 18002,
+   "sha256": "ea019592f31da798d5c66e8ddc2692e050d7564b42a18ae3e4998d1b2f8604b7"
+  },
+  {
+   "path": "30_REPORT/FINAL_AUDIT_REPORT.pdf",
+   "bytes": 114636,
+   "sha256": "b9774a2c6156078fa505baffbeac17b28d45a6cc438d6e2a94fa8a1fc2134bc8"
+  },
+  {
+   "path": "30_REPORT/FINAL_AUDIT_REPORT.tex",
+   "bytes": 27526,
+   "sha256": "65e2192c15614356c70a629ee01e11cbcd5aaa2b9bd5063ad31d42545a499de3"
+  },
+  {
+   "path": "30_REPORT/FINAL_AUDIT_SUMMARY.json",
+   "bytes": 2732,
+   "sha256": "5bf32ec04e725251d8fabc58082dc3a1d887a6f83e8fc2a9f3672b6219eb4ba0"
+  },
+  {
+   "path": "30_REPORT/hdr.tex",
+   "bytes": 164,
+   "sha256": "af5b82dd3355b207b203e873e1c297ad1636d46eb354a7d180c09c535e8777b6"
+  }
+ ]
+}

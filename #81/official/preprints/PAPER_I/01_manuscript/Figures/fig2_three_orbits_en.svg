@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 840 480" font-family="Georgia, 'Times New Roman', serif">
+  <style>
+    .lbl{font-size:18px;fill:#2b2b2b}
+    .leg{font-size:15px;fill:#3a3a3a}
+    .sn{fill:#52657b;stroke:#2f3b47;stroke-width:1.4}
+    .on{fill:#7a6a86;stroke:#463a4f;stroke-width:1.4}
+    .ss{stroke:#4e6e8e;stroke-width:3}
+    .bt{stroke:#a8763f;stroke-width:3}
+    .oo{stroke:#5e8060;stroke-width:3}
+  </style>
+
+  <!-- region hulls -->
+  <ellipse cx="215" cy="215" rx="150" ry="150" fill="#4e6e8e" fill-opacity="0.05" stroke="#4e6e8e" stroke-opacity="0.35"/>
+  <ellipse cx="620" cy="215" rx="150" ry="150" fill="#7a6a86" fill-opacity="0.05" stroke="#7a6a86" stroke-opacity="0.35"/>
+
+  <!-- vertices (S): s1,s2,s3 ; (K\S): o1,o2,o3 -->
+  <!-- S(K\S) between-edges (beta): connect real vertices s2->o1, s2->o3 -->
+  <line class="bt" x1="285" y1="205" x2="555" y2="145"/>
+  <line class="bt" x1="285" y1="205" x2="565" y2="305"/>
+
+  <!-- SS edges (alpha): s1-s2, s2-s3, s1-s3 -->
+  <line class="ss" x1="150" y1="145" x2="285" y2="205"/>
+  <line class="ss" x1="285" y1="205" x2="165" y2="310"/>
+  <line class="ss" x1="150" y1="145" x2="165" y2="310"/>
+
+  <!-- (K\S)(K\S) edges (gamma): o1-o2, o2-o3, o1-o3 -->
+  <line class="oo" x1="555" y1="145" x2="690" y2="205"/>
+  <line class="oo" x1="690" y1="205" x2="565" y2="305"/>
+  <line class="oo" x1="555" y1="145" x2="565" y2="305"/>
+
+  <!-- S vertices -->
+  <circle class="sn" cx="150" cy="145" r="11"/>
+  <circle class="sn" cx="285" cy="205" r="11"/>
+  <circle class="sn" cx="165" cy="310" r="11"/>
+  <!-- K\S vertices -->
+  <circle class="on" cx="555" cy="145" r="11"/>
+  <circle class="on" cx="690" cy="205" r="11"/>
+  <circle class="on" cx="565" cy="305" r="11"/>
+
+  <!-- region labels -->
+  <text class="lbl" x="215" y="400" text-anchor="middle">S</text>
+  <text class="lbl" x="620" y="400" text-anchor="middle">K \ S</text>
+
+  <!-- legend (bottom, spaced) -->
+  <line class="ss" x1="150" y1="452" x2="188" y2="452"/>
+  <text class="leg" x="196" y="457">SS: cover value α</text>
+  <line class="bt" x1="380" y1="452" x2="418" y2="452"/>
+  <text class="leg" x="426" y="457">S(K∖S): β</text>
+  <line class="oo" x1="560" y1="452" x2="598" y2="452"/>
+  <text class="leg" x="606" y="457">(K∖S)²: γ</text>
+</svg>

@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 400" font-family="Georgia, 'Times New Roman', serif">
+  <style>
+    .lbl{font-size:17px;fill:#2b2b2b}
+    .cap{font-size:15px;fill:#3a3a3a}
+    .vn{fill:#52657b;stroke:#2f3b47;stroke-width:1.4}
+    .uu{fill:#4f7d6c;stroke:#2f4f45;stroke-width:1.4}
+    .vv{fill:#a8763f;stroke:#5f4324;stroke-width:1.4}
+    .e{stroke:#7f8b98;stroke-width:1.6}
+    .ne{stroke:#a8763f;stroke-width:2.2;stroke-dasharray:6 4}
+    .tag{font-size:14px;fill:#2b2b2b;font-style:italic}
+  </style>
+
+  <!-- Panel G -->
+  <text class="lbl" x="200" y="45" text-anchor="middle">G  (u, v no adyacentes)</text>
+  <!-- edges -->
+  <line class="e" x1="150" y1="120" x2="90" y2="210"/>
+  <line class="e" x1="150" y1="120" x2="255" y2="155"/>
+  <line class="e" x1="150" y1="300" x2="90" y2="210"/>
+  <line class="e" x1="150" y1="300" x2="255" y2="270"/>
+  <circle class="uu" cx="150" cy="120" r="12"/>
+  <circle class="vv" cx="150" cy="300" r="12"/>
+  <circle class="vn" cx="90" cy="210" r="11"/>
+  <circle class="vn" cx="255" cy="155" r="11"/>
+  <circle class="vn" cx="255" cy="270" r="11"/>
+  <text class="tag" x="150" y="105" text-anchor="middle">u</text>
+  <text class="tag" x="150" y="330" text-anchor="middle">v</text>
+
+  <!-- arrow -->
+  <line x1="360" y1="210" x2="440" y2="210" stroke="#2b2b2b" stroke-width="2"/>
+  <polygon points="440,210 428,204 428,216" fill="#2b2b2b"/>
+
+  <!-- Panel G_{v->u} -->
+  <text class="lbl" x="615" y="45" text-anchor="middle">G(v→u): v se convierte en un clone de u</text>
+  <line class="e" x1="565" y1="120" x2="505" y2="210"/>
+  <line class="e" x1="565" y1="120" x2="670" y2="155"/>
+  <!-- v now takes u's neighborhood (dashed = the new clone edges) -->
+  <line class="ne" x1="565" y1="300" x2="505" y2="210"/>
+  <line class="ne" x1="565" y1="300" x2="670" y2="155"/>
+  <circle class="uu" cx="565" cy="120" r="12"/>
+  <circle class="vv" cx="565" cy="300" r="12"/>
+  <circle class="vn" cx="505" cy="210" r="11"/>
+  <circle class="vn" cx="670" cy="155" r="11"/>
+  <circle class="vn" cx="670" cy="270" r="11"/>
+  <text class="tag" x="565" y="105" text-anchor="middle">u</text>
+  <text class="tag" x="565" y="330" text-anchor="middle">v</text>
+
+  <!-- inequality caption -->
+  <text class="cap" x="410" y="378" text-anchor="middle">Paso de intercambio (Lemma 3.1):  Φ_τ(G(v→u)) + Φ_τ(G(u→v)) ≥ 2 Φ_τ(G)</text>
+</svg>

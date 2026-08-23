@@ -1,0 +1,68 @@
+{
+ "label": "REUSED_BYTE_IDENTICAL_EXTERNAL_EVIDENCE",
+ "rule": "evidence from run_2026-08-21_v1.2 is reused only where the underlying artifact is byte-identical to the earlier freeze; each row is the proof for one artifact",
+ "note": "the earlier inventory records repository-relative paths; the prefix 'PAPER_II/active/preprint_draft_v1.2/' is stripped before comparison",
+ "source_run": "run_2026-08-21_v1.2",
+ "rows": [
+  {
+   "path": "01_manuscript/PAPER_II_preprint_draft_v1.2.md",
+   "gates_reused_for": "mathematics, citations, novelty, bilingual, duplicates",
+   "previous_sha256": "7215e14bbea8ab2bf208dcdd1efa050cd2b72c997eee2efe504a1e6817c68882",
+   "current_sha256": "7215e14bbea8ab2bf208dcdd1efa050cd2b72c997eee2efe504a1e6817c68882",
+   "byte_identical": true
+  },
+  {
+   "path": "01_manuscript/PAPER_II_preprint_draft_v1.2_es.md",
+   "gates_reused_for": "bilingual, duplicates",
+   "previous_sha256": "d0d1df05eb267a51db2ccc100dd9725dcde9b03dbb95c8a730742e357eb0f4dc",
+   "current_sha256": "d0d1df05eb267a51db2ccc100dd9725dcde9b03dbb95c8a730742e357eb0f4dc",
+   "byte_identical": true
+  },
+  {
+   "path": "01_manuscript/PAPER_II_preprint_draft_v1.2_en.tex",
+   "gates_reused_for": "rendered artifacts",
+   "previous_sha256": "bb5f76c3ce56dbb0bff11242a3a8787f9c8ba3d9f0ad23973fc2f26cc5fc3cf0",
+   "current_sha256": "bb5f76c3ce56dbb0bff11242a3a8787f9c8ba3d9f0ad23973fc2f26cc5fc3cf0",
+   "byte_identical": true
+  },
+  {
+   "path": "01_manuscript/PAPER_II_preprint_draft_v1.2_es.tex",
+   "gates_reused_for": "rendered artifacts",
+   "previous_sha256": "d3f0c6301a48d6553ebad222fa685f152119cb61b5efd3e8be55e389f9d606ae",
+   "current_sha256": "d3f0c6301a48d6553ebad222fa685f152119cb61b5efd3e8be55e389f9d606ae",
+   "byte_identical": true
+  },
+  {
+   "path": "01_manuscript/PAPER_II_preprint_draft_v1.2_en.pdf",
+   "gates_reused_for": "rendered artifacts, duplicates",
+   "previous_sha256": "d05c4cab1262357fddd21e4aab399bdb92d5bcf139172897c80595e781049052",
+   "current_sha256": "d05c4cab1262357fddd21e4aab399bdb92d5bcf139172897c80595e781049052",
+   "byte_identical": true
+  },
+  {
+   "path": "01_manuscript/PAPER_II_preprint_draft_v1.2_es.pdf",
+   "gates_reused_for": "rendered artifacts, duplicates",
+   "previous_sha256": "d525d02a6e911cb23f7e1f28e1de7648441eccea6de206e76e5321161c86c2db",
+   "current_sha256": "d525d02a6e911cb23f7e1f28e1de7648441eccea6de206e76e5321161c86c2db",
+   "byte_identical": true
+  },
+  {
+   "path": "05_formalization/lean_v1.2_freeze/PAPER_II_lean_v1.2_freeze.zip",
+   "gates_reused_for": "formal conformance (Gate H)",
+   "previous_sha256": "ee2d05cc40d943ca92f8f7bf3e5dd83c2692518ddea5e2ca4f7686ccb1ac3895",
+   "current_sha256": "ee2d05cc40d943ca92f8f7bf3e5dd83c2692518ddea5e2ca4f7686ccb1ac3895",
+   "byte_identical": true
+  }
+ ],
+ "all_byte_identical": true,
+ "not_rerun": [
+  "mathematical verification",
+  "Lean build",
+  "citation retrieval",
+  "novelty sweep",
+  "bilingual comparison",
+  "duplicate detection",
+  "rendered-PDF analysis"
+ ],
+ "cross_checked_independently": "the internal R4 gate's copied build and axiom logs were compared by SHA-256 against this auditor's own external logs and are byte-identical"
+}

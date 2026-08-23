@@ -1,0 +1,19 @@
+Block E internal audit re-run and static scan
+Executed copied internal scripts, not the original package files.
+
+Initial run with system Python failed due missing local dependencies:
+- sympy
+- numpy/scipy
+- pulp
+
+After local workspace install into .python-packages-audit, rerun results:
+- block01_algebraic_identities/verify_identities.py: rc=0
+- block02_common_profile_LP/verify_common_profile_LP.py: rc=0
+- block03_unified_margin/verify_margin.py: rc=0
+- block04_corridor_ILP/verify_corridor_ILP.py: rc=0
+
+Static scan hits relevant to tolerance/solver behavior:
+- block02_common_profile_LP/verify_common_profile_LP.py contains TOL/float/linprog.
+- block04_corridor_ILP/verify_corridor_ILP.py contains PULP_CBC_CMD and round().
+
+Verdict: reproducibility confirmed after installing declared computational dependencies locally. Static scan observations are not defects by themselves.

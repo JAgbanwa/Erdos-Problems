@@ -1,0 +1,98 @@
+{
+ "spec": "RESIDUAL_AUDIT_REQUEST_SPEC.md",
+ "target": "preprint_draft_v1.3",
+ "claim": "|E(G)| - 2 nu_3^*(G) <= n^2/6 + n/2 for every split graph",
+ "arithmetic": "exact Fraction, exact rational simplex, deterministic, no seeds",
+ "domain": {
+  "clique_size": [
+   0,
+   4
+  ],
+  "independent_vertices": [
+   0,
+   4
+  ]
+ },
+ "graphs_tested": 5429,
+ "violations": 0,
+ "violation_detail": [],
+ "min_slack": "2/3",
+ "min_slack_witness": {
+  "p": 0,
+  "n": 1,
+  "E": 0,
+  "nu": "0"
+ },
+ "complete_split_family": [
+  {
+   "p": 2,
+   "n": 6,
+   "nu3star": "1",
+   "eq_binom": true,
+   "lhs": "7",
+   "n2_6_plus_n_6": "7",
+   "match": true,
+   "satisfies_thm": true
+  },
+  {
+   "p": 3,
+   "n": 9,
+   "nu3star": "3",
+   "eq_binom": true,
+   "lhs": "15",
+   "n2_6_plus_n_6": "15",
+   "match": true,
+   "satisfies_thm": true
+  },
+  {
+   "p": 4,
+   "n": 12,
+   "nu3star": "6",
+   "eq_binom": true,
+   "lhs": "26",
+   "n2_6_plus_n_6": "26",
+   "match": true,
+   "satisfies_thm": true
+  },
+  {
+   "p": 5,
+   "n": 15,
+   "nu3star": "10",
+   "eq_binom": true,
+   "lhs": "40",
+   "n2_6_plus_n_6": "40",
+   "match": true,
+   "satisfies_thm": true
+  },
+  {
+   "p": 6,
+   "n": 18,
+   "nu3star": "15",
+   "eq_binom": true,
+   "lhs": "57",
+   "n2_6_plus_n_6": "57",
+   "match": true,
+   "satisfies_thm": true
+  },
+  {
+   "p": 7,
+   "n": 21,
+   "nu3star": "21",
+   "eq_binom": true,
+   "lhs": "77",
+   "n2_6_plus_n_6": "77",
+   "match": true,
+   "satisfies_thm": true
+  },
+  {
+   "p": 8,
+   "n": 24,
+   "nu3star": "28",
+   "eq_binom": true,
+   "lhs": "100",
+   "n2_6_plus_n_6": "100",
+   "match": true,
+   "satisfies_thm": true
+  }
+ ]
+}

@@ -1,0 +1,74 @@
+### EXT AUDIT v1.1 protocol - Paper I clean Lean reproduction
+### pwd: /c/erdos_audit/P1
+### start_utc: 2026-08-21T14:41:22Z
+### core.longpaths: true
+Lean (version 4.28.0, x86_64-w64-windows-gnu, commit 7e01a1bf5c70fc6167d49c345d3bf80596e9a79b, Release)
+Lake version 5.0.0-src+7e01a1b (Lean version 4.28.0)
+
+=== STEP 1: lake update ===
+info: leanprover-community/mathlib: cloning https://github.com/leanprover-community/mathlib4
+info: leanprover-community/mathlib: checking out revision '8f9d9cff6bd728b17a24e163c9402775d9e6a365'
+info: toolchain not updated; already up-to-date
+info: plausible: cloning https://github.com/leanprover-community/plausible
+info: plausible: checking out revision '55c8532eb21ec9f6d565d51d96b8ca50bd1fbef3'
+info: LeanSearchClient: cloning https://github.com/leanprover-community/LeanSearchClient
+info: LeanSearchClient: checking out revision 'c5d5b8fe6e5158def25cd28eb94e4141ad97c843'
+info: importGraph: cloning https://github.com/leanprover-community/import-graph
+info: importGraph: checking out revision '85b59af46828c029a9168f2f9c35119bd0721e6e'
+info: proofwidgets: cloning https://github.com/leanprover-community/ProofWidgets4
+info: proofwidgets: checking out revision 'be3b2e63b1bbf496c478cef98b86972a37c1417d'
+info: aesop: cloning https://github.com/leanprover-community/aesop
+info: aesop: checking out revision 'f642a64c76df8ba9cb53dba3b919425a0c2aeaf1'
+info: Qq: cloning https://github.com/leanprover-community/quote4
+info: Qq: checking out revision 'b8f98e9087e02c8553945a2c5abf07cec8e798c3'
+info: batteries: cloning https://github.com/leanprover-community/batteries
+info: batteries: checking out revision '495c008c3e3f4fb4256ff5582ddb3abf3198026f'
+info: Cli: cloning https://github.com/leanprover/lean4-cli
+info: Cli: checking out revision '4f10f47646cb7d5748d6f423f4a07f98f7bbcc9e'
+info: mathlib: running post-update hooks
+✔ [5/23] Built Cache.Lean (4.3s)
+✔ [6/23] Built Cache.Init (4.3s)
+✔ [7/23] Built Batteries.Data.Array.Match (4.8s)
+✔ [8/23] Built Batteries.Data.String.Basic (4.7s)
+✔ [9/23] Built Cache.Init:c.o (1.3s)
+✔ [10/23] Built Batteries.Data.String.Basic:c.o (952ms)
+✔ [11/23] Built Batteries.Data.String.Matcher (2.7s)
+✔ [12/23] Built Batteries.Data.Array.Match:c.o (2.6s)
+✔ [13/23] Built Batteries.Data.String.Matcher:c.o (450ms)
+✔ [14/23] Built Cache.Lean:c.o (7.1s)
+✔ [15/23] Built Cache.IO (7.2s)
+✔ [16/23] Built Cache.Hashing (4.3s)
+✔ [17/23] Built Cache.IO:c.o (4.2s)
+✔ [18/23] Built Cache.Requests (5.7s)
+✔ [19/23] Built Cache.Hashing:c.o (5.7s)
+✔ [20/23] Built Cache.Main (4.4s)
+✔ [21/23] Built Cache.Requests:c.o (4.4s)
+✔ [22/23] Built Cache.Main:c.o (1.2s)
+✔ [23/23] Built cache:exe (6.1s)
+Fetching ProofWidgets cloud release... done!
+Current branch: HEAD
+Using cache (Azure) from origin: leanprover-community/mathlib4
+No files to download
+Decompressing 8007 file(s) (3 already decompressed)
+Decompressed in 281142 ms
+Completed successfully!
+
+real	17m21.069s
+user	0m0.015s
+sys	0m0.046s
+EXIT_UPDATE=0
+
+=== manifest hash after update ===
+c20864999107e693e1a2dae55cf6e8711097ee12717ef42b4d69b26d49e1b8c4 *lake-manifest.json
+
+=== STEP 2: lake exe cache get ===
+Current branch: HEAD
+Using cache (Azure) from origin: leanprover-community/mathlib4
+No files to download
+Already decompressed 8010 file(s)
+
+real	6m23.093s
+user	0m0.000s
+sys	0m0.031s
+EXIT_CACHE=0
+### mid_utc: 2026-08-21T15:05:13Z

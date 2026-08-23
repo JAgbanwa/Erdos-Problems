@@ -1,0 +1,50 @@
+{
+ "checks": {
+  "manifest_counts": true,
+  "archive_matches_manifest": true,
+  "source_only": true,
+  "identical_to_preserved_v1_4": true,
+  "aggregate_root_present": true,
+  "axiom_queries": true,
+  "release_claims_accurate": true
+ },
+ "source_manifest_entries": 707,
+ "package_manifest_entries": 751,
+ "archive": {
+  "members": 751,
+  "crc_bad": null,
+  "matched": 751,
+  "absent": 0,
+  "mismatched": 0,
+  "not_in_manifest": 0,
+  "problems": [],
+  "comparison": "exact key, no suffix heuristics"
+ },
+ "vs_preserved": {
+  "source_manifest_identical": true,
+  "package_manifest_identical": true,
+  "zip_identical": true,
+  "preserved_zip_sha256": "79ee24c38fd776bc2585a0c3c996e30817f0829fc5064463bdbde0fa2d3d7104"
+ },
+ "roots": [
+  "PaperIII.lean"
+ ],
+ "canonical_surfaces": [
+  "PaperIII/PublicAPI.lean",
+  "PaperIII/Theorem_1_1_Final.lean"
+ ],
+ "axiom_query_logs": {
+  "count": 8,
+  "all_exit_zero": true,
+  "all_expected_footprint_no_sorryAx": true
+ },
+ "v1_5_release_claims_about_external_audit": {
+  "public_root_8455_jobs": true,
+  "public_root_exit_zero": true,
+  "query_roots_8444_jobs": true,
+  "query_roots_exit_zero": true,
+  "eight_axiom_files_passed": true,
+  "started_from_absent_project_build_dir": true
+ },
+ "E3_pass": true
+}

@@ -1,0 +1,5 @@
+python 20_SCRIPTS/verify_e2_residual.py
+
+Run from the E2_RESIDUAL_v1.4 directory.  Requires Python 3 and SymPy.
+The program refuses to run against a manuscript whose SHA-256 differs from
+the externally audited v1.3 mathematical target.

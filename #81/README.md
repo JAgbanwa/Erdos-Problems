@@ -1,46 +1,73 @@
 # Erdős Problem #81 — Chordal Clique Partitions
 
 Erdős Problem #81 asks whether the edge clique-partition number of every
-n-vertex chordal graph is at most `n^2/6 + O(n)`. **The problem remains open.**
+`n`-vertex chordal graph is at most `n²/6 + O(n)`. **The problem for all chordal
+graphs remains open.**
 
-This folder holds public materials from an ongoing research program on the
-problem. **No item here resolves Erdős #81**; each is individually scoped and
-verified, and further findings will be added as they are completed.
+This folder mirrors the current public Papers I–III repository maintained at
+[jtraverso/erdos-81-chordal-clique-partitions](https://github.com/jtraverso/erdos-81-chordal-clique-partitions).
+The complete mirrored package is under [`official/`](official/), including the
+manuscripts, Lean formalizations, audit evidence, reproducibility records and
+integrity manifests.
+
+Zenodo concept DOI: [10.5281/zenodo.21273143](https://doi.org/10.5281/zenodo.21273143)
 
 Problem reference: https://www.erdosproblems.com/81
 
-## Official materials
+## Current preprints
 
-See [`official/`](official/).
+### Paper I — Affine Profile Reduction for Fractional Triangle Packings in Split Graphs
 
-Currently published:
+Paper I v1.3 proves the finite fractional inequality
 
-- **Paper I — *Affine Profile Reduction for Fractional Triangle Packings in
-  Split Graphs.*** Proves `|E(G)| − 2·ν₃*(G) ≤ n²/6 + n` for split graphs, by a
-  finite analytic argument, machine-verified in Lean 4 (sorry-free, axiom-clean).
-  [PDF](official/preprints/PAPER_I/01_manuscript/PAPER_I_preprint_v1.0.pdf) ·
-  [package](official/preprints/PAPER_I/) ·
-  [Lean](official/preprints/PAPER_I/05_formalization/lean/) ·
-  [explainer](https://htmlpreview.github.io/?https://github.com/jtraverso/erdos-81-chordal-clique-partitions/blob/main/preprints/PAPER_I/PaperI_explained_4_levels.html)
+```text
+|E(G)| − 2·ν₃*(G) ≤ n²/6 + n
+```
 
-- **Paper II — *Complete-Split Extremizers for a Fractional Triangle-Cover
-  Functional on Chordal Graphs.*** Determines the exact maximum over **chordal**
-  graphs on `n` vertices: `max ( |E(G)| − 2·τ₃*(G) ) = ⌊(2n+1)²/24⌋`, attained by a
-  complete-split graph, by a finite analytic argument, machine-verified in Lean 4
-  (sorry-free, axiom-clean, unconditional on the standard `IsChordal` definition).
-  [PDF](official/preprints/PAPER_II/01_manuscript/PAPER_II_preprint_v1.0.pdf) ·
-  [package](official/preprints/PAPER_II/) ·
-  [Lean](official/preprints/PAPER_II/05_formalization/lean/) ·
-  [explainer](https://htmlpreview.github.io/?https://github.com/jtraverso/erdos-81-chordal-clique-partitions/blob/main/preprints/PAPER_II/PaperII_explained_4_levels.html)
+for every split graph `G` on `n` vertices.
 
-Both papers are fractional-functional results (a triangle-**packing** bound on
-split graphs, ν₃*; an exact triangle-**cover** extremum on chordal graphs, τ₃*).
-Neither establishes an integral clique-partition bound `cp(G)`, an asymptotic
-transfer, or a resolution of Erdős #81, which remains open. Each has an
-independent AI adversarial audit (PASS) but is not externally peer-reviewed. See
-each package README for the exact scope.
+[English PDF](official/preprints/PAPER_I/01_manuscript/PAPER_I_preprint_v1.3_en.pdf) ·
+[Spanish PDF](official/preprints/PAPER_I/01_manuscript/PAPER_I_preprint_v1.3_es.pdf) ·
+[complete package](official/preprints/PAPER_I/)
 
-## Status
+### Paper II — Complete-Split Extremizers for a Fractional Triangle-Cover Functional on Chordal Graphs
 
-These are preprints and formalization artifacts; they are not externally
-peer-reviewed. Erdős #81 itself remains open.
+Paper II v1.2 determines, for every integer `n ≥ 1`,
+
+```text
+max (|E(G)| − 2·τ₃*(G)) = floor((2n+1)²/24)
+```
+
+over `n`-vertex chordal graphs, with equality attained by a complete-split
+graph.
+
+[English PDF](official/preprints/PAPER_II/01_manuscript/PAPER_II_preprint_v1.2_en.pdf) ·
+[Spanish PDF](official/preprints/PAPER_II/01_manuscript/PAPER_II_preprint_v1.2_es.pdf) ·
+[complete package](official/preprints/PAPER_II/)
+
+### Paper III — Linear-Error Clique Partitions of Split Graphs via Structured Triangle Packing
+
+Paper III v1.5 proves
+
+```text
+cp(G) ≤ n²/6 + O(n)
+```
+
+for every split graph `G`, with sharp quadratic coefficient `1/6`. Thus it
+resolves the split-graph case of Erdős Problem #81 at the conjectured
+quadratic scale. It does **not** resolve the problem for all chordal graphs.
+
+[English PDF](official/preprints/PAPER_III/01_manuscript/PAPER_III_preprint_v1.5_en.pdf) ·
+[Spanish PDF](official/preprints/PAPER_III/01_manuscript/PAPER_III_preprint_v1.5_es.pdf) ·
+[complete package](official/preprints/PAPER_III/)
+
+## Verification status and scope
+
+The three packages contain frozen Lean 4 sources and recorded internal and
+independent adversarial AI audits with final verdict `PASS`. These controls are
+an intermediate assurance tier: the papers have not undergone human peer
+review or specialist priority review.
+
+Paper I and Paper II establish fractional results. Paper III establishes the
+integral `n²/6 + O(n)` bound for split graphs. None proves the corresponding
+statement for every chordal graph.

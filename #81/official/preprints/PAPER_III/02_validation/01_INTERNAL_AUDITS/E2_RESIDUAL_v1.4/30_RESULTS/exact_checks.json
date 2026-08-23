@@ -1,0 +1,27 @@
+{
+  "K-CORRIDOR-finite": {
+    "checks": 34694,
+    "detail": "22306 exact subset/probability cases; universal proof remains textual.",
+    "status": "PASS"
+  },
+  "K-CORRIDOR-symbolic": {
+    "checks": 4,
+    "detail": "Identities (5.2), (5.3), and the packing-to-Phi algebra of (7.6).",
+    "status": "PASS"
+  },
+  "K-EPS": {
+    "checks": 187748,
+    "detail": "Bulk asymptotic absorption plus exact box-placement and coarse-cell parameter/loss identities.",
+    "status": "PASS"
+  },
+  "K-GLOBAL": {
+    "checks": 4852,
+    "detail": "Deletion branch has slack C-1; all small-order inequalities checked for N<100 and proved textually for arbitrary N.",
+    "status": "PASS"
+  },
+  "K-SPARSE": {
+    "checks": 87885,
+    "detail": "Matching ledger, 4095 exhaustive parity corrections, threshold p>=125, and (8.11).",
+    "status": "PASS"
+  }
+}

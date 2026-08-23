@@ -1,33 +1,21 @@
-# Release notes — preprint v1.0
+# Release notes — Paper I preprint v1.3
 
-This is the first official public preprint release of Paper I.
+**Release date:** 2026-08-22
+**Supersedes:** public preprint v1.0
 
-## Included
+Paper I v1.3 is the new canonical author preprint. It supplies synchronized
+English and Spanish Markdown, LaTeX and PDF artifacts; the complete Lean v1.2
+freeze; internal audit evidence; and the independent external audit trail.
 
-- publication PDF;
-- LaTeX source;
-- Markdown source;
-- calculation ledger;
-- public validation-status record;
-- build instructions;
-- cryptographic integrity manifest;
-- verified Lean 4 formalization of Theorem 1.1 (sorry-free; axiom report reduces to Lean's three standard axioms, with no project-specific axiom).
+The external residual process closed with plain `PASS`. The release promotion
+changed only release-status prose, canonical filenames, PDFs derived from the
+promoted TeX, navigation, metadata and hashes. The theorem statement, constants,
+proof architecture and Lean archive are unchanged from the audited target.
 
-## Excluded
+The complete previous public v1.0 package is preserved at
+`superseded/preprint_v1.0/`. Intermediate working versions were internal and
+were not public releases.
 
-- superseded manuscript versions;
-- private or sealed audit artifacts;
-- exploratory computations not used as logical premises;
-- legacy Lean files or formalizations not certified against this exact theorem version;
-- series-level announcements, which belong at the repository or series level.
-
-## Mathematical scope
-
-The release proves the finite fractional inequality
-
-\[
-|E(G)|-2\nu_3^*(G)\le \frac{n^2}{6}+n
-\]
-
-for split graphs. It does not claim an integral packing theorem, a clique-partition
-theorem, an asymptotic transfer result, or a theorem for all chordal graphs.
+This is an author preprint, not external human peer review or a specialist
+priority determination. The broader chordal clique-partition problem remains
+open.

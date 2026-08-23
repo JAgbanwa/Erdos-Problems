@@ -1,0 +1,24 @@
+{
+  "paper": "PAPER_III",
+  "target": "preprint_draft_v1.3",
+  "date": "2026-08-22",
+  "audit_class": "INTERNAL_AUTHOR_SIDE_NON_INDEPENDENT",
+  "protocol": "INTERNAL_AUDIT_STANDARD_v1.3",
+  "lean_rebuild_during_audit": false,
+  "recorded_build": {
+    "exit_code": 0,
+    "jobs": 8719,
+    "lean": "4.28.0",
+    "mathlib_tag": "v4.28.0",
+    "mathlib_commit": "8f9d9cff6bd728b17a24e163c9402775d9e6a365"
+  },
+  "checks": {"passed": 133, "total": 133},
+  "gate_verdicts": {
+    "G0": "PASS", "G1": "PASS", "G2": "PASS",
+    "G3": "PASS", "G4": "PASS", "G5": "PASS",
+    "G6": "PASS", "G7": "PASS", "G8": "PASS"
+  },
+  "formal_archive_sha256": "2eb0ff20a9dae6610a46026355374570d5afdfea89837ea7f9dd29da10b9d300",
+  "overall": "PASS",
+  "external_gates_open": true
+}

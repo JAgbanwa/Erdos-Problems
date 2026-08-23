@@ -1,0 +1,95 @@
+{
+  "spec": "RESIDUAL_AUDIT_REQUEST_SPEC.md",
+  "spec_sha256": "e8d92cf5fffbc55b02eada99e4e446207752dbe28f1b8492195838b123d85435",
+  "paper": "PAPER_I",
+  "target": "preprint_draft_v1.3",
+  "run": "run_2026-08-21_v1.3",
+  "audit_class": "EXTERNAL_RESIDUAL_ADVERSARIAL_RE_AUDIT",
+  "audit_date": "2026-08-21",
+  "overall_verdict": "PASS_WITH_RESIDUALS",
+  "verdict_basis": "All nine mandatory correction controls now PASS, including control 6: the 3/16 constant was verified against the primary source (Chen-Erdos-Ordman 1994, Theorem 1, page 23) from the author-hosted scan supplied by the owner after the auditor's four independent retrieval routes failed. The general regression passes. Zero BLOCKER, zero MAJOR. The verdict is held at PASS_WITH_RESIDUALS rather than plain PASS because two correctable MINOR package defects remain open (compiler residue in tmp/, and transposed declaration namespaces in CHANGELOG_v1.3.md), plus standing external residuals. Deleting tmp/ and fixing the two changelog names would make a plain PASS available on a new target hash.",
+  "anchors_verified": 8,
+  "anchors_matched": 8,
+  "mandatory_controls": {
+    "control_1": "PASS",
+    "control_2": "PASS",
+    "control_3": "PASS",
+    "control_4": "PASS",
+    "control_5": "PASS",
+    "control_6": "PASS",
+    "control_7": "PASS",
+    "control_8": "PASS",
+    "control_9": "PASS"
+  },
+  "gates": {
+    "G0_target_freeze": "PASS",
+    "corrections_validation": "PASS",
+    "math_regression": "PASS",
+    "H_lean_reuse": "PASS_REUSED_BYTE_IDENTICAL",
+    "citations_novelty": "PASS",
+    "bilingual_duplicates": "PASS",
+    "pdf_page_qa": "PASS",
+    "package_integrity": "PASS_WITH_RESIDUALS"
+  },
+  "unresolved": {
+    "blocker": 0,
+    "major": 0,
+    "minor": 2,
+    "note": 1
+  },
+  "v12_major_corrected": true,
+  "lean": {
+    "mode": "REUSED_BYTE_IDENTICAL_EXTERNAL_EVIDENCE",
+    "archive_sha256": "0181506408644fc1f8872d711de5a98a500f4052aa295bcd6f8c82776694fd3a",
+    "members_compared": 32,
+    "members_byte_identical": 32,
+    "toolchain_manifest_lakefile_axiomfile": "IDENTICAL",
+    "reused_build": "exit 0, 8034 jobs, 24m47.960s, zero errors",
+    "axiom_footprint": "[propext, Classical.choice, Quot.sound] on all four Appendix C declarations",
+    "rebuilt_in_this_run": false
+  },
+  "regression": {
+    "symbolic_identities": 14,
+    "symbolic_all_hold": true,
+    "orbit_lp_cases": 6732,
+    "orbit_lp_mismatches": 0,
+    "bound_7_8_violations": 0,
+    "mandated_point_2_4_2": "CONFIRMED equality (slack 0)",
+    "duplicate_exact_classes_genuine": 0,
+    "duplicate_near_pairs_genuine": 0,
+    "exact_duplicate_pages": 0,
+    "pages_inspected": 39,
+    "sidecars_checked": 28,
+    "sidecars_verifying": 28
+  },
+  "not_established": [
+    "truth of Theorem 1.1 (only failure to falsify)",
+    "human peer review",
+    "global novelty",
+    "PDF recompilation from delivered TeX",
+    "the six Lean modules outside the eight built targets",
+    "formal adequacy of the PaperI.Split model"
+  ],
+  "v12_report_status": "stands unchanged with its own FAIL verdict; no evidence merged",
+  "control_6_verification": {
+    "status": "VERIFIED against the primary source",
+    "pinpoint": "Chen-Erdos-Ordman 1994, Theorem 1, page 23: 'For all split graphs G_n, cp(G_n) <= (3/16) n^2 + O(n)'",
+    "abstract_corroboration": "page 21 abstract states the same constant",
+    "evidence_provenance": "OWNER_SUPPLIED_SCAN_VERIFIED_BY_AUDITOR (not an independent auditor retrieval)",
+    "scan_sha256": "b7d965e6e00cd664ad2249ad7fa3640330009c3c9057301d73f752a718b28262",
+    "scan_is_image_only": true,
+    "auditor_retrieval_routes_failed": [
+      "WebFetch https (expired certificate)",
+      "curl http (302 to https, expired certificate)",
+      "internal browser (navigation denied)",
+      "web.archive.org snapshot (unreachable)"
+    ],
+    "additional_findings": [
+      "CEO page 22 Example 1 states cp(K_n - K_2n/3 bar) = n^2/6 + n/6 when 6 | n, matching this audit's independent construction for Paper III's complete-split benchmark at p = 2..40",
+      "CEO page 23 states 'A split graph ... may need n^2/6 + O(n) cliques ... We cannot show that this many will suffice', so the authors themselves flag the gap Paper III claims to close",
+      "CEO Theorem 2 obtains n^2/6 + O(n) only for the special form K_n - K_m bar, not for general split graphs, so Paper III's general claim is not implied by it"
+    ]
+  },
+  "package_sha256": "73c4060e77cd16b62881689612594a04f9329fd166021909a2a1786fc9883429",
+  "end_utc": "2026-08-21T17:40:00Z"
+}

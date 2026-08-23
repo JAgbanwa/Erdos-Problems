@@ -1,0 +1,55 @@
+========================================================================
+Paper III — Block 01: algebraic identities (SymPy exact symbolic audit)
+========================================================================
+
+[PASS] I1  T(G) key identity (Thm 4.2)
+        T = 1/2 Sum d_i + C_alpha p^2 - p/4, alpha=q/p, |E|=C(p,2)+Sum d_i
+        simplify(LHS - RHS) = 0
+
+[PASS] I2  (9.12) s^2 coefficient
+        -1/6 + 2/9 - 7/96 = -5/288
+        simplify(LHS - RHS) = 0
+
+[PASS] I3  (9.19) completed square
+        s^2/6 - s*rho + 2*rho^2 = 2(rho - s/4)^2 + s^2/24
+        simplify(LHS - RHS) = 0
+
+[PASS] I4  (9.19) lower bound >= s^2/24
+        difference equals 2*(rho - s/4)^2 >= 0 (sum of squares certificate)
+        evaluated: True
+
+[PASS] I5  (9.20) coefficient
+        -1/24 + 5/192 = -1/64
+        simplify(LHS - RHS) = 0
+
+[PASS] I6  (9.10) delta>=7/8 (p odd)
+        (p-s)/p - 7/8 = (p/8 - s)/p >= 0 when s<=p/8, p>0
+        evaluated: True
+
+[PASS] I7  (9.10) delta>=7/8 (p even)
+        (p+1-s)/(p-1) - 7/8 = (p + 15 - 8s)/(8(p-1)); p-8s>=0 => numerator>=15>0
+        evaluated: True
+
+[PASS] I8  corridor threshold p=2304
+        36 p = p^2/64  <=>  p in {0, 2304}; positive root = 2304 (i.e. 6*sqrt(p)=p/8)
+        evaluated: True
+
+[PASS] I9  mu continuity at alpha=2/3
+        (2/3)^2/12 = (2-2/3)^2/48
+        simplify(LHS - RHS) = 0
+
+[PASS] I10a C_alpha(q/p) p^2 closed form
+        C_alpha(q/p) p^2 = (2p^2 - 2qp - q^2)/12
+        simplify(LHS - RHS) = 0
+
+[PASS] I10b mu low-branch closed form
+        mu_low(q/p) p^2 = q^2/12
+        simplify(LHS - RHS) = 0
+
+[PASS] I10c mu high-branch closed form
+        mu_high(q/p) p^2 = (2p-q)^2/48
+        simplify(LHS - RHS) = 0
+
+========================================================================
+SUMMARY: 12/12 identity checks PASSED
+========================================================================

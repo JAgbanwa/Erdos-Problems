@@ -1,0 +1,32 @@
+Paper III — Lean formalization: FROZEN RELEASE
+==============================================
+Release commit (git object; source of truth): fcb49bb25ccc31f44908b8fd2a17a9bb8e678f97
+Frozen:            2026-07-24
+Toolchain:         leanprover/lean4:v4.28.0  (see lean_snapshot/lean/lean-toolchain)
+Mathlib:           v4.28.0  (see lean_snapshot/lean/lakefile.toml / lake-manifest.json)
+
+STATUS: SORRY-FREE.  lake build = 8058 jobs, 0 errors, 0 'sorry'.
+Escape-hatch scan of the git object at the release commit:
+  git grep -c -w sorry fcb49bb25ccc31f44908b8fd2a17a9bb8e678f97 -- 'lean/PaperIII/*.lean'        -> 0
+  git grep -nE "^axiom " fcb49bb25ccc31f44908b8fd2a17a9bb8e678f97 -- 'lean/PaperIII/*.lean'      -> only AX1, AX2 (AX.lean)
+  (no native_decide, admit, unsafe, opaque, implemented_by)
+
+AXIOM REPORT (#print axioms, verbatim):
+  Theorem_1_1   : [propext, Classical.choice, Quot.sound, PaperIII.AX1, PaperIII.AX2]
+  Corollary_1_2 : [propext, Classical.choice, Quot.sound, PaperIII.AX1, PaperIII.AX2]
+  E_8           : [propext, Classical.choice, Quot.sound, PaperIII.AX1, PaperIII.AX2]
+  E_4_3         : [propext, Classical.choice, Quot.sound, PaperIII.AX1]
+  E_7_1         : [propext, Classical.choice, Quot.sound]
+  Prop_10_1_low : [propext, Classical.choice, Quot.sound]
+  clique_divisible_correction : [propext, Classical.choice, Quot.sound]
+  -> NO sorryAx anywhere; trusted base = exactly the two Layer-X axioms AX1, AX2.
+
+HOW TO REPRODUCE THE SNAPSHOT (independent of the bundled copy):
+  git archive fcb49bb25ccc31f44908b8fd2a17a9bb8e678f97 -- lean | tar -x -C <dest>
+  # then: cd lean && lake exe cache get && lake build
+  # then: lake env lean ../gate.lean   (or copy gate.lean into lean/ and run there)
+The bundled lean_snapshot/ MUST byte-match that archive; any difference is a finding.
+
+AX1 = Haxell-Rodl/Yuster (fractional-integral triangle packing gap = o(n^2)).
+AX2 = Dross + Barber-Kuhn-Lo-Osthus (exact triangle decomposition at min-degree >= (0.9+e)n).
+These two are the intended external inputs (Layer X), cited in the paper (Section 2.4).

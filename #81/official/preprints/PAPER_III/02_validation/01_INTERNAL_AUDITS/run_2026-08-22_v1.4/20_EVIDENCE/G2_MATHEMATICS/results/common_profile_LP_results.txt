@@ -1,0 +1,17 @@
+========================================================================
+Paper III — Block 02: common-profile LP  nu3*(H(p,q,d)) = F(p,q,d)
+(LP) direct HiGHS packing LP vs F   +   (EXACT) rational cover upper-bound cert.
+========================================================================
+
+Instances audited (3<=p<=8, 0<=q<=8, 0<=d<=p): 351
+
+(LP)    direct HiGHS packing LP optimum vs float(F):
+        PASS (|LP - F| <= 1e-07): 351/351   FAIL: 0
+        max |LP - F| over grid : 3.908e-14
+
+(EXACT) rational feasible-cover upper-bound certificate (nu3* <= F, exact):
+        PASS: 351/351   FAIL: 0
+
+========================================================================
+VERDICT: PASS  (LP 351/351, EXACT 351/351)
+========================================================================

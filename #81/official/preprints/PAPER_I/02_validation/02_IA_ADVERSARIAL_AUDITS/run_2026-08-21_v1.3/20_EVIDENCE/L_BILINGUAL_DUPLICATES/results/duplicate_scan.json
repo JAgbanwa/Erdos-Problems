@@ -1,0 +1,1456 @@
+{
+ "spec": "RESIDUAL_AUDIT_REQUEST_SPEC.md",
+ "control": "1 (EXT-P1-L-001)",
+ "target": "preprint_draft_v1.3",
+ "thresholds": {
+  "min_normalized_length": 60,
+  "near_duplicate_ratio": 0.92,
+  "page_near_duplicate_mean_gray_diff": 6
+ },
+ "exclusions": "none; every long unit in every artifact is compared",
+ "artifacts": {
+  "EN_md": {
+   "paragraphs": {
+    "unit_kind": "paragraph",
+    "units": 116,
+    "exact_duplicate_classes": 0,
+    "exact_detail": [],
+    "near_duplicate_pairs": 1,
+    "near_detail": [
+     {
+      "ratio": 0.9571,
+      "loc_a": 518,
+      "loc_b": 828,
+      "text_a": " 3alphage1 qquad alpha2betage1 qquad 2betagammage1 qquad 3gammage1 tag64 ",
+      "text_b": " 3alphage1 qquad alpha2betage1 qquad 2betagammage1 qquad 3gammage1 "
+     }
+    ]
+   },
+   "lines": {
+    "unit_kind": "line",
+    "units": 106,
+    "exact_duplicate_classes": 0,
+    "exact_detail": [],
+    "near_duplicate_pairs": 1,
+    "near_detail": [
+     {
+      "ratio": 0.9262,
+      "loc_a": 1056,
+      "loc_b": 1057,
+      "text_a": "paperisplitpaperi_main_sharp depends on axioms propext classicalchoice quotsound",
+      "text_b": "paperipaperi_main depends on axioms propext classicalchoice quotsound"
+     }
+    ]
+   }
+  },
+  "ES_md": {
+   "paragraphs": {
+    "unit_kind": "paragraph",
+    "units": 121,
+    "exact_duplicate_classes": 0,
+    "exact_detail": [],
+    "near_duplicate_pairs": 1,
+    "near_detail": [
+     {
+      "ratio": 0.9571,
+      "loc_a": 518,
+      "loc_b": 828,
+      "text_a": " 3alphage1 qquad alpha2betage1 qquad 2betagammage1 qquad 3gammage1 tag64 ",
+      "text_b": " 3alphage1 qquad alpha2betage1 qquad 2betagammage1 qquad 3gammage1 "
+     }
+    ]
+   },
+   "lines": {
+    "unit_kind": "line",
+    "units": 111,
+    "exact_duplicate_classes": 0,
+    "exact_detail": [],
+    "near_duplicate_pairs": 1,
+    "near_detail": [
+     {
+      "ratio": 0.9262,
+      "loc_a": 1055,
+      "loc_b": 1056,
+      "text_a": "paperisplitpaperi_main_sharp depends on axioms propext classicalchoice quotsound",
+      "text_b": "paperipaperi_main depends on axioms propext classicalchoice quotsound"
+     }
+    ]
+   }
+  },
+  "EN_tex": {
+   "paragraphs": {
+    "unit_kind": "paragraph",
+    "units": 133,
+    "exact_duplicate_classes": 0,
+    "exact_detail": [],
+    "near_duplicate_pairs": 1,
+    "near_detail": [
+     {
+      "ratio": 0.9571,
+      "loc_a": 671,
+      "loc_b": 997,
+      "text_a": " 3alphage1 qquad alpha2betage1 qquad 2betagammage1 qquad 3gammage1 tag64 ",
+      "text_b": " 3alphage1 qquad alpha2betage1 qquad 2betagammage1 qquad 3gammage1 "
+     }
+    ]
+   },
+   "lines": {
+    "unit_kind": "line",
+    "units": 133,
+    "exact_duplicate_classes": 0,
+    "exact_detail": [],
+    "near_duplicate_pairs": 3,
+    "near_detail": [
+     {
+      "ratio": 0.9811,
+      "loc_a": 128,
+      "loc_b": 138,
+      "text_a": "pdftitleaffine profile reduction for fractional triangle packings in split graphs",
+      "text_b": "titleaffine profile reduction for fractional triangle packings in split graphs"
+     },
+     {
+      "ratio": 0.9778,
+      "loc_a": 1207,
+      "loc_b": 1211,
+      "text_a": "normaltok gphi  gn  ensuremathmathbbr  2  6  gn  ensuremathmathbbr  2",
+      "text_b": "normaltok gphi  gn  ensuremathmathbbr  2  6  gn  ensuremathmathbbr"
+     },
+     {
+      "ratio": 0.9341,
+      "loc_a": 1227,
+      "loc_b": 1228,
+      "text_a": "normaltokpaperisplitpaperi_main_sharp depends on axioms propext classicalchoice quotsound",
+      "text_b": "normaltokpaperipaperi_main depends on axioms propext classicalchoice quotsound"
+     }
+    ]
+   }
+  },
+  "ES_tex": {
+   "paragraphs": {
+    "unit_kind": "paragraph",
+    "units": 139,
+    "exact_duplicate_classes": 0,
+    "exact_detail": [],
+    "near_duplicate_pairs": 1,
+    "near_detail": [
+     {
+      "ratio": 0.9571,
+      "loc_a": 671,
+      "loc_b": 997,
+      "text_a": " 3alphage1 qquad alpha2betage1 qquad 2betagammage1 qquad 3gammage1 tag64 ",
+      "text_b": " 3alphage1 qquad alpha2betage1 qquad 2betagammage1 qquad 3gammage1 "
+     }
+    ]
+   },
+   "lines": {
+    "unit_kind": "line",
+    "units": 139,
+    "exact_duplicate_classes": 0,
+    "exact_detail": [],
+    "near_duplicate_pairs": 3,
+    "near_detail": [
+     {
+      "ratio": 0.9846,
+      "loc_a": 128,
+      "loc_b": 138,
+      "text_a": "pdftitlereducción afín de perfiles para empaquetamientos fraccionales de triángulos en grafos split",
+      "text_b": "titlereducción afín de perfiles para empaquetamientos fraccionales de triángulos en grafos split"
+     },
+     {
+      "ratio": 0.9778,
+      "loc_a": 1207,
+      "loc_b": 1211,
+      "text_a": "normaltok gphi  gn  ensuremathmathbbr  2  6  gn  ensuremathmathbbr  2",
+      "text_b": "normaltok gphi  gn  ensuremathmathbbr  2  6  gn  ensuremathmathbbr"
+     },
+     {
+      "ratio": 0.9341,
+      "loc_a": 1227,
+      "loc_b": 1228,
+      "text_a": "normaltokpaperisplitpaperi_main_sharp depends on axioms propext classicalchoice quotsound",
+      "text_b": "normaltokpaperipaperi_main depends on axioms propext classicalchoice quotsound"
+     }
+    ]
+   }
+  },
+  "EN_pdftext": {
+   "paragraphs": {
+    "unit_kind": "paragraph",
+    "units": 68,
+    "exact_duplicate_classes": 1,
+    "exact_detail": [
+     {
+      "count": 2,
+      "locations": [
+       1071,
+       1091
+      ],
+      "text": "propext classicalchoice quotsound propext classicalchoice quotsound"
+     }
+    ],
+    "near_duplicate_pairs": 0,
+    "near_detail": []
+   },
+   "lines": {
+    "unit_kind": "line",
+    "units": 243,
+    "exact_duplicate_classes": 0,
+    "exact_detail": [],
+    "near_duplicate_pairs": 0,
+    "near_detail": []
+   }
+  },
+  "ES_pdftext": {
+   "paragraphs": {
+    "unit_kind": "paragraph",
+    "units": 73,
+    "exact_duplicate_classes": 1,
+    "exact_detail": [
+     {
+      "count": 2,
+      "locations": [
+       1105,
+       1126
+      ],
+      "text": "propext classicalchoice quotsound propext classicalchoice quotsound"
+     }
+    ],
+    "near_duplicate_pairs": 0,
+    "near_detail": []
+   },
+   "lines": {
+    "unit_kind": "line",
+    "units": 274,
+    "exact_duplicate_classes": 0,
+    "exact_detail": [],
+    "near_duplicate_pairs": 0,
+    "near_detail": []
+   }
+  }
+ },
+ "page_images": {
+  "en": {
+   "pages": 19,
+   "exact_duplicate_page_sets": [],
+   "near_duplicate_page_pairs": [
+    {
+     "pages": [
+      "p-01.png",
+      "p-08.png"
+     ],
+     "mean_abs_gray_diff": 4.713
+    },
+    {
+     "pages": [
+      "p-02.png",
+      "p-13.png"
+     ],
+     "mean_abs_gray_diff": 5.503
+    },
+    {
+     "pages": [
+      "p-02.png",
+      "p-19.png"
+     ],
+     "mean_abs_gray_diff": 4.881
+    },
+    {
+     "pages": [
+      "p-03.png",
+      "p-04.png"
+     ],
+     "mean_abs_gray_diff": 5.27
+    },
+    {
+     "pages": [
+      "p-03.png",
+      "p-05.png"
+     ],
+     "mean_abs_gray_diff": 4.472
+    },
+    {
+     "pages": [
+      "p-03.png",
+      "p-06.png"
+     ],
+     "mean_abs_gray_diff": 5.406
+    },
+    {
+     "pages": [
+      "p-03.png",
+      "p-07.png"
+     ],
+     "mean_abs_gray_diff": 4.065
+    },
+    {
+     "pages": [
+      "p-03.png",
+      "p-09.png"
+     ],
+     "mean_abs_gray_diff": 5.188
+    },
+    {
+     "pages": [
+      "p-03.png",
+      "p-10.png"
+     ],
+     "mean_abs_gray_diff": 4.761
+    },
+    {
+     "pages": [
+      "p-03.png",
+      "p-12.png"
+     ],
+     "mean_abs_gray_diff": 5.75
+    },
+    {
+     "pages": [
+      "p-03.png",
+      "p-14.png"
+     ],
+     "mean_abs_gray_diff": 5.767
+    },
+    {
+     "pages": [
+      "p-03.png",
+      "p-15.png"
+     ],
+     "mean_abs_gray_diff": 4.895
+    },
+    {
+     "pages": [
+      "p-03.png",
+      "p-16.png"
+     ],
+     "mean_abs_gray_diff": 4.588
+    },
+    {
+     "pages": [
+      "p-03.png",
+      "p-17.png"
+     ],
+     "mean_abs_gray_diff": 3.744
+    },
+    {
+     "pages": [
+      "p-04.png",
+      "p-05.png"
+     ],
+     "mean_abs_gray_diff": 3.554
+    },
+    {
+     "pages": [
+      "p-04.png",
+      "p-06.png"
+     ],
+     "mean_abs_gray_diff": 4.25
+    },
+    {
+     "pages": [
+      "p-04.png",
+      "p-07.png"
+     ],
+     "mean_abs_gray_diff": 3.653
+    },
+    {
+     "pages": [
+      "p-04.png",
+      "p-08.png"
+     ],
+     "mean_abs_gray_diff": 5.156
+    },
+    {
+     "pages": [
+      "p-04.png",
+      "p-09.png"
+     ],
+     "mean_abs_gray_diff": 4.179
+    },
+    {
+     "pages": [
+      "p-04.png",
+      "p-10.png"
+     ],
+     "mean_abs_gray_diff": 4.832
+    },
+    {
+     "pages": [
+      "p-04.png",
+      "p-11.png"
+     ],
+     "mean_abs_gray_diff": 4.71
+    },
+    {
+     "pages": [
+      "p-04.png",
+      "p-12.png"
+     ],
+     "mean_abs_gray_diff": 4.759
+    },
+    {
+     "pages": [
+      "p-04.png",
+      "p-15.png"
+     ],
+     "mean_abs_gray_diff": 3.665
+    },
+    {
+     "pages": [
+      "p-04.png",
+      "p-16.png"
+     ],
+     "mean_abs_gray_diff": 5.142
+    },
+    {
+     "pages": [
+      "p-04.png",
+      "p-17.png"
+     ],
+     "mean_abs_gray_diff": 4.185
+    },
+    {
+     "pages": [
+      "p-05.png",
+      "p-06.png"
+     ],
+     "mean_abs_gray_diff": 3.918
+    },
+    {
+     "pages": [
+      "p-05.png",
+      "p-07.png"
+     ],
+     "mean_abs_gray_diff": 3.236
+    },
+    {
+     "pages": [
+      "p-05.png",
+      "p-08.png"
+     ],
+     "mean_abs_gray_diff": 5.955
+    },
+    {
+     "pages": [
+      "p-05.png",
+      "p-09.png"
+     ],
+     "mean_abs_gray_diff": 3.653
+    },
+    {
+     "pages": [
+      "p-05.png",
+      "p-10.png"
+     ],
+     "mean_abs_gray_diff": 4.318
+    },
+    {
+     "pages": [
+      "p-05.png",
+      "p-11.png"
+     ],
+     "mean_abs_gray_diff": 5.338
+    },
+    {
+     "pages": [
+      "p-05.png",
+      "p-12.png"
+     ],
+     "mean_abs_gray_diff": 4.057
+    },
+    {
+     "pages": [
+      "p-05.png",
+      "p-15.png"
+     ],
+     "mean_abs_gray_diff": 3.048
+    },
+    {
+     "pages": [
+      "p-05.png",
+      "p-16.png"
+     ],
+     "mean_abs_gray_diff": 4.395
+    },
+    {
+     "pages": [
+      "p-05.png",
+      "p-17.png"
+     ],
+     "mean_abs_gray_diff": 3.432
+    },
+    {
+     "pages": [
+      "p-06.png",
+      "p-07.png"
+     ],
+     "mean_abs_gray_diff": 4.102
+    },
+    {
+     "pages": [
+      "p-06.png",
+      "p-08.png"
+     ],
+     "mean_abs_gray_diff": 4.884
+    },
+    {
+     "pages": [
+      "p-06.png",
+      "p-09.png"
+     ],
+     "mean_abs_gray_diff": 4.44
+    },
+    {
+     "pages": [
+      "p-06.png",
+      "p-10.png"
+     ],
+     "mean_abs_gray_diff": 5.134
+    },
+    {
+     "pages": [
+      "p-06.png",
+      "p-11.png"
+     ],
+     "mean_abs_gray_diff": 4.352
+    },
+    {
+     "pages": [
+      "p-06.png",
+      "p-12.png"
+     ],
+     "mean_abs_gray_diff": 4.241
+    },
+    {
+     "pages": [
+      "p-06.png",
+      "p-15.png"
+     ],
+     "mean_abs_gray_diff": 3.534
+    },
+    {
+     "pages": [
+      "p-06.png",
+      "p-16.png"
+     ],
+     "mean_abs_gray_diff": 5.028
+    },
+    {
+     "pages": [
+      "p-06.png",
+      "p-17.png"
+     ],
+     "mean_abs_gray_diff": 4.526
+    },
+    {
+     "pages": [
+      "p-06.png",
+      "p-19.png"
+     ],
+     "mean_abs_gray_diff": 5.94
+    },
+    {
+     "pages": [
+      "p-07.png",
+      "p-08.png"
+     ],
+     "mean_abs_gray_diff": 5.69
+    },
+    {
+     "pages": [
+      "p-07.png",
+      "p-09.png"
+     ],
+     "mean_abs_gray_diff": 3.469
+    },
+    {
+     "pages": [
+      "p-07.png",
+      "p-10.png"
+     ],
+     "mean_abs_gray_diff": 3.543
+    },
+    {
+     "pages": [
+      "p-07.png",
+      "p-11.png"
+     ],
+     "mean_abs_gray_diff": 4.875
+    },
+    {
+     "pages": [
+      "p-07.png",
+      "p-12.png"
+     ],
+     "mean_abs_gray_diff": 3.571
+    },
+    {
+     "pages": [
+      "p-07.png",
+      "p-15.png"
+     ],
+     "mean_abs_gray_diff": 2.517
+    },
+    {
+     "pages": [
+      "p-07.png",
+      "p-16.png"
+     ],
+     "mean_abs_gray_diff": 3.347
+    },
+    {
+     "pages": [
+      "p-07.png",
+      "p-17.png"
+     ],
+     "mean_abs_gray_diff": 3.81
+    },
+    {
+     "pages": [
+      "p-08.png",
+      "p-10.png"
+     ],
+     "mean_abs_gray_diff": 5.267
+    },
+    {
+     "pages": [
+      "p-08.png",
+      "p-11.png"
+     ],
+     "mean_abs_gray_diff": 4.031
+    },
+    {
+     "pages": [
+      "p-08.png",
+      "p-12.png"
+     ],
+     "mean_abs_gray_diff": 5.21
+    },
+    {
+     "pages": [
+      "p-08.png",
+      "p-15.png"
+     ],
+     "mean_abs_gray_diff": 5.611
+    },
+    {
+     "pages": [
+      "p-08.png",
+      "p-16.png"
+     ],
+     "mean_abs_gray_diff": 5.832
+    },
+    {
+     "pages": [
+      "p-08.png",
+      "p-17.png"
+     ],
+     "mean_abs_gray_diff": 5.665
+    },
+    {
+     "pages": [
+      "p-08.png",
+      "p-19.png"
+     ],
+     "mean_abs_gray_diff": 5.455
+    },
+    {
+     "pages": [
+      "p-09.png",
+      "p-10.png"
+     ],
+     "mean_abs_gray_diff": 3.96
+    },
+    {
+     "pages": [
+      "p-09.png",
+      "p-11.png"
+     ],
+     "mean_abs_gray_diff": 4.861
+    },
+    {
+     "pages": [
+      "p-09.png",
+      "p-12.png"
+     ],
+     "mean_abs_gray_diff": 3.438
+    },
+    {
+     "pages": [
+      "p-09.png",
+      "p-15.png"
+     ],
+     "mean_abs_gray_diff": 2.884
+    },
+    {
+     "pages": [
+      "p-09.png",
+      "p-16.png"
+     ],
+     "mean_abs_gray_diff": 3.673
+    },
+    {
+     "pages": [
+      "p-09.png",
+      "p-17.png"
+     ],
+     "mean_abs_gray_diff": 3.972
+    },
+    {
+     "pages": [
+      "p-10.png",
+      "p-12.png"
+     ],
+     "mean_abs_gray_diff": 4.432
+    },
+    {
+     "pages": [
+      "p-10.png",
+      "p-15.png"
+     ],
+     "mean_abs_gray_diff": 3.452
+    },
+    {
+     "pages": [
+      "p-10.png",
+      "p-16.png"
+     ],
+     "mean_abs_gray_diff": 3.736
+    },
+    {
+     "pages": [
+      "p-10.png",
+      "p-17.png"
+     ],
+     "mean_abs_gray_diff": 4.312
+    },
+    {
+     "pages": [
+      "p-11.png",
+      "p-12.png"
+     ],
+     "mean_abs_gray_diff": 4.605
+    },
+    {
+     "pages": [
+      "p-11.png",
+      "p-15.png"
+     ],
+     "mean_abs_gray_diff": 4.744
+    },
+    {
+     "pages": [
+      "p-11.png",
+      "p-16.png"
+     ],
+     "mean_abs_gray_diff": 5.784
+    },
+    {
+     "pages": [
+      "p-11.png",
+      "p-17.png"
+     ],
+     "mean_abs_gray_diff": 5.497
+    },
+    {
+     "pages": [
+      "p-12.png",
+      "p-15.png"
+     ],
+     "mean_abs_gray_diff": 3.741
+    },
+    {
+     "pages": [
+      "p-12.png",
+      "p-16.png"
+     ],
+     "mean_abs_gray_diff": 4.037
+    },
+    {
+     "pages": [
+      "p-12.png",
+      "p-17.png"
+     ],
+     "mean_abs_gray_diff": 4.364
+    },
+    {
+     "pages": [
+      "p-13.png",
+      "p-14.png"
+     ],
+     "mean_abs_gray_diff": 5.088
+    },
+    {
+     "pages": [
+      "p-13.png",
+      "p-18.png"
+     ],
+     "mean_abs_gray_diff": 5.247
+    },
+    {
+     "pages": [
+      "p-13.png",
+      "p-19.png"
+     ],
+     "mean_abs_gray_diff": 5.082
+    },
+    {
+     "pages": [
+      "p-14.png",
+      "p-16.png"
+     ],
+     "mean_abs_gray_diff": 5.918
+    },
+    {
+     "pages": [
+      "p-15.png",
+      "p-16.png"
+     ],
+     "mean_abs_gray_diff": 3.244
+    },
+    {
+     "pages": [
+      "p-15.png",
+      "p-17.png"
+     ],
+     "mean_abs_gray_diff": 3.531
+    },
+    {
+     "pages": [
+      "p-16.png",
+      "p-17.png"
+     ],
+     "mean_abs_gray_diff": 3.793
+    },
+    {
+     "pages": [
+      "p-16.png",
+      "p-19.png"
+     ],
+     "mean_abs_gray_diff": 5.952
+    },
+    {
+     "pages": [
+      "p-18.png",
+      "p-19.png"
+     ],
+     "mean_abs_gray_diff": 5.568
+    }
+   ]
+  },
+  "es": {
+   "pages": 20,
+   "exact_duplicate_page_sets": [],
+   "near_duplicate_page_pairs": [
+    {
+     "pages": [
+      "p-01.png",
+      "p-02.png"
+     ],
+     "mean_abs_gray_diff": 5.756
+    },
+    {
+     "pages": [
+      "p-01.png",
+      "p-08.png"
+     ],
+     "mean_abs_gray_diff": 5.977
+    },
+    {
+     "pages": [
+      "p-01.png",
+      "p-13.png"
+     ],
+     "mean_abs_gray_diff": 4.483
+    },
+    {
+     "pages": [
+      "p-01.png",
+      "p-14.png"
+     ],
+     "mean_abs_gray_diff": 5.435
+    },
+    {
+     "pages": [
+      "p-02.png",
+      "p-14.png"
+     ],
+     "mean_abs_gray_diff": 5.207
+    },
+    {
+     "pages": [
+      "p-03.png",
+      "p-05.png"
+     ],
+     "mean_abs_gray_diff": 5.795
+    },
+    {
+     "pages": [
+      "p-03.png",
+      "p-07.png"
+     ],
+     "mean_abs_gray_diff": 4.852
+    },
+    {
+     "pages": [
+      "p-03.png",
+      "p-09.png"
+     ],
+     "mean_abs_gray_diff": 5.625
+    },
+    {
+     "pages": [
+      "p-03.png",
+      "p-11.png"
+     ],
+     "mean_abs_gray_diff": 5.923
+    },
+    {
+     "pages": [
+      "p-03.png",
+      "p-15.png"
+     ],
+     "mean_abs_gray_diff": 4.844
+    },
+    {
+     "pages": [
+      "p-03.png",
+      "p-16.png"
+     ],
+     "mean_abs_gray_diff": 5.892
+    },
+    {
+     "pages": [
+      "p-03.png",
+      "p-20.png"
+     ],
+     "mean_abs_gray_diff": 5.599
+    },
+    {
+     "pages": [
+      "p-04.png",
+      "p-05.png"
+     ],
+     "mean_abs_gray_diff": 4.403
+    },
+    {
+     "pages": [
+      "p-04.png",
+      "p-06.png"
+     ],
+     "mean_abs_gray_diff": 4.327
+    },
+    {
+     "pages": [
+      "p-04.png",
+      "p-07.png"
+     ],
+     "mean_abs_gray_diff": 4.506
+    },
+    {
+     "pages": [
+      "p-04.png",
+      "p-08.png"
+     ],
+     "mean_abs_gray_diff": 4.759
+    },
+    {
+     "pages": [
+      "p-04.png",
+      "p-09.png"
+     ],
+     "mean_abs_gray_diff": 5.364
+    },
+    {
+     "pages": [
+      "p-04.png",
+      "p-10.png"
+     ],
+     "mean_abs_gray_diff": 4.48
+    },
+    {
+     "pages": [
+      "p-04.png",
+      "p-11.png"
+     ],
+     "mean_abs_gray_diff": 4.111
+    },
+    {
+     "pages": [
+      "p-04.png",
+      "p-15.png"
+     ],
+     "mean_abs_gray_diff": 5.236
+    },
+    {
+     "pages": [
+      "p-04.png",
+      "p-16.png"
+     ],
+     "mean_abs_gray_diff": 3.642
+    },
+    {
+     "pages": [
+      "p-04.png",
+      "p-17.png"
+     ],
+     "mean_abs_gray_diff": 4.801
+    },
+    {
+     "pages": [
+      "p-04.png",
+      "p-18.png"
+     ],
+     "mean_abs_gray_diff": 5.761
+    },
+    {
+     "pages": [
+      "p-04.png",
+      "p-20.png"
+     ],
+     "mean_abs_gray_diff": 5.815
+    },
+    {
+     "pages": [
+      "p-05.png",
+      "p-06.png"
+     ],
+     "mean_abs_gray_diff": 4.031
+    },
+    {
+     "pages": [
+      "p-05.png",
+      "p-07.png"
+     ],
+     "mean_abs_gray_diff": 3.801
+    },
+    {
+     "pages": [
+      "p-05.png",
+      "p-08.png"
+     ],
+     "mean_abs_gray_diff": 5.935
+    },
+    {
+     "pages": [
+      "p-05.png",
+      "p-09.png"
+     ],
+     "mean_abs_gray_diff": 3.83
+    },
+    {
+     "pages": [
+      "p-05.png",
+      "p-10.png"
+     ],
+     "mean_abs_gray_diff": 4.406
+    },
+    {
+     "pages": [
+      "p-05.png",
+      "p-11.png"
+     ],
+     "mean_abs_gray_diff": 3.582
+    },
+    {
+     "pages": [
+      "p-05.png",
+      "p-12.png"
+     ],
+     "mean_abs_gray_diff": 5.756
+    },
+    {
+     "pages": [
+      "p-05.png",
+      "p-15.png"
+     ],
+     "mean_abs_gray_diff": 3.327
+    },
+    {
+     "pages": [
+      "p-05.png",
+      "p-16.png"
+     ],
+     "mean_abs_gray_diff": 4.426
+    },
+    {
+     "pages": [
+      "p-05.png",
+      "p-17.png"
+     ],
+     "mean_abs_gray_diff": 4.648
+    },
+    {
+     "pages": [
+      "p-05.png",
+      "p-20.png"
+     ],
+     "mean_abs_gray_diff": 5.094
+    },
+    {
+     "pages": [
+      "p-06.png",
+      "p-07.png"
+     ],
+     "mean_abs_gray_diff": 4.134
+    },
+    {
+     "pages": [
+      "p-06.png",
+      "p-08.png"
+     ],
+     "mean_abs_gray_diff": 5.574
+    },
+    {
+     "pages": [
+      "p-06.png",
+      "p-09.png"
+     ],
+     "mean_abs_gray_diff": 4.526
+    },
+    {
+     "pages": [
+      "p-06.png",
+      "p-10.png"
+     ],
+     "mean_abs_gray_diff": 4.705
+    },
+    {
+     "pages": [
+      "p-06.png",
+      "p-11.png"
+     ],
+     "mean_abs_gray_diff": 2.597
+    },
+    {
+     "pages": [
+      "p-06.png",
+      "p-12.png"
+     ],
+     "mean_abs_gray_diff": 5.054
+    },
+    {
+     "pages": [
+      "p-06.png",
+      "p-15.png"
+     ],
+     "mean_abs_gray_diff": 3.926
+    },
+    {
+     "pages": [
+      "p-06.png",
+      "p-16.png"
+     ],
+     "mean_abs_gray_diff": 4.162
+    },
+    {
+     "pages": [
+      "p-06.png",
+      "p-17.png"
+     ],
+     "mean_abs_gray_diff": 5.509
+    },
+    {
+     "pages": [
+      "p-06.png",
+      "p-20.png"
+     ],
+     "mean_abs_gray_diff": 5.602
+    },
+    {
+     "pages": [
+      "p-07.png",
+      "p-09.png"
+     ],
+     "mean_abs_gray_diff": 4.597
+    },
+    {
+     "pages": [
+      "p-07.png",
+      "p-10.png"
+     ],
+     "mean_abs_gray_diff": 4.099
+    },
+    {
+     "pages": [
+      "p-07.png",
+      "p-11.png"
+     ],
+     "mean_abs_gray_diff": 3.378
+    },
+    {
+     "pages": [
+      "p-07.png",
+      "p-12.png"
+     ],
+     "mean_abs_gray_diff": 4.92
+    },
+    {
+     "pages": [
+      "p-07.png",
+      "p-15.png"
+     ],
+     "mean_abs_gray_diff": 2.594
+    },
+    {
+     "pages": [
+      "p-07.png",
+      "p-16.png"
+     ],
+     "mean_abs_gray_diff": 4.67
+    },
+    {
+     "pages": [
+      "p-07.png",
+      "p-17.png"
+     ],
+     "mean_abs_gray_diff": 4.051
+    },
+    {
+     "pages": [
+      "p-07.png",
+      "p-20.png"
+     ],
+     "mean_abs_gray_diff": 5.281
+    },
+    {
+     "pages": [
+      "p-08.png",
+      "p-09.png"
+     ],
+     "mean_abs_gray_diff": 5.548
+    },
+    {
+     "pages": [
+      "p-08.png",
+      "p-11.png"
+     ],
+     "mean_abs_gray_diff": 5.528
+    },
+    {
+     "pages": [
+      "p-08.png",
+      "p-15.png"
+     ],
+     "mean_abs_gray_diff": 5.898
+    },
+    {
+     "pages": [
+      "p-08.png",
+      "p-16.png"
+     ],
+     "mean_abs_gray_diff": 4.611
+    },
+    {
+     "pages": [
+      "p-08.png",
+      "p-17.png"
+     ],
+     "mean_abs_gray_diff": 5.56
+    },
+    {
+     "pages": [
+      "p-08.png",
+      "p-18.png"
+     ],
+     "mean_abs_gray_diff": 4.969
+    },
+    {
+     "pages": [
+      "p-09.png",
+      "p-10.png"
+     ],
+     "mean_abs_gray_diff": 5.156
+    },
+    {
+     "pages": [
+      "p-09.png",
+      "p-11.png"
+     ],
+     "mean_abs_gray_diff": 4.088
+    },
+    {
+     "pages": [
+      "p-09.png",
+      "p-15.png"
+     ],
+     "mean_abs_gray_diff": 3.963
+    },
+    {
+     "pages": [
+      "p-09.png",
+      "p-16.png"
+     ],
+     "mean_abs_gray_diff": 4.71
+    },
+    {
+     "pages": [
+      "p-09.png",
+      "p-17.png"
+     ],
+     "mean_abs_gray_diff": 4.528
+    },
+    {
+     "pages": [
+      "p-09.png",
+      "p-20.png"
+     ],
+     "mean_abs_gray_diff": 5.679
+    },
+    {
+     "pages": [
+      "p-10.png",
+      "p-11.png"
+     ],
+     "mean_abs_gray_diff": 4.182
+    },
+    {
+     "pages": [
+      "p-10.png",
+      "p-13.png"
+     ],
+     "mean_abs_gray_diff": 4.693
+    },
+    {
+     "pages": [
+      "p-10.png",
+      "p-15.png"
+     ],
+     "mean_abs_gray_diff": 4.909
+    },
+    {
+     "pages": [
+      "p-10.png",
+      "p-16.png"
+     ],
+     "mean_abs_gray_diff": 5.276
+    },
+    {
+     "pages": [
+      "p-10.png",
+      "p-17.png"
+     ],
+     "mean_abs_gray_diff": 4.196
+    },
+    {
+     "pages": [
+      "p-11.png",
+      "p-12.png"
+     ],
+     "mean_abs_gray_diff": 4.719
+    },
+    {
+     "pages": [
+      "p-11.png",
+      "p-15.png"
+     ],
+     "mean_abs_gray_diff": 3.438
+    },
+    {
+     "pages": [
+      "p-11.png",
+      "p-16.png"
+     ],
+     "mean_abs_gray_diff": 4.253
+    },
+    {
+     "pages": [
+      "p-11.png",
+      "p-17.png"
+     ],
+     "mean_abs_gray_diff": 4.145
+    },
+    {
+     "pages": [
+      "p-12.png",
+      "p-15.png"
+     ],
+     "mean_abs_gray_diff": 5.099
+    },
+    {
+     "pages": [
+      "p-12.png",
+      "p-16.png"
+     ],
+     "mean_abs_gray_diff": 5.25
+    },
+    {
+     "pages": [
+      "p-12.png",
+      "p-17.png"
+     ],
+     "mean_abs_gray_diff": 5.676
+    },
+    {
+     "pages": [
+      "p-13.png",
+      "p-14.png"
+     ],
+     "mean_abs_gray_diff": 4.236
+    },
+    {
+     "pages": [
+      "p-13.png",
+      "p-17.png"
+     ],
+     "mean_abs_gray_diff": 5.832
+    },
+    {
+     "pages": [
+      "p-13.png",
+      "p-18.png"
+     ],
+     "mean_abs_gray_diff": 5.702
+    },
+    {
+     "pages": [
+      "p-13.png",
+      "p-19.png"
+     ],
+     "mean_abs_gray_diff": 5.724
+    },
+    {
+     "pages": [
+      "p-14.png",
+      "p-19.png"
+     ],
+     "mean_abs_gray_diff": 5.989
+    },
+    {
+     "pages": [
+      "p-15.png",
+      "p-16.png"
+     ],
+     "mean_abs_gray_diff": 4.469
+    },
+    {
+     "pages": [
+      "p-15.png",
+      "p-17.png"
+     ],
+     "mean_abs_gray_diff": 3.94
+    },
+    {
+     "pages": [
+      "p-15.png",
+      "p-20.png"
+     ],
+     "mean_abs_gray_diff": 5.386
+    },
+    {
+     "pages": [
+      "p-16.png",
+      "p-17.png"
+     ],
+     "mean_abs_gray_diff": 3.983
+    },
+    {
+     "pages": [
+      "p-16.png",
+      "p-18.png"
+     ],
+     "mean_abs_gray_diff": 5.733
+    }
+   ]
+  }
+ }
+}

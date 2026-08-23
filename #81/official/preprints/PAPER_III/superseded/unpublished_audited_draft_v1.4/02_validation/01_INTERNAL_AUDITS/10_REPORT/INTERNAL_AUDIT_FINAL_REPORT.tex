@@ -1,0 +1,63 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{booktabs,longtable,array}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{microtype}
+\usepackage[hidelinks]{hyperref}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.5em}
+\title{Paper III v1.3 Internal Audit Final Report}
+\author{Internal author-side audit --- not independent}
+\date{22 August 2026 --- Overall verdict: PASS}
+\begin{document}
+\maketitle
+\textbf{Protocol:} \texttt{INTERNAL\_AUDIT\_STANDARD\_v1.3}.\\
+\textbf{Release position:} candidate for Paper III's first formal public release.\\
+\textbf{Lean execution:} recorded consolidated build reviewed; full build not rerun during the audit.
+
+\section{Frozen target}
+Formal archive SHA-256:\\
+{\small\nolinkurl{2eb0ff20a9dae6610a46026355374570d5afdfea89837ea7f9dd29da10b9d300}}.\\
+Toolchain: Lean 4.28.0; Mathlib v4.28.0 at commit
+\nolinkurl{8f9d9cff6bd728b17a24e163c9402775d9e6a365}.\\
+Recorded build: exit 0; 8,719 successful jobs. Eight axiom-query runs record
+exactly \texttt{[propext, Classical.choice, Quot.sound]} on every queried
+canonical surface. The archive and both manifests verify.
+
+\section{Gate results}
+\begin{longtable}{p{.17\linewidth}p{.20\linewidth}p{.53\linewidth}}
+\toprule Gate & Verdict & Principal evidence \\ \midrule
+G0 & PASS & Six artifacts, LF sidecar, manifests, archive hash and CRC. \\
+G1 & PASS & Main bound, sharpness, three regimes and exact EN/ES scope. \\
+G2 & PASS & 12 identities; 351 LP/exact cases; 78,384 margins; 372 ILPs; 360 packing/corridor cases. \\
+G3 & PASS & Canonical model bridges, AX1/AX2, induction and final theorem. \\
+G4 & PASS recorded build & 8,719-job build and eight axiom-query runs reviewed. \\
+G5 & PASS & 31 consistency checks; 144/144 headings; notation and citations aligned. \\
+G6 & PASS & EN 45 / ES 46 pages; embedded fonts; all 91 pages inspected. \\
+G7 & PASS internal & Bounded prior-art conclusion; independent novelty gate open. \\
+G8 & PASS & Clean public freeze and delivery tree; no prior-version dependency. \\
+\bottomrule
+\end{longtable}
+
+The executable suite reports \textbf{133/133 checks passed} and every gate
+G0--G8 as PASS.
+
+\section{External-finding regression}
+The v1.3 target closes the previous wording, notation, citation, stale-label and
+formal-interface findings internally. It adds two-sided canonical bridges
+between the paper and Yuster-style fractional-packing models and explicitly
+queries the AX1/AX2 and K-EPS, K-CORRIDOR, K-SPARSE, K-COVER and K-GLOBAL
+surfaces. Two disclosed legacy comparison-route axioms are unimported and absent
+from all canonical footprints.
+
+This is internal formal-coverage closure, not independent mathematical
+rederivation. External review must independently check bridge semantics,
+quantitative tolerances, the hypergraph-to-graph passage, the Sections 4--9
+analytic core, dependency closure, citations and novelty.
+
+\section{Overall verdict}
+\textbf{PASS.} No unresolved internal blocker or major finding remains. The
+target is ready for a new external adversarial audit; all external review and
+release gates remain open.
+\end{document}

@@ -1,0 +1,908 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+\PassOptionsToPackage{dvipsnames,svgnames,x11names}{xcolor}
+\documentclass[
+  9pt,
+  a4paper,
+]{article}
+\usepackage{xcolor}
+\usepackage[margin=1.9cm]{geometry}
+\usepackage{amsmath,amssymb}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math} % this also loads fontspec
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+\usepackage{lmodern}
+\ifPDFTeX\else
+  % xetex/luatex font selection
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{longtable,booktabs,array}
+\newcounter{none} % for unnumbered tables
+\usepackage{calc} % for calculating minipage widths
+% Correct order of tables after \paragraph or \subparagraph
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd\longtable{\par}{\if@noskipsec\mbox{}\fi\par}{}{}
+\makeatother
+% Allow footnotes in longtable head/foot
+\IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
+\makesavenoteenv{longtable}
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\usepackage{longtable,booktabs,array}
+\setlength{\tabcolsep}{4pt}
+\usepackage{etoolbox}
+\AtBeginEnvironment{longtable}{\footnotesize}
+\emergencystretch=3em
+\sloppy
+\usepackage{bookmark}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same}
+\hypersetup{
+  pdftitle={External Residual Adversarial Re-audit -\/-\/- Paper I{,} preprint\textbackslash\_draft\textbackslash\_v1.3},
+  pdfauthor={Claude Opus 5 (claude-opus-5), Anthropic},
+  colorlinks=true,
+  linkcolor={blue},
+  filecolor={Maroon},
+  citecolor={Blue},
+  urlcolor={Blue},
+  pdfcreator={LaTeX via pandoc}}
+
+\title{External Residual Adversarial Re-audit -\/-\/- Paper I,
+preprint\textbackslash\_draft\textbackslash\_v1.3}
+\author{Claude Opus 5 (claude-opus-5), Anthropic}
+\date{2026-08-21}
+
+\begin{document}
+\maketitle
+
+\section{\texorpdfstring{External Residual Adversarial Re-audit ---
+Paper I,
+\texttt{preprint\_draft\_v1.3}}{External Residual Adversarial Re-audit --- Paper I, preprint\_draft\_v1.3}}\label{external-residual-adversarial-re-audit--paper-i-preprint_draft_v13}
+
+\textbf{Specification:} \texttt{RESIDUAL\_AUDIT\_REQUEST\_SPEC.md}
+\textbf{Specification SHA-256:}
+\texttt{e8d92cf5fffbc55b02eada99e4e446207752dbe28f1b8492195838b123d85435}
+\textbf{Run:} \texttt{run\_2026-08-21\_v1.3} \textbf{Audit class:}
+external residual adversarial re-audit \textbf{Audit date:} 2026-08-21
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\subsection{1. Executive verdict}\label{1-executive-verdict}
+
+\begin{quote}
+\mbox{}%
+\subsection{\texorpdfstring{\texttt{PASS\_WITH\_RESIDUALS}}{PASS\_WITH\_RESIDUALS}}\label{pass_with_residuals}
+\end{quote}
+
+\textbf{What this means.} \textbf{All nine} mandatory correction
+controls pass, the general regression passes in full, and there is
+\textbf{no unresolved \texttt{BLOCKER} and no unresolved
+\texttt{MAJOR}}. The \texttt{MAJOR} finding that made v1.2 fail --- five
+duplicated Spanish blocks reaching the delivered PDF --- is
+\textbf{fully corrected and independently re-verified}.
+
+Control 6 was initially assessed \texttt{PARTIAL}, because the newly
+cited Chen--Erdős--Ordman author-hosted scan could not be retrieved by
+any of four routes the auditor attempted. The owner then supplied the
+scan, downloaded from the cited URL in their own browser. The auditor
+rendered and read it, and the \texttt{3/16} constant is now
+\textbf{verified against the primary source with a pinpoint}: Theorem 1,
+page 23. Control 6 therefore passes. This evidence is disclosed as
+\textbf{owner-supplied and auditor-verified}, not as an independent
+auditor retrieval (Section 4.4).
+
+\textbf{Why not a plain \texttt{PASS}.} Two correctable \texttt{MINOR}
+package defects remain open: compiler residue left inside the sealed
+package, and two transposed declaration namespaces in the changelog
+(Section 7). Neither is claim-critical, and Specification Section 7
+permits minor findings that are compatible with the PASS rule --- but a
+sealed package carrying stray build artifacts is a real defect the owner
+can fix in minutes. \textbf{Deleting \texttt{tmp/} and correcting the
+two changelog names would make a plain \texttt{PASS} available on a new
+target hash.} Standing external residuals also remain (Section 10).
+
+\textbf{This audit is not human peer review and does not prove global
+novelty.}
+
+\subsection{2. Target identity --- all eight anchors
+verified}\label{2-target-identity--all-eight-anchors-verified}
+
+Recomputed from the delivered bytes before any analysis. \textbf{8/8
+match.}
+
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}lll@{}}
+\toprule\noalign{}
+Artifact & Required SHA-256 & Result \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+English Markdown &
+\texttt{f3094b670c93ff622c3f573cdab61bdd0f5d84007f04b1888b364e0183565bea}
+& MATCH \\
+Spanish Markdown &
+\texttt{57ba967fc2de805b7bbb4cf5f937727bde43c2ada80fa794bcbb5a727db05b8b}
+& MATCH \\
+English LaTeX &
+\texttt{1a87de70548879ca90a714ec9e1b10c8576b380a749785916e5d59176e479465}
+& MATCH \\
+Spanish LaTeX &
+\texttt{f83ee709c1168b5b9afe504e6b6a43763bf3bb2a08f674f2031f83670ba9bb56}
+& MATCH \\
+English PDF &
+\texttt{7d04c47692b613c8d6e2cc4471f0205128b4ae06ca11d581a08d020eb2236db0}
+& MATCH \\
+Spanish PDF &
+\texttt{3ad16ae86e8fcad358bf964a6ae98ae053b0bde2fdf3140e008cedab78b90c2a}
+& MATCH \\
+Lean archive &
+\texttt{0181506408644fc1f8872d711de5a98a500f4052aa295bcd6f8c82776694fd3a}
+& MATCH \\
+Internal-audit ZIP &
+\texttt{f261add8050f1ab8779d9e25f345475790768368f4c056067358153db6639382}
+& MATCH \\
+\end{longtable}
+}
+
+Input freeze sealed before analysis: \textbf{221 files, 24,675,148
+bytes}, aggregate
+\texttt{a8852b0e4d424615d299d9b1dba5bb0aef244295193a662f57afc48a652427fb},
+with the audit-output subtree excluded. Manuscript sidecar is
+\textbf{LF-only, 6/6 entries verify}. No path resolves into
+\texttt{superseded/}. The target did not change during the run and was
+not modified by the auditor.
+
+\subsection{3. What actually changed from
+v1.2}\label{3-what-actually-changed-from-v12}
+
+Established by a line-level diff of the two English manuscripts, not
+taken on trust: \textbf{14 changed regions, every one of them an
+announced correction.} v1.2 had 1,089 lines; v1.3 has 1,101.
+
+No theorem statement, no constant, no proof step changed, with two
+exceptions that both \emph{strengthen} the argument: the added
+\texttt{H}-slack accounting in the derivation of (4.7), and the domain
+restriction on the Appendix A.2 excess formula. This matches the
+specification\textquotesingle s own statement in Section 1 and the
+\texttt{CHANGELOG\_v1.3.md}.
+
+\subsection{4. Mandatory correction controls, one by
+one}\label{4-mandatory-correction-controls-one-by-one}
+
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}llll@{}}
+\toprule\noalign{}
+\# & Finding & Verdict & Evidence \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+1 & \texttt{EXT-P1-L-001} duplicated Spanish blocks & \textbf{PASS} &
+Section 5 \\
+2 & \texttt{EXT-P1-M-001} integrity metadata & \textbf{PASS} & Section
+6 \\
+3 & \texttt{EXT-P1-D-001} derivation of (4.7) & \textbf{PASS} & Section
+4.1 \\
+4 & \texttt{EXT-P1-E-002} Appendix A.2 restriction & \textbf{PASS} &
+Section 4.2 \\
+5 & \texttt{EXT-P1-J-001} meaning of "sharp" & \textbf{PASS} & Section
+4.3 \\
+6 & \texttt{EXT-P1-I-001} CEO scan and \texttt{3/16} & \textbf{PASS} &
+Section 4.4 \\
+7 & \texttt{EXT-P1-I-002} Schrijver pinpoint absent & \textbf{PASS} &
+Section 4.5 \\
+8 & \texttt{EXT-P1-I-003} stale repository citation absent &
+\textbf{PASS} & Section 4.5 \\
+9 & \texttt{P1-IA-V13-001} no residual pinpoint & \textbf{PASS} &
+Section 4.5 \\
+\end{longtable}
+}
+
+\subsubsection{4.1 Control 3 --- the derivation of (4.7) is now complete
+and
+correct}\label{41-control-3--the-derivation-of-47-is-now-complete-and-correct}
+
+Both halves of the v1.2 finding are addressed.
+
+\begin{itemize}
+\item
+  \textbf{The substitution is stated.} English and Spanish L270 now read
+  that the second substitution "gives \texttt{z\_e\ =\ x\_e} and leads
+  to the fixed \textbf{capped-dual} polytope". In v1.2 the composition
+  \texttt{y\ =\ 1-x} then \texttt{z\ =\ 1-y} was left unremarked, so
+  (4.5) appeared to be a new polytope rather than the original capped
+  dual.
+\item
+  \textbf{Every edge of \texttt{H} is accounted for.} New text at
+  L303--317 supplies the cancellation v1.2 omitted:
+
+  \texttt{\textbar{}w\_1\textbar{}\ =\ b\_\{\textgreater{}=2\}/2\ +\ sum\_\{e\ in\ H\}\ (1\ -\ kappa\_e)}
+  \texttt{\textbar{}w\_2\textbar{}\ =\ M(kappa)\ -\ sum\_\{e\ in\ H\}\ (1\ -\ kappa\_e)}
+
+  and notes explicitly that "On \texttt{H}, the residual coefficient
+  \texttt{r\_e} is zero" --- precisely the distinction the v1.2 finding
+  turned on, since \texttt{r\_e\ =\ max\{1-kappa\_e,\ 0\}} vanishes on
+  \texttt{H} rather than being negative.
+\end{itemize}
+
+\textbf{Independently verified symbolically, not merely read:}
+
+\begin{itemize}
+\tightlist
+\item
+  the new \texttt{\textbar{}w\_1\textbar{}} identity is \emph{consistent
+  with} (4.3)
+  \texttt{\textbar{}w\_1\textbar{}\ =\ \textbar{}H\textbar{}\ +\ sum\_\{e\ in\ L\}\ kappa\_e},
+  given Lemma 3.1
+  (\texttt{sum\ over\ all\ e\ of\ kappa\_e\ =\ b\_\{\textgreater{}=2\}/2}).
+  Exact identity, residual zero.
+\item
+  adding the two new identities yields (4.7)
+  \texttt{V\_com\ =\ b\_\{\textgreater{}=2\}/2\ +\ M(kappa)} exactly:
+  the two \texttt{sum\_H\ (1\ -\ kappa\_e)} terms cancel. Exact
+  identity, residual zero.
+\end{itemize}
+
+So the accounting is not just present, it is right.
+
+\subsubsection{4.2 Control 4 --- Appendix A.2 is now correctly
+restricted}\label{42-control-4--appendix-a2-is-now-correctly-restricted}
+
+L888 now reads "If \texttt{A\ \textgreater{}=\ 0} \textbf{and
+\texttt{o\ \textgreater{}=\ 3}}", and L904--906 route the cases
+\texttt{o\ =\ 0,1,2} to Appendix A.3. Verified symbolically that this is
+the \emph{exact} correct domain:
+
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}lll@{}}
+\toprule\noalign{}
+Endpoint & Excess over \texttt{U} & Matches printed
+\texttt{(B-2A)/6}? \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+\texttt{(0,\ 1/2,\ 1/3)}, valid when \texttt{o\ \textgreater{}=\ 3} &
+\texttt{(B\ -\ 2A)/6} & \textbf{yes} \\
+\texttt{(0,\ 1/2,\ 0)}, the case \texttt{o\ \textless{}=\ 2} &
+\texttt{(B\ -\ 2A\ -\ 2C)/6} & \textbf{no}, differs by \texttt{-2C/6} \\
+\end{longtable}
+}
+
+The v1.2 text printed \texttt{(B-2A)/6} unconditionally, which is false
+for \texttt{o\ \textless{}=\ 2}. The v1.3 restriction is precisely the
+right one.
+
+\subsubsection{4.3 Control 5 --- "sharp" no longer
+overreaches}\label{43-control-5--sharp-no-longer-overreaches}
+
+The phrase "the sharp target" is \textbf{gone} from L691/L705. "Sharp"
+now appears only inside the declaration names
+\texttt{paperI\_main\_sharp} and \texttt{assembly\_sharp}, and L750
+still states plainly that "The additive term \texttt{n/2} in Theorem 1.1
+is not optimized", giving the \texttt{n/6} to \texttt{n/2} window. The
+\texttt{CHANGELOG} records the intent as clarifying that \texttt{sharp}
+refers to the quadratic coefficient \texttt{1/6}. Consistent, and
+consistent with this audit\textquotesingle s own computation that the
+extremal family attains \texttt{n\^{}2/6\ +\ n/6}, which is what makes
+\texttt{n/2} non-optimal.
+
+\subsubsection{\texorpdfstring{4.4 Control 6 --- cited, and now verified
+against the primary source:
+\texttt{PASS}}{4.4 Control 6 --- cited, and now verified against the primary source: PASS}}\label{44-control-6--cited-and-now-verified-against-the-primary-source-pass}
+
+\textbf{The citation.} Reference {[}2{]} now reads, in both languages
+and in all four generated artifacts: "...World Scientific, 1994, pp.
+21-30, author-hosted scan:
+\texttt{https://ordman.net/MathResearch/CEOClique\_Parts.pdf}, accessed
+August 21, 2026." The URL is present once in the English Markdown,
+Spanish Markdown, both LaTeX sources \textbf{and both rendered PDFs} -
+the acceptance criterion the owner\textquotesingle s own correction
+matrix set.
+
+\textbf{Retrieval, and how the evidence was obtained.} The auditor could
+not retrieve the scan. Four routes were attempted and all failed:
+
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}ll@{}}
+\toprule\noalign{}
+Route & Outcome \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+\texttt{WebFetch} on the printed \texttt{https} URL & certificate
+expired \\
+\texttt{curl} on the \texttt{http} URL & HTTP 302 to \texttt{https},
+certificate expired \\
+internal browser, \texttt{https} & navigation denied \\
+\texttt{web.archive.org} snapshot & not reachable from this
+environment \\
+\end{longtable}
+}
+
+The auditor declined to disable certificate validation. \textbf{The
+owner then supplied the file}, downloaded from the cited URL in their
+own browser after clicking through the certificate warning. This is
+disclosed plainly: the evidence below is \textbf{owner-supplied and
+auditor-verified}, not an independent auditor retrieval. The auditor did
+perform the verification itself - the file is an image-only scan
+(\texttt{pdftotext} extracts zero lines, Producer "EPSON Scan"), so it
+was rendered at 150 dpi and read.
+
+Received file SHA-256
+\texttt{b7d965e6e00cd664ad2249ad7fa3640330009c3c9057301d73f752a718b28262},
+6 pages, archived in
+\texttt{20\_EVIDENCE/I\_CITATIONS\_NOVELTY/results/}.
+
+\textbf{Identity confirmed.} Title "CLIQUE PARTITIONS OF SPLIT GRAPHS";
+authors Guan-Tao Chen (North Dakota State University), Paul Erdos
+(Mathematical Institute, Hungarian Academy Of Sciences), Edward T.
+Ordman (Memphis State University). A handwritten annotation on the first
+page records the volume: "Combinatorics, Graph Theory, Algorithms, and
+Applications, ed. Yousef Alavi, Don Lick, Jiuqiang Liu; World Scientific
+Pub Co. Pte Ltd, Singapore, 1994 (Conference Beijing 1-5 June 1993)".
+Printed folios run \texttt{-21-}, \texttt{-22-}, \texttt{-23-},
+\texttt{-24-}, consistent with the cited "pp. 21-30".
+
+\textbf{The \texttt{3/16} constant, verified twice.}
+
+\begin{itemize}
+\tightlist
+\item
+  Abstract, page 21, verbatim: "It is well-known that edge-partitioning
+  a split graph on n vertices may require as many as
+  \texttt{n\^{}2/6\ +\ n/6} cliques. We show that
+  \texttt{(3/16)n\^{}2\ +\ O(n)} cliques will always suffice."
+\item
+  \textbf{Pinpoint}, page 23, Section 2 "Statement of results":
+  \textbf{"Theorem 1. For all split graphs \texttt{G\_n},
+  \texttt{cp(G\_n)\ \textless{}=\ (3/16)\ n\^{}2\ +\ O(n)}."} with
+  "Corollary 1. The same bound applies to threshold graphs."
+\end{itemize}
+
+The manuscript\textquotesingle s attribution is therefore
+\textbf{\texttt{SUPPORTED}, with pinpoint Theorem 1, page 23.} The
+residual that made this a \texttt{MINOR} finding in the v1.2 report
+(\texttt{EXT-P1-I-001}) is \textbf{closed}.
+
+\textbf{Two further findings of independent value, from the same
+source.}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Page 22, Example 1: "The clique partition number of
+  \texttt{G\_n\ =\ K\_n\ -\ K\_2n/3(bar)} is \texttt{n\^{}2/6\ +\ n/6},
+  provided 6 divides n." This is \textbf{exactly} the complete-split
+  benchmark value this audit verified independently by explicit
+  construction for \texttt{p\ =\ 2..40} in the Paper III Gate F
+  evidence. Primary source and independent computation agree.
+\item
+  Page 23: "A split graph on n vertices may need
+  \texttt{n\^{}2/6\ +\ O(n)} cliques to partition it. \textbf{We cannot
+  show that this many will suffice.}" The original authors thus flag as
+  open precisely the gap Paper III claims to close. Their Theorem 2
+  obtains \texttt{n\^{}2/6\ +\ O(n)} only for the special form
+  \texttt{K\_n\ -\ K\_m(bar)}, a difference of cliques, \textbf{not} for
+  general split graphs. Paper III\textquotesingle s general claim is
+  therefore genuinely stronger than CEO Theorem 1 and is not implied by
+  CEO Theorem 2 - no collision, and the
+  \texttt{3/16\ -\textgreater{}\ 1/6} framing is well posed.
+\end{enumerate}
+
+\textbf{What remains.} The printed URL is still unusable as printed,
+since the host serves an expired certificate. That is now an
+accessibility matter rather than an evidentiary gap, recorded as
+\texttt{RES-V13-004} (NOTE).
+
+\subsubsection{4.5 Controls 7, 8, 9 --- removals verified across all six
+artifacts}\label{45-controls-7-8-9--removals-verified-across-all-six-artifacts}
+
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}lllllll@{}}
+\toprule\noalign{}
+Check & EN md & ES md & EN tex & ES tex & EN pdf & ES pdf \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+\texttt{Corollary\ 7.1g} pinpoint & absent & absent & absent & absent &
+absent & absent \\
+\texttt{github.com/jtraverso} citation & absent & absent & absent &
+absent & absent & absent \\
+\end{longtable}
+}
+
+Schrijver is now cited at the \textbf{verified chapter level}: "{[}4,
+Chapter 7{]}" at L1025, and "Schrijver {[}4, Chapter 7{]} remains the
+classical reference" at L781. Control 9 is therefore satisfied: no
+residual occurrence of the old pinpoint survived regeneration.
+
+The bibliography went from 10 entries to 9 with the removal of the
+repository entry. \textbf{No dangling and no orphaned citation
+resulted}: keys cited in the body are exactly \{1,2,3,5,6,7\} plus
+{[}4{]} cited as "{[}4, Chapter 7{]}", and the reference list defines
+\{1,...,7\}. Two apparent anomalies were investigated and dismissed ---
+an apparent citation "{[}0{]}" is the unit cube
+\texttt{z\ in\ {[}0,1{]}\^{}\{E(K)\}} in (4.5), and {[}4{]} appeared
+"uncited" only because the pinpoint form escapes a plain-bracket regex.
+
+\subsection{5. Control 1 --- duplication, tested generally rather than
+by known
+phrase}\label{5-control-1--duplication-tested-generally-rather-than-by-known-phrase}
+
+The specification requires an exact \textbf{and near-duplicate} scan of
+normalized long units in all six artifacts, manual inspection of every
+candidate, and a page-image check. All were performed.
+
+\textbf{Method.} Units are (a) paragraphs, i.e. maximal runs of
+non-blank lines, and (b) individual lines. Normalization: NFKC,
+lowercase, whitespace collapsed, punctuation stripped. Threshold:
+normalized length \textgreater= \textbf{60} characters. Near-duplicate
+criterion: \texttt{difflib} ratio \textgreater= \textbf{0.92} between
+distinct units. \textbf{Exclusions: none} --- every long unit in every
+artifact was compared against every other. Pages: exact SHA-256 of the
+rendered PNG plus a 64x88 grayscale signature compared by mean absolute
+difference.
+
+\textbf{Result.}
+
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}llll@{}}
+\toprule\noalign{}
+Artifact & Long units (para/line) & Exact duplicate classes &
+Near-duplicate pairs \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+EN Markdown & 116 / 106 & 0 / 0 & 1 / 1 \\
+ES Markdown & 121 / 111 & 0 / 0 & 1 / 1 \\
+EN LaTeX & 133 / 133 & 0 / 0 & 1 / 3 \\
+ES LaTeX & 139 / 139 & 0 / 0 & 1 / 3 \\
+EN PDF text & 68 / 243 & 1 / 0 & 0 / 0 \\
+ES PDF text & 73 / 274 & 1 / 0 & 0 / 0 \\
+\end{longtable}
+}
+
+\textbf{Every candidate was inspected individually. All are legitimate:}
+
+\begin{itemize}
+\tightlist
+\item
+  the near-duplicate paragraph in each artifact is the constraint set
+  (6.4)
+  \texttt{3a\textgreater{}=1,\ a+2b\textgreater{}=1,\ 2b+g\textgreater{}=1,\ 3g\textgreater{}=1}
+  restated in Appendix A.1 --- the two differ only by the
+  \texttt{\textbackslash{}tag\{6.4\}} marker;
+\item
+  the near-duplicate lines are the two \emph{different} declarations
+  \texttt{paperI\_main\_sharp} and \texttt{paperI\_main} reporting the
+  same axiom footprint, and in the LaTeX the pair
+  \texttt{\textbackslash{}pdftitle\{...\}} /
+  \texttt{\textbackslash{}title\{...\}}, both of which are required;
+\item
+  the one "exact duplicate" in each PDF text layer is the string
+  \texttt{propext,\ Classical.choice,\ Quot.sound} on consecutive lines
+  --- adjacent table cells for different declarations that legitimately
+  share a footprint, flattened into separate lines by
+  \texttt{pdftotext}.
+\end{itemize}
+
+\textbf{Page images.}
+
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}llllll@{}}
+\toprule\noalign{}
+PDF & Pages & Exact-duplicate page sets & Min signature distance &
+Median & Pairs below strict threshold 1.5 \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+English & 19 & \textbf{0} & 3.850 & 8.496 & \textbf{0} \\
+Spanish & 20 & \textbf{0} & 4.619 & 8.515 & \textbf{0} \\
+\end{longtable}
+}
+
+A genuinely repeated page would show a signature distance near zero; the
+closest pair in either document sits at roughly half the median
+separation, nowhere near identity. No near-blank page and no anomalous
+black area in either document.
+
+\textbf{The five v1.2 duplications are gone and nothing replaced them.}
+For the record, they were at Spanish v1.2 lines 51--65/67--81, 730/732,
+742/744, 758--762/764--768 and 776--785/787--794, including an orphaned
+sentence and an ungrammatical duplicate "Esto prueba Teorema 1.1."; none
+of these patterns occurs in v1.3.
+
+Note: the Spanish PDF remains 20 pages against the English 19, unchanged
+from v1.2. Since the duplicated content has been removed and the page
+count did not fall, the page delta is ordinary Spanish text expansion
+plus the newly added \texttt{H}-accounting and A.2 text --- not
+duplication.
+
+\subsection{6. Control 2 --- integrity metadata now identifies v1.3 and
+verifies
+exactly}\label{6-control-2--integrity-metadata-now-identifies-v13-and-verifies-exactly}
+
+\textbf{28 of 28 sidecars in the package verify by content, with zero
+problems.} This is the control v1.2 failed.
+
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}lll@{}}
+\toprule\noalign{}
+Sidecar & Entries & Result \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+\texttt{01\_manuscript/...\_v1.3\_SHA256.txt} & 6 & all verify,
+\textbf{LF-only} \\
+\texttt{04\_integrity/CURRENT\_TARGET\_SHA256.txt} & 8 & all verify \\
+\texttt{04\_integrity/INITIAL\_SOURCE\_SHA256.txt} & 2 & \textbf{both
+verify} (in v1.2, 1 of 2 was unresolvable) \\
+\texttt{05\_formalization/.../PACKAGE\_MANIFEST.sha256} & 31 & all
+verify \\
+\texttt{05\_formalization/.../SOURCE\_MANIFEST.sha256} & 19 & all
+verify \\
+internal-audit manifests (v1.2 baseline + current) & 40 across 22 files
+& all verify \\
+\end{longtable}
+}
+
+\texttt{04\_integrity/} now carries v1.3-specific records:
+\texttt{CURRENT\_TARGET\_SHA256.txt},
+\texttt{EXTERNAL\_AUDIT\_CORRECTION\_MATRIX.md},
+\texttt{SEMANTIC\_INTEGRITY\_REPORT\_v1.3.md}. The stale "Pending for
+v1.1" baseline that produced \texttt{EXT-P1-M-001} is gone.
+
+\subsection{7. New findings opened against
+v1.3}\label{7-new-findings-opened-against-v13}
+
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}llll@{}}
+\toprule\noalign{}
+ID & Severity & Status & Summary \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+\texttt{RES-V13-001} & MINOR & OPEN & stray
+\texttt{tmp/internal\_report\_v1.3/} directory containing compiler
+residue \\
+\texttt{RES-V13-002} & MINOR & OPEN & \texttt{CHANGELOG\_v1.3.md} names
+two declarations with swapped namespaces \\
+\texttt{RES-V13-003} & MINOR & \textbf{RESOLVED} & the \texttt{3/16}
+constant is verified against the primary source (Theorem 1, page 23) \\
+\texttt{RES-V13-004} & NOTE & OPEN & the cited URL is unusable as
+printed; the host serves an expired certificate \\
+\end{longtable}
+}
+
+\subsubsection{\texorpdfstring{\texttt{RES-V13-001} --- compiler residue
+inside the frozen
+package}{RES-V13-001 --- compiler residue inside the frozen package}}\label{res-v13-001--compiler-residue-inside-the-frozen-package}
+
+The package contains \texttt{tmp/internal\_report\_v1.3/} with three
+files: \texttt{INTERNAL\_AUDIT\_FINAL\_REPORT.aux} (628 B),
+\texttt{.log} (17,594 B) and \texttt{.pdf} (164,176 B). The
+\texttt{.log} and \texttt{.pdf} are \textbf{byte-identical} to files
+already correctly placed under
+\texttt{02\_validation/01\_INTERNAL\_AUDITS/10\_REPORT/}, so
+\texttt{tmp/} is pure LaTeX scratch left behind by the internal-report
+build. Specification Section 6 explicitly requires verifying "no
+compiler residue"; this is that. \textbf{Disposition:} delete the
+\texttt{tmp/} subtree and reseal.
+
+\subsubsection{\texorpdfstring{\texttt{RES-V13-002} --- swapped
+namespaces in the
+changelog}{RES-V13-002 --- swapped namespaces in the changelog}}\label{res-v13-002--swapped-namespaces-in-the-changelog}
+
+\texttt{CHANGELOG\_v1.3.md} line 10 states the axiom query was expanded
+to cover \texttt{PaperI.Split.assembly\_sharp} and
+\texttt{PaperI.residual\_duality}. The actual declarations are
+\texttt{PaperI.assembly\_sharp} and
+\texttt{PaperI.Split.residual\_duality} --- the namespaces are
+transposed. The \textbf{manuscript itself is correct}: Appendix C prints
+the four declarations with the right namespaces, matching this
+auditor\textquotesingle s verbatim \texttt{\#print\ axioms} output
+exactly. So the error is confined to package documentation and does not
+affect any claim. \textbf{Disposition:} correct the two names in the
+changelog.
+
+\subsubsection{\texorpdfstring{\texttt{RES-V13-003} ---
+RESOLVED}{RES-V13-003 --- RESOLVED}}\label{res-v13-003--resolved}
+
+The \texttt{3/16} constant is verified against the primary source with a
+pinpoint (Theorem 1, page 23). See Section 4.4. No further action.
+
+\subsubsection{\texorpdfstring{\texttt{RES-V13-004} --- the printed URL
+does not resolve
+(NOTE)}{RES-V13-004 --- the printed URL does not resolve (NOTE)}}\label{res-v13-004--the-printed-url-does-not-resolve-note}
+
+\texttt{ordman.net} redirects \texttt{http} to \texttt{https} and serves
+an expired certificate, so a reader following reference {[}2{]} hits a
+certificate error. Now an accessibility matter, not an evidentiary gap.
+\textbf{Disposition:} optionally note the expired certificate in the
+manuscript, or cite a stable mirror alongside the author-hosted copy.
+The defect is on a third-party host and cannot be fixed by editing the
+target.
+
+\subsection{8. General regression (specification Section
+6)}\label{8-general-regression-specification-section-6}
+
+\subsubsection{8.1 Mathematics --- 14 of 14 symbolic identities exact;
+6,732 LP cases with zero
+mismatches}\label{81-mathematics--14-of-14-symbolic-identities-exact-6732-lp-cases-with-zero-mismatches}
+
+Every identity is checked as an exact polynomial identity (expand,
+subtract, require the residual to be identically zero), not sampled. Two
+of the fourteen are new in v1.3 and are the ones that validate the
+control-3 correction.
+
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}lll@{}}
+\toprule\noalign{}
+Tag & Identity & Holds \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+\texttt{v13-4.3/4.8} & v1.3 ` & w\_1 \\
+\texttt{v13-4.7} & the two v1.3 identities add to (4.7); \texttt{sum\_H}
+terms cancel & yes \\
+\texttt{L3.1} & \texttt{C(d,2)/(d-1)\ =\ d/2} & yes \\
+\texttt{6.3} & \texttt{A+B+C\ =\ (p\^{}2-p-sq)/2} & yes \\
+\texttt{7.2}, \texttt{7.4}, \texttt{7.4c}, \texttt{7.6} & the three
+Section 7 comparisons and the nonnegativity certificate & yes \\
+\texttt{8.2}, \texttt{8.3}, \texttt{8.res} & the simplification, the
+assembly difference, the residual regime & yes \\
+\texttt{9.cs} & complete-split value \texttt{n\^{}2/6\ +\ n/6} at
+\texttt{n\ =\ 3p} & yes \\
+\texttt{A.2-o\textgreater{}=3}, \texttt{A.2-o\textless{}=2} & the A.2
+excess at each endpoint & yes \\
+\end{longtable}
+}
+
+Orbit program, exact rational vertex enumeration, \texttt{p\ =\ 2..18},
+\texttt{q\ =\ 1..44}, \texttt{s\ =\ 2..p}: \textbf{6,732 cases, 0
+closed-form mismatches, 0 violations of (7.8)}.
+
+Tightness Remark, all claims re-verified with the same sharp constants:
+
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}llll@{}}
+\toprule\noalign{}
+Regime & Minimum slack & At & Claim \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+\texttt{s\textgreater{}=3,\ o\textgreater{}=3} & \texttt{9/4} &
+\texttt{(6,3,3)} & \texttt{\textgreater{}=\ 9/4} --- PASS, tight \\
+\texttt{s=2,\ o\textgreater{}=1} & \texttt{1/4} & \texttt{(3,3,2)} &
+\texttt{\textgreater{}=\ 1/4} --- PASS, tight \\
+\texttt{o=1} & \texttt{1/4} & \texttt{(3,3,2)} &
+\texttt{\textgreater{}=\ 1/4} --- PASS, tight \\
+\texttt{o=2} & \texttt{1} & \texttt{(4,2,2)} &
+\texttt{\textgreater{}=\ 1/4} --- PASS \\
+\texttt{o=0} & \texttt{0} & \texttt{(2,4,2)} & equality regime \\
+\end{longtable}
+}
+
+The mandated point \texttt{(p,q,s)\ =\ (2,4,2)} gives LP value
+\texttt{-3} and slack \textbf{exactly 0}: \textbf{CONFIRMED} in the
+equality family. All 17 equality cases have \texttt{o=0} and
+\texttt{q=2p}, exactly as the Remark claims.
+
+A direct enumeration of split graphs with \texttt{nu\_3\^{}*} by exact
+rational simplex was launched to re-falsify Theorem 1.1 itself; its
+result file is recorded under
+\texttt{20\_EVIDENCE/MATH\_REGRESSION/results/}.
+
+\subsubsection{8.2 Bilingual chain}\label{82-bilingual-chain}
+
+All eight corrections are present in \textbf{both} languages, at
+\textbf{identical line numbers} (270, 308/311/314, 888, 904/906,
+1091/1089, 781/1025), which indicates a properly regenerated pair rather
+than a hand-patched one. Zero self-containment violations: neither
+manuscript references \texttt{v1.1.4}, \texttt{v1.1.5}, "supersede", the
+correction matrix, the external or internal audit reports, the
+changelog, or any \texttt{EXT-P1-*} finding id. The manuscript is
+self-contained, as Section 6 requires.
+
+\subsubsection{8.3 Rendered artifacts}\label{83-rendered-artifacts}
+
+Both PDFs: LuaTeX-1.24.0, A4, unencrypted, text layer
+Unicode-recoverable including mathematical alphanumeric symbols. All 39
+pages (19 EN + 20 ES) rendered at 100 dpi and analysed; no blank page,
+no anomalous black area, no duplicated page, no malformed structure.
+
+\subsubsection{8.4 Package hygiene}\label{84-package-hygiene}
+
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}ll@{}}
+\toprule\noalign{}
+Check & Result \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+zero-byte files & 0 \\
+stray \texttt{\$o} & absent \\
+paths into \texttt{superseded/} & 0 \\
+compiler residue & \textbf{3 files} --- \texttt{RES-V13-001} \\
+stale version, path or hash in the manuscripts & none \\
+truncated report or script & none found \\
+\end{longtable}
+}
+
+\subsection{9. Gate H --- reused under the byte-identity
+rule}\label{9-gate-h--reused-under-the-byte-identity-rule}
+
+Labelled \textbf{\texttt{REUSED\_BYTE\_IDENTICAL\_EXTERNAL\_EVIDENCE}}.
+All five conditions of specification Section 5 are shown:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \textbf{Archive hash.} The delivered archive is
+  \texttt{0181506408644fc1f8872d711de5a98a500f4052aa295bcd6f8c82776694fd3a},
+  exactly the required value.
+\item
+  \textbf{Byte-identical to what was previously rebuilt externally.} The
+  archive was re-extracted and compared member by member against the
+  external v1.2 clean room: \textbf{32 of 32 members byte-identical, 0
+  differing, 0 missing.}
+\item
+  \textbf{Nothing that governs the build changed.}
+  \texttt{lean-toolchain}, \texttt{lake-manifest.json},
+  \texttt{lakefile.toml} and \texttt{FreezeAxioms.lean} are each
+  \textbf{IDENTICAL} to the versions built. Toolchain Lean 4.28.0 commit
+  \texttt{7e01a1bf5c70fc6167d49c345d3bf80596e9a79b}; Mathlib pinned at
+  \texttt{8f9d9cff6bd728b17a24e163c9402775d9e6a365}.
+\item
+  \textbf{The v1.3 manuscript\textquotesingle s formal claims check out
+  against those unchanged sources.} Appendix C\textquotesingle s axiom
+  report lists four declarations; all four match the
+  auditor\textquotesingle s own independently obtained verbatim output,
+  \textbf{including the namespaces} that the changelog gets wrong:
+\end{enumerate}
+
+\begin{verbatim}
+PaperI.Split.paperI_main_sharp depends on axioms: [propext, Classical.choice, Quot.sound]
+PaperI.paperI_main            depends on axioms: [propext, Classical.choice, Quot.sound]
+PaperI.assembly_sharp         depends on axioms: [propext, Classical.choice, Quot.sound]
+PaperI.Split.residual_duality depends on axioms: [propext, Classical.choice, Quot.sound]
+\end{verbatim}
+
+Appendix C\textquotesingle s stated theorem
+\texttt{G.Phi\ \textless{}=\ (G.n\ :\ R)\^{}2/6\ +\ (G.n\ :\ R)/2}
+matches the compiled
+\texttt{PaperI.Split.paperI\_main\_sharp\ :\ forall\ (G\ :\ PaperI.Split),\ G.Phi\ \textless{}=\ G.n\^{}2/6\ +\ G.n/2},
+and the companion form matches \texttt{paperI\_main}. Table
+2\textquotesingle s five rows are covered by the frozen axiom file,
+which reported the standard footprint for all 15 of its declarations
+with exit code 0. 5. \textbf{Reused evidence is cited by direct path}
+and carries the required label:
+\texttt{20\_EVIDENCE/H\_LEAN\_REUSE/results/} mirrors the external
+clean-room logs --- the \texttt{lake\ build} log
+(\texttt{Build\ completed\ successfully\ (8034\ jobs)}, exit 0,
+24m47.960s, zero errors), the frozen axiom run, and the
+auditor\textquotesingle s own independent axiom query.
+
+No Lean build was rerun. Per specification Section 5, this reuse does
+\textbf{not} carry over any manuscript, citation, bilingual, PDF or
+package verdict from v1.2 --- every one of those was re-established
+fresh in this run.
+
+\subsection{10. Residual risks}\label{10-residual-risks}
+
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}ll@{}}
+\toprule\noalign{}
+Risk & Can this audit close it? \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+the printed citation URL does not resolve (expired third-party
+certificate) & \textbf{No} --- the constant itself is now verified; only
+accessibility remains \\
+erdosproblems.com returns HTTP 403 to this auditor, so the official
+problem page was never read directly & \textbf{No} --- the open status
+is corroborated by the verified primary source {[}1{]} \\
+novelty & \textbf{No} --- this is a residual re-audit, not a fresh
+prior-art search; the v1.2 Gate K conclusion was evidence-bounded and
+remains so \\
+PDFs not independently recompiled from the delivered TeX & \textbf{No}
+--- producer strings and source-to-PDF tracking checked instead \\
+the six project Lean modules outside the eight built targets &
+\textbf{No} --- never compiled, no verdict \\
+adequacy of the bespoke \texttt{PaperI.Split} structure as a model of
+every split graph & \textbf{No} --- judged faithful by inspection; not
+formalized \\
+\end{longtable}
+}
+
+\subsection{11. What this audit does not
+establish}\label{11-what-this-audit-does-not-establish}
+
+\begin{itemize}
+\tightlist
+\item
+  It does \textbf{not} establish that Theorem 1.1 is true; it
+  establishes that a determined adversarial regression failed to falsify
+  it.
+\item
+  It is \textbf{not} human peer review.
+\item
+  It does \textbf{not} prove global novelty.
+\item
+  It does \textbf{not} re-derive the Lean development; Gate H is reused
+  under byte identity.
+\item
+  A \texttt{PASS\_WITH\_RESIDUALS} does \textbf{not} close any release
+  gate that explicitly requires one of the residuals in Section 10.
+\end{itemize}
+
+\subsection{12. Signature}\label{12-signature}
+
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}ll@{}}
+\toprule\noalign{}
+Item & Value \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+Auditor & Claude Opus 5 (\texttt{claude-opus-5}), Anthropic \\
+Configuration & primary auditor; the v1.2 run additionally used an
+adversarial challenger of the same model family \\
+Audit date & 2026-08-21 \\
+Specification & \texttt{RESIDUAL\_AUDIT\_REQUEST\_SPEC.md}, SHA-256
+\texttt{e8d92cf5...5435} \\
+Target & \texttt{preprint\_draft\_v1.3}, EN Markdown
+\texttt{f3094b67...5bea} \\
+\textbf{Verdict} & \textbf{\texttt{PASS\_WITH\_RESIDUALS}} --- all 9
+controls pass; general regression passes; 0 blocker, 0 major, 2 open
+minor, 1 note \\
+\end{longtable}
+}
+
+The v1.2 report is \textbf{not} rewritten, relabelled or superseded by
+this document. It stands with its own \texttt{FAIL} verdict against its
+own hashes, and no evidence from the two runs is merged.
+
+\end{document}

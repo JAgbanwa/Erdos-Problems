@@ -1,0 +1,31 @@
+{
+  "paper": "Paper III",
+  "version": "1.4",
+  "status": "LOCAL_SOURCE_FREEZE_WITH_RECORDED_BUILD_EVIDENCE",
+  "freeze_date": "2026-08-22",
+  "toolchain": "leanprover/lean4:v4.28.0",
+  "mathlib_revision": "v4.28.0",
+  "mathlib_commit": "8f9d9cff6bd728b17a24e163c9402775d9e6a365",
+  "lean_source_files": 704,
+  "recorded_build": {
+    "classification": "PASS_CLEAN_ORIGIN_RESUMED",
+    "machine": "CCS_NOTEBOOK456",
+    "public_root": "lake build PaperIII",
+    "public_root_jobs": 8455,
+    "public_root_exit_code": 0,
+    "query_roots_jobs": 8444,
+    "query_roots_exit_code": 0,
+    "uninterrupted": false,
+    "evidence": "gate_logs/run_2026-08-22_CCS_NOTEBOOK456_resumed"
+  },
+  "axiom_gate": {
+    "result": "PASS_FOUNDATIONAL_ONLY",
+    "query_files": 8,
+    "surfaces": 42,
+    "sorryAx": 0,
+    "footprint_upper_bound": ["propext", "Classical.choice", "Quot.sound"]
+  },
+  "audit_lifecycle": "AUDIT_RESULTS_ARE_EXTERNAL_TO_THIS_IMMUTABLE_FORMAL_SNAPSHOT",
+  "external_reproduction": "PENDING",
+  "public_commit": null
+}

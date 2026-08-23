@@ -1,0 +1,33 @@
+EN 92,819 bytes   ES 101,735 bytes
+
+  headings           EN=144 ES=144 level-sequence-equal=True
+  displays           EN=205 ES=205 sequence_identical=False
+      only in EN: ['\\max_{\\substack{|V(G)|=n\\\\G\\text{chordal}}}\\bigl(|E(G)|-2\\nu_3^*(G)\\bigr)=\\max_{\\substack{|V(G)|=n\\\\G\\text{spl', "\\chi'(K_t)=\\begin{cases}t-1,&t\\text{even},\\\\t,&t\\text{odd}.\\end{cases}\\tag{2.2}", 'b-t_i\\ge\\max\\{\\rho,u\\}\\qquad\\text{forall}i.\\tag{7.2}', 'x_jx_{j+1}\\inE(J)\\quad\\Longleftrightarrow\\quad|O\\cap\\{x_1,\\ldots,x_j\\}|\\text{isodd}.\\tag{8.5}', 'J=\\{x_jx_{j+1}:|O\\cap\\{x_1,\\ldots,x_j\\}|\\text{isodd}\\}.']
+      only in ES: ['\\max_{\\substack{|V(G)|=n\\\\G\\text{cordal}}}\\bigl(|E(G)|-2\\nu_3^*(G)\\bigr)=\\max_{\\substack{|V(G)|=n\\\\G\\text{spli', "\\chi'(K_t)=\\begin{cases}t-1,&t\\text{par},\\\\t,&t\\text{impar}.\\end{cases}\\tag{2.2}", 'b-t_i\\ge\\max\\{\\rho,u\\}\\qquad\\text{paratodo}i.\\tag{7.2}', 'x_jx_{j+1}\\inE(J)\\quad\\Longleftrightarrow\\quad|O\\cap\\{x_1,\\ldots,x_j\\}|\\text{esimpar}.\\tag{8.5}', 'J=\\{x_jx_{j+1}:|O\\cap\\{x_1,\\ldots,x_j\\}|\\text{esimpar}\\}.']
+  equation tags      EN=66    ES=66    missing_in_es=0 extra_in_es=0 OK
+  citations          EN=18    ES=18    missing_in_es=0 extra_in_es=0 OK
+  lean identifiers   EN=36    ES=36    missing_in_es=0 extra_in_es=0 OK
+  table rows         EN=20    ES=20    missing_in_es=3 extra_in_es=3 DIFF
+      missing: {'`PaperIII`|8,455|0': 1, '`gate_logs/run_2026-08-22_CCS_NOTEBOOK456_resumed/logs/02_build_public_root_clean.log`|0|8,455': 1, '`gate_logs/run_2026-08-22_CCS_NOTEBOOK456_resumed/logs/03_build_query_roots_incremental.log`|0|8,444': 1}
+      extra  : {'`PaperIII`|8.455|0': 1, '`gate_logs/run_2026-08-22_CCS_NOTEBOOK456_resumed/logs/02_build_public_root_clean.log`|0|8.455': 1, '`gate_logs/run_2026-08-22_CCS_NOTEBOOK456_resumed/logs/03_build_query_roots_incremental.log`|0|8.444': 1}
+  list items         EN=30 ES=30 equal=True
+  long paragraphs    sections=63 mismatches=14
+      section 1.1: EN=6 ES=5
+      section 1.3: EN=2 ES=3
+      section 12.2: EN=1 ES=2
+      section 12.5: EN=2 ES=3
+      section 13: EN=71 ES=75
+      section 3.1: EN=1 ES=2
+      section 3.2: EN=2 ES=3
+      section 5.1: EN=1 ES=2
+      section 7.2: EN=1 ES=2
+      section 7.3: EN=2 ES=3
+      section 7.4: EN=1 ES=2
+      section 8.1: EN=0 ES=1
+      section 8.3: EN=8 ES=9
+      section 9: EN=1 ES=2
+
+  ALL STRUCTURAL CHECKS PASS: False
+  failing: ['displays', 'table_rows', 'long_paragraphs']
+
+  -> C:/v14c/20_EVIDENCE/A_BILINGUAL/bilingual_structural_diff.json

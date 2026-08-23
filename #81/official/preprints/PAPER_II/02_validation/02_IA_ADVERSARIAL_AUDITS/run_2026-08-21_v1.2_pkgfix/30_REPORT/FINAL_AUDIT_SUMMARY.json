@@ -1,0 +1,89 @@
+{
+  "spec": "FINAL_RESIDUAL_AUDIT_REQUEST_SPEC.md",
+  "spec_sha256": "2eadd655d6dd9f1d96127c979ba43a0b2d251da7478cd84ba4bb1868e38cb683",
+  "request_id": "PAPER_II_EXTERNAL_PACKAGE_RESIDUAL_v1.0",
+  "paper": "PAPER_II",
+  "target": {
+    "file_count": 245,
+    "file_count_declared": 245,
+    "total_bytes": 3940779,
+    "total_bytes_declared": 3940779,
+    "manifest_sha256": "4b41f7e2e9415ca55514c6997dc6bff4e952b830282f46012c5214b04f688c1e",
+    "manifest_reproduced": true,
+    "manifest_algorithm_published_by_spec": true,
+    "file_entry_mismatches": 0
+  },
+  "run": "run_2026-08-21_v1.2_pkgfix",
+  "audit_class": "EXTERNAL_RESIDUAL_ADVERSARIAL_RE_AUDIT",
+  "audit_date": "2026-08-21",
+  "overall_verdict": "PASS",
+  "verdict_basis": "EXT-PII-M-001 independently closed. Target inventory verifies (245 files, 3,940,779 bytes) INCLUDING the canonical manifest hash 4b41f7e2...8c1e, which was reproducible because the specification publishes the algorithm. All nine protected anchors match. Package regression found no new blocker, major or minor. Reused evidence satisfies byte identity. EXT-P2-I-001 preserved as a NOTE and not represented as repaired.",
+  "controls": {
+    "A_EXT_PII_M_001": "PASS",
+    "B_internal_evidence": "PASS",
+    "C_package_regression": "PASS"
+  },
+  "anchors": {
+    "checked": 9,
+    "matched": 9
+  },
+  "sidecars": {
+    "checked": 40,
+    "verifying": 40
+  },
+  "delta_vs_previous_external_freeze": {
+    "previous_files": 197,
+    "current_files": 245,
+    "changed": 6,
+    "added": 48,
+    "removed": 0,
+    "unauthorized_changes": 0,
+    "unauthorized_additions": 0,
+    "conclusion": "exactly the authorized delta; no deletion; no manuscript or formal change"
+  },
+  "internal_residual_evidence": {
+    "report_md_hash_match": true,
+    "report_pdf_hash_match": true,
+    "R0": "PASS 17/17",
+    "R1": "PASS 58/58",
+    "R2": "PASS, keyed to the unchanged EN Markdown hash, with real instance counts",
+    "R3": "PASS, zero exact and zero near duplicates in all six artifacts",
+    "R4": "PASS and independently cross-checked: the three copied external logs are BYTE-IDENTICAL to this auditor's own logs; exit 0, 8,063 jobs, 16 axiom surfaces, 0 sorryAx, 0 project axioms, 2 reduced footprints",
+    "R5": "PASS, artifacts unchanged",
+    "R6": "PASS, ZIP 42 members all consistent, sidecar matches the spec anchor"
+  },
+  "findings": {
+    "EXT-PII-M-001": "CLOSED",
+    "EXT-P2-I-001": "OPEN (NOTE, preserved)"
+  },
+  "unresolved": {
+    "blocker": 0,
+    "major": 0,
+    "minor": 0,
+    "note": 1
+  },
+  "reuse": {
+    "label": "REUSED_BYTE_IDENTICAL_EXTERNAL_EVIDENCE",
+    "lean_rebuilt": false,
+    "math_rerun": false,
+    "rendered_analysis_rerun": false
+  },
+  "preserved_scope_limitations": [
+    "termination of the repeated-copy process not independently verified",
+    "the discrete-convexity lift to clone classes not verified",
+    "the two-variable orbit reduction tested only through its consequences",
+    "exhaustive enumeration reached only n = 6",
+    "Lean modules outside the seven protocol targets never compiled",
+    "PDFs not independently recompiled from the delivered TeX",
+    "novelty is an evidence-bounded negative result only",
+    "Paper II has never been audited by an adversarial challenger"
+  ],
+  "not_established": [
+    "truth of the headline theorem (only failure to falsify)",
+    "human peer review",
+    "global novelty",
+    "termination and the clone-class lift"
+  ],
+  "prior_report_status": "the earlier PASS_WITH_RESIDUALS run is not overwritten or relabelled and stands against its own hashes",
+  "package_sha256": "recorded in 40_PACKAGE/FINAL_RESIDUAL_AUDIT_PACKAGE.zip.sha256, which is the authority; a hash of the ZIP cannot live inside the ZIP"
+}

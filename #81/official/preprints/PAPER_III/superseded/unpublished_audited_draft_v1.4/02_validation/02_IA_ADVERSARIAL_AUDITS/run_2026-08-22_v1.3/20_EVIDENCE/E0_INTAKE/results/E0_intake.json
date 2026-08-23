@@ -1,0 +1,184 @@
+{
+ "gate": "E0",
+ "paper": "PAPER_III",
+ "target": "preprint_draft_v1.3",
+ "request_sha256": "a0569fa455d70ee3e8af8ddb4362c52863de69d830bc76975bb6f9d22d9e12c0",
+ "excluded_from_target": [
+  "05_formalization/lean_v1.3_candidate"
+ ],
+ "exclusion_basis": "the audit request states lean_v1.3_candidate is a local build workspace, not part of the frozen target, and must not be copied, trusted or used",
+ "target_inventory": {
+  "file_count": 875,
+  "total_bytes": 16502156
+ },
+ "CURRENT_TARGET_SHA256": {
+  "sidecar": "04_integrity/CURRENT_TARGET_SHA256.txt",
+  "entries": 12,
+  "ok": 12,
+  "mismatch": 0,
+  "missing": 0,
+  "resolved_from": ".",
+  "line_endings": "LF",
+  "verifies": true,
+  "detail": []
+ },
+ "manuscript_sidecar": {
+  "sidecar": "01_manuscript/PAPER_III_preprint_draft_v1.3_SHA256.txt",
+  "entries": 6,
+  "ok": 6,
+  "mismatch": 0,
+  "missing": 0,
+  "resolved_from": "01_manuscript",
+  "line_endings": "LF",
+  "verifies": true,
+  "detail": []
+ },
+ "freeze_zip_sidecar": {
+  "sidecar": "05_formalization/lean_v1.3_freeze/PAPER_III_lean_v1.3_freeze.zip.sha256",
+  "entries": 1,
+  "ok": 1,
+  "mismatch": 0,
+  "missing": 0,
+  "resolved_from": "05_formalization/lean_v1.3_freeze",
+  "line_endings": "LF",
+  "verifies": true,
+  "detail": []
+ },
+ "SOURCE_MANIFEST.sha256": {
+  "sidecar": "05_formalization/lean_v1.3_freeze/SOURCE_MANIFEST.sha256",
+  "entries": 707,
+  "ok": 707,
+  "mismatch": 0,
+  "missing": 0,
+  "resolved_from": "05_formalization/lean_v1.3_freeze",
+  "line_endings": "LF",
+  "verifies": true,
+  "detail": []
+ },
+ "PACKAGE_MANIFEST.sha256": {
+  "sidecar": "05_formalization/lean_v1.3_freeze/PACKAGE_MANIFEST.sha256",
+  "entries": 742,
+  "ok": 742,
+  "mismatch": 0,
+  "missing": 0,
+  "resolved_from": "05_formalization/lean_v1.3_freeze",
+  "line_endings": "LF",
+  "verifies": true,
+  "detail": []
+ },
+ "freeze_zip": {
+  "path": "05_formalization/lean_v1.3_freeze/PAPER_III_lean_v1.3_freeze.zip",
+  "sha256": "2eb0ff20a9dae6610a46026355374570d5afdfea89837ea7f9dd29da10b9d300",
+  "bytes": 2851061,
+  "declared_sha256": "2eb0ff20a9dae6610a46026355374570d5afdfea89837ea7f9dd29da10b9d300",
+  "matches_request": true,
+  "entries": 743,
+  "files": 743,
+  "crc_first_bad_member": null,
+  "crc_all_ok": true,
+  "path_traversal": [],
+  "absolute_paths": [],
+  "backslash_names": [],
+  "symlink_entries": [],
+  "build_artifacts": [],
+  "lake_dirs": [],
+  "duplicate_names": [],
+  "top_level": [
+   "Ax2",
+   "BKLO",
+   "Contrib",
+   "ESCAPE_HATCH_ASSESSMENT.md",
+   "FREEZE_METADATA.json",
+   "FREEZE_REPORT.md",
+   "FreezeAxioms.lean",
+   "FreezeAxiomsAX1.lean",
+   "FreezeAxiomsAX1Closure.lean",
+   "FreezeAxiomsAX2.lean",
+   "FreezeAxiomsAuditClosure.lean",
+   "FreezeAxiomsByproducts.lean",
+   "FreezeAxiomsCanonical.lean",
+   "FreezeAxiomsObstructions.lean",
+   "Nibble",
+   "PACKAGE_MANIFEST.sha256",
+   "PAPERIII_SORRYFREE_STATUS.md",
+   "PaperIII",
+   "PaperIII.lean",
+   "SOURCE_MANIFEST.sha256"
+  ],
+  "mentions_v1_2": [],
+  "mentions_v1_3": 0
+ },
+ "stale_labels": [
+  {
+   "file": "02_validation/00_intake/PAPER_III_preprint_draft_v1.2_BASELINE.md",
+   "label": "v1.2",
+   "count": 3
+  },
+  {
+   "file": "02_validation/00_intake/PAPER_III_preprint_draft_v1.2_BASELINE.md",
+   "label": "lean_v1.2",
+   "count": 2
+  },
+  {
+   "file": "02_validation/00_intake/PROTECTED_ELEMENT_INDEX_v1.3_BASELINE.md",
+   "label": "v1.2",
+   "count": 2
+  },
+  {
+   "file": "02_validation/00_intake/SEMANTIC_CHANGE_CONTROL_v1.3.md",
+   "label": "v1.2",
+   "count": 3
+  },
+  {
+   "file": "02_validation/01_INTERNAL_AUDITS/00_CONTROL/AUDIT_PROTOCOL.md",
+   "label": "v1.2",
+   "count": 1
+  },
+  {
+   "file": "02_validation/01_INTERNAL_AUDITS/00_CONTROL/EXTERNAL_FINDINGS_REGRESSION_MATRIX.md",
+   "label": "v1.1",
+   "count": 4
+  },
+  {
+   "file": "02_validation/01_INTERNAL_AUDITS/10_REPORT/INTERNAL_AUDIT_FINAL_REPORT.md",
+   "label": "v1.1",
+   "count": 1
+  },
+  {
+   "file": "02_validation/01_INTERNAL_AUDITS/20_EVIDENCE/G0_STATIC/AUDIT_RECORD.md",
+   "label": "v1.1",
+   "count": 1
+  },
+  {
+   "file": "02_validation/01_INTERNAL_AUDITS/20_EVIDENCE/G0_STATIC/results/internal_audit_static.json",
+   "label": "v1.1",
+   "count": 1
+  },
+  {
+   "file": "02_validation/01_INTERNAL_AUDITS/20_EVIDENCE/G2_MATHEMATICS/results/run.txt",
+   "label": "v1.2",
+   "count": 1
+  },
+  {
+   "file": "05_formalization/lean_v1.3_freeze/FREEZE_REPORT.md",
+   "label": "v1.2",
+   "count": 1
+  },
+  {
+   "file": "CHANGELOG_v1.3.md",
+   "label": "v1.2",
+   "count": 1
+  },
+  {
+   "file": "README.md",
+   "label": "v1.2",
+   "count": 2
+  }
+ ],
+ "auditor_manifest": {
+  "path": "00_CONTROL/TARGET_SHA256.txt",
+  "entries": 875,
+  "sha256_of_manifest": "7178c8bbafc7008f2b13ccf446b4fe568a248337071a4a67bbb304b8a159f74c",
+  "algorithm": "UTF-8, LF-only, '<sha256><two spaces><target-relative posix path>\\n', sorted by path, then SHA-256 of the exact bytes"
+ }
+}

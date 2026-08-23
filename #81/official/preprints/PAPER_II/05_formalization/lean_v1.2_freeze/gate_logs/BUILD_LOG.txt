@@ -1,0 +1,351 @@
+⚠ [8026/8061] Built PaperII.FiniteCover (118s)
+warning: PaperII/FiniteCover.lean:86:0: automatically included section variable(s) unused in theorem `PaperII.feasibleCover_isCompact`:
+  [Fintype κ]
+  [DecidableEq κ]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype κ] [DecidableEq κ] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [8027/8061] Built PaperII.CoverRelabel (18s)
+warning: PaperII/CoverRelabel.lean:28:0: automatically included section variable(s) unused in theorem `PaperII.feasible_transport`:
+  [Fintype κ]
+  [DecidableEq κ]
+  [Fintype κ']
+  [DecidableEq κ']
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype κ] [DecidableEq κ] [Fintype κ'] [DecidableEq κ'] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+✔ [8028/8061] Built PaperII.AsymptoticCorollaries (124s)
+✔ [8029/8061] Built PaperII.Arith (191s)
+ℹ [8030/8061] Built PaperII.AxiomCheckCorollaries (29s)
+info: PaperII/AxiomCheckCorollaries.lean:5:0: 'PaperII.phiTau_max_sandwich' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: PaperII/AxiomCheckCorollaries.lean:6:0: 'PaperII.phiTau_max_le_paperI_bound' depends on axioms: [propext, Quot.sound]
+info: PaperII/AxiomCheckCorollaries.lean:7:0: 'PaperII.odd_sq_emod_24' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: PaperII/AxiomCheckCorollaries.lean:8:0: 'PaperII.phiTau_max_closed' depends on axioms: [propext, Classical.choice, Quot.sound]
+⚠ [8031/8061] Built PaperII.Model (387s)
+warning: PaperII/Model.lean:42:0: automatically included section variable(s) unused in theorem `PaperII.triangleEdges_nonempty`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+✔ [8032/8061] Built PaperII.ConvexSeq (443s)
+✔ [8033/8061] Built Contrib.Submission.GeodesicChordless (468s)
+⚠ [8034/8061] Built PaperII.CloneSimplicial (122s)
+warning: PaperII/CloneSimplicial.lean:23:0: automatically included section variable(s) unused in theorem `PaperII.not_adj_of_isClone`:
+  [Fintype V]
+  [DecidableEq V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] [DecidableEq V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: PaperII/CloneSimplicial.lean:32:0: automatically included section variable(s) unused in theorem `PaperII.isClone_comm`:
+  [Fintype V]
+  [DecidableEq V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] [DecidableEq V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [8035/8061] Built PaperII.VertexCopy (122s)
+warning: PaperII/VertexCopy.lean:27:0: automatically included section variable(s) unused in theorem `PaperII.copyVertex_adj_v`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: PaperII/VertexCopy.lean:33:0: automatically included section variable(s) unused in theorem `PaperII.copyVertex_adj_of_ne`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: PaperII/VertexCopy.lean:38:0: automatically included section variable(s) unused in theorem `PaperII.not_copyVertex_adj`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+✔ [8036/8061] Built PaperII.CompleteSplit (122s)
+✔ [8037/8061] Built PaperII.IsoInvariance (122s)
+✔ [8038/8061] Built Contrib.Submission.Chordal (613s)
+✔ [8039/8061] Built PaperII.EdgeCount (135s)
+✔ [8040/8061] Built PaperII.Chordal (135s)
+⚠ [8041/8061] Built PaperII.L1 (136s)
+warning: PaperII/L1.lean:29:0: automatically included section variable(s) unused in theorem `PaperII.sym2_offdiag_triple`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: PaperII/L1.lean:47:0: automatically included section variable(s) unused in theorem `PaperII.relabel_of_ne`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: PaperII/L1.lean:50:8: automatically included section variable(s) unused in theorem `PaperII.relabel_self`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: PaperII/L1.lean:52:0: automatically included section variable(s) unused in theorem `PaperII.copyCover_pair`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: PaperII/L1.lean:176:0: automatically included section variable(s) unused in theorem `PaperII.copyCover_inUnitBox`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: PaperII/L1.lean:224:25: unused variable `hne`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [8042/8061] Built PaperII.L9Packing (120s)
+warning: PaperII/L9Packing.lean:136:19: This simp argument is unused:
+  Finset.card_erase_of_mem
+
+Hint: Omit it from the simp argument list.
+  simp +decide [̵ ̵F̵i̵n̵s̵e̵t̵.̵c̵a̵r̵d̵_̵e̵r̵a̵s̵e̵_̵o̵f̵_̵m̵e̵m̵,̵ ̵F̵i̵n̵s̵e̵t̵.̵m̵e̵m̵_̵e̵r̵a̵s̵e̵,̵ ̵h̵a̵b̵ ̵]̵[̲F̲i̲n̲s̲e̲t̲.̲m̲e̲m̲_̲e̲r̲a̲s̲e̲,̲ ̲h̲a̲b̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: PaperII/L9Packing.lean:136:45: This simp argument is unused:
+  Finset.mem_erase
+
+Hint: Omit it from the simp argument list.
+  simp +decide [̵ ̵F̵i̵n̵s̵e̵t̵.̵c̵a̵r̵d̵_̵e̵r̵a̵s̵e̵_̵o̵f̵_̵m̵e̵m̵,̵ ̵F̵i̵n̵s̵e̵t̵.̵m̵e̵m̵_̵e̵r̵a̵s̵e̵,̵ ̵h̵a̵b̵ ̵]̵[̲F̲i̲n̲s̲e̲t̲.̲c̲a̲r̲d̲_̲e̲r̲a̲s̲e̲_̲o̲f̲_̲m̲e̲m̲,̲ ̲h̲a̲b̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: PaperII/L9Packing.lean:136:63: This simp argument is unused:
+  hab
+
+Hint: Omit it from the simp argument list.
+  simp +decide [ ̵Finset.card_erase_of_mem, Finset.mem_erase,̵ ̵h̵a̵b̵ ̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: PaperII/L9Packing.lean:148:62: This simp argument is unused:
+  triA
+
+Hint: Omit it from the simp argument list.
+  simp_all +decide [̵ ̵F̵i̵n̵s̵e̵t̵.̵e̵x̵t̵_̵i̵f̵f̵,̵ ̵t̵r̵i̵A̵ ̵]̵[̲F̲i̲n̲s̲e̲t̲.̲e̲x̲t̲_̲i̲f̲f̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: PaperII/L9Packing.lean:170:33: This simp argument is unused:
+  Fintype.elems
+
+Hint: Omit it from the simp argument list.
+  simp +decide [̵ ̵F̵i̵n̵s̵e̵t̵.̵e̵x̵t̵_̵i̵f̵f̵,̵ ̵F̵i̵n̵t̵y̵p̵e̵.̵e̵l̵e̵m̵s̵ ̵]̵[̲F̲i̲n̲s̲e̲t̲.̲e̲x̲t̲_̲i̲f̲f̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [8043/8061] Built PaperII.IsChordal (142s)
+warning: PaperII/IsChordal.lean:30:0: automatically included section variable(s) unused in theorem `PaperII.chordal_induce`:
+  [Fintype V]
+  [DecidableEq V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] [DecidableEq V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [8044/8061] Built PaperII.Dirac (142s)
+warning: PaperII/Dirac.lean:51:0: automatically included section variable(s) unused in theorem `PaperII.isSimplicial_of_rsimplicial`:
+  [Fintype V]
+  [DecidableEq V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] [DecidableEq V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: PaperII/Dirac.lean:60:0: automatically included section variable(s) unused in theorem `PaperII.rsh_of_chordal`:
+  [Fintype V]
+  [DecidableEq V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] [DecidableEq V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: PaperII/Dirac.lean:69:0: automatically included section variable(s) unused in theorem `PaperII.rstep_symm`:
+  [Fintype V]
+  [DecidableEq V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] [DecidableEq V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: PaperII/Dirac.lean:84:0: automatically included section variable(s) unused in theorem `PaperII.rreach_mono`:
+  [Fintype V]
+  [DecidableEq V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] [DecidableEq V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: PaperII/Dirac.lean:92:0: automatically included section variable(s) unused in theorem `PaperII.exists_radj_of_rreach_ne`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: PaperII/Dirac.lean:104:0: automatically included section variable(s) unused in theorem `PaperII.rreach_erase`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: PaperII/Dirac.lean:115:49: This simp argument is unused:
+  RStep
+
+Hint: Omit it from the simp argument list.
+  simp_all +decide ̵[̵ ̵R̵S̵t̵e̵p̵ ̵]̵
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: PaperII/Dirac.lean:117:49: This simp argument is unused:
+  RStep
+
+Hint: Omit it from the simp argument list.
+  simp_all +decide ̵[̵ ̵R̵S̵t̵e̵p̵ ̵]̵
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: PaperII/Dirac.lean:133:0: automatically included section variable(s) unused in theorem `PaperII.rsimplicial_of_erase`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: PaperII/Dirac.lean:188:52: unused variable `hKS`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: PaperII/Dirac.lean:272:0: automatically included section variable(s) unused in theorem `PaperII.rreach_univ_iff`:
+  [DecidableEq V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: PaperII/Dirac.lean:289:0: automatically included section variable(s) unused in theorem `PaperII.exists_two_nonadj_simplicial_of_not_connected`:
+  [Fintype V]
+  [DecidableEq V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] [DecidableEq V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: PaperII/Dirac.lean:314:53: unused variable `huD`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: PaperII/Dirac.lean:326:0: automatically included section variable(s) unused in theorem `PaperII.component_sep`:
+  [Fintype V]
+  [DecidableEq V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] [DecidableEq V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [8045/8061] Built PaperII.L9 (61s)
+warning: PaperII/L9.lean:191:41: This simp argument is unused:
+  SimpleGraph.isNClique_iff
+
+Hint: Omit it from the simp argument list.
+  simp_all +decide ̵[̵ ̵S̵i̵m̵p̵l̵e̵G̵r̵a̵p̵h̵.̵i̵s̵N̵C̵l̵i̵q̵u̵e̵_̵i̵f̵f̵ ̵]̵
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: PaperII/L9.lean:277:42: This simp argument is unused:
+  IsTriangle
+
+Hint: Omit it from the simp argument list.
+  simp_all +decide ̵[̵ ̵I̵s̵T̵r̵i̵a̵n̵g̵l̵e̵ ̵]̵
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: PaperII/L9.lean:280:82: This simp argument is unused:
+  SimpleGraph.isNClique_iff
+
+Hint: Omit it from the simp argument list.
+  simp_all +decide ̵[̵ ̵S̵i̵m̵p̵l̵e̵G̵r̵a̵p̵h̵.̵i̵s̵N̵C̵l̵i̵q̵u̵e̵_̵i̵f̵f̵ ̵]̵
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [8046/8061] Built PaperII.L7 (44s)
+warning: PaperII/L7.lean:76:0: automatically included section variable(s) unused in theorem `PaperII.simplicial_nbhd_is_clique_separator`:
+  [Fintype V]
+  [DecidableEq V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] [DecidableEq V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: PaperII/L7.lean:81:0: automatically included section variable(s) unused in theorem `PaperII.simplicial_in_C_or_nbhd_eq_C`:
+  [Fintype V]
+  [DecidableEq V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] [DecidableEq V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: PaperII/L7.lean:95:5: unused variable `hxy`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [8047/8061] Built PaperII.Dirac1 (231s)
+warning: PaperII/Dirac1.lean:396:0: automatically included section variable(s) unused in theorem `PaperII.minimal_separator_isClique`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+✔ [8048/8061] Built PaperII.CloneCopy (645s)
+✔ [8049/8061] Built PaperII.L10 (650s)
+✔ [8050/8061] Built PaperII.L4 (45s)
+✔ [8051/8061] Built PaperII.L5 (47s)
+✔ [8052/8061] Built PaperII.L2Family (48s)
+✔ [8053/8061] Built PaperII.L3 (66s)
+⚠ [8054/8061] Built PaperII.IsChordalCopy (66s)
+warning: PaperII/IsChordalCopy.lean:37:0: automatically included section variable(s) unused in theorem `PaperII.classCopy_neighbor_mem`:
+  [DecidableEq V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: PaperII/IsChordalCopy.lean:46:0: automatically included section variable(s) unused in theorem `PaperII.classCopy_adj_of_neighborFinset_ne`:
+  [DecidableEq V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: PaperII/IsChordalCopy.lean:57:0: automatically included section variable(s) unused in theorem `PaperII.path_edge_start_eq_getVert_one`:
+  [Fintype V]
+  [DecidableEq V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] [DecidableEq V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: PaperII/IsChordalCopy.lean:82:76: This simp argument is unused:
+  SimpleGraph.Walk.rotate_edges
+
+Hint: Omit it from the simp argument list.
+  simp_all +decide ̵[̵ ̵S̵i̵m̵p̵l̵e̵G̵r̵a̵p̵h̵.̵W̵a̵l̵k̵.̵r̵o̵t̵a̵t̵e̵_̵e̵d̵g̵e̵s̵ ̵]̵
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: PaperII/IsChordalCopy.lean:103:59: This simp argument is unused:
+  SimpleGraph.Walk.edges_append
+
+Hint: Omit it from the simp argument list.
+  simp_all +decide ̵[̵ ̵S̵i̵m̵p̵l̵e̵G̵r̵a̵p̵h̵.̵W̵a̵l̵k̵.̵e̵d̵g̵e̵s̵_̵a̵p̵p̵e̵n̵d̵ ̵]̵
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: PaperII/IsChordalCopy.lean:149:54: This simp argument is unused:
+  List.IsRotated.mem_iff
+
+Hint: Omit it from the simp argument list.
+  simp_all +decide ̵[̵ ̵L̵i̵s̵t̵.̵I̵s̵R̵o̵t̵a̵t̵e̵d̵.̵m̵e̵m̵_̵i̵f̵f̵ ̵]̵
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [8055/8061] Built PaperII.L2 (43s)
+warning: PaperII/L2.lean:191:0: automatically included section variable(s) unused in theorem `PaperII.moveGraph_empty`:
+  [DecidableEq V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+✔ [8056/8061] Built PaperII.CompleteSplitChordal (59s)
+⚠ [8057/8061] Built PaperII.L6 (41s)
+warning: PaperII/L6.lean:38:0: automatically included section variable(s) unused in theorem `PaperII.isClique_neighborFinset_of_simplicial`:
+  [DecidableEq V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+✔ [8058/8061] Built PaperII.L12 (65s)
+✔ [8059/8061] Built PaperII.Unconditional (42s)
+✔ [8060/8061] Built PaperII (42s)
+Build completed successfully (8061 jobs).

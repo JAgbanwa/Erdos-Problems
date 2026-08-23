@@ -1,222 +1,755 @@
 preprints/PAPER_I/
 ├── 01_manuscript/
-│   ├── PAPER_I_preprint_v1.0.md
-│   ├── PAPER_I_preprint_v1.0.pdf
-│   ├── PAPER_I_preprint_v1.0.tex
-│   ├── PAPER_I_preprint_v1.0_es.md
-│   ├── PAPER_I_preprint_v1.0_es.pdf
-│   ├── PAPER_I_preprint_v1.0_es.tex
+│   ├── Figures/
+│   │   ├── fig1_two_phase_packing_en.png
+│   │   ├── fig1_two_phase_packing_en.svg
+│   │   ├── fig1_two_phase_packing_es.png
+│   │   ├── fig1_two_phase_packing_es.svg
+│   │   ├── fig2_three_orbits_en.png
+│   │   ├── fig2_three_orbits_en.svg
+│   │   ├── fig2_three_orbits_es.png
+│   │   └── fig2_three_orbits_es.svg
+│   ├── PAPER_I_preprint_v1.3_CONSISTENCY_REPORT.md
+│   ├── PAPER_I_preprint_v1.3_en.pdf
+│   ├── PAPER_I_preprint_v1.3_en.tex
+│   ├── PAPER_I_preprint_v1.3_es.md
+│   ├── PAPER_I_preprint_v1.3_es.pdf
+│   ├── PAPER_I_preprint_v1.3_es.tex
+│   ├── PAPER_I_preprint_v1.3_SHA256.txt
+│   ├── PAPER_I_preprint_v1.3.md
 │   └── README.md
 ├── 02_validation/
-│   ├── 01_INTERNAL_AUDITS/
-│   │   └── 20_EVIDENCE/
-│   │       ├── ERDOZ81-P1-3ORBIT-01/
-│   │       │   └── audits/
-│   │       │       └── INTERNAL_ADVERSARIAL_AUDIT_v0.1.md
-│   │       ├── ERDOZ81-P1-3ORBIT-SOLVE-01/
-│   │       │   └── audits/
-│   │       │       └── INTERNAL_ADVERSARIAL_AUDIT_v0.1.md
-│   │       ├── ERDOZ81-P1-ASSEMBLY-01/
-│   │       │   └── audits/
-│   │       │       └── ASSEMBLY_AUDIT_v0.1.md
-│   │       ├── ERDOZ81-P1-BOUND-01/
-│   │       │   └── audits/
-│   │       │       └── INTERNAL_ADVERSARIAL_AUDIT_v0.1.md
-│   │       ├── ERDOZ81-P1-BOUND-FALSIFY-01/
-│   │       │   └── audits/
-│   │       │       └── BOUNDARY_FALSIFICATION_v0.1.md
-│   │       ├── ERDOZ81-P1-CONCAVE-01/
-│   │       │   └── audits/
-│   │       │       └── INTERNAL_ADVERSARIAL_AUDIT_v0.1.md
-│   │       ├── ERDOZ81-P1-DEF-01/
-│   │       │   └── audits/
-│   │       │       └── INTERNAL_ADVERSARIAL_AUDIT_v0.1.md
-│   │       ├── ERDOZ81-P1-FRAC-THM-01/
-│   │       │   └── audits/
-│   │       │       ├── CLEAN_CONTEXT_AUDIT_v0.1.md
-│   │       │       └── INTERNAL_ASSEMBLY_AUDIT_v0.1.md
-│   │       ├── ERDOZ81-P1-LIT-01/
-│   │       │   └── audits/
-│   │       │       └── SELF_AUDIT_LITERATURE_TRIAGE_v0.1.md
-│   │       ├── ERDOZ81-P1-LOAD-01/
-│   │       │   └── audits/
-│   │       │       └── INTERNAL_ADVERSARIAL_AUDIT_v0.1.md
-│   │       ├── ERDOZ81-P1-LP-DUALITY-01/
-│   │       │   └── audits/
-│   │       │       └── SELF_AUDIT_FARKAS_v0.2.md
-│   │       ├── ERDOZ81-P1-PHASE1-01/
-│   │       │   └── audits/
-│   │       │       └── INTERNAL_ADVERSARIAL_AUDIT_v0.1.md
-│   │       ├── ERDOZ81-P1-PHASE2-DUAL-01/
-│   │       │   └── audits/
-│   │       │       └── INTERNAL_ADVERSARIAL_AUDIT_v0.1.md
-│   │       ├── ERDOZ81-P1-PROFILE-01/
-│   │       │   └── audits/
-│   │       │       └── INTERNAL_ADVERSARIAL_AUDIT_v0.1.md
-│   │       ├── ERDOZ81-P1-Q0-01/
-│   │       │   └── audits/
-│   │       │       └── INTERNAL_ADVERSARIAL_AUDIT_v0.1.md
-│   │       └── ERDOZ81-P1-SYMMETRY-01/
-│   │           └── audits/
-│   │               └── INTERNAL_ADVERSARIAL_AUDIT_v0.1.md
-│   ├── 02_IA_ADVERSARIAL_AUDITS/
-│   │   ├── 20_EVIDENCE/
-│   │   │   ├── ERDOZ81-P1-ASSEMBLY-01/
-│   │   │   │   └── audits/
-│   │   │   │       └── INDEPENDENT_T4_ASSEMBLY_AUDIT_RECORD_v1.0.pdf
-│   │   │   ├── ERDOZ81-P1-BOUND-01/
-│   │   │   │   └── audits/
-│   │   │   │       └── INDEPENDENT_AUDIT_RECORD_v1.0.pdf
-│   │   │   └── ERDOZ81-P1-FRAC-THM-01/
-│   │   │       ├── audits/
-│   │   │       │   └── INDEPENDENT_AUDIT_RECORD_v1.0.pdf
-│   │   │       └── PAPER_I_EXT_AUDIT_2026-07-10/
-│   │   │           ├── _lib/
-│   │   │           │   ├── package.py
-│   │   │           │   └── pdfgen.py
-│   │   │           ├── scripts/
-│   │   │           │   ├── 01_algebraic_identities/
-│   │   │           │   │   ├── 01_algebraic_identities.py
-│   │   │           │   │   ├── 01_algebraic_identities.zip
-│   │   │           │   │   ├── 01_algebraic_identities.zip.sha256
-│   │   │           │   │   ├── report.md
-│   │   │           │   │   ├── report.pdf
-│   │   │           │   │   └── results.txt
-│   │   │           │   ├── 02_orbit_lp_and_reduction/
-│   │   │           │   │   ├── 02_orbit_lp_and_reduction.py
-│   │   │           │   │   ├── 02_orbit_lp_and_reduction.zip
-│   │   │           │   │   ├── 02_orbit_lp_and_reduction.zip.sha256
-│   │   │           │   │   ├── report.md
-│   │   │           │   │   ├── report.pdf
-│   │   │           │   │   └── results.txt
-│   │   │           │   ├── 03_split_falsification/
-│   │   │           │   │   ├── 03_split_falsification.py
-│   │   │           │   │   ├── 03_split_falsification.zip
-│   │   │           │   │   ├── 03_split_falsification.zip.sha256
-│   │   │           │   │   ├── report.md
-│   │   │           │   │   ├── report.pdf
-│   │   │           │   │   └── results.txt
-│   │   │           │   └── 04_lean_certificate/
-│   │   │           │       ├── 04_lean_certificate.py
-│   │   │           │       ├── 04_lean_certificate.zip
-│   │   │           │       ├── 04_lean_certificate.zip.sha256
-│   │   │           │       ├── independent_axioms_and_exit.txt
-│   │   │           │       ├── independent_build.log
-│   │   │           │       ├── independent_build.sh
-│   │   │           │       ├── report.md
-│   │   │           │       ├── report.pdf
-│   │   │           │       └── results.txt
-│   │   │           ├── ENVIRONMENT.md
-│   │   │           ├── ENVIRONMENT.pdf
-│   │   │           ├── FINAL_AUDIT_REPORT.md
-│   │   │           ├── FINAL_AUDIT_REPORT.pdf
-│   │   │           ├── README.md
-│   │   │           ├── README.pdf
-│   │   │           └── SHA256_MANIFEST.txt
-│   │   └── README.md
-│   ├── 03_CERTIFICATES_AND_ADMISSIONS/
-│   │   └── 20_EVIDENCE/
-│   │       ├── ERDOZ81-P1-3ORBIT-01/
-│   │       │   └── admission/
-│   │       │       └── ADMISSION_RECORD_001.md
-│   │       ├── ERDOZ81-P1-3ORBIT-SOLVE-01/
-│   │       │   └── admission/
-│   │       │       └── ADMISSION_RECORD_001.md
-│   │       ├── ERDOZ81-P1-ASSEMBLY-01/
-│   │       │   ├── EVIDENCE_ADMISSION_RECORD_002.md
-│   │       │   └── INDEPENDENT_T4_ASSEMBLY_AUDIT_EVIDENCE_RECORD_v1.0.md
-│   │       ├── ERDOZ81-P1-BOUND-01/
-│   │       │   ├── certificates/
-│   │       │   │   └── INDEPENDENT_AUDIT_EVIDENCE_RECORD_v1.0.md
-│   │       │   └── EVIDENCE_ADMISSION_RECORD_002.md
-│   │       ├── ERDOZ81-P1-BOUND-FALSIFY-01/
-│   │       │   └── admission/
-│   │       │       └── ADMISSION_RECORD_001.md
-│   │       ├── ERDOZ81-P1-CONCAVE-01/
-│   │       │   └── admission/
-│   │       │       └── ADMISSION_RECORD_001.md
-│   │       ├── ERDOZ81-P1-DEF-01/
-│   │       │   └── admission/
-│   │       │       └── ADMISSION_RECORD_001.md
-│   │       ├── ERDOZ81-P1-FRAC-THM-01/
-│   │       │   ├── EVIDENCE_ADMISSION_RECORD_004.md
-│   │       │   └── INDEPENDENT_AUDIT_EVIDENCE_RECORD_v1.0.md
-│   │       ├── ERDOZ81-P1-LOAD-01/
-│   │       │   └── admission/
-│   │       │       └── ADMISSION_RECORD_001.md
-│   │       ├── ERDOZ81-P1-LP-DUALITY-01/
-│   │       │   └── admission/
-│   │       │       └── ADMISSION_RECORD_001.md
-│   │       ├── ERDOZ81-P1-PHASE1-01/
-│   │       │   └── admission/
-│   │       │       └── ADMISSION_RECORD_001.md
-│   │       ├── ERDOZ81-P1-PHASE2-DUAL-01/
-│   │       │   ├── admission/
-│   │       │   │   └── ADMISSION_RECORD_001.md
-│   │       │   └── certificates/
-│   │       │       └── EXTERNAL_THEOREM_CERTIFICATE_LP_DUALITY_v0.1.md
-│   │       ├── ERDOZ81-P1-PROFILE-01/
-│   │       │   └── admission/
-│   │       │       └── ADMISSION_RECORD_001.md
-│   │       ├── ERDOZ81-P1-Q0-01/
-│   │       │   └── admission/
-│   │       │       └── ADMISSION_RECORD_001.md
-│   │       └── ERDOZ81-P1-SYMMETRY-01/
-│   │           └── admission/
-│   │               └── ADMISSION_RECORD_001.md
-│   ├── 04_FREEZE_AND_CONFORMANCE/
+│   ├── 00_BASELINE_INTERNAL_AUDIT_v1.2/
 │   │   ├── 00_CONTROL/
-│   │   │   ├── FROZEN_SCOPE_MANIFEST_STEP27.md
-│   │   │   ├── STEP27_DOCUMENTATION_RECONCILIATION.md
-│   │   │   └── TARGETED_CONFORMANCE_REVIEW_STEP27.md
-│   │   └── 10_GATES/
-│   │       ├── ERDOZ81-P1-ASSEMBLY-01/
-│   │       │   └── FREEZE_RECORD.md
-│   │       ├── ERDOZ81-P1-BOUND-01/
-│   │       │   └── FREEZE_RECORD.md
-│   │       └── ERDOZ81-P1-FRAC-THM-01/
-│   │           └── FREEZE_RECORD.md
-│   ├── CALCULATION_LEDGER_FINITE_FRACTIONAL_preprint_v1.0.md
-│   ├── MANIFEST.json
-│   ├── README.md
-│   ├── SHA256SUMS.txt
-│   └── VALIDATION_STATUS.md
+│   │   │   ├── AUDIT_INDEX.md
+│   │   │   ├── AUDIT_PROTOCOL.md
+│   │   │   ├── CLAIM_MAP.md
+│   │   │   ├── CONTRIB_SCOPE.md
+│   │   │   ├── ENVIRONMENT.md
+│   │   │   └── OPEN_RISKS.md
+│   │   ├── 10_REPORT/
+│   │   │   ├── INTERNAL_AUDIT_FINAL_REPORT_TEMPLATE.md
+│   │   │   ├── INTERNAL_AUDIT_FINAL_REPORT_TEMPLATE.tex
+│   │   │   ├── INTERNAL_AUDIT_FINAL_REPORT.md
+│   │   │   ├── INTERNAL_AUDIT_FINAL_REPORT.pdf
+│   │   │   ├── INTERNAL_AUDIT_FINAL_REPORT.tex
+│   │   │   ├── INTERNAL_AUDIT_SUMMARY.json
+│   │   │   └── README.md
+│   │   ├── 20_EVIDENCE/
+│   │   │   ├── G0_STATIC/
+│   │   │   │   ├── results/
+│   │   │   │   │   ├── run.txt
+│   │   │   │   │   └── summary.json
+│   │   │   │   ├── AUDIT_RECORD.md
+│   │   │   │   ├── COMMAND.txt
+│   │   │   │   ├── internal_static_checks.py
+│   │   │   │   └── SHA256_MANIFEST.txt
+│   │   │   ├── G1_CLAIMS/
+│   │   │   │   ├── AUDIT_RECORD.md
+│   │   │   │   └── SHA256_MANIFEST.txt
+│   │   │   ├── G2_MATHEMATICS/
+│   │   │   │   ├── results/
+│   │   │   │   │   ├── run.txt
+│   │   │   │   │   └── summary.json
+│   │   │   │   ├── audit_math.py
+│   │   │   │   ├── AUDIT_RECORD.md
+│   │   │   │   ├── COMMAND.txt
+│   │   │   │   └── SHA256_MANIFEST.txt
+│   │   │   ├── G3_FORMAL_CONFORMANCE/
+│   │   │   │   ├── AUDIT_RECORD.md
+│   │   │   │   └── SHA256_MANIFEST.txt
+│   │   │   ├── G4_RECORDED_BUILD/
+│   │   │   │   ├── AUDIT_RECORD.md
+│   │   │   │   └── SHA256_MANIFEST.txt
+│   │   │   ├── G5_BILINGUAL/
+│   │   │   │   ├── AUDIT_RECORD.md
+│   │   │   │   └── SHA256_MANIFEST.txt
+│   │   │   ├── G6_TEX_PDF/
+│   │   │   │   ├── results/
+│   │   │   │   │   └── QA_SUMMARY.txt
+│   │   │   │   ├── AUDIT_RECORD.md
+│   │   │   │   ├── COMMANDS.txt
+│   │   │   │   └── SHA256_MANIFEST.txt
+│   │   │   ├── G7_PRIOR_ART/
+│   │   │   │   ├── AUDIT_RECORD.md
+│   │   │   │   └── SHA256_MANIFEST.txt
+│   │   │   ├── G8_PACKAGE/
+│   │   │   │   ├── AUDIT_RECORD.md
+│   │   │   │   └── SHA256_MANIFEST.txt
+│   │   │   └── README.md
+│   │   └── 30_PACKAGE/
+│   │       ├── INTERNAL_AUDIT_PACKAGE.zip
+│   │       ├── INTERNAL_AUDIT_PACKAGE.zip.sha256
+│   │       ├── INTERNAL_AUDIT_SHA256.txt
+│   │       └── README.md
+│   ├── 00_intake/
+│   │   ├── ADVERSARIAL_AI_AUDIT_HANDOFF.md
+│   │   ├── CHANGELOG_v1.1.4_to_v1.1.5.md
+│   │   ├── EXTERNAL_AUDIT_v1.2_FINAL_REPORT.md
+│   │   ├── PAPER_I_preprint_v1.1.5_near_final_editorial_en.md
+│   │   └── SEMANTIC_INTEGRITY_REPORT_v1.1.5.md
+│   ├── 01_INTERNAL_AUDITS/
+│   │   ├── 00_CONTROL/
+│   │   │   ├── AUDIT_INDEX.md
+│   │   │   ├── AUDIT_PROTOCOL.md
+│   │   │   ├── CLAIM_MAP.md
+│   │   │   ├── CONTRIB_SCOPE.md
+│   │   │   ├── ENVIRONMENT.md
+│   │   │   └── OPEN_RISKS.md
+│   │   ├── 10_REPORT/
+│   │   │   ├── renders/
+│   │   │   │   ├── page-1.png
+│   │   │   │   └── page-2.png
+│   │   │   ├── INTERNAL_AUDIT_FINAL_REPORT_lualatex_pass2.log
+│   │   │   ├── INTERNAL_AUDIT_FINAL_REPORT_TEMPLATE.md
+│   │   │   ├── INTERNAL_AUDIT_FINAL_REPORT_TEMPLATE.tex
+│   │   │   ├── INTERNAL_AUDIT_FINAL_REPORT.md
+│   │   │   ├── INTERNAL_AUDIT_FINAL_REPORT.pdf
+│   │   │   ├── INTERNAL_AUDIT_FINAL_REPORT.tex
+│   │   │   ├── INTERNAL_AUDIT_SUMMARY.json
+│   │   │   └── README.md
+│   │   ├── 20_EVIDENCE/
+│   │   │   ├── G0_STATIC/
+│   │   │   │   ├── results/
+│   │   │   │   │   ├── run.txt
+│   │   │   │   │   └── summary.json
+│   │   │   │   ├── AUDIT_RECORD.md
+│   │   │   │   ├── COMMAND.txt
+│   │   │   │   ├── internal_static_checks.py
+│   │   │   │   └── SHA256_MANIFEST.txt
+│   │   │   ├── G1_CLAIMS/
+│   │   │   │   ├── AUDIT_RECORD.md
+│   │   │   │   └── SHA256_MANIFEST.txt
+│   │   │   ├── G2_MATHEMATICS/
+│   │   │   │   ├── results/
+│   │   │   │   │   ├── run.txt
+│   │   │   │   │   └── summary.json
+│   │   │   │   ├── audit_math.py
+│   │   │   │   ├── AUDIT_RECORD.md
+│   │   │   │   ├── COMMAND.txt
+│   │   │   │   └── SHA256_MANIFEST.txt
+│   │   │   ├── G3_FORMAL_CONFORMANCE/
+│   │   │   │   ├── AUDIT_RECORD.md
+│   │   │   │   └── SHA256_MANIFEST.txt
+│   │   │   ├── G4_RECORDED_BUILD/
+│   │   │   │   ├── AUDIT_RECORD.md
+│   │   │   │   └── SHA256_MANIFEST.txt
+│   │   │   ├── G5_BILINGUAL/
+│   │   │   │   ├── audit_duplicates.py
+│   │   │   │   ├── AUDIT_RECORD.md
+│   │   │   │   ├── COMMAND.txt
+│   │   │   │   ├── duplicate_audit_results.json
+│   │   │   │   └── SHA256_MANIFEST.txt
+│   │   │   ├── G6_TEX_PDF/
+│   │   │   │   ├── results/
+│   │   │   │   │   ├── renders/
+│   │   │   │   │   │   ├── en/
+│   │   │   │   │   │   │   ├── page-01.png
+│   │   │   │   │   │   │   ├── page-02.png
+│   │   │   │   │   │   │   ├── page-03.png
+│   │   │   │   │   │   │   ├── page-04.png
+│   │   │   │   │   │   │   ├── page-05.png
+│   │   │   │   │   │   │   ├── page-06.png
+│   │   │   │   │   │   │   ├── page-07.png
+│   │   │   │   │   │   │   ├── page-08.png
+│   │   │   │   │   │   │   ├── page-09.png
+│   │   │   │   │   │   │   ├── page-10.png
+│   │   │   │   │   │   │   ├── page-11.png
+│   │   │   │   │   │   │   ├── page-12.png
+│   │   │   │   │   │   │   ├── page-13.png
+│   │   │   │   │   │   │   ├── page-14.png
+│   │   │   │   │   │   │   ├── page-15.png
+│   │   │   │   │   │   │   ├── page-16.png
+│   │   │   │   │   │   │   ├── page-17.png
+│   │   │   │   │   │   │   ├── page-18.png
+│   │   │   │   │   │   │   └── page-19.png
+│   │   │   │   │   │   ├── es/
+│   │   │   │   │   │   │   ├── page-01.png
+│   │   │   │   │   │   │   ├── page-02.png
+│   │   │   │   │   │   │   ├── page-03.png
+│   │   │   │   │   │   │   ├── page-04.png
+│   │   │   │   │   │   │   ├── page-05.png
+│   │   │   │   │   │   │   ├── page-06.png
+│   │   │   │   │   │   │   ├── page-07.png
+│   │   │   │   │   │   │   ├── page-08.png
+│   │   │   │   │   │   │   ├── page-09.png
+│   │   │   │   │   │   │   ├── page-10.png
+│   │   │   │   │   │   │   ├── page-11.png
+│   │   │   │   │   │   │   ├── page-12.png
+│   │   │   │   │   │   │   ├── page-13.png
+│   │   │   │   │   │   │   ├── page-14.png
+│   │   │   │   │   │   │   ├── page-15.png
+│   │   │   │   │   │   │   ├── page-16.png
+│   │   │   │   │   │   │   ├── page-17.png
+│   │   │   │   │   │   │   ├── page-18.png
+│   │   │   │   │   │   │   ├── page-19.png
+│   │   │   │   │   │   │   └── page-20.png
+│   │   │   │   │   │   ├── en_contact_1.jpg
+│   │   │   │   │   │   ├── en_contact_2.jpg
+│   │   │   │   │   │   ├── en_contact_3.jpg
+│   │   │   │   │   │   ├── en_contact_4.jpg
+│   │   │   │   │   │   ├── es_contact_1.jpg
+│   │   │   │   │   │   ├── es_contact_2.jpg
+│   │   │   │   │   │   ├── es_contact_3.jpg
+│   │   │   │   │   │   └── es_contact_4.jpg
+│   │   │   │   │   ├── PAPER_I_preprint_draft_v1.3_en_lualatex_pass2.log
+│   │   │   │   │   ├── PAPER_I_preprint_draft_v1.3_es_lualatex_pass2.log
+│   │   │   │   │   └── QA_SUMMARY.txt
+│   │   │   │   ├── AUDIT_RECORD.md
+│   │   │   │   ├── COMMANDS.txt
+│   │   │   │   └── SHA256_MANIFEST.txt
+│   │   │   ├── G7_PRIOR_ART/
+│   │   │   │   ├── AUDIT_RECORD.md
+│   │   │   │   └── SHA256_MANIFEST.txt
+│   │   │   ├── G8_PACKAGE/
+│   │   │   │   ├── AUDIT_RECORD.md
+│   │   │   │   └── SHA256_MANIFEST.txt
+│   │   │   └── README.md
+│   │   ├── 30_PACKAGE/
+│   │   │   ├── INTERNAL_AUDIT_PACKAGE.zip
+│   │   │   ├── INTERNAL_AUDIT_PACKAGE.zip.sha256
+│   │   │   ├── INTERNAL_AUDIT_SHA256.txt
+│   │   │   └── README.md
+│   │   └── residual_run_2026-08-21_v1.3_pkgfix/
+│   │       ├── 00_CONTROL/
+│   │       │   └── AUDIT_PROTOCOL.md
+│   │       ├── 20_EVIDENCE/
+│   │       │   ├── R0_PACKAGE_FIX/
+│   │       │   │   ├── results/
+│   │       │   │   │   ├── INPUT_INVENTORY.json
+│   │       │   │   │   ├── summary.json
+│   │       │   │   │   └── TARGET_FREEZE_MANIFEST.sha256
+│   │       │   │   ├── AUDIT_RECORD.md
+│   │       │   │   ├── residual_checks.py
+│   │       │   │   └── SHA256_MANIFEST.txt
+│   │       │   ├── R1_STATIC/
+│   │       │   │   ├── results/
+│   │       │   │   │   ├── run.txt
+│   │       │   │   │   └── summary.json
+│   │       │   │   ├── AUDIT_RECORD.md
+│   │       │   │   ├── internal_static_checks.py
+│   │       │   │   └── SHA256_MANIFEST.txt
+│   │       │   ├── R2_MATHEMATICS/
+│   │       │   │   ├── results/
+│   │       │   │   │   ├── run.txt
+│   │       │   │   │   └── summary.json
+│   │       │   │   ├── audit_math.py
+│   │       │   │   ├── AUDIT_RECORD.md
+│   │       │   │   └── SHA256_MANIFEST.txt
+│   │       │   ├── R3_DUPLICATES/
+│   │       │   │   ├── results/
+│   │       │   │   │   └── summary.json
+│   │       │   │   ├── audit_duplicates.py
+│   │       │   │   ├── AUDIT_RECORD.md
+│   │       │   │   └── SHA256_MANIFEST.txt
+│   │       │   ├── R4_FORMAL_REUSE/
+│   │       │   │   ├── results/
+│   │       │   │   │   ├── AXIOMS_EXIT.txt
+│   │       │   │   │   ├── AXIOMS_REPORT.txt
+│   │       │   │   │   ├── BUILD_EXIT.txt
+│   │       │   │   │   ├── BUILD_LOG.txt
+│   │       │   │   │   ├── ESCAPE_HATCH_SCAN.txt
+│   │       │   │   │   └── summary.json
+│   │       │   │   ├── AUDIT_RECORD.md
+│   │       │   │   └── SHA256_MANIFEST.txt
+│   │       │   ├── R5_ARTIFACTS/
+│   │       │   │   ├── results/
+│   │       │   │   │   ├── renders/
+│   │       │   │   │   │   ├── en/
+│   │       │   │   │   │   │   ├── page-01.png
+│   │       │   │   │   │   │   ├── page-02.png
+│   │       │   │   │   │   │   ├── page-03.png
+│   │       │   │   │   │   │   ├── page-04.png
+│   │       │   │   │   │   │   ├── page-05.png
+│   │       │   │   │   │   │   ├── page-06.png
+│   │       │   │   │   │   │   ├── page-07.png
+│   │       │   │   │   │   │   ├── page-08.png
+│   │       │   │   │   │   │   ├── page-09.png
+│   │       │   │   │   │   │   ├── page-10.png
+│   │       │   │   │   │   │   ├── page-11.png
+│   │       │   │   │   │   │   ├── page-12.png
+│   │       │   │   │   │   │   ├── page-13.png
+│   │       │   │   │   │   │   ├── page-14.png
+│   │       │   │   │   │   │   ├── page-15.png
+│   │       │   │   │   │   │   ├── page-16.png
+│   │       │   │   │   │   │   ├── page-17.png
+│   │       │   │   │   │   │   ├── page-18.png
+│   │       │   │   │   │   │   └── page-19.png
+│   │       │   │   │   │   ├── es/
+│   │       │   │   │   │   │   ├── page-01.png
+│   │       │   │   │   │   │   ├── page-02.png
+│   │       │   │   │   │   │   ├── page-03.png
+│   │       │   │   │   │   │   ├── page-04.png
+│   │       │   │   │   │   │   ├── page-05.png
+│   │       │   │   │   │   │   ├── page-06.png
+│   │       │   │   │   │   │   ├── page-07.png
+│   │       │   │   │   │   │   ├── page-08.png
+│   │       │   │   │   │   │   ├── page-09.png
+│   │       │   │   │   │   │   ├── page-10.png
+│   │       │   │   │   │   │   ├── page-11.png
+│   │       │   │   │   │   │   ├── page-12.png
+│   │       │   │   │   │   │   ├── page-13.png
+│   │       │   │   │   │   │   ├── page-14.png
+│   │       │   │   │   │   │   ├── page-15.png
+│   │       │   │   │   │   │   ├── page-16.png
+│   │       │   │   │   │   │   ├── page-17.png
+│   │       │   │   │   │   │   ├── page-18.png
+│   │       │   │   │   │   │   ├── page-19.png
+│   │       │   │   │   │   │   └── page-20.png
+│   │       │   │   │   │   ├── contact_en.jpg
+│   │       │   │   │   │   └── contact_es.jpg
+│   │       │   │   │   ├── pdffonts_en.txt
+│   │       │   │   │   ├── pdffonts_es.txt
+│   │       │   │   │   ├── pdfinfo_en.txt
+│   │       │   │   │   ├── pdfinfo_es.txt
+│   │       │   │   │   └── summary.json
+│   │       │   │   ├── AUDIT_RECORD.md
+│   │       │   │   ├── make_contact_sheets.py
+│   │       │   │   └── SHA256_MANIFEST.txt
+│   │       │   └── R6_SEAL_AUDIT_RECORD.md
+│   │       ├── 30_REPORT/
+│   │       │   ├── renders/
+│   │       │   │   ├── page-1.png
+│   │       │   │   └── page-2.png
+│   │       │   ├── INTERNAL_RESIDUAL_AUDIT_REPORT_lualatex_pass2.log
+│   │       │   ├── INTERNAL_RESIDUAL_AUDIT_REPORT.md
+│   │       │   ├── INTERNAL_RESIDUAL_AUDIT_REPORT.pdf
+│   │       │   ├── INTERNAL_RESIDUAL_AUDIT_REPORT.tex
+│   │       │   └── INTERNAL_RESIDUAL_AUDIT_SUMMARY.json
+│   │       └── 40_PACKAGE/
+│   │           ├── INTERNAL_RESIDUAL_AUDIT_PACKAGE.zip
+│   │           ├── INTERNAL_RESIDUAL_AUDIT_PACKAGE.zip.sha256
+│   │           └── INTERNAL_RESIDUAL_AUDIT_SHA256.txt
+│   ├── 02_IA_ADVERSARIAL_AUDITS/
+│   │   ├── run_2026-08-21_v1.3/
+│   │   │   ├── 00_REQUEST/
+│   │   │   │   ├── AUDITOR_DECLARATION.md
+│   │   │   │   ├── INPUT_FREEZE_MANIFEST.sha256
+│   │   │   │   ├── INPUT_INVENTORY.json
+│   │   │   │   ├── RESIDUAL_AUDIT_REQUEST_SPEC.md
+│   │   │   │   └── RESIDUAL_AUDIT_REQUEST_SPEC.md.sha256
+│   │   │   ├── 10_CONTROL/
+│   │   │   │   ├── AUDIT_INDEX.md
+│   │   │   │   ├── ENVIRONMENT.md
+│   │   │   │   ├── FINDINGS.csv
+│   │   │   │   ├── GATE_STATUS.json
+│   │   │   │   └── OPEN_RISKS.md
+│   │   │   ├── 20_EVIDENCE/
+│   │   │   │   ├── CORRECTIONS_VALIDATION/
+│   │   │   │   │   ├── results/
+│   │   │   │   │   │   └── es_mirror_and_selfcontainment.json
+│   │   │   │   │   ├── scripts/
+│   │   │   │   │   │   └── es_mirror_and_selfcontainment.py
+│   │   │   │   │   └── SHA256_MANIFEST.txt
+│   │   │   │   ├── G0_TARGET_FREEZE/
+│   │   │   │   │   ├── results/
+│   │   │   │   │   ├── scripts/
+│   │   │   │   │   └── SHA256_MANIFEST.txt
+│   │   │   │   ├── H_LEAN_REUSE/
+│   │   │   │   │   ├── results/
+│   │   │   │   │   │   ├── BYTE_IDENTITY_PROOF.txt
+│   │   │   │   │   │   ├── REUSED_BYTE_IDENTICAL_EXTERNAL_EVIDENCE_01_lake_update_cache_get.log
+│   │   │   │   │   │   ├── REUSED_BYTE_IDENTICAL_EXTERNAL_EVIDENCE_02_lake_build_protocol_9_1.log
+│   │   │   │   │   │   ├── REUSED_BYTE_IDENTICAL_EXTERNAL_EVIDENCE_03_FreezeAxioms_run.log
+│   │   │   │   │   │   └── REUSED_BYTE_IDENTICAL_EXTERNAL_EVIDENCE_04_independent_axiom_query.log
+│   │   │   │   │   ├── scripts/
+│   │   │   │   │   └── SHA256_MANIFEST.txt
+│   │   │   │   ├── I_CITATIONS_NOVELTY/
+│   │   │   │   │   ├── results/
+│   │   │   │   │   │   ├── CEO_1994_author_hosted_scan_OWNER_SUPPLIED.pdf
+│   │   │   │   │   │   ├── CEO_3over16_VERIFICATION.txt
+│   │   │   │   │   │   ├── CEO_scan_page1_pp21-22.png
+│   │   │   │   │   │   └── CEO_scan_page2_pp23-24.png
+│   │   │   │   │   ├── scripts/
+│   │   │   │   │   └── SHA256_MANIFEST.txt
+│   │   │   │   ├── L_BILINGUAL_DUPLICATES/
+│   │   │   │   │   ├── results/
+│   │   │   │   │   │   ├── duplicate_scan.json
+│   │   │   │   │   │   └── duplicate_scan.stderr.txt
+│   │   │   │   │   ├── scripts/
+│   │   │   │   │   │   └── duplicate_scan.py
+│   │   │   │   │   └── SHA256_MANIFEST.txt
+│   │   │   │   ├── M_PACKAGE_INTEGRITY/
+│   │   │   │   │   ├── results/
+│   │   │   │   │   ├── scripts/
+│   │   │   │   │   └── SHA256_MANIFEST.txt
+│   │   │   │   ├── MATH_REGRESSION/
+│   │   │   │   │   ├── results/
+│   │   │   │   │   │   ├── regression_v13.json
+│   │   │   │   │   │   ├── regression_v13.stderr.txt
+│   │   │   │   │   │   └── theorem_enumeration_v13.json
+│   │   │   │   │   ├── scripts/
+│   │   │   │   │   │   ├── regression_v13.py
+│   │   │   │   │   │   └── theorem_enumeration_v13.py
+│   │   │   │   │   └── SHA256_MANIFEST.txt
+│   │   │   │   └── PDF_PAGE_QA/
+│   │   │   │       ├── results/
+│   │   │   │       │   └── page_duplicate_and_qa.json
+│   │   │   │       ├── scripts/
+│   │   │   │       └── SHA256_MANIFEST.txt
+│   │   │   ├── 30_REPORT/
+│   │   │   │   ├── ADDENDUM_XP-004.md
+│   │   │   │   ├── ADDENDUM_XP-004.md.sha256
+│   │   │   │   ├── FINAL_AUDIT_REPORT.aux
+│   │   │   │   ├── FINAL_AUDIT_REPORT.log
+│   │   │   │   ├── FINAL_AUDIT_REPORT.md
+│   │   │   │   ├── FINAL_AUDIT_REPORT.pdf
+│   │   │   │   ├── FINAL_AUDIT_REPORT.tex
+│   │   │   │   └── FINAL_AUDIT_SUMMARY.json
+│   │   │   └── 40_PACKAGE/
+│   │   │       ├── PACKAGE_MANIFEST.json
+│   │   │       ├── RESIDUAL_AUDIT_PACKAGE.zip
+│   │   │       ├── RESIDUAL_AUDIT_PACKAGE.zip.sha256
+│   │   │       ├── SHA256_MANIFEST.txt
+│   │   │       └── TREE.txt
+│   │   └── run_2026-08-21_v1.3_pkgfix/
+│   │       ├── 00_REQUEST/
+│   │       │   ├── FINAL_RESIDUAL_AUDIT_REQUEST_SPEC.md
+│   │       │   ├── FINAL_RESIDUAL_AUDIT_REQUEST_SPEC.md.sha256
+│   │       │   ├── INPUT_TARGET_INVENTORY.json
+│   │       │   └── INPUT_TARGET_MANIFEST.sha256
+│   │       ├── 10_CONTROL/
+│   │       │   ├── AUDIT_INDEX.md
+│   │       │   ├── AUDITOR_DECLARATION.md
+│   │       │   ├── ENVIRONMENT.md
+│   │       │   ├── FINDINGS.csv
+│   │       │   └── GATE_STATUS.json
+│   │       ├── 20_EVIDENCE/
+│   │       │   ├── BYTE_IDENTITY_REUSE/
+│   │       │   │   ├── results/
+│   │       │   │   │   └── REUSE_RECORD.txt
+│   │       │   │   ├── scripts/
+│   │       │   │   └── SHA256_MANIFEST.txt
+│   │       │   ├── PACKAGE_REGRESSION/
+│   │       │   │   ├── results/
+│   │       │   │   │   └── control_C.json
+│   │       │   │   ├── scripts/
+│   │       │   │   │   └── control_C.py
+│   │       │   │   └── SHA256_MANIFEST.txt
+│   │       │   ├── RES_V13_001_SCRATCH/
+│   │       │   │   ├── results/
+│   │       │   │   │   └── controls_A_B.json
+│   │       │   │   ├── scripts/
+│   │       │   │   │   └── controls_A_B.py
+│   │       │   │   └── SHA256_MANIFEST.txt
+│   │       │   ├── RES_V13_002_CHANGELOG/
+│   │       │   │   ├── results/
+│   │       │   │   │   └── controls_A_B.json
+│   │       │   │   ├── scripts/
+│   │       │   │   └── SHA256_MANIFEST.txt
+│   │       │   └── TARGET_VERIFICATION/
+│   │       │       ├── results/
+│   │       │       │   └── manifest_comparison.json
+│   │       │       ├── scripts/
+│   │       │       │   └── compare_manifests.py
+│   │       │       └── SHA256_MANIFEST.txt
+│   │       ├── 30_REPORT/
+│   │       │   ├── ADDENDUM_XP-001.md
+│   │       │   ├── ADDENDUM_XP-001.md.sha256
+│   │       │   ├── FINAL_AUDIT_REPORT.aux
+│   │       │   ├── FINAL_AUDIT_REPORT.log
+│   │       │   ├── FINAL_AUDIT_REPORT.md
+│   │       │   ├── FINAL_AUDIT_REPORT.pdf
+│   │       │   ├── FINAL_AUDIT_REPORT.tex
+│   │       │   ├── FINAL_AUDIT_SUMMARY.json
+│   │       │   └── hdr.tex
+│   │       └── 40_PACKAGE/
+│   │           ├── FINAL_RESIDUAL_AUDIT_PACKAGE.zip
+│   │           ├── FINAL_RESIDUAL_AUDIT_PACKAGE.zip.sha256
+│   │           ├── PACKAGE_MANIFEST.json
+│   │           ├── SHA256_MANIFEST.txt
+│   │           └── TREE.txt
+│   └── README.md
 ├── 03_reproducibility/
-│   ├── BUILD.md
-│   ├── BUILD_VERIFICATION.md
-│   ├── ENVIRONMENT.md
+│   ├── PAPER_I_preprint_v1.3_en_pass1.log
+│   ├── PAPER_I_preprint_v1.3_en_pass2.log
+│   ├── PAPER_I_preprint_v1.3_es_pass1.log
+│   ├── PAPER_I_preprint_v1.3_es_pass2.log
 │   └── README.md
 ├── 04_integrity/
-│   ├── PROVENANCE.md
+│   ├── EXTERNAL_AUDIT_CORRECTION_MATRIX.md
+│   ├── EXTERNAL_AUDIT_V1.3_RESIDUAL_MATRIX.md
+│   ├── INITIALIZATION_DIFF.md
 │   ├── README.md
-│   ├── RELEASE_MANIFEST.json
+│   ├── SEMANTIC_INTEGRITY_REPORT_v1.3.md
 │   └── SHA256SUMS.txt
 ├── 05_formalization/
-│   ├── lean/
+│   ├── lean_v1.2_freeze/
+│   │   ├── AristotleLean/
+│   │   │   └── Basic.lean
+│   │   ├── Contrib/
+│   │   │   ├── Submission/
+│   │   │   │   ├── FarkasLP.lean
+│   │   │   │   ├── FgConeClosed.lean
+│   │   │   │   └── README.md
+│   │   │   ├── FgConeClosed.lean
+│   │   │   ├── LpStability.lean
+│   │   │   ├── PaperISharp.lean
+│   │   │   ├── Probes.lean
+│   │   │   └── TuzaSplitCentered.lean
 │   │   ├── gate_logs/
-│   │   │   ├── FiniteLPDuality_compile.log
-│   │   │   ├── lake_build_PaperI_full.log
-│   │   │   └── print_axioms_residual_and_main.log
+│   │   │   ├── AXIOMS_EXIT.txt
+│   │   │   ├── AXIOMS_REPORT.txt
+│   │   │   ├── BUILD_EXIT.txt
+│   │   │   ├── BUILD_LOG.txt
+│   │   │   └── ESCAPE_HATCH_SCAN.txt
 │   │   ├── PaperI/
 │   │   │   ├── PaperI_Arith.lean
 │   │   │   └── PaperI_Statement.lean
-│   │   ├── .gitignore
+│   │   ├── AristotleLean.lean
 │   │   ├── DeltaNu.lean
 │   │   ├── FiniteLPDuality.lean
+│   │   ├── FREEZE_METADATA.json
+│   │   ├── FREEZE_REPORT.md
+│   │   ├── FreezeAxioms.lean
 │   │   ├── lake-manifest.json
 │   │   ├── lakefile.toml
 │   │   ├── lean-toolchain
+│   │   ├── PACKAGE_MANIFEST.sha256
+│   │   ├── PAPER_I_lean_v1.2_freeze.zip
+│   │   ├── PAPER_I_lean_v1.2_freeze.zip.sha256
+│   │   ├── PaperI_Complete.lean
 │   │   ├── README.md
-│   │   ├── README_EVIDENCE.md
+│   │   ├── REPRODUCTION.md
+│   │   ├── SOURCE_MANIFEST.sha256
+│   │   ├── TREE.txt
 │   │   └── WCDH_check.lean
+│   └── README.md
+├── figures/
+│   ├── fig1_two_phase_packing_en.png
+│   ├── fig1_two_phase_packing_en.svg
+│   ├── fig1_two_phase_packing_es.png
+│   ├── fig1_two_phase_packing_es.svg
+│   ├── fig2_three_orbits_en.png
+│   ├── fig2_three_orbits_en.svg
+│   ├── fig2_three_orbits_es.png
+│   └── fig2_three_orbits_es.svg
+├── superseded/
+│   ├── preprint_v1.0/
+│   │   ├── 01_manuscript/
+│   │   │   ├── PAPER_I_preprint_v1.0_es.md
+│   │   │   ├── PAPER_I_preprint_v1.0_es.pdf
+│   │   │   ├── PAPER_I_preprint_v1.0_es.tex
+│   │   │   ├── PAPER_I_preprint_v1.0.md
+│   │   │   ├── PAPER_I_preprint_v1.0.pdf
+│   │   │   ├── PAPER_I_preprint_v1.0.tex
+│   │   │   └── README.md
+│   │   ├── 02_validation/
+│   │   │   ├── 01_INTERNAL_AUDITS/
+│   │   │   │   └── 20_EVIDENCE/
+│   │   │   │       ├── ERDOZ81-P1-3ORBIT-01/
+│   │   │   │       │   └── audits/
+│   │   │   │       │       └── INTERNAL_ADVERSARIAL_AUDIT_v0.1.md
+│   │   │   │       ├── ERDOZ81-P1-3ORBIT-SOLVE-01/
+│   │   │   │       │   └── audits/
+│   │   │   │       │       └── INTERNAL_ADVERSARIAL_AUDIT_v0.1.md
+│   │   │   │       ├── ERDOZ81-P1-ASSEMBLY-01/
+│   │   │   │       │   └── audits/
+│   │   │   │       │       └── ASSEMBLY_AUDIT_v0.1.md
+│   │   │   │       ├── ERDOZ81-P1-BOUND-01/
+│   │   │   │       │   └── audits/
+│   │   │   │       │       └── INTERNAL_ADVERSARIAL_AUDIT_v0.1.md
+│   │   │   │       ├── ERDOZ81-P1-BOUND-FALSIFY-01/
+│   │   │   │       │   └── audits/
+│   │   │   │       │       └── BOUNDARY_FALSIFICATION_v0.1.md
+│   │   │   │       ├── ERDOZ81-P1-CONCAVE-01/
+│   │   │   │       │   └── audits/
+│   │   │   │       │       └── INTERNAL_ADVERSARIAL_AUDIT_v0.1.md
+│   │   │   │       ├── ERDOZ81-P1-DEF-01/
+│   │   │   │       │   └── audits/
+│   │   │   │       │       └── INTERNAL_ADVERSARIAL_AUDIT_v0.1.md
+│   │   │   │       ├── ERDOZ81-P1-FRAC-THM-01/
+│   │   │   │       │   └── audits/
+│   │   │   │       │       ├── CLEAN_CONTEXT_AUDIT_v0.1.md
+│   │   │   │       │       └── INTERNAL_ASSEMBLY_AUDIT_v0.1.md
+│   │   │   │       ├── ERDOZ81-P1-LIT-01/
+│   │   │   │       │   └── audits/
+│   │   │   │       │       └── SELF_AUDIT_LITERATURE_TRIAGE_v0.1.md
+│   │   │   │       ├── ERDOZ81-P1-LOAD-01/
+│   │   │   │       │   └── audits/
+│   │   │   │       │       └── INTERNAL_ADVERSARIAL_AUDIT_v0.1.md
+│   │   │   │       ├── ERDOZ81-P1-LP-DUALITY-01/
+│   │   │   │       │   └── audits/
+│   │   │   │       │       └── SELF_AUDIT_FARKAS_v0.2.md
+│   │   │   │       ├── ERDOZ81-P1-PHASE1-01/
+│   │   │   │       │   └── audits/
+│   │   │   │       │       └── INTERNAL_ADVERSARIAL_AUDIT_v0.1.md
+│   │   │   │       ├── ERDOZ81-P1-PHASE2-DUAL-01/
+│   │   │   │       │   └── audits/
+│   │   │   │       │       └── INTERNAL_ADVERSARIAL_AUDIT_v0.1.md
+│   │   │   │       ├── ERDOZ81-P1-PROFILE-01/
+│   │   │   │       │   └── audits/
+│   │   │   │       │       └── INTERNAL_ADVERSARIAL_AUDIT_v0.1.md
+│   │   │   │       ├── ERDOZ81-P1-Q0-01/
+│   │   │   │       │   └── audits/
+│   │   │   │       │       └── INTERNAL_ADVERSARIAL_AUDIT_v0.1.md
+│   │   │   │       └── ERDOZ81-P1-SYMMETRY-01/
+│   │   │   │           └── audits/
+│   │   │   │               └── INTERNAL_ADVERSARIAL_AUDIT_v0.1.md
+│   │   │   ├── 02_IA_ADVERSARIAL_AUDITS/
+│   │   │   │   ├── 20_EVIDENCE/
+│   │   │   │   │   ├── ERDOZ81-P1-ASSEMBLY-01/
+│   │   │   │   │   │   └── audits/
+│   │   │   │   │   │       └── INDEPENDENT_T4_ASSEMBLY_AUDIT_RECORD_v1.0.pdf
+│   │   │   │   │   ├── ERDOZ81-P1-BOUND-01/
+│   │   │   │   │   │   └── audits/
+│   │   │   │   │   │       └── INDEPENDENT_AUDIT_RECORD_v1.0.pdf
+│   │   │   │   │   └── ERDOZ81-P1-FRAC-THM-01/
+│   │   │   │   │       ├── audits/
+│   │   │   │   │       │   └── INDEPENDENT_AUDIT_RECORD_v1.0.pdf
+│   │   │   │   │       └── PAPER_I_EXT_AUDIT_2026-07-10/
+│   │   │   │   │           ├── _lib/
+│   │   │   │   │           │   ├── package.py
+│   │   │   │   │           │   └── pdfgen.py
+│   │   │   │   │           ├── scripts/
+│   │   │   │   │           │   ├── 01_algebraic_identities/
+│   │   │   │   │           │   │   ├── 01_algebraic_identities.py
+│   │   │   │   │           │   │   ├── 01_algebraic_identities.zip
+│   │   │   │   │           │   │   ├── 01_algebraic_identities.zip.sha256
+│   │   │   │   │           │   │   ├── report.md
+│   │   │   │   │           │   │   ├── report.pdf
+│   │   │   │   │           │   │   └── results.txt
+│   │   │   │   │           │   ├── 02_orbit_lp_and_reduction/
+│   │   │   │   │           │   │   ├── 02_orbit_lp_and_reduction.py
+│   │   │   │   │           │   │   ├── 02_orbit_lp_and_reduction.zip
+│   │   │   │   │           │   │   ├── 02_orbit_lp_and_reduction.zip.sha256
+│   │   │   │   │           │   │   ├── report.md
+│   │   │   │   │           │   │   ├── report.pdf
+│   │   │   │   │           │   │   └── results.txt
+│   │   │   │   │           │   ├── 03_split_falsification/
+│   │   │   │   │           │   │   ├── 03_split_falsification.py
+│   │   │   │   │           │   │   ├── 03_split_falsification.zip
+│   │   │   │   │           │   │   ├── 03_split_falsification.zip.sha256
+│   │   │   │   │           │   │   ├── report.md
+│   │   │   │   │           │   │   ├── report.pdf
+│   │   │   │   │           │   │   └── results.txt
+│   │   │   │   │           │   └── 04_lean_certificate/
+│   │   │   │   │           │       ├── 04_lean_certificate.py
+│   │   │   │   │           │       ├── 04_lean_certificate.zip
+│   │   │   │   │           │       ├── 04_lean_certificate.zip.sha256
+│   │   │   │   │           │       ├── independent_axioms_and_exit.txt
+│   │   │   │   │           │       ├── independent_build.sh
+│   │   │   │   │           │       ├── report.md
+│   │   │   │   │           │       ├── report.pdf
+│   │   │   │   │           │       └── results.txt
+│   │   │   │   │           ├── ENVIRONMENT.md
+│   │   │   │   │           ├── ENVIRONMENT.pdf
+│   │   │   │   │           ├── FINAL_AUDIT_REPORT.md
+│   │   │   │   │           ├── FINAL_AUDIT_REPORT.pdf
+│   │   │   │   │           ├── README.md
+│   │   │   │   │           ├── README.pdf
+│   │   │   │   │           └── SHA256_MANIFEST.txt
+│   │   │   │   └── README.md
+│   │   │   ├── 03_CERTIFICATES_AND_ADMISSIONS/
+│   │   │   │   └── 20_EVIDENCE/
+│   │   │   │       ├── ERDOZ81-P1-3ORBIT-01/
+│   │   │   │       │   └── admission/
+│   │   │   │       │       └── ADMISSION_RECORD_001.md
+│   │   │   │       ├── ERDOZ81-P1-3ORBIT-SOLVE-01/
+│   │   │   │       │   └── admission/
+│   │   │   │       │       └── ADMISSION_RECORD_001.md
+│   │   │   │       ├── ERDOZ81-P1-ASSEMBLY-01/
+│   │   │   │       │   ├── EVIDENCE_ADMISSION_RECORD_002.md
+│   │   │   │       │   └── INDEPENDENT_T4_ASSEMBLY_AUDIT_EVIDENCE_RECORD_v1.0.md
+│   │   │   │       ├── ERDOZ81-P1-BOUND-01/
+│   │   │   │       │   ├── certificates/
+│   │   │   │       │   │   └── INDEPENDENT_AUDIT_EVIDENCE_RECORD_v1.0.md
+│   │   │   │       │   └── EVIDENCE_ADMISSION_RECORD_002.md
+│   │   │   │       ├── ERDOZ81-P1-BOUND-FALSIFY-01/
+│   │   │   │       │   └── admission/
+│   │   │   │       │       └── ADMISSION_RECORD_001.md
+│   │   │   │       ├── ERDOZ81-P1-CONCAVE-01/
+│   │   │   │       │   └── admission/
+│   │   │   │       │       └── ADMISSION_RECORD_001.md
+│   │   │   │       ├── ERDOZ81-P1-DEF-01/
+│   │   │   │       │   └── admission/
+│   │   │   │       │       └── ADMISSION_RECORD_001.md
+│   │   │   │       ├── ERDOZ81-P1-FRAC-THM-01/
+│   │   │   │       │   ├── EVIDENCE_ADMISSION_RECORD_004.md
+│   │   │   │       │   └── INDEPENDENT_AUDIT_EVIDENCE_RECORD_v1.0.md
+│   │   │   │       ├── ERDOZ81-P1-LOAD-01/
+│   │   │   │       │   └── admission/
+│   │   │   │       │       └── ADMISSION_RECORD_001.md
+│   │   │   │       ├── ERDOZ81-P1-LP-DUALITY-01/
+│   │   │   │       │   └── admission/
+│   │   │   │       │       └── ADMISSION_RECORD_001.md
+│   │   │   │       ├── ERDOZ81-P1-PHASE1-01/
+│   │   │   │       │   └── admission/
+│   │   │   │       │       └── ADMISSION_RECORD_001.md
+│   │   │   │       ├── ERDOZ81-P1-PHASE2-DUAL-01/
+│   │   │   │       │   ├── admission/
+│   │   │   │       │   │   └── ADMISSION_RECORD_001.md
+│   │   │   │       │   └── certificates/
+│   │   │   │       │       └── EXTERNAL_THEOREM_CERTIFICATE_LP_DUALITY_v0.1.md
+│   │   │   │       ├── ERDOZ81-P1-PROFILE-01/
+│   │   │   │       │   └── admission/
+│   │   │   │       │       └── ADMISSION_RECORD_001.md
+│   │   │   │       ├── ERDOZ81-P1-Q0-01/
+│   │   │   │       │   └── admission/
+│   │   │   │       │       └── ADMISSION_RECORD_001.md
+│   │   │   │       └── ERDOZ81-P1-SYMMETRY-01/
+│   │   │   │           └── admission/
+│   │   │   │               └── ADMISSION_RECORD_001.md
+│   │   │   ├── 04_FREEZE_AND_CONFORMANCE/
+│   │   │   │   ├── 00_CONTROL/
+│   │   │   │   │   ├── FROZEN_SCOPE_MANIFEST_STEP27.md
+│   │   │   │   │   ├── STEP27_DOCUMENTATION_RECONCILIATION.md
+│   │   │   │   │   └── TARGETED_CONFORMANCE_REVIEW_STEP27.md
+│   │   │   │   └── 10_GATES/
+│   │   │   │       ├── ERDOZ81-P1-ASSEMBLY-01/
+│   │   │   │       │   └── FREEZE_RECORD.md
+│   │   │   │       ├── ERDOZ81-P1-BOUND-01/
+│   │   │   │       │   └── FREEZE_RECORD.md
+│   │   │   │       └── ERDOZ81-P1-FRAC-THM-01/
+│   │   │   │           └── FREEZE_RECORD.md
+│   │   │   ├── CALCULATION_LEDGER_FINITE_FRACTIONAL_preprint_v1.0.md
+│   │   │   ├── MANIFEST.json
+│   │   │   ├── README.md
+│   │   │   ├── SHA256SUMS.txt
+│   │   │   └── VALIDATION_STATUS.md
+│   │   ├── 03_reproducibility/
+│   │   │   ├── BUILD_VERIFICATION.md
+│   │   │   ├── BUILD.md
+│   │   │   ├── ENVIRONMENT.md
+│   │   │   └── README.md
+│   │   ├── 04_integrity/
+│   │   │   ├── PROVENANCE.md
+│   │   │   ├── README.md
+│   │   │   ├── RELEASE_MANIFEST.json
+│   │   │   └── SHA256SUMS.txt
+│   │   ├── 05_formalization/
+│   │   │   ├── lean/
+│   │   │   │   ├── PaperI/
+│   │   │   │   │   ├── PaperI_Arith.lean
+│   │   │   │   │   └── PaperI_Statement.lean
+│   │   │   │   ├── .gitignore
+│   │   │   │   ├── DeltaNu.lean
+│   │   │   │   ├── FiniteLPDuality.lean
+│   │   │   │   ├── lake-manifest.json
+│   │   │   │   ├── lakefile.toml
+│   │   │   │   ├── lean-toolchain
+│   │   │   │   ├── README_EVIDENCE.md
+│   │   │   │   ├── README.md
+│   │   │   │   └── WCDH_check.lean
+│   │   │   └── README.md
+│   │   ├── .gitattributes
+│   │   ├── .gitignore
+│   │   ├── CITATION.bib
+│   │   ├── CITATION.cff
+│   │   ├── LICENSE
+│   │   ├── PaperI_explained_4_levels.html
+│   │   ├── README.md
+│   │   ├── RELEASE_METADATA.yml
+│   │   ├── RELEASE_NOTES.md
+│   │   └── TREE.txt
 │   └── README.md
 ├── .gitattributes
 ├── .gitignore
+├── CHANGELOG_v1.3.md
 ├── CITATION.bib
 ├── CITATION.cff
 ├── LICENSE
 ├── PaperI_explained_4_levels.html
 ├── README.md
 ├── RELEASE_METADATA.yml
-├── RELEASE_NOTES.md
-└── TREE.txt
+└── RELEASE_NOTES.md

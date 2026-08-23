@@ -1,0 +1,273 @@
+{
+ "en": {
+  "path": "C:/p3v14/01_manuscript/PAPER_III_preprint_draft_v1.4.md",
+  "sha256": "ae9a62736739de578077b0b25ef41468841e25a9e6b10f99986f5db657c7a942",
+  "bytes": 92819
+ },
+ "es": {
+  "path": "C:/p3v14/01_manuscript/PAPER_III_preprint_draft_v1.4_es.md",
+  "sha256": "71046acf88ab1d56237491b5f00d4ce92518615da6a7e09f53dbb963ce793b7e",
+  "bytes": 101735
+ },
+ "headings": {
+  "en": 144,
+  "es": 144,
+  "level_sequence_equal": true
+ },
+ "displayed_formulas": {
+  "en": 205,
+  "es": 205,
+  "sequence_identical": false,
+  "only_en": [
+   "\\max_{\\substack{|V(G)|=n\\\\G\\text{chordal}}}\\bigl(|E(G)|-2\\nu_3^*(G)\\bigr)=\\max_{\\substack{|V(G)|=n\\\\G\\text{spl",
+   "\\chi'(K_t)=\\begin{cases}t-1,&t\\text{even},\\\\t,&t\\text{odd}.\\end{cases}\\tag{2.2}",
+   "b-t_i\\ge\\max\\{\\rho,u\\}\\qquad\\text{forall}i.\\tag{7.2}",
+   "x_jx_{j+1}\\inE(J)\\quad\\Longleftrightarrow\\quad|O\\cap\\{x_1,\\ldots,x_j\\}|\\text{isodd}.\\tag{8.5}",
+   "J=\\{x_jx_{j+1}:|O\\cap\\{x_1,\\ldots,x_j\\}|\\text{isodd}\\}."
+  ],
+  "only_es": [
+   "\\max_{\\substack{|V(G)|=n\\\\G\\text{cordal}}}\\bigl(|E(G)|-2\\nu_3^*(G)\\bigr)=\\max_{\\substack{|V(G)|=n\\\\G\\text{spli",
+   "\\chi'(K_t)=\\begin{cases}t-1,&t\\text{par},\\\\t,&t\\text{impar}.\\end{cases}\\tag{2.2}",
+   "b-t_i\\ge\\max\\{\\rho,u\\}\\qquad\\text{paratodo}i.\\tag{7.2}",
+   "x_jx_{j+1}\\inE(J)\\quad\\Longleftrightarrow\\quad|O\\cap\\{x_1,\\ldots,x_j\\}|\\text{esimpar}.\\tag{8.5}",
+   "J=\\{x_jx_{j+1}:|O\\cap\\{x_1,\\ldots,x_j\\}|\\text{esimpar}\\}."
+  ]
+ },
+ "equation tags": {
+  "en_distinct": 66,
+  "es_distinct": 66,
+  "missing_in_es": {},
+  "extra_in_es": {},
+  "repeated_en": {
+   "1.1": 3,
+   "3.5": 4,
+   "4.4": 2,
+   "4.5": 2,
+   "5.3": 3,
+   "5.4": 2,
+   "6.2": 2,
+   "7.1": 2,
+   "7.2": 5,
+   "7.6": 2,
+   "9.1": 4,
+   "9.11": 2,
+   "9.15": 2,
+   "9.2": 2,
+   "9.5": 3,
+   "9.7": 3,
+   "9.8": 2
+  },
+  "repeated_es": {
+   "1.1": 3,
+   "3.5": 4,
+   "4.4": 2,
+   "4.5": 2,
+   "5.3": 3,
+   "5.4": 2,
+   "6.2": 2,
+   "7.1": 2,
+   "7.2": 5,
+   "7.6": 2,
+   "9.1": 4,
+   "9.11": 2,
+   "9.15": 2,
+   "9.2": 2,
+   "9.5": 3,
+   "9.7": 3,
+   "9.8": 2
+  },
+  "ok": true
+ },
+ "citations": {
+  "en_distinct": 18,
+  "es_distinct": 18,
+  "missing_in_es": {},
+  "extra_in_es": {},
+  "repeated_en": {
+   "5": 3,
+   "3": 4,
+   "8": 4,
+   "15": 3,
+   "16": 2,
+   "11": 3,
+   "17": 3,
+   "2": 3,
+   "10": 4,
+   "4": 2,
+   "7": 2,
+   "6": 3,
+   "14": 2,
+   "12": 2,
+   "1": 2,
+   "9": 2,
+   "13": 2
+  },
+  "repeated_es": {
+   "5": 3,
+   "3": 4,
+   "8": 4,
+   "15": 3,
+   "16": 2,
+   "11": 3,
+   "17": 3,
+   "2": 3,
+   "10": 4,
+   "4": 2,
+   "7": 2,
+   "6": 3,
+   "14": 2,
+   "12": 2,
+   "1": 2,
+   "9": 2,
+   "13": 2
+  },
+  "ok": true
+ },
+ "lean identifiers": {
+  "en_distinct": 36,
+  "es_distinct": 36,
+  "missing_in_es": {},
+  "extra_in_es": {},
+  "repeated_en": {
+   "PaperIII.Obstructions": 4,
+   "PaperIII.Theorem_1_1_Final": 3,
+   "PaperIII.PublicAPI": 5,
+   "PaperIII.CanonicalTrianglePacking": 3,
+   "PaperIII.PaperImprovements": 3,
+   "PaperIII.OfPartition": 3,
+   "PaperIII.CanonicalTrianglePackingGate": 3,
+   "PaperIII.PaperImprovementsGate": 2,
+   "Contrib.LPStrongDuality": 2,
+   "Contrib.SpreadMatchingDirac": 2
+  },
+  "repeated_es": {
+   "PaperIII.Obstructions": 4,
+   "PaperIII.Theorem_1_1_Final": 3,
+   "PaperIII.PublicAPI": 5,
+   "PaperIII.CanonicalTrianglePacking": 3,
+   "PaperIII.PaperImprovements": 3,
+   "PaperIII.OfPartition": 3,
+   "PaperIII.CanonicalTrianglePackingGate": 3,
+   "PaperIII.PaperImprovementsGate": 2,
+   "Contrib.LPStrongDuality": 2,
+   "Contrib.SpreadMatchingDirac": 2
+  },
+  "ok": true
+ },
+ "table rows": {
+  "en_distinct": 20,
+  "es_distinct": 20,
+  "missing_in_es": {
+   "`PaperIII`|8,455|0": 1,
+   "`gate_logs/run_2026-08-22_CCS_NOTEBOOK456_resumed/logs/02_build_public_root_clean.log`|0|8,455": 1,
+   "`gate_logs/run_2026-08-22_CCS_NOTEBOOK456_resumed/logs/03_build_query_roots_incremental.log`|0|8,444": 1
+  },
+  "extra_in_es": {
+   "`PaperIII`|8.455|0": 1,
+   "`gate_logs/run_2026-08-22_CCS_NOTEBOOK456_resumed/logs/02_build_public_root_clean.log`|0|8.455": 1,
+   "`gate_logs/run_2026-08-22_CCS_NOTEBOOK456_resumed/logs/03_build_query_roots_incremental.log`|0|8.444": 1
+  },
+  "repeated_en": {
+   "`PaperIII.CanonicalTrianglePackingGate`|0": 2
+  },
+  "repeated_es": {
+   "`PaperIII.CanonicalTrianglePackingGate`|0": 2
+  },
+  "ok": false
+ },
+ "list_items": {
+  "en": 30,
+  "es": 30,
+  "equal": true
+ },
+ "long_paragraph_parity": {
+  "sections_compared": 63,
+  "mismatches": [
+   {
+    "section": "1.1",
+    "en_long_paragraphs": 6,
+    "es_long_paragraphs": 5
+   },
+   {
+    "section": "1.3",
+    "en_long_paragraphs": 2,
+    "es_long_paragraphs": 3
+   },
+   {
+    "section": "12.2",
+    "en_long_paragraphs": 1,
+    "es_long_paragraphs": 2
+   },
+   {
+    "section": "12.5",
+    "en_long_paragraphs": 2,
+    "es_long_paragraphs": 3
+   },
+   {
+    "section": "13",
+    "en_long_paragraphs": 71,
+    "es_long_paragraphs": 75
+   },
+   {
+    "section": "3.1",
+    "en_long_paragraphs": 1,
+    "es_long_paragraphs": 2
+   },
+   {
+    "section": "3.2",
+    "en_long_paragraphs": 2,
+    "es_long_paragraphs": 3
+   },
+   {
+    "section": "5.1",
+    "en_long_paragraphs": 1,
+    "es_long_paragraphs": 2
+   },
+   {
+    "section": "7.2",
+    "en_long_paragraphs": 1,
+    "es_long_paragraphs": 2
+   },
+   {
+    "section": "7.3",
+    "en_long_paragraphs": 2,
+    "es_long_paragraphs": 3
+   },
+   {
+    "section": "7.4",
+    "en_long_paragraphs": 1,
+    "es_long_paragraphs": 2
+   },
+   {
+    "section": "8.1",
+    "en_long_paragraphs": 0,
+    "es_long_paragraphs": 1
+   },
+   {
+    "section": "8.3",
+    "en_long_paragraphs": 8,
+    "es_long_paragraphs": 9
+   },
+   {
+    "section": "9",
+    "en_long_paragraphs": 1,
+    "es_long_paragraphs": 2
+   }
+  ],
+  "ok": false
+ },
+ "verdict": {
+  "checks": {
+   "headings_count": true,
+   "heading_levels": true,
+   "displays": false,
+   "equation_tags": true,
+   "citations": true,
+   "lean_identifiers": true,
+   "table_rows": false,
+   "list_items": true,
+   "long_paragraphs": false
+  },
+  "all_pass": false
+ }
+}

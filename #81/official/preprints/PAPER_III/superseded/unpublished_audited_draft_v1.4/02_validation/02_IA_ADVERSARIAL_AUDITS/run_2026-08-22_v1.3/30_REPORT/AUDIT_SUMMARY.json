@@ -1,0 +1,193 @@
+{
+  "request": "EXTERNAL_ADVERSARIAL_AUDIT_REQUEST.md",
+  "request_sha256": "a0569fa455d70ee3e8af8ddb4362c52863de69d830bc76975bb6f9d22d9e12c0",
+  "paper": "PAPER_III",
+  "target": "preprint_draft_v1.3",
+  "run": "run_2026-08-22_v1.3",
+  "audit_date": "2026-08-22",
+  "only_this_version_evaluated": true,
+  "prior_results_inherited": false,
+  "auditor": {
+    "provider": "Anthropic",
+    "model": "claude-opus-5",
+    "independence": "primary auditor only; NO adversarial challenger"
+  },
+  "overall_verdict": "FAIL",
+  "verdict_basis": "E4, E5 and E7 fail; E2 and E6 are inconclusive. No mathematical or formal defect was found: the theorem compiles, its axiom footprint is clean, and every inequality rederived held exactly. The failures are release-readiness defects in the build configuration, bilingual fidelity and freeze metadata.",
+  "gate_verdicts": {
+    "E0": "PASS",
+    "E1": "PASS",
+    "E2": "INCONCLUSIVE",
+    "E3": "PASS",
+    "E4": "FAIL",
+    "E5": "FAIL",
+    "E6": "INCONCLUSIVE",
+    "E7": "FAIL"
+  },
+  "gate_bases": {
+    "E0": "every declared hash and manifest entry verifies; archive CRC intact and structurally clean; auditor manifest recorded",
+    "E1": "claims, quantifiers, endpoint cases and scope separation confirmed; zero overbroad-scope wording",
+    "E2": "Sections 4 and 9 rederived exactly (14/15 items PASS, K-COVER closed); K-EPS, K-CORRIDOR and K-SPARSE not attempted; K-GLOBAL partial",
+    "E3": "the four canonical bridges validated against an auditor-constructed bridge, AX1 by an iff in both directions; claim map produced",
+    "E4": "clean build and axiom boundary all pass, but the public aggregate root does not import the canonical theorem path (EXT-V13-001)",
+    "E5": "renders and MD/TeX/PDF fidelity all pass, but Proposition 7.4 diverges EN/ES (EXT-V13-002)",
+    "E6": "citation integrity clean; no reference retrieved and no specialist search possible in this environment",
+    "E7": "self-containment and final hash re-verification pass, but the freeze metadata contradicts its own package (EXT-V13-003)"
+  },
+  "finding_counts": {
+    "blocking": 0,
+    "critical": 0,
+    "major": 3,
+    "minor": 4,
+    "total": 7
+  },
+  "findings": [
+    {
+      "id": "EXT-V13-001",
+      "severity": "MAJOR",
+      "gate": "E4",
+      "disposition": "OPEN"
+    },
+    {
+      "id": "EXT-V13-002",
+      "severity": "MAJOR",
+      "gate": "E5",
+      "disposition": "OPEN"
+    },
+    {
+      "id": "EXT-V13-003",
+      "severity": "MAJOR",
+      "gate": "E7",
+      "disposition": "OPEN"
+    },
+    {
+      "id": "EXT-V13-004",
+      "severity": "MINOR",
+      "gate": "E4",
+      "disposition": "OPEN"
+    },
+    {
+      "id": "EXT-V13-005",
+      "severity": "MINOR",
+      "gate": "E6",
+      "disposition": "OPEN"
+    },
+    {
+      "id": "EXT-V13-006",
+      "severity": "MINOR",
+      "gate": "E7",
+      "disposition": "OPEN"
+    },
+    {
+      "id": "EXT-V13-007",
+      "severity": "MINOR",
+      "gate": "E7",
+      "disposition": "OPEN"
+    }
+  ],
+  "target_hashes": {
+    "01_manuscript/PAPER_III_preprint_draft_v1.3.md": "ef410252009f55aa1e0ccbec1873f8d838cf4f9b54e7478befe71459f68440ca",
+    "01_manuscript/PAPER_III_preprint_draft_v1.3_en.tex": "f08a8ecc2fb04074b5eaa54ad64b55f2f26e3e36c706382429a11c17f7a21f2b",
+    "01_manuscript/PAPER_III_preprint_draft_v1.3_en.pdf": "69594bb330543e101f69dace165545af863a38f733fb10cdacf56ecfb409a3f4",
+    "01_manuscript/PAPER_III_preprint_draft_v1.3_es.md": "212d03d71300a6c9b1f7a2c09c15a157c386de4b1b74e0c0282713304d360b12",
+    "01_manuscript/PAPER_III_preprint_draft_v1.3_es.tex": "c45786dad1485eb55e526fa8b165333e7b2ed5e907480ae0c88db8a1f27ae75e",
+    "01_manuscript/PAPER_III_preprint_draft_v1.3_es.pdf": "58a7e37e3e2ab462de00ca1cc042d0538e71b9422f1d31070928f5c5da236883",
+    "05_formalization/lean_v1.3_freeze/PAPER_III_lean_v1.3_freeze.zip": "2eb0ff20a9dae6610a46026355374570d5afdfea89837ea7f9dd29da10b9d300",
+    "02_validation/01_INTERNAL_AUDITS/10_REPORT/INTERNAL_AUDIT_FINAL_REPORT.md": "c0f3607bfce862f64a8d248d62879783cf34166d4b0714b48112421e0540592d",
+    "02_validation/01_INTERNAL_AUDITS/10_REPORT/INTERNAL_AUDIT_FINAL_REPORT.tex": "f270e995eec2bce6ab87b6b52f21f735baa659965abbe552ff927a666e9617ac",
+    "02_validation/01_INTERNAL_AUDITS/10_REPORT/INTERNAL_AUDIT_FINAL_REPORT.pdf": "0f70a4a0e306bb43c25aaa588d369d888b1fd7e552c46951541f338dfe63b903",
+    "02_validation/01_INTERNAL_AUDITS/10_REPORT/INTERNAL_AUDIT_SUMMARY.json": "62ca165a9b56913770dfcbf0edd24b6f70f1798bf79b2677839b9ed35c087391",
+    "02_validation/01_INTERNAL_AUDITS/30_PACKAGE/INTERNAL_AUDIT_PACKAGE.zip": "dd46fc196b4df65a677cd075d33e2e958fc1e508f026c99dd1549d30843921a1"
+  },
+  "target_inventory": {
+    "files": 875,
+    "bytes": 16502156,
+    "excluded": "05_formalization/lean_v1.3_candidate"
+  },
+  "freeze_archive_sha256": "2eb0ff20a9dae6610a46026355374570d5afdfea89837ea7f9dd29da10b9d300",
+  "freeze_archive_matches_request": true,
+  "environment": {
+    "os": "Windows 11 10.0.26200",
+    "cpu": "Intel Core i7-1255U, 10 cores / 12 logical",
+    "ram_gb": 15.7,
+    "lean": "4.28.0 (7e01a1bf5c70fc6167d49c345d3bf80596e9a79b)",
+    "lake": "5.0.0-src+7e01a1b",
+    "mathlib": "8f9d9cff6bd728b17a24e163c9402775d9e6a365",
+    "python": "3.14.4",
+    "poppler": "24.04.0",
+    "external_solver": null,
+    "random_seeds": 0,
+    "clean_room": "C:/ea/P3",
+    "dependency_cache": "auditor-controlled junction, 9/9 revisions verified clean"
+  },
+  "builds": [
+    {
+      "command": "lake build PaperIII",
+      "jobs": 8203,
+      "exit": 0,
+      "minutes": 90,
+      "errors": 0,
+      "note": "the command the reproduction protocol prescribes; does NOT build Theorem_1_1_Final -- see EXT-V13-001"
+    },
+    {
+      "command": "lake build <7 canonical roots>",
+      "jobs": 8444,
+      "exit": 0,
+      "minutes": 105,
+      "errors": 0,
+      "note": "what the eight axiom queries actually require"
+    }
+  ],
+  "axiom_queries": {
+    "files": 8,
+    "all_exit_zero": true,
+    "surfaces": 42,
+    "sorryAx": 0,
+    "non_standard_footprints": 0,
+    "project_axioms": 0,
+    "smaller_footprint_surfaces": [
+      "PaperIII.isTrianglePacking_iff_yuster [propext, Quot.sound]"
+    ]
+  },
+  "axiom_boundary": {
+    "project_modules": 704,
+    "archived_axiom_modules": [
+      "Ax2.PartB.Axioms",
+      "Ax2.PartA.Wlog"
+    ],
+    "direct_importers_of_those_modules": 0,
+    "reachable_from_any_canonical_root": false,
+    "aggregate_root_closure": 177,
+    "theorem_1_1_final_closure": 393
+  },
+  "kill_switches": {
+    "K-COVER": "CLOSED",
+    "K-GLOBAL": "PARTIAL",
+    "K-EPS": "NOT ATTEMPTED",
+    "K-CORRIDOR": "NOT ATTEMPTED",
+    "K-SPARSE": "NOT ATTEMPTED"
+  },
+  "final_hash_reverification": {
+    "entries": 12,
+    "matching": 12,
+    "target_unchanged_during_audit": true
+  },
+  "unresolved_items": [
+    "K-EPS: the AX1 epsilon ledger",
+    "K-CORRIDOR: Sections 5-7",
+    "K-SPARSE: Section 8",
+    "K-GLOBAL: the deletion step and small orders",
+    "E6: no reference retrieved, no specialist search possible",
+    "the three MAJOR and four MINOR findings, all OPEN",
+    "Paper III has never been audited by an adversarial challenger"
+  ],
+  "not_established": [
+    "the truth of Theorem 1.1",
+    "the AX1 epsilon budget",
+    "Sections 5 to 8",
+    "novelty, or that no published result already gives the 1/6 coefficient",
+    "human peer review",
+    "independent recompilation of the delivered PDFs"
+  ],
+  "package_sha256": "recorded in 40_PACKAGE/EXTERNAL_AUDIT_PACKAGE_SHA256.txt, which is the authority; a hash of the ZIP cannot live inside the ZIP"
+}

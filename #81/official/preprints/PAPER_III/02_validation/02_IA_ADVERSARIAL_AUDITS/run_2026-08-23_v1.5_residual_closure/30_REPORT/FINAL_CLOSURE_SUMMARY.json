@@ -1,0 +1,102 @@
+{
+ "run": "run_2026-08-23_v1.5_residual_closure",
+ "date": "2026-08-23",
+ "scope": "residual closure test for EXT-V15-M01 only; no source gate repeated",
+ "request_sha256": "37118ecff3894b8c018c1031cd619f88e05e449e6fd685cce14ff3920bbaf034",
+ "closure_packet_sha256": "7972a0b5212bc69d0437fd328886a63e383bc60f54e91c365ab771e5a6be20e4",
+ "preserved_source_report": {
+  "path": "run_2026-08-23_v1.5_residual/30_REPORT/FINAL_AUDIT_REPORT.md",
+  "sha256": "4f4537816840c62fb23521190fab4fa1a860085e05a4cb956d8afe1eb3b67596",
+  "verdict": "CONDITIONAL_PASS",
+  "rewritten": false,
+  "byte_identical_to_auditor_own_copy": true
+ },
+ "verdict": "PASS",
+ "finding_disposition": {
+  "EXT-V14C-N02": "CLOSED in the source run, on its mathematics",
+  "EXT-V14C-N03": "CLOSED in the source run, on its mathematics",
+  "EXT-V15-M01": "CLOSED in this run"
+ },
+ "closure_test_as_stated_by_auditor": "no file in 03_reproducibility/ outside a v1.3/v1.4-labelled path names a non-v1.5 artifact or quotes a non-v1.5 hash",
+ "closure_test_met": true,
+ "checks": {
+  "1_no_loose_files_under_manuscript_build_logs": true,
+  "2_relocated_logs_intact": true,
+  "3_current_v1_5_logs_correct": true,
+  "4_consistency_json": true,
+  "5_target_unchanged": true,
+  "6_prior_reports_unmodified": true,
+  "A_no_dangling_references": true,
+  "B_local_links_resolve": true,
+  "C_removed_evidence_preserved": true,
+  "D_pattern_does_not_recur": true
+ },
+ "checks_passed": "10/10",
+ "detail": {
+  "loose_files_under_build_logs": 0,
+  "build_log_subdirs": [
+   "v1.3_legacy",
+   "v1.4",
+   "v1.5"
+  ],
+  "legacy_logs": {
+   "files": 29,
+   "manifest_entries": 29,
+   "hash_matches": 29,
+   "naming_a_v1_5_job": 0,
+   "not_naming_a_v1_3_job": 0
+  },
+  "current_logs": {
+   "files": 6,
+   "hash_matches": 6,
+   "pages": {
+    "en": 46,
+    "es": 47
+   },
+   "prohibited_diagnostics": 0
+  },
+  "consistency_json": {
+   "generic_present": false,
+   "versioned_verdict": "PASS",
+   "versioned_checks": 61,
+   "versioned_failed": 0,
+   "md_en_sha256_matches_v1_5_target": true
+  },
+  "target_unchanged": {
+   "manuscript_hashes": "6/6",
+   "lean_zip": true
+  },
+  "prior_packages_reverify": {
+   "run_2026-08-22_v1.4_residual": "60/60",
+   "run_2026-08-23_v1.4_challenger": "24/24",
+   "run_2026-08-23_v1.5_residual": "45/45"
+  },
+  "tree_txt": {
+   "entries": 1572,
+   "unresolvable": 0,
+   "regenerated": true,
+   "sha256": "2f5ae5a68faa561c91e106b04ca64019c9833726f848d22a00b5294e5f73f310",
+   "integrity_record_updated": true
+  },
+  "broken_local_links": 0,
+  "shadowing_pattern_recurrences": 0,
+  "files_scanned_for_dangling_references": 122
+ },
+ "author_verification_used_as_evidence": false,
+ "author_verification_contrast_result": "PASS 16/16, agrees on every overlapping point",
+ "stated_limitation": "byte-identity between the deleted generic MANUSCRIPT_CONSISTENCY_RESULTS.json and the copy preserved under superseded/ cannot be proved: the file is gone and neither the source audit nor the closure packet recorded its hash. Verified instead that the preserved copy describes v1.4 (md_en eea753a4..., PASS 51/51), so the v1.4 evidence was not destroyed",
+ "auditor_tool_false_positives_corrected_during_run": 3,
+ "blockers": 0,
+ "criticals": 0,
+ "majors": 0,
+ "minors_open": 0,
+ "notes_open": 0,
+ "does_not_establish": [
+  "the truth of Theorem 1.1",
+  "the Lean nibble chain's internal parameter ledger",
+  "novelty beyond the searched corpus; no priority determination",
+  "human peer review",
+  "resolution of the full chordal problem, which remains open",
+  "independence: six external runs share one reasoning context, and this auditor raised all three findings whose fixes it has now reviewed"
+ ]
+}

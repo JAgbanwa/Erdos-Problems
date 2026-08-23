@@ -1,0 +1,23 @@
+{
+  "protocol": "EXTERNAL_AI_ADVERSARIAL_AUDIT_INSTRUCTIONS_v1.1",
+  "paper": "PAPER_II",
+  "run": "run_2026-08-21_v1.2",
+  "gates": {
+    "G0": "PASS",
+    "A": "PASS",
+    "B": "PASS",
+    "C": "PASS",
+    "D": "PASS",
+    "E": "PASS",
+    "F": "PASS",
+    "G": "PASS",
+    "H": "PASS",
+    "I": "PASS_WITH_RESIDUALS",
+    "J": "PASS",
+    "K": "PASS_WITH_RESIDUALS",
+    "L": "PASS_WITH_RESIDUALS",
+    "M": "PASS_WITH_RESIDUALS"
+  },
+  "overall": "PASS_WITH_RESIDUALS",
+  "weakest_mandatory_gate": "I / K / L / M (all PASS_WITH_RESIDUALS)"
+}

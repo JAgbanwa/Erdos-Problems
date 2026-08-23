@@ -1,0 +1,42 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{booktabs,longtable,array}
+\usepackage[T1]{fontenc}\usepackage{lmodern}\usepackage{microtype}
+\setlength{\parindent}{0pt}\setlength{\parskip}{0.5em}
+\title{Paper I v1.2 Internal Audit Final Report}
+\author{Internal author-side audit --- not external}
+\date{21 August 2026 --- Overall verdict: PASS}
+\begin{document}\maketitle
+\textbf{Protocol:} \texttt{INTERNAL\_AUDIT\_STANDARD\_v1.3}.\\
+\textbf{Lean execution:} recorded full build reviewed; full build not rerun.
+\section{Frozen target}
+English SHA-256: \texttt{da7e48196a03a8698a9c5a503976b43780cb9e5309558f1b7d3e06b4af35ee9e}.\\
+Spanish SHA-256: \texttt{a6b14c85abdb872c21187d13889038f5aa2a16fae5caf8d6781ff998a20ed847}.\\
+Archive: \texttt{PAPER\_I\_lean\_v1.2\_freeze.zip}.\\
+Archive SHA-256: \texttt{0181506408644fc1f8872d711de5a98a}\newline
+\texttt{500f4052aa295bcd6f8c82776694fd3a}.\\
+Recorded build: exit 0, 8,034 jobs. Recorded axioms: \texttt{propext},
+\texttt{Classical.choice}, \texttt{Quot.sound}.
+\section{Gate results}
+\begin{longtable}{p{.18\linewidth}p{.20\linewidth}p{.52\linewidth}}
+\toprule Gate & Verdict & Evidence \\ \midrule
+G0 & PASS & 59 static checks; exact archive and portable six-artifact sidecar. \\
+G1 & PASS after correction & Claims, namespaces, provenance and boundary language matched. \\
+G2 & PASS & 5 identities; 561 boundary; 480 orbit; 99,671 assembly; 1,179 split-LP; 9 benchmark checks. \\
+G3 & PASS & Headline, assembly and residual-duality surfaces matched. \\
+G4 & PASS recorded build & 8,034-job record and 15-surface axiom report reviewed. \\
+G5 & PASS & English/Spanish semantics and protected identifiers aligned. \\
+G6 & PASS & 19/20 pages; fonts embedded; every page visually inspected. \\
+G7 & PASS internal & Scoped negative literature result; external specialist gate open. \\
+G8 & PASS & Self-contained v1.2 package and evidence perimeter. \\
+\bottomrule\end{longtable}
+\section{Corrections}
+The delivered archive name/hash, portable hash sidecar, axiom-query coverage,
+and the $s=2$, $o\ge1$ tightness wording were corrected in the v1.2 batch.
+The manuscript contains no internal version narrative. No protected theorem,
+hypothesis, constant or proof step changed.
+\section{Overall verdict}
+\textbf{PASS.} No unresolved internal blocker or major finding remains.
+Independent reconstruction, external adversarial audit, specialist prior-art
+review, peer review, tagging and publication approval remain open.
+\end{document}

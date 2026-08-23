@@ -1,0 +1,17 @@
+### PRUEBA DE LIMPIEZA DEL BUILD DEL PROYECTO (paso 7 del protocolo)
+### utc: 2026-08-22T16:25:03Z
+
+-- existe .lake/build:
+NO (ausente)
+
+-- contenido de .lake (solo primer nivel):
+total 8
+drwxr-xr-x 1 jtrav 197609  0 Aug 22 12:08 .
+drwxr-xr-x 1 jtrav 197609  0 Aug 22 12:08 ..
+lrwxrwxrwx 1 jtrav 197609 34 Aug 22 12:08 packages -> /c/erdos_audit/PIII/.lake/packages
+
+-- cualquier .olean/.ilean del PROYECTO fuera de packages:
+(fin de la lista; vacia = ninguno)
+
+-- .lake/packages es junction al cache del auditor:
+lrwxrwxrwx 1 jtrav 197609 34 Aug 22 12:08 packages -> /c/erdos_audit/PIII/.lake/packages

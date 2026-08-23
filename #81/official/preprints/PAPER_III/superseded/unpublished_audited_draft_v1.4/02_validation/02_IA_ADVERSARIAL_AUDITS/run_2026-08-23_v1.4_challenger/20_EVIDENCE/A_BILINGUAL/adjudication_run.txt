@@ -1,0 +1,30 @@
+=== 1. displayed formulas: difference confined to \text{...} operands?
+  formulas: EN=205 ES=205
+  positional differences raw          : 5
+  positional differences after masking: 0
+  VERDICT: TRANSLATION_ONLY
+
+=== 2. table rows: difference confined to digit-group separators?
+  rows EN=21 ES=21 equal_after_canonicalisation=True
+  VERDICT: LOCALISATION_ONLY
+
+=== 3. paragraph-count mismatches: split/merge or content change?
+     sec  EN  ES  anchors_identical  en_chars es_chars  ratio
+     1.1   6   5               True      2751     2813   1.02
+     1.3   2   3               True       868      966   1.11
+    12.2   1   2               True       492      533   1.08
+    12.5   2   3              False       895      970   1.08
+           anchor 'inline_math': EN=4 ES=5
+      13  71  75               True     25789    27854   1.08
+     3.1   1   2               True       585      645   1.10
+     3.2   2   3               True       944      980   1.04
+     5.1   1   2               True      1020     1122   1.10
+     7.2   1   2               True       579      623   1.08
+     7.3   2   3               True       823      899   1.09
+     7.4   1   2               True       604      660   1.09
+     8.1   0   1               True       270      284   1.05
+     8.3   8   9               True      2243     2401   1.07
+       9   1   2               True       705      740   1.05
+  VERDICT: ANCHOR_MISMATCH_REQUIRES_INSPECTION
+
+-> C:/v14c/20_EVIDENCE/A_BILINGUAL/adjudication.json

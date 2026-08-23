@@ -1,0 +1,48 @@
+release_id: PAPER_III_PREPRINT_V1_5
+paper: PAPER_III
+title: Linear-Error Clique Partitions of Split Graphs via Structured Triangle Packing
+version: "1.5"
+release_date: "2026-08-23"
+first_formal_public_release: true
+supersedes_public_version: null
+author:
+  name: Juan Pablo Traverso Gianini
+  affiliation: Independent researcher, Santiago, Chile
+  orcid: 0009-0003-6068-4096
+status:
+  manuscript: PREPRINT_RELEASE
+  mathematical: FINAL_PASS
+  lifecycle: READY_FOR_PUBLIC_TAG
+  internal_audit: PASS
+  internal_residual_audit_v1_5: PASS
+  prior_independent_ai_adversarial_audit_v1_4: PASS
+  independent_residual_audit_v1_5: PASS
+  external_peer_review: false
+  specialist_priority_review: false
+formalization:
+  system: Lean 4 / Mathlib v4.28.0
+  freeze: 05_formalization/lean_v1.4_freeze
+  archive: PAPER_III_lean_v1.4_freeze.zip
+  archive_sha256: 79ee24c38fd776bc2585a0c3c996e30817f0829fc5064463bdbde0fa2d3d7104
+  externally_reproduced: true
+  external_public_root_jobs: 8455
+  external_query_root_jobs: 8444
+  axiom_query_files: 8
+  axiom_queries: 42
+  distinct_axiom_surfaces: 35
+  axioms: [propext, Classical.choice, Quot.sound]
+canonical_files:
+  - 01_manuscript/PAPER_III_preprint_v1.5.md
+  - 01_manuscript/PAPER_III_preprint_v1.5_en.tex
+  - 01_manuscript/PAPER_III_preprint_v1.5_en.pdf
+  - 01_manuscript/PAPER_III_preprint_v1.5_es.md
+  - 01_manuscript/PAPER_III_preprint_v1.5_es.tex
+  - 01_manuscript/PAPER_III_preprint_v1.5_es.pdf
+internal_audit_v1_4: 02_validation/01_INTERNAL_AUDITS/run_2026-08-22_v1.4/10_REPORT/INTERNAL_AUDIT_FINAL_REPORT.md
+internal_residual_audit_v1_5: 02_validation/01_INTERNAL_AUDITS/run_2026-08-23_v1.5_internal_residual/10_REPORT/FINAL_INTERNAL_RESIDUAL_AUDIT_REPORT.md
+external_reproduction_v1_4: 02_validation/02_IA_ADVERSARIAL_AUDITS/run_2026-08-22_v1.4_residual/30_REPORT/FINAL_AUDIT_REPORT.md
+external_final_report_v1_4: 02_validation/02_IA_ADVERSARIAL_AUDITS/run_2026-08-23_v1.4_challenger/30_REPORT/FINAL_AUDIT_REPORT.md
+external_residual_report_v1_5: 02_validation/02_IA_ADVERSARIAL_AUDITS/run_2026-08-23_v1.5_residual/30_REPORT/FINAL_AUDIT_REPORT.md
+external_closure_report_v1_5: 02_validation/02_IA_ADVERSARIAL_AUDITS/run_2026-08-23_v1.5_residual_closure/30_REPORT/FINAL_CLOSURE_REPORT.md
+historical_audited_draft: superseded/unpublished_audited_draft_v1.4
+historical_local_precursor: superseded/unpublished_local_preprint_v1.0

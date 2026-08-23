@@ -1,0 +1,14 @@
+========================================================================
+Paper III — Block 02: common-profile LP  nu3*(H(p,q,d)) = F(p,q,d)
+Direct fractional triangle-packing LP (scipy HiGHS) vs closed form F.
+========================================================================
+
+Instances audited (3<=p<=8, 0<=q<=8, 0<=d<=p): 351
+Direct-LP vs closed-form F:
+    PASS (|LP - F| <= 1e-07): 351/351
+    FAIL: 0
+    max |LP - F| over grid : 3.908e-14
+
+========================================================================
+VERDICT: PASS  (351/351 direct-LP matches of the closed form F)
+========================================================================

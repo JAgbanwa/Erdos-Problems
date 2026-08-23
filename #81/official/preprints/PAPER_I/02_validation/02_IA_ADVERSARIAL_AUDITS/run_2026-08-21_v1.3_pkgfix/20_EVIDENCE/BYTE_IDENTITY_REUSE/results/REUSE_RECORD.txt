@@ -1,0 +1,48 @@
+GATE H AND REGRESSION REUSE — BYTE-IDENTITY RECORD
+Label: REUSED_BYTE_IDENTICAL_EXTERNAL_EVIDENCE
+Specification: FINAL_RESIDUAL_AUDIT_REQUEST_SPEC.md, Section 6
+Run: run_2026-08-21_v1.3_pkgfix   Date: 2026-08-21
+
+PRECONDITION: the eight manuscript and formal anchors must match exactly.
+  RESULT: they do. Six publication artifacts plus the Lean archive plus the corrected
+  changelog all verified MATCH; see 30_REPORT/FINAL_AUDIT_REPORT.md Section 2.1.
+
+BYTE IDENTITY RE-ESTABLISHED IN THIS RUN (not assumed):
+  The delivered archive PAPER_I_lean_v1.2_freeze.zip
+  (0181506408644fc1f8872d711de5a98a500f4052aa295bcd6f8c82776694fd3a) was re-extracted
+  into a scratch directory and every member compared by SHA-256 against the external
+  clean room that produced the reused build.
+    members compared      : 32
+    byte-identical        : 32
+    differing             : 0
+    missing               : 0
+    lean-toolchain        : IDENTICAL  (leanprover/lean4:v4.28.0)
+    lake-manifest.json    : IDENTICAL  (mathlib 8f9d9cff6bd728b17a24e163c9402775d9e6a365)
+    lakefile.toml         : IDENTICAL
+    FreezeAxioms.lean     : IDENTICAL  (line 8 reads "preprint draft v1.2")
+  The archive hash was re-verified after extraction: unchanged. The target was not mutated.
+
+NOT RERUN, per Section 6:
+  lake update; lake exe cache get; the 8,034-job build; the frozen and independent axiom
+  queries; the full mathematical enumeration; the bilingual and duplicate analysis; the
+  citation work; PDF compilation.
+
+REUSED RESULTS AND WHERE THEY LIVE:
+  run_2026-08-21_v1.2/20_EVIDENCE/H_LEAN_REPRODUCTION/results/
+     02_lake_build_protocol_9_1.log  -> "Build completed successfully (8034 jobs)",
+                                        EXIT_BUILD=0, real 24m47.960s, zero errors
+     03_FreezeAxioms_run.log         -> 15 declarations, all
+                                        [propext, Classical.choice, Quot.sound], exit 0
+     04_independent_axiom_query.log  -> the auditor's own print-axioms and check output
+  run_2026-08-21_v1.3/20_EVIDENCE/MATH_REGRESSION/results/
+     regression_v13.json             -> 14/14 exact symbolic identities; 6,732 orbit-LP
+                                        cases, 0 mismatches; (2,4,2) confirmed equality
+     theorem_enumeration_v13.json    -> 5,429 split graphs, 0 violations
+  run_2026-08-21_v1.3/20_EVIDENCE/L_BILINGUAL_DUPLICATES/results/
+     duplicate_scan.json             -> 0 genuine duplicates across six artifacts
+  run_2026-08-21_v1.3/20_EVIDENCE/I_CITATIONS_NOVELTY/results/
+     CEO_3over16_VERIFICATION.txt    -> 3/16 verified, pinpoint Theorem 1, page 23
+
+SCOPE OF THIS REUSE:
+  Formal and previously-completed regression evidence only. The package-level controls
+  A, B and C were performed fresh in this run over all 308 files.

@@ -1,0 +1,2984 @@
+Clique partitions and coverings of graphs
+by Michael S. Cavers
+An essay presented to the University of Waterloo
+in fulﬁllment of the essay requirement for the degree of
+Masters of Mathematics
+Waterloo, Ontario, Canada c Michael Cavers 2005 December 20th, 2005
+i
+
+Abstract
+This essay looks at the clique partition and covering numbers of graphs and introduces some new results.
+In the ﬁrst part, two cornerstone theorems in clique partitions are presented and proved. Namely, the Erdo˝s-Goodman-Po´sa Theorem and the de Bruijn-Erd˝os Theorem. The problem of partitioning the complement of a clique is looked at, and asymptotic results are provided. The existence of Steiner systems and projective planes can be used to construct clique partitions of complements of graphs. Using Steiner systems, upper bounds on the clique partition number of the complement of paths, cycles, and perfect matchings are given. For the ﬁrst time, we provide an upper bound for the clique partition number of the complement of a forest and the complement of graphs with bounded maximum degree.
+In the second part, the clique covering number of the complement of small graphs is analyzed. We provide results by Kohayakawa of induced paths and cycles in the Kneser graph. Bounds on the clique covering number of the complement of a path and cycle are given. Also, the clique covering number of the complement of a perfect matching is determined, a result of Gregory and Pullman. By using the Erd˝os-KoRado Theorem, we are able to generalize this result to obtain a lower bound on the clique covering number for complete multipartite graphs. The clique covering number of the complement of the union of cycles and paths is looked at, and we demonstrate that in general, a lower bound of log2 n cannot be obtained. Finally, for the ﬁrst time, we obtain bounds on the clique covering number of the complement of a forest.
+ii
+
+Acknowledgments
+I would like to thank my supervisor Jacques Verstra¨ete for all of his valuable advice and feedback throughout the process of preparing this essay. I would also like to thank Nick Wormald for being an oﬃcial reader of this essay. Finally, I would like to acknowledge Kevin Vander Meulen for introducing this problem to me.
+iii
+
+Contents
+
+I Introduction
+
+1
+
+1.1 Edge-partitioning and covering problems . . . . . . . . . . . . . . . . 1
+
+1.2 Notation . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 4
+
+II Clique Partitions
+
+5
+
+2.1 Preliminary results . . . . . . . . . . . . . . . . . . . . . . . . . . . . 5
+
+2.2 The Erd˝os-Goodman-P´osa Theorem . . . . . . . . . . . . . . . . . . . 6
+
+2.3 Steiner systems, projective planes and clique partitions . . . . . . . . 8
+
+2.4 The de Bruijn-Erdo˝s Theorem . . . . . . . . . . . . . . . . . . . . . . 9
+
+2.5 Complement of a clique . . . . . . . . . . . . . . . . . . . . . . . . . . 12
+
+2.5.1 The Pullman-Donald Theorem . . . . . . . . . . . . . . . . . . 13
+
+2.5.2 The Erdo˝s-Faudree-Ordman Theorem . . . . . . . . . . . . . . 15
+
+2.6 Complement of small graphs . . . . . . . . . . . . . . . . . . . . . . . 18
+
+2.7 Complement of paths, cycles, and perfect matchings . . . . . . . . . . 20
+
+2.8 Complement of forests . . . . . . . . . . . . . . . . . . . . . . . . . . 22
+
+2.9 Complement of graphs with bounded maximum degree . . . . . . . . 26
+
+III Clique Coverings
+
+30
+
+3.1 Intersection graphs and Kneser graphs . . . . . . . . . . . . . . . . . 30
+
+3.2 Clique covers of complete multipartite graphs . . . . . . . . . . . . . 32
+
+3.2.1 The Erd˝os-Ko-Rado Theorem and clique coverings . . . . . . . 32
+
+3.2.2 t-Balanced families . . . . . . . . . . . . . . . . . . . . . . . . 34
+
+3.3 Complement of paths, cycles, and perfect matchings . . . . . . . . . . 36
+
+3.3.1 Induced cycles and paths in Kneser graphs . . . . . . . . . . . 37
+
+iv
+
+3.4 Complement of graphs with maximum degree two . . . . . . . . . . . 40 3.5 Complement of forests . . . . . . . . . . . . . . . . . . . . . . . . . . 42
+
+IV Conclusion
+
+45
+
+4.1 Open Problems . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 45
+
+V Appendix
+
+47
+
+5.1 Lower bound for σt(s) . . . . . . . . . . . . . . . . . . . . . . . . . . 47
+
+5.2 A recurrence relation . . . . . . . . . . . . . . . . . . . . . . . . . . . 49
+
+v
+
+Part I
+Introduction
+1.1 Edge-partitioning and covering problems
+A clique partition of a graph G is a collection of complete subgraphs of G (called cliques) that partition the edge set of G. Similarly, a clique cover of G is a collection of cliques that cover the edge set of G (that is, every edge appears in at least one clique of the clique cover). In this essay, we study the problem of ﬁnding clique partitions and covers of minimum size of a graph. We analyze the clique partition number of a graph in Chapter II, the clique covering number of a graph in Chapter III, and state some open problems in Chapter IV. Monson, Pullman, and Rees [21] survey recent results regarding clique partitions and coverings of graphs.
+The ﬁrst result on clique partitions and covers is due to Hall [18], who proved that the edge set of any graph G on n vertices can be covered using at most n2/4 cliques, none of which need to be larger than a triangle. Later, Erd˝os, Goodman and Po´sa [14] showed that Hall’s result holds for clique partitions as well. In Chapter II we look at this result among others dealing with the clique partition number of a graph. In particular, Erdo˝s, Goodman and P´osa [14] showed that the edge set of any graph G with n vertices can be partitioned using at most n2/4 triangles and edges, and the complete bipartite graph K n/2 , n/2 gives equality. We present the theorem and its proof in Section 2.2.
+In Section 2.3 we look at Steiner systems. A rich family of clique partitions of Kn is provided by the existence of Steiner systems. We use the terminology from Cameron and Van Lint [9]. The complete subgraphs of Kn induced by each block in a Steiner system form a clique partition of Kn.
+In Section 2.4 we present and prove the de Bruijn-Erd˝os [8] Theorem. It states that for n ≥ 3, if C is a non-trivial clique partition of Kn, then |C| ≥ n. Further, equality holds if and only if C consists of one clique on n − 1 vertices and n − 1 copies of K2 incident with a single vertex of Kn; or C consists of n copies of Kq+1, n = q2 + q + 1 and each vertex of Kn is a vertex of exactly q + 1 cliques of C. This second condition is equivalent to the existence of a projective plane of order q. There
+1
+
+are several proofs of the de Bruijn-Erd˝os Theorem in the literature. In this essay, we follow the proof given by Conway, which may be found in Batten and Beutelspacher [4].
+
+A natural generalization is to consider the clique partition number of Kn\Km, the complement of a clique of size m, for m ≥ 2. Using the edge chromatic number of
+
+a graph, Pullman and Donald [23] compute the clique partition number of Kn\Km,
+
+for
+
+n 2
+
+≤
+
+m≤ √
+
+n.
+
+This
+
+result
+
+is
+
+presented
+
+in
+
+Section
+
+2.5.1.
+
+Wallis
+
+[26]
+
+determined
+
+that
+
+for m ≤ n, the number of cliques required to partition the edge set of Kn\Km is
+
+asymptotic to n. This result follows from a theorem in Section 2.6. To try and ﬁll in
+
+the gap, Erdo˝s, Faudree and Ordman [13] use aﬃne planes to get asymptotic results
+
+for other values of m, which can be found in Section 2.5.2. A consequence is that the
+
+clique partition number of Kn\Km is asymptotic to max{m2, n}, for m = o(n).
+
+The existence of Steiner systems and projective planes can be used to construct clique partitions of complements of graphs. The idea is to ﬁt most of the graph into few blocks to get good clique partitions of the complement. In Section 2.6, we prove a
+√ result of Wallis [28] where if H is a graph with at most n vertices, the complement of H in Kn can be partitioned into O(n) cliques. It is more diﬃcult to determine clique partitions of complements of spanning subgraphs of Kn. In Sections 2.7 − 2.8, we consider matchings, paths, cycles and forests. Gregory, McGuinness and Wallis [15] prove that for n suﬃciently large, the complement of a perfect matching on n vertices can be partitioned into about n log2 log2 n cliques. The details can be found in Section 2.7. In an attempt to generalize these results, we look at the complement of a spanning forest of Kn in Section 2.8. Using projective planes we show the existence of a clique partition of the complement of a forest using about n(log2 n)log2 3 cliques.
+
+Finally, we present a general method for ﬁnding upper bounds for any graph with
+
+bounded maximum prove the existence
+
+degree. We of a clique
+
+use Steiner partition of
+
+systems G¯ using
+
+and a√probabilistic argument to n3/2 ∆(log2 n)2 cliques, where
+
+∆ = o(n/(log2 n)4) is the maximum degree of G. This is done in Section 2.9. We
+
+conjecture that the complement of any graph on n vertices with o(n2) edges can be
+
+partitioned into o(n2) cliques.
+
+In Chapter III, we analyze the clique covering number of the complement of graphs
+with very few edges, such as a cycle, path, and perfect matching. Finding an induced graph H in the Kneser graph gives rise to a clique cover of H¯ . Thus, by looking at
+
+2
+
+induced subgraphs in the Kneser graph we may obtain upper bounds on the clique covering numbers of graphs. In Section 3.1, we show the relationship between clique coverings and intersection graphs. Using this result, Gy´arf´as [17] gives a lower bound of log2(n+1) for a graph with n vertices that has no isolated vertices and no equivalent vertices.
+In Section 3.2, we present a result of Gregory and Pullman [16]. In particular, it is shown that the clique covering number of the complement of a perfect matching on n vertices is asymptotic to log2 n. This is accomplished by using the famous Erdo˝s-KoRado Theorem on set intersections. We use the terminology from set theory found in Bolloba´s [6]. For the ﬁrst time, we generalize this result to give a lower bound on the clique covering number of Ks(t), the complete s-partite graph with parts of size t. In particular, we show for s suﬃciently large and ﬁxed t, covering the edges of Ks(t) requires at least logb(st) cliques, where b = b(t) ∈ (1, 2], which when t = 2, gives Gregory and Pullman’s [16] result.
+In Section 3.3, the clique covering number of the complement of a cycle and path are analyzed. For m suﬃciently large, de Caen, Gregory, and Pullman [11] give a lower bound of log2 m and an upper bound of 2 log2 m on the clique covering number of the complement of a cycle and path on m vertices. They conjecture that the clique covering number is log2 m asymptotically. Alles and Poljak [1] improve the upper bound to 1.695 log2 m, and Kohayakawa [19] improves the upper bound to 1.459 log2 m, for m suﬃciently large. This is done by ﬁnding a long induced path in the Kneser graph. In particular, Kohayakawa [19] uses a bipartite graph to give a recursive construction for an induced path in the Kneser graph. Kohayakawa [19] made a conjecture regarding the length of a longest induced path in the Kneser graph, which if true, would imply de Caen, Gregory, and Pullman’s [11] conjecture of the existence of a clique cover of the complement of a cycle and path with size asymptotic to log2 m. We follow Vander Meulen [25] for most of the results in Section 3.3 regarding induced cycles and paths in the Kneser graph.
+In Section 3.4, bounds on the clique covering number of the complement of graphs whose maximum degree is two are obtained. de Caen, Gregory and Pullman [11] prove that for n suﬃciently large, an upper bound on the order of log2 n can be obtained. They ask if an upper bound of (1 + o(1)) log2 n can be obtained, and for the ﬁrst time we demonstrate that in general, it cannot. We demonstrate with the complete
+3
+
+multipartite graph whose parts each have size three, and show this graph requires at least 1.088 log2 n cliques in a minimum size clique covering.
+In Section 3.5, we use the techniques of Section 3.4 to obtain bounds on the clique covering number of the complement of a forest. We show an upper bound of 10.3 log2 n for the clique covering number of the complement of a forest, and a lower bound of log2 k, where k is the size of the largest induced matching of the forest.
+Finally, in Section 4.1, we list some open problems and present some conjectures dealing with clique partitions and coverings of graphs.
+
+1.2 Notation
+
+We use the usual deﬁnitions from graph theory found in Bondy and Murty [12]. We often write Gn to emphasize that G has n vertices. The complement G¯ of Gn is the graph on vertex set V , with edge set E(Kn)\E(G). If G has n vertices, then we also use Kn\G to denote the complement of the graph G. If N > n and V (G) ⊂ V (KN ), then KN \G denotes the graph with vertex set V (KN ) and edge set E(KN )\E(G). Let G be a non-empty graph. If v ∈ V (G), then the set of vertices adjacent to v in G is denoted by Γ(v). The union G ∪ H of two graphs G and H has vertex set V (G) ∪ V (H) and edge set E(G) ∪ E(H).
+
+We use the usual deﬁnitions from set theory found in Bolloba´s [6]. Sets with k elements will be called k-sets; subsets with k elements are k-subsets. Let A be a set. By A(k) we denote the set of all k-subsets of A. For convenience, we use [n] to denote the set {1, 2, . . . , n}.
+
+The Kneser graph Kn:k is the graph whose vertex set consists of the k-subsets of
+
+[n], and where two vertices are adjacent if and only if they are disjoint. Note that Kn:k
+
+is an
+
+n−k k
+
+-regular
+
+graph.
+
+For
+
+example,
+
+K5:2
+
+is
+
+isomorphic
+
+to
+
+the
+
+Petersen
+
+graph.
+
+If
+
+n < 2k, then Kn:k is the empty graph, and if n = 2k, then Kn:k is a matching of size
+
+2k k
+
+.
+
+4
+
+Part II
+Clique Partitions
+2.1 Preliminary results
+Let G be a graph with vertex set V (G) and edge set E(G). We call a complete subgraph of G a clique of G. A clique partition of G is a set of cliques of G, which together contain each edge of G exactly once. The smallest cardinality of any clique partition of G is called the clique partition number of G, and is denoted by cp(G). This number exists as the edge set of G forms a clique partition for G. A clique partition of G with size cp(G) is referred to as a minimum clique partition of G. Note that any minimum clique partition does not contain any cliques of size one, and also the clique partition number of the empty graph is 0.
+Orlin [22] ﬁrst noted that a clique partition of G gives rise to a clique partition of G − v. Namely, delete the vertex v from each clique in the partition of G. If this produces a clique with a single vertex, then delete this vertex from the clique partition.
+Conversely, a clique partition of G−v gives rise to a clique partition of G. Namely, add the edges adjacent to v to the clique partition of G − v to get a clique partition of G.
+Lemma 2.1.1 Given any graph G,
+cp(G) − deg(v) ≤ cp(G − v) ≤ cp(G).
+This lemma can be generalized as follows.
+Lemma 2.1.2 If H is an induced subgraph of G then,
+cp(G) − (|E(G)| − |E(H)|) ≤ cp(H) ≤ cp(G).
+Also, if H is a subgraph of G, then for any n ≥ |V (G)|
+cp(Kn\H) ≤ cp(Kn\G) + |E(G)| − |E(H)|.
+5
+
+Proof. By taking a clique partition of H and adding the edges E(G)\E(H) we get a clique partition of G, so the ﬁrst inequality follows. If H is an induced subgraph of G, then cp(H) ≤ cp(G) follows by applying Lemma 2.1.1 to each vertex of G\H.
+If H is a subgraph of G, then to get a clique partition of Kn\H, we take a clique partition of Kn\G and add the edges of G that do not appear in H.
+Monson [20] lists other results that the eﬀect vertex and edge deletion have on the clique partition number of a graph.
+2.2 The Erdo˝s-Goodman-Po´sa Theorem
+How large in absolute terms can cp(G) be for a simple graph on n vertices? Erd˝os, Goodman and Po´sa [14] showed that the edge set of any simple graph G
+with n vertices can be partitioned using at most n2/4 triangles and edges, and that the complete bipartite graph K n/2 , n/2 gives equality. This is the ﬁrst fundamental result in clique partitions of graphs. Note that their proof can be adapted to show that K n/2 , n/2 is the only graph that gives cp(G) = n2/4 .
+Theorem 2.2.1 Let G be a simple graph with n vertices. Then G has a clique partition of size at most n2/4 consisting of edges and triangles. In particular,
+cp(G) ≤ n2/4 , with equality if and only if G ∼= K n/2 , n/2 .
+Proof. First note that given any positive integer n,
+n2/4 = (n − 1)2/4 + n/2 .
+We will prove the theorem by induction on the number of vertices n of G. If n = 1, 2, then the theorem is true. Assume that it is true for all graphs with less than n vertices, and let G be a simple graph with n vertices. Suppose that the minimum degree of G is δ = n/2 + r, where r is an integer, and let x be a vertex of smallest degree in G.
+6
+
+Case 1: r ≤ 0. Then deg(x) ≤ n/2 . By induction, G − x can be partitioned into (n − 1)2/4 edges and triangles. Hence, by Lemma 2.1.1,
+cp(G) ≤ cp(G − x) + deg(x) ≤ (n − 1)2/4 + n/2 = n2/4 .
+Furthermore, this clique partition of G consists of the edges and triangles from the clique partition of G − x and the edges incident to x. For equality to hold in the theorem, we need cp(G − x) = (n − 1)2/4 and deg(x) = n/2 . By induction, G − x ∼= K (n−1)/2 , (n−1)/2 . Since deg(x) = n/2 and cp(G) = n2/4 , x may only be adjacent to vertices on one side of G − x (otherwise we form a triangle which may be included in our clique partition to give cp(G) < n2/4 ). Hence, G ∼= K n/2 , n/2 .
+Case 2: r > 0. Let Γ(x) = {y1, y2, . . . , yδ}, and let H be the subgraph of G induced by Γ(x). We claim that H has at least r independent edges. We prove this claim by contradiction. Suppose H has at most r − 1 independent edges. Without loss of generality, assume this set of edges is
+{y1y2, y3y4, . . . , ys−1ys},
+for some maximal even integer s ≤ 2r − 2. By hypothesis, deg(ys+1) ≥ δ. Note that Γ(ys+1) ⊆ V (G)\{ys+1, ys+2, . . . , yδ}. Hence,
+deg(ys+1) ≤ n − (δ − s) ≤ (2r − 2) + (n − δ) = n/2 + r − 2 ≤ n/2 + r − 1 < n/2 + r = δ.
+This contradicts that deg(ys+1) ≥ δ. Thus H has at least r independent edges. Without loss of generality, assume they are
+{y1y2, y3y4, . . . , y2r−1y2r}.
+For convenience, deﬁne G = (G − x)\{y1y2, y3y4, . . . , y2r−1y2r}. By induction, G can be partitioned into at most (n − 1)2/4 edges and triangles. These edges and
+7
+
+triangles along with the triangles induced by {x, y2i−1, y2i}, for i = 1, 2, . . . , r, and the edges {xy2r+1, xy2r+2, . . . , xyδ} give a partition of G into at most
+(n − 1)2/4 + r + (δ − 2r) = (n − 1)2/4 + r + n/2 + r − 2r = n2/4
+edges and triangles. For equality to hold in the theorem, we need cp(G ) = (n − 1)2/4 . Hence, by
+induction, G ∼= K (n−1)/2 , (n−1)/2 . We may assume that G is not the complete graph, since n > 2 and cp(G) > 1. Thus, there is a vertex, say z, which is not adjacent to x (as x is of minimum degree). But then z is adjacent to at most (n − 1)/2 vertices in G, as z belongs to one of the parts of G . So, as r > 0,
+deg(z) ≤ (n − 1)/2 = n/2 < n/2 + r = δ,
+contradicting that δ is the minimum degree of G.
+
+2.3 Steiner systems, projective planes and clique partitions
+
+A rich family of clique partitions of Kn is provided by the existence of Steiner systems. In deﬁning a Steiner system, we use the text by Cameron and Van Lint [9].
+
+A Steiner system S(n, k) is a pair (X, B), where X is a set of points of cardinality
+
+n, and B is a collection of k-element subsets of X called blocks, with the property
+
+that any two points are contained in precisely one block. We assume that X and B
+
+are non-empty, and that n ≥ k ≥ 2. As any two points of a Steiner system S(n, k)
+
+appear in exactly one block, we can think of the blocks of S(n, k) as cliques of Kn,
+
+such that every edge of Kn appears in exactly one clique. Hence, we get a clique
+
+partition of Kn into
+
+n 2
+
+/
+
+k 2
+
+cliques of size k.
+
+A projective plane of order q is a Steiner system S(q2 + q + 1, q + 1). We call the
+
+blocks of a projective plane lines. Alternatively, a projective plane of order q consists
+
+of q2 + q + 1 points, where any two points determine a line; any two lines determine
+
+a point; every point has q + 1 lines on it; and every line has q + 1 points. Projective
+
+planes are known to exist for all prime power orders, but no plane of non-prime power
+
+order is known.
+
+8
+
+For example, the projective plane of order 2 provides a clique partition of K7 into seven cliques, each of size three. This is called the Fano plane and corresponds to the Steiner system S(7, 3).
+The cliques are the triangles induced by the sets {1, 2, 4}, {2, 3, 5}, {3, 4, 6}, {4, 5, 7}, {1, 5, 6}, {2, 6, 7}, {1, 3, 7},
+which correspond to the lines of the Fano plane. An aﬃne plane of order q is a Steiner system S(q2, q). Note that an aﬃne plane
+can be created from a projective plane by deleting all of the points of a particular block. We call the blocks of an aﬃne plane lines, and we say two lines are parallel if they are equal or disjoint. Then if L is a line, and p is a point, there is a unique line parallel to L which contains p. Hence, parallelism is an equivalence relation on the set of lines, and the lines in any parallel class partition the set of points. So, any parallel class has q lines, and there are q + 1 parallel classes. It is straightforward to prove that there exists an aﬃne plane of order q if and only if there exists a projective plane of order q.
+2.4 The de Bruijn-Erd˝os Theorem
+A clique partition is said to be trivial if it consists of a single clique, and non-trivial otherwise.
+For n ≥ 3, de Bruijn and Erdo˝s [8] prove that if C is a non-trivial clique partition of Kn, then |C| ≥ n. They further showed that equality holds if and only if C consists of one clique on n − 1 vertices and n − 1 copies of K2 incident with a single vertex of Kn; or C consists of n copies of Kq+1, n = q2 + q + 1 and each vertex of Kn is a vertex
+9
+
+of exactly q + 1 cliques of C. This second condition is equivalent to the existence of a projective plane of order q. There are several proofs in the literature. We follow the proof given by Conway, which may be found in Batten and Beutelspacher [4].
+
+Theorem 2.4.1 If n ≥ 3 and C is a non-trivial clique partition of Kn, then |C| ≥ n, with equality if and only if
+(i) C consists of one clique on n − 1 vertices and n − 1 copies of K2 incident with a single vertex of Kn, or
+(ii) C consists of n copies of Kq+1, n = q2 + q + 1 and each vertex of Kn is a vertex of exactly q + 1 cliques of C.
+
+Proof. Clearly if (i) or (ii) is satisﬁed, then we get |C| = n.
+Let C be a clique partition of Kn with size |C| ≤ n. We will show that |C| = n and either (i) or (ii) is satisﬁed. Let V be the vertex set of Kn. For v ∈ V , let rv denote the number of cliques of C that contain the vertex v. Since n ≥ 3, |C| − rv > 0, for all vertices v ∈ V . Also, for any clique K ∈ C, |C| − |V (K)| > 0. This follows as taking any vertex not in V (K) (one exists as |C| > 1) gives rise to a set of |V (K)| edges, no two which may share a clique in C.
+For any vertex v ∈ V and clique K ∈ C, deﬁne
+
+0 if v is not a vertex of K δ(v, K) =
+1 if v is a vertex of K We note that for each K ∈ C,
+
+δ(v, K) = |V (K)|,
+v∈V
+
+and for every ﬁxed v ∈ V ,
+
+δ(v, K) = rv.
+K ∈C
+
+Now,
+
+n = |C| − rv =
+
+1 − δ(v, K) .
+
+v∈V |C| − rv v∈V K∈C |C| − rv
+
+10
+
+Note that for any clique K ∈ C and any vertex v which is not a vertex of K, then
+
+rv ≥ |V (K)|. This follows as no two edges joining v to a vertex of K can appear in
+
+the same clique. Thus,
+
+1 − δ(v, K) 1 − δ(v, K)
+
+≥
+
+(1)
+
+|C| − rv |C| − |V (K)|
+
+for all cliques K ∈ C and vertices v ∈ V . So,
+
+1 − δ(v, K) n≥
+|C| − |V (K)|
+v∈V K∈C
+
+1 − δ(v, K) =
+|C| − |V (K)|
+K∈C v∈V
+
+n − |V (K)| =
+|C| − |V (K)|
+K ∈C
+
+n
+
+≥
+
+= n.
+
+|C|
+
+K ∈C
+
+The last inequality follows as |C| ≤ n and |C| > |V (K)| imply
+n − |V (K)| n ≥,
+|C| − |V (K)| |C|
+for any clique K ∈ C. Thus we must have equality everywhere, implying that |C| = n.
+In addition, for each vertex v ∈ V not in clique K, equality in equation (1) implies rv = |V (K)|. We claim that any two cliques J, K ∈ C meet in at least one vertex. Suppose J, K do not meet in a vertex. Take v ∈ V (J). Then v appears in |V (K)| cliques of C, as rv = |V (K)|. But there are |V (K)| edges from v to K, no two of which appear in the same clique of C. As v also appears in clique J, we get that rv ≥ |V (K)| + 1, a contradiction. Hence, any two cliques must meet in at least one vertex.
+Note, if two cliques shared a pair of vertices, there would be an edge which appears in two cliques, contradicting that C is a clique partition. Therefore, any two cliques meet in exactly one vertex. Also, any two vertices determine a clique.
+Now let J, K ∈ C be any two diﬀerent cliques from C, and say J, K share vertex v.
+
+11
+
+First suppose V (Kn) = V (J ∪ K). Then rv = 2, implying that all other cliques of C have size 2. This implies that either J or K is a clique on n − 1 vertices. Hence, C satisﬁes (i).
+
+Now suppose that for any choice of J and K, there is always a vertex of Kn, say
+
+w, such that w ∈ V (J ∪K). Then rw = |V (J)| = |V (K)|. As J and K were arbitrary,
+
+every clique in C must have the same size, say q + 1. As there are n cliques in C, an
+
+edge count gives,
+
+n(n − 1) (q + 1)q
+
+=n
+
+,
+
+2
+
+2
+
+implying, n = q2 + q + 1. Hence, C satisﬁes (ii).
+
+Thus it follows that C satisﬁes either (i) or (ii).
+
+Corollary 2.4.2 If G is a graph on n vertices, and is neither the complete graph nor
+
+the empty graph then,
+
+cp(G) + cp(G¯) ≥ n.
+
+Proof. Suppose G is a graph on n vertices, and is neither the complete graph nor the empty graph. If cp(G) + cp(G¯) < n, then we would get a clique partition of Kn into fewer than n cliques, contradicting Theorem 2.4.1.
+The de Bruijn-Erdo˝s Theorem can be used to construct clique partitions of the complement of small graphs, as done in Sections 2.5 − 2.8. The Fano plane in Section 2.3 gives an example of Theorem 2.4.1 (ii).
+
+2.5 Complement of a clique
+We wish to know how many cliques are required to partition the edge set of Kn\Km, for m < n. For n ≥ 3, Orlin [22] ﬁrst noted that Theorem 2.4.1 gives cp(Kn\K2) = n − 1 and
+cp(Kq2+q+1\Kq+1) = q2 + q whenever a projective plane of order q exists. As for a lower bound, we get
+cp(Kn\Km) ≥ n − 1
+
+12
+
+for 1 < m < n, by Corollary 2.4.2.
+
+In the next section we will see a result due to Wallis [26], who shows if m > 1 is √
+ﬁxed or m ≤ n, then cp(Kn\Km) ∼ n.
+
+Using the edge chromatic number of a graph, Pullman and Donald [23] show that
+
+1
+
+cp(Kn\Km)
+
+=
+
+(n 2
+
+−
+
+m)(3m
+
+−
+
+n
+
++
+
+1)
+
+for
+
+n
+
+>
+
+m
+
+≥
+
+1 2
+
+(n
+
+−
+
+x),
+
+(where
+
+x
+
+=
+
+0
+
+for
+
+n
+
+−
+
+m
+
+odd,
+
+and
+
+x
+
+=
+
+1
+
+otherwise).
+
+To try and ﬁll in the gap, Erd˝os, Faudree and Ordman [13] use aﬃne planes to
+
+prove that for m = o(n),
+
+cp(Kn\Km) ∼ max{n, m2}.
+
+2.5.1 The Pullman-Donald Theorem
+Let χ (G) denote the edge chromatic number of G, that is, the minimum number of colours required to colour the edges of G, so that no pair of adjacent edges have the same colour.
+We deﬁne the join H1 ∨ H2 of two vertex disjoint graphs H1 and H2, to be the graph with vertex set V (H1) ∪ V (H2), and edge set consisting of E(H1) ∪ E(H2) and edges ij, where i ∈ V (H1) and j ∈ V (H2). If H is a graph, then Pullman and Donald [23] compute the clique partition number of the join of H and K¯q, for q ≥ χ (H). Choosing H = Kn will then provide us with the clique partition number of Kn\Km, for particular values of m.
+
+Theorem 2.5.1 Let H be a graph with h vertices and e edges. If q ≥ χ (H) then cp(H ∨ K¯q) = hq − e. Further, any minimal clique partition consists of edges and triangles only.
+Proof. Let H be a graph with h vertices and e edges and ﬁx q ≥ χ (H). We ﬁrst construct a clique partition of H ∨ K¯q into hq − e edges and triangles. Suppose Ei is the set of edges of colour i in a minimal edge colouring of H, for 1 ≤ i ≤ χ (H). For convenience, we denote the vertices of K¯q by {v1, v2, . . . , vq}.
+13
+
+Note that Ei is a matching. Let Ti be the family of |Ei| triangles with one vertex at vi and the opposite edge in Ei. This gives a clique partition of H ∨ K¯q into edges and triangles. Namely, we use the triangles from T1, T2, . . . , Tχ (H) and all of the remaining edges. As every edge of H belongs to a triangle using a vertex from K¯q, there are e triangles. Removing these triangles from H ∨ K¯q gives a triangle-free graph with hq − 2e edges. Thus,
+cp(H ∨ K¯q) ≤ e + (hq − 2e) = hq − e.
+
+Now suppose C is a clique partition of H∨K¯q having r of its members C1, C2, . . . , Cr
+
+with edges in H. For convenience, let cj = |V (Cj) ∩ V (H)|. For each Cj, the clique on
+
+vertices V (Cj) ∩ V (H) has at least cj − 1 edges, with equality if |V (Cj) ∩ V (H)| = 2.
+
+Thus, e + r ≥
+
+r j=1
+
+cj
+
+.
+
+If
+
+e+r
+
+=
+
+r j=1
+
+cj
+
+then
+
+no
+
+member
+
+of
+
+C
+
+has
+
+size
+
+more
+
+than
+
+three. Let s be the number of edges outside of H that are covered by C1, C2, . . . , Cr.
+
+Then s ≤
+
+r j=1
+
+cj
+
+.
+
+Note
+
+that
+
+|C|
+
+=
+
+r + (hq − s),
+
+as
+
+removing
+
+the
+
+C1, C2, . . . , Cr
+
+from
+
+C leaves a triangle-free graph with hq − s edges. Then,
+
+r
+|C| = r + (hq − s) ≥ r + hq − cj ≥ hq − e.
+j=1
+
+If we have equality, then no member of C may have more than three vertices. Hence, cp(H ∨ K¯q) = hq − e, and any minimal clique partition uses only triangles and edges.
+
+If q < χ (H) then Theorem 2.5.1 may be false. For example, if n ≥ 10, H = Kn−3
+
+and q = 3, then Theorem 2.5.1 gives cp(H ∨ K¯q) = (n − 3)3 −
+
+n−3 2
+
+≤ 0, but
+
+cp(H ∨ K¯q) > 0 as H ∨ K¯q is not the empty graph.
+
+To get a result on the complement of clique, we note that χ (K2k) = χ (K2k−1) =
+
+2k − 1.
+
+Thus when m ≥ χ (Kn−m) we get cp(Kn\Km) = (n − m)m −
+
+n−m 2
+
+by
+
+Theorem 2.5.1.
+
+Theorem
+
+2.5.2
+
+For
+
+n
+
+>
+
+m
+
+≥
+
+1 2
+
+(n
+
+−
+
+x),
+
+(where
+
+x
+
+=
+
+0
+
+for
+
+n−m
+
+odd,
+
+and
+
+x
+
+=
+
+1
+
+otherwise),
+
+1
+
+cp(Kn\Km)
+
+=
+
+(n 2
+
+−
+
+m)(3m
+
+−
+
+n
+
++ 1).
+
+Also, any minimal clique partition consists of edges and triangles only.
+
+14
+
+2.5.2 The Erd˝os-Faudree-Ordman Theorem
+
+The proof of Theorem 2.5.1 relies on the fact that there are hq edges connecting H to K¯q; two lie in the same clique only if that clique contains at least one edge selected from the e edges of H. Erd˝os, Faudree and Ordman [13] make use of this fact to extend several existing lower bounds on the clique partition number of a graph.
+We ﬁrst need a numerical lemma.
+
+Lemma 2.5.3 Let
+
+q i=1
+
+ei
+
+=
+
+c
+
+and
+
+q i=1
+
+e2i
+
+≤
+
+d.
+
+Then
+
+q
+
+≥
+
+c2/d.
+
+Proof. Note that the ei’s may be distinct. If we substitute ei = c/q, for i = 1, 2, . . . , q,
+
+then the ﬁrst sum is preserved. This substitution can only decrease
+
+q i=1
+
+ei2,
+
+as
+
+the
+
+sum of the ei2 is minimized when e1 = e2 = · · · = eq = c/q. This is because i xi2 is
+
+a convex function. Thus, iq=1(c/q)2 ≤ d implying that q(c/q)2 ≤ d.
+
+Let G be a graph with n vertices, and partition V (G) into two sets A and B (which we call sides) such that A ∩ B = ∅. The edges of the graph G now fall into three classes, which we call A edges, B edges, and connecting edges, depending as to whether their ends lie both in A, both in B, or one in each. If a clique in G contains more than one of the connecting edges of G, then it must contain some A edges or B edges (or both). If the number of connecting edges is large, then there will not be enough A edges or B edges of G available to combine the connecting edges into a few number of cliques. Erd˝os, Faudree and Ordman [13] provide a lower bound on cp(G) if one of the sides has no edges.
+
+Lemma 2.5.4 Suppose G is a graph with n vertices, and A, B ⊆ V (G) such that
+
+A ∩ B = ∅. If G has k edges in side A, no edges in side B, and c connecting edges,
+
+then
+
+c2
+
+cp(G) ≥
+
+.
+
+(2k + c)
+
+Proof. If G is partitioned by q cliques and clique i has ei connecting edges, then clique
+
+i has ei(ei − 1)/2 edges in side A. Then
+
+q i=1
+
+ei
+
+=
+
+c
+
+and
+
+k ≥ q ei(ei − 1) = 1
+
+2
+
+2
+
+i=1
+
+q
+
+q
+
+e2i − ei
+
+i=1
+
+i=1
+
+1 =
+2
+
+q
+e2i − c .
+i=1
+
+15
+
+Hence,
+
+q i=1
+
+e2i
+
+≤
+
+2k
+
++
+
+c,
+
+and
+
+the
+
+result
+
+follows
+
+by
+
+Lemma
+
+2.5.3.
+
+Thus we obtain a lower bound for the clique partition number of the complement of a clique.
+
+Theorem 2.5.5 For 1 < m < n,
+
+(n − m)m2
+
+cp(Kn\Km) ≥
+
+. (n − 1)
+
+Proof. Substituting c = m(n − m) and k =
+
+n−m 2
+
+into Lemma 2.5.4 gives,
+
+(n − m)2m2
+
+(n − m)m2
+
+cp(Kn\Km) ≥ (n − m)(n − m − 1) + m(n − m) =
+
+. (n − 1)
+
+To get an upper bound for the complement of a clique, Erd˝os, Faudree and Ordman [13] use a modiﬁcation of the strategy that Wallis [26] used, that is, aﬃne planes. One problem is our lack of knowledge of aﬃne planes when q is not a prime power. To get around this problem we use the following result.
+
+Lemma 2.5.6 There exists a constant α ∈ [1/2, 1), such that if p < q are consecutive
+
+primes, then,
+
+q − p = O(pα).
+
+Note that α = 21/40 is possible, as shown in [3] by Baker, Harman and Pintz. By constructing a clique partition using an aﬃne plane, Erd˝os, Faudree and Ord-
+√ man [13] showed that if m = f (n) and for n suﬃciently large, n < m < n, we have cp(Kn\Km) < m2 + o(m2).
+√ Theorem 2.5.7 Let m = f (n) and n < m < n. Then for n suﬃciently large,
+cp(Kn\Km) < m2 + o(m2).
+
+16
+
+Proof. Let t be the smallest integer such that t ≥ m and there is an aﬃne plane of order t. By Lemma 2.5.6, we may assume for suﬃciently large m,
+m ≤ t ≤ m + cmα,
+for some constant c and α ∈ [1/2, 1). Thus, t2 = m2 + o(m2). In an aﬃne plane of order t, choose a line L, and delete all but m points from L. In the other lines, delete a total of (t2 − n) − (t − m) points. This leaves a total of n points, with m of them on a selected line. Use this design to construct a clique partition of Kn\Km into at most t2 + t − 1 cliques. Thus,
+cp(Kn\Km) ≤ t2 + t − 1 < m2 + o(m2),
+as required.
+
+√ Theorem 2.5.8 If m = o(n) and m ≥ n, then
+
+cp(Kn\Km) ∼ m2.
+
+√ Proof. If m = o(n) and m ≥ n then for a lower bound, we note that for n large enough, Theorem 2.5.5 gives,
+
+cp(Kn\Km)
+
+≥
+
+(n − m)m2 n−1
+
+∼
+
+m2.
+
+For an upper bound, we note that for n large enough, Theorem 2.5.7 gives,
+
+cp(Kn\Km) ≤ m2 + o(m2) ∼ m2.
+
+√ If m ≤ n, we will see in the next section that
+cp(Kn\Km) ∼ n.
+
+For comparison, we note that Theorem 2.5.2 gives,
+
+cp(Kn\Km)
+
+∼
+
+(1
+
+−
+
+c)(3c 2c2
+
+−
+
+1) m2
+
+when m = cn, for some constant 1/2 ≤ c ≤ 1.
+
+If
+
+c
+
+=
+
+1/2
+
+this
+
+gives
+
+1 8
+
+n2,
+
+and
+
+if
+
+c
+
+=
+
+3/4
+
+this
+
+gives
+
+5 32
+
+n2
+
+.
+
+Various authors have analyzed the case c < 1/2.
+
+See
+
+Monson, Pullman, and Rees [21] for these results.
+
+17
+
+2.6 Complement of small graphs
+
+In the previous section, we analyzed the clique partition number of the graph Kn\H, where H is Km. What can be said about the clique partition number of Kn\H, if H is not a clique?
+
+As in Theorem 2.5.7, we will exploit the second part of Theorem 2.4.1 to con-
+
+struct clique partitions of complements of small graphs. Wallis [26, 28] examined the
+
+asymptotic behaviour of the clique partition number of complements of graphs with
+
+few vertices, thus proving (i) and (ii) of the following theorem. Using the same argu-
+
+√
+
+ment, we can prove if H has a subgraph H which has O( n) components, with each
+
+√
+
+√
+
+component having at most n vertices, and further if H has O( n) edges between
+
+components of H , then cp(Kn\H) = O(n3/2).
+
+Theorem 2.6.1 Let H be a graph. √
+(i) If H has n or less vertices, then,
+
+cp(Kn\H) = O(n). √ (ii) If H has o( n) vertices then,
+
+cp(Kn\H) ∼ n.
+
+√
+
+(iii) If H has a subgraph H which has O( n) components, with each component hav-
+
+√
+
+√
+
+ing at most n vertices, and further if H has O( n) edges between components
+
+of H , then
+
+cp(Kn\H) = O(n3/2).
+
+Proof. Let H be a graph satisfying one of the three conditions in the theorem and √
+suppose H has h vertices. Let t be the smallest integer such that t ≥ n, and such that there is a projective plane of order t. Then by Lemma 2.5.6, t2 = n + o(n). Since Kn\H is an induced subgraph of Kt2+h\H, by Lemma 2.1.2,
+cp(Kn\H) ≤ cp(Kt2+h\H)
+
+Suppose H satisﬁes (i) or (ii). Then take a ﬁnite projective plane of order t, and construct a copy of Kt2+t+1 with a distinguished subgraph H. Do this by identifying
+18
+
+points of the plane with vertices in such a way that the vertices of H are identiﬁed with the points of one block, say B. This can be done since, h ≤ t. Then we delete from Kt2+t+1, all the points of B except the ones belonging to H. This results in a Kt2+h partitioned into t2 + t + 1 cliques, with one clique of size h, and the remaining cliques of size t or t + 1. We replace the clique of size h by a clique partition of Kh\H using cp(Kh\H) cliques. This gives a clique partition of Kt2+h\H into t2 + t + cp(Kh\H) cliques. Hence,
+
+cp(Kn\H) ≤ cp(Kt2+h\H) ≤ t2 + t + cp(Kh\H).
+
+If
+
+H
+
+satisﬁes
+
+(i)
+
+then,
+
+cp(Kh \H )
+
+≤
+
+1 2
+
+h(h
+
+−
+
+1)
+
+<
+
+t2,
+
+giving
+
+that
+
+cp(Kn\H) = O(t2) = O(n).
+
+If
+
+H
+
+satisﬁes
+
+(ii),
+
+then
+
+√ h = o( n),
+√
+
+implying
+
+1 2
+
+h(h
+
+−
+
+1)
+
+=
+
+o(n).
+
+Thus,
+
+cp(Kn\H) ≤
+
+n + o(n) But cp(Kn\H) ≥ n − n by Theorem 2.4.2, thus,
+
+cp(Kn\H) ∼ n.
+
+Finally, suppose H satisﬁes (iii). Thus, the vertices of H can be identiﬁed with √
+points in a projective plane of order t such that the edges of H appear in r = O( n) √
+blocks, say, B1, B2, . . . , Br. Suppose there are e = O( n) edges in H not in H , then, Kt2+t+1\H can be partitioned into at most
+
+t2 + t + 1 − (r + e) + (r + e)(n/2)+ ≤ n + o(n) + O(n3/2) = O(n3/2)
+
+cliques, as the edges of H not in H are contained in at most e blocks and each block which contains edges of H can be partitioned into less than n/2 edges. Hence, we get a clique partition of Kn\H into at most O(n3/2) cliques, by deleting points not identiﬁed with a vertex of H.
+√ Note that if H is the graph Km, for m ≤ n, then we get
+cp(Kn\Km) ∼ n,
+as cp(Kh\H) would be zero in the proof of Theorem 2.6.1 (i). Thus, along with Theorem 2.5.8 we have established the following theorem.
+
+19
+
+Theorem 2.6.2 If m = o(n), then cp(Kn\Km) ∼ max{n, m2}.
+
+More generally, the proof of Theorem 2.6.1 (iii) implies that if H has a subgraph
+
+√
+
+√
+
+H which has O( n) components, with each component having at most n vertices,
+
+and there are o(n) edges connecting these components, then
+
+cp(Kn\H) = o(n2).
+
+2.7 Complement of paths, cycles, and perfect matchings
+
+If we ﬁx H in Theorem 2.6.1(iii) to be a particular graph, we can provide better bounds on the clique partition number of the complement of H. In particular, consider the clique partition numbers of the complement of a path Pn, a cycle Cn, and a perfect matching Mn each on n vertices.
+In this essay, M¯n denotes the complement of a perfect matching on n vertices, where n must be even. For convenience, if n is odd, we use the notation M¯n to denote the complement graph Kn\Mn−1. It was Orlin [22] who ﬁrst asked about the asymptotics of the clique partition number of the complement of a perfect matching. Wallis [27] showed that for any ﬁxed > 0, cp(M¯n) = o(n1+ ). Later, Gregory, McGuinness and Wallis [15] proved for n suﬃciently large, we have
+
+n ≤ cp(M¯n) ≤ (1 + o(1))n log2 log2 n
+
+and conjecture that cp(M¯n) ∼ n.
+
+The ﬁrst result regarding the clique partition number of the complement of a
+
+cycle is by Wallis [29], who shows cc(C¯n) <
+
+3 16
+
+n2.
+
+Using the same argument as for
+
+the complement of a perfect matching, Wallis [28] proves that for the path, cp(P¯n) ≤
+
+(1 + o(1))n log2 log2 n, for n suﬃciently large. Wallis [28] also notes (but does not prove), that this technique can be extended to the complement of H, where every
+
+vertex of H is of degree one or two, namely Cn. Since de Caen and Gregory [10] prove that for n ≥ 11, cp(C¯n) ≥ n, for the complement of a cycle we have,
+
+n ≤ cp(C¯n) ≤ (1 + o(1))n log2 log2 n.
+
+20
+
+Lemma 2.1.2 gives cp(P¯n) ≥ cp(C¯n−1). Thus, for the complement of a path we have,
+n − 1 ≤ cp(P¯n) ≤ (1 + o(1))n log2 log2 n.
+In this essay, we will prove the result cp(P¯n) ≤ (1+o(1))n log2 log2 n by Wallis [28]. Note that this result can be used to show that cp(C¯n) and cp(M¯n) are O(n log2 log2 n), by Lemma 2.1.2.
+
+Theorem 2.7.1 If Pn is the path on n vertices then, cp(P¯n) ≤ (1 + o(1))n log2 log2 n,
+
+for n suﬃciently large.
+
+Proof. Note that by Lemma 2.1.2, cp(P¯n) ≤ cp(P¯r), for n ≤ r. Let d =
+
+√ n
+
+and
+
+choose e to be the smallest integer such that de ≥ n.
+
+√ Let t be the smallest prime power such that t ≥ n. We embed a path Pn
+
+in a copy of an aﬃne plane of order t. One parallel class, say P1, is chosen and
+
+all but d of its lines are deleted. Now select another parallel class P2 and delete t − e of its lines, leaving e lines. Denote the point of intersection of line i of P1
+
+with line j of P2 by aij. Replace line j of P2 by a copy of Pd, in particular, the complement of path (a1j, a2j, . . . , adj), for j = 1, 2, . . . , e. Now replace line 1 of P1 by
+
+the complement of path (a11, a12, . . . , a1e) and line d of P1 by the complement of path (ad1, ad2, . . . , ade). What we have done is selected e + 2 blocks and replaced them with
+
+copies of complements of paths, while the remaining blocks are left untouched. By
+
+construction, we have an embedded path Ped along with e − 1 additional edges in an
+
+aﬃne plane of order t. Thus,
+
+cp(P¯n) ≤ cp(P¯ed) ≤ t2 + t − (e + 2) + e cp(P¯d) + 2 cp(P¯e) + e − 1, ≤ t2 + t − 3 + e cp(P¯d) + 2[cp(P¯d) + 3d − 1],
+
+since P¯e can be partitioned into at most cp(P¯d) + 3d − 1 cliques, as e ≤ d + 3. So,
+
+cp(P¯n) ≤ t2 + d cp(P¯d) + 5 cp(P¯d) + t + 6d − 5, ≤ t2 + d cp(P¯d) + o(d2).
+
+21
+
+by Theorem 2.6.1 (iii), as the path satisﬁes the condition of the theorem. We write
+
+c(x) = cp(P¯ x ), so that,
+
+c(x)
+
+≤
+
+t2
+
++
+
+√√ xc( x)
+
++
+
+o(x),
+
+√ where t is the closest integer bigger than x. Hence,
+
+√√ c(x) ≤ x + xc( x) + o(x).
+
+By Lemma 5.2.1, for x suﬃciently large.
+
+c(x) ≤ (1 + o(1))x log2 log2 x,
+
+2.8 Complement of forests
+
+In this section, we use projective planes to prove that if Fn is a forest on n vertices, then the edge set of F¯n can be partitioned into O(n(log2 n)log2 3) cliques. We use the
+techniques of the previous section to set up a recursion and solve it.
+
+But √
+
+ﬁrst,
+
+we
+
+need
+
+to
+
+know
+
+that
+
+we
+
+can
+
+partition
+
+Fn
+
+into
+
+components
+
+of
+
+size
+
+at
+
+most n such that two components intersect in at most one vertex. If the components
+
+are small, then this corresponds to using lots of blocks of our projective plane, thus increasing the number of cliques required to partition F¯n. Hence, we will prove a lower bound on the size of the components.
+
+We assume that we are working with trees, as a clique partition for F¯n can be extended to a clique partition of the complement of some tree Tn with E(Fn) ⊆ E(Tn), by adding at most n − 1 edges (namely edges E(Tn)\E(Fn)) to our clique partition of F¯n.
+
+Deﬁnition 2.8.1 A tree partition of a tree Tn is a collection of subtrees {T 1, T 2, . . . , T r},
+such that every edge of Tn is in exactly one subtree, Tn = ∪ir=1T i and |V (T i) ∩ V (T j)| ≤ 1
+for all i = j.
+
+22
+
+For any positive integers k and b with 2 ≤ k ≤ n and b > 1, we say a tree partition is (k, b)-smooth if k/b ≤ |T i| ≤ k, for i = 1, 2, . . . , r. We will prove that a (k, 3)-smooth tree partition of Tn always exists.
+
+Lemma 2.8.2 Let Tn be a tree on n vertices, and 2 ≤ k ≤ n be a positive integer. Then there exists a (k, 3)-smooth tree partition of Tn.
+
+Proof. Let Tn be a tree on n vertices, and 2 ≤ k ≤ n be a positive integer. Note that there is always a tree partition of Tn into two subtrees. It is well known that there exists a tree partition {T 1, T 2} of Tn such that n/3 ≤ |T i| ≤ 2n/3, for i = 1, 2. To see this, take an arbitrary tree partition {T 1, T 2} of Tn so that ||V (T 1)| − |V (T 2)|| is minimized, and assume T 1 and T 2 share vertex v. If n/3 ≤ |T i| ≤ 2n/3, for i = 1, 2, then we are done. Without loss of generality, suppose that |T 1| < n/3. As ||V (T 1)| − |V (T 2)|| is minimized, v is adjacent to at least two vertices of T 2. Form a tree partition {J1, J2} of T 2, such that J1 and J2 share vertex v. Then,
+
+2n + 1 < {|T 1| + |J1|} + {|T 1| + |J2|} < 4n + 1,
+
+3
+
+3
+
+as 2n/3 + 1 < 2|T 1| + |T 2| + 1 < 4n/3 + 1. Hence, n/3 < |V (T 1 ∪ J1)| < 2n/3 or n/3 < |V (T 1 ∪ J2)| < 2n/3. Thus, we constructed a tree partition of Tn consisting of two subtrees that share a vertex, with sizes between n/3 and 2n/3.
+
+We will construct a (k, 3)-smooth tree partition S of Tn as follows. Repeatedly split trees using the above argument that have size more than k. Then, for all subtrees T i of S, we have that k/3 ≤ |T i| ≤ k, as required. We get a (k, 3)-smooth tree partition
+of Tn, as each time we split a subtree, the two resulting trees share exactly one vertex.
+
+For convenience of the next proof, we deﬁne the following functions g(n) and h(x), where n ∈ N and x ∈ R+,
+g(n) = max{cp(T¯n) : Tn is a tree on n vertices},
+h(x) = max{cp(K9 x \T x ) : T x is a tree on x vertices}. Note that g(n) ≤ h(n), and cp(T¯n) ≤ g(n), for any tree Tn.
+
+23
+
+Theorem 2.8.3 If Fn is a forest on n vertices then, cp(F¯n) = O(n(log2 n)log2 3),
+for n suﬃciently large.
+
+Proof. We assume that we are working with trees, as a clique partition for F¯n can
+
+be extended to a clique partition of T¯n, for some tree Tn with E(Fn) ⊆ E(Tn), by
+
+adding O(n) edges to our clique partition of F¯n. Since cp(T¯n) ≤ g(n), for any tree Tn,
+
+it
+
+suﬃces
+
+to
+
+show
+
+that
+
+g(n)
+
+=
+
+O(n(log2 n)log2 3).
+
+Let
+
+Tn
+
+be
+
+a
+
+tree
+
+on
+
+n vertices √
+
+such
+
+that
+
+h(n) = cp(K9n\Tn).
+
+Let
+
+t
+
+be
+
+the
+
+smallest
+
+integer
+
+such
+
+that t ≥ 4 √
+
+n + 11 and √
+
+there is a projective plane of order t. Lemma 2.5.6 gives that t = 4 n + o( n) which
+
+gives
+
+t2
+
+=
+
+16n + o(n)
+
+upon
+
+squaring.
+
+Let
+
+S
+
+=
+
+{T 1, T 2, . . . , T r}
+
+be
+
+a
+
+(
+
+√ n
+
+, 3)-smooth
+
+tree partition of Tn, which exists by Lemma 2.8.2. Then, we have for i = 1, 2, . . . , r,
+
+√
+
+n
+
+≤ |T i| ≤
+
+√ n.
+
+3
+
+Without loss of generality, suppose that
+
+i−1
+
+V (T i) ∩
+
+V (T j) = {vi}
+
+j=1
+
+for i = 2, 3, . . . , r. Note that we need |T 1|+(|T 2|−1)+(|T 3|−1)+· · ·+(|T r|−1) = n,
+
+which implies that
+
+3(n − 1) r≤ √
+n−4
+
+√√
+
+√
+
+as n ≤ n + 1. Then we get r ≤ 3 n + 13, if n is large enough.
+
+Choose a projective plane of order t. We claim that we can ﬁnd blocks
+
+{B1, B2, . . . , Br}
+
+such that Bi contains T i, no two vertices of Tn are identiﬁed with the same point of the projective plane and the blocks Bi have the same tree like structure as the subtrees T i. First identify the vertices of T 1 with points from an arbitrary block, say B1, of the projective plane, where the vertex v2 is identiﬁed with some point w2, and all other vertices of T 1 are identiﬁed arbitrarily with points from B1\{w2}. We will show how to ﬁnd blocks B2, B3, . . . , Br satisfying the requirements. Suppose for some
+
+24
+
+2 ≤ i ≤ r, we have already identiﬁed the vertices of T i−1 with the points of Bi−1,
+
+such that vertex vi is identiﬁed with point wi of some block Bj, where j ≤ i − 1. Pick
+
+a
+
+block
+
+Bi
+
+(diﬀerent
+
+from
+
+B1, B2, . . . , Bi−1) √
+
+that
+
+contains
+
+the
+
+point
+
+wi.
+
+There
+
+exists
+
+such a block as there √
+r ≤ 3 n + 13 blocks
+
+are t+1 ≥ have been
+
+4 n+11 blocks containing used). Identify the vertices
+
+the point wi (and of T i with points
+
+at most from Bi
+
+such that vi is identiﬁed with wi, and all other vertices of T i are identiﬁed arbitrarily with points from Bi\W , where W is the set of points from B1 ∪ B2 ∪ · · · ∪ Bi−1 that
+
+intersect with Bi. Note that |W | < r, as Bi intersects every other block in at most
+
+√
+
+one point. This identiﬁcation can be done, as each block has t + 1 ≥ 4 n + 12 points,
+
+√√
+
+√
+
+each tree has at most n ≤ n vertices, and removing at most r − 1 ≤ 3 n + 12
+
+points
+
+of
+
+block
+
+Bi
+
+leaves
+
+at
+
+least
+
+√ n
+
+points
+
+which
+
+can
+
+be
+
+identiﬁed
+
+with
+
+T i.
+
+This
+
+gives a collection of blocks {B1, B2, . . . , Br} that contain the edges of T¯n.
+
+Then by Lemma 2.1.2,
+
+g(n) ≤ h(n) = cp(K9n\Tn) ≤ cp(Kt2+t+1\Tn).
+
+As r is the number of blocks Bi that contain edges of Tn, we have
+
+r
+
+h(n) ≤ t2 + t + 1 − r + cp(K|Bi|\T i)
+
+i=1
+
+r
+
+≤ O(n) + cp(K|Bi|\T i)
+
+i=1
+
+r
+
+≤ O(n) +
+
+cp(K9
+
+√ n
+
+\T
+
+i).
+
+i=1
+
+√
+
+√
+
+√
+
+The last inequality follows as, Lemma 2.5.6 implies t + 1 ≤ 4 n + o( n) ≤ 9 n ,
+
+for n suﬃciently large. But, if Tp is an induced subgraph of Tq, then cp(T¯p) ≤ cp√(T¯q) + q − p, for p ≤ q, by Lemma 2.1.2. Hence, we can extend the trees T i to have
+n vertices. Then we have,
+
+√
+
+h(n) ≤ O(n) + r · h( n)
+
+√
+
+√
+
+≤ O(n) + (3 n + 13)h( n)
+
+√√
+
+= O(n) + 3 nh( n)
+
+√ since h( n) = O(n). Hence,
+
+√√ h(x) ≤ O(x) + 3 xh( x).
+
+25
+
+Dividing through by x and setting z = log2 log2 x, and r(z) = h(x)/x gives, r(z) ≤ O(1) + 3 · r(z − 1).
+
+So, r(z) = O(3z)
+for x (and hence z) arbitrarily large. Hence,
+
+implying that
+
+h(x) < O(x3z) = O(x(log2 x)log2 3), g(n) = O(n(log2 n)log2 3).
+
+It would be interesting to know if there is a forest Fn such that lim cp(F¯n) = ∞. n→∞ n
+Regardless, we conjecture that a bound of O(n log2 log2 n) is possible.
+
+Conjecture 2.8.4 If Fn is a forest on n vertices then,
+
+cp(F¯n) = O(n log2 log2 n),
+
+for n suﬃciently large.
+
+√
+
+We
+
+believe that √
+
+Fn
+
+can
+
+be
+
+partitioned
+
+into
+
+(1
+
++
+
+o(1))
+
+n components each with
+
+size (1 + o(1)) n, such that any two components intersect in at most one vertex. If
+
+this is true, then Theorem 2.8.3 can be adapted to give O(n log2 log2 n).
+
+2.9 Complement of graphs with bounded maximum degree
+The Probabilistic Method has recently been developed intensively. We use the terminology from Alon [2] and follow Beth, Jungnickel and Lenz [5] regarding the existence of Steiner systems. Necessary existence conditions for the existence of an S(n, k) are
+n ≡ 1 mod k − 1,
+26
+
+n(n − 1) ≡ 0 mod k(k − 1).
+Wilson’s theorem [5] says that the necessary conditions above for the existence of an S(n, k) are suﬃcient for almost all n ∈ N. However, the proofs presented by Wilson do not give an explicit constant n0(k) such that an S(n, k) exists for all n ≥ n0(k) satisfying the necessary conditions. Recently, Chang showed that n0(k) ≤ exp(exp(kk2)) (see page 800 in [5]). In the next theorem, we will show that if a graph G has bounded maximum degree, then the existence of a Steiner system gives rise to a clique partition of G¯.
+
+Theorem 2.9.1 Let G be a√grap√h on g vertices with maximum degree ∆ = o(n/ log4 n), where n = O(g). Let k = n/ 2∆ . If n is large enough, and if a Steiner system
+
+S(n, k) exists then,
+
+√ cp(G) = O(n3/2 ∆(log2 n)2).
+
+Proof. Suppose G, n, k satisfy the conditions of the theorem. Let S = (X, B) be a
+
+Steiner system with blocks of size k on n points. For a random permutation of the
+
+points, the probability that a ﬁxed set of k points is a ﬁxed block in B is exactly
+
+1/
+
+n k
+
+.
+
+Take
+
+G to be
+
+a ﬁxed
+
+graph
+
+on
+
+the
+
+same
+
+set of n
+
+points,
+
+with
+
+maximum
+
+degree
+
+∆. Let GB denote the subgraph of G spanned by the edges contained in a block
+
+B ∈ B.
+
+Consider the event |E(GB)| ≥ r, for some integer r. Pick a subgraph HB of GB
+
+with exactly r edges. If the maximum size of a matching in HB is i for some positive
+
+integer i ≤ r, and if there are s vertices of HB which are unsaturated by a maximum
+
+matching, then
+
+max
+
+r−
+
+2i 2
+
+,0
+
+≤ s ≤ r − i.
+
+2i
+
+For convenience, let si = (r −
+
+2i 2
+
+)/2i.
+
+Let AB(i, s) denote the event that the
+
+largest matching in HB has size i and HB has s + 2i vertices. Fixing a matching M
+
+of size i in G, there are at most (2i∆)s ways to choose a set S of s vertices so that
+
+V (M ) ∪ S = HB. Then there are
+
+n−2i−s k−2i−s
+
+ways to choose the vertices of B\V (HB)
+
+from G. Therefore
+
+1 P[AB(i, s)] ≤ n
+k
+
+∆n (2i∆)s n − 2i − s .
+
+i
+
+k − 2i − s
+
+27
+
+Since {|E(GB)| ≥ r} ⊂ i,s AB(i, s), it follows that
+
+1 P[|E(GB)| ≥ r] ≤ n
+
+r r−i ∆n (2i∆)s n − 2i − s .
+
+i
+
+k − 2i − s
+
+k i=1 s≥si
+
+s≥0
+
+To estimate the sums on the right, we use the inequality
+
+a−t b−t
+a
+
+bt <.
+at
+
+b
+
+Let j be the largest integer such that
+
+so that deﬁnitely
+
+2j
+
+r−
+
+≥0
+
+2
+
+√√ r/2 − 1 ≤ j ≤ r/2 + 1. Put k = n/ 2∆ . Then
+
+P[|E(GB)| ≥ r] ≤
+
+r
+
+r−i
+
+∆n i
+
+(2i∆)s
+
+n−2i−s k−2i−s
+n
+
+i=1 s≥si
+
+k
+
+s≥0
+
+< r r−i (∆n)i(2r∆)s k2i+s n2i+s
+i=1 s≥si s≥0
+
+r
+=
+i=1
+
+∆k2 n
+
+i r−i s≥si s≥0
+
+2rk∆ s n
+
+j
+≤
+i=1
+
+1 i r−i 2
+s=si
+
+1s
+
+r
+
++
+
+2
+
+i=j+1
+
+1 i r−i 2
+s=0
+
+j 1 i 1 si
+
+1 j+1
+
+≤2
+
++4
+
+22
+
+2
+
+i=1
+
+√j =2
+i=1
+
+1 r/(2i) +
+2
+
+1 j−1 2
+
+√
+
+1 r/(2j)
+
+1 j−1
+
+≤ 2j
+
++
+
+.
+
+2
+
+2
+
+1s (∗)
+2
+
+28
+
+Note that (2rk∆)/n ≤ 1/2 is true if we set r = 2(log2(2n2∆))2 and suppose ∆(log2 n)4 → 0, n
+for large n. Also, ∆k2/n ≤ 1/2 by our choice of k. Hence, (∗) follows. We want the above expression less than 1/|B|. That is,
+
+√
+
+r
+1 2j
+
+1 j−1 n(n − 1)
+
+2j
+
++
+
+< 1.
+
+2
+
+2
+
+k(k − 1)
+
+But, the left hand side (LHS) of this is
+
+n2
+
+r
+1 2j
+
+LHS = O j
+
+k2 2
+
+r
+
+=O
+
+∆n log2(2n2∆)
+
+1 2
+
+2 log2(2n2∆)+1
+
+=O
+
+∆n log2(2n2∆)
+
+1 2
+
+log2(2n2∆)
+
+= O log2(2n2∆) n
+= O(log2 n/n).
+
+So with positive probability |E(GB)| < r for all B ∈ B, and √
+cp(G) < rk|B| = O(n3/2 ∆ log2 n),
+
+if n is suﬃciently large. This completes the proof.
+Provided that ∆ = o(n/ log4 n), the expression in the theorem is o(n2). We conjecture the following stronger statement:
+
+Conjecture 2.9.2 Let Gn be a graph on n vertices with o(n2) edges. Then the clique partition number of G¯n is o(n2).
+
+29
+
+Part III
+Clique Coverings
+3.1 Intersection graphs and Kneser graphs
+Let G be a graph. A clique covering of G is a set of cliques of G, which together contain each edge of G at least once. The smallest cardinality of any clique covering of G is called the clique covering number of G, and is denoted by cc(G). This number exists as the edge set of G forms a clique covering for G. A clique covering of G with size cc(G) is referred to as a minimum clique covering of G. The results on clique partitions in Sections 2.1 − 2.2 also hold for clique coverings. Namely, Lemma 2.1.1, Lemma 2.1.2 and Theorem 2.2.1. Brigham and Dutton [7] list other results that the eﬀect vertex and edge deletion have on the clique covering number of a graph.
+Before Erdo˝s, Goodman and P´osa [14] proved Theorem 2.2.1 for clique partitions, Hall [18] proved that the edge set of any graph G on n vertices can be covered using at most n2/4 cliques, none of which need to be larger than a triangle. We note that Hall’s result follows trivially from Theorem 2.2.1. This is because a clique partition of a graph G is also a clique covering of G, so we have the inequality cc(G) ≤ cp(G). Thus, by Theorem 2.2.1, we have cc(G) ≤ cp(G) ≤ n2/4 , with equality everywhere if and only if G ∼= K n/2 , n/2 .
+Let S = {S1, S2, . . . , Sm} be a family of subsets of [n]. The intersection graph Ω(S) is the graph whose vertex set is S, with two vertices being adjacent if their sets intersect. That is, Si is adjacent to Sj if and only if Si ∩ Sj = ∅, for i = j, Si, Sj ∈ S. The Kneser graph Kn:k is the complement of the intersection graph of all distinct k-subsets of an n-set. We have the following relationship between intersection graphs and clique coverings which is essentially due to Spilrajn-Marczewski [24] and Erdo˝s, Goodman and Po´sa [14].
+Theorem 3.1.1 Given a graph G,
+G ∼= Ω(S) ⇐⇒ cc(G) ≤ n
+where S = {S1, S2, . . . , Sm} is a family of subsets of [n].
+30
+
+Proof. We ﬁrst prove that G ∼= Ω(S) implies cc(G) ≤ n. Let G ∼= Ω(S) with S = {S1, S2, . . . , Sm}, Si ⊆ [n]. Let Cj = {Si : j ∈ Si, i ∈ [m]}, for each j ∈ [n]. Then Cj induces a clique whenever |Cj| ≥ 2. Then {Cj : |Cj| ≥ 2} is a clique covering of G of size at most n, implying cc(G) ≤ n.
+We now show that cc(G) ≤ n implies that G ∼= Ω(S), for some family S of subsets of [n]. Let {C1, C2, . . . , Cn} be a clique covering of G of size n. Let Sv = {i ∈ [n] : v ∈ V (Ci)}. Let S = {Sv : v ∈ V (G)}. Then G is the intersection graph of S.
+Notice that cc(G) does not change if isolated vertices are removed from G. We give another operation on G which does not aﬀect cc(G). We call vertices x, y ∈ V (G) equivalent if xy ∈ E(G) and Γ(x)\{y} = Γ(y)\{x} = ∅. Then if x is equivalent to another vertex of G, cc(G) = cc(G − x). Gya´rf´as [17] gives a lower bound for a graph with no isolated vertices and no equivalent vertices.
+Theorem 3.1.2 Let G be a graph on n vertices that contains neither isolated vertices nor equivalent vertices. Then
+cc(G) ≥ log2(n + 1).
+Proof. Let C be a clique covering of G of minimum cardinality k. Index the vertices of G by v1, v2, . . . , vn. Let Fi consist of those members of C having vi as a vertex and deﬁne F = {F1, F2, . . . , Fn}. Then Ω(F ) is isomorphic to G. Since G contains no isolated vertices, Fi = ∅, for i ∈ [n]. We now show that Fi = Fj, for i = j. Suppose that i = j. If vivj ∈ E(G), then Fi = Fj as they are disjoint sets. If vivj ∈ E(G), then by assumption they are not equivalent. So there is a vertex vr, for some r ∈ [n]\{i, j}, such that vr is adjacent to exactly one of vi and vj. Without loss of generality, suppose vivr ∈ E(G) and vjvr ∈ E(G). Let K ∈ C be the clique that covers edge vivr. Then K ∈ Fi and K ∈ Fj showing that Fi = Fj. As the sets Fi are distinct non-empty subsets of [k], we have that
+n = |F | ≤ 2k − 1.
+Hence, k ≥ log2(n + 1), as required.
+Gy´arf´as [17] showed the inequality in Theorem 3.1.2 is tight for inﬁnitely many n. However, if we know more about the intersection properties of the sets Fi in the proof of Theorem 3.1.2, then we may obtain a better upper bound on |F| than 2k − 1, thus improving the lower bound on the clique covering number.
+31
+
+3.2 Clique covers of complete multipartite graphs
+In Section 2.5 we looked at the clique partition number of the complement of a clique. The corresponding problem for clique coverings is an easy one. Namely, cc(Kn\Km) = m, for m > 2, because we require a unique clique in our clique covering for each vertex of Km.
+A more interesting problem is determining the clique covering number of the complement of the union of complete graphs. Gregory and Pullman [16] compute the clique covering number of the complement of a perfect matching. We generalize this result of Gregory and Pullman [16] to give bounds on the clique covering number of the complement of the union of complete graphs. Note that the complement of the union of complete graphs is the s-partite complete graph Kt1,t2,...,ts, whose parts are of size t1, t2, . . . , ts respectively. If each part has the same size, t1 = t2 = · · · = ts = t > 1, then we denote the graph by Ks(t). In the next section we will prove the following theorem.
+
+Theorem 3.2.1 If 0 < < 1 and t > 1 are ﬁxed, then for s suﬃciently large,
+
+1− cc(Ks(t)) ≥ logb(st) + 2 logb logb(st)
+
+where
+
+t b = (t − 1)(t−1)/t .
+
+3.2.1 The Erdo˝s-Ko-Rado Theorem and clique coverings
+We will use a variant of the Erd˝os-Ko-Rado Theorem [6] to give a lower bound on the clique covering number of Ks(t). We use the usual deﬁnitions from set theory found in Bolloba´s [6]. An antichain is a family F of sets such that F ⊂ G, for all F = G in F. In 1928, Sperner [6] proved the following theorem on the maximum size of an antichain:
+
+Theorem 3.2.2 Let F be an antichain on [n], then
+
+n
+
+|F| ≤
+
+.
+
+n/2
+
+32
+
+In 1961, Erdo˝s, Ko, and Rado [6] gave an upper bound for the maximum size of an intersecting family of k-element sets in [n], for n ≥ 2k. This is known as the Erdo˝s-Ko-Rado Theorem.
+
+Theorem 3.2.3 If F is an intersecting family of k-element sets in [n], where n ≥ 2k,
+
+then |F| ≤
+
+n−1 k−1
+
+.
+
+Also,
+
+if n > 2k,
+
+then
+
+we get equality
+
+if and
+
+only if
+
+the
+
+sets
+
+in
+
+F
+
+all contain a common element.
+
+We say F is an intersecting antichain if it is an antichain of sets Fi such that Fi ∩ Fj = ∅, for all Fi, Fj in F . If F is an intersecting antichain whose sets are of size at most k, then a variant of the Erd˝os-Ko-Rado Theorem holds. The proof uses a technique known as the Katona Circle Method [6].
+
+Theorem 3.2.4 Let n ≥ 2k. If F is an antichain and an intersecting family of sets
+
+of size at most k in [n], then |F| ≤
+
+n−1 k−1
+
+.
+
+Proof. Let F be an intersecting family of subsets of [n], such that F is an antichain.
+
+Note
+
+that
+
+there
+
+are
+
+exactly
+
+1 2
+
+(n
+
+−
+
+1)!
+
+circular
+
+permutations
+
+on
+
+n
+
+elements.
+
+We
+
+will
+
+count the ordered pairs (π, F ), where π is a circular permutation of [n], and F is a set
+
+in F whose image under π is an interval. Fix any particular circular permutation π.
+
+At most k members of F have their image under π as an interval, as each member of
+
+F must intersect the others (and have size at most k). Thus, the number of ordered
+
+pairs
+
+(π,
+
+F)
+
+is
+
+at
+
+most
+
+k
+
+·
+
+1 2
+
+(n
+
+−
+
+1)!.
+
+Now, ﬁx any particular member F of F. Then F is the image of an interval
+
+for
+
+1 2
+
+· |F |! · (n − |F |)!
+
+circular
+
+permutations,
+
+as
+
+there
+
+are
+
+|F |!
+
+ways
+
+to
+
+permute
+
+the
+
+elements of F , and (n − |F |)! ways to permute the remaining elements for the circular
+
+permutation. Hence, the number of ordered pairs (π, F ) is
+
+1
+
+1
+
+· |F |! · (n − |F |)! ≤ k · (n − 1)!
+
+2
+
+2
+
+F ∈F
+
+Thus, it suﬃces to show
+
+|F| · k! · (n − k)! ≤ |F |! · (n − |F |)!
+F ∈F
+
+33
+
+But,
+
+|F |! · (n − |F |)!
+
+nn
+
+=
+
+/
+
+k! · (n − k)!
+
+k |F |
+
+F ∈F
+
+F ∈F
+
+since
+
+n k
+
+≥
+
+n |F |
+
+,
+
+for
+
+each
+
+F
+
+∈
+
+F,
+
+as
+
+|F |
+
+≤
+
+k
+
+≤
+
+n/2.
+
+≥ 1 = |F|
+F ∈F
+
+3.2.2 t-Balanced families
+Deﬁnition 3.2.5 A family F is t-balanced if it is the intersection graph of the complete multipartite graph on |F| vertices, whose components each have size t.
+
+It is implied that |F| is divisible by t and F is a set of subsets in [n], for some n ∈ N. It is easy to see that a t-balanced family is an antichain. Suppose on the contrary that F is a t-balanced family which is not an antichain. Then there are sets A, B ∈ F with A ⊂ B. Consider D ∈ F such that B ∩ D = ∅. But then A ∩ D = ∅ by the deﬁnition of t-balanced, a contradiction. The Erd˝os-Ko-Rado Theorem can be used to provide an upper bound on the size of a t-balanced family.
+
+Theorem 3.2.6 Let F be a t-balanced collection of sets in [n]. Then
+
+n−1
+
+|F| ≤ t
+
+.
+
+n/t
+
+Further, there exists a t-balanced family F that gives equality when t = 2.
+
+Proof. Take F to be a t-balanced collection of sets in [n]. Then for some s, Ω(F) ∼= Ks(t), and the vertices of Ks(t) correspond to sets in [n]. For each part of Ks(t), choose a single vertex whose set in [n] is smallest among all other vertices of that part, and let B be the set of these vertices. Then B consists of s sets of size at most n/t . Since F is t-balanced, F is an antichain implying that B is an antichain. Also, B is intersecting as it contains one vertex from each part. Thus, by Theorem 3.2.4,
+
+n−1
+
+n−1
+
+|F| = t|B| ≤ t
+
+=t
+
+.
+
+n/t − 1
+
+n/t
+
+Note that we may obtain equality when t = 2. Let r = n/2 − 1 < n/2, and B be the set of r-subsets of [n] containing a point x. Then F = B ∪ B¯ gives equality.
+
+34
+
+This theorem provides us with a lower bound for cc(Ks(t)). Throughout the rest
+
+of this essay let
+
+n−1 σt(s) = min n : s ≤ n/t .
+
+Corollary 3.2.7 For all s, t > 1, cc(Ks(t)) ≥ σt(s), where σt(s) is deﬁned above.
+
+Proof. Let C be a clique covering of Ks(t) of minimum cardinality k. Index the vertices of Ks(t) by v1, v2, . . . , vts. Let Fi consist of those members of C having vi as a vertex and deﬁne F = {F1, F2, . . . , Fts}. Since Ω(F ) is isomorphic to Ks(t), the family F is t-balanced. Thus by Theorem 3.2.6,
+k−1 |F| = ts ≤ t
+k/t
+and hence, cc(Ks(t)) = k ≥ σt(s) by deﬁnition of σt(s).
+
+For t = 2, we may obtain equality. In general, suppose equality holds in Theorem
+
+3.2.6. Take k = σt(s) and choose a t-balanced family F in S = {1, 2, . . . , k} with
+
+cardinality
+
+k−1
+
+|F| = ts ≤ t
+
+.
+
+k/t
+
+Then the intersection graph of F is isomorphic to Ks(t) and cc(Ω(F)) ≤ k, by Theorem 3.1.1. Thus, for values of t where equality holds in Theorem 3.2.6, cc(Ks(t)) = σt(s). We conjecture that cc(Ks(t)) = σt(s), for t > 1. Theorem 3.2.1 now follows as it is straight forward to compute a lower bound on σt(s). See Lemma 5.1.1 in the Appendix for details. Theorem 3.1.2 gives
+
+cc(Ks(t)) ≥ log2(st + 1).
+Theorem 3.2.1 is an improvement on this result since b → 1 as t → ∞. This gives a lower bound for complete multipartite graphs whose parts have diﬀerent size. If Kt1,t2,...,ts has r parts of size bigger than one and if
+t = min{ti : ti > 1, i = 1, 2, . . . , s}
+
+then
+
+cc(Kt1,t2,...,ts ) ≥ σt(r) ≥ logb r
+
+35
+
+where
+
+t b = (t − 1)(t−1)/t .
+
+This follows from Lemma 2.1.2 for clique covers, by deleting vertices in parts of size
+
+one, and deleting vertices in parts of size bigger than t, until every part has size t.
+
+3.3 Complement of paths, cycles, and perfect matchings
+In Section 2.7 we analyzed the clique partition number of the complement of paths, cycles and perfect matchings. It would be nice to know how the clique covering number behaves for these graphs. It was Orlin [22] who ﬁrst asked about the asymptotics of the clique covering number of the complement of a perfect matching. Gregory and Pullman [16] answer this question and show that asymptotically, cc(M¯m) ∼ log2 m. Regarding the complement of a cycle and path, de Caen, Gregory, and Pullman [11] have computed exact values for cc(C¯m) and cc(P¯m), for small values of m.
+m 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 cc(C¯m) 2 5 5 7 6 7 6 8 7 7 7 8 7 8 7 8 8 cc(P¯m) 3 4 5 5 6 6 6 6 7 7 7 7 7 7 7 7 8
+They show that for m large enough,
+log2 m ≤ cc(C¯m) − 2 ≤ cc(P¯m) ≤ 2 log2 m
+and conjecture that asymptotically, cc(C¯m) ∼ log2 m and cc(P¯m) ∼ log2 m. Alles and Poljak [1] improve the upper bound to cc(P¯m) ≤ 1.695 log2 m, for m suﬃciently large. Kohayakawa [19] again improves the upper bound to cc(P¯m) ≤ 1.459 log2 m, for m suﬃciently large, by ﬁnding a long induced path in the Kneser graph.
+First, note that if we have a clique covering for P¯m−1 then this gives rise to a clique covering of C¯m using at most cc(P¯m−1) + 2 cliques. Using Lemma 2.1.1 for clique coverings, we get that cc(C¯m) ≤ cc(P¯m−1) + 2 ≤ cc(P¯m) + 2.
+Remark 3.3.1 cc(C¯m) ≤ cc(P¯m) + 2.
+We use the results from the previous section to provide a lower bound on the clique covering number of the complement of a cycle, and hence, the complement of
+36
+
+a path. We note that if we have a clique covering for C¯m, then by adding at most three cliques, we get a clique covering for M¯m.
+Remark 3.3.2 cc(M¯m) ≤ cc(C¯m) + 3.
+
+Hence, for m suﬃciently large and ﬁxed > 0, Corollary 3.2.1 gives
+
+1− log2 m + 2
+
+log2 log2 m − 3 ≤ cc(C¯m) ≤ cc(P¯m) + 2.
+
+Thus,
+
+log2 m ≤ cc(C¯m) − 2 ≤ cc(P¯m),
+
+for m suﬃciently large.
+
+3.3.1 Induced cycles and paths in Kneser graphs
+In this section, we will look at how to get an upper bound for the clique covering number of the complement of a path, and hence, the complement of a cycle. We will follow Vander Meulen [25] for most of the results in this section. Theorem 3.1.1 says that ﬁnding an induced graph H in the Kneser graph Kn:k gives rise to a clique covering of H¯ . Thus, we look at the problem of ﬁnding the order of the longest cycle (or path) in the Kneser graph Kn:k. We deﬁne p(n, k) and c(n, k) to be the maximum order (number of vertices) of an induced path and cycle respectively in Kn:k. Upper bounds on p(n, k) and c(n, k) have been given by Alles and Poljak [1] and Kohayakawa [19]. A simple argument relates these two numbers. If Cm is an induced cycle in a graph, then removing a vertex gives an induced path of order m − 1.
+Proposition 3.3.3 Fix k ≥ 1, then p(n, k) ≥ c(n, k) − 1, for n ≥ 2k + 1.
+Further, if H is an induced subgraph of the Kneser graph Kn:k, the intersection graph of V (H) is the complement of H. Hence, cc(H¯ ) ≤ n. Also, if there is an induced path of order m in Kn:k, then cc(P¯m) ≤ n. In particular, if H is an induced path or cycle, cc(P¯m) ≤ cc(P¯m+1) implies the following:
+Lemma 3.3.4 Given k ≥ 1, n > 2k, we have cc(C¯c(n,k)) ≤ n and cc(P¯s) ≤ n, for all positive integers s ≤ p(n, k).
+37
+
+To provide an upper bound on the clique covering number of the complement of a path, we must obtain a lower bound on p(2k + 1, k). Kohoyakawa [19] bounds p(2k + 1, k) from below by using a bipartite graph and giving a recursive construction for an induced path in K2k+1:k. Let s ∈ N and deﬁne Gs to be a bipartite graph with vertex classes [2s](s) and [2s](s−1). Two vertices in diﬀerent classes are adjacent if and only if they are disjoint. (Note that we are using Gs to represent this bipartite graph, and not a graph on s vertices).
+We deﬁne w(s) to be the maximum number of vertices in [2s](s) in an induced path in Gs. Note that w(s) is roughly half the order of a maximum induced path in Gs. The proof of the following theorem gives a construction of long induced paths in the Kneser graph K2k+1:k. For the next proof, we use Ka1,a2,...,al:k to denote the graph whose vertex set consists of the k-subsets of {a1, a2, . . . , al}, and where two vertices are adjacent if and only if they are disjoint. Note that Ka1,a2,...,al:k is isomorphic to Kl:k .
+
+Theorem 3.3.5 For k ≥ 2, s ≥ 1,
+
+w(s) · (p(2k + 1, k) + 1) − 1, if p(2k + 1, k) is odd
+
+p(2(k + s) + 1, k + s) ≥
+
+w(s) · p(2k + 1, k) − 1,
+
+if p(2k + 1, k) is even
+
+Proof. Let A1B1A2B2 . . . Bm−1Am be an induced path in Gs, where Ai ∈ [2s](s), for 1 ≤ i ≤ m, and Bj ∈ [2s](s−1), for 1 ≤ j ≤ m − 1. Let V1V2, . . . Vn be an induced path of order n (with n odd) in
+K2s+1,2s+2,...,2(k+s)+1:k
+
+which is isomorphic to K2k+1:k. Consider the paths, Pi = Ai ∪ V1, A¯i ∪ V2, Ai ∪ V3, . . . , A¯i ∪ Vn−1, Ai ∪ Vn
+where A¯i is the complement of Ai in [2s](s), for 1 ≤ i ≤ m. The paths end in vertex Ai ∪ Vn, as n was chosen to be odd.
+
+Then the set of paths P = ∪iPi is a collection of m vertex disjoint induced paths in K2(k+s)+1:k+s. Note that we could have Ai = A¯j, for some i = j, as Ai ∈ [2s](s). We join these paths together to create a path of order m(n + 1) − 1 in K2(k+s)+1:k+s. Take b ∈ V3\V1 and a ∈ Vn−2\Vn. Then, for i ∈ {1, 2, . . . , m − 1}, deﬁne
+
+Ci =
+
+Vn−1 ∪ Bi ∪ {a}, if i is odd V2 ∪ Bi ∪ {b}, if i is even
+
+38
+
+Then, as vertices, the Ci are non-adjacent as Vn−1 ∩ V2 ⊆ Ci ∩ Cj and Vn−1 ∩ V2 = ∅ (for n ≥ 5 and 1 ≤ i, j ≤ m − 1). Also, each Ci is connected to exactly two vertices in P , namely Vn ∪ Ai and Vn ∪ Ai+1 for odd i, or V1 ∪ Ai and V1 ∪ Ai+1 for even i.
+Thus, we get a path of order m(n + 1) − 1 in K2(k+s)+1:k+s. Since the longest induced path in Gs might not have initial and end vertices in [2s](s), then we simply delete these vertices to get a path as above. This can be done as w(s) counts the vertices in [2s](s). Taking m = w(s) and
+p(2k + 1, k) − 1, if p(2k + 1, k) is even n=
+p(2k + 1, k), if p(2k + 1, k) is odd
+gives the result.
+Theorem 3.3.5 gives a lower bound on p(2k + 1, k).
+
+Corollary 3.3.6 Fix s ≥ 1. Then p(2k + 1, k) ≥ w(s) (k−1)/s , for all k ≥ 1.
+
+Proof. Note that the theorem is true when s = 1, as w(s) = 1. Fix s ≥ 2 and recursively use p(2k + 1, k + 1) ≥ w(s) · p(2(k − s) + 1, k − s) − 1 to get
+
+t−1
+p(2k + 1, k + 1) ≥ w(s)t · p(2(k − ts) + 1, k − ts) − w(s)i
+i=0
+
+for
+
+any
+
+integer
+
+1
+
+≤
+
+t
+
+≤
+
+k−1 s
+
+.
+
+As
+
+w(s)
+
+≥
+
+2
+
+for
+
+s
+
+≥
+
+1,
+
+we
+
+get
+
+p(2k + 1, k + 1) ≥ w(s)t · [p(2(k − ts) + 1, k − ts) − 1].
+
+As p(3, 1) = 2, taking t = (k − 1)/s gives p(2k + 1, k + 1) ≥ w(s) (k−1)/s [p(3, 1) − 1] = w(s) (k−1)/s
+
+as required to prove.
+
+By using a computer search, Kohayakawa [19] found a long induced path in G6.
+
+Remark 3.3.7 There exists an induced path in G6 with 300 vertices in [12](6) (that is, w(6) ≥ 300).
+
+39
+
+Thus by Corollary 3.3.6, p(2k + 1, k) ≥ 300 (k−1)/6 ≥ (2.587)k−1, for all k ≥ 1.
+
+By Lemma 3.3.4, cc(P¯m) ≤ 2k + 1, for m ≤ p(2k + 1, k). Take m = (2.587)k−1 + 1.
+
+Then we have,
+
+k ≤ log2 m + 1. log2 2.587
+
+This implies for m large enough,
+
+cc(P¯m) ≤ 2k + 1 ≤ 1.459 log2 m.
+
+Kohayakawa [19] conjectured that sup w(s)1/s = 4. If this is correct, then we will
+be able to improve the 1.459 in the upper bound to 1 + o(1). Note that de Caen and Gregory [11] also conjectured that cc(P¯m) ∼ log2 m. Thus we have established the following theorem.
+
+Theorem 3.3.8 For m large enough, log2 m ≤ cc(C¯m) − 2 ≤ cc(P¯m) ≤ 1.459 log2 m.
+
+3.4 Complement of graphs with maximum degree two
+In this section we will obtain bounds on the clique covering number of the complement of graphs whose maximum degree is two. Let Gn be a graph on n vertices with maximum degree two. Then Gn is a graph whose components are paths and cycles. We will assume that the paths and cycles are nontrivial. de Caen, Gregory and Pullman [11] prove that for n suﬃciently large
+log2 n ≤ cc(G¯n) ≤ 5.8 log2 n.
+To provide a lower bound on cc(G¯n), where Gn is a graph whose components are paths and cycles, we use the complement of a perfect matching. Notice that by removing at most 3n/5 vertices from Gn, we obtain a perfect matching on at least 2n/5 vertices. Thus by Lemma 2.1.2 and Lemma 5.1.1, if n is large enough,
+cc(G¯n) ≥ cc(M¯ 2n/5 ) ≥ log2 n.
+For an upper bound on cc(G¯n), we ﬁrst need the following lemma which may be found in de Caen, Gregory and Pullman [11].
+40
+
+Lemma 3.4.1 Let G be a graph with components Gi, for i = 1, 2, . . . , s. Then
+
+cc(G¯) ≤ max{cc(G¯i) : i = 1, 2, . . . , s} + cc(Kt1,t2,...,ts) where ti is the chromatic number of Gi, for i = 1, 2, . . . , s.
+
+Proof. We will ﬁrst cover the edges of the form vw such that v ∈ Gi =⇒ w ∈ Gi. Since ti is the chromatic number of Gi, we can select ti cliques in G¯i which partition the vertices of G¯i. Call the cliques Ki(1), Ki(2), . . . , Ki(ti). Note that Ki(j) could
+
+be a single vertex if tj = 1. Recall the join and union of graphs [12]. Consider the
+
+graph
+
+s
+H = (Ki(1) ∪ Ki(2) ∪ · · · ∪ Ki(ti)).
+
+i=1
+
+A clique covering of H covers the edges of the form vw such that v ∈ Gi =⇒ w ∈ Gi.
+
+Note that if x, y ∈ V (Ki(j)), then x, y are equivalent. Hence, cc(H) = cc(Kt1,t2,...,ts).
+
+If Ki is a clique in G¯i, for each i = 1, 2, . . . , s, their join K1∨K2∨· · · Ks is a clique in G¯. By joining cliques from minimum clique coverings of the G¯i, for i = 1, 2, . . . , s, the remaining edges within the graphs G¯i can be covered by max{cc(Gi) : i = 1, 2, . . . , s}
+
+cliques in G.
+
+de Caen, Gregory and Pullman [11] use this result to obtain an upper bound on cc(G¯n).
+
+Theorem 3.4.2 If Gn has components consisting of nontrivial cycles and paths then cc(G¯n) = O(log2 n)
+for suﬃciently large n.
+
+Proof. Suppose Gn has components Gi for i = 1, 2, . . . , s, where each Gi is a cycle or a path on ni > 1 vertices. As the chromatic number of each Gi is at most three, Lemma 3.4.1 gives
+cc(G¯n) ≤ max{cc(G¯i) : i = 1, 2 . . . , s} + cc(Ks(3))
+Note that as Theorem 3.3.8 is for ni suﬃciently large, cc(G¯i) ≤ 1.459 log2 ni + O(1), for ni > 1. For an upper bound on cc(Ks(3)), we note that Lemma 3.4.1 gives
+cc(K3s(3)) ≤ cc(Ks(3)) + cc(K3(3)) = cc(Ks(3)) + 9.
+
+41
+
+Thus, cc(Ks(3)) ≤ 9 log3 s + O(1).
+Note that de Caen, Gregory and Pullman [11] provide an upper bound of 6 log3 s + O(1) for cc(Ks(3)) by using Latin squares, however, 9 log3 s + O(1) is suﬃcient for our purposes. This implies
+cc(G¯n) ≤ 1.459 log2 n + 9 log3 s = O(log2 n)
+for n suﬃciently large.
+
+de Caen, Gregory and Pullman [11] ask whether or not for n suﬃciently large, we
+
+can get
+
+cc(G¯n) < (1 + o(1)) log2 n
+
+in Theorem 3.4.2. We give an example of a graph, which is the complement of paths and cycles, where this fails to be true. Consider Gn to be the graph where each component is a K3, and n is divisible by three. Corollary 3.2.1 gives,
+
+cc(G¯n) ≥ 1.088 log2 n.
+
+So G¯n is a counterexample.
+
+3.5 Complement of forests
+
+In this section, we use the techniques of the previous section to obtain bounds on the clique covering number of the complement of a forest, F¯n, were Fn denotes a forest on n vertices. For the ﬁrst time, we show
+
+log2 k ≤ cc(F¯n) ≤ 10.3 log2 n
+
+where k is the length of the longest path in Fn.
+
+To provide a lower bound on cc(F¯n) we use the complement of a path. Let Pk be
+
+an induced path in Fn with k vertices. Then by Lemma 2.1.2 and Theorem 3.3.8, if
+
+n is large enough,
+
+cc(F¯n) ≥ cc(P¯k) ≥ log2 k.
+
+Note that this bound is achieved by the star graph. Also note that this lower bound
+
+holds if k is replaced the size of the largest induced matching of Fn.
+
+42
+
+We now obtain an upper bound on cc(F¯n). For the remainder of this section, let g be the function deﬁned by
+g(n) = max{cc(F¯n) : Fn is a forest on n vertices}.
+It is easy to see that g(n) ≤ g(n + 1) ≤ g(n) + 2.
+
+Lemma 3.5.1
+
+g(n) ≤ g( 2n/3 ) + 6.
+
+Proof. Let Fn be a forest such that g(n) = cc(F¯n). By Lemma 2.8.2, we may split Fn into forests F 1 and F 2 such that |F i| ≤ 2n/3 , for i = 1, 2, and V (F 1)∩V (F 2) = {v}, for some vertex v of Fn. We will construct a clique covering of F¯n. By Lemma 3.4.1, Fn − v can be covered using at most
+max{cc(F 1 − v), cc(F 2 − v)} + cc(K2(2))
+cliques. But cc(K2(2)) = 4. Also, the edges adjacent to v in F¯n can be covered by at most two cliques. The result now follows, as
+max{cc(F 1 − v), cc(F 2 − v)} ≤ g( 2n/3 ).
+
+We will show if n is large enough, then cc(F¯n) = O(log2 n).
+Theorem 3.5.2 Let Fn be a forest on n vertices. Then cc(F¯n) ≤ 10.3 log2 n
+for n suﬃciently large.
+Proof. Let Fn be a forest on n vertices. Then cc(F¯n) ≤ g(n), so it suﬃces to prove that g(n) ≤ 10.3 log2 n. Let r = log3/2 n, so that n ≤ (3/2)r +1. Then by repeatedly using Lemma 3.5.1 and the fact that g(n) ≤ g(n + 1) ≤ g(n) + 2 gives,
+g(n) ≤ g( (3/2)r + 1) ≤ 6r + O(1) ≤ 10.3 log2 n
+43
+
+for n suﬃciently large. It would be interesting to know whether or not cc(F¯n) ≤ (1 + o(1)) log2 n
+for n suﬃciently large. If in fact cc(P¯n) ∼ log2 n, then this would seem like a reasonable guess. Perhaps the upper bound is O(log2 k), where k is the size of a largest matching in Fn.
+44
+
+Part IV
+Conclusion
+
+4.1 Open Problems
+
+In Chapter II, we looked that the clique partition number of graphs. In Section 2.7,
+
+we gave a result due to Gregory, McGuinness and Wallis [15], that is, for n suﬃciently
+
+large,
+
+n ≤ cp(M¯n) ≤ (1 + o(1))n log2 log2 n.
+
+They conjecture that cp(M¯n) ∼ n. Similar results hold for P¯n and C¯n, although it does not appear that projective planes can be used to get a linear bound for the clique partition number of M¯n, P¯n, and C¯n.
+
+Conjecture 4.1.1 If Gn is Mn, Pn or Cn, then cp(G¯n) ∼ n.
+
+In Section 2.8, the clique partition number of the complement of a forest was
+
+√
+
+looked
+
+at.
+
+We
+
+believe √
+
+that
+
+Fn
+
+can
+
+be
+
+partitioned
+
+into
+
+(1 + o(1))
+
+n components each
+
+with size (1 + o(1)) n, such that any two components intersect in at most one vertex.
+
+Conjecture 4.1.2 If Fn is a forest on n vertices then, cp(F¯n) = O(n log2 log2 n),
+for n suﬃciently large.
+
+A probabilistic argument could give the existence of a forest whose clique partition number is not linear.
+
+Conjecture 4.1.3 There exists a forest such that lim cp(F¯n) = ∞. n→∞ n
+In Section 2.9 we used a probabilistic argument to give an upper bound on the clique partition number of the complement of a graph with bounded maximum degree. If the maximum degree is not bounded, a similar argument might exist.
+
+45
+
+Conjecture 4.1.4 If |E(Gn)| = o(n2) then cp(G¯n) = o(n2).
+
+In Chapter II, we analyzed the clique covering number of graphs. As cc(Ks(2)) = σ2(s), we suspect that cc(Ks(t)) = σt(s), for all t > 1.
+In Section 3.3, cc(P¯m) and cc(C¯m) were analyzed. de Caen, Gregory, and Pullman [11], as well as Kohayakawa [19], conjecture that cc(C¯m) ∼ log2 m and cc(P¯m) ∼ log2 m. It would be interesting to know if this is the case and whether or not sup w(s)1/s is indeed equal to four.
+
+Conjecture 4.1.5 cc(C¯m) ∼ log2 m and cc(P¯m) ∼ log2 m.
+
+In Section 3.5 we looked at the clique covering number of the complement of a forest. We suspect that the upper bound is log2 n.
+
+Conjecture 4.1.6 for n suﬃciently large.
+
+cc(F¯n) ≤ (1 + o(1)) log2 n
+
+46
+
+Part V
+Appendix
+
+5.1 Lower bound for σt(s)
+
+Lemma 5.1.1 Let t > 1 be an integer, σt(s) = min{n : s ≤
+
+n−1 n/t
+
+} and ﬁx 0 <
+
+< 1.
+
+Then for s suﬃciently large,
+
+1− σt(s) ≥ logb(st) + 2 logb logb(st)
+
+where
+
+t
+
+b=
+
+.
+
+(t − 1)(t−1)/t
+
+Proof. We ﬁrst note Stirling’s formula,
+
+√
+
+√
+
+2πn(n/e)ne1/(12n+1) ≤ n! ≤ 2πn(n/e)ne1/(12n).
+
+The following inequality can be derived from Stirling’s formula,
+
+tn
+
+t1
+
+tt
+
+n
+
+≤ n
+
+√ 2π(t − 1) n (t − 1)t−1
+
+.
+
+Then, as σt(s) = min{n : s ≤
+
+n−1 n/t
+
+}, we get,
+
+n − 1 n − n/t n
+
+t−1 n
+
+t − 1 t n/t
+
+s≤
+
+=
+
+≤
+
+≤
+
+.
+
+n/t
+
+n
+
+n/t
+
+t n/t
+
+t n/t
+
+Thus,
+
+t−1
+
+t
+
+1
+
+tt
+
+n/t
+
+s≤ t
+
+2π(t − 1) n/t (t − 1)t−1
+
+.
+
+For convenience, we let
+
+t
+
+t2b2(t − 1)
+
+b = (t − 1)(t−1)/t
+
+and
+
+c=
+
+.
+
+2π
+
+Then as b > 1 for t > 1,
+
+st ≤
+
+t − 1 √1 · bn+1t = bn
+
+c .
+
+2π n
+
+n
+
+47
+
+Then,
+
+1
+
+1
+
+logb(st) ≤ n − 2 logb n + 2 logb c
+
+1
+
+1
+
+n ≥ logb(st) + 2 logb n − 2 logb c.
+
+Take s suﬃciently large so that
+
+logb(st) ≥ c (logb(st))1−
+
+1 + 2 logb c.
+
+This can be done as t, b, c, are all constant. This implies
+
+n
+
+≥
+
+1 logb(st) + 2 logb
+
+c (logb(st))1−
+
+1 − 2 logb c
+
+1− = logb(st) + 2 logb logb(st). As σt(s) is the smallest such n, we are done.
+
+Note that b = 2 when t = 2. Also, as t → ∞, b → 1. A similar argument can be
+
+used to give a lower bound on σt(s). Note that we actually have that
+
+tn
+
+t1
+
+tt
+
+n
+
+∼
+
+√
+
+n
+
+2π(t − 1) n (t − 1)t−1
+
+For convenience, denote σ = σt(s). Thus, for a lower bound on s we can use
+
+s≥
+
+σ−2
+σ−1
+
+≥ d1(t)
+
+t
+
+σ−1 t
+
+σ−1
+
+t
+
+t
+
+where d1(t) is some function of t. Then we have,
+
+bσ
+
+s
+
+≥
+
+d2
+
+(t)
+
+√ σ
+
+for some function d2(t). There is also a function d3(t) so that we have,
+
+bσ
+
+bσ
+
+d2(t)
+
+√ σ
+
+≤
+
+s
+
+≤
+
+d3(t)
+
+√ σ
+
+.
+
+Taking logarithms base b, dividing by σ and taking the limit as s → ∞ (and hence
+
+σ → ∞), we have Thus, σt(s) ∼ logb s, where
+
+1 ≤ lim logb s ≤ 1 s→∞ σ
+
+t
+
+b=
+
+.
+
+(t − 1)(t−1)/t
+
+48
+
+5.2 A recurrence relation
+
+Lemma 5.2.1 Let x be a positive real number and > 0. If
+
+√
+
+c(x)
+
+c( x)
+
+≤1+ + √ ,
+
+x
+
+x
+
+then for some constant M .
+
+c(x) ≤ (1 + )x log2 log2 x + M x
+
+Proof.
+
+Let
+
+z
+
+=
+
+log2 log2 x
+
+and
+
+deﬁne
+
+h(z)
+
+=
+
+c(x) x
+
+.
+
+Then
+
+√
+
+1
+
+log2 log2 x = log2 2 log2 x
+
+1 = log2 log2 x + log2 2
+
+= z − 1.
+
+√
+
+Thus,
+
+h(z
+
+− 1)
+
+=
+
+c(√ x) x
+
+.
+
+By
+
+our
+
+assumption
+
+in
+
+the
+
+lemma,
+
+h(z) ≤ 1 + + h(z − 1).
+
+By repeatedly using this inequality, we get
+
+h(z) ≤ (1 + ) z + h(z − z ).
+
+Let Then implying
+
+M = sup h(z).
+z∈[0,1]
+h(z) ≤ (1 + )z + M
+c(x) ≤ (1 + )x log2 log2 x + M x.
+
+49
+
+List of notation
+
+N R+ A(k) [n] F σt(s) Kn\G G∨H δ(G) ∆(G) Γ(x) χ (G) Ks,t Kt1,t2,...,ts Ks(t) Mn Fn Tn Ω(S) Kn:k Ka1,a2,...,al:k p(n, k) c(n, k) w(s) cc(G) cp(G) S(n, k)
+
+natural numbers . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 23 positive real numbers . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 23 set of all k-subsets of A . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 4 the set {1, 2, . . . , n} . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 4 collection of sets . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 31 deﬁned in the appendix . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 35 complement of G in Kn . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 4 join of two graphs . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 13 minimum degree of G . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 6 maximum degree of G . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 27 neighbourhood of x . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 4 edge chromatic number of G . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 13 complete bipartite graph . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 6 complete multipartite graph . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 32 complete multipartite graph with parts of size t . . . . . . . . . . . . . . . . . . . . 32 (perfect) matching on n vertices . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 20 forest on n vertices . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 22 tree on n vertices . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 22 intersection graph of S . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 30 the Kneser graph . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 4 Kneser graph isomorphic to Kl:k . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 38 maximum order of an induced path in Kn:k . . . . . . . . . . . . . . . . . . . . . . . . 37 maximum order of an induced cycle in Kn:k . . . . . . . . . . . . . . . . . . . . . . . . 37 maximum number of vertices in [2s](s) in an induced path in Gs . . . .38 clique covering number of G . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 30 clique partition number of G . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 5 Steiner system . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 8
+
+50
+
+References
+[1] P. Alles and S. Poljak Long induced paths and cycles in Kneser graphs Graphs and Combinatorics 5 (1989) 303-306.
+[2] N. Alon and J.H. Spencer, The Probabilistic Method, Wiley, New York, (1992). (Second Edition, 2000).
+[3] R.C. Baker, G. Harman, and J. Pintz, The diﬀerence between consecutive primes, Proc. London Math. Soc. 83(3) (2001) 532-562.
+[4] L.M. Batten and A. Beutelspacher, The theory of ﬁnite linear spaces, Cambridge Univ. Press, New York, (1993).
+[5] T. Beth, D. Jungnickel, and H. Lenz, Design Theory, Volume 2, Second Edition, Cambridge Univ. Press, New York, (1999).
+[6] B. Bolloba´s Combinatorics: set systems, hypergraphs, families of vectors, and combinatorial probability, Univ. of Cambridge, New York, (1994).
+[7] R.C. Brigham and R.D. Dutton, Changing and unchanging invariants: The edge clique covering number, Congr. Numer. 70 (1990) 145-152.
+[8] N.G. de Bruijn and P. Erd˝os, On a combinatorial problem, Indag. Math. 10 (1948) 421-423.
+[9] P.J. Cameron and J.H. Van Lint, Designs, graphs, codes and their links, London Mathematical Society Student Texts 22, Cambridge Univ. Press, New York, (1991).
+[10] D. de Caen and D.A. Gregory, Partitions of the edge-set of a multigraph by complete subgraphs, Congressus Numerantium 47 (1985) 255-263.
+[11] D. de Caen, D.A. Gregory, and N.J. Pullman, Clique coverings of complements of paths and cycles, Annals of Discrete Math. 27 (1985) 25-268.
+[12] J.A. Bondy and U.S.R. Murty, Graph theory with applications, MacMillan, London, (1972).
+51
+
+[13] P. Erdo˝s, R. Faudree, and E.T. Ordman, Clique partitions and clique coverings, Discrete Math. 72 (1988) 93-101.
+[14] P. Erdo˝s, A.W. Goodman, and L. Po´sa, The representation of a graph by set intersections, Can. J. Math. 18 (1966) 106-112.
+[15] D.A. Gregory, S. McGuinness, and W. Wallis, Clique partitions of the cocktail party graph, Discrete Math. 59 (1986) 267-273.
+[16] D.A. Gregory and N.J. Pullman, On a clique covering problem of Orlin, Discrete Math. 41 (1982) 97-99.
+[17] A. Gya´rfa´s, A simple lower bound on edge coverings by cliques, Discrete Math. 85 (1990) 103-104.
+[18] M. Hall, Jr., A problem in partitions, Bull. Amer. Math. Soc., 47 (1941) 801-807.
+[19] Y. Kohayakawa, A note on induced cycles in Kneser graphs, Combinatorica, 11 (1991) 245-251.
+[20] S.D. Monson, The eﬀects of vertex deletion and edge deletion on the clique partition number, Ars Combin. 42 (1996), 89-96.
+[21] S.D. Monson, N.J. Pullman, and R. Rees, A survey of clique and biclique coverings and factorizations of (0, 1)-matrices, Bull. Inst. Combin. Appl. 14 (1995), 17-86.
+[22] J. Orlin, Contentment in Graph Theory, Indag. Math. 39 (1977), 406-424.
+[23] N.J. Pullman and A. Donald, Clique coverings of graphs II - Compliments of cliques, Utilitas Mathematica 19 (1981) 207-213.
+[24] E. Spilrajn-Marczewski, Sur des propri´et´es des classes d’ensembles, Fund. Math. 33 (1945), 303-307.
+[25] K. Vander Meulen, Induced subgraphs of Kneser graphs, M.Sc. Thesis, Queen’s University, Kingston, ON (1991).
+[26] W.D. Wallis, Asymptotic values of clique partition numbers, Combinatorica, 2(1) (1982) 99-101.
+52
+
+[27] W.D. Wallis, Clique partitions of the complement of a one-factor, Congressus Numerantium, 46 (1985) 317-319.
+[28] W.D. Wallis, Finite planes and clique partitions, Contemporary Mathematics, 111 (1990) 279-285.
+[29] W.D. Wallis, The clique partition number of the complement of a cycle, Annals of Discrete Mathematics, 27 (1985) 335-344.
+53
+
+

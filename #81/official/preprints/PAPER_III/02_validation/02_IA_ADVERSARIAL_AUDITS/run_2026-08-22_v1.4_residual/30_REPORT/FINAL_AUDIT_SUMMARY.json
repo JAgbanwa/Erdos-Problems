@@ -1,0 +1,225 @@
+{
+  "request": "EXTERNAL_RESIDUAL_AUDIT_REQUEST_v1.4.md",
+  "instructions_zip_sha256": "0dd44c49c43bff8cb6d7880b4d2825c83c1a88cf30d2be2111772b5e418854c0",
+  "paper": "PAPER_III",
+  "target": {
+    "files": 1194,
+    "bytes": 49760012,
+    "freeze_zip_sha256": "79ee24c38fd776bc2585a0c3c996e30817f0829fc5064463bdbde0fa2d3d7104",
+    "freeze_zip_matches_request": true,
+    "manifests": {
+      "CURRENT_TARGET_SHA256": "22/22",
+      "manuscript_sidecar": "6/6",
+      "freeze_zip_sidecar": "1/1",
+      "SOURCE_MANIFEST": "707/707",
+      "PACKAGE_MANIFEST": "751/751"
+    },
+    "archive_hygiene_all_zero": true,
+    "v13_report_hash_claim_verified": true
+  },
+  "run": "run_2026-08-22_v1.4_residual",
+  "audit_dates": [
+    "2026-08-22",
+    "2026-08-23"
+  ],
+  "auditor": {
+    "provider": "Anthropic",
+    "model": "claude-opus-5",
+    "independence": "primary auditor only; NO adversarial challenger"
+  },
+  "overall_verdict": "CONDITIONAL_PASS",
+  "verdict_basis": "every blocking gate passes; 0 blocking, 0 critical, 0 major; no mathematical or formal defect; the three v1.3 MAJOR findings closed with independent evidence. The single condition is an adversarial challenger review, which this auditor cannot supply about its own work: four audits of Paper III have all come from one reasoning context, and on Paper I a challenger found four Spanish duplications this auditor's own diff had missed.",
+  "gate_verdicts": {
+    "1_intake": "PASS",
+    "2_claims_regression": "PASS",
+    "3_bilingual_chains": "PASS",
+    "4_rendered_pdfs": "PASS",
+    "5_lean_reproduction": "PASS",
+    "6_axiom_boundary": "PASS",
+    "7_conformance": "PASS",
+    "8_prior_art": "PASS",
+    "9_v13_regression": "PASS",
+    "E2_mathematics": "PASS"
+  },
+  "finding_counts": {
+    "blocking": 0,
+    "critical": 0,
+    "major": 0,
+    "minor": 2,
+    "note": 1
+  },
+  "findings": [
+    {
+      "id": "EXT-V14-M01",
+      "severity": "MINOR",
+      "gate": "3"
+    },
+    {
+      "id": "EXT-V14-M02",
+      "severity": "MINOR",
+      "gate": "E2"
+    },
+    {
+      "id": "EXT-V14-N01",
+      "severity": "NOTE",
+      "gate": "1"
+    }
+  ],
+  "v13_regression": {
+    "EXT-V13-001": "CLOSED",
+    "EXT-V13-002": "CLOSED",
+    "EXT-V13-003": "CLOSED",
+    "EXT-V13-004": "CLOSED",
+    "EXT-V13-005": "WITHDRAWN",
+    "EXT-V13-006": "CLOSED",
+    "EXT-V13-007": "CLOSED",
+    "EXT-V13-008": "CLOSED",
+    "open": 0
+  },
+  "target_hashes": {
+    "01_manuscript/PAPER_III_preprint_draft_v1.4.md": "eea753a4c352bafcb36f8bd09c262de0bfcae5379318264aa76c21628965136f",
+    "01_manuscript/PAPER_III_preprint_draft_v1.4_en.tex": "5e3cf6da1d43a213bd5b2991c0916e045192b0574cf759129de009d99b64f90f",
+    "01_manuscript/PAPER_III_preprint_draft_v1.4_en.pdf": "afd00647f22b97fd2f761ed052857e4273bc88cb265b9d1af8dad347ba943702",
+    "01_manuscript/PAPER_III_preprint_draft_v1.4_es.md": "748a833015543ad8a28c42013b46bb35f1158bffb63e7444d3644451caef1cf6",
+    "01_manuscript/PAPER_III_preprint_draft_v1.4_es.tex": "62acd23fe86e3bc6295660a504953bdab8a97b7128893172454b111578b5aa60",
+    "01_manuscript/PAPER_III_preprint_draft_v1.4_es.pdf": "0f93b4b54b9fc1f46c3cf9ea6a783fb50ce5a13d0b56af0e013da077581181ca",
+    "01_manuscript/PAPER_III_preprint_draft_v1.4_SHA256.txt": "609761c5e4a1e76361b0c920508439ab718f969d26088dc84ee6e117890671d1",
+    "05_formalization/lean_v1.4_freeze/SOURCE_MANIFEST.sha256": "c8f283d215259688eaff933ce14fe6f1d4aa88e9b90978831911faee4d8b26a6",
+    "05_formalization/lean_v1.4_freeze/PACKAGE_MANIFEST.sha256": "8707516a1ba698841f4c4f328299aae18858357fd7222fa91aeec3645e1ac10e",
+    "05_formalization/lean_v1.4_freeze/PAPER_III_lean_v1.4_freeze.zip": "79ee24c38fd776bc2585a0c3c996e30817f0829fc5064463bdbde0fa2d3d7104",
+    "05_formalization/lean_v1.4_freeze/PAPER_III_lean_v1.4_freeze.zip.sha256": "ea391018562f5d3e7d941c8879ba663267b66248f989c7161549ec12f603fedd",
+    "02_validation/01_INTERNAL_AUDITS/run_2026-08-22_v1.4/10_REPORT/INTERNAL_AUDIT_FINAL_REPORT.md": "1cb57678b44eebf937fac0cd2aade4c46b51d75d8f68308aa22d742b946d760f",
+    "02_validation/01_INTERNAL_AUDITS/run_2026-08-22_v1.4/10_REPORT/INTERNAL_AUDIT_FINAL_REPORT.tex": "50acaa2391f95024ee25516632ef36a1cef60c4b2ae819fba8a25de447b61e01",
+    "02_validation/01_INTERNAL_AUDITS/run_2026-08-22_v1.4/10_REPORT/INTERNAL_AUDIT_FINAL_REPORT.pdf": "33769e596bad023a97cd3391d87acf83441416048ba9025a27450fe45418ad8f",
+    "02_validation/01_INTERNAL_AUDITS/run_2026-08-22_v1.4/10_REPORT/INTERNAL_AUDIT_SUMMARY.json": "7b7ebb15812eea5a7dc0827511c2c4fe31719901b532695016a79de0682bebf6",
+    "02_validation/01_INTERNAL_AUDITS/run_2026-08-22_v1.4/30_PACKAGE/INTERNAL_AUDIT_PACKAGE_v1.4.zip": "86d858c215419386c1b931c3d34b971a9d04c127772ba30a2995c5363312de72",
+    "02_validation/01_INTERNAL_AUDITS/run_2026-08-22_v1.4/30_PACKAGE/INTERNAL_AUDIT_PACKAGE_v1.4.zip.sha256": "1d70fe3073b6f4b9b2e795f9ca1259b5778f8fbf7ce944806640cc5606f652d5",
+    "02_validation/02_IA_ADVERSARIAL_AUDITS/EXTERNAL_RESIDUAL_AUDIT_REQUEST_v1.4.md": "bc7dd1cfb263fac27b54695f7b1bc1a18b1fe687d1bdb862f8b5d042aec53280",
+    "02_validation/02_IA_ADVERSARIAL_AUDITS/PAPER_III_v1.4_EXTERNAL_RESIDUAL_AUDIT_INSTRUCTIONS.zip": "0dd44c49c43bff8cb6d7880b4d2825c83c1a88cf30d2be2111772b5e418854c0",
+    "02_validation/02_IA_ADVERSARIAL_AUDITS/PAPER_III_v1.4_EXTERNAL_RESIDUAL_AUDIT_INSTRUCTIONS.zip.sha256": "dd6c449913bb3263034489e886fd85ff3a1a4ce2932af53f5c81e2d13782c9b7",
+    "DRAFT_METADATA.yml": "fb8f38f294953562e2c7ebdec8f0870fbf9eb9cb2857f97abf7612fe47fdd6a0",
+    "CHANGELOG_v1.4.md": "066fb19141b75d7204f7125ac0a4198a16afd57447cad6c80e5ed31d18b73995"
+  },
+  "environment": {
+    "os": "Windows 11 10.0.26200",
+    "cpu": "Intel Core i7-1255U, 10 cores / 12 logical",
+    "ram_gb": 15.7,
+    "lean": "4.28.0 (7e01a1bf5c70fc6167d49c345d3bf80596e9a79b)",
+    "lake": "5.0.0-src+7e01a1b",
+    "mathlib": "8f9d9cff6bd728b17a24e163c9402775d9e6a365",
+    "clean_room": "C:/p3a",
+    "random_seeds": 0,
+    "external_solver": null,
+    "dependency_cache_origin": "auditor checkout from the v1.2 audit, junctioned, 9/9 pins verified clean"
+  },
+  "lean_reproduction": {
+    "project_objects_before": 0,
+    "project_objects_after": 429,
+    "public_root": {
+      "command": "lake build PaperIII",
+      "jobs": 8455,
+      "exit": 0,
+      "minutes": 70.2,
+      "uninterrupted": true,
+      "errors": 0,
+      "produced_Theorem_1_1_Final_olean": true,
+      "produced_PublicAPI_olean": true
+    },
+    "query_roots": {
+      "jobs": 8444,
+      "exit": 0,
+      "minutes": 8.6,
+      "errors": 0
+    },
+    "axiom_queries": {
+      "files": 8,
+      "all_exit_zero": true,
+      "surfaces": 42,
+      "sorryAx": 0,
+      "non_standard_footprints": 0,
+      "project_axioms": 0
+    },
+    "cache_get": "hung on network; terminated and documented; cache was complete and pin-verified",
+    "v13_comparison": {
+      "v13_aggregate_jobs": 8203,
+      "v14_public_root_jobs": 8455,
+      "delta": 252,
+      "v13_aggregate_closure_modules": 177,
+      "v14_aggregate_closure_modules": 429,
+      "v13_query_root_minutes": 105,
+      "v14_query_root_minutes": 8.6,
+      "v13_axiom_queries_failed": 7,
+      "v14_axiom_queries_failed": 0
+    }
+  },
+  "axiom_boundary": {
+    "project_modules": 704,
+    "archived_axiom_modules": [
+      "Ax2.PartB.Axioms",
+      "Ax2.PartA.Wlog"
+    ],
+    "direct_importers": 0,
+    "reachable_from_any_canonical_root": false,
+    "aggregate_root_reaches_Theorem_1_1_Final": true,
+    "aggregate_root_reaches_PublicAPI": true
+  },
+  "E2": {
+    "method": "exact symbolic rederivation from the manuscript's definitions",
+    "items": 23,
+    "pass": 22,
+    "scope_notes": 1,
+    "failures": 0,
+    "section9_items": 15,
+    "section9_pass": 14,
+    "kill_switches": {
+      "K-EPS": "CLOSED",
+      "K-CORRIDOR": "CLOSED",
+      "K-SPARSE": "CLOSED",
+      "K-COVER": "CLOSED",
+      "K-GLOBAL": "CLOSED"
+    },
+    "math_unchanged_from_v13": true,
+    "sections_byte_identical": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "10",
+      "12"
+    ],
+    "author_exact_checks_rerun": false,
+    "residual": "Appendix D self-containedness not audited (EXT-V14-M02)"
+  },
+  "E6": {
+    "references_verified_at_source": 6,
+    "collision_found": false,
+    "claim_tested": "no published integral upper bound for split graphs at or below n^2/6 + O(n)",
+    "state_of_the_art": {
+      "chordal_lower": "n^2/6 + O(n)",
+      "chordal_upper": "(1-c) n^2/4",
+      "split_upper": "3/16 n^2 + O(n)",
+      "status": "open"
+    },
+    "most_recent_adjacent": "arXiv:2608.11536 (Bo Ning, 2026-07-30), no collision",
+    "limitations": [
+      "erdosproblems.com HTTP 403",
+      "no MathSciNet or zbMATH access",
+      "the 1994 World Scientific volume for [5] not openly accessible"
+    ]
+  },
+  "auditor_tool_artifacts_recorded": 5,
+  "not_established": [
+    "the truth of Theorem 1.1",
+    "Appendix D's self-containedness",
+    "the Lean nibble chain's internal parameter ledger",
+    "novelty beyond the searched corpus",
+    "human peer review",
+    "adversarial challenger review"
+  ],
+  "package_sha256": "recorded in 40_PACKAGE alongside the ZIP; a hash of the ZIP cannot live inside the ZIP"
+}

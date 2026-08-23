@@ -1,0 +1,59 @@
+{
+ "gate": "G8 / E6",
+ "refresh_date": "2026-08-22/23",
+ "relation_to_baseline": "the v1.3 addendum's search is preserved as novelty_search_v13_baseline.json and was independently refreshed here with new queries against the same corpora through the audit date",
+ "new_queries_this_run": [
+  "split graph clique partition sharp quadratic coefficient 1/6 improvement over 3/16 Chen Erdos Ordman 2026 preprint",
+  "Yuster \"Integer and fractional packing of families of graphs\" Random Structures Algorithms 26 2005 110"
+ ],
+ "corpora": [
+  "general web index",
+  "arXiv listings incl. math.CO 2026-02 and recent split-graph papers",
+  "Cambridge Core",
+  "Wiley Online Library",
+  "ACM Digital Library",
+  "Springer",
+  "Renyi Institute Erdos archive",
+  "Ordman academic page",
+  "Univ. Waterloo C&O repository"
+ ],
+ "precise_claim_tested": "Chen-Erdos-Ordman gave the earlier split-graph coefficient 3/16; Paper III improves the split-graph QUADRATIC coefficient to the sharp 1/6, matching the complete-split lower bound and establishing n^2/6+O(n) for split graphs; it does NOT claim the least uniform linear coefficient and does NOT solve the full chordal problem",
+ "result": "NO COLLISION FOUND",
+ "distinctions": {
+  "integral vs fractional": "EOZ, CEO and Paper III's Theorem 1.1 bound |E|-2*nu3 and cp, integrally. Papers I and II bound |E|-2*nu3star, fractionally. Different objects; Paper III's claim is the integral one.",
+  "vs o(n^2) statements": "Haxell-Rodl [11] and Yuster [17] bound the fractional-to-integral packing GAP by o(|V|^2). Verified at source: Yuster, Random Structures & Algorithms 26 (2005), 110-118, main result exactly that the difference is o(|V(G)|^2). That is an input, not a clique-partition bound, and yields no quadratic coefficient by itself.",
+  "vs general chordal": "still open. EOZ's proved chordal upper bound is (1-c)n^2/4 and whether n^2/6 suffices is unknown. Paper III claims only the split case.",
+  "vs the optimal linear coefficient": "the record's lower bound is n^2/6+O(n) and the least uniform linear coefficient is undetermined; Paper III asserts sharpness of the quadratic coefficient only."
+ },
+ "references_verified_at_source": {
+  "[2] Barber-Kuhn-Lo-Osthus": "Adv. Math. 288 (2016) 337-385; with Dross implies K3-decomposition at min degree >= 9n/10+o(n)",
+  "[3] Erdos-Ordman-Zalcstein": "CPC 2(4) Dec 1993, 409-415; abstract verbatim: n^2/6 lower by construction (a split and threshold graph), (1-c)n^2/4 upper, sufficiency OPEN",
+  "[5] Chen-Erdos-Ordman": "Beijing 1993, 21-30, World Scientific 1994; 3/16 n^2+O(n) for split graphs, confirmed via the Erdos Problems #81 record",
+  "[7] Dross": "confirmed through the BKLO consequence statement",
+  "[11] Haxell-Rodl": "Combinatorica 21 (2001) 13-38, confirmed from Haxell's own CV",
+  "[17] Yuster": "Random Structures & Algorithms 26 (2005) 110-118, confirmed; main result is the o(|V|^2) gap"
+ },
+ "cavers_survey": {
+  "retrieved": true,
+  "identification": "M. S. Cavers, Masters essay, Univ. of Waterloo, 2005-12-20, 87916 chars extracted",
+  "chordal": 0,
+  "3/16": 0,
+  "n^2/6": 0,
+  "Zalcstein": 0,
+  "bears_on_the_split_graph_claim": false,
+  "note": "its three occurrences of 'split' are the verb; the essay concerns trees, forests and complements"
+ },
+ "most_recent_adjacent_paper": {
+  "id": "arXiv:2608.11536v1",
+  "author": "Bo Ning",
+  "date": "2026-07-30",
+  "result": "floor(n^2/4) - C1 n^(4/3) <= f(n) <= floor(n^2/4) - C2 n^(4/3) for the max difference between clique partition and covering numbers",
+  "collision": false
+ },
+ "limitations": [
+  "erdosproblems.com/81 returns HTTP 403 to direct fetching; its status text was read through the search index",
+  "the 1994 World Scientific volume containing [5] is not openly accessible; the 3/16 coefficient is confirmed from the Erdos Problems record rather than the volume itself",
+  "no subscription index (MathSciNet, zbMATH) was reachable from this environment"
+ ],
+ "verdict": "PASS"
+}

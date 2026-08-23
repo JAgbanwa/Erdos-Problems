@@ -1,0 +1,28 @@
+release_id: PAPER_III_PREPRINT_V1_0
+project: ERDOZ81 — Paper III
+title: Linear-Error Clique Partitions of Split Graphs via Structured Triangle Packing
+version: "1.0"
+release_date: "2026-07-25"
+author:
+  name: Juan Pablo Traverso Gianini
+  affiliation: Independent researcher, Santiago, Chile
+  orcid: 0009-0003-6068-4096
+status:
+  manuscript: PREPRINT_RELEASE
+  mathematical: FINAL_PASS
+  lifecycle: FROZEN
+  dependency_health: AXIOMS_DECLARED   # not axiom-clean by design; see below
+  trusted_project_axioms:
+    - AX1   # Haxell–Rödl / Yuster o(n^2) fractional-to-integral gap
+    - AX2   # Dross + Barber–Kühn–Lo–Osthus triangle decomposition
+  axiom_footprint: [propext, Classical.choice, Quot.sound, AX1, AX2]
+  validation:
+    - AI_ADVERSARIAL_INTERNAL_AUDIT
+    - EDITOR_APPROVED
+  external_peer_review: false
+  independent_build_reproduction: PENDING
+  novelty_review: NOT_ASSESSED_INCOMPLETE
+canonical_files:
+  - 01_manuscript/PAPER_III_preprint_v1.0.pdf
+  - 01_manuscript/PAPER_III_preprint_v1.0.tex
+  - 01_manuscript/PAPER_III_preprint_v1.0.md

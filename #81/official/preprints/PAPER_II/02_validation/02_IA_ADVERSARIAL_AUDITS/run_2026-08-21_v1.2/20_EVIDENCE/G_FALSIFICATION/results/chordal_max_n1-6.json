@@ -1,0 +1,468 @@
+{
+ "1": {
+  "labeled_graphs_enumerated": 1,
+  "chordal_graphs": 1,
+  "max_phi_tau_found": "0",
+  "claimed_floor_formula": 0,
+  "match": true,
+  "argmax_edge_set": [],
+  "nu_tau_duality_mismatches": 0,
+  "complete_split_max": "0",
+  "complete_split_attains_global_max": true,
+  "complete_split_argmax": [
+   {
+    "p": 0,
+    "q": 1,
+    "phi": "0"
+   },
+   {
+    "p": 1,
+    "q": 0,
+    "phi": "0"
+   }
+  ]
+ }
+}
+{
+ "2": {
+  "labeled_graphs_enumerated": 2,
+  "chordal_graphs": 2,
+  "max_phi_tau_found": "1",
+  "claimed_floor_formula": 1,
+  "match": true,
+  "argmax_edge_set": [
+   [
+    0,
+    1
+   ]
+  ],
+  "nu_tau_duality_mismatches": 0,
+  "complete_split_max": "1",
+  "complete_split_attains_global_max": true,
+  "complete_split_argmax": [
+   {
+    "p": 1,
+    "q": 1,
+    "phi": "1"
+   },
+   {
+    "p": 2,
+    "q": 0,
+    "phi": "1"
+   }
+  ]
+ }
+}
+{
+ "3": {
+  "labeled_graphs_enumerated": 8,
+  "chordal_graphs": 8,
+  "max_phi_tau_found": "2",
+  "claimed_floor_formula": 2,
+  "match": true,
+  "argmax_edge_set": [
+   [
+    0,
+    1
+   ],
+   [
+    0,
+    2
+   ]
+  ],
+  "nu_tau_duality_mismatches": 0,
+  "complete_split_max": "2",
+  "complete_split_attains_global_max": true,
+  "complete_split_argmax": [
+   {
+    "p": 1,
+    "q": 2,
+    "phi": "2"
+   }
+  ]
+ }
+}
+{
+ "4": {
+  "labeled_graphs_enumerated": 64,
+  "chordal_graphs": 61,
+  "max_phi_tau_found": "3",
+  "claimed_floor_formula": 3,
+  "match": true,
+  "argmax_edge_set": [
+   [
+    0,
+    1
+   ],
+   [
+    0,
+    2
+   ],
+   [
+    0,
+    3
+   ]
+  ],
+  "nu_tau_duality_mismatches": 0,
+  "complete_split_max": "3",
+  "complete_split_attains_global_max": true,
+  "complete_split_argmax": [
+   {
+    "p": 1,
+    "q": 3,
+    "phi": "3"
+   },
+   {
+    "p": 2,
+    "q": 2,
+    "phi": "3"
+   }
+  ]
+ }
+}
+{
+ "5": {
+  "labeled_graphs_enumerated": 1024,
+  "chordal_graphs": 822,
+  "max_phi_tau_found": "5",
+  "claimed_floor_formula": 5,
+  "match": true,
+  "argmax_edge_set": [
+   [
+    0,
+    1
+   ],
+   [
+    0,
+    2
+   ],
+   [
+    0,
+    3
+   ],
+   [
+    0,
+    4
+   ],
+   [
+    1,
+    2
+   ],
+   [
+    1,
+    3
+   ],
+   [
+    1,
+    4
+   ]
+  ],
+  "nu_tau_duality_mismatches": 0,
+  "complete_split_max": "5",
+  "complete_split_attains_global_max": true,
+  "complete_split_argmax": [
+   {
+    "p": 2,
+    "q": 3,
+    "phi": "5"
+   }
+  ]
+ }
+}
+{
+ "6": {
+  "labeled_graphs_enumerated": 32768,
+  "chordal_graphs": 18154,
+  "max_phi_tau_found": "7",
+  "claimed_floor_formula": 7,
+  "match": true,
+  "argmax_edge_set": [
+   [
+    0,
+    1
+   ],
+   [
+    0,
+    2
+   ],
+   [
+    0,
+    3
+   ],
+   [
+    0,
+    4
+   ],
+   [
+    0,
+    5
+   ],
+   [
+    1,
+    2
+   ],
+   [
+    1,
+    3
+   ],
+   [
+    1,
+    4
+   ],
+   [
+    1,
+    5
+   ]
+  ],
+  "nu_tau_duality_mismatches": 0,
+  "complete_split_max": "7",
+  "complete_split_attains_global_max": true,
+  "complete_split_argmax": [
+   {
+    "p": 2,
+    "q": 4,
+    "phi": "7"
+   }
+  ]
+ }
+}
+{
+ "protocol": "EXTERNAL_AI_ADVERSARIAL_AUDIT_INSTRUCTIONS_v1.1",
+ "paper": "PAPER_II",
+ "target": "preprint_draft_v1.2",
+ "gate": [
+  "E",
+  "F",
+  "G"
+ ],
+ "claim": "max over chordal G on n vertices of Phi_tau(G) = floor((2n+1)^2/24)",
+ "method": "exhaustive enumeration of all labeled graphs on n vertices; chordality by simplicial elimination; nu_3^* and tau_3^* both by exact rational simplex (Bland)",
+ "arithmetic": "exact Fraction; deterministic; no seeds",
+ "domain": {
+  "n": [
+   1,
+   6
+  ]
+ },
+ "per_n": {
+  "1": {
+   "labeled_graphs_enumerated": 1,
+   "chordal_graphs": 1,
+   "max_phi_tau_found": "0",
+   "claimed_floor_formula": 0,
+   "match": true,
+   "argmax_edge_set": [],
+   "nu_tau_duality_mismatches": 0,
+   "complete_split_max": "0",
+   "complete_split_attains_global_max": true,
+   "complete_split_argmax": [
+    {
+     "p": 0,
+     "q": 1,
+     "phi": "0"
+    },
+    {
+     "p": 1,
+     "q": 0,
+     "phi": "0"
+    }
+   ]
+  },
+  "2": {
+   "labeled_graphs_enumerated": 2,
+   "chordal_graphs": 2,
+   "max_phi_tau_found": "1",
+   "claimed_floor_formula": 1,
+   "match": true,
+   "argmax_edge_set": [
+    [
+     0,
+     1
+    ]
+   ],
+   "nu_tau_duality_mismatches": 0,
+   "complete_split_max": "1",
+   "complete_split_attains_global_max": true,
+   "complete_split_argmax": [
+    {
+     "p": 1,
+     "q": 1,
+     "phi": "1"
+    },
+    {
+     "p": 2,
+     "q": 0,
+     "phi": "1"
+    }
+   ]
+  },
+  "3": {
+   "labeled_graphs_enumerated": 8,
+   "chordal_graphs": 8,
+   "max_phi_tau_found": "2",
+   "claimed_floor_formula": 2,
+   "match": true,
+   "argmax_edge_set": [
+    [
+     0,
+     1
+    ],
+    [
+     0,
+     2
+    ]
+   ],
+   "nu_tau_duality_mismatches": 0,
+   "complete_split_max": "2",
+   "complete_split_attains_global_max": true,
+   "complete_split_argmax": [
+    {
+     "p": 1,
+     "q": 2,
+     "phi": "2"
+    }
+   ]
+  },
+  "4": {
+   "labeled_graphs_enumerated": 64,
+   "chordal_graphs": 61,
+   "max_phi_tau_found": "3",
+   "claimed_floor_formula": 3,
+   "match": true,
+   "argmax_edge_set": [
+    [
+     0,
+     1
+    ],
+    [
+     0,
+     2
+    ],
+    [
+     0,
+     3
+    ]
+   ],
+   "nu_tau_duality_mismatches": 0,
+   "complete_split_max": "3",
+   "complete_split_attains_global_max": true,
+   "complete_split_argmax": [
+    {
+     "p": 1,
+     "q": 3,
+     "phi": "3"
+    },
+    {
+     "p": 2,
+     "q": 2,
+     "phi": "3"
+    }
+   ]
+  },
+  "5": {
+   "labeled_graphs_enumerated": 1024,
+   "chordal_graphs": 822,
+   "max_phi_tau_found": "5",
+   "claimed_floor_formula": 5,
+   "match": true,
+   "argmax_edge_set": [
+    [
+     0,
+     1
+    ],
+    [
+     0,
+     2
+    ],
+    [
+     0,
+     3
+    ],
+    [
+     0,
+     4
+    ],
+    [
+     1,
+     2
+    ],
+    [
+     1,
+     3
+    ],
+    [
+     1,
+     4
+    ]
+   ],
+   "nu_tau_duality_mismatches": 0,
+   "complete_split_max": "5",
+   "complete_split_attains_global_max": true,
+   "complete_split_argmax": [
+    {
+     "p": 2,
+     "q": 3,
+     "phi": "5"
+    }
+   ]
+  },
+  "6": {
+   "labeled_graphs_enumerated": 32768,
+   "chordal_graphs": 18154,
+   "max_phi_tau_found": "7",
+   "claimed_floor_formula": 7,
+   "match": true,
+   "argmax_edge_set": [
+    [
+     0,
+     1
+    ],
+    [
+     0,
+     2
+    ],
+    [
+     0,
+     3
+    ],
+    [
+     0,
+     4
+    ],
+    [
+     0,
+     5
+    ],
+    [
+     1,
+     2
+    ],
+    [
+     1,
+     3
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     1,
+     5
+    ]
+   ],
+   "nu_tau_duality_mismatches": 0,
+   "complete_split_max": "7",
+   "complete_split_attains_global_max": true,
+   "complete_split_argmax": [
+    {
+     "p": 2,
+     "q": 4,
+     "phi": "7"
+    }
+   ]
+  }
+ },
+ "all_n_match": true,
+ "all_attained_by_complete_split": true,
+ "total_duality_mismatches": 0
+}

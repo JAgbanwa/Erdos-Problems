@@ -1,0 +1,6 @@
+% Long monospace tokens (hashes, paths, status literals) are unbreakable by default
+% and produce overfull boxes. Allow hyphenation inside monospace and shrink tables.
+\usepackage{etoolbox}
+\setmonofont{Latin Modern Mono}[HyphenChar={-}]
+\AtBeginEnvironment{longtable}{\small}
+\emergencystretch=3em

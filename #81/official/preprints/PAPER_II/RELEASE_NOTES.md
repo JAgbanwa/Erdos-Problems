@@ -1,21 +1,23 @@
-# Release notes -- Paper II, preprint v1.0
+# Release notes — Paper II preprint v1.2
 
-**Date:** 2026-07-10
+**Release date:** 2026-08-22
+**Supersedes:** public preprint v1.0
 
-## Summary
-First official preprint release of Paper II: the exact finite extremum of the
-fractional triangle-cover functional over chordal graphs,
-`max = floor((2n+1)^2/24)`, attained by a complete-split graph.
+Paper II v1.2 is the new canonical author preprint. It supplies synchronized
+English and Spanish Markdown, LaTeX and PDF artifacts; the consolidated Lean
+v1.2 freeze; internal audit evidence; and the independent external audit trail.
 
-## Highlights
-- Self-contained analytic proof (calculation ledger v1.1).
-- **Formally verified in Lean 4 / Mathlib v4.28.0** (`PaperII.theorem_1_2`,
-  commit `5f2d448`): `sorry`-free, unconditional on the standard `IsChordal`
-  definition, axiom report `[propext, Classical.choice, Quot.sound]`.
-- Bilingual manuscript (English + Spanish), identical mathematics.
-- Per-section internal computational audits (A-F).
+The external residual process closed with plain `PASS`. Independent clean-room
+reproduction recorded a successful 8,063-job build and 16 expected axiom
+surfaces. The release promotion changed only release-status prose, canonical
+filenames, PDFs derived from the promoted TeX, navigation, metadata and hashes.
+The theorem statement, exact extremal value, proof architecture and Lean archive
+are unchanged from the audited target.
 
-## Boundary
-Not externally peer-reviewed; novelty/priority review incomplete; independent
-third-party reproduction of the Lean build recommended and pending; external
-adversarial audit of Paper II pending. Does not settle 
+The complete previous public v1.0 package is preserved at
+`superseded/preprint_v1.0/`. Intermediate working versions were internal and
+were not public releases.
+
+This is an author preprint, not external human peer review or a specialist
+priority determination. The broader chordal clique-partition problem remains
+open.

@@ -1,0 +1,569 @@
+C:\p3build5\P3\Ax2\Explore\DrossNet.lean:2593:(Proved below; sorry-free, no native_decide/admit/axioms.) -/
+C:\p3build5\P3\Ax2\Explore\NodupChain.lean:11:`Classical`/`propext`/`Quot.sound`), and `sorry`-free.
+C:\p3build5\P3\Ax2\Explore\RouteB.lean:12:  The remaining `sorry` (`maxflow_eq_mincut`) is the HARD direction (existence of a flow meeting
+C:\p3build5\P3\Ax2\PartA\Dross.lean:11:  sorry-free in `Ax2.PartA.FarkasSplit`): a fractional decomposition exists iff there is no
+C:\p3build5\P3\Ax2\PartA\Dross.lean:17:  `TriangleFreeBound`, A8) — is already formalized and gate-verified. The remaining `sorry` is
+C:\p3build5\P3\Ax2\PartA\Dross.lean:31:`DrossArith`, `TriangleFreeBound`) rule it out. Replacing this `sorry` closes `dross_fractional`,
+C:\p3build5\P3\Ax2\PartA\Dross.lean:41:(`decomp_of_no_farkas`, sorry-free), to the single atom `no_deficient_cut`. -/
+C:\p3build5\P3\Ax2\PartA\Flow.lean:18:  need, stated as a TARGET (sorry): the hard analytic content (strong LP duality for the
+C:\p3build5\P3\Ax2\PartA\Flow.lean:46:-- is proved (sorry-free) as `Ax2.decomp_of_no_farkas` in `Ax2.PartA.FarkasSplit`, which
+C:\p3build5\P3\Ax2\PartA\Wlog.lean:19:axiom dross_fractional_flow_noHDT (G : SimpleGraph V) [DecidableRel G.Adj]
+C:\p3build5\P3\Ax2\PartA\Wlog.lean:281:Prove this (replace the final `sorry`). You MAY use `dross_fractional_flow_noHDT` freely (it is an
+C:\p3build5\P3\Ax2\PartA\Wlog.lean:282:axiom here). No `native_decide`, no `admit`, no new axioms, no `sorry` in the final proof. Use
+C:\p3build5\P3\Ax2\PartA\Wlog.lean:284:localize the remaining gap to the smallest possible `sorry`. -/
+C:\p3build5\P3\Ax2\PartB\Axioms.lean:27:axiom bklo_kthree_transfer
+C:\p3build5\P3\Ax2\PartB\BKLO\Absorber.lean:9:    triangle-divisible graph keeps it triangle-divisible (local parity/counting), sorry-free.
+C:\p3build5\P3\Ax2\PartB\BKLO\ApproxFromPacking.lean:6:  `approx_of_fractional`, isolated as a self-contained, `sorry`-free, ax2-internal lemma. The
+C:\p3build5\P3\Ax2\PartB\BKLO\Bridge.lean:44:interface `hEng` — are carried as honest hypotheses (they are being closed separately).  No `sorry`;
+C:\p3build5\P3\Ax2\PartB\BKLO\CycleChunks.lean:794:/-- **Reduction (sorry-free): it suffices to absorb leftovers presented in chunked cycle form.**
+C:\p3build5\P3\Ax2\PartB\BKLO\EndgameDross.lean:18:No `sorry`; the only remaining obligations are the two carried hypotheses.
+C:\p3build5\P3\Ax2\PartB\BKLO\FlexBank.lean:18:  `absorber_of_flexBank` (proved here, sorry-free) is the generalised rerouting move: a rich
+C:\p3build5\P3\Ax2\PartB\BKLO\FlexBankBuild.lean:27:    `flexBankExists_of_reservedSplit : ReservedSplitExists ε → FlexBankExists ε` (sorry-free);
+C:\p3build5\P3\Ax2\PartB\BKLO\FlexBankBuild.lean:359:/-- **Reduction (sorry-free): reserved units plus a splitting of every admissible leftover give a
+C:\p3build5\P3\Ax2\PartB\BKLO\Gadget.lean:8:  KEY FINDING (`Switcher.elim`, proved sorry-free): this naive model is **uninhabited**. An
+C:\p3build5\P3\Ax2\PartB\BKLO\Gadget.lean:12:  `switcher_exists` interface (it would have been a FALSE `sorry`), and pins down the shape the
+C:\p3build5\P3\Ax2\PartB\BKLO\Gadget.lean:16:  Also proved sorry-free: the quantified common-neighbour bound (`card_common_neighbors_ge`)
+C:\p3build5\P3\Ax2\PartB\BKLO\Gadget.lean:87:lies in a triangle. A genuine, sorry-free sub-fact of AC-1 (`switcher_exists`). -/
+C:\p3build5\P3\Ax2\PartB\BKLO\NibbleMaxDegBridge.lean:13:No `sorry`; axiom-clean.
+C:\p3build5\P3\Ax2\PartB\BKLO\ReservedSplitParts.lean:535:/-- **Reduction (sorry-free): a load-bounded absorbing core is an absorbing core.** The residual
+C:\p3build5\P3\Ax2\PartB\BKLO\Transfer.lean:4:  The monolithic transfer is split into named interfaces (each a `sorry` TARGET), composed by
+C:\p3build5\P3\Ax2\PartB\BKLO\Transfer.lean:6:  `Ax2.bklo_kthree_transfer`. Filling every interface (and removing the small assembly `sorry`s)
+C:\p3build5\P3\BKLO\ApexCover.lean:13:Contents (all `sorry`-free):
+C:\p3build5\P3\BKLO\ApproxTriDecompMinDegDense.lean:10:`per-vertex` leftover bound `≤ ηn`).  This file wires the two together, `sorry`-free:
+C:\p3build5\P3\BKLO\AX2BalancedMerge.lean:32:Everything here is `sorry`-free.  The one-link step
+C:\p3build5\P3\BKLO\AX2BalancedMergeFixed.lean:38:Everything here is `sorry`-free.
+C:\p3build5\P3\BKLO\AX2CompleteStep.lean:47:Everything here is `sorry`-free except the step
+C:\p3build5\P3\BKLO\AX2CountedMerge.lean:9:This file audits the merge that the counted invariant is meant to admit, and records what it
+C:\p3build5\P3\BKLO\AX2CountedMerge.lean:80:Everything here is `sorry`-free.  The one-link step itself — `BKLO.RoutedSweepInvCellCountStep`
+C:\p3build5\P3\BKLO\AX2CountedMergeAllocation.lean:12:`sorry`-free.
+C:\p3build5\P3\BKLO\AX2CountedMergeCaps.lean:95:Everything here is `sorry`-free.  Nothing here *refutes*
+C:\p3build5\P3\BKLO\AX2CyclePairing.lean:28:Everything here is `sorry`-free.
+C:\p3build5\P3\BKLO\AX2CycleRouted.lean:44:Everything here is `sorry`-free.
+C:\p3build5\P3\BKLO\AX2FibreBalance.lean:42:Everything here is `sorry`-free.  It is stated for arbitrary `h`, `S`, `L`, `Pc`, `rt`, so adding
+C:\p3build5\P3\BKLO\AX2ForeignCapacityAudit.lean:76:Everything here is `sorry`-free.
+C:\p3build5\P3\BKLO\AX2ForeignFibreBalance.lean:39:Everything here is `sorry`-free.
+C:\p3build5\P3\BKLO\AX2PartnerClassLedger.lean:33:Everything here is `sorry`-free.
+C:\p3build5\P3\BKLO\AX2PartnerClassSpread.lean:52:Everything here is `sorry`-free.
+C:\p3build5\P3\BKLO\AX2PartnerSpreadRepaired.lean:26:Everything here is `sorry`-free.
+C:\p3build5\P3\BKLO\AX2PrescribedClassFibre.lean:27:Everything here is `sorry`-free.
+C:\p3build5\P3\BKLO\AX2ResizedSixH.lean:27:Everything here is `sorry`-free; the demand itself is not proved here.
+C:\p3build5\P3\BKLO\AX2RoutedLedger.lean:33:Everything here is `sorry`-free.
+C:\p3build5\P3\BKLO\AX2RoutedResidual.lean:16:`BKLO.twoSidedUsedClassMatchedQuarterPairing_of_step` is the assembly; it is `sorry`-free.
+C:\p3build5\P3\BKLO\AX2RoutedResidual.lean:152:--   sorry
+C:\p3build5\P3\BKLO\AX2RoutedResidualCell.lean:45:Everything here is `sorry`-free; the one-link step `BKLO.RoutedSweepInvCellStep` is *not* proved —
+C:\p3build5\P3\BKLO\AX2RoutedResidualCell.lean:213:admit a plan `L`, balanced on every cell, such that every link can be paired — by `F`-edges
+C:\p3build5\P3\BKLO\AX2RoutedResidualCellCount.lean:56:Everything here is `sorry`-free; the one-link step `BKLO.RoutedSweepInvCellCountStep` is *not*
+C:\p3build5\P3\BKLO\AX2RoutedResidualCellFree.lean:47:Everything here is `sorry`-free; the one-link step `BKLO.RoutedSweepInvCellFreeStep` is *not*
+C:\p3build5\P3\BKLO\AX2RoutedResidualCellResized.lean:24:Everything here is `sorry`-free; the one-link step is *not* proved.
+C:\p3build5\P3\BKLO\AX2RoutedResidualGen.lean:27:Everything here is `sorry`-free; the one-link step `BKLO.RoutedSweepInvGenStep` is *not* proved.
+C:\p3build5\P3\BKLO\AX2RoutedSweepInvariant.lean:25:Everything in this file is `sorry`-free.
+C:\p3build5\P3\BKLO\AX2ScaledCompleteStep.lean:34:Everything here is `sorry`-free; the step itself remains a hypothesis, and
+C:\p3build5\P3\BKLO\AX2ScaledPerturbation.lean:36:Everything here is `sorry`-free.
+C:\p3build5\P3\BKLO\AX2SweepWideAudit.lean:46:links than the `2 c² / d` such a burn costs.  So the two clauses alone still admit the class
+C:\p3build5\P3\BKLO\AX2SweepWideAudit.lean:86:Everything here is `sorry`-free.
+C:\p3build5\P3\BKLO\AX2ThreeClassBlock.lean:37:Everything here is `sorry`-free.
+C:\p3build5\P3\BKLO\BalancedClasses.lean:17:Everything here is `sorry`-free.
+C:\p3build5\P3\BKLO\BalancedClassesEighth.lean:26:Everything here is `sorry`-free.
+C:\p3build5\P3\BKLO\Basic.lean:16:(Proposition 8.2) — which is essentially definitional.  Everything here is `sorry`-free.
+C:\p3build5\P3\BKLO\BipartiteMatching.lean:13:Everything here is `sorry`-free.
+C:\p3build5\P3\BKLO\BottomClause.lean:14:Everything here is `sorry`-free.
+C:\p3build5\P3\BKLO\BoundedLeftoverConfined.lean:4:Extracted `sorry`-free from the absorber development (job 1f978435's `BoundedLeftoverMain.lean`,
+C:\p3build5\P3\BKLO\BoundedLeftoverConfined.lean:5:whose only `sorry` was the unrelated spread cover-down).  This is the achievable half of the §8
+C:\p3build5\P3\BKLO\CellGadgets.lean:13:Everything here is `sorry`-free.
+C:\p3build5\P3\BKLO\CellsGreedy.lean:21:Everything here is `sorry`-free.
+C:\p3build5\P3\BKLO\CellsSpreadLevels.lean:13:Everything here is `sorry`-free.
+C:\p3build5\P3\BKLO\CellsStep.lean:23:Everything here is `sorry`-free.
+C:\p3build5\P3\BKLO\ClassInvolution.lean:17:Everything here is `sorry`-free.
+C:\p3build5\P3\BKLO\ClassLeftoverBudget.lean:23:Everything here is `sorry`-free.
+C:\p3build5\P3\BKLO\ClassPairing.lean:22:Everything here is `sorry`-free.
+C:\p3build5\P3\BKLO\ClassPairingPerturbed.lean:24:Everything here is `sorry`-free.
+C:\p3build5\P3\BKLO\ClusterCompletion.lean:21:Everything here is `sorry`-free.  The result exported is `BKLO.clusterReservoirExistence_holds`:
+C:\p3build5\P3\BKLO\ClusterObstruction.lean:28:`sorry`-free.
+C:\p3build5\P3\BKLO\ClusterReservoir.lean:34:Everything in this file is `sorry`-free.
+C:\p3build5\P3\BKLO\ClusterWeb.lean:42:Everything in this file is `sorry`-free.
+C:\p3build5\P3\BKLO\CodegreeCounting.lean:15:Everything here is `sorry`-free.
+C:\p3build5\P3\BKLO\CornerHexagon.lean:20:Everything in this file is `sorry`-free.
+C:\p3build5\P3\BKLO\CornerLimit.lean:32:Everything in this file is `sorry`-free.
+C:\p3build5\P3\BKLO\CornerRouting.lean:37:Everything in this file is `sorry`-free.
+C:\p3build5\P3\BKLO\CoverDown.lean:15:Everything here is `sorry`-free.
+C:\p3build5\P3\BKLO\CoverDownAbsorberConfinement.lean:19:`BKLO.coverDownK3Div_of_denseNibble_shellAbsorption` proves, `sorry`-free, that these two
+C:\p3build5\P3\BKLO\CoverDownAbsorberConfinement.lean:25:`sorry`-free that after the nibble no unused edge is left to build an absorber from, so a per-set
+C:\p3build5\P3\BKLO\CoverDownAbsorberConfinement.lean:28:Everything here is `sorry`-free.  Nothing here asserts `ShellAbsorption`, and nothing here asserts
+C:\p3build5\P3\BKLO\CoverDownBudget.lean:9:`≤ γ|V|` (condition (iii)).  This file records, `sorry`-free, that the slack `γ|V|` of (ii) exactly
+C:\p3build5\P3\BKLO\CoverDownBudget.lean:19:Everything here is `sorry`-free.
+C:\p3build5\P3\BKLO\CoverDownBudgetAccumulate.lean:5:`famEdges (starTriangles x (Mx x))`.  Their union `D` is the used set.  This file proves, `sorry`-free,
+C:\p3build5\P3\BKLO\CoverDownBudgetAccumulate.lean:17:Everything here is `sorry`-free.
+C:\p3build5\P3\BKLO\CoverDownBudgetInvariant.lean:10:This file proves, `sorry`-free, the two combinatorial facts behind that bound:
+C:\p3build5\P3\BKLO\CoverDownBudgetInvariant.lean:17:Everything here is `sorry`-free.
+C:\p3build5\P3\BKLO\CoverDownChooserStep.lean:4:This file assembles, `sorry`-free, the single greedy step of BKLO Lemma 10.3 (r = 2): given the
+C:\p3build5\P3\BKLO\CoverDownChooserStep.lean:19:Everything here is `sorry`-free.
+C:\p3build5\P3\BKLO\CoverDownDiracChooser.lean:11:This file assembles that step, `sorry`-free: a graph on a neighbourhood `N` (even, minimum degree
+C:\p3build5\P3\BKLO\CoverDownDiracChooser.lean:16:Everything here is `sorry`-free.
+C:\p3build5\P3\BKLO\CoverDownEngineR3.lean:36:Everything here is `sorry`-free.
+C:\p3build5\P3\BKLO\CoverDownEquivalence.lean:36:Everything here is `sorry`-free.
+C:\p3build5\P3\BKLO\CoverDownFromDecomp.lean:33:Everything here is `sorry`-free.
+C:\p3build5\P3\BKLO\CoverDownFused.lean:30:Everything here is `sorry`-free.
+C:\p3build5\P3\BKLO\CoverDownFusedR.lean:15:Everything here is `sorry`-free.
+C:\p3build5\P3\BKLO\CoverDownGreedyAssembly.lean:9:This file supplies the **assembly** half of that loop, `sorry`-free: given a matching per apex
+C:\p3build5\P3\BKLO\CoverDownGreedyAssembly.lean:19:Everything here is `sorry`-free.
+C:\p3build5\P3\BKLO\CoverDownGreedyExistence.lean:10:This file proves, `sorry`-free, the **accumulation** heart of that greedy loop: from a chooser that,
+C:\p3build5\P3\BKLO\CoverDownGreedyExistence.lean:20:Everything here is `sorry`-free.
+C:\p3build5\P3\BKLO\CoverDownObstruction.lean:19:Everything here is `sorry`-free.
+C:\p3build5\P3\BKLO\CoverDownRefutation.lean:39:Everything here is `sorry`-free.
+C:\p3build5\P3\BKLO\CoverDownRefutationA.lean:21:Everything here is `sorry`-free.
+C:\p3build5\P3\BKLO\CoverDownRefutationB.lean:24:Everything here is `sorry`-free.
+C:\p3build5\P3\BKLO\CoverDownRepaired.lean:28:Everything here is `sorry`-free.
+C:\p3build5\P3\BKLO\CoverDownStepFaithful.lean:63:Everything in this file is `sorry`-free, and depends only on `propext`, `Classical.choice` and
+C:\p3build5\P3\BKLO\CoverDownVortexDense.lean:40:Everything here is `sorry`-free.
+C:\p3build5\P3\BKLO\CrossHexGadget.lean:45:Everything in this file is `sorry`-free.
+C:\p3build5\P3\BKLO\CrossHexWall.lean:32:(the packaged existence statement is false).  Everything in this file is `sorry`-free.
+C:\p3build5\P3\BKLO\CrossPatch.lean:47:Everything in this file is `sorry`-free.
+C:\p3build5\P3\BKLO\DescentStep.lean:15:Everything here is `sorry`-free.
+C:\p3build5\P3\BKLO\DistributiveAbsorptionSkeleton.lean:18:Everything here is `sorry`-free and pure `Mathlib` (the decomposability predicate is abstract).
+C:\p3build5\P3\BKLO\EngineR3.lean:39:Everything here is `sorry`-free: these are definitions plus one elementary lemma about them.
+C:\p3build5\P3\BKLO\EngineR3Assembly.lean:29:Everything here is `sorry`-free.
+C:\p3build5\P3\BKLO\EngineR4Assembly.lean:8:Everything here is `sorry`-free.
+C:\p3build5\P3\BKLO\EquitablePartitionDense.lean:22:Everything here is `sorry`-free.
+C:\p3build5\P3\BKLO\Erdos81AX2Endgame.lean:24:Everything here is `sorry`-free.
+C:\p3build5\P3\BKLO\Erdos81AX2Faithful.lean:10:beyond producing the conclusion).  Everything here is `sorry`-free.
+C:\p3build5\P3\BKLO\Fano.lean:22:Everything here is `sorry`-free.
+C:\p3build5\P3\BKLO\FiniteBernoulli.lean:26:Everything here is `sorry`-free.
+C:\p3build5\P3\BKLO\GreedyPairCover.lean:28:Everything here is `sorry`-free.
+C:\p3build5\P3\BKLO\GridCompetition.lean:15:Everything here is `sorry`-free.
+C:\p3build5\P3\BKLO\GridLabelling.lean:15:Everything here is `sorry`-free.
+C:\p3build5\P3\BKLO\GridLabellingCells.lean:14:Everything here is `sorry`-free.
+C:\p3build5\P3\BKLO\GridPairingClean.lean:25:Everything here is `sorry`-free.
+C:\p3build5\P3\BKLO\GridPairingCleanCount.lean:19:Everything here is `sorry`-free.
+C:\p3build5\P3\BKLO\GridPairingStepTwoSided.lean:23:Everything here is `sorry`-free.
+C:\p3build5\P3\BKLO\GridPairingTwoSided.lean:26:Everything here is `sorry`-free.
+C:\p3build5\P3\BKLO\GridPairingTwoSidedEighth.lean:27:Everything here is `sorry`-free.
+C:\p3build5\P3\BKLO\GridRegionCard.lean:12:Everything here is `sorry`-free.
+C:\p3build5\P3\BKLO\HexagonWeb.lean:34:Everything in this file is `sorry`-free.
+C:\p3build5\P3\BKLO\HexWall.lean:42:Everything in this file is `sorry`-free.
+C:\p3build5\P3\BKLO\Inputs.lean:11:  (`dross_fractional_flow_exact`), sorry-free.**
+C:\p3build5\P3\BKLO\Inputs.lean:27:Everything here is `sorry`-free: these are definitions of the interface predicates, not claims.
+C:\p3build5\P3\BKLO\InputsVortex.lean:51:Everything here is `sorry`-free: these are definitions of interface predicates, not claims.
+C:\p3build5\P3\BKLO\InputsVortexSat.lean:15:Everything here is `sorry`-free.
+C:\p3build5\P3\BKLO\InvolutionMatching.lean:14:Everything here is `sorry`-free.
+C:\p3build5\P3\BKLO\LevelSampling.lean:29:Everything here is `sorry`-free.
+C:\p3build5\P3\BKLO\LinkCoverAssembly.lean:27:Everything here is `sorry`-free.
+C:\p3build5\P3\BKLO\LinkLoad.lean:20:Everything here is `sorry`-free.
+C:\p3build5\P3\BKLO\MainCoverDownRoute.lean:52:Everything here is `sorry`-free.
+C:\p3build5\P3\BKLO\MainDenseUnconditional.lean:16:sorry-free and depending only on `[propext, Classical.choice, Quot.sound]`.
+C:\p3build5\P3\BKLO\MainR4.lean:15:Everything here is `sorry`-free.  The assumed inputs are the three classical ones — Dross's
+C:\p3build5\P3\BKLO\MainRepaired.lean:25:Everything here is `sorry`-free.  The assumed inputs are the three classical ones — Dross's
+C:\p3build5\P3\BKLO\MainRepaired2.lean:21:Everything here is `sorry`-free.  The assumed inputs are the three classical ones — Dross's
+C:\p3build5\P3\BKLO\MainRepaired3.lean:23:Everything here is `sorry`-free.  The assumed inputs are the three classical ones — Dross's
+C:\p3build5\P3\BKLO\NearOptimalFaithful.lean:38:Everything here is `sorry`-free and uses no `axiom`.
+C:\p3build5\P3\BKLO\NibbleMaxDeg.lean:17:Everything here is `sorry`-free.
+C:\p3build5\P3\BKLO\NibbleMaxDegDense.lean:16:Everything here is `sorry`-free.
+C:\p3build5\P3\BKLO\PackingAbsorb.lean:28:reduction — equivalently `ApexReservoirExistence`.  Everything in this file is `sorry`-free.
+C:\p3build5\P3\BKLO\PackingReservoir.lean:42:Everything in this file is `sorry`-free.
+C:\p3build5\P3\BKLO\PairCovering.lean:20:Everything in this file is `sorry`-free.
+C:\p3build5\P3\BKLO\PaperIIIAX2Dense.lean:12:FIVE explicit, named classical ingredients — with NO `sorry`, no bespoke/refuted route, and the
+C:\p3build5\P3\BKLO\ParityFamily.lean:15:Everything here is `sorry`-free.
+C:\p3build5\P3\BKLO\ParityTools.lean:13:Everything here is `sorry`-free.
+C:\p3build5\P3\BKLO\PartitionSampling.lean:20:Everything here is `sorry`-free.
+C:\p3build5\P3\BKLO\PartSeqDenseProof.lean:20:Everything here is `sorry`-free.
+C:\p3build5\P3\BKLO\PerturbedBlock.lean:23:Everything here is `sorry`-free.
+C:\p3build5\P3\BKLO\Reservoir.lean:34:Everything here is `sorry`-free: these are definitions plus elementary lemmas about them.
+C:\p3build5\P3\BKLO\ReservoirDesign.lean:38:Everything here is `sorry`-free.
+C:\p3build5\P3\BKLO\ReservoirDesignClean.lean:28:Everything here is `sorry`-free.
+C:\p3build5\P3\BKLO\ReservoirDesignEquitable.lean:28:Everything here is `sorry`-free.
+C:\p3build5\P3\BKLO\ReservoirDesignFull.lean:24:Everything here is `sorry`-free.
+C:\p3build5\P3\BKLO\ReservoirDesignSharp.lean:28:Everything here is `sorry`-free.
+C:\p3build5\P3\BKLO\ReservoirDesignSharpEighth.lean:25:Everything here is `sorry`-free.
+C:\p3build5\P3\BKLO\ReservoirDesignStructured.lean:16:Everything here is `sorry`-free.
+C:\p3build5\P3\BKLO\ReservoirDesignTwoSided.lean:33:Everything here is `sorry`-free.
+C:\p3build5\P3\BKLO\ReservoirDesignTwoSidedEighth.lean:20:Everything here is `sorry`-free.
+C:\p3build5\P3\BKLO\ReservoirLarge.lean:26:Everything here is `sorry`-free.
+C:\p3build5\P3\BKLO\ReservoirPairing.lean:5:abundance, and — the hard one — that *every* admissible perturbed link system `X` admit a link
+C:\p3build5\P3\BKLO\ReservoirPairing.lean:29:Everything here is `sorry`-free.
+C:\p3build5\P3\BKLO\ReservoirPairingLarge.lean:21:Everything here is `sorry`-free.
+C:\p3build5\P3\BKLO\ReservoirPairingRefutation.lean:29:Everything here is `sorry`-free.
+C:\p3build5\P3\BKLO\ReservoirPairingStructured.lean:21:Everything here is `sorry`-free.
+C:\p3build5\P3\BKLO\ReservoirRepaired.lean:49:Everything here is `sorry`-free: these are definitions plus elementary lemmas about them.
+C:\p3build5\P3\BKLO\ReservoirRepaired2.lean:34:Everything here is `sorry`-free: these are definitions plus one elementary lemma about them.
+C:\p3build5\P3\BKLO\ReservoirRepairedSat.lean:20:Everything here is `sorry`-free.
+C:\p3build5\P3\BKLO\ReservoirSat.lean:24:Everything here is `sorry`-free.
+C:\p3build5\P3\BKLO\Sampling.lean:22:Everything here is `sorry`-free.
+C:\p3build5\P3\BKLO\ScheduleR3.lean:24:Everything here is `sorry`-free.
+C:\p3build5\P3\BKLO\Section1010Dense.lean:29:Everything here is `sorry`-free.
+C:\p3build5\P3\BKLO\Section1010Obstruction.lean:20:Everything here is `sorry`-free.
+C:\p3build5\P3\BKLO\Section1010Refutation.lean:36:Everything here is `sorry`-free.
+C:\p3build5\P3\BKLO\Section1010Sparse.lean:35:Everything here is `sorry`-free.
+C:\p3build5\P3\BKLO\Section1012Assembly.lean:37:(`Lemma1012K3' δ` for `δ ≥ 9/10`).  Everything here is `sorry`-free; the inputs — Lemma 7.2,
+C:\p3build5\P3\BKLO\Section1012Defs.lean:24:Everything here is `sorry`-free.
+C:\p3build5\P3\BKLO\Section1012Dense.lean:10:This file isolates that reduction, `sorry`-free:
+C:\p3build5\P3\BKLO\Section1012Hier.lean:33:paper's hierarchy holds**.  Everything here is `sorry`-free.
+C:\p3build5\P3\BKLO\Section1012Repaired.lean:16:paper.  Everything here is `sorry`-free.
+C:\p3build5\P3\BKLO\Section1012RhoWindow.lean:22:Everything here is `sorry`-free.
+C:\p3build5\P3\BKLO\Section1012Tools.lean:14:Everything here is `sorry`-free.
+C:\p3build5\P3\BKLO\Section102K3.lean:7:`sorry`-free:
+C:\p3build5\P3\BKLO\Section106Set.lean:23:Everything here is `sorry`-free.
+C:\p3build5\P3\BKLO\Section107Core.lean:22:Everything here is `sorry`-free.
+C:\p3build5\P3\BKLO\Section107Core.lean:181:The apex neighbourhoods of the configuration of Lemma 10.10 admit pairwise edge-disjoint perfect
+C:\p3build5\P3\BKLO\Section10Defs.lean:24:Everything here is `sorry`-free.
+C:\p3build5\P3\BKLO\Section10DegreeReduction.lean:12:Everything here is `sorry`-free.
+C:\p3build5\P3\BKLO\Section10Faithful.lean:29:Both halves are assembled below.  Everything in this development is `sorry`-free, and no `axiom`
+C:\p3build5\P3\BKLO\Section10Iteration.lean:19:Everything here is `sorry`-free.
+C:\p3build5\P3\BKLO\Section10Lemma103.lean:21:Everything here is `sorry`-free.
+C:\p3build5\P3\BKLO\Section10Matchings.lean:23:Everything here is `sorry`-free.
+C:\p3build5\P3\BKLO\Section10TransformStepProof.lean:43:Everything here is `sorry`-free.
+C:\p3build5\P3\BKLO\Section10TransformStepWeak.lean:21:Everything here is `sorry`-free.
+C:\p3build5\P3\BKLO\Section11Cells.lean:17:Steps 2 and 3 are carried out here, `sorry`-free.  Step 1 — the *existence* of the cells absorber
+C:\p3build5\P3\BKLO\Section11CellsBuild.lean:23:Everything here is `sorry`-free.  What it does **not** yet give, and what therefore separates it
+C:\p3build5\P3\BKLO\Section11CellsChain.lean:23:Everything here is `sorry`-free.
+C:\p3build5\P3\BKLO\Section11CellsMain.lean:19:Everything here is `sorry`-free.
+C:\p3build5\P3\BKLO\Section11CellsPlace.lean:22:Everything here is `sorry`-free.
+C:\p3build5\P3\BKLO\Section11CellsSpread.lean:21:The main statement is `BKLO.exists_cellsAbsorbers_spread`.  Everything here is `sorry`-free.
+C:\p3build5\P3\BKLO\Section11CellsWire.lean:19:Everything here is `sorry`-free.
+C:\p3build5\P3\BKLO\Section72K3.lean:25:Everything here is `sorry`-free.
+C:\p3build5\P3\BKLO\Section9Assembly.lean:11:This is `BKLO.reach_vecOf_of_pairs_reps`.  Everything here is `sorry`-free.
+C:\p3build5\P3\BKLO\Section9Build.lean:14:Everything here is `sorry`-free.
+C:\p3build5\P3\BKLO\Section9Chain.lean:16:`BKLO.chain_exists` is the resulting statement.  Everything here is `sorry`-free.
+C:\p3build5\P3\BKLO\Section9Construct.lean:11:Everything here is `sorry`-free.
+C:\p3build5\P3\BKLO\Section9Greedy.lean:13:Everything here is `sorry`-free.
+C:\p3build5\P3\BKLO\Section9ParityK3.lean:18:Everything here is `sorry`-free.
+C:\p3build5\P3\BKLO\Section9ParityK3Proof.lean:20:Everything here is `sorry`-free.
+C:\p3build5\P3\BKLO\Section9Vectors.lean:16:Everything here is `sorry`-free.
+C:\p3build5\P3\BKLO\SetGraph.lean:16:Everything here is `sorry`-free.
+C:\p3build5\P3\BKLO\SharpLinkMargin.lean:26:Everything here is `sorry`-free.
+C:\p3build5\P3\BKLO\SharpSweepBudget.lean:31:Everything here is `sorry`-free.
+C:\p3build5\P3\BKLO\ShellAbsorptionConfinementWall.lean:6:cover-down step `BKLO.CoverDownK3Div`.  This file records, `sorry`-free, the three facts that decide
+C:\p3build5\P3\BKLO\ShellAbsorptionConfinementWall.lean:82:Everything here is `sorry`-free.
+C:\p3build5\P3\BKLO\ShellAbsorptionDense.lean:5:`BKLO/ShellAbsorptionConfinementWall.lean` shows `sorry`-free that this interface, *as stated*,
+C:\p3build5\P3\BKLO\ShellAbsorptionDense.lean:37:`sorry`-free.
+C:\p3build5\P3\BKLO\ShellAbsorptionDenseWall.lean:6:level down to the bounded core).  This file records, `sorry`-free, the exact effect of that
+C:\p3build5\P3\BKLO\ShellAbsorptionDenseWall.lean:44:Everything here is `sorry`-free.
+C:\p3build5\P3\BKLO\StarGreedyBudget.lean:19:Everything here is `sorry`-free.
+C:\p3build5\P3\BKLO\StarMatchingTriangles.lean:9:This file proves, `sorry`-free, the atomic combinatorial fact that makes that step work: if `M` is a
+C:\p3build5\P3\BKLO\StarMatchingTriangles.lean:17:Everything here is `sorry`-free.
+C:\p3build5\P3\BKLO\SubtypeTransport.lean:16:Everything here is `sorry`-free.
+C:\p3build5\P3\BKLO\TriangleCompletion.lean:16:Everything here is `sorry`-free.  The two results exported are
+C:\p3build5\P3\BKLO\TriangleSums.lean:10:Everything here is `sorry`-free.
+C:\p3build5\P3\BKLO\TriDecompDenseFromInputs.lean:16:Everything here is `sorry`-free.
+C:\p3build5\P3\BKLO\TwoSidedClassLedger.lean:33:Everything here is `sorry`-free.
+C:\p3build5\P3\BKLO\TwoSidedClassMatched.lean:28:Everything here is `sorry`-free.
+C:\p3build5\P3\BKLO\TwoSidedClassMatchedInvariant.lean:41:Everything here is `sorry`-free.
+C:\p3build5\P3\BKLO\TwoSidedClassMatchedResidual.lean:53:Everything here is `sorry`-free.
+C:\p3build5\P3\BKLO\TwoSidedCrossSide.lean:37:Everything here is `sorry`-free.
+C:\p3build5\P3\BKLO\TwoSidedCrossSideExc.lean:31:Everything here is `sorry`-free.
+C:\p3build5\P3\BKLO\TwoSidedCrossSideSweep.lean:32:Everything here is `sorry`-free.
+C:\p3build5\P3\BKLO\TwoSidedLedger.lean:26:Everything here is `sorry`-free.
+C:\p3build5\P3\BKLO\TwoSidedLedgerObstruction.lean:36:Everything here is `sorry`-free.
+C:\p3build5\P3\BKLO\TwoSidedLinkMargin.lean:24:Everything here is `sorry`-free.
+C:\p3build5\P3\BKLO\TwoSidedSweep.lean:20:Everything here is `sorry`-free.
+C:\p3build5\P3\BKLO\TwoSidedUsedClassMatched.lean:46:Everything here is `sorry`-free.
+C:\p3build5\P3\BKLO\TwoSidedUsedClassMatchedQuarter.lean:28:Everything here is `sorry`-free.  The demand `BKLO.TwoSidedUsedClassMatchedQuarterPairing` itself
+C:\p3build5\P3\BKLO\TwoSidedUsedClassMatchedResized.lean:27:Everything here is `sorry`-free; the demand itself is not proved here.
+C:\p3build5\P3\BKLO\Vortex.lean:27:Everything in this file is `sorry`-free.  What is *not* proved here is `VortexEngine` itself: that
+C:\p3build5\P3\BKLO\VortexComposition.lean:57:Everything in this file is `sorry`-free.
+C:\p3build5\P3\BKLO\VortexEngine.lean:34:Everything here is `sorry`-free.
+C:\p3build5\P3\BKLO\VortexEngineFusedR.lean:25:Everything here is `sorry`-free.
+C:\p3build5\P3\BKLO\VortexEngineFusedR2.lean:15:Everything here is `sorry`-free.
+C:\p3build5\P3\BKLO\VortexPartition.lean:32:Everything here is `sorry`-free.
+C:\p3build5\P3\BKLO\VortexScheduleRefutation.lean:38:Everything here is `sorry`-free.
+C:\p3build5\P3\BKLO\VortexScheduleRepaired.lean:41:Everything here is `sorry`-free.
+C:\p3build5\P3\BKLO\WebWall.lean:30:Everything in this file is `sorry`-free.
+C:\p3build5\P3\Contrib\BeckFiala.lean:17:Sorry-free and axiom-clean `[propext, Classical.choice, Quot.sound]`.
+C:\p3build5\P3\Contrib\BennettBernstein.lean:23:Sorry-free and axiom-clean `[propext, Classical.choice, Quot.sound]`.
+C:\p3build5\P3\Contrib\ConditionalHoeffding.lean:15:Sorry-free and axiom-clean `[propext, Classical.choice, Quot.sound]`.
+C:\p3build5\P3\Contrib\CorradiCodegree.lean:17:Sorry-free and axiom-clean `[propext, Classical.choice, Quot.sound]`.
+C:\p3build5\P3\Contrib\DiracHamiltonian.lean:20:Sorry-free and axiom-clean `[propext, Classical.choice, Quot.sound]`.
+C:\p3build5\P3\Contrib\FanoSTS.lean:29:Everything here is `sorry`-free.
+C:\p3build5\P3\Contrib\FiniteBernoulli.lean:26:Everything here is `sorry`-free.
+C:\p3build5\P3\Contrib\FreedmanBernstein.lean:15:Sorry-free and axiom-clean `[propext, Classical.choice, Quot.sound]`.
+C:\p3build5\P3\Contrib\HoeffdingUpper.lean:16:Sorry-free and axiom-clean `[propext, Classical.choice, Quot.sound]`.
+C:\p3build5\P3\Contrib\HypergeometricTail.lean:26:Sorry-free and axiom-clean `[propext, Classical.choice, Quot.sound]`.
+C:\p3build5\P3\Contrib\InjectionAboveMean.lean:11:Sorry-free and axiom-clean `[propext, Classical.choice, Quot.sound]`.
+C:\p3build5\P3\Contrib\LPStrongDuality.lean:16:Sorry-free and axiom-clean `[propext, Classical.choice, Quot.sound]`.
+C:\p3build5\P3\Contrib\MaxFlowMinCut.lean:21:The development is `sorry`-free and uses only the standard axioms
+C:\p3build5\P3\Contrib\TriangleDecomp.lean:61:/-- `Y` is bipartite: its vertices admit a 2-colouring with no monochromatic edge. -/
+C:\p3build5\P3\Contrib\TriangleFreeMinDegree.lean:11:Sorry-free and axiom-clean `[propext, Classical.choice, Quot.sound]`.
+C:\p3build5\P3\Nibble\AdaptiveAssembly.lean:28:sorry-free reductions
+C:\p3build5\P3\Nibble\AdaptiveAssembly.lean:71:/-- **`NibbleTheoremMost` — assembled from the adaptive oracle (PEELED, sorry-free modulo the atom).**
+C:\p3build5\P3\Nibble\AdaptiveAssembly.lean:173:  sorry
+C:\p3build5\P3\Nibble\AdaptiveAssembly.lean:175:/-- **`NibbleTheoremMost` — assembled (sorry-free modulo `adaptiveOracleExists_holds`).** -/
+C:\p3build5\P3\Nibble\AdaptiveAssembly.lean:287:/-- **The corrected adaptive oracle from the one-round oracle (PEELED, sorry-free).**  All of the
+C:\p3build5\P3\Nibble\AdaptiveAssembly.lean:347:are all discharged there (`exists_roundOracle_params_of_nibbleRoundStep`, sorry-free).  The only
+C:\p3build5\P3\Nibble\AdaptiveRounds.lean:12:This file performs the two *architectural* reductions of that demand, both sorry-free:
+C:\p3build5\P3\Nibble\AdaptiveRounds.lean:31:Must be sorry-free and axiom-clean `[propext, Classical.choice, Quot.sound]`.
+C:\p3build5\P3\Nibble\AdaptiveSchedule.lean:27:Must be sorry-free and axiom-clean `[propext, Classical.choice, Quot.sound]`.
+C:\p3build5\P3\Nibble\AllVertices.lean:11:Must be sorry-free and axiom-clean `[propext, Classical.choice, Quot.sound]`.
+C:\p3build5\P3\Nibble\Assemble.lean:11:Must be sorry-free and axiom-clean `[propext, Classical.choice, Quot.sound]`.
+C:\p3build5\P3\Nibble\Assembly.lean:16:Must be sorry-free and axiom-clean `[propext, Classical.choice, Quot.sound]`.
+C:\p3build5\P3\Nibble\AX1Closed.lean:10:Must be sorry-free and axiom-clean `[propext, Classical.choice, Quot.sound]`.
+C:\p3build5\P3\Nibble\AX1Reduction.lean:15:Must be sorry-free and axiom-clean `[propext, Classical.choice, Quot.sound]`.
+C:\p3build5\P3\Nibble\BandFifthRefutation.lean:33:Sorry-free and axiom-clean `[propext, Classical.choice, Quot.sound]`.
+C:\p3build5\P3\Nibble\Basic.lean:12:Everything here must be sorry-free and axiom-clean `[propext, Classical.choice, Quot.sound]`.
+C:\p3build5\P3\Nibble\BeckFiala.lean:17:Sorry-free and axiom-clean `[propext, Classical.choice, Quot.sound]`.
+C:\p3build5\P3\Nibble\BeckFialaPairs.lean:17:Sorry-free and axiom-clean `[propext, Classical.choice, Quot.sound]`.
+C:\p3build5\P3\Nibble\BernoulliConfig.lean:16:Must be sorry-free and axiom-clean `[propext, Classical.choice, Quot.sound]`.
+C:\p3build5\P3\Nibble\BernoulliSpace.lean:13:Must be sorry-free and axiom-clean `[propext, Classical.choice, Quot.sound]`.
+C:\p3build5\P3\Nibble\BlockCoverPortionBudget.lean:44:Must be sorry-free and axiom-clean `[propext, Classical.choice, Quot.sound]`.
+C:\p3build5\P3\Nibble\BlockCoverUniformAux.lean:13:Must be sorry-free and axiom-clean `[propext, Classical.choice, Quot.sound]`.
+C:\p3build5\P3\Nibble\BlockSplit.lean:14:Must be sorry-free and axiom-clean `[propext, Classical.choice, Quot.sound]`.
+C:\p3build5\P3\Nibble\BlowUpFracNibble.lean:27:Must be sorry-free and axiom-clean `[propext, Classical.choice, Quot.sound]`.
+C:\p3build5\P3\Nibble\BoundedDiff.lean:16:Deterministic; holds for any `R`. Must be sorry-free and axiom-clean
+C:\p3build5\P3\Nibble\BoxAllocationSpec.lean:31:Must be sorry-free and axiom-clean `[propext, Classical.choice, Quot.sound]`.
+C:\p3build5\P3\Nibble\BoxPlacementCount.lean:13:Must be sorry-free and axiom-clean `[propext, Classical.choice, Quot.sound]`.
+C:\p3build5\P3\Nibble\BoxPlacementEdge.lean:17:Must be sorry-free and axiom-clean `[propext, Classical.choice, Quot.sound]`.
+C:\p3build5\P3\Nibble\BoxPlacementGraph.lean:30:Must be sorry-free and axiom-clean `[propext, Classical.choice, Quot.sound]`.
+C:\p3build5\P3\Nibble\BoxPlacementNibble.lean:26:Must be sorry-free and axiom-clean `[propext, Classical.choice, Quot.sound]`.
+C:\p3build5\P3\Nibble\CellBoxAllocation.lean:30:Must be sorry-free and axiom-clean `[propext, Classical.choice, Quot.sound]`.
+C:\p3build5\P3\Nibble\CellDesignPartner.lean:40:Must be sorry-free and axiom-clean `[propext, Classical.choice, Quot.sound]`.
+C:\p3build5\P3\Nibble\Chebyshev.lean:12:Must be sorry-free and axiom-clean `[propext, Classical.choice, Quot.sound]`.
+C:\p3build5\P3\Nibble\ClusterTripleLP.lean:30:Must be sorry-free and axiom-clean `[propext, Classical.choice, Quot.sound]`.
+C:\p3build5\P3\Nibble\ClusterTripleLPCount.lean:17:Must be sorry-free and axiom-clean `[propext, Classical.choice, Quot.sound]`.
+C:\p3build5\P3\Nibble\CoarseCellAssembly.lean:14:Must be sorry-free and axiom-clean `[propext, Classical.choice, Quot.sound]`.
+C:\p3build5\P3\Nibble\CoarseCellBlocks.lean:21:Must be sorry-free and axiom-clean `[propext, Classical.choice, Quot.sound]`.
+C:\p3build5\P3\Nibble\CoarseCellCoupled.lean:29:Must be sorry-free and axiom-clean `[propext, Classical.choice, Quot.sound]`.
+C:\p3build5\P3\Nibble\CoarseCellDiagonalDesign.lean:46:Must be sorry-free and axiom-clean `[propext, Classical.choice, Quot.sound]`.
+C:\p3build5\P3\Nibble\CoarseCellLatinFill.lean:32:Must be sorry-free and axiom-clean `[propext, Classical.choice, Quot.sound]`.
+C:\p3build5\P3\Nibble\CoarseCellShapeGate.lean:64:Must be sorry-free and axiom-clean `[propext, Classical.choice, Quot.sound]`.
+C:\p3build5\P3\Nibble\CompleteHypergraph.lean:17:Must be sorry-free and axiom-clean `[propext, Classical.choice, Quot.sound]`.
+C:\p3build5\P3\Nibble\Conflict.lean:16:Must be sorry-free and axiom-clean `[propext, Classical.choice, Quot.sound]`.
+C:\p3build5\P3\Nibble\Convergence.lean:15:Must be sorry-free and axiom-clean `[propext, Classical.choice, Quot.sound]`.
+C:\p3build5\P3\Nibble\CoreGapAX1.lean:45:Must be sorry-free and axiom-clean `[propext, Classical.choice, Quot.sound]`.
+C:\p3build5\P3\Nibble\CoreGapBlockAlloc.lean:22:Must be sorry-free and axiom-clean `[propext, Classical.choice, Quot.sound]`.
+C:\p3build5\P3\Nibble\CoreGapBlockCover.lean:27:Must be sorry-free and axiom-clean `[propext, Classical.choice, Quot.sound]`.
+C:\p3build5\P3\Nibble\CoreGapBlockCoverCoupled.lean:26:Must be sorry-free and axiom-clean `[propext, Classical.choice, Quot.sound]`.
+C:\p3build5\P3\Nibble\CoreGapBlockCoverRefute.lean:28:Must be sorry-free and axiom-clean `[propext, Classical.choice, Quot.sound]`.
+C:\p3build5\P3\Nibble\CoreGapBlockCoverUniform.lean:39:Must be sorry-free and axiom-clean `[propext, Classical.choice, Quot.sound]`.
+C:\p3build5\P3\Nibble\CoreGapBlockShape.lean:17:Must be sorry-free and axiom-clean `[propext, Classical.choice, Quot.sound]`.
+C:\p3build5\P3\Nibble\CoreGapBlowUp.lean:29:Must be sorry-free and axiom-clean `[propext, Classical.choice, Quot.sound]`.
+C:\p3build5\P3\Nibble\CoreGapBlowUpGap.lean:27:Must be sorry-free and axiom-clean `[propext, Classical.choice, Quot.sound]`.
+C:\p3build5\P3\Nibble\CoreGapBlowUpSelect.lean:28:Must be sorry-free and axiom-clean `[propext, Classical.choice, Quot.sound]`.
+C:\p3build5\P3\Nibble\CoreGapClusterCapacity.lean:19:Must be sorry-free and axiom-clean `[propext, Classical.choice, Quot.sound]`.
+C:\p3build5\P3\Nibble\CoreGapClusterHost.lean:17:Must be sorry-free and axiom-clean `[propext, Classical.choice, Quot.sound]`.
+C:\p3build5\P3\Nibble\CoreGapClusterLP.lean:28:Must be sorry-free and axiom-clean `[propext, Classical.choice, Quot.sound]`.
+C:\p3build5\P3\Nibble\CoreGapClusterPackingRefute.lean:6:block size `α ≤ ε ^ 2`, every regularity-reduced graph must admit a family of block sub-triples with
+C:\p3build5\P3\Nibble\CoreGapClusterPackingRefute.lean:39:Must be sorry-free and axiom-clean `[propext, Classical.choice, Quot.sound]`.
+C:\p3build5\P3\Nibble\CoreGapCoverCapacity.lean:38:Must be sorry-free and axiom-clean `[propext, Classical.choice, Quot.sound]`.
+C:\p3build5\P3\Nibble\CoreGapDensePairs.lean:20:Must be sorry-free and axiom-clean `[propext, Classical.choice, Quot.sound]`.
+C:\p3build5\P3\Nibble\CoreGapDesign.lean:19:Must be sorry-free and axiom-clean `[propext, Classical.choice, Quot.sound]`.
+C:\p3build5\P3\Nibble\CoreGapDesignLocal.lean:17:Must be sorry-free and axiom-clean `[propext, Classical.choice, Quot.sound]`.
+C:\p3build5\P3\Nibble\CoreGapGridLocalResidual.lean:32:Must be sorry-free and axiom-clean `[propext, Classical.choice, Quot.sound]`.
+C:\p3build5\P3\Nibble\CoreGapGridResidual.lean:43:Must be sorry-free and axiom-clean `[propext, Classical.choice, Quot.sound]`.
+C:\p3build5\P3\Nibble\CoreGapNearComplete.lean:22:Must be sorry-free and axiom-clean `[propext, Classical.choice, Quot.sound]`.
+C:\p3build5\P3\Nibble\CoreGapOpenRange.lean:19:Must be sorry-free and axiom-clean `[propext, Classical.choice, Quot.sound]`.
+C:\p3build5\P3\Nibble\CoreGapPackingEdges.lean:14:Must be sorry-free and axiom-clean `[propext, Classical.choice, Quot.sound]`.
+C:\p3build5\P3\Nibble\CoreGapPackingSplit.lean:17:Must be sorry-free and axiom-clean `[propext, Classical.choice, Quot.sound]`.
+C:\p3build5\P3\Nibble\CoreGapPrune.lean:22:Must be sorry-free and axiom-clean `[propext, Classical.choice, Quot.sound]`.
+C:\p3build5\P3\Nibble\CoreGapPruneLocal.lean:21:Must be sorry-free and axiom-clean `[propext, Classical.choice, Quot.sound]`.
+C:\p3build5\P3\Nibble\CoreGapRectPack.lean:16:Must be sorry-free and axiom-clean `[propext, Classical.choice, Quot.sound]`.
+C:\p3build5\P3\Nibble\CoreGapReducedPair.lean:16:Must be sorry-free and axiom-clean `[propext, Classical.choice, Quot.sound]`.
+C:\p3build5\P3\Nibble\CoreGapRegularCover.lean:28:Must be sorry-free and axiom-clean `[propext, Classical.choice, Quot.sound]`.
+C:\p3build5\P3\Nibble\CoreGapRegularDecomp.lean:28:Must be sorry-free and axiom-clean `[propext, Classical.choice, Quot.sound]`.
+C:\p3build5\P3\Nibble\CoreGapRegularDegrees.lean:25:Must be sorry-free and axiom-clean `[propext, Classical.choice, Quot.sound]`.
+C:\p3build5\P3\Nibble\CoreGapRegularFamily.lean:22:Must be sorry-free and axiom-clean `[propext, Classical.choice, Quot.sound]`.
+C:\p3build5\P3\Nibble\CoreGapRemoval.lean:29:Must be sorry-free and axiom-clean `[propext, Classical.choice, Quot.sound]`.
+C:\p3build5\P3\Nibble\CoreGapSubblock.lean:14:Must be sorry-free and axiom-clean `[propext, Classical.choice, Quot.sound]`.
+C:\p3build5\P3\Nibble\CoreGapTripleDegrees.lean:24:Must be sorry-free and axiom-clean `[propext, Classical.choice, Quot.sound]`.
+C:\p3build5\P3\Nibble\CoreGapTripleShape.lean:24:Must be sorry-free and axiom-clean `[propext, Classical.choice, Quot.sound]`.
+C:\p3build5\P3\Nibble\CoreGapUniformCodegree.lean:22:Must be sorry-free and axiom-clean `[propext, Classical.choice, Quot.sound]`.
+C:\p3build5\P3\Nibble\CoupledDyadicBoxRoute.lean:88:Must be sorry-free and axiom-clean `[propext, Classical.choice, Quot.sound]`.
+C:\p3build5\P3\Nibble\CoupledDyadicGate.lean:63:Must be sorry-free and axiom-clean `[propext, Classical.choice, Quot.sound]`.
+C:\p3build5\P3\Nibble\CoupledDyadicScaled.lean:36:Must be sorry-free and axiom-clean `[propext, Classical.choice, Quot.sound]`.
+C:\p3build5\P3\Nibble\Coverage.lean:15:Must be sorry-free and axiom-clean `[propext, Classical.choice, Quot.sound]`.
+C:\p3build5\P3\Nibble\Covered.lean:17:Must be sorry-free and axiom-clean `[propext, Classical.choice, Quot.sound]`.
+C:\p3build5\P3\Nibble\CoveredExpectation.lean:12:Must be sorry-free and axiom-clean `[propext, Classical.choice, Quot.sound]`.
+C:\p3build5\P3\Nibble\DegreeDecay.lean:2:# Degree-decay invariant (analytic heart of the nibble oracle) — PROVED, sorry-free
+C:\p3build5\P3\Nibble\DenseApproxDeg.lean:52:Sorry-free and axiom-clean `[propext, Classical.choice, Quot.sound]`.
+C:\p3build5\P3\Nibble\DenseGapAX1.lean:27:Must be sorry-free and axiom-clean `[propext, Classical.choice, Quot.sound]`.
+C:\p3build5\P3\Nibble\DenseGlobalLeftoverBelowHalf.lean:36:Sorry-free and axiom-clean `[propext, Classical.choice, Quot.sound]`.
+C:\p3build5\P3\Nibble\DenseGlobalLeftoverConst.lean:44:Sorry-free and axiom-clean `[propext, Classical.choice, Quot.sound]`.
+C:\p3build5\P3\Nibble\DenseGlobalLeftoverSharp.lean:42:Sorry-free and axiom-clean `[propext, Classical.choice, Quot.sound]`.
+C:\p3build5\P3\Nibble\DenseGlobalLeftoverThird.lean:37:Sorry-free and axiom-clean `[propext, Classical.choice, Quot.sound]`.
+C:\p3build5\P3\Nibble\DenseGlobalRoutes.lean:38:Sorry-free and axiom-clean `[propext, Classical.choice, Quot.sound]`.
+C:\p3build5\P3\Nibble\DenseTriangleNibbleDegAll.lean:18:Sorry-free and axiom-clean `[propext, Classical.choice, Quot.sound]`.
+C:\p3build5\P3\Nibble\DenseTriangleNibbleDegHalf.lean:40:Sorry-free and axiom-clean `[propext, Classical.choice, Quot.sound]`.
+C:\p3build5\P3\Nibble\DenseTriangleNibbleDegProof.lean:28:Sorry-free and axiom-clean `[propext, Classical.choice, Quot.sound]`.
+C:\p3build5\P3\Nibble\DenseTriNibbleMaxDeg.lean:36:Sorry-free and axiom-clean `[propext, Classical.choice, Quot.sound]`.
+C:\p3build5\P3\Nibble\DepLocal.lean:12:Deterministic; holds for any `R, R' ⊆ H`. Sorry-free, axiom-clean.
+C:\p3build5\P3\Nibble\Discharge.lean:15:Must be sorry-free and axiom-clean `[propext, Classical.choice, Quot.sound]`.
+C:\p3build5\P3\Nibble\DischargeSeq.lean:14:Must be sorry-free and axiom-clean `[propext, Classical.choice, Quot.sound]`.
+C:\p3build5\P3\Nibble\DoubleSwap.lean:23:Sorry-free and axiom-clean `[propext, Classical.choice, Quot.sound]`.
+C:\p3build5\P3\Nibble\DrossCutArith.lean:17:Sorry-free and axiom-clean `[propext, Classical.choice, Quot.sound]`.
+C:\p3build5\P3\Nibble\DrossCutCert.lean:20:Sorry-free and axiom-clean `[propext, Classical.choice, Quot.sound]`.
+C:\p3build5\P3\Nibble\DrossCutCount.lean:14:Sorry-free and axiom-clean `[propext, Classical.choice, Quot.sound]`.
+C:\p3build5\P3\Nibble\DrossCutPartners.lean:16:Sorry-free and axiom-clean `[propext, Classical.choice, Quot.sound]`.
+C:\p3build5\P3\Nibble\DrossCutThresholdTight.lean:34:Sorry-free and axiom-clean `[propext, Classical.choice, Quot.sound]`.
+C:\p3build5\P3\Nibble\DrossFlowDense.lean:23:Sorry-free and axiom-clean `[propext, Classical.choice, Quot.sound]`.
+C:\p3build5\P3\Nibble\DrossFlowDenseNibble.lean:18:Sorry-free and axiom-clean `[propext, Classical.choice, Quot.sound]`.
+C:\p3build5\P3\Nibble\DrossFlowRoute.lean:27:Sorry-free and axiom-clean `[propext, Classical.choice, Quot.sound]`.
+C:\p3build5\P3\Nibble\DrossFractional.lean:46:Sorry-free and axiom-clean `[propext, Classical.choice, Quot.sound]`.
+C:\p3build5\P3\Nibble\DrossGadget.lean:26:Sorry-free and axiom-clean `[propext, Classical.choice, Quot.sound]`.
+C:\p3build5\P3\Nibble\DrossLinkRouting.lean:34:Sorry-free and axiom-clean `[propext, Classical.choice, Quot.sound]`.
+C:\p3build5\P3\Nibble\DrossResidual.lean:16:Sorry-free and axiom-clean `[propext, Classical.choice, Quot.sound]`.
+C:\p3build5\P3\Nibble\DrossSplitGraph.lean:22:Sorry-free and axiom-clean `[propext, Classical.choice, Quot.sound]`.
+C:\p3build5\P3\Nibble\DrossSpread.lean:30:Sorry-free and axiom-clean `[propext, Classical.choice, Quot.sound]`.
+C:\p3build5\P3\Nibble\DrossSpread.lean:235:/-- **Codegree-regular graphs admit a bounded uniform-deficiency correction.**  If every edge of `G`
+C:\p3build5\P3\Nibble\DrossTransfer.lean:23:Sorry-free and axiom-clean `[propext, Classical.choice, Quot.sound]`.
+C:\p3build5\P3\Nibble\Expectation.lean:13:`degree` comes from `Nibble.Basic`. Must be sorry-free and axiom-clean
+C:\p3build5\P3\Nibble\FlowFeasibility.lean:19:Sorry-free and axiom-clean `[propext, Classical.choice, Quot.sound]`.
+C:\p3build5\P3\Nibble\FracNibbleDense.lean:32:Sorry-free and axiom-clean `[propext, Classical.choice, Quot.sound]`.
+C:\p3build5\P3\Nibble\FracNibbleLE.lean:25:Must be sorry-free and axiom-clean `[propext, Classical.choice, Quot.sound]`.
+C:\p3build5\P3\Nibble\FracNibbleMultiScale.lean:41:Sorry-free and axiom-clean `[propext, Classical.choice, Quot.sound]`.
+C:\p3build5\P3\Nibble\FracNibbleRefutation.lean:40:Sorry-free and axiom-clean `[propext, Classical.choice, Quot.sound]`.
+C:\p3build5\P3\Nibble\FracNibbleRepaired.lean:28:Sorry-free and axiom-clean `[propext, Classical.choice, Quot.sound]`.
+C:\p3build5\P3\Nibble\FracNibbleSlack.lean:27:codegrees and *enough slack*.  Sorry-free and axiom-clean.
+C:\p3build5\P3\Nibble\FracNibbleSlackR.lean:24:Sorry-free and axiom-clean.
+C:\p3build5\P3\Nibble\FracPackingDense.lean:60:Sorry-free and axiom-clean `[propext, Classical.choice, Quot.sound]`.
+C:\p3build5\P3\Nibble\FracRounding.lean:29:Sorry-free and axiom-clean `[propext, Classical.choice, Quot.sound]`.
+C:\p3build5\P3\Nibble\FreedmanCoeffRefutation.lean:37:Sorry-free and axiom-clean `[propext, Classical.choice, Quot.sound]`.
+C:\p3build5\P3\Nibble\FreedmanParamsObstruction.lean:36:Must be sorry-free and axiom-clean `[propext, Classical.choice, Quot.sound]`.
+C:\p3build5\P3\Nibble\GoodEvent.lean:13:Must be sorry-free and axiom-clean `[propext, Classical.choice, Quot.sound]`.
+C:\p3build5\P3\Nibble\GoodRetentionClean.lean:11:Must be sorry-free and axiom-clean `[propext, Classical.choice, Quot.sound]`.
+C:\p3build5\P3\Nibble\GoodRetentionFinset.lean:19:Must be sorry-free and axiom-clean `[propext, Classical.choice, Quot.sound]`.
+C:\p3build5\P3\Nibble\GoodRetentionMcDiarmid.lean:14:Must be sorry-free and axiom-clean `[propext, Classical.choice, Quot.sound]`.
+C:\p3build5\P3\Nibble\GoodRound.lean:16:Must be sorry-free and axiom-clean `[propext, Classical.choice, Quot.sound]`.
+C:\p3build5\P3\Nibble\GoodRoundMcDiarmid.lean:19:Must be sorry-free and axiom-clean `[propext, Classical.choice, Quot.sound]`.
+C:\p3build5\P3\Nibble\Greedy.lean:14:Must be sorry-free and axiom-clean `[propext, Classical.choice, Quot.sound]`.
+C:\p3build5\P3\Nibble\GreedyFracMatching.lean:15:Sorry-free and axiom-clean `[propext, Classical.choice, Quot.sound]`.
+C:\p3build5\P3\Nibble\GridDesign.lean:19:Must be sorry-free and axiom-clean `[propext, Classical.choice, Quot.sound]`.
+C:\p3build5\P3\Nibble\GridDesignRect.lean:20:Must be sorry-free and axiom-clean `[propext, Classical.choice, Quot.sound]`.
+C:\p3build5\P3\Nibble\GridLineDesign.lean:34:Must be sorry-free and axiom-clean `[propext, Classical.choice, Quot.sound]`.
+C:\p3build5\P3\Nibble\GridScale.lean:18:Must be sorry-free and axiom-clean `[propext, Classical.choice, Quot.sound]`.
+C:\p3build5\P3\Nibble\GridTripleDesign.lean:59:Must be sorry-free and axiom-clean `[propext, Classical.choice, Quot.sound]`.
+C:\p3build5\P3\Nibble\GridTripleDesignRect.lean:29:Must be sorry-free and axiom-clean `[propext, Classical.choice, Quot.sound]`.
+C:\p3build5\P3\Nibble\InvariantDegree.lean:10:Must be sorry-free and axiom-clean `[propext, Classical.choice, Quot.sound]`.
+C:\p3build5\P3\Nibble\Iteration.lean:18:Definitions come from `Nibble.Basic` / `Nibble.Round`. Must be sorry-free and axiom-clean
+C:\p3build5\P3\Nibble\IterationSeq.lean:21:Must be sorry-free and axiom-clean `[propext, Classical.choice, Quot.sound]`.
+C:\p3build5\P3\Nibble\K4Obstruction.lean:26:Sorry-free and axiom-clean `[propext, Classical.choice, Quot.sound]`.
+C:\p3build5\P3\Nibble\LinkSolve.lean:17:Sorry-free and axiom-clean `[propext, Classical.choice, Quot.sound]`.
+C:\p3build5\P3\Nibble\LowDegreeQuadraticFrac.lean:24:Must be sorry-free and axiom-clean `[propext, Classical.choice, Quot.sound]`.
+C:\p3build5\P3\Nibble\MarkovVertices.lean:15:Sorry-free and axiom-clean `[propext, Classical.choice, Quot.sound]`.
+C:\p3build5\P3\Nibble\McDiarmid.lean:11:Must stay sorry-free and axiom-clean `[propext, Classical.choice, Quot.sound]`.
+C:\p3build5\P3\Nibble\McDiarmidFull.lean:16:Must be sorry-free and axiom-clean `[propext, Classical.choice, Quot.sound]`.
+C:\p3build5\P3\Nibble\McDiarmidResidual.lean:11:Must be sorry-free and axiom-clean `[propext, Classical.choice, Quot.sound]`.
+C:\p3build5\P3\Nibble\McDiarmidResidualCount.lean:14:Must be sorry-free and axiom-clean `[propext, Classical.choice, Quot.sound]`.
+C:\p3build5\P3\Nibble\McDiarmidResidualSharp.lean:16:Must be sorry-free and axiom-clean `[propext, Classical.choice, Quot.sound]`.
+C:\p3build5\P3\Nibble\McDiarmidStep.lean:10:Must be sorry-free and axiom-clean `[propext, Classical.choice, Quot.sound]`.
+C:\p3build5\P3\Nibble\McDiarmidStep2.lean:14:Must be sorry-free and axiom-clean `[propext, Classical.choice, Quot.sound]`.
+C:\p3build5\P3\Nibble\McDiarmidTail.lean:12:Must be sorry-free and axiom-clean `[propext, Classical.choice, Quot.sound]`.
+C:\p3build5\P3\Nibble\Measurable.lean:11:Must be sorry-free and axiom-clean `[propext, Classical.choice, Quot.sound]`.
+C:\p3build5\P3\Nibble\MostAssembly.lean:4:Standalone, Mathlib-only. This is the OUTER LOOP that glues the (already sorry-free) per-round
+C:\p3build5\P3\Nibble\NearComplete.lean:21:Sorry-free and axiom-clean `[propext, Classical.choice, Quot.sound]`.
+C:\p3build5\P3\Nibble\NearCompleteFrac.lean:23:Sorry-free and axiom-clean `[propext, Classical.choice, Quot.sound]`.
+C:\p3build5\P3\Nibble\NearCompleteNibble.lean:23:Sorry-free and axiom-clean `[propext, Classical.choice, Quot.sound]`.
+C:\p3build5\P3\Nibble\NearRegObligationRefutation.lean:24:Must be sorry-free and axiom-clean `[propext, Classical.choice, Quot.sound]`.
+C:\p3build5\P3\Nibble\NibbleGapReduction.lean:6:i.e. AX1 sorry-free reduces to EXACTLY: cover-side strong duality (Aristotle `b3ee717f`), the nibble
+C:\p3build5\P3\Nibble\NibbleGapReduction.lean:14:Must be sorry-free and axiom-clean `[propext, Classical.choice, Quot.sound]`.
+C:\p3build5\P3\Nibble\NibbleGapReduction.lean:205:/-- **The full AX1 reduction.** AX1 sorry-free ⟸ the three irreducible obligations. -/
+C:\p3build5\P3\Nibble\NibbleStrategy.lean:14:Must be sorry-free and axiom-clean `[propext, Classical.choice, Quot.sound]`.
+C:\p3build5\P3\Nibble\Nu3StarCover.lean:20:Must be sorry-free and axiom-clean `[propext, Classical.choice, Quot.sound]`.
+C:\p3build5\P3\Nibble\OneRoundGood.lean:15:Must be sorry-free and axiom-clean `[propext, Classical.choice, Quot.sound]`.
+C:\p3build5\P3\Nibble\PadCount.lean:14:Sorry-free and axiom-clean `[propext, Classical.choice, Quot.sound]`.
+C:\p3build5\P3\Nibble\PadHypergraph.lean:17:Sorry-free and axiom-clean `[propext, Classical.choice, Quot.sound]`.
+C:\p3build5\P3\Nibble\PadRounding.lean:19:Sorry-free and axiom-clean `[propext, Classical.choice, Quot.sound]`.
+C:\p3build5\P3\Nibble\PaperImprovements.lean:19:Must be sorry-free and axiom-clean `[propext, Classical.choice, Quot.sound]`.
+C:\p3build5\P3\Nibble\ParamsCoreRefutation.lean:21:Must be sorry-free and axiom-clean `[propext, Classical.choice, Quot.sound]`.
+C:\p3build5\P3\Nibble\Pruning.lean:21:Sorry-free and axiom-clean `[propext, Classical.choice, Quot.sound]`.
+C:\p3build5\P3\Nibble\Regular.lean:14:Must be sorry-free and axiom-clean `[propext, Classical.choice, Quot.sound]`.
+C:\p3build5\P3\Nibble\RegularityBad.lean:14:Must be sorry-free and axiom-clean `[propext, Classical.choice, Quot.sound]`.
+C:\p3build5\P3\Nibble\RegularityBadBound.lean:9:Must be sorry-free and axiom-clean `[propext, Classical.choice, Quot.sound]`.
+C:\p3build5\P3\Nibble\RegularityBadMcDiarmid.lean:17:Must be sorry-free and axiom-clean `[propext, Classical.choice, Quot.sound]`.
+C:\p3build5\P3\Nibble\RegularityBadTwoSided.lean:16:Must be sorry-free and axiom-clean `[propext, Classical.choice, Quot.sound]`.
+C:\p3build5\P3\Nibble\RegularMost.lean:16:Must be sorry-free and axiom-clean `[propext, Classical.choice, Quot.sound]`.
+C:\p3build5\P3\Nibble\ResidualBoundedDiff.lean:13:Must be sorry-free and axiom-clean `[propext, Classical.choice, Quot.sound]`.
+C:\p3build5\P3\Nibble\ResidualBoundedDiffSharp.lean:16:Must be sorry-free and axiom-clean `[propext, Classical.choice, Quot.sound]`.
+C:\p3build5\P3\Nibble\ResidualCodegree.lean:9:Must be sorry-free and axiom-clean `[propext, Classical.choice, Quot.sound]`.
+C:\p3build5\P3\Nibble\ResidualCondVariance.lean:5:obligation and discharges the residual-specific part against it (sorry-free).
+C:\p3build5\P3\Nibble\ResidualDegree.lean:16:Must be sorry-free and axiom-clean `[propext, Classical.choice, Quot.sound]`.
+C:\p3build5\P3\Nibble\ResidualDegreeUpper.lean:16:Must be sorry-free and axiom-clean `[propext, Classical.choice, Quot.sound]`.
+C:\p3build5\P3\Nibble\Round.lean:24:`Nibble.Greedy`. Must be sorry-free and axiom-clean `[propext, Classical.choice, Quot.sound]`.
+C:\p3build5\P3\Nibble\RoundConcentration.lean:12:Must be sorry-free and axiom-clean `[propext, Classical.choice, Quot.sound]`.
+C:\p3build5\P3\Nibble\RoundConcentrationTwoSided.lean:11:Must be sorry-free and axiom-clean `[propext, Classical.choice, Quot.sound]`.
+C:\p3build5\P3\Nibble\RoundConflict.lean:11:Definitions come from `Nibble.Basic`, `Nibble.Round`, `Nibble.Conflict`. Must be sorry-free and
+C:\p3build5\P3\Nibble\RoundCover.lean:13:Must be sorry-free and axiom-clean `[propext, Classical.choice, Quot.sound]`.
+C:\p3build5\P3\Nibble\RoundCoverFraction.lean:2:# Nibble — the COVER clause of one nibble round (unconditional, sorry-free)
+C:\p3build5\P3\Nibble\RoundCoverFraction.lean:18:Sorry-free and axiom-clean `[propext, Classical.choice, Quot.sound]`.
+C:\p3build5\P3\Nibble\RoundInvariant.lean:12:Must be sorry-free and axiom-clean `[propext, Classical.choice, Quot.sound]`.
+C:\p3build5\P3\Nibble\RoundOracleKernel.lean:39:  on the same witness which no pruning can evade — so this file has no `sorry` left, and no unproved
+C:\p3build5\P3\Nibble\RoundOracleKernel.lean:44:* `nibbleRoundStep_of_nibbleRoundProb` — sorry-free (but, by the above, vacuous): the deterministic
+C:\p3build5\P3\Nibble\RoundOracleKernel.lean:49:* `exists_roundOracle_params_of_nibbleRoundStep` — the reduction (sorry-free): the whole parameter
+C:\p3build5\P3\Nibble\RoundOracleKernel.lean:55:Everything in this file is sorry-free and axiom-clean `[propext, Classical.choice, Quot.sound]`.
+C:\p3build5\P3\Nibble\RoundOracleKernel.lean:337:  sorry
+C:\p3build5\P3\Nibble\RoundOracleKernel.lean:372:/-- **The full nibble round from its probabilistic half (sorry-free).**  The global degree ceiling
+C:\p3build5\P3\Nibble\RoundOracleKernel.lean:461:  sorry
+C:\p3build5\P3\Nibble\RoundOracleKernel.lean:522:/-- **The ceiling one-round oracle from the single nibble round (sorry-free reduction).**
+C:\p3build5\P3\Nibble\RoundOracleLocal.lean:7:`RoundStepSchedule`, and proves — sorry-free — that this residual already yields
+C:\p3build5\P3\Nibble\RoundOracleLocal.lean:19:Must be sorry-free and axiom-clean `[propext, Classical.choice, Quot.sound]`.
+C:\p3build5\P3\Nibble\RoundOracleLocal.lean:23:`RoundOracleExistsCeil` — sorry-free and axiom-clean — from the single one-round hypothesis
+C:\p3build5\P3\Nibble\RoundOracleLocal.lean:28:invariant instead of the assembled oracle), so this file too is sorry-free; nothing in the tight-band
+C:\p3build5\P3\Nibble\RoundOracleLocal.lean:73:/-- **The peel is sorry-free: the schedule residual already implies the one-round oracle atom.**
+C:\p3build5\P3\Nibble\RoundOracleLocal.lean:209:/-- The one-round oracle atom, assembled LOCALLY from the schedule residual (sorry-free modulo
+C:\p3build5\P3\Nibble\RoundProbRefutation.lean:41:Sorry-free and axiom-clean `[propext, Classical.choice, Quot.sound]`.
+C:\p3build5\P3\Nibble\RoundStepRefutation.lean:39:Sorry-free and axiom-clean `[propext, Classical.choice, Quot.sound]`.
+C:\p3build5\P3\Nibble\SpreadNecessary.lean:18:Sorry-free and axiom-clean `[propext, Classical.choice, Quot.sound]`.
+C:\p3build5\P3\Nibble\SpreadNibble.lean:25:Sorry-free and axiom-clean `[propext, Classical.choice, Quot.sound]`.
+C:\p3build5\P3\Nibble\StarAugment.lean:11:Sorry-free and axiom-clean `[propext, Classical.choice, Quot.sound]`.
+C:\p3build5\P3\Nibble\StarCount.lean:21:Sorry-free and axiom-clean `[propext, Classical.choice, Quot.sound]`.
+C:\p3build5\P3\Nibble\StarCounterexample.lean:24:Must be sorry-free and axiom-clean `[propext, Classical.choice, Quot.sound]`.
+C:\p3build5\P3\Nibble\StarExchange.lean:15:Sorry-free and axiom-clean `[propext, Classical.choice, Quot.sound]`.
+C:\p3build5\P3\Nibble\StarMoves.lean:17:Sorry-free and axiom-clean `[propext, Classical.choice, Quot.sound]`.
+C:\p3build5\P3\Nibble\Subgamma.lean:16:Must be sorry-free and axiom-clean `[propext, Classical.choice, Quot.sound]`.
+C:\p3build5\P3\Nibble\SumEstimate.lean:15:Must be sorry-free and axiom-clean `[propext, Classical.choice, Quot.sound]`.
+C:\p3build5\P3\Nibble\Survival.lean:12:`conflicts` comes from `Nibble.Conflict`. Must be sorry-free and axiom-clean
+C:\p3build5\P3\Nibble\TightAssembly.lean:32:Must be sorry-free and axiom-clean `[propext, Classical.choice, Quot.sound]`.
+C:\p3build5\P3\Nibble\TightNibble.lean:22:Must be sorry-free and axiom-clean `[propext, Classical.choice, Quot.sound]`.
+C:\p3build5\P3\Nibble\TightSchedule.lean:27:Must be sorry-free and axiom-clean `[propext, Classical.choice, Quot.sound]`.
+C:\p3build5\P3\Nibble\TriangleCapacity.lean:14:Sorry-free and axiom-clean `[propext, Classical.choice, Quot.sound]`.
+C:\p3build5\P3\Nibble\TripleEdges.lean:14:Must be sorry-free and axiom-clean `[propext, Classical.choice, Quot.sound]`.
+C:\p3build5\P3\Nibble\TripleEdgesThree.lean:14:Must be sorry-free and axiom-clean `[propext, Classical.choice, Quot.sound]`.
+C:\p3build5\P3\Nibble\UniformRounding.lean:15:Sorry-free and axiom-clean `[propext, Classical.choice, Quot.sound]`.
+C:\p3build5\P3\Nibble\VarianceBound.lean:11:Must be sorry-free and axiom-clean `[propext, Classical.choice, Quot.sound]`.
+C:\p3build5\P3\Nibble\VarianceEstimate.lean:15:Must be sorry-free and axiom-clean `[propext, Classical.choice, Quot.sound]`.
+C:\p3build5\P3\Nibble\WeightedNibble.lean:27:Must be sorry-free and axiom-clean `[propext, Classical.choice, Quot.sound]`.
+C:\p3build5\P3\Nibble\WeightedNibbleRestrict.lean:14:Sorry-free and axiom-clean `[propext, Classical.choice, Quot.sound]`.
+C:\p3build5\P3\Nibble\WeightedSpreadNibble.lean:34:Sorry-free and axiom-clean `[propext, Classical.choice, Quot.sound]`.
+C:\p3build5\P3\Nibble\Wiring.lean:12:Definitions from `Nibble.Basic` / `Nibble.Regular`. Must be sorry-free and axiom-clean.
+C:\p3build5\P3\Nibble\WitnessPair.lean:18:Sorry-free and axiom-clean `[propext, Classical.choice, Quot.sound]`.
+C:\p3build5\P3\Nibble\YusterAX1.lean:11:Must be sorry-free and axiom-clean `[propext, Classical.choice, Quot.sound]`.
+C:\p3build5\P3\Nibble\YusterBridgePacking.lean:13:Must be sorry-free and axiom-clean `[propext, Classical.choice, Quot.sound]`.
+C:\p3build5\P3\Nibble\YusterCapture.lean:14:Must be sorry-free and axiom-clean `[propext, Classical.choice, Quot.sound]`.
+C:\p3build5\P3\Nibble\YusterCaptureCount.lean:16:Must be sorry-free and axiom-clean `[propext, Classical.choice, Quot.sound]`.
+C:\p3build5\P3\Nibble\YusterEdge.lean:16:Must be sorry-free and axiom-clean `[propext, Classical.choice, Quot.sound]`.
+C:\p3build5\P3\Nibble\YusterEdgeDegree.lean:13:Must be sorry-free and axiom-clean `[propext, Classical.choice, Quot.sound]`.
+C:\p3build5\P3\Nibble\YusterEdgeType.lean:14:Must be sorry-free and axiom-clean `[propext, Classical.choice, Quot.sound]`.
+C:\p3build5\P3\Nibble\YusterFracUpper.lean:11:Must be sorry-free and axiom-clean `[propext, Classical.choice, Quot.sound]`.
+C:\p3build5\P3\Nibble\YusterGap.lean:14:Must be sorry-free and axiom-clean `[propext, Classical.choice, Quot.sound]`.
+C:\p3build5\P3\Nibble\YusterMost.lean:13:Must be sorry-free and axiom-clean `[propext, Classical.choice, Quot.sound]`.
+C:\p3build5\P3\Nibble\YusterNibble.lean:15:Must be sorry-free and axiom-clean `[propext, Classical.choice, Quot.sound]`.
+C:\p3build5\P3\Nibble\YusterNibbleApply.lean:17:Must be sorry-free and axiom-clean `[propext, Classical.choice, Quot.sound]`.
+C:\p3build5\P3\Nibble\YusterNu3.lean:16:Must be sorry-free and axiom-clean `[propext, Classical.choice, Quot.sound]`.
+C:\p3build5\P3\Nibble\YusterRegular.lean:16:Must be sorry-free and axiom-clean `[propext, Classical.choice, Quot.sound]`.
+C:\p3build5\P3\Nibble\YusterRegularMost.lean:14:Must be sorry-free and axiom-clean `[propext, Classical.choice, Quot.sound]`.
+C:\p3build5\P3\Nibble\YusterSubBridge.lean:15:Must be sorry-free and axiom-clean `[propext, Classical.choice, Quot.sound]`.
+C:\p3build5\P3\Nibble\YusterSubDegree.lean:13:Must be sorry-free and axiom-clean `[propext, Classical.choice, Quot.sound]`.
+C:\p3build5\P3\Nibble\YusterSubDegreeChar.lean:12:Must be sorry-free and axiom-clean `[propext, Classical.choice, Quot.sound]`.
+C:\p3build5\P3\Nibble\YusterSubRegular.lean:16:Must be sorry-free and axiom-clean `[propext, Classical.choice, Quot.sound]`.
+C:\p3build5\P3\Nibble\YusterSzemeredi.lean:14:Must be sorry-free and axiom-clean `[propext, Classical.choice, Quot.sound]`.
+C:\p3build5\P3\Nibble\Tight\ConflictCount.lean:22:Sorry-free and axiom-clean `[propext, Classical.choice, Quot.sound]`.
+C:\p3build5\P3\Nibble\Tight\CoverProb.lean:20:Sorry-free and axiom-clean `[propext, Classical.choice, Quot.sound]`.
+C:\p3build5\P3\Nibble\Tight\CoverVariance.lean:26:Sorry-free and axiom-clean `[propext, Classical.choice, Quot.sound]`.
+C:\p3build5\P3\Nibble\Tight\CoverWeight.lean:23:Sorry-free and axiom-clean `[propext, Classical.choice, Quot.sound]`.
+C:\p3build5\P3\Nibble\Tight\CoverWeightMoments.lean:23:Sorry-free and axiom-clean `[propext, Classical.choice, Quot.sound]`.
+C:\p3build5\P3\Nibble\Tight\FlipStability.lean:33:Sorry-free and axiom-clean `[propext, Classical.choice, Quot.sound]`.
+C:\p3build5\P3\Nibble\Tight\LossVariance.lean:22:Sorry-free and axiom-clean `[propext, Classical.choice, Quot.sound]`.
+C:\p3build5\P3\Nibble\Tight\PairExcessCodegree.lean:37:Sorry-free and axiom-clean `[propext, Classical.choice, Quot.sound]`.
+C:\p3build5\P3\Nibble\Tight\PairWeightMean.lean:19:Sorry-free and axiom-clean `[propext, Classical.choice, Quot.sound]`.
+C:\p3build5\P3\Nibble\Tight\Pruning.lean:12:Pure `Finset` combinatorics, no probability.  Sorry-free and axiom-clean
+C:\p3build5\P3\Nibble\Tight\ResidualBand.lean:22:Sorry-free and axiom-clean `[propext, Classical.choice, Quot.sound]`.
+C:\p3build5\P3\Nibble\Tight\ResidualBandCheb.lean:31:Sorry-free and axiom-clean `[propext, Classical.choice, Quot.sound]`.
+C:\p3build5\P3\Nibble\Tight\RoundExplicit.lean:27:Sorry-free and axiom-clean `[propext, Classical.choice, Quot.sound]`.
+C:\p3build5\P3\Nibble\Tight\SafeBand.lean:15:Sorry-free and axiom-clean `[propext, Classical.choice, Quot.sound]`.
+C:\p3build5\P3\Nibble\Tight\SafeDegree.lean:25:Sorry-free and axiom-clean `[propext, Classical.choice, Quot.sound]`.
+C:\p3build5\P3\Nibble\Tight\SafeDegreeVariance.lean:38:Sorry-free and axiom-clean `[propext, Classical.choice, Quot.sound]`.
+C:\p3build5\P3\Nibble\Tight\SafeRoundCheb.lean:32:Sorry-free and axiom-clean `[propext, Classical.choice, Quot.sound]`.
+C:\p3build5\P3\Nibble\Tight\Selection.lean:13:Sorry-free and axiom-clean `[propext, Classical.choice, Quot.sound]`.
+C:\p3build5\P3\Nibble\Tight\SharpRound.lean:95:Nothing in this file is proved; it is a specification.  The assembly is COMPLETE and sorry-free:
+C:\p3build5\P3\Nibble\Tight\SharpRound.lean:106:Sorry-free and axiom-clean `[propext, Classical.choice, Quot.sound]`.
+C:\p3build5\P3\Nibble\Tight\TightRound.lean:20:Sorry-free and axiom-clean `[propext, Classical.choice, Quot.sound]`.
+C:\p3build5\P3\Nibble\Tight\TightRoundCheb.lean:26:Sorry-free and axiom-clean `[propext, Classical.choice, Quot.sound]`.
+C:\p3build5\P3\Nibble\Tight\TightRoundConcrete.lean:18:Sorry-free and axiom-clean `[propext, Classical.choice, Quot.sound]`.
+C:\p3build5\P3\Nibble\Tight\TwoEdgeMatch.lean:20:Sorry-free and axiom-clean `[propext, Classical.choice, Quot.sound]`.
+C:\p3build5\P3\Nibble\Tight\TwoSidedRound.lean:19:Sorry-free and axiom-clean `[propext, Classical.choice, Quot.sound]`.
+C:\p3build5\P3\PaperIII\Obstructions.lean:15:Both are sorry-free and axiom-clean `[propext, Classical.choice, Quot.sound]`.

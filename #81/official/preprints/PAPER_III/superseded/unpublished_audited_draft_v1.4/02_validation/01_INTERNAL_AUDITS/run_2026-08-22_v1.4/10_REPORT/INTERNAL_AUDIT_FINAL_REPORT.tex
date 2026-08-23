@@ -1,0 +1,60 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{booktabs,longtable,array}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{microtype}
+\usepackage[hidelinks]{hyperref}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.5em}
+\title{Paper III v1.4 Internal Audit Final Report}
+\author{Internal author-side audit --- not independent}
+\date{22 August 2026 --- Overall verdict: PASS}
+\begin{document}
+\maketitle
+\textbf{Protocol:} \texttt{INTERNAL\_AUDIT\_STANDARD\_v1.3} plus Paper III v1.4 regressions.\\
+\textbf{Lean execution:} recorded build evidence reviewed; full build not rerun.
+
+\section{Frozen target}
+Formal archive: \texttt{PAPER\_III\_lean\_v1.4\_freeze.zip}.\\
+SHA-256:\\
+{\small\nolinkurl{79ee24c38fd776bc2585a0c3c996e30817f0829fc5064463bdbde0fa2d3d7104}}.\\
+Toolchain: Lean 4.28.0; Mathlib commit
+\nolinkurl{8f9d9cff6bd728b17a24e163c9402775d9e6a365}.\\
+Recorded build: \texttt{PASS\_CLEAN\_ORIGIN\_RESUMED}; public root 8,455 jobs;
+query roots 8,444 jobs. Eight axiom files contain 42 queries over 35 distinct
+surfaces, with foundational-only footprints and no \texttt{sorryAx}.
+
+\clearpage
+\section{Gate results}
+\begin{longtable}{p{.16\linewidth}p{.22\linewidth}p{.52\linewidth}}
+\toprule Gate & Verdict & Principal evidence \\ \midrule
+G0 & PASS & Six hashes; source/package manifests; archive CRC/hash. \\
+G1 & PASS & Exact split scope, sharpness roles and open chordal scope. \\
+G2 & PASS & Fresh bounded suites plus E2 ledger and 315,183 exact residual checks. \\
+G3 & PASS & Final/API root closure and all canonical/load-bearing surfaces. \\
+G4 & PASS recorded & Clean-origin resumed logs verified; limitation disclosed. \\
+G5 & PASS & 51 checks; 144 headings per language; no duplicated long text. \\
+G6 & PASS & EN 46 / ES 47 pages; clean final logs; all 93 pages inspected. \\
+G7 & PASS internal & Bounded novelty wording; independent E6 confirmation open. \\
+G8 & PASS & One unambiguous v1.4 target; no residue or duplicate v1.3 artifacts. \\
+\bottomrule
+\end{longtable}
+
+The executable suite reports \textbf{144/144 checks passed} and every gate G0--G8 as PASS.
+
+\section{External-finding regression}
+Version 1.4 closes the public-root imports, stale root description, Spanish
+Proposition 7.4, freeze metadata and reproduction-sequence findings. The recorded
+author build began clean but resumed after an application restart, so uninterrupted
+clean-room reproduction remains mandatory externally.
+
+The external auditor receives explicit E2 and E6 hints. E2 must independently
+rederive the analytic obligations and quantitative bridges; E6 must refresh and
+confirm the prior-art search and the precise split-versus-chordal novelty scope.
+
+\section{Overall verdict}
+\textbf{PASS.} No internal blocker, major or minor finding remains. This is not
+external reproduction, peer review, public-release approval or an independent
+novelty certificate. The package is ready for residual external adversarial audit.
+\end{document}

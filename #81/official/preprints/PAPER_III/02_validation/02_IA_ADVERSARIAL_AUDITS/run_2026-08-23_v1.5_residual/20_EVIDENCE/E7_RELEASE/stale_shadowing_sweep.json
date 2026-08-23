@@ -1,0 +1,295 @@
+{
+ "duplicate_filenames": 45,
+ "findings": [
+  {
+   "filename": "01_cache_get.log",
+   "current": [
+    {
+     "path": "03_reproducibility/author_build_evidence/run_2026-08-23_CCS_NOTEBOOK456_clean_uninterrupted_adjudicated/RESULTS/logs/01_cache_get.log",
+     "versions_mentioned": [
+      "1.4",
+      "1.5",
+      "1.9"
+     ],
+     "builds": null,
+     "bytes": 2610
+    },
+    {
+     "path": "03_reproducibility/author_build_evidence/run_2026-08-23_clean_PASS/RESULTS/logs/01_cache_get.log",
+     "versions_mentioned": [
+      "1.0",
+      "1.3",
+      "1.4",
+      "1.5",
+      "1.8",
+      "1.9"
+     ],
+     "builds": null,
+     "bytes": 2609
+    }
+   ],
+   "stale": [
+    {
+     "path": "03_reproducibility/author_build_evidence/run_2026-08-22_CCS_NOTEBOOK456_resumed/RESULTS/logs/01_cache_get.log",
+     "versions_mentioned": [
+      "1.1",
+      "1.9"
+     ],
+     "builds": null,
+     "bytes": 34284
+    }
+   ]
+  },
+  {
+   "filename": "LUALATEX_FINAL_en.log",
+   "current": [
+    {
+     "path": "03_reproducibility/manuscript_build_logs/v1.5/LUALATEX_FINAL_en.log",
+     "versions_mentioned": [
+      "1.0",
+      "1.1",
+      "1.2",
+      "v1.0",
+      "v1.1",
+      "v1.2"
+     ],
+     "builds": "PAPER_III_preprint_v1.5_en.pdf",
+     "bytes": 79001
+    }
+   ],
+   "stale": [
+    {
+     "path": "03_reproducibility/manuscript_build_logs/LUALATEX_FINAL_en.log",
+     "versions_mentioned": [
+      "1.0",
+      "1.1",
+      "1.2",
+      "1.4",
+      "v1.0",
+      "v1.1"
+     ],
+     "builds": "PAPER_III_preprint_draft_v1.3_en.pdf",
+     "bytes": 78941
+    }
+   ]
+  },
+  {
+   "filename": "LUALATEX_FINAL_es.log",
+   "current": [
+    {
+     "path": "03_reproducibility/manuscript_build_logs/v1.5/LUALATEX_FINAL_es.log",
+     "versions_mentioned": [
+      "1.0",
+      "1.1",
+      "1.2",
+      "v1.0",
+      "v1.1",
+      "v1.2"
+     ],
+     "builds": "PAPER_III_preprint_v1.5_es.pdf",
+     "bytes": 79555
+    }
+   ],
+   "stale": [
+    {
+     "path": "03_reproducibility/manuscript_build_logs/LUALATEX_FINAL_es.log",
+     "versions_mentioned": [
+      "1.0",
+      "1.1",
+      "1.2",
+      "1.4",
+      "v1.0",
+      "v1.1"
+     ],
+     "builds": "PAPER_III_preprint_draft_v1.3_es.pdf",
+     "bytes": 79574
+    }
+   ]
+  },
+  {
+   "filename": "LUALATEX_en_PASS1.txt",
+   "current": [
+    {
+     "path": "03_reproducibility/manuscript_build_logs/v1.5/LUALATEX_en_PASS1.txt",
+     "versions_mentioned": [
+      "1.2",
+      "v1.4",
+      "v1.5"
+     ],
+     "builds": "PAPER_III_preprint_v1.5_en.pdf",
+     "bytes": 18475
+    }
+   ],
+   "stale": [
+    {
+     "path": "03_reproducibility/manuscript_build_logs/LUALATEX_en_PASS1.txt",
+     "versions_mentioned": [
+      "1.2",
+      "1.4",
+      "v1.3",
+      "v1.4"
+     ],
+     "builds": "PAPER_III_preprint_draft_v1.3_en.pdf",
+     "bytes": 18654
+    }
+   ]
+  },
+  {
+   "filename": "LUALATEX_en_PASS2.txt",
+   "current": [
+    {
+     "path": "03_reproducibility/manuscript_build_logs/v1.5/LUALATEX_en_PASS2.txt",
+     "versions_mentioned": [
+      "1.2",
+      "v1.4",
+      "v1.5"
+     ],
+     "builds": "PAPER_III_preprint_v1.5_en.pdf",
+     "bytes": 18438
+    }
+   ],
+   "stale": [
+    {
+     "path": "03_reproducibility/manuscript_build_logs/LUALATEX_en_PASS2.txt",
+     "versions_mentioned": [
+      "1.2",
+      "1.4",
+      "v1.3",
+      "v1.4"
+     ],
+     "builds": "PAPER_III_preprint_draft_v1.3_en.pdf",
+     "bytes": 18682
+    }
+   ]
+  },
+  {
+   "filename": "LUALATEX_es_PASS1.txt",
+   "current": [
+    {
+     "path": "03_reproducibility/manuscript_build_logs/v1.5/LUALATEX_es_PASS1.txt",
+     "versions_mentioned": [
+      "1.2",
+      "v1.4",
+      "v1.5"
+     ],
+     "builds": "PAPER_III_preprint_v1.5_es.pdf",
+     "bytes": 18965
+    }
+   ],
+   "stale": [
+    {
+     "path": "03_reproducibility/manuscript_build_logs/LUALATEX_es_PASS1.txt",
+     "versions_mentioned": [
+      "1.2",
+      "1.4",
+      "v1.3",
+      "v1.4"
+     ],
+     "builds": "PAPER_III_preprint_draft_v1.3_es.pdf",
+     "bytes": 19220
+    }
+   ]
+  },
+  {
+   "filename": "LUALATEX_es_PASS2.txt",
+   "current": [
+    {
+     "path": "03_reproducibility/manuscript_build_logs/v1.5/LUALATEX_es_PASS2.txt",
+     "versions_mentioned": [
+      "1.2",
+      "v1.4",
+      "v1.5"
+     ],
+     "builds": "PAPER_III_preprint_v1.5_es.pdf",
+     "bytes": 18928
+    }
+   ],
+   "stale": [
+    {
+     "path": "03_reproducibility/manuscript_build_logs/LUALATEX_es_PASS2.txt",
+     "versions_mentioned": [
+      "1.2",
+      "1.4",
+      "v1.3",
+      "v1.4"
+     ],
+     "builds": "PAPER_III_preprint_draft_v1.3_es.pdf",
+     "bytes": 19248
+    }
+   ]
+  },
+  {
+   "filename": "README.md",
+   "current": [
+    {
+     "path": "README.md",
+     "versions_mentioned": [
+      "v1.0",
+      "v1.4",
+      "v1.5"
+     ],
+     "builds": null,
+     "bytes": 4897
+    },
+    {
+     "path": "01_manuscript/README.md",
+     "versions_mentioned": [
+      "v1.4",
+      "v1.5"
+     ],
+     "builds": null,
+     "bytes": 923
+    },
+    {
+     "path": "03_reproducibility/README.md",
+     "versions_mentioned": [
+      "v1.4",
+      "v1.5"
+     ],
+     "builds": null,
+     "bytes": 1283
+    },
+    {
+     "path": "04_integrity/README.md",
+     "versions_mentioned": [
+      "v1.4",
+      "v1.5"
+     ],
+     "builds": null,
+     "bytes": 604
+    }
+   ],
+   "stale": [
+    {
+     "path": "03_reproducibility/author_build_evidence/run_2026-08-22_CCS_NOTEBOOK456_resumed/README.md",
+     "versions_mentioned": [
+      "v1.4"
+     ],
+     "builds": null,
+     "bytes": 1581
+    },
+    {
+     "path": "03_reproducibility/author_build_evidence/run_2026-08-23_CCS_NOTEBOOK456_clean_uninterrupted_adjudicated/README.md",
+     "versions_mentioned": [
+      "v1.4"
+     ],
+     "builds": null,
+     "bytes": 1062
+    },
+    {
+     "path": "03_reproducibility/author_build_evidence/run_2026-08-23_clean_PASS/README.md",
+     "versions_mentioned": [
+      "v1.4"
+     ],
+     "builds": null,
+     "bytes": 2152
+    }
+   ]
+  },
+  {
+   "filename": "MANUSCRIPT_CONSISTENCY_RESULTS.json",
+   "non_versioned_is_stale": true,
+   "versions_mentioned": []
+  }
+ ]
+}

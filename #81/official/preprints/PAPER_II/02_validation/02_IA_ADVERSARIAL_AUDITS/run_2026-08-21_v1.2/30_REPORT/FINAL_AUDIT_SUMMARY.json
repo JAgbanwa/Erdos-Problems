@@ -1,0 +1,84 @@
+{
+  "protocol": "EXTERNAL_AI_ADVERSARIAL_AUDIT_INSTRUCTIONS_v1.1",
+  "protocol_sha256": "8ba029f443297927c9a5101b0a349bd33e3772587e56d32cbb70145de24ae505",
+  "paper": "PAPER_II",
+  "target": "preprint_draft_v1.2",
+  "run": "run_2026-08-21_v1.2",
+  "target_sha256": "7215e14bbea8ab2bf208dcdd1efa050cd2b72c997eee2efe504a1e6817c68882",
+  "lean_archive_sha256": "ee2d05cc40d943ca92f8f7bf3e5dd83c2692518ddea5e2ca4f7686ccb1ac3895",
+  "internal_audit_zip_sha256": "e6f625486db867582da72fff9e71fa0f600dcce40e43ef885ce01756282b24e2",
+  "audit_class": "EXTERNAL_AI_ADVERSARIAL",
+  "independence_level": "primary auditor only; the adversarial challenger was run against Paper I only. Same model family (claude-opus-5), same operator. Not human peer review.",
+  "start_utc": "2026-08-21T14:38:00Z",
+  "end_utc": "2026-08-21T18:05:00Z",
+  "overall_verdict": "PASS_WITH_RESIDUALS",
+  "verdict_basis": "No mathematical or formal defect found. The headline exact-maximum claim survived exhaustive falsification over 19,048 chordal graphs; the vertex-copy inequality survived 251,085 instances; the Lean development clean-builds with the expected axiom footprint and zero escape hatches. One MINOR finding (stale 04_integrity baseline) and one NOTE (erdosproblems.com inaccessible) remain.",
+  "gates": {
+    "G0": "PASS",
+    "A": "PASS",
+    "B": "PASS",
+    "C": "PASS",
+    "D": "PASS",
+    "E": "PASS",
+    "F": "PASS",
+    "G": "PASS",
+    "H": "PASS",
+    "I": "PASS_WITH_RESIDUALS",
+    "J": "PASS",
+    "K": "PASS_WITH_RESIDUALS",
+    "L": "PASS_WITH_RESIDUALS",
+    "M": "PASS_WITH_RESIDUALS"
+  },
+  "unresolved": {
+    "blocker": 0,
+    "major": 0,
+    "minor": 1,
+    "note": 1
+  },
+  "v11_regression_corrected": "the v1.0.1 stale-freeze defect that Paper II failed at v1.1 is corrected and was re-established from scratch on the v1.2 bytes",
+  "lean": {
+    "clean_build": "PASS - exit 0, 30m05.109s, 'Build completed successfully (8063 jobs)', zero errors",
+    "job_count_note": "manuscript records 8061 main + 8032 supplement as two builds; this run produced 8063 in one invocation over all seven targets - a different target set, not a discrepancy",
+    "axiom_gate": "PASS - 16 declarations, exit 0; 14 report [propext, Classical.choice, Quot.sound] and 2 report the strictly smaller [propext, Quot.sound], which the manuscript's Table 5 records accurately",
+    "explicit_targets_vs_aggregate_root": "Extremizer and CopyDefect are explicit build targets AND are imported directly by FreezeAxioms.lean, so the axiom queries do not rely on aggregate-root closure",
+    "failed_axiom_attempts": 0,
+    "escape_hatches_in_active_code": 0,
+    "toolchain": "Lean 4.28.0 commit 7e01a1bf5c70fc6167d49c345d3bf80596e9a79b",
+    "mathlib_rev": "8f9d9cff6bd728b17a24e163c9402775d9e6a365"
+  },
+  "computational_falsification": {
+    "arithmetic": "exact fractions.Fraction; deterministic; no random seeds",
+    "chordal_graphs_enumerated": 19048,
+    "labeled_graphs_enumerated": 33867,
+    "headline_formula_exact_at_every_n": true,
+    "attained_by_complete_split_at_every_n": true,
+    "copy_inequality_instances": 251085,
+    "copy_inequality_violations": 0,
+    "nu_tau_graphs_compared": 270133,
+    "nu_tau_mismatches": 0,
+    "arithmetic_corollaries_confirmed": 4,
+    "paper_I_comparison_hypothesis_shown_necessary": true,
+    "cross_paper_uses_paper_I_corrected_n_over_2_surface": true
+  },
+  "novelty": {
+    "cutoff_date": "2026-08-21",
+    "verdict": "No prior result with the same statement was found in the searched corpus as of 2026-08-21. Evidence-bounded negative result; not proof of global novelty.",
+    "specialist_residuals": [
+      "no institutional bibliographic database available",
+      "no citation-graph traversal",
+      "no non-English search",
+      "erdosproblems.com returns HTTP 403 to this auditor"
+    ]
+  },
+  "not_established": [
+    "truth of the headline theorem (only failure to falsify)",
+    "termination of the repeated-copy process",
+    "the discrete-convexity lift to clone classes",
+    "the two-variable orbit reduction on S_pq (tested only through its consequences)",
+    "human peer review",
+    "global novelty",
+    "that the delivered PDFs were compiled from the delivered TeX",
+    "Lean modules outside the seven protocol targets"
+  ],
+  "package_sha256": "1d352e67ed0690780cb9df0fe482a1c2cc8b8f56a2658f4b72c354440ef4a2b7"
+}

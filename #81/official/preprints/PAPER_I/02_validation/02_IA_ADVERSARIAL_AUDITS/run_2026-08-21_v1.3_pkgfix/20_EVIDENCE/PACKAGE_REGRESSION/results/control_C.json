@@ -1,0 +1,217 @@
+{
+ "spec": "FINAL_RESIDUAL_AUDIT_REQUEST_SPEC.md",
+ "target": "preprint_draft_v1.3 (corrected)",
+ "files_in_target": 308,
+ "sidecars": {
+  "checked": 37,
+  "verifying": 36,
+  "failing": [
+   {
+    "sidecar": "02_validation/01_INTERNAL_AUDITS/residual_run_2026-08-21_v1.3_pkgfix/20_EVIDENCE/R0_PACKAGE_FIX/results/TARGET_FREEZE_MANIFEST.sha256",
+    "entries": 219,
+    "ok": 0,
+    "mismatch": 0,
+    "missing": 219,
+    "line_endings": "CRLF",
+    "verifies": false,
+    "detail": [
+     "MISSING .gitattributes",
+     "MISSING .gitignore",
+     "MISSING 01_manuscript/Figures/fig1_two_phase_packing_en.png"
+    ]
+   }
+  ]
+ },
+ "internal_residual_zip": {
+  "zip": "02_validation/01_INTERNAL_AUDITS/residual_run_2026-08-21_v1.3_pkgfix/40_PACKAGE/INTERNAL_RESIDUAL_AUDIT_PACKAGE.zip",
+  "present": true,
+  "sha256": "0ac2fa306a2df8607b2d2d5d54ec4d9cdda8eca4f21dd8e47f1e36d8adae92e6",
+  "sidecar_declared": "0ac2fa306a2df8607b2d2d5d54ec4d9cdda8eca4f21dd8e47f1e36d8adae92e6",
+  "sidecar_matches": true,
+  "members": 87,
+  "member_hash_mismatches_vs_loose_files": [],
+  "members_consistent": true
+ },
+ "delta_vs_previous_external_freeze": {
+  "previous_inventory_found": true,
+  "previous_file_count": 221,
+  "current_file_count": 308,
+  "added": {
+   "kind": "added",
+   "count": 90,
+   "authorized_1_scratch_removed": [],
+   "authorized_2_changelog_corrected": [],
+   "authorized_3_matrix_and_internal_residual_evidence": [
+    "02_validation/01_INTERNAL_AUDITS/residual_run_2026-08-21_v1.3_pkgfix/00_CONTROL/AUDIT_PROTOCOL.md",
+    "02_validation/01_INTERNAL_AUDITS/residual_run_2026-08-21_v1.3_pkgfix/20_EVIDENCE/R0_PACKAGE_FIX/AUDIT_RECORD.md",
+    "02_validation/01_INTERNAL_AUDITS/residual_run_2026-08-21_v1.3_pkgfix/20_EVIDENCE/R0_PACKAGE_FIX/SHA256_MANIFEST.txt",
+    "02_validation/01_INTERNAL_AUDITS/residual_run_2026-08-21_v1.3_pkgfix/20_EVIDENCE/R0_PACKAGE_FIX/residual_checks.py",
+    "02_validation/01_INTERNAL_AUDITS/residual_run_2026-08-21_v1.3_pkgfix/20_EVIDENCE/R0_PACKAGE_FIX/results/INPUT_INVENTORY.json",
+    "02_validation/01_INTERNAL_AUDITS/residual_run_2026-08-21_v1.3_pkgfix/20_EVIDENCE/R0_PACKAGE_FIX/results/TARGET_FREEZE_MANIFEST.sha256",
+    "02_validation/01_INTERNAL_AUDITS/residual_run_2026-08-21_v1.3_pkgfix/20_EVIDENCE/R0_PACKAGE_FIX/results/summary.json",
+    "02_validation/01_INTERNAL_AUDITS/residual_run_2026-08-21_v1.3_pkgfix/20_EVIDENCE/R1_STATIC/AUDIT_RECORD.md",
+    "02_validation/01_INTERNAL_AUDITS/residual_run_2026-08-21_v1.3_pkgfix/20_EVIDENCE/R1_STATIC/SHA256_MANIFEST.txt",
+    "02_validation/01_INTERNAL_AUDITS/residual_run_2026-08-21_v1.3_pkgfix/20_EVIDENCE/R1_STATIC/internal_static_checks.py",
+    "02_validation/01_INTERNAL_AUDITS/residual_run_2026-08-21_v1.3_pkgfix/20_EVIDENCE/R1_STATIC/results/run.txt",
+    "02_validation/01_INTERNAL_AUDITS/residual_run_2026-08-21_v1.3_pkgfix/20_EVIDENCE/R1_STATIC/results/summary.json",
+    "02_validation/01_INTERNAL_AUDITS/residual_run_2026-08-21_v1.3_pkgfix/20_EVIDENCE/R2_MATHEMATICS/AUDIT_RECORD.md",
+    "02_validation/01_INTERNAL_AUDITS/residual_run_2026-08-21_v1.3_pkgfix/20_EVIDENCE/R2_MATHEMATICS/SHA256_MANIFEST.txt",
+    "02_validation/01_INTERNAL_AUDITS/residual_run_2026-08-21_v1.3_pkgfix/20_EVIDENCE/R2_MATHEMATICS/audit_math.py",
+    "02_validation/01_INTERNAL_AUDITS/residual_run_2026-08-21_v1.3_pkgfix/20_EVIDENCE/R2_MATHEMATICS/results/run.txt",
+    "02_validation/01_INTERNAL_AUDITS/residual_run_2026-08-21_v1.3_pkgfix/20_EVIDENCE/R2_MATHEMATICS/results/summary.json",
+    "02_validation/01_INTERNAL_AUDITS/residual_run_2026-08-21_v1.3_pkgfix/20_EVIDENCE/R3_DUPLICATES/AUDIT_RECORD.md",
+    "02_validation/01_INTERNAL_AUDITS/residual_run_2026-08-21_v1.3_pkgfix/20_EVIDENCE/R3_DUPLICATES/SHA256_MANIFEST.txt",
+    "02_validation/01_INTERNAL_AUDITS/residual_run_2026-08-21_v1.3_pkgfix/20_EVIDENCE/R3_DUPLICATES/audit_duplicates.py",
+    "02_validation/01_INTERNAL_AUDITS/residual_run_2026-08-21_v1.3_pkgfix/20_EVIDENCE/R3_DUPLICATES/results/summary.json",
+    "02_validation/01_INTERNAL_AUDITS/residual_run_2026-08-21_v1.3_pkgfix/20_EVIDENCE/R4_FORMAL_REUSE/AUDIT_RECORD.md",
+    "02_validation/01_INTERNAL_AUDITS/residual_run_2026-08-21_v1.3_pkgfix/20_EVIDENCE/R4_FORMAL_REUSE/SHA256_MANIFEST.txt",
+    "02_validation/01_INTERNAL_AUDITS/residual_run_2026-08-21_v1.3_pkgfix/20_EVIDENCE/R4_FORMAL_REUSE/results/AXIOMS_EXIT.txt",
+    "02_validation/01_INTERNAL_AUDITS/residual_run_2026-08-21_v1.3_pkgfix/20_EVIDENCE/R4_FORMAL_REUSE/results/AXIOMS_REPORT.txt",
+    "02_validation/01_INTERNAL_AUDITS/residual_run_2026-08-21_v1.3_pkgfix/20_EVIDENCE/R4_FORMAL_REUSE/results/BUILD_EXIT.txt",
+    "02_validation/01_INTERNAL_AUDITS/residual_run_2026-08-21_v1.3_pkgfix/20_EVIDENCE/R4_FORMAL_REUSE/results/BUILD_LOG.txt",
+    "02_validation/01_INTERNAL_AUDITS/residual_run_2026-08-21_v1.3_pkgfix/20_EVIDENCE/R4_FORMAL_REUSE/results/ESCAPE_HATCH_SCAN.txt",
+    "02_validation/01_INTERNAL_AUDITS/residual_run_2026-08-21_v1.3_pkgfix/20_EVIDENCE/R4_FORMAL_REUSE/results/summary.json",
+    "02_validation/01_INTERNAL_AUDITS/residual_run_2026-08-21_v1.3_pkgfix/20_EVIDENCE/R5_ARTIFACTS/AUDIT_RECORD.md",
+    "02_validation/01_INTERNAL_AUDITS/residual_run_2026-08-21_v1.3_pkgfix/20_EVIDENCE/R5_ARTIFACTS/SHA256_MANIFEST.txt",
+    "02_validation/01_INTERNAL_AUDITS/residual_run_2026-08-21_v1.3_pkgfix/20_EVIDENCE/R5_ARTIFACTS/make_contact_sheets.py",
+    "02_validation/01_INTERNAL_AUDITS/residual_run_2026-08-21_v1.3_pkgfix/20_EVIDENCE/R5_ARTIFACTS/results/pdffonts_en.txt",
+    "02_validation/01_INTERNAL_AUDITS/residual_run_2026-08-21_v1.3_pkgfix/20_EVIDENCE/R5_ARTIFACTS/results/pdffonts_es.txt",
+    "02_validation/01_INTERNAL_AUDITS/residual_run_2026-08-21_v1.3_pkgfix/20_EVIDENCE/R5_ARTIFACTS/results/pdfinfo_en.txt",
+    "02_validation/01_INTERNAL_AUDITS/residual_run_2026-08-21_v1.3_pkgfix/20_EVIDENCE/R5_ARTIFACTS/results/pdfinfo_es.txt",
+    "02_validation/01_INTERNAL_AUDITS/residual_run_2026-08-21_v1.3_pkgfix/20_EVIDENCE/R5_ARTIFACTS/results/renders/contact_en.jpg",
+    "02_validation/01_INTERNAL_AUDITS/residual_run_2026-08-21_v1.3_pkgfix/20_EVIDENCE/R5_ARTIFACTS/results/renders/contact_es.jpg",
+    "02_validation/01_INTERNAL_AUDITS/residual_run_2026-08-21_v1.3_pkgfix/20_EVIDENCE/R5_ARTIFACTS/results/renders/en/page-01.png",
+    "02_validation/01_INTERNAL_AUDITS/residual_run_2026-08-21_v1.3_pkgfix/20_EVIDENCE/R5_ARTIFACTS/results/renders/en/page-02.png",
+    "02_validation/01_INTERNAL_AUDITS/residual_run_2026-08-21_v1.3_pkgfix/20_EVIDENCE/R5_ARTIFACTS/results/renders/en/page-03.png",
+    "02_validation/01_INTERNAL_AUDITS/residual_run_2026-08-21_v1.3_pkgfix/20_EVIDENCE/R5_ARTIFACTS/results/renders/en/page-04.png",
+    "02_validation/01_INTERNAL_AUDITS/residual_run_2026-08-21_v1.3_pkgfix/20_EVIDENCE/R5_ARTIFACTS/results/renders/en/page-05.png",
+    "02_validation/01_INTERNAL_AUDITS/residual_run_2026-08-21_v1.3_pkgfix/20_EVIDENCE/R5_ARTIFACTS/results/renders/en/page-06.png",
+    "02_validation/01_INTERNAL_AUDITS/residual_run_2026-08-21_v1.3_pkgfix/20_EVIDENCE/R5_ARTIFACTS/results/renders/en/page-07.png",
+    "02_validation/01_INTERNAL_AUDITS/residual_run_2026-08-21_v1.3_pkgfix/20_EVIDENCE/R5_ARTIFACTS/results/renders/en/page-08.png",
+    "02_validation/01_INTERNAL_AUDITS/residual_run_2026-08-21_v1.3_pkgfix/20_EVIDENCE/R5_ARTIFACTS/results/renders/en/page-09.png",
+    "02_validation/01_INTERNAL_AUDITS/residual_run_2026-08-21_v1.3_pkgfix/20_EVIDENCE/R5_ARTIFACTS/results/renders/en/page-10.png",
+    "02_validation/01_INTERNAL_AUDITS/residual_run_2026-08-21_v1.3_pkgfix/20_EVIDENCE/R5_ARTIFACTS/results/renders/en/page-11.png",
+    "02_validation/01_INTERNAL_AUDITS/residual_run_2026-08-21_v1.3_pkgfix/20_EVIDENCE/R5_ARTIFACTS/results/renders/en/page-12.png",
+    "02_validation/01_INTERNAL_AUDITS/residual_run_2026-08-21_v1.3_pkgfix/20_EVIDENCE/R5_ARTIFACTS/results/renders/en/page-13.png",
+    "02_validation/01_INTERNAL_AUDITS/residual_run_2026-08-21_v1.3_pkgfix/20_EVIDENCE/R5_ARTIFACTS/results/renders/en/page-14.png",
+    "02_validation/01_INTERNAL_AUDITS/residual_run_2026-08-21_v1.3_pkgfix/20_EVIDENCE/R5_ARTIFACTS/results/renders/en/page-15.png",
+    "02_validation/01_INTERNAL_AUDITS/residual_run_2026-08-21_v1.3_pkgfix/20_EVIDENCE/R5_ARTIFACTS/results/renders/en/page-16.png",
+    "02_validation/01_INTERNAL_AUDITS/residual_run_2026-08-21_v1.3_pkgfix/20_EVIDENCE/R5_ARTIFACTS/results/renders/en/page-17.png",
+    "02_validation/01_INTERNAL_AUDITS/residual_run_2026-08-21_v1.3_pkgfix/20_EVIDENCE/R5_ARTIFACTS/results/renders/en/page-18.png",
+    "02_validation/01_INTERNAL_AUDITS/residual_run_2026-08-21_v1.3_pkgfix/20_EVIDENCE/R5_ARTIFACTS/results/renders/en/page-19.png",
+    "02_validation/01_INTERNAL_AUDITS/residual_run_2026-08-21_v1.3_pkgfix/20_EVIDENCE/R5_ARTIFACTS/results/renders/es/page-01.png",
+    "02_validation/01_INTERNAL_AUDITS/residual_run_2026-08-21_v1.3_pkgfix/20_EVIDENCE/R5_ARTIFACTS/results/renders/es/page-02.png",
+    "02_validation/01_INTERNAL_AUDITS/residual_run_2026-08-21_v1.3_pkgfix/20_EVIDENCE/R5_ARTIFACTS/results/renders/es/page-03.png",
+    "02_validation/01_INTERNAL_AUDITS/residual_run_2026-08-21_v1.3_pkgfix/20_EVIDENCE/R5_ARTIFACTS/results/renders/es/page-04.png",
+    "02_validation/01_INTERNAL_AUDITS/residual_run_2026-08-21_v1.3_pkgfix/20_EVIDENCE/R5_ARTIFACTS/results/renders/es/page-05.png",
+    "02_validation/01_INTERNAL_AUDITS/residual_run_2026-08-21_v1.3_pkgfix/20_EVIDENCE/R5_ARTIFACTS/results/renders/es/page-06.png",
+    "02_validation/01_INTERNAL_AUDITS/residual_run_2026-08-21_v1.3_pkgfix/20_EVIDENCE/R5_ARTIFACTS/results/renders/es/page-07.png",
+    "02_validation/01_INTERNAL_AUDITS/residual_run_2026-08-21_v1.3_pkgfix/20_EVIDENCE/R5_ARTIFACTS/results/renders/es/page-08.png",
+    "02_validation/01_INTERNAL_AUDITS/residual_run_2026-08-21_v1.3_pkgfix/20_EVIDENCE/R5_ARTIFACTS/results/renders/es/page-09.png",
+    "02_validation/01_INTERNAL_AUDITS/residual_run_2026-08-21_v1.3_pkgfix/20_EVIDENCE/R5_ARTIFACTS/results/renders/es/page-10.png",
+    "02_validation/01_INTERNAL_AUDITS/residual_run_2026-08-21_v1.3_pkgfix/20_EVIDENCE/R5_ARTIFACTS/results/renders/es/page-11.png",
+    "02_validation/01_INTERNAL_AUDITS/residual_run_2026-08-21_v1.3_pkgfix/20_EVIDENCE/R5_ARTIFACTS/results/renders/es/page-12.png",
+    "02_validation/01_INTERNAL_AUDITS/residual_run_2026-08-21_v1.3_pkgfix/20_EVIDENCE/R5_ARTIFACTS/results/renders/es/page-13.png",
+    "02_validation/01_INTERNAL_AUDITS/residual_run_2026-08-21_v1.3_pkgfix/20_EVIDENCE/R5_ARTIFACTS/results/renders/es/page-14.png",
+    "02_validation/01_INTERNAL_AUDITS/residual_run_2026-08-21_v1.3_pkgfix/20_EVIDENCE/R5_ARTIFACTS/results/renders/es/page-15.png",
+    "02_validation/01_INTERNAL_AUDITS/residual_run_2026-08-21_v1.3_pkgfix/20_EVIDENCE/R5_ARTIFACTS/results/renders/es/page-16.png",
+    "02_validation/01_INTERNAL_AUDITS/residual_run_2026-08-21_v1.3_pkgfix/20_EVIDENCE/R5_ARTIFACTS/results/renders/es/page-17.png",
+    "02_validation/01_INTERNAL_AUDITS/residual_run_2026-08-21_v1.3_pkgfix/20_EVIDENCE/R5_ARTIFACTS/results/renders/es/page-18.png",
+    "02_validation/01_INTERNAL_AUDITS/residual_run_2026-08-21_v1.3_pkgfix/20_EVIDENCE/R5_ARTIFACTS/results/renders/es/page-19.png",
+    "02_validation/01_INTERNAL_AUDITS/residual_run_2026-08-21_v1.3_pkgfix/20_EVIDENCE/R5_ARTIFACTS/results/renders/es/page-20.png",
+    "02_validation/01_INTERNAL_AUDITS/residual_run_2026-08-21_v1.3_pkgfix/20_EVIDENCE/R5_ARTIFACTS/results/summary.json",
+    "02_validation/01_INTERNAL_AUDITS/residual_run_2026-08-21_v1.3_pkgfix/20_EVIDENCE/R6_SEAL_AUDIT_RECORD.md",
+    "02_validation/01_INTERNAL_AUDITS/residual_run_2026-08-21_v1.3_pkgfix/30_REPORT/INTERNAL_RESIDUAL_AUDIT_REPORT.md",
+    "02_validation/01_INTERNAL_AUDITS/residual_run_2026-08-21_v1.3_pkgfix/30_REPORT/INTERNAL_RESIDUAL_AUDIT_REPORT.pdf",
+    "02_validation/01_INTERNAL_AUDITS/residual_run_2026-08-21_v1.3_pkgfix/30_REPORT/INTERNAL_RESIDUAL_AUDIT_REPORT.tex",
+    "02_validation/01_INTERNAL_AUDITS/residual_run_2026-08-21_v1.3_pkgfix/30_REPORT/INTERNAL_RESIDUAL_AUDIT_REPORT_lualatex_pass2.log",
+    "02_validation/01_INTERNAL_AUDITS/residual_run_2026-08-21_v1.3_pkgfix/30_REPORT/INTERNAL_RESIDUAL_AUDIT_SUMMARY.json",
+    "02_validation/01_INTERNAL_AUDITS/residual_run_2026-08-21_v1.3_pkgfix/30_REPORT/renders/page-1.png",
+    "02_validation/01_INTERNAL_AUDITS/residual_run_2026-08-21_v1.3_pkgfix/30_REPORT/renders/page-2.png",
+    "02_validation/01_INTERNAL_AUDITS/residual_run_2026-08-21_v1.3_pkgfix/40_PACKAGE/INTERNAL_RESIDUAL_AUDIT_PACKAGE.zip",
+    "02_validation/01_INTERNAL_AUDITS/residual_run_2026-08-21_v1.3_pkgfix/40_PACKAGE/INTERNAL_RESIDUAL_AUDIT_PACKAGE.zip.sha256",
+    "02_validation/01_INTERNAL_AUDITS/residual_run_2026-08-21_v1.3_pkgfix/40_PACKAGE/INTERNAL_RESIDUAL_AUDIT_SHA256.txt",
+    "04_integrity/EXTERNAL_AUDIT_V1.3_RESIDUAL_MATRIX.md"
+   ],
+   "authorized_4_readme_metadata_status": [],
+   "UNANNOUNCED": []
+  },
+  "removed": {
+   "kind": "removed",
+   "count": 3,
+   "authorized_1_scratch_removed": [
+    "tmp/internal_report_v1.3/INTERNAL_AUDIT_FINAL_REPORT.aux",
+    "tmp/internal_report_v1.3/INTERNAL_AUDIT_FINAL_REPORT.log",
+    "tmp/internal_report_v1.3/INTERNAL_AUDIT_FINAL_REPORT.pdf"
+   ],
+   "authorized_2_changelog_corrected": [],
+   "authorized_3_matrix_and_internal_residual_evidence": [],
+   "authorized_4_readme_metadata_status": [],
+   "UNANNOUNCED": []
+  },
+  "changed": {
+   "kind": "changed",
+   "count": 4,
+   "authorized_1_scratch_removed": [],
+   "authorized_2_changelog_corrected": [
+    "CHANGELOG_v1.3.md"
+   ],
+   "authorized_3_matrix_and_internal_residual_evidence": [],
+   "authorized_4_readme_metadata_status": [
+    "04_integrity/README.md",
+    "DRAFT_METADATA.yml",
+    "README.md"
+   ],
+   "UNANNOUNCED": []
+  }
+ },
+ "stale_and_truncation": {
+  "stale_version_strings_in_manuscripts": [],
+  "possible_truncations": [
+   {
+    "file": "DRAFT_METADATA.yml",
+    "tail": "Y_REVIEW\n  - EXTERNAL_PEER_REVIEW\n  - FINAL_RELEASE_APPROVAL"
+   },
+   {
+    "file": "01_manuscript/PAPER_I_preprint_draft_v1.3_SHA256.txt",
+    "tail": "fdf3140e008cedab78b90c2a  PAPER_I_preprint_draft_v1.3_es.pdf"
+   },
+   {
+    "file": "02_validation/00_BASELINE_INTERNAL_AUDIT_v1.2/20_EVIDENCE/G0_STATIC/internal_static_checks.py",
+    "tail": "{type(exc).__name__}: {exc}\", file=sys.stderr)\n        raise"
+   },
+   {
+    "file": "02_validation/00_BASELINE_INTERNAL_AUDIT_v1.2/20_EVIDENCE/G0_STATIC/SHA256_MANIFEST.txt",
+    "tail": "b3d2c30eb5e528d3f3b090c0ddc51f05d80a0f  results/summary.json"
+   },
+   {
+    "file": "02_validation/00_BASELINE_INTERNAL_AUDIT_v1.2/20_EVIDENCE/G1_CLAIMS/SHA256_MANIFEST.txt",
+    "tail": "ce6e2a1821035be7b3a4d0053a1e28f2ec89e5d4555  AUDIT_RECORD.md"
+   },
+   {
+    "file": "02_validation/00_BASELINE_INTERNAL_AUDIT_v1.2/20_EVIDENCE/G2_MATHEMATICS/SHA256_MANIFEST.txt",
+    "tail": "ff3f4e8029ea81b106ab3e4f6fd7bf6ac1ce78  results/summary.json"
+   },
+   {
+    "file": "02_validation/00_BASELINE_INTERNAL_AUDIT_v1.2/20_EVIDENCE/G3_FORMAL_CONFORMANCE/SHA256_MANIFEST.txt",
+    "tail": "cd14b4b416c7abd76d5bfd1fd0c4c05bb8825a9e910  AUDIT_RECORD.md"
+   },
+   {
+    "file": "02_validation/00_BASELINE_INTERNAL_AUDIT_v1.2/20_EVIDENCE/G4_RECORDED_BUILD/SHA256_MANIFEST.txt",
+    "tail": "1fc028894addb6c7de8868fc0b9749aa4a717e77540  AUDIT_RECORD.md"
+   },
+   {
+    "file": "02_validation/00_BASELINE_INTERNAL_AUDIT_v1.2/20_EVIDENCE/G5_BILINGUAL/SHA256_MANIFEST.txt",
+    "tail": "7574f72628ec450fec3d6b4900bffb02f5dcac8e4ac  AUDIT_RECORD.md"
+   },
+   {
+    "file": "02_validation/00_BASELINE_INTERNAL_AUDIT_v1.2/20_EVIDENCE/G6_TEX_PDF/SHA256_MANIFEST.txt",
+    "tail": "d65a41f1b10753240623107ef39826f38f76  results/QA_SUMMARY.txt"
+   }
+  ]
+ },
+ "manuscript_self_containment_violations": {
+  "EN": [],
+  "ES": []
+ }
+}

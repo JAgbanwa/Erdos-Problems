@@ -1,0 +1,15 @@
+Block F Lean audit summary
+cache_get_ok=True
+lake_build_ok=True
+gate_ok=True
+static_scan_ok=True
+
+Observed:
+- lake exe cache get completed successfully and decompressed 8007 cached files.
+- lake build completed successfully: 8058 jobs.
+- lake env lean gate.lean exited 0 and printed expected axiom/signature report.
+- Layer E declarations in gate.lean depend only on [propext, Classical.choice, Quot.sound].
+- Layer X declarations depend on AX1/AX2 exactly as expected.
+- Static scan found no sorry/admit and no escape hatches; only AX1 and AX2 are axiom declarations.
+
+Verdict: CONFIRMED for Block F.
