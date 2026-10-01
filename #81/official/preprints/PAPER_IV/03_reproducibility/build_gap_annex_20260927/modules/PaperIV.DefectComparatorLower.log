@@ -1,0 +1,24 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 PaperIV/DefectComparatorLower.lean -o /workspace/request-project/.lake/runner/lib/lean/PaperIV/DefectComparatorLower.olean -i /workspace/request-project/.lake/runner/lib/lean/PaperIV/DefectComparatorLower.ilean
+import took 3.56s
+cumulative profiling times:
+	.olean serialization 63.2ms
+	attribute application 0.0579ms
+	compilation (IR) 0.615ms
+	compilation (LCNF base) 2.5ms
+	compilation (LCNF mono) 1.07ms
+	congr simp thm 4.27ms
+	elaboration 29.6ms
+	fix level params 0.776ms
+	import 3.56s
+	initialization 41.5ms
+	instantiate metavars 5.99ms
+	interpretation 241ms
+	let-to-have transformation 0.0722ms
+	linting 15.8ms
+	parsing 8.31ms
+	process pre-definitions 7.6ms
+	share common exprs 2.6ms
+	simp 52ms
+	tactic execution 154ms
+	type checking 63ms
+	typeclass inference 154ms

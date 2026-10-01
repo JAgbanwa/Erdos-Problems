@@ -1,0 +1,32 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 A4S1/CriticalReduction.lean -o /workspace/request-project/.lake/runner/lib/lean/A4S1/CriticalReduction.olean -i /workspace/request-project/.lake/runner/lib/lean/A4S1/CriticalReduction.ilean
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_nlinarith_1._boxed took 112ms
+tactic execution of Lean.Parser.Tactic.omega took 123ms
+tactic execution of Lean.Parser.Tactic.omega took 121ms
+type checking took 131ms
+type checking took 115ms
+import took 4.45s
+.olean serialization took 144ms
+cumulative profiling times:
+	.olean serialization 144ms
+	attribute application 0.123ms
+	compilation (IR) 1.86ms
+	compilation (LCNF base) 2.02ms
+	compilation (LCNF mono) 0.87ms
+	congr simp thm 10ms
+	elaboration 66.5ms
+	fix level params 1.08ms
+	import 4.45s
+	initialization 35.8ms
+	instantiate metavars 20.2ms
+	interpretation 501ms
+	let-to-have transformation 0.13ms
+	linting 23.3ms
+	norm_num 15.3ms
+	parsing 15.2ms
+	process pre-definitions 43.8ms
+	ring 10.2ms
+	share common exprs 6.25ms
+	simp 149ms
+	tactic execution 728ms
+	type checking 625ms
+	typeclass inference 549ms

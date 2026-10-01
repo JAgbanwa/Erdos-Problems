@@ -1,155 +1,90 @@
 # Erdős Problem #81 — Chordal Clique Partitions
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21273143.svg)](https://doi.org/10.5281/zenodo.21273143)
-[![License: CC BY-NC 4.0](https://img.shields.io/badge/License-CC_BY--NC_4.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc/4.0/)
 
-Erdős Problem #81 asks whether the edge clique-partition number of every
-n-vertex chordal graph is at most `n^2/6 + O(n)`. **The problem remains open.**
+This repository contains Juan Pablo Traverso Gianini's preprint series,
+formal sources and verification evidence concerning
+[Erdős Problem #81](https://www.erdosproblems.com/81).
 
-This directory collects individually verified preprints and formal artifacts
-from an ongoing research program on the problem. Each release states its exact
-scope; **no single item here resolves Erdős #81.** Further findings related to
-the problem will be published here as they are completed and verified.
+## Explore the series
 
-Problem reference: https://www.erdosproblems.com/81
+- [Papers I–IV: bilingual explanations at different levels](index.html)
+- [HTML preview of the series](https://htmlpreview.github.io/?https://github.com/jtraverso/erdos-81-chordal-clique-partitions/blob/main/index.html)
 
-## Published preprints
+## Paper IV — v1.23 editorial revision
 
-**Paper I — *Affine Profile Reduction for Fractional Triangle Packings in Split
-Graphs.*** For every split graph `G`, it proves
+**Clique partitions with rooted simplicial defect: quantitative stability and
+sharp eventual bounds.** Version 1.23 moves administrative history out of the
+manuscript and adds a bilingual explainer. Mathematical content and the Lean
+freeze are unchanged from the published v1.22, whose consolidated external
+review is **PASS, E0–E8, zero open corrective actions**. The v1.23 documentary
+checks are separate. This release is authorized for GitHub publication;
+a new Zenodo version deposit remains separate.
 
-```text
-|E(G)| − 2·ν₃*(G) ≤ n²/6 + n,
-```
+- [English PDF](preprints/PAPER_IV/01_manuscript/PAPER_IV_preprint_v1.23_en.pdf)
+- [Spanish PDF](preprints/PAPER_IV/01_manuscript/PAPER_IV_preprint_v1.23_es.pdf)
+- [Paper IV explained at four levels](preprints/PAPER_IV/PaperIV_explained_4_levels.html)
+- [Editorial changelog](preprints/PAPER_IV/CHANGELOG_v1.23.md)
+- [Paper IV: scope, package and limits](preprints/PAPER_IV/README.md)
+- [Consolidated external PASS](preprints/PAPER_IV/02_validation/02_IA_ADVERSARIAL_AUDITS/run_v1.22_r4/30_REPORT/FINAL_CONSOLIDATED_AUDIT_REPORT.md)
+- [English translation of the consolidated report](preprints/PAPER_IV/02_validation/translations/v1.22_r4/FINAL_CONSOLIDATED_AUDIT_REPORT_en.md)
+- [Frozen Lean sources](preprints/PAPER_IV/05_formalization/README.md)
+- [Superseded public draft v0.8](preprints/PAPER_IV/superseded/README.md)
+- [Publication integrity checks](preprints/PAPER_IV/04_integrity/PUBLICATION_CHECKS.json)
 
-by a finite, analytic argument (no asymptotic transfer theorem). The theorem is
-machine-verified in Lean 4 (Mathlib v4.28.0): sorry-free, with an axiom report
-reducing to Lean's three standard foundational axioms and no project-specific
-axiom.
+The paper proves the all-orders chordal bound c₄(G) ≤ floor(n(n+1)/6) + b
+for an absolute constant, and the sharp eventual maximum. It also treats
+rooted simplicial defect, quantitative same-root stability of graphs and
+partitions, and explicit (impractical) thresholds. See the manuscript for exact
+hypotheses and attribution. Neither universal b = 0 nor priority for the
+extremal bound is claimed.
 
-- [Paper I v1.3 — PDF (English)](preprints/PAPER_I/01_manuscript/PAPER_I_preprint_v1.3_en.pdf)
-- [Paper I v1.3 — PDF (Spanish)](preprints/PAPER_I/01_manuscript/PAPER_I_preprint_v1.3_es.pdf)
-- [Full package (manuscript, ledger, reproducibility, integrity, Lean)](preprints/PAPER_I/)
-- [Lean 4 formalization](preprints/PAPER_I/05_formalization/lean_v1.2_freeze/)
-- [Plain-language explainer (four levels, rendered)](https://htmlpreview.github.io/?https://github.com/jtraverso/erdos-81-chordal-clique-partitions/blob/main/preprints/PAPER_I/PaperI_explained_4_levels.html)
+## Papers I–III
 
-**Paper II — *Complete-Split Extremizers for a Fractional Triangle-Cover
-Functional on Chordal Graphs.*** For every integer `n ≥ 1`, over chordal graphs
-on `n` vertices it determines the exact maximum
+| Paper | Current preprint | Scope |
+| --- | --- | --- |
+| [I](preprints/PAPER_I/README.md) | v1.3 — Affine Profile Reduction for Fractional Triangle Packings in Split Graphs | Finite fractional triangle-packing bound for split graphs |
+| [II](preprints/PAPER_II/README.md) | v1.2 — Complete-Split Extremizers for a Fractional Triangle-Cover Functional on Chordal Graphs | Exact fractional-cover extremum on chordal graphs |
+| [III](preprints/PAPER_III/README.md) | v1.5 — Linear-Error Clique Partitions of Split Graphs via Structured Triangle Packing | Integral split-graph bound with sharp quadratic coefficient 1/6 |
 
-```text
-max ( |E(G)| − 2·τ₃*(G) ) = ⌊(2n+1)²/24⌋,
-```
+Their released packages and historical audits are unchanged. Each paper has
+its own English and Spanish manuscripts, source freeze and verification
+evidence. Earlier verdicts do not substitute for Paper IV's audit.
 
-attained by a complete-split graph `S_{p,q} = K_p ∨ K̄_q`. Finite and cover-first
-(no integral packing, no strong LP duality, no asymptotic packing theorem);
-machine-verified in Lean 4 (Mathlib v4.28.0): sorry-free, unconditional on the
-standard `IsChordal` definition, axioms reducing to Lean's three standard ones.
+## Formal verification and limits
 
-- [Paper II v1.2 — PDF (English)](preprints/PAPER_II/01_manuscript/PAPER_II_preprint_v1.2_en.pdf)
-- [Paper II v1.2 — PDF (Spanish)](preprints/PAPER_II/01_manuscript/PAPER_II_preprint_v1.2_es.pdf)
-- [Full package (manuscript, ledger, validation, reproducibility, integrity, Lean)](preprints/PAPER_II/)
-- [Lean 4 formalization](preprints/PAPER_II/05_formalization/lean_v1.2_freeze/)
-- [Plain-language explainer (four levels, rendered)](https://htmlpreview.github.io/?https://github.com/jtraverso/erdos-81-chordal-clique-partitions/blob/main/preprints/PAPER_II/PaperII_explained_4_levels.html)
+Paper IV uses source identity `piv-v12-fb459343d234`: 607 Lean modules and
+615 source/configuration entries. The verified external build checked 607
+modules, 19 targets and 224 publication exports, plus a separate 50-module
+annex. Later editorial reviews inherited that evidence by checked identity;
+they did not rerun the kernel. Audited axiom footprints use only propext,
+Classical.choice and Quot.sound, or subsets.
 
-**Paper III — *Linear-Error Clique Partitions of Split Graphs via Structured
-Triangle Packing.*** It resolves the split-graph case of Erdős Problem #81 at
-the conjectured scale:
+Lean, Mathlib and their pinned dependencies remain third-party software.
+These preprints are not human peer-reviewed. The external AI report discloses
+the same model family, continuation of its audit session and shared
+machine/cache. The mandatory supplemental log verifier remains part of
+reproduction. No claim of bibliographic originality follows from a cone check.
 
-```text
-cp(G) ≤ n²/6 + O(n)
-```
+## Citation, integrity and licenses
 
-The coefficient `1/6` is sharp in the quadratic term, improving the previously
-identified split-graph upper coefficient `3/16`; the least uniform linear
-coefficient is not claimed. The theorem is machine-verified in Lean 4 with no
-project mathematical axiom on the public theorem path. The full problem for
-all chordal graphs remains open.
+Use [CITATION.md](CITATION.md), [CITATION.bib](CITATION.bib) or
+[CITATION.cff](CITATION.cff). The series concept DOI remains
+[10.5281/zenodo.21273143](https://doi.org/10.5281/zenodo.21273143).
+The existing [Papers I–III deposit](https://doi.org/10.5281/zenodo.22064657)
+does not include Paper IV. The published v1.22 is tagged `paper-IV-v1.22`,
+commit `cfcd5cf57cadc8583a218caaa1476911efe6158a`.
+The author has supplied [10.5281/zenodo.23089131](https://doi.org/10.5281/zenodo.23089131)
+for the new version including Paper IV. Its public deposit was not yet
+available when checked on 1 October 2026; registration/publication remains
+a separate Zenodo step. The concept DOI above is unchanged.
 
-- [Paper III v1.5 — PDF (English)](preprints/PAPER_III/01_manuscript/PAPER_III_preprint_v1.5_en.pdf)
-- [Paper III v1.5 — PDF (Spanish)](preprints/PAPER_III/01_manuscript/PAPER_III_preprint_v1.5_es.pdf)
-- [Full package (manuscript, validation, reproducibility, integrity, Lean)](preprints/PAPER_III/)
-- [Lean 4 formalization](preprints/PAPER_III/05_formalization/lean_v1.4_freeze/)
-- [Plain-language explainer (four levels, rendered)](https://htmlpreview.github.io/?https://github.com/jtraverso/erdos-81-chordal-clique-partitions/blob/main/preprints/PAPER_III/PaperIII_explained_4_levels.html)
+The root `manifest_sha256.txt` covers the prepared repository except itself
+and Git metadata. Paper IV has its own manifest and verification procedure.
+Earlier Paper IV manuscripts required by the audit, including published
+v1.22, are retained as audit backups rather than alternative current editions;
+the public v0.8 draft is preserved as superseded.
 
-## What Papers I–III establish — and what remains open
-
-| Paper | Established result | Scope not claimed |
-|---|---|---|
-| **Paper I** | The finite fractional inequality `\|E(G)\| − 2·ν₃*(G) ≤ n²/6 + n` for split graphs | No integral clique-partition theorem and no theorem for all chordal graphs |
-| **Paper II** | The exact maximum `⌊(2n+1)²/24⌋` of `\|E(G)\| − 2·τ₃*(G)` over `n`-vertex chordal graphs, attained by a complete-split graph | No integral clique-partition theorem and no resolution of Erdős #81 |
-| **Paper III** | The integral bound `cp(G) ≤ n²/6 + O(n)` for split graphs, with sharp quadratic coefficient `1/6` | No theorem for all chordal graphs and no claim for the least uniform linear coefficient |
-
-Thus Paper III resolves Erdős #81 for split graphs at the conjectured quadratic
-scale, while the problem for all chordal graphs remains open.
-
-## Formal verification
-
-Paper I's main theorem is checked in Lean 4. To reproduce, from
-`preprints/PAPER_I/05_formalization/lean_v1.2_freeze/`:
-
-```bash
-lake exe cache get   # fetch the prebuilt Mathlib cache
-lake build           # exit 0 type-checks every theorem with no sorry
-```
-
-The recorded `#print axioms` output is in
-`preprints/PAPER_I/05_formalization/lean_v1.2_freeze/gate_logs/`:
-
-```text
-PaperI.paperI_main depends on axioms: [propext, Classical.choice, Quot.sound]
-```
-
-Paper II is likewise checked from `preprints/PAPER_II/05_formalization/lean_v1.2_freeze/`
-(`lake exe cache get` then `lake build`), with recorded output in that package's
-`gate_logs/`:
-
-```text
-PaperII.theorem_1_2 depends on axioms: [propext, Classical.choice, Quot.sound]
-```
-
-Paper III uses the immutable source freeze at
-`preprints/PAPER_III/05_formalization/lean_v1.4_freeze/`. Its aggregate public
-root and directed axiom-query roots were reproduced independently; the public
-theorem path has footprint:
-
-```text
-[propext, Classical.choice, Quot.sound]
-```
-
-## Scope and disclaimers
-
-- These are preprints and formalization artifacts. They have undergone the
-  documented adversarial AI audits linked from each package, but they have
-  **not undergone human peer review** or specialist priority review.
-- Each item is deliberately scoped. Paper I concerns the finite fractional
-  packing bound for split graphs; Paper II concerns the exact fractional-cover
-  extremum for chordal graphs; Paper III proves the integral `n²/6 + O(n)`
-  bound for split graphs. None resolves the full chordal problem.
-
-## Citation
-
-Archived on Zenodo — concept DOI [10.5281/zenodo.21273143](https://doi.org/10.5281/zenodo.21273143),
-which resolves to the latest deposited version. The current Papers I–III
-snapshot is [Zenodo v3](https://doi.org/10.5281/zenodo.22064657).
-See also `CITATION.cff`, `CITATION.bib`, and `CITATION.md` in this directory.
-
-## License
-
-Documents and artifacts are licensed under Creative Commons
-Attribution-NonCommercial 4.0 International (CC BY-NC 4.0); see `LICENSE`.
-The Lean sources additionally depend on Mathlib, distributed under the Apache
-License 2.0.
-
-## Integrity
-
-A SHA-256 manifest for this directory is provided in `manifest_sha256.txt`.
-Sub-packages contain their own integrity manifests.
-
-The complete preceding public packages are retained under each paper's
-`superseded/preprint_v1.0/` directory. Intermediate v1.x working drafts were
-internal and were not public releases.
-
-## Author
-
-Juan Pablo Traverso Gianini — Independent research
+Documents follow CC BY-NC 4.0; see [LICENSE.md](LICENSE.md). Existing upstream
+software licenses remain applicable; packaging does not relicense Mathlib
+or separately licensed Lean Pool/Mathlib contributions.

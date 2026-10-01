@@ -1,0 +1,51 @@
+{
+  "run": "run_v1.2_r1",
+  "handoff_revision": "v1.2-r1",
+  "started_utc": "2026-09-30T12:21:44Z",
+  "finished_utc": "2026-09-30T22:15:00Z",
+  "auditor": "Claude Opus 5.5 (claude-opus-5-5), Anthropic; fresh Claude Code session on the owner's machine",
+  "overall_verdict": "INCONCLUSIVE",
+  "overall_reason": "No mathematical error, identity defect, attribution blocker or formal failure; E2 INCONCLUSIVE because A2-3, A2-4, A2-5, A2-6 REQUIRE_EXPANSION (A2-3: prose does not yield the asserted per-edge feasibility).",
+  "gates": {
+    "E0_identity": "PASS",
+    "E1_claims": "PASS",
+    "E2_mathematics": "INCONCLUSIVE",
+    "E3_conformance": "PASS_WITH_FINDINGS",
+    "E4_formal_reproduction": "PASS",
+    "E5_falsification": "PASS",
+    "E6_bilingual": "PASS_WITH_FINDINGS",
+    "E7_attribution": "PASS_WITH_MINOR_FINDINGS",
+    "E8_internal_evidence": "PASS_WITH_FINDINGS"
+  },
+  "mathematical_rederivation": {
+    "status": "no error found; headline assemblies rederived",
+    "rederived_components": "see 20_EVIDENCE/E2/E2_RECORD.md (56-component ledger)",
+    "a2_verdicts": {"A2-1": "ACCEPTABLE_SUMMARY", "A2-2": "ACCEPTABLE_SUMMARY", "A2-3": "REQUIRES_EXPANSION", "A2-4": "REQUIRES_EXPANSION", "A2-5": "REQUIRES_EXPANSION", "A2-6": "REQUIRES_EXPANSION", "A2-7": "ACCEPTABLE_SUMMARY"}
+  },
+  "conformance": {"headline_statements_match_lean_types": true, "export_checks": 224, "targets": 19, "provenance_finding": "X-27 cp-classification cone uses historical Alon-Shapira chain"},
+  "isolated_build_with_shared_dependencies": {
+    "main_modules_pass": 607, "main_modules_planned": 607, "targets_pass": 19,
+    "annex_modules_pass": 50, "annex_target": "BoundedCliqueGap.AxiomCheck",
+    "olean_byte_identical_to_author": 607,
+    "author_objects_used": false, "shared_cache_modified": false,
+    "runner": "auditor-written, no Lake", "wall_hours_main": 6.4
+  },
+  "axiom_footprint": {"public_declarations_checked": 50, "axioms": ["propext", "Classical.choice", "Quot.sound"], "sorryAx": false, "Erdos81_root": false, "axiom_records_author_rule": 461, "print_axioms_records": 314},
+  "falsification": {"tests_pass": 24, "tests_fail": 0, "negative_controls_rejected": "all predeclared", "certo": "certificate audited: valid 6-part exact clique partition of K3 join I3 (feasibility only)"},
+  "bilingual_qa": {"pages_viewed": 137, "math_segments_identical": true, "findings": {"MODERATE": 1, "MINOR": 4}},
+  "attribution": {"r2_blocker_F01": "RESOLVED in v1.2", "later_versions": {"[15]": "only v1", "[22]": "only v1", "[5]": "HEAD unchanged cbde8a0a"}, "minor_findings": 6},
+  "independence_limitations": ["same model family as manuscript-preparation assistant and as r2 auditor", "same-family subagents for E5/E6/E7 sub-tasks", "same machine and shared pinned third-party oleans; no clean-room Mathlib; no leanchecker replay", "operational (not OS-enforced) reading boundary"],
+  "input_identities": {
+    "AUDIT_TARGET_v1.2.json": "d1eb542d9cd7c700bd7350987cfc6d8154419e25fa9f4a1477d2597f5c8fdc29",
+    "source_manifest": "fb459343d234f968d7d32eff1491ea8a09aa2e135b313a80623012e7449042f5",
+    "source_zip": "cb2741454380736ffe01b59933057b5079fa9f865d5bbdd3f67534bf808a62e6",
+    "manuscript_manifest": "2451d43bfacee76791a10bcd115100d6a7dfa68e4e3bda9de62032179151f8be",
+    "manuscript_zip": "422b0be34cfec130eaece95d077975d4e01d7e3d4501461b8db64931e0d2e663",
+    "annex_zip": "2847a422865e06880d457ea806aae5b9f749d22359eff325349c09c01cb4837d",
+    "v1_0_base_zip": "0a13c01cc4cf0198d5d138082d45b25df4c5ac0684c0ed85e7cc758575f8a7dd"
+  },
+  "uncompleted_gates": [],
+  "uncompleted_items": ["E2 independent human rederivation of A2-3..A2-6 (not possible from the text)", "leanchecker replay not performed"],
+  "findings_counts": {"MODERATE": 5, "MINOR": 13, "OBSERVATION_INFO": 11, "PROCESS_CORRECTIONS": 3},
+  "not": ["human peer review", "proof of universal novelty", "permission to publish"]
+}

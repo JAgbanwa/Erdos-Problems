@@ -1,0 +1,21 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 PaperIV/RegularizationBounds.lean -o /workspace/request-project/.lake/runner/lib/lean/PaperIV/RegularizationBounds.olean -i /workspace/request-project/.lake/runner/lib/lean/PaperIV/RegularizationBounds.ilean
+import took 2.98s
+cumulative profiling times:
+	.olean serialization 78ms
+	attribute application 0.186ms
+	congr simp thm 7.05ms
+	elaboration 75.4ms
+	fix level params 1.28ms
+	import 2.98s
+	initialization 39.4ms
+	instantiate metavars 4.7ms
+	interpretation 337ms
+	let-to-have transformation 0.23ms
+	linting 32.5ms
+	parsing 16.7ms
+	process pre-definitions 17.5ms
+	share common exprs 3.81ms
+	simp 26ms
+	tactic execution 338ms
+	type checking 547ms
+	typeclass inference 583ms

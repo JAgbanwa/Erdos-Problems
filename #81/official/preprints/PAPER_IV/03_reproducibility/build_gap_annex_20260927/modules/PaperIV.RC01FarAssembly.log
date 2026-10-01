@@ -1,0 +1,28 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 PaperIV/RC01FarAssembly.lean -o /workspace/request-project/.lake/runner/lib/lean/PaperIV/RC01FarAssembly.olean -i /workspace/request-project/.lake/runner/lib/lean/PaperIV/RC01FarAssembly.ilean
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_nlinarith_1._boxed took 304ms
+import took 5.22s
+.olean serialization took 105ms
+cumulative profiling times:
+	.olean serialization 105ms
+	attribute application 0.0904ms
+	compilation (IR) 2.45ms
+	compilation (LCNF base) 2.5ms
+	compilation (LCNF mono) 1.03ms
+	congr simp thm 5.06ms
+	elaboration 53.7ms
+	fix level params 0.666ms
+	import 5.22s
+	initialization 37.3ms
+	instantiate metavars 10.2ms
+	interpretation 811ms
+	let-to-have transformation 0.13ms
+	linting 13.3ms
+	norm_num 104ms
+	parsing 6.99ms
+	process pre-definitions 8.4ms
+	ring 30ms
+	share common exprs 25.5ms
+	simp 40ms
+	tactic execution 97.4ms
+	type checking 70.7ms
+	typeclass inference 418ms

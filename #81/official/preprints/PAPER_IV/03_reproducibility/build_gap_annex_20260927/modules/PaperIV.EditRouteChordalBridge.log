@@ -1,0 +1,21 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 PaperIV/EditRouteChordalBridge.lean -o /workspace/request-project/.lake/runner/lib/lean/PaperIV/EditRouteChordalBridge.olean -i /workspace/request-project/.lake/runner/lib/lean/PaperIV/EditRouteChordalBridge.ilean
+import took 3.23s
+cumulative profiling times:
+	.olean serialization 50.9ms
+	attribute application 0.0127ms
+	congr simp thm 0.909ms
+	elaboration 7.59ms
+	fix level params 0.202ms
+	import 3.23s
+	initialization 37.2ms
+	instantiate metavars 2.92ms
+	interpretation 191ms
+	let-to-have transformation 0.0199ms
+	linting 4.75ms
+	parsing 3.91ms
+	process pre-definitions 2.35ms
+	share common exprs 0.665ms
+	simp 1.82ms
+	tactic execution 66ms
+	type checking 31.8ms
+	typeclass inference 25.2ms

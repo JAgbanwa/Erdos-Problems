@@ -1,0 +1,94 @@
+====================================================================================================
+QUERY Erdos81AllOrders.erdos81_all_orders_additive hits 1
+--- PaperIV/Erdos81AllOrders.lean:142
+theorem erdos81_all_orders_additive :
+    ∃ b : ℕ, ∀ (n : ℕ) (G : SimpleGraph (Fin n)) [DecidableRel G.Adj],
+      PaperIV.FarRounding.IsChordal G →
+        ∃ Q : CliquePartition G, Q.OrderAtMost 4 ∧ Q.size ≤ PaperIV.targetSize n + b := by
+====================================================================================================
+QUERY Erdos81Unconditional.erdos81_cliquePartition hits 1
+--- PaperIV/Erdos81Unconditional.lean:31
+theorem erdos81_cliquePartition :
+    ∃ N : ℕ, ∀ n : ℕ, N ≤ n → ∀ (G : SimpleGraph (Fin n)) [DecidableRel G.Adj],
+      PaperIV.FarRounding.IsChordal G →
+        ∃ Q : CliquePartition G, Q.OrderAtMost 4 ∧ Q.size ≤ targetSize n := by
+====================================================================================================
+QUERY PaperTheorems.erdos81_max_eq hits 1
+--- PaperIV/PaperTheorems.lean:183
+theorem erdos81_max_eq :
+    ∃ N : ℕ, ∀ n : ℕ, N ≤ n →
+      (∀ (G : SimpleGraph (Fin n)) [DecidableRel G.Adj], SimpleGraph.IsChordal G →
+          ∃ Q : CliquePartition G, Q.OrderAtMost 4 ∧ Q.size ≤ PaperIV.targetSize n)
+        ∧ (∃ (G : SimpleGraph (Fin n)) (_ : DecidableRel G.Adj),
+            SimpleGraph.IsChordal G ∧
+            ∃ Q : CliquePartition G, Q.OrderAtMost 4 ∧
+              Q.size = PaperIV.targetSize n ∧ ∀ R : CliquePartition G, Q.size ≤ R.size) := by
+====================================================================================================
+QUERY IntegralStability.chordal_linear_stability_sixteen hits 1
+--- PaperIV/IntegralStability.lean:94
+theorem chordal_linear_stability_sixteen :
+    ∃ N : ℕ, ∀ n : ℕ, N ≤ n → ∀ (G : SimpleGraph (Fin n)) [DecidableRel G.Adj],
+      PaperIV.FarRounding.IsChordal G → ∀ δ : ℚ, 0 ≤ δ → δ ≤ gamma * (n : ℚ) ^ 2 →
+        (∀ Q : CliquePartition G, Q.OrderAtMost 4 →
+            (PaperIV.targetSize n : ℚ) - δ ≤ (Q.size : ℚ)) →
+          ∃ R : Finset (Fin n), G.IsClique (R : Set (Fin n)) ∧
+            2 ≤ R.card ∧ R.card ≤ (Finset.univ \ R).card ∧
+            PaperIV.splitBaseline (n : ℚ) R.card ≤
+              (PaperIV.targetSize n : ℚ) ∧
+            (117 : ℚ) / 1825 *
+                ((PaperIV.RootVocab.outsideEdges G R).card : ℚ) +
+              (12687 : ℚ) / 20000 *
+                (PaperIV.RootVocab.missingIncidences G R : ℚ) ≤ δ ∧
+            (PaperIV.targetSize n : ℚ) -
+                PaperIV.splitBaseline (n : ℚ) R.card +
+              ((PaperIV.RootVocab.outsideEdges G R).card : ℚ) / 16 +
+              (PaperIV.RootVocab.missingIncidences G R : ℚ) / 2 ≤ δ ∧
+            (PaperIV.EditMetric.editDist G.edgeFinset
+                (graphEdgeSupport (splitGraph R (Finset.univ \ R))) : ℚ) ≤ 16 * δ := by
+====================================================================================================
+QUERY IntegralStability.chordal_linear_stability hits 1
+--- PaperIV/IntegralStability.lean:196
+theorem chordal_linear_stability :
+    ∃ N : ℕ, ∀ n : ℕ, N ≤ n → ∀ (G : SimpleGraph (Fin n)) [DecidableRel G.Adj],
+      PaperIV.FarRounding.IsChordal G → ∀ δ : ℚ, 0 ≤ δ → δ ≤ gamma * (n : ℚ) ^ 2 →
+        (∀ Q : CliquePartition G, Q.OrderAtMost 4 →
+            (PaperIV.targetSize n : ℚ) - δ ≤ (Q.size : ℚ)) →
+          ∃ R : Finset (Fin n), G.IsClique (R : Set (Fin n)) ∧
+            2 ≤ R.card ∧ R.card ≤ (Finset.univ \ R).card ∧
+            ((PaperIV.RootVocab.outsideEdges G R).card : ℚ) / 20
+                + (PaperIV.RootVocab.missingIncidences G R : ℚ) / 2 ≤ δ ∧
+            (PaperIV.EditMetric.editDist G.edgeFinset
+                (graphEdgeSupport (splitGraph R (Finset.univ \ R))) : ℚ) ≤ 20 * δ := by
+====================================================================================================
+QUERY RootPartitionStability.chordal_partition_stability hits 1
+--- PaperIV/RootPartitionStability.lean:339
+theorem chordal_partition_stability :
+    ∃ N : ℕ, ∀ n : ℕ, N ≤ n →
+      ∀ (G : SimpleGraph (Fin n)) [DecidableRel G.Adj],
+        PaperIV.FarRounding.IsChordal G →
+        ∀ δ : ℚ, 0 ≤ δ →
+          δ ≤ PaperIV.IntegralStability.gamma * (n : ℚ) ^ 2 →
+          (∀ Q : CliquePartition G, Q.OrderAtMost 4 →
+              (PaperIV.targetSize n : ℚ) - δ ≤ (Q.size : ℚ)) →
+          ∃ R : Finset (Fin n), G.IsClique (R : Set (Fin n)) ∧
+            2 ≤ R.card ∧ R.card ≤ (Finset.univ \ R).card ∧
+            ∀ (Q : CliquePartition G) (τ : ℚ),
+              (Q.size : ℚ) ≤ PaperIV.targetSize n + τ →
+              ((noncanonicalPieces R Q).card : ℚ) ≤ τ + 48 * δ := by
+====================================================================================================
+QUERY RootPartitionStability.sum_rootPieceDefect_eq hits 1
+--- PaperIV/RootPartitionStability.lean:200
+theorem sum_rootPieceDefect_eq (R : Finset V)
+    (hR : G.IsClique (R : Set V)) (Q : CliquePartition G) :
+    ∑ K ∈ Q.pieces, rootPieceDefect R K =
+      (Q.size : ℚ) - splitBaseline (Fintype.card V) R.card
+        + missingIncidences G R + 3 * (outsideEdges G R).card := by
+====================================================================================================
+QUERY ExtremalClassification.chordal_extremal_classification hits 1
+--- PaperIV/ExtremalClassification.lean:135
+theorem chordal_extremal_classification :
+    ∃ N : ℕ, ∀ n : ℕ, N ≤ n → ∀ (G : SimpleGraph (Fin n)) [DecidableRel G.Adj],
+      PaperIV.FarRounding.IsChordal G →
+        (CliqueCoverEq G (PaperIV.targetSize n) ↔
+            CliqueCover4Eq G (PaperIV.targetSize n)) ∧
+          (CliqueCover4Eq G (PaperIV.targetSize n) ↔ IsOptimalCompleteSplit G) := by

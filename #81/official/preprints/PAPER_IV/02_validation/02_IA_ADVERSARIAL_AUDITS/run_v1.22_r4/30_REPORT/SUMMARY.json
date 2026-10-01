@@ -1,0 +1,111 @@
+{
+ "run": "run_v1.22_r4",
+ "revision": "v1.22-r4",
+ "manuscript_version": "1.22",
+ "status": "COMPLETED",
+ "started_utc": "2026-10-01T16:30:05Z",
+ "e0_initial_utc": "2026-10-01T16:31:05.027334+00:00",
+ "target": {
+  "audit_target_sha256": "99ff96c9cb51c0d887548333ad41a7b6af0c1fc3523345ba0ec2f6dd03bce888",
+  "candidate_manifest_sha256": "f35bf2a9c383f6cf814bbca6a67a2fc2337eb051b97521ad492a79cae8fc1075",
+  "candidate_package_sha256": "8f20048c50968c93f768be774f2f6a571301dc67fe3c9023b331d15a359494e9",
+  "six_sha256": {
+   "PAPER_IV_preprint_v1.22_en.md": "d3415df365ad8910b37f37dd1cdd5de04a4315e36811a285b3112c07a8b6cc7b",
+   "PAPER_IV_preprint_v1.22_en.tex": "c6b14105d6646754a15d96e3129e28539fbda23019dc01946290da4be1c28f75",
+   "PAPER_IV_preprint_v1.22_en.pdf": "4280b03e410664b6bf73f54d8544b75fc79b2f91e9624f98675532606c1b85c2",
+   "PAPER_IV_preprint_v1.22_es.md": "a8e2030544646245343ea92a6f04e8a161e81c8675aa0ae5aad2e2405fe1820c",
+   "PAPER_IV_preprint_v1.22_es.tex": "e5a2667259bc4e3e160e67bf598ec06b0d00177ec35faa886efbec64a4a9ebc8",
+   "PAPER_IV_preprint_v1.22_es.pdf": "638cad0762311baac9dd36c9f136c4bdeeae385e7ff357e9bd3e371302d3c1db"
+  },
+  "en_byte_identical_to_r3": true,
+  "verifier_sha256": "c55225f35bd60ed624816ab74dd609a83ff5de7480cb2ff32b160b7d45850606",
+  "inventory_sha256": "938dcdcc23c024a53a6167192af9b913f3c625db6091e419c045e06cbec1829a",
+  "lean_source_manifest_sha256": "fb459343d234f968d7d32eff1491ea8a09aa2e135b313a80623012e7449042f5",
+  "annex_zip_sha256": "2847a422865e06880d457ea806aae5b9f749d22359eff325349c09c01cb4837d"
+ },
+ "auditor": "Claude Opus 5.5 (claude-opus-5-5), Anthropic; continuation of the SAME session as all five prior runs; not blind; not cross-family",
+ "overall_verdict": "PASS",
+ "scope_of_PASS": "All applicable E0-E8 criteria satisfied with no open corrective action in package v1.22-r4. Not: absence of limits, human peer review, new build, or permission to publish.",
+ "gates_current": {
+  "E0": "PASS (ejecutado en r4)",
+  "E1": "PASS (heredado y revalidado por identidad; 33-record map)",
+  "E2": "PASS (heredado y revalidado por identidad; R-01 documented limit)",
+  "E3": "PASS (heredado y revalidado por identidad)",
+  "E4": {
+   "verdict": "PASS",
+   "method": "reused_verified_external_build",
+   "basis": "heredado y revalidado por identidad",
+   "new_build": false,
+   "kernel_replay": false,
+   "scope": {
+    "main_modules": 607,
+    "targets": 19,
+    "export_checks": 224,
+    "annex_modules": 50,
+    "axiom_records": 461,
+    "print_axioms": 314,
+    "headline_declarations": 18,
+    "public_cones": 50
+   }
+  },
+  "E5": "PASS (heredado y revalidado por identidad; 59 checks + 7 controls)",
+  "E6": "PASS (ES delta ejecutado en r4; EN heredado por identidad)",
+  "E7": "PASS (heredado y revalidado por identidad)",
+  "E8": "PASS (verifier rerun in r4, identical; X-28 historical defect recorded, control in force)"
+ },
+ "closed_this_cycle": [
+  "NEW-05"
+ ],
+ "new_findings_this_cycle": [],
+ "open_actions": [],
+ "history": {
+  "v1.2": "INCONCLUSIVE",
+  "v1.21": "INCONCLUSIVE",
+  "v1.22-r1": "PASS (MINOR non-blocking)",
+  "v1.22-r2": "PASS_WITH_OBSERVATIONS",
+  "v1.22-r3": "PASS_WITH_FINDINGS",
+  "v1.22-r4": "PASS"
+ },
+ "a2_current": {
+  "A2-1": "ACCEPTABLE_SUMMARY",
+  "A2-2": "ACCEPTABLE_SUMMARY",
+  "A2-3": "ACCEPTABLE_SUMMARY",
+  "A2-4": "ACCEPTABLE_SUMMARY",
+  "A2-5": "ACCEPTABLE_SUMMARY",
+  "A2-6": "ACCEPTABLE_SUMMARY",
+  "A2-7": "ACCEPTABLE_SUMMARY"
+ },
+ "accepted_limits_no_action": [
+  "X-17",
+  "X-18",
+  "X-19",
+  "X-22",
+  "X-24",
+  "X-29",
+  "R-01",
+  "X-26 (independence)",
+  "X-28 (historical runner defect; control in force)"
+ ],
+ "findings_counts": {
+  "rows": 54,
+  "CLOSED": 30,
+  "MITIGATED": 1,
+  "ACCEPTED_OBSERVATION": 7,
+  "KEPT_INFO": 1,
+  "PRESERVED_CORRECTION": 15,
+  "OPEN": 0
+ },
+ "milestones_outside_scope": [
+  "human peer review (recommended, future)",
+  "optional cross-family audit with clean-room build or kernel replay",
+  "publication decision by the owner"
+ ],
+ "lean_executed_this_cycle": false,
+ "limitations": [
+  "same session/model/family",
+  "shared machine and cache",
+  "no new build, no kernel replay",
+  "summary-level written-proof check",
+  "unchanged ES pages and EN pages inherit r3 visual inspection"
+ ]
+}

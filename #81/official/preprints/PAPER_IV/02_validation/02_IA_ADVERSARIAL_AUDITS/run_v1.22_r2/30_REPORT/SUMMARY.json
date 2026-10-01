@@ -1,0 +1,53 @@
+{
+  "run": "run_v1.22_r2",
+  "revision": "v1.22-r2",
+  "manuscript_version": "v1.22",
+  "status": "COMPLETED",
+  "started_utc": "2026-10-01T11:00:18Z",
+  "target": {
+    "audit_target_sha256": "f931776370dcc101c637cb978273d8757b298ff79e99d50fff815104d4e00583",
+    "candidate_manifest_sha256": "0fcaf0589c389f70fdb85959f4c69c45f97a131a64a7234a78e40328f7509c0a",
+    "candidate_package_sha256": "d4f3b33d647744a54c93098e0944b18d01a3377c4bbc9a3ecc5f8789e9973635",
+    "es_md_tex_pdf_sha256": ["ec227eb57e98ee09677a49fe743ad29a78ec38e864e6bf04f171a36cc5e0e97e", "356f03c12465316a51f6b0ec28d2f7a9d21ab6eaf364cb464640eb218222d02c", "8ebfccd7f9b1cc830280fa7a388682393ecacdca087756e9eaabe5b56d6eb0df"],
+    "en_md_tex_pdf_sha256_byte_identical_to_r1": ["99a1159d43eda387197ddfbccbfa961241a1a86e235462531dadf7dd6d65c94f", "34a3081b0dd2b21b886a575cea45502bb5d51dbf5dd2637b203b230e399c1100", "5bbb730eb5fbf1a15ca37253f2b934eb4c0c15c4a978c86dcdf2324f0bcd79e0"],
+    "lean_source_manifest_sha256": "fb459343d234f968d7d32eff1491ea8a09aa2e135b313a80623012e7449042f5",
+    "lean_source_zip_sha256": "cb2741454380736ffe01b59933057b5079fa9f865d5bbdd3f67534bf808a62e6",
+    "annex_zip_sha256": "2847a422865e06880d457ea806aae5b9f749d22359eff325349c09c01cb4837d"
+  },
+  "historical_packages": {
+    "run_v1.2_r1": "886ed7f033bca42a530944d48f91ef45e79f6be4cb0d74080c5d8d6efc4f5e2b",
+    "run_v1.21_r1": "11659a97b0a4f2bffadb6968159cc5b66562b4470053939a45c1e8a42db7a638",
+    "run_v1.22_r1": "9c74d673206ab17a5b4586209ececca30536f1768fcc91ffdd39db551193a1fa"
+  },
+  "auditor": "Claude Opus 5.5 (claude-opus-5-5), Anthropic; continuation of the SAME Claude Code session as run_v1.2_r1, run_v1.21_r1 and run_v1.22_r1; not blind; not cross-family (manuscript declares Claude among tools)",
+  "overall_verdict": "PASS_WITH_OBSERVATIONS",
+  "overall_qualifier": "No open finding of severity MINOR or higher. Nine accepted observations (X-17, X-18, X-19, X-22, X-24, X-29, R-01, E8-02, NEW-04), one mitigation (X-28), independence limits. Not human peer review; not permission to publish.",
+  "gates_current": {
+    "E0": {"verdict": "PASS", "basis": "executed in r2 (initial and final identical)"},
+    "E1": {"verdict": "PASS", "basis": "PASS heredado y revalidado por identidad + impact check"},
+    "E2": {"verdict": "PASS", "basis": "PASS heredado y revalidado por identidad", "observations": ["R-01"]},
+    "E3": {"verdict": "PASS", "basis": "PASS heredado y revalidado por identidad"},
+    "E4": {"verdict": "PASS", "method": "reused_verified_external_build", "basis": "PASS heredado y revalidado por identidad", "new_build_this_cycle": false, "kernel_replay": false, "scope": {"main_modules": 607, "targets": 19, "export_checks": 224, "annex_modules": 50}},
+    "E5": {"verdict": "PASS", "basis": "PASS heredado y revalidado por identidad, arithmetic scripts repeated (identical)"},
+    "E6": {"verdict": "PASS_WITH_OBSERVATIONS", "basis": "executed in r2", "observations": ["NEW-04"]},
+    "E7": {"verdict": "PASS", "basis": "PASS heredado y revalidado por identidad"},
+    "E8": {"verdict": "PASS_WITH_OBSERVATIONS", "basis": "detector repeated in r2 + inherited attribution", "observations": ["X-28 MITIGATED", "E8-02"]}
+  },
+  "history": {
+    "v1.2 (run_v1.2_r1)": {"overall": "INCONCLUSIVE", "E2": "INCONCLUSIVE", "E3": "PASS_WITH_FINDINGS", "E6": "PASS_WITH_FINDINGS", "E7": "PASS_WITH_MINOR_FINDINGS", "E8": "PASS_WITH_FINDINGS", "others": "PASS"},
+    "v1.21 (run_v1.21_r1)": {"overall": "INCONCLUSIVE", "E1": "PASS_WITH_MINOR", "E2": "INCONCLUSIVE", "E6": "PASS_WITH_FINDINGS", "E8": "PASS_WITH_OBSERVATIONS", "E4": "PASS reused", "others": "PASS"},
+    "v1.22-r1 (run_v1.22_r1)": {"overall": "PASS", "E6": "PASS_WITH_FINDINGS", "E8": "PASS_WITH_OBSERVATIONS", "E4": "PASS reused", "others": "PASS"},
+    "v1.22-r2 (run_v1.22_r2)": {"overall": "PASS_WITH_OBSERVATIONS"}
+  },
+  "a2_current": {"A2-1": "ACCEPTABLE_SUMMARY (since v1.2)", "A2-2": "ACCEPTABLE_SUMMARY (since v1.2)", "A2-3": "ACCEPTABLE_SUMMARY (since v1.21)", "A2-4": "ACCEPTABLE_SUMMARY (since v1.22-r1)", "A2-5": "ACCEPTABLE_SUMMARY (since v1.21)", "A2-6": "ACCEPTABLE_SUMMARY (since v1.21)", "A2-7": "ACCEPTABLE_SUMMARY (since v1.2)"},
+  "closed_this_cycle": ["X-15", "NEW-01", "NEW-03"],
+  "new_this_cycle": ["NEW-04 OBSERVATION (historical status text in manuscripts)"],
+  "auditor_corrections_this_cycle": ["C3-01 X-15 count (11 matching(s) + 1 packing, not 12)", "C3-02 unseen comparison images: rows discarded and pages re-inspected", "C3-03 script output path"],
+  "x15_count_reconciliation": {"r1_prose_matching": 11, "r1_prose_packing": 1, "r2_prose_residual": 0, "reference_titles_untouched": 4, "prior_narrative_12_explained": "included reference [9] title / singular-only scan pattern"},
+  "e6": {"pages": 73, "raster_changed_pages": [16, 18, 20, 21, 35, 55, 56, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71], "pdf_matches_tex": true, "protected_content_identical": true, "editor_diff_equals_auditor_diff": true},
+  "findings_counts": {"rows": 49, "CLOSED": 27, "MITIGATED": 1, "ACCEPTED_OBSERVATION": 9, "KEPT_INFO": 1, "PRESERVED_CORRECTION": 11},
+  "lean_executed_this_cycle": false,
+  "limitations": ["same session/model/family as prior runs and as manuscript AI assistant", "same machine and shared Mathlib cache as the historical build", "no new build, no kernel replay", "summary-level written-proof check", "Table 7 entries without an individual E1 semantic row (Thm 5.0, Cor 5.4, (1.5), coefficient optimality, (6.7b), Prop D.3) covered by E2 ledger + E3/E4 only; G.2 not re-extracted"],
+  "pending": ["update historical status text in both languages before publication (NEW-04), then new identity check and E6", "human peer review; optional cross-family independent audit with clean-room build or kernel replay"],
+  "not": ["human peer review", "permission to publish", "a new formal build"]
+}

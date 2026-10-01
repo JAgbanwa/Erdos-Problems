@@ -1,0 +1,211 @@
+--- PAPER_IV_preprint_v1.0_en.md
++++ PAPER_IV_preprint_v1.0.1_en.md
+@@ -1,4 +1,4 @@
+-# Clique partitions of chordal graphs: mixed rounding and construction in the critical regime
++# Clique partitions of chordal graphs: quantitative stability and sharp eventual bounds
+ 
+ **Juan Pablo Traverso Gianini**  
+ Independent researcher, Santiago, Chile  
+@@ -6,9 +6,10 @@
+ [ORCID: 0009-0003-6068-4096](https://orcid.org/0009-0003-6068-4096)
+ 
+ **Paper IV in the series**  
+-**Preprint:** version 1.0 candidate, English edition for review.  
+-**Date:** September 27, 2026.  
+-**Status:** version 1.0 candidate for review, with the mathematical additions incorporated into the manuscript. The identified Lean source freeze passed the combined local build; the internal and adversarial audits of the publication package remain pending. This edition does not yet replace the public draft.
++**Preprint:** version 1.0.1 candidate for external review.  
++**Date of this revision:** September 28, 2026.  
++**Status:** the identified v1.0 Lean source freeze passed the combined local build and the author's internal audit. This bilingual v1.0.1 edition preserves its mathematical content. The first external adversarial cycle stopped on an attribution defect before rebuilding Lean. This revised edition corrects that attribution and awaits renewed external review; it has not been published or assigned its own DOI.
++**Series concept DOI:** <https://doi.org/10.5281/zenodo.21273143>. The version DOI for the deposit that will collect Papers I–IV has not yet been assigned.
+ 
+ **MSC 2020:** Primary 05C70; secondary 05C35, 05C72.
+ 
+@@ -20,9 +21,13 @@
+ \]
+ for an absolute constant \(b\). For sufficiently large orders, the bound is \(M(n)\) and is attained even against partitions with unrestricted clique order. The form valid for every \(n\) implies the bound \(n^2/6+O(n)\) requested by Erdős, Ordman and Zalcstein.
+ 
+-The proof continues the series Papers I–III. The nibble from Paper III rounds the mixed gain of triangles and \(K_4\) when there is a quadratic fractional margin. In the critical regime, descent by vertex copying locates a root, and a construction on the original graph produces the partition. Its accounts give stability with at most \(16\delta\) edge edits for sufficiently small integral deficit \(\delta\), control of noncanonical pieces and eventual classification of extremizers.
+-
+-The eventual bound extends to each fixed rooted simplicial defect \(s\), with target \(M(n+s)-\binom{s+1}{2}\), pieces of order at most four and unrestricted lower witnesses. Rounding now has an explicit tower-type threshold, which propagates to a bound for \(b\); it is not practical and does not prove \(b=0\). The quadratic and linear coefficients of the chordal target are optimal. The Lean development proves the components used without taking them as unresolved interfaces. Its identified source cut passed the combined local build; internal and adversarial review of the publication package remain open.
++Near equality has a quantitative structural consequence. For sufficiently large chordal graphs with \(c_4(G)\ge M(n)-\delta\), where \(0\le\delta\le\gamma n^2\) for a fixed \(\gamma>0\), there is a clique \(R\) such that \(G\) differs from the corresponding complete-split graph by at most \(16\delta\) edge edits. The same root controls every clique partition \(Q\), even without a restriction on piece order: if \(|Q|\le M(n)+\tau\) with \(\tau\ge0\), at most \(\tau+48\delta\) pieces are neither root–exterior edges nor triangles with two root vertices. At equality, the argument classifies the eventual extremal chordal graphs.
++
++The proof continues Papers I–III. The nibble from Paper III rounds the mixed gain of triangles and \(K_4\) when there is a quadratic fractional margin. In the critical regime, descent by vertex copying locates a root, and a construction on the original graph produces the partition. The far/near dichotomy and the retained physical accounts yield the structural bounds above.
++
++For each fixed rooted simplicial defect \(s\), Okechukwu [15, Theorem 1.1] obtains the eventual maximum \(M(n+s)-\binom{s+1}{2}\) for unrestricted clique partitions. We strengthen its upper-bound conclusion by using only pieces of order at most four, with an independent Lean proof and the same lower-witness family. Order three does not suffice uniformly, already in the chordal case. Rounding has an explicit tower-type threshold for chordal graphs, which propagates to a bound for \(b\); it is not practical and does not prove \(b=0\). The quadratic and linear coefficients of the chordal target are optimal.
++
++The chordal bound and the graph and partition stability theorems have kernel-checked proofs in Lean 4. Their audited declarations use only Lean's standard foundational axioms, and the proof chain leaves no unresolved mathematical interfaces. The identified source cut passed the combined local build and the author's internal audit; external adversarial review remains open.
+ 
+ **Keywords:** chordal graph; clique partition; mixed packing; fractional rounding; complete-split graph; mathematical formalization.
+ 
+@@ -34,7 +39,13 @@
+ 
+ The three preceding papers in the series separate aspects of this difficulty. Paper I [2] studies neighborhood profiles relative to a split presentation and reduces the residual problem to a fixed polytope. Paper II [3] determines the exact maximum of the fractional triangle deficit over all chordal graphs by vertex copying. Paper III [4] constructs partitions with linear error for split graphs, distinguishing the regimes in which the fractional margin suffices from those requiring a more precise construction. Its formal development also supplies the nibble and rounding infrastructure reused in Section 3 and Appendix B.
+ 
+-This work is part of that series: its inputs are stated where they are applied. There are also the public preprint [5] and that of Okechukwu [15], whose Corollary 1.2 obtains the additive bound and eventual maximum for chordal graphs as a special case of a larger class. The present formal proof chain does not logically depend on the results of those works. Its contribution is presented through the verified proof, weighted rounding and quantitative accounting in the critical regime, not as a priority claim for the bound. Section 8 distinguishes the mechanisms and the scope of the comparisons.
++This work is part of that series: its inputs are stated where they are applied.
++
++This paper makes four contributions for chordal graphs. First, Theorem 6.1 gives integral stability with an explicit constant: for sufficiently large orders and a fixed \(\gamma>0\), if \(c_4(G)\ge M(n)-\delta\) with \(0\le\delta\le\gamma n^2\), then \(G\) is within \(16\delta\) edge edits of a complete-split graph on a clique root \(R\). Second, Corollary 6.1a uses the same root, chosen independently of the partition, to control every clique partition with at most \(M(n)+\tau\) pieces, where \(\tau\ge0\), with no restriction on piece order: all but at most \(\tau+48\delta\) pieces are root–exterior edges or triangles with two root vertices and one exterior vertex. Third, the rounding step has an explicit threshold (§6.3 and Appendix C.3), which propagates to an explicit, although impractical, bound for the additive constant \(b\). Fourth, the chordal bound and both stability theorems have kernel-checked proofs in Lean 4 whose audited declarations use only the standard foundational axioms (§7).
++
++The public preprint [5] also establishes the eventual maximum for chordal graphs, which implies an all-orders additive bound. Okechukwu [15, Theorem 1.1] proves the eventual maximum for every fixed rooted simplicial defect, together with an all-orders additive bound for unrestricted clique partitions and an equality classification; its chordal case is [15, Corollary 1.2]. The maximum in our Theorem C is the same result at the level of statements. Our upper bound additionally restricts pieces to order at most four. Moreover, [15, Theorem 1.3] proves asymptotic structural stability for sublinear rooted defect, and [15, Corollary 5.5] gives qualitative edit stability for each fixed defect. The present formal proof chain does not logically depend on the results of those works. Section 8 compares the statements and mechanisms; no priority for the extremal bound is claimed.
++
++Cipollini [21] announced the partial bound \(n^2/6+o(n^2)\) for chordal graphs. That announcement identifies the remaining gap between subquadratic and linear error; it is an antecedent, not an input to our proof.
+ 
+ The formulation in [8] asks: “Can the edges of \(G\) be partitioned into \(n^2/6+O(n)\) many cliques?”, for chordal \(G\). Erdős, Ordman and Zalcstein [1] had proved a bound \((1/4-\epsilon)n^2\), with a small positive constant \(\epsilon\). Theorem A gives the requested form for every order.
+ 
+@@ -67,9 +78,11 @@
+ 
+ The example that fixes the scale is explicit: for \(n\ge6\), take \(k=\lceil n/3\rceil\), \(h=n-k\) and \(S=K_k\vee I_h\). Eliminating the independent hosts first and then the core gives a perfect elimination ordering, so \(S\) is chordal. Using one core base per triangle yields a partition of cost \(kh-\binom k2=M(n)\); the weight argument in §6.1 shows that no partition, even one with larger cliques, costs less.
+ 
++The construction gives more than the extremal value. Theorem 6.1 bounds the edits needed to reach a complete-split graph, while Corollary 6.1a uses the same root, chosen independently of the partition, to control the pieces of every near-optimal partition. Setting the deficit to zero also identifies the eventual extremal graphs.
++
+ ### Theorem C. Fixed rooted simplicial defect
+ 
+-We say that \(G\) has **rooted simplicial defect at most \(s\)** if it satisfies the following condition. Given an induced vertex set \(U\subseteq V(G)\) and a prescribed clique \(R\subsetneq U\), there is a vertex \(v\in U\setminus R\) whose neighborhood in \(U\) contains a clique omitting at most \(s\) of its neighbors. The empty root \(R=\varnothing\) is allowed. Quantification over all prescribed roots is part of the definition, not a consequence of having a single elimination ordering.
++Following Okechukwu [15, §1], we say that \(G\) has **rooted simplicial defect at most \(s\)** if it satisfies the following condition. Given an induced vertex set \(U\subseteq V(G)\) and a prescribed clique \(R\subsetneq U\), there is a vertex \(v\in U\setminus R\) whose neighborhood in \(U\) contains a clique omitting at most \(s\) of its neighbors. The empty root \(R=\varnothing\) is allowed. Quantification over all prescribed roots is part of the definition, not a consequence of having a single elimination ordering. We also retain the notation \(Q_s\) from [15, (1.1)].
+ 
+ For each fixed integer \(s\ge0\), there is \(N_s\) such that every graph \(G\) in this class of order \(n\ge N_s\) satisfies
+ \[
+@@ -80,7 +93,9 @@
+ \]
+ Moreover, for each sufficiently large order there is a graph in the class with \(\operatorname{cp}(G)=Q_s(n)\). Thus the eventual maximum is \(Q_s(n)\), also when cliques of arbitrary order are allowed.
+ 
+-Every chordal graph belongs to the class \(s=0\), and \(Q_0=M\). Theorem C enlarges the domain of the bound while retaining pieces of order at most four; it does not by itself extend the equality classification or the stability theorems beyond the chordal class. Appendix E explains the constructor, the induction step and the lower witness. The explicit threshold in §6.3 concerns chordal graphs; it is not automatically assigned to all classes \(s>0\).
++This is an order-at-most-four strengthening of the eventual upper bound in [15, Theorem 1.1]. Proposition D.2 shows that four cannot be replaced by three uniformly over the classes in Theorem C: the obstruction already occurs for \(s=0\). It does not assert minimality separately for each positive defect.
++
++The unrestricted maximum in Theorem C is the one established by [15, Theorem 1.1], with the same attaining family. Relative to that statement, the additional conclusion here is the order-at-most-four upper bound, supported by an independent formal proof. Every chordal graph belongs to the class \(s=0\), and \(Q_0=M\). Theorem C does not by itself extend our equality classification or stability theorems beyond the chordal class. Appendix E explains the constructor, the induction step and the lower witness. The explicit threshold in §6.3 concerns chordal graphs; it is not automatically assigned to all classes \(s>0\).
+ 
+ ### 1.1. The common condition: a loss budget
+ 
+@@ -149,7 +164,7 @@
+ 
+ Figure 1 follows only our proof. To connect the diagram to the text, we call the far case **branch L**: Theorem 3.1 performs rounding and Corollary 3.5 pays for its loss. **Branch C** is the critical case: Proposition 4.3 locates the comparator, Section 5 constructs in \(G\), and Lemma 5.3 pays for the losses. Both branches end in Theorem B; Section 6.3 extends its conclusion to every order and proves Theorem A. The letters L and C denote the two cases of a single proof.
+ 
+-This proof has two refinements with different roles. The **hybrid form** retains the `NearStructureWitness`, namely the root, comparator and accounting; it is described in Section 5.4 and yields the stability result of Section 6.5. The **model bridge** preserves resources and gains when changing the formal representation of pieces; it is documented in Section 7.2. This bridge acts at the model level, not after Theorem B or as another stabilization mechanism.
++The near witness is retained because its root and accounts yield more than an upper bound. The **hybrid form** records `NearStructureWitness`—root, comparator and accounting—and leads to the graph and partition stability results of Section 6.5. The **model bridge** has a different role: it preserves resources and gains when changing the formal representation of pieces, as documented in Section 7.2. Neither refinement is a third proof of Theorem B.
+ 
+ ![Proof map. Branch L is developed in Theorem 3.1 and Corollary 3.5; branch C, in Proposition 4.3 and Lemma 5.3. Solid lines form the proof of Theorems A and B. Dashed lines indicate refinements not needed for those bounds: the model bridge of Section 7.2 and the retained witness of Section 5.4.](figures_en/fig1_proof_map.png)
+ 
+@@ -806,6 +821,8 @@
+ 
+ ### 6.5. Integral stability and classification of extremizers
+ 
++The upper-bound argument retains the stronger near account (5.15a), although Theorem B needs only (5.15). A graph whose optimal partition count is close to \(M(n)\) cannot lie in the far branch, where rounding produces a partition well below that target. The retained account therefore converts a small integral deficit into a bound on the graph's exterior edges and missing links. Once the root has been chosen, a separate piecewise identity controls every partition close to the same target; the root is not selected afresh for each partition.
++
+ **Theorem 6.1 (integral stability).** There exist \(\gamma>0\) and a threshold \(N_{\rm est}\) such that, if \(n\ge N_{\rm est}\), \(G\) is chordal, \(0\le\delta\le\gamma n^2\), and every partition of order at most four has at least \(M(n)-\delta\) pieces, then there is a clique \(R\) of \(G\) for which
+ \[
+ \bigl(M(n)-B_n(|R|)\bigr)+\frac m{16}+\frac A2\le\delta,
+@@ -905,11 +922,13 @@
+ 
+ The identified Lean supplement for this version uses Lean and Mathlib v4.28.0. The final declarations do not take rounding, existence of an optimum or the near constructor as arguments: they invoke them as proved theorems in their dependencies. The permitted foundational axioms are distinguished from any additional mathematical hypothesis.
+ 
+-The formal scope differs from that documented by [5] at the cited commit. Its `FORMALIZATION_STATUS.md` file declares verification conditional on `ExternalInputs.Inputs`: Vizing, Häggkvist–Janssen and a packing transfer that includes certificates of rational optimality. These inputs are explicit parameters, not hidden axioms. Here the inputs used by our chain, including Vizing, are discharged; Häggkvist–Janssen is not used. The comparison concerns what each Lean development checks: it does not assert that the mathematical proof of [5] is conditional on conjectures.
++The formal scope differs from that documented by [5] at the cited commit. Its `lean/FORMALIZATION_STATUS.md` file declares verification conditional on `ExternalInputs.Inputs`: Vizing, Häggkvist–Janssen and a packing transfer that includes certificates of rational optimality. These inputs are explicit parameters, not hidden axioms. Here the inputs used by our chain, including Vizing, are discharged; Häggkvist–Janssen is not used. The comparison concerns what each Lean development checks: it does not assert that the mathematical proof of [5] is conditional on conjectures.
++
++Formal identifiers are printed in monospaced type. A continuation arrow at a line break is a typesetting marker, not part of the identifier; the Markdown and Lean sources retain the literal spelling.
+ 
+ The configuration declares Mathlib as a third-party package and a selection of Paper III `Nibble` modules as a local dependency of the series. `ConeAudit` traverses the types and proof terms of the selected declarations and checks that their transitive dependencies contain no names under the root `Erdos81`, used by [5]. The absence of these names is a reproducible audit result, not an inference from the import list. Its scope is precise: it certifies that exclusion in the examined snapshot; it would not by itself detect relocated and renamed code or determine the historical provenance of each argument. Source attribution is documented separately. The same namespace check cannot yield a verdict on [15].
+ 
+-The additional `PublicationIncrementAudit` covers the public statements in `DefectSharpPublication`, including Theorem C, its lower-bound witness and its eventual maximum. The combined local build also executed this audit, excluding the replaced historical modules. The `PaperIV.Editorial.ConstructorBudget` interface in E.1 is included in the same source cut and its separate audit target passed, retaining the same partition in both conclusions. Source-to-manuscript correspondence and the publication package remain subject to internal audit.
++The additional `PublicationIncrementAudit` covers the public statements in `DefectSharpPublication`, including Theorem C, its lower-bound witness and its eventual maximum. The combined local build also executed this audit, excluding the replaced historical modules. The `PaperIV.Editorial.ConstructorBudget` interface in E.1 is included in the same source cut and its separate audit target passed, retaining the same partition in both conclusions. Source-to-manuscript correspondence was examined in the author's internal audit; it still requires independent adversarial review.
+ 
+ | Result in the text | Reference module |
+ |:--|:--|
+@@ -948,7 +967,7 @@
+ 
+ A further 195 `#check` commands through `import PaperIV` completed without errors in the frozen source cut. This verifies access to the declarations listed in that check through the aggregate; it does not replace examination of hypotheses or dependency audits. `FarExploration` and `ThreeRegime` have separate audit targets in the main freeze. `BoundedCliqueGap` is a separate source annex with its own recorded-build and axiom evidence; none of these complements is a premise of the chordal theorem.
+ 
+-The combined local reconstruction finished with 504 of 504 project modules passing and zero failed or omitted modules. It used the existing shared Mathlib cache at the pinned revision, not a new build of Mathlib. The 13 requested targets include the root, the separate audits and the 195 export checks; all recorded exit code zero. The source cut is `piv-v1.0-f1769273dd2c`, identified by the SHA-256 of its 504-entry `SOURCES.json`. Its source-only ZIP has SHA-256 `0a13c01cc4cf0198d5d138082d45b25df4c5ac0684c0ed85e7cc758575f8a7dd`. The logs and hashes are included in the local package. Internal audit and adversarial review of that final package remain pending. Neither the record of 8402 jobs from an earlier snapshot nor the evidence for the public v0.8 draft is reused as a certificate for this version.
++The combined local reconstruction finished with 504 of 504 project modules passing and zero failed or omitted modules. It used the existing shared Mathlib cache at the pinned revision, not a new build of Mathlib. The 13 requested targets include the root, the separate audits and the 195 export checks; all recorded exit code zero. The source cut is `piv-v1.0-f1769273dd2c`, identified by the SHA-256 of its 504-entry `SOURCES.json`. Its source-only ZIP has SHA-256 `0a13c01cc4cf0198d5d138082d45b25df4c5ac0684c0ed85e7cc758575f8a7dd`. The logs and hashes are included in the local package. The author's internal audit recorded `PASS_INTERNAL_AUTHOR_SIDE` for that cut and the v1.0 manuscripts. This bilingual v1.0.1 editorial revision has separate manuscript hashes and does not inherit the literal checks of the v1.0 PDFs. External adversarial review remains pending. Neither the record of 8402 jobs from an earlier snapshot nor the evidence for the public v0.8 draft is reused as a certificate for this version.
+ 
+ ### 7.1. Repositories and contributions
+ 
+@@ -1012,7 +1031,7 @@
+ 
+ ### 8.1. The bounded simplicial defect antecedent
+ 
+-Okechukwu [15] studies rooted simplicial defect. Our Theorem C uses that class with its quantification over prescribed roots, not merely a favorable elimination ordering. The bound is realized with pieces of order at most four; the lower witness is compared with all clique partitions. This is the precise scope of the extension incorporated here. Comparing mechanisms is not a priority claim for the extremal formula.
++Okechukwu [15, Theorem 1.1] establishes the fixed-defect eventual maximum used in Theorem C. The graph class, the notation \(Q_s(n)\), the eventual quantifiers and the attaining family coincide. That theorem also gives an all-orders additive bound for \(\operatorname{cp}\) and classifies equality graphs. We use its rooted-defect definition, including quantification over prescribed cliques. The additional upper-bound conclusion in Theorem C is a partition with pieces of order at most four, proved through our own formal chain; the unrestricted maximum is not presented as a new extremal formula. This comparison of statements does not assert that the method of [15] cannot yield the stronger piece-size bound.
+ 
+ | Component | Okechukwu [15] | This work |
+ |:--|:--|:--|
+@@ -1022,9 +1041,11 @@
+ 
+ **Table 6.** Additional comparison; [15] is not identified with [5].
+ 
++The cutoff in [15] needs care. Theorem 3.3 chooses \(L\) as a function of the localization accuracy, and the stability argument used by Proposition 5.4 and Theorem 1.1 applies that cutoff through Lemma 3.4. It does not set \(L=4\). The explicit choice \(L=4\) following the proof of [15, Theorem 1.3] proves its separate approximation (1.5), not the exact bound in Theorem 1.1. Thus our fixed order-four conclusion strengthens the stated exact upper bound; this is not a claim that every possible adaptation of the method in [15] needs larger cliques.
++
+ To connect its transfer with Table 4, [15, Lemma 3.4] gives \(q_L(G)\le q_L^*(G)+\zeta n^2\). Its exact fractional partition is equivalent to the gain model of §1.1, so \(q_L^*=F_{\{3,\ldots,L\}}\). This bound pays the budget when \(\zeta n^2\le M(n)-q_L^*(G)\). The approximation lemma alone does not guarantee the last condition: it is used in the branch with the corresponding margin.
+ 
+-The stability comparison has a different scope. Our Theorem 6.1 gives an explicit bound linear in the deficit under chordal hypotheses; [15, Theorem 1.3] concerns a larger class and an asymptotic conclusion. Theorem C does not automatically extend that stability. As for thresholds, §6.3 and C.3 now give an explicit global tower-type bound for chordal graphs. It is not practical and must not be confused with the near threshold \(4\cdot10^{12}\).
++The stability comparison has a different scope. Our Theorem 6.1 gives an explicit bound linear in the integral deficit under chordal hypotheses, and Corollary 6.1a controls the pieces of near-optimal partitions through the same root. In [15], Theorem 1.3 gives asymptotic structural stability for a larger rooted-defect class, while Corollary 5.5 gives an \(\varepsilon\)–\(\delta\) edit-stability statement for each fixed defect. Theorem C does not automatically extend our quantitative chordal stability. As for thresholds, §6.3 and C.3 give an explicit global tower-type bound for chordal graphs. It is not practical and must not be confused with the near threshold \(4\cdot10^{12}\).
+ 
+ The term \(n/6+1/24\) in the proof of [15, Theorem 3.3] also occurs in our calibration: in both cases \((2n+1)^2/24=n^2/6+n/6+1/24\). It comes from the continuous quadratic envelope; by itself it is not the floor error in \(M(n)\). The integer profile in §6.7 also retains that floor. The optimal cores in [15, Corollary 1.2], described by the integers nearest to \((2n+1)/6\), agree with (6.4), including the tie when \(n\equiv1\pmod3\).
+ 
+@@ -1095,7 +1116,7 @@
+ 
+ ### A.1. Statements and checks
+ 
+-The common prefix `PaperIV` is omitted from the following table. For each row, `Audit.lean` prints the foundational axiom footprint; the execution on the identified freeze contains only `propext`, `Classical.choice` and `Quot.sound`. `ConeAudit.lean` examines the dependencies of the final statements. The complete list of compiled sources and their SHA-256 values is `03_reproducibility/build_v1.0_20260927/SOURCES.json`; the declaration-by-declaration claim map is part of the pending internal audit. The earlier `AUDIT_DECLARATIONS.tsv` and `AUDIT_SNAPSHOT.json` remain historical draft records, not evidence for this cut.
++The common prefix `PaperIV` is omitted from the following table. For each row, `Audit.lean` prints the foundational axiom footprint; the execution on the identified freeze contains only `propext`, `Classical.choice` and `Quot.sound`. `ConeAudit.lean` examines the dependencies of the final statements. The complete list of compiled sources and their SHA-256 values is `03_reproducibility/build_v1.0_20260927/SOURCES.json`; the declaration-by-declaration claim map is in the author's internal audit, `02_validation/01_INTERNAL_AUDITS/run_20260927_v1.0_f1769273dd2c/00_CONTROL/CLAIM_MAP.csv`. The earlier `AUDIT_DECLARATIONS.tsv` and `AUDIT_SNAPSHOT.json` remain historical draft records, not evidence for this cut.
+ 
+ | Result | Lean declaration |
+ |:--|:--|
+@@ -1114,11 +1135,11 @@
+ | Corollary 6.1a | `RootPartitionStability.chordal_partition_stability` |
+ | Identity (6.7b) | `RootPartitionStability.sum_rootPieceDefect_eq` |
+ | Corollary 6.2 | `ExtremalClassification.chordal_extremal_classification` |
+-| Proposition 6.3 | `SplitMixedGap.mixed_gap_zero` |
++| Proposition 6.3 | `SplitMixedGap.mixed_gap_zero` together with the bounded construction in `SplitCompleteSharpValue` |
+ 
+ **Table 7.** Final declarations. The module table in Section 7 locates the implementation; this table identifies the statement being audited.
+ 
+-The combined local run checked `PaperIV/Audit.lean` and `PaperIV/ConeAudit.lean` as separate targets, alongside `PaperIV` and the other targets listed in `RUN_META.json`. The exact Lean version is in `lean-toolchain`; dependency revisions are in `lake-manifest.json`. An aggregate build is an additional integration check, but does not replace inspection of statements and their axiom footprints. The source freeze is local and identified; the complete internal audit and any permanent public link remain open before publication.
++The combined local run checked `PaperIV/Audit.lean` and `PaperIV/ConeAudit.lean` as separate targets, alongside `PaperIV` and the other targets listed in `RUN_META.json`. The exact Lean version is in `lean-toolchain`; dependency revisions are in `lake-manifest.json`. An aggregate build is an additional integration check, but does not replace inspection of statements and their axiom footprints. The source freeze is local and identified; the author's internal audit is complete, while adversarial review and a permanent public link remain open.
+ 
+ **Literal definitions.** The following excerpts reproduce definitions and theorem headers, omitting proofs but not hypotheses. The first excerpt is in the namespace `SimpleGraph`; the next three are in `PaperIV.FarRounding`, with finite \(V\), decidable equality and decidable adjacency for \(G\). The last definition is in `PaperIV`. Namespace names are retained in the supplementary excerpt file.
+ 
+@@ -1170,6 +1191,20 @@
+ 
+ ### A.2. Intermediate proof contracts
+ 
++**Scope of the written proof.** The finite derivations listed below are summarized rather than fully expanded in this manuscript. The frozen Lean sources contain the corresponding proofs; a successful build checks their formal derivations, not the completeness of their exposition. The first external audit left their independent mathematical rederivation open. They remain explicit review obligations, not additional assumptions of the theorems.
++
++| Location | Derivation not fully expanded in prose |
++|:--|:--|
++| §5.1, (5.4) and (5.7) | Regularization mass, degree, palette and width estimates |
++| C.2, (3.8) and (3.10) | Discard counts and retention under the partition conventions |
++| §3.2 and C.2 | Fibre lower bounds from regular pairs and their normalization |
++| C.3, Table C.1 | Numerical domination of the nibble constants and tower iterations |
++| E.1 | Normalization bounds preceding the terminal construction |
++| E.1, (E.2b) and (E.2d) | Terminal estimates and the three-case budget |
++| D.1 | Bose/Skolem frame constructions underlying the residue table |
++
++The nibble imported from Paper III and the classical design constructions retain their stated references. The following source map locates the formal implementations; it does not replace those derivations with theorem names.
++
+ The bounded-rank nibble is reused through `PaperIIISlackNibbleAdapter.boundedRankNibbleAt`. The two-quota construction is in `MarkedQuotaSlackGate.slackMarkedQuotaNibbleAt_proved`; the pairing of triangular supports and its physical realization are in `MarkedQuotaPairing` and `JointTwoQuotaPhysical`. The joint codegree scale corresponds to `RC01CleanedGate.cleanedPacking_joint_codegree_le_of_served_patterns`. Profile mass is at most \(t^2\), not one: this is the physical normalization of `RC01PatternMassScale`.
+ 
+ For the mixed path, `VertexCopyMonotone.two_mul_F4_le_add` proves the two-direction inequality. `VertexCopyGate` selects the step and its finite potential; `GatedTerminalSplit.exists_split_terminal_symmetrizationPath` supplies the complete sequence. Local accounting is constructed in `NearH1WindowAccounts` before being imported into `NearH1Localization`. This dependency direction matches the logical order explained in Lemma 4.2.
+@@ -1180,7 +1215,7 @@
+ 
+ The additions in this revision have separate public entry points. Theorem C and its maximum are `PaperIV.DefectSharpPublication.rooted_defect_eventual` and `rooted_defect_maximum`; Proposition D.2 is `order_three_insufficient` in the same namespace. The complete account (3.11) is `E17Bridge.improved_far_loss_explicit`. Corollary 3.5 with an explicit threshold is `E17Bridge.ExplicitAssembly.farRegime_allGraphs_explicit`. Finally, `PaperIV.ExplicitThreshold.erdos81_sharp_explicit` and `erdos81_all_orders_bounded_additive` provide the global result with the tower of §6.3. These names identify declarations, not new hypotheses.
+ 
+-The B7 link is audited through `E17.ExplicitFarAudit`. It reuses the numerical constants from `E18` and `E19`, but constructs the packing through the improved cleaning: the audit requires both of its accounts in the dependency cone and excludes the old final existence theorems. This audit target passed in the combined local run for the identified source cut; the internal audit will review its recorded log and hypotheses.
++The B7 link is audited through `E17.ExplicitFarAudit`. It reuses the numerical constants from `E18` and `E19`, but constructs the packing through the improved cleaning: the audit requires both of its accounts in the dependency cone and excludes the old final existence theorems. This audit target passed in the combined local run for the identified source cut; the author's internal audit reviewed its log and hypotheses, subject to the limitations recorded in the report.
+ 
+ ### A.3. Limits of the result
+ 
+@@ -1729,8 +1764,6 @@
+ \]
+ pieces. The equality is the integer comparator identity for this choice of \(k\). Together with the eventual upper bound, it proves the maximum in Theorem C.
+ 
+-\Needspace{20\baselineskip}
+-
+ ## Acknowledgments
+ 
+ The author is deeply grateful to his wife María Paz and his children Lucas, Juan Cristóbal, Francisca, Raimundo, and Benjamín for their love, patience, and support.
+@@ -1784,3 +1817,5 @@
+ [19] R. C. Bose, “On the construction of balanced incomplete block designs,” *Annals of Eugenics* **9** (1939), 353–399. <https://doi.org/10.1111/j.1469-1809.1939.tb02219.x>.
+ 
+ [20] T. Skolem, “Some Remarks on the Triple Systems of Steiner,” *Mathematica Scandinavica* **6** (1958), 273–280. <https://tidsskrift.dk/math/article/view/10551>.
++
++[21] R. Cipollini, partial proof announcement for Erdős Problem #81, 10 August 2026. Author's summary: <https://www.erdosproblems.com/forum/thread/81/proof-claims#proof-claim-201>; linked manuscript: <https://www.overleaf.com/read/thjptfhgnmxc>. Cited for the announced subquadratic-error bound, not as an independently audited input.

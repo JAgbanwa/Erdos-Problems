@@ -1,0 +1,44 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 E17/ImprovedFarRoundingAudit.lean -o /workspace/request-project/.lake/runner/lib/lean/E17/ImprovedFarRoundingAudit.olean -i /workspace/request-project/.lake/runner/lib/lean/E17/ImprovedFarRoundingAudit.ilean
+PASS E17Bridge.faceTransfer_loss: 12962 transitive constants; axioms [propext, Classical.choice, Quot.sound]
+PASS E17Bridge.faceTransfer_weight_four: 12902 transitive constants; axioms [propext, Classical.choice, Quot.sound]
+PASS E17Bridge.profileCleanup_loss: 13350 transitive constants; axioms [propext, Classical.choice, Quot.sound]
+PASS E17Bridge.profileCleanup_zero_or_heavy: 13204 transitive constants; axioms [propext, Classical.choice, Quot.sound]
+PASS E17Bridge.profileCleanup_offCanonical_zero: 13379 transitive constants; axioms [propext,
+ Classical.choice,
+ Quot.sound]
+PASS E17Bridge.profileCleanup_triangleMass_loss: 13302 transitive constants; axioms [propext,
+ Classical.choice,
+ Quot.sound]
+PASS E17Bridge.exists_improvedGateGap_of_high_mass: 33515 transitive constants; axioms [propext,
+ Classical.choice,
+ Quot.sound]
+PASS E17Bridge.cleanedR3_loss: 13628 transitive constants; axioms [propext, Classical.choice, Quot.sound]
+PASS E17Bridge.UniformSchedule.uniformRoundingTarget_via_r3_f1: 34302 transitive constants; axioms [propext,
+ Classical.choice,
+ Quot.sound]
+PASS E17Bridge.exists_improvedGateGap_eventually: 34309 transitive constants; axioms [propext,
+ Classical.choice,
+ Quot.sound]
+PASS E17Bridge.improved_far_loss_eventually: 34313 transitive constants; axioms [propext, Classical.choice, Quot.sound]
+interpretation of E17Bridge.B7Audit._aux_E17_ImprovedFarRoundingAudit___elabRules_E17Bridge_B7Audit_commandAuditB7_1._boxed took 7.93s
+import took 4.29s
+cumulative profiling times:
+	.olean serialization 8.3ms
+	attribute application 0.575ms
+	blocked (unaccounted) 72.1ms
+	compilation (IR) 6.29ms
+	compilation (LCNF base) 28.6ms
+	compilation (LCNF mono) 7.05ms
+	elaboration 48.4ms
+	fix level params 0.0441ms
+	import 4.29s
+	initialization 40.3ms
+	instantiate metavars 0.0163ms
+	interpretation 8.19s
+	let-to-have transformation 0.953ms
+	linting 3.36ms
+	parsing 2.11ms
+	process pre-definitions 3.08ms
+	share common exprs 0.516ms
+	type checking 2.43ms
+	typeclass inference 25.1ms

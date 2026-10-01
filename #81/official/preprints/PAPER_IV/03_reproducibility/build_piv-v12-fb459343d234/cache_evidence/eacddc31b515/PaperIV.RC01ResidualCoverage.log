@@ -1,0 +1,4 @@
+$ c:\Users\jtraverso\.elan\toolchains\leanprover--lean4---v4.28.0\bin\lean.exe -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false PaperIV/RC01ResidualCoverage.lean -o C:\Users\jtraverso\e81p4\opt_build_20260927\.lake\runner\lib\lean\PaperIV\RC01ResidualCoverage.olean -i C:\Users\jtraverso\e81p4\opt_build_20260927\.lake\runner\lib\lean\PaperIV\RC01ResidualCoverage.ilean
+PaperIV/RC01ResidualCoverage.lean:162:5: warning: unused variable `R`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`

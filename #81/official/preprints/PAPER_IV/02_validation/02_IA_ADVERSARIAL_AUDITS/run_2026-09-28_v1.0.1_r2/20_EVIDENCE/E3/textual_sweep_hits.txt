@@ -1,0 +1,85 @@
+./A4S1/IndepAllAudit.lean:4:# E14: axiom audit and machine check of the import cone
+./A4S1/IndepAllAudit.lean:7:`Lean.ofReduceBool`, no new axiom).
+./A4S1/IndepAllAudit.lean:9:The `#eval` at the end walks the **transitive** import closure of this file (hence of
+./A4S1/IndepAllAudit.lean:64:#eval show CoreM Unit from do
+./A4S1/MinDegreeAll.lean:20:Layer E (unconditional): axiom target = {propext, Classical.choice, Quot.sound}.
+./A4S1/MinDegreeTerminal.lean:28:Layer E (unconditional): axiom target = {propext, Classical.choice, Quot.sound}.
+./E17/ExplicitFarAudit.lean:2:import Lean.Elab.Command
+./E17/ExplicitFarAudit.lean:7:private partial def cone (env : Environment) : List Name → NameSet → NameSet
+./E17/ExplicitFarAudit.lean:18:/-- Check the actual proof, not merely imported modules or its axiom fingerprint. -/
+./E17/ExplicitFarAudit.lean:19:elab "auditExplicitB7" : command => do
+./E17/ExplicitFarAudit.lean:51:          throwError "Unapproved axiom in {t}: {n}"
+./E17/ImprovedFarRoundingAudit.lean:2:import Lean.Elab.Command
+./E17/ImprovedFarRoundingAudit.lean:7:private partial def cone (env : Environment) : List Name → NameSet → NameSet
+./E17/ImprovedFarRoundingAudit.lean:18:elab "auditB7" : command => do
+./E17/ImprovedFarRoundingAudit.lean:41:          throwError "Unapproved axiom in {t}: {n}"
+./E19/AxiomCheck.lean:3:#eval show CoreM Unit from do
+./Nibble/AdaptiveAssembly.lean:28:sorry-free reductions
+./Nibble/AdaptiveAssembly.lean:119:/-- **The corrected adaptive oracle from the one-round oracle (PEELED, sorry-free).**  All of the
+./Nibble/AdaptiveRounds.lean:12:This file performs the two *architectural* reductions of that demand, both sorry-free:
+./Nibble/AdaptiveRounds.lean:31:Must be sorry-free and axiom-clean `[propext, Classical.choice, Quot.sound]`.
+./Nibble/Assemble.lean:11:Must be sorry-free and axiom-clean `[propext, Classical.choice, Quot.sound]`.
+./Nibble/Assembly.lean:16:Must be sorry-free and axiom-clean `[propext, Classical.choice, Quot.sound]`.
+./Nibble/Basic.lean:12:Everything here must be sorry-free and axiom-clean `[propext, Classical.choice, Quot.sound]`.
+./Nibble/BernoulliSpace.lean:13:Must be sorry-free and axiom-clean `[propext, Classical.choice, Quot.sound]`.
+./Nibble/Conflict.lean:16:Must be sorry-free and axiom-clean `[propext, Classical.choice, Quot.sound]`.
+./Nibble/Convergence.lean:15:Must be sorry-free and axiom-clean `[propext, Classical.choice, Quot.sound]`.
+./Nibble/Covered.lean:17:Must be sorry-free and axiom-clean `[propext, Classical.choice, Quot.sound]`.
+./Nibble/CoveredExpectation.lean:12:Must be sorry-free and axiom-clean `[propext, Classical.choice, Quot.sound]`.
+./Nibble/DischargeSeq.lean:14:Must be sorry-free and axiom-clean `[propext, Classical.choice, Quot.sound]`.
+./Nibble/FracNibbleLE.lean:25:Must be sorry-free and axiom-clean `[propext, Classical.choice, Quot.sound]`.
+./Nibble/Greedy.lean:14:Must be sorry-free and axiom-clean `[propext, Classical.choice, Quot.sound]`.
+./Nibble/Iteration.lean:18:Definitions come from `Nibble.Basic` / `Nibble.Round`. Must be sorry-free and axiom-clean
+./Nibble/IterationSeq.lean:21:Must be sorry-free and axiom-clean `[propext, Classical.choice, Quot.sound]`.
+./Nibble/Measurable.lean:11:Must be sorry-free and axiom-clean `[propext, Classical.choice, Quot.sound]`.
+./Nibble/Regular.lean:14:Must be sorry-free and axiom-clean `[propext, Classical.choice, Quot.sound]`.
+./Nibble/RegularMost.lean:16:Must be sorry-free and axiom-clean `[propext, Classical.choice, Quot.sound]`.
+./Nibble/Round.lean:24:`Nibble.Greedy`. Must be sorry-free and axiom-clean `[propext, Classical.choice, Quot.sound]`.
+./Nibble/RoundConflict.lean:11:Definitions come from `Nibble.Basic`, `Nibble.Round`, `Nibble.Conflict`. Must be sorry-free and
+./Nibble/RoundConflict.lean:12:axiom-clean `[propext, Classical.choice, Quot.sound]`.
+./Nibble/Survival.lean:12:`conflicts` comes from `Nibble.Conflict`. Must be sorry-free and axiom-clean
+./Nibble/Tight/CoverWeight.lean:72:/-- An edge at `v` is unsafe exactly when it meets `C` outside `v`. -/
+./Nibble/Tight/SharpRound.lean:95:Nothing in this file is proved; it is a specification.  The assembly is COMPLETE and sorry-free:
+./Nibble/TightAssembly.lean:32:Must be sorry-free and axiom-clean `[propext, Classical.choice, Quot.sound]`.
+./Nibble/TightNibble.lean:22:Must be sorry-free and axiom-clean `[propext, Classical.choice, Quot.sound]`.
+./Nibble/TightSchedule.lean:27:Must be sorry-free and axiom-clean `[propext, Classical.choice, Quot.sound]`.
+./PaperIV/A4AllDefects.lean:14:Layer E (unconditional): axiom target = {propext, Classical.choice, Quot.sound}.
+./PaperIV/A4ExceptionalBound.lean:16:Layer E (unconditional): axiom target = {propext, Classical.choice, Quot.sound}.
+./PaperIV/ChordalStructure.lean:16:sorry-free, `import Mathlib`), traído a Paper IV **sin cambios matemáticos**.  Se porta y
+./PaperIV/CliqueBagNibble.lean:48:**demostrado para todo `r ≥ 2`**, sin `sorry`, y cuya cadena a AX1 audita
+./PaperIV/CliqueTreeAudit.lean:11:Compiling this module prints the transitive axiom dependencies of every public result of the
+./PaperIV/ConeAudit.lean:31:import Lean.Elab.Command
+./PaperIV/ConeAudit.lean:62:private partial def cone (env : Environment) : List Name → NameSet → NameSet
+./PaperIV/ConeAudit.lean:167:elab "coneAudit" : command => do
+./PaperIV/DefectOneRootStar.lean:17:Layer E (unconditional): axiom target = {propext, Classical.choice, Quot.sound}.
+./PaperIV/E01Ledger.lean:38:   (`Nibble.fracNibbleWeighted_nearPerfect`, `r`-genérico, sin `sorry`). Falta el porte, y
+./PaperIV/EditRouteChordalBridge.lean:10:Layer E (unconditional): axiom target = {propext, Classical.choice, Quot.sound}.
+./PaperIV/EditRouteLemmaK.lean:12:Layer E (unconditional): axiom target = {propext, Classical.choice, Quot.sound}.
+./PaperIV/EditRouteUnconditional.lean:16:Layer E (unconditional): axiom target = {propext, Classical.choice, Quot.sound}.
+./PaperIV/ErdosKPartite.lean:13:Layer E (Mathlib only): axiom target = {propext, Classical.choice, Quot.sound}.
+./PaperIV/ExplicitThresholdAudit.lean:3:import Lean.Elab.Command
+./PaperIV/ExplicitThresholdAudit.lean:8:private partial def cone (env : Environment) : List Name → NameSet → NameSet
+./PaperIV/ExplicitThresholdAudit.lean:19:elab "auditExplicitThreshold" : command => do
+./PaperIV/ExplicitThresholdAudit.lean:40:          throwError "Unapproved axiom in {t}: {n}"
+./PaperIV/FarRounding.lean:17:any historical aggregate source, and it contains no `axiom`, `sorry`, `admit` or
+./PaperIV/FarRounding.lean:18:`implemented_by`.
+./PaperIV/FarRoundingBatchBridge.lean:11:It contains three things, all `Mathlib`-only and `sorry`-free, and it makes **no
+./PaperIV/NibblePort.lean:28:  III**, para todo `r ≥ 2`, sin `sorry`, con la cadena a AX1 auditando
+./PaperIV/NibblePort.lean:100:**Ésta es la que Paper III demuestra**, sin `sorry`, para todo `r ≥ 2`.  `WeightedNibbleAt`
+./PaperIV/PublicationIncrementAudit.lean:2:import Lean.Elab.Command
+./PaperIV/PublicationIncrementAudit.lean:16:private partial def cone (env : Environment) : List Name → NameSet → NameSet
+./PaperIV/PublicationIncrementAudit.lean:37:elab "auditPublicationIncrement" : command => do
+./PaperIV/PublicationIncrementAudit.lean:49:          throwError "Unapproved axiom in {t}: {n}"
+./PaperIV/PublicationIncrementAudit.lean:58:  logInfo "Publication increment: constant-cone, axiom whitelist and import checks PASSED."
+./PaperIV/RegularizedRootGoal.lean:43:2. **Sin `sorry`, sin `admit`, sin `axiom` propio, sin `native_decide`.** El resultado tiene que
+./PaperIV/SplitLPToPhysicalLoads.lean:8:This is the first non-opaque coupling of the two split modules: the scalar
+./PaperIV/SplitUniformIncidence.lean:15:and it uses no `sorry`, `admit`, `axiom`, `@[implemented_by]` or
+./PaperIV/SplitUniformIncidence.lean:16:`native_decide`.
+./PaperIVEditorial/ConstructorBudgetAudit.lean:2:import Lean.Elab.Command
+./PaperIVEditorial/ConstructorBudgetAudit.lean:10:private partial def cone (env : Environment) : List Name → NameSet → NameSet
+./PaperIVEditorial/ConstructorBudgetAudit.lean:21:elab "auditConstructorBudget" : command => do
+./PaperIVEditorial/ConstructorBudgetAudit.lean:33:          throwError "Unapproved axiom in {t}: {n}"
+./PaperIVEditorial/ConstructorBudgetAudit.lean:35:    logInfo m!"PASS {t}: {used.length} transitive constants; axiom whitelist passed"
+./PaperIVEditorial/ConstructorBudgetAudit.lean:42:  logInfo "Constructor budget: constant-cone, axiom and historical-import checks PASSED."
+./ThreeRegime/AxiomCheck.lean:12:`[propext, Classical.choice, Quot.sound]`: ni `sorry`, ni axiomas propios, ni
+./ThreeRegime/AxiomCheck.lean:13:`native_decide`, ni `implemented_by`.

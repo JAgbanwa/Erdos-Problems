@@ -1,0 +1,79 @@
+{
+ "sealed_utc": "2026-10-01T15:18:07.484996+00:00",
+ "gate_zips": [
+  {
+   "zip": "GATE_E0_run_v1.22_r3.zip",
+   "sha256": "01b039fa7455edcf76e7f22d0e429353886fa78b2e7a8e5c057130e5e9307f24",
+   "members": 6,
+   "bytes": 335366
+  },
+  {
+   "zip": "GATE_E1_run_v1.22_r3.zip",
+   "sha256": "bc29972ea6744d0a28bf6c712d38956f653914d4d24e03a0659e53e6ed6723d4",
+   "members": 5,
+   "bytes": 333574
+  },
+  {
+   "zip": "GATE_E2_run_v1.22_r3.zip",
+   "sha256": "4f9ea3593708b4790779b0a708628807a5308b33bfab58e42d775c9644ca6ea0",
+   "members": 4,
+   "bytes": 671252
+  },
+  {
+   "zip": "GATE_E3_run_v1.22_r3.zip",
+   "sha256": "d88d6b4203ac56e6d43904b7c085a1ff7e1445cbf04a323c5e94e26581255be8",
+   "members": 4,
+   "bytes": 327841
+  },
+  {
+   "zip": "GATE_E4_run_v1.22_r3.zip",
+   "sha256": "342e2e4f3174df61f5513254e9715cc133fa1e38e17d6f9ea22659ec35787632",
+   "members": 5,
+   "bytes": 903740
+  },
+  {
+   "zip": "GATE_E5_run_v1.22_r3.zip",
+   "sha256": "0a9f7409d5ee162c2ff5f69d912845314867bb11723f3b5c687a4ae87bed10e4",
+   "members": 4,
+   "bytes": 547560
+  },
+  {
+   "zip": "GATE_E6_run_v1.22_r3.zip",
+   "sha256": "1e659a62ae54154ce77d8bbccbcc0fb77dce10f212dd48b7b57d6d3e834e4e95",
+   "members": 65,
+   "bytes": 25159504
+  },
+  {
+   "zip": "GATE_E7_run_v1.22_r3.zip",
+   "sha256": "729c063724ba6edd11f6895d4cf3c045e04065510fc40ecc023753071a818352",
+   "members": 4,
+   "bytes": 326812
+  },
+  {
+   "zip": "GATE_E8_run_v1.22_r3.zip",
+   "sha256": "2ac6a2832e6d2fcc278a259c76d3839a5746c397046d173f58830adc41022c60",
+   "members": 11,
+   "bytes": 758016
+  }
+ ],
+ "final_zip": {
+  "zip": "EXTERNAL_REVALIDATION_run_v1.22_r3.zip",
+  "sha256": "8ca5a69a1fdbb96823bf415de8de89265d14a8d2897acfed01a86c2a70fd3ddd",
+  "members": 166,
+  "bytes": 32550716
+ },
+ "manifest_sha256": "dfc9c01b64e2a83063e31b4cd6431ed759177e9bb8c1c9e6eaafb5913222810e",
+ "manifest_files": 165,
+ "historical_packages_linked_not_duplicated": {
+  "run_v1.2_r1": "886ed7f033bca42a530944d48f91ef45e79f6be4cb0d74080c5d8d6efc4f5e2b",
+  "run_v1.21_r1": "11659a97b0a4f2bffadb6968159cc5b66562b4470053939a45c1e8a42db7a638",
+  "run_v1.22_r1": "9c74d673206ab17a5b4586209ececca30536f1768fcc91ffdd39db551193a1fa",
+  "run_v1.22_r2": "626571be12839325a918109b446fe3e6f8d446d7f5c5911c6407af2f1e480684"
+ },
+ "excluded": [
+  "05_BUILD (compiled objects, extracted sources)",
+  "shared Mathlib/packages",
+  "runtimes",
+  "credentials (none present)"
+ ]
+}

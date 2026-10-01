@@ -1,0 +1,126 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+\documentclass[
+]{article}
+\usepackage{xcolor}
+\usepackage{amsmath,amssymb}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math} % this also loads fontspec
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+\usepackage{lmodern}
+\ifPDFTeX\else
+  % xetex/luatex font selection
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\usepackage{bookmark}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same}
+% fallback for those not using the hyperref driver hyperxmp:
+\makeatletter
+\@ifundefined{xmpquote}{\newcommand{\xmpquote}[1]{#1}}{}
+\makeatother
+\hypersetup{
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+
+\author{}
+\date{}
+
+\begin{document}
+
+\section{Gate E1 report --- run\_v1.21\_r1 (Paper IV
+v1.21)}\label{gate-e1-report--run_v121_r1-paper-iv-v121}
+
+Verdict: \textbf{PASS (1 MINOR)}. Evidence: \texttt{20\_EVIDENCE/E1/}.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\subsection{E1 --- Claims revalidation
+(v1.21)}\label{e1--claims-revalidation-v121}
+
+Basis: the auditor\textquotesingle s diff v1.2 → v1.21 (EN and ES), the
+E1 claim map of run\_v1.2\_r1 (reused for unchanged statements), and the
+E6 automated parity results.
+
+\begin{itemize}
+\item
+  \textbf{Statements, hypotheses, constants, tags and Lean blocks:}
+  unchanged. Every theorem block (A, B, C, C′, 3.1, 3.5, 5.0, 6.1, 6.1a,
+  6.2, 6.3, 6.3a, 6.4, 6.5, 6.6, D.1--D.3, F.3a/b, G.1) is identical.
+  The display formulas are identical except for the declared subscripts
+  N\_far (formerly N\_lej, N\_lejano), e\_cross, x\^{}clean and
+  E\_covered, plus the defined abbreviation mis\_c. These renamings are
+  semantically neutral: each denotes the same object as before, and
+  N\_far was already the name used in (C.4) and (F.1). The run\_v1.2\_r1
+  claim map therefore stands.
+\item
+  \textbf{Abstract / Theorem A remark:} now cites {[}5{]} and {[}15,
+  Cor. 1.2{]} for the all-orders unrestricted bound. Accurate.
+\item
+  \textbf{Front-matter status and §7 / A.1 status paragraphs:} they say
+  the v1.2 external run was INCONCLUSIVE overall with formal
+  reproduction PASS (607 modules, 19 targets, 50-module annex, 607
+  byte-identical objects), and that v1.21 needs its own review. Accurate
+  per run\_v1.2\_r1.
+\item
+  \textbf{New expository passages} (C.2, C.3, E.1): they introduce no
+  new claim beyond the derivations reviewed in E2.
+\item
+  \textbf{A.2 scope paragraph:} "the remaining tower iteration is a
+  symbolic comparison with the recurrence in §6.3". §6.3 contains no
+  recurrence, only T and h, so this cross-reference is inaccurate (part
+  of A2-4 / X-05r).
+\item
+  \textbf{NEW-01 (MINOR):} ordinary words have been set as code
+  identifiers in headings, apparently by the monospacing pass:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    EN §5.1 heading "\texttt{Regularization} on the original graph" and
+    the A.2 table row "\texttt{Regularization} mass, degree, \ldots". In
+    v1.2 both were plain words.
+  \item
+    ES Lemma 3.2 heading "\texttt{Nibble} de rango acotado\ldots",
+    whereas the EN heading says "Bounded-rank nibble" in plain text.
+  \end{itemize}
+
+  The headings then read as if they referred to the Lean module
+  \texttt{PaperIV.Regularization} or the library \texttt{Nibble}. It
+  also creates an EN/ES heading inconsistency. Conversely, "bounded gain
+  function from Model" lost the backticks it had on \texttt{Model} in
+  v1.2 (§7.2), although it refers to the Lean namespace \texttt{Model}
+  (OBSERVATION).
+\end{itemize}
+
+\textbf{E1 verdict: PASS with one MINOR finding (NEW-01).} No semantic
+change to any claim.
+
+\end{document}

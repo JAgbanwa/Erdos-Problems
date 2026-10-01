@@ -1,0 +1,78 @@
+{
+  "started_utc": "2026-09-22T01:23:41.195770+00:00",
+  "mode": "author-side cache-assisted Lake rebuild; not independent clean-room",
+  "toolchain": "leanprover/lean4:v4.28.0",
+  "snapshot_sha256": "4f6ba1b40ace1d926ae5fab7490c4bc0dc3f236dea28640de4cee0166da60afa",
+  "commands": [
+    {
+      "name": "build",
+      "command": [
+        "lake",
+        "build",
+        "PaperIV",
+        "PaperIV.Audit",
+        "PaperIV.ConeAudit",
+        "BoundedCliqueGap.AxiomCheck"
+      ],
+      "exit_code": 0,
+      "log_sha256": "feaae48c9915872a7e2b3e95827789e51ec56a2f0b2df9d68012782a233e56bd"
+    },
+    {
+      "name": "axioms",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "PaperIV/Audit.lean"
+      ],
+      "exit_code": 0,
+      "log_sha256": "331d472372b2c6f4f6041f50281f1cc338627bc3c1f564c9c43626fc4d0b76ae"
+    },
+    {
+      "name": "cones",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "PaperIV/ConeAudit.lean"
+      ],
+      "exit_code": 0,
+      "log_sha256": "895209d68745722f2c6e1f538a8d8f759984b9ffea11c5289fafcfe82395b45a"
+    },
+    {
+      "name": "supplement",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "C:\\Users\\jtraverso\\e81p4-publish\\preprints\\PAPER_IV\\03_reproducibility\\recorded_lean_audits\\SupplementAudit.lean"
+      ],
+      "exit_code": 0,
+      "log_sha256": "9503678633e76ec1e8a95dbee1514e6eea503c072ef2128d5ca0175368d3cc7f"
+    },
+    {
+      "name": "bounded",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "BoundedCliqueGap/AxiomCheck.lean"
+      ],
+      "exit_code": 0,
+      "log_sha256": "f22883cbd7fc7df04d585f7cda220d5e68ec91aba2706b97fb198ca833aa6d53"
+    },
+    {
+      "name": "public_contracts",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "C:\\Users\\jtraverso\\e81p4-publish\\preprints\\PAPER_IV\\03_reproducibility\\PublicContracts.lean"
+      ],
+      "exit_code": 0,
+      "log_sha256": "0ab87175f41fea912e4a6dbc4fe6688c02443bead1b5f5f140e23729b14319d7"
+    }
+  ],
+  "sources_unchanged": true,
+  "updated_utc": "2026-09-22T01:56:21.440079+00:00"
+}

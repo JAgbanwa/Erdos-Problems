@@ -1,0 +1,23 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 PaperV/GalvinClass.lean -o /workspace/request-project/.lake/runner/lib/lean/PaperV/GalvinClass.olean -i /workspace/request-project/.lake/runner/lib/lean/PaperV/GalvinClass.ilean
+import took 2.63s
+cumulative profiling times:
+	.olean serialization 70.6ms
+	attribute application 0.753ms
+	blocked (unaccounted) 16.8ms
+	compilation (IR) 0.532ms
+	compilation (LCNF base) 0.912ms
+	compilation (LCNF mono) 0.54ms
+	elaboration 147ms
+	fix level params 0.71ms
+	import 2.63s
+	initialization 37.1ms
+	instantiate metavars 0.497ms
+	interpretation 209ms
+	let-to-have transformation 1.12ms
+	linting 9.71ms
+	parsing 9.11ms
+	process pre-definitions 6.44ms
+	share common exprs 2.49ms
+	tactic execution 10.8ms
+	type checking 25.1ms
+	typeclass inference 325ms

@@ -1,0 +1,24 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 PaperIV/TrianglePairingDefs.lean -o /workspace/request-project/.lake/runner/lib/lean/PaperIV/TrianglePairingDefs.olean -i /workspace/request-project/.lake/runner/lib/lean/PaperIV/TrianglePairingDefs.ilean
+import took 3.15s
+cumulative profiling times:
+	.olean serialization 51.2ms
+	attribute application 0.0856ms
+	compilation (IR) 0.796ms
+	compilation (LCNF base) 1.38ms
+	compilation (LCNF mono) 1.23ms
+	congr simp thm 1.23ms
+	elaboration 27.4ms
+	fix level params 0.342ms
+	import 3.15s
+	initialization 37.3ms
+	instantiate metavars 0.746ms
+	interpretation 203ms
+	let-to-have transformation 0.0965ms
+	linting 8.69ms
+	parsing 4.95ms
+	process pre-definitions 3.61ms
+	share common exprs 0.805ms
+	simp 4.25ms
+	tactic execution 24.8ms
+	type checking 8.3ms
+	typeclass inference 21.7ms

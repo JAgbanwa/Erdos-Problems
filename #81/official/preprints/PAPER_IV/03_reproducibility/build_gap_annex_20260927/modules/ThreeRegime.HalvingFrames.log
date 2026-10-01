@@ -1,0 +1,26 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 ThreeRegime/HalvingFrames.lean -o /workspace/request-project/.lake/runner/lib/lean/ThreeRegime/HalvingFrames.olean -i /workspace/request-project/.lake/runner/lib/lean/ThreeRegime/HalvingFrames.ilean
+import took 3.52s
+cumulative profiling times:
+	.olean serialization 93.3ms
+	attribute application 1.58ms
+	compilation (IR) 3.75ms
+	compilation (LCNF base) 12.4ms
+	compilation (LCNF mono) 4.29ms
+	congr simp thm 3.05ms
+	elaboration 98.6ms
+	fix level params 0.692ms
+	import 3.52s
+	initialization 41.9ms
+	instantiate metavars 4.52ms
+	interpretation 382ms
+	let-to-have transformation 0.383ms
+	linting 35.1ms
+	norm_num 3.09ms
+	parsing 17.6ms
+	process pre-definitions 26ms
+	ring 31.2ms
+	share common exprs 5.42ms
+	simp 25.4ms
+	tactic execution 397ms
+	type checking 794ms
+	typeclass inference 970ms

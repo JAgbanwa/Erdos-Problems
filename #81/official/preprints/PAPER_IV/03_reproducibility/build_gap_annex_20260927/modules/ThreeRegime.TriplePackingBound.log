@@ -1,0 +1,24 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 ThreeRegime/TriplePackingBound.lean -o /workspace/request-project/.lake/runner/lib/lean/ThreeRegime/TriplePackingBound.olean -i /workspace/request-project/.lake/runner/lib/lean/ThreeRegime/TriplePackingBound.ilean
+import took 3.46s
+cumulative profiling times:
+	.olean serialization 57.8ms
+	attribute application 0.0558ms
+	compilation (IR) 0.465ms
+	compilation (LCNF base) 0.539ms
+	compilation (LCNF mono) 0.568ms
+	congr simp thm 0.755ms
+	elaboration 21.9ms
+	fix level params 0.306ms
+	import 3.46s
+	initialization 37.4ms
+	instantiate metavars 0.64ms
+	interpretation 209ms
+	let-to-have transformation 0.0781ms
+	linting 6.1ms
+	parsing 4.08ms
+	process pre-definitions 3.41ms
+	share common exprs 0.951ms
+	simp 7.4ms
+	tactic execution 93ms
+	type checking 202ms
+	typeclass inference 173ms

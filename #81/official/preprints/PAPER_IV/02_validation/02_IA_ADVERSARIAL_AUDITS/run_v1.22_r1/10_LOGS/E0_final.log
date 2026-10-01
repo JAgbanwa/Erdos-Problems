@@ -1,0 +1,110 @@
+{
+ "target_sha256": "cbe0fd6e8e8c3f70faf91b02d1e0e8da08d201ed9d87f262a12de1e6115f8119",
+ "target_sidecar_match": true,
+ "candidate_manifest": {
+  "sha_match": true,
+  "bytes_match": true
+ },
+ "candidate_package": {
+  "sha_match": true,
+  "bytes_match": true
+ },
+ "mandate": {
+  "sha_match": true,
+  "bytes_match": true
+ },
+ "frozen_source_manifest": {
+  "sha_match": true,
+  "bytes_match": true
+ },
+ "earlier_evidence": {
+  "02_validation/02_IA_ADVERSARIAL_AUDITS/run_v1.21_r1/40_PACKAGE/EXTERNAL_REVALIDATION_run_v1.21_r1.zip": {
+   "sha_match": true,
+   "bytes_match": true
+  },
+  "02_validation/02_IA_ADVERSARIAL_AUDITS/run_v1.2_r1/40_PACKAGE/EXTERNAL_AUDIT_run_v1.2_r1.zip": {
+   "sha_match": true,
+   "bytes_match": true
+  },
+  "05_formalization/LEAN_SOURCE_piv-v12-fb459343d234.zip": {
+   "sha_match": true,
+   "bytes_match": true
+  },
+  "05_formalization/LEAN_BOUNDED_GAP_ANNEX_v1.0.zip": {
+   "sha_match": true,
+   "bytes_match": true
+  }
+ },
+ "ms_manifest_files": 223,
+ "ms_manifest_vs_dir_bad": [],
+ "ms_manifest_meta": {
+  "revision": "v1.22-r1",
+  "created_utc": "2026-10-01T09:51:38.368113+00:00",
+  "status": "READY_FOR_REVALIDATION_NOT_EXTERNALLY_PASSED",
+  "lean_source_manifest": {
+   "path": "03_reproducibility/build_piv-v12-fb459343d234/SOURCE_MANIFEST.json",
+   "bytes": 82477,
+   "sha256": "fb459343d234f968d7d32eff1491ea8a09aa2e135b313a80623012e7449042f5"
+  },
+  "prior_packages_verified_hash_and_crc": [
+   {
+    "path": "02_validation/02_IA_ADVERSARIAL_AUDITS/run_v1.21_r1/40_PACKAGE/EXTERNAL_REVALIDATION_run_v1.21_r1.zip",
+    "bytes": 59792841,
+    "sha256": "11659a97b0a4f2bffadb6968159cc5b66562b4470053939a45c1e8a42db7a638"
+   },
+   {
+    "path": "02_validation/02_IA_ADVERSARIAL_AUDITS/run_v1.2_r1/40_PACKAGE/EXTERNAL_AUDIT_run_v1.2_r1.zip",
+    "bytes": 42489289,
+    "sha256": "886ed7f033bca42a530944d48f91ef45e79f6be4cb0d74080c5d8d6efc4f5e2b"
+   },
+   {
+    "path": "05_formalization/LEAN_SOURCE_piv-v12-fb459343d234.zip",
+    "bytes": 1817716,
+    "sha256": "cb2741454380736ffe01b59933057b5079fa9f865d5bbdd3f67534bf808a62e6"
+   },
+   {
+    "path": "05_formalization/LEAN_BOUNDED_GAP_ANNEX_v1.0.zip",
+    "bytes": 103055,
+    "sha256": "2847a422865e06880d457ea806aae5b9f749d22359eff325349c09c01cb4837d"
+   }
+  ],
+  "exclusions": [
+   "__pycache__",
+   "*.pyc",
+   "*.aux",
+   "seal manifest and sidecar (included in ZIP separately)",
+   "ZIP and its sidecar"
+  ],
+  "lean_executed": false
+ },
+ "ms_sidecar": true,
+ "pkg_sidecar": true,
+ "zip_testzip": null,
+ "zip_members": 225,
+ "zip_unsafe": [],
+ "zip_only": [
+  "MANUSCRIPT_REVIEW_MANIFEST.json",
+  "MANUSCRIPT_REVIEW_MANIFEST.json.sha256"
+ ],
+ "manifest_only_not_in_zip": [],
+ "zip_hash_mismatch": [],
+ "other_zips_in_dir": [],
+ "six_in_manifest": true,
+ "source_entries": 615,
+ "source_mismatch": [],
+ "source_dir_extra_files": [],
+ "run_v1.2_r1": {
+  "manifest_files": 1097,
+  "changed_on_disk": [],
+  "zip_sidecar": true,
+  "zip_testzip": null,
+  "zip_members": 1098
+ },
+ "run_v1.21_r1": {
+  "manifest_files": 340,
+  "changed_on_disk": [],
+  "zip_sidecar": true,
+  "zip_testzip": null,
+  "zip_members": 341
+ }
+}

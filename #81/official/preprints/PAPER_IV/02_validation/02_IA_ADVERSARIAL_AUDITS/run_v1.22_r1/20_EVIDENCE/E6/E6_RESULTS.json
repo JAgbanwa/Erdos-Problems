@@ -1,0 +1,6 @@
+{"gate": "E6", "verdict": "PASS_WITH_FINDINGS",
+ "pages_inspected": {"en": 72, "es": 73, "log": "PAGE_INSPECTION_LOG.csv", "status_counts": {"VIEWED_OK": 138, "VIEWED_FINDING_X15": 7, "VIEWED_FINDING_NEW01": 1}},
+ "zoom_130dpi_viewed": ["en_p026","en_p050","en_p051","en_p065","en_p071","es_p026","es_p051","es_p052","es_p067","es_p072"],
+ "parity": {"displays_en": 237, "displays_es": 237, "added_vs_v121": 7, "removed_vs_v121": 0, "tags_equal_v121": true, "lean_blocks_equal_v121": true, "en_es_sequence_equal": true},
+ "items": {"X-12": "RESOLVED", "NEW-01": "PARTIAL (ES 7.2 'Model' plain; MD l.1203)", "X-15": "PARTIAL (figure fixed; 12 'matching(s)' + 1 'packing' in ES prose remain)", "NEW-02": "RESOLVED", "Preference_Labs": "RESOLVED", "X-27": "PRESERVED"},
+ "author_claim_discrepancy": "RESPONSE_TO_REVALIDATION_v1.22.md X-15 row claims prose translated; NEW-01 row 'Model restored' holds only for EN"}

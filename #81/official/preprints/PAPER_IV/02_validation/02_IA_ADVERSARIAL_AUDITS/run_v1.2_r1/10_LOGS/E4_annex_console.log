@@ -1,0 +1,61 @@
+PASS 1 50 BoundedCliqueGap.Defs 9.3s exit 0
+PASS 2 50 BoundedCliqueGap.Ladder 9.1s exit 0
+PASS 3 50 BoundedCliqueGap.QPES 8.5s exit 0
+PASS 4 50 PaperIV.ChordalStructure 98.0s exit 0
+PASS 5 50 PaperIV.CliqueTree.Basic 10.2s exit 0
+PASS 6 50 PaperIV.CliqueTree.PEO 27.2s exit 0
+PASS 7 50 PaperIV.CliqueTree.Helly 23.7s exit 0
+PASS 8 50 PaperIV.CliqueTree.Characterization 22.9s exit 0
+PASS 9 50 PaperIV.CliqueTree.Counting 23.1s exit 0
+PASS 10 50 PaperIV.CliqueTree.Maximal 22.9s exit 0
+PASS 11 50 PaperIV.CliqueTree.MaximalBridge 24.1s exit 0
+PASS 12 50 PaperIV.CliqueTree.Separator 13.8s exit 0
+PASS 13 50 PaperIV.CliqueTree 10.2s exit 0
+PASS 14 50 BoundedCliqueGap.PEOBridge 10.3s exit 0
+PASS 15 50 BoundedCliqueGap.SteinerTools 8.7s exit 0
+PASS 16 50 BoundedCliqueGap.Bose 9.6s exit 0
+PASS 17 50 BoundedCliqueGap.CompleteSplit 8.5s exit 0
+PASS 18 50 BoundedCliqueGap.CSPorts 9.6s exit 0
+PASS 19 50 PaperIV.Vizing 10.8s exit 0
+PASS 20 50 BoundedCliqueGap.GVizing 9.8s exit 0
+PASS 21 50 BoundedCliqueGap.BoseSub 11.3s exit 0
+PASS 22 50 BoundedCliqueGap.CSPortRich 8.8s exit 0
+PASS 23 50 BoundedCliqueGap.CSPortFull 10.9s exit 0
+PASS 24 50 BoundedCliqueGap.CSLower 13.8s exit 0
+PASS 25 50 BoundedCliqueGap.NuAdd 8.7s exit 0
+PASS 26 50 BoundedCliqueGap.Flower 10.5s exit 0
+PASS 27 50 BoundedCliqueGap.DualCeiling 11.0s exit 0
+PASS 28 50 BoundedCliqueGap.FlowerLP 10.9s exit 0
+PASS 29 50 BoundedCliqueGap.FlowerFull 22.0s exit 0
+PASS 30 50 BoundedCliqueGap.Shell 19.4s exit 0
+PASS 31 50 BoundedCliqueGap.JRelative 10.7s exit 0
+PASS 32 50 BoundedCliqueGap.Transport 10.2s exit 0
+PASS 33 50 BoundedCliqueGap.LInterface 24.4s exit 0
+PASS 34 50 BoundedCliqueGap.NChain 24.5s exit 0
+PASS 35 50 BoundedCliqueGap.QTree 22.9s exit 0
+PASS 36 50 BoundedCliqueGap.QTreePresentation 14.1s exit 0
+PASS 37 50 BoundedCliqueGap.QChordalTree 10.8s exit 0
+PASS 38 50 BoundedCliqueGap.TTreeLift 10.2s exit 0
+PASS 39 50 BoundedCliqueGap.MTLift 10.6s exit 0
+PASS 40 50 BoundedCliqueGap.KDonation 10.5s exit 0
+PASS 41 50 BoundedCliqueGap.KShellFull 10.9s exit 0
+PASS 42 50 BoundedCliqueGap.TResidual 10.5s exit 0
+PASS 43 50 BoundedCliqueGap.TTree 19.1s exit 0
+PASS 44 50 BoundedCliqueGap.THPartition 19.3s exit 0
+PASS 45 50 BoundedCliqueGap.THForeign 22.0s exit 0
+PASS 46 50 BoundedCliqueGap.THMaster 11.1s exit 0
+PASS 47 50 BoundedCliqueGap.Gap 10.6s exit 0
+PASS 48 50 PaperIV.SplitUniformIncidence 12.9s exit 0
+PASS 49 50 BoundedCliqueGap.SplitBridge 10.0s exit 0
+PASS 50 50 BoundedCliqueGap.AxiomCheck 71.4s exit 0
+{
+ "finished_utc": "2026-09-30T22:03:18.712369+00:00",
+ "modules_planned": 50,
+ "pass": 50,
+ "fail_or_blocked": [],
+ "wall_s_total_this_invocation": 844.7,
+ "targets_status": {
+  "BoundedCliqueGap.AxiomCheck": "PASS"
+ }
+}
+EXIT 0

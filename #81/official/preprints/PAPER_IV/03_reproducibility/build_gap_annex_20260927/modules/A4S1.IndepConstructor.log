@@ -1,0 +1,27 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 A4S1/IndepConstructor.lean -o /workspace/request-project/.lake/runner/lib/lean/A4S1/IndepConstructor.olean -i /workspace/request-project/.lake/runner/lib/lean/A4S1/IndepConstructor.ilean
+instantiate metavars took 142ms
+type checking took 133ms
+type checking took 146ms
+import took 3.31s
+.olean serialization took 112ms
+cumulative profiling times:
+	.olean serialization 112ms
+	attribute application 0.0175ms
+	congr simp thm 4.82ms
+	elaboration 61.3ms
+	fix level params 3.33ms
+	import 3.31s
+	initialization 35.3ms
+	instantiate metavars 142ms
+	interpretation 490ms
+	let-to-have transformation 0.0625ms
+	linting 77.7ms
+	norm_num 0.652ms
+	parsing 17.4ms
+	process pre-definitions 31ms
+	ring 4.43ms
+	share common exprs 12.1ms
+	simp 54.4ms
+	tactic execution 1.03s
+	type checking 569ms
+	typeclass inference 579ms

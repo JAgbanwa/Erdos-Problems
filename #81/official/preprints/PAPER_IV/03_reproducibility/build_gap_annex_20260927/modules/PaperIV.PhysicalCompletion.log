@@ -1,0 +1,25 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 PaperIV/PhysicalCompletion.lean -o /workspace/request-project/.lake/runner/lib/lean/PaperIV/PhysicalCompletion.olean -i /workspace/request-project/.lake/runner/lib/lean/PaperIV/PhysicalCompletion.ilean
+import took 2.82s
+cumulative profiling times:
+	.olean serialization 53.3ms
+	attribute application 0.237ms
+	blocked (unaccounted) 560ms
+	compilation (IR) 0.962ms
+	compilation (LCNF base) 1.8ms
+	compilation (LCNF mono) 1.22ms
+	congr simp thm 8.64ms
+	elaboration 101ms
+	fix level params 2.41ms
+	import 2.82s
+	initialization 40ms
+	instantiate metavars 6.05ms
+	interpretation 264ms
+	let-to-have transformation 0.35ms
+	linting 43ms
+	parsing 11.5ms
+	process pre-definitions 10.9ms
+	share common exprs 2.66ms
+	simp 149ms
+	tactic execution 170ms
+	type checking 54.4ms
+	typeclass inference 174ms

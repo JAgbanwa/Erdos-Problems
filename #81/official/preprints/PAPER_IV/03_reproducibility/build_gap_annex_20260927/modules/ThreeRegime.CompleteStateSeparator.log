@@ -1,0 +1,21 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 ThreeRegime/CompleteStateSeparator.lean -o /workspace/request-project/.lake/runner/lib/lean/ThreeRegime/CompleteStateSeparator.olean -i /workspace/request-project/.lake/runner/lib/lean/ThreeRegime/CompleteStateSeparator.ilean
+import took 2.63s
+cumulative profiling times:
+	.olean serialization 28.2ms
+	attribute application 0.035ms
+	congr simp thm 0.824ms
+	elaboration 10.3ms
+	fix level params 0.119ms
+	import 2.63s
+	initialization 37.8ms
+	instantiate metavars 0.145ms
+	interpretation 147ms
+	let-to-have transformation 0.0472ms
+	linting 2.6ms
+	parsing 1.98ms
+	process pre-definitions 1.03ms
+	share common exprs 0.252ms
+	simp 9.17ms
+	tactic execution 8.71ms
+	type checking 2.25ms
+	typeclass inference 11.8ms

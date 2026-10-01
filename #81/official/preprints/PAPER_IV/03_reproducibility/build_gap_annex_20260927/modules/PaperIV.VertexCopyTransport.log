@@ -1,0 +1,27 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 PaperIV/VertexCopyTransport.lean -o /workspace/request-project/.lake/runner/lib/lean/PaperIV/VertexCopyTransport.olean -i /workspace/request-project/.lake/runner/lib/lean/PaperIV/VertexCopyTransport.ilean
+import took 3.75s
+.olean serialization took 112ms
+cumulative profiling times:
+	.olean serialization 112ms
+	attribute application 0.248ms
+	compilation (IR) 0.662ms
+	compilation (LCNF base) 1.18ms
+	compilation (LCNF mono) 0.705ms
+	congr simp thm 4.49ms
+	elaboration 134ms
+	fix level params 2.48ms
+	import 3.75s
+	initialization 42.6ms
+	instantiate metavars 8.46ms
+	interpretation 481ms
+	let-to-have transformation 0.552ms
+	linting 54.3ms
+	norm_num 1.97ms
+	parsing 22.6ms
+	process pre-definitions 20.4ms
+	ring 7.3ms
+	share common exprs 8.66ms
+	simp 64.2ms
+	tactic execution 261ms
+	type checking 52.8ms
+	typeclass inference 494ms

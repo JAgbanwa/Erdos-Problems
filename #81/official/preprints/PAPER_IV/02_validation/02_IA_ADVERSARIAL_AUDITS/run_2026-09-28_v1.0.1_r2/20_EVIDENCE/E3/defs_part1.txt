@@ -1,0 +1,90 @@
+====================================================================================================
+QUERY IntegralStability.gamma hits 1
+--- PaperIV/IntegralStability.lean:70
+def gamma : ℚ := PaperIV.NearH1Calibration.eta / 4
+
+theorem gamma_pos : 0 < gamma := by
+====================================================================================================
+QUERY splitBaseline hits 1
+--- PaperIV/SharpEnvelope.lean:16
+def splitBaseline (n p : ℚ) : ℚ := p * (n - p) - p * (p - 1) / 2
+
+theorem sharpEnvelope_sub_splitBaseline (n p : ℚ) :
+    sharpEnvelope n - splitBaseline n p = (6 * p - 2 * n - 1) ^ 2 / 24 := by
+====================================================================================================
+QUERY targetSize hits 2
+--- PaperIV/FarRounding.lean:667
+def targetSize (n : ℕ) : ℕ := n * (n + 1) / 6
+
+/-- **Far-regime closure, conditional on `FarRoundingAt η`.**  Every finite reduction
+is internal: only the transfer hypothesis is external, and it appears explicitly in
+the statement. -/
+theorem farRegime_cliquePartition {η : ℚ} (hη : 0 ≤ η) (h : FarRoundingAt η) :
+    ∃ N : ℕ, ∀ n : ℕ, N ≤ n → ∀ (G : SimpleGraph (Fin n)) [DecidableRel G.Adj],
+      IsChordal G → ∀ w : ℚ, CertifiedFractionalOptimum G w →
+        (G.edgeFinset.card : ℚ) - w < (n : ℚ) ^ 2 / 6 - η * (n : ℚ) ^ 2 →
+          ∃ Q : CliquePartition G, Q.OrderAtMost 4 ∧ Q.size ≤ targetSize n := by
+--- PaperIV/TargetEnvelope.lean:13
+def targetSize (n : ℕ) : ℕ := n * (n + 1) / 6
+
+theorem targetSize_cast_le_continuous (n : ℕ) :
+    (targetSize n : ℚ) ≤ (n : ℚ) * ((n : ℚ) + 1) / 6 := by
+====================================================================================================
+QUERY RootVocab.outsideEdges hits 1
+--- PaperIV/RootVocabulary.lean:29
+noncomputable def outsideEdges (G : SimpleGraph V) [DecidableRel G.Adj]
+    (P : Finset V) : Finset (Sym2 V) := by
+====================================================================================================
+QUERY RootVocab.missingIncidences hits 1
+--- PaperIV/RootVocabulary.lean:67
+noncomputable def missingIncidences (G : SimpleGraph V) [DecidableRel G.Adj]
+    (P : Finset V) : ℕ :=
+====================================================================================================
+QUERY EditMetric.editDist hits 1
+--- PaperIV/EditMetric.lean:37
+def editDist (A B : Finset V) : ℕ := (A ∆ B).card
+
+@[simp] lemma editDist_self (A : Finset V) : editDist A A = 0 := by
+====================================================================================================
+QUERY graphEdgeSupport hits 1
+--- PaperIV/GraphFamilyDistance.lean:20
+noncomputable def graphEdgeSupport (X : SimpleGraph V) : Finset (Sym2 V) := by
+====================================================================================================
+QUERY splitGraph hits 1
+--- PaperIV/SplitUniformIncidence.lean:161
+def splitGraph (Core Hosts : Finset V) : SimpleGraph V where
+====================================================================================================
+QUERY noncanonicalPieces hits 1
+--- PaperIV/RootPartitionStability.lean:291
+noncomputable def noncanonicalPieces (R : Finset V)
+    (Q : CliquePartition G) : Finset (Finset V) := by
+====================================================================================================
+QUERY rootPieceDefect hits 1
+--- PaperIV/RootPartitionStability.lean:79
+def rootPieceDefect (R K : Finset V) : ℚ :=
+====================================================================================================
+QUERY CliqueCoverEq hits 1
+--- PaperIV/ExtremalClassification.lean:71
+def CliqueCoverEq {n : ℕ} (G : SimpleGraph (Fin n)) [DecidableRel G.Adj] (t : ℕ) : Prop :=
+====================================================================================================
+QUERY CliqueCover4Eq hits 1
+--- PaperIV/ExtremalClassification.lean:75
+def CliqueCover4Eq {n : ℕ} (G : SimpleGraph (Fin n)) [DecidableRel G.Adj] (t : ℕ) : Prop :=
+====================================================================================================
+QUERY IsOptimalCompleteSplit hits 1
+--- PaperIV/ExtremalClassification.lean:66
+def IsOptimalCompleteSplit {n : ℕ} (G : SimpleGraph (Fin n)) : Prop :=
+====================================================================================================
+QUERY IsChordal hits 3
+--- PaperIV/ChordalStructure.lean:65
+def IsChordal (G : SimpleGraph V) : Prop :=
+--- PaperIV/FarRounding.lean:630
+abbrev IsChordal {V : Type*} (G : SimpleGraph V) : Prop :=
+--- RequestProject/AlonShapira.lean:57
+def IsChordal {V : Type*} (G : SimpleGraph V) : Prop :=
+====================================================================================================
+QUERY CliquePartition hits 1
+--- PaperIV/FarRounding.lean:327
+structure CliquePartition where
+====================================================================================================
+QUERY OrderAtMost hits 0

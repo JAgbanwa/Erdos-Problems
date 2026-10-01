@@ -1,0 +1,52 @@
+[
+  {
+    "text": "def IsChordal (G : SimpleGraph V) : Prop :=\n  ∀ ⦃v : V⦄ (c : G.Walk v v), c.IsCycle → 4 ≤ c.length →\n    ∃ x y : V, x ∈ c.support ∧ y ∈ c.support ∧ G.Adj x y ∧ s(x, y) ∉ c.edges",
+    "source_matches": [
+      "PaperIV/ChordalStructure.lean"
+    ]
+  },
+  {
+    "text": "def pairs (K : Finset V) : Finset (Sym2 V) := K.sym2.filter fun e => ¬ e.IsDiag",
+    "source_matches": [
+      "MixedRounding/Defs.lean",
+      "PaperIV/FarRounding.lean"
+    ]
+  },
+  {
+    "text": "structure CliquePartition where\n  pieces : Finset (Finset V)\n  isClique : ∀ K ∈ pieces, ∀ a ∈ K, ∀ b ∈ K, a ≠ b → G.Adj a b\n  two_le_card : ∀ K ∈ pieces, 2 ≤ K.card\n  edgeDisjoint : ∀ K ∈ pieces, ∀ L ∈ pieces, K ≠ L → Disjoint (pairs K) (pairs L)\n  covers : pieces.biUnion pairs = G.edgeFinset",
+    "source_matches": [
+      "PaperIV/FarRounding.lean"
+    ]
+  },
+  {
+    "text": "def CliquePartition.size (Q : CliquePartition G) : ℕ := Q.pieces.card",
+    "source_matches": [
+      "PaperIV/FarRounding.lean"
+    ]
+  },
+  {
+    "text": "def CliquePartition.OrderAtMost (Q : CliquePartition G) (r : ℕ) : Prop :=\n  ∀ K ∈ Q.pieces, K.card ≤ r",
+    "source_matches": [
+      "PaperIV/FarRounding.lean"
+    ]
+  },
+  {
+    "text": "def targetSize (n : ℕ) : ℕ := n * (n + 1) / 6",
+    "source_matches": [
+      "PaperIV/FarRounding.lean",
+      "PaperIV/TargetEnvelope.lean"
+    ]
+  },
+  {
+    "text": "theorem erdos81_all_orders_additive :\n    ∃ b : ℕ, ∀ (n : ℕ) (G : SimpleGraph (Fin n)) [DecidableRel G.Adj],\n      PaperIV.FarRounding.IsChordal G →\n        ∃ Q : CliquePartition G, Q.OrderAtMost 4 ∧ Q.size ≤ PaperIV.targetSize n + b",
+    "source_matches": [
+      "PaperIV/Erdos81AllOrders.lean"
+    ]
+  },
+  {
+    "text": "theorem erdos81_cliquePartition :\n    ∃ N : ℕ, ∀ n : ℕ, N ≤ n → ∀ (G : SimpleGraph (Fin n)) [DecidableRel G.Adj],\n      PaperIV.FarRounding.IsChordal G →\n        ∃ Q : CliquePartition G, Q.OrderAtMost 4 ∧ Q.size ≤ targetSize n",
+    "source_matches": [
+      "PaperIV/Erdos81Unconditional.lean"
+    ]
+  }
+]

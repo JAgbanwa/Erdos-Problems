@@ -1,0 +1,61 @@
+{
+  "version": "1.2",
+  "handoff_revision": "v1.2-r1",
+  "policy": "Operational allowlist, not an OS sandbox",
+  "paths_relative_to": "C:/Users/jtraverso/e81p4-publish/preprints/PAPER_IV",
+  "status": "BLOCKED_PENDING_INTERNAL_AUDIT",
+  "allowed_from_intake": [
+    "02_validation/02_IA_ADVERSARIAL_AUDITS/EXTERNAL_ADVERSARIAL_AUDIT_REQUEST_v1.2.md",
+    "02_validation/02_IA_ADVERSARIAL_AUDITS/AUDIT_TARGET_v1.2.json",
+    "02_validation/02_IA_ADVERSARIAL_AUDITS/LOCAL_INPUT_SCOPE_v1.2.json",
+    "02_validation/02_IA_ADVERSARIAL_AUDITS/README.md",
+    "02_validation/02_IA_ADVERSARIAL_AUDITS/run_2026-09-28_v1.0.1_r2/30_REPORT/FINAL_AUDIT_REPORT.md",
+    "02_validation/02_IA_ADVERSARIAL_AUDITS/run_2026-09-28_v1.0.1_r2/30_REPORT/FINDINGS.csv",
+    "02_validation/02_IA_ADVERSARIAL_AUDITS/run_2026-09-28_v1.0.1_r2/20_EVIDENCE/E7/E7_RECORD.md",
+    "02_validation/02_IA_ADVERSARIAL_AUDITS/bind_v12_sealed_inputs.py"
+  ],
+  "allowed_after_ready": [
+    "Exactly the six manuscripts, figure assets, templates, public claim map and frozen sources named in required_final_bindings.",
+    "Files enumerated by the bound source/archive manifests, including the separately identified BoundedCliqueGap annex.",
+    "Bound source/configuration metadata and run scope; author-build verdicts/log details deferred until E8.",
+    "The bound historical v1.0 base source ZIP/configuration solely to reproduce the separate BoundedCliqueGap annex; not other historical research."
+  ],
+  "initial_hash_or_crc_only": [
+    "Author full-build evidence packages and new internal-audit package after their exact paths/hashes are bound.",
+    "Editorial and internal reports included in the manuscript ZIP; no reading their conclusions before the independent pass."
+  ],
+  "allowed_after_independent_first_pass": [
+    "All bound author full-build logs, recovery validation/provenance and interrupted-segment evidence.",
+    "New bound internal-audit reports, scripts, certificates, negatives, archives and standards.",
+    "Bound manuscript editorial reports and evidence.",
+    "03_reproducibility/REBOOT_RECOVERY_v12_20260929.md",
+    "03_reproducibility/resume_full_rebuild_v12_20260929.py",
+    "03_reproducibility/run_full_rebuild_v12_20260929.py",
+    "03_reproducibility/build_gap_annex_20260927/",
+    "README.md",
+    "01_manuscript/README.md",
+    "02_validation/README.md",
+    "03_reproducibility/README.md",
+    "04_integrity/README.md",
+    "05_formalization/README.md"
+  ],
+  "technical_exceptions": {
+    "dependencies": "C:/Users/jtraverso/e81p4/preprints/PAPER_IV/05_formalization/lean/.lake/packages; only the frozen manifest packages, resolved links and pinned revisions.",
+    "toolchain": "Pinned Lean/Elan/Lake executables, configuration and libraries; no other project objects.",
+    "document_tools": "C:/Users/jtraverso/.cache/e81-editorial-tools; existing binaries, libraries, templates/cache required for reports.",
+    "test_tools": "Installed Certo and test runtimes/documentation only as needed; log resolved roots/versions; do not read their unrelated project datasets.",
+    "process_inspection": "Read-only process/resource checks; never terminate other teams' work.",
+    "auditor_work": "02_validation/02_IA_ADVERSARIAL_AUDITS/run_v1.2_r1/; an additional short-path own build directory must be registered in 00_CONTROL before use."
+  },
+  "literature": "Cited public versions and independent public prior-art search allowed; log URLs, dates, versions/hashes. Not unpublished local copies.",
+  "explicit_exclusions": [
+    "Unlisted local research files",
+    "ar_* and handoff_*",
+    "Other Aristotle/proof-development trees and chats",
+    "Unpublished Paper V or B=0 work",
+    "Other editorial history unless an exact document is owner-approved",
+    "Credentials and .env files",
+    "Author project .olean/.ilean caches as reproduction inputs"
+  ],
+  "additional_access": "Requires approval BEFORE reading unlisted local research; log accidental exposure and stop if material."
+}

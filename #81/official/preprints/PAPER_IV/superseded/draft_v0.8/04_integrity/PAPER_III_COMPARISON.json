@@ -1,0 +1,527 @@
+{
+  "reference": "PAPER_III/05_formalization/lean_v1.4_freeze",
+  "files": [
+    {
+      "file": "Contrib/SpreadMatchingDirac.lean",
+      "paper_iv_sha256": "63e7916d7e4e1e16966e48b4b0fc45ba2623fda1391ae3ffa6a32353721d29d7",
+      "paper_iii_sha256": "355553793a7508c59fa6e7500795eb0d21c6905f542b9cb4565e2cb58472090c",
+      "comparison": "changed"
+    },
+    {
+      "file": "Nibble/AdaptiveAssembly.lean",
+      "paper_iv_sha256": "c461c2e5f71f510db5defb57087ff72da13fa74edd5c47e89ef8a533ad81caa6",
+      "paper_iii_sha256": "c461c2e5f71f510db5defb57087ff72da13fa74edd5c47e89ef8a533ad81caa6",
+      "comparison": "byte_identical"
+    },
+    {
+      "file": "Nibble/AdaptiveRounds.lean",
+      "paper_iv_sha256": "3f4ceb3b68ff24ba2860baddcf746e76b13f632c87ea58b3f340ba9759b8ca67",
+      "paper_iii_sha256": "3f4ceb3b68ff24ba2860baddcf746e76b13f632c87ea58b3f340ba9759b8ca67",
+      "comparison": "byte_identical"
+    },
+    {
+      "file": "Nibble/Assemble.lean",
+      "paper_iv_sha256": "a5a218323e7d0a1c9f3d1363a9641aa472b9c22fad42613b273883c9de46bd9f",
+      "paper_iii_sha256": "a5a218323e7d0a1c9f3d1363a9641aa472b9c22fad42613b273883c9de46bd9f",
+      "comparison": "byte_identical"
+    },
+    {
+      "file": "Nibble/Assembly.lean",
+      "paper_iv_sha256": "b0e6debce6ade5652c8f182f0df0e699e630e3a78c66add03f1dda3c9f5201e6",
+      "paper_iii_sha256": "b0e6debce6ade5652c8f182f0df0e699e630e3a78c66add03f1dda3c9f5201e6",
+      "comparison": "byte_identical"
+    },
+    {
+      "file": "Nibble/AX1Reduction.lean",
+      "paper_iv_sha256": "b973dc4eff37702dee79bddeb3ff903f49680f6ec52d9bc07613fa06b05f5f29",
+      "paper_iii_sha256": "b973dc4eff37702dee79bddeb3ff903f49680f6ec52d9bc07613fa06b05f5f29",
+      "comparison": "byte_identical"
+    },
+    {
+      "file": "Nibble/Basic.lean",
+      "paper_iv_sha256": "c97e920a631cfc891c2f32c24fc1312233b4c642995a8c8215ed9a1d2c133e75",
+      "paper_iii_sha256": "c97e920a631cfc891c2f32c24fc1312233b4c642995a8c8215ed9a1d2c133e75",
+      "comparison": "byte_identical"
+    },
+    {
+      "file": "Nibble/BeckFiala.lean",
+      "paper_iv_sha256": "48513aa4b2055a0a33b9301e9fcb13a8045301851e65f77fe282c19ecd7fcd46",
+      "paper_iii_sha256": "48513aa4b2055a0a33b9301e9fcb13a8045301851e65f77fe282c19ecd7fcd46",
+      "comparison": "byte_identical"
+    },
+    {
+      "file": "Nibble/BeckFialaPairs.lean",
+      "paper_iv_sha256": "41a603f05608e9f041afefc120850dd32b304504399675afca65a028200581ff",
+      "paper_iii_sha256": "41a603f05608e9f041afefc120850dd32b304504399675afca65a028200581ff",
+      "comparison": "byte_identical"
+    },
+    {
+      "file": "Nibble/BernoulliSpace.lean",
+      "paper_iv_sha256": "73c1e2470ef6263bd79cd6d28d9cef04b685a5514988d18555e6f67d45906d3a",
+      "paper_iii_sha256": "73c1e2470ef6263bd79cd6d28d9cef04b685a5514988d18555e6f67d45906d3a",
+      "comparison": "byte_identical"
+    },
+    {
+      "file": "Nibble/Conflict.lean",
+      "paper_iv_sha256": "47bb8c1c874cb14cf2386a500fa4d7d0f13ca93deed04ac5e82ba65cb40175c9",
+      "paper_iii_sha256": "47bb8c1c874cb14cf2386a500fa4d7d0f13ca93deed04ac5e82ba65cb40175c9",
+      "comparison": "byte_identical"
+    },
+    {
+      "file": "Nibble/Convergence.lean",
+      "paper_iv_sha256": "1a2e5f0ac8cc01067fc3f3bd76b29ddb3a60aaa4db6585e6e6faffc8e37108c7",
+      "paper_iii_sha256": "1a2e5f0ac8cc01067fc3f3bd76b29ddb3a60aaa4db6585e6e6faffc8e37108c7",
+      "comparison": "byte_identical"
+    },
+    {
+      "file": "Nibble/CoreGapAX1.lean",
+      "paper_iv_sha256": "1d706ee4d922c64737d564712b34d8953427a22e6e26c8192937e1d3e187d000",
+      "paper_iii_sha256": "1d706ee4d922c64737d564712b34d8953427a22e6e26c8192937e1d3e187d000",
+      "comparison": "byte_identical"
+    },
+    {
+      "file": "Nibble/Covered.lean",
+      "paper_iv_sha256": "584dfbdfde90a35331f665dec893e061b543a0c34bff7e15daf50640f7ba2f2c",
+      "paper_iii_sha256": "584dfbdfde90a35331f665dec893e061b543a0c34bff7e15daf50640f7ba2f2c",
+      "comparison": "byte_identical"
+    },
+    {
+      "file": "Nibble/CoveredExpectation.lean",
+      "paper_iv_sha256": "7c247a5f108fa4b7d6a4c318bd8ad0629d1274845d39faf3ef64ea7f72c1dff9",
+      "paper_iii_sha256": "7c247a5f108fa4b7d6a4c318bd8ad0629d1274845d39faf3ef64ea7f72c1dff9",
+      "comparison": "byte_identical"
+    },
+    {
+      "file": "Nibble/DenseGapAX1.lean",
+      "paper_iv_sha256": "01c935894dd6a5b40fd22c5049dcd82b0f24e442e1e34f901419e110aa3cedd4",
+      "paper_iii_sha256": "01c935894dd6a5b40fd22c5049dcd82b0f24e442e1e34f901419e110aa3cedd4",
+      "comparison": "byte_identical"
+    },
+    {
+      "file": "Nibble/DenseNearRegular.lean",
+      "paper_iv_sha256": "9907e7dfa0b0554bedc042f2610a7ab7846d0307f8d94cf5a055f9f1e9b60f57",
+      "paper_iii_sha256": "9907e7dfa0b0554bedc042f2610a7ab7846d0307f8d94cf5a055f9f1e9b60f57",
+      "comparison": "byte_identical"
+    },
+    {
+      "file": "Nibble/DischargeSeq.lean",
+      "paper_iv_sha256": "958207bd7616c59557b10c2dd9e9fb2eb46b859ebcfac95f0271bdc3d3d523b9",
+      "paper_iii_sha256": "958207bd7616c59557b10c2dd9e9fb2eb46b859ebcfac95f0271bdc3d3d523b9",
+      "comparison": "byte_identical"
+    },
+    {
+      "file": "Nibble/FracNibbleLE.lean",
+      "paper_iv_sha256": "e864807d5fad7128e7c26bb368e9caebc0e720fadc66ee420db94474fafd745a",
+      "paper_iii_sha256": "e864807d5fad7128e7c26bb368e9caebc0e720fadc66ee420db94474fafd745a",
+      "comparison": "byte_identical"
+    },
+    {
+      "file": "Nibble/FracNibbleRefutation.lean",
+      "paper_iv_sha256": "18a2e69b846936f285b54fff8a893cf363f301d55c1e199dc68c41a6069abe51",
+      "paper_iii_sha256": "18a2e69b846936f285b54fff8a893cf363f301d55c1e199dc68c41a6069abe51",
+      "comparison": "byte_identical"
+    },
+    {
+      "file": "Nibble/FracNibbleRepaired.lean",
+      "paper_iv_sha256": "a3b8b0922cd1f2ecc51695ebba8998b6b634109cd5ef97c9ffc4b4cd12557c13",
+      "paper_iii_sha256": "a3b8b0922cd1f2ecc51695ebba8998b6b634109cd5ef97c9ffc4b4cd12557c13",
+      "comparison": "byte_identical"
+    },
+    {
+      "file": "Nibble/FracNibbleSlack.lean",
+      "paper_iv_sha256": "25c8382cbf8d16a9f073031b01292b5c1fa34e07803eb925c0d334a341465bc8",
+      "paper_iii_sha256": "25c8382cbf8d16a9f073031b01292b5c1fa34e07803eb925c0d334a341465bc8",
+      "comparison": "byte_identical"
+    },
+    {
+      "file": "Nibble/FracNibbleSlackR.lean",
+      "paper_iv_sha256": "efba2acd8da60cc6c0e0b6238732013ed6032667b42b610f2a711ce451b30554",
+      "paper_iii_sha256": "efba2acd8da60cc6c0e0b6238732013ed6032667b42b610f2a711ce451b30554",
+      "comparison": "byte_identical"
+    },
+    {
+      "file": "Nibble/Greedy.lean",
+      "paper_iv_sha256": "4f6a7b041b2e93e2ca985275776e0b483c3c03cef7c80f66de58d7d346aa7aaa",
+      "paper_iii_sha256": "4f6a7b041b2e93e2ca985275776e0b483c3c03cef7c80f66de58d7d346aa7aaa",
+      "comparison": "byte_identical"
+    },
+    {
+      "file": "Nibble/Interface.lean",
+      "paper_iv_sha256": "8f73fdd1f448f14bb2429c0b124079e187f0745de6eb5269cbd7b93a33aa03bc",
+      "paper_iii_sha256": "8f73fdd1f448f14bb2429c0b124079e187f0745de6eb5269cbd7b93a33aa03bc",
+      "comparison": "byte_identical"
+    },
+    {
+      "file": "Nibble/InvariantDegree.lean",
+      "paper_iv_sha256": "a0be3f374cbe4454e75ba3835839565fefaa5f747626b80b90abd23105209534",
+      "paper_iii_sha256": "a0be3f374cbe4454e75ba3835839565fefaa5f747626b80b90abd23105209534",
+      "comparison": "byte_identical"
+    },
+    {
+      "file": "Nibble/Iteration.lean",
+      "paper_iv_sha256": "169f17e747aa79f6ecacd1ffaaf55306905fe45fda833f1adcebf00df2d67e1f",
+      "paper_iii_sha256": "169f17e747aa79f6ecacd1ffaaf55306905fe45fda833f1adcebf00df2d67e1f",
+      "comparison": "byte_identical"
+    },
+    {
+      "file": "Nibble/IterationSeq.lean",
+      "paper_iv_sha256": "c586ac037fe5068a7d6ac02d2ca566ecc1b4e18fae405837fe2895fdaf5c55b9",
+      "paper_iii_sha256": "c586ac037fe5068a7d6ac02d2ca566ecc1b4e18fae405837fe2895fdaf5c55b9",
+      "comparison": "byte_identical"
+    },
+    {
+      "file": "Nibble/LPDuality.lean",
+      "paper_iv_sha256": "9b0b33cfa1733865378fd28f04fe82bee18bf5739b07263a2c5a9c69b9fce6f6",
+      "paper_iii_sha256": "9b0b33cfa1733865378fd28f04fe82bee18bf5739b07263a2c5a9c69b9fce6f6",
+      "comparison": "byte_identical"
+    },
+    {
+      "file": "Nibble/MarkovVertices.lean",
+      "paper_iv_sha256": "61f9cfb0ae462a516fe27ed23b580ee1ddab7a00a182ba1be2518f3177a9741e",
+      "paper_iii_sha256": "61f9cfb0ae462a516fe27ed23b580ee1ddab7a00a182ba1be2518f3177a9741e",
+      "comparison": "byte_identical"
+    },
+    {
+      "file": "Nibble/Measurable.lean",
+      "paper_iv_sha256": "07cfe99fd139daa595798d076486edd889234744b1ab412f4700567c88a24c5e",
+      "paper_iii_sha256": "07cfe99fd139daa595798d076486edd889234744b1ab412f4700567c88a24c5e",
+      "comparison": "byte_identical"
+    },
+    {
+      "file": "Nibble/NibbleGapReduction.lean",
+      "paper_iv_sha256": "45ed0d77e3694ec00508ec960d3eeb2aa3d491d50363ba692ea216b16f1b972b",
+      "paper_iii_sha256": "45ed0d77e3694ec00508ec960d3eeb2aa3d491d50363ba692ea216b16f1b972b",
+      "comparison": "byte_identical"
+    },
+    {
+      "file": "Nibble/Prelude.lean",
+      "paper_iv_sha256": "453b606fb8b35583a041a793c3b9db02938317900590f177332032c92d722969",
+      "paper_iii_sha256": "453b606fb8b35583a041a793c3b9db02938317900590f177332032c92d722969",
+      "comparison": "byte_identical"
+    },
+    {
+      "file": "Nibble/Pruning.lean",
+      "paper_iv_sha256": "421d97e25115f4b4742c04e6380da542936daa3f1604484df2ecfe76fda5cf08",
+      "paper_iii_sha256": "421d97e25115f4b4742c04e6380da542936daa3f1604484df2ecfe76fda5cf08",
+      "comparison": "byte_identical"
+    },
+    {
+      "file": "Nibble/Regular.lean",
+      "paper_iv_sha256": "ee31c1031b679f788f8ef1d7932dbacedb5e49f22f6d117aebba91e1be616ff3",
+      "paper_iii_sha256": "ee31c1031b679f788f8ef1d7932dbacedb5e49f22f6d117aebba91e1be616ff3",
+      "comparison": "byte_identical"
+    },
+    {
+      "file": "Nibble/RegularMost.lean",
+      "paper_iv_sha256": "311cc4f107eb9aa1d470be91be9813f985ee54f0f592b2ad17e90069b3cd289b",
+      "paper_iii_sha256": "311cc4f107eb9aa1d470be91be9813f985ee54f0f592b2ad17e90069b3cd289b",
+      "comparison": "byte_identical"
+    },
+    {
+      "file": "Nibble/Round.lean",
+      "paper_iv_sha256": "c4be4705d648401a55c5a99883a5c8b5b8cb049c5a783ac6fadf91e73512a559",
+      "paper_iii_sha256": "c4be4705d648401a55c5a99883a5c8b5b8cb049c5a783ac6fadf91e73512a559",
+      "comparison": "byte_identical"
+    },
+    {
+      "file": "Nibble/RoundConflict.lean",
+      "paper_iv_sha256": "9a80978619cd3e69bd5694b0ad6dbee76f4cbb1fd9272f419b00ddcfea2ea32e",
+      "paper_iii_sha256": "9a80978619cd3e69bd5694b0ad6dbee76f4cbb1fd9272f419b00ddcfea2ea32e",
+      "comparison": "byte_identical"
+    },
+    {
+      "file": "Nibble/RoundOracleKernel.lean",
+      "paper_iv_sha256": "2d6d9416c69ff9f1f1834478f0dbc11d9ad46bf16e877a8b556b82e0bef2997e",
+      "paper_iii_sha256": "2d6d9416c69ff9f1f1834478f0dbc11d9ad46bf16e877a8b556b82e0bef2997e",
+      "comparison": "byte_identical"
+    },
+    {
+      "file": "Nibble/StarCounterexample.lean",
+      "paper_iv_sha256": "8998239b506a94544e6b5bf9ab33a9b4a66ac5a133c3ddbaea14f0574f294f7e",
+      "paper_iii_sha256": "8998239b506a94544e6b5bf9ab33a9b4a66ac5a133c3ddbaea14f0574f294f7e",
+      "comparison": "byte_identical"
+    },
+    {
+      "file": "Nibble/StrongDualityInst.lean",
+      "paper_iv_sha256": "ef735d21b1b45c0ad36106a727be808250bf34cb3dea94abc6f7609c7a1539ce",
+      "paper_iii_sha256": "ef735d21b1b45c0ad36106a727be808250bf34cb3dea94abc6f7609c7a1539ce",
+      "comparison": "byte_identical"
+    },
+    {
+      "file": "Nibble/Survival.lean",
+      "paper_iv_sha256": "dbd842a40bf1cfcd605d0f7ff62d88d90b7218f95a7f6ae7113fc1638627ae5d",
+      "paper_iii_sha256": "dbd842a40bf1cfcd605d0f7ff62d88d90b7218f95a7f6ae7113fc1638627ae5d",
+      "comparison": "byte_identical"
+    },
+    {
+      "file": "Nibble/Tight/ConflictCount.lean",
+      "paper_iv_sha256": "62f22e0564d79908f3991daad07d599335a6a6a05b70384df66a61a7d52ed892",
+      "paper_iii_sha256": "62f22e0564d79908f3991daad07d599335a6a6a05b70384df66a61a7d52ed892",
+      "comparison": "byte_identical"
+    },
+    {
+      "file": "Nibble/Tight/CoverProb.lean",
+      "paper_iv_sha256": "176784b8f40fe1bf15cf82147adb7f98674478597427cc87963c1cbafdeb98be",
+      "paper_iii_sha256": "176784b8f40fe1bf15cf82147adb7f98674478597427cc87963c1cbafdeb98be",
+      "comparison": "byte_identical"
+    },
+    {
+      "file": "Nibble/Tight/CoverVariance.lean",
+      "paper_iv_sha256": "8896e67c4676d8359000296916d032418b838c60e0319f0e3739446e4317b28b",
+      "paper_iii_sha256": "8896e67c4676d8359000296916d032418b838c60e0319f0e3739446e4317b28b",
+      "comparison": "byte_identical"
+    },
+    {
+      "file": "Nibble/Tight/CoverWeight.lean",
+      "paper_iv_sha256": "1197f5a50a5a8c719d96e3c74b880799ac2a3498432392fd04c31d6d16bf5c60",
+      "paper_iii_sha256": "1197f5a50a5a8c719d96e3c74b880799ac2a3498432392fd04c31d6d16bf5c60",
+      "comparison": "byte_identical"
+    },
+    {
+      "file": "Nibble/Tight/CoverWeightMoments.lean",
+      "paper_iv_sha256": "ce16cc0170af439186cc060082f42a0baa33016f064aed36c4959d8133e3cc20",
+      "paper_iii_sha256": "ce16cc0170af439186cc060082f42a0baa33016f064aed36c4959d8133e3cc20",
+      "comparison": "byte_identical"
+    },
+    {
+      "file": "Nibble/Tight/CubeRetention.lean",
+      "paper_iv_sha256": "615d85fdc20dc23db8cf0d1ee5cabee04175561bd26ccd9ec45c1f522c5933ae",
+      "paper_iii_sha256": "615d85fdc20dc23db8cf0d1ee5cabee04175561bd26ccd9ec45c1f522c5933ae",
+      "comparison": "byte_identical"
+    },
+    {
+      "file": "Nibble/Tight/CubeVariance.lean",
+      "paper_iv_sha256": "316df2c5081e05ee31a16001329eb244f853ae42991e23da7ada61e73e0db67f",
+      "paper_iii_sha256": "316df2c5081e05ee31a16001329eb244f853ae42991e23da7ada61e73e0db67f",
+      "comparison": "byte_identical"
+    },
+    {
+      "file": "Nibble/Tight/DenseRegDischarge.lean",
+      "paper_iv_sha256": "bf04b30a590253fe8a65df53015f0c031a7a363bd3b1ebe7db01874a7ea11bdb",
+      "paper_iii_sha256": "bf04b30a590253fe8a65df53015f0c031a7a363bd3b1ebe7db01874a7ea11bdb",
+      "comparison": "byte_identical"
+    },
+    {
+      "file": "Nibble/Tight/FlipStability.lean",
+      "paper_iv_sha256": "d167aa21037c781e9b007dcc3ed0e154f54fa6bd063332191e6a9f85c50e8018",
+      "paper_iii_sha256": "d167aa21037c781e9b007dcc3ed0e154f54fa6bd063332191e6a9f85c50e8018",
+      "comparison": "byte_identical"
+    },
+    {
+      "file": "Nibble/Tight/LossVariance.lean",
+      "paper_iv_sha256": "9ae77f2aa63af81f19b8570dcb549c289cf46aaf6b756b9f34502009cb887e4b",
+      "paper_iii_sha256": "9ae77f2aa63af81f19b8570dcb549c289cf46aaf6b756b9f34502009cb887e4b",
+      "comparison": "byte_identical"
+    },
+    {
+      "file": "Nibble/Tight/PairExcessCodegree.lean",
+      "paper_iv_sha256": "49dedbfb11475a93b7e03bea40fd0d7b7fe7d859ae5f6de391e54bc8eed7951f",
+      "paper_iii_sha256": "49dedbfb11475a93b7e03bea40fd0d7b7fe7d859ae5f6de391e54bc8eed7951f",
+      "comparison": "byte_identical"
+    },
+    {
+      "file": "Nibble/Tight/PairWeightMean.lean",
+      "paper_iv_sha256": "8e745e5a024b524f114670ca3d1664c84d50545bef7b88009ddad4a62aadf62b",
+      "paper_iii_sha256": "8e745e5a024b524f114670ca3d1664c84d50545bef7b88009ddad4a62aadf62b",
+      "comparison": "byte_identical"
+    },
+    {
+      "file": "Nibble/Tight/Pruning.lean",
+      "paper_iv_sha256": "4bd863969f836c0603c3c0a28f9640e8f9e959899766f528fac24b175a0f99ff",
+      "paper_iii_sha256": "4bd863969f836c0603c3c0a28f9640e8f9e959899766f528fac24b175a0f99ff",
+      "comparison": "byte_identical"
+    },
+    {
+      "file": "Nibble/Tight/ResidualBand.lean",
+      "paper_iv_sha256": "82b09a84ee05c98a3b01ed5ea97d0d2bbfe81e629ae8177286df9e2399eef595",
+      "paper_iii_sha256": "82b09a84ee05c98a3b01ed5ea97d0d2bbfe81e629ae8177286df9e2399eef595",
+      "comparison": "byte_identical"
+    },
+    {
+      "file": "Nibble/Tight/ResidualBandCheb.lean",
+      "paper_iv_sha256": "f8407808f665c247a564059de5768fa781c044abe0079e2d4767311815015551",
+      "paper_iii_sha256": "f8407808f665c247a564059de5768fa781c044abe0079e2d4767311815015551",
+      "comparison": "byte_identical"
+    },
+    {
+      "file": "Nibble/Tight/RoundExplicit.lean",
+      "paper_iv_sha256": "d487483ca6340298f9dd40c15970a634f6ced1ae3046d3cbb9e6557cfb8d3e96",
+      "paper_iii_sha256": "d487483ca6340298f9dd40c15970a634f6ced1ae3046d3cbb9e6557cfb8d3e96",
+      "comparison": "byte_identical"
+    },
+    {
+      "file": "Nibble/Tight/SafeDegree.lean",
+      "paper_iv_sha256": "228b1b84933ef06c0d4eacda28e5828f00be32d01bec0a1a2e68eab7d77762f5",
+      "paper_iii_sha256": "228b1b84933ef06c0d4eacda28e5828f00be32d01bec0a1a2e68eab7d77762f5",
+      "comparison": "byte_identical"
+    },
+    {
+      "file": "Nibble/Tight/SafeDegreeVariance.lean",
+      "paper_iv_sha256": "db79642cd59531cd7ab5d09d69ac437f024239b746e9370c97e8b567fa5a6270",
+      "paper_iii_sha256": "db79642cd59531cd7ab5d09d69ac437f024239b746e9370c97e8b567fa5a6270",
+      "comparison": "byte_identical"
+    },
+    {
+      "file": "Nibble/Tight/SafeRoundCheb.lean",
+      "paper_iv_sha256": "0a8fb4ae13096b77df658448dafe63a73c1f77508e268d3fc2d59a449e6fa2f4",
+      "paper_iii_sha256": "0a8fb4ae13096b77df658448dafe63a73c1f77508e268d3fc2d59a449e6fa2f4",
+      "comparison": "byte_identical"
+    },
+    {
+      "file": "Nibble/Tight/Selection.lean",
+      "paper_iv_sha256": "d9ff29dd6fbed218aa2e98293190f8c7e513e0feeaa227ca27f6095880892c17",
+      "paper_iii_sha256": "d9ff29dd6fbed218aa2e98293190f8c7e513e0feeaa227ca27f6095880892c17",
+      "comparison": "byte_identical"
+    },
+    {
+      "file": "Nibble/Tight/SharpRound.lean",
+      "paper_iv_sha256": "5eadb34f8e8f5de977dc6ec3ebb99b31b153b596e626fc97f99b55ded716e741",
+      "paper_iii_sha256": "5eadb34f8e8f5de977dc6ec3ebb99b31b153b596e626fc97f99b55ded716e741",
+      "comparison": "byte_identical"
+    },
+    {
+      "file": "Nibble/Tight/SharpRoundAssembly.lean",
+      "paper_iv_sha256": "0c9fe72d501be4ee653736b4af60be7f23972d70783f92bd848534346d835706",
+      "paper_iii_sha256": "0c9fe72d501be4ee653736b4af60be7f23972d70783f92bd848534346d835706",
+      "comparison": "byte_identical"
+    },
+    {
+      "file": "Nibble/Tight/SharpRoundProof.lean",
+      "paper_iv_sha256": "91d19bec4f2cd6f14ec766b38e30559858ff298cc1097b9b0b988a04cf210880",
+      "paper_iii_sha256": "91d19bec4f2cd6f14ec766b38e30559858ff298cc1097b9b0b988a04cf210880",
+      "comparison": "byte_identical"
+    },
+    {
+      "file": "Nibble/Tight/SharpVariance.lean",
+      "paper_iv_sha256": "8a339d31badaec86465f523506a77d2dd2c8299ed9eee79261f9ffd8167cb421",
+      "paper_iii_sha256": "8a339d31badaec86465f523506a77d2dd2c8299ed9eee79261f9ffd8167cb421",
+      "comparison": "byte_identical"
+    },
+    {
+      "file": "Nibble/Tight/TightRound.lean",
+      "paper_iv_sha256": "7875408a507ea6945ce2e86bc97f8ea5efb3e32589171381f2b577f68c4f44d7",
+      "paper_iii_sha256": "7875408a507ea6945ce2e86bc97f8ea5efb3e32589171381f2b577f68c4f44d7",
+      "comparison": "byte_identical"
+    },
+    {
+      "file": "Nibble/Tight/TightRoundCheb.lean",
+      "paper_iv_sha256": "df38cd7c84e0f3699099c81074a60eb5b9571c4bb8da41123c11ad49e820f44f",
+      "paper_iii_sha256": "df38cd7c84e0f3699099c81074a60eb5b9571c4bb8da41123c11ad49e820f44f",
+      "comparison": "byte_identical"
+    },
+    {
+      "file": "Nibble/Tight/TightRoundConcrete.lean",
+      "paper_iv_sha256": "f62a515577af8636586ab88844dbff534f2988d8387f9cbc68ad15abf1d482e8",
+      "paper_iii_sha256": "f62a515577af8636586ab88844dbff534f2988d8387f9cbc68ad15abf1d482e8",
+      "comparison": "byte_identical"
+    },
+    {
+      "file": "Nibble/Tight/TwoEdgeMatch.lean",
+      "paper_iv_sha256": "c1f551921bdd2cb3b31c73906f9a8c8cbd48fe2358b1e058f5120f6b4eff09f0",
+      "paper_iii_sha256": "c1f551921bdd2cb3b31c73906f9a8c8cbd48fe2358b1e058f5120f6b4eff09f0",
+      "comparison": "byte_identical"
+    },
+    {
+      "file": "Nibble/TightAssembly.lean",
+      "paper_iv_sha256": "3197100a244c540ab7585386ef4cbcf043b1817cecb7eb982e080c8c98220b3f",
+      "paper_iii_sha256": "3197100a244c540ab7585386ef4cbcf043b1817cecb7eb982e080c8c98220b3f",
+      "comparison": "byte_identical"
+    },
+    {
+      "file": "Nibble/TightNibble.lean",
+      "paper_iv_sha256": "3a60b5cb06085ed37a11165636be01bf2f19d3b790f5dff05c335e69505c636f",
+      "paper_iii_sha256": "3a60b5cb06085ed37a11165636be01bf2f19d3b790f5dff05c335e69505c636f",
+      "comparison": "byte_identical"
+    },
+    {
+      "file": "Nibble/TightSchedule.lean",
+      "paper_iv_sha256": "9f1640c640cacb5809ce6a82fb89be18f93f70339e5d64325e944b810cc80541",
+      "paper_iii_sha256": "9f1640c640cacb5809ce6a82fb89be18f93f70339e5d64325e944b810cc80541",
+      "comparison": "byte_identical"
+    },
+    {
+      "file": "Nibble/WeightedNibble.lean",
+      "paper_iv_sha256": "5fe551eb5f62f52ad0c4ea5d3da4757581fa05c9441e8cce18b90a21ed1a5322",
+      "paper_iii_sha256": "5fe551eb5f62f52ad0c4ea5d3da4757581fa05c9441e8cce18b90a21ed1a5322",
+      "comparison": "byte_identical"
+    },
+    {
+      "file": "Nibble/WeightedNibbleRestrict.lean",
+      "paper_iv_sha256": "3e0569aeff954f9d35107df00fb39e45d69c84b13d893808ced5ed4be9deebba",
+      "paper_iii_sha256": "3e0569aeff954f9d35107df00fb39e45d69c84b13d893808ced5ed4be9deebba",
+      "comparison": "byte_identical"
+    },
+    {
+      "file": "Nibble/WeightedSpreadNibble.lean",
+      "paper_iv_sha256": "c0a75a9201abcae7b3c6ae31e818f00b66bc41fcbb868c12070e102da46999c3",
+      "paper_iii_sha256": "c0a75a9201abcae7b3c6ae31e818f00b66bc41fcbb868c12070e102da46999c3",
+      "comparison": "byte_identical"
+    },
+    {
+      "file": "Nibble/YusterAX1.lean",
+      "paper_iv_sha256": "69b22e38ff0737035ca84a38e1be7ef6292bae797ffaec9159e84e101bb06f8b",
+      "paper_iii_sha256": "69b22e38ff0737035ca84a38e1be7ef6292bae797ffaec9159e84e101bb06f8b",
+      "comparison": "byte_identical"
+    },
+    {
+      "file": "Nibble/YusterEdge.lean",
+      "paper_iv_sha256": "3dd21ebc0788bde6c94df3caa22928f2e7b72034ea0af7730acd5610761d0d8e",
+      "paper_iii_sha256": "3dd21ebc0788bde6c94df3caa22928f2e7b72034ea0af7730acd5610761d0d8e",
+      "comparison": "byte_identical"
+    },
+    {
+      "file": "Nibble/YusterEdgeType.lean",
+      "paper_iv_sha256": "3b01dbe53844013f022f51963a8cdcd52a5f9570ccf49c93ac8b6fe02393deb8",
+      "paper_iii_sha256": "3b01dbe53844013f022f51963a8cdcd52a5f9570ccf49c93ac8b6fe02393deb8",
+      "comparison": "byte_identical"
+    },
+    {
+      "file": "Nibble/YusterFracUpper.lean",
+      "paper_iv_sha256": "451cf99efc13ab414b850552007531f53779e377c14e54205848ae5f9c0050f1",
+      "paper_iii_sha256": "451cf99efc13ab414b850552007531f53779e377c14e54205848ae5f9c0050f1",
+      "comparison": "byte_identical"
+    },
+    {
+      "file": "Nibble/YusterGap.lean",
+      "paper_iv_sha256": "a22893e21d7dad7e7681e0a3c95963f1e1df1b6283a4c9a0358d1928ed9a9547",
+      "paper_iii_sha256": "a22893e21d7dad7e7681e0a3c95963f1e1df1b6283a4c9a0358d1928ed9a9547",
+      "comparison": "byte_identical"
+    },
+    {
+      "file": "Nibble/YusterMost.lean",
+      "paper_iv_sha256": "bcb05c941f8fa833e5f870a28aeb982f8cd2b8e64c83069a04cebf6fe8aff357",
+      "paper_iii_sha256": "bcb05c941f8fa833e5f870a28aeb982f8cd2b8e64c83069a04cebf6fe8aff357",
+      "comparison": "byte_identical"
+    },
+    {
+      "file": "Nibble/YusterNibbleApply.lean",
+      "paper_iv_sha256": "42eab6cb38cd73470c47ca3cf1381324268c6f7ec2b1a80b7acce002a1480642",
+      "paper_iii_sha256": "42eab6cb38cd73470c47ca3cf1381324268c6f7ec2b1a80b7acce002a1480642",
+      "comparison": "byte_identical"
+    },
+    {
+      "file": "Nibble/YusterSubBridge.lean",
+      "paper_iv_sha256": "bfb0fefa44983a57b377bcc10d413b53bb3e0a76f35f2ac57f2da961dbbd3e4a",
+      "paper_iii_sha256": "bfb0fefa44983a57b377bcc10d413b53bb3e0a76f35f2ac57f2da961dbbd3e4a",
+      "comparison": "byte_identical"
+    },
+    {
+      "file": "Nibble/YusterSubDegree.lean",
+      "paper_iv_sha256": "b00fcdca5be2bda37bbe96447ebff7b9cab069a12dbedc2002b87b532c25511c",
+      "paper_iii_sha256": "b00fcdca5be2bda37bbe96447ebff7b9cab069a12dbedc2002b87b532c25511c",
+      "comparison": "byte_identical"
+    },
+    {
+      "file": "Nibble/YusterSubDegreeChar.lean",
+      "paper_iv_sha256": "c2ba4098ef5489226f3894af1fd641f01bc25ce4ce3aea1bbfcb62ad4c1d7fb7",
+      "paper_iii_sha256": "c2ba4098ef5489226f3894af1fd641f01bc25ce4ce3aea1bbfcb62ad4c1d7fb7",
+      "comparison": "byte_identical"
+    },
+    {
+      "file": "Nibble/YusterSubRegular.lean",
+      "paper_iv_sha256": "846037d342ff3b67c5858c15f2bfa8ccc39021beb043cb65ae8868838a776c21",
+      "paper_iii_sha256": "846037d342ff3b67c5858c15f2bfa8ccc39021beb043cb65ae8868838a776c21",
+      "comparison": "byte_identical"
+    }
+  ]
+}

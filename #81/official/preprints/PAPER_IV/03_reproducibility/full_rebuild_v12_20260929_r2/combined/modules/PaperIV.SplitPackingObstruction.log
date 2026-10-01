@@ -1,0 +1,19 @@
+$ c:\Users\jtraverso\.elan\toolchains\leanprover--lean4---v4.28.0\bin\lean.exe -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false PaperIV/SplitPackingObstruction.lean -o C:\Users\jtraverso\e81p4\piv_v12_full_rebuild_20260929\.lake\runner\lib\lean\PaperIV\SplitPackingObstruction.olean -i C:\Users\jtraverso\e81p4\piv_v12_full_rebuild_20260929\.lake\runner\lib\lean\PaperIV\SplitPackingObstruction.ilean
+PaperIV/SplitPackingObstruction.lean:36:0: warning: automatically included section variable(s) unused in theorem `PaperIV.SplitPackingObstruction.subset_core_union_hosts`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+PaperIV/SplitPackingObstruction.lean:54:0: warning: automatically included section variable(s) unused in theorem `PaperIV.SplitPackingObstruction.card_inter_hosts_le_one`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+PaperIV/SplitPackingObstruction.lean:177:0: warning: automatically included section variable(s) unused in theorem `PaperIV.SplitPackingObstruction.filter_coveredEdges`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`

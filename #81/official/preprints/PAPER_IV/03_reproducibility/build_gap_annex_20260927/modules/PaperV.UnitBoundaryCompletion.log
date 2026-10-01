@@ -1,0 +1,66 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 PaperV/UnitBoundaryCompletion.lean -o /workspace/request-project/.lake/runner/lib/lean/PaperV/UnitBoundaryCompletion.olean -i /workspace/request-project/.lake/runner/lib/lean/PaperV/UnitBoundaryCompletion.ilean
+PaperV/UnitBoundaryCompletion.lean:52:0: warning: automatically included section variable(s) unused in theorem `PaperV.UnitBoundary.le_packOpt`:
+  [DecidableEq α]
+  [DecidableEq R]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq α] [DecidableEq R] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+PaperV/UnitBoundaryCompletion.lean:58:0: warning: automatically included section variable(s) unused in theorem `PaperV.UnitBoundary.packOpt_le`:
+  [DecidableEq α]
+  [DecidableEq R]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq α] [DecidableEq R] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+PaperV/UnitBoundaryCompletion.lean:79:0: warning: automatically included section variable(s) unused in theorem `PaperV.UnitBoundary.le_nuAvoid`:
+  [DecidableEq α]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq α] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+PaperV/UnitBoundaryCompletion.lean:85:0: warning: automatically included section variable(s) unused in theorem `PaperV.UnitBoundary.exists_nuAvoid`:
+  [DecidableEq α]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq α] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+PaperV/UnitBoundaryCompletion.lean:115:0: warning: automatically included section variable(s) unused in theorem `PaperV.UnitBoundary.Z_subset`:
+  [DecidableEq α]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq α] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+PaperV/UnitBoundaryCompletion.lean:117:0: warning: automatically included section variable(s) unused in theorem `PaperV.UnitBoundary.mem_Z`:
+  [DecidableEq α]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq α] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+PaperV/UnitBoundaryCompletion.lean:133:6: warning: unused variable `r`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+import took 2.16s
+cumulative profiling times:
+	.olean serialization 76.6ms
+	attribute application 0.425ms
+	blocked (unaccounted) 644ms
+	compilation (IR) 1.11ms
+	compilation (LCNF base) 2.27ms
+	compilation (LCNF mono) 1.74ms
+	congr simp thm 15.3ms
+	elaboration 190ms
+	fix level params 3.19ms
+	import 2.16s
+	initialization 38ms
+	instantiate metavars 19.7ms
+	interpretation 395ms
+	let-to-have transformation 0.563ms
+	linting 64.9ms
+	parsing 25.3ms
+	process pre-definitions 22.9ms
+	share common exprs 7.15ms
+	simp 183ms
+	tactic execution 424ms
+	type checking 205ms
+	typeclass inference 481ms

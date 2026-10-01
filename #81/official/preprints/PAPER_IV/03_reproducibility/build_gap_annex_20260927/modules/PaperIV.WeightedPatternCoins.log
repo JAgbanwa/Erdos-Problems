@@ -1,0 +1,63 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 PaperIV/WeightedPatternCoins.lean -o /workspace/request-project/.lake/runner/lib/lean/PaperIV/WeightedPatternCoins.olean -i /workspace/request-project/.lake/runner/lib/lean/PaperIV/WeightedPatternCoins.ilean
+PaperIV/WeightedPatternCoins.lean:37:0: warning: automatically included section variable(s) unused in theorem `PaperIV.WeightedPatternCoins.patternCapacity_of_sum_mass_le`:
+  [Fintype W]
+  [DecidableEq W]
+  [Fintype Pat]
+  [DecidableEq Pat]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype W] [DecidableEq W] [Fintype Pat] [DecidableEq Pat] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+PaperIV/WeightedPatternCoins.lean:46:0: warning: automatically included section variable(s) unused in theorem `PaperIV.WeightedPatternCoins.patternCoin_nonneg`:
+  [Fintype W]
+  [DecidableEq W]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype W] [DecidableEq W] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+PaperIV/WeightedPatternCoins.lean:57:0: warning: automatically included section variable(s) unused in theorem `PaperIV.WeightedPatternCoins.patternCoin_sum`:
+  [Fintype W]
+  [DecidableEq W]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype W] [DecidableEq W] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+PaperIV/WeightedPatternCoins.lean:73:8: warning: automatically included section variable(s) unused in theorem `PaperIV.WeightedPatternCoins.patternCoin_some_of_mem`:
+  [Fintype W]
+  [DecidableEq W]
+  [Fintype Pat]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype W] [DecidableEq W] [Fintype Pat] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+PaperIV/WeightedPatternCoins.lean:79:8: warning: automatically included section variable(s) unused in theorem `PaperIV.WeightedPatternCoins.patternCoin_some_of_not_mem`:
+  [Fintype W]
+  [DecidableEq W]
+  [Fintype Pat]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype W] [DecidableEq W] [Fintype Pat] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+import took 3.68s
+cumulative profiling times:
+	.olean serialization 70.6ms
+	attribute application 0.823ms
+	compilation (IR) 0.371ms
+	compilation (LCNF base) 0.667ms
+	compilation (LCNF mono) 0.457ms
+	congr simp thm 0.365ms
+	elaboration 61.4ms
+	fix level params 0.491ms
+	import 3.68s
+	initialization 39.4ms
+	instantiate metavars 0.399ms
+	interpretation 237ms
+	let-to-have transformation 0.17ms
+	linting 10.7ms
+	parsing 9.46ms
+	process pre-definitions 4.67ms
+	share common exprs 1.43ms
+	simp 3.22ms
+	tactic execution 50.3ms
+	type checking 13.5ms
+	typeclass inference 71.1ms

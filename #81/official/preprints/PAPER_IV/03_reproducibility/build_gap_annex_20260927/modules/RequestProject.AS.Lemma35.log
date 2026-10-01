@@ -1,0 +1,28 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 RequestProject/AS/Lemma35.lean -o /workspace/request-project/.lake/runner/lib/lean/RequestProject/AS/Lemma35.olean -i /workspace/request-project/.lake/runner/lib/lean/RequestProject/AS/Lemma35.ilean
+import took 7.01s
+.olean serialization took 227ms
+cumulative profiling times:
+	.olean serialization 227ms
+	attribute application 0.0591ms
+	blocked (unaccounted) 695ms
+	compilation (IR) 1.6ms
+	compilation (LCNF base) 1.52ms
+	compilation (LCNF mono) 0.575ms
+	congr simp thm 12.4ms
+	elaboration 31.8ms
+	fix level params 1.99ms
+	import 7.01s
+	initialization 36.2ms
+	instantiate metavars 22.9ms
+	interpretation 601ms
+	let-to-have transformation 0.0889ms
+	linting 10ms
+	norm_num 13.8ms
+	parsing 6.01ms
+	process pre-definitions 12ms
+	ring 9.49ms
+	share common exprs 9.14ms
+	simp 181ms
+	tactic execution 195ms
+	type checking 36.1ms
+	typeclass inference 538ms

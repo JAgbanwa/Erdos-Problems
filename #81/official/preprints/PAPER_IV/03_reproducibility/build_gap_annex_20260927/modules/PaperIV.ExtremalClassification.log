@@ -1,0 +1,27 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 PaperIV/ExtremalClassification.lean -o /workspace/request-project/.lake/runner/lib/lean/PaperIV/ExtremalClassification.olean -i /workspace/request-project/.lake/runner/lib/lean/PaperIV/ExtremalClassification.ilean
+import took 5.07s
+.olean serialization took 117ms
+cumulative profiling times:
+	.olean serialization 117ms
+	attribute application 0.0904ms
+	compilation (IR) 5ms
+	compilation (LCNF base) 4.64ms
+	compilation (LCNF mono) 2.13ms
+	congr simp thm 5.79ms
+	elaboration 38.5ms
+	fix level params 0.35ms
+	import 5.07s
+	initialization 38.6ms
+	instantiate metavars 6.69ms
+	interpretation 512ms
+	let-to-have transformation 0.1ms
+	linting 9.89ms
+	norm_num 12.1ms
+	parsing 11.1ms
+	process pre-definitions 10.4ms
+	ring 4.83ms
+	share common exprs 3.15ms
+	simp 71.5ms
+	tactic execution 323ms
+	type checking 402ms
+	typeclass inference 553ms

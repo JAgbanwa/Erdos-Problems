@@ -1,0 +1,37 @@
+$ c:\Users\jtraverso\.elan\toolchains\leanprover--lean4---v4.28.0\bin\lean.exe -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false PaperIV/RD09CanonicalBadAccounts.lean -o C:\Users\jtraverso\e81p4\opt_build_20260927\.lake\runner\lib\lean\PaperIV\RD09CanonicalBadAccounts.olean -i C:\Users\jtraverso\e81p4\opt_build_20260927\.lake\runner\lib\lean\PaperIV\RD09CanonicalBadAccounts.ilean
+PaperIV/RD09CanonicalBadAccounts.lean:38:8: warning: automatically included section variable(s) unused in theorem `PaperIV.RD09CanonicalBadAccounts.mem_missingCandidates`:
+  [Fintype V]
+  [DecidableEq V]
+  [Fintype Z]
+  [DecidableEq Z]
+  [DecidableEq Cand]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] [DecidableEq V] [Fintype Z] [DecidableEq Z] [DecidableEq Cand] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+PaperIV/RD09CanonicalBadAccounts.lean:43:8: warning: automatically included section variable(s) unused in theorem `PaperIV.RD09CanonicalBadAccounts.mem_usedCandidates`:
+  [Fintype V]
+  [Fintype I]
+  [DecidableEq I]
+  [Fintype Z]
+  [DecidableEq Z]
+  [DecidableEq Cand]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] [Fintype I] [DecidableEq I] [Fintype Z] [DecidableEq Z] [DecidableEq Cand] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+PaperIV/RD09CanonicalBadAccounts.lean:69:8: warning: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+PaperIV/RD09CanonicalBadAccounts.lean:76:8: warning: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+PaperIV/RD09CanonicalBadAccounts.lean:107:0: warning: automatically included section variable(s) unused in theorem `PaperIV.RD09CanonicalBadAccounts.card_usedCandidates_le_two_mul`:
+  [Fintype I]
+  [DecidableEq I]
+  [Fintype Z]
+  [DecidableEq Z]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype I] [DecidableEq I] [Fintype Z] [DecidableEq Z] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`

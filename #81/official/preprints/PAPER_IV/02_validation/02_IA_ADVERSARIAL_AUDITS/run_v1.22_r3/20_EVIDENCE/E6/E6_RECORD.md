@@ -1,0 +1,50 @@
+# E6 — NEW-04 and parity (run_v1.22_r3)
+
+## Method (independent of the editor's scripts)
+- **Diff and protected content.** `10_SCRIPTS/e6_r3_delta.py` produces `E6_R3_DELTA.json` and the auditor's diffs `auditor_diff_{en,es}_{md,tex}.diff`.
+  - Paragraphs: 503 → 503 in each language; **5 changed paragraph groups per language**.
+  - Unchanged in EN and ES: 237 displays, 1989 inline formulas, code blocks, 146 tags, 159 table rows, headings, image references and the whole bibliography.
+  - Changed paragraphs contain no inline mathematics in either r2 or r3.
+  - Code spans: 331 → 333. No span is removed; the two added are `run_v1.22_r1` and `run_v1.22_r2` (audit-run names, not Lean identifiers).
+  - TeX: preamble identical; 10 changed lines per language; displays and equation environments identical.
+  - The body of the editor's `CHANGES_{en,es}.diff` equals the auditor's diff byte for byte. Only the two header lines (file names) differ.
+- **ES bold leads.** The single difference among bold paragraph leads is the A.2 lead, «Alcance de la demostración escrita» → «Alcance de la prueba escrita». It sits inside a changed paragraph and is not a section heading.
+- **PDF corresponds to TeX.**
+  - EN r3: 72 pages, xdvipdfmx 2026-10-01 13:56 UTC. ES r3: 73 pages, 13:54 UTC.
+  - Every token-diff region between the r2 and r3 PDF texts (EN 56, ES 63) is explained by the changed MD paragraphs, with 0 unexplained regions.
+- **Raster (72 dpi).** EN changes on pp. 1, 33, 39, 40, 64; ES on pp. 1–6, 34–36, 39, 40, 66. This equals `ARTIFACT_CHECKS.json`.
+- **Visual inspection** (`PAGE_INSPECTION_LOG.csv`, 145/145).
+  - Every page was seen on 4-up sheets at 70 dpi (`overview/`).
+  - The pages with changes or shifts were also inspected in r2|r3 side-by-side comparisons at 105 dpi (`cmp/`): ES 36, 39, 40, 66 and shifts.
+  - For pages whose comparison images could not be confirmed, the rows were re-logged from displayed sheets (CORRECTIONS C4-01).
+  - The ES shift (pp. 1–6, 34–36) is absorbed by white space before Figure 1 and Figure 4, so pp. 7–33 and 37+ are raster-identical. No content is lost or duplicated, and page counts are unchanged.
+
+## NEW-04 — the five documentary paragraphs per language
+All ten paragraphs (five EN, five ES) are quoted in full before/after in `E6_R3_DELTA.json` (`changed`).
+
+| Place | r2 (stale) | r3 | Check |
+|---|---|---|---|
+| Front matter (Status/Estado) | «revisión que responde a la revalidación de 1.21 … INCONCLUSIVE … requieren su propia revisión» | r2 concluded PASS_WITH_OBSERVATIONS on 1 Oct 2026; accepted C.3 and the seven A.2 rows; no open finding ≥ MINOR; Lean cut unchanged with formal PASS inherited; r3 updates the status and its delta awaits verification; no new build | **Correct.** It does not invent a clean PASS and it states the observations. |
+| §7 «Audit status / Estado de auditoría» | «v1.22 … esperan revalidación» | v1.2 and v1.21 INCONCLUSIVE; C.3 accepted in run_v1.22_r1; r2 PASS_WITH_OBSERVATIONS, observations retained; no recompilation; r3 claims no verdict for its own changes | **Correct**, and the historical INCONCLUSIVE verdicts are kept. |
+| A.1, note after Table 7 | «La comparación ampliada de C.3 en v1.22 espera una nueva revisión» | evidence revalidated without recompilation; r2 records C.3 and distinguishes individual semantic rows from coverage by the component ledger and compilation | **Correct.** This is consistent with run_v1.22_r2 §4.1. |
+| A.2 «Scope of the written proof / Alcance de la prueba escrita» | «aceptó seis de las siete filas … requiere revisión» | the seven rows are ACCEPTABLE_SUMMARY per r2; R-01 limit retained; build ≠ exposition ≠ peer review | **Correct.** The A.2 table header «Derivation to review…/Derivación por revisar…» is unchanged because table rows are protected. It reads as guidance for a referee and is acceptable as is. |
+| F.4, closing paragraph | «Una nueva auditoría todavía debe comprobar…» | the E.4/F.3/F.5 checks are consolidated in r2, with its scope; compilation is not a substitute for review | **Correct.** run_v1.2_r1 E2 §5.1 rederived E.4 block by block, F.3a and F.5 cases. |
+
+**C.3 and the seven A.2 rows are no longer presented as pending in either language. No clean PASS is invented. EN/ES content parity holds.**
+
+**NEW-04: CLOSED in r3.** The paragraphs are dated records of r2; the verdict on r3 is this report. That is not an inconsistency and does not require editing the manuscript retroactively (mandate §2).
+
+## NEW-05 — ES terminology in the r3 rewrites (MINOR)
+The new ES text of the A.2 and F.4 paragraphs introduces terms that differ from the established terminology of the ES manuscript:
+- «la **programación numérica** de C.3» (A.2, MD l.1355). Elsewhere the text says «calendario numérico» (l.1599), the C.3 heading is «Un **calendario** explícito y su propagación», and r2 itself said «el calendario numérico en C.3».
+- «la cota adaptada **con muestra fijada**» (F.4, l.2356). F.5 says «Ensamblaje de la cota adaptada para **muestras con anclajes**» (l.2403), and Table 10 says «Cota de muestra con anclajes» (l.2398); r2 said «muestras con anclajes».
+- (Checked and *not* a finding: «conteos de normalización» replaces r2's «cuentas de normalización», but «Conteos» is established in the A.2 table, as in «Conteos de descarte».)
+
+These are not mathematical changes, and EN/ES parity of meaning holds. However, they break the terminological consistency the series maintains (compare X-04 and X-15). A reader of the A.2 and F.4 notes might not identify the named objects.
+
+**Action before publication:** restore «calendario numérico» (A.2) and «muestras con anclajes» (F.4) in the ES text, then repeat the ES identity and E6 check.
+
+## E6 verdict (r3)
+**PASS_WITH_FINDINGS.**
+- NEW-04 is closed; the protected content is identical; each PDF corresponds to its TeX; all 145 pages were inspected.
+- NEW-05 (MINOR, ES terminology) remains open, with a small pre-publication correction.

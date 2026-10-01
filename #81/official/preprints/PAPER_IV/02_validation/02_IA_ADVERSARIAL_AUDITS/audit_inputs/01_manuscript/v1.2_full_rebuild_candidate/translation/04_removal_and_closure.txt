@@ -1,0 +1,123 @@
+@@407
+### F.3. Localización uniforme mediante edición hacia un cordal
+@@408
+La parte estructural del Teorema 6.5 no utiliza sólo (F.2). También necesita convertir un defecto enraizado pequeño en una edición cordal pequeña. Para cada precisión {{0}}, E34 da un tamaño de muestra explícito {{1}}. El adaptador SublinearEdit utiliza
+{{2}}
+Para {{3}} y {{4}}, un grafo de defecto enraizado a lo sumo {{5}} está a distancia de a lo sumo {{6}} ediciones de aristas de un grafo cordal. La prueba de remoción subyacente es la formalizada a partir de [22].
+@@409
+El lema siguiente recupera una clique en el grafo original. Para un conjunto de vértices {{0}}, sea {{1}} el número de pares ordenados de vértices distintos y no adyacentes de {{2}}, y escribamos {{3}}.
+@@410
+**Lema F.3a (recuperación de clique con defecto aditivo).** Si {{0}}, todo {{1}} contiene una clique {{2}} de {{3}} tal que
+{{4}}
+@@411
+**Demostración.** Inducimos en {{0}}; el conjunto vacío es inmediato. Apliquemos la condición enraizada a {{1}}, con raíz prescrita vacía. Existe un vértice {{2}} cuyos vecinos en {{3}} contienen una clique {{4}} con a lo sumo {{5}} vecinos fuera de {{6}}. Sea {{7}} el número de no-vecinos de {{8}} en {{9}}. Retirar {{10}} elimina exactamente las dos orientaciones de esas {{11}} no-aristas, luego
+{{12}}
+Por inducción, {{13}} contiene una clique {{14}} con
+{{15}}, donde
+{{16}}.
+Si {{17}}, tomemos {{18}}. Entonces
+{{19}}
+En otro caso, {{20}}, porque ambos son enteros. Tomemos {{21}}, que es una clique. La descomposición del grado da {{22}}, luego {{23}}. Elevar al cuadrado y usar la cota inductiva prueba (F.5a) también en este caso.
+@@412
+**Corolario F.3b (recuperación tras borrar aristas).** Supongamos {{0}}, que {{1}} tienen el mismo conjunto de vértices y que {{2}} es una clique de {{3}}. Si {{4}} y
+{{5}}
+entonces {{6}} contiene una clique {{7}} de {{8}} con {{9}}.
+@@413
+**Demostración.** Cada no-arista no ordenada de {{0}} dentro de {{1}} es una arista de {{2}} ausente en {{3}}. En consecuencia,
+{{4}}.
+Apliquemos (F.5a); tomar raíces cuadradas no negativas da
+{{5}}, que es la estimación requerida.
+@@414
+Las interfaces formales son exists_clique_additive_defect y recover_clique_from_edit. La segunda toma {{0}} racional y supone explícitamente {{1}}; la prueba mostrada también vale para {{2}} real. Cuando {{3}}, (F.5a) se reduce a la estimación de extracción de clique cordal (F.9). La pérdida en {{4}} es aditiva, no un factor que multiplica el término de raíz cuadrada.
+@@415
+Sea ahora {{0}} el grafo cordal obtenido arriba y pongamos {{1}}. Reparar particiones de orden acotado transfiere la cota inferior integral con déficit a lo sumo {{2}}. Apliquemos el Teorema 6.1 en {{3}}. Su clique no tiene por qué ser una clique de {{4}}; el Corolario F.3b retira a lo sumo {{5}} vértices para cualquier {{6}} con {{7}}, produciendo una clique {{8}} en el propio {{9}}. Contar aristas modificadas e incidencias da
+{{10}}
+Éstas son las desigualdades de SublinearStabilityTransfer. Aquí {{11}} se mide respecto de {{12}}. Para partir de la hipótesis en {{13}} del Teorema 6.5, basta aumentar su déficit en {{14}}, lo que conserva un error {{15}}. Elijamos {{16}}, la razón de defecto y el margen de casi extremalidad suficientemente pequeños antes que {{17}} y {{18}}; entonces se puede elegir {{19}} como un múltiplo pequeño de {{20}}. La fórmula (F.6) prueba el control uniforme de ediciones y baseline. La parábola del comparador transforma este último en una ventana de tamaño, a una escala de precisión cuadrática. Minimizar (6.27) da entonces el enunciado secuencial con una raíz. Este orden de elecciones evita tanto un umbral oculto de {{21}} fijo como una raíz que dependa de la partición solicitada.
+@@416
+### F.4. Nuevas interfaces públicas y límites de esta revisión
+@@417
+En la tabla siguiente, el prefijo es PaperIV.SublinearResearch, salvo la entrada E32 nombrada explícitamente. Todos los archivos listados pertenecen al nuevo congelado de fuentes identificado en §7. ResearchAudit comprueba estas interfaces; FDCheck.FinalAudit y E34.Audit comprueban por separado el ensamblaje de defecto fijo y el desarrollo de remoción. E35, el adaptador público del Teorema C y la obstrucción de raíz cuadrada están incluidos en el mismo corte, con sus controles específicos indicados abajo.
+@@418
+| Enunciado | Declaración |
+|:--|:--|
+| Cotas cordales reales con una misma raíz, incluida la masa de aristas | chordal_joint_stability_real |
+| Teorema C′ y (6.12)–(6.13) | fixed_defect_joint_stability_real |
+| Parámetros explícitos y clasificación | FixedExplicit.fixed_defect_stability_explicit |
+| Cota de edición hacia tamaño óptimo (6.17) | fixed_defect_exact_extremal_edit_real |
+| Clasificación irrestricta de la igualdad | E32.cp_classification_of_theoremCPrimeC, con la clasificación demostrada arriba |
+| Cota finita (6.22) | certified_shifted_fractional_bound_all_orders |
+| Cota finita (6.23) | certified_refined_fractional_bound_all_orders |
+| Versiones integrales uniformes | uniform_shifted_partition_bound; uniform_refined_partition_bound |
+| Aproximación secuencial con órdenes arbitrarios | sequence_arbitrary_orders_partition_bound |
+| Estabilidad secuencial con una raíz | sequence_arbitrary_orders_stability |
+@@419
+**Tabla 9.** Correspondencia de la extensión. Las interfaces finitas con una misma raíz toman déficits reales; la interfaz secuencial registra parámetros racionales de error y exceso. Esta última no se describe implícitamente como un tipo Lean elaborado distinto.
+@@420
+El factor diez de la desigualdad local {{0}}, para defecto positivo, es óptimo: el perfil {{1}} tiene diez aristas y defecto uno. Esto no prueba la optimalidad de {{2}}, {{3}} ni de los umbrales globales.
+@@421
+El Apéndice E.4 deduce las cuentas terminales conservadas utilizadas en §6.6, y F.3 demuestra la recuperación de clique. El Apéndice F.5 explica el ensamblaje de tres casos de la cota adaptada de muestras con anclajes. Estas adiciones exponen los argumentos intermedios para revisión; no son un nuevo veredicto de auditoría. Una nueva auditoría todavía debe comprobar su correspondencia con los productores formales y los lemas de remoción de nivel inferior. La compilación local no sustituye esa revisión.
+@@422
+### F.5. Lemas auxiliares y adaptaciones de remoción cordal
+@@423
+La implementación de remoción sigue a [22], pero no es una traducción literal de sus enunciados y constantes. Cuatro lemas finitos explicitan los cambios pertinentes para esta aplicación.
+@@424
+**Conteo de ciclos inducidos.** Si {{0}}, entonces para todo {{1}},
+{{2}}
+Aquí indCopies cuenta inmersiones inducidas etiquetadas del ciclo de longitud {{3}}, no conjuntos de vértices de ciclos sin etiquetar. Esta convención importa al utilizar (F.7) en la cota de la unión de eventos de la muestra. El resultado es E34.indCopies_cycle_le. Proporciona la entrada de conteo de ciclos directamente a partir del defecto enraizado.
+@@425
+**Cota de edición co-bipartita.** Si el conjunto de vértices es la unión de dos cliques y {{0}}, existe un cordal {{1}} sobre los mismos vértices con
+{{2}}
+La prueba formal, E34.coBipartite_edit_le, ordena una clique, acota las inversiones en las filas de adyacencia de la otra y reemplaza cada fila por una fila umbral. Los vecindarios cruzados anidados resultantes dan un grafo cordal. La estimación se refiere a distancia de edición, no a una partición en cliques del grafo original.
+@@426
+**Extracción de clique por eliminación.** Si {{0}} es cordal, {{1}} y {{2}} es el número de no-aristas no ordenadas en {{3}}, entonces {{4}} contiene una clique {{5}} que satisface
+{{6}}
+La prueba de E34.exists_large_clique es una inducción por eliminación simplicial. El lado derecho formal utiliza no-aristas ordenadas, de ahí el factor dos. Esto reemplaza el uso de [22, Lema 4] dentro de la reparación casi simplicial; no se presenta como una nueva versión del teorema completo citado allí.
+@@427
+**Reparación casi simplicial.** Particionemos {{0}}, supongamos que {{1}} es cordal y sea {{2}} el número de no-aristas no ordenadas dentro de {{3}}. Si {{4}} y {{5}} para todo {{6}}, existe un cordal {{7}} con
+{{8}}
+Éste es E34.lemma3. En comparación con [22, Lema 3], la constante es ocho en vez de seis, pero no se requiere la condición {{9}}. Ninguna versión se describe como uniformemente más fuerte: difieren las hipótesis y las constantes.
+@@428
+El resto de la implementación cambia la representación y la elección numérica de parámetros de la siguiente manera.
+@@429
+| Paso de [22] | Implementación utilizada aquí |
+|:--|:--|
+| Muestreo | Las muestras son sucesiones con reemplazo. E34.transfer pasa de conteos de sucesiones a subconjuntos de vértices para la propiedad cerrada hacia arriba que se considera. |
+| Representaciones con anclajes | La definición permite una aplicación que preserva caminos desde el árbol prescrito hacia otro árbol enraizado. La prueba de conteo trata esta clase ampliada de representaciones; también cambia la cota de la muestra. |
+| Modelo de árbol | Aplicaciones padre finitas y conjuntos de nodos reemplazan los árboles topológicos. El parámetro {{0}} cuenta nodos, no hojas. Las secciones se indexan por nodos, por lo que no se importa la Afirmación 1 correspondiente. |
+| Conteo de coloraciones por conjuntos | Los vértices afectados se cuentan explícitamente. Los casos de parámetros pequeños y degenerados se separan en lugar de importar literalmente las cotas logarítmicas publicadas. |
+| Cota de muestra con anclajes | El tamaño elegido es {{1}}. |
+| Cota final de la unión de eventos | Se utilizan {{2}} pares muestreados y {{3}} bloques independientes, con {{4}} la familia de datos de compuerta contada explícitamente. |
+@@430
+**Tabla 10.** Adaptaciones de [22] pertinentes al umbral explícito. Las cotas de parámetros mayores no mejoran su exponente del tamaño muestral. La prueba sigue siendo una implementación de su estrategia de remoción, con estos reemplazos finitos y elecciones de parámetros.
+@@431
+**Ensamblaje de la cota adaptada para muestras con anclajes.** Damos los tres casos utilizados en E34.lemma11_V, pues cambiar la representación y la convención de muestreo exige comprobar el argumento de conteo, no sólo citar el lema publicado. Fijemos un árbol enraizado {{0}} con {{1}} nodos y un anclaje prescrito {{2}} para cada vértice de {{3}}. Una muestra *admite los anclajes* si su grafo inducido tiene una representación por subárboles de otro árbol enraizado {{4}}, junto con una aplicación que preserva caminos {{5}}, tal que el subárbol de {{6}} contiene {{7}}. Ésta es la noción ampliada de la Tabla 10.
+@@432
+Supongamos que {{0}} está {{1}}-lejos de ser cordal: todo grafo cordal sobre su conjunto de vértices tiene distancia de edición mayor que {{2}}. La comparación con el grafo vacío fuerza {{3}} y {{4}}; la aplicación de anclajes fuerza entonces {{5}}. Para {{6}}, elijamos
+{{7}}
+Debemos mostrar que a lo sumo la mitad de las {{8}} muestras ordenadas de longitud {{9}}, con reemplazo, admiten los anclajes.
+@@433
+Una coloración por conjuntos admisible asigna a {{0}} un subárbol {{1}} de {{2}} que contiene {{3}}. Para una arista {{4}}, la compatibilidad requiere que el camino de {{5}} a {{6}} esté contenido en {{7}}; para una no-arista requiere {{8}}. Sea {{9}} el número de pares ordenados incompatibles de vértices distintos. Una muestra que admite los anclajes induce una coloración por conjuntos compatible sobre su conjunto de vértices (properOn_of_pinned).
+@@434
+*Caso A: toda coloración admisible tiene al menos {{0}} conflictos.* Apliquemos el teorema adaptado de conteo de coloraciones por conjuntos con tamaño muestral {{1}} y {{2}} rondas. Las condiciones numéricas son {{3}} y la desigualdad thm2_ineq para los parámetros (F.11). Se sigue que a lo sumo la mitad de todas las muestras admiten una coloración por conjuntos compatible. Las muestras que admiten los anclajes forman un subconjunto, por lo que vale para ellas la misma cota.
+@@435
+*Caso B1: alguna {{0}} admisible tiene menos de {{1}} conflictos, pero una sección está lejos de todo modelo de cadena.* Las secciones se indexan por los {{2}} nodos de {{3}}; cada sección tiene dos clases de vértices y un modelo de rangos para sus adyacencias cruzadas. En este caso, una sección tiene más de {{4}} discrepancias para toda asignación de rangos. El lema de conteo de secciones claim5_count acota el número de muestras de longitud {{5}} que inducen un grafo cordal por
+{{6}}
+La estimación de parámetros block_ineq da {{7}}. El segundo sumando es a lo sumo {{8}}, pues {{9}}. Así, a lo sumo la mitad de las muestras de longitud {{10}} son cordales. Tenemos {{11}}; toda muestra de longitud {{12}} que admite los anclajes induce un cordal, y también su prefijo de longitud {{13}}. Cada prefijo tiene {{14}} extensiones. Por tanto, a lo sumo {{15}} muestras completas admiten los anclajes. Todo el argumento usa sucesiones y no supone que sus entradas sean distintas.
+@@436
+*Caso B2: toda sección tiene una asignación de rangos con a lo sumo {{0}} discrepancias.* Normalicemos cada rango reemplazándolo por el número de vértices de rango estrictamente menor. Esto preserva todas las comparaciones estrictas de rangos y, por tanto, todas las discrepancias de las secciones, mientras acota cada rango por {{1}}. Subdividamos el árbol prescrito usando esta cota común y peguemos los modelos de sección. El grafo resultante {{2}} es un grafo de intersección de subárboles y, por tanto, cordal. La estimación de pegado carga cada arista modificada a un conflicto o a una discrepancia de sección:
+{{3}}
+Aquí {{4}}, por (F.11). Esto contradice la distancia supuesta a la clase cordal, luego el caso B2 no puede ocurrir.
+@@437
+Las alternativas son exhaustivas: o toda coloración tiene muchos conflictos, o alguna tiene pocos, y sus secciones incluyen una lejana o todas admiten modelos de rangos cercanos. Las pruebas formales son l11_caseA, l11_caseB1 y l11_caseB2 de E34.L11Main. El teorema de coloración por conjuntos, el lema de conteo de secciones y el lema de pegado de subárboles conservan sus papeles en la estrategia de remoción de [22]; el argumento anterior identifica cómo encajan sus versiones adaptadas. No afirma que el Lema 11 publicado originalmente tenga el enunciado o las constantes modificadas.
+@@438
+El nuevo congelado de fuentes incluye los cuatro lemas finitos anteriores y E35.theoremC_tower, theoremC_tower_uniform, theoremC_tower_uniform_sMax y NfarE_le_tower_poly para (6.28)–(6.29) y (C.4). El adaptador público es PaperIV.DefectExplicitPublication; FDCheck.ASCheck comprueba las dependencias de remoción seleccionadas. La Proposición 6.3a se apoya en PaperIV.OptimalTemplateObstruction.shifted_template_witness, shifted_template_sqrt_witness y no_linear_optimal_template_bound; optimal_family_nonempty verifica que la comparación no sea vacua. Sus resultados de auditoría ejecutados de nuevo y su identidad fuente se describen en §7.
+@@439
+## Apéndice G. Brechas de empaquetamiento y límites de la limpieza
+@@440
+### G.1. La cota para todos los órdenes y las brechas de empaquetamiento
+@@446
+### G.2. Una obstrucción cuantitativa a la limpieza de codegrado
+@@484
+[22] R. de Joannis de Verclos, *Chordal graphs are easily testable*, arXiv:1902.06135v1, 16 de febrero de 2019. Disponible en <https://arxiv.org/abs/1902.06135v1>. El argumento de remoción que sostiene el Apéndice F.3 se atribuye a este trabajo; su implementación y adaptaciones se documentan en el Apéndice F.5.
+@@485
+[23] N. Alon y A. Shapira, *A characterization of the (natural) graph properties testable with one-sided error*, SIAM Journal on Computing **37** (2008), 1703–1727. DOI: <https://doi.org/10.1137/06064888X>. Utilizado por el ensamblaje existencial histórico discutido en el Apéndice E.2, no como el teorema de remoción seleccionado para el Teorema C público explícito.

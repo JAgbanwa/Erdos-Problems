@@ -1,0 +1,29 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 PaperIV/IntegralStability.lean -o /workspace/request-project/.lake/runner/lib/lean/PaperIV/IntegralStability.olean -i /workspace/request-project/.lake/runner/lib/lean/PaperIV/IntegralStability.ilean
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_nlinarith_1._boxed took 299ms
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_nlinarith_1._boxed took 348ms
+import took 4.08s
+.olean serialization took 107ms
+cumulative profiling times:
+	.olean serialization 107ms
+	attribute application 0.0542ms
+	compilation (IR) 13.7ms
+	compilation (LCNF base) 13.7ms
+	compilation (LCNF mono) 6.16ms
+	congr simp thm 22ms
+	elaboration 46.8ms
+	fix level params 1.08ms
+	import 4.08s
+	initialization 33.8ms
+	instantiate metavars 31ms
+	interpretation 1.65s
+	let-to-have transformation 0.125ms
+	linting 7.79ms
+	norm_num 304ms
+	parsing 7.17ms
+	process pre-definitions 15.9ms
+	ring 46.8ms
+	share common exprs 18.9ms
+	simp 348ms
+	tactic execution 158ms
+	type checking 88.7ms
+	typeclass inference 838ms

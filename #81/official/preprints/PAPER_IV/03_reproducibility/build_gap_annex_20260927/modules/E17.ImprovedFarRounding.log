@@ -1,0 +1,129 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 E17/ImprovedFarRounding.lean -o /workspace/request-project/.lake/runner/lib/lean/E17/ImprovedFarRounding.olean -i /workspace/request-project/.lake/runner/lib/lean/E17/ImprovedFarRounding.ilean
+'E17Bridge.faceTransfer_loss' depends on axioms: [propext, Classical.choice, Quot.sound]
+elaboration took 269ms
+'E17Bridge.faceTransfer_weight_four' depends on axioms: [propext, Classical.choice, Quot.sound]
+elaboration took 264ms
+'E17Bridge.transfer_avoids' depends on axioms: [propext, Classical.choice, Quot.sound]
+elaboration took 239ms
+'E17Bridge.profileCleanup_loss' depends on axioms: [propext, Classical.choice, Quot.sound]
+elaboration took 290ms
+'E17Bridge.profileCleanup_zero_or_heavy' depends on axioms: [propext, Classical.choice, Quot.sound]
+elaboration took 284ms
+'E17Bridge.profileCleanup_offCanonical_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+elaboration took 298ms
+'E17Bridge.selected_mass_le_r3_add_card' depends on axioms: [propext, Classical.choice, Quot.sound]
+elaboration took 317ms
+'E17Bridge.triangle_mass_le_r3_add_card' depends on axioms: [propext, Classical.choice, Quot.sound]
+elaboration took 286ms
+'E17Bridge.profileCleanup_triangleMass_loss' depends on axioms: [propext, Classical.choice, Quot.sound]
+elaboration took 280ms
+elaboration took 173ms
+E17/ImprovedFarRounding.lean:574:37: warning: unused variable `hθ`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+E17/ImprovedFarRounding.lean:574:63: warning: unused variable `hv`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+E17/ImprovedFarRounding.lean:575:9: warning: unused variable `huv`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+E17/ImprovedFarRounding.lean:577:9: warning: unused variable `hchoice3`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+E17/ImprovedFarRounding.lean:578:9: warning: unused variable `hchoice4`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+'E17Bridge.exists_improvedGateGap_of_high_mass' depends on axioms: [propext, Classical.choice, Quot.sound]
+elaboration took 1.32s
+interpretation of Mathlib.Meta.Positivity.evalMul._lam_3._boxed took 177ms
+interpretation of Mathlib.Meta.Positivity.evalMul._lam_3._boxed took 112ms
+'E17Bridge.cleanedR3_loss' depends on axioms: [propext, Classical.choice, Quot.sound]
+elaboration took 304ms
+'E17Bridge.cleanedR3_original_value_le_profiles_oldBudget' depends on axioms: [propext, Classical.choice, Quot.sound]
+elaboration took 331ms
+'E17Bridge.cleanedR3_original_triangle_le_profiles_oldBudget' depends on axioms: [propext, Classical.choice, Quot.sound]
+elaboration took 335ms
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_linarith_1._boxed took 123ms
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_linarith_1._boxed took 189ms
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_linarith_1._boxed took 189ms
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_linarith_1._boxed took 201ms
+simp took 151ms
+interpretation of Mathlib.Meta.Positivity.evalNatCast._lam_1._boxed took 114ms
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_linarith_1._boxed took 189ms
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_linarith_1._boxed took 190ms
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_linarith_1._boxed took 218ms
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_linarith_1._boxed took 232ms
+simp took 144ms
+interpretation of Mathlib.Meta.Positivity.evalNatCast._lam_1._boxed took 115ms
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_linarith_1._boxed took 198ms
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_linarith_1._boxed took 214ms
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_linarith_1._boxed took 232ms
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_linarith_1._boxed took 214ms
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_linarith_1._boxed took 212ms
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_linarith_1._boxed took 227ms
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_linarith_1._boxed took 254ms
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_linarith_1._boxed took 235ms
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_linarith_1._boxed took 254ms
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_linarith_1._boxed took 243ms
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_linarith_1._boxed took 240ms
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_linarith_1._boxed took 282ms
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_linarith_1._boxed took 262ms
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_linarith_1._boxed took 266ms
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_linarith_1._boxed took 270ms
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_linarith_1._boxed took 269ms
+tactic execution of Lean.Parser.Tactic.refine took 178ms
+tactic execution of Lean.Parser.Tactic.refine took 167ms
+tactic execution of Lean.Parser.Tactic.obtain took 176ms
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_linarith_1._boxed took 286ms
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_linarith_1._boxed took 350ms
+tactic execution of Lean.Parser.Tactic.refine took 113ms
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_nlinarith_1._boxed took 227ms
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_linarith_1._boxed took 328ms
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_linarith_1._boxed took 227ms
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_linarith_1._boxed took 241ms
+tactic execution of Lean.Parser.Tactic.obtain took 287ms
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_linarith_1._boxed took 243ms
+instantiate metavars took 549ms
+share common exprs took 128ms
+process pre-definitions took 161ms
+type checking took 229ms
+interpretation of Mathlib.TacticAnalysis.tacticAnalysis._lam_0._boxed took 135ms
+linting took 113ms
+'E17Bridge.UniformSchedule.uniformRoundingTarget_via_r3_f1' depends on axioms: [propext, Classical.choice, Quot.sound]
+elaboration took 1.25s
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_nlinarith_1._boxed took 114ms
+E17/ImprovedFarRounding.lean:1215:17: warning: unused variable `hδ`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+'E17Bridge.exists_improvedGateGap_eventually' depends on axioms: [propext, Classical.choice, Quot.sound]
+elaboration took 1.28s
+'E17Bridge.improved_far_loss_eventually' depends on axioms: [propext, Classical.choice, Quot.sound]
+elaboration took 1.28s
+import took 3.82s
+.olean serialization took 273ms
+cumulative profiling times:
+	.olean serialization 273ms
+	attribute application 0.909ms
+	blocked (unaccounted) 40.8s
+	compilation (IR) 211ms
+	compilation (LCNF base) 200ms
+	compilation (LCNF mono) 90.9ms
+	congr simp thm 176ms
+	dsimp 8.58ms
+	elaboration 9.38s
+	fix level params 18.6ms
+	import 3.82s
+	initialization 36.9ms
+	instantiate metavars 600ms
+	interpretation 13.4s
+	let-to-have transformation 10.9ms
+	linting 493ms
+	norm_num 7.89s
+	parsing 76.3ms
+	process pre-definitions 292ms
+	ring 620ms
+	share common exprs 217ms
+	simp 3.8s
+	tactic execution 4.03s
+	type checking 809ms
+	typeclass inference 8.58s

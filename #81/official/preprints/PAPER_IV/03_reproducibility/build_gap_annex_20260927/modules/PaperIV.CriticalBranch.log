@@ -1,0 +1,19 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 PaperIV/CriticalBranch.lean -o /workspace/request-project/.lake/runner/lib/lean/PaperIV/CriticalBranch.olean -i /workspace/request-project/.lake/runner/lib/lean/PaperIV/CriticalBranch.ilean
+import took 2.22s
+cumulative profiling times:
+	.olean serialization 20.9ms
+	attribute application 0.0113ms
+	elaboration 3.75ms
+	fix level params 0.0742ms
+	import 2.22s
+	initialization 38.2ms
+	instantiate metavars 0.101ms
+	interpretation 117ms
+	let-to-have transformation 0.0207ms
+	linting 1.9ms
+	parsing 0.945ms
+	process pre-definitions 0.392ms
+	share common exprs 0.158ms
+	tactic execution 13.7ms
+	type checking 0.978ms
+	typeclass inference 32.5ms

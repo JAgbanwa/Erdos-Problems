@@ -1,0 +1,39 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 PaperIV/SplitFarRounding.lean -o /workspace/request-project/.lake/runner/lib/lean/PaperIV/SplitFarRounding.olean -i /workspace/request-project/.lake/runner/lib/lean/PaperIV/SplitFarRounding.ilean
+PaperIV/SplitFarRounding.lean:54:0: warning: automatically included section variable(s) unused in theorem `PaperIV.SplitFarRounding.splitWeight_nonneg`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+tactic execution of Lean.Parser.Tactic.congr took 447ms
+tactic execution of Lean.Parser.Tactic.congr took 574ms
+PaperIV/SplitFarRounding.lean:185:0: warning: automatically included section variable(s) unused in theorem `PaperIV.SplitFarRounding.splitWeight_coreOnly_nonneg`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+import took 3.03s
+cumulative profiling times:
+	.olean serialization 60ms
+	attribute application 0.451ms
+	compilation (IR) 0.651ms
+	compilation (LCNF base) 2.61ms
+	compilation (LCNF mono) 1.05ms
+	congr simp thm 2.8ms
+	elaboration 63.1ms
+	fix level params 0.958ms
+	import 3.03s
+	initialization 38.1ms
+	instantiate metavars 3.23ms
+	interpretation 303ms
+	let-to-have transformation 0.162ms
+	linting 23.6ms
+	norm_num 2.83ms
+	parsing 11ms
+	process pre-definitions 13.8ms
+	share common exprs 2.97ms
+	simp 17.3ms
+	tactic execution 1.26s
+	type checking 40.4ms
+	typeclass inference 283ms

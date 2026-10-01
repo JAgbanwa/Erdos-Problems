@@ -1,0 +1,27 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 PaperIV/SplitCanonicalWeight.lean -o /workspace/request-project/.lake/runner/lib/lean/PaperIV/SplitCanonicalWeight.olean -i /workspace/request-project/.lake/runner/lib/lean/PaperIV/SplitCanonicalWeight.ilean
+PaperIV/SplitCanonicalWeight.lean:27:29: warning: unused variable `hd`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+import took 3.09s
+cumulative profiling times:
+	.olean serialization 44.5ms
+	attribute application 0.0946ms
+	compilation (IR) 0.559ms
+	compilation (LCNF base) 0.939ms
+	compilation (LCNF mono) 0.82ms
+	congr simp thm 1.95ms
+	elaboration 37.1ms
+	fix level params 0.434ms
+	import 3.09s
+	initialization 40ms
+	instantiate metavars 0.573ms
+	interpretation 234ms
+	let-to-have transformation 0.115ms
+	linting 14.8ms
+	parsing 5.6ms
+	process pre-definitions 3.88ms
+	share common exprs 1.01ms
+	simp 47.2ms
+	tactic execution 49.4ms
+	type checking 6.91ms
+	typeclass inference 47.3ms

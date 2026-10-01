@@ -1,0 +1,22 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 A4S1/DefectOneReduction.lean -o /workspace/request-project/.lake/runner/lib/lean/A4S1/DefectOneReduction.olean -i /workspace/request-project/.lake/runner/lib/lean/A4S1/DefectOneReduction.ilean
+import took 3.91s
+.olean serialization took 107ms
+cumulative profiling times:
+	.olean serialization 107ms
+	attribute application 0.0478ms
+	congr simp thm 1.59ms
+	elaboration 16.1ms
+	fix level params 0.142ms
+	import 3.91s
+	initialization 39.5ms
+	instantiate metavars 4.52ms
+	interpretation 242ms
+	let-to-have transformation 0.0398ms
+	linting 5.56ms
+	parsing 4.02ms
+	process pre-definitions 3.78ms
+	share common exprs 0.954ms
+	simp 7.17ms
+	tactic execution 33.7ms
+	type checking 5.2ms
+	typeclass inference 36.9ms

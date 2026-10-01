@@ -1,0 +1,122 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+\documentclass[
+]{article}
+\usepackage{xcolor}
+\usepackage{amsmath,amssymb}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math} % this also loads fontspec
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+\usepackage{lmodern}
+\ifPDFTeX\else
+  % xetex/luatex font selection
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{longtable,booktabs,array}
+\usepackage{caption}
+\captionsetup[table]{skip=6pt}
+\newcounter{none} % for unnumbered tables
+\usepackage{calc} % for calculating minipage widths
+% Correct order of tables after \paragraph or \subparagraph
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd\longtable{\par}{\if@noskipsec\mbox{}\fi\par}{}{}
+\makeatother
+% Allow footnotes in longtable head/foot
+\IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
+\makesavenoteenv{longtable}
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\usepackage{bookmark}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same}
+% fallback for those not using the hyperref driver hyperxmp:
+\makeatletter
+\@ifundefined{xmpquote}{\newcommand{\xmpquote}[1]{#1}}{}
+\makeatother
+\hypersetup{
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+
+\author{}
+\date{}
+
+\begin{document}
+
+\section{Informe de puerta E0 --- run\_v1.22\_r4 (Paper IV
+v1.22-r4)}\label{informe-de-puerta-e0--run_v122_r4-paper-iv-v122-r4}
+
+Veredicto actual: \textbf{PASS}. Evidencia: \texttt{20\_EVIDENCE/E0/}.
+Auditor: Claude Opus 5.5, misma sesión que las ejecuciones anteriores;
+no se ejecutó Lean.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section{E0 --- Identity (r4)}\label{e0--identity-r4}
+
+Script: \texttt{10\_SCRIPTS/e0\_v122r4.py} (read-only). It produces
+\texttt{E0\_INITIAL.json} and \texttt{E0\_FINAL.json}; the comparison
+between them is in report §11.
+
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}ll@{}}
+\toprule\noalign{}
+Check & Result \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+\texttt{AUDIT\_TARGET\_v1.22\_r4.json} (99ff96c9\ldots) vs. sidecar &
+match \\
+r4 manifest (f35bf2a9\ldots, 129 files), r4 ZIP (8f20048c\ldots),
+mandate (5d89f1c9\ldots), source manifest, source ZIP, annex, base
+target r3 (df89c3dd\ldots) & hash and bytes match \\
+Earlier evidence: the r3, r2, r1, v1.21 and v1.2 ZIPs, source ZIP, annex
+& match \\
+r4 manifest vs. directory & 0 mismatches. Excluded by declaration:
+manifest/sidecar, ZIP/sidecar, \texttt{.aux},
+\texttt{\_\_pycache\_\_} \\
+r4 ZIP: 131 members (129 + manifest + sidecar) & CRC OK; nothing missing
+or extra; 0 hash mismatches \\
+\textbf{EN MD/TeX/PDF vs. r3} & \textbf{byte-identical} \\
+ES MD/TeX/PDF vs. r3 & differ, as declared (see E6) \\
+\texttt{verify\_frozen\_logs.py} (c55225f3\ldots) and
+\texttt{LOG\_INVENTORY.json} (938dcdcc\ldots) vs. r3 &
+\textbf{identical} \\
+Figures (18 files + svg) vs. r3 & identical; none missing \\
+r3 and r2 comparison cuts & unchanged \\
+Lean 615/615; source ZIP = manifest; annex has 40 members, CRC OK &
+OK \\
+run\_v1.2\_r1, v1.21, r1, r2, r3 & 1097 / 340 / 188 / 182 / 165 manifest
+files unchanged; sidecars and CRC OK \\
+\end{longtable}
+}
+
+\textbf{E0 verdict (r4): PASS.}
+
+\end{document}

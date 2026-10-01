@@ -1,0 +1,119 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+\documentclass[
+]{article}
+\usepackage{xcolor}
+\usepackage{amsmath,amssymb}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math} % this also loads fontspec
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+\usepackage{lmodern}
+\ifPDFTeX\else
+  % xetex/luatex font selection
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\usepackage{bookmark}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same}
+% fallback for those not using the hyperref driver hyperxmp:
+\makeatletter
+\@ifundefined{xmpquote}{\newcommand{\xmpquote}[1]{#1}}{}
+\makeatother
+\hypersetup{
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+
+\author{}
+\date{}
+
+\begin{document}
+
+\section{Informe de puerta E4 --- run\_v1.22\_r4 (Paper IV
+v1.22-r4)}\label{informe-de-puerta-e4--run_v122_r4-paper-iv-v122-r4}
+
+Veredicto actual: \textbf{PASS --- reused\_verified\_external\_build}.
+Evidencia: \texttt{20\_EVIDENCE/E4/}. Auditor: Claude Opus 5.5, misma
+sesión que las ejecuciones anteriores; no se ejecutó Lean.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section{E4 --- Formal reproduction
+(r4)}\label{e4--formal-reproduction-r4}
+
+\textbf{Status: PASS --- reused\_verified\_external\_build, inherited
+and revalidated by identity. No new build, Lake, Lean or kernel replay
+was run.}
+
+The original external build is run\_v1.2\_r1, attempt 2, 2026-09-30,
+15:09--21:33 UTC.
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Console} \texttt{10\_LOGS/E4\_main\_console.log}
+  (ef5b01c7\ldots): \texttt{modules\_planned\ 607,\ pass\ 607}, no
+  failures; 607 lines \texttt{PASS\ n\ 607}; \texttt{EXIT\ 0}; all 19
+  FREEZE\_SCOPE targets PASS.
+\item
+  \textbf{\texttt{records.jsonl}} (0f2d8495\ldots): 608 rows, all PASS,
+  exit 0.
+\item
+  \textbf{\texttt{ReleaseExportCheck}}: 224 \texttt{\#check} lines, 0
+  errors.
+\item
+  \textbf{Annex} (57ce1895\ldots): 50/50 PASS; 633 declarations with
+  standard axioms.
+\item
+  \textbf{Objects}: 607 oleans byte-identical to the
+  author\textquotesingle s.
+\item
+  \textbf{Axioms}: 461 \emph{records}, of which 314 are
+  \texttt{\#print\ axioms} outputs and the rest repetitions, \textbf{not
+  distinct theorems}. The 18 headline declarations depend on \{propext,
+  Classical.choice, Quot.sound\}. In the 50 public cones there are 0
+  non-standard axioms, 0 \texttt{sorryAx} and 0 \texttt{Erdos81}
+  constants.
+\item
+  \texttt{E4\_main/SUMMARY.json} was overwritten by AuditorChecks and is
+  \textbf{not used}.
+\end{itemize}
+
+\textbf{r4 confirmation.} \texttt{10\_SCRIPTS/e4\_reuse\_check.py}
+(db2eddb8\ldots) produces \texttt{E4\_REUSE\_CHECK.json},
+\textbf{identical} to r3 and r2.
+
+\textbf{Validity.} r4 changes only two ES documentary phrases. Lean, the
+source ZIP, the annex and the run\_v1.2\_r1 evidence (1097 files) are
+unchanged (E0 initial and final).
+
+\textbf{Limits.} Same machine and cache; no clean-room build; no kernel
+replay; the build was produced by the same auditor and session.
+
+\end{document}

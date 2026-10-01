@@ -1,0 +1,23 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 PaperIV/RC01ResidualTransferClosure.lean -o /workspace/request-project/.lake/runner/lib/lean/PaperIV/RC01ResidualTransferClosure.olean -i /workspace/request-project/.lake/runner/lib/lean/PaperIV/RC01ResidualTransferClosure.ilean
+import took 3.98s
+.olean serialization took 138ms
+cumulative profiling times:
+	.olean serialization 138ms
+	attribute application 0.136ms
+	congr simp thm 1.71ms
+	elaboration 110ms
+	fix level params 0.902ms
+	import 3.98s
+	initialization 37.9ms
+	instantiate metavars 6.35ms
+	interpretation 380ms
+	let-to-have transformation 0.229ms
+	linting 30.2ms
+	norm_num 13.8ms
+	parsing 14.9ms
+	process pre-definitions 8.12ms
+	share common exprs 2.82ms
+	simp 7.04ms
+	tactic execution 189ms
+	type checking 34ms
+	typeclass inference 233ms

@@ -1,0 +1,104 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+\documentclass[
+]{article}
+\usepackage{xcolor}
+\usepackage{amsmath,amssymb}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math} % this also loads fontspec
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+\usepackage{lmodern}
+\ifPDFTeX\else
+  % xetex/luatex font selection
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\usepackage{bookmark}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same}
+% fallback for those not using the hyperref driver hyperxmp:
+\makeatletter
+\@ifundefined{xmpquote}{\newcommand{\xmpquote}[1]{#1}}{}
+\makeatother
+\hypersetup{
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+
+\author{}
+\date{}
+
+\begin{document}
+
+\section{Informe de puerta E2 --- run\_v1.22\_r2 (Paper IV
+v1.22-r2)}\label{informe-de-puerta-e2--run_v122_r2-paper-iv-v122-r2}
+
+Veredicto actual: \textbf{PASS (R-01 observation)}. Evidencia:
+\texttt{20\_EVIDENCE/E2/}. Auditor: Claude Opus 5.5, misma sesión que
+las ejecuciones anteriores; no se ejecutó Lean.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section{E2 --- Matemática (r2: control de
+impacto)}\label{e2--matemuxe1tica-r2-control-de-impacto}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Delta r2.} Una única línea cambiada cae en una demostración
+  (l.688, Lema 5.3: «ni otro empaquetamiento»). Es una sustitución
+  terminológica sin contenido matemático. Ninguna fórmula cambia (E6).
+\item
+  \textbf{Herencia de las siete filas de A.2.} Las evaluaciones
+  individuales se conservan (detalle en el informe consolidado §4):
+
+  \begin{itemize}
+  \tightlist
+  \item
+    A2-1, A2-2 y A2-7: ACCEPTABLE\_SUMMARY desde run\_v1.2\_r1.
+  \item
+    A2-3, A2-5 y A2-6: REQUIRES\_EXPANSION en run\_v1.2\_r1;
+    ACCEPTABLE\_SUMMARY en run\_v1.21\_r1.
+  \item
+    A2-4: REQUIRES\_EXPANSION en run\_v1.2\_r1 y run\_v1.21\_r1;
+    ACCEPTABLE\_SUMMARY en run\_v1.22\_r1, tras rederivar C.3 contra
+    Mathlib fijado y E18/E19.
+  \item
+    La herencia es válida porque el texto ES/EN de C.2, C.3, E.1, §5.1 y
+    D.1 es idéntico a r1, salvo las palabras de l.1892, 1917 y 1959 en
+    E.1, que no tocan ninguna fórmula ni cuenta.
+  \end{itemize}
+\item
+  \textbf{R-01} (OBSERVATION, vigente): las cotas de segundo momento
+  B\_q de C.2 se citan, no se derivan. \textbf{R-02:} resuelto en r1.
+\end{itemize}
+
+\textbf{Veredicto E2 (r2): PASS} (observación R-01 vigente) --- heredado
+y revalidado por identidad.
+
+\end{document}

@@ -1,0 +1,29 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 PaperIV/RD09SpokeCompatibility.lean -o /workspace/request-project/.lake/runner/lib/lean/PaperIV/RD09SpokeCompatibility.olean -i /workspace/request-project/.lake/runner/lib/lean/PaperIV/RD09SpokeCompatibility.ilean
+PaperIV/RD09SpokeCompatibility.lean:181:0: warning: automatically included section variable(s) unused in theorem `PaperIV.RD09SpokeCompatibility.IsSpokeCompatible.completion_card_le_paid`:
+  [DecidableEq J]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq J] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+import took 3s
+cumulative profiling times:
+	.olean serialization 69.7ms
+	attribute application 0.149ms
+	blocked (unaccounted) 3.3ms
+	compilation (IR) 0.662ms
+	compilation (LCNF base) 1.04ms
+	compilation (LCNF mono) 0.319ms
+	elaboration 151ms
+	fix level params 0.627ms
+	import 3s
+	initialization 40.3ms
+	instantiate metavars 2.19ms
+	interpretation 249ms
+	let-to-have transformation 0.271ms
+	linting 19.5ms
+	parsing 11.8ms
+	process pre-definitions 5.27ms
+	share common exprs 1.62ms
+	tactic execution 65.3ms
+	type checking 16.8ms
+	typeclass inference 114ms

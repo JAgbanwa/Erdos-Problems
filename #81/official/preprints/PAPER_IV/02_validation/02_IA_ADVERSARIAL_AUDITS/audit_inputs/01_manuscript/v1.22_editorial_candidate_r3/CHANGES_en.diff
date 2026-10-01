@@ -1,0 +1,47 @@
+--- r2/PAPER_IV_preprint_v1.22_en.md
++++ r3/PAPER_IV_preprint_v1.22_en.md
+@@ -8,7 +8,7 @@
+ **Paper IV in the series**  
+ **Preprint:** version 1.22, editorial review candidate.
+ **Date of this revision:** October 1, 2026.
+-**Status:** editorial revision addressing the completed revalidation of version 1.21. The Lean source cut remains `piv-v12-fb459343d234`; this revision makes no source changes. The revalidation retained PASS for formal reproduction after checking the unchanged sources and earlier build evidence. Its overall verdict was INCONCLUSIVE because the final regularity-to-tower comparison required fuller exposition. That comparison is expanded in C.3 below; the new explanations and bilingual artifacts require their own review. This candidate has not been published or assigned its own DOI.
++**Status:** the v1.22-r2 external review concluded PASS_WITH_OBSERVATIONS on October 1, 2026. It accepted the expanded C.3 argument and all seven derivations in A.2; no finding of severity MINOR or higher remained open. The Lean source cut remains `piv-v12-fb459343d234`, with formal PASS inherited from the verified external build. This r3 package updates audit-status information; its documentary delta awaits verification. No new Lean build is claimed. This candidate has not been published or assigned its own DOI.
+ **Series concept DOI:** <https://doi.org/10.5281/zenodo.21273143>. The version DOI for the deposit that will collect Papers I–IV has not yet been assigned.
+ 
+ **MSC 2020:** Primary 05C70; secondary 05C35, 05C72.
+@@ -1182,7 +1182,7 @@
+ 
+ The earlier cut `piv-stability-fe9bb18343da` and the separate integration runs are preserved under their original identities. The new cut supersedes their role as the selected source identity; it does not rewrite their evidence. The four E35L modules and `FDCheck.TowerAudit` were removed from the new tree because E35 supersedes their estimates and none belongs to the selected dependency closure. All remaining local Lean modules lie in the closure of the 19 selected targets. That closure includes historical definitions and comparison checks; it is not claimed to be the smallest possible proof library.
+ 
+-**Audit status of this editorial candidate.** The reconstruction evidence above predates the audits. Subsequently, the internal run `run_20260929_v1.2_fb459343d234_r1` recorded PASS for its declared scope. The completed external run `run_v1.2_r1` returned INCONCLUSIVE overall because four derivations required fuller exposition, but PASS for formal reproduction: 607 main modules, all 19 targets and the 50-module annex compiled successfully. All 607 main compiled objects were byte-identical to the author’s recorded objects. The subsequent `run_v1.21_r1` accepted six of the seven intermediate derivations in A.2 and retained formal PASS by rechecking the existing evidence, without recompilation. It remained INCONCLUSIVE on the final comparison in C.3. Version 1.22 expands that comparison and corrects the remaining presentation findings; those changes await revalidation. The Lean source identity has not changed, and no new Lean build is claimed for this editorial candidate.
++**Audit status of this editorial candidate.** The internal run `run_20260929_v1.2_fb459343d234_r1` recorded PASS for its declared scope. The external build in `run_v1.2_r1` compiled 607 main modules, all 19 targets and the 50-module annex; the 607 main objects were byte-identical to the author’s objects. That review and `run_v1.21_r1` were INCONCLUSIVE overall because exposition remained incomplete. The expanded C.3 comparison was accepted in `run_v1.22_r1`, completing the seven A.2 derivations. The consolidated `run_v1.22_r2` returned PASS_WITH_OBSERVATIONS and closed the remaining Spanish corrections. Its observations and scope limitations are retained in the report. Revalidations used unchanged sources and existing build evidence, without recompilation. This r3 documentary update is submitted separately; it does not claim a new formal build or a verdict for its own changes.
+ 
+ ### 7.1. Repositories and contributions
+ 
+@@ -1300,7 +1300,7 @@
+ 
+ **Table 7.** Principal declarations. The module table in Section 7 locates the implementation; this table identifies the statement being audited.
+ 
+-The single audit command described in §7 executes all 19 targets, including the root, the individual audit targets and the export check. Lean and dependency revisions are recorded in lean-toolchain and lake-manifest.json. Compilation, public export, axiom inspection and semantic correspondence are distinct checks. The source freeze is unchanged. Its internal audit is complete; the external v1.2 build passed and was revalidated without recompilation in v1.21. The expanded C.3 comparison in v1.22 awaits a new mathematical and editorial review.
++The single audit command described in §7 executes all 19 targets, including the root, the individual audit targets and the export check. Lean and dependency revisions are recorded in lean-toolchain and lake-manifest.json. Compilation, public export, axiom inspection and semantic correspondence are distinct checks. The source freeze is unchanged. The external build passed in v1.2 and its evidence was revalidated in subsequent revisions without recompilation. The consolidated v1.22-r2 report records the accepted C.3 expansion and distinguishes individual semantic comparisons from statements covered by the proof-component ledger and compiled declarations.
+ 
+ **Literal definitions.** The following excerpts reproduce definitions and theorem headers, omitting proofs but not hypotheses. The first excerpt is in the namespace `SimpleGraph`; the next three are in `PaperIV.FarRounding`, with finite \(V\), decidable equality and decidable adjacency for \(G\). The last definition is in `PaperIV`. Namespace names are retained in the supplementary excerpt file.
+ 
+@@ -1352,7 +1352,7 @@
+ 
+ ### A.2. Intermediate proof contracts
+ 
+-**Scope of the written proof.** The table below records derivations whose exposition requires particular scrutiny. Revision 1.21 expanded the bilateral fibre cleaning in C.2, the normalization counts and joint elimination in E.1, and the numerical schedule in C.3. Its revalidation accepted six of the seven rows, leaving the final tower comparison open. Revision 1.22 defines the regularity recurrence in C.3 and expands the lower bound for its iterate, the absorption of the five threshold terms and the upper tower comparison. The corresponding proofs already belong to the frozen Lean sources. A successful build checks formal derivations, not the completeness of their exposition; the new explanation requires review. These are review obligations, not additional hypotheses of the theorems.
++**Scope of the written proof.** The table below records derivations that received particular scrutiny. Revision 1.21 expanded the bilateral fibre cleaning in C.2, the normalization counts and joint elimination in E.1, and the numerical schedule in C.3. Revision 1.22 then supplied the regularity recurrence and the final tower comparison. The consolidated v1.22-r2 report classifies all seven rows as ACCEPTABLE_SUMMARY. It retains the stated expository limit concerning the cited second-moment estimates in C.2. A successful build checks formal derivations, not completeness of exposition; the written-proof assessment remains distinct from compilation and from human peer review.
+ 
+ | Location | Derivation to review, including the expanded accounts |
+ |:--|:--|
+@@ -2354,7 +2354,7 @@
+ 
+ The factor ten in the local inequality \(\binom{a+b}{2}\le10d(a,b)\), for positive defect, is sharp: the profile \((a,b)=(3,2)\) has ten edges and defect one. This does not prove optimality of \(480\), \(A_s\), or the global thresholds.
+ 
+-Appendix E.4 derives the retained terminal accounts used in §6.6, and F.3 proves clique recovery. Appendix F.5 explains the three-case assembly of the adapted pinned-sample bound. These additions expose the intermediate arguments for review; they are not a new audit verdict. A renewed audit must still check their correspondence with the formal producers and the lower-level removal lemmas. Local compilation is not a substitute for that review.
++Appendix E.4 derives the retained terminal accounts used in §6.6, F.3 proves clique recovery, and F.5 explains the three-case assembly of the adapted pinned-sample bound. Their recorded checks are consolidated in the v1.22-r2 report, with the scope and limitations stated there. These checks compare the written accounts with the frozen formal development; they do not turn local compilation into a substitute for mathematical review.
+ 
+ ### F.5. Auxiliary lemmas and adaptations of chordal removal
+ 

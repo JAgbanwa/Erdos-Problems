@@ -1,0 +1,26 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 PaperIV/RC01CleanedSpreadPacking.lean -o /workspace/request-project/.lake/runner/lib/lean/PaperIV/RC01CleanedSpreadPacking.olean -i /workspace/request-project/.lake/runner/lib/lean/PaperIV/RC01CleanedSpreadPacking.ilean
+PaperIV/RC01CleanedSpreadPacking.lean:33:0: warning: automatically included section variable(s) unused in theorem `PaperIV.RC01CleanedSpreadPacking.activeServing_subset`:
+  [Fintype V]
+  [DecidableEq V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] [DecidableEq V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+import took 3.72s
+cumulative profiling times:
+	.olean serialization 88.1ms
+	attribute application 0.0403ms
+	elaboration 31.7ms
+	fix level params 0.215ms
+	import 3.72s
+	initialization 36.4ms
+	instantiate metavars 0.325ms
+	interpretation 257ms
+	let-to-have transformation 0.0912ms
+	linting 5.97ms
+	parsing 3.83ms
+	process pre-definitions 3.82ms
+	share common exprs 0.512ms
+	tactic execution 27.7ms
+	type checking 7.03ms
+	typeclass inference 76.1ms

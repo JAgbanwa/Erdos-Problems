@@ -1,0 +1,26 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 PaperIV/RC01TriangleTransfer.lean -o /workspace/request-project/.lake/runner/lib/lean/PaperIV/RC01TriangleTransfer.olean -i /workspace/request-project/.lake/runner/lib/lean/PaperIV/RC01TriangleTransfer.ilean
+import took 4.19s
+cumulative profiling times:
+	.olean serialization 95.6ms
+	attribute application 0.0403ms
+	compilation (IR) 1.17ms
+	compilation (LCNF base) 1.17ms
+	compilation (LCNF mono) 0.477ms
+	congr simp thm 4.11ms
+	elaboration 36ms
+	fix level params 0.928ms
+	import 4.19s
+	initialization 39.2ms
+	instantiate metavars 5.86ms
+	interpretation 458ms
+	let-to-have transformation 0.0703ms
+	linting 29.8ms
+	norm_num 29ms
+	parsing 5.78ms
+	process pre-definitions 9.83ms
+	ring 21.1ms
+	share common exprs 4.32ms
+	simp 15.2ms
+	tactic execution 210ms
+	type checking 44.7ms
+	typeclass inference 248ms

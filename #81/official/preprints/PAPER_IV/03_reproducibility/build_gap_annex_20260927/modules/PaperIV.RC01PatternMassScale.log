@@ -1,0 +1,33 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 PaperIV/RC01PatternMassScale.lean -o /workspace/request-project/.lake/runner/lib/lean/PaperIV/RC01PatternMassScale.olean -i /workspace/request-project/.lake/runner/lib/lean/PaperIV/RC01PatternMassScale.ilean
+PaperIV/RC01PatternMassScale.lean:24:0: warning: automatically included section variable(s) unused in theorem `PaperIV.RC01PatternMassScale.card_crossEdges_le_mul_classCards`:
+  [Fintype P]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype P] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_nlinarith_1._boxed took 139ms
+import took 3.87s
+cumulative profiling times:
+	.olean serialization 74.3ms
+	attribute application 0.036ms
+	compilation (IR) 1.59ms
+	compilation (LCNF base) 1.53ms
+	compilation (LCNF mono) 0.654ms
+	congr simp thm 5.54ms
+	elaboration 28.2ms
+	fix level params 0.618ms
+	import 3.87s
+	initialization 45.4ms
+	instantiate metavars 5.07ms
+	interpretation 378ms
+	let-to-have transformation 0.0576ms
+	linting 10.9ms
+	norm_num 0.656ms
+	parsing 5.3ms
+	process pre-definitions 4.64ms
+	ring 4.78ms
+	share common exprs 2.25ms
+	simp 68.5ms
+	tactic execution 235ms
+	type checking 18ms
+	typeclass inference 211ms

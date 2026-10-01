@@ -1,0 +1,25 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 Nibble/Tight/LossVariance.lean -o /workspace/request-project/.lake/runner/lib/lean/Nibble/Tight/LossVariance.olean -i /workspace/request-project/.lake/runner/lib/lean/Nibble/Tight/LossVariance.ilean
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_nlinarith_1._boxed took 592ms
+import took 4.28s
+.olean serialization took 103ms
+cumulative profiling times:
+	.olean serialization 103ms
+	attribute application 0.0763ms
+	congr simp thm 3.17ms
+	elaboration 71.2ms
+	fix level params 1.98ms
+	import 4.28s
+	initialization 39.4ms
+	instantiate metavars 13.3ms
+	interpretation 1.74s
+	let-to-have transformation 0.114ms
+	linting 44.5ms
+	norm_num 22.7ms
+	parsing 20.4ms
+	process pre-definitions 29.1ms
+	ring 101ms
+	share common exprs 24.1ms
+	simp 6.28ms
+	tactic execution 349ms
+	type checking 91.7ms
+	typeclass inference 1.03s

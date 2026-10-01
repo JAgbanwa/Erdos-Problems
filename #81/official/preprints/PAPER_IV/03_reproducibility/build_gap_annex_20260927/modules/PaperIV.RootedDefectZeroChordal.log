@@ -1,0 +1,21 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 PaperIV/RootedDefectZeroChordal.lean -o /workspace/request-project/.lake/runner/lib/lean/PaperIV/RootedDefectZeroChordal.olean -i /workspace/request-project/.lake/runner/lib/lean/PaperIV/RootedDefectZeroChordal.ilean
+import took 3.08s
+cumulative profiling times:
+	.olean serialization 46.9ms
+	attribute application 0.074ms
+	congr simp thm 2.59ms
+	elaboration 29.3ms
+	fix level params 0.642ms
+	import 3.08s
+	initialization 36.5ms
+	instantiate metavars 5.52ms
+	interpretation 218ms
+	let-to-have transformation 0.0973ms
+	linting 9.57ms
+	parsing 9.13ms
+	process pre-definitions 4.49ms
+	share common exprs 1.75ms
+	simp 19.7ms
+	tactic execution 91.5ms
+	type checking 47.7ms
+	typeclass inference 39.6ms

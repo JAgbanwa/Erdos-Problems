@@ -1,0 +1,26 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 Nibble/Survival.lean -o /workspace/request-project/.lake/runner/lib/lean/Nibble/Survival.olean -i /workspace/request-project/.lake/runner/lib/lean/Nibble/Survival.ilean
+import took 4.47s
+.olean serialization took 106ms
+cumulative profiling times:
+	.olean serialization 106ms
+	attribute application 0.0303ms
+	blocked (unaccounted) 7.88ms
+	congr simp thm 17.8ms
+	dsimp 4.79ms
+	elaboration 39.5ms
+	fix level params 1.22ms
+	import 4.47s
+	initialization 40.6ms
+	instantiate metavars 4.35ms
+	interpretation 333ms
+	let-to-have transformation 0.0418ms
+	linting 9.5ms
+	norm_num 0.471ms
+	parsing 6.47ms
+	process pre-definitions 6.6ms
+	ring 4.56ms
+	share common exprs 3.92ms
+	simp 198ms
+	tactic execution 107ms
+	type checking 27.9ms
+	typeclass inference 156ms

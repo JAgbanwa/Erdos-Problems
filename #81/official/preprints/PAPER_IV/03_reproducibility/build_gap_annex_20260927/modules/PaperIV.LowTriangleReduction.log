@@ -1,0 +1,25 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 PaperIV/LowTriangleReduction.lean -o /workspace/request-project/.lake/runner/lib/lean/PaperIV/LowTriangleReduction.olean -i /workspace/request-project/.lake/runner/lib/lean/PaperIV/LowTriangleReduction.ilean
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_nlinarith_1._boxed took 140ms
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_nlinarith_1._boxed took 253ms
+import took 2.84s
+cumulative profiling times:
+	.olean serialization 66ms
+	attribute application 0.11ms
+	congr simp thm 6ms
+	elaboration 58.5ms
+	fix level params 0.895ms
+	import 2.84s
+	initialization 38.3ms
+	instantiate metavars 1.64ms
+	interpretation 630ms
+	let-to-have transformation 0.319ms
+	linting 15.6ms
+	norm_num 40ms
+	parsing 6.82ms
+	process pre-definitions 11.4ms
+	ring 22.6ms
+	share common exprs 5.04ms
+	simp 41.8ms
+	tactic execution 86.1ms
+	type checking 65.5ms
+	typeclass inference 307ms

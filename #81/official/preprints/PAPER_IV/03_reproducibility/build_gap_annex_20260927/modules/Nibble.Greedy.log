@@ -1,0 +1,26 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 Nibble/Greedy.lean -o /workspace/request-project/.lake/runner/lib/lean/Nibble/Greedy.olean -i /workspace/request-project/.lake/runner/lib/lean/Nibble/Greedy.ilean
+import took 2.26s
+cumulative profiling times:
+	.olean serialization 23.3ms
+	attribute application 0.0466ms
+	compilation (IR) 0.177ms
+	compilation (LCNF base) 0.407ms
+	compilation (LCNF mono) 0.251ms
+	congr simp thm 0.682ms
+	elaboration 16.9ms
+	fix level params 0.262ms
+	import 2.26s
+	initialization 51.5ms
+	instantiate metavars 0.535ms
+	interpretation 156ms
+	let-to-have transformation 0.0566ms
+	linting 5.28ms
+	norm_num 0.139ms
+	parsing 4.35ms
+	process pre-definitions 4.4ms
+	ring 1.79ms
+	share common exprs 0.732ms
+	simp 5.23ms
+	tactic execution 33.7ms
+	type checking 5.3ms
+	typeclass inference 41.2ms

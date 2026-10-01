@@ -1,0 +1,21 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 PaperIV/RC01CanonicalSlots.lean -o /workspace/request-project/.lake/runner/lib/lean/PaperIV/RC01CanonicalSlots.olean -i /workspace/request-project/.lake/runner/lib/lean/PaperIV/RC01CanonicalSlots.ilean
+import took 3.53s
+cumulative profiling times:
+	.olean serialization 63ms
+	attribute application 0.0612ms
+	congr simp thm 1.61ms
+	elaboration 32.9ms
+	fix level params 0.436ms
+	import 3.53s
+	initialization 35.3ms
+	instantiate metavars 1.32ms
+	interpretation 213ms
+	let-to-have transformation 0.0997ms
+	linting 40.3ms
+	parsing 5.07ms
+	process pre-definitions 4.57ms
+	share common exprs 1.02ms
+	simp 19.2ms
+	tactic execution 114ms
+	type checking 7.36ms
+	typeclass inference 69.5ms

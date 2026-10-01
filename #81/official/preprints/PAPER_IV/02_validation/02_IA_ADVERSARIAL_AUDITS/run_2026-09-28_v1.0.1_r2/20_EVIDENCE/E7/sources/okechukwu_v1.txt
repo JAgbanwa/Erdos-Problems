@@ -1,0 +1,1536 @@
+                                          CLIQUE PARTITIONS AND BOUNDED SIMPLICIAL
+                                                                               DEFECT
+
+                                                        OBINNA OKECHUKWU
+
+arXiv:2609.20871v1 [math.CO] 15 Sep 2026  Abstract. The clique partition number of a graph is the minimum
+
+                                          number of complete subgraphs whose edge sets partition its edge set.
+
+                                          We study graphs in which, in every induced subgraph and outside every
+
+                                          prescribed clique, some vertex has a neighbourhood that becomes a clique
+
+                                          after deleting at most s vertices. The case s = 0 is exactly the class of
+
+                                          chordal graphs. For each fixed s, we prove that the maximum clique
+
+                                          partition number at all sufficiently large orders n is (n + s)(n + s +
+
+                                          1)/6 -  s+1   , and determine all equality graphs. The same expression is
+                                                    2
+
+                                          an upper bound up to an additive constant depending only on s at every
+
+                                          order. In particular, every chordal graph has clique partition number
+                                          at most n2/6 + n/6 + O(1), answering a question of Erds, Ordman
+
+                                          and Zalcstein. We also prove structural stability for sublinear defect
+
+                                          and a sharp finite-order theorem for integer signed clique functionals.
+
+                                          The proof combines signed fractional localization with an edge-disjoint
+
+                                          triangle construction; only a qualitative fractional-packing approximation
+
+                                          is required.
+
+                                                                               1. Introduction
+
+                                             For a finite simple graph G, let cp(G) be the minimum number of cliques
+                                          of order at least two whose edge sets partition E(G). Erds, Goodman
+                                          and Pósa proved that cp(G)  |G|2/4, with a partition using only edges
+                                          and triangles [5, Theorem 4]. Erds, Ordman and Zalcstein asked for the
+                                          corresponding extremal bound on chordal graphs. They exhibited examples
+                                          with n2/6 + O(n) parts and proved an upper bound (1/4 - )n2 for some
+                                          absolute  > 0 [6]. Their question, now listed as Erds Problem 81 [2], asks
+                                          whether n2/6 + O(n) parts always suffice. We prove a stronger bound and
+                                          extend it to a hereditary relaxation of chordality.
+
+                                             A vertex v of a graph H is s-simplicial if
+
+                                                                          dH (v) - (H[NH (v)])  s,
+
+                                          where the clique number of the empty graph is zero. Define the rooted
+                                          simplicial defect rsd(G) to be the least nonnegative integer s such that, in
+
+                                              Date: September 2026.
+                                              2020 Mathematics Subject Classification. 05C35, 05C70, 05C17.
+                                              Key words and phrases. Clique partition, chordal graph, simplicial vertex, fractional
+                                          packing, stability.
+                                              Cambridge, MA, USA.
+
+                                                                                                             1
+2                          OBINNA OKECHUKWU
+
+every induced subgraph H and outside every proper clique of H, there is
+
+an s-simplicial vertex. The empty clique is allowed. Equivalently, every
+
+noncomplete induced subgraph contains two nonadjacent s-simplicial vertices
+
+(Lemma 2.1). Dirac's simplicial-vertex theorem gives rsd(G) = 0 exactly for
+
+chordal graphs [4].
+
+   Put
+
+           Fn =      n(n + 1)     ,  Qs(n) = Fn+s -       s+1           (1.1)
+                                                                .
+                        6                                 2
+
+The join of two vertex-disjoint graphs is denoted by , and their disjoint
+union by .
+
+Theorem 1.1. For each integer s  0 there are constants Ks  0 and Ns
+with the following properties. Every graph G of order n with rsd(G)  s
+
+satisfies
+
+                           cp(G)  Qs(n) + Ks.                           (1.2)
+
+For n  Ns, the maximum is exactly Qs(n). Equality at these orders holds
+precisely for the graphs
+
+   Kk-s  Ks  Kn-k,                k a nearest integer to  2(n + s) + 1  . (1.3)
+
+                                                           6
+
+   In particular, the extremal value for fixed s is
+
+                     n2 2s + 1 s(s + 1)
+                        +            n-        + O(1).
+                     6         6            3
+
+The coefficient of the linear term is therefore determined by the defect.
+
+Corollary 1.2. Every chordal graph G of order n satisfies
+
+                        cp(G)        n(n + 1)  + O(1).
+
+                                         6
+
+For all sufficiently large n, the maximum is Fn, and the equality graphs are
+exactly Kk  Kn-k with k a nearest integer to (2n + 1)/6.
+
+   The graphs Kk  Kn-k are the extremal examples already underlying [6].
+Split graphs were studied separately by Wallis and Wu [11] and by Chen,
+Erds and Ordman [3]. The computational difficulty remains even within
+split graphs: deciding their clique partition number is NP-complete [11]. Our
+conclusions are extremal theorems, not formulas for the optimum of every
+graph in the class.
+
+   The hereditary condition in Theorem 1.1 does not impose a useful cut or a
+near-extremal form in advance. For example, rsd(Km  H) = rsd(H), so the
+class with defect at most one contains joins of arbitrarily large cliques with
+disjoint unions of cycles. The subclass s = 0 is understood through perfect
+elimination orders [4, 7]; the proof below uses orders ending in a prescribed
+clique. Generalized elimination orderings for hereditary graph classes were
+studied systematically by Aboulker, Charbit, Trotignon and Vuskovi [1].
+After reversing their order convention, an unrooted s-defective order is an
+CLIQUE PARTITIONS AND BOUNDED SIMPLICIAL DEFECT                    3
+
+Fs-elimination order for the family Fs of graphs J with |J| - (J) > s; our
+rooted condition requires such an order ending at every prescribed clique.
+Distance-based notions of simplicial elimination characterize graphs with
+bounded induced-cycle length [10]. Our definition instead counts deleted
+neighbours; cycles of arbitrary length already have rooted defect at most one,
+since every vertex of every induced subgraph has neighbourhood deficiency
+at most one.
+
+   We also obtain a stability statement in which the defect may grow with
+the order. For a clique A  V (G), write
+
+       DA = |A| |V (G) \ A| - eG(A, V (G) \ A).                    (1.4)
+
+Theorem 1.3. Let |Gj| = nj  . If
+
+rsd(Gj) = o(nj),               cp(Gj )            nj2  -  o(nj2),
+                                                  6
+
+then there are cliques Aj  V (Gj) such that
+
+|Aj |  =  nj  +  o(nj ),       DAj + e(Gj - Aj) = o(nj2).
+          3
+
+There is also a function (n)  0, independent of the graph, such that every
+
+graph of order n  8 satisfies
+
+       cp(G)  (2n + 1)2 + n rsd(G) + (n)n2.                        (1.5)
+                       24
+
+The proof first localizes a signed fractional optimum at an actual clique.
+
+The approximation theorem of Haxell and Rödl [9], in the fixed-family
+
+form proved by Yuster [12], is used only to obtain this localization from
+
+a large integral partition number. A separate construction then gives an
+
+exact partition near the extremal configuration. Galvin's list edge-colouring
+
+theorem [8] supplies one part of that construction. A bounded exceptional
+
+set is controlled by an incidence inequality and a finite optimization of its
+
+normalized neighbourhood sizes. Equality is obtained from the final finite
+
+partition count, rather than from the fractional approximation.
+
+Section 2 gives the elimination facts and attaining examples. Section 3
+
+proves fractional localization, its packing conversion, and Theorem 1.3.
+
+Sections 4 and 5 construct the partitions and prove Theorem 1.1. Section 6
+
+gives the finite signed theorem. The final section states the all-order integral
+
+conjecture and quantitative stability questions.
+
+                2. Elimination and the extremal examples
+
+   All graphs are finite and simple. We write |G| = |V (G)|, use G[U ] for
+an induced subgraph, and set e(U ) = e(G[U ]) when the graph is fixed. For
+disjoint vertex sets U, V , the number of edges between them is e(U, V ). A
+clique partition of an edgeless graph has zero parts. All asymptotic statements
+below are along sequences whose orders tend to infinity; a parameter described
+as fixed is held constant along the sequence.
+4  OBINNA OKECHUKWU
+
+   For an order  of V (G), let N+(v) be the neighbours appearing after v.
+The order is s-defective if
+
+                    |N+(v)| - (G[N+(v)])  s (v  V (G)).
+
+An induced suborder has the same property: deleting a vertex from a graph
+decreases its order by one and its clique number by at most one.
+
+Lemma 2.1. The following conditions are equivalent for a graph G and an
+integer s  0:
+
+   (i) rsd(G)  s;
+  (ii) every induced subgraph has an s-defective order ending in any prescribed
+
+        clique;
+  (iii) every noncomplete induced subgraph has two nonadjacent s-simplicial
+
+        vertices.
+
+The parameter is induced-hereditary, and every nonempty induced subgraph
+H is ((H) + s - 1)-degenerate when rsd(G)  s.
+
+Proof. Repeated deletion outside the prescribed clique proves (i)(ii). The
+first exterior vertex of such an order proves the converse. If the set of all s-
+simplicial vertices in a noncomplete induced subgraph were a clique, it would
+be a proper root containing every such vertex, contradicting (i). This proves
+(iii). Conversely, a clique contains at most one endpoint of the nonadjacent
+pair in (iii), and every vertex of a complete graph is simplicial. Thus (iii)
+implies (i).
+
+   Induced heredity is part of (i). Applying it with the empty root gives
+a vertex of degree at most s + (H) - 1 in every induced subgraph of H,
+proving the degeneracy bound. In particular,
+
+   (H)  (H) + s.                                    (2.1)
+
+                                                    
+
+   The identification with chordal graphs follows from Dirac's theorem [4]. In
+
+the reverse direction, an induced cycle of length at least four has no simplicial
+
+vertex, so it cannot satisfy Lemma 2.1 with s = 0.
+
+Lemma 2.2. For every graph H,
+
+   rsd(H)  |H| - (H), rsd(Km  H) = rsd(H) (m  0).
+
+Proof. A maximum clique leaves |H| - (H) vertices outside it. Its intersec-
+tion with any neighbourhood is a clique, so every vertex has neighbourhood
+deficiency at most that number. Clique deficiency does not increase on taking
+induced subgraphs, proving the first assertion.
+
+   For the second assertion, induced heredity gives the lower bound. In
+an induced subgraph of the join, eliminate the H-vertices outside the root
+using a defective order ending in the H-part of the root, while retaining all
+complete-side vertices. The retained complete-side vertices increase the order
+and clique number of each forward neighbourhood by the same amount. The
+            CLIQUE PARTITIONS AND BOUNDED SIMPLICIAL DEFECT     5
+
+remaining graph is complete, and can be finished outside the root and then
+
+inside it.                                                      
+
+   The following obstruction will replace common-neighbourhood arguments
+specific to chordal graphs.
+
+Lemma 2.3. A graph of rooted simplicial defect at most s cannot contain
+s+1 vertex-disjoint nonedges whose endpoints have s+2 independent common
+neighbours.
+
+Proof. Let W be the 2s + 2 endpoints and let P be the independent common-
+
+neighbour set of size s + 2. Every clique in G[W ] omits an endpoint of
+
+each nonedge, so |W | - (G[W ])  s + 1. In G[W  P ], retain a maximum
+
+clique of G[W ] as root. Each vertex of P has deficiency at least s + 1. At a
+
+vertex x  W outside the root, adjoining the independent set P to NG[W ](x)
+increases the neighbourhood order by |P | and its clique number by one. Its
+
+deficiency is therefore at least |P | - 1 = s + 1. This contradicts the rooted
+
+condition.                                                      
+
+We use the following elementary edge-colouring facts.
+
+Lemma 2.4. A simple d-degenerate graph of maximum degree  has a
+proper edge-colouring with at most  + d colours. If a graph has a proper
+k-edge-colouring, it has one in which the colour classes differ in size by at
+most one.
+
+Proof. For the first assertion, remove a vertex of degree at most d, colour the
+
+residual by induction from the same palette, and restore its edges successively.
+
+At a restored edge, at most ( - 1) + (d - 1) colours are forbidden. The case
+
+of no edges is immediate.
+
+For the second assertion, choose a proper colouring minimizing the sum of
+
+the squared colour-class sizes, allowing empty classes. If two classes differ in
+
+size by at least two, their alternating union has a path component with one
+
+more edge of the larger colour. Interchanging the colours on that component
+
+decreases the sum of squares, a contradiction.                  
+
+To record the attaining graphs, define
+
+            Bn(c) = c(n - c) -   c      Mn =    (2n + 1)2
+                                    ,                  .
+                                 2              24
+
+The square completion
+
+c(n - c) -  c-s        = Mn+s -  s+1 3          2(n + s) + 1 2  (2.2)
+                                        - c-
+            2                       2      2           6
+
+has maximum Qs(n) over integer c. Indeed, the nearest-integer loss from
+MN is 1/24 when N  0, 2 (mod 3), and 3/8 when N  1 (mod 3); in both
+cases the resulting value is FN . For sufficiently large n with s fixed, every
+maximizing c satisfies s + 1  c  n/2.
+6                          OBINNA OKECHUKWU
+
+Lemma 2.5. Let k  s + 1 and b  k. The graph
+
+                           G = (Kk-s  Ks)  Kb
+
+has rsd(G) = s and
+
+                           cp(G) = kb -  k-s     .                            (2.3)
+
+                                              2
+
+Proof. Call the b independent vertices pages and the other k vertices the core.
+
+With any prescribed clique retained, first delete the non-root pages. Their
+
+forward neighbourhoods have clique deficiency at most s. The remaining
+
+graph is a clique with an independent set joined through at most one retained
+
+page; it is chordal and can be eliminated outside the root. This proves
+
+rsd(G)  s. For the reverse inequality, retain the (k - s)-clique as root.
+
+Every page has deficiency s, and every exceptional core vertex has deficiency
+
+b - 1  s.
+
+      A part containing a page and j core vertices covers j spokes and consumes
+
+   j  core edges. Summing j  1 +      j  gives cp(G)  kb -  k-s  .         Label  the
+   2                                  2                       2
+
+forced core clique by residues modulo k - s, and colour its edge ij by i + j.
+
+Incident edges have different colours. Assign the colours to distinct pages,
+
+extend core edges to triangles through their assigned pages, and take all
+
+unused spokes singly. This attains the lower bound. The clique of order one
+
+has no edges to colour.                                                           
+
+           3. Signed fractional localization
+
+   Fix an integer L  3. Let KL(G) be the cliques of G of orders from two
+to L. Write qL(G) for the minimum size of an edge partition using these
+cliques, and let
+
+                                                                    
+
+      qL (G) = min         xQ : xQ  0,                                        (3.1)
+                                                 xQ = 1 (e  E(G)) .
+
+           QKL(G)                        Qe                         
+
+The notation Q  e means that e  E(Q). The dual program is
+
+                                                            
+
+           qL (G) = max         ze :                                          (3.2)
+                                             ze  1 (Q  KL(G)) .
+
+                         eE(G)        eE(Q)                 
+
+The coordinates ze are real and unrestricted in sign. The edge constraints
+
+imply ze  1. The primal is feasible using edges alone. An optimal dual
+                                              L
+exists; alternatively, coordinates below 2 -  2  may be raised to that value
+
+without violating any clique constraint, so the dual maximum can be taken
+
+over a compact set.
+
+3.1. A maximal positive clique-star. For an edge set S, define
+
+           Z(S) = ze, Nz(S) = (-ze)+.
+
+                           eS                    eS
+
+The next estimate holds for every feasible dual vector, not only an optimum.
+    CLIQUE PARTITIONS AND BOUNDED SIMPLICIAL DEFECT                      7
+
+Lemma 3.1. Let n  8, L  4, rsd(G)  s, and let z be feasible in (3.2).
+Put W = Z(E(G)). There are a vertex v and a clique C  N (v), possibly
+empty, such that, with
+
+              c = |C|,  = zvu, Nout = Nz(E(G) \ E(G[C])),
+
+                                              uC
+
+we have 0    c and
+
+    W + Nout  (n - c)( + s) + Z(E(G[C])).                          (3.3)
+
+If c  (n + 1)/2, then
+
+    Mn + sn - W  3     c-   2n + 1 2  + (n - 2c + 1)(c - ) + sc + Nout.
+                 
+                    2          6
+
+                                                                   (3.4)
+
+If c  (n + 1)/2, then
+
+                                                   25n2            (3.5)
+                                  W + Nout  192 + sn.
+In particular, qL (G)  Mn + n rsd(G).
+
+Proof. Maximize uC zvu over vertices v and cliques C  N (v), allowing
+the empty clique. Remove any nonpositive entries from a maximizing clique.
+Thus its entries are positive unless C is empty.
+
+   Take an s-defective order ending in C. At each exterior vertex the forward
+neighbourhood is a clique together with at most s exceptional vertices. The
+sum of its positive weights on the clique is at most , since the positive
+neighbours still form a clique. Its positive exceptional weights sum to at most
+s. Every edge outside E(G[C]) is counted at its earlier endpoint. Adding
+negative mass to the signed sum leaves precisely the positive sum, and proves
+(3.3).
+
+   Sum the triangle inequalities through the chosen vertex v to obtain
+
+                                             c                     (3.6)
+                       Z(E(G[C]))  - (c - 1).
+
+                                             2
+
+Writing Bn(c) = c(n - c) -  c  ,  equations  (3.3)­(3.6)  give
+                            2
+
+    W + Nout  Bn(c) - (n - 2c + 1)(c - ) + s(n - c).
+
+The square completion (2.2) with s = 0 proves (3.4).
+   In the other range c  (n + 1)/2, we have c  4. Averaging all four-clique
+
+constraints inside C yields
+
+                       Z(E(G[C]))            1c  .
+
+                                             62
+
+After subtracting s(n - c), the right side of (3.3) is bounded by the minimum
+
+of
+
+    (n - 2c + 1) +                c  and (n - c) +        1c    .
+
+                                  2                       62
+8                 OBINNA OKECHUKWU
+
+The first is nonincreasing in , the second is nondecreasing, and they meet
+at  = 5c/12. Their minimum is therefore at most
+
+             c(5n - 4c - 1) (5n - 1)2 25n2
+                                                      .
+                  12                      192            192
+
+This proves (3.5). Both ranges imply the final assertion.                     
+
+3.2. A cover estimate with signed weights. A cover suffices for the next
+bound, provided repeated negative weights are counted. This avoids any
+assertion about an edge-deleted graph retaining its elimination property.
+
+Lemma 3.2. Let H have at most n vertices and admit an s-defective order.
+
+Suppose z satisfies all clique inequalities of orders two through L. For every
+
+ > 0,
+
+   Z(E(H))             1           n2  +  (s  +  3)n  +  L  -  2              (3.7)
+             +                                                  Nz (E (H )).
+
+                  2(L - 1)
+
+Proof. At each vertex, cover its at most s exceptional forward edges singly.
+Let U be the clique part of its forward neighbourhood. If |U | < n + 1,
+cover those forward edges singly. Otherwise order U uniformly at random,
+split it into consecutive groups of at most L - 1 vertices, and adjoin the
+current vertex to each group. All resulting parts are cliques of orders at most
+L.
+
+   This covers each edge once at its earlier endpoint, possibly also at earlier
+vertices. The number of parts is at most
+
+       sn + nn +  e(H )  +n +                    1          n2 + (s + 3)n.
+
+                  L-1                         2(L - 1)
+
+A fixed pair in a large U lies in one group with probability at most (L -
+2)/(|U | - 1)  (L - 2)/(n). There are at most n possible earlier vertices, so
+each edge has expected additional multiplicity at most (L - 2)/.
+
+   If e  1 is the multiplicity of an edge in this cover, summing its clique
+inequalities gives
+
+             ze  #{cover members} + (e - 1)(-ze)+.
+
+       e                                         e
+
+Taking expectations proves (3.7).                                             
+
+Theorem 3.3. For every  > 0 there are an integer L  4, constants
+0, 0 > 0, and an integer n0 such that the following holds. If |G| = n  n0,
+
+                      rsd(G)  0n, qL (G)  (1/6 - 0)n2,
+then G has a clique C for which
+
+                     |C| - n/3  n, DC + e(G - C)  n2.
+
+Proof. It suffices to consider 0 <  < 1/100. We give estimates that specify
+the order of all parameter choices. Take an optimal dual vector, put s =
+       CLIQUE PARTITIONS AND BOUNDED SIMPLICIAL DEFECT            9
+
+rsd(G), and use Lemma 3.1. If 0 + 0 < 7/192, the lower bound on its value
+excludes (3.5). Set
+
+                                      = Mn + sn - W.
+Then 0    (0 + 0)n2 + n/6 + 1/24. If this is at most n2 for a sufficiently
+small , equation (3.4) gives
+
+       2n + 1     2/3,     n         5n      6                    (3.8)
+c-                            c ,         c- ,           Nout  .
+        6                  4         12              n
+
+Let R = V (G) \ C, and for x  R put
+
+                 bx = c -           zxu,     B = bx.
+
+                           uCN (x)                   xR
+
+Each missing spoke contributes one to B and each present spoke contributes
+1 - zxu  0, so DC  B. Decomposing the total signed value and using (3.6)
+yields
+
+                  W  Bn(c) - B + (c - 1)(c - ) + Z(E(G[R])).
+
+Since Bn(c)  Mn and (3.8) holds,
+
+                        B  7 + Z(E(G[R])).                        (3.9)
+
+Apply Lemma 3.2 to the induced graph G[R]. With A0 = (L - 2)/ this
+
+gives
+
+               B              1           3
+               n2   + 2(L - 1) + 0 + n + (7 + A0).                (3.10)
+
+   There are at most 8B/c  32B/n vertices with bx  c/8, and at most 32B
+row edges incident with them. If adjacent rows x, y both have bx, by < c/8,
+the sum of their paired spoke deficiencies is less than c/4. Some u  C has
+
+paired deficiency less than 1/4. Both spokes are present, their weights sum
+
+to more than 7/4, and the triangle constraint gives zxy < -3/4. There are
+at most 2 such edges, by (3.8). Hence
+
+                  DC + e(G[R])  33B + 2.                          (3.11)
+
+   Choose  > 0 and then L  4 so that 33( + 1/[2(L - 1)]) < /4. Next
+choose  > 0 so small that
+
+       2/3 < /4,           33(7 + A0) + 2  < /4,  < 10-3.
+
+Choose 0, 0 > 0 with 0 + 0 < min{/2, 7/192} and 330 < /8. Finally
+choose n0 large enough that n/6 + 1/24  n2/2, 99/n < /8, and the
+
+constant 1/6 in the first estimate of (3.8) is at most n/4. Equations (3.10)­
+
+(3.11) and (3.8) prove both conclusions.                          
+10                          OBINNA OKECHUKWU
+
+3.3. From fractional to integral bounded-clique partitions. For a
+
+fixed graph J without isolated vertices, let J (G) and J(G) denote its
+integral and fractional edge-packing numbers. We use
+
+                J (G)  J(G) - o(n2) (|G| = n),                           (3.12)
+
+uniformly over G. This is the theorem of Haxell and Rödl [9]; Yuster gives
+
+a shorter proof and the fixed-family extension [12]. The graph J may be
+
+disconnected, and copies need not be induced. Isolated vertices of the host
+
+have no effect: apply the theorem on the nonisolated vertices when their
+
+number exceeds its threshold, and use the bounded total number of edges
+
+otherwise.
+
+    The saving from a j-clique is  j  - 1, so unweighted rounding of each size
+                                   2
+
+separately would not ensure edge-disjointness between the rounded families.
+
+The next argument bundles the sizes before applying (3.12).
+
+Lemma 3.4. For every fixed L  3 and every  > 0, all sufficiently large
+
+graphs satisfy
+
+                       qL(G)  qL (G) + |G|2.                             (3.13)
+
+Proof. An exact fractional partition is equivalently a fractional packing of
+
+cliques of orders 3, . . . , L, with unused edge capacities assigned to singleton
+
+edges. Write tj for the total packing mass of j-cliques, and wj =   j    - 1 for
+                                                                    2
+its saving. Each tj  n2/6.
+
+    Choose  > 0 with   L    wj     <   /4,  put  aj  =  tj /(n2 ),  and  let  J  be
+                       j=3
+
+the disjoint union of aj copies of Kj for each j. For fixed L, , only finitely
+
+many templates J arise. If all aj = 0, the total saving is less than n2/4,
+
+and edges alone suffice. Otherwise set
+
+                h = |J|,                          L
+
+                                      wJ = ajwj > 0.
+
+                                                j=3
+
+We construct a fractional J-packing of mass at least n2 - hn, for n large
+enough that this number is positive.
+
+   The total fractional mass of cliques meeting any fixed vertex is at most
+(n - 1)/2: every such clique uses at least two of its incident edge capacities.
+Thus the mass meeting any set of at most h vertices is less than hn. Suppose
+bundles of total mass u < n2 - hn have been selected. For any required
+size j, the remaining mass is
+
+                                   tj - aju > ajhn  hn.
+
+We can therefore choose all the required component cliques successively, each
+disjoint in vertices from those already chosen in this bundle. Their union,
+with only their component edges, is a copy of J. Subtract the minimum of
+their remaining weights, capped at the amount needed to reach n2 - hn,
+and add that weight to the bundle. Each nonfinal step exhausts a fractional
+variable, so this finite procedure terminates. No edge load increases beyond
+its original packing load.
+CLIQUE PARTITIONS AND BOUNDED SIMPLICIAL DEFECT         11
+
+   Apply (3.12) with error /(4wJ ) and expand each integral copy of J into
+its clique components. The resulting saving is at least
+
+wJ  n2 - hn - n2                         .
+                    4wJ
+
+Quantization lost less than n2/4 from the original saving. For sufficiently
+
+large n, the additional term wJ hn is at most n2/2. The total loss is at
+most n2. Taking a maximum of the thresholds over the finite collection of
+
+templates proves the uniform assertion.                 
+
+Proof of Theorem 1.3. Fix  > 0, and choose L, 0, 0 from Theorem 3.3.
+The cutoff L is now fixed. Apply Lemma 3.4 with error 0n2/2. Since
+
+qL(G)  cp(G), the hypotheses on the sequence imply, for all sufficiently
+
+large indices,
+
+qL (Gj)  (1/6 - 0)nj2,                   rsd(Gj)  0nj.
+
+Theorem 3.3 supplies a clique with the required errors at accuracy . Mini-
+
+mize, over the finitely many cliques of each graph, the maximum of the two
+normalized errors. These minima tend to zero, giving the asserted sequence
+
+of cliques. This argument never applies fixed-cutoff rounding with a varying
+cutoff.
+
+For (1.5), use L = 4 in Lemmas 3.1 and 3.4. Their uniform remainder
+
+defines a function (n)  0 with the claimed bound.       
+
+                       4. Compatible integral partitions
+
+   We first construct partitions for an arbitrary division of the vertices into a
+core and an exterior. The core need not induce a complete graph. Its actual
+edge count will determine the final bound.
+
+Lemma 4.1. Let V (G) = C  R, with |C| = c  3 and |R| = b. Suppose
+every vertex of C misses at most  vertices of R. If
+
+b  3c/2 - 3 + 4,                                        (4.1)
+
+then there are e(G[C]) edge-disjoint triangles, each consisting of one edge of
+G[C] and one vertex of R.
+
+Proof. Put a = c/2 and divide C into two parts whose orders differ by at
+most one. For every pair uv of core vertices, its list of allowable colours is
+NR(u)  NR(v). At most 2 vertices of R are absent from this list.
+
+   Choose disjoint palettes in R of sizes a + 2 and 2a - 3 + 2 . On the
+abstract complete bipartite graph between the two halves of C, every list in
+the first palette has size at least a, its maximum degree. Galvin's theorem
+[8, Theorem 4.1] gives a proper list edge-colouring. Within each half, use the
+second palette. Every list has size at least 2a - 3, whereas an edge has at
+most 2a - 4 adjacent edges, so sequential greedy colouring succeeds. Colours
+can be reused between the two halves, whose vertex sets are disjoint. The
+palettes for the crossing and internal pairs are disjoint.
+12    OBINNA OKECHUKWU
+
+   We have properly coloured the pairs of an abstract complete graph on C.
+Retain only the colours of the actual edges of G[C], and extend each such
+edge through its assigned exterior vertex. Properness prevents any cross
+edge from occurring twice. Distinct triangles use distinct core edges. 
+
+    For a partition V (G) = C  R, use the notation
+
+    c = |C|, b = |R|, h = e(G[C]), m = e(G[R]), D = cb - eG(C, R),
+                                                                                               (4.2)
+
+       = max |C \ N (x)|,         = max |R \ N (u)|.        (4.3)
+
+              xR                         uC
+
+A maximum over an empty set is zero. In all applications of the following
+
+lemma, both sides are nonempty.
+
+Lemma 4.2. Suppose c  3, and G[R] has a proper edge-colouring with k
+colours such that
+
+      c  k  2(c - 2),                                       (4.4)
+
+                                       m                    (4.5)
+      b  3c/2 - 3 + 4 + 8 .
+
+                                        k
+
+Then                             2(c - 2)
+
+      q3(G)  cb - D - h -               - 1 m.              (4.6)
+                                 k
+
+Proof. By Lemma 2.4, we can balance the colour classes so that each has size
+at most m/k. Inject the c core vertices uniformly into the k colours. A row
+edge has at least c - 2 common core neighbours. For each such neighbour,
+the probability that its assigned colour equals the edge's colour is 1/k, and
+these events are disjoint. Thus some injection retains at least
+
+                                             m(c - 2)
+                                        t
+
+                                                   k
+row edges whose assigned core vertex is adjacent to both endpoints. Extend
+these edges to triangles through the assigned vertices. Each colour class is a
+matching, so these triangles are edge-disjoint. A core vertex spends at most
+2m/k cross edges.
+
+   Delete this first triangle family. No core edge has been used, and the
+remaining column deficiency is at most
+
+       =  + 2 m .
+                      k
+
+Equation (4.5) permits Lemma 4.1 to extend every actual core edge to a
+triangle in the residual graph. These triangles are disjoint from the first
+family. Take all remaining edges singly. Since e(G) = cb - D + h + m, the
+number of parts is
+
+      e(G) - 2(h + t) = cb - D - h + m - 2t
+
+       cb - D - h -              2(c - 2)           - 1 m.  (4.7)
+
+                                 k
+      CLIQUE PARTITIONS AND BOUNDED SIMPLICIAL DEFECT               13
+
+No elimination property is asserted for the edge-deleted residual.  
+
+   The coefficient of m in (4.6) is positive when the second inequality in (4.4)
+is strict. This strictness will determine the equality graphs.
+
+Lemma 4.3. Let V (G) = C  R  T , where C is a clique, c = |C|  3, and
+t = |T |. Define the parameters in (4.2)­(4.3) on G[C  R]. Suppose G[R]
+has a proper k-edge-colouring and (4.4)­(4.5) hold after replacing ,  by
+ + t,  + t. For x  T , put
+
+      ux = |N (x)  C|, vx = |N (x)  R|.
+
+Then
+
+                          c      |vx - ux| + 4t2.                   (4.8)
+      cp(G)  cb - +
+                             xT
+                          2
+
+Proof. For each x  T , let Bx be the bipartite graph between N (x)  C
+and N (x)  R whose edges are the corresponding cross edges of G. Choose
+
+matchings Mx  E(Bx), pairwise disjoint as sets of cross edges, so that
+  xT |Mx| is maximum. Such a family exists because the graph is finite.
+
+For a fixed x, the matching Mx is maximum after the edges used by the
+other matchings have been deleted; otherwise replacing Mx would increase
+the total size.
+
+Put qx = |Mx| and
+
+                     Lx = min{ux, vx} - qx.
+
+In the available bipartite graph for x, choose Lx unmatched vertices on each
+side. No available edge joins the two chosen sets, since Mx is maximum. At
+any one vertex, the other matchings use at most t cross edges, one from each
+
+matching. The rectangle between the two chosen sets therefore contains at
+most tLx edges of G, while it has Lx2 pairs. Since D is the total number of
+missing pairs between C and R,
+
+                     Lx2 - tLx  D.
+
+If Lx  t then Lx  D + t. If Lx > t, the preceding inequality gives
+
+(Lx - t)2  Lx(Lx - t)  D. Hence in all cases
+                                              
+                             Lx  t D + t2.
+      Lx  D + t,                                                    (4.9)
+
+                     xT
+
+   For every edge cr  Mx, use the triangle xcr. These triangles are edge-
+disjoint: each Mx is a matching, and the matchings are disjoint in their cross
+edges. Remove all their cross edges from G[C  R]. At any vertex of C  R,
+at most one edge from each Mx has been removed, so the maximum row
+and column deficiencies increase by at most t. The internal graphs on C
+and R are unchanged. Since c  3, the hypotheses permit Lemma 4.2 to be
+
+applied to the residual graph. We drop its nonnegative residual-edge saving.
+If q = xT qx, then the residual missing-cross count is D + q.
+14                    OBINNA OKECHUKWU
+
+   Add the q exceptional triangles, take every unused edge from T to C  R
+singly, and also take all edges of G[T ] singly. Since C is a clique, the number
+of parts is at most
+
+        c           (ux + vx - 2qx) + e(G[T ])
+    cb - - D +
+            2   xT
+
+              = cb -  c  - D + |vx - ux| + 2 Lx + e(G[T ]).
+
+                      2                xT            xT
+
+                                                          t  ,  the  error
+Using (4.9), the inequality -D + 2t D  t2, and e(G[T ])   2
+
+beyond the claimed main terms is at most
+
+                      t2 + 2t2 + t  4t2.
+                                     2
+
+                                                                     
+
+           5. Near-extremal structure and exactness
+
+   Fix s  0. In this section all asymptotic notation refers to a sequence
+with n  , while s is held fixed. We use the constants
+
+                =        1             ,                             (5.1)
+                                           = .
+                      100(s + 1)
+                                                100
+
+They satisfy
+
+              8 < /3, 4 < 1/6, (2s + 2) = 1/50.
+
+5.1. A bounded exceptional set.
+
+Lemma 5.1. Suppose rsd(G)  s, (G)  n/3 - o(n), and G has a clique
+
+A with
+
+              |A| = n/3 + o(n), DA + e(G - A) = o(n2).
+
+For all sufficiently large orders there is a partition V (G) = C  R  T , with
+
+C a clique and |T |  T0(s), such that
+
+    |C| = n/3 + o(n), D + e(G[R]) = o(n2), (G[R]) = o(n), (5.2)
+
+                2n,   n, (G[R])  |R| - n/2.                          (5.3)
+
+Here D, ,  refer to C, R. The bound T0(s) is independent of the sequence
+and of the rates in its error terms.
+
+Proof. Remove from A every vertex missing more than n/4 original exterior
+
+vertices. There are o(n) such vertices. The remaining clique A0 has order
+n/3 + o(n), and its exterior R0 has o(n2) edges. Hence (G[R0]) = o(n).
+Every vertex of A0 misses at most n/4 vertices of R0, since the moved core
+vertices are adjacent to all of A0.
+CLIQUE PARTITIONS AND BOUNDED SIMPLICIAL DEFECT               15
+
+   Let Y0 consist of the vertices of R0 with degree at least n in G[R0].
+Consider the bipartite graph of nonedges between A0 and Y0. Its matching
+
+number is less than              4(s + 1)
+                          =
+
+                                     
+
+for large n. Suppose instead that it contains  disjoint missing pairs. Each
+
+pair has at least n/2 common neighbours in R0. If jy counts how many
+
+pairs have both endpoints adjacent to y, then
+
+                           jy  2(s + 1)n,  0  jy  .
+
+                     yR0
+
+If M vertices have jy  s + 1, the sum is at most sn + M . Thus M  n/.
+Counting the (s + 1)-subsets of pairs seen by these vertices, some fixed s + 1
+pairs have at least
+
+                                                n
+
+                              
+                            s+1
+
+common neighbours in R0. Every induced subgraph of G[R0] is colourable
+
+with at most (G[R0]) + s = o(n) colours, by Lemma 2.1. This linear-size
+
+common neighbourhood contains s + 2 independent vertices for large n,
+
+contradicting Lemma 2.3.
+
+Take a maximal matching of the nonedge graph. Put its fewer than  row
+
+endpoints in T1, and move its fewer than  core endpoints into the exterior.
+
+Call the remaining core A1 and exterior R1. Every retained vertex of Y0 is
+
+complete to A1, as is every moved core vertex. We still have
+
+|A1| = n/3 + o(n), e(G[R1]) = o(n2), (G[R1]) = o(n).
+
+A retained row not originally in Y0 has degree less than n + Os(1) in R1.
+   Put
+                          U = {x  R1 : dR1(x) > |R1| - n}.
+
+The sparse edge count gives |U | = o(n). Every member of U is complete to
+A1, by the preceding low-degree bound. Each vertex of A1  U misses at
+most n vertices of R1, counting a vertex itself as missed when it lies in R1.
+
+   The complement of G[A1  U ] has no matching of size s + 1. Indeed, the
+endpoints of such a matching would have at least
+
+                                 |R1| - (2s + 2)n = (n)
+
+common neighbours in R1. Its clique number is o(n), so Lemma 2.1 again
+supplies s + 2 independent common neighbours, contradicting Lemma 2.3.
+
+   Let Z0 be the endpoint set of a maximal matching in this complement.
+Then |Z0|  2s, and
+
+              C = (A1  U ) \ Z0, R = R1 \ U, T = T1  Z0
+
+is a partition with C a clique and |T |   - 1 + 2s. In particular, vertices
+removed from the promoted core go into T , not back into R.
+
+   The changes from A involve o(n) vertices, so the cross and exterior errors
+remain o(n2), and (G[R]) = o(n). A retained low-degree row has at most
+16                  OBINNA OKECHUKWU
+
+n + Os(1) neighbours outside A1  T1. Minimum degree therefore makes
+it adjacent to all but n + o(n) vertices of A1. The other retained rows are
+complete to A1. Since |U | = o(n), this gives   2n for large n. Core
+columns miss at most n rows by construction. Finally, every row outside U
+has degree at most |R1| - n, and |U | = o(n) gives
+
+                                  (G[R])  |R| - n/2.
+
+                                                                                       
+
+5.2. Incidences of exceptional neighbourhoods.
+
+Lemma 5.2. Let C, R, X be disjoint vertex sets, with C a clique and
+rsd(G[C  R  X])  s. Put
+
+                  h = |X|, w = (G[R]), a = max |C \ N (r)|.
+
+                                                                                   rR
+
+If every x  X satisfies
+
+                    |C \ N (x)| > a + w + h,                                           (5.4)
+
+then
+
+                    e(X, R)  s|R| + h(s + w).                                          (5.5)
+
+Proof. Take an s-defective order ending in C. At the deletion of r  R, a
+forward-neighbourhood clique containing x  X has order at most
+
+                    |NC(x)| + w + h < |C| - a.
+
+The retained core neighbours of r form a clique of order at least |C| - a.
+
+Hence a maximum forward-neighbourhood clique avoids X. Its deficiency is
+
+therefore at least the number of later X-neighbours of r, which is at most s.
+
+    At the deletion of x  X, a forward-neighbourhood clique has order at
+
+most
+
+                    |NC (x)| + w + dX+ (x).
+
+The forward deficiency bound gives dR+(x)  s + w. Count each edge between
+
+X and R at its earlier endpoint to obtain (5.5).                                       
+
+Lemma 5.3. Let (xi, yi)  [0, 1] × [0, 2] for 1  i  t, and put
+
+      I = {i : yi > xi, xi < 1}, h = |I|.
+
+If iI yi  2s, then
+
+                      t                                                                (5.6)
+
+                        |yi - xi|  t + s - |h - s|.
+
+                    i=1
+
+If the left side is at least t + s, then exactly s points are (0, 2) and every other
+point is (1, 0) or (1, 2).
+CLIQUE PARTITIONS AND BOUNDED SIMPLICIAL DEFECT                                              17
+
+Proof. Outside I, each summand is at most one. Inside I, it is at most yi  2.
+Therefore the sum is at most
+
+                     t - h + min{2h, 2s} = t + s - |h - s|.
+
+Equality at t + s forces h = s. It then forces xi = 0, yi = 2 on I, and
+
+|yi - xi| = 1 outside I. The latter points, by the definition of I, are precisely
+
+(1, 0) and (1, 2).                                                                           
+
+5.3. Exact rigidity.
+
+Proposition 5.4. Fix s  0. Suppose |Gj| = nj  , rsd(Gj)  s,
+                     (Gj)  nj/3 - o(nj), cp(Gj)  Qs(nj).
+
+Then all sufficiently large members of the sequence have the form (1.3), and
+their clique partition numbers equal Qs(nj).
+
+Proof. Suppose an infinite subsequence consists of graphs not having the
+
+asserted form. Theorem 1.3 supplies the cliques needed for Lemma 5.1, since
+Qs(n) = n2/6 + Os(n). Use its partition C  R  T , and suppress sequence
+subscripts. Pass to a subsequence on which t = |T | is constant. Label these
+
+boundedly many vertices and pass again so that every pair
+
+3ui , 3vi           - (xi, yi),                        ui = |NC (t(in))|, vi = |NR(ti(n))|,
+ nn
+
+converges. Here t(in) denotes the ith exceptional vertex; the limits are real
+numbers in [0, 1] × [0, 2].
+
+   The row graph has degeneracy at most (G[R]) + s - 1, so Lemma 2.4
+
+gives a proper edge-colouring with
+
+                     k = max{c, (G[R]) + (G[R]) + s}
+
+colours. The parameters of the normal form imply
+
+k 2                                                    2(c - 2( + t)) 2
+   - + o(1),                                                               - 8 - o(1).
+                                                       n                     3
+n32
+
+Since c = n/3 + o(n), we have c  3 for all sufficiently large indices. Since
+
+8 < /2, the first capacity condition of Lemma 4.3 holds. For the second,
+k  c = n/3 + o(n) and m = o(n2) give
+
+b - 3c/2 + 3 - 4( + t) - 8m/k 1
+                                                           - 4 - o(1) > 0.
+                      n                                                   6
+
+Thus (4.8) applies.
+
+Its base term is at most Mn-t, by (2.2) with s = 0, whereas
+
+                                            s+t
+                     Qs(n) - Mn-t = 3 n + Os,t(1).
+
+Divide (4.8) by n/3 after subtracting this base bound, and pass to the limit.
+
+We obtain
+
+                                                    t
+
+                                                       |yi - xi|  s + t.                     (5.7)
+
+                         i=1
+18         OBINNA OKECHUKWU
+
+    Let I be as in Lemma 5.3, and let X consist of the corresponding excep-
+
+tional vertices in each graph. Each misses a positive linear number of vertices
+
+of C. Put
+
+           n = D/n2 + n-1/2.
+
+Delete from R every row missing more than nn core vertices. Their number
+is at most D/(nn) = o(n). On the remaining rows the maximum core
+deficiency and the clique number are both o(n). For large n, condition (5.4)
+
+holds for X, whose size is bounded. Lemma 5.2 applies. Restoring the
+
+omitted rows changes e(X, R) by o(n), so division by n/3 gives
+
+                   yi  2s.
+
+               iI
+
+Together with (5.7), Lemma 5.3 forces exactly s limits to be (0, 2). Denote
+their vertex set by X, and denote the sets with limits (1, 0) and (1, 2) by P
+and Z, respectively. Thus
+
+           vX  |NC (v)|  |NR(v)|                                (5.8)
+           vP    o(n)    b - o(n)
+           vZ
+               c - o(n)    o(n)
+               c - o(n)  b - o(n).
+
+   The set C  Z is a clique for all sufficiently large indices. Otherwise
+choose a nonedge in it. For each of the s vertices xi  X, choose a distinct
+missed vertex ai  C, avoiding the first nonedge's endpoints. Equation (5.8)
+gives linearly many choices. These are s + 1 vertex-disjoint nonedges. Their
+endpoints have a common neighbourhood in R of order at least
+
+           b - (s + 2)n - o(n) = (n) :
+
+old core columns miss at most n rows, while X and Z miss o(n). Since
+(G[R]) + s = o(n), that common neighbourhood has s + 2 independent
+vertices. This contradicts Lemma 2.3. The same reasoning covers s = 0,
+when the first nonedge alone is forbidden.
+
+   Now use a fresh partition of the original graph, with
+
+           C = C  Z  X, R = R  P.
+
+The set C \ X = C  Z is a clique of order |C| - s. The preliminary
+matchings used to prove the numerical bound (4.8) are not retained. Denote
+the parameters of this new cut by primes. Equations (5.2)­(5.3) and (5.8)
+give
+
+c = n/3 + o(n), b = 2n/3 + o(n),   2n + o(n),    n + o(n),
+                                                                                            (5.9)
+
+    m = o(n2), (G[R]) = o(n), (G[R])  b - n/3.                  (5.10)
+
+For the degree assertion, old rows gain only boundedly many neighbours,
+while every added row in P has o(n) row neighbours. The other assertions
+follow by moving the bounded set T and using its profiles.
+CLIQUE PARTITIONS AND BOUNDED SIMPLICIAL DEFECT                          19
+
+Colour the new row graph with
+                    k = max{c, (G[R]) + (G[R]) + s}
+
+colours. Then                     2(c - 2)/n  2/3 - 8 - o(1).
+        k/n  2/3 - /3 + o(1),
+
+The first capacity inequality is strict because 8 < /3. The second has
+normalized slack at least 1/6 - 4 - o(1) > 0, by (5.10). Lemma 4.2 yields,
+with  = 2(c - 2)/k - 1 > 0,
+
+                      cp(G)  cb - e(G[C]) - D - m
+
+ c(n - c) - c - s - D - m
+                       2
+
+ Qs(n).                                                               (5.11)
+
+Here (2.2) gives the last inequality, including its integer maximum.
+
+Our hypothesis forces equality throughout this finite count. Therefore
+
+D = m = 0 and e(G[C]) =  c-s   .  The  known    clique  C \ X  accounts  for
+                           2
+
+every core edge; the s vertices of X are isolated within the core. All cross
+
+edges are present and the exterior is independent. Equality in the quadratic
+
+forces the allowed nearest-integer choices of c. This contradicts the choice
+
+of the subsequence and proves the proposition.                           
+
+5.4. The extremal theorem.
+
+Proof of Theorem 1.1. Fix s. We first prove the constant-error bound. Sup-
+pose cp(G) - Qs(|G|) is unbounded on graphs with rsd(G)  s. For integers
+K  , choose a graph GK of smallest order violating
+
+cp(GK )  Qs(|GK |) + K.
+
+The orders tend to infinity, since there are only finitely many graphs of any
+bounded order. Every one-vertex deletion has defect at most s and satisfies
+the bound with this same K. Covering the incident edges singly gives, for
+every vertex v,
+
+                            cp(GK)  Qs(n - 1) + K + d(v).
+
+Since the values are integral,
+
+d(v)  Qs(n) - Qs(n - 1) + 1 =          n+s+1            + 1 > n/3.
+
+                                                3
+
+Proposition 5.4 applies and gives cp(GK) = Qs(n) for all sufficiently large
+K, a contradiction. The difference is therefore bounded above, proving (1.2)
+after increasing Ks to a nonnegative integer if necessary.
+
+   We now use this established bound to prove eventual exactness. If cp(G) 
+Qs(n), apply (1.2) to G - v. It gives
+
+d(v)  Qs(n) - Qs(n - 1) - Ks  n/3 - Ks - 1.
+20                      OBINNA OKECHUKWU
+
+Any unbounded sequence of such graphs satisfies Proposition 5.4. Hence,
+
+above a threshold depending on s, all are the graphs in (1.3) and have value
+
+Qs(n). All other graphs have smaller value. Lemma 2.5 supplies the attaining
+
+examples at every sufficiently large order.                        
+
+Proof of Corollary 1.2. By Lemma 2.1, chordal graphs are exactly those of
+
+rooted defect zero. Substitute s = 0 in Theorem 1.1.               
+
+Corollary 5.5. For every fixed s  0 and every  > 0, there are  > 0 and
+N such that if n  N , rsd(G)  s, and
+
+                                   cp(G)  Qs(n) - n2,
+then at most n2 edge additions and deletions turn G into a graph of the
+form (1.3).
+
+Proof. It suffices to prove the sequential assertion with  = o(1). Otherwise
+
+choose counterexamples with  = 1/j and order at least j. Theorem 1.3
+
+produces a clique A of order n/3 + o(n) such that adding its DA missing
+cross pairs and deleting the e(G - A) exterior edges gives a book after o(n2)
+
+edits.
+
+    Choose an allowed k from (1.3). Both k - s and |A| are n/3 + o(n). Move
+
+o(n) vertices between the two sides to obtain a clique core of order k - s
+
+and an independent exterior; changing every adjacency incident with those
+
+vertices costs o(n2). Choose s exterior vertices, delete their edges to the core,
+
+and join them to all the other exterior vertices. This costs Os(n) further
+
+edits and gives (1.3).                                             
+
+           6. An exact finite signed bound
+
+   The extremal profile also has a finite interpretation that needs only one
+defective elimination order. Define
+
+           Ps(n) = max k(n - k) -            max{k - s, 1}      .  (6.1)
+
+                          0kn/2                     2
+
+The values at orders zero and one are zero.
+
+Lemma 6.1. For nonnegative integers n, s,
+
+                        n2/4,                       n < 2s,        (6.2)
+           Ps(n) = s(n - s) + Fn-2s, n  2s.
+
+For n  1,
+
+           Ps(n) - Ps(n - 1) = min           n n+s+1         .     (6.3)
+                                                 ,
+                                             2      3
+
+In particular, Ps(n) = Qs(n) for n  2s.
+
+Proof. When n < 2s, every admissible k is at most s, so the binomial term
+is zero and the maximum is n2/4. Suppose n  2s. Candidates with k < s
+      CLIQUE PARTITIONS AND BOUNDED SIMPLICIAL DEFECT     21
+
+do not exceed the candidate k = s. Put k = s + j and m = n - 2s. For
+0  j  m/2, the objective is
+
+                                             j
+              s(n - s) + j(m - j) - .
+
+                                             2
+
+The last two terms have maximum Fm: for m  2 a nearest integer to
+(2m + 1)/6 lies in this interval, so (2.2) applies, and m = 0, 1 are immediate.
+
+This proves (6.2).
+   Successive differences of n2/4 are n/2, and those of Fn are (n + 1)/3.
+
+Thus for n > 2s the difference is s + (n - 2s + 1)/3 = (n + s + 1)/3,
+
+which is no larger than n/2. For n  2s the other term is minimal, and
+
+the boundary n = 2s gives the same value s. Finally
+
+      Fn+s - Fn-2s = s(n - s) +                  s+1
+                                                       ,
+                                                 2
+
+because the difference of the corresponding real quadratics is this integer.
+
+This gives Ps(n) = Qs(n) in the asserted range.           
+
+Theorem 6.2. Suppose G has n vertices and admits an s-defective elimina-
+tion order. If integer edge weights satisfy
+
+      ze  1,          ze  1 for every triangle T,         (6.4)
+
+              eE(T )
+
+then
+
+                      ze  Ps(n).                          (6.5)
+
+              eE(G)
+
+For every n, s, the bound is attained by a graph with rsd(G)  s and a signing
+that satisfies every clique inequality, not just the triangle inequalities.
+
+Proof. The assertion is immediate when n = 0, so assume n  1. Raise every
+
+coordinate below -1 to -1. This preserves (6.4): an affected triangle has
+one coordinate equal to -1 and the other two at most one. The objective
+
+can only increase. We may assume all coordinates belong to {-1, 0, 1}.
+
+   Write z(v) = ev ze and µ = minv z(v). The positive-edge graph is
+triangle-free. At the endpoints of a positive edge, the positive neighbourhoods
+
+are disjoint, so one endpoint has positive degree at most n/2. Its signed
+
+degree is no larger. If there is no positive edge, all signed degrees are
+nonpositive. Hence
+
+              µ  n/2.                                     (6.6)
+
+This is the needed bound when n  2s + 2.
+
+Suppose n  2s + 3. If µ  s, then µ  (n + s + 1)/3. Otherwise choose
+
+the first vertex v of an s-defective order, and a largest clique Q  N (v). Let
+
+a-, a+ count the negative and positive spokes from v to Q, and let r-, r+
+count them outside Q. Then
+
+      r- + r+  s, µ  a+ + r+ - a- - r-.                   (6.7)
+22    OBINNA OKECHUKWU
+
+Since µ > s, there is a positive neighbour u  Q. Its edges to the other a+ - 1
+positive neighbours of v in Q have weight -1, by the triangle constraints. Its
+positive neighbourhood is disjoint from that of v, which has order a+ + r+.
+Therefore
+
+                        µ  z(u)  n - (a+ + r+) - (a+ - 1).
+
+Combining this with (6.7) gives
+
+      n  µ + 2a+ + r+ - 1
+         3µ + 2a- + 2r- - r+ - 1
+         3µ - s - 1.
+
+The signed degrees are integers, so µ  (n + s + 1)/3. Together with (6.6),
+this is the increment in (6.3).
+
+   Delete a minimum-signed-degree vertex. The induced graph retains an
+s-defective order, and the signing remains feasible. Induction, starting with
+the empty graph, now proves (6.5) by telescoping (6.3).
+
+   For sharpness, suppose n  2 and choose a maximizing k  1 in (6.1).
+Put a = max{k - s, 1}, and take
+
+      G = (Ka  Kk-a)  Kn-k.
+
+The page-first argument of Lemma 2.5 gives rsd(G)  k - a  s. Give
+
+core-clique edges weight -1 and all spokes weight 1. A clique containing a
+
+page and j core vertices has weight  js-ign2jingv1a;luaecliisqkue(nco-ntka)in-eda2in  the core
+has nonpositive weight. The total                                                     = Ps(n).
+
+Empty and one-vertex graphs attain zero.                                              
+
+Corollary 6.3. If G admits an s-defective elimination order, then
+
+                             2 MaxCut(G) - e(G)  Ps(|G|).
+The bound is sharp at every order, even on the class rsd(G)  s.
+
+Proof. Give crossing edges of a maximum cut weight 1 and internal edges
+
+weight -1. Every triangle has zero or two crossing edges, so (6.4) holds. The
+
+sharpness construction in Theorem 6.2 uses this signing on its core­page
+
+cut.                                                                                  
+
+   The integer signed theorem is not a pointwise partition formula. For
+G = K3  K2, the core-negative, spoke-positive signing has value three.
+Assigning weight 1/2 to each of the six page triangles gives an exact fractional
+partition of value three, which also bounds every signed clique functional.
+But cp(G) = 4. A four-clique and the three remaining spokes give four
+parts. Three parts are impossible: a four-clique leaves three separate spokes,
+while without a four-clique all nine edges would have to form three triangles,
+contrary to the odd degrees of the two pages. Thus the finite signed result
+does not replace the integral construction in Theorem 1.1.
+CLIQUE PARTITIONS AND BOUNDED SIMPLICIAL DEFECT  23
+
+                                    7. Open problems
+
+   The attaining graphs in Theorem 6.2 also have clique partition number
+Ps(n): there are at least as many pages as core vertices, so the modular
+edge-colouring construction attains the page-edge lower bound. Theorem 1.1
+proves the matching upper bound eventually for each fixed s. The exact
+finite problem remains.
+
+Conjecture 7.1. For all nonnegative integers n, s,
+
+                    max{cp(G) : |G| = n, rsd(G)  s} = Ps(n).
+
+   The eventual equality classification need not hold at small orders. For
+example, cp(P4) = 3 = F4, but P4 is not a book.
+
+   A quantitative version of Corollary 5.5 would relate the number of adja-
+cency changes needed to reach (1.3) to
+
+                                       Qs(n) - cp(G).
+
+Determine the optimal dependence on this deficit, on n, and on s. The proof
+above gives qualitative stability, but does not give a sharp rate or a useful
+numerical threshold for eventual exactness.
+
+                                   Acknowledgments
+
+   The author thanks Dimitrios Los for carefully reviewing an earlier version
+of this manuscript.
+
+                                       References
+
+[1] P. Aboulker, P. Charbit, N. Trotignon and K. Vuskovi, Vertex elimination
+    orderings for hereditary graph classes, Discrete Math. 338 (2015), no. 5, 825­834.
+    10.1016/j.disc.2014.12.014. Preprint: arXiv:1205.2535.
+
+[2] T. F. Bloom, Erds Problem #81, The Erds Problems website, https://www.
+    erdosproblems.com/81.
+
+[3] G.-T. Chen, P. Erds and E. T. Ordman, Clique partitions of split graphs, in
+    Combinatorics, Graph Theory, Algorithms and Applications (Beijing, 1993),
+    World Scientific, Singapore, 1994, pp. 21­30.
+
+[4] G. A. Dirac, On rigid circuit graphs, Abh. Math. Sem. Univ. Hamburg 25
+    (1961), 71­76. 10.1007/BF02992776.
+
+[5] P. Erds, A. W. Goodman and L. Pósa, The representation of a graph by set
+    intersections, Canad. J. Math. 18 (1966), 106­112. 10.4153/CJM-1966-014-3.
+
+[6] P. Erds, E. T. Ordman and Y. Zalcstein, Clique partitions of chordal
+    graphs, Combin. Probab. Comput. 2 (1993), no. 4, 409­415. 10.1017/
+    S0963548300000808.
+
+[7] D. R. Fulkerson and O. A. Gross, Incidence matrices and interval graphs, Pacific
+    J. Math. 15 (1965), no. 3, 835­855. 10.2140/pjm.1965.15.835.
+
+[8] F. Galvin, The list chromatic index of a bipartite multigraph, J. Combin. Theory
+    Ser. B 63 (1995), no. 1, 153­158. 10.1006/jctb.1995.1011.
+
+[9] P. E. Haxell and V. Rödl, Integer and fractional packings in dense graphs,
+    Combinatorica 21 (2001), no. 1, 13­38. 10.1007/s004930170003.
+24  OBINNA OKECHUKWU
+
+[10] R. Krithika, R. Mathew, N. S. Narayanaswamy and N. Sadagopan, A Dirac-
+     type characterization of k-chordal graphs, Discrete Math. 313 (2013), no. 24,
+     2865­2867. 10.1016/j.disc.2013.08.032. Preprint: arXiv:1206.5397.
+
+[11] W. D. Wallis and J. Wu, On clique partitions of split graphs, Discrete Math.
+     92 (1991), nos. 1­3, 427­429. 10.1016/0012-365X(91)90297-F.
+
+[12] R. Yuster, Integer and fractional packing of families of graphs, Random Struc-
+     tures Algorithms 26 (2005), nos. 1­2, 110­118. 10.1002/rsa.20048. Preprint:
+     arXiv:math/0305350.
+

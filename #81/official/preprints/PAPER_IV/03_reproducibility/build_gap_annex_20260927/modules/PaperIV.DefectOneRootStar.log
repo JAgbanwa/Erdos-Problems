@@ -1,0 +1,21 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 PaperIV/DefectOneRootStar.lean -o /workspace/request-project/.lake/runner/lib/lean/PaperIV/DefectOneRootStar.olean -i /workspace/request-project/.lake/runner/lib/lean/PaperIV/DefectOneRootStar.ilean
+import took 2.95s
+cumulative profiling times:
+	.olean serialization 53.9ms
+	attribute application 0.0419ms
+	congr simp thm 2.71ms
+	elaboration 33.7ms
+	fix level params 1.41ms
+	import 2.95s
+	initialization 39.2ms
+	instantiate metavars 12.6ms
+	interpretation 239ms
+	let-to-have transformation 0.0659ms
+	linting 16.8ms
+	parsing 10.5ms
+	process pre-definitions 13.7ms
+	share common exprs 5.11ms
+	simp 28.3ms
+	tactic execution 204ms
+	type checking 69.6ms
+	typeclass inference 117ms

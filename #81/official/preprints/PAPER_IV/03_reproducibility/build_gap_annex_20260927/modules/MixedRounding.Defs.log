@@ -1,0 +1,52 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 MixedRounding/Defs.lean -o /workspace/request-project/.lake/runner/lib/lean/MixedRounding/Defs.olean -i /workspace/request-project/.lake/runner/lib/lean/MixedRounding/Defs.ilean
+MixedRounding/Defs.lean:46:0: warning: automatically included section variable(s) unused in theorem `MixedRounding.mem_pairs`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+MixedRounding/Defs.lean:50:0: warning: automatically included section variable(s) unused in theorem `MixedRounding.mk_mem_pairs`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+MixedRounding/Defs.lean:75:0: warning: automatically included section variable(s) unused in theorem `MixedRounding.gainF_le_five`:
+  [Fintype V]
+  [DecidableEq V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] [DecidableEq V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+MixedRounding/Defs.lean:82:0: warning: automatically included section variable(s) unused in theorem `MixedRounding.gainF_nonneg`:
+  [Fintype V]
+  [DecidableEq V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] [DecidableEq V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+import took 2.77s
+cumulative profiling times:
+	.olean serialization 67.3ms
+	attribute application 0.44ms
+	blocked (unaccounted) 366ms
+	compilation (IR) 3.91ms
+	compilation (LCNF base) 5.92ms
+	compilation (LCNF mono) 4.95ms
+	congr simp thm 8.04ms
+	elaboration 110ms
+	fix level params 0.534ms
+	import 2.77s
+	initialization 39.3ms
+	instantiate metavars 0.603ms
+	interpretation 274ms
+	let-to-have transformation 0.152ms
+	linting 14ms
+	norm_num 11.9ms
+	parsing 10.8ms
+	process pre-definitions 10.2ms
+	share common exprs 1.54ms
+	simp 18.1ms
+	tactic execution 31.2ms
+	type checking 40.9ms
+	typeclass inference 132ms

@@ -1,0 +1,7 @@
+$ c:\Users\jtraverso\.elan\toolchains\leanprover--lean4---v4.28.0\bin\lean.exe -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false ExplicitFixedStability.lean -o C:\Users\jtraverso\e81p4\clean_stability_build_20260928\.lake\runner\lib\lean\ExplicitFixedStability.olean -i C:\Users\jtraverso\e81p4\clean_stability_build_20260928\.lake\runner\lib\lean\ExplicitFixedStability.ilean
+'PaperIV.SublinearResearch.FixedExplicit.fixed_defect_stability_explicit' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PaperIV.SublinearResearch.FixedExplicit.fixed_defect_edit_and_size_explicit' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

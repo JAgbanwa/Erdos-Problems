@@ -1,0 +1,43 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 PaperIV/CenteredMoments.lean -o /workspace/request-project/.lake/runner/lib/lean/PaperIV/CenteredMoments.olean -i /workspace/request-project/.lake/runner/lib/lean/PaperIV/CenteredMoments.ilean
+PaperIV/CenteredMoments.lean:50:0: warning: automatically included section variable(s) unused in theorem `PaperIV.CenteredMoments.expect_affine`:
+  [DecidableEq Ω]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq Ω] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+PaperIV/CenteredMoments.lean:155:38: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+PaperIV/CenteredMoments.lean:158:38: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+PaperIV/CenteredMoments.lean:195:0: warning: automatically included section variable(s) unused in theorem `PaperIV.CenteredMoments.block_indicator_mem`:
+  [Fintype ρ]
+  [DecidableEq ρ]
+  [Fintype κ]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype ρ] [DecidableEq ρ] [Fintype κ] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+import took 3.54s
+cumulative profiling times:
+	.olean serialization 63.9ms
+	attribute application 0.12ms
+	congr simp thm 1.09ms
+	elaboration 75.4ms
+	fix level params 0.798ms
+	import 3.54s
+	initialization 39.8ms
+	instantiate metavars 2.73ms
+	interpretation 337ms
+	let-to-have transformation 0.194ms
+	linting 20.3ms
+	norm_num 2.93ms
+	parsing 15.1ms
+	process pre-definitions 7.81ms
+	ring 27.2ms
+	share common exprs 5.63ms
+	simp 26.1ms
+	tactic execution 129ms
+	type checking 39.4ms
+	typeclass inference 147ms

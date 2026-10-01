@@ -1,0 +1,41 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 PaperIV/RC01DensePhysicalGate.lean -o /workspace/request-project/.lake/runner/lib/lean/PaperIV/RC01DensePhysicalGate.olean -i /workspace/request-project/.lake/runner/lib/lean/PaperIV/RC01DensePhysicalGate.ilean
+elaboration took 156ms
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_nlinarith_1._boxed took 522ms
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_nlinarith_1._boxed took 564ms
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_nlinarith_1._boxed took 538ms
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_nlinarith_1._boxed took 606ms
+PaperIV/RC01DensePhysicalGate.lean:34:50: warning: unused variable `hv`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+PaperIV/RC01DensePhysicalGate.lean:36:9: warning: unused variable `hchoice3`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+PaperIV/RC01DensePhysicalGate.lean:37:9: warning: unused variable `hchoice4`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+import took 4.39s
+.olean serialization took 115ms
+cumulative profiling times:
+	.olean serialization 115ms
+	attribute application 0.0193ms
+	compilation (IR) 2.98ms
+	compilation (LCNF base) 3.24ms
+	compilation (LCNF mono) 1.35ms
+	congr simp thm 9.38ms
+	elaboration 168ms
+	fix level params 0.619ms
+	import 4.39s
+	initialization 36.7ms
+	instantiate metavars 21.9ms
+	interpretation 2.51s
+	let-to-have transformation 0.106ms
+	linting 21.9ms
+	norm_num 3.34ms
+	parsing 8.11ms
+	process pre-definitions 7.52ms
+	ring 29.9ms
+	share common exprs 10.2ms
+	simp 174ms
+	tactic execution 211ms
+	type checking 53ms
+	typeclass inference 1.03s

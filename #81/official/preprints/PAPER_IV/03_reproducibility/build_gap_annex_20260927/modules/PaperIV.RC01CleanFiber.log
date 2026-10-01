@@ -1,0 +1,33 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 PaperIV/RC01CleanFiber.lean -o /workspace/request-project/.lake/runner/lib/lean/PaperIV/RC01CleanFiber.olean -i /workspace/request-project/.lake/runner/lib/lean/PaperIV/RC01CleanFiber.ilean
+PaperIV/RC01CleanFiber.lean:218:0: warning: automatically included section variable(s) unused in theorem `PaperIV.RC01CleanFiber.serving_of_mem_profileFiber`:
+  [Nonempty V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Nonempty V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+import took 4.12s
+.olean serialization took 140ms
+cumulative profiling times:
+	.olean serialization 140ms
+	attribute application 0.585ms
+	compilation (IR) 2.36ms
+	compilation (LCNF base) 3.02ms
+	compilation (LCNF mono) 1.84ms
+	congr simp thm 21.9ms
+	elaboration 220ms
+	fix level params 2.37ms
+	import 4.12s
+	initialization 39.3ms
+	instantiate metavars 10.2ms
+	interpretation 589ms
+	let-to-have transformation 0.6ms
+	linting 65.8ms
+	norm_num 1.89ms
+	parsing 24.5ms
+	process pre-definitions 24.9ms
+	ring 19ms
+	share common exprs 7.72ms
+	simp 157ms
+	tactic execution 344ms
+	type checking 67.2ms
+	typeclass inference 633ms

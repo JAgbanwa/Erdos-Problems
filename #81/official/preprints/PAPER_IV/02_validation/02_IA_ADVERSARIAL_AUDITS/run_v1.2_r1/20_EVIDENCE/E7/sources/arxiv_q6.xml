@@ -1,0 +1,436 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/rlA5GFGosOcCt9hBRVOXbULie4A</id>
+  <title>arXiv Query: search_query=ti:"clique partition"&amp;id_list=&amp;start=0&amp;max_results=25</title>
+  <updated>2026-09-30T12:34:31Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=ti:%22clique+partition%22&amp;start=0&amp;max_results=25&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>25</opensearch:itemsPerPage>
+  <opensearch:totalResults>20</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/2609.20871v1</id>
+    <title>Clique partitions and bounded simplicial defect</title>
+    <updated>2026-09-15T16:25:32Z</updated>
+    <link href="https://arxiv.org/abs/2609.20871v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2609.20871v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The clique partition number of a graph is the minimum number of complete subgraphs whose edge sets partition its edge set. We study graphs in which, in every induced subgraph and outside every prescribed clique, some vertex has a neighbourhood that becomes a clique after deleting at most $s$ vertices. The case $s=0$ is exactly the class of chordal graphs. For each fixed $s$, we prove that the maximum clique partition number at all sufficiently large orders $n$ is $\lfloor(n+s)(n+s+1)/6\rfloor-\binom{s+1}{2}$, and determine all equality graphs. The same expression is an upper bound up to an additive constant depending only on $s$ at every order. In particular, every chordal graph has clique partition number at most $n^2/6+n/6+O(1)$, answering a question of Erdős, Ordman and Zalcstein. We also prove structural stability for sublinear defect and a sharp finite-order theorem for integer signed clique functionals. The proof combines signed fractional localization with an edge-disjoint triangle construction; only a qualitative fractional-packing approximation is required.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-09-15T16:25:32Z</published>
+    <arxiv:comment>24 pages</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Obinna Okechukwu</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2608.11536v1</id>
+    <title>On the difference between clique partition and clique covering numbers of graphs</title>
+    <updated>2026-08-12T00:59:14Z</updated>
+    <link href="https://arxiv.org/abs/2608.11536v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2608.11536v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>For a graph $G$, let $\cpn(G)$ and $\ccn(G)$ denote the minimum numbers of cliques whose edge sets partition and cover $E(G)$, respectively, and put $f(n)=\max_{|V(G)|=n}\bigl(\cpn(G)-\ccn(G)\bigr).$ In 1983, Erdős, Faudree, and Ordman asked whether there is a sequence of graphs $G_n$ such that $|V(G_n)|=n$ and $\cpn(G_n)-\ccn(G_n)=n^2/4+O(n)$. The question appears as Problem 66 in Chung's survey \cite{ChungProblems} and is also listed on the UCSD Erdős Problems website. Caccetta, Erdős, Ordman, and Pullman proved that $f(n)=n^2/4-o(n^2)$. We prove that $f(n)=\left\lfloor\frac{n^2}{4}\right\rfloor-Θ(n^{4/3}),$ and hence answer the question in the negative.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-08-12T00:59:14Z</published>
+    <arxiv:comment>10 pages</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Bo Ning</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2609.20305v1</id>
+    <title>On the difference between clique partition and clique covering numbers</title>
+    <updated>2026-08-01T08:35:26Z</updated>
+    <link href="https://arxiv.org/abs/2609.20305v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2609.20305v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>For a graph \(G\), let \(\operatorname{cp}(G)\) and \(\operatorname{cc}(G)\) be the minimum numbers of cliques in an edge partition and a clique cover of \(G\), respectively. Set $σ_n
+  = \max_{\lvert V(G)\rvert=n}
+  \bigl(\operatorname{cp}(G)-\operatorname{cc}(G)\bigr), d_n=\left\lfloor\frac{n^2}{4}\right\rfloor-σ_n.$ In 1983, Erdős, Faudree, and Ordman asked whether \(d_n=O(n)\). Caccetta, Erdős, Ordman, and Pullman previously constructed graphs showing \(d_n=O(n^{3/2})\). We prove that $d_n=Θ(n^{4/3}),$ thereby determining the correct order of the deficit and answering their question in the negative.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-08-01T08:35:26Z</published>
+    <arxiv:comment>10 pages</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Bo Ning</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2605.01481v1</id>
+    <title>On the redundancy of transitivity constraints in the clique partitioning problem</title>
+    <updated>2026-05-02T15:02:39Z</updated>
+    <link href="https://arxiv.org/abs/2605.01481v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2605.01481v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In this study, we identify a class of redundant transitivity constraints in a 0-1 integer linear programming formulation of the clique partitioning problem. The transitivity constraints in this class can be removed from the formulation without changing the optimal solution set, although each transitivity constraint defines a facet of the associated polytope. This leads to a smaller formulation that is particularly effective for instances arising from correlation clustering, where edge weights are drawn from $\{-1,1\}$. Our computational experiments show that the resulting formulation outperforms existing formulations on such instances.</summary>
+    <category term="math.OC" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.DM" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-05-02T15:02:39Z</published>
+    <arxiv:primary_category term="math.OC"/>
+    <author>
+      <name>Noriyoshi Sukegawa</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2506.21216v1</id>
+    <title>Edge Clique Partition and Cover Beyond Independence</title>
+    <updated>2025-06-26T13:11:12Z</updated>
+    <link href="https://arxiv.org/abs/2506.21216v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2506.21216v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Covering and partitioning the edges of a graph into cliques are classical problems at the intersection of combinatorial optimization and graph theory, having been studied through a range of algorithmic and complexity-theoretic lenses. Despite the well-known fixed-parameter tractability of these problems when parameterized by the total number of cliques, such a parameterization often fails to be meaningful for sparse graphs. In many real-world instances, on the other hand, the minimum number of cliques in an edge cover or partition can be very close to the size of a maximum independent set α(G).
+  Motivated by this observation, we investigate above αparameterizations of the edge clique cover and partition problems. Concretely, we introduce and study Edge Clique Cover Above Independent Set (ECC/α) and Edge Clique Partition Above Independent Set (ECP/α), where the goal is to cover or partition all edges of a graph using at most α(G) + k cliques, and k is the parameter. Our main results reveal a distinct complexity landscape for the two variants. We show that ECP/αis fixed-parameter tractable, whereas ECC/αis NP-complete for all k \geq 2, yet can be solved in polynomial time for k \in {0,1}. These findings highlight intriguing differences between the two problems when viewed through the lens of parameterization above a natural lower bound.
+  Finally, we demonstrate that ECC/αbecomes fixed-parameter tractable when parameterized by k + ω(G), where ω(G) is the size of a maximum clique of the graph G. This result is particularly relevant for sparse graphs, in which ωis typically small. For H-minor free graphs, we design a subexponential algorithm of running time f(H)^{\sqrt{k}}n^{O(1)}.</summary>
+    <category term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.DM" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-06-26T13:11:12Z</published>
+    <arxiv:comment>An extended abstract of this paper appears in the proceedings of ESA 2025</arxiv:comment>
+    <arxiv:primary_category term="cs.DS"/>
+    <author>
+      <name>Fedor V. Fomin</name>
+    </author>
+    <author>
+      <name>Petr A. Golovach</name>
+    </author>
+    <author>
+      <name>Danil Sagunov</name>
+    </author>
+    <author>
+      <name>Kirill Simonov</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2505.03573v1</id>
+    <title>Troika algorithm: approximate optimization for accurate clique partitioning and clustering of weighted networks</title>
+    <updated>2025-05-06T14:32:54Z</updated>
+    <link href="https://arxiv.org/abs/2505.03573v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2505.03573v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Clique partitioning is a fundamental network clustering task, with applications in a wide range of computational sciences. It involves identifying an optimal partition of the nodes for a real-valued weighted graph according to the edge weights. An optimal partition is one that maximizes the sum of within-cluster edge weights over all possible node partitions. This paper introduces a novel approximation algorithm named Troika to solve this NP-hard problem in small to mid-sized networks for instances of theoretical and practical relevance. Troika uses a branch-and-cut scheme for branching on node triples to find a partition that is within a user-specified optimality gap tolerance. Troika offers advantages over alternative methods like integer programming solvers and heuristics for clique partitioning. Unlike existing heuristics, Troika returns solutions within a guaranteed proximity to global optimality. And our results indicate that Troika is faster than using the state-of-the-art integer programming solver Gurobi for most benchmark instances. Besides its advantages for solving the clique partitioning problem, we demonstrate the applications of Troika in community detection and portfolio analysis. Troika returns partitions with higher proximity to optimal compared to eight modularity-based community detection algorithms. When used on networks of correlations among stocks, Troika reveals the dynamic changes in the structure of portfolio networks including downturns from the 2008 financial crisis and the reaction to the COVID-19 pandemic. Our comprehensive results based on benchmarks from the literature and new real and random networks point to Troika as a reliable and accurate method for solving clique partitioning instances with up to 5000 edges on standard hardware.</summary>
+    <category term="cs.SI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.OC" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-05-06T14:32:54Z</published>
+    <arxiv:comment>29 pages, 10 figures, 3 tables</arxiv:comment>
+    <arxiv:primary_category term="cs.SI"/>
+    <author>
+      <name>Samin Aref</name>
+    </author>
+    <author>
+      <name>Boris Ng</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2502.02477v3</id>
+    <title>Speeding-up Graph Algorithms via Clique Partitioning</title>
+    <updated>2026-03-31T17:02:53Z</updated>
+    <link href="https://arxiv.org/abs/2502.02477v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2502.02477v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Reducing the running time of graph algorithms is vital for tackling real-world problems such as shortest paths and matching in large-scale graphs, where path information plays a crucial role. To address this critical challenge, this paper introduces a graph restructuring algorithm that identifies bipartite cliques and replaces them with tripartite graphs. This restructuring leads to fewer edges while preserving complete graph path information, enabling the direct application of algorithms like matching and all-pairs shortest paths to achieve significant runtime reductions, especially for large, dense graphs. The running time of the proposed algorithm for a graph $G(V,E)$, with $|V| = n$ and $|E| = m$ is~$O(mn^δ)$, which is better than $O(mn^δ\log^2 n)$, the running time of the best existing algorithm for speeding-up other graph algorithms (the Feder-Motwani (\textsf{FM}) algorithm), where $0 \leq δ\leq 1$. Both the \textsf{FM} algorithm and the proposed algorithm are originally formulated for bipartite graphs, but can also be applied to general directed or undirected graphs. Our extensive experimental analysis demonstrates that the proposed algorithm achieves up to 21.26\% higher reduction in the number of edges and runs up to 105.18$\times$ faster than the \textsf{FM} algorithm. On large synthetic graphs with up to 1.05 billion edges, it attains a reduction in the number of edges of up to 74.36\%. On real-world graphs, it achieves a reduction in the number of edges by up to 46.8\%. Furthermore, when used as a preprocessing step, our approach yields up to a 2.07$\times$ speedup for the matching algorithms on large synthetic graphs, and up to a 1.74$\times$ speedup for the All-Pairs Shortest Path algorithms on real-world graphs, when compared to using the given graph as input.</summary>
+    <category term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-02-04T16:53:10Z</published>
+    <arxiv:comment>Accepted at Networks</arxiv:comment>
+    <arxiv:primary_category term="cs.DS"/>
+    <arxiv:journal_ref>Networks (2026)</arxiv:journal_ref>
+    <author>
+      <name>Akshar Chavan</name>
+    </author>
+    <author>
+      <name>Sanaz Rabinia</name>
+    </author>
+    <author>
+      <name>Daniel Grosu</name>
+    </author>
+    <author>
+      <name>Marco Brocanelli</name>
+    </author>
+    <arxiv:doi>10.1002/net.70038</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1002/net.70038" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2411.03407v3</id>
+    <title>Chorded cycle facets of the clique partitioning polytope</title>
+    <updated>2025-07-17T09:13:05Z</updated>
+    <link href="https://arxiv.org/abs/2411.03407v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2411.03407v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The $q$-chorded $k$-cycle inequalities are a class of valid inequalities for the clique partitioning polytope. It is known that for $q \in \{2, \tfrac{k-1}{2}\}$, these inequalities induce facets of the clique partitioning polytope if and only if $k$ is odd. Here, we characterize such facets for arbitrary $k$ and $q$. More specifically, we prove that the $q$-chorded $k$-cycle inequalities induce facets of the clique partitioning polytope if and only if two conditions are satisfied: $k = 1$ mod $q$, and if $k=3q+1$ then $q=3$ or $q$ is even. This establishes the existence of many facets induced by $q$-chorded $k$-cycle inequalities beyond those previously known.</summary>
+    <category term="cs.DM" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.OC" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-11-05T18:42:46Z</published>
+    <arxiv:comment>12 pages</arxiv:comment>
+    <arxiv:primary_category term="cs.DM"/>
+    <author>
+      <name>Jannik Irmai</name>
+    </author>
+    <author>
+      <name>Lucas Fabian Naumann</name>
+    </author>
+    <author>
+      <name>Bjoern Andres</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2309.13800v1</id>
+    <title>Enumerating All Maximal Clique-Partitions of an Undirected Graph</title>
+    <updated>2023-09-25T01:14:49Z</updated>
+    <link href="https://arxiv.org/abs/2309.13800v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2309.13800v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We address the problem of enumerating all maximal clique-partitions of an undirected graph and present an algorithm based on the observation that every maximal clique-partition can be produced from the maximal clique-cover of the graph by assigning the vertices shared among maximal cliques, to belong to only one clique. This simple algorithm has the following drawbacks: (1) the search space is very large; (2) it finds some clique-partitions which are not maximal; and (3) some clique-partitions are found more than once. We propose two criteria to avoid these drawbacks. The outcome is an algorithm that explores a much smaller search space and guarantees that every maximal clique-partition is computed only once. The algorithm can be used in problems such as anti-unification with proximity relations or in resource allocation tasks when one looks for several alternative ways to allocate resources.</summary>
+    <category term="cs.DM" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-09-25T01:14:49Z</published>
+    <arxiv:comment>In Proceedings FROM 2023, arXiv:2309.12959</arxiv:comment>
+    <arxiv:primary_category term="cs.DM"/>
+    <arxiv:journal_ref>EPTCS 389, 2023, pp. 65-79</arxiv:journal_ref>
+    <author>
+      <name>Mircea Marin</name>
+      <arxiv:affiliation>West University of Timisoara, Romania</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Temur Kutsia</name>
+      <arxiv:affiliation>Johannes Kepler University, Linz, Austria</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Cleo Pau</name>
+      <arxiv:affiliation>Johannes Kepler University, Linz, Austria</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Mikheil Rukhaia</name>
+      <arxiv:affiliation>Institute of Applied Mathematics, Tbilisi State University, Georgia</arxiv:affiliation>
+    </author>
+    <arxiv:doi>10.4204/EPTCS.389.6</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.4204/EPTCS.389.6" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2201.01224v4</id>
+    <title>Sharp bounds on the least eigenvalue of a graph determined from edge clique partitions</title>
+    <updated>2022-02-24T15:17:10Z</updated>
+    <link href="https://arxiv.org/abs/2201.01224v4" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2201.01224v4" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Sharp bounds on the least eigenvalue of an arbitrary graph are presented. Necessary and sufficient (just sufficient) conditions for the lower (upper) bound to be attained are deduced using edge clique partitions. As an application, we prove that the least eigenvalue of the $n$-Queens' graph $\mathcal{Q}(n)$ is equal to $-4$ for every $n \ge 4$ and it is also proven that the multiplicity of this eigenvalue is $(n-3)^2$. Additionally, some results on the edge clique partition graph parameters are obtained.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2022-01-04T16:11:43Z</published>
+    <arxiv:comment>arXiv admin note: substantial text overlap with arXiv:2012.01992</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Domingos M. Cardoso</name>
+    </author>
+    <author>
+      <name>Inês Serôdio Costa</name>
+    </author>
+    <author>
+      <name>Rui Duarte</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2111.02734v1</id>
+    <title>Spectral radius and clique partitions of graphs</title>
+    <updated>2021-11-04T10:38:56Z</updated>
+    <link href="https://arxiv.org/abs/2111.02734v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2111.02734v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We give lower bounds on the size and total size of clique partitions of a graph in terms of its spectral radius and minimum degree, and derive a spectral upper bound for the maximum number of edge-disjoint $t$-cliques. The extremal graphs attaining the bounds are exactly the block graphs of Steiner $2$-designs and the regular graphs with $K_t$-decompositions, respectively.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2021-11-04T10:38:56Z</published>
+    <arxiv:primary_category term="math.CO"/>
+    <arxiv:journal_ref>Linear Algebra and its Applications 630 (2021), 84-94</arxiv:journal_ref>
+    <author>
+      <name>Jiang Zhou</name>
+    </author>
+    <author>
+      <name>Edwin R. van Dam</name>
+    </author>
+    <arxiv:doi>10.1016/j.laa.2021.07.025</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1016/j.laa.2021.07.025" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2110.05627v2</id>
+    <title>Subnetwork Constraints for Tighter Upper Bounds and Exact Solution of the Clique Partitioning Problem</title>
+    <updated>2023-09-14T00:38:22Z</updated>
+    <link href="https://arxiv.org/abs/2110.05627v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2110.05627v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We consider a variant of the clustering problem for a complete weighted graph. The aim is to partition the nodes into clusters maximizing the sum of the edge weights within the clusters. This problem is known as the clique partitioning problem, being NP-hard in the general case of having edge weights of different signs. We propose a new method of estimating an upper bound of the objective function that we combine with the classical branch-and-bound technique to find the exact solution. We evaluate our approach on a broad range of random graphs and real-world networks. The proposed approach provided tighter upper bounds and achieved significant convergence speed improvements compared to known alternative methods.</summary>
+    <category term="cs.SI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.DM" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.OC" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="physics.data-an" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2021-10-11T21:50:45Z</published>
+    <arxiv:comment>28 pages, 3 figures, 6 tables This version of the article has been accepted for publication after peer review but is not the Version of Record and does not reflect post-acceptance improvements or any corrections. The Version of Record is available online at Math Meth Oper Res (2023): https://doi.org/10.1007/s00186-023-00835-y</arxiv:comment>
+    <arxiv:primary_category term="cs.SI"/>
+    <author>
+      <name>Alexander Belyi</name>
+    </author>
+    <author>
+      <name>Stanislav Sobolevsky</name>
+    </author>
+    <author>
+      <name>Alexander Kurbatski</name>
+    </author>
+    <author>
+      <name>Carlo Ratti</name>
+    </author>
+    <arxiv:doi>10.1007/s00186-023-00835-y</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1007/s00186-023-00835-y" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2002.07761v3</id>
+    <title>Fixed-Parameter Tractability of the Weighted Edge Clique Partition Problem</title>
+    <updated>2020-05-20T13:45:58Z</updated>
+    <link href="https://arxiv.org/abs/2002.07761v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2002.07761v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We develop an FPT algorithm and a bi-kernel for the Weighted Edge Clique Partition (WECP) problem, where a graph with $n$ vertices and integer edge weights is given together with an integer $k$, and the aim is to find $k$ cliques, such that every edge appears in exactly as many cliques as its weight. The problem has been previously only studied in the unweighted version called Edge Clique Partition (ECP), where the edges need to be partitioned into $k$ cliques. It was shown that ECP admits a kernel with~$k^2$ vertices [Mujuni and Rosamond, 2008], but this kernel does not extend to WECP. The previously fastest algorithm known for ECP has a runtime of $2^{\mathcal{O}(k^2)}n^{O(1)}$ [Issac, 2019]. For WECP we develop a bi-kernel with $4^k$ vertices, and an algorithm with runtime $2^{\mathcal{O}(k^{3/2}w^{1/2}\log(k/w))}n^{O(1)}$, where $w$ is the maximum edge weight. The latter in particular improves the runtime for ECP to~$2^{\mathcal{O}(k^{3/2}\log k)}n^{O(1)}$.</summary>
+    <category term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2020-02-18T17:50:26Z</published>
+    <arxiv:primary_category term="cs.DS"/>
+    <author>
+      <name>Andreas Emil Feldmann</name>
+    </author>
+    <author>
+      <name>Davis Issac</name>
+    </author>
+    <author>
+      <name>Ashutosh Rai</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1809.00527v2</id>
+    <title>Clique-partitioned graphs</title>
+    <updated>2022-04-01T09:45:53Z</updated>
+    <link href="https://arxiv.org/abs/1809.00527v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1809.00527v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>A graph $G$ of order $nv$ where $n\geq 2$ and $v\geq 2$ is said to be weakly $(n,v)$-clique-partitioned if its vertex set can be decomposed in a unique way into $n$ vertex-disjoint $v$-cliques. It is strongly $(n,v)$-clique-partitioned if in addition, the only $v$-cliques of $G$ are the $n$ cliques in the decomposition. We determine the structure of such graphs which have the largest possible number of edges.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2018-09-03T10:07:49Z</published>
+    <arxiv:comment>16 pages</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <arxiv:journal_ref>Discrete Applied Math. 314 (2022) 238--248</arxiv:journal_ref>
+    <author>
+      <name>Grahame Erskine</name>
+    </author>
+    <author>
+      <name>Terry Griggs</name>
+    </author>
+    <author>
+      <name>Jozef Širáň</name>
+    </author>
+    <arxiv:doi>10.1016/j.dam.2022.02.024</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1016/j.dam.2022.02.024" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1509.03408v1</id>
+    <title>Red-blue clique partitions and (1-1)-transversals</title>
+    <updated>2015-09-11T07:53:02Z</updated>
+    <link href="https://arxiv.org/abs/1509.03408v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1509.03408v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Motivated by the problem of Gallai on $(1-1)$-transversals of $2$-intervals, it was proved by the authors in 1969 that if the edges of a complete graph $K$ are colored with red and blue (both colors can appear on an edge) so that there is no monochromatic induced $C_4$ and $C_5$ then the vertices of $K$ can be partitioned into a red and a blue clique. Aharoni, Berger, Chudnovsky and Ziani recently strengthened this by showing that it is enough to assume that there is no induced monochromatic $C_4$ and there is no induced $C_5$ in {\em one of the colors}. Here this is strengthened further, it is enough to assume that there is no monochromatic induced $C_4$ and there is no $K_5$ on which both color classes induce a $C_5$.
+  We also answer a question of Kaiser and Rabinovich, giving an example of six $2$-convex sets in the plane such that any three intersect but there is no $(1-1)$-transversal for them.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2015-09-11T07:53:02Z</published>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Andras Gyarfas</name>
+    </author>
+    <author>
+      <name>Jeno Lehel</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1412.4595v1</id>
+    <title>Maximal-clique partitions and the Roller Coaster Conjecture</title>
+    <updated>2014-12-15T13:55:11Z</updated>
+    <link href="https://arxiv.org/abs/1412.4595v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1412.4595v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>A graph $G$ is {\em well-covered} if every maximal independent set has the same cardinality $q$. Let $i_k(G)$ denote the number of independent sets of cardinality $k$ in $G$. Brown, Dilcher, and Nowakowski conjectured that the independence sequence $(i_0(G), i_1(G), \ldots, i_q(G))$ was unimodal for any well-ordered graph $G$ with independence number $q$. Michael and Traves disproved this conjecture. Instead they posited the so-called ``Roller Coaster" Conjecture: that the terms \[
+  i_{\left\lceil\frac{q}2\right\rceil}(G), i_{\left\lceil\frac{q}2\right\rceil+1}(G), \ldots, i_q(G) \] could be in any specified order for some well-covered graph $G$ with independence number $q$. Michael and Traves proved the conjecture for $q&lt;8$ and Matchett extended this to $q&lt;12$.
+  In this paper, we prove the Roller Coaster Conjecture using a construction of graphs with a property related to that of having a maximal-clique partition. In particular, we show, for all pairs of integers $1\le k&lt;q$ and positive integers $m$, that there is a well-covered graph $G$ with independence number $q$ for which every independent set of size $k+1$ is contained in a unique maximal independent set, but each independent set of size $k$ is contained in at least $m$ distinct independent sets.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2014-12-15T13:55:11Z</published>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Jonathan Cutler</name>
+    </author>
+    <author>
+      <name>Luke Pebody</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1411.0266v1</id>
+    <title>Pairwise Balanced Designs and Sigma Clique Partitions</title>
+    <updated>2014-11-02T15:11:25Z</updated>
+    <link href="https://arxiv.org/abs/1411.0266v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1411.0266v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In this paper, we are interested in minimizing the sum of block sizes in a pairwise balanced design, where there are some constraints on the size of one block or the size of the largest block. For every positive integers n;m, where m ? n, let S(n;m) be the smallest integer s for which there exists a PBD on n points whose largest block has size m and the sum of its block sizes is equal to s. Also, let S0(n;m) be the smallest integers for which there exists a PBD on n points which has a block of size m and the sum of it block sizes is equal to s. We prove some lower bounds for S(n;m) and S0(n;m). Moreover, we apply these bounds to determine the asymptotic behaviour of the sigma clique partition number of the graph Kn-Km, Cocktail party graphs and complement of paths and cycles.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2014-11-02T15:11:25Z</published>
+    <arxiv:comment>15 pages, 1 figures</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Akbar Davoodi</name>
+    </author>
+    <author>
+      <name>Ramin Javadi</name>
+    </author>
+    <author>
+      <name>Behnaz Omoomi</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/0909.1552v1</id>
+    <title>Minimum clique partition in unit disk graphs</title>
+    <updated>2009-09-08T20:47:19Z</updated>
+    <link href="https://arxiv.org/abs/0909.1552v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/0909.1552v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>  The minimum clique partition (MCP) problem is that of partitioning the vertex set of a given graph into a minimum number of cliques. Given $n$ points in the plane, the corresponding unit disk graph (UDG) has these points as vertices, and edges connecting points at distance at most~1. MCP in unit disk graphs is known to be NP-hard and several constant factor approximations are known, including a recent PTAS. We present two improved approximation algorithms for minimum clique partition in unit disk graphs:
+  (I) A polynomial time approximation scheme (PTAS) running in time $n^{O(1/\eps^2)}$. This improves on a previous PTAS with $n^{O(1/\eps^4)}$ running time \cite{PS09}.
+  (II) A randomized quadratic-time algorithm with approximation ratio 2.16. This improves on a ratio 3 algorithm with $O(n^2)$ running time \cite{CFFP04}.</summary>
+    <category term="cs.CG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2009-09-08T20:47:19Z</published>
+    <arxiv:comment>12 pages, 3 figures</arxiv:comment>
+    <arxiv:primary_category term="cs.CG"/>
+    <author>
+      <name>Adrian Dumitrescu</name>
+    </author>
+    <author>
+      <name>János Pach</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/0904.2203v2</id>
+    <title>A Weakly-Robust PTAS for Minimum Clique Partition in Unit Disk Graphs</title>
+    <updated>2009-12-03T22:50:13Z</updated>
+    <link href="https://arxiv.org/abs/0904.2203v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/0904.2203v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>  We consider the problem of partitioning the set of vertices of a given unit disk graph (UDG) into a minimum number of cliques. The problem is NP-hard and various constant factor approximations are known, with the current best ratio of 3. Our main result is a {\em weakly robust} polynomial time approximation scheme (PTAS) for UDGs expressed with edge-lengths, it either (i) computes a clique partition or (ii) gives a certificate that the graph is not a UDG; for the case (i) that it computes a clique partition, we show that it is guaranteed to be within $(1+\eps)$ ratio of the optimum if the input is UDG; however if the input is not a UDG it either computes a clique partition as in case (i) with no guarantee on the quality of the clique partition or detects that it is not a UDG. Noting that recognition of UDG's is NP-hard even if we are given edge lengths, our PTAS is a weakly-robust algorithm. Our algorithm can be transformed into an $O(\frac{\log^* n}{\eps^{O(1)}})$ time distributed PTAS.
+  We consider a weighted version of the clique partition problem on vertex weighted UDGs that generalizes the problem. We note some key distinctions with the unweighted version, where ideas useful in obtaining a PTAS breakdown. Yet, surprisingly, it admits a $(2+\eps)$-approximation algorithm for the weighted case where the graph is expressed, say, as an adjacency matrix. This improves on the best known 8-approximation for the {\em unweighted} case for UDGs expressed in standard form.</summary>
+    <category term="cs.CG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.DC" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.DM" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2009-04-14T20:44:57Z</published>
+    <arxiv:comment>21 pages, 9 figures</arxiv:comment>
+    <arxiv:primary_category term="cs.CG"/>
+    <author>
+      <name>Imran A. Pirwani</name>
+      <arxiv:affiliation>Department of Computing Science, University of Alberta, Edmonton, Canada</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Mohammad R. Salavatipour</name>
+      <arxiv:affiliation>Department of Computing Science, University of Alberta, Edmonton, Canada</arxiv:affiliation>
+    </author>
+    <arxiv:doi>10.1007/978-3-642-13731-0_19</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1007/978-3-642-13731-0_19" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/0804.4617v1</id>
+    <title>On Intersection Representations and Clique Partitions of Graphs</title>
+    <updated>2008-04-29T14:14:26Z</updated>
+    <link href="https://arxiv.org/abs/0804.4617v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/0804.4617v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>  A multifamily set representation of a finite simple graph $G$ is a multifamily $\mathcal{F}$ of sets (not necessarily distinct) for which each set represents a vertex in $G$ and two sets in $\mathcal{F}$ intersects if and only if the two corresponding vertices are adjacent. For a graph $G$, an \textit{edge clique covering} (\textit{edge clique partition}, respectively) $\mathcal{Q}$ is a set of cliques for which every edge is contained in \textit{at least} (\textit{exactly}, respectively) one member of $\mathcal{Q}$. In 1966, P. Erdös, A. Goodman, and L. Pósa (The representation of a graph by set intersections, \textit{Canadian J. Math.}, \textbf{18}, pp.106-112) pointed out that for a graph there is a one-to-one correspondence between multifamily set representations $\mathcal{F}$ and clique coverings $\mathcal{Q}$ for the edge set. Furthermore, for a graph one may similarly have a one-to-one correspondence between particular multifamily set representations with intersection size at most one and clique partitions of the edge set. In 1990, S. McGuinness and R. Rees (On the number of distinct minimal clique partitions and clique covers of a line graph, \textit{Discrete Math.} \textbf{83} (1990) 49-62.) calculated the number of distinct clique partitions for line graphs. In this paper, we study the set representations of graphs corresponding to edge clique partitions in various senses, namely family representations of \textit{distinct} sets, antichain representations of \textit{mutually exclusive} sets, and uniform representations of sets with the \textit{same cardinality}. Among others, we completely determine the number of distinct family representations and the number of antichain representations of line graphs.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2008-04-29T14:14:26Z</published>
+    <arxiv:comment>28 pages, 14 figures</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Tao-Ming Wang</name>
+    </author>
+    <author>
+      <name>Jun-Lin Kuo</name>
+    </author>
+  </entry>
+</feed>

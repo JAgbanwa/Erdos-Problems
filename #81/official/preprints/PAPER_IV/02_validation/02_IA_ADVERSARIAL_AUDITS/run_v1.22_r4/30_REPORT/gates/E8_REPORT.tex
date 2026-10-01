@@ -1,0 +1,116 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+\documentclass[
+]{article}
+\usepackage{xcolor}
+\usepackage{amsmath,amssymb}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math} % this also loads fontspec
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+\usepackage{lmodern}
+\ifPDFTeX\else
+  % xetex/luatex font selection
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\usepackage{bookmark}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same}
+% fallback for those not using the hyperref driver hyperxmp:
+\makeatletter
+\@ifundefined{xmpquote}{\newcommand{\xmpquote}[1]{#1}}{}
+\makeatother
+\hypersetup{
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+
+\author{}
+\date{}
+
+\begin{document}
+
+\section{Informe de puerta E8 --- run\_v1.22\_r4 (Paper IV
+v1.22-r4)}\label{informe-de-puerta-e8--run_v122_r4-paper-iv-v122-r4}
+
+Veredicto actual: \textbf{PASS}. Evidencia: \texttt{20\_EVIDENCE/E8/}.
+Auditor: Claude Opus 5.5, misma sesión que las ejecuciones anteriores;
+no se ejecutó Lean.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section{E8 --- Mandatory verifier and history
+(r4)}\label{e8--mandatory-verifier-and-history-r4}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Identity.} \texttt{verify\_frozen\_logs.py} (c55225f3\ldots)
+  and \texttt{LOG\_INVENTORY.json} (938dcdcc\ldots) are byte-identical
+  to r3 (E0). The r4 reproduction profile
+  (\texttt{RESPONSE\_AND\_REPRODUCTION\_PROFILE\_v1.22\_r4.md},
+  «Reproducción limitada», item 3) keeps the verifier
+  \textbf{mandatory}.
+\item
+  \textbf{Repetition with the auditor\textquotesingle s own output (log
+  reader only, no Lean).}
+  \texttt{python\ verify\_frozen\_logs.py\ -\/-inventory\ LOG\_INVENTORY.json\ -\/-output\ \textless{}run\_v1.22\_r4\textgreater{}/20\_EVIDENCE/E8/VERIFY\_FROZEN\_LOGS\_AUDITOR\_OUTPUT\_r4.json}
+  returned \textbf{PASS, 1266 logs, 0 errors}, exit 0. The output is
+  identical to that of run\_v1.22\_r3. Nothing was written in the r4
+  directory: \texttt{\_\_pycache\_\_} keeps only its earlier file,
+  timestamp unchanged.
+\item
+  \textbf{Inherited and revalidated by identity} from run\_v1.22\_r3,
+  because the verifier and inventory are identical:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    15/15 unit cases and 4/4 CLI corruptions (test copy);
+  \item
+    the error rule is case-sensitive, identical to the frozen runner
+    (E8-02 closed);
+  \item
+    1266 = 608 + 50 + 422 + 186 files, counted once; the
+    author\textquotesingle s old script covered 844 (E8-01).
+  \end{itemize}
+\item
+  \textbf{X-28.} The historical defect is that the frozen runners
+  \texttt{audit\_publication.py} and \texttt{paperiv\_build.py} keep
+  their insufficient pattern; they were not patched, and their hashes
+  equal the manifest. That stays recorded as history. \textbf{Current
+  compliance:} the control action was closed by the mitigation validated
+  in r3, and it is still in force, unchanged and mandatory. The axiom
+  and cone evidence (18 headline declarations, 50 public cones) also
+  remains in force. \textbf{There is no open action.} The historical
+  antecedent does not make E8 fail its criteria today.
+\end{itemize}
+
+\textbf{E8 verdict (r4): PASS.}
+
+\end{document}

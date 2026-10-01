@@ -1,0 +1,26 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 PaperIV/H1DescentBarrier.lean -o /workspace/request-project/.lake/runner/lib/lean/PaperIV/H1DescentBarrier.olean -i /workspace/request-project/.lake/runner/lib/lean/PaperIV/H1DescentBarrier.ilean
+import took 3.69s
+cumulative profiling times:
+	.olean serialization 92.6ms
+	attribute application 0.116ms
+	compilation (IR) 0.349ms
+	compilation (LCNF base) 0.452ms
+	compilation (LCNF mono) 0.162ms
+	congr simp thm 5.14ms
+	elaboration 73.9ms
+	fix level params 1.08ms
+	import 3.69s
+	initialization 34.8ms
+	instantiate metavars 6.98ms
+	interpretation 472ms
+	let-to-have transformation 0.161ms
+	linting 18.7ms
+	norm_num 56.6ms
+	parsing 12.1ms
+	process pre-definitions 12.5ms
+	ring 22.6ms
+	share common exprs 6.76ms
+	simp 48.7ms
+	tactic execution 148ms
+	type checking 106ms
+	typeclass inference 292ms

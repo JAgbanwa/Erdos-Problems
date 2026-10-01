@@ -1,0 +1,23 @@
+{
+  "added_display_parity": true,
+  "added_displays_per_language": {
+    "en": 3,
+    "es": 3
+  },
+  "exact_rational_coefficient_checks": {
+    "joint_elimination_error": true,
+    "normalized_missing_mass": true,
+    "triangle_cleanup_coefficient": true,
+    "four_clique_cleanup_coefficient": true,
+    "regularization_degree": true,
+    "old_exterior_degree": true,
+    "core_size_window": true,
+    "light_missing_threshold": true,
+    "schedule_log_upper": true,
+    "schedule_exponential": true,
+    "retained_scale": true,
+    "gate_ceiling": true,
+    "chain_offset": true
+  },
+  "limits": "Checks scalar comparisons only. They do not prove the graph lemmas, validate the entire schedule, or replace bilingual/editorial review."
+}

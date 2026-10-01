@@ -1,0 +1,26 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 PaperIV/RoundRobinPairs.lean -o /workspace/request-project/.lake/runner/lib/lean/PaperIV/RoundRobinPairs.olean -i /workspace/request-project/.lake/runner/lib/lean/PaperIV/RoundRobinPairs.ilean
+import took 2.97s
+cumulative profiling times:
+	.olean serialization 67.7ms
+	attribute application 2.63ms
+	compilation (IR) 2.64ms
+	compilation (LCNF base) 6.3ms
+	compilation (LCNF mono) 2.44ms
+	congr simp thm 12.3ms
+	elaboration 93.6ms
+	fix level params 0.961ms
+	import 2.97s
+	initialization 42.4ms
+	instantiate metavars 69.5ms
+	interpretation 424ms
+	let-to-have transformation 0.354ms
+	linting 36.6ms
+	norm_num 14ms
+	parsing 20.2ms
+	process pre-definitions 22.5ms
+	ring 122ms
+	share common exprs 13.6ms
+	simp 212ms
+	tactic execution 490ms
+	type checking 238ms
+	typeclass inference 653ms

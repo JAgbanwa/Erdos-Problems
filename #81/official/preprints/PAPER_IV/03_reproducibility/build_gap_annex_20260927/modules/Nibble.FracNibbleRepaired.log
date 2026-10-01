@@ -1,0 +1,18 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 Nibble/FracNibbleRepaired.lean -o /workspace/request-project/.lake/runner/lib/lean/Nibble/FracNibbleRepaired.olean -i /workspace/request-project/.lake/runner/lib/lean/Nibble/FracNibbleRepaired.ilean
+import took 4.26s
+cumulative profiling times:
+	.olean serialization 98ms
+	attribute application 0.0245ms
+	elaboration 22.8ms
+	fix level params 0.0487ms
+	import 4.26s
+	initialization 38.6ms
+	instantiate metavars 0.0606ms
+	interpretation 245ms
+	let-to-have transformation 0.0635ms
+	linting 3.73ms
+	parsing 3.28ms
+	process pre-definitions 1.23ms
+	share common exprs 0.303ms
+	type checking 1.23ms
+	typeclass inference 25ms

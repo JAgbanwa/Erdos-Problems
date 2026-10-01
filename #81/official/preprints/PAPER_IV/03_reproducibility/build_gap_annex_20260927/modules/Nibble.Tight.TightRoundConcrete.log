@@ -1,0 +1,27 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 Nibble/Tight/TightRoundConcrete.lean -o /workspace/request-project/.lake/runner/lib/lean/Nibble/Tight/TightRoundConcrete.olean -i /workspace/request-project/.lake/runner/lib/lean/Nibble/Tight/TightRoundConcrete.ilean
+import took 4.67s
+.olean serialization took 120ms
+cumulative profiling times:
+	.olean serialization 120ms
+	attribute application 0.0744ms
+	compilation (IR) 2.9ms
+	compilation (LCNF base) 3.15ms
+	compilation (LCNF mono) 1.29ms
+	congr simp thm 5.26ms
+	elaboration 93.4ms
+	fix level params 1.05ms
+	import 4.67s
+	initialization 43.3ms
+	instantiate metavars 11.7ms
+	interpretation 603ms
+	let-to-have transformation 0.185ms
+	linting 32ms
+	norm_num 38.3ms
+	parsing 14.3ms
+	process pre-definitions 19.6ms
+	ring 64.2ms
+	share common exprs 11.2ms
+	simp 39.2ms
+	tactic execution 205ms
+	type checking 78.7ms
+	typeclass inference 535ms

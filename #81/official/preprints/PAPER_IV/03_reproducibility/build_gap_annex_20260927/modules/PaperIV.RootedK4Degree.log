@@ -1,0 +1,28 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 PaperIV/RootedK4Degree.lean -o /workspace/request-project/.lake/runner/lib/lean/PaperIV/RootedK4Degree.olean -i /workspace/request-project/.lake/runner/lib/lean/PaperIV/RootedK4Degree.ilean
+instantiate metavars took 126ms
+type checking took 886ms
+import took 3.21s
+cumulative profiling times:
+	.olean serialization 80.1ms
+	attribute application 0.25ms
+	compilation (IR) 2.3ms
+	compilation (LCNF base) 5.18ms
+	compilation (LCNF mono) 3.86ms
+	congr simp thm 4.03ms
+	elaboration 99.1ms
+	fix level params 2.4ms
+	import 3.21s
+	initialization 37.4ms
+	instantiate metavars 129ms
+	interpretation 558ms
+	let-to-have transformation 0.272ms
+	linting 45.2ms
+	norm_num 3.1ms
+	parsing 17.2ms
+	process pre-definitions 38.6ms
+	ring 1.02ms
+	share common exprs 10.4ms
+	simp 10.3ms
+	tactic execution 699ms
+	type checking 926ms
+	typeclass inference 210ms

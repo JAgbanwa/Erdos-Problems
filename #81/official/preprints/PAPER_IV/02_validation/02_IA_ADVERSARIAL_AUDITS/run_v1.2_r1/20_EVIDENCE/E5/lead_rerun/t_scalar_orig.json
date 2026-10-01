@@ -1,0 +1,323 @@
+{
+ "T01": {
+  "claim": "(4.6a): 16/(6n)+1/n+16/(24n^2) < eps0-16eta0 holds at n=4e12, LHS decreasing, fails for n<=3.6e12",
+  "manuscript_lines": "380-386",
+  "method": "exact Fraction evaluation; sympy equivalence with 16D/n^2<eps0-1/n; sympy derivative sign; exact binary search for crossover",
+  "evidence_type": "exact",
+  "parameters": {
+   "eps0": "1e-12",
+   "eta0": "1e-16"
+  },
+  "details": {
+   "holds_at_4e12": true,
+   "holds_at_3.6e12": false,
+   "equivalence_residual": "0",
+   "LHS_derivative_times_n3_coeffs_nonpositive": true,
+   "exact_smallest_n_where_4.6a_holds": 3672542735043,
+   "LHS_at_4e12": "9.166666666667083e-13",
+   "RHS": "9.984e-13"
+  },
+  "result": "PASS",
+  "negative_control": {
+   "description": "old budget factor 20 (instead of 16) at n=4e12 must violate the contraction",
+   "accepted_by_test": false,
+   "result": "PASS (rejected)"
+  },
+  "runtime_s": 0.372,
+  "id": "T01"
+ },
+ "T02": {
+  "claim": "Lemma 4.2: 16*117/1825 > 1 and 16*12687/20000 > 10, hence m+10A <= 16D",
+  "manuscript_lines": "366-368",
+  "method": "exact Fraction; LP optimum of max m+10A s.t. (117/1825)m+(12687/20000)A<=D by vertex enumeration",
+  "evidence_type": "exact",
+  "parameters": {},
+  "details": {
+   "16*117/1825": "1872/1825",
+   "16*12687/20000": "12687/1250",
+   "LP max (m+10A)/D": "200000/12687",
+   "LP max float": 15.76416804603137
+  },
+  "result": "PASS",
+  "negative_control": {
+   "description": "factor 15 in place of 16 must fail (15*117/1825 > 1 false)",
+   "accepted_by_test": false,
+   "result": "PASS (rejected)"
+  },
+  "runtime_s": 0.0,
+  "id": "T02"
+ },
+ "T03": {
+  "claim": "Lemma 5.3 coefficients -19/365, -253/500 (from Table 2) and -117/1825, -12687/20000 (from l<=11A/100+29f/1000)",
+  "manuscript_lines": "539-549, 655-688",
+  "method": "exact recomputation of substitution chain; sympy check of (5.4a)",
+  "evidence_type": "exact",
+  "parameters": {},
+  "details": {
+   "relaxed": [
+    "-19/365",
+    "-253/500"
+   ],
+   "strong": [
+    "-117/1825",
+    "-12687/20000"
+   ],
+   "intermediate": [
+    "-13/20",
+    "-48/25",
+    "-39/50",
+    "-971/500"
+   ],
+   "table2_first_phase_equiv": true,
+   "table2_second_phase_equiv": true,
+   "(5.4a)_residual": "0"
+  },
+  "result": "PASS",
+  "negative_control": {
+   "description": "corrupted second-phase ratio 8A/40 (instead of 7A/40) must NOT reproduce -253/500",
+   "observed_A_coeff": "-57/125",
+   "result": "PASS (rejected)"
+  },
+  "runtime_s": 0.006,
+  "id": "T03"
+ },
+ "T04": {
+  "claim": "(5.14) coefficient bounds <=11/100 and <=29/1000; (5.13) q(q-1)/a^2 >= Q0^2-Q0/1024 >= 393/100; (5.12a) a/64+3a/57344 < a/48; (5.12) t/a<=1/256",
+  "manuscript_lines": "618-655",
+  "method": "exact Fraction evaluation; independent re-linearisation of (5.11) using (5.12)",
+  "evidence_type": "exact (given the premises (5.12))",
+  "parameters": {
+   "Q0": "87947/44352",
+   "R0": "393/100"
+  },
+  "details": {
+   "coefA": "3370729481/33180644160",
+   "coefA_float": 0.10158722250074605,
+   "coeff": "307775059/11060214720",
+   "coeff_float": 0.027827222779269876,
+   "(5.13)_middle": 3.930082853871412,
+   "(5.12a)_lhs_over_a": 0.015677315848214284,
+   "rederived_equal_to_printed": true,
+   "t_bound_ok": true
+  },
+  "result": "PASS",
+  "negative_control": {
+   "description": "corrupted R0=394/100 must fail (5.13); corrupted A-coefficient bound 1/10 must fail",
+   "R0_394_accepted": false,
+   "coefA_le_1/10_accepted": false,
+   "result": "PASS (rejected)"
+  },
+  "runtime_s": 0.0,
+  "id": "T04"
+ },
+ "T05": {
+  "claim": "Thm 5.0 window: a>=33n/100, 99a<=100p, 48(2p-q)_+<=a, q=n-p imply 3267n<=10000p, 3539p<=1188n, |3p-n|<=n/50",
+  "manuscript_lines": "433, 440",
+  "method": "z3 linear real arithmetic: premises AND NOT(conclusion) unsat; truncated premise replaced by weaker untruncated one (conservative)",
+  "evidence_type": "exact (decision procedure for LRA)",
+  "parameters": {},
+  "details": {
+   "with_|n-3a|<=a/64": {
+    "3267n<=10000p": "unsat",
+    "3539p<=1188n": "unsat",
+    "|3p-n|<=n/50": "unsat"
+   },
+   "without_|n-3a|<=a/64": {
+    "3267n<=10000p": "unsat",
+    "3539p<=1188n": "unsat",
+    "|3p-n|<=n/50": "unsat"
+   },
+   "note": "the upper bound uses 99a<=100p (a<=100p/99) together with 48(3p-n)<=a; |n-3a|<=a/64 is not needed"
+  },
+  "result": "PASS",
+  "negative_control": {
+   "description": "corrupted conclusion |3p-n|<=n/100 must be refutable (sat); dropping 99a<=100p must make 3267n<=10000p refutable",
+   "corrupt_conclusion": "sat",
+   "drop_premise": "sat",
+   "counter_model_1": "[n = 9650/99, p = 32, q = 6482/99, a = 3200/99]",
+   "result": "PASS (rejected)"
+  },
+  "runtime_s": 0.051,
+  "id": "T05"
+ },
+ "T06": {
+  "claim": "(5.1)-(5.4) scalar steps: 1e-12+1.5e-6<=0.33^2/65536; u(u+1)/2<=eps0 n^2 => u<=3n/2e6; 7a/2-129a/64=95a/64; (5.1a) middle/third branch bounds below (2n+1)^2/24-n^2/40 for n>=9",
+  "manuscript_lines": "456-514",
+  "method": "exact Fractions, sympy polynomial coefficients, z3 (LRA/NRA), exhaustive integer branch scan n=9..1500",
+  "evidence_type": "exact / symbolic (+ finite exhaustive scan for the branch bounds)",
+  "parameters": {
+   "branch_scan_n": [
+    9,
+    1500
+   ]
+  },
+  "details": {
+   "(a) 1e-12+1.5e-6 <= 0.33^2/65536": true,
+   "(b) u(u+1)/2<=eps0 n^2 => u<=3n/2e6 (z3 NRA)": true,
+   "(b') exact: (1.5e-6)^2 > 2e-12": true,
+   "(c) 7/2-129/64 = 95/64": true,
+   "(c') 95a/64 > a/128+1 for a>=1024": true,
+   "(c'') n-3a<=a/64 => n-a <= 129a/64": true,
+   "(d) sympy: target-(4n+1)^2/120 = N**2/120 + N/10 + 1/30": true,
+   "(d) sympy: target-n(n-1)/12 = 7*N**2/120 + N/4 + 1/24": true,
+   "(d) exhaustive integer branch check n=9..1500 violations=0": true,
+   "(e) delta_C<=n^2/40 for all n>=9 (exact, n=9..10^4 and leading coeff)": true,
+   "(f) delta_C<=(61/10)eps0 n^2 at n=4e12 (and hence above: n/6+1/24 <= (1e-13-1e-16)n^2 monotone)": true,
+   "(g0) sqrt(24*6.1e-12) <= 1.211e-5": true,
+   "(g1) |r-n/3| < 3e-6 n": true,
+   "(g2) a>=33n/100": true,
+   "(g3) |n-3a|<=a/64": true,
+   "branch_violations_first10": []
+  },
+  "result": "PASS",
+  "negative_control": {
+   "description": "(a) with 1.7e-6 must fail; middle-branch max <= n^2/8-1 must fail somewhere (true max (n^2-1)/8 at r=(n+1)/2)",
+   "(a)_1.7e-6_accepted": false,
+   "n^2/8-1_accepted": false,
+   "result": "PASS (rejected)"
+  },
+  "runtime_s": 1.155,
+  "id": "T06"
+ },
+ "T18": {
+  "claim": "Thm C' constants: max{40000(s+1)^3, 2/eps_s} = 2e41(s+1)^8; 1+32s+800(3+32s)(s+1)^2 <= 38000(s+1)^3; d_E<=40000(s+1)^3 delta; 1+7A_s",
+  "manuscript_lines": "101-107, 910-965, 2107-2118",
+  "method": "sympy polynomial with nonnegative coefficients after x=1+y; z3 LRA for the (6.14) chain for each s=0..60",
+  "evidence_type": "exact / symbolic",
+  "parameters": {
+   "z3_chain_s": [
+    0,
+    60
+   ]
+  },
+  "details": {
+   "coef_poly_in_x=s+1": "25600*x**3 - 23200*x**2 + 32*x - 31",
+   "38000x^3-coef in y=x-1 coeffs": [
+    "12400",
+    "60400",
+    "83568",
+    "35599"
+   ],
+   "max_equals_2/eps_s": true,
+   "chain_z3_ok_s0..60": true,
+   "1+7A identity": true
+  },
+  "result": "PASS",
+  "negative_control": {
+   "description": "corrupted coefficient bound 25000(s+1)^3 must fail for large s (leading coefficient 25600)",
+   "values(s, holds)": [
+    [
+     0,
+     true
+    ],
+    [
+     10,
+     true
+    ],
+    [
+     100,
+     false
+    ],
+    [
+     1000,
+     false
+    ]
+   ],
+   "result": "PASS (rejected)"
+  },
+  "runtime_s": 0.131,
+  "id": "T18"
+ },
+ "T19": {
+  "claim": "F.1 deletion invariant 0<=delta<=g0 t(t-N0), g0<=eps/4, eps N0>=1, delta'<=delta-eps t+1/3 => delta'<=g0(t-1)(t-1-N0); bottom order contradiction",
+  "manuscript_lines": "2141-2146 (with 973-977)",
+  "method": "z3 nonlinear real arithmetic (nlsat); premises AND NOT(conclusion) unsat",
+  "evidence_type": "exact (decision procedure, NRA)",
+  "parameters": {},
+  "details": {
+   "invariant_preserved": "unsat",
+   "rhs_change_le_eps_t/2": "unsat",
+   "t=N0_forces_negative_child_deficit": "unsat"
+  },
+  "result": "PASS",
+  "negative_control": {
+   "description": "with g0<=eps (not eps/4), or without eps N0>=1, the invariant must be refutable (sat)",
+   "g0<=eps": "sat",
+   "no_epsN0>=1": "sat",
+   "result": "PASS (rejected)"
+  },
+  "runtime_s": 0.017,
+  "id": "T19"
+ },
+ "T21": {
+  "claim": "Table 1 gains; Lemma 2.1 |Q|=e-g(P); (1.3) equivalence; (1.3a) g(Q)+|Q|=e; (2.4) w<=5/6 e",
+  "manuscript_lines": "113-138, 196-238",
+  "method": "symbolic identities here; (1.3a)/(2.1) on random partitions and (2.4) on all exact W* values are in t_graphs.py (T21b)",
+  "evidence_type": "exact / symbolic",
+  "parameters": {},
+  "details": {
+   "table1": true,
+   "max gain/edges = 5/6": true,
+   "(1.3) difference identity": true
+  },
+  "result": "PASS",
+  "negative_control": {
+   "description": "none predeclared (trivial)",
+   "result": "N/A"
+  },
+  "runtime_s": 0.0,
+  "id": "T21"
+ },
+ "T22": {
+  "claim": "Thm 6.1/Cor 6.1a: from (6.7) r+m/16+A/2<=delta (r,m,A>=0): r+A+3m<=48delta (optimal), m+A<=16delta, edges 10tau+480delta",
+  "manuscript_lines": "837-877",
+  "method": "exact LP by vertex enumeration of the simplex r+m/16+A/2<=1; HiGHS cross-check",
+  "evidence_type": "exact",
+  "parameters": {},
+  "details": {
+   "max r+A+3m": "48",
+   "max m+A": "16",
+   "argmax": "(r,m,A)=(0,16,0)",
+   "highs": 48.0
+  },
+  "result": "PASS",
+  "negative_control": {
+   "description": "constant 47 must fail (vertex m=16delta gives 48delta)",
+   "accepted_by_test": false,
+   "result": "PASS (rejected)"
+  },
+  "runtime_s": 3.535,
+  "id": "T22"
+ },
+ "T24": {
+  "claim": "(6.5a)/(6.5): M(n)>=n(n+1)/6-1; M(n)<=n^2/6+n/6; M(n)>=n^2/6 (n>=6, Cor 3.5); floor((2n+1)^2/24)=M(n) (\u00a72.3); N^2<=2^N for N>=4 (\u00a76.3)",
+  "manuscript_lines": "250, 301, 779-809",
+  "method": "exhaustive exact integers n<=1e5, N<=2000; sympy induction step (N+1)^2<=2N^2 for N>=3",
+  "evidence_type": "exact (finite exhaustive + symbolic induction step)",
+  "parameters": {
+   "n_max": 100000,
+   "N_max": 2000
+  },
+  "details": {
+   "M>=n(n+1)/6-1": true,
+   "floor((2n+1)^2/24)=M": true,
+   "M>=n^2/6 (n>=6)": true,
+   "N^2<=2^N (4..2000)": true,
+   "induction step coefficients >=0": true,
+   "M<=n^2/6+n/6": true,
+   "n(n+1) mod 6 values": [
+    0,
+    2
+   ]
+  },
+  "result": "PASS",
+  "negative_control": {
+   "description": "N=3 must violate N^2<=2^N; M(n)>=n(n+1)/6-1/4 must fail (remainder 2/6)",
+   "N=3_accepted": false,
+   "quarter_accepted": false,
+   "result": "PASS (rejected)"
+  },
+  "runtime_s": 0.259,
+  "id": "T24"
+ }
+}

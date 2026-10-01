@@ -1,0 +1,61 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 E17/Reconstruction.lean -o /workspace/request-project/.lake/runner/lib/lean/E17/Reconstruction.olean -i /workspace/request-project/.lake/runner/lib/lean/E17/Reconstruction.ilean
+E17/Reconstruction.lean:194:0: warning: automatically included section variable(s) unused in theorem `E17.Reconstruction.exists_mem_base`:
+  [Fintype V]
+  [DecidableEq V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] [DecidableEq V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+E17/Reconstruction.lean:214:0: warning: automatically included section variable(s) unused in theorem `E17.Reconstruction.radPiece_eq`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+E17/Reconstruction.lean:230:0: warning: automatically included section variable(s) unused in theorem `E17.Reconstruction.mem_radE`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+E17/Reconstruction.lean:233:0: warning: automatically included section variable(s) unused in theorem `E17.Reconstruction.mem_radP`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+tactic execution of Lean.Parser.Tactic.contradiction took 105ms
+tactic execution of Lean.Parser.Tactic.contradiction took 107ms
+tactic execution of Lean.Parser.Tactic.contradiction took 120ms
+tactic execution of Lean.Parser.Tactic.contradiction took 103ms
+tactic execution of Lean.Parser.Tactic.contradiction took 107ms
+tactic execution of Lean.Parser.Tactic.contradiction took 109ms
+tactic execution of Lean.Parser.Tactic.contradiction took 103ms
+interpretation of Mathlib.Tactic.Tauto._aux_Mathlib_Tactic_Tauto___elabRules_Mathlib_Tactic_Tauto_tauto_1._boxed took 661ms
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_linarith_1._boxed took 123ms
+import took 3.08s
+cumulative profiling times:
+	.olean serialization 86.9ms
+	attribute application 0.491ms
+	blocked (unaccounted) 254ms
+	compilation (IR) 6.38ms
+	compilation (LCNF base) 7.06ms
+	compilation (LCNF mono) 4.1ms
+	congr simp thm 9.6ms
+	elaboration 229ms
+	fix level params 4.89ms
+	import 3.08s
+	initialization 39.7ms
+	instantiate metavars 42.5ms
+	interpretation 1.23s
+	let-to-have transformation 1.08ms
+	linting 75ms
+	norm_num 1.95ms
+	parsing 28.7ms
+	process pre-definitions 31.3ms
+	ring 15.6ms
+	share common exprs 11.6ms
+	simp 238ms
+	tactic execution 2.75s
+	type checking 147ms
+	typeclass inference 610ms

@@ -1,0 +1,23 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 PaperIV/MarkedQuotaNibble.lean -o /workspace/request-project/.lake/runner/lib/lean/PaperIV/MarkedQuotaNibble.olean -i /workspace/request-project/.lake/runner/lib/lean/PaperIV/MarkedQuotaNibble.ilean
+import took 4.15s
+cumulative profiling times:
+	.olean serialization 92.5ms
+	attribute application 0.0767ms
+	congr simp thm 1.59ms
+	elaboration 53.2ms
+	fix level params 0.521ms
+	import 4.15s
+	initialization 39.1ms
+	instantiate metavars 4.12ms
+	interpretation 295ms
+	let-to-have transformation 0.17ms
+	linting 10.1ms
+	norm_num 1.58ms
+	parsing 7.82ms
+	process pre-definitions 7.99ms
+	ring 7.17ms
+	share common exprs 2.89ms
+	simp 7.82ms
+	tactic execution 38.5ms
+	type checking 25.2ms
+	typeclass inference 84.9ms

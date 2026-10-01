@@ -1,0 +1,27 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 Nibble/Tight/CoverProb.lean -o /workspace/request-project/.lake/runner/lib/lean/Nibble/Tight/CoverProb.olean -i /workspace/request-project/.lake/runner/lib/lean/Nibble/Tight/CoverProb.ilean
+import took 4.55s
+.olean serialization took 111ms
+cumulative profiling times:
+	.olean serialization 111ms
+	attribute application 0.116ms
+	compilation (IR) 0.439ms
+	compilation (LCNF base) 0.507ms
+	compilation (LCNF mono) 0.191ms
+	congr simp thm 9.28ms
+	elaboration 82.3ms
+	fix level params 3.58ms
+	import 4.55s
+	initialization 50ms
+	instantiate metavars 6.66ms
+	interpretation 612ms
+	let-to-have transformation 0.245ms
+	linting 27.7ms
+	norm_num 3.4ms
+	parsing 18.4ms
+	process pre-definitions 20.5ms
+	ring 33.1ms
+	share common exprs 10.4ms
+	simp 122ms
+	tactic execution 366ms
+	type checking 73ms
+	typeclass inference 585ms

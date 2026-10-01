@@ -1,0 +1,198 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 PaperIV/PaperIIIUsageAudit.lean -o /workspace/request-project/.lake/runner/lib/lean/PaperIV/PaperIIIUsageAudit.olean -i /workspace/request-project/.lake/runner/lib/lean/PaperIV/PaperIIIUsageAudit.ilean
+PaperIV.PaperIIINibbleAdapter.nearPerfectNibbleAt: [Nibble.AdaptiveAssembly,
+ Nibble.AdaptiveRounds,
+ Nibble.Assemble,
+ Nibble.Assembly,
+ Nibble.Basic,
+ Nibble.BeckFiala,
+ Nibble.BeckFialaPairs,
+ Nibble.Conflict,
+ Nibble.Covered,
+ Nibble.CoveredExpectation,
+ Nibble.DischargeSeq,
+ Nibble.FracMatchingBound,
+ Nibble.FracNibbleRepaired,
+ Nibble.Greedy,
+ Nibble.IterationSeq,
+ Nibble.Measurable,
+ Nibble.Regular,
+ Nibble.RegularMost,
+ Nibble.Round,
+ Nibble.RoundConflict,
+ Nibble.Survival,
+ Nibble.Tight.ConflictCount,
+ Nibble.Tight.CoverProb,
+ Nibble.Tight.CoverVariance,
+ Nibble.Tight.CoverWeight,
+ Nibble.Tight.CoverWeightMoments,
+ Nibble.Tight.CubeRetention,
+ Nibble.Tight.CubeVariance,
+ Nibble.Tight.FlipStability,
+ Nibble.Tight.LossVariance,
+ Nibble.Tight.PairExcessCodegree,
+ Nibble.Tight.Pruning,
+ Nibble.Tight.SafeDegree,
+ Nibble.Tight.SafeDegreeVariance,
+ Nibble.Tight.SafeRoundCheb,
+ Nibble.Tight.Selection,
+ Nibble.Tight.SharpRound,
+ Nibble.Tight.SharpRoundAssembly,
+ Nibble.Tight.SharpRoundProof,
+ Nibble.Tight.SharpVariance,
+ Nibble.Tight.TightRound,
+ Nibble.Tight.TwoEdgeMatch,
+ Nibble.TightAssembly,
+ Nibble.TightNibble,
+ Nibble.TightSchedule,
+ Nibble.WeightedSpreadNibble]
+PaperIV.PaperIIISlackNibbleAdapter.boundedRankNibbleAt: [Nibble.AdaptiveAssembly,
+ Nibble.AdaptiveRounds,
+ Nibble.Assemble,
+ Nibble.Assembly,
+ Nibble.Basic,
+ Nibble.BeckFiala,
+ Nibble.BeckFialaPairs,
+ Nibble.Conflict,
+ Nibble.Covered,
+ Nibble.CoveredExpectation,
+ Nibble.DischargeSeq,
+ Nibble.FracMatchingBound,
+ Nibble.FracNibbleLE,
+ Nibble.FracNibbleRepaired,
+ Nibble.FracNibbleSlack,
+ Nibble.FracNibbleSlackR,
+ Nibble.Greedy,
+ Nibble.IterationSeq,
+ Nibble.Measurable,
+ Nibble.Regular,
+ Nibble.RegularMost,
+ Nibble.Round,
+ Nibble.RoundConflict,
+ Nibble.Survival,
+ Nibble.Tight.ConflictCount,
+ Nibble.Tight.CoverProb,
+ Nibble.Tight.CoverVariance,
+ Nibble.Tight.CoverWeight,
+ Nibble.Tight.CoverWeightMoments,
+ Nibble.Tight.CubeRetention,
+ Nibble.Tight.CubeVariance,
+ Nibble.Tight.FlipStability,
+ Nibble.Tight.LossVariance,
+ Nibble.Tight.PairExcessCodegree,
+ Nibble.Tight.Pruning,
+ Nibble.Tight.SafeDegree,
+ Nibble.Tight.SafeDegreeVariance,
+ Nibble.Tight.SafeRoundCheb,
+ Nibble.Tight.Selection,
+ Nibble.Tight.SharpRound,
+ Nibble.Tight.SharpRoundAssembly,
+ Nibble.Tight.SharpRoundProof,
+ Nibble.Tight.SharpVariance,
+ Nibble.Tight.TightRound,
+ Nibble.Tight.TwoEdgeMatch,
+ Nibble.TightAssembly,
+ Nibble.TightNibble,
+ Nibble.TightSchedule,
+ Nibble.WeightedSpreadNibble]
+PaperIV.BalancedReserve.exists_balanced_reserve: [Nibble.BeckFiala]
+PaperIV.SpreadAbsorptionCompatibility.exists_budgeted_compatible_spread_absorber: [Contrib.SpreadMatchingDirac]
+Paper III union (50 modules): [Contrib.SpreadMatchingDirac,
+ Nibble.AdaptiveAssembly,
+ Nibble.AdaptiveRounds,
+ Nibble.Assemble,
+ Nibble.Assembly,
+ Nibble.Basic,
+ Nibble.BeckFiala,
+ Nibble.BeckFialaPairs,
+ Nibble.Conflict,
+ Nibble.Covered,
+ Nibble.CoveredExpectation,
+ Nibble.DischargeSeq,
+ Nibble.FracMatchingBound,
+ Nibble.FracNibbleLE,
+ Nibble.FracNibbleRepaired,
+ Nibble.FracNibbleSlack,
+ Nibble.FracNibbleSlackR,
+ Nibble.Greedy,
+ Nibble.IterationSeq,
+ Nibble.Measurable,
+ Nibble.Regular,
+ Nibble.RegularMost,
+ Nibble.Round,
+ Nibble.RoundConflict,
+ Nibble.Survival,
+ Nibble.Tight.ConflictCount,
+ Nibble.Tight.CoverProb,
+ Nibble.Tight.CoverVariance,
+ Nibble.Tight.CoverWeight,
+ Nibble.Tight.CoverWeightMoments,
+ Nibble.Tight.CubeRetention,
+ Nibble.Tight.CubeVariance,
+ Nibble.Tight.FlipStability,
+ Nibble.Tight.LossVariance,
+ Nibble.Tight.PairExcessCodegree,
+ Nibble.Tight.Pruning,
+ Nibble.Tight.SafeDegree,
+ Nibble.Tight.SafeDegreeVariance,
+ Nibble.Tight.SafeRoundCheb,
+ Nibble.Tight.Selection,
+ Nibble.Tight.SharpRound,
+ Nibble.Tight.SharpRoundAssembly,
+ Nibble.Tight.SharpRoundProof,
+ Nibble.Tight.SharpVariance,
+ Nibble.Tight.TightRound,
+ Nibble.Tight.TwoEdgeMatch,
+ Nibble.TightAssembly,
+ Nibble.TightNibble,
+ Nibble.TightSchedule,
+ Nibble.WeightedSpreadNibble]
+USED CONSTANTS FROM Nibble.AdaptiveAssembly: [Nibble.AdaptiveOracleExistsCeil,
+ Nibble.RoundOracleExistsCeil,
+ Nibble.adaptiveOracleExistsCeil_of_roundOracleCeil,
+ Nibble.nibbleTheoremMostCeil_of_adaptiveOracleCeil]
+USED CONSTANTS FROM Nibble.Assemble: [Hypergraph.support_union,
+ Hypergraph.support_union._simp_1_1,
+ Hypergraph.support_union._simp_1_2]
+USED CONSTANTS FROM Nibble.DischargeSeq: [Hypergraph.exists_matching_of_oracle_seq_lt,
+ Hypergraph.nibble_matching_card_of_oracle_seq_lt,
+ Nibble.geometric_decay_prod_lt,
+ Nibble.uncovered_below_prod_lt]
+USED CONSTANTS FROM Nibble.FracNibbleRepaired: [Nibble.fracNibbleWeighted_nearPerfect]
+USED CONSTANTS FROM Nibble.IterationSeq: [Hypergraph.nibbleIterSeq,
+ Hypergraph.nibbleIterSeq.match_1,
+ Hypergraph.nibbleMatchingSeq,
+ Hypergraph.nibbleMatchingSeq_isMatching,
+ Hypergraph.nibbleMatchingSeq_subset,
+ Hypergraph.nibbleMatchingSeq_support_card_succ,
+ Hypergraph.nibbleResidualSeq,
+ Hypergraph.nibbleResidualSeq_disjoint_support,
+ Hypergraph.nibbleResidualSeq_subset]
+USED CONSTANTS FROM Nibble.RegularMost: [Hypergraph.NearlyRegularMost, Nibble.NibbleTheoremMostCeil]
+USED CONSTANTS FROM Nibble.Tight.SharpRound: [Nibble.SharpRoundFor,
+ Nibble.SharpRoundFor._proof_1,
+ Nibble.SharpRoundFor._proof_2]
+USED CONSTANTS FROM Nibble.Tight.TightRound: [Nibble.coveredCount_eq_sum, Nibble.safeDegree.congr_simp]
+USED CONSTANTS FROM Nibble.TightNibble: [Nibble.nibbleTheoremMostCeil_holds, Nibble.roundOracleExistsCeil_holds]
+USED CONSTANTS FROM Nibble.WeightedNibble: []
+interpretation of PaperIV.PaperIIIUsageAudit._aux_PaperIV_PaperIIIUsageAudit___elabRules_PaperIV_PaperIIIUsageAudit_command#audit_paperIII_usage_1._boxed took 55.6s
+import took 4.12s
+cumulative profiling times:
+	.olean serialization 15.4ms
+	attribute application 0.232ms
+	blocked (unaccounted) 95.7ms
+	compilation (IR) 9.04ms
+	compilation (LCNF base) 32.7ms
+	compilation (LCNF mono) 8.86ms
+	elaboration 64.3ms
+	fix level params 0.0673ms
+	import 4.12s
+	initialization 39ms
+	instantiate metavars 0.0317ms
+	interpretation 55.9s
+	let-to-have transformation 1.35ms
+	linting 4.05ms
+	parsing 2.93ms
+	process pre-definitions 3.37ms
+	share common exprs 0.532ms
+	type checking 2.65ms
+	typeclass inference 27.3ms

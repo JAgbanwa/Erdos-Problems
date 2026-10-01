@@ -1,0 +1,58 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 E19/AxiomCheck.lean -o /workspace/request-project/.lake/runner/lib/lean/E19/AxiomCheck.olean -i /workspace/request-project/.lake/runner/lib/lean/E19/AxiomCheck.ilean
+constants under forbidden roots: 0
+modules under forbidden roots: 0; total modules in cone: 5216
+interpretation of _private.E19.AxiomCheck.0._eval._boxed took 659ms
+elaboration took 256ms
+'E19.Sched.gamT_ge' depends on axioms: [propext, Classical.choice, Quot.sound]
+elaboration took 853ms
+'E19.Sched.TT_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+elaboration took 801ms
+'E19.Sched.excT_ge' depends on axioms: [propext, Classical.choice, Quot.sound]
+elaboration took 898ms
+'E19.Sched.lominT_ge' depends on axioms: [propext, Classical.choice, Quot.sound]
+elaboration took 832ms
+'E19.Sched.muT_ge' depends on axioms: [propext, Classical.choice, Quot.sound]
+elaboration took 837ms
+'E19.Sched.DS_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+elaboration took 837ms
+'E19.Sched.gamR_ge' depends on axioms: [propext, Classical.choice, Quot.sound]
+elaboration took 921ms
+'E19.GateB.gamQ_ge' depends on axioms: [propext, Classical.choice, Quot.sound]
+elaboration took 848ms
+'E19.G1_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+elaboration took 851ms
+'E19.G2_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+elaboration took 864ms
+'E19.G3_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+elaboration took 831ms
+'E19.stepBound_le_two_pow' depends on axioms: [propext]
+'E19.iterate_le_tower2' depends on axioms: [propext, Classical.choice, Quot.sound]
+'E19.iterate_le_tower2_explicit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'E19.NfarE_eta0_le_clean' depends on axioms: [propext, Classical.choice, Quot.sound]
+elaboration took 863ms
+'E19.Tnum_le_tower2' depends on axioms: [propext, Classical.choice, Quot.sound]
+'E19.NfarE_eta0_le_tower' depends on axioms: [propext, Classical.choice, Quot.sound]
+elaboration took 902ms
+'E19.farRegime_eta0_tower' depends on axioms: [propext, Classical.choice, Quot.sound]
+elaboration took 1.73s
+import took 4.95s
+cumulative profiling times:
+	.olean serialization 3.1ms
+	attribute application 0.0085ms
+	blocked (unaccounted) 27.8ms
+	compilation (IR) 3.67ms
+	compilation (LCNF base) 13.8ms
+	compilation (LCNF mono) 3.31ms
+	elaboration 13.2s
+	fix level params 0.0164ms
+	import 4.95s
+	initialization 39.7ms
+	instantiate metavars 0.00365ms
+	interpretation 900ms
+	let-to-have transformation 0.0115ms
+	linting 2.93ms
+	parsing 2.23ms
+	process pre-definitions 0.773ms
+	share common exprs 0.122ms
+	type checking 0.692ms
+	typeclass inference 12.2ms

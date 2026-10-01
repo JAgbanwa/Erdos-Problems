@@ -1,0 +1,114 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+\documentclass[
+]{article}
+\usepackage{xcolor}
+\usepackage{amsmath,amssymb}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math} % this also loads fontspec
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+\usepackage{lmodern}
+\ifPDFTeX\else
+  % xetex/luatex font selection
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\usepackage{bookmark}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same}
+% fallback for those not using the hyperref driver hyperxmp:
+\makeatletter
+\@ifundefined{xmpquote}{\newcommand{\xmpquote}[1]{#1}}{}
+\makeatother
+\hypersetup{
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+
+\author{}
+\date{}
+
+\begin{document}
+
+\section{Gate E3 report --- run\_v1.21\_r1 (Paper IV
+v1.21)}\label{gate-e3-report--run_v121_r1-paper-iv-v121}
+
+Verdict: \textbf{PASS}. Evidence: \texttt{20\_EVIDENCE/E3/}.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\subsection{E3 --- Conformance revalidation (no Lean
+run)}\label{e3--conformance-revalidation-no-lean-run}
+
+\begin{itemize}
+\tightlist
+\item
+  Lean source cut unchanged: 615/615 manifest entries match (E0; author
+  \texttt{LEAN\_IDENTITY\_CHECK.json} concurs, not relied upon).
+  Therefore all static and dynamic E3 results of run\_v1.2\_r1 carry
+  over for the unchanged statements; the diff shows no change to any
+  theorem statement, Lean excerpt or declaration name cited.
+\item
+  \textbf{X-27 (MODERATE in v1.2) --- RESOLVED.} v1.21 now states, in §7
+  (new paragraph after the ASCheck paragraph), E.2 (l. after "An earlier
+  existential assembly\ldots"), Table 9 (row "Unrestricted equality
+  classification") and reference {[}23{]}, that
+  \texttt{E32.cp\_classification\_of\_theoremCPrimeC} and
+  \texttt{E32.ref15Theorem11\_of\_theoremCPrimeC} use the historical
+  assembly through \texttt{E32.theoremC\_at} and therefore include the
+  induced-removal chain of {[}23{]}, and that the exclusion check must
+  not be extended to them. This matches
+  \texttt{run\_v1.2\_r1/20\_EVIDENCE/E4/AuditorASProbe.log} (sha256
+  3a78a44a\ldots, unchanged): the cones of both wrappers contain
+  \texttt{AlonShapira.lemma\_4\_2},
+  \texttt{near\_chordal\_of\_induced\_cycles\_littleO\textquotesingle{}},
+  \texttt{EditRoute.editApproxAt\_all},
+  \texttt{EditRoute.fixedL4Localization\_unconditional},
+  \texttt{AFKS.strong\_regularity}, while
+  \texttt{rooted\_defect\_maximum},
+  \texttt{fixed\_defect\_stability\_explicit} and
+  \texttt{sequence\_arbitrary\_orders\_stability} contain none of them.
+  The text does not extend the exclusion beyond the selected
+  declarations.
+\item
+  New identifiers typeset in the prose were spot-checked against the
+  source (e.g. \texttt{IndepAllBounds}, \texttt{IndepAllParams},
+  \texttt{E18.NibbleSchedule}, \texttt{NibbleOracle},
+  \texttt{NibbleChain}, \texttt{RC01DeviationCleanup},
+  \texttt{RC01CleanFiber}): see \texttt{identifier\_check.json}.
+\item
+  Minor presentation issue (E1/E6 NEW-01): the descriptive word
+  "Regularization" is set as a code identifier in the §5.1 heading and
+  the A.2 row; it coincides with the module name
+  \texttt{PaperIV.Regularization} but the heading is a section title,
+  not a declaration reference.
+\end{itemize}
+
+\textbf{E3 verdict: PASS} (X-27 resolved; no conformance defect).
+
+\end{document}

@@ -1,0 +1,10 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 PaperIV/HybridRoute.lean -o /workspace/request-project/.lake/runner/lib/lean/PaperIV/HybridRoute.olean -i /workspace/request-project/.lake/runner/lib/lean/PaperIV/HybridRoute.ilean
+import took 4.03s
+cumulative profiling times:
+	.olean serialization 3.69ms
+	elaboration 0.0877ms
+	import 4.03s
+	initialization 36.1ms
+	interpretation 207ms
+	linting 0.373ms
+	parsing 0.0346ms

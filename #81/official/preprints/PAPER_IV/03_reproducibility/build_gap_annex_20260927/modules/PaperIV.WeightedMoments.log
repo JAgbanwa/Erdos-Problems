@@ -1,0 +1,38 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 PaperIV/WeightedMoments.lean -o /workspace/request-project/.lake/runner/lib/lean/PaperIV/WeightedMoments.olean -i /workspace/request-project/.lake/runner/lib/lean/PaperIV/WeightedMoments.ilean
+PaperIV/WeightedMoments.lean:65:0: warning: automatically included section variable(s) unused in theorem `PaperIV.WeightedMoments.coin_le_one`:
+  [Fintype ρ]
+  [DecidableEq ρ]
+  [DecidableEq V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype ρ] [DecidableEq ρ] [DecidableEq V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+PaperIV/WeightedMoments.lean:75:0: warning: automatically included section variable(s) unused in theorem `PaperIV.WeightedMoments.blockWeight_nonneg`:
+  [Fintype ρ]
+  [DecidableEq ρ]
+  [Fintype V]
+  [DecidableEq V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype ρ] [DecidableEq ρ] [Fintype V] [DecidableEq V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+import took 3.42s
+cumulative profiling times:
+	.olean serialization 79.1ms
+	attribute application 0.15ms
+	elaboration 102ms
+	fix level params 1.02ms
+	import 3.42s
+	initialization 39.1ms
+	instantiate metavars 2.96ms
+	interpretation 382ms
+	let-to-have transformation 0.524ms
+	linting 18.8ms
+	norm_num 1.08ms
+	parsing 11.8ms
+	process pre-definitions 7.52ms
+	ring 14ms
+	share common exprs 3.88ms
+	tactic execution 126ms
+	type checking 41.9ms
+	typeclass inference 196ms

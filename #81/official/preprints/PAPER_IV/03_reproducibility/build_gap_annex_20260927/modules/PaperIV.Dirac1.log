@@ -1,0 +1,103 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 PaperIV/Dirac1.lean -o /workspace/request-project/.lake/runner/lib/lean/PaperIV/Dirac1.olean -i /workspace/request-project/.lake/runner/lib/lean/PaperIV/Dirac1.ilean
+grind took 145ms
+tactic execution of Lean.Parser.Tactic.grind took 218ms
+grind took 155ms
+grind took 227ms
+simp took 238ms
+simp took 153ms
+simp took 145ms
+simp took 144ms
+simp took 104ms
+simp took 148ms
+simp took 319ms
+simp took 113ms
+simp took 696ms
+simp took 1.21s
+simp took 152ms
+simp took 1.26s
+simp took 165ms
+simp took 1.28s
+simp took 165ms
+simp took 162ms
+simp took 159ms
+simp took 934ms
+simp took 122ms
+simp took 205ms
+simp took 123ms
+simp took 200ms
+simp took 969ms
+simp took 127ms
+simp took 215ms
+simp took 992ms
+simp took 928ms
+simp took 130ms
+simp took 200ms
+simp took 923ms
+simp took 121ms
+simp took 195ms
+simp took 233ms
+simp took 1.75s
+simp took 130ms
+simp took 226ms
+simp took 238ms
+simp took 344ms
+simp took 517ms
+simp took 113ms
+grind took 1.16s
+simp took 110ms
+simp took 119ms
+simp took 106ms
+simp took 125ms
+simp took 100ms
+simp took 115ms
+simp took 101ms
+simp took 115ms
+simp took 101ms
+simp took 105ms
+PaperIV/Dirac1.lean:396:0: warning: automatically included section variable(s) unused in theorem `PaperIV.minimal_separator_isClique`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+simp took 119ms
+simp took 345ms
+simp took 342ms
+grind took 891ms
+import took 3.53s
+cumulative profiling times:
+	.olean serialization 92.4ms
+	aesop 541ms
+	attribute application 0.311ms
+	blocked (unaccounted) 144s
+	compilation (IR) 50.9ms
+	compilation (LCNF base) 52.9ms
+	compilation (LCNF mono) 24.5ms
+	congr simp thm 297ms
+	elaboration 160ms
+	fix level params 12.8ms
+	grind 2.73s
+	grind ac 1.08ms
+	grind canon 344ms
+	grind cutsat 2.82ms
+	grind ematch 382ms
+	grind linarith 0.215ms
+	grind mark subsingleton 277ms
+	grind ring 3.26ms
+	grind simp 1.75s
+	grind typeclass inference 203ms
+	import 3.53s
+	initialization 41.9ms
+	instantiate metavars 134ms
+	interpretation 969ms
+	let-to-have transformation 0.386ms
+	linting 77ms
+	norm_num 4.56ms
+	parsing 28.3ms
+	process pre-definitions 50.5ms
+	ring 20.4ms
+	share common exprs 31.8ms
+	simp 30s
+	tactic execution 1.54s
+	type checking 290ms
+	typeclass inference 36.2s

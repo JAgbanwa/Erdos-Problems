@@ -1,0 +1,105 @@
+{
+ "tests": [
+  {
+   "id": "C3a",
+   "claim": "H(δ/8)=⌊4/ε⁵⌋ is the integer h of §6.3 (and 9e19 = 4500·2e16)",
+   "pass": true,
+   "negative_control": "h with 4500^104",
+   "negative_rejected": true
+  },
+  {
+   "id": "C3b",
+   "claim": "100/ε⁵ ≤ 4^4000, hence I(δ/8,k0)=k0 (≤4001<k0)",
+   "pass": true,
+   "negative_control": "100/ε⁵ ≤ 4^3400",
+   "negative_rejected": true
+  },
+  {
+   "id": "C3c",
+   "claim": "1/δ = α = 2208(9e19)^21 exactly",
+   "pass": true,
+   "negative_control": null,
+   "negative_rejected": null
+  },
+  {
+   "id": "C3d",
+   "claim": "(a3+a4)/(a3 a4) ≤ 2(9e19)^6 (exact), with slack ≥ 1/(4·G1·B^5) for the ceiling",
+   "pass": true,
+   "negative_control": "(a3+a4)/(a3 a4) ≤ (9e19)^6",
+   "negative_rejected": true
+  },
+  {
+   "id": "C3e",
+   "claim": "z=1/(2e17) and 50/ξ=10^18 at ξ=η0/2",
+   "pass": true,
+   "negative_control": null,
+   "negative_rejected": null
+  },
+  {
+   "id": "C3f",
+   "claim": "k0, α, β, 10^18 ≤ 2^2000",
+   "pass": true,
+   "negative_control": "α ≤ 2^1400",
+   "negative_rejected": true
+  },
+  {
+   "id": "C3g",
+   "claim": "k0 ≥ 59517 so 2^(2^k0) ≥ 2^(2^59517) ≥ G_i bound",
+   "pass": true,
+   "negative_control": null,
+   "negative_rejected": null
+  },
+  {
+   "id": "C3h",
+   "claim": "x·4^x ≥ 2^x, 16^x ≥ 4x, 4x ≤ 4^x, 8q ≤ 2^q (q≥6) on x≤200, q in 6..200",
+   "pass": true,
+   "negative_control": "8q ≤ 2^q at q=5",
+   "negative_rejected": true
+  },
+  {
+   "id": "C3i",
+   "claim": "(1/4 + 7/256) ≤ 1 and 256B² ≤ B⁶ for B ≥ 4",
+   "pass": true,
+   "negative_control": "256B² ≤ B⁶ at B=3",
+   "negative_rejected": true
+  },
+  {
+   "id": "C3j",
+   "claim": "term bounds sum: 1+1+1+3+1 = 7 (k0, αB, G3, 10^18(1+2G2), 1)",
+   "pass": true,
+   "negative_control": null,
+   "negative_rejected": null
+  },
+  {
+   "id": "C3k",
+   "claim": "4k0 ≤ 2^67 ≤ T(5)=2^65536",
+   "pass": true,
+   "negative_control": "4k0 ≤ 2^66",
+   "negative_rejected": true
+  },
+  {
+   "id": "C3l",
+   "claim": "4(x4^x) ≤ 2^(4x) for x in 1..300 (induction step 4t_{j+1} ≤ 2^{4t_j})",
+   "pass": true,
+   "negative_control": null,
+   "negative_rejected": null
+  },
+  {
+   "id": "C3m",
+   "claim": "B^6 ≤ 2^(30R): (R·16^R)^6 = R^6·2^(24R) ≤ 2^(6R)·2^(24R) for R in 1..300",
+   "pass": true,
+   "negative_control": "(R·16^R)^6 ≤ 2^(29R) at R=1..50",
+   "negative_rejected": false
+  },
+  {
+   "id": "C3n",
+   "claim": "30R ≤ 8q when 4R ≤ q",
+   "pass": true,
+   "negative_control": null,
+   "negative_rejected": null
+  }
+ ],
+ "all_pass": true,
+ "all_negatives_rejected": false,
+ "scope": "finite/exact checks of the arithmetic steps; universal lemmas (e.g. x4^x≥2^x for all x) are elementary and checked only on ranges here"
+}

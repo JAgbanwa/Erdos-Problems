@@ -1,0 +1,41 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 E18/NibbleSchedule.lean -o /workspace/request-project/.lake/runner/lib/lean/E18/NibbleSchedule.olean -i /workspace/request-project/.lake/runner/lib/lean/E18/NibbleSchedule.ilean
+tactic execution of Lean.Parser.Tactic.refine took 125ms
+interpretation of Mathlib.Tactic.FieldSimp._aux_Mathlib_Tactic_FieldSimp___elabRules_Mathlib_Tactic_FieldSimp_fieldSimp_1._boxed took 102ms
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_linarith_1._boxed took 312ms
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_linarith_1._boxed took 101ms
+tactic execution of Lean.Parser.Tactic.rewriteSeq took 121ms
+tactic execution of Lean.Parser.Tactic.rewriteSeq took 183ms
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_linarith_1._boxed took 135ms
+tactic execution of Lean.Parser.Tactic.rewriteSeq took 118ms
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_linarith_1._boxed took 127ms
+tactic execution of Lean.Parser.Tactic.apply took 109ms
+instantiate metavars took 739ms
+share common exprs took 252ms
+elaboration took 106ms
+type checking took 288ms
+import took 4.37s
+.olean serialization took 118ms
+cumulative profiling times:
+	.olean serialization 118ms
+	attribute application 0.107ms
+	compilation (IR) 9.14ms
+	compilation (LCNF base) 8.51ms
+	compilation (LCNF mono) 3.64ms
+	congr simp thm 15.9ms
+	elaboration 139ms
+	fix level params 7.09ms
+	import 4.37s
+	initialization 39ms
+	instantiate metavars 739ms
+	interpretation 3.11s
+	let-to-have transformation 0.1ms
+	linting 51.1ms
+	norm_num 751ms
+	parsing 24.3ms
+	process pre-definitions 95.4ms
+	ring 355ms
+	share common exprs 252ms
+	simp 158ms
+	tactic execution 1.55s
+	type checking 295ms
+	typeclass inference 1.92s

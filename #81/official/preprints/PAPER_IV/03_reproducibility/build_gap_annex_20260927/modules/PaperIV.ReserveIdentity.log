@@ -1,0 +1,27 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 PaperIV/ReserveIdentity.lean -o /workspace/request-project/.lake/runner/lib/lean/PaperIV/ReserveIdentity.olean -i /workspace/request-project/.lake/runner/lib/lean/PaperIV/ReserveIdentity.ilean
+import took 3.11s
+.olean serialization took 109ms
+cumulative profiling times:
+	.olean serialization 109ms
+	attribute application 0.134ms
+	compilation (IR) 3.09ms
+	compilation (LCNF base) 4.32ms
+	compilation (LCNF mono) 1.68ms
+	congr simp thm 4.39ms
+	elaboration 42.5ms
+	fix level params 0.645ms
+	import 3.11s
+	initialization 44.9ms
+	instantiate metavars 1.8ms
+	interpretation 369ms
+	let-to-have transformation 0.166ms
+	linting 11.6ms
+	norm_num 20.5ms
+	parsing 8.35ms
+	process pre-definitions 12.4ms
+	ring 42.9ms
+	share common exprs 7.45ms
+	simp 78.9ms
+	tactic execution 137ms
+	type checking 266ms
+	typeclass inference 330ms

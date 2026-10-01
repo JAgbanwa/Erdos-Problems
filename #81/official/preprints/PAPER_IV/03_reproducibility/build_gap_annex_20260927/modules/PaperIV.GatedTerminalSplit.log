@@ -1,0 +1,19 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 PaperIV/GatedTerminalSplit.lean -o /workspace/request-project/.lake/runner/lib/lean/PaperIV/GatedTerminalSplit.olean -i /workspace/request-project/.lake/runner/lib/lean/PaperIV/GatedTerminalSplit.ilean
+import took 4.68s
+cumulative profiling times:
+	.olean serialization 97.9ms
+	attribute application 0.0281ms
+	elaboration 17.4ms
+	fix level params 0.106ms
+	import 4.68s
+	initialization 45.4ms
+	instantiate metavars 0.323ms
+	interpretation 213ms
+	let-to-have transformation 0.0212ms
+	linting 2.39ms
+	parsing 1.17ms
+	process pre-definitions 0.709ms
+	share common exprs 0.195ms
+	tactic execution 6.95ms
+	type checking 1.12ms
+	typeclass inference 3.39ms

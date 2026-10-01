@@ -1,0 +1,21 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 PaperV/MultiGalvinBase.lean -o /workspace/request-project/.lake/runner/lib/lean/PaperV/MultiGalvinBase.olean -i /workspace/request-project/.lake/runner/lib/lean/PaperV/MultiGalvinBase.ilean
+import took 2.5s
+cumulative profiling times:
+	.olean serialization 6.3ms
+	attribute application 0.0164ms
+	compilation (IR) 0.547ms
+	compilation (LCNF base) 0.809ms
+	compilation (LCNF mono) 0.865ms
+	elaboration 6.24ms
+	fix level params 0.0385ms
+	import 2.5s
+	initialization 36.1ms
+	instantiate metavars 0.0244ms
+	interpretation 128ms
+	let-to-have transformation 0.0191ms
+	linting 3.39ms
+	parsing 0.991ms
+	process pre-definitions 0.657ms
+	share common exprs 0.0606ms
+	type checking 0.512ms
+	typeclass inference 1.63ms

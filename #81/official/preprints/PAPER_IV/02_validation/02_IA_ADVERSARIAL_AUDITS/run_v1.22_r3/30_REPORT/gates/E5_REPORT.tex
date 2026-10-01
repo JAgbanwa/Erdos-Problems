@@ -1,0 +1,101 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+\documentclass[
+]{article}
+\usepackage{xcolor}
+\usepackage{amsmath,amssymb}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math} % this also loads fontspec
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+\usepackage{lmodern}
+\ifPDFTeX\else
+  % xetex/luatex font selection
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\usepackage{bookmark}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same}
+% fallback for those not using the hyperref driver hyperxmp:
+\makeatletter
+\@ifundefined{xmpquote}{\newcommand{\xmpquote}[1]{#1}}{}
+\makeatother
+\hypersetup{
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+
+\author{}
+\date{}
+
+\begin{document}
+
+\section{Informe de puerta E5 --- run\_v1.22\_r3 (Paper IV
+v1.22-r3)}\label{informe-de-puerta-e5--run_v122_r3-paper-iv-v122-r3}
+
+Veredicto actual: \textbf{PASS}. Evidencia: \texttt{20\_EVIDENCE/E5/}.
+Auditor: Claude Opus 5.5, misma sesión que las ejecuciones anteriores;
+no se ejecutó Lean.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section{E5 --- Exact arithmetic and falsification
+(r3)}\label{e5--exact-arithmetic-and-falsification-r3}
+
+No formula changed in r3, so no script was re-run (mandate §5). The E5
+evidence is \textbf{inherited and revalidated by identity}: the
+arithmetic scripts and outputs of run\_v1.22\_r2 and run\_v1.22\_r1 are
+intact (E0: their manifests are unchanged).
+
+\textbf{Inventory, with no double counting:}
+
+\begin{itemize}
+\tightlist
+\item
+  59 distinct checks: T01--T24 (run\_v1.2\_r1), 21 (v1.21), 14
+  (C3a--C3n, r1).
+\item
+  7 added negative controls: the corrected C3m control plus 6
+  supplementary controls.
+\item
+  Every negative control was rejected.
+\item
+  The repetitions in r2 gave identical results and \textbf{are not
+  counted as new checks}.
+\end{itemize}
+
+The new log-reader controls (15 unit cases and 4 CLI corruptions) belong
+to E8. They do not prove theorems.
+
+Finite-range checks and the Certo certificate (a feasible 6-part exact
+clique partition of K3∨I3) do not replace universal proofs. The
+universal statements rest on E2 and on the formal theorems (E4).
+
+\textbf{E5 verdict (r3): PASS.} Inherited and revalidated by identity.
+
+\end{document}

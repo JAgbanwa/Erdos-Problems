@@ -1,0 +1,243 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+\documentclass[
+]{article}
+\usepackage{xcolor}
+\usepackage{amsmath,amssymb}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math} % this also loads fontspec
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+\usepackage{lmodern}
+\ifPDFTeX\else
+  % xetex/luatex font selection
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\usepackage{bookmark}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same}
+% fallback for those not using the hyperref driver hyperxmp:
+\makeatletter
+\@ifundefined{xmpquote}{\newcommand{\xmpquote}[1]{#1}}{}
+\makeatother
+\hypersetup{
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+
+\author{}
+\date{}
+
+\begin{document}
+
+\section{Gate E4 report --- run\_v1.2\_r1 (Paper IV
+v1.2)}\label{gate-e4-report--run_v12_r1-paper-iv-v12}
+
+Verdict: \textbf{PASS}. Evidence directory: \texttt{20\_EVIDENCE/E4/}.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\subsection{E4 --- Formal reproduction (isolated project, shared pinned
+dependencies)}\label{e4--formal-reproduction-isolated-project-shared-pinned-dependencies}
+
+\subsection{Setup}\label{setup}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Runner:} \texttt{auditor\_build.py}, written by the auditor.
+  It does not use Lake or the author\textquotesingle s runner. It
+  compiles serially, one lean process at a time with \texttt{-j\ 8}.
+  Each module gets the lakefile \texttt{{[}leanOptions{]}}
+  (\texttt{pp.unicode.fun=true}, \texttt{relaxedAutoImplicit=false},
+  \texttt{linter.unusedSimpArgs=false}) plus the owning
+  lean\_lib\textquotesingle s \texttt{moreLeanArgs}
+  (\texttt{-s\ 32768}), using Lake\textquotesingle s
+  \texttt{isBuildableModule} rule. Every command line is recorded at the
+  top of each module log.
+\item
+  \textbf{Toolchain:} \texttt{lean.exe} v4.28.0, commit 7e01a1bf, sha256
+  6a66c4a5\ldots{}
+\item
+  \textbf{Sources:} a fresh extraction of
+  \texttt{LEAN\_SOURCE\_piv-v12-fb459343d234.zip} into
+  \texttt{05\_BUILD/main/src} (615/615 manifest hashes checked; no
+  \texttt{.lake} directory, no \texttt{.olean}).
+\item
+  \textbf{Objects:} written only to \texttt{05\_BUILD/main/obj}, which
+  started empty. No author \texttt{.olean}/\texttt{.ilean} was used.
+\item
+  \textbf{Dependencies:} the shared package build directories (mathlib,
+  plausible, LeanSearchClient, importGraph, proofwidgets, aesop, Qq,
+  batteries), read-only via LEAN\_PATH. A snapshot of 113 821 files
+  taken before and after shows 0 changed, 0 added, 0 removed, with the
+  same Mathlib.olean sha256 (\texttt{cache\_diff.json}).
+\item
+  \textbf{Attempts:} attempt 1 (15:07 UTC) failed on the
+  auditor\textquotesingle s own option-flattening bug (C-04) and is
+  preserved. Attempt 2 ran 15:09--21:33 UTC (6.4 h).
+\end{itemize}
+
+\subsection{Results --- main cut}\label{results--main-cut}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{607/607 modules PASS}, exit 0, with no failed, blocked or
+  skipped module. \texttt{records.jsonl} has one row per module,
+  including the source hash, dependency olean hashes, the command and
+  the olean sha256.
+\item
+  \textbf{All 19 FREEZE\_SCOPE targets were executed fresh and PASS.}
+  Each target log is identical to the author\textquotesingle s segment-2
+  log apart from the command line (\texttt{target\_log\_analysis.json}).
+\item
+  \textbf{Bit-for-bit reproduction:} all \textbf{607 .olean files are
+  byte-identical} to the olean hashes recorded by the author across the
+  two segments (\texttt{olean\_vs\_author.json}). Separately, a
+  37-module recompilation reproduced identical oleans (determinism).
+  Together these independently corroborate the author\textquotesingle s
+  two-segment reuse (resolves X-21).
+\item
+  \textbf{Axiom records:} 461 under the author\textquotesingle s
+  counting rule, of which 314 are genuine \texttt{\#print\ axioms}
+  outputs. Every set is a subset of \{propext, Classical.choice,
+  Quot.sound\}.
+\item
+  \textbf{Sorry and errors:} "sorry" occurs nowhere (case-insensitive)
+  in any of the 608 auditor logs, or in the author\textquotesingle s
+  logs. No \texttt{error} appears in any target log. The negative
+  control (\texttt{AuditorNegControl.lean}) shows that Lean 4.28 prints
+  "declaration uses `sorry`" with backticks. The literal pattern in both
+  runners would have missed it, so the explicit rescan and the axiom
+  cones are the operative checks (C-07, finding X-28).
+\item
+  \textbf{Exports:} \texttt{ReleaseExportCheck} (224 \texttt{\#check}
+  lines, import \texttt{PaperIV} only) compiled with 0 errors.
+\end{itemize}
+
+\subsection{\texorpdfstring{Auditor\textquotesingle s independent checks
+(\texttt{AuditorChecks.lean},
+\texttt{AuditorChecks.log})}{Auditor\textquotesingle s independent checks (AuditorChecks.lean, AuditorChecks.log)}}\label{auditors-independent-checks-auditorcheckslean-auditorcheckslog}
+
+\begin{itemize}
+\tightlist
+\item
+  The elaborated types of the headline declarations were printed; their
+  definitions (\texttt{RootedDefectAt}, \texttt{CliquePartition},
+  \texttt{IsDefectRoot}, \texttt{IsCanonicalPiece},
+  \texttt{defSplitGraph}) match E3\_STATIC\_RECORD.
+\item
+  \texttt{\#print\ axioms} on 18 headline declarations: all exactly
+  {[}propext, Classical.choice, Quot.sound{]}.
+\item
+  \textbf{Own cone traversal} (type + value, transitive) of 50 public
+  declarations: \textbf{0 non-standard axioms, 0 \texttt{sorryAx}, 0
+  constants under the root \texttt{Erdos81}}.
+\item
+  \textbf{Removal provenance} (\texttt{AuditorASProbe.lean}):
+
+  \begin{itemize}
+  \tightlist
+  \item
+    None of the six named removal keys
+    (\texttt{AlonShapira.lemma\_4\_2},
+    \texttt{near\_chordal\_of\_induced\_cycles\_littleO\textquotesingle{}},
+    \texttt{…few\_induced\_cycles\textquotesingle{}},
+    \texttt{EditRoute.editApproxAt\_all},
+    \texttt{EditRoute.fixedL4Localization\_unconditional},
+    \texttt{AFKS.strong\_regularity}) occurs in the cones of the public
+    Theorem C (\texttt{rooted\_defect\_eventual/\_maximum}),
+    \texttt{E35.theoremC\_tower*},
+    \texttt{fixed\_defect\_stability\_explicit},
+    \texttt{fixed\_defect\_joint\_stability\_real} or
+    \texttt{sequence\_arbitrary\_orders\_stability}. This confirms
+    FDCheck.ASCheck independently.
+  \item
+    Shared helpers (\texttt{AlonShapira.IsChordal.induce},
+    \texttt{EditRoute.*} arithmetic lemmas) do occur, as §7 discloses.
+  \item
+    \textbf{However}, the cones of
+    \texttt{E32.cp\_classification\_of\_theoremCPrimeC} and
+    \texttt{E32.ref15Theorem11\_of\_theoremCPrimeC} contain
+    \texttt{AlonShapira.lemma\_4\_2},
+    \texttt{near\_chordal\_of\_induced\_cycles\_littleO\textquotesingle{}},
+    \texttt{EditRoute.editApproxAt\_all},
+    \texttt{EditRoute.fixedL4Localization\_unconditional} and
+    \texttt{AFKS.strong\_regularity}. They enter through
+    \texttt{E32.theoremC\_at} :=
+    \texttt{DefectSharpPublication.rooted\_defect\_eventual}, the
+    historical existential assembly. Appendix F.4 Table 9 cites
+    \texttt{E32.cp\_classification\_of\_theoremCPrimeC} for the
+    "unrestricted equality classification" (Cor 6.3, (6.18)). The formal
+    cp-part of that classification therefore depends on the
+    Alon--Shapira route that §7 and {[}23{]} describe as historical and
+    not selected. This is finding X-27 (MODERATE,
+    provenance/conformance). There is no correctness impact: that route
+    is fully proved, with standard axioms.
+  \end{itemize}
+\end{itemize}
+
+\subsection{Results --- annex
+(BoundedCliqueGap)}\label{results--annex-boundedcliquegap}
+
+\begin{itemize}
+\tightlist
+\item
+  Project: a fresh extraction of
+  \texttt{LEAN\_SOURCE\_SNAPSHOT\_v1.0.zip} (its lakefile, manifest and
+  toolchain equal the bound freeze files), with the 38 annex files
+  overlaid (38/38 manifest hashes OK), in its own objects directory
+  \texttt{05\_BUILD/annex/obj}. Run serially after the main build.
+\item
+  \textbf{50/50 modules PASS} for the closure of
+  \texttt{BoundedCliqueGap.AxiomCheck}, the same number as the internal
+  report. The audit reports "633 declarations audited; axioms ⊆
+  {[}propext, Classical.choice, Quot.sound{]}; no \texttt{Erdos81*}
+  name". \texttt{chordal\_gap\_linear\_cliqueFree} and four related
+  declarations depend on exactly the three standard axioms.
+\end{itemize}
+
+\subsection{Limits}\label{limits}
+
+\begin{itemize}
+\tightlist
+\item
+  Same machine and shared Mathlib/third-party oleans. The dependencies
+  were not rebuilt, so this is not a clean-room Mathlib build. The
+  \texttt{leanchecker} kernel replay was not performed (C-02 probe
+  aborted).
+\item
+  The build establishes that the formal statements are proved with
+  standard axioms. It does not establish exposition adequacy (A.2) or
+  manuscript correspondence beyond E3.
+\end{itemize}
+
+\textbf{E4 verdict: PASS} (with the limits above).
+
+\end{document}

@@ -1,0 +1,31 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 Nibble/Tight/SafeDegreeVariance.lean -o /workspace/request-project/.lake/runner/lib/lean/Nibble/Tight/SafeDegreeVariance.olean -i /workspace/request-project/.lake/runner/lib/lean/Nibble/Tight/SafeDegreeVariance.ilean
+tactic execution of Mathlib.Tactic.nlinarith took 538ms
+interpretation of Mathlib.Tactic.Tauto._aux_Mathlib_Tactic_Tauto___elabRules_Mathlib_Tactic_Tauto_tauto_1._boxed took 116ms
+tactic execution of Mathlib.Tactic.nlinarith took 848ms
+tactic execution of Mathlib.Tactic.nlinarith took 864ms
+import took 4.83s
+.olean serialization took 124ms
+cumulative profiling times:
+	.olean serialization 124ms
+	attribute application 0.204ms
+	compilation (IR) 3.22ms
+	compilation (LCNF base) 3.28ms
+	compilation (LCNF mono) 1.48ms
+	congr simp thm 15.6ms
+	elaboration 203ms
+	fix level params 5.47ms
+	import 4.83s
+	initialization 40.6ms
+	instantiate metavars 52.6ms
+	interpretation 1.44s
+	let-to-have transformation 0.381ms
+	linting 70.3ms
+	norm_num 22.2ms
+	parsing 37.5ms
+	process pre-definitions 56.8ms
+	ring 149ms
+	share common exprs 36.2ms
+	simp 270ms
+	tactic execution 3.07s
+	type checking 226ms
+	typeclass inference 1.7s

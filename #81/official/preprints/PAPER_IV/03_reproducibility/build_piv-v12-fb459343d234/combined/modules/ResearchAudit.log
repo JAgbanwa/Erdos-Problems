@@ -1,0 +1,177 @@
+$ c:\Users\jtraverso\.elan\toolchains\leanprover--lean4---v4.28.0\bin\lean.exe -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false ResearchAudit.lean -o C:\Users\jtraverso\e81p4\clean_stability_build_20260928\.lake\runner\lib\lean\ResearchAudit.olean -i C:\Users\jtraverso\e81p4\clean_stability_build_20260928\.lake\runner\lib\lean\ResearchAudit.ilean
+PASS PaperIV.SublinearResearch.exists_clique_additive_defect: 12138 constants; axioms [propext,
+ Classical.choice,
+ Quot.sound]
+PASS PaperIV.SublinearResearch.exists_clique_of_small_missing_mass: 12377 constants; axioms [propext,
+ Classical.choice,
+ Quot.sound]
+PASS PaperIV.SublinearResearch.edit_close_of_small_defect_ratio: 19708 constants; axioms [propext,
+ Classical.choice,
+ Quot.sound]
+PASS PaperIV.SublinearResearch.uniform_chordal_edit: 19710 constants; axioms [propext, Classical.choice, Quot.sound]
+PASS PaperIV.SublinearResearch.uniform_sublinear_partition_bound: 40877 constants; axioms [propext,
+ Classical.choice,
+ Quot.sound]
+PASS PaperIV.SublinearResearch.exists_root_step_with_capped_budget: 4585 constants; axioms [propext,
+ Classical.choice,
+ Quot.sound]
+PASS PaperIV.SublinearResearch.exception_charge_exact: 11876 constants; axioms [propext, Classical.choice, Quot.sound]
+PASS PaperIV.SublinearResearch.retained_star_shift: 11220 constants; axioms [propext, Classical.choice, Quot.sound]
+PASS PaperIV.SublinearResearch.low_star_refined_bound: 11820 constants; axioms [propext, Classical.choice, Quot.sound]
+PASS PaperIV.SublinearResearch.high_star_refined_margin: 11786 constants; axioms [propext, Classical.choice, Quot.sound]
+PASS PaperIV.SublinearResearch.refined_gain_over_old: 11262 constants; axioms [propext, Classical.choice, Quot.sound]
+PASS PaperIV.SublinearResearch.ordNE_le_twice_deleted: 4562 constants; axioms [propext, Classical.choice, Quot.sound]
+PASS PaperIV.SublinearResearch.recover_clique_from_edit: 12588 constants; axioms [propext, Classical.choice, Quot.sound]
+PASS PaperIV.SublinearResearch.partition_lower_bound_transfers: 12619 constants; axioms [propext,
+ Classical.choice,
+ Quot.sound]
+PASS PaperIV.SublinearResearch.baseline_loss_on_shrinking: 12041 constants; axioms [propext,
+ Classical.choice,
+ Quot.sound]
+PASS PaperIV.SublinearResearch.stability_via_chordal_edit: 39808 constants; axioms [propext,
+ Classical.choice,
+ Quot.sound]
+PASS PaperIV.SublinearResearch.integral_baseline_le_target: 11912 constants; axioms [propext,
+ Classical.choice,
+ Quot.sound]
+PASS PaperIV.SublinearResearch.uniform_sublinear_stability: 40959 constants; axioms [propext,
+ Classical.choice,
+ Quot.sound]
+PASS PaperIV.SublinearResearch.uniform_sublinear_localization: 40965 constants; axioms [propext,
+ Classical.choice,
+ Quot.sound]
+PASS PaperIV.SublinearResearch.uniform_sublinear_fractional_localization: 40975 constants; axioms [propext,
+ Classical.choice,
+ Quot.sound]
+PASS PaperIV.SublinearResearch.signedPrice_le_one: 11705 constants; axioms [propext, Classical.choice, Quot.sound]
+PASS PaperIV.SublinearResearch.signed_item_sum_le_one: 12385 constants; axioms [propext, Classical.choice, Quot.sound]
+PASS PaperIV.SublinearResearch.signed_value_eq: 4328 constants; axioms [propext, Classical.choice, Quot.sound]
+PASS PaperIV.SublinearResearch.exists_certified_signed_cover: 4907 constants; axioms [propext,
+ Classical.choice,
+ Quot.sound]
+PASS PaperIV.SublinearResearch.exists_maximum_signed_star: 12410 constants; axioms [propext,
+ Classical.choice,
+ Quot.sound]
+PASS PaperIV.SublinearResearch.sum_edgesWithin_erase: 5034 constants; axioms [propext, Classical.choice, Quot.sound]
+PASS PaperIV.SublinearResearch.exists_bounded_signed_row: 12694 constants; axioms [propext,
+ Classical.choice,
+ Quot.sound]
+PASS PaperIV.SublinearResearch.signed_elimination_bound: 12998 constants; axioms [propext, Classical.choice, Quot.sound]
+PASS PaperIV.SublinearResearch.sum_pairs_triangle_bound: 12707 constants; axioms [propext, Classical.choice, Quot.sound]
+PASS PaperIV.SublinearResearch.signed_root_triangle_bound: 13071 constants; axioms [propext,
+ Classical.choice,
+ Quot.sound]
+PASS PaperIV.SublinearResearch.signed_root_K4_bound: 13280 constants; axioms [propext, Classical.choice, Quot.sound]
+PASS PaperIV.SublinearResearch.certified_star_accounts: 13818 constants; axioms [propext, Classical.choice, Quot.sound]
+PASS PaperIV.SublinearResearch.certified_star_accounts_strict: 13817 constants; axioms [propext,
+ Classical.choice,
+ Quot.sound]
+PASS PaperIV.SublinearResearch.high_star_exact_envelope: 11767 constants; axioms [propext, Classical.choice, Quot.sound]
+PASS PaperIV.SublinearResearch.small_high_envelope_shifted: 11729 constants; axioms [propext,
+ Classical.choice,
+ Quot.sound]
+PASS PaperIV.SublinearResearch.small_high_envelope_refined: 11745 constants; axioms [propext,
+ Classical.choice,
+ Quot.sound]
+PASS PaperIV.SublinearResearch.certified_refined_fractional_bound: 13926 constants; axioms [propext,
+ Classical.choice,
+ Quot.sound]
+PASS PaperIV.SublinearResearch.certified_shifted_fractional_bound: 14318 constants; axioms [propext,
+ Classical.choice,
+ Quot.sound]
+PASS PaperIV.SublinearResearch.certified_shifted_fractional_bound_all_orders: 14352 constants; axioms [propext,
+ Classical.choice,
+ Quot.sound]
+PASS PaperIV.SublinearResearch.certified_refined_fractional_bound_all_orders: 14373 constants; axioms [propext,
+ Classical.choice,
+ Quot.sound]
+PASS PaperIV.SublinearResearch.uniform_shifted_partition_bound: 34454 constants; axioms [propext,
+ Classical.choice,
+ Quot.sound]
+PASS PaperIV.SublinearResearch.uniform_refined_partition_bound: 34464 constants; axioms [propext,
+ Classical.choice,
+ Quot.sound]
+PASS PaperIV.SublinearResearch.rational_isLittleO_iff: 12042 constants; axioms [propext, Classical.choice, Quot.sound]
+PASS PaperIV.SublinearResearch.exists_minimum_rootScore: 5551 constants; axioms [propext, Classical.choice, Quot.sound]
+PASS PaperIV.SublinearResearch.rootScore_components: 12218 constants; axioms [propext, Classical.choice, Quot.sound]
+PASS PaperIV.SublinearResearch.rootScore_le_of_localization: 12121 constants; axioms [propext,
+ Classical.choice,
+ Quot.sound]
+PASS PaperIV.SublinearResearch.noncanonical_le_rootScore: 13407 constants; axioms [propext,
+ Classical.choice,
+ Quot.sound]
+PASS PaperIV.SublinearResearch.exists_minimum_order_four_partition: 5035 constants; axioms [propext,
+ Classical.choice,
+ Quot.sound]
+PASS PaperIV.SublinearResearch.sequence_sublinear_partition_bound: 40897 constants; axioms [propext,
+ Classical.choice,
+ Quot.sound]
+PASS PaperIV.SublinearResearch.sequence_sublinear_stability: 40991 constants; axioms [propext,
+ Classical.choice,
+ Quot.sound]
+PASS PaperIV.SublinearResearch.FixedExplicit.stabilityGamma_pos: 11822 constants; axioms [propext,
+ Classical.choice,
+ Quot.sound]
+PASS PaperIV.SublinearResearch.FixedExplicit.minimumDegree_stability_explicit: 42063 constants; axioms [propext,
+ Classical.choice,
+ Quot.sound]
+PASS PaperIV.SublinearResearch.FixedExplicit.edit_stability_explicit: 42226 constants; axioms [propext,
+ Classical.choice,
+ Quot.sound]
+PASS PaperIV.SublinearResearch.FixedExplicit.fixed_defect_stability_explicit: 42555 constants; axioms [propext,
+ Classical.choice,
+ Quot.sound]
+PASS PaperIV.SublinearResearch.FixedExplicit.fixed_defect_edit_and_size_explicit: 42557 constants; axioms [propext,
+ Classical.choice,
+ Quot.sound]
+PASS PaperIV.SublinearResearch.piece_edges_le_ten_defect: 11967 constants; axioms [propext,
+ Classical.choice,
+ Quot.sound]
+PASS PaperIV.SublinearResearch.piece_edges_coefficient_sharp: 11123 constants; axioms [propext,
+ Classical.choice,
+ Quot.sound]
+PASS PaperIV.SublinearResearch.noncanonicalEdgeMass_le_sum_defect: 12619 constants; axioms [propext,
+ Classical.choice,
+ Quot.sound]
+PASS PaperIV.SublinearResearch.noncanonicalEdgeMass_le: 13364 constants; axioms [propext, Classical.choice, Quot.sound]
+PASS PaperIV.SublinearResearch.noncanonicalEdgeMass_le_rootScore: 13420 constants; axioms [propext,
+ Classical.choice,
+ Quot.sound]
+PASS PaperIV.SublinearResearch.chordal_partition_edge_stability: 39728 constants; axioms [propext,
+ Classical.choice,
+ Quot.sound]
+PASS PaperIV.SublinearResearch.sequence_arbitrary_orders_partition_bound: 40897 constants; axioms [propext,
+ Classical.choice,
+ Quot.sound]
+PASS PaperIV.SublinearResearch.sequence_arbitrary_orders_stability: 41003 constants; axioms [propext,
+ Classical.choice,
+ Quot.sound]
+PASS PaperIV.SublinearResearch.optimal_core_distance_sq: 11932 constants; axioms [propext, Classical.choice, Quot.sound]
+PASS PaperIV.SublinearResearch.fixed_defect_optimal_size_distance: 42585 constants; axioms [propext,
+ Classical.choice,
+ Quot.sound]
+PASS PaperIV.SublinearResearch.exists_resize_core: 11506 constants; axioms [propext, Classical.choice, Quot.sound]
+PASS PaperIV.SublinearResearch.comparator_resize_edit_le: 4574 constants; axioms [propext, Classical.choice, Quot.sound]
+PASS PaperIV.SublinearResearch.exists_optimal_comparator_near_root: 12364 constants; axioms [propext,
+ Classical.choice,
+ Quot.sound]
+PASS PaperIV.SublinearResearch.fixed_defect_exact_extremal_edit: 42611 constants; axioms [propext,
+ Classical.choice,
+ Quot.sound]
+PASS E32.noncanonical_edge_mass_le: 13264 constants; axioms [propext, Classical.choice, Quot.sound]
+PASS PaperIV.SublinearResearch.fixed_defect_partition_edge_stability: 42576 constants; axioms [propext,
+ Classical.choice,
+ Quot.sound]
+PASS PaperIV.SublinearResearch.lower_bound_floor_deficit: 11681 constants; axioms [propext,
+ Classical.choice,
+ Quot.sound]
+PASS PaperIV.SublinearResearch.fixed_defect_joint_stability_real: 42580 constants; axioms [propext,
+ Classical.choice,
+ Quot.sound]
+PASS PaperIV.SublinearResearch.fixed_defect_exact_extremal_edit_real: 42613 constants; axioms [propext,
+ Classical.choice,
+ Quot.sound]
+PASS PaperIV.SublinearResearch.chordal_joint_stability_real: 39737 constants; axioms [propext,
+ Classical.choice,
+ Quot.sound]
+Sublinear research audit PASSED: 75 targets.

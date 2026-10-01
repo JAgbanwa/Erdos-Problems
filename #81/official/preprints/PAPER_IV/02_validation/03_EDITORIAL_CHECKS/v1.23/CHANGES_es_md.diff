@@ -1,0 +1,56 @@
+--- PAPER_IV_preprint_v1.22_es.md
++++ PAPER_IV_preprint_v1.23_es.md
+@@ -6,10 +6,8 @@
+ [ORCID: 0009-0003-6068-4096](https://orcid.org/0009-0003-6068-4096)
+ 
+ **Paper IV de la serie**  
+-**Preprint:** versión 1.22, candidata a revisión editorial.
+-**Fecha de esta revisión:** 1 de octubre de 2026.
+-**Estado:** la revisión externa v1.22-r2 concluyó PASS_WITH_OBSERVATIONS el 1 de octubre de 2026. Aceptó la ampliación de C.3 y las siete derivaciones de A.2; no quedaron hallazgos abiertos de severidad MINOR o superior. El corte Lean sigue siendo `piv-v12-fb459343d234`, con PASS formal heredado del build externo verificado. Este paquete r3 actualiza la información de auditoría; su cambio documental espera verificación. No se afirma un nuevo build Lean. Esta candidata no se ha publicado ni tiene DOI propio asignado.
+-**DOI de concepto de la serie:** <https://doi.org/10.5281/zenodo.21273143>. El DOI de versión del depósito que reunirá Papers I–IV todavía no está asignado.
++**Preprint:** versión 1.23.  
++**Fecha:** 1 de octubre de 2026.
+ 
+ **MSC 2020:** Primario 05C70; secundarios 05C35, 05C72.
+ 
+@@ -1182,11 +1180,11 @@
+ 
+ El corte anterior `piv-stability-fe9bb18343da` y las ejecuciones separadas de integración se conservan bajo sus identidades originales. El nuevo corte los sustituye como identidad fuente seleccionada; no reescribe su evidencia. Los cuatro módulos E35L y `FDCheck.TowerAudit` se retiraron del nuevo árbol porque E35 reemplaza sus estimaciones y ninguno pertenece al conjunto de dependencias seleccionado. Todos los módulos Lean locales restantes pertenecen al cierre de dependencias de los 19 objetivos seleccionados. Ese cierre incluye definiciones históricas y controles comparativos; no se afirma que sea la biblioteca de prueba más pequeña posible.
+ 
+-**Estado de auditoría de esta candidata editorial.** La ejecución interna `run_20260929_v1.2_fb459343d234_r1` registró PASS para su alcance declarado. El build externo de `run_v1.2_r1` compiló 607 módulos principales, los 19 objetivos y el anexo de 50 módulos; los 607 objetos principales fueron idénticos byte a byte a los del autor. Esa revisión y `run_v1.21_r1` dieron INCONCLUSIVE global porque faltaba completar la exposición. La comparación ampliada de C.3 fue aceptada en `run_v1.22_r1`, completando las siete derivaciones de A.2. El informe consolidado `run_v1.22_r2` dio PASS_WITH_OBSERVATIONS y cerró las correcciones españolas restantes. Sus observaciones y límites de alcance se conservan en el informe. Las revalidaciones utilizaron las fuentes sin cambios y la evidencia del build existente, sin recompilar. Esta actualización documental r3 se presenta por separado; no afirma un nuevo build formal ni un veredicto sobre sus propios cambios.
++**Evidencia de verificación.** Las fuentes congeladas y el build externo registrado respaldan las afirmaciones formales anteriores. El informe consolidado de v1.22-r4 registra PASS para las puertas E0–E8. El repositorio conserva ese informe, sus límites de alcance y el historial completo de auditoría. La versión 1.23 cambia únicamente la presentación editorial; utiliza el mismo corte Lean y no afirma un nuevo build ni una nueva auditoría externa. La revisión humana por pares sigue siendo una evaluación separada.
+ 
+ ### 7.1. Repositorios y contribuciones
+ 
+-El repositorio de la serie, disponible en <https://github.com/jtraverso/erdos-81-chordal-clique-partitions>, contiene los manuscritos y materiales de Papers I–III [2–4] y el borrador público v0.8 de Paper IV, identificado por el commit `f783a792404a60983a7ef754d055fbe6c341188b`. Ese commit identifica sólo la versión anterior. El nuevo congelado de fuentes que sostiene esta candidata se identifica localmente arriba; no se ha asignado a esta candidata un commit de repositorio ni una fecha de publicación.
++El repositorio de la serie, disponible en <https://github.com/jtraverso/erdos-81-chordal-clique-partitions>, ofrece los manuscritos bilingües, las fuentes formales congeladas y la evidencia de verificación de Papers I–IV. El paquete auditado v1.22 se conserva bajo la etiqueta `paper-IV-v1.22` y en el directorio de respaldo de auditoría. Esta revisión editorial utiliza el mismo corte de fuentes identificado arriba. El DOI de concepto de la serie es <https://doi.org/10.5281/zenodo.21273143>; el README y el changelog del repositorio registran la información de publicación y auditoría propia de cada versión.
+ 
+ Las contribuciones reutilizables tienen referencias propias. El empaquetamiento de triángulos suma-cero corresponde al PR #348 de Lean Pool [12], <https://github.com/Vilin97/lean-pool/pull/348>, fusionado en el commit `540d8e3`. Los emparejamientos por grado mínimo y su selección ponderada corresponden al PR #420 [9], <https://github.com/Vilin97/lean-pool/pull/420>, fusionado en `d1de6d2`. Las fuentes de la serie conservan los antecedentes y adaptaciones de Vizing y Beck–Fiala. La atribución de las formalizaciones se distingue de la autoría de los teoremas clásicos.
+ 
+@@ -1300,7 +1298,7 @@
+ 
+ **Tabla 7.** Declaraciones finales. La tabla de módulos de la Sección 7 localiza la implementación; esta tabla identifica qué enunciado se audita.
+ 
+-El comando único de auditoría descrito en §7 ejecuta los 19 objetivos, incluidos la raíz, los objetivos individuales de auditoría y el control de exportación. Las revisiones de Lean y sus dependencias están registradas en lean-toolchain y lake-manifest.json. Compilación, exportación pública, inspección de axiomas y correspondencia semántica son controles distintos. El congelado de fuentes no cambia. El build externo pasó en v1.2 y su evidencia se revalidó en las revisiones posteriores sin recompilar. El informe consolidado v1.22-r2 registra la aceptación de la ampliación de C.3 y distingue las comparaciones semánticas individuales de los enunciados cubiertos por el registro de componentes de prueba y las declaraciones compiladas.
++El comando único de auditoría descrito en §7 ejecuta los 19 objetivos, incluidos la raíz, los objetivos individuales de auditoría y el control de exportación. Las revisiones de Lean y sus dependencias están registradas en lean-toolchain y lake-manifest.json. Compilación, exportación pública, inspección de axiomas y correspondencia semántica son controles distintos. El congelado de fuentes no cambia. El informe externo consolidado y su evidencia distinguen las comparaciones semánticas individuales de los enunciados cubiertos por el registro de componentes de prueba y las declaraciones compiladas.
+ 
+ **Definiciones literales.** Los fragmentos siguientes reproducen las definiciones y las cabeceras de los teoremas, omitiendo sus demostraciones, no sus hipótesis. En el primer fragmento el espacio es `SimpleGraph`; en los tres siguientes es `PaperIV.FarRounding`, con \(V\) finito, igualdad decidible y adyacencia decidible para \(G\). La última definición está en `PaperIV`. Los nombres de los espacios se conservan en el archivo complementario de extractos.
+ 
+@@ -1352,7 +1350,7 @@
+ 
+ ### A.2. Contratos intermedios de las pruebas
+ 
+-**Alcance de la prueba escrita.** La tabla siguiente registra las derivaciones que recibieron especial atención. La versión 1.21 amplió la limpieza bilateral de fibras de C.2, los conteos de normalización y la eliminación conjunta de E.1, y el calendario numérico de C.3. La versión 1.22 añadió la recurrencia de regularidad y la comparación final con la torre. El informe consolidado v1.22-r2 clasifica las siete filas como ACCEPTABLE_SUMMARY. Conserva el límite expositivo declarado sobre las estimaciones de segundo momento citadas en C.2. Un build satisfactorio verifica derivaciones formales, no la integridad de su exposición; la evaluación de la prueba escrita sigue siendo distinta de la compilación y de la revisión humana por pares.
++**Alcance de la prueba escrita.** La tabla siguiente registra siete derivaciones examinadas en la revisión externa consolidada. Su evaluación, ACCEPTABLE_SUMMARY para cada fila, conserva el límite expositivo declarado sobre las estimaciones de segundo momento citadas en C.2. Un build satisfactorio verifica derivaciones formales, no la integridad de su exposición; la evaluación de la prueba escrita sigue siendo distinta de la compilación y de la revisión humana por pares. El historial de auditoría y las evaluaciones detalladas se conservan con la evidencia complementaria.
+ 
+ | Ubicación | Derivación por revisar, incluidas las cuentas desarrolladas |
+ |:--|:--|
+@@ -2353,7 +2351,7 @@
+ 
+ El factor diez de la desigualdad local \(\binom{a+b}{2}\le10d(a,b)\), para defecto positivo, es óptimo: el perfil \((a,b)=(3,2)\) tiene diez aristas y defecto uno. Esto no prueba la optimalidad de \(480\), \(A_s\) ni de los umbrales globales.
+ 
+-El Apéndice E.4 desarrolla las cuentas terminales conservadas que se usan en §6.6, F.3 demuestra la recuperación de la clique y F.5 explica el ensamblaje de tres casos de la cota adaptada con muestras con anclajes. Sus comprobaciones registradas se consolidan en el informe v1.22-r2, con el alcance y los límites allí declarados. Esas comprobaciones contrastan las cuentas escritas con el desarrollo formal congelado; no convierten la compilación local en un sustituto de la revisión matemática.
++El Apéndice E.4 desarrolla las cuentas terminales conservadas que se usan en §6.6, F.3 demuestra la recuperación de la clique y F.5 explica el ensamblaje de tres casos de la cota adaptada con muestras con anclajes. El informe externo consolidado registra las comprobaciones correspondientes y sus límites de alcance. Esas comprobaciones contrastan las cuentas escritas con el desarrollo formal congelado; no convierten la compilación local en un sustituto de la revisión matemática.
+ 
+ ### F.5. Lemas auxiliares y adaptaciones de remoción cordal
+ 

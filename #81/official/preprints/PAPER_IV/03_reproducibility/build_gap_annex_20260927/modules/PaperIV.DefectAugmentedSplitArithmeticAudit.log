@@ -1,0 +1,22 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 PaperIV/DefectAugmentedSplitArithmeticAudit.lean -o /workspace/request-project/.lake/runner/lib/lean/PaperIV/DefectAugmentedSplitArithmeticAudit.olean -i /workspace/request-project/.lake/runner/lib/lean/PaperIV/DefectAugmentedSplitArithmeticAudit.ilean
+'PaperIV.DefectAugmentedSplitArithmetic.augmented_baseline_identity' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+elaboration took 226ms
+'PaperIV.DefectAugmentedSplitArithmetic.augmented_baseline_le_defectTarget' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+elaboration took 241ms
+'PaperIV.DefectAugmentedSplitArithmetic.arbitrary_core_edges_le_defectTarget' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+elaboration took 233ms
+import took 3.16s
+cumulative profiling times:
+	.olean serialization 3.05ms
+	elaboration 700ms
+	import 3.16s
+	initialization 37.3ms
+	interpretation 143ms
+	linting 0.504ms
+	parsing 0.245ms

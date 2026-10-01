@@ -1,0 +1,79 @@
+### ES 37
+NEW: Los tres papers anteriores de la serie separan aspectos de esta dificultad. Paper I [2] estudia perfiles de vecindario sobre una presentación split y reduce el problema residual a un politopo fijo. Paper II [3] determina el máximo exacto del déficit fraccional triangular sobre todos los cordales mediante copias de vértices. Paper III [4] construye particiones con error lineal para grafos split, distinguiendo los regímenes en que basta el margen fraccional de aquellos que requieren una construcción más precisa. Su desarrollo formal aporta además la infraestructura de nibble y redondeo que se reutiliza en la Sección 3 y en el Apéndice B.
+OLD: Los tres papers anteriores de la serie separan aspectos de esta dificultad. Paper I [2] estudia perfiles de vecindario sobre una presentación split y reduce el problema residual a un politopo fijo. Paper II [3] determina el máximo exacto del déficit fraccional triangular sobre todos los cordales mediante copias de vértices. Paper III [4] construye particiones con error lineal para grafos split, distinguiendo los regímenes en que basta la holgura fraccional de aquellos que requieren una construcción más precisa. Su desarrollo formal aporta además la infraestructura de nibble y redondeo que se reutiliza en la Sección 3 y en el Apéndice B.
+
+### ES 150
+NEW: En esta investigación demostramos que el redondeo uniforme RC01 produce una pérdida menor que el margen en el régimen lejano. Para el régimen crítico, el descenso localiza una raíz y la construcción H1/RD09 produce \(\mathcal P\) directamente en \(G\), sin escoger un índice de primera entrada. Sus cuentas físicas, desarrolladas en la Sección 5, demuestran
+OLD: En esta investigación demostramos que el redondeo uniforme RC01 produce una pérdida menor que la holgura en el régimen lejano. Para el régimen crítico, el descenso localiza una raíz y la construcción H1/RD09 produce \(\mathcal P\) directamente en \(G\), sin escoger un índice de primera entrada. Sus cuentas físicas, desarrolladas en la Sección 5, demuestran
+
+### ES 269
+NEW: ## 3. Redondeo mixto y régimen con margen
+OLD: ## 3. Redondeo mixto y régimen con holgura
+
+### ES 303
+NEW: El argumento no necesita una cota lineal universal para \(W^*(G)-W(G)\). Sólo requiere que la pérdida sea menor que el margen de la instancia.
+OLD: El argumento no necesita una cota lineal universal para \(W^*(G)-W(G)\). Sólo requiere que la pérdida sea menor que la holgura de la instancia.
+
+### ES 837
+NEW: **Teorema 6.1 (estabilidad integral).** Existen \(\gamma>0\) y un umbral \(N_{\rm est}\) tales que, si \(n\ge N_{\rm est}\), \(G\) es cordal, \(0\le\delta\le\gamma n^2\) y toda partición de orden a lo sumo cuatro tiene al menos \(M(n)-\delta\) piezas, entonces existe una clique \(R\) de \(G\) para la cual
+OLD: **Teorema 6.1 (estabilidad integral).** Existe \(\gamma>0\) y un umbral \(N_{\rm est}\) tales que, si \(n\ge N_{\rm est}\), \(G\) es cordal, \(0\le\delta\le\gamma n^2\) y toda partición de orden a lo sumo cuatro tiene al menos \(M(n)-\delta\) piezas, entonces existe una clique \(R\) de \(G\) para la cual
+
+### ES 1034
+NEW: **Demostración.** El argumento de defecto enraizado del Apéndice E.3 no requiere un núcleo de tamaño óptimo: se aplica a \(G_{s,q,d}\) y da \(\operatorname{rsd}(G_{s,q,d})\le s\). El núcleo clique tiene al menos dos vértices y no tiene más vértices que el conjunto de anfitriones. Por tanto, la construcción del comparador da una partición de orden a lo sumo cuatro con coste \(B_{s,n}(q+d)\). El argumento de pesos del Apéndice E.3 también se aplica a este núcleo de tamaño no óptimo: toda partición irrestricta tiene al menos ese número de piezas. Restar este valor base de \(Q_s(n)\) da (6.20).
+OLD: **Demostración.** El argumento de defecto enraizado del Apéndice E.3 no requiere un núcleo de tamaño óptimo: se aplica a \(G_{s,q,d}\) y da \(\operatorname{rsd}(G_{s,q,d})\le s\). El núcleo clique tiene al menos dos vértices y no tiene más vértices que el conjunto de anfitriones. Por tanto, la construcción del comparador da una partición de orden a lo sumo cuatro con coste \(B_{s,n}(q+d)\). El argumento de pesos del Apéndice E.3 también se aplica a este núcleo de tamaño no óptimo: toda partición irrestricta tiene al menos ese número de piezas. Restar este baseline de \(Q_s(n)\) da (6.20).
+
+### ES 1070
+NEW: El argumento de estrella con signos sigue [15, Lema 3.1]; se cita como método utilizado aquí, no como un principio nuevo de localización. Nuestro cálculo usa \(L=4\), conserva el cargo truncado por excepciones \(\sum_{j<q}\min(s,j)\) y acota mediante el comparador entero, sin redondear hacia abajo una desigualdad fraccional. El Apéndice F describe las dos estimaciones de estrella y el control de órdenes pequeños. Para la conclusión integral, primero se elige el umbral de RC01 a partir de \(\varepsilon\). Completar el empaquetamiento redondeado cuesta a lo sumo \(F_4(G)+\varepsilon n^2\); se inserta (6.22) o (6.23). La elección de \(N\) nunca depende del grafo ni de \(s\).
+OLD: El argumento de estrella con pesos de ambos signos sigue [15, Lema 3.1]; se cita como método utilizado aquí, no como un principio nuevo de localización. Nuestro cálculo usa \(L=4\), conserva el cargo truncado por excepciones \(\sum_{j<q}\min(s,j)\) y acota mediante el comparador entero, sin redondear hacia abajo una desigualdad fraccional. El Apéndice F describe las dos estimaciones de estrella y el control de órdenes pequeños. Para la conclusión integral, primero se elige el umbral de RC01 a partir de \(\varepsilon\). Completar el empaquetamiento redondeado cuesta a lo sumo \(F_4(G)+\varepsilon n^2\); se inserta (6.22) o (6.23). La elección de \(N\) nunca depende del grafo ni de \(s\).
+
+### ES 1279
+NEW: En la tabla siguiente se omite el prefijo común `PaperIV`. Las declaraciones anteriores se comprueban en `Audit.lean` y sus objetivos asociados; las nuevas interfaces de estabilidad y defecto sublineal tienen entradas separadas más abajo. La identidad de fuentes se fija en `03_reproducibility/build_piv-v12-fb459343d234/SOURCE_MANIFEST.json`. Los registros de objetivos registran tipos elaborados y controles de axiomas. Los mapas históricos no certifican las secciones nuevas; el mapa de revisión de la versión 1.2 acompaña estos manuscritos.
+OLD: En la tabla siguiente se omite el prefijo común `PaperIV`. Las declaraciones anteriores se comprueban en `Audit.lean` y sus targets asociados; las nuevas interfaces de estabilidad y defecto sublineal tienen entradas separadas más abajo. La identidad de fuentes se fija en `03_reproducibility/build_piv-v12-fb459343d234/SOURCE_MANIFEST.json`. Los logs de targets registran tipos elaborados y controles de axiomas. Los mapas históricos no certifican las secciones nuevas; el mapa de revisión de la versión 1.2 acompaña estos manuscritos.
+
+### ES 1375
+NEW: El Teorema 5.0 tiene una forma reforzada, `NearH1LocalConstructor.exists_near_partition_paid_by_root_sharp`, que añade \(|3|R|-n|\le n/50\) al constructor físico; la interfaz anterior `exists_near_partition_paid_by_root` se conserva como corolario. La reserva reforzada de (5.15a) se conserva para ese mismo testigo en `NearStructureWitness.accounts_count_le_improved`; `IntegralStability.chordal_linear_stability_sixteen` y `RootPartitionStability.chordal_partition_stability` la utilizan sin recombinar raíces ni empaquetamientos. La selección cíclica de la fase I está en `RD09PaddedL1Mass`; la última evaluación de la fase II, en `H1ImprovedConstants.l10_of_raw_rd09L2`. Los regímenes del comparador de (5.1a) se comprueban en `SplitComparatorResidual.residual_sq_le_of_near_split_universal`. La reserva (D.8) es `ReserveIdentity.targetSize_eq_baseline_add_reserve`; la contracción mejorada corresponde a `NearThresholdSensitivity.descent_threshold_maximal_barrier` y `near_threshold_binding`. Los resultados de geometría crítica están en `NearRootWindow`, `NearEdgeDensity` y `NearCriticalDichotomy`.
+OLD: El Teorema 5.0 tiene una forma reforzada, `NearH1LocalConstructor.exists_near_partition_paid_by_root_sharp`, que añade \(|3|R|-n|\le n/50\) al constructor físico; la interfaz anterior `exists_near_partition_paid_by_root` se conserva como corolario. La reserva reforzada de (5.15a) se conserva para ese mismo testigo en `NearStructureWitness.accounts_count_le_improved`; `IntegralStability.chordal_linear_stability_sixteen` y `RootPartitionStability.chordal_partition_stability` la utilizan sin recombinar raíces ni packings. La selección cíclica de la fase I está en `RD09PaddedL1Mass`; la última evaluación de la fase II, en `H1ImprovedConstants.l10_of_raw_rd09L2`. Los regímenes del comparador de (5.1a) se comprueban en `SplitComparatorResidual.residual_sq_le_of_near_split_universal`. La reserva (D.8) es `ReserveIdentity.targetSize_eq_baseline_add_reserve`; la contracción mejorada corresponde a `NearThresholdSensitivity.descent_threshold_maximal_barrier` y `near_threshold_binding`. Los resultados de geometría crítica están en `NearRootWindow`, `NearEdgeDensity` y `NearCriticalDichotomy`.
+
+### ES 1379
+NEW: El enlace B7 se audita mediante `E17.ExplicitFarAudit`. Reutiliza las constantes numéricas de `E18` y `E19`, pero construye el empaquetamiento mediante la limpieza mejorada: la auditoría exige sus dos cuentas en el cono y excluye los antiguos teoremas finales de existencia. Ese objetivo pasó en la ejecución local combinada del corte identificado; la auditoría interna del autor revisó su registro y sus hipótesis, con las limitaciones consignadas en el informe.
+OLD: El enlace B7 se audita mediante `E17.ExplicitFarAudit`. Reutiliza las constantes numéricas de `E18` y `E19`, pero construye el empaquetamiento mediante la limpieza mejorada: la auditoría exige sus dos cuentas en el cono y excluye los antiguos teoremas finales de existencia. Ese target pasó en la ejecución local combinada del corte identificado; la auditoría interna del autor revisó su log y sus hipótesis, con las limitaciones consignadas en el informe.
+
+### ES 1383
+NEW: No se demuestra una brecha fraccionario–integral \(O(n)\) para todo cordal. Tampoco se afirma que toda demostración deba pasar por copias, regularización o un constructor particular. La cota eventual no resuelve si \(b=0\) en el Teorema A: esa igualdad conservaría el término \(n/6\) contenido en \(M(n)\), no lo eliminaría.
+OLD: No se demuestra un gap fraccionario–integral \(O(n)\) para todo cordal. Tampoco se afirma que toda demostración deba pasar por copias, regularización o un constructor particular. La cota eventual no resuelve si \(b=0\) en el Teorema A: esa igualdad conservaría el término \(n/6\) contenido en \(M(n)\), no lo eliminaría.
+
+### ES 1448
+NEW: ### Lema 3.2. `Nibble` de rango acotado con holgura, entrada de Paper III
+OLD: ### Lema 3.2. Nibble de rango acotado con holgura, entrada de Paper III
+
+### ES 1804
+NEW: **Proposición D.3 (brecha mixta nula en completo-split).** Sea \(S=K_k\vee I_h\), con \(2\le k\le h\), y sea \(W(S)\) la máxima ganancia de un empaquetamiento mixto físico. Entonces
+OLD: **Proposición D.3 (gap mixto nulo en completo-split).** Sea \(S=K_k\vee I_h\), con \(2\le k\le h\), y sea \(W(S)\) la máxima ganancia de un empaquetamiento mixto físico. Entonces
+
+### ES 1820
+NEW: La conclusión es una igualdad de valores óptimos en esta familia y bajo \(2\le k\le h\). No afirma que todos los vértices del politopo fraccional sean enteros, ni extiende la brecha nula a cualquier grafo split.
+OLD: La conclusión es una igualdad de valores óptimos en esta familia y bajo \(2\le k\le h\). No afirma que todos los vértices del politopo fraccional sean enteros, ni extiende el gap cero a cualquier grafo split.
+
+### ES 2226
+NEW: Esto utiliza una desigualdad del valor base entero antes de la comparación final, no un piso aplicado a un valor fraccional. En la rama de estrella alta, comparemos \(\alpha\) con \(5c/12\); se utiliza la segunda fila por debajo de ese valor y la primera por encima. Ambas dan la envolvente
+OLD: Esto utiliza una desigualdad del baseline entero antes de la comparación final, no un piso aplicado a un valor fraccional. En la rama de estrella alta, comparemos \(\alpha\) con \(5c/12\); se utiliza la segunda fila por debajo de ese valor y la primera por encima. Ambas dan la envolvente
+
+### ES 2405
+NEW: La demostración no necesita ni establece una cota lineal universal para la brecha mixta \(W^*(G)-W(G)\), donde \(W(G)\) es la ganancia mixta entera óptima. Compara la pérdida de la construcción con el margen disponible en cada instancia. El orden de crecimiento general de esa brecha se estudia por separado; no es una hipótesis de este paper.
+OLD: La demostración no necesita ni establece una cota lineal universal para el gap mixto \(W^*(G)-W(G)\), donde \(W(G)\) es la ganancia mixta entera óptima. Compara la pérdida de la construcción con el margen disponible en cada instancia. El orden de crecimiento general de ese gap se estudia por separado; no es una hipótesis de este paper.
+
+### ES 2407
+NEW: Hay un resultado complementario para la **brecha triangular** con número de clique acotado. Sean \(d\ge0\) entero y \(G\) cordal sin clique de orden \(d+2\). La biblioteca `BoundedCliqueGap`, incluida como anexo de fuentes separado y comprobada contra una compilación registrada distinta, demuestra que todo empaquetamiento fraccional triangular \(x\) satisface
+OLD: Hay un resultado complementario para el **gap triangular** con número de clique acotado. Sean \(d\ge0\) entero y \(G\) cordal sin clique de orden \(d+2\). La biblioteca `BoundedCliqueGap`, incluida como anexo de fuentes separado y comprobada contra una compilación registrada distinta, demuestra que todo empaquetamiento fraccional triangular \(x\) satisface
+
+### ES 2416
+NEW: La misma biblioteca expresa la hipótesis mediante un árbol de cliques cuyas bolsas tienen a lo sumo \(d+1\) vértices. `exists_cliqueTree_width_le_iff_cliqueFree` demuestra, para cordales, la equivalencia con la exclusión de \(K_{d+2}\). Es la forma de anchura de árbol disponible en este desarrollo; no se afirma que Mathlib proporcione una definición general de *treewidth* utilizada aquí. El resultado (G.1) no acota la brecha **mixta** de \(K_3/K_4\), ni sustituye el redondeo de la Sección 3.
+OLD: La misma biblioteca expresa la hipótesis mediante un árbol de cliques cuyas bolsas tienen a lo sumo \(d+1\) vértices. `exists_cliqueTree_width_le_iff_cliqueFree` demuestra, para cordales, la equivalencia con la exclusión de \(K_{d+2}\). Es la forma de anchura de árbol disponible en este desarrollo; no se afirma que Mathlib proporcione una definición general de *treewidth* utilizada aquí. El resultado (G.1) no acota el gap **mixto** de \(K_3/K_4\), ni sustituye el redondeo de la Sección 3.
+
+### ES 2458
+NEW: Esta cuenta delimita el alcance de la obstrucción; no demuestra una limpieza cordal ni una cota superior \(O(1/\varepsilon)\) para su umbral. Tampoco se ha formalizado aquí una versión de la implicación limpieza–redondeo restringida a cordales. Estudiar ese contrato más débil es una cuestión distinta tanto de la barrera universal como de la brecha triangular con clique acotada del Apéndice G.1.
+OLD: Esta cuenta delimita el alcance de la obstrucción; no demuestra una limpieza cordal ni una cota superior \(O(1/\varepsilon)\) para su umbral. Tampoco se ha formalizado aquí una versión de la implicación limpieza–redondeo restringida a cordales. Estudiar ese contrato más débil es una cuestión distinta tanto de la barrera universal como del gap triangular con clique acotada de Apéndice G.1.
+
+### ES 2484
+NEW: [6] P. E. Haxell y V. Rödl, «Integer and fractional empaquetamientos in dense graphs», *Combinatorica* **21** (2001), 13–38.
+OLD: [6] P. E. Haxell y V. Rödl, «Integer and fractional packings in dense graphs», *Combinatorica* **21** (2001), 13–38.

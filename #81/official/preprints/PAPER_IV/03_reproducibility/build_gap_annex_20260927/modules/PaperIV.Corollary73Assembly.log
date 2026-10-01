@@ -1,0 +1,35 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 PaperIV/Corollary73Assembly.lean -o /workspace/request-project/.lake/runner/lib/lean/PaperIV/Corollary73Assembly.olean -i /workspace/request-project/.lake/runner/lib/lean/PaperIV/Corollary73Assembly.ilean
+PaperIV/Corollary73Assembly.lean:76:33: warning: unused variable `hn`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+PaperIV/Corollary73Assembly.lean:77:13: warning: unused variable `hζ`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+PaperIV/Corollary73Assembly.lean:77:26: warning: unused variable `hζ1`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+import took 4.07s
+cumulative profiling times:
+	.olean serialization 89.4ms
+	attribute application 0.0532ms
+	compilation (IR) 0.424ms
+	compilation (LCNF base) 0.469ms
+	compilation (LCNF mono) 0.201ms
+	congr simp thm 1.33ms
+	elaboration 46ms
+	fix level params 0.175ms
+	import 4.07s
+	initialization 37.1ms
+	instantiate metavars 0.348ms
+	interpretation 292ms
+	let-to-have transformation 0.103ms
+	linting 5.64ms
+	norm_num 0.979ms
+	parsing 5.28ms
+	process pre-definitions 3.31ms
+	ring 7.67ms
+	share common exprs 1.3ms
+	simp 9.03ms
+	tactic execution 7.01ms
+	type checking 14.5ms
+	typeclass inference 91.6ms

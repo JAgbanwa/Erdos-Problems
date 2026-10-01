@@ -1,0 +1,77 @@
+{
+  "scope": "Editorial r3 preparation only; external r2 FAIL retained; r3 NOT STARTED",
+  "editions": {
+    "en": {
+      "checks": {
+        "displays_unchanged": true,
+        "code_unchanged": true,
+        "body_headings_unchanged": true,
+        "formal_identifiers_unchanged": true,
+        "no_intermediate_version": true,
+        "version_present": true,
+        "source_identity_present": true,
+        "source_to_tex_to_pdf_order": true,
+        "compiler_no_errors_or_overflow": true,
+        "compiler_names_output": true,
+        "two_tex_passes": true,
+        "no_off_page_spans": true,
+        "render_matches_pdf": true,
+        "all_pages_rendered_after_pdf": true,
+        "figures_present": true
+      },
+      "pages": 52,
+      "display_blocks": 158,
+      "code_blocks": 5,
+      "body_headings": 67,
+      "compiler_problems": [],
+      "off_page_spans": [],
+      "nonfatal_fontconfig_advisory": true,
+      "hashes": {
+        "PAPER_IV_preprint_v1.0.1_en.md": "d2175d22d2388e718d00cee1cd09571d3075820cddae3af0b92ec3638abe03fb",
+        "PAPER_IV_preprint_v1.0.1_en.tex": "8a197ec9565ad15126c3450b0bcfd37c80140eea33ec8d949bcdee3b1a7517b3",
+        "PAPER_IV_preprint_v1.0.1_en.pdf": "c88a3f7fe890e6e7d562a242aea1a625f02a80b761e2b7966c9b7f62a84a5f3f"
+      }
+    },
+    "es": {
+      "checks": {
+        "displays_unchanged": true,
+        "code_unchanged": true,
+        "body_headings_unchanged": true,
+        "formal_identifiers_unchanged": true,
+        "no_intermediate_version": true,
+        "version_present": true,
+        "source_identity_present": true,
+        "source_to_tex_to_pdf_order": true,
+        "compiler_no_errors_or_overflow": true,
+        "compiler_names_output": true,
+        "two_tex_passes": true,
+        "no_off_page_spans": true,
+        "render_matches_pdf": true,
+        "all_pages_rendered_after_pdf": true,
+        "figures_present": true
+      },
+      "pages": 53,
+      "display_blocks": 158,
+      "code_blocks": 5,
+      "body_headings": 67,
+      "compiler_problems": [],
+      "off_page_spans": [],
+      "nonfatal_fontconfig_advisory": true,
+      "hashes": {
+        "PAPER_IV_preprint_v1.0.1_es.md": "4c2e28d6c0b443c1dcce88658ae45258b0aee93078a8406688d4896a342d952f",
+        "PAPER_IV_preprint_v1.0.1_es.tex": "55f9b39fd7375111cc946b5c715ac4a3279479d32bf0513728d18a4fbdaac1b4",
+        "PAPER_IV_preprint_v1.0.1_es.pdf": "7a0b9acaf71442b3cd45000b760c975628f711c5cf4a4a049f66bc7d54f663d2"
+      }
+    }
+  },
+  "parity": {
+    "display_math_translation_aware": true,
+    "heading_depth": true,
+    "equation_tags": true,
+    "code_blocks": true,
+    "formal_identifiers": true
+  },
+  "failures": [],
+  "status": "PASS_STATIC_EDITORIAL_CHECKS",
+  "limits": "Not a proof or full semantic/visual review. See EDITORIAL_DELTA_REPORT.md for those checks and their scope."
+}

@@ -1,0 +1,50 @@
+{
+  "generation": {
+    "command": [
+      "certo",
+      "cover",
+      "C:\\Users\\jtraverso\\e81p4-publish\\preprints\\PAPER_IV\\02_validation\\01_INTERNAL_AUDITS\\run_20260929_v1.2_fb459343d234_r1\\20_EVIDENCE\\G2_MATHEMATICS\\B01_MODEL\\inputs\\split_k3_h3_cover.py",
+      "--optimize",
+      "--prove-optimal",
+      "--timeout-ms",
+      "60000",
+      "--max-memory-mb",
+      "2048",
+      "--cert",
+      "C:\\Users\\jtraverso\\e81p4-publish\\preprints\\PAPER_IV\\02_validation\\01_INTERNAL_AUDITS\\run_20260929_v1.2_fb459343d234_r1\\20_EVIDENCE\\G2_MATHEMATICS\\B01_MODEL\\certificates\\split_k3_h3_cover_optimal.json",
+      "--json",
+      "--brief"
+    ],
+    "exitCode": 0,
+    "elapsedSeconds": 3.75
+  },
+  "replay": {
+    "command": [
+      "certo",
+      "verify",
+      "C:\\Users\\jtraverso\\e81p4-publish\\preprints\\PAPER_IV\\02_validation\\01_INTERNAL_AUDITS\\run_20260929_v1.2_fb459343d234_r1\\20_EVIDENCE\\G2_MATHEMATICS\\B01_MODEL\\certificates\\split_k3_h3_cover_optimal.json",
+      "--spec",
+      "C:\\Users\\jtraverso\\e81p4-publish\\preprints\\PAPER_IV\\02_validation\\01_INTERNAL_AUDITS\\run_20260929_v1.2_fb459343d234_r1\\20_EVIDENCE\\G2_MATHEMATICS\\B01_MODEL\\inputs\\split_k3_h3_cover.py",
+      "--json",
+      "--brief"
+    ],
+    "exitCode": 0,
+    "elapsedSeconds": 1.281
+  },
+  "tamper": {
+    "command": [
+      "certo",
+      "verify",
+      "C:\\Users\\jtraverso\\e81p4-publish\\preprints\\PAPER_IV\\02_validation\\01_INTERNAL_AUDITS\\run_20260929_v1.2_fb459343d234_r1\\20_EVIDENCE\\G2_MATHEMATICS\\B01_MODEL\\certificates\\split_k3_h3_cover_optimal.json",
+      "--spec",
+      "C:\\Users\\jtraverso\\e81p4-publish\\preprints\\PAPER_IV\\02_validation\\01_INTERNAL_AUDITS\\run_20260929_v1.2_fb459343d234_r1\\20_EVIDENCE\\G2_MATHEMATICS\\B01_MODEL\\inputs\\split_k3_h3_cover.py",
+      "--tamper",
+      "--json",
+      "--brief"
+    ],
+    "exitCode": 0,
+    "elapsedSeconds": 1.375
+  },
+  "certificateKind": "exact_cover",
+  "scope": "Exact-cover certificate proves this partition, not a stored lower-bound certificate. The independent core-edge charge gives the lower bound 6."
+}

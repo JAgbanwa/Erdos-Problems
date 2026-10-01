@@ -1,0 +1,57 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 PaperIV/RC01PatternCapacity.lean -o /workspace/request-project/.lake/runner/lib/lean/PaperIV/RC01PatternCapacity.olean -i /workspace/request-project/.lake/runner/lib/lean/PaperIV/RC01PatternCapacity.ilean
+PaperIV/RC01PatternCapacity.lean:34:0: warning: automatically included section variable(s) unused in theorem `PaperIV.RC01PatternCapacity.slotMass_nonneg`:
+  [Fintype Pat]
+  [DecidableEq Pat]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype Pat] [DecidableEq Pat] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+PaperIV/RC01PatternCapacity.lean:46:0: warning: automatically included section variable(s) unused in theorem `PaperIV.RC01PatternCapacity.rawMass_nonneg`:
+  [Fintype Pat]
+  [DecidableEq Pat]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype Pat] [DecidableEq Pat] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+PaperIV/RC01PatternCapacity.lean:53:0: warning: automatically included section variable(s) unused in theorem `PaperIV.RC01PatternCapacity.sum_rawMass_le_pairVolume`:
+  [Fintype Pat]
+  [DecidableEq Pat]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype Pat] [DecidableEq Pat] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+PaperIV/RC01PatternCapacity.lean:54:35: warning: unused variable `ht`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+PaperIV/RC01PatternCapacity.lean:97:0: warning: automatically included section variable(s) unused in theorem `PaperIV.RC01PatternCapacity.sum_slotMass_le_density`:
+  [Fintype Pat]
+  [DecidableEq Pat]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype Pat] [DecidableEq Pat] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+import took 3.42s
+cumulative profiling times:
+	.olean serialization 71.7ms
+	attribute application 0.0793ms
+	compilation (IR) 1.18ms
+	compilation (LCNF base) 1.17ms
+	compilation (LCNF mono) 0.512ms
+	congr simp thm 0.883ms
+	elaboration 67.6ms
+	fix level params 0.631ms
+	import 3.42s
+	initialization 40.3ms
+	instantiate metavars 0.552ms
+	interpretation 344ms
+	let-to-have transformation 0.241ms
+	linting 11.2ms
+	norm_num 2.64ms
+	parsing 6.68ms
+	process pre-definitions 4.43ms
+	ring 5.6ms
+	share common exprs 1.92ms
+	simp 8.73ms
+	tactic execution 72.9ms
+	type checking 33.5ms
+	typeclass inference 229ms

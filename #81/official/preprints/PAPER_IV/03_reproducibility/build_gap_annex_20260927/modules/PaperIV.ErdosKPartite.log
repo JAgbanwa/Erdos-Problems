@@ -1,0 +1,30 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 PaperIV/ErdosKPartite.lean -o /workspace/request-project/.lake/runner/lib/lean/PaperIV/ErdosKPartite.olean -i /workspace/request-project/.lake/runner/lib/lean/PaperIV/ErdosKPartite.ilean
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_nlinarith_1._boxed took 134ms
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_nlinarith_1._boxed took 236ms
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_nlinarith_1._boxed took 616ms
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_nlinarith_1._boxed took 614ms
+import took 2.93s
+cumulative profiling times:
+	.olean serialization 58.6ms
+	attribute application 0.0716ms
+	compilation (IR) 15.6ms
+	compilation (LCNF base) 17.1ms
+	compilation (LCNF mono) 8.66ms
+	congr simp thm 17.9ms
+	elaboration 46.5ms
+	fix level params 1.06ms
+	import 2.93s
+	initialization 38.1ms
+	instantiate metavars 32ms
+	interpretation 2.53s
+	let-to-have transformation 0.101ms
+	linting 21.3ms
+	norm_num 255ms
+	parsing 12.4ms
+	process pre-definitions 16.5ms
+	ring 84.2ms
+	share common exprs 36.3ms
+	simp 305ms
+	tactic execution 387ms
+	type checking 126ms
+	typeclass inference 1.49s

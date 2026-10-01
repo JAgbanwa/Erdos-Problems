@@ -1,0 +1,54 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 ExactReduction/Deletion.lean -o /workspace/request-project/.lake/runner/lib/lean/ExactReduction/Deletion.olean -i /workspace/request-project/.lake/runner/lib/lean/ExactReduction/Deletion.ilean
+ExactReduction/Deletion.lean:37:8: warning: automatically included section variable(s) unused in theorem `ExactReduction.deleteAt_adj`:
+  [DecidableEq V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+ExactReduction/Deletion.lean:40:0: warning: automatically included section variable(s) unused in theorem `ExactReduction.deleteAt_le`:
+  [DecidableEq V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+ExactReduction/Deletion.lean:42:0: warning: automatically included section variable(s) unused in theorem `ExactReduction.deleteAt_isolated`:
+  [DecidableEq V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+ExactReduction/Deletion.lean:48:8: warning: automatically included section variable(s) unused in theorem `_private.ExactReduction.Deletion.0.ExactReduction.walk_start_ne`:
+  [DecidableEq V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+ExactReduction/Deletion.lean:54:8: warning: automatically included section variable(s) unused in theorem `_private.ExactReduction.Deletion.0.ExactReduction.walk_support_ne`:
+  [DecidableEq V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+import took 2.81s
+cumulative profiling times:
+	.olean serialization 58.2ms
+	attribute application 0.873ms
+	compilation (IR) 0.479ms
+	compilation (LCNF base) 1.07ms
+	compilation (LCNF mono) 0.545ms
+	congr simp thm 3.79ms
+	elaboration 38.8ms
+	fix level params 3.31ms
+	import 2.81s
+	initialization 37.4ms
+	instantiate metavars 31.1ms
+	interpretation 229ms
+	let-to-have transformation 0.114ms
+	linting 20.3ms
+	parsing 9.17ms
+	process pre-definitions 13.4ms
+	share common exprs 6.22ms
+	simp 23.8ms
+	tactic execution 179ms
+	type checking 36.8ms
+	typeclass inference 57.7ms

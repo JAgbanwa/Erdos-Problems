@@ -1,0 +1,73 @@
+{
+ "sealed_utc": "2026-10-01T10:43:04.466779+00:00",
+ "gate_zips": [
+  {
+   "zip": "GATE_E0_run_v1.22_r1.zip",
+   "sha256": "e6d1a64c45f207dbb0fcda72729e433928a4c0cc170f0d366aa888667b021bba",
+   "members": 7,
+   "bytes": 380385
+  },
+  {
+   "zip": "GATE_E1_run_v1.22_r1.zip",
+   "sha256": "7ef8fc27e962c8f348378c5187fba9d5462ae69378edbae8bbcab34aa6486593",
+   "members": 4,
+   "bytes": 327675
+  },
+  {
+   "zip": "GATE_E2_run_v1.22_r1.zip",
+   "sha256": "d33386186d86b53a39d173f20676112958f944344a809d08567640d500bc6bbd",
+   "members": 6,
+   "bytes": 580658
+  },
+  {
+   "zip": "GATE_E3_run_v1.22_r1.zip",
+   "sha256": "aedbc532849be2581030fa45ca736d7400873d3f60a0e633b1dd917f4518d79e",
+   "members": 6,
+   "bytes": 636633
+  },
+  {
+   "zip": "GATE_E4_run_v1.22_r1.zip",
+   "sha256": "7f72cee430f9de9e611c5c0cd3133f287119a8acdce0cfcfcdde4c2f18eda0fe",
+   "members": 6,
+   "bytes": 555141
+  },
+  {
+   "zip": "GATE_E5_run_v1.22_r1.zip",
+   "sha256": "3c1f881e202fb9cac57f2001b2916f8b08d82ba454d5283edc4a5c31462bf9a8",
+   "members": 12,
+   "bytes": 644165
+  },
+  {
+   "zip": "GATE_E6_run_v1.22_r1.zip",
+   "sha256": "f8aaa8f57c013b7162b2dd5bae457882c60a63f236228031f614cdd145cf18f5",
+   "members": 102,
+   "bytes": 28398718
+  },
+  {
+   "zip": "GATE_E7_run_v1.22_r1.zip",
+   "sha256": "a781c1c7ba02cb6ae439a75c468b074d525e38d6f0cef798732e5c088c1e85aa",
+   "members": 4,
+   "bytes": 631927
+  },
+  {
+   "zip": "GATE_E8_run_v1.22_r1.zip",
+   "sha256": "5ca2345fce56308a561cdea527605985cf0a35ccdc29b1ea41a309d0cbb318ca",
+   "members": 6,
+   "bytes": 334647
+  }
+ ],
+ "final_zip": {
+  "zip": "EXTERNAL_REVALIDATION_run_v1.22_r1.zip",
+  "sha256": "9c74d673206ab17a5b4586209ececca30536f1768fcc91ffdd39db551193a1fa",
+  "members": 189,
+  "bytes": 34289568
+ },
+ "manifest_sha256": "9bc233ff60986a4ef2ca1d3e340d1c199bad065360fd3ed0d69b8586bcd733ae",
+ "manifest_files": 188,
+ "excluded": [
+  "05_BUILD (compiled objects, extracted sources)",
+  "shared Mathlib/packages",
+  "runtimes",
+  "credentials (none present)"
+ ]
+}

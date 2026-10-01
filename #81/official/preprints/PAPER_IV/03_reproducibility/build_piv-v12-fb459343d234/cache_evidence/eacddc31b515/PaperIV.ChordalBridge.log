@@ -1,0 +1,27 @@
+$ c:\Users\jtraverso\.elan\toolchains\leanprover--lean4---v4.28.0\bin\lean.exe -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false PaperIV/ChordalBridge.lean -o C:\Users\jtraverso\e81p4\opt_build_20260927\.lake\runner\lib\lean\PaperIV\ChordalBridge.olean -i C:\Users\jtraverso\e81p4\opt_build_20260927\.lake\runner\lib\lean\PaperIV\ChordalBridge.ilean
+PaperIV/ChordalBridge.lean:57:0: warning: automatically included section variable(s) unused in theorem `PaperIV.ChordalBridge.isChordal_iff`:
+  [Fintype V]
+  [DecidableEq V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] [DecidableEq V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+PaperIV/ChordalBridge.lean:62:0: warning: automatically included section variable(s) unused in theorem `PaperIV.ChordalBridge.exists_isSimplicial`:
+  [DecidableRel G.Adj]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableRel G.Adj] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+PaperIV/ChordalBridge.lean:68:0: warning: automatically included section variable(s) unused in theorem `PaperIV.ChordalBridge.minimalSeparator_isClique`:
+  [DecidableRel G.Adj]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableRel G.Adj] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+PaperIV/ChordalBridge.lean:82:0: warning: automatically included section variable(s) unused in theorem `PaperIV.ChordalBridge.ownerOf_eq`:
+  [Fintype V]
+  [DecidableRel G.Adj]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] [DecidableRel G.Adj] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`

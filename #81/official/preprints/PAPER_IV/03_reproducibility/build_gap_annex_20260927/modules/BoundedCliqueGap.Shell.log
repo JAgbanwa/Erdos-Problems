@@ -1,0 +1,29 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 BoundedCliqueGap/Shell.lean -o /workspace/request-project/.lake/runner/lib/lean/BoundedCliqueGap/Shell.olean -i /workspace/request-project/.lake/runner/lib/lean/BoundedCliqueGap/Shell.ilean
+tactic execution of Lean.Parser.Tactic.assumption took 254ms
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_nlinarith_1._boxed took 227ms
+import took 3.2s
+cumulative profiling times:
+	.olean serialization 83.3ms
+	attribute application 8.78ms
+	compilation (IR) 8.73ms
+	compilation (LCNF base) 10.1ms
+	compilation (LCNF mono) 4.5ms
+	congr simp thm 15.6ms
+	dsimp 6.79ms
+	elaboration 141ms
+	fix level params 1.59ms
+	import 3.2s
+	initialization 39.8ms
+	instantiate metavars 33.7ms
+	interpretation 1s
+	let-to-have transformation 0.575ms
+	linting 48ms
+	norm_num 127ms
+	parsing 23.3ms
+	process pre-definitions 39.9ms
+	ring 60.7ms
+	share common exprs 21.1ms
+	simp 259ms
+	tactic execution 703ms
+	type checking 148ms
+	typeclass inference 889ms

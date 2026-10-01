@@ -1,0 +1,14 @@
+$ C:\Users\jtraverso\.elan\toolchains\leanprover--lean4---v4.28.0\bin\lean.exe -j 8 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false FDCheck/ASCheck.lean -o C:\Users\jtraverso\e81p4-publish\preprints\PAPER_IV\02_validation\02_IA_ADVERSARIAL_AUDITS\run_v1.2_r1\05_BUILD\main\obj\FDCheck\ASCheck.olean -i C:\Users\jtraverso\e81p4-publish\preprints\PAPER_IV\02_validation\02_IA_ADVERSARIAL_AUDITS\run_v1.2_r1\05_BUILD\main\obj\FDCheck\ASCheck.ilean
+PASS PaperIV.DefectExplicitPublication.rooted_defect_eventual: 42052 constants; no listed Alon–Shapira removal lemmas; standard axioms only.
+PASS PaperIV.DefectExplicitPublication.rooted_defect_maximum: 42145 constants; no listed Alon–Shapira removal lemmas; standard axioms only.
+PASS E35.theoremC_tower: 46361 constants; no listed Alon–Shapira removal lemmas; standard axioms only.
+PASS PaperIV.SublinearResearch.FixedExplicit.fixed_defect_stability_explicit: 42555 constants; no listed Alon–Shapira removal lemmas; standard axioms only.
+PASS PaperIV.SublinearResearch.fixed_defect_joint_stability_real: 42580 constants; no listed Alon–Shapira removal lemmas; standard axioms only.
+PASS PaperIV.SublinearResearch.sequence_arbitrary_orders_stability: 41003 constants; no listed Alon–Shapira removal lemmas; standard axioms only.
+HISTORICAL route removal dependencies: [AlonShapira.lemma_4_2,
+ AlonShapira.near_chordal_of_induced_cycles_littleO',
+ PaperIV.EditRoute.editApproxAt_all,
+ PaperIV.EditRoute.fixedL4Localization_unconditional,
+ AFKS.strong_regularity]
+'PaperIV.DefectExplicitPublication.rooted_defect_eventual' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PaperIV.DefectExplicitPublication.rooted_defect_maximum' depends on axioms: [propext, Classical.choice, Quot.sound]

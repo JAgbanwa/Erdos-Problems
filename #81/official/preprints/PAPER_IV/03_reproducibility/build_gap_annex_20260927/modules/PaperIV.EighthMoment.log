@@ -1,0 +1,77 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 PaperIV/EighthMoment.lean -o /workspace/request-project/.lake/runner/lib/lean/PaperIV/EighthMoment.olean -i /workspace/request-project/.lake/runner/lib/lean/PaperIV/EighthMoment.ilean
+PaperIV/EighthMoment.lean:68:0: warning: automatically included section variable(s) unused in theorem `PaperIV.EighthMoment.FinProb.expect_const`:
+  [DecidableEq Ω]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq Ω] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+PaperIV/EighthMoment.lean:72:0: warning: automatically included section variable(s) unused in theorem `PaperIV.EighthMoment.FinProb.expect_mono`:
+  [DecidableEq Ω]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq Ω] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+PaperIV/EighthMoment.lean:76:0: warning: automatically included section variable(s) unused in theorem `PaperIV.EighthMoment.FinProb.abs_expect_le`:
+  [DecidableEq Ω]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq Ω] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+PaperIV/EighthMoment.lean:85:0: warning: automatically included section variable(s) unused in theorem `PaperIV.EighthMoment.FinProb.expect_sum`:
+  [DecidableEq Ω]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq Ω] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+PaperIV/EighthMoment.lean:91:0: warning: automatically included section variable(s) unused in theorem `PaperIV.EighthMoment.FinProb.prob_nonneg`:
+  [DecidableEq Ω]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq Ω] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+PaperIV/EighthMoment.lean:95:0: warning: automatically included section variable(s) unused in theorem `PaperIV.EighthMoment.FinProb.markov`:
+  [DecidableEq Ω]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq Ω] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+PaperIV/EighthMoment.lean:149:0: warning: automatically included section variable(s) unused in theorem `PaperIV.EighthMoment.expect_prod_eq_zero`:
+  [DecidableEq Ω]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq Ω] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+typeclass inference of Nonempty took 119ms
+PaperIV/EighthMoment.lean:258:0: warning: automatically included section variable(s) unused in theorem `PaperIV.EighthMoment.FinProb.prob_mono`:
+  [DecidableEq Ω]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq Ω] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+import took 3.29s
+cumulative profiling times:
+	.olean serialization 76.2ms
+	attribute application 0.266ms
+	blocked (unaccounted) 8.94ms
+	compilation (IR) 2.01ms
+	compilation (LCNF base) 3.75ms
+	compilation (LCNF mono) 2.86ms
+	congr simp thm 5.3ms
+	dsimp 1.28ms
+	elaboration 117ms
+	fix level params 1.01ms
+	import 3.29s
+	initialization 39.6ms
+	instantiate metavars 2.7ms
+	interpretation 496ms
+	let-to-have transformation 0.598ms
+	linting 34.1ms
+	norm_num 3.67ms
+	parsing 21.4ms
+	process pre-definitions 19.5ms
+	ring 10.6ms
+	share common exprs 5.42ms
+	simp 55.8ms
+	tactic execution 267ms
+	type checking 91.9ms
+	typeclass inference 858ms

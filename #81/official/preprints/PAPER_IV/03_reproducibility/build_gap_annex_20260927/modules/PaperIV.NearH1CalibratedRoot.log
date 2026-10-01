@@ -1,0 +1,26 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 PaperIV/NearH1CalibratedRoot.lean -o /workspace/request-project/.lake/runner/lib/lean/PaperIV/NearH1CalibratedRoot.olean -i /workspace/request-project/.lake/runner/lib/lean/PaperIV/NearH1CalibratedRoot.ilean
+import took 3.01s
+cumulative profiling times:
+	.olean serialization 53.7ms
+	attribute application 0.0167ms
+	compilation (IR) 2.6ms
+	compilation (LCNF base) 2.3ms
+	compilation (LCNF mono) 1.03ms
+	congr simp thm 4.17ms
+	elaboration 23.2ms
+	fix level params 0.672ms
+	import 3.01s
+	initialization 37.9ms
+	instantiate metavars 3.64ms
+	interpretation 357ms
+	let-to-have transformation 0.0616ms
+	linting 5.63ms
+	norm_num 88.8ms
+	parsing 2.74ms
+	process pre-definitions 3.37ms
+	ring 11.1ms
+	share common exprs 2.4ms
+	simp 36.2ms
+	tactic execution 73.4ms
+	type checking 24.4ms
+	typeclass inference 236ms

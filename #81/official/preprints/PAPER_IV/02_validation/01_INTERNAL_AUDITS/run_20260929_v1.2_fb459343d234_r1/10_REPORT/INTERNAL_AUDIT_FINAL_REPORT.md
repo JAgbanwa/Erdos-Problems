@@ -1,0 +1,64 @@
+# Paper IV v1.2: informe final de auditoría interna
+
+Corte Lean `piv-v12-fb459343d234`; manuscritos `piv-v12-manuscripts-2451d43bface`. Auditoría interna del lado del autor, no independiente. Fecha: 30 de septiembre de 2026.
+
+## Dictamen
+
+**PASS_INTERNAL_AUTHOR_SIDE** para el alcance fijado, sujeto a la verificación mecánica del paquete que acompaña este informe. G0-G8 y B01-B10 están cubiertos. No se encontró un defecto matemático bloqueante. Se documenta una referencia cruzada menor en A.2, aclarada en FINDINGS.md sin cambiar el manuscrito sellado.
+
+Este dictamen no es auditoría externa, revisión humana independiente, autorización de publicación ni demostración de b=0. No se lanzó otro build ni otro Mathlib; la continuación se ejecutó sin subagentes y con cómputo serial limitado.
+
+## Identidad y procedencia
+
+- Fuentes: 607 módulos, manifiesto de 615 archivos.
+- Entrada PaperIV: cierre de 553 módulos; 224 comprobaciones de exportación que importan solo esa raíz.
+- Build completo: dos segmentos tras reinicio, con cada objeto reutilizado vinculado a su compilación fresca verificada. Los 19 targets de auditoría se reejecutaron.
+- 461 listas de axiomas permitidos; 313 impresiones nominales sobre 307 declaraciones distintas. Los únicos axiomas admitidos son propext, Classical.choice y Quot.sound o subconjuntos.
+- Anexo separado: 38 módulos BoundedCliqueGap, cierre de 50 fuentes históricas cotejadas. Los restantes logs de su corrida histórica de 579 módulos no certifican fuentes no distribuidas.
+- Manuscritos: inglés 68 páginas, español 69. Los hashes originales siguen vigentes; no se generó una versión matemática nueva.
+
+Los identificadores completos, ZIP fuente, ZIP de manuscritos y evidencia del build están en TARGET.json. El hash de este expediente se entrega en un sidecar externo, evitando una referencia circular.
+
+## Matriz de gates
+
+| Gate | Resultado | Objeto |
+|:--|:--|:--|
+| G0 | PASS interno | Identidad e integridad |
+| G1 | PASS interno | Afirmaciones y alcance |
+| G2 | PASS interno | Diez bloques matemáticos |
+| G3 | PASS interno | Conformidad y entrada pública |
+| G4 | PASS interno | Build y axiomas registrados |
+| G5 | PASS interno | Paridad bilingüe |
+| G6 | PASS interno | Artefactos y revisión visual |
+| G7 | PASS interno | Atribución y licencias |
+| G8 | PASS interno | Reproducción y paquetes |
+
+## Cobertura matemática
+
+Se separaron A para todo orden, B agudo eventual, C para defecto fijo y C prime con la misma raíz antes de toda partición. Se revisaron la estabilidad real, el término de raíz cuadrada, las cotas fraccionales en todos los órdenes, el redondeo uniforme en s y las sucesiones de órdenes arbitrarios.
+
+E.4 fue cotejado con StrictParams, StrictBudget, ResidualExcess, CoreCliqueAlternative, LargeCliqueCore, TemplateDistance y RootPartition. F.3a conserva parte positiva y no-aristas ordenadas. Los tres casos F.5 son exhaustivos y conservan el muestreo con reemplazo y el tamaño de muestra adaptado. Las siete entradas resumidas de A.2 tienen dictámenes individuales ACCEPTABLE_SUMMARY para el paper acompañado de sus fuentes y referencias; no se declara una nueva rederivación humana de todos los diseños o del nibble.
+
+El detalle está en `20_EVIDENCE/G1_CLAIMS/MATHEMATICAL_REVIEW.md`, el inventario de encabezados y `00_CONTROL/CLAIM_MAP.csv`. Las exclusiones de dependencias se aplican a los conos nombrados y no se convierten en una afirmación de originalidad histórica.
+
+## Regresiones y Certo
+
+Se ejecutaron ocho suites seriales y ampliaciones exactas. El censo literal comprende 33 868 grafos etiquetados hasta orden seis; 19 049 son cordales. Se verificaron 76 pares primal-dual racionales, las cuotas mixtas, 100 000 vectores de presupuesto, 40 000 telescopajes y los testigos split. Las ampliaciones controlan perfiles de piezas, constantes de defecto fijo, obstrucción de raíz cuadrada y casos degenerados de árboles de cliques.
+
+Certo 0.20.1 produjo un certificado de cobertura de K3 join I3. Se verificó con su especificación y con un checker literal que no importa el productor. La optimalidad se certificó aparte mediante pesos de cliques. Se rechazaron mutaciones semánticas. Certo no es un auditor independiente del autor, y estas pruebas finitas no demuestran los teoremas universales.
+
+## Paridad, PDFs y atribución
+
+Las 1 988 expresiones matemáticas por idioma difieren solo en siete textos traducidos; coinciden 146 etiquetas y cinco bloques Lean. Las 137 páginas fueron revisadas en láminas y se inspeccionaron a resolución legible páginas densas, figuras, tablas y referencias. Los informes de esta auditoría se compilaron desde sus TeX finales con la plantilla de informes de Paper III, y tienen revisión visual propia.
+
+La comparación con [15] reconoce su Teorema 1.1, su estabilidad y el método de estrella. F.5 atribuye la estrategia de [22] y sus modificaciones. [5] se compara en el commit citado. El anuncio de Cipollini no es una entrada auditada de la demostración. Actualizar la literatura y repetir estos juicios con independencia corresponde al carril externo.
+
+## Hallazgos y límites
+
+Los incidentes de los verificadores se conservaron y corrigieron sin alterar el corte: colisión por basename, nombres Lean con apóstrofo, fórmula mal transcrita en una regresión y alcance excesivo inicial del verificador del anexo. La referencia '§3.2' de A.2 se precisa como Lema 3.2/C.1-C.2 en la errata. Las regresiones ligeras comenzaron antes de completar G1; no se usaron para inferir su PASS.
+
+Este expediente valida evidencia de compilación, no ejecuta una nueva compilación independiente. La aprobación de resúmenes expositivos no impide que un árbitro solicite más detalle. No se certifican extracciones contrib fuera del corte, licencias nuevas ni prioridad bibliográfica. No se modificó ni publicó el repositorio.
+
+## Entrega y siguiente paso
+
+Hay informes MD, TeX y PDF para diez bloques, nueve gates y este resumen; ZIP por bloque y gate, manifiestos y paquete general. PACKAGE_INDEX.json y PACKAGE_VERIFICATION.json registran los hashes y el replay de cada archivo. La auditoría externa debe empezar por identidad y lectura independiente según su mandato, sin usar este PASS como premisa matemática. Su ejecución requiere la petición del autor.

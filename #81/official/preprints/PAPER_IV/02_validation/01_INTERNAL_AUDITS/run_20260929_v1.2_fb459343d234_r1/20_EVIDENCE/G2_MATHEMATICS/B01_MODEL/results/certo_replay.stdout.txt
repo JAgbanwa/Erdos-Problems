@@ -1,0 +1,37 @@
+{
+  "ok": true,
+  "kind": "exact_cover",
+  "solver_free": true,
+  "method": "verify.cover.method",
+  "checks": [
+    {
+      "check": "every element of the universe is covered",
+      "ok": true,
+      "detail": "0 missed: -"
+    },
+    {
+      "check": "no part covers anything outside the universe",
+      "ok": true,
+      "detail": "0 foreign elements"
+    },
+    {
+      "check": "and covered exactly once",
+      "ok": true,
+      "detail": "0 covered more than once: -"
+    },
+    {
+      "check": "the declared number of parts is the number of parts",
+      "ok": true,
+      "detail": "6 counted, 6 declared"
+    },
+    {
+      "check": "every part really is a clique of the graph",
+      "ok": true,
+      "detail": "0 parts are not"
+    }
+  ],
+  "warnings": [
+    "this says the cover is VALID and how large it is. It does not say it is the smallest: for that, pair it with an exact dual from `opt` on the same universe."
+  ],
+  "detail": "6 parts covering 12 elements exactly once each"
+}

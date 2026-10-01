@@ -1,0 +1,25 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 PaperIV/CopySelector.lean -o /workspace/request-project/.lake/runner/lib/lean/PaperIV/CopySelector.olean -i /workspace/request-project/.lake/runner/lib/lean/PaperIV/CopySelector.ilean
+import took 3.61s
+cumulative profiling times:
+	.olean serialization 81.6ms
+	attribute application 0.0759ms
+	blocked (unaccounted) 34.9ms
+	compilation (IR) 0.3ms
+	compilation (LCNF base) 0.658ms
+	compilation (LCNF mono) 0.111ms
+	congr simp thm 6.16ms
+	elaboration 56.8ms
+	fix level params 0.271ms
+	import 3.61s
+	initialization 46.1ms
+	instantiate metavars 1.27ms
+	interpretation 232ms
+	let-to-have transformation 0.157ms
+	linting 9.33ms
+	parsing 4.83ms
+	process pre-definitions 4.52ms
+	share common exprs 0.589ms
+	simp 10.3ms
+	tactic execution 35.8ms
+	type checking 20ms
+	typeclass inference 48ms

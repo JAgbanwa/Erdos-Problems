@@ -1,0 +1,25 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 PaperIV/RootedEliminationOrder.lean -o /workspace/request-project/.lake/runner/lib/lean/PaperIV/RootedEliminationOrder.olean -i /workspace/request-project/.lake/runner/lib/lean/PaperIV/RootedEliminationOrder.ilean
+import took 3.81s
+cumulative profiling times:
+	.olean serialization 74.6ms
+	attribute application 1.34ms
+	blocked (unaccounted) 305ms
+	compilation (IR) 0.361ms
+	compilation (LCNF base) 0.8ms
+	compilation (LCNF mono) 0.342ms
+	congr simp thm 3.85ms
+	elaboration 94.7ms
+	fix level params 1.2ms
+	import 3.81s
+	initialization 49.2ms
+	instantiate metavars 9.48ms
+	interpretation 312ms
+	let-to-have transformation 0.193ms
+	linting 24.9ms
+	parsing 16.4ms
+	process pre-definitions 15.7ms
+	share common exprs 3.09ms
+	simp 10.8ms
+	tactic execution 183ms
+	type checking 105ms
+	typeclass inference 95.6ms

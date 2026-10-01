@@ -1,0 +1,16 @@
+$ c:\Users\jtraverso\.elan\toolchains\leanprover--lean4---v4.28.0\bin\lean.exe -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false FarExploration/CleanupDense.lean -o C:\Users\jtraverso\e81p4\opt_build_20260927\.lake\runner\lib\lean\FarExploration\CleanupDense.olean -i C:\Users\jtraverso\e81p4\opt_build_20260927\.lake\runner\lib\lean\FarExploration\CleanupDense.ilean
+FarExploration/CleanupDense.lean:296:23: warning: unused variable `hn`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+FarExploration/CleanupDense.lean:303:22: warning: unused variable `hn`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+FarExploration/CleanupDense.lean:514:12: warning: `div_add_div_same` has been deprecated: Use `add_div` instead
+
+Note: The updated constant has a different type:
+  ∀ {K : Type u_1} [inst : DivisionSemiring K] (a b c : K), (a + b) / c = a / c + b / c
+instead of
+  ∀ {K : Type u_1} [inst : DivisionSemiring K] (a b c : K), a / c + b / c = (a + b) / c
+FarExploration/CleanupDense.lean:523:75: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`

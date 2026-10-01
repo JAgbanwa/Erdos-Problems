@@ -1,0 +1,20 @@
+--- 
++++ 
+@@ -1352,7 +1352,7 @@
+ 
+ ### A.2. Contratos intermedios de las pruebas
+ 
+-**Alcance de la prueba escrita.** La tabla siguiente registra las derivaciones que recibieron especial atención. La versión 1.21 amplió la limpieza bilateral de fibras de C.2, los conteos de normalización y la eliminación conjunta de E.1, y la programación numérica de C.3. La versión 1.22 añadió la recurrencia de regularidad y la comparación final con la torre. El informe consolidado v1.22-r2 clasifica las siete filas como ACCEPTABLE_SUMMARY. Conserva el límite expositivo declarado sobre las estimaciones de segundo momento citadas en C.2. Un build satisfactorio verifica derivaciones formales, no la integridad de su exposición; la evaluación de la prueba escrita sigue siendo distinta de la compilación y de la revisión humana por pares.
++**Alcance de la prueba escrita.** La tabla siguiente registra las derivaciones que recibieron especial atención. La versión 1.21 amplió la limpieza bilateral de fibras de C.2, los conteos de normalización y la eliminación conjunta de E.1, y el calendario numérico de C.3. La versión 1.22 añadió la recurrencia de regularidad y la comparación final con la torre. El informe consolidado v1.22-r2 clasifica las siete filas como ACCEPTABLE_SUMMARY. Conserva el límite expositivo declarado sobre las estimaciones de segundo momento citadas en C.2. Un build satisfactorio verifica derivaciones formales, no la integridad de su exposición; la evaluación de la prueba escrita sigue siendo distinta de la compilación y de la revisión humana por pares.
+ 
+ | Ubicación | Derivación por revisar, incluidas las cuentas desarrolladas |
+ |:--|:--|
+@@ -2353,7 +2353,7 @@
+ 
+ El factor diez de la desigualdad local \(\binom{a+b}{2}\le10d(a,b)\), para defecto positivo, es óptimo: el perfil \((a,b)=(3,2)\) tiene diez aristas y defecto uno. Esto no prueba la optimalidad de \(480\), \(A_s\) ni de los umbrales globales.
+ 
+-El Apéndice E.4 desarrolla las cuentas terminales conservadas que se usan en §6.6, F.3 demuestra la recuperación de la clique y F.5 explica el ensamblaje de tres casos de la cota adaptada con muestra fijada. Sus comprobaciones registradas se consolidan en el informe v1.22-r2, con el alcance y los límites allí declarados. Esas comprobaciones contrastan las cuentas escritas con el desarrollo formal congelado; no convierten la compilación local en un sustituto de la revisión matemática.
++El Apéndice E.4 desarrolla las cuentas terminales conservadas que se usan en §6.6, F.3 demuestra la recuperación de la clique y F.5 explica el ensamblaje de tres casos de la cota adaptada con muestras con anclajes. Sus comprobaciones registradas se consolidan en el informe v1.22-r2, con el alcance y los límites allí declarados. Esas comprobaciones contrastan las cuentas escritas con el desarrollo formal congelado; no convierten la compilación local en un sustituto de la revisión matemática.
+ 
+ ### F.5. Lemas auxiliares y adaptaciones de remoción cordal
+ 

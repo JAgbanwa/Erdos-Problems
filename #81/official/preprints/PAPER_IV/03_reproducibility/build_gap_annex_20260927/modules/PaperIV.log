@@ -1,0 +1,10 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 PaperIV.lean -o /workspace/request-project/.lake/runner/lib/lean/PaperIV.olean -i /workspace/request-project/.lake/runner/lib/lean/PaperIV.ilean
+import took 8.34s
+cumulative profiling times:
+	.olean serialization 4.02ms
+	elaboration 0.0661ms
+	import 8.34s
+	initialization 40.1ms
+	interpretation 305ms
+	linting 0.197ms
+	parsing 0.00237ms

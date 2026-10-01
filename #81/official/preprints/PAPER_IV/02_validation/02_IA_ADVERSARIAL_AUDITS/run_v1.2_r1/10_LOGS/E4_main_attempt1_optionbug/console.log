@@ -1,0 +1,19 @@
+FAIL 1 607 PaperIV.ChordalStructure 67.0s exit 1
+BLOCKED 2 607 PaperIV.FarRounding
+BLOCKED 3 607 A4S1.HostAbsorption
+FAIL 4 607 PaperIV.Model 15.7s exit 1
+BLOCKED 5 607 PaperIV.PhysicalCompletion
+Traceback (most recent call last):
+  File "C:\Users\jtraverso\e81p4-publish\preprints\PAPER_IV\02_validation\02_IA_ADVERSARIAL_AUDITS\run_v1.2_r1\20_EVIDENCE\E4\auditor_build.py", line 156, in <module>
+    'targets_status': {t: done.get(t, {}).get('status') for t in targets}}
+     ^^^^^^
+  File "C:\Users\jtraverso\e81p4-publish\preprints\PAPER_IV\02_validation\02_IA_ADVERSARIAL_AUDITS\run_v1.2_r1\20_EVIDENCE\E4\auditor_build.py", line 135, in main
+    if prev and prev.get('status') == 'PASS' and prev.get('key') == key and olean.exists() and sha(olean) == prev.get('olean_sha256') and m not in targets:
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jtraverso\AppData\Local\Programs\Python\Python312\Lib\pathlib.py", line 1047, in write_text
+    with self.open(mode='w', encoding=encoding, errors=errors, newline=newline) as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jtraverso\AppData\Local\Programs\Python\Python312\Lib\pathlib.py", line 1013, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\jtraverso\\e81p4-publish\\preprints\\PAPER_IV\\02_validation\\02_IA_ADVERSARIAL_AUDITS\\run_v1.2_r1\\10_LOGS\\E4_main\\modules\\PaperIV.SplitUniformIncidence.log'

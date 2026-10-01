@@ -1,0 +1,24 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 PaperIV/PhysicalToCliquePartition.lean -o /workspace/request-project/.lake/runner/lib/lean/PaperIV/PhysicalToCliquePartition.olean -i /workspace/request-project/.lake/runner/lib/lean/PaperIV/PhysicalToCliquePartition.ilean
+import took 2.99s
+cumulative profiling times:
+	.olean serialization 50ms
+	attribute application 1.29ms
+	compilation (IR) 0.235ms
+	compilation (LCNF base) 0.54ms
+	compilation (LCNF mono) 0.154ms
+	congr simp thm 2.46ms
+	elaboration 22.2ms
+	fix level params 0.168ms
+	import 2.99s
+	initialization 36.1ms
+	instantiate metavars 0.5ms
+	interpretation 184ms
+	let-to-have transformation 0.0683ms
+	linting 4.1ms
+	parsing 2.8ms
+	process pre-definitions 3.08ms
+	share common exprs 0.43ms
+	simp 18.2ms
+	tactic execution 21.7ms
+	type checking 31.6ms
+	typeclass inference 23.3ms

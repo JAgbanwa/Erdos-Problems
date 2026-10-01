@@ -1,0 +1,29 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 PaperV/ConflictGraph.lean -o /workspace/request-project/.lake/runner/lib/lean/PaperV/ConflictGraph.olean -i /workspace/request-project/.lake/runner/lib/lean/PaperV/ConflictGraph.ilean
+PaperV/ConflictGraph.lean:179:55: warning: unused variable `hX`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+import took 2.45s
+cumulative profiling times:
+	.olean serialization 46.6ms
+	attribute application 1.27ms
+	blocked (unaccounted) 4.91ms
+	compilation (IR) 2.1ms
+	compilation (LCNF base) 3.82ms
+	compilation (LCNF mono) 2.98ms
+	congr simp thm 9.6ms
+	elaboration 53.3ms
+	fix level params 0.924ms
+	import 2.45s
+	initialization 36.1ms
+	instantiate metavars 3.33ms
+	interpretation 231ms
+	let-to-have transformation 0.135ms
+	linting 16.3ms
+	norm_num 1.15ms
+	parsing 9.43ms
+	process pre-definitions 8.57ms
+	share common exprs 2.55ms
+	simp 102ms
+	tactic execution 107ms
+	type checking 82.9ms
+	typeclass inference 342ms

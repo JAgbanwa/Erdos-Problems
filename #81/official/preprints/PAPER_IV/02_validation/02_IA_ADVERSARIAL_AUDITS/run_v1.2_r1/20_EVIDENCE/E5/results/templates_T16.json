@@ -1,0 +1,185 @@
+{
+ "T16": {
+  "id": "T16",
+  "claim": "Prop D.1: c4(K_n)<=M(n) (n<=13 checked); Prop D.2: n=4 mod 6 => every order<=3 partition of K_n has >M(n) pieces (c3(K_10)=M(10)+1=19)",
+  "manuscript_lines": "1705-1761",
+  "method": "CBC ILP constructs packings; completions verified exactly; D.2 lower bound by exact parity argument (independent), upper bound by verified partition; second ILP solve with <=M(n) (solver-dependent)",
+  "evidence_type": "exact constructions (D.1); exact value certified by parity bound + verified partition (D.2); ILP infeasibility solver-dependent",
+  "parameters": {
+   "D.1 n": [
+    0,
+    13
+   ],
+   "D.2 n": [
+    4,
+    10,
+    16
+   ],
+   "note": "D.2 second (infeasibility) ILP solve only for n<=10; for n=16 it exceeded the time budget in a first attempt and was skipped"
+  },
+  "details": {
+   "D.1": [
+    {
+     "n": 0,
+     "M": 0,
+     "pieces": 0,
+     "ok": true
+    },
+    {
+     "n": 1,
+     "M": 0,
+     "pieces": 0,
+     "ok": true
+    },
+    {
+     "n": 2,
+     "M": 1,
+     "status": "Optimal",
+     "pieces": 1,
+     "gain": 0,
+     "verified": true,
+     "ok": true
+    },
+    {
+     "n": 3,
+     "M": 2,
+     "status": "Optimal",
+     "pieces": 1,
+     "gain": 2,
+     "verified": true,
+     "ok": true
+    },
+    {
+     "n": 4,
+     "M": 3,
+     "status": "Optimal",
+     "pieces": 1,
+     "gain": 5,
+     "verified": true,
+     "ok": true
+    },
+    {
+     "n": 5,
+     "M": 5,
+     "status": "Optimal",
+     "pieces": 5,
+     "gain": 5,
+     "verified": true,
+     "ok": true
+    },
+    {
+     "n": 6,
+     "M": 7,
+     "status": "Optimal",
+     "pieces": 7,
+     "gain": 8,
+     "verified": true,
+     "ok": true
+    },
+    {
+     "n": 7,
+     "M": 9,
+     "status": "Optimal",
+     "pieces": 7,
+     "gain": 14,
+     "verified": true,
+     "ok": true
+    },
+    {
+     "n": 8,
+     "M": 12,
+     "status": "Optimal",
+     "pieces": 11,
+     "gain": 17,
+     "verified": true,
+     "ok": true
+    },
+    {
+     "n": 9,
+     "M": 15,
+     "status": "Optimal",
+     "pieces": 12,
+     "gain": 24,
+     "verified": true,
+     "ok": true
+    },
+    {
+     "n": 10,
+     "M": 18,
+     "status": "Optimal",
+     "pieces": 12,
+     "gain": 33,
+     "verified": true,
+     "ok": true
+    },
+    {
+     "n": 11,
+     "M": 22,
+     "status": "Optimal",
+     "pieces": 13,
+     "gain": 42,
+     "verified": true,
+     "ok": true
+    },
+    {
+     "n": 12,
+     "M": 26,
+     "status": "Optimal",
+     "pieces": 13,
+     "gain": 53,
+     "verified": true,
+     "ok": true
+    },
+    {
+     "n": 13,
+     "M": 30,
+     "status": "Optimal",
+     "pieces": 13,
+     "gain": 65,
+     "verified": true,
+     "ok": true
+    }
+   ],
+   "D.2": [
+    {
+     "n": 4,
+     "M": 3,
+     "c3_found": 4,
+     "parity_lower_bound": 4,
+     "verified": true,
+     "certified_exact": true,
+     "ILP_with_<=M(n)_status": "Infeasible",
+     "ok": true
+    },
+    {
+     "n": 10,
+     "M": 18,
+     "c3_found": 19,
+     "parity_lower_bound": 19,
+     "verified": true,
+     "certified_exact": true,
+     "ILP_with_<=M(n)_status": "Infeasible",
+     "ok": true
+    },
+    {
+     "n": 16,
+     "M": 45,
+     "c3_found": 46,
+     "parity_lower_bound": 46,
+     "verified": true,
+     "certified_exact": true,
+     "ILP_with_<=M(n)_status": "skipped (time budget)",
+     "ok": true
+    }
+   ]
+  },
+  "result": "PASS",
+  "negative_control": {
+   "description": "corrupted D.2 at n=9 (3 mod 6): order<=3 partition with <=M(9) pieces must exist (claim rejected)",
+   "c3(K9)_found": 12,
+   "M(9)": 15,
+   "result": "PASS (rejected)"
+  },
+  "runtime_s": 140.73
+ }
+}

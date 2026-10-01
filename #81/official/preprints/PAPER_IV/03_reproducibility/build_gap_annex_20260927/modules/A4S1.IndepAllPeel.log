@@ -1,0 +1,28 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 A4S1/IndepAllPeel.lean -o /workspace/request-project/.lake/runner/lib/lean/A4S1/IndepAllPeel.olean -i /workspace/request-project/.lake/runner/lib/lean/A4S1/IndepAllPeel.ilean
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_nlinarith_1._boxed took 234ms
+import took 8.57s
+.olean serialization took 255ms
+cumulative profiling times:
+	.olean serialization 255ms
+	attribute application 0.0413ms
+	compilation (IR) 2.18ms
+	compilation (LCNF base) 2.15ms
+	compilation (LCNF mono) 1.34ms
+	congr simp thm 4.49ms
+	elaboration 57.7ms
+	fix level params 1.69ms
+	import 8.57s
+	initialization 37.9ms
+	instantiate metavars 45ms
+	interpretation 767ms
+	let-to-have transformation 0.075ms
+	linting 29.6ms
+	norm_num 3.51ms
+	parsing 12.6ms
+	process pre-definitions 18.4ms
+	ring 20.4ms
+	share common exprs 5.96ms
+	simp 80.3ms
+	tactic execution 330ms
+	type checking 136ms
+	typeclass inference 309ms

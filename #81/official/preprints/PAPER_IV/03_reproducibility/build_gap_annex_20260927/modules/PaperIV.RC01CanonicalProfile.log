@@ -1,0 +1,30 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 PaperIV/RC01CanonicalProfile.lean -o /workspace/request-project/.lake/runner/lib/lean/PaperIV/RC01CanonicalProfile.olean -i /workspace/request-project/.lake/runner/lib/lean/PaperIV/RC01CanonicalProfile.ilean
+PaperIV/RC01CanonicalProfile.lean:36:8: warning: automatically included section variable(s) unused in theorem `_private.PaperIV.RC01CanonicalProfile.0.PaperIV.RC01CanonicalProfile.image_some_injective`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+import took 3.95s
+cumulative profiling times:
+	.olean serialization 95.1ms
+	attribute application 0.0854ms
+	compilation (IR) 0.241ms
+	compilation (LCNF base) 0.5ms
+	compilation (LCNF mono) 0.3ms
+	congr simp thm 1.95ms
+	elaboration 45.4ms
+	fix level params 0.663ms
+	import 3.95s
+	initialization 38.4ms
+	instantiate metavars 4.07ms
+	interpretation 280ms
+	let-to-have transformation 0.102ms
+	linting 28.6ms
+	parsing 5.36ms
+	process pre-definitions 5.7ms
+	share common exprs 1.58ms
+	simp 67.4ms
+	tactic execution 91.5ms
+	type checking 18.1ms
+	typeclass inference 87.1ms

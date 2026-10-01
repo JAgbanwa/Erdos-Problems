@@ -1,0 +1,37 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 PaperV/HostRealizer.lean -o /workspace/request-project/.lake/runner/lib/lean/PaperV/HostRealizer.olean -i /workspace/request-project/.lake/runner/lib/lean/PaperV/HostRealizer.ilean
+PaperV/HostRealizer.lean:88:0: warning: automatically included section variable(s) unused in theorem `PaperV.Host.csFeasible_hostCS_of_properOn`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+PaperV/HostRealizer.lean:94:0: warning: automatically included section variable(s) unused in theorem `PaperV.Host.base_injOn_of_csFeasible`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+import took 2.45s
+cumulative profiling times:
+	.olean serialization 54.4ms
+	attribute application 0.496ms
+	blocked (unaccounted) 101ms
+	compilation (IR) 2.94ms
+	compilation (LCNF base) 4.81ms
+	compilation (LCNF mono) 4.78ms
+	congr simp thm 1.88ms
+	elaboration 101ms
+	fix level params 0.917ms
+	import 2.45s
+	initialization 38.1ms
+	instantiate metavars 4.49ms
+	interpretation 254ms
+	let-to-have transformation 0.394ms
+	linting 19.5ms
+	parsing 10.3ms
+	process pre-definitions 9.82ms
+	share common exprs 1.95ms
+	simp 20.4ms
+	tactic execution 54ms
+	type checking 31ms
+	typeclass inference 131ms

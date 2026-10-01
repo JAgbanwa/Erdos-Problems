@@ -1,0 +1,36 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 PaperIV/JointTwoQuotaPhysical.lean -o /workspace/request-project/.lake/runner/lib/lean/PaperIV/JointTwoQuotaPhysical.olean -i /workspace/request-project/.lake/runner/lib/lean/PaperIV/JointTwoQuotaPhysical.ilean
+PaperIV/JointTwoQuotaPhysical.lean:50:0: warning: automatically included section variable(s) unused in theorem `PaperIV.JointTwoQuotaPhysical.subset_of_pairs_subset`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+PaperIV/JointTwoQuotaPhysical.lean:336:24: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+PaperIV/JointTwoQuotaPhysical.lean:432:24: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+import took 4.08s
+.olean serialization took 117ms
+cumulative profiling times:
+	.olean serialization 117ms
+	attribute application 0.158ms
+	congr simp thm 7.11ms
+	elaboration 82.2ms
+	fix level params 1.79ms
+	import 4.08s
+	initialization 38ms
+	instantiate metavars 34.2ms
+	interpretation 651ms
+	let-to-have transformation 0.237ms
+	linting 38.7ms
+	norm_num 90.3ms
+	parsing 18.3ms
+	process pre-definitions 19.6ms
+	ring 10.7ms
+	share common exprs 8.05ms
+	simp 30.1ms
+	tactic execution 403ms
+	type checking 169ms
+	typeclass inference 716ms

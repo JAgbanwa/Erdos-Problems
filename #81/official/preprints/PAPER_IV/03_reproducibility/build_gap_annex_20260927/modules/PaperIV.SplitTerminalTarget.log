@@ -1,0 +1,27 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 PaperIV/SplitTerminalTarget.lean -o /workspace/request-project/.lake/runner/lib/lean/PaperIV/SplitTerminalTarget.olean -i /workspace/request-project/.lake/runner/lib/lean/PaperIV/SplitTerminalTarget.ilean
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_linarith_1._boxed took 118ms
+import took 3.19s
+cumulative profiling times:
+	.olean serialization 64.1ms
+	attribute application 0.0669ms
+	compilation (IR) 6.01ms
+	compilation (LCNF base) 5.9ms
+	compilation (LCNF mono) 3.12ms
+	congr simp thm 5.84ms
+	elaboration 34.9ms
+	fix level params 0.41ms
+	import 3.19s
+	initialization 40.2ms
+	instantiate metavars 3.1ms
+	interpretation 357ms
+	let-to-have transformation 0.0842ms
+	linting 12.7ms
+	norm_num 49.5ms
+	parsing 6.41ms
+	process pre-definitions 5.28ms
+	ring 27.9ms
+	share common exprs 5.69ms
+	simp 247ms
+	tactic execution 84.4ms
+	type checking 68.9ms
+	typeclass inference 412ms

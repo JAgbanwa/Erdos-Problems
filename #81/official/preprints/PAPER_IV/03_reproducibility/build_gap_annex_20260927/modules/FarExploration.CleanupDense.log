@@ -1,0 +1,48 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 FarExploration/CleanupDense.lean -o /workspace/request-project/.lake/runner/lib/lean/FarExploration/CleanupDense.olean -i /workspace/request-project/.lake/runner/lib/lean/FarExploration/CleanupDense.ilean
+FarExploration/CleanupDense.lean:296:23: warning: unused variable `hn`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+FarExploration/CleanupDense.lean:303:22: warning: unused variable `hn`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+FarExploration/CleanupDense.lean:514:12: warning: `div_add_div_same` has been deprecated: Use `add_div` instead
+
+Note: The updated constant has a different type:
+  ∀ {K : Type u_1} [inst : DivisionSemiring K] (a b c : K), (a + b) / c = a / c + b / c
+instead of
+  ∀ {K : Type u_1} [inst : DivisionSemiring K] (a b c : K), a / c + b / c = (a + b) / c
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_nlinarith_1._boxed took 293ms
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_nlinarith_1._boxed took 221ms
+FarExploration/CleanupDense.lean:523:75: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_nlinarith_1._boxed took 280ms
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_nlinarith_1._boxed took 392ms
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_nlinarith_1._boxed took 340ms
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_nlinarith_1._boxed took 597ms
+import took 3.93s
+.olean serialization took 144ms
+cumulative profiling times:
+	.olean serialization 144ms
+	attribute application 1.81ms
+	compilation (IR) 29.6ms
+	compilation (LCNF base) 31.6ms
+	compilation (LCNF mono) 13.4ms
+	congr simp thm 34.7ms
+	elaboration 170ms
+	fix level params 3.65ms
+	import 3.93s
+	initialization 36.5ms
+	instantiate metavars 29.6ms
+	interpretation 4.27s
+	let-to-have transformation 0.511ms
+	linting 87.4ms
+	norm_num 912ms
+	parsing 34.3ms
+	process pre-definitions 74.1ms
+	ring 164ms
+	share common exprs 63.9ms
+	simp 419ms
+	tactic execution 846ms
+	type checking 536ms
+	typeclass inference 2.49s

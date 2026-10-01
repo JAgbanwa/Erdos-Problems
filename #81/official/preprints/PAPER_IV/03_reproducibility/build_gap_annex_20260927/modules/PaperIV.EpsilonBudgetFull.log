@@ -1,0 +1,26 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 PaperIV/EpsilonBudgetFull.lean -o /workspace/request-project/.lake/runner/lib/lean/PaperIV/EpsilonBudgetFull.olean -i /workspace/request-project/.lake/runner/lib/lean/PaperIV/EpsilonBudgetFull.ilean
+PaperIV/EpsilonBudgetFull.lean:111:35: warning: unused variable `hε`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+import took 3.13s
+cumulative profiling times:
+	.olean serialization 45.7ms
+	attribute application 0.0572ms
+	congr simp thm 1.88ms
+	elaboration 26.9ms
+	fix level params 0.429ms
+	import 3.13s
+	initialization 35.9ms
+	instantiate metavars 0.91ms
+	interpretation 323ms
+	let-to-have transformation 0.0912ms
+	linting 9.76ms
+	norm_num 46.2ms
+	parsing 3.3ms
+	process pre-definitions 6.6ms
+	ring 24.6ms
+	share common exprs 5.23ms
+	simp 7.16ms
+	tactic execution 25.5ms
+	type checking 46.3ms
+	typeclass inference 120ms

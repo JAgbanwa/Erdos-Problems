@@ -1,0 +1,59 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 A4S1/ApexChordalSharp.lean -o /workspace/request-project/.lake/runner/lib/lean/A4S1/ApexChordalSharp.olean -i /workspace/request-project/.lake/runner/lib/lean/A4S1/ApexChordalSharp.ilean
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_nlinarith_1._boxed took 377ms
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_nlinarith_1._boxed took 487ms
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_nlinarith_1._boxed took 259ms
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_nlinarith_1._boxed took 292ms
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_nlinarith_1._boxed took 360ms
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_nlinarith_1._boxed took 337ms
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_nlinarith_1._boxed took 536ms
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_nlinarith_1._boxed took 285ms
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_nlinarith_1._boxed took 370ms
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_nlinarith_1._boxed took 491ms
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_nlinarith_1._boxed took 728ms
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_nlinarith_1._boxed took 728ms
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_nlinarith_1._boxed took 830ms
+interpretation of Aesop.BuiltinRules.subst._boxed took 115ms
+interpretation of Aesop.BuiltinRules.subst._boxed took 117ms
+interpretation of Aesop.BuiltinRules.subst._boxed took 118ms
+interpretation of Aesop.BuiltinRules.subst._boxed took 119ms
+interpretation of Aesop.BuiltinRules.subst._boxed took 129ms
+interpretation of Aesop.BuiltinRules.subst._boxed took 120ms
+interpretation of Mathlib.Meta.Positivity.evalNatCast._lam_1._boxed took 459ms
+interpretation of Mathlib.Tactic.Positivity._aux_Mathlib_Tactic_Positivity_Core___elabRules_Mathlib_Tactic_Positivity_positivity_1._boxed took 229ms
+interpretation of Aesop.BuiltinRules.subst._boxed took 118ms
+interpretation of Aesop.BuiltinRules.subst._boxed took 119ms
+interpretation of Aesop.BuiltinRules.subst._boxed took 119ms
+interpretation of Aesop.BuiltinRules.subst._boxed took 118ms
+interpretation of Aesop.BuiltinRules.subst._boxed took 118ms
+interpretation of Mathlib.Meta.Positivity.evalNatCast._lam_1._boxed took 407ms
+interpretation of Mathlib.Tactic.Positivity._aux_Mathlib_Tactic_Positivity_Core___elabRules_Mathlib_Tactic_Positivity_positivity_1._boxed took 230ms
+tactic execution of Lean.Parser.Tactic.refine took 376ms
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_linarith_1._boxed took 228ms
+instantiate metavars took 178ms
+type checking took 119ms
+import took 4.02s
+.olean serialization took 185ms
+cumulative profiling times:
+	.olean serialization 185ms
+	attribute application 0.0803ms
+	compilation (IR) 45.7ms
+	compilation (LCNF base) 42.8ms
+	compilation (LCNF mono) 18.9ms
+	congr simp thm 93.2ms
+	elaboration 115ms
+	fix level params 5.78ms
+	import 4.02s
+	initialization 36.2ms
+	instantiate metavars 211ms
+	interpretation 10.3s
+	let-to-have transformation 0.756ms
+	linting 62ms
+	norm_num 549ms
+	parsing 22.7ms
+	process pre-definitions 65.6ms
+	ring 243ms
+	share common exprs 120ms
+	simp 4.01s
+	tactic execution 1.93s
+	type checking 775ms
+	typeclass inference 3.54s

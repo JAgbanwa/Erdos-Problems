@@ -1,0 +1,351 @@
+{
+ "T06s": {
+  "id": "T06s (supplementary to T06, not predeclared)",
+  "claim": "(5.1a) F_4(S_C) upper bounds by branch, r>=4, nonempty exterior",
+  "manuscript_lines": "458-468",
+  "method": "exact LP with verified certificates for K_r v I_h, 4<=r<=11, r+h<=12",
+  "evidence_type": "exact (small instances)",
+  "parameters": {},
+  "details": {
+   "instances": [
+    {
+     "r": 4,
+     "h": 1,
+     "F4": "5/3",
+     "status": "exact",
+     "checks": {
+      "b0<=a0: <=(a0+b0)/6": true
+     }
+    },
+    {
+     "r": 4,
+     "h": 2,
+     "F4": "10/3",
+     "status": "exact",
+     "checks": {
+      "a0<=b0<=2a0: <=(2b0-a0)/3": true
+     }
+    },
+    {
+     "r": 4,
+     "h": 3,
+     "F4": "6",
+     "status": "exact",
+     "checks": {
+      "b0>=2a0: <=b0-a0": true,
+      "a0<=b0<=2a0: <=(2b0-a0)/3": true
+     }
+    },
+    {
+     "r": 4,
+     "h": 4,
+     "F4": "10",
+     "status": "exact",
+     "checks": {
+      "b0>=2a0: <=b0-a0": true
+     }
+    },
+    {
+     "r": 4,
+     "h": 5,
+     "F4": "14",
+     "status": "exact",
+     "checks": {
+      "b0>=2a0: <=b0-a0": true
+     }
+    },
+    {
+     "r": 4,
+     "h": 6,
+     "F4": "18",
+     "status": "exact",
+     "checks": {
+      "b0>=2a0: <=b0-a0": true
+     }
+    },
+    {
+     "r": 4,
+     "h": 7,
+     "F4": "22",
+     "status": "exact",
+     "checks": {
+      "b0>=2a0: <=b0-a0": true
+     }
+    },
+    {
+     "r": 4,
+     "h": 8,
+     "F4": "26",
+     "status": "exact",
+     "checks": {
+      "b0>=2a0: <=b0-a0": true
+     }
+    },
+    {
+     "r": 5,
+     "h": 1,
+     "F4": "5/2",
+     "status": "exact",
+     "checks": {
+      "b0<=a0: <=(a0+b0)/6": true
+     }
+    },
+    {
+     "r": 5,
+     "h": 2,
+     "F4": "10/3",
+     "status": "exact",
+     "checks": {
+      "a0<=b0<=2a0: <=(2b0-a0)/3": true,
+      "b0<=a0: <=(a0+b0)/6": true
+     }
+    },
+    {
+     "r": 5,
+     "h": 3,
+     "F4": "20/3",
+     "status": "exact",
+     "checks": {
+      "a0<=b0<=2a0: <=(2b0-a0)/3": true
+     }
+    },
+    {
+     "r": 5,
+     "h": 4,
+     "F4": "10",
+     "status": "exact",
+     "checks": {
+      "b0>=2a0: <=b0-a0": true,
+      "a0<=b0<=2a0: <=(2b0-a0)/3": true
+     }
+    },
+    {
+     "r": 5,
+     "h": 5,
+     "F4": "15",
+     "status": "exact",
+     "checks": {
+      "b0>=2a0: <=b0-a0": true
+     }
+    },
+    {
+     "r": 5,
+     "h": 6,
+     "F4": "20",
+     "status": "exact",
+     "checks": {
+      "b0>=2a0: <=b0-a0": true
+     }
+    },
+    {
+     "r": 5,
+     "h": 7,
+     "F4": "25",
+     "status": "exact",
+     "checks": {
+      "b0>=2a0: <=b0-a0": true
+     }
+    },
+    {
+     "r": 6,
+     "h": 1,
+     "F4": "7/2",
+     "status": "exact",
+     "checks": {
+      "b0<=a0: <=(a0+b0)/6": true
+     }
+    },
+    {
+     "r": 6,
+     "h": 2,
+     "F4": "9/2",
+     "status": "exact",
+     "checks": {
+      "b0<=a0: <=(a0+b0)/6": true
+     }
+    },
+    {
+     "r": 6,
+     "h": 3,
+     "F4": "7",
+     "status": "exact",
+     "checks": {
+      "a0<=b0<=2a0: <=(2b0-a0)/3": true
+     }
+    },
+    {
+     "r": 6,
+     "h": 4,
+     "F4": "11",
+     "status": "exact",
+     "checks": {
+      "a0<=b0<=2a0: <=(2b0-a0)/3": true
+     }
+    },
+    {
+     "r": 6,
+     "h": 5,
+     "F4": "15",
+     "status": "exact",
+     "checks": {
+      "b0>=2a0: <=b0-a0": true,
+      "a0<=b0<=2a0: <=(2b0-a0)/3": true
+     }
+    },
+    {
+     "r": 6,
+     "h": 6,
+     "F4": "21",
+     "status": "exact",
+     "checks": {
+      "b0>=2a0: <=b0-a0": true
+     }
+    },
+    {
+     "r": 7,
+     "h": 1,
+     "F4": "14/3",
+     "status": "exact",
+     "checks": {
+      "b0<=a0: <=(a0+b0)/6": true
+     }
+    },
+    {
+     "r": 7,
+     "h": 2,
+     "F4": "35/6",
+     "status": "exact",
+     "checks": {
+      "b0<=a0: <=(a0+b0)/6": true
+     }
+    },
+    {
+     "r": 7,
+     "h": 3,
+     "F4": "7",
+     "status": "exact",
+     "checks": {
+      "a0<=b0<=2a0: <=(2b0-a0)/3": true,
+      "b0<=a0: <=(a0+b0)/6": true
+     }
+    },
+    {
+     "r": 7,
+     "h": 4,
+     "F4": "35/3",
+     "status": "exact",
+     "checks": {
+      "a0<=b0<=2a0: <=(2b0-a0)/3": true
+     }
+    },
+    {
+     "r": 7,
+     "h": 5,
+     "F4": "49/3",
+     "status": "exact",
+     "checks": {
+      "a0<=b0<=2a0: <=(2b0-a0)/3": true
+     }
+    },
+    {
+     "r": 8,
+     "h": 1,
+     "F4": "6",
+     "status": "exact",
+     "checks": {
+      "b0<=a0: <=(a0+b0)/6": true
+     }
+    },
+    {
+     "r": 8,
+     "h": 2,
+     "F4": "22/3",
+     "status": "exact",
+     "checks": {
+      "b0<=a0: <=(a0+b0)/6": true
+     }
+    },
+    {
+     "r": 8,
+     "h": 3,
+     "F4": "26/3",
+     "status": "exact",
+     "checks": {
+      "b0<=a0: <=(a0+b0)/6": true
+     }
+    },
+    {
+     "r": 8,
+     "h": 4,
+     "F4": "12",
+     "status": "exact",
+     "checks": {
+      "a0<=b0<=2a0: <=(2b0-a0)/3": true
+     }
+    },
+    {
+     "r": 9,
+     "h": 1,
+     "F4": "15/2",
+     "status": "exact",
+     "checks": {
+      "b0<=a0: <=(a0+b0)/6": true
+     }
+    },
+    {
+     "r": 9,
+     "h": 2,
+     "F4": "9",
+     "status": "exact",
+     "checks": {
+      "b0<=a0: <=(a0+b0)/6": true
+     }
+    },
+    {
+     "r": 9,
+     "h": 3,
+     "F4": "21/2",
+     "status": "exact",
+     "checks": {
+      "b0<=a0: <=(a0+b0)/6": true
+     }
+    },
+    {
+     "r": 10,
+     "h": 1,
+     "F4": "55/6",
+     "status": "exact",
+     "checks": {
+      "b0<=a0: <=(a0+b0)/6": true
+     }
+    },
+    {
+     "r": 10,
+     "h": 2,
+     "F4": "65/6",
+     "status": "exact",
+     "checks": {
+      "b0<=a0: <=(a0+b0)/6": true
+     }
+    },
+    {
+     "r": 11,
+     "h": 1,
+     "F4": "11",
+     "status": "exact",
+     "checks": {
+      "b0<=a0: <=(a0+b0)/6": true
+     }
+    }
+   ],
+   "violations": [],
+   "inexact_lp": []
+  },
+  "result": "PASS",
+  "negative_control": {
+   "description": "none",
+   "result": "N/A"
+  },
+  "runtime_s": 4.81
+ }
+}

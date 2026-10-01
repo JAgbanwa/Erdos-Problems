@@ -1,0 +1,22 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 Nibble/BernoulliSpace.lean -o /workspace/request-project/.lake/runner/lib/lean/Nibble/BernoulliSpace.olean -i /workspace/request-project/.lake/runner/lib/lean/Nibble/BernoulliSpace.ilean
+import took 4.39s
+.olean serialization took 107ms
+cumulative profiling times:
+	.olean serialization 107ms
+	attribute application 0.0119ms
+	congr simp thm 2.63ms
+	elaboration 6.83ms
+	fix level params 0.137ms
+	import 4.39s
+	initialization 38.3ms
+	instantiate metavars 1.11ms
+	interpretation 250ms
+	let-to-have transformation 0.0154ms
+	linting 4.52ms
+	parsing 2.74ms
+	process pre-definitions 1.64ms
+	share common exprs 0.683ms
+	simp 20.6ms
+	tactic execution 71.5ms
+	type checking 17.6ms
+	typeclass inference 103ms

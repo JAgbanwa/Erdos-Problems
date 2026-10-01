@@ -1,0 +1,29 @@
+$ c:\Users\jtraverso\.elan\toolchains\leanprover--lean4---v4.28.0\bin\lean.exe -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false PaperIV/F4EditRobustness.lean -o C:\Users\jtraverso\e81p4\opt_build_20260927\.lake\runner\lib\lean\PaperIV\F4EditRobustness.olean -i C:\Users\jtraverso\e81p4\opt_build_20260927\.lake\runner\lib\lean\PaperIV\F4EditRobustness.ilean
+PaperIV/F4EditRobustness.lean:19:0: warning: automatically included section variable(s) unused in theorem `PaperIV.F4EditRobustness.isItem_mono`:
+  [Fintype V]
+  [DecidableEq V]
+  [DecidableRel G.Adj]
+  [DecidableRel H.Adj]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] [DecidableEq V] [DecidableRel G.Adj] [DecidableRel H.Adj] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+PaperIV/F4EditRobustness.lean:117:38: warning: unused variable `hGH`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+PaperIV/F4EditRobustness.lean:133:0: warning: automatically included section variable(s) unused in theorem `PaperIV.F4EditRobustness.gainF_nonneg_real`:
+  [Fintype V]
+  [DecidableEq V]
+  [DecidableRel H.Adj]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] [DecidableEq V] [DecidableRel H.Adj] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+PaperIV/F4EditRobustness.lean:143:0: warning: automatically included section variable(s) unused in theorem `PaperIV.F4EditRobustness.gainF_le_five_real`:
+  [Fintype V]
+  [DecidableEq V]
+  [DecidableRel H.Adj]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] [DecidableEq V] [DecidableRel H.Adj] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`

@@ -1,0 +1,21 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 PaperIV/SubgraphPadding.lean -o /workspace/request-project/.lake/runner/lib/lean/PaperIV/SubgraphPadding.olean -i /workspace/request-project/.lake/runner/lib/lean/PaperIV/SubgraphPadding.ilean
+import took 2.88s
+cumulative profiling times:
+	.olean serialization 51ms
+	attribute application 0.0162ms
+	congr simp thm 1.38ms
+	elaboration 15ms
+	fix level params 0.923ms
+	import 2.88s
+	initialization 34.9ms
+	instantiate metavars 10.9ms
+	interpretation 193ms
+	let-to-have transformation 0.0208ms
+	linting 28.4ms
+	parsing 3.87ms
+	process pre-definitions 5.44ms
+	share common exprs 2.04ms
+	simp 4.46ms
+	tactic execution 151ms
+	type checking 13.2ms
+	typeclass inference 63.6ms

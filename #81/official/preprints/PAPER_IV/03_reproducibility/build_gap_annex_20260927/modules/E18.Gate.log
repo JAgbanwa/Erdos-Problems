@@ -1,0 +1,61 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 E18/Gate.lean -o /workspace/request-project/.lake/runner/lib/lean/E18/Gate.olean -i /workspace/request-project/.lake/runner/lib/lean/E18/Gate.ilean
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_nlinarith_1._boxed took 724ms
+typeclass inference of Nonempty took 180ms
+typeclass inference of Nonempty took 121ms
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_linarith_1._boxed took 144ms
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_linarith_1._boxed took 139ms
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_linarith_1._boxed took 144ms
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_linarith_1._boxed took 140ms
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_linarith_1._boxed took 133ms
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_linarith_1._boxed took 141ms
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_linarith_1._boxed took 175ms
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_linarith_1._boxed took 141ms
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_linarith_1._boxed took 150ms
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_linarith_1._boxed took 167ms
+instantiate metavars took 168ms
+E18/Gate.lean:548:24: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_nlinarith_1._boxed took 632ms
+elaboration took 124ms
+tactic execution of Lean.Parser.Tactic.rewriteSeq took 137ms
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_nlinarith_1._boxed took 546ms
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_nlinarith_1._boxed took 622ms
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_nlinarith_1._boxed took 596ms
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_nlinarith_1._boxed took 631ms
+E18/Gate.lean:636:50: warning: unused variable `hv`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+E18/Gate.lean:638:9: warning: unused variable `hchoice3`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+E18/Gate.lean:639:9: warning: unused variable `hchoice4`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+import took 3.97s
+.olean serialization took 199ms
+cumulative profiling times:
+	.olean serialization 199ms
+	attribute application 0.173ms
+	blocked (unaccounted) 926ms
+	compilation (IR) 54.9ms
+	compilation (LCNF base) 51.2ms
+	compilation (LCNF mono) 26ms
+	congr simp thm 34.9ms
+	elaboration 312ms
+	fix level params 4.56ms
+	import 3.97s
+	initialization 39ms
+	instantiate metavars 267ms
+	interpretation 7.4s
+	let-to-have transformation 0.426ms
+	linting 142ms
+	norm_num 1.01s
+	parsing 42.7ms
+	process pre-definitions 130ms
+	ring 250ms
+	share common exprs 103ms
+	simp 649ms
+	tactic execution 1.76s
+	type checking 373ms
+	typeclass inference 4.26s

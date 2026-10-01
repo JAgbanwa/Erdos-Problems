@@ -1,0 +1,35 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 PaperIV/RC01MarkedRounding.lean -o /workspace/request-project/.lake/runner/lib/lean/PaperIV/RC01MarkedRounding.olean -i /workspace/request-project/.lake/runner/lib/lean/PaperIV/RC01MarkedRounding.ilean
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_nlinarith_1._boxed took 480ms
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_nlinarith_1._boxed took 327ms
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_nlinarith_1._boxed took 814ms
+PaperIV/RC01MarkedRounding.lean:106:17: warning: unused variable `hn`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_nlinarith_1._boxed took 424ms
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_nlinarith_1._boxed took 622ms
+import took 3.65s
+.olean serialization took 142ms
+cumulative profiling times:
+	.olean serialization 142ms
+	attribute application 0.115ms
+	compilation (IR) 1.79ms
+	compilation (LCNF base) 1.85ms
+	compilation (LCNF mono) 0.721ms
+	congr simp thm 11.6ms
+	elaboration 128ms
+	fix level params 2.82ms
+	import 3.65s
+	initialization 46.2ms
+	instantiate metavars 38.7ms
+	interpretation 3.56s
+	let-to-have transformation 0.276ms
+	linting 39ms
+	norm_num 566ms
+	parsing 13.9ms
+	process pre-definitions 41.8ms
+	ring 105ms
+	share common exprs 42.1ms
+	simp 47.4ms
+	tactic execution 205ms
+	type checking 183ms
+	typeclass inference 1.57s

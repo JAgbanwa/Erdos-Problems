@@ -1,0 +1,31 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 PaperIV/NearH1PromotionAccounts.lean -o /workspace/request-project/.lake/runner/lib/lean/PaperIV/NearH1PromotionAccounts.olean -i /workspace/request-project/.lake/runner/lib/lean/PaperIV/NearH1PromotionAccounts.ilean
+PaperIV/NearH1PromotionAccounts.lean:19:0: warning: automatically included section variable(s) unused in theorem `PaperIV.NearH1PromotionAccounts.notMem_of_notMem_of_subset`:
+  [Fintype V]
+  [DecidableEq V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] [DecidableEq V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+PaperIV/NearH1PromotionAccounts.lean:32:13: warning: unused variable `hx`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+import took 2.87s
+cumulative profiling times:
+	.olean serialization 49ms
+	attribute application 0.0564ms
+	congr simp thm 1.77ms
+	elaboration 21.6ms
+	fix level params 0.225ms
+	import 2.87s
+	initialization 34.5ms
+	instantiate metavars 0.234ms
+	interpretation 195ms
+	let-to-have transformation 0.0685ms
+	linting 7.16ms
+	parsing 3.18ms
+	process pre-definitions 1.89ms
+	share common exprs 0.487ms
+	simp 10.6ms
+	tactic execution 33.2ms
+	type checking 9.83ms
+	typeclass inference 34.9ms

@@ -1,0 +1,33 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 PaperIV/NibblePort.lean -o /workspace/request-project/.lake/runner/lib/lean/PaperIV/NibblePort.olean -i /workspace/request-project/.lake/runner/lib/lean/PaperIV/NibblePort.ilean
+PaperIV/NibblePort.lean:153:0: warning: automatically included section variable(s) unused in theorem `PaperIV.NibblePort.cliqueOf_pairs`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+import took 2.86s
+cumulative profiling times:
+	.olean serialization 59.5ms
+	attribute application 0.137ms
+	blocked (unaccounted) 14.9ms
+	compilation (IR) 0.655ms
+	compilation (LCNF base) 1.08ms
+	compilation (LCNF mono) 0.96ms
+	congr simp thm 2ms
+	elaboration 70.4ms
+	fix level params 0.664ms
+	import 2.86s
+	initialization 37.6ms
+	instantiate metavars 2.42ms
+	interpretation 255ms
+	let-to-have transformation 0.169ms
+	linting 17.6ms
+	norm_num 1.54ms
+	parsing 11.9ms
+	process pre-definitions 10.2ms
+	ring 2.94ms
+	share common exprs 2.11ms
+	simp 11.2ms
+	tactic execution 92.9ms
+	type checking 47.8ms
+	typeclass inference 100ms

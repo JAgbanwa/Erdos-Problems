@@ -1,0 +1,57 @@
+$ c:\Users\jtraverso\.elan\toolchains\leanprover--lean4---v4.28.0\bin\lean.exe -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false PaperIV/RD09RootExteriorAdapter.lean -o C:\Users\jtraverso\e81p4\opt_build_20260927\.lake\runner\lib\lean\PaperIV\RD09RootExteriorAdapter.olean -i C:\Users\jtraverso\e81p4\opt_build_20260927\.lake\runner\lib\lean\PaperIV\RD09RootExteriorAdapter.ilean
+PaperIV/RD09RootExteriorAdapter.lean:40:8: warning: automatically included section variable(s) unused in theorem `PaperIV.RD09RootExteriorAdapter.exteriorGraph_adj`:
+  [DecidableRel G.Adj]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableRel G.Adj] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+PaperIV/RD09RootExteriorAdapter.lean:49:0: warning: automatically included section variable(s) unused in theorem `PaperIV.RD09RootExteriorAdapter.exteriorEmbedding_hom`:
+  [DecidableRel G.Adj]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableRel G.Adj] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+PaperIV/RD09RootExteriorAdapter.lean:54:0: warning: automatically included section variable(s) unused in theorem `PaperIV.RD09RootExteriorAdapter.exteriorEmbedding_reflect`:
+  [DecidableRel G.Adj]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableRel G.Adj] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+PaperIV/RD09RootExteriorAdapter.lean:133:0: warning: automatically included section variable(s) unused in theorem `PaperIV.RD09RootExteriorAdapter.cliqueNum_exteriorGraph_le`:
+  [DecidableRel G.Adj]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableRel G.Adj] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+PaperIV/RD09RootExteriorAdapter.lean:161:8: warning: automatically included section variable(s) unused in theorem `PaperIV.RD09RootExteriorAdapter.rootVertex_mem`:
+  [Fintype V]
+  [DecidableEq V]
+  [Fintype I]
+  [DecidableEq I]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] [DecidableEq V] [Fintype I] [DecidableEq I] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+PaperIV/RD09RootExteriorAdapter.lean:165:0: warning: automatically included section variable(s) unused in theorem `PaperIV.RD09RootExteriorAdapter.rootVertex_injective`:
+  [Fintype V]
+  [DecidableEq V]
+  [Fintype I]
+  [DecidableEq I]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] [DecidableEq V] [Fintype I] [DecidableEq I] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+PaperIV/RD09RootExteriorAdapter.lean:182:8: warning: automatically included section variable(s) unused in theorem `PaperIV.RD09RootExteriorAdapter.card_RootIndex`:
+  [Fintype V]
+  [DecidableEq V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] [DecidableEq V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+PaperIV/RD09RootExteriorAdapter.lean:243:0: warning: automatically included section variable(s) unused in theorem `PaperIV.RD09RootExteriorAdapter.compatiblePaddedHostBase_subset_outsideEdges`:
+  [Nonempty I]
+  [Group I]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Nonempty I] [Group I] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`

@@ -1,0 +1,26 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 PaperIV/Vizing.lean -o /workspace/request-project/.lake/runner/lib/lean/PaperIV/Vizing.olean -i /workspace/request-project/.lake/runner/lib/lean/PaperIV/Vizing.ilean
+import took 3.33s
+.olean serialization took 129ms
+cumulative profiling times:
+	.olean serialization 129ms
+	attribute application 7.32ms
+	blocked (unaccounted) 1.2s
+	compilation (IR) 1.47ms
+	compilation (LCNF base) 3.32ms
+	compilation (LCNF mono) 1.76ms
+	congr simp thm 13.4ms
+	elaboration 301ms
+	fix level params 8ms
+	import 3.33s
+	initialization 37.4ms
+	instantiate metavars 51.6ms
+	interpretation 849ms
+	let-to-have transformation 0.767ms
+	linting 88.9ms
+	parsing 55.5ms
+	process pre-definitions 58.6ms
+	share common exprs 13ms
+	simp 93.2ms
+	tactic execution 940ms
+	type checking 559ms
+	typeclass inference 532ms

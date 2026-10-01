@@ -1,0 +1,36 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 PaperIV/ColourClasses.lean -o /workspace/request-project/.lake/runner/lib/lean/PaperIV/ColourClasses.olean -i /workspace/request-project/.lake/runner/lib/lean/PaperIV/ColourClasses.ilean
+PaperIV/ColourClasses.lean:26:0: warning: automatically included section variable(s) unused in theorem `PaperIV.ColourClasses.mem_colourClass`:
+  [DecidableEq α]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq α] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+PaperIV/ColourClasses.lean:56:0: warning: automatically included section variable(s) unused in theorem `PaperIV.ColourClasses.card_eq_sum_card_colourClass`:
+  [DecidableEq α]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq α] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+import took 2.35s
+cumulative profiling times:
+	.olean serialization 27.7ms
+	attribute application 0.0676ms
+	compilation (IR) 0.415ms
+	compilation (LCNF base) 0.677ms
+	compilation (LCNF mono) 0.539ms
+	congr simp thm 2.54ms
+	elaboration 21.2ms
+	fix level params 0.255ms
+	import 2.35s
+	initialization 39.1ms
+	instantiate metavars 0.405ms
+	interpretation 159ms
+	let-to-have transformation 0.0748ms
+	linting 6.95ms
+	parsing 4.42ms
+	process pre-definitions 2.17ms
+	share common exprs 0.518ms
+	simp 9.69ms
+	tactic execution 28.1ms
+	type checking 4.97ms
+	typeclass inference 23.7ms

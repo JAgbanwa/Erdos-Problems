@@ -1,0 +1,26 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 PaperIV/DegreeConcentration.lean -o /workspace/request-project/.lake/runner/lib/lean/PaperIV/DegreeConcentration.olean -i /workspace/request-project/.lake/runner/lib/lean/PaperIV/DegreeConcentration.ilean
+PaperIV/DegreeConcentration.lean:130:46: warning: unused variable `hcard`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+import took 3.38s
+cumulative profiling times:
+	.olean serialization 67.8ms
+	attribute application 0.0866ms
+	congr simp thm 2.68ms
+	elaboration 58.3ms
+	fix level params 0.594ms
+	import 3.38s
+	initialization 38.3ms
+	instantiate metavars 1.2ms
+	interpretation 386ms
+	let-to-have transformation 0.138ms
+	linting 13.3ms
+	norm_num 6.14ms
+	parsing 8.23ms
+	process pre-definitions 6.33ms
+	ring 6.99ms
+	share common exprs 3.93ms
+	simp 12ms
+	tactic execution 62.3ms
+	type checking 42.5ms
+	typeclass inference 198ms

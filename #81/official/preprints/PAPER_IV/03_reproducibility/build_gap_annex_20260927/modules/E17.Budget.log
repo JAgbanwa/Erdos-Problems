@@ -1,0 +1,47 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 E17/Budget.lean -o /workspace/request-project/.lake/runner/lib/lean/E17/Budget.olean -i /workspace/request-project/.lake/runner/lib/lean/E17/Budget.ilean
+E17/Budget.lean:29:0: warning: automatically included section variable(s) unused in theorem `E17.Budget.map_finEmb`:
+  [Fintype V]
+  [DecidableEq V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] [DecidableEq V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+E17/Budget.lean:129:0: warning: automatically included section variable(s) unused in theorem `E17.Budget.sum_avg8`:
+  [Fintype V]
+  [DecidableEq V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] [DecidableEq V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+E17/Budget.lean:140:0: warning: automatically included section variable(s) unused in theorem `E17.Budget.card_eq_sum_part`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+tactic execution of Lean.Parser.Tactic.congr took 147ms
+import took 3.17s
+cumulative profiling times:
+	.olean serialization 78.1ms
+	attribute application 0.148ms
+	compilation (IR) 2.9ms
+	compilation (LCNF base) 3.41ms
+	compilation (LCNF mono) 1.87ms
+	congr simp thm 16.4ms
+	elaboration 127ms
+	fix level params 2.95ms
+	import 3.17s
+	initialization 38.4ms
+	instantiate metavars 45.9ms
+	interpretation 666ms
+	let-to-have transformation 0.329ms
+	linting 42ms
+	norm_num 24.6ms
+	parsing 18.1ms
+	process pre-definitions 34.1ms
+	ring 63.8ms
+	share common exprs 16.8ms
+	simp 281ms
+	tactic execution 865ms
+	type checking 191ms
+	typeclass inference 612ms

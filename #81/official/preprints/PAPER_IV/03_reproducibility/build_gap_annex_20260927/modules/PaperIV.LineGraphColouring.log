@@ -1,0 +1,21 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 PaperIV/LineGraphColouring.lean -o /workspace/request-project/.lake/runner/lib/lean/PaperIV/LineGraphColouring.olean -i /workspace/request-project/.lake/runner/lib/lean/PaperIV/LineGraphColouring.ilean
+import took 3.3s
+cumulative profiling times:
+	.olean serialization 44.1ms
+	attribute application 0.0427ms
+	congr simp thm 0.891ms
+	elaboration 28.1ms
+	fix level params 0.226ms
+	import 3.3s
+	initialization 44.5ms
+	instantiate metavars 0.898ms
+	interpretation 171ms
+	let-to-have transformation 0.197ms
+	linting 6.72ms
+	parsing 2.82ms
+	process pre-definitions 4.12ms
+	share common exprs 0.564ms
+	simp 11.9ms
+	tactic execution 29.5ms
+	type checking 4.82ms
+	typeclass inference 31.2ms

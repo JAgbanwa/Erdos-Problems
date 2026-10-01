@@ -1,0 +1,10 @@
+import ThreeRegime.CompleteStateAllOrders
+import FarExploration.CleanupRigidVerdict
+
+#print axioms ThreeRegime.CompleteStateAllOrders.complete_state_closes
+#print axioms ThreeRegime.CompleteStateAllOrders.exists_packing
+#print axioms FarExploration.CleanupRigidVerdict.rs_rigid_mass_ge
+#print axioms FarExploration.CleanupRigidVerdict.rigid_card_le_of_cleanup
+#print axioms FarExploration.CleanupRigidVerdict.threshold_gt_exp
+#print axioms FarExploration.CleanupRigidVerdict.threshold_superpolynomial
+#print axioms FarExploration.CleanupRigidVerdict.threshold_gt_exp_seventy_two

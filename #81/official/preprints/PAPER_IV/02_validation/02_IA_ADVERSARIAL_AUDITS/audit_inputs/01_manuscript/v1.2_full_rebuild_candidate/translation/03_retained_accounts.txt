@@ -1,0 +1,99 @@
+@@387
+Deducimos (6.14) bajo las hipótesis del terminal normalizado de E.1. Escribamos {{0}}, {{1}}, {{2}}, {{3}}, y conservemos las escalas {{4}} y {{5}}. Sea {{6}} el número de enlaces cruzados ausentes y {{7}}. Las contribuciones excepcionales {{8}}, el exceso del núcleo {{9}} y el crédito residual {{10}} son los definidos en E.1. El argumento utiliza el terminal normalizado, incluidas sus cotas de grado mínimo, enlaces ausentes y grado exterior; el defecto enraizado por sí solo no proporciona estas cotas.
+@@388
+**Una paleta menor deja un ahorro cuantificable.** Pongamos
+{{0}}
+Aquí {{1}} se eligen antes de la construcción como los máximos números de enlaces ausentes en las filas y columnas respectivas, añadiendo {{2}} para los radios reservados. La normalización da
+{{3}}
+El umbral terminal da {{4}}, luego
+{{5}}. Sustituir en (E.6) da
+{{6}} y {{7}}. Más explícitamente,
+{{8}}. Un anfitrión ligero tiene grado exterior a lo sumo {{9}}; a cada uno de los demás anfitriones le faltan más de {{10}} vecinos de la región ligera, de modo que su grado dentro de {{11}} es a lo sumo {{12}}. Ambas cotas de grado, incrementadas en uno para colorear, son a lo sumo {{13}}. Para la segunda comparación, la diferencia entre {{14}} y {{15}} paga {{16}}.
+@@389
+Como {{0}} y {{1}}, la cota de aristas da {{2}}. Las mismas estimaciones mostradas dan
+{{3}}.
+Por tanto, todas las condiciones de capacidad y listas de (E.1) siguen cumpliéndose con esta paleta menor. Son las desigualdades establecidas en StrictParams; no se introduce una nueva hipótesis de coloración.
+@@390
+El paso de promedio cíclico conserva ahora {{0}} bases exteriores hospedadas con
+{{1}}. Por ello, su ahorro entero {{2}} satisface
+{{3}}
+Las fases de absorción y hospedaje siguen utilizando aristas disjuntas. En su cuenta, conservemos {{4}} en lugar de sustituirlo por {{5}}. Así, (E.2a) se refuerza a
+{{6}}
+Definamos el comparador terminal racional
+{{7}}
+Las dos desigualdades de (E.2e) dan {{8}}, incluido su redondeo entero. Sustituir la definición de {{9}} en (E.8) da
+{{10}}.
+La cota inferior para toda partición de orden a lo sumo cuatro da ahora
+{{11}}
+Esto prueba la primera cuenta de (6.14), una vez conservada la no negatividad de {{12}}. La partición aquí es la partición física recién construida, no un óptimo elegido por separado.
+@@391
+**Las excepciones pagan sus costes de incidencia.** La prueba de (E.2b) deja margen suficiente para reemplazar cada {{0}} por {{1}}. Explicamos por qué se mantienen los tres casos. Fuera de {{2}}, las estimaciones de grado y normalización dan
+{{3}}
+Usando {{4}}, {{5}} y {{6}}, el lado derecho es a lo sumo {{7}}. Por tanto, allí {{8}}.
+@@392
+En {{0}}, reemplacemos {{1}} por {{2}}. La pérdida de más de {{3}} vecinos ligeros sigue dando
+{{4}}: el término añadido {{5}}, el error de normalización en {{6}} y el {{7}} original consumen juntos menos de {{8}}. Esto prueba el caso {{9}} como antes. En el caso {{10}}, todas las contribuciones desplazadas son no positivas. En el caso restante, (E.2d) da
+{{11}}
+Aquí {{12}}. Como {{13}}, {{14}} y {{15}}, el término negativo {{16}} paga estos errores y el término binomial. La misma cota de pares ausentes usada en E.1 da, por tanto,
+{{17}}. Equivalentemente,
+{{18}}
+Éste es el presupuesto estricto de StrictBudget, no una hipótesis adicional sobre el constructor.
+@@393
+**El exceso restante del núcleo también queda pagado.** Las cotas de normalización implican
+{{0}}. Como el mínimo restado en {{1}} es no negativo, {{2}}. En consecuencia,
+{{3}}
+Ésta es la cuenta de ResidualExcess. Utiliza la cota del mismo {{4}} proporcionado por el constructor.
+@@394
+**Una clique real, con desplazamiento pagado.** Primero justifiquemos la restricción de pares ausentes en {{0}}. Supongamos que {{1}} pares disjuntos de no-aristas tienen extremos {{2}}, y sean {{3}} sus vecinos ligeros comunes. Las estimaciones normalizadas de enlaces ausentes y {{4}} dan
+{{5}}
+Toda clique de {{6}} tiene a lo sumo {{7}} vértices, por la cota de grado exterior ligero. En el grafo inducido por {{8}}, cada vértice de {{9}} tiene entonces más de {{10}} vecinos fuera de cualquier clique de su vecindario. Cada vértice de {{11}} tiene la misma propiedad: su vecindario contiene {{12}}, y una clique puede contener a lo sumo un extremo de cada par ausente. Ningún vértice de este inducido satisface la condición de defecto enraizado con raíz vacía, una contradicción. Éste es el argumento de AllInput.no_core_pairs; las estimaciones de vecinos comunes son esenciales.
+@@395
+Para completar la exposición, la alternativa finita del núcleo utilizada a continuación es la siguiente. Si {{0}} y el complemento de {{1}} no tiene un matching de tamaño {{2}}, entonces {{3}} contiene una clique de tamaño {{4}}, o bien
+{{5}}
+Se prueba por inducción en {{6}}. Para {{7}}, {{8}} es una clique. Si algún vértice tiene al menos {{9}} no-vecinos en {{10}}, eliminarlo deja un grafo sin matching de no-aristas de tamaño {{11}}: tal matching ocuparía sólo {{12}} vértices, dejando un no-vecino para extenderlo. Apliquemos la inducción con {{13}}; el tamaño objetivo del núcleo sigue siendo {{14}}, y toda cota inferior para las aristas del conjunto menor también vale en {{15}}. En otro caso, el grafo de aristas ausentes tiene grado máximo a lo sumo {{16}}. Eliminar repetidamente los dos extremos de una arista ausente retira a lo sumo {{17}} aristas ausentes por paso y termina tras a lo sumo {{18}} pasos. Por tanto, tiene a lo sumo {{19}} aristas. Sustituir en {{20}}, usando {{21}}, da (E.12). Éste es CoreCliqueAlternative.
+@@396
+En el primer caso, elijamos la clique {{0}} de tamaño {{1}} y pongamos {{2}}. En el segundo, los extremos de un matching máximo de no-aristas tocan toda arista ausente. Su complemento es una clique de tamaño al menos {{3}}; reduzcámosla a ese tamaño y pongamos {{4}}. Entonces {{5}}. Como {{6}}, (E.12) da {{7}} y, por tanto, {{8}}. La normalización también da {{9}}, de modo que en ambos casos
+{{10}}
+La construcción conserva {{11}} como clique del grafo original. Las cotas normalizadas de tamaño también dan {{12}} y {{13}}, como requiere la raíz final.
+@@397
+**Contar las ediciones sobre el conjunto original de vértices.** Partamos de la plantilla provisional con clique {{0}}, conjunto independiente {{1}}, todos los enlaces entre {{2}} y {{3}}, y vértices aislados {{4}}. Como {{5}} ya es una clique, compararla con {{6}} cuesta a lo sumo
+{{7}}
+Elijamos {{8}} con {{9}}, pongamos {{10}}, y traslademos {{11}} a la clase de anfitriones {{12}}. Aquí {{13}}. Todo par modificado en esta segunda comparación toca {{14}}, por lo que cuesta a lo sumo {{15}}. Finalmente,
+{{16}}
+Combinar ambas comparaciones da
+{{17}}
+Un {{18}} paga el tamaño reducido de la clique en la cuenta interior; el otro paga el cambio de clase de anfitrión. Análogamente, {{19}} primero se aísla y después se coloca en la clase de anfitriones. Son cotas superiores de dos ediciones sucesivas, no una afirmación de que todos los pares cargados sean distintos. TemplateDistance, RootPartition y CliqueShiftArithmetic formalizan estas comparaciones.
+@@398
+**Combinar las cuentas.** Las ecuaciones (E.11), (E.13) y (E.14) implican
+{{0}}
+El coeficiente final es a lo sumo {{1}}. La ecuación (E.9), con {{2}}, paga {{3}} con a lo sumo {{4}}, y paga {{5}} con a lo sumo {{6}}. Por tanto,
+{{7}}
+Ésta es la estimación terminal utilizada en §6.6. Su constante paga una clique real de {{8}}; una comparación más barata que sólo reparara el núcleo hasta convertirlo en clique no proporcionaría la conclusión con una misma raíz del Teorema C′.
+@@399
+## Apéndice F. Parámetros e interfaces de prueba de las extensiones
+@@400
+### F.1. Parámetros explícitos para defecto fijo
+@@401
+Las funciones utilizadas aquí son las del módulo congelado ExplicitFixedStability. Reemplazan la elección existencial de un umbral terminal o de localización; ninguno es una entrada sin demostrar. Escribimos {{0}}, {{1}} y {{2}} para las funciones explícitas de E33.Assembly y E33.LocExplicit, con el umbral de edición cordal NeditE suministrado por E34.L11Main. El argumento de remoción formalizado en E34 sigue a de Joannis de Verclos [22]; la verificación formal no cambia su atribución matemática. La función {{3}} es el umbral explícito de redondeo de E18, no un parámetro existencial adicional.
+@@402
+Con {{0}} como en (6.11), los parámetros efectivos de estabilidad son
+{{1}}
+Éstas son definiciones de funciones de umbral identificadas y demostradas, no cotas numéricamente útiles. El término local {{2}} es sólo un sumando; no debe presentarse como el umbral global. La prueba de fixed_defect_stability_explicit invoca los resultados demostrados de remoción, localización, redondeo lejano y cuentas terminales conservadas. Así, (F.1) no contiene ningún realizador ni teorema de localización supuesto.
+@@403
+Para aclararlo, el invariante de borrado utilizado en §6.6 es
+{{0}}
+Al eliminar un vértice de grado bajo, (6.15) reduce el déficit al menos en {{1}}. El cambio del lado derecho es {{2}}. Como {{3}}, esto paga el cambio y deja un déficit hijo no negativo. Si el borrado alcanzara el orden inferior, el invariante forzaría déficit cero, mientras que la misma estimación de borrado forzaría un déficit hijo negativo, una contradicción. Por eso un caso finito de orden pequeño no introduce un error aditivo en la estabilidad.
+@@404
+### F.2. Contabilidad fraccional por estrellas y órdenes pequeños
+@@405
+Para {{0}}, tomemos un dual mixto óptimo {{1}} y usemos precios con signo {{2}}. Las restricciones triangulares y de {{3}} dan sumas con signo a lo sumo uno en las cliques. El argumento de estrella positiva máxima sobre una clique de [15, Lema 3.1], seguido de eliminación enraizada, da un entero {{4}} y un precio {{5}} con {{6}} tales que
+{{7}}
+Aquí se utiliza el óptimo certificado: no se identifica un valor dual meramente factible con {{8}}.
+@@406
+Si {{0}}, la primera suma de excepciones es exactamente
+{{1}}
+En la rama de estrella baja {{2}}, el coeficiente de {{3}} es no negativo, por lo que se puede sustituir {{4}} en la primera fila. En la banda {{5}}, (F.3) da entonces
+{{6}}
+Esto utiliza una desigualdad del baseline entero antes de la comparación final, no un piso aplicado a un valor fraccional. En la rama de estrella alta, comparemos {{7}} con {{8}}; se utiliza la segunda fila por debajo de ese valor y la primera por encima. Ambas dan la envolvente
+{{9}}
+Las comparaciones racionales de RefinedFractionalBound y UniformFractionalBound establecen las dos bandas de la Proposición 6.4. Para {{10}}, SmallOrderFractional comprueba dentro de Lean los rangos enteros de parámetros restantes contra esta misma envolvente. El grafo vacío y los casos que no requieren una restricción de {{11}} utilizan la primera fila o la cota de número de aristas. No se necesita enumeración de grafos pequeños, óptimos en punto flotante ni certificados de un solver externo para estos órdenes.

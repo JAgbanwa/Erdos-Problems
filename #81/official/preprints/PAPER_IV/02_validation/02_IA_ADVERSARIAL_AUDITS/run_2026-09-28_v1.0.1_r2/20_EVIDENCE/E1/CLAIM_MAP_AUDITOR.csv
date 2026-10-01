@@ -1,0 +1,38 @@
+claim_id,type,manuscript_location_en,literal_claim_summary,lean_declaration,static_semantic_match,notes
+C01,global,Thm A (l.52-60),"exists b in N: forall n>=0, chordal G on n vertices: c4(G) <= M(n)+b",PaperIV.Erdos81AllOrders.erdos81_all_orders_additive,MATCH,"Fin n with n:N covers n=0; OrderAtMost 4; exact coverage in CliquePartition; M via Nat division"
+C01b,corollary,Thm A (l.60),"exists C>=0: c4 <= n^2/6 + C n",erdos81_linear_form / erdos81_cp_form (not in Table 7),MATCH_BY_HAND,"C=b+1/6 for n>=1; n=0 trivially (empty partition)"
+C02,global,Thm B (1.1),"exists N: n>=N chordal => c4(G) <= M(n)",PaperIV.Erdos81Unconditional.erdos81_cliquePartition,MATCH,
+C03,global,Thm B (1.2),"eventually max cp over chordal = M(n); witness optimal vs unrestricted partitions",PaperIV.PaperTheorems.erdos81_max_eq,MATCH,"witness Q order<=4 with size=M and forall R (unrestricted) Q.size<=R.size"
+C04,external-input+construction,Thm 3.1,"forall rational xi>0 exists N: forall graph n>=N, forall rational frac mixed packing x, exists packing P: w(x)-g(P)<=xi n^2",PaperIV.RC01Final.rc01_uniformRoundingTarget (MixedRounding.UniformRoundingTarget),MATCH,"quantifier order N before G,x; no chordality"
+C05,local,Cor 3.5,"F4 < n^2/6 - eta n^2 => c4 <= M(n) eventually",PaperIV.FarRegimeAllGraphs.farRegime_cliquePartition_allGraphs,MATCH,"eta rational >0; F4' real"
+C06,dichotomy,(1.5),"far or NearStructureWitness",PaperIV.HybridDichotomy.chordal_far_or_nearStructure,MATCH,"witness is a structure (data) - contents checked in E3"
+C07,local,Lemma 4.1 / (4.4),"W*(G_uv)+W*(G_vu)<=2W*(G); admissible path to complete split",VertexCopyMonotone.two_mul_F4_le_add; GatedTerminalSplit.exists_split_terminal_symmetrizationPath,E2_REDERIVED,
+C08,local,Lemma 4.2 / (4.5)-(4.6a),"window contraction d(X)<=16D/n^2 < eps0-1/n for n>=4e12",NearThresholdSensitivity.descent_threshold_maximal_barrier,E2+E5,
+C09,local,Prop 4.3,"exists C: dE(G,S_C)<=eps0 n^2 and (6|C|-2n-1)^2 <= 24(...)",NearH1Localization (not individually headed),E2_REDERIVED,
+C10,local,Thm 5.0 (5.0),"clique R, |3p-n|<=n/50, |Q|<=B_n(p)-m/20-A/2",NearH1LocalConstructor.exists_near_partition_paid_by_root_sharp,MATCH,"hypotheses: n>=4e12, chordal, certified optimum w, normalized dist<eps, near value"
+C11,local,Lemma 5.1-Prop 5.2 (5.1)-(5.4),"extraction and regularization bounds",ChordalCoreMissing; NearH1CalibratedRoot; Regularization*,E2_PARTIAL,"several derived bounds only sketched ('substituting ... gives (5.4) and (5.7)')"
+C12,local,Table 2 / (5.4a),"piece identity |Q|+A+2f=B+m+2l",RD09PhysicalLedger; RD09SpokeCompatibility.card_union_phases,E2_REDERIVED,
+C13,local,(5.5)-(5.7),"first phase 1600m<=2920f+219A",RD09PaddedL1Mass,E2_REDERIVED,"(5.7) palette/width bounds from regularization not rederived in full"
+C14,local,(5.8)-(5.14),"second phase l<=11A/100+29f/1000",RD09FactorCandidateMoments; RD09FactorCandidateAverage; H1ImprovedConstants.l10_of_raw_rd09L2,E2+E5,
+C15,local,Lemma 5.3 (5.15a)/(5.15),"coefficients -117/1825, -12687/20000; -19/365, -253/500",NearStructureWitness.accounts_count_le_improved,E2+E5,
+C16,local,Cor 5.4 (5.17)-(5.18),"size window and edge density",NearCriticalDichotomy.chordal_far_or_criticalRoot; chordal_far_or_edge_density,MATCH,"Lean adds ||R|-|C||<=n/100"
+C17,local,§6.1 (6.1)-(6.2),"cp(S)=c3(S)=c4(S)=kh-C(k,2) for 2<=k<=h",SplitCompleteSharpValue; ExtremalClassification.split_value,E2+E5,
+C18,local,§6.2 (6.3)-(6.4),"identity 6f+(n-3k)(n-3k+1)=n(n+1); optimal cores",SplitCompleteRigidity.optimal_cores; ExtremalClassification.OptimalCore,E2+E5,
+C19,global,§6.3 tower,"N=T(h+7), b=N^2<=T(h+8), h=4*8^5*2208^5*4500^105*(2e16)^105",ExplicitThreshold.erdos81_sharp_explicit; erdos81_all_orders_bounded_additive; E18.Numeric.hIter; E19.tower2,MATCH,"hIter literal equals manuscript h; tower2 0=1, succ=2^"
+C20,global,§6.3 (6.5a),"quadratic coefficient 1/6 optimal (rational c,C)",SharpConstantOptimality.erdos81_quadratic_constant_optimal; _isLeast,MATCH,
+C21,global,§6.3 (6.5),"linear coefficient 1/6 optimal",LinearCoefficient.linear_coefficient_optimal,MATCH,"unrestricted Q"
+C22,local,§6.4 (6.6),"excess identity for complete split",SplitCompleteDefect,E2_REDERIVED,
+C23,headline,Thm 6.1 (6.7),"gamma>0, N: c4>=M-delta, 0<=delta<=gamma n^2 => clique R with (M-B)+m/16+A/2<=delta and dE<=16 delta",PaperIV.IntegralStability.chordal_linear_stability_sixteen,MATCH,"gamma=eta/4=2.5e-17 fixed; delta rational (sufficient, see E3 note); also R.card>=2, R.card<=|V\R|, 117/1825 account"
+C24,headline,Cor 6.1a (6.7a)-(6.7b),"root before every partition Q (unrestricted order), |Q|<=M+tau => noncanonical<=tau+48 delta",PaperIV.RootPartitionStability.chordal_partition_stability,MATCH (Lean stronger: tau any rational),"quantifier order exists R, forall Q tau - verified in header"
+C25,headline,Cor 6.2 (6.9),"cp=M <=> c4=M <=> optimal complete split, eventually",PaperIV.ExtremalClassification.chordal_extremal_classification,MATCH,
+C26,local,Prop 6.3 (6.10),"W*(S)=W(S)=2C(k,2)",PaperIV.SplitMixedGap.mixed_gap_zero,PARTIAL_MATCH,"Lean: forall frac x value<=2C(k,2) and exists clique partition with FarRounding gain sum=2C(k,2); W(S) as mixed-packing optimum not literally stated (OBSERVATION)"
+C27,local,§6.7 (6.12),"M(n)=B_n(k)+M(d_{n,k})",ReserveIdentity.targetSize_eq_baseline_add_reserve,E2+E5,
+C28,headline,Thm C (C),"forall s exists N_s: rooted defect <=s, n>=N_s => c4<=Q_s(n)=M(n+s)-C(s+1,2)",PaperIV.DefectSharpPublication.rooted_defect_eventual,MATCH,"RootedDefectAt literal = manuscript definition incl. empty root; defectTarget uses truncated Nat subtraction (harmless for n>=s+1)"
+C29,headline,Thm C maximum,"eventual maximum Q_s(n) vs unrestricted partitions",PaperIV.DefectSharpPublication.rooted_defect_maximum,MATCH,
+C30,local,Prop D.1,"c4(K_n)<=M(n) all n",ThreeRegime.CompleteStateAllOrders.complete_state_closes / exists_packing,E5,
+C31,local,Prop D.2,"n=4 mod 6: order<=3 partitions of K_n exceed M(n)",PaperIV.DefectSharpPublication.order_three_insufficient,MATCH,
+C32,annex,§8.2 (8.1a),"chordal, K_{d+2}-free: frac triangle value <= nu3+(10+d/2)n",BoundedCliqueGap.chordal_gap_linear_cliqueFree (annex only),MATCH,"triangular only; not in PaperIV import closure"
+C33,complement,Prop 8.1 (8.2),"cleanup contract threshold N0>exp(t^2/16)",FarExploration.CleanupRigidVerdict.threshold_gt_exp,NOT_YET,
+C34,attribution,§1 l.46; §8.1,"[15] Cor 1.2 contains eventual max as special case; [15] Thm 1.3, Cor 5.5 stability; Thm C vs [15]",n/a,E7,
+C35,attribution,§7 l.921,"[5] FORMALIZATION_STATUS conditional on ExternalInputs.Inputs",n/a,E7,
+C36,formal-trust,Abstract/§7,"audited declarations use only propext, Classical.choice, Quot.sound",Audit.lean / ConeAudit.lean,E4,

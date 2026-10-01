@@ -1,0 +1,50 @@
+\section{B02: Óptimo fraccional y
+dualidad}\label{b02-uxf3ptimo-fraccional-y-dualidad}
+
+Corte Lean \texttt{piv-v12-fb459343d234}; manuscritos
+\texttt{piv-v12-manuscripts-2451d43bface}. Auditoría interna del lado
+del autor, no independiente. Fecha: 30 de septiembre de 2026.
+
+\subsection{Obligación e hipótesis}\label{obligaciuxf3n-e-hipuxf3tesis}
+
+Packing de copias reales K3/K4 con cargas no negativas y capacidad uno
+por arista. Las extensiones finitas mantienen s\textless=n, y la
+corrección más fuerte exige 4s\textless=n.
+
+\subsection{Revisión y resultados}\label{revisiuxf3n-y-resultados}
+
+Se comprobaron 76 pares primal-dual en todos los grafos etiquetados
+hasta cuatro vértices. SciPy propone valores; el verificador racional
+exige factibilidad de ambos lados e igualdad exacta. Se conserva un
+certificado K4 y el regenerador determinista del resto.
+
+El cotejo matemático detallado está en
+\texttt{G1\_CLAIMS/MATHEMATICAL\_REVIEW.md}; las declaraciones y tipos
+se vinculan en \texttt{CLAIM\_MAP.csv}.
+
+\subsection{Negativos e incidentes}\label{negativos-e-incidentes}
+
+Los negativos alteran carga, signo, objetivo o cota dual. No se acepta
+un valor flotante óptimo sin replay racional.
+
+\subsection{Reproducción y evidencia}\label{reproducciuxf3n-y-evidencia}
+
+Ejecutar con Python 3.12 \texttt{scripts/exact\_lp\_pairs.py}. Los JSON,
+stdout y stderr de \texttt{results/} son la evidencia de ejecución. El
+runner guarda comandos, duración, límite y código de salida. Las
+ampliaciones exactas usan \texttt{extension\_checks.py}; no invocan
+Lean.
+
+Un solo proceso propio a la vez; las regresiones serializadas tienen
+límite de 2 GiB y 120 segundos, Certo 60 segundos por instancia. Se usan
+versiones registradas en \texttt{ENVIRONMENT.json}, sin instalar
+dependencias.
+
+\subsection{Dictamen y límites}\label{dictamen-y-luxedmites}
+
+\textbf{PASS interno}, combinando evidencia formal registrada y
+regresión finita donde corresponde. La regresión no demuestra dualidad
+fuerte universal ni la cota de defecto para todos los órdenes; sus
+interfaces y el caso pequeño fueron revisados en G1/G3. Los archivos de
+entrada comunes se resuelven por \texttt{TARGET.json}, no por otra
+carpeta mutable de trabajo.

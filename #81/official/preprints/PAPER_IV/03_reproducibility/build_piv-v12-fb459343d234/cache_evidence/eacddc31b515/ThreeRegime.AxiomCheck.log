@@ -1,0 +1,44 @@
+$ c:\Users\jtraverso\.elan\toolchains\leanprover--lean4---v4.28.0\bin\lean.exe -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false ThreeRegime/AxiomCheck.lean -o C:\Users\jtraverso\e81p4\opt_build_20260927\.lake\runner\lib\lean\ThreeRegime\AxiomCheck.olean -i C:\Users\jtraverso\e81p4\opt_build_20260927\.lake\runner\lib\lean\ThreeRegime\AxiomCheck.ilean
+'ThreeRegime.Selector.exists_le_of_weighted_aggregate' depends on axioms: [propext, Quot.sound]
+'ThreeRegime.Selector.aggregate_not_necessary' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ThreeRegime.Selector.weighted_aggregate_fails_of_one_expensive' depends on axioms: [propext, Quot.sound]
+'ThreeRegime.reserve_lt_missing' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ThreeRegime.extreme_route_fails_on_complete' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ThreeRegime.complete_state_has_no_separator' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ThreeRegime.centre_route_closes_on_small_complete' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ThreeRegime.centre_closes_of_triangle_packing' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ThreeRegime.clique_removal_over_budget' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ThreeRegime.AggregateRefutation.K4_picture' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ThreeRegime.AggregateRefutation.aggregate_fails_under_unavailability_pricing' depends on axioms: [propext, Quot.sound]
+'ThreeRegime.TrianglePackingParity.card_filter_mem_pairs' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ThreeRegime.TrianglePackingParity.two_mul_card_pieces_at_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ThreeRegime.TrianglePackingParity.six_mul_card_pieces_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ThreeRegime.TrianglePackingParity.not_triangle_obligation_of_four_mod_six' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ThreeRegime.TrianglePackingParity.centre_closes_of_gain' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ThreeRegime.Transport.gain_eq_two_mul_card_add_three_mul_card_four' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ThreeRegime.Owner.packingOfOwn' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ThreeRegime.Owner.six_mul_card_pieces_avoiding' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ThreeRegime.Latin.Frame.own_spec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ThreeRegime.Latin.Frame.biUnion_eq_edgeFinset' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ThreeRegime.Latin.Frame.filter_card_four_card' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ThreeRegime.Latin.oddFrame' depends on axioms: [propext, Quot.sound]
+'ThreeRegime.Latin.evenFrame' depends on axioms: [propext, Quot.sound]
+'ThreeRegime.CompleteStateAllOrders.closes_zero_mod_six' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ThreeRegime.CompleteStateAllOrders.closes_one_mod_six' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ThreeRegime.CompleteStateAllOrders.closes_two_mod_six' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ThreeRegime.CompleteStateAllOrders.closes_three_mod_six' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ThreeRegime.CompleteStateAllOrders.closes_four_mod_six' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ThreeRegime.CompleteStateAllOrders.closes_five_mod_six' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ThreeRegime.CompleteStateAllOrders.exists_packing' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ThreeRegime.CompleteStateAllOrders.complete_state_closes' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ThreeRegime.TriplePackingBound.three_mul_card_pieces_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ThreeRegime.TriplePackingBound.six_mul_card_pieces_le_of_odd' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ThreeRegime.TriplePackingBound.six_mul_card_pieces_le_of_even' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

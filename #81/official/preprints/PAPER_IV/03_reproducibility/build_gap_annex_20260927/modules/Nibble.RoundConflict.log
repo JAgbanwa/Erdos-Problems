@@ -1,0 +1,19 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 Nibble/RoundConflict.lean -o /workspace/request-project/.lake/runner/lib/lean/Nibble/RoundConflict.olean -i /workspace/request-project/.lake/runner/lib/lean/Nibble/RoundConflict.ilean
+import took 2.21s
+cumulative profiling times:
+	.olean serialization 22.4ms
+	attribute application 0.0177ms
+	elaboration 5.72ms
+	fix level params 0.102ms
+	import 2.21s
+	initialization 36.1ms
+	instantiate metavars 0.376ms
+	interpretation 122ms
+	let-to-have transformation 0.021ms
+	linting 2.2ms
+	parsing 1.15ms
+	process pre-definitions 1.11ms
+	share common exprs 0.241ms
+	tactic execution 12.6ms
+	type checking 1.56ms
+	typeclass inference 17.5ms

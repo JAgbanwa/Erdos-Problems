@@ -1,0 +1,50 @@
+name = "PaperIV"
+version = "0.1.0"
+keywords = ["math", "erdos-81", "chordal-graphs", "clique-partitions"]
+defaultTargets = ["PaperIV"]
+
+[leanOptions]
+pp.unicode.fun = true
+relaxedAutoImplicit = false
+linter.unusedSimpArgs = false
+
+[[require]]
+name = "mathlib"
+scope = "leanprover-community"
+rev = "v4.28.0"
+
+[[require]]
+name = "PaperIIIRelease"
+path = "PaperIIIRelease"
+
+[[lean_lib]]
+name = "PaperIV"
+moreLeanArgs = ["-s", "32768"]
+
+[[lean_lib]]
+name = "MixedRounding"
+moreLeanArgs = ["-s", "32768"]
+
+[[lean_lib]]
+name = "PaperI"
+moreLeanArgs = ["-s", "32768"]
+
+[[lean_lib]]
+name = "FarExploration"
+globs = ["FarExploration.+"]
+moreLeanArgs = ["-s", "32768"]
+
+[[lean_lib]]
+name = "ExactReduction"
+globs = ["ExactReduction.+"]
+moreLeanArgs = ["-s", "32768"]
+
+[[lean_lib]]
+name = "ThreeRegime"
+globs = ["ThreeRegime.+"]
+moreLeanArgs = ["-s", "32768"]
+
+[[lean_lib]]
+name = "BoundedCliqueGap"
+globs = ["BoundedCliqueGap.+"]
+moreLeanArgs = ["-s", "32768"]

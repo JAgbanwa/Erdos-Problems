@@ -1,0 +1,31 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 FarExploration/CleanupLP.lean -o /workspace/request-project/.lake/runner/lib/lean/FarExploration/CleanupLP.olean -i /workspace/request-project/.lake/runner/lib/lean/FarExploration/CleanupLP.ilean
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_nlinarith_1._boxed took 179ms
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_nlinarith_1._boxed took 249ms
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_nlinarith_1._boxed took 235ms
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_nlinarith_1._boxed took 331ms
+import took 2.83s
+cumulative profiling times:
+	.olean serialization 75.9ms
+	attribute application 2.77ms
+	blocked (unaccounted) 84.4ms
+	compilation (IR) 7.56ms
+	compilation (LCNF base) 9.67ms
+	compilation (LCNF mono) 5.59ms
+	congr simp thm 16.7ms
+	elaboration 175ms
+	fix level params 1.95ms
+	import 2.83s
+	initialization 41.4ms
+	instantiate metavars 8.06ms
+	interpretation 1.6s
+	let-to-have transformation 0.706ms
+	linting 36ms
+	norm_num 148ms
+	parsing 20.6ms
+	process pre-definitions 26ms
+	ring 45ms
+	share common exprs 12.5ms
+	simp 160ms
+	tactic execution 259ms
+	type checking 148ms
+	typeclass inference 1.25s

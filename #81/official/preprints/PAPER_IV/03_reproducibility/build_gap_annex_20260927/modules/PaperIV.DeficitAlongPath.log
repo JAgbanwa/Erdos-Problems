@@ -1,0 +1,21 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 PaperIV/DeficitAlongPath.lean -o /workspace/request-project/.lake/runner/lib/lean/PaperIV/DeficitAlongPath.olean -i /workspace/request-project/.lake/runner/lib/lean/PaperIV/DeficitAlongPath.ilean
+import took 3.31s
+cumulative profiling times:
+	.olean serialization 38.6ms
+	attribute application 0.0319ms
+	elaboration 8.85ms
+	fix level params 0.101ms
+	import 3.31s
+	initialization 49.3ms
+	instantiate metavars 0.269ms
+	interpretation 214ms
+	let-to-have transformation 0.0355ms
+	linting 3.77ms
+	norm_num 0.685ms
+	parsing 0.779ms
+	process pre-definitions 2.39ms
+	ring 10ms
+	share common exprs 1.12ms
+	tactic execution 4.45ms
+	type checking 15.8ms
+	typeclass inference 34.9ms

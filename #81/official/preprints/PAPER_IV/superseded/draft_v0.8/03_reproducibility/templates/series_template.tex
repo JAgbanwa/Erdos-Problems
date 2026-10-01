@@ -1,0 +1,40 @@
+% Adaptación del preámbulo de Paper III v1.5 español; no plantilla standalone de Pandoc.
+\documentclass[spanish,11pt,a4paper]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{fontspec}
+\setmainfont{lmroman10-regular.otf}[BoldFont=lmroman10-bold.otf,ItalicFont=lmroman10-italic.otf,BoldItalicFont=lmroman10-bolditalic.otf]
+\setsansfont{lmsans10-regular.otf}[BoldFont=lmsans10-bold.otf]
+\setmonofont{lmmono10-regular.otf}[Scale=MatchLowercase]
+\usepackage{amsmath,amssymb}
+\usepackage[spanish,es-noshorthands,es-tabla]{babel}
+\usepackage{microtype,parskip}
+\usepackage{graphicx,float,caption}
+\usepackage{longtable,booktabs,array,calc}
+\usepackage{xcolor}
+\usepackage{xurl}
+\usepackage{hyperref,bookmark}
+\usepackage{etoolbox,needspace}
+\setcounter{secnumdepth}{-\maxdimen}
+\setlength{\emergencystretch}{3em}
+\providecommand{\tightlist}{\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\newcounter{none}
+\AtBeginEnvironment{longtable}{\Needspace{8\baselineskip}\small}
+\pretocmd{\section}{\Needspace{5\baselineskip}}{}{}
+\pretocmd{\subsection}{\Needspace{4\baselineskip}}{}{}
+\pretocmd{\subsubsection}{\Needspace{4\baselineskip}}{}{}
+\captionsetup{font=small,labelfont=bf}
+\urlstyle{same}
+\hypersetup{pdftitle={Particiones de cliques en grafos cordales: redondeo mixto y construcción del régimen crítico},
+pdfauthor={Juan Pablo Traverso Gianini},pdflang={es-ES},
+colorlinks=true,linkcolor=blue,urlcolor=blue,citecolor=blue}
+\title{Particiones de cliques en grafos cordales:\\redondeo mixto y construcción del régimen crítico}
+\author{Juan Pablo Traverso Gianini\\
+\small Investigador independiente, Santiago, Chile\\
+\small \href{mailto:jtraverso@gmail.com}{jtraverso@gmail.com}\\
+\small ORCID: 0009-0003-6068-4096}
+\date{}
+\begin{document}
+\raggedbottom
+\maketitle
+% BODY
+\end{document}

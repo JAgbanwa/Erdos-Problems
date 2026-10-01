@@ -1,0 +1,106 @@
+$ c:\Users\jtraverso\.elan\toolchains\leanprover--lean4---v4.28.0\bin\lean.exe -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false ThreeRegime/LatinBlocks.lean -o C:\Users\jtraverso\e81p4\opt_build_20260927\.lake\runner\lib\lean\ThreeRegime\LatinBlocks.olean -i C:\Users\jtraverso\e81p4\opt_build_20260927\.lake\runner\lib\lean\ThreeRegime\LatinBlocks.ilean
+ThreeRegime/LatinBlocks.lean:105:0: warning: automatically included section variable(s) unused in theorem `ThreeRegime.Latin.pt_inj`:
+  [Fintype Q]
+  [DecidableEq Q]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype Q] [DecidableEq Q] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+ThreeRegime/LatinBlocks.lean:108:8: warning: automatically included section variable(s) unused in theorem `ThreeRegime.Latin.pt_eq_pt`:
+  [Fintype Q]
+  [DecidableEq Q]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype Q] [DecidableEq Q] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+ThreeRegime/LatinBlocks.lean:112:8: warning: automatically included section variable(s) unused in theorem `ThreeRegime.Latin.pt_ne_star`:
+  [Fintype Q]
+  [DecidableEq Q]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype Q] [DecidableEq Q] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+ThreeRegime/LatinBlocks.lean:188:0: warning: automatically included section variable(s) unused in theorem `ThreeRegime.Latin.Frame.rowBlock_comm`:
+  [Fintype Q]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype Q] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+ThreeRegime/LatinBlocks.lean:194:0: warning: automatically included section variable(s) unused in theorem `ThreeRegime.Latin.Frame.ownIn_eq`:
+  [Fintype Q]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype Q] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+ThreeRegime/LatinBlocks.lean:197:0: warning: automatically included section variable(s) unused in theorem `ThreeRegime.Latin.Frame.ownIn_succ`:
+  [Fintype Q]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype Q] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+ThreeRegime/LatinBlocks.lean:202:0: warning: automatically included section variable(s) unused in theorem `ThreeRegime.Latin.Frame.ownIn_succ_diag`:
+  [Fintype Q]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype Q] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+ThreeRegime/LatinBlocks.lean:207:0: warning: automatically included section variable(s) unused in theorem `ThreeRegime.Latin.Frame.ownIn_pred`:
+  [Fintype Q]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype Q] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+ThreeRegime/LatinBlocks.lean:213:0: warning: automatically included section variable(s) unused in theorem `ThreeRegime.Latin.Frame.ownIn_pred_diag`:
+  [Fintype Q]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype Q] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+ThreeRegime/LatinBlocks.lean:219:8: warning: automatically included section variable(s) unused in theorem `ThreeRegime.Latin.Frame.own_inl_inl`:
+  [Fintype Q]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype Q] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+ThreeRegime/LatinBlocks.lean:222:8: warning: automatically included section variable(s) unused in theorem `ThreeRegime.Latin.Frame.own_inl_inr`:
+  [Fintype Q]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype Q] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+ThreeRegime/LatinBlocks.lean:225:8: warning: automatically included section variable(s) unused in theorem `ThreeRegime.Latin.Frame.own_inr_inl`:
+  [Fintype Q]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype Q] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+ThreeRegime/LatinBlocks.lean:231:0: warning: automatically included section variable(s) unused in theorem `ThreeRegime.Latin.Frame.mem_colBlock`:
+  [Fintype Q]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype Q] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+ThreeRegime/LatinBlocks.lean:296:0: warning: automatically included section variable(s) unused in theorem `ThreeRegime.Latin.Frame.mem_starBlock`:
+  [Fintype Q]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype Q] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+ThreeRegime/LatinBlocks.lean:341:0: warning: automatically included section variable(s) unused in theorem `ThreeRegime.Latin.Frame.card_rowBlock`:
+  [Fintype Q]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype Q] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+ThreeRegime/LatinBlocks.lean:344:0: warning: automatically included section variable(s) unused in theorem `ThreeRegime.Latin.Frame.card_starBlock`:
+  [Fintype Q]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype Q] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+ThreeRegime/LatinBlocks.lean:573:0: warning: automatically included section variable(s) unused in theorem `ThreeRegime.Latin.Frame.card_Pt`:
+  [DecidableEq Q]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq Q] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`

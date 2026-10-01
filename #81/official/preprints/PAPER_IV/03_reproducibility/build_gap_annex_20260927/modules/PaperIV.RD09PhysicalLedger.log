@@ -1,0 +1,29 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 PaperIV/RD09PhysicalLedger.lean -o /workspace/request-project/.lake/runner/lib/lean/PaperIV/RD09PhysicalLedger.olean -i /workspace/request-project/.lake/runner/lib/lean/PaperIV/RD09PhysicalLedger.ilean
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_nlinarith_1._boxed took 570ms
+import took 3.82s
+.olean serialization took 124ms
+cumulative profiling times:
+	.olean serialization 124ms
+	attribute application 10.8ms
+	blocked (unaccounted) 1.96s
+	compilation (IR) 6.25ms
+	compilation (LCNF base) 7.25ms
+	compilation (LCNF mono) 4.75ms
+	congr simp thm 25.2ms
+	elaboration 361ms
+	fix level params 1.91ms
+	import 3.82s
+	initialization 41.5ms
+	instantiate metavars 4.06ms
+	interpretation 1.17s
+	let-to-have transformation 0.93ms
+	linting 42.2ms
+	norm_num 135ms
+	parsing 25.4ms
+	process pre-definitions 24.9ms
+	ring 43.3ms
+	share common exprs 12.2ms
+	simp 194ms
+	tactic execution 78.2ms
+	type checking 155ms
+	typeclass inference 758ms

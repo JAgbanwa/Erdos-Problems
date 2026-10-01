@@ -1,0 +1,33 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 FarExploration/RuzsaSzemeredi.lean -o /workspace/request-project/.lake/runner/lib/lean/FarExploration/RuzsaSzemeredi.olean -i /workspace/request-project/.lake/runner/lib/lean/FarExploration/RuzsaSzemeredi.ilean
+FarExploration/RuzsaSzemeredi.lean:246:0: warning: automatically included section variable(s) unused in theorem `FarExploration.RuzsaSzemeredi.item_card_eq_three`:
+  [NeZero N]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [NeZero N] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+import took 3.97s
+.olean serialization took 121ms
+cumulative profiling times:
+	.olean serialization 121ms
+	attribute application 2.29ms
+	compilation (IR) 2.08ms
+	compilation (LCNF base) 4.9ms
+	compilation (LCNF mono) 1.64ms
+	congr simp thm 14.8ms
+	elaboration 164ms
+	fix level params 1.71ms
+	import 3.97s
+	initialization 36.5ms
+	instantiate metavars 41.8ms
+	interpretation 505ms
+	let-to-have transformation 0.611ms
+	linting 55.8ms
+	norm_num 2.34ms
+	parsing 25ms
+	process pre-definitions 37.8ms
+	ring 52.9ms
+	share common exprs 18ms
+	simp 353ms
+	tactic execution 425ms
+	type checking 168ms
+	typeclass inference 714ms

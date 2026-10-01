@@ -1,0 +1,55 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 PaperIV/SpreadAbsorption.lean -o /workspace/request-project/.lake/runner/lib/lean/PaperIV/SpreadAbsorption.olean -i /workspace/request-project/.lake/runner/lib/lean/PaperIV/SpreadAbsorption.ilean
+PaperIV/SpreadAbsorption.lean:28:0: warning: automatically included section variable(s) unused in theorem `PaperIV.SpreadAbsorption.exists_certificate`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+PaperIV/SpreadAbsorption.lean:30:6: warning: unused variable `C`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+PaperIV/SpreadAbsorption.lean:37:0: warning: automatically included section variable(s) unused in theorem `PaperIV.SpreadAbsorption.exists_lowConflict_certificate`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+PaperIV/SpreadAbsorption.lean:52:0: warning: automatically included section variable(s) unused in theorem `PaperIV.SpreadAbsorption.matchingEdges_isLiteralMatching`:
+  [Fintype V]
+  [DecidableRel G.Adj]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] [DecidableRel G.Adj] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+PaperIV/SpreadAbsorption.lean:76:0: warning: automatically included section variable(s) unused in theorem `PaperIV.SpreadAbsorption.biUnion_matchingEdges`:
+  [Fintype V]
+  [DecidableRel G.Adj]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] [DecidableRel G.Adj] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+import took 2.54s
+cumulative profiling times:
+	.olean serialization 55.6ms
+	attribute application 0.112ms
+	blocked (unaccounted) 8.58ms
+	compilation (IR) 0.596ms
+	compilation (LCNF base) 0.964ms
+	compilation (LCNF mono) 0.628ms
+	congr simp thm 4.3ms
+	elaboration 70ms
+	fix level params 0.85ms
+	import 2.54s
+	initialization 36.3ms
+	instantiate metavars 4.64ms
+	interpretation 279ms
+	let-to-have transformation 0.154ms
+	linting 13.1ms
+	norm_num 2.56ms
+	parsing 7.1ms
+	process pre-definitions 5.85ms
+	share common exprs 2.07ms
+	simp 17.8ms
+	tactic execution 103ms
+	type checking 29.6ms
+	typeclass inference 141ms

@@ -1,0 +1,28 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 RequestProject/AFKS/MeanSquare.lean -o /workspace/request-project/.lake/runner/lib/lean/RequestProject/AFKS/MeanSquare.olean -i /workspace/request-project/.lake/runner/lib/lean/RequestProject/AFKS/MeanSquare.ilean
+import took 6.72s
+.olean serialization took 244ms
+cumulative profiling times:
+	.olean serialization 244ms
+	attribute application 0.186ms
+	blocked (unaccounted) 4.14s
+	compilation (IR) 2.81ms
+	compilation (LCNF base) 2.53ms
+	compilation (LCNF mono) 1.45ms
+	congr simp thm 21.1ms
+	elaboration 82.8ms
+	fix level params 3.94ms
+	import 6.72s
+	initialization 36.5ms
+	instantiate metavars 3.8ms
+	interpretation 811ms
+	let-to-have transformation 0.219ms
+	linting 30.6ms
+	norm_num 6.96ms
+	parsing 12.9ms
+	process pre-definitions 24.7ms
+	ring 25.9ms
+	share common exprs 8.5ms
+	simp 337ms
+	tactic execution 304ms
+	type checking 80.4ms
+	typeclass inference 1.38s

@@ -1,0 +1,24 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 PaperIV/RootVocabulary.lean -o /workspace/request-project/.lake/runner/lib/lean/PaperIV/RootVocabulary.olean -i /workspace/request-project/.lake/runner/lib/lean/PaperIV/RootVocabulary.ilean
+import took 3.09s
+cumulative profiling times:
+	.olean serialization 49.1ms
+	attribute application 2.18ms
+	compilation (IR) 0.359ms
+	compilation (LCNF base) 0.893ms
+	compilation (LCNF mono) 0.321ms
+	congr simp thm 2.34ms
+	elaboration 40.5ms
+	fix level params 0.542ms
+	import 3.09s
+	initialization 35.5ms
+	instantiate metavars 0.328ms
+	interpretation 232ms
+	let-to-have transformation 0.149ms
+	linting 13.3ms
+	parsing 12.1ms
+	process pre-definitions 10.3ms
+	share common exprs 1.17ms
+	simp 22ms
+	tactic execution 57.1ms
+	type checking 8.92ms
+	typeclass inference 144ms

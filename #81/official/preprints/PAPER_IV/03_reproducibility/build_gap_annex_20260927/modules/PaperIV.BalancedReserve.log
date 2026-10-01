@@ -1,0 +1,21 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 PaperIV/BalancedReserve.lean -o /workspace/request-project/.lake/runner/lib/lean/PaperIV/BalancedReserve.olean -i /workspace/request-project/.lake/runner/lib/lean/PaperIV/BalancedReserve.ilean
+import took 3.4s
+cumulative profiling times:
+	.olean serialization 61.1ms
+	attribute application 0.0779ms
+	congr simp thm 2.56ms
+	elaboration 24ms
+	fix level params 0.683ms
+	import 3.4s
+	initialization 34.9ms
+	instantiate metavars 3.52ms
+	interpretation 214ms
+	let-to-have transformation 0.077ms
+	linting 15.1ms
+	parsing 4.53ms
+	process pre-definitions 5.78ms
+	share common exprs 2.11ms
+	simp 22.7ms
+	tactic execution 103ms
+	type checking 12.4ms
+	typeclass inference 96.2ms

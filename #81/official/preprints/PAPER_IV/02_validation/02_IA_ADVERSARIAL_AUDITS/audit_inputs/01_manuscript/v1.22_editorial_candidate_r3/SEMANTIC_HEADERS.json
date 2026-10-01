@@ -1,0 +1,119 @@
+[
+  {
+    "name": "PaperIV.NearH1LocalConstructor.exists_near_partition_paid_by_root_sharp",
+    "source": "PaperIV/NearH1LocalConstructor.lean",
+    "source_sha256": "f5994eefb45a008f92a51c47a05ff8fcc071f19f49467cd0fff06dad4aefa5b2",
+    "line": 36,
+    "header": "theorem exists_near_partition_paid_by_root_sharp {n : ℕ}\n    (hn : 4 * 10 ^ 12 ≤ n)\n    (G : SimpleGraph (Fin n)) [DecidableRel G.Adj]\n    (hG : PaperIV.IsChordal G) {w : ℚ}\n    (hw : CertifiedFractionalOptimum G w)\n    (hdist : graphFamDistNorm\n      (allSplitSupports (V := Fin n)) allSplitSupports_nonempty G\n        ((n : ℚ) ^ 2) < PaperIV.NearH1Calibration.eps)\n    (hnear : (n : ℚ) ^ 2 / 6 -\n        PaperIV.NearH1Calibration.eta * (n : ℚ) ^ 2 ≤\n      (G.edgeFinset.card : ℚ) - w) :\n    ∃ (R : Finset (Fin n)) (Q : CliquePartition G),\n      G.IsClique (R : Set (Fin n)) ∧\n      |3 * (R.card : ℚ) - (n : ℚ)| ≤ (n : ℚ) / 50 ∧\n      Q.OrderAtMost 4 ∧\n      (Q.size : ℚ) ≤\n        splitBaseline (n : ℚ) (R.card : ℚ) -\n          ((outsideEdges G R).card : ℚ) / 20 -\n          (missingIncidences G R : ℚ) / 2",
+    "external_compilation_log": "02_validation\\02_IA_ADVERSARIAL_AUDITS\\run_v1.2_r1\\10_LOGS\\E4_main\\modules\\PaperIV.NearH1LocalConstructor.log",
+    "log_sha256": "5f8bc8b5136487a5396e2033f60a04ebae4b6583342f1a6e7668f24cb2863705"
+  },
+  {
+    "name": "PaperIV.NearH1LocalConstructor.exists_near_partition_paid_by_root",
+    "source": "PaperIV/NearH1LocalConstructor.lean",
+    "source_sha256": "f5994eefb45a008f92a51c47a05ff8fcc071f19f49467cd0fff06dad4aefa5b2",
+    "line": 121,
+    "header": "theorem exists_near_partition_paid_by_root {n : ℕ}\n    (hn : 4 * 10 ^ 12 ≤ n)\n    (G : SimpleGraph (Fin n)) [DecidableRel G.Adj]\n    (hG : PaperIV.IsChordal G) {w : ℚ}\n    (hw : CertifiedFractionalOptimum G w)\n    (hdist : graphFamDistNorm\n      (allSplitSupports (V := Fin n)) allSplitSupports_nonempty G\n        ((n : ℚ) ^ 2) < PaperIV.NearH1Calibration.eps)\n    (hnear : (n : ℚ) ^ 2 / 6 -\n        PaperIV.NearH1Calibration.eta * (n : ℚ) ^ 2 ≤\n      (G.edgeFinset.card : ℚ) - w) :\n    ∃ (R : Finset (Fin n)) (Q : CliquePartition G),\n      G.IsClique (R : Set (Fin n)) ∧\n      (n : ℚ) / 4 ≤ (R.card : ℚ) ∧\n      (R.card : ℚ) ≤ (n : ℚ) / 2 ∧\n      Q.OrderAtMost 4 ∧\n      (Q.size : ℚ) ≤\n        splitBaseline (n : ℚ) (R.card : ℚ) -\n          ((outsideEdges G R).card : ℚ) / 20 -\n          (missingIncidences G R : ℚ) / 2",
+    "external_compilation_log": "02_validation\\02_IA_ADVERSARIAL_AUDITS\\run_v1.2_r1\\10_LOGS\\E4_main\\modules\\PaperIV.NearH1LocalConstructor.log",
+    "log_sha256": "5f8bc8b5136487a5396e2033f60a04ebae4b6583342f1a6e7668f24cb2863705"
+  },
+  {
+    "name": "PaperIV.NearCriticalDichotomy.chordal_far_or_criticalRoot",
+    "source": "PaperIV/NearCriticalDichotomy.lean",
+    "source_sha256": "f122406defdfdbd802c6aab17d4bd929d18ec639046aa02ab2fe77654d87bd72",
+    "line": 41,
+    "header": "theorem chordal_far_or_criticalRoot :\n    ∃ N : ℕ, ∀ n : ℕ, N ≤ n → ∀ (G : SimpleGraph (Fin n)) [DecidableRel G.Adj],\n      PaperIV.FarRounding.IsChordal G → ∀ w : ℚ, CertifiedFractionalOptimum G w →\n        ((G.edgeFinset.card : ℚ) - w <\n            (n : ℚ) ^ 2 / 6 - PaperIV.NearH1Calibration.eta * (n : ℚ) ^ 2) ∨\n          ∃ R C : Finset (Fin n),\n            G.IsClique (R : Set (Fin n)) ∧\n            |3 * (R.card : ℚ) - (n : ℚ)| ≤ (n : ℚ) / 50 ∧\n            C.Nonempty ∧\n            (PaperIV.EditMetric.editDist G.edgeFinset\n                (graphEdgeSupport\n                  (PaperIV.SplitUniformIncidence.splitGraph C\n                    (Finset.univ \\ C))) : ℚ) ≤\n              PaperIV.NearH1Calibration.eps * (n : ℚ) ^ 2 ∧\n            |3 * (C.card : ℚ) - (n : ℚ)| ≤ (n : ℚ) / 10000 ∧\n            |(R.card : ℚ) - (C.card : ℚ)| ≤ (n : ℚ) / 100",
+    "external_compilation_log": "02_validation\\02_IA_ADVERSARIAL_AUDITS\\run_v1.2_r1\\10_LOGS\\E4_main\\modules\\PaperIV.NearCriticalDichotomy.log",
+    "log_sha256": "274ac230c336fab63371d1212d70bba44ee400a6b396642e5dbd9caab932e5d0"
+  },
+  {
+    "name": "PaperIV.NearCriticalDichotomy.chordal_far_or_edge_density",
+    "source": "PaperIV/NearCriticalDichotomy.lean",
+    "source_sha256": "f122406defdfdbd802c6aab17d4bd929d18ec639046aa02ab2fe77654d87bd72",
+    "line": 103,
+    "header": "theorem chordal_far_or_edge_density :\n    ∃ N : ℕ, ∀ n : ℕ, N ≤ n → ∀ (G : SimpleGraph (Fin n)) [DecidableRel G.Adj],\n      PaperIV.FarRounding.IsChordal G → ∀ w : ℚ, CertifiedFractionalOptimum G w →\n        ((G.edgeFinset.card : ℚ) - w <\n            (n : ℚ) ^ 2 / 6 - PaperIV.NearH1Calibration.eta * (n : ℚ) ^ 2) ∨\n          |(G.edgeFinset.card : ℚ) - 5 * (n : ℚ) ^ 2 / 18| ≤ (n : ℚ) ^ 2 / 10000",
+    "external_compilation_log": "02_validation\\02_IA_ADVERSARIAL_AUDITS\\run_v1.2_r1\\10_LOGS\\E4_main\\modules\\PaperIV.NearCriticalDichotomy.log",
+    "log_sha256": "274ac230c336fab63371d1212d70bba44ee400a6b396642e5dbd9caab932e5d0"
+  },
+  {
+    "name": "PaperIV.HybridDichotomy.chordal_far_or_nearStructure",
+    "source": "PaperIV/HybridDichotomy.lean",
+    "source_sha256": "7cb1a1c46e20403cefa5abbf9f08ea531a70015a02524e4182343c27beafb81a",
+    "line": 69,
+    "header": "theorem chordal_far_or_nearStructure :\n    ∃ N : ℕ, ∀ n : ℕ, N ≤ n → ∀ (G : SimpleGraph (Fin n)) [DecidableRel G.Adj],\n      PaperIV.FarRounding.IsChordal G → ∀ w : ℚ, CertifiedFractionalOptimum G w →\n        ((G.edgeFinset.card : ℚ) - w <\n            (n : ℚ) ^ 2 / 6 - PaperIV.NearH1Calibration.eta * (n : ℚ) ^ 2) ∨\n          Nonempty (NearStructureWitness G)",
+    "external_compilation_log": "02_validation\\02_IA_ADVERSARIAL_AUDITS\\run_v1.2_r1\\10_LOGS\\E4_main\\modules\\PaperIV.HybridDichotomy.log",
+    "log_sha256": "a71be80493e9861b8a82f4720cf864f16ff5264f65c9e5337100ca8dff0faa61"
+  },
+  {
+    "name": "PaperIV.SharpConstantOptimality.erdos81_quadratic_constant_optimal",
+    "source": "PaperIV/SharpConstantOptimality.lean",
+    "source_sha256": "9661832fc84ea6f051cb825fa66e5d6d10508722ce3604429f7591b97dc092e7",
+    "line": 52,
+    "header": "theorem erdos81_quadratic_constant_optimal {c C : ℚ} {N : ℕ}\n    (h : ∀ n : ℕ, N ≤ n → ∀ (G : SimpleGraph (Fin n)) (_ : DecidableRel G.Adj),\n      SimpleGraph.IsChordal G → ∃ Q : CliquePartition G, (Q.size : ℚ) ≤ c * (n : ℚ) ^ 2 +\n        C * (n : ℚ)) :\n    1 / 6 ≤ c",
+    "external_compilation_log": "02_validation\\02_IA_ADVERSARIAL_AUDITS\\run_v1.2_r1\\10_LOGS\\E4_main\\modules\\PaperIV.SharpConstantOptimality.log",
+    "log_sha256": "d3ecd9a6e2cc18d81390a43a9392c17327f3cda483ce5f4d476e2a6ef5ed775f"
+  },
+  {
+    "name": "PaperIV.SharpConstantOptimality.erdos81_quadratic_constant_isLeast",
+    "source": "PaperIV/SharpConstantOptimality.lean",
+    "source_sha256": "9661832fc84ea6f051cb825fa66e5d6d10508722ce3604429f7591b97dc092e7",
+    "line": 93,
+    "header": "theorem erdos81_quadratic_constant_isLeast :\n    IsLeast {c : ℚ | ∃ (C : ℚ) (N : ℕ), ∀ n : ℕ, N ≤ n →\n      ∀ (G : SimpleGraph (Fin n)) (_ : DecidableRel G.Adj), SimpleGraph.IsChordal G →\n        ∃ Q : CliquePartition G, (Q.size : ℚ) ≤ c * (n : ℚ) ^ 2 + C * (n : ℚ)}\n      (1 / 6)",
+    "external_compilation_log": "02_validation\\02_IA_ADVERSARIAL_AUDITS\\run_v1.2_r1\\10_LOGS\\E4_main\\modules\\PaperIV.SharpConstantOptimality.log",
+    "log_sha256": "d3ecd9a6e2cc18d81390a43a9392c17327f3cda483ce5f4d476e2a6ef5ed775f"
+  },
+  {
+    "name": "PaperIV.LinearCoefficient.linear_coefficient_optimal",
+    "source": "PaperIV/LinearCoefficient.lean",
+    "source_sha256": "b4a643cc5b5d099fc7b9f50af57e840394a75582153acdf1f5278a523494e614",
+    "line": 49,
+    "header": "theorem linear_coefficient_optimal (c B : ℚ) (hc : c < 1 / 6) :\n    ∃ N : ℕ, ∀ n : ℕ, N ≤ n →\n      ∃ (G : SimpleGraph (Fin n)) (_ : DecidableRel G.Adj),\n        SimpleGraph.IsChordal G ∧\n        ∀ Q : CliquePartition G, (n : ℚ) ^ 2 / 6 + c * (n : ℚ) + B < (Q.size : ℚ)",
+    "external_compilation_log": "02_validation\\02_IA_ADVERSARIAL_AUDITS\\run_v1.2_r1\\10_LOGS\\E4_main\\modules\\PaperIV.LinearCoefficient.log",
+    "log_sha256": "24e748603347e59643061310d1492a2a647e1daaae1ccea5580d4e6a3577d337"
+  },
+  {
+    "name": "PaperIV.RootPartitionStability.sum_rootPieceDefect_eq",
+    "source": "PaperIV/RootPartitionStability.lean",
+    "source_sha256": "7253ae28570782a7682ccb94e1b87241912d3c75f01fc573bb4a908c0c5f58dd",
+    "line": 200,
+    "header": "theorem sum_rootPieceDefect_eq (R : Finset V)\n    (hR : G.IsClique (R : Set V)) (Q : CliquePartition G) :\n    ∑ K ∈ Q.pieces, rootPieceDefect R K =\n      (Q.size : ℚ) - splitBaseline (Fintype.card V) R.card\n        + missingIncidences G R + 3 * (outsideEdges G R).card",
+    "external_compilation_log": "02_validation\\02_IA_ADVERSARIAL_AUDITS\\run_v1.2_r1\\10_LOGS\\E4_main\\modules\\PaperIV.RootPartitionStability.log",
+    "log_sha256": "2c6e26dc0e49263d80c440e58832f938fa0b646117140210d237f8512b6087a4"
+  },
+  {
+    "name": "PaperIV.SplitMixedGap.mixed_gap_zero",
+    "source": "PaperIV/SplitMixedGap.lean",
+    "source_sha256": "d340f1cc207de1238f7d3fbebf02615702b645edf91644ebfb8c7342689c51cb",
+    "line": 167,
+    "header": "theorem mixed_gap_zero {Core Hosts : Finset V} (hd : Disjoint Core Hosts)\n    (hcore : 2 ≤ Core.card) (hhosts : Core.card ≤ Hosts.card) :\n    (∀ x : FracPacking (splitGraph Core Hosts) ℚ,\n        x.value ≤ 2 * (Core.card.choose 2 : ℚ)) ∧\n      ∃ Q : CliquePartition (splitGraph Core Hosts),\n        ∑ K ∈ Q.pieces, FarRounding.gainOf K = 2 * Core.card.choose 2",
+    "external_compilation_log": "02_validation\\02_IA_ADVERSARIAL_AUDITS\\run_v1.2_r1\\10_LOGS\\E4_main\\modules\\PaperIV.SplitMixedGap.log",
+    "log_sha256": "710d5e79ab6c86b6d847d3cbcc6477433b9893c64de804c27682bb0d17d3b838"
+  },
+  {
+    "name": "PaperIV.SplitCompleteSharpValue.exists_sharp_cliquePartition_allParities",
+    "source": "PaperIV/SplitCompleteSharpValue.lean",
+    "source_sha256": "cd650a63d4ae5b908881ea415e24dfaa486c2c9a5fa463c14f4258fddd2885f7",
+    "line": 14,
+    "header": "theorem exists_sharp_cliquePartition_allParities\n    {Core Hosts : Finset V} (hd : Disjoint Core Hosts)\n    (hcore : 2 ≤ Core.card) (hhosts : Core.card ≤ Hosts.card) :\n    ∃ Q : CliquePartition (splitGraph Core Hosts),\n      Q.OrderAtMost 4 ∧\n      Q.size = Core.card * Hosts.card - Core.card.choose 2 ∧\n      ∀ R : CliquePartition (splitGraph Core Hosts), Q.size ≤ R.size",
+    "external_compilation_log": "02_validation\\02_IA_ADVERSARIAL_AUDITS\\run_v1.2_r1\\10_LOGS\\E4_main\\modules\\PaperIV.SplitCompleteSharpValue.log",
+    "log_sha256": "b808f690499a9c127ce4eaa414b2039a762fd716e68c89afe4aae293d49a190c"
+  },
+  {
+    "name": "FarExploration.CleanupRigidVerdict.threshold_gt_exp",
+    "source": "FarExploration/CleanupRigidVerdict.lean",
+    "source_sha256": "186e1ea1f241592a70e3a99a1159592fac63cfcf0f51d22e152f50dcea53b9a6",
+    "line": 194,
+    "header": "theorem threshold_gt_exp (eps : ℚ) (heps : 0 < eps) (gam Cst : ℝ) (hgam : gam ≤ 1 / 2) (N₀ : ℕ)\n    (hN : CleanupAtWith gam Cst (eps / 30) (eps / 4) N₀) (t : ℝ) (ht : 4 ≤ t)\n    (hteps : 7 * (eps : ℝ) ≤ Real.exp (-t)) :\n    Real.exp (t ^ 2 / 16) < (N₀ : ℝ)",
+    "external_compilation_log": "02_validation\\02_IA_ADVERSARIAL_AUDITS\\run_v1.2_r1\\10_LOGS\\E4_main\\modules\\FarExploration.CleanupRigidVerdict.log",
+    "log_sha256": "c781d23694e96edbe54245197683da1e3b7b3768961d7f80d05b7d9d7ce1ef99"
+  },
+  {
+    "name": "FarExploration.CleanupRigidVerdict.threshold_gt_exp_seventy_two",
+    "source": "FarExploration/CleanupRigidVerdict.lean",
+    "source_sha256": "186e1ea1f241592a70e3a99a1159592fac63cfcf0f51d22e152f50dcea53b9a6",
+    "line": 271,
+    "header": "theorem threshold_gt_exp_seventy_two (eps : ℚ) (heps : 0 < eps) (gam Cst : ℝ) (hgam : gam ≤ 1 / 2)\n    (N₀ : ℕ) (hN : CleanupAtWith gam Cst (eps / 30) (eps / 4) N₀)\n    (hsmall : (eps : ℝ) ≤ 1 / (7 * Real.exp 34)) :\n    Real.exp 72 < (N₀ : ℝ)",
+    "external_compilation_log": "02_validation\\02_IA_ADVERSARIAL_AUDITS\\run_v1.2_r1\\10_LOGS\\E4_main\\modules\\FarExploration.CleanupRigidVerdict.log",
+    "log_sha256": "c781d23694e96edbe54245197683da1e3b7b3768961d7f80d05b7d9d7ce1ef99"
+  }
+]

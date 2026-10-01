@@ -1,0 +1,42 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/fMn1DQcNs5Y3ecqQdE+L3Iq792Q</id>
+  <title>arXiv Query: search_query=&amp;id_list=2608.11536,2609.20305&amp;start=0&amp;max_results=10</title>
+  <updated>2026-09-30T12:34:44Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=&amp;start=0&amp;max_results=10&amp;id_list=2608.11536,2609.20305" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>10</opensearch:itemsPerPage>
+  <opensearch:totalResults>2</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/2608.11536v1</id>
+    <title>On the difference between clique partition and clique covering numbers of graphs</title>
+    <updated>2026-08-12T00:59:14Z</updated>
+    <link href="https://arxiv.org/abs/2608.11536v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2608.11536v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>For a graph $G$, let $\cpn(G)$ and $\ccn(G)$ denote the minimum numbers of cliques whose edge sets partition and cover $E(G)$, respectively, and put $f(n)=\max_{|V(G)|=n}\bigl(\cpn(G)-\ccn(G)\bigr).$ In 1983, Erdős, Faudree, and Ordman asked whether there is a sequence of graphs $G_n$ such that $|V(G_n)|=n$ and $\cpn(G_n)-\ccn(G_n)=n^2/4+O(n)$. The question appears as Problem 66 in Chung's survey \cite{ChungProblems} and is also listed on the UCSD Erdős Problems website. Caccetta, Erdős, Ordman, and Pullman proved that $f(n)=n^2/4-o(n^2)$. We prove that $f(n)=\left\lfloor\frac{n^2}{4}\right\rfloor-Θ(n^{4/3}),$ and hence answer the question in the negative.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-08-12T00:59:14Z</published>
+    <arxiv:comment>10 pages</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Bo Ning</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2609.20305v1</id>
+    <title>On the difference between clique partition and clique covering numbers</title>
+    <updated>2026-08-01T08:35:26Z</updated>
+    <link href="https://arxiv.org/abs/2609.20305v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2609.20305v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>For a graph \(G\), let \(\operatorname{cp}(G)\) and \(\operatorname{cc}(G)\) be the minimum numbers of cliques in an edge partition and a clique cover of \(G\), respectively. Set $σ_n
+  = \max_{\lvert V(G)\rvert=n}
+  \bigl(\operatorname{cp}(G)-\operatorname{cc}(G)\bigr), d_n=\left\lfloor\frac{n^2}{4}\right\rfloor-σ_n.$ In 1983, Erdős, Faudree, and Ordman asked whether \(d_n=O(n)\). Caccetta, Erdős, Ordman, and Pullman previously constructed graphs showing \(d_n=O(n^{3/2})\). We prove that $d_n=Θ(n^{4/3}),$ thereby determining the correct order of the deficit and answering their question in the negative.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-08-01T08:35:26Z</published>
+    <arxiv:comment>10 pages</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Bo Ning</name>
+    </author>
+  </entry>
+</feed>

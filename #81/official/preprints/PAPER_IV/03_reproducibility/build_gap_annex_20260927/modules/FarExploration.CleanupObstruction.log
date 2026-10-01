@@ -1,0 +1,29 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 FarExploration/CleanupObstruction.lean -o /workspace/request-project/.lake/runner/lib/lean/FarExploration/CleanupObstruction.olean -i /workspace/request-project/.lake/runner/lib/lean/FarExploration/CleanupObstruction.ilean
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_nlinarith_1._boxed took 117ms
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_nlinarith_1._boxed took 679ms
+import took 2.95s
+.olean serialization took 122ms
+cumulative profiling times:
+	.olean serialization 122ms
+	attribute application 0.665ms
+	compilation (IR) 6.9ms
+	compilation (LCNF base) 9.62ms
+	compilation (LCNF mono) 4.95ms
+	congr simp thm 12.3ms
+	elaboration 76.6ms
+	fix level params 1.03ms
+	import 2.95s
+	initialization 39.9ms
+	instantiate metavars 12.8ms
+	interpretation 1.47s
+	let-to-have transformation 0.293ms
+	linting 32.8ms
+	norm_num 290ms
+	parsing 14.1ms
+	process pre-definitions 30.2ms
+	ring 60.8ms
+	share common exprs 14.1ms
+	simp 230ms
+	tactic execution 338ms
+	type checking 476ms
+	typeclass inference 1.17s

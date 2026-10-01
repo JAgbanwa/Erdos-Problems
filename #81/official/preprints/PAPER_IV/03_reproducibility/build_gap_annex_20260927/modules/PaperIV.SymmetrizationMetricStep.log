@@ -1,0 +1,22 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 PaperIV/SymmetrizationMetricStep.lean -o /workspace/request-project/.lake/runner/lib/lean/PaperIV/SymmetrizationMetricStep.olean -i /workspace/request-project/.lake/runner/lib/lean/PaperIV/SymmetrizationMetricStep.ilean
+import took 2.8s
+cumulative profiling times:
+	.olean serialization 46.5ms
+	attribute application 0.0325ms
+	congr simp thm 1.47ms
+	elaboration 20ms
+	fix level params 0.194ms
+	import 2.8s
+	initialization 38.6ms
+	instantiate metavars 0.254ms
+	interpretation 203ms
+	let-to-have transformation 0.0566ms
+	linting 5.42ms
+	norm_num 1.48ms
+	parsing 4.55ms
+	process pre-definitions 1.97ms
+	share common exprs 1.06ms
+	simp 1.72ms
+	tactic execution 67.3ms
+	type checking 23.9ms
+	typeclass inference 195ms

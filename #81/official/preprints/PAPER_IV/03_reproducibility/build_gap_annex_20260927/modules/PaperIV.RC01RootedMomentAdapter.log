@@ -1,0 +1,64 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 PaperIV/RC01RootedMomentAdapter.lean -o /workspace/request-project/.lake/runner/lib/lean/PaperIV/RC01RootedMomentAdapter.olean -i /workspace/request-project/.lake/runner/lib/lean/PaperIV/RC01RootedMomentAdapter.ilean
+PaperIV/RC01RootedMomentAdapter.lean:36:0: warning: automatically included section variable(s) unused in theorem `PaperIV.RC01RootedMomentAdapter.classOfPart_eq`:
+  [Nonempty α]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Nonempty α] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+tactic execution of Lean.Parser.Tactic.assumption took 1.65s
+tactic execution of Lean.Parser.Tactic.assumption took 5.13s
+PaperIV/RC01RootedMomentAdapter.lean:312:0: warning: automatically included section variable(s) unused in theorem `PaperIV.RC01RootedMomentAdapter.regularPattern_comp_perm`:
+  [Fintype α]
+  [Nonempty α]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype α] [Nonempty α] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+PaperIV/RC01RootedMomentAdapter.lean:335:0: warning: automatically included section variable(s) unused in theorem `PaperIV.RC01RootedMomentAdapter.exists_perm3_rootPair_eq`:
+  [Fintype α]
+  [Nonempty α]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype α] [Nonempty α] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+PaperIV/RC01RootedMomentAdapter.lean:354:0: warning: automatically included section variable(s) unused in theorem `PaperIV.RC01RootedMomentAdapter.exists_perm4_rootPair_eq`:
+  [Fintype α]
+  [Nonempty α]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype α] [Nonempty α] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+PaperIV/RC01RootedMomentAdapter.lean:530:0: warning: automatically included section variable(s) unused in theorem `PaperIV.RC01RootedMomentAdapter.indexed_rootFiber3_card_le`:
+  [Nonempty α]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Nonempty α] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+PaperIV/RC01RootedMomentAdapter.lean:554:0: warning: automatically included section variable(s) unused in theorem `PaperIV.RC01RootedMomentAdapter.indexed_rootFiber4_card_le`:
+  [Nonempty α]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Nonempty α] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+import took 4.14s
+.olean serialization took 162ms
+cumulative profiling times:
+	.olean serialization 162ms
+	attribute application 0.396ms
+	congr simp thm 11.8ms
+	elaboration 297ms
+	fix level params 3.81ms
+	import 4.14s
+	initialization 40.4ms
+	instantiate metavars 22.1ms
+	interpretation 650ms
+	let-to-have transformation 0.762ms
+	linting 94.3ms
+	norm_num 13.5ms
+	parsing 35.2ms
+	process pre-definitions 31.4ms
+	share common exprs 12.7ms
+	simp 111ms
+	tactic execution 7.39s
+	type checking 233ms
+	typeclass inference 917ms

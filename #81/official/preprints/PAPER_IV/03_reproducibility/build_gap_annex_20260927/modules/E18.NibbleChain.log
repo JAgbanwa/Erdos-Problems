@@ -1,0 +1,39 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 E18/NibbleChain.lean -o /workspace/request-project/.lake/runner/lib/lean/E18/NibbleChain.olean -i /workspace/request-project/.lake/runner/lib/lean/E18/NibbleChain.ilean
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_nlinarith_1._boxed took 171ms
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_nlinarith_1._boxed took 348ms
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_nlinarith_1._boxed took 403ms
+typeclass inference of Nonempty took 145ms
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_nlinarith_1._boxed took 642ms
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_nlinarith_1._boxed took 119ms
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_nlinarith_1._boxed took 649ms
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_nlinarith_1._boxed took 1.56s
+typeclass inference of Nonempty took 162ms
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_nlinarith_1._boxed took 1.62s
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_nlinarith_1._boxed took 2.57s
+type checking took 105ms
+import took 4.28s
+.olean serialization took 128ms
+cumulative profiling times:
+	.olean serialization 128ms
+	attribute application 0.142ms
+	compilation (IR) 41.9ms
+	compilation (LCNF base) 41.6ms
+	compilation (LCNF mono) 18.5ms
+	congr simp thm 27.5ms
+	elaboration 115ms
+	fix level params 2.58ms
+	import 4.28s
+	initialization 38.9ms
+	instantiate metavars 156ms
+	interpretation 11.1s
+	let-to-have transformation 0.211ms
+	linting 60.8ms
+	norm_num 1.31s
+	parsing 27.9ms
+	process pre-definitions 56.5ms
+	ring 213ms
+	share common exprs 64.3ms
+	simp 485ms
+	tactic execution 954ms
+	type checking 356ms
+	typeclass inference 4.16s

@@ -1,0 +1,34 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 PaperIV/VertexCopyGate.lean -o /workspace/request-project/.lake/runner/lib/lean/PaperIV/VertexCopyGate.olean -i /workspace/request-project/.lake/runner/lib/lean/PaperIV/VertexCopyGate.ilean
+tactic execution of Lean.Parser.Tactic.decide took 131ms
+type checking took 139ms
+tactic execution of Lean.Parser.Tactic.decide took 130ms
+type checking took 123ms
+tactic execution of Lean.Parser.Tactic.decide took 119ms
+type checking took 125ms
+import took 4.04s
+.olean serialization took 122ms
+cumulative profiling times:
+	.olean serialization 122ms
+	attribute application 1.29ms
+	blocked (unaccounted) 1.44s
+	compilation (IR) 1.82ms
+	compilation (LCNF base) 4.02ms
+	compilation (LCNF mono) 2.19ms
+	congr simp thm 7.07ms
+	elaboration 234ms
+	fix level params 3.34ms
+	import 4.04s
+	initialization 37.4ms
+	instantiate metavars 32.1ms
+	interpretation 613ms
+	let-to-have transformation 0.75ms
+	linting 61.3ms
+	norm_num 8.49ms
+	parsing 37.4ms
+	process pre-definitions 38.7ms
+	ring 12.3ms
+	share common exprs 9.05ms
+	simp 75.2ms
+	tactic execution 1.04s
+	type checking 849ms
+	typeclass inference 559ms

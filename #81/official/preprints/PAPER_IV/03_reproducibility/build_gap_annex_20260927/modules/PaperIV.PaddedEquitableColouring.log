@@ -1,0 +1,36 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 PaperIV/PaddedEquitableColouring.lean -o /workspace/request-project/.lake/runner/lib/lean/PaperIV/PaddedEquitableColouring.olean -i /workspace/request-project/.lake/runner/lib/lean/PaperIV/PaddedEquitableColouring.ilean
+PaperIV/PaddedEquitableColouring.lean:46:0: warning: automatically included section variable(s) unused in theorem `PaperIV.PaddedEquitableColouring.hostCount_le_paddedPaletteSize`:
+  [DecidableEq V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+PaperIV/PaddedEquitableColouring.lean:49:0: warning: automatically included section variable(s) unused in theorem `PaperIV.PaddedEquitableColouring.vizingSize_le_paddedPaletteSize`:
+  [DecidableEq V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+import took 3.01s
+cumulative profiling times:
+	.olean serialization 45.1ms
+	attribute application 0.0462ms
+	compilation (IR) 0.327ms
+	compilation (LCNF base) 0.793ms
+	compilation (LCNF mono) 0.36ms
+	congr simp thm 0.794ms
+	elaboration 17.8ms
+	fix level params 0.147ms
+	import 3.01s
+	initialization 38.8ms
+	instantiate metavars 0.264ms
+	interpretation 189ms
+	let-to-have transformation 1.97ms
+	linting 5.64ms
+	parsing 2.82ms
+	process pre-definitions 5.42ms
+	share common exprs 0.454ms
+	simp 2.43ms
+	tactic execution 19.7ms
+	type checking 7.56ms
+	typeclass inference 17.9ms

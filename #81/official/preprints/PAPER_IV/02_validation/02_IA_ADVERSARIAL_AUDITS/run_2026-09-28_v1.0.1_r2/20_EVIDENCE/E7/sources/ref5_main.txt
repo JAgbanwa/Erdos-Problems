@@ -1,0 +1,1129 @@
+CLIQUE PARTITIONS OF CHORDAL GRAPHS WITH
+                               LINEAR ERROR
+
+                                            ANONYMOUS
+
+      Abstract. We prove that the edges of every chordal graph on n vertices
+      can be partitioned into n2/6 + O(n) complete subgraphs. This resolves
+      a problem of Erds, Ordman, and Zalcstein. In fact, for all sufficiently
+      large n, the maximum clique-partition number among n-vertex chordal
+      graphs is
+
+                                                n(n + 1)
+                                                               .
+
+                                                     6
+      The proof combines a weighted fractional packing of triangles and copies
+      of K4 with a quantitative stability argument. Near the extremal complete-
+      split graphs we construct a partition using only edges and triangles, with
+      a strict saving for every structural defect. Far from that family, a
+      finite-family packing transfer absorbs its subquadratic rounding error. A
+      single-vertex symmetrization path and a first-entry argument connect
+      the two regimes.
+
+1. Introduction
+
+   A clique partition of a finite simple graph G is a collection of complete
+subgraphs whose edge sets partition E(G). We write cp(G) for the minimum
+number of parts in such a partition. Erds, Ordman, and Zalcstein asked
+whether every chordal graph on n vertices satisfies
+
+            n2   (1.1)
+cp(G)  + O(n).
+
+            6
+
+Their complete-split examples show that the coefficient 1/6 cannot be im-
+proved [EOZ93]. The question is listed as Erds Problem 81 [Blo26].
+
+   Recall that a graph is chordal if it contains no induced cycle of length
+at least four. Split graphs, whose vertices can be divided into a clique
+and an independent set, form an important subclass. Chen, Erds, and
+Ordman proved the bound 3n2/16 + O(n) for split graphs [CEO94]. Traverso
+determined the exact extremum of a fractional triangle-cover functional over
+chordal graphs, with a complete-split extremizer and a clone-copy reduction
+[TG26a]. Combined with the standard dense packing transfer, that result
+already gives the first-order estimate n2/6+o(n2) for chordal graphs. Traverso
+
+    Date: September 8, 2026.
+    2020 Mathematics Subject Classification. Primary 05C70, 05C35; Secondary 90C27.
+    Key words and phrases. chordal graph, clique partition, fractional packing, symmetriza-
+tion, stability.
+
+                                                                   1
+2       ANONYMOUS
+
+subsequently proved the linear-error bound for split graphs [TG26b], while
+Cipollini independently obtained n2/6 + o(n2) for all chordal graphs [Cip26].
+The remaining issue addressed here is the linear-error conclusion for general
+chordal graphs.
+
+   Our main result is stronger than (1.1).
+
+Theorem 1.1. There is an integer N such that, for every n  N ,
+
+   max{cp(G) : G is chordal and |V (G)| = n} = M (n) :=  n(n + 1)   .
+
+                                                                 6
+
+Corollary 1.2. There is an absolute constant C such that every chordal
+graph G on n vertices satisfies
+
+                    n2
+        cp(G)  + Cn.
+
+                    6
+
+   The proof has two distinct parts. We first introduce a mixed packing
+
+functional in which a triangle has gain 2 and a copy of K4 has gain 5. The
+
+K4 term is structurally useful rather than cosmetic. For the triangle-only
+fractional functional, complete graphs remain on the competing n2/6 scale;
+
+allowing K4 with its natural gain   4  - 1 = 5 lowers that branch by a fixed
+                                    2
+
+quadratic amount. This isolates the complete-split branch needed by the
+
+stability argument. The corresponding fractional functional is well behaved
+
+under vertex copying. Repeated copies lead monotonically to a complete-
+
+split graph. This gives the correct global quadratic bound, but a general
+
+packing-transfer theorem loses o(n2) and therefore cannot by itself prove
+
+(1.1).
+
+   The second part repairs precisely that loss near the extremal family.
+
+Starting from a clique of order close to n/3, we regularize the choice of root
+
+clique without changing the graph. A balanced Vizing edge-colouring and
+
+the Häggkvist­Janssen list-edge-colouring theorem then produce an integral
+
+triangle packing with a fixed saving for both types of defect: edges outside
+
+the root and missing edges between the root and its complement. This yields
+
+a local stability inequality in the actual labelled edit distance. Finally, a
+
+single-vertex version of the copying argument forces every graph with nearly
+
+extremal fractional value into that local neighbourhood. The first path vertex
+
+entering the neighbourhood would otherwise satisfy incompatible upper and
+
+lower bounds on its edit distance.
+
+   The constants used below are intentionally conservative. Put
+
+         = 10-12,  = 10-30.                                         (1.2)
+
+For the packing-transfer theorem stated in theorem 2.3, choose a threshold
+T () that works uniformly for all graphs, and set
+
+        N = max{1032, T (/2)}.                                      (1.3)
+
+No numerical value for T (/2) is asserted.
+         LINEAR-ERROR CLIQUE PARTITIONS OF CHORDAL GRAPHS                3
+
+         2. Preliminaries and external inputs
+
+   All graphs in the paper are finite and simple. For r  2, let cpr(G) be
+the minimum number of parts in a clique partition of G in which every part
+
+has at most r vertices. Thus
+
+                                      cp(G)  cpr(G).
+
+We allow copies of K2 as parts. We write e(G) = |E(G)|, (G) for maximum
+degree, and (G) for clique number.
+
+   We use the following three published results. Their quantifiers are recorded
+explicitly because the uniformity in the third result is important.
+
+Theorem 2.1 (Vizing [Viz64]). Every finite simple graph H has a proper
+edge-colouring with at most (H) + 1 colours.
+
+Theorem 2.2 (Häggkvist­Janssen [HJ97]). The list-chromatic index of Kp
+is at most p. Equivalently, if every edge of Kp is assigned a list of at least p
+colours, then the edges admit a proper colouring in which each edge receives
+
+a colour from its own list.
+
+For a graph G, consider edge-disjoint packings by triangles and copies
+
+of K4. Assign gain 2 to a triangle and gain 5 to a copy of K4. Let W4(G)
+be the maximum total gain of an integral packing and let W4(G) be the
+optimum of the fractional relaxation. Explicitly, if T (G) and K4(G) denote
+
+the triangles and copies of K4 in G, then
+
+W4(G) = max 2              xT + 5              zK ,
+
+               T T (G)               K K4 (G)
+
+         subject to xT , zK  0,                                          (2.1)
+
+                        xT + zK  1                   for every e  E(G).
+
+         T e               K e
+
+The gains are exactly the numbers of parts saved by replacing constituent
+
+edges with one clique:  3  -1  =  2  and  4  -1 = 5.  Thus the family and weight
+                        2                 2
+
+vector in the notation of the finite-family transfer theorem are {K3, K4} and
+
+(2, 5).
+
+Theorem 2.3 (finite-family packing transfer). For every  > 0 there is an
+integer T () such that every graph G with |V (G)|  T () satisfies
+
+                            0  W4(G) - W4(G)  |V (G)|2.
+The threshold is uniform over all graphs of the given order.
+
+   This is the specialization of the weighted finite-family theorem [RUW21,
+Theorem 3.4] to {K3, K4} and gains 2, 5. The graph-independent threshold
+used here is the uniformity made explicit in the proof of [RUW21, Theo-
+rem 3.6].
+
+   We shall use standard properties of chordal graphs: induced subgraphs are
+chordal; chordal graphs admit perfect elimination orderings; adding a vertex
+4                            ANONYMOUS
+
+whose neighbourhood is a clique preserves chordality; and every noncomplete
+chordal graph has two nonadjacent simplicial vertices [Dir61, BP93]. We
+also need the following convenient form of the elimination-ordering property.
+
+Lemma 2.4. If P is a clique in a chordal graph G, then G has a perfect
+elimination ordering whose final vertices are precisely the vertices of P .
+
+Proof. As long as a vertex remains outside P , remove a simplicial vertex
+
+outside P . Such a vertex exists: if the current graph is complete, every
+
+outside vertex is simplicial; otherwise, two nonadjacent simplicial vertices
+
+exist and they cannot both lie in the clique P . The induced graph left after
+
+each removal is chordal. Appending the vertices of P in any order completes
+
+the desired ordering.                                                          
+
+   The fractional mixed packing has the dual formulation
+
+                             ye  0,                                  
+                               eE(T ) ye  2
+                               eE(K) ye  5                                   
+                                                                             
+   W4(G) = min         ye :
+                                               for every triangle T, .
+
+                eE(G)                             for every K = K4   
+                                                                     
+
+                                                                     (2.2)
+
+Both primal and dual optima are attained. For example, a dual coordinate
+
+larger than 5 can be replaced by 5, so the dual minimum may be taken over
+
+a compact box.
+
+   Define                                              (2n + 1)2
+
+             (G) = e(G) - W4(G),               Q(n) =    24       .  (2.3)
+
+Since the gain of a clique is the number of edges saved when it replaces its
+
+constituent K2 parts, we have the exact identity
+
+             cp4(G) = e(G) - W4(G) = (G) + W4(G) - W4(G).            (2.4)
+
+Moreover,
+
+                       (G)  cp3(G),                                  (2.5)
+
+because every integral triangle packing is an admissible mixed fractional
+
+packing. Notice that (2.5) does not assert (G)  cp(G).
+
+   Finally,
+
+                       Q(n) =        n(n + 1)  = M (n).              (2.6)
+
+                                     6
+
+Indeed, Q(n) = n(n + 1)/6 + 1/24, while the fractional part of n(n + 1)/6 is
+either 0 or 1/3.
+
+       3. An integral construction around a root clique
+
+   Let P be a clique in a chordal graph G, and introduce the data
+
+   p = |P |, H = G - P, q = |V (H)|, m = e(H), w = (H).              (3.1)
+                                                                     (3.2)
+Write
+
+             A = pq - eG(P, V (H)),     D = max |V (H) \ NG(x)|.
+
+                                                 xP
+      LINEAR-ERROR CLIQUE PARTITIONS OF CHORDAL GRAPHS                  5
+
+Thus A is the total number of missing root­outside incidences and D is the
+largest missing column; here eG(X, Y ) denotes the number of edges with one
+endpoint in each of the disjoint sets X and Y .
+
+Lemma 3.1 (terminal construction). Assume p  1, and put
+
+      c = max{p, (H) + 1},                                    m
+                                                       t= .
+
+                                                              c
+
+If                                                                      (3.3)
+                                      q - 2D - 4t  p,                   (3.4)
+
+then
+
+      cp3(G)  pq -  p              2p  m- 1-           2(w - 1)
+                       +  1-                                        A.
+                    2           c                                p
+
+The clique P need not be maximum.
+
+Proof. By theorem 2.1, the edges of H have a proper colouring with c colours.
+Choose such a colouring for which the sum of the squares of the colour-class
+sizes is minimum. Its classes differ in size by at most one. Indeed, if two
+classes differed by at least two, their union would contain an alternating
+path with one more edge of the larger colour; interchanging the two colours
+on that path would decrease the sum of squares. Consequently each class
+has at most t edges.
+
+   Retain the p largest classes. Together they contain at least pm/c edges.
+We assign these classes bijectively to the vertices of P . An outside edge uv
+assigned to x  P is retained when x is adjacent to both u and v; it then
+yields the triangle uvx.
+
+   Choose a perfect elimination ordering ending in P , as in lemma 2.4, and
+orient every edge of H from its earlier to its later endpoint. If uv is oriented
+from u to v, then
+
+                                 NG(u)  P  NG(v)  P,
+
+because the later neighbours of u form a clique. Hence the number of root
+vertices that are invalid hosts for uv is exactly au = p - |NG(u)  P |. The
+vertex u has at most w - 1 later neighbours in H, and therefore the total
+number of invalid-host incidences over all outside edges is at most
+
+      (w - 1)                      au = (w - 1)A.
+
+                       uV (H)
+
+This remains an upper bound after only the selected colour classes are kept.
+   Choose the bijection from the selected classes to P uniformly at random.
+
+Each invalid host is assigned to its class with probability 1/p, so some
+bijection retains at least
+
+                          pm (w - 1)A                                   (3.5)
+                    f -
+                          c            p
+
+outside edges. Use the corresponding f triangles. Since every selected class
+is a matching of size at most t, each root vertex is incident with at most 2t
+outside spokes already used by these triangles.
+6                                 ANONYMOUS
+
+   It remains to cover the edges within P . For each xy  E(G[P ]), let L(xy)
+be the set of outside vertices z such that xyz is a triangle and neither xz
+nor yz has already been used. The union bound gives
+
+                   |L(xy)|  q - 2D - 4t  p.
+
+Apply theorem 2.2 to the complete graph on P with these actual lists. Its
+proper list-edge-colouring assigns a host z  L(xy) to every root edge xy. The
+resulting root triangles are pairwise edge-disjoint and are also edge-disjoint
+from the f outside-edge triangles.
+
+   Use K2 parts for every crossing or outside edge not yet covered. The exact
+number of parts is
+
+                                          p
+                                 pq - + m - A - 2f.
+
+                                          2
+
+Substituting (3.5) proves (3.4).                                  
+
+   We shall repeatedly use the following immediate consequence.
+
+Corollary 3.2. Under the hypotheses of lemma 3.1, if in addition
+
+                   9p             2(w - 1) 1
+                   c  and                    ,
+                   5                 p       2
+
+then
+
+                   cp3(G)  pq -   p mA                            (3.6)
+                                     - -.
+                                  2     92
+
+Proof. In (3.4), the coefficient of m is at most -1/9 and the coefficient of A
+
+is at most -1/2.                                                  
+
+                    4. Strict regularization of the root
+
+   The construction in lemma 3.1 becomes useful only when both coefficients
+in (3.4) are bounded away from zero. The next elementary observation
+controls vertices that are not complete to the root.
+
+Lemma 4.1. With the notation of (3.1)­(3.2), suppose u  V (H) is nonad-
+jacent to some x  P . Then
+
+                   dH (u)  D + w - 2.
+
+Proof. The common neighbours of two nonadjacent vertices in a chordal
+
+graph form a clique: two nonadjacent common neighbours would induce a
+
+4-cycle. Thus NH (u)  NG(x), together with u, is a clique in H, and the
+intersection has at most w - 1 vertices. Every remaining neighbour of u in
+
+H lies in V (H) \ NG(x). This set has at most D vertices and contains u
+itself, so it contains at most D - 1 neighbours of u. Adding the two estimates
+
+proves the claim.                                                 
+LINEAR-ERROR CLIQUE PARTITIONS OF CHORDAL GRAPHS                            7
+
+Lemma 4.2 (strict root regularization). Suppose that a chordal graph G
+contains a clique P whose data satisfy
+
+p  128,                                p           m+A         p2     .     (4.1)
+                        |q - 2p|  ,
+                                                               65536
+                                      64
+
+Then G contains a clique P --not necessarily a maximum clique--such that,
+
+for the corresponding data p, q, m, A,
+
+                    cp3(G)  pq -          p        m A                      (4.2)
+                                          2     - -.
+
+                                                    92
+
+Proof. First demote every root vertex whose original missing column has
+more than p/64 entries. Let R be the set of demoted vertices, let r = |R|,
+and put P0 = P \ R. This changes only the designation of the root: no edge
+is edited and no clique-partition part is chosen. From (4.1),
+
+     64A p                          =     -  r     99p         q0 = q + r,  (4.3)
+r  ,                            p0     p               ,
+                                                   100
+       p 1024
+
+and the largest missing column of the retained root satisfies D0  p/64.
+   Let H0 = G - P0. Since R was contained in the original clique, its outside
+
+edge count is exactly
+
+                    m0 = m + eG(R, V (H)) +               r
+                                                            .
+                                                         2
+
+Using q  129p/64 and (4.3), we obtain
+
+                        1             129                1     p2
+m0                      65536 + 64 · 1024 + 2 · 10242
+
+                    =   4161    p2 <   p2                                   (4.4)
+                                           .                                (4.5)
+                       2097152 400                                          (4.6)
+
+If w0 = (H0), then  w0   m0, and hence
+                     2
+
+                        w0 - 1          2m0        p
+                                                <     .
+                                                   10
+
+Define the fixed defect bound
+
+                        D = max     D0,   q0  -    7p0    .
+                                                    4
+
+Equations (4.1) and (4.3) give
+
+                        p 17 11                          1099 p
+D  max , +                                      p = p< .                    (4.7)
+                        64 64 4096                       4096 3
+
+   Starting from P0, promote an outside vertex whenever its degree in the
+current outside graph is at least 7/4 times the current root order. Every
+promotion is legal. Indeed, by lemma 4.1, a vertex not complete to the
+current root has outside degree at most
+
+                        D + w0 - 2 <            13p
+                                                    ,
+                                                30
+8                                ANONYMOUS
+
+far below 7p0/4. Thus every promoted vertex is complete to the current root,
+which consequently remains a clique.
+
+   The bound D remains valid throughout the procedure. If u is promoted
+when the outside and root orders are qi and pi, respectively, then its missing
+column after promotion has size at most
+
+   qi  - 1 - dHi(u)              qi -  7pi  -1    q0  -  7p0    D.
+                                        4                 4
+
+The old missing columns can only shrink, and the outside clique number
+cannot increase.
+
+   The edges removed from the outside graph in different promotions are
+disjointly accounted for. If h vertices are promoted, then
+
+                               h  4m0       p                       (4.8)
+                                               .
+                                    7p0 693
+
+Let P  and H be the root and outside graph at termination. Then (H) <
+7p/4, and therefore
+
+       c := max{p, (H) + 1}                       7p        9p      (4.9)
+                                                         .
+                                                  4      5
+
+The last inequality holds for every integer p  15, whereas here p  p0  127.
+Also, by (4.5),
+
+                               2(w - 1) 20 1                        (4.10)
+                                       < <.
+                               p          99 2
+
+   Put t = m/c. Since m  m0 and c  p0,
+
+       t  m0  p + 1.                                                (4.11)
+               p0 396
+
+Finally, each promotion decreases q - p by two, so
+
+   q - p - 2D - 4t                  63 2 2 1                  p-4
+                                        - --
+                                    64 693 3 99
+
+                                    4505             p
+                                 =          p - 4 > - 4  0.         (4.12)
+                                    14784            4
+
+Thus the host condition (3.3) holds for P . Apply corollary 3.2 using (4.9)
+
+and (4.10); this gives (4.2).                                       
+
+Remark 4.3. The promotion threshold 7p/4 is what leaves a fixed negative
+coefficient on m in (4.2). A threshold of 2p would permit that coefficient to
+
+vanish. The exact formula for m0 also shows that every edge created in the
+outside graph by demoting a root vertex has been charged.
+
+                         5. Quantitative local stability
+
+   Fix n, put a = n/3, and, for each A0  V (G) with |A0| = a, let SA0 be
+the complete-split graph on V (G) with clique side A0. Thus two vertices
+LINEAR-ERROR CLIQUE PARTITIONS OF CHORDAL GRAPHS                            9
+
+are adjacent in SA0 if and only if at least one of them lies in A0. Define the
+labelled edit distance
+
+                   dsp(G)  =     min    |E(G)    E(SA0 )|.                  (5.1)
+
+                                |A0|=a
+
+A single operation that replaces the neighbourhood of one vertex by the
+
+neighbourhood of a nonadjacent vertex changes at most n - 2 unordered
+
+pairs. Consequently, dsp changes by at most n - 2 in one such operation.
+
+Lemma 5.1. Let G be chordal of order n  1000. If
+
+                                dsp(G)  n2,
+
+then G has a clique satisfying the hypotheses of lemma 4.2.
+
+Proof. Choose A0 in (5.1) with edit count E  n2. Let P be a maximum
+clique of the chordal graph G[A0], write p = |P |, and put u = a - p.
+
+   A chordal graph on a vertices with clique number p has at most
+
+                                             p                              (5.2)
+                             (p - 1)a -
+
+                                             2
+
+edges. To see this, sum the number of later neighbours in a perfect elimination
+
+ordering, bounding the successive terms by min{p - 1, a - i}. The number of
+
+pairs missing from G[A0] is therefore at least   u+1  .  These  pairs  are  counted
+                                                   2
+
+by E, and hence                 
+
+                           u  2E  2 n.                                      (5.3)
+
+Since p = a - u and q = n - p, for n  1000 we have
+
+n                               33n
+p  - 1 - 2 n   128,                                                         (5.4)
+3                               100                                         (5.5)
+n                                                                   p
+p  , 0  q - 2p = n - 3p  3 + 3                            2 n  .
+3
+                                                                   64
+
+The edges in the old independent side and the nonedges between the two
+
+old sides contribute at most E defects altogether. Every newly relevant pair
+
+involving A0 \ P contributes at most un. Thus the outside-edge count and
+
+missing-incidence count for the root P satisfy
+
+m + A  E + un  ( + 2)n2
+
+                   10-12  +  2   3      n2 < (33/100)2n2        p2          (5.6)
+                                · 106                                .
+                                                 65536          65536
+
+Together with (5.4)­(5.5), this is exactly (4.1).                           
+
+Lemma 5.2 (local stability). Under the hypotheses of lemma 5.1, put
+
+                           D = Q(n) - (G).
+
+Then D  0 and
+
+                     dsp(G)  9D + n             2D                          (5.7)
+                   cp3(G)  M (n).                   + n,                    (5.8)
+
+                                                 3
+10                           ANONYMOUS
+
+Proof. Apply lemma 4.2, and use primes for the resulting root data. By (2.5)
+
+and (4.2),
+
+                 D  Q(n) - pq - p                      m A             (5.9)
+                                              2     + +.
+
+                                                        92
+
+The first difference on the right has the exact form
+
+            Q(n) - p(n - p) - p                  =  (6p - 2n - 1)2  .  (5.10)
+                                           2
+                                                       24
+
+It follows that
+
+                 m + A  9D,          p - 2n + 1            2D          (5.11)
+                                                 6             .
+                                                           3
+
+In particular, D  0.
+   The graph G differs from the complete-split graph with clique side P  on
+
+exactly m + A pairs. Changing that clique side to have order n/3 requires
+at most |p - n/3| vertex-role changes, each costing at most n edge edits.
+
+Since
+
+                        2n + 1 n                 < 1,
+                                     -
+                        6                     3
+
+equation (5.7) follows from (5.11).
+
+    Finally, (4.2) and (5.10) give cp3(G)  Q(n). The left side is an integer,
+
+so (2.6) yields (5.8).                                                 
+
+            6. A monotone path of single-vertex copies
+
+   The cover-pullback copy inequality, its discrete-convex lift to clone classes,
+and the complete-split terminal reduction follow the strategy of Traverso
+[TG26a, Sections 3­5] for the triangle-cover functional. We give the mixed-
+functional adaptation because both triangle and K4 constraints must be
+transported. The additional feature needed later is a fine path recording every
+single-vertex copy, so that a first-entry argument can control the moment
+the path crosses a fixed edit-distance ball.
+
+   Let u and v be nonadjacent vertices of a graph G. Write Guv for the
+graph obtained by deleting the edges incident with u and then making
+NGuv (u) = NG(v). In particular, u and v remain nonadjacent.
+
+Lemma 6.1 (copy inequality). For every graph G and every nonadjacent
+
+pair u, v,
+
+                        (Guv) + (Gvu)  2(G).                           (6.1)
+
+Proof. Choose an optimal dual cover y in (2.2). To obtain a cover of Guv,
+keep every unaffected edge weight and give each new edge ux the old weight
+yvx. Every triangle or K4 containing u is then a copy of one containing v in
+G, while no clique contains both u and v. Thus all dual constraints remain
+valid.
+LINEAR-ERROR CLIQUE PARTITIONS OF CHORDAL GRAPHS          11
+
+   Let su and sv be the sums of the y-weights on edges incident with u and
+v. The copied covers of Guv and Gvu have respective weights
+
+W4(G) - su + sv and W4(G) - sv + su.
+
+They therefore give
+
+                     W4(Guv) + W4(Gvu)  2W4(G).
+
+On the other hand, the two copied edge counts sum to 2e(G). Subtracting
+
+the preceding inequality from this identity gives (6.1).  
+
+   Vertices with the same open neighbourhood are called false twins. Every
+
+false-twin class is independent. Suppose A1 and A2 are distinct false-twin
+classes consisting of simplicial vertices, with no edge between the two classes.
+
+Keep the graph outside A1  A2 fixed. If r = |A1| + |A2|, let Hj be the graph
+in which j of these r vertices have neighbourhood NG(A1) and the other
+r - j have neighbourhood NG(A2). For fixed j, different choices of the j
+labelled vertices give isomorphic graphs, via a permutation supported on
+
+A1  A2; hence (Hj) depends only on j. Both neighbourhoods are cliques,
+so every Hj is chordal. For 0 < j < r, lemma 6.1 gives
+
+                     (Hj-1) + (Hj+1)  2(Hj).              (6.2)
+
+Thus j  (Hj) is discretely convex. At any interior index, at least one
+adjacent value is no smaller. Once such a direction is chosen, the successive
+differences in that direction remain nonnegative by (6.2). We may therefore
+move one vertex at a time to the corresponding endpoint without ever
+decreasing .
+
+   At the endpoint the two selected false-twin classes have merged. No
+class outside their union splits: all of its vertices have the same adjacency
+to a representative of the target class and consequently acquire the same
+adjacency to every copied vertex. The number of false-twin classes has
+strictly decreased.
+
+   We next identify the graphs at which this procedure stops; this is the
+same terminal family appearing in [TG26a, Section 5].
+
+Lemma 6.2 (terminal characterization). Let G be chordal. If every two
+nonadjacent simplicial vertices of G have the same open neighbourhood, then
+G is complete-split; that is,
+
+                                       G = Kk  Kn-k
+
+for some 0  k  n.
+
+Proof. Suppose first that G is disconnected and has an edge. Choose a
+nonisolated simplicial vertex in a nontrivial component and a simplicial
+vertex in another component. Their neighbourhoods are disjoint and at least
+one is nonempty, contrary to the hypothesis. Hence a disconnected terminal
+graph is edgeless. Complete graphs are also of the required form.
+
+   It remains to consider a connected, noncomplete graph. Take a clique tree
+of G with at least two maximal-clique bags. A vertex private to a leaf bag is
+12                            ANONYMOUS
+
+simplicial and occurs in no other bag. Private vertices chosen from distinct
+
+leaves are nonadjacent, and hence they have a common open neighbourhood,
+
+say K.
+
+    Each leaf has exactly one private vertex. Otherwise, the neighbourhood
+
+of a private vertex in that leaf would contain another private vertex from
+
+the same leaf, whereas the neighbourhood of a private vertex in a different
+
+leaf would not. It follows that every leaf bag is K together with its unique
+
+private vertex.
+
+    Every member of K occurs in every leaf bag. By the running-intersection
+
+property, it then occurs in every bag, because every node of a finite tree
+
+lies on a path between two leaves. Thus K is complete and universal to
+
+V (G) \ K. Each leaf-private vertex is isolated in G - K.
+
+    If G - K had a nontrivial component, choose a nonisolated simplicial
+
+vertex of that chordal component. Its neighbourhood in G is a clique, so
+
+it is also simplicial in G. It is nonadjacent to a leaf-private vertex, but its
+
+neighbourhood properly contains K, again a contradiction. Therefore G - K
+
+is independent, as required.                                            
+
+Proposition 6.3 (fine monotone symmetrization). Every chordal graph G
+of order n admits a sequence
+
+                              G = G0, G1, . . . , GL = Sk,n-k
+of chordal graphs such that
+
+              (Gi+1)  (Gi) and |E(Gi+1)  E(Gi)|  n - 2
+for every i. One may take L  n(n - 1).
+
+Proof. If the condition in lemma 6.2 fails, choose two nonadjacent simplicial
+
+vertices with different neighbourhoods and take their false-twin classes. The
+
+preceding discrete-convexity argument merges those classes by a sequence of
+
+nondecreasing single-vertex copies. Each copied vertex changes at most n - 2
+
+incident pairs. Repeat. A full-class merge strictly decreases the number of
+
+false-twin classes, so there are at most n - 1 merges, each requiring at most
+
+n copies. The terminal graph is complete-split by lemma 6.2.            
+
+   The single-vertex resolution in proposition 6.3 is essential: the proof below
+controls the first point at which the path crosses the boundary of a fixed
+edit-distance neighbourhood.
+
+        7. The mixed functional on complete-split graphs
+
+    Write
+
+                 Sk, = Kk  K, k +  = n.
+
+Lemma 7.1. If k  4 and   1, then
+
+           (Sk,) = max        k -  k   2k -  k   k +              k  .  (7.1)
+                                   2  ,      2  ,                 2
+
+                                         3                     6
+        LINEAR-ERROR CLIQUE PARTITIONS OF CHORDAL GRAPHS                          13
+
+Proof. Average an optimal dual cover over all automorphisms of Sk,. We
+may therefore assign a common weight x to each edge in the clique side and
+
+a common weight y to each spoke. The triangle and K4 constraints in (2.2)
+reduce to
+
+                      5     y  0,        x + 2y  2,                   5           (7.2)
+                x ,                                        x+y .
+
+                      6                                               3
+
+Here x  5/6 subsumes the root-triangle constraint x  2/3.
+   The lower boundary of (7.2) has vertices
+
+                         (2, 0),     41                55
+                                      ,,                ,.
+
+                                     33                66
+
+The dual objective is    k  x + ky,  so  its  minimum  is  attained  at  one  of  these
+                         2
+                                                                         k
+vertices. Subtracting the three possible values from e(Sk,) =            2  + k gives
+
+(7.1).                                                                            
+
+   The three expressions in (7.1), maximized over the real variable k, are
+bounded respectively by
+
+                Q(n),             (4n + 1)2   , qquad  n(n - 1)  .                (7.3)
+
+                                     120               12
+
+The first bound is the square identity (5.10); the other two follow by
+
+completing the square and by e(Sk,)           n  .     If  = 0 and k  4, then
+                                              2
+
+(Kk) = e(Kk)/6: the constant dual weight 5/6 is optimal, as witnessed
+
+by the uniform fractional packing of all copies of K4. If k  3, then
+
+(Sk,n-k)  e(Sk,n-k)  3n.
+
+For n  100, every branch except the first in (7.1), including the preceding
+
+degenerate cases, is strictly smaller than
+
+                                     n2 n2                                        (7.4)
+                                         -.
+
+                                     6 40
+
+For the second branch this is equivalent to n2 > 8n + 1, while 3n < n2/6 -
+n2/40 follows from 17n > 360; the third branch and the complete graph are
+
+smaller still.
+
+Corollary 7.2. Every chordal graph G of order n  100 satisfies
+
+                                   (G)  Q(n).
+
+Proof. Apply proposition 6.3. The functional does not decrease along the
+
+path, and (7.3) bounds its complete-split endpoint by Q(n).                       
+
+   We shall also need a quantitative statement about a nearly extremal
+terminal graph.
+
+Lemma 7.3. Let n  100, and suppose that a complete-split graph S of
+
+order n satisfies
+                                      (S)  n2 - n2.
+                                                 6
+14                              ANONYMOUS
+
+If D = Q(n) - (S), then the first branch in (7.1) gives the value of (S)
+and
+
+                                        2D
+                         dsp(S)  n         + n.                     (7.5)
+                                        3
+
+Proof. Since  = 10-30 < 1/40, the branch separation (7.4) forces the first
+branch. If its root has order k, the square identity (5.10) gives
+
+                            k-  2n + 1      2D      .
+
+                                6                3
+
+Changing the root order to n/3 costs at most n edits per vertex-role change.
+The offset between (2n + 1)/6 and n/3 is less than one, proving (7.5). 
+
+             8. Global stability by first entry
+
+Theorem 8.1 (fixed-neighbourhood stability). Let G be chordal of order
+
+n  1032. If
+
+                            (G)  n2 - n2,                           (8.1)
+                                        6
+
+then
+
+                             dsp(G) <   n2                          (8.2)
+                                              .
+                                           2
+
+Proof. Take the path G = G0, . . . , GL from proposition 6.3. Its functional
+values are no smaller than (G). Therefore, for every graph H on the path,
+
+             Q(n) - (H)  n2 + n + 1  2n2,                           (8.3)
+                                           6 24
+
+where the last inequality follows from n  1032. By lemma 7.3, the endpoint
+
+satisfies
+
+                      dsp(GL)        4 1 
+                         n2              + <.
+
+                                     3 n4
+
+   Suppose, contrary to (8.2), that dsp(G0)  n2/2. Let i be the first path
+index with dsp(Gi) < n2/2. A path step changes at most n - 2 edges, and
+
+hence
+
+                      n2    - n  dsp(Gi) <       n2                 (8.4)
+                                                       .
+                         2                          2
+
+In particular, Gi lies inside the radius-n2 neighbourhood, so lemma 5.2
+
+applies. Combining (5.7) with (8.3) gives
+
+             dsp(Gi)     18  +  4 1
+                n2                  +
+                                                                
+                                3n                               .
+
+                      <  18 · 10-30  + 2 · 10-15    + 10-32  <  4   (8.5)
+
+But /2 - 1/n > /4, so (8.4) and (8.5) are incompatible. This proves the
+
+theorem.                                                            
+        LINEAR-ERROR CLIQUE PARTITIONS OF CHORDAL GRAPHS                     15
+
+                   9. Proof of the main theorem
+
+   We now combine the near and far regimes. Recall the definition of N in
+(1.3).
+
+Theorem 9.1. Every chordal graph G on n  N vertices satisfies
+
+                      cp4(G)  M (n).
+
+Proof. If (8.1) holds, then theorem 8.1 places G within the radius-n2 neigh-
+
+bourhood. Equation (5.8) gives the stronger bound cp3(G)  M (n).
+   Otherwise, apply theorem 2.3 with  = /2. Using (2.4),
+
+                   cp4(G) = (G) + W4(G) - W4(G)
+
+                      < n2 - n2 + n2 < n2  M (n),
+                      6             26
+
+where the final inequality is valid for the present range of n. This completes
+
+both cases.                                                                  
+
+   It remains to match the upper bound. We record the standard complete-
+split calculation because it also explains the linear term in M (n).
+
+Lemma 9.2. If   (Kk), then                                                   (9.1)
+                                                           k
+
+                                   cp(Sk,) = k - 2 .
+
+Proof. Properly edge-colour the clique Kk using at most  colours, identified
+with distinct vertices of the independent side. For every root edge xy, use
+the triangle consisting of x, y and the vertex corresponding to the colour
+of xy. Properness makes these triangles edge-disjoint. Cover every unused
+spoke by a K2. The resulting partition has
+
+                   k  + k - 2    k  = k -                     k
+
+                   2             2                            2
+
+parts.
+
+For the reverse inequality, assign weight -1 to each root edge and weight
+
++1 to each spoke. Every clique in a complete-split graph has total edge
+
+weight at most 1: a clique contains at most one independent-side vertex, and,
+
+if it contains r root vertices and one outside vertex, its weight is r -  r   1.
+                                                                          2
+
+Its value is nonpositive when it contains only root vertices. Summing over
+
+any clique partition shows that the number of parts is at least the total edge
+
+weight k -   k  .                                                            
+             2
+
+   Choose an integer k nearest to (2n + 1)/6 and put  = n - k. Then
+  k  (Kk), using Vizing's theorem, and a check of the three residue
+classes of n modulo 3 gives
+
+                         k       n(n + 1)                                    (9.2)
+                   k(n - k) - =                               = M (n).
+                         2          6
+16       ANONYMOUS
+
+Together with theorem 9.1, this proves theorem 1.1.
+   For completeness, let C = N . If 0 < n < N , the partition into individual
+
+edges gives
+                                              n n2
+
+                                cp(G)   + N n.
+                                              26
+
+For n  N , theorem 9.1 and M (n)  n2/6 + n/6 give the same conclusion.
+The empty graph is immediate. This proves corollary 1.2.
+
+                             10. Verification and scope
+
+   The proof invokes three named non-elementary theorem inputs: theo-
+rems 2.1 to 2.3. In particular, it does not assume a linear bound for the
+general integral­fractional packing gap. The transfer theorem is invoked only
+in the far regime, where a fixed quadratic deficit pays for its o(n2) loss. In
+the near regime, lemma 3.1 constructs an actual edge partition into triangles
+and K2's.
+
+   The accompanying repository contains exact rational checks of the numer-
+ical inequalities and finite mixed-packing certificates. These computations
+are regression tests; none is a premise of the proof for arbitrary n.
+
+   The Lean companion checks the conditional upper-bound chain: terminal
+construction, root regularization, local stability, terminating single-vertex
+symmetrization, first entry, and near­far assembly. It also checks the signed-
+weight lower bound for complete-split witnesses and combines the two sides
+into the eventual exact extremal statement. Its external-input record has
+three interfaces corresponding to theorems 2.1 to 2.3; the packing-transfer
+interface packages attained rational primal and dual witnesses together with
+the published asymptotic gap. These are explicit theorem arguments rather
+than project axioms and have not themselves been reproved in Lean.
+
+   The formalization sometimes uses an equivalent proof architecture rather
+than mirroring the prose line by line. In particular, its terminal characteriza-
+tion uses minimal separators instead of clique trees, and path termination uses
+a finite lexicographic measure. The displayed auxiliary bound L  n(n - 1)
+is not needed by the final theorem and is not separately formalized. The
+rigidity addendum is supported by exact Python certificate replay but lies
+outside this Lean theorem perimeter. The repository records the precise
+trust ledger and the commands for reproducing the build and the fail-closed
+axiom audit.
+
+[Blo26]                               References
+[BP93]
+         Thomas F. Bloom. Erds problem 81. Erds Problems, erdosproblems.com/81,
+         2026. Accessed 2026-09-07.
+         Jean R. S. Blair and Barry Peyton. An introduction to chordal graphs and
+         clique trees. In Graph Theory and Sparse Matrix Computation, volume 56 of
+         IMA Volumes in Mathematics and its Applications, pages 1­29. Springer, 1993.
+         Springer DOI.
+LINEAR-ERROR CLIQUE PARTITIONS OF CHORDAL GRAPHS  17
+
+[CEO94] Guan-Tao Chen, Paul Erds, and Edward T. Ordman. Clique partitions of split
+              graphs. In Combinatorics, Graph Theory, Algorithms and Applications (Beijing,
+             1993), pages 21­30. World Scientific, River Edge, NJ, 1994.
+
+[Cip26] Ricky Cipollini. A partial result on erds problem 81. Preprint, public Overleaf
+              manuscript, 2026.
+
+[Dir61] Gabriel A. Dirac. On rigid circuit graphs. Abhandlungen aus dem Mathematischen
+             Seminar der Universität Hamburg, 25:71­76, 1961. doi:10.1007/BF02992776.
+
+[EOZ93] Paul Erds, Edward T. Ordman, and Yechezkel Zalcstein. Clique partitions of
+              chordal graphs. Combinatorics, Probability and Computing, 2(4):409­415, 1993.
+              doi:10.1017/S0963548300000808.
+
+[HJ97] Roland Häggkvist and Jeannette Janssen. New bounds on the list-chromatic
+              index of the complete graph and other simple graphs. Combinatorics, Probability
+             and Computing, 6(3):295­313, 1997. doi:10.1017/S0963548397002927.
+
+[RUW21] Dhruv Rohatgi, John C. Urschel, and Jake Wellens. Regarding two conjectures on
+              clique and biclique partitions. Electronic Journal of Combinatorics, 28(4):P4.53,
+              2021. doi:10.37236/9564.
+
+[TG26a] Juan Pablo Traverso Gianini. Complete-split extremizers for a fractional triangle-
+              cover functional on chordal graphs. Zenodo, 2026. Version 1.2; Paper II in
+              the Erds Problem 81 series; contained in the version 3 collection snapshot;
+              doi:10.5281/zenodo.22064657.
+
+[TG26b] Juan Pablo Traverso Gianini. Linear-error clique partitions of split graphs
+              via structured triangle packing. Zenodo, 2026. Version 1.5; Paper III in
+              the Erds Problem 81 series; contained in the version 3 collection snapshot;
+              doi:10.5281/zenodo.22064657.
+
+[Viz64] Vadim G. Vizing. On an estimate of the chromatic class of a p-graph. Diskretnyi
+             Analiz, 3:25­30, 1964. In Russian.
+

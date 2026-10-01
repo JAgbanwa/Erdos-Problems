@@ -1,0 +1,10 @@
+$ c:\Users\jtraverso\.elan\toolchains\leanprover--lean4---v4.28.0\bin\lean.exe -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false PaperIV/RC01DensePhysicalGate.lean -o C:\Users\jtraverso\e81p4\opt_build_20260927\.lake\runner\lib\lean\PaperIV\RC01DensePhysicalGate.olean -i C:\Users\jtraverso\e81p4\opt_build_20260927\.lake\runner\lib\lean\PaperIV\RC01DensePhysicalGate.ilean
+PaperIV/RC01DensePhysicalGate.lean:34:50: warning: unused variable `hv`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+PaperIV/RC01DensePhysicalGate.lean:36:9: warning: unused variable `hchoice3`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+PaperIV/RC01DensePhysicalGate.lean:37:9: warning: unused variable `hchoice4`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`

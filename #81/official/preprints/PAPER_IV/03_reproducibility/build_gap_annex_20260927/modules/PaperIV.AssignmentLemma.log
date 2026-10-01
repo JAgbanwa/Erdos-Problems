@@ -1,0 +1,40 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 PaperIV/AssignmentLemma.lean -o /workspace/request-project/.lake/runner/lib/lean/PaperIV/AssignmentLemma.olean -i /workspace/request-project/.lake/runner/lib/lean/PaperIV/AssignmentLemma.ilean
+PaperIV/AssignmentLemma.lean:68:0: warning: automatically included section variable(s) unused in theorem `PaperIV.AssignmentLemma.ownParts_disjoint`:
+  [DecidableEq V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+PaperIV/AssignmentLemma.lean:96:0: warning: automatically included section variable(s) unused in theorem `PaperIV.AssignmentLemma.loss_decomposition`:
+  [Fintype V]
+  [DecidableRel G.Adj]
+  [DecidableEq β]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] [DecidableRel G.Adj] [DecidableEq β] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+import took 3.1s
+cumulative profiling times:
+	.olean serialization 53.3ms
+	attribute application 0.0917ms
+	compilation (IR) 0.258ms
+	compilation (LCNF base) 0.639ms
+	compilation (LCNF mono) 0.415ms
+	congr simp thm 1.08ms
+	elaboration 47.4ms
+	fix level params 0.364ms
+	import 3.1s
+	initialization 37.8ms
+	instantiate metavars 1.84ms
+	interpretation 219ms
+	let-to-have transformation 0.103ms
+	linting 9.6ms
+	norm_num 0.443ms
+	parsing 6.87ms
+	process pre-definitions 4.51ms
+	ring 8.22ms
+	share common exprs 1.67ms
+	simp 6.1ms
+	tactic execution 26ms
+	type checking 19.7ms
+	typeclass inference 46ms

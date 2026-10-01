@@ -1,0 +1,136 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 PaperIV/EquitableKempe.lean -o /workspace/request-project/.lake/runner/lib/lean/PaperIV/EquitableKempe.olean -i /workspace/request-project/.lake/runner/lib/lean/PaperIV/EquitableKempe.ilean
+PaperIV/EquitableKempe.lean:24:0: warning: automatically included section variable(s) unused in theorem `PaperIV.EquitableKempe.two_mul_card_colourClass_le_vertices`:
+  [Fintype Color]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype Color] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+PaperIV/EquitableKempe.lean:107:0: warning: automatically included section variable(s) unused in theorem `PaperIV.EquitableKempe.edgeAnchor_mem`:
+  [Fintype V]
+  [DecidableEq V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] [DecidableEq V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+PaperIV/EquitableKempe.lean:119:8: warning: automatically included section variable(s) unused in theorem `PaperIV.EquitableKempe.mem_componentClass`:
+  [DecidableEq V]
+  [Fintype Color]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq V] [Fintype Color] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+PaperIV/EquitableKempe.lean:131:0: warning: automatically included section variable(s) unused in theorem `PaperIV.EquitableKempe.sum_card_componentClass`:
+  [Fintype Color]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype Color] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+PaperIV/EquitableKempe.lean:169:0: warning: automatically included section variable(s) unused in theorem `PaperIV.EquitableKempe.exists_pair_gap_two_of_not_equitable`:
+  [DecidableEq V]
+  [Fintype Color]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq V] [Fintype Color] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+PaperIV/EquitableKempe.lean:187:0: warning: automatically included section variable(s) unused in theorem `PaperIV.EquitableKempe.liftComponentEdge_injective`:
+  [Fintype V]
+  [DecidableEq V]
+  [Fintype Color]
+  [DecidableEq Color]
+  [DecidableRel G.Adj]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] [DecidableEq V] [Fintype Color] [DecidableEq Color] [DecidableRel G.Adj] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+PaperIV/EquitableKempe.lean:194:0: warning: automatically included section variable(s) unused in theorem `PaperIV.EquitableKempe.liftComponentEdge_mem_graphEdges`:
+  [DecidableEq V]
+  [Fintype Color]
+  [DecidableEq Color]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq V] [Fintype Color] [DecidableEq Color] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+PaperIV/EquitableKempe.lean:208:0: warning: automatically included section variable(s) unused in theorem `PaperIV.EquitableKempe.liftComponentEdge_has_selected_colour`:
+  [Fintype V]
+  [DecidableEq V]
+  [Fintype Color]
+  [DecidableEq Color]
+  [DecidableRel G.Adj]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] [DecidableEq V] [Fintype Color] [DecidableEq Color] [DecidableRel G.Adj] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+PaperIV/EquitableKempe.lean:225:0: warning: automatically included section variable(s) unused in theorem `PaperIV.EquitableKempe.twoColourCode_injective_on_pair`:
+  [Fintype Color]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype Color] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+PaperIV/EquitableKempe.lean:276:0: warning: automatically included section variable(s) unused in theorem `PaperIV.EquitableKempe.endpoint_mem_component_of_anchor`:
+  [DecidableEq V]
+  [Fintype Color]
+  [DecidableEq Color]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq V] [Fintype Color] [DecidableEq Color] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+PaperIV/EquitableKempe.lean:344:0: warning: automatically included section variable(s) unused in theorem `PaperIV.EquitableKempe.anchor_liftComponentEdge_mem_support`:
+  [Fintype Color]
+  [DecidableEq Color]
+  [DecidableRel G.Adj]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype Color] [DecidableEq Color] [DecidableRel G.Adj] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+PaperIV/EquitableKempe.lean:543:0: warning: automatically included section variable(s) unused in theorem `PaperIV.EquitableKempe.colourClass_swapComponent_left`:
+  [Fintype Color]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype Color] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+PaperIV/EquitableKempe.lean:577:0: warning: automatically included section variable(s) unused in theorem `PaperIV.EquitableKempe.colourClass_swapComponent_right`:
+  [Fintype Color]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype Color] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+PaperIV/EquitableKempe.lean:611:0: warning: automatically included section variable(s) unused in theorem `PaperIV.EquitableKempe.componentClass_subset_colourClass`:
+  [DecidableEq V]
+  [Fintype Color]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq V] [Fintype Color] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+PaperIV/EquitableKempe.lean:673:0: warning: automatically included section variable(s) unused in theorem `PaperIV.EquitableKempe.colourClass_swapComponent_of_ne`:
+  [Fintype Color]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype Color] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_nlinarith_1._boxed took 786ms
+import took 2.96s
+.olean serialization took 119ms
+cumulative profiling times:
+	.olean serialization 119ms
+	attribute application 5.64ms
+	compilation (IR) 4.84ms
+	compilation (LCNF base) 5.72ms
+	compilation (LCNF mono) 2.41ms
+	congr simp thm 28.8ms
+	elaboration 266ms
+	fix level params 4.93ms
+	import 2.96s
+	initialization 36.6ms
+	instantiate metavars 23.5ms
+	interpretation 1.31s
+	let-to-have transformation 3.15ms
+	linting 127ms
+	norm_num 8.52ms
+	parsing 41.6ms
+	process pre-definitions 46.4ms
+	ring 55.4ms
+	share common exprs 19.2ms
+	simp 645ms
+	tactic execution 540ms
+	type checking 344ms
+	typeclass inference 1.08s

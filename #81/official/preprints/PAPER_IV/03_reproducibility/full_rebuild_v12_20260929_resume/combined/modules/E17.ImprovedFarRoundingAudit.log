@@ -1,0 +1,22 @@
+$ c:\Users\jtraverso\.elan\toolchains\leanprover--lean4---v4.28.0\bin\lean.exe -j 1 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false E17/ImprovedFarRoundingAudit.lean -o C:\Users\jtraverso\e81p4\piv_v12_full_rebuild_20260929\.lake\runner\lib\lean\E17\ImprovedFarRoundingAudit.olean -i C:\Users\jtraverso\e81p4\piv_v12_full_rebuild_20260929\.lake\runner\lib\lean\E17\ImprovedFarRoundingAudit.ilean
+PASS E17Bridge.faceTransfer_loss: 12962 transitive constants; axioms [propext, Classical.choice, Quot.sound]
+PASS E17Bridge.faceTransfer_weight_four: 12902 transitive constants; axioms [propext, Classical.choice, Quot.sound]
+PASS E17Bridge.profileCleanup_loss: 13350 transitive constants; axioms [propext, Classical.choice, Quot.sound]
+PASS E17Bridge.profileCleanup_zero_or_heavy: 13204 transitive constants; axioms [propext, Classical.choice, Quot.sound]
+PASS E17Bridge.profileCleanup_offCanonical_zero: 13379 transitive constants; axioms [propext,
+ Classical.choice,
+ Quot.sound]
+PASS E17Bridge.profileCleanup_triangleMass_loss: 13302 transitive constants; axioms [propext,
+ Classical.choice,
+ Quot.sound]
+PASS E17Bridge.exists_improvedGateGap_of_high_mass: 33515 transitive constants; axioms [propext,
+ Classical.choice,
+ Quot.sound]
+PASS E17Bridge.cleanedR3_loss: 13628 transitive constants; axioms [propext, Classical.choice, Quot.sound]
+PASS E17Bridge.UniformSchedule.uniformRoundingTarget_via_r3_f1: 34302 transitive constants; axioms [propext,
+ Classical.choice,
+ Quot.sound]
+PASS E17Bridge.exists_improvedGateGap_eventually: 34309 transitive constants; axioms [propext,
+ Classical.choice,
+ Quot.sound]
+PASS E17Bridge.improved_far_loss_eventually: 34313 transitive constants; axioms [propext, Classical.choice, Quot.sound]

@@ -1,0 +1,21 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 PaperIV/NearCriticalDichotomy.lean -o /workspace/request-project/.lake/runner/lib/lean/PaperIV/NearCriticalDichotomy.olean -i /workspace/request-project/.lake/runner/lib/lean/PaperIV/NearCriticalDichotomy.ilean
+import took 4.34s
+cumulative profiling times:
+	.olean serialization 98.3ms
+	attribute application 0.0323ms
+	congr simp thm 3.08ms
+	elaboration 42.7ms
+	fix level params 0.166ms
+	import 4.34s
+	initialization 38ms
+	instantiate metavars 2.04ms
+	interpretation 253ms
+	let-to-have transformation 0.101ms
+	linting 4.2ms
+	parsing 4.63ms
+	process pre-definitions 2.54ms
+	share common exprs 1.07ms
+	simp 22.3ms
+	tactic execution 55.3ms
+	type checking 20.6ms
+	typeclass inference 120ms

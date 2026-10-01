@@ -1,0 +1,35 @@
+{
+  "revision": "v1.22-r2",
+  "spanish_input_sha256": "4d612d7efdf274505a896fae18e9553f337123ceb4e55e0691204c6ddebc7663",
+  "spanish_output_sha256": "ec227eb57e98ee09677a49fe743ad29a78ec38e864e6bf04f171a36cc5e0e97e",
+  "matching_occurrences_corrected": 11,
+  "packing_occurrences_corrected": 1,
+  "model_formatting_corrections": 1,
+  "protected_fields_identical": [
+    "display",
+    "inline_math",
+    "code_blocks",
+    "tags",
+    "result_paragraphs"
+  ],
+  "references_identical": true,
+  "english": [
+    {
+      "file": "PAPER_IV_preprint_v1.22_en.md",
+      "sha256": "99a1159d43eda387197ddfbccbfa961241a1a86e235462531dadf7dd6d65c94f",
+      "byte_identical": true
+    },
+    {
+      "file": "PAPER_IV_preprint_v1.22_en.tex",
+      "sha256": "34a3081b0dd2b21b886a575cea45502bb5d51dbf5dd2637b203b230e399c1100",
+      "byte_identical": true
+    },
+    {
+      "file": "PAPER_IV_preprint_v1.22_en.pdf",
+      "sha256": "5bbb730eb5fbf1a15ca37253f2b934eb4c0c15c4a978c86dcdf2324f0bcd79e0",
+      "byte_identical": true
+    }
+  ],
+  "lean_executed": false,
+  "scope": "Only the enumerated ES terminology and one code-format marker changed; version, date and audit-status prose intentionally retained."
+}

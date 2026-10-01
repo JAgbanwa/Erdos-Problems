@@ -1,0 +1,24 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 PaperIV/TwoRegimeAssembly.lean -o /workspace/request-project/.lake/runner/lib/lean/PaperIV/TwoRegimeAssembly.olean -i /workspace/request-project/.lake/runner/lib/lean/PaperIV/TwoRegimeAssembly.ilean
+import took 2.55s
+cumulative profiling times:
+	.olean serialization 41.9ms
+	attribute application 0.0383ms
+	blocked (unaccounted) 169ms
+	congr simp thm 1.22ms
+	elaboration 15.1ms
+	fix level params 0.124ms
+	import 2.55s
+	initialization 36ms
+	instantiate metavars 0.259ms
+	interpretation 210ms
+	let-to-have transformation 0.0358ms
+	linting 3.88ms
+	norm_num 7.81ms
+	parsing 1.64ms
+	process pre-definitions 2.15ms
+	ring 8.34ms
+	share common exprs 1.2ms
+	simp 1.78ms
+	tactic execution 4.8ms
+	type checking 18.5ms
+	typeclass inference 64.4ms

@@ -1,0 +1,21 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 PaperIV/NearH1PhaseI.lean -o /workspace/request-project/.lake/runner/lib/lean/PaperIV/NearH1PhaseI.olean -i /workspace/request-project/.lake/runner/lib/lean/PaperIV/NearH1PhaseI.ilean
+import took 3.03s
+cumulative profiling times:
+	.olean serialization 57.2ms
+	attribute application 0.0117ms
+	congr simp thm 1.11ms
+	elaboration 16.2ms
+	fix level params 0.158ms
+	import 3.03s
+	initialization 36.1ms
+	instantiate metavars 0.434ms
+	interpretation 180ms
+	let-to-have transformation 0.0443ms
+	linting 2.88ms
+	parsing 1.55ms
+	process pre-definitions 1.23ms
+	share common exprs 0.445ms
+	simp 4.53ms
+	tactic execution 38ms
+	type checking 77.3ms
+	typeclass inference 85.3ms

@@ -1,0 +1,26 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 FarExploration/CleanupCertificate.lean -o /workspace/request-project/.lake/runner/lib/lean/FarExploration/CleanupCertificate.olean -i /workspace/request-project/.lake/runner/lib/lean/FarExploration/CleanupCertificate.ilean
+import took 2.99s
+cumulative profiling times:
+	.olean serialization 55.4ms
+	attribute application 0.18ms
+	compilation (IR) 1.93ms
+	compilation (LCNF base) 4.14ms
+	compilation (LCNF mono) 2.48ms
+	congr simp thm 5.61ms
+	elaboration 65.8ms
+	fix level params 0.499ms
+	import 2.99s
+	initialization 41.7ms
+	instantiate metavars 2.26ms
+	interpretation 335ms
+	let-to-have transformation 0.282ms
+	linting 18ms
+	norm_num 27.4ms
+	parsing 8.44ms
+	process pre-definitions 17.9ms
+	ring 8.45ms
+	share common exprs 4.45ms
+	simp 109ms
+	tactic execution 90.9ms
+	type checking 55.9ms
+	typeclass inference 418ms

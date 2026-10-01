@@ -1,0 +1,29 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 PaperIV/RC01CanonicalTransferBridge.lean -o /workspace/request-project/.lake/runner/lib/lean/PaperIV/RC01CanonicalTransferBridge.olean -i /workspace/request-project/.lake/runner/lib/lean/PaperIV/RC01CanonicalTransferBridge.ilean
+PaperIV/RC01CanonicalTransferBridge.lean:36:0: warning: automatically included section variable(s) unused in theorem `PaperIV.RC01CanonicalTransferBridge.rawMass_profileFiber_le_psiT`:
+  [Fintype P]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype P] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+import took 4.21s
+cumulative profiling times:
+	.olean serialization 99.6ms
+	attribute application 0.0651ms
+	congr simp thm 0.654ms
+	elaboration 43.5ms
+	fix level params 0.43ms
+	import 4.21s
+	initialization 37.5ms
+	instantiate metavars 0.51ms
+	interpretation 304ms
+	let-to-have transformation 0.136ms
+	linting 11.2ms
+	norm_num 8.77ms
+	parsing 4.48ms
+	process pre-definitions 3.67ms
+	ring 3.8ms
+	share common exprs 1.49ms
+	simp 2.52ms
+	tactic execution 61.3ms
+	type checking 22.3ms
+	typeclass inference 104ms

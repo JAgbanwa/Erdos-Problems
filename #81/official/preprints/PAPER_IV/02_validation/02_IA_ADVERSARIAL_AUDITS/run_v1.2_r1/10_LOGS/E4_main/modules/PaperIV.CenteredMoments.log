@@ -1,0 +1,21 @@
+$ C:\Users\jtraverso\.elan\toolchains\leanprover--lean4---v4.28.0\bin\lean.exe -j 8 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false PaperIV/CenteredMoments.lean -o C:\Users\jtraverso\e81p4-publish\preprints\PAPER_IV\02_validation\02_IA_ADVERSARIAL_AUDITS\run_v1.2_r1\05_BUILD\main\obj\PaperIV\CenteredMoments.olean -i C:\Users\jtraverso\e81p4-publish\preprints\PAPER_IV\02_validation\02_IA_ADVERSARIAL_AUDITS\run_v1.2_r1\05_BUILD\main\obj\PaperIV\CenteredMoments.ilean
+PaperIV/CenteredMoments.lean:50:0: warning: automatically included section variable(s) unused in theorem `PaperIV.CenteredMoments.expect_affine`:
+  [DecidableEq Ω]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq Ω] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+PaperIV/CenteredMoments.lean:155:38: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+PaperIV/CenteredMoments.lean:158:38: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+PaperIV/CenteredMoments.lean:195:0: warning: automatically included section variable(s) unused in theorem `PaperIV.CenteredMoments.block_indicator_mem`:
+  [Fintype ρ]
+  [DecidableEq ρ]
+  [Fintype κ]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype ρ] [DecidableEq ρ] [Fintype κ] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`

@@ -1,0 +1,321 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+\documentclass[
+]{article}
+\usepackage{xcolor}
+\usepackage{amsmath,amssymb}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math} % this also loads fontspec
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+\usepackage{lmodern}
+\ifPDFTeX\else
+  % xetex/luatex font selection
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{longtable,booktabs,array}
+\usepackage{caption}
+\captionsetup[table]{skip=6pt}
+\newcounter{none} % for unnumbered tables
+\usepackage{calc} % for calculating minipage widths
+% Correct order of tables after \paragraph or \subparagraph
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd\longtable{\par}{\if@noskipsec\mbox{}\fi\par}{}{}
+\makeatother
+% Allow footnotes in longtable head/foot
+\IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
+\makesavenoteenv{longtable}
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\usepackage{bookmark}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same}
+% fallback for those not using the hyperref driver hyperxmp:
+\makeatletter
+\@ifundefined{xmpquote}{\newcommand{\xmpquote}[1]{#1}}{}
+\makeatother
+\hypersetup{
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+
+\author{}
+\date{}
+
+\begin{document}
+
+\section{Paper IV v1.22-r1 --- External adversarial revalidation
+(run\_v1.22\_r1)}\label{paper-iv-v122-r1--external-adversarial-revalidation-run_v122_r1}
+
+\textbf{Overall verdict: PASS.} It comes with two MINOR, non-blocking
+presentation findings in the Spanish edition (X-15, NEW-01) and an
+inaccurate author claim about them (NEW-03). No mandatory derivation
+remains insufficient. This is not human peer review and not permission
+to publish.
+
+\subsection{1. Target, identity and
+comparison}\label{1-target-identity-and-comparison}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Target.} \texttt{01\_manuscript/v1.22\_editorial\_candidate/},
+  bound by \texttt{AUDIT\_TARGET\_v1.22.json} (sha256
+  cbe0fd6e8e8c3f70\ldots, matching its sidecar).
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \texttt{MANUSCRIPT\_REVIEW\_MANIFEST.json} (d9e559a3\ldots): 223
+    files.
+  \item
+    \texttt{PAPER\_IV\_v1.22\_REVIEW\_PACKAGE\_r1.zip} (2b87b746\ldots):
+    225 members.
+  \item
+    Lean cut \texttt{lean\_piv-v12-fb459343d234}: 615/615 entries.
+  \item
+    The identity was complete and matching at E0 initial. \textbf{E0
+    final (after the review) is identical}, so neither the inputs nor
+    the historical evidence changed.
+  \end{itemize}
+\item
+  \textbf{Comparison baseline.} v1.21 and \texttt{run\_v1.21\_r1}.
+\item
+  \textbf{Preservation.} \texttt{run\_v1.2\_r1} (1097 files) and
+  \texttt{run\_v1.21\_r1} (340 files) are unchanged on disk, and their
+  ZIP sidecars match.
+\end{itemize}
+
+\subsection{2. Auditor declaration}\label{2-auditor-declaration}
+
+\begin{itemize}
+\tightlist
+\item
+  Model and family: Claude Opus 5.5 (\texttt{claude-opus-5-5}),
+  Anthropic.
+\item
+  Session: a \textbf{continuation of the same Claude Code session} that
+  produced run\_v1.2\_r1 and run\_v1.21\_r1 (with context compaction).
+  This is not a new session.
+\item
+  Exposure: full prior exposure; \textbf{not blind}; not cross-family.
+  The model family is the same as the manuscript\textquotesingle s
+  declared AI assistant. The machine and pinned cache are shared.
+\item
+  Reads: the read restriction is operational, not technical isolation.
+  Every read is listed in \texttt{00\_CONTROL/INPUT\_ACCESS\_LOG.csv},
+  including the pinned Mathlib source read and one incidental
+  out-of-scope path listing that was not opened (C2-07).
+\item
+  \textbf{No Lean, Lake, leanchecker or build was executed.}
+\end{itemize}
+
+\subsection{3. Order executed}\label{3-order-executed}
+
+E0 initial → E2 (C.3, six checks) → E6 (parity, all 145 pages, zooms) →
+E1/E3/E7 regressions → E5/E8 → E0 final and documentary E4. The author
+response was read only after the independent C.3 pass.
+
+\subsection{4. Gate results}\label{4-gate-results}
+
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}llll@{}}
+\toprule\noalign{}
+Gate & Verdict & Repeated this cycle & Inherited (and why) \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+E0 & PASS & E0 initial + final (identical) & -- \\
+E1 & PASS & diff; tags, displays and headings & -- \\
+E2 & \textbf{PASS} & C.3 rederived against pinned Mathlib
+\texttt{Bound.lean} and frozen \texttt{E18/Numeric.lean},
+\texttt{E19/Main.lean}; A2-4 → ACCEPTABLE\_SUMMARY; R-02 checked &
+A2-1--3, 5--7 (text unchanged per diff) \\
+E3 & PASS & new-identifier resolution; X-27 text & probe AuditorASProbe
+(source identical, 615/615) \\
+E4 & \textbf{PASS --- reused\_verified\_external\_build} & documentary
+script over records.jsonl, console, module logs, annex records and
+manifests (not SUMMARY.json): 607 modules, 19 targets, 224 checks, 50
+annex modules; identical to the v1.21 result & run\_v1.2\_r1 build,
+permitted by 615/615 source identity and unchanged run\_v1.2\_r1
+evidence; \textbf{no new build} \\
+E5 & PASS & 14 new exact C.3 checks, each with a rejected negative
+control; 21 v1.21 checks rerun & run\_v1.2\_r1 T01--T24 (text
+unchanged) \\
+E6 & PASS\_WITH\_FINDINGS & full parity; 145/145 pages viewed; 10 zooms
+at 130 dpi & -- \\
+E7 & PASS & reference diff; NEW-02; spelling & v1.21 literature checks
+X-06--X-11 (text unchanged) \\
+E8 & PASS\_WITH\_OBSERVATIONS & 1266-log detector rescan (identical);
+runner hashes; package inventory & -- \\
+\end{longtable}
+}
+
+\subsection{5. The open item from run\_v1.21\_r1: A2-4 / X-05 ---
+closed}\label{5-the-open-item-from-run_v121_r1-a2-4--x-05--closed}
+
+C.3 now defines the regularity bound as Mathlib\textquotesingle s
+\texttt{SzemerediRegularity.initialBound}, \texttt{stepBound} and
+\texttt{bound}, and I verified it literally against the pinned source.
+
+At η₀, the following steps are all correct:
+
+\begin{itemize}
+\tightlist
+\item
+  I = k₀, because 100/ε⁵ ≤ 4⁴⁰⁰⁰.
+\item
+  H = h exactly.
+\item
+  The two-iteration lower bound R ≥ 2\^{}\{2\^{}\{k₀\}\} ≥ G\_i holds,
+  and the text explicitly says it is only a lower bound.
+\item
+  The five terms of (C.1), with their ceilings and the final unit, are
+  bounded by k₀ + αB + G₃ + βG₁B⁵ + 10¹⁸(1+2G₂) + 1. This is the content
+  of \texttt{E18.Numeric.NfarE\_eta0\_le}.
+\item
+  The absorption B⁶/4 + 7B² ≤ B⁶ and the induction 4t\_j ≤ T(j+5) give
+  N\_far(η₀) ≤ B⁶ ≤ 2\^{}\{30R\} ≤ T(h+7), matching
+  \texttt{E19.absorb\_abstract}, \texttt{B6\_le\_two\_pow\_two\_pow} and
+  \texttt{NfarE\_eta0\_le\_tower}.
+\end{itemize}
+
+A.2 now points to C.3, and the account can be reconstructed from the
+printed text alone. \textbf{A2-4: ACCEPTABLE\_SUMMARY; X-05: RESOLVED.}
+All seven A.2 rows are now ACCEPTABLE\_SUMMARY. R-02 is resolved. R-01
+is kept as a declared expository limit.
+
+\subsection{6. Findings remaining (all
+non-blocking)}\label{6-findings-remaining-all-non-blocking}
+
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}llll@{}}
+\toprule\noalign{}
+ID & Severity & Location & Remaining step \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+X-15 & MINOR & ES prose: MD l.526, 578, 688, 746 (×2), 1892, 1917, 1959,
+2177, 2182 (×2), 2184; PDF pp. 16, 18, 20, 21, 55, 56, 61 & Translate 12
+occurrences of "matching(s)" and 1 of "packing" in prose
+(emparejamiento(s)/empaquetamiento). The Figure 3 label "valor base" is
+already fixed, and cited titles must stay untranslated. \\
+NEW-01 & MINOR & ES §7.2: MD l.1203, TeX l.1084, PDF p35 & Set "Model"
+in "función de ganancia acotada de Model" as code
+(\texttt{\textasciigrave{}Model\textasciigrave{}}), as in EN and in v1.2
+ES. The prior run missed this (C2-08). \\
+NEW-03 & MINOR & \texttt{RESPONSE\_TO\_REVALIDATION\_v1.22.md}, rows
+X-15 and NEW-01 & The response claims the X-15 prose translation and the
+Model restoration; neither happened in ES. \\
+R-01, E8-02, X-17, X-18, X-19, X-22, X-24, X-29 & OBSERVATION & as
+before & kept \\
+X-28 & MINOR, MITIGATED & frozen runners & patch not applied; external
+detector confirmed again \\
+\end{longtable}
+}
+
+Resolved this cycle: X-05, X-12, X-10 (spelling), NEW-02, R-02, E8-01
+(attribution), E8-03 (single package). X-27 is preserved. The full
+matrix (45 rows, all historical IDs kept) is in \texttt{FINDINGS.csv}.
+
+\subsection{7. Why PASS}\label{7-why-pass}
+
+No mathematical error was found, and the last mandatory derivation (C.3)
+is now complete and consistent with the frozen formal statements. Formal
+reproduction is confirmed by reuse with verified identity. The remaining
+items concern Spanish typography and terminology and the accuracy of the
+author\textquotesingle s change log; none affects a statement, constant,
+proof step or formal correspondence. Under §4 of the mandate,
+non-blocking observations may accompany a PASS.
+
+\subsection{8. Auditor corrections (this
+cycle)}\label{8-auditor-corrections-this-cycle}
+
+\begin{itemize}
+\tightlist
+\item
+  C2-01: C3m negative control mis-specified; corrected and supplemented.
+\item
+  C2-02 to C2-05: during E6, image reads were stripped by a request
+  limit, and provisional page-log rows had been written before the pages
+  were confirmed viewed. Interim progress messages to the owner
+  overstated coverage. All such rows were discarded (the files are
+  kept), and the final log was rebuilt only from sheets displayed at the
+  time of logging.
+\item
+  C2-06: console encoding error on the first E4 script run; rerun
+  identical.
+\item
+  C2-07: an over-broad filesystem listing showed an out-of-scope path;
+  it was not opened.
+\item
+  C2-08: run\_v1.21\_r1 missed the ES \texttt{Model} residual.
+\end{itemize}
+
+\subsection{9. Limitations}\label{9-limitations}
+
+\begin{itemize}
+\tightlist
+\item
+  Same session and model as both prior runs, and the same family as the
+  manuscript\textquotesingle s assistant. Same machine and cache.
+\item
+  No kernel replay; E4 is reuse.
+\item
+  The written-proof check is summary-level.
+\item
+  Visual inspection used 90 dpi 2-up sheets plus selected 130 dpi zooms.
+\item
+  Qualified human review remains necessary before any publication
+  decision.
+\end{itemize}
+
+\subsection{10. Deliverables}\label{10-deliverables}
+
+\begin{itemize}
+\tightlist
+\item
+  \texttt{00\_CONTROL/}: declaration, access log, corrections.
+\item
+  \texttt{10\_LOGS/}.
+\item
+  \texttt{20\_EVIDENCE/E0–E8/}: records, scripts, inputs and results.
+\item
+  \texttt{30\_REPORT/}: this report and the gate reports in MD, TeX and
+  PDF; \texttt{SUMMARY.json}; \texttt{FINDINGS.csv}.
+\item
+  \texttt{40\_PACKAGE/}: \texttt{RUN\_MANIFEST.json}, per-gate ZIPs,
+  \texttt{EXTERNAL\_REVALIDATION\_run\_v1.22\_r1.zip} with sha256
+  sidecar, \texttt{PACKAGE\_INDEX.json}.
+\end{itemize}
+
+Nothing was published, pushed, tagged or sent to third parties. The
+manuscript and its hashes were not modified.
+
+\end{document}

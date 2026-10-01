@@ -1,0 +1,26 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 PaperIV/PathDescentBridge.lean -o /workspace/request-project/.lake/runner/lib/lean/PaperIV/PathDescentBridge.olean -i /workspace/request-project/.lake/runner/lib/lean/PaperIV/PathDescentBridge.ilean
+import took 3.61s
+cumulative profiling times:
+	.olean serialization 84.9ms
+	attribute application 0.064ms
+	compilation (IR) 1.11ms
+	compilation (LCNF base) 1.18ms
+	compilation (LCNF mono) 0.442ms
+	congr simp thm 4.04ms
+	elaboration 30.7ms
+	fix level params 0.58ms
+	import 3.61s
+	initialization 37.9ms
+	instantiate metavars 3.77ms
+	interpretation 382ms
+	let-to-have transformation 0.0881ms
+	linting 11.7ms
+	norm_num 43.2ms
+	parsing 6.31ms
+	process pre-definitions 9.46ms
+	ring 14.4ms
+	share common exprs 4.69ms
+	simp 83.9ms
+	tactic execution 110ms
+	type checking 159ms
+	typeclass inference 249ms

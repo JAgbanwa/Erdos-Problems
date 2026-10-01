@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/tKov6iKBqAPSApwEvKXxheV9VpA</id>
+  <title>arXiv Query: search_query=all:"clique partition" AND all:chordal&amp;id_list=&amp;start=0&amp;max_results=25</title>
+  <updated>2026-09-30T12:34:08Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=all:%22clique+partition%22+AND+all:chordal&amp;start=0&amp;max_results=25&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>25</opensearch:itemsPerPage>
+  <opensearch:totalResults>1</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/2609.20871v1</id>
+    <title>Clique partitions and bounded simplicial defect</title>
+    <updated>2026-09-15T16:25:32Z</updated>
+    <link href="https://arxiv.org/abs/2609.20871v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2609.20871v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The clique partition number of a graph is the minimum number of complete subgraphs whose edge sets partition its edge set. We study graphs in which, in every induced subgraph and outside every prescribed clique, some vertex has a neighbourhood that becomes a clique after deleting at most $s$ vertices. The case $s=0$ is exactly the class of chordal graphs. For each fixed $s$, we prove that the maximum clique partition number at all sufficiently large orders $n$ is $\lfloor(n+s)(n+s+1)/6\rfloor-\binom{s+1}{2}$, and determine all equality graphs. The same expression is an upper bound up to an additive constant depending only on $s$ at every order. In particular, every chordal graph has clique partition number at most $n^2/6+n/6+O(1)$, answering a question of Erdős, Ordman and Zalcstein. We also prove structural stability for sublinear defect and a sharp finite-order theorem for integer signed clique functionals. The proof combines signed fractional localization with an edge-disjoint triangle construction; only a qualitative fractional-packing approximation is required.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-09-15T16:25:32Z</published>
+    <arxiv:comment>24 pages</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Obinna Okechukwu</name>
+    </author>
+  </entry>
+</feed>

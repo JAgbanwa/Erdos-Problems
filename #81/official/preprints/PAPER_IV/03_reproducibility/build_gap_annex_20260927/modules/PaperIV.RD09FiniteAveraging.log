@@ -1,0 +1,24 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 PaperIV/RD09FiniteAveraging.lean -o /workspace/request-project/.lake/runner/lib/lean/PaperIV/RD09FiniteAveraging.olean -i /workspace/request-project/.lake/runner/lib/lean/PaperIV/RD09FiniteAveraging.ilean
+import took 2.86s
+cumulative profiling times:
+	.olean serialization 42.7ms
+	attribute application 0.115ms
+	compilation (IR) 0.773ms
+	compilation (LCNF base) 1.2ms
+	compilation (LCNF mono) 1.09ms
+	congr simp thm 3.06ms
+	elaboration 34.6ms
+	fix level params 0.371ms
+	import 2.86s
+	initialization 40.8ms
+	instantiate metavars 0.553ms
+	interpretation 198ms
+	let-to-have transformation 0.15ms
+	linting 7.75ms
+	parsing 8.14ms
+	process pre-definitions 5.04ms
+	share common exprs 1.19ms
+	simp 16.4ms
+	tactic execution 77.3ms
+	type checking 13.6ms
+	typeclass inference 113ms

@@ -1,0 +1,8347 @@
+{
+"order": [
+"PaperIV.ChordalStructure",
+"PaperIV.FarRounding",
+"A4S1.HostAbsorption",
+"PaperIV.Model",
+"PaperIV.PhysicalCompletion",
+"PaperIV.SplitUniformIncidence",
+"PaperIV.SplitEdgeCount",
+"PaperIV.DefectComparatorGraph",
+"PaperIV.DefectTargetArithmetic",
+"PaperI.FiniteLP",
+"PaperI.RationalFarkas",
+"PaperI.FiniteLPDuality",
+"PaperIV.CertifiedOptimumExistence",
+"PaperIV.ClassCopy",
+"PaperIV.ChordalBasics",
+"PaperIV.ChordalCopy",
+"PaperIV.DiracEngine",
+"PaperIV.TerminalSplit",
+"PaperIV.TerminalSplitAdapter",
+"PaperIV.CloneMeasure",
+"PaperIV.Dirac1",
+"PaperIV.CopySelector",
+"PaperIV.EditMetric",
+"PaperIV.FirstEntryWindow",
+"PaperIV.EditFirstEntry",
+"PaperIV.CopyPathWindow",
+"PaperIV.DeficitAlongPath",
+"PaperIV.CopyPathNearEntry",
+"PaperIV.VertexCopy",
+"PaperIV.VertexCopySelector",
+"PaperIV.FiniteLPDuality",
+"PaperIV.FarRoundingRealLP",
+"PaperIV.VertexCopyItems",
+"PaperIV.VertexCopyTransport",
+"PaperIV.VertexCopyMonotone",
+"PaperIV.VertexCopyRank",
+"PaperIV.VertexCopyGate",
+"PaperIV.GatedTerminalSplit",
+"PaperIV.NearH1Calibration",
+"PaperIV.GraphFamilyDistance",
+"PaperIV.SplitComparatorFamily",
+"PaperIV.FarRoundingToPhysical",
+"PaperIV.VertexCopyWBridge",
+"PaperIV.F4EditRobustness",
+"PaperIV.SplitPackingObstruction",
+"PaperIV.ColourClasses",
+"PaperIV.Vizing",
+"PaperIV.LineGraphColouring",
+"PaperIV.ExteriorTriangleLift",
+"PaperIV.PackingUnion",
+"PaperIV.MultiHostTriangleLift",
+"PaperIV.OneFactorization",
+"PaperIV.TransportedMatchings",
+"PaperIV.RD09PhaseII",
+"PaperIV.RD09RootFactorPhase",
+"PaperIV.RoundRobinPairs",
+"PaperIV.SplitTriangleFactor",
+"PaperIV.SplitTriangleFactorHighHost",
+"PaperIV.GatedSplitTargetBridge",
+"PaperIV.CriticalBranch",
+"PaperIV.SharpEnvelope",
+"PaperIV.CriticalResidual",
+"PaperIV.TerminalSeparation",
+"PaperIV.NearTerminalSynthesis",
+"PaperIV.SplitFamilyDisjoint",
+"PaperIV.UniformWeightValue",
+"PaperIV.SplitCanonicalWeight",
+"PaperIV.SplitItems",
+"PaperIV.SplitCanonicalSupportSum",
+"PaperIV.SplitFamilyNonempty",
+"PaperIV.SplitCanonicalValue",
+"PaperIV.SplitTerminalLP",
+"PaperIV.UniformSplitLoads",
+"PaperIV.SplitLPToPhysicalLoads",
+"PaperIV.SplitFarRounding",
+"PaperIV.SplitComparatorResidual",
+"PaperIV.NearH1SplitComparator",
+"PaperIV.RD09FiniteAveraging",
+"PaperIV.EquitableEdgeColouring",
+"PaperIV.EquitableKempe",
+"PaperIV.RD09LocalPhaseI",
+"PaperIV.RD09L1Adapter",
+"PaperIV.RootedEliminationOrder",
+"PaperIV.RD09RootedOrderAdapter",
+"PaperIV.ClassCopyEdit",
+"PaperIV.PaddedEquitableColouring",
+"PaperIV.RootVocabulary",
+"PaperIV.RootEdgeSplit",
+"PaperIV.RD09SplitEditAccount",
+"PaperIV.ChordalCoreMissing",
+"PaperIV.NearH1FinalScalars",
+"PaperIV.NearH1PromotionAccounts",
+"PaperIV.NearH1RootRegularization",
+"PaperIV.ChordalC4",
+"PaperIV.OutsideCounting",
+"PaperIV.Regularization",
+"PaperIV.RegularizationBounds",
+"PaperIV.RegularizedRootGoal",
+"PaperIV.RootRegularizationBridge",
+"PaperIV.NearH1CalibratedRoot",
+"PaperIV.ParametricBudget",
+"PaperIV.CanonicalBudget",
+"PaperIV.TerminalLedger",
+"PaperIV.H1LedgerArithmetic",
+"PaperIV.H1ImprovedConstants",
+"PaperIV.FiniteHeavySelection",
+"PaperIV.RD09PaddedHostBase",
+"PaperIV.RD09PaddedL1Adapter",
+"PaperIV.RD09PaddedL1Mass",
+"PaperIV.RD09RootExteriorAdapter",
+"PaperIV.NearH1PhaseI",
+"PaperIV.RD09CandidateCounting",
+"PaperIV.RD09FactorCandidateMoments",
+"PaperIV.RD09TerminalAssembly",
+"PaperIV.RD09PhysicalLedger",
+"PaperIV.RD09FactorCandidateAverage",
+"PaperIV.RD09SpokeCompatibility",
+"PaperIV.RD09H1SpokeRealization",
+"PaperIV.RD09CanonicalBadAccounts",
+"PaperIV.RD09CanonicalL2Assembly",
+"PaperIV.RD09CompleteFactorAdapter",
+"PaperIV.NearH1FinalAssembly",
+"PaperIV.NearH1StructureWitness",
+"PaperIV.CertifiedF4Bridge",
+"PaperIV.PathDescentBridge",
+"PaperIV.PathDescentBarrier",
+"PaperIV.SymmetrizationMetricStep",
+"PaperIV.H1DescentBarrier",
+"PaperIV.SymmetrizationBarrier",
+"PaperIV.SymmetrizationInvariantBarrier",
+"PaperIV.LocalStabilityS01S03",
+"PaperIV.RD09RootSplitDistance",
+"PaperIV.NearH1WindowAccounts",
+"PaperIV.NearH1Localization",
+"MixedRounding.Defs",
+"MixedRounding.Cleanup",
+"PaperIV.MixedRoundingAdapter",
+"PaperIV.TargetEnvelope",
+"PaperIV.NB08Interface",
+"PaperIV.RC01GlobalBudget",
+"PaperIV.FarRoundingBatchBridge",
+"PaperIV.FarRoundingFromAssignment",
+"PaperIV.AssignmentLemma",
+"PaperIV.CliqueBagNibble",
+"PaperIV.DonationBudget",
+"PaperIV.ChordalBridge",
+"PaperIV.DenseBagClosure",
+"PaperIV.AssignmentEquivalence",
+"PaperIV.TwoRegimeAccounting",
+"PaperIV.E01Ledger",
+"PaperIV.NibblePort",
+"PaperIV.RootedCounting",
+"PaperIV.RootedCountingBridge",
+"PaperIV.CountingTelescope",
+"PaperIV.OneStepEstimate",
+"PaperIV.TelescopeK3",
+"PaperIV.TelescopeK3Full",
+"PaperIV.TelescopeK4",
+"PaperIV.TelescopeK4Step2",
+"PaperIV.TelescopeK4Full",
+"PaperIV.RegularityFormat",
+"PaperIV.DoubledPattern",
+"PaperIV.PatternCounting",
+"PaperIV.EighthMoment",
+"PaperIV.RootedVariance",
+"PaperIV.CopyCleanup",
+"PaperIV.PatternMass",
+"PaperIV.SimultaneousSelection",
+"PaperIV.CyclicLayering",
+"PaperIV.OwnerCoins",
+"PaperIV.DegreeConcentration",
+"PaperIV.CenteredMoments",
+"PaperIV.ResourceSizes",
+"PaperIV.WeightedCodegree",
+"PaperIV.RC01Candidates",
+"PaperIV.RC01CandidatePool",
+"PaperIV.RC01CanonicalSlots",
+"PaperIV.K4UniformNibbleCounts",
+"PaperIV.RC01CanonicalSupports",
+"PaperIV.TriangleNibblePort",
+"PaperIV.RC01K3Pool",
+"PaperIV.OwnerCoinMoments",
+"PaperIV.WeightedMoments",
+"PaperIV.WeightedPatternCoins",
+"PaperIV.RC01PatternCapacity",
+"PaperIV.RC01MixedPatterns",
+"PaperIV.WeightedCoin",
+"PaperIV.PatternCoin",
+"PaperIV.PatternTransfer",
+"PaperIV.PartitionBridge",
+"PaperIV.NibbleHypotheses",
+"PaperIV.PatternPoolGeometry",
+"MixedRounding.Lift",
+"MixedRounding.Producer",
+"PaperIV.MixedNibbleUnion",
+"PaperIV.JointTypedNibbleGate",
+"PaperIV.JointTypedQuota",
+"Nibble.BeckFiala",
+"Nibble.BeckFialaPairs",
+"Nibble.Basic",
+"Nibble.FracMatchingBound",
+"Nibble.Tight.Pruning",
+"Nibble.Prelude",
+"Nibble.Conflict",
+"Nibble.Survival",
+"Nibble.BernoulliSpace",
+"Nibble.Greedy",
+"Nibble.Round",
+"Nibble.Covered",
+"Nibble.Measurable",
+"Nibble.RoundConflict",
+"Nibble.CoveredExpectation",
+"Nibble.Tight.CoverProb",
+"Nibble.Tight.SafeDegree",
+"Nibble.Tight.CoverWeight",
+"Nibble.Tight.CoverWeightMoments",
+"Nibble.Tight.LossVariance",
+"Nibble.Tight.PairWeightMean",
+"Nibble.Tight.Selection",
+"Nibble.Tight.TightRound",
+"Nibble.Tight.TightRoundConcrete",
+"Nibble.Tight.ResidualBand",
+"Nibble.Tight.ConflictCount",
+"Nibble.Tight.TwoEdgeMatch",
+"Nibble.Tight.PairExcessCodegree",
+"Nibble.Tight.CoverVariance",
+"Nibble.Tight.TightRoundCheb",
+"Nibble.Tight.ResidualBandCheb",
+"Nibble.Tight.RoundExplicit",
+"Nibble.Tight.SharpRound",
+"Nibble.Tight.CubeVariance",
+"Nibble.Tight.CubeRetention",
+"Nibble.Tight.SafeDegreeVariance",
+"Nibble.Tight.SafeRoundCheb",
+"Nibble.Tight.FlipStability",
+"Nibble.Tight.SharpVariance",
+"Nibble.Tight.SharpRoundProof",
+"Nibble.Tight.SharpRoundAssembly",
+"Nibble.Convergence",
+"Nibble.Assembly",
+"Nibble.Iteration",
+"Nibble.Assemble",
+"Nibble.IterationSeq",
+"Nibble.DischargeSeq",
+"Nibble.AdaptiveRounds",
+"Nibble.Regular",
+"Nibble.Interface",
+"Nibble.RegularMost",
+"Nibble.AdaptiveAssembly",
+"Nibble.TightAssembly",
+"Nibble.TightSchedule",
+"Nibble.TightNibble",
+"Nibble.WeightedSpreadNibble",
+"Nibble.FracNibbleRepaired",
+"PaperIV.PaperIIINibbleAdapter",
+"PaperIV.MarkedQuotaNibble",
+"PaperIV.MarkedQuotaTokens",
+"PaperIV.MarkedQuotaGate",
+"Nibble.FracNibbleSlack",
+"Nibble.FracNibbleSlackR",
+"Nibble.FracNibbleLE",
+"PaperIV.PaperIIISlackNibbleAdapter",
+"PaperIV.MarkedQuotaSlackGate",
+"PaperIV.MarkedQuotaTypedGain",
+"PaperIV.TrianglePairingDefs",
+"PaperIV.TrianglePairingSplit",
+"PaperIV.TrianglePairingSums",
+"PaperIV.MarkedQuotaPairing",
+"PaperIV.JointTwoQuotaPhysical",
+"PaperIV.RC01CanonicalFractional",
+"PaperIV.RC01CanonicalNormalization",
+"PaperIV.RC01CanonicalSlackBridge",
+"PaperIV.SpreadPacking",
+"PaperIV.RC01CleanedSpreadPacking",
+"PaperIV.RC01DeviationCleanup",
+"PaperIV.RC01CleanFiber",
+"PaperIV.RC01RegularVolume",
+"PaperIV.RC01CanonicalProfile",
+"PaperIV.RC01CanonicalFiberProfile",
+"PaperIV.RC01CleanedMixedCodegree",
+"PaperIV.UniformDual",
+"PaperIV.LowTriangleReduction",
+"PaperIV.RC01MarkedRounding",
+"PaperIV.RC01PatternMassScale",
+"PaperIV.RC01CleanedGate",
+"PaperIV.RC01CanonicalValueAccounting",
+"PaperIV.RC01CanonicalTransferBridge",
+"PaperIV.DiscardCounts",
+"PaperIV.RC01ResidualCoverage",
+"PaperIV.EpsilonBudgetFull",
+"PaperIV.SpreadRestricted",
+"PaperIV.SpreadValueTransfer",
+"PaperIV.RC01ResidualTransferClosure",
+"PaperIV.RC01PatternCardinality",
+"PaperIV.RC01GlobalSchedule",
+"PaperIV.RC01DenseAssembly",
+"PaperIV.SparseRegime",
+"PaperIV.RoundingTrichotomy",
+"PaperIV.Corollary73Assembly",
+"PaperIV.TriangleCover",
+"PaperIV.TriangleSwap",
+"PaperIV.CleanedLowTriangleBridge",
+"PaperIV.RC01TriangleSchedule",
+"PaperIV.CleanedTriangleMass",
+"PaperIV.RC01TriangleTransfer",
+"PaperIV.RC01RootwiseReference",
+"PaperIV.RootedK3Counting",
+"PaperIV.RootedK4Degree",
+"PaperIV.RootedK4Counting",
+"PaperIV.RC01RootedMomentAdapter",
+"PaperIV.RC01RootwiseCleanupBudget",
+"PaperIV.RC01RootwiseRetention",
+"PaperIV.RootedK4Pool",
+"PaperIV.RootedK3Pool",
+"PaperIV.RC01DenseRootwiseRetention",
+"PaperIV.RC01DensePhysicalGate",
+"PaperIV.RC01UniformDenseGate",
+"PaperIV.RC01Final",
+"PaperIV.RC01FarAssembly",
+"PaperIV.SplitBaselineTarget",
+"PaperIV.NearRegimePackingInterface",
+"PaperIV.NearH1TargetAssembly",
+"PaperIV.NearH1GlobalAssembly",
+"PaperIV.Erdos81Unconditional",
+"PaperIV.FarSlackQuantitative",
+"PaperIV.HybridDichotomy",
+"PaperIV.SplitEditIdentity",
+"PaperIV.IntegralStability",
+"PaperIV.SubgraphPadding",
+"PaperIV.DefectApexStability",
+"A4S1.DefectOneAbsorbedStability",
+"A4S1.PerVertexAbsorption",
+"A4S1.ApexChordalSharp",
+"PaperIV.RootedSimplicialDefect",
+"PaperIV.DefectDeletionRoute",
+"A4S1.DefectOneReduction",
+"PaperIV.FarRegimeAllGraphs",
+"A4S1.CriticalReduction",
+"A4S1.IndepAbsorb",
+"PaperIV.GalvinRectangle",
+"PaperIV.DyadicHosting",
+"PaperIV.PhysicalToCliquePartition",
+"PaperIV.SplitCompleteExactValue",
+"PaperIV.SplitTriangleFactorOdd",
+"PaperIV.TwoRegimeAssembly",
+"PaperIV.TerminalToNear",
+"PaperIV.SplitTerminalNear",
+"PaperIV.SplitTerminalTarget",
+"PaperIV.SplitTriangleFactorOddHighHost",
+"PaperIV.SplitCompleteExactValueAllParities",
+"PaperIV.SplitCompleteSharpLower",
+"PaperIV.SplitCompleteSharpValue",
+"PaperIV.SplitCompleteRigidity",
+"PaperIV.LiftedPieceBudget",
+"PaperIV.LiftedPieceGreedy",
+"PaperIV.LiftedHostingAssembly",
+"A4S1.TerminalPacking",
+"A4S1.IndepHostingTools",
+"A4S1.IndepLedger",
+"A4S1.IndepPhaseOne",
+"A4S1.IndepConstructor",
+"PaperIV.EditRouteCliqueRecovery",
+"PaperIV.ErdosKPartite",
+"PaperIV.EditRouteLemmaK",
+"PaperIV.EditRouteChordalBridge",
+"PaperIV.CliqueTree.Basic",
+"PaperIV.CliqueTree.PEO",
+"PaperIV.CliqueTree.Helly",
+"PaperIV.CliqueTree.Characterization",
+"PaperIV.RootedDefectZeroChordal",
+"PaperIV.FixedL4Localization",
+"PaperIV.Erdos81AllOrders",
+"PaperIV.SplitCompleteDefect",
+"PaperIV.SplitMixedGap",
+"PaperIV.LossBudget",
+"PaperIV.FixedL4LocalizationAllEps",
+"PaperIV.EditRouteLocalization",
+"RequestProject.AS.Defs",
+"RequestProject.AS.ColoredHom",
+"RequestProject.AFKS.MeanSquare",
+"RequestProject.AFKS.Refine",
+"RequestProject.AFKS.Lemma41",
+"RequestProject.AFKS.Selection",
+"RequestProject.AFKS.Corollary42",
+"RequestProject.AS.Counting",
+"RequestProject.AS.Ramsey",
+"RequestProject.AS.Lemma35",
+"RequestProject.AS.EditDist",
+"RequestProject.AS.Modify",
+"RequestProject.AS.Lemma42",
+"RequestProject.AlonShapira",
+"PaperIV.EditRouteUnconditional",
+"A4S1.MinDegreeTerminal",
+"PaperIV.A4AllDefects",
+"A4S1.MinDegreeAll",
+"PaperIV.A4ExceptionalBound",
+"PaperIV.DefectOneRootStar",
+"A4S1.IndepAllTools",
+"A4S1.IndepAllArith",
+"A4S1.IndepAllPairs",
+"A4S1.IndepAllPeel",
+"A4S1.IndepAllSetup",
+"A4S1.IndepAllBounds",
+"A4S1.IndepAllObstr",
+"A4S1.IndepAllParams",
+"A4S1.IndepAllBudget",
+"A4S1.IndepAllMain",
+"E34.CycleCount",
+"E34.CoBipartite",
+"E34.Trees",
+"E34.Compress",
+"E34.Sampling",
+"E34.Pinned",
+"E34.SetColoring",
+"E34.Theorem2",
+"E34.Theorem6",
+"E34.L11Claim2",
+"E34.L11Claim5",
+"E34.L11Subdiv",
+"E34.L11Glue",
+"E34.L11Claim6",
+"E34.SampleBound",
+"E34.ChordalTools",
+"E34.Gavril",
+"E34.NearlySimplicial",
+"E34.Sec6Claim1",
+"E34.Sec6Claim2",
+"E34.Sec6Count",
+"E34.Sec6Main",
+"E34.Bridge",
+"E34.Params",
+"E34.L11Params",
+"E18.NibbleSchedule",
+"E18.NibbleOracle",
+"E18.NibbleChain",
+"E18.Gate",
+"E18.Rounding",
+"E18.Far",
+"E18.Numeric",
+"E19.ScheduleBounds",
+"E19.ChainBounds",
+"E19.GateBounds",
+"E19.Tower",
+"E19.Main",
+"E33.FarExplicit",
+"E33.LocExplicit",
+"E33.Assembly",
+"E34.Reduction",
+"E34.Main",
+"E34.L11Main",
+"SublinearEdit",
+"PaperIV.DefectComparatorLower",
+"PaperIV.DefectComparatorRootedDefect",
+"PaperIV.E11Core",
+"PaperIV.E11K10",
+"PaperIV.DefectSharpPublication",
+"PaperIV.CliquePartitionTransport",
+"PaperIV.ExtremalClassification",
+"E32.Basic",
+"E32.Transfer",
+"RootedCliqueRecovery",
+"EditRootRecovery",
+"PaperIV.RootPartitionStability",
+"SublinearStabilityTransfer",
+"SublinearStability",
+"SublinearLocalization",
+"RootScore",
+"PieceEdgeStability",
+"AsymptoticTools",
+"SublinearPartitionBound",
+"SublinearSequences",
+"ArbitraryOrderSequences",
+"E32.Deletion",
+"E32.DeletionInduction",
+"E32.PieceIdentity",
+"E32.Consequences",
+"E32.FarMargin",
+"E32.Main",
+"E32.Comparison",
+"E35.Sched",
+"E35.Gate",
+"E35.Numeric",
+"E35.Main",
+"E33.RemovalReduction",
+"E33.ClosedForms",
+"E35.Edit",
+"E35.Theorem",
+"CliqueShiftArithmetic",
+"CoreRepair",
+"CoreCliqueAlternative",
+"LargeCliqueCore",
+"NormalizedCliqueCore",
+"BaselineCapacity",
+"StrictBudget",
+"StrictConstructor",
+"StrictParams",
+"StrictTerminal",
+"NormalizedDeficit",
+"ResidualExcess",
+"VertexEditBound",
+"TemplateDistance",
+"TemplateShift",
+"RootPartition",
+"NormalizedStability",
+"E32Bridge",
+"ExplicitFixedStability",
+"DualBudgetArithmetic",
+"E17.Cleanup",
+"E17.FarBudget",
+"E17.ImprovedFarRounding",
+"OptimalCoreDistance",
+"ComparatorResize",
+"ExtremalEditStability",
+"FixedDefectPieceEdges",
+"PaperIV.BalancedReserve",
+"PaperIV.CliqueTree.Counting",
+"PaperIV.CliqueTree.Maximal",
+"PaperIV.CliqueTree.MaximalBridge",
+"PaperIV.CliqueTree.Separator",
+"PaperIV.CliqueTree",
+"PaperIV.DefectExplicitPublication",
+"E17.ExplicitFarRounding",
+"E17.ExplicitFarAssembly",
+"PaperIV.ExplicitThreshold",
+"PaperIV.FourHostClosure",
+"PaperIV.HybridRoute",
+"PaperIV.PaperTheorems",
+"PaperIV.LinearCoefficient",
+"PaperIV.ReserveIdentity",
+"PaperIV.NearRootWindow",
+"PaperIV.NearEdgeDensity",
+"PaperIV.NearCriticalDichotomy",
+"PaperIV.NearH1LocalConstructor",
+"PaperIV.NearThresholdSensitivity",
+"PaperIV.OptimalTemplateObstruction",
+"PaperIV.SeparationAbsorptionRoute",
+"PaperIV.SharpConstantOptimality",
+"PaperIV.SimplicialReduction",
+"PaperIV.SimplicialReductionRefined",
+"Contrib.SpreadMatchingDirac",
+"PaperIV.SpreadAbsorption",
+"PaperIV.SpreadLedgerAbsorption",
+"PaperIV.SpreadAbsorptionCompatibility",
+"PaperIVEditorial.ConstructorBudget",
+"PublicationStability",
+"RootStepBudget",
+"SignedDualModel",
+"SignedElimination",
+"RootCliquePrices",
+"RefinedFractionalBound",
+"UniformFractionalBound",
+"SmallOrderFractional",
+"RefinedRounding",
+"PaperIV",
+"AuditorChecks"
+],
+"graph": {
+"PaperIV.ChordalStructure": {
+"path": "PaperIV/ChordalStructure.lean",
+"imports": [
+"Mathlib.Algebra.Order.Ring.Star",
+"Mathlib.Analysis.Normed.Ring.Lemmas",
+"Mathlib.Combinatorics.SimpleGraph.Clique",
+"Mathlib.Combinatorics.SimpleGraph.Connectivity.WalkCounting",
+"Mathlib.Combinatorics.SimpleGraph.Ends.Defs",
+"Mathlib.Combinatorics.SimpleGraph.Metric",
+"Mathlib.Data.Int.Star",
+"Mathlib.Tactic.Cases",
+"Mathlib.Tactic.Positivity"
+],
+"local": [],
+"external": [
+"Mathlib.Algebra.Order.Ring.Star",
+"Mathlib.Analysis.Normed.Ring.Lemmas",
+"Mathlib.Combinatorics.SimpleGraph.Clique",
+"Mathlib.Combinatorics.SimpleGraph.Connectivity.WalkCounting",
+"Mathlib.Combinatorics.SimpleGraph.Ends.Defs",
+"Mathlib.Combinatorics.SimpleGraph.Metric",
+"Mathlib.Data.Int.Star",
+"Mathlib.Tactic.Cases",
+"Mathlib.Tactic.Positivity"
+]
+},
+"PaperIV.FarRounding": {
+"path": "PaperIV/FarRounding.lean",
+"imports": [
+"Mathlib.Algebra.Field.Defs",
+"Mathlib.Algebra.EuclideanDomain.Field",
+"Mathlib.Analysis.RCLike.Basic",
+"Mathlib.Data.Rat.Star",
+"Mathlib.Order.Partition.Basic",
+"PaperIV.ChordalStructure"
+],
+"local": [
+"PaperIV.ChordalStructure"
+],
+"external": [
+"Mathlib.Algebra.Field.Defs",
+"Mathlib.Algebra.EuclideanDomain.Field",
+"Mathlib.Analysis.RCLike.Basic",
+"Mathlib.Data.Rat.Star",
+"Mathlib.Order.Partition.Basic"
+]
+},
+"A4S1.HostAbsorption": {
+"path": "A4S1/HostAbsorption.lean",
+"imports": [
+"PaperIV.FarRounding",
+"Mathlib.Combinatorics.Enumerative.DoubleCounting"
+],
+"local": [
+"PaperIV.FarRounding"
+],
+"external": [
+"Mathlib.Combinatorics.Enumerative.DoubleCounting"
+]
+},
+"PaperIV.Model": {
+"path": "PaperIV/Model.lean",
+"imports": [
+"Mathlib.Algebra.Order.Ring.Star",
+"Mathlib.Combinatorics.SimpleGraph.Clique",
+"Mathlib.Tactic.Linarith",
+"Mathlib.Tactic.Positivity",
+"Mathlib.Tactic.Ring"
+],
+"local": [],
+"external": [
+"Mathlib.Algebra.Order.Ring.Star",
+"Mathlib.Combinatorics.SimpleGraph.Clique",
+"Mathlib.Tactic.Linarith",
+"Mathlib.Tactic.Positivity",
+"Mathlib.Tactic.Ring"
+]
+},
+"PaperIV.PhysicalCompletion": {
+"path": "PaperIV/PhysicalCompletion.lean",
+"imports": [
+"PaperIV.Model"
+],
+"local": [
+"PaperIV.Model"
+],
+"external": []
+},
+"PaperIV.SplitUniformIncidence": {
+"path": "PaperIV/SplitUniformIncidence.lean",
+"imports": [
+"Mathlib.Algebra.CharP.Defs",
+"Mathlib.Algebra.Order.Ring.Star",
+"Mathlib.Analysis.Normed.Field.Lemmas",
+"Mathlib.Combinatorics.SimpleGraph.Clique",
+"Mathlib.Data.Int.Star",
+"Mathlib.Tactic.IntervalCases",
+"Mathlib.Tactic.LinearCombination",
+"Mathlib.Tactic.Positivity"
+],
+"local": [],
+"external": [
+"Mathlib.Algebra.CharP.Defs",
+"Mathlib.Algebra.Order.Ring.Star",
+"Mathlib.Analysis.Normed.Field.Lemmas",
+"Mathlib.Combinatorics.SimpleGraph.Clique",
+"Mathlib.Data.Int.Star",
+"Mathlib.Tactic.IntervalCases",
+"Mathlib.Tactic.LinearCombination",
+"Mathlib.Tactic.Positivity"
+]
+},
+"PaperIV.SplitEdgeCount": {
+"path": "PaperIV/SplitEdgeCount.lean",
+"imports": [
+"PaperIV.Model",
+"PaperIV.SplitUniformIncidence"
+],
+"local": [
+"PaperIV.Model",
+"PaperIV.SplitUniformIncidence"
+],
+"external": []
+},
+"PaperIV.DefectComparatorGraph": {
+"path": "PaperIV/DefectComparatorGraph.lean",
+"imports": [
+"PaperIV.SplitEdgeCount",
+"PaperIV.PhysicalCompletion"
+],
+"local": [
+"PaperIV.SplitEdgeCount",
+"PaperIV.PhysicalCompletion"
+],
+"external": []
+},
+"PaperIV.DefectTargetArithmetic": {
+"path": "PaperIV/DefectTargetArithmetic.lean",
+"imports": [
+"PaperIV.FarRounding"
+],
+"local": [
+"PaperIV.FarRounding"
+],
+"external": []
+},
+"PaperI.FiniteLP": {
+"path": "PaperI/FiniteLP.lean",
+"imports": [
+"Mathlib.Algebra.BigOperators.Group.Finset.Basic",
+"Mathlib.Data.Rat.Defs",
+"Mathlib.Analysis.Normed.Field.Lemmas",
+"Mathlib.Tactic.Positivity"
+],
+"local": [],
+"external": [
+"Mathlib.Algebra.BigOperators.Group.Finset.Basic",
+"Mathlib.Data.Rat.Defs",
+"Mathlib.Analysis.Normed.Field.Lemmas",
+"Mathlib.Tactic.Positivity"
+]
+},
+"PaperI.RationalFarkas": {
+"path": "PaperI/RationalFarkas.lean",
+"imports": [
+"Mathlib.Algebra.BigOperators.Fin",
+"Mathlib.Algebra.Order.Ring.Star",
+"Mathlib.Analysis.Normed.Field.Lemmas",
+"Mathlib.Data.Rat.Star",
+"Mathlib.Tactic.Positivity"
+],
+"local": [],
+"external": [
+"Mathlib.Algebra.BigOperators.Fin",
+"Mathlib.Algebra.Order.Ring.Star",
+"Mathlib.Analysis.Normed.Field.Lemmas",
+"Mathlib.Data.Rat.Star",
+"Mathlib.Tactic.Positivity"
+]
+},
+"PaperI.FiniteLPDuality": {
+"path": "PaperI/FiniteLPDuality.lean",
+"imports": [
+"PaperI.RationalFarkas",
+"PaperI.FiniteLP",
+"Mathlib.Algebra.BigOperators.Field"
+],
+"local": [
+"PaperI.RationalFarkas",
+"PaperI.FiniteLP"
+],
+"external": [
+"Mathlib.Algebra.BigOperators.Field"
+]
+},
+"PaperIV.CertifiedOptimumExistence": {
+"path": "PaperIV/CertifiedOptimumExistence.lean",
+"imports": [
+"PaperIV.FarRounding",
+"PaperI.FiniteLPDuality"
+],
+"local": [
+"PaperIV.FarRounding",
+"PaperI.FiniteLPDuality"
+],
+"external": []
+},
+"PaperIV.ClassCopy": {
+"path": "PaperIV/ClassCopy.lean",
+"imports": [
+"Mathlib.Combinatorics.SimpleGraph.Finite",
+"Mathlib.Tactic.Linarith",
+"Mathlib.Tactic.Positivity",
+"Mathlib.Tactic.Ring"
+],
+"local": [],
+"external": [
+"Mathlib.Combinatorics.SimpleGraph.Finite",
+"Mathlib.Tactic.Linarith",
+"Mathlib.Tactic.Positivity",
+"Mathlib.Tactic.Ring"
+]
+},
+"PaperIV.ChordalBasics": {
+"path": "PaperIV/ChordalBasics.lean",
+"imports": [
+"PaperIV.ClassCopy",
+"PaperIV.ChordalStructure"
+],
+"local": [
+"PaperIV.ClassCopy",
+"PaperIV.ChordalStructure"
+],
+"external": []
+},
+"PaperIV.ChordalCopy": {
+"path": "PaperIV/ChordalCopy.lean",
+"imports": [
+"PaperIV.ClassCopy",
+"PaperIV.ChordalStructure"
+],
+"local": [
+"PaperIV.ClassCopy",
+"PaperIV.ChordalStructure"
+],
+"external": []
+},
+"PaperIV.DiracEngine": {
+"path": "PaperIV/DiracEngine.lean",
+"imports": [
+"Mathlib.ModelTheory.Graph",
+"PaperIV.ChordalCopy",
+"PaperIV.ChordalBasics"
+],
+"local": [
+"PaperIV.ChordalCopy",
+"PaperIV.ChordalBasics"
+],
+"external": [
+"Mathlib.ModelTheory.Graph"
+]
+},
+"PaperIV.TerminalSplit": {
+"path": "PaperIV/TerminalSplit.lean",
+"imports": [
+"PaperIV.DiracEngine"
+],
+"local": [
+"PaperIV.DiracEngine"
+],
+"external": []
+},
+"PaperIV.TerminalSplitAdapter": {
+"path": "PaperIV/TerminalSplitAdapter.lean",
+"imports": [
+"PaperIV.TerminalSplit",
+"PaperIV.SplitUniformIncidence"
+],
+"local": [
+"PaperIV.TerminalSplit",
+"PaperIV.SplitUniformIncidence"
+],
+"external": []
+},
+"PaperIV.CloneMeasure": {
+"path": "PaperIV/CloneMeasure.lean",
+"imports": [
+"PaperIV.ClassCopy"
+],
+"local": [
+"PaperIV.ClassCopy"
+],
+"external": []
+},
+"PaperIV.Dirac1": {
+"path": "PaperIV/Dirac1.lean",
+"imports": [
+"PaperIV.DiracEngine"
+],
+"local": [
+"PaperIV.DiracEngine"
+],
+"external": []
+},
+"PaperIV.CopySelector": {
+"path": "PaperIV/CopySelector.lean",
+"imports": [
+"PaperIV.TerminalSplit",
+"PaperIV.CloneMeasure",
+"PaperIV.Dirac1",
+"PaperIV.ChordalStructure"
+],
+"local": [
+"PaperIV.TerminalSplit",
+"PaperIV.CloneMeasure",
+"PaperIV.Dirac1",
+"PaperIV.ChordalStructure"
+],
+"external": []
+},
+"PaperIV.EditMetric": {
+"path": "PaperIV/EditMetric.lean",
+"imports": [
+"Mathlib.Algebra.Order.Ring.Star",
+"Mathlib.Analysis.Normed.Field.Lemmas",
+"Mathlib.Data.Rat.Star",
+"Mathlib.Tactic.Positivity"
+],
+"local": [],
+"external": [
+"Mathlib.Algebra.Order.Ring.Star",
+"Mathlib.Analysis.Normed.Field.Lemmas",
+"Mathlib.Data.Rat.Star",
+"Mathlib.Tactic.Positivity"
+]
+},
+"PaperIV.FirstEntryWindow": {
+"path": "PaperIV/FirstEntryWindow.lean",
+"imports": [
+"Mathlib.Algebra.Order.Ring.Star",
+"Mathlib.Analysis.Normed.Field.Lemmas",
+"Mathlib.Data.Rat.Star",
+"Mathlib.Tactic.Positivity"
+],
+"local": [],
+"external": [
+"Mathlib.Algebra.Order.Ring.Star",
+"Mathlib.Analysis.Normed.Field.Lemmas",
+"Mathlib.Data.Rat.Star",
+"Mathlib.Tactic.Positivity"
+]
+},
+"PaperIV.EditFirstEntry": {
+"path": "PaperIV/EditFirstEntry.lean",
+"imports": [
+"PaperIV.EditMetric",
+"PaperIV.FirstEntryWindow"
+],
+"local": [
+"PaperIV.EditMetric",
+"PaperIV.FirstEntryWindow"
+],
+"external": []
+},
+"PaperIV.CopyPathWindow": {
+"path": "PaperIV/CopyPathWindow.lean",
+"imports": [
+"PaperIV.EditFirstEntry"
+],
+"local": [
+"PaperIV.EditFirstEntry"
+],
+"external": []
+},
+"PaperIV.DeficitAlongPath": {
+"path": "PaperIV/DeficitAlongPath.lean",
+"imports": [
+"Mathlib.Algebra.Order.Ring.Star",
+"Mathlib.Analysis.Normed.Field.Lemmas",
+"Mathlib.Data.Rat.Star",
+"Mathlib.Tactic.Positivity"
+],
+"local": [],
+"external": [
+"Mathlib.Algebra.Order.Ring.Star",
+"Mathlib.Analysis.Normed.Field.Lemmas",
+"Mathlib.Data.Rat.Star",
+"Mathlib.Tactic.Positivity"
+]
+},
+"PaperIV.CopyPathNearEntry": {
+"path": "PaperIV/CopyPathNearEntry.lean",
+"imports": [
+"PaperIV.CopyPathWindow",
+"PaperIV.DeficitAlongPath"
+],
+"local": [
+"PaperIV.CopyPathWindow",
+"PaperIV.DeficitAlongPath"
+],
+"external": []
+},
+"PaperIV.VertexCopy": {
+"path": "PaperIV/VertexCopy.lean",
+"imports": [
+"PaperIV.ChordalBasics",
+"PaperIV.ChordalCopy",
+"PaperIV.CopyPathNearEntry"
+],
+"local": [
+"PaperIV.ChordalBasics",
+"PaperIV.ChordalCopy",
+"PaperIV.CopyPathNearEntry"
+],
+"external": []
+},
+"PaperIV.VertexCopySelector": {
+"path": "PaperIV/VertexCopySelector.lean",
+"imports": [
+"PaperIV.VertexCopy",
+"PaperIV.CopySelector"
+],
+"local": [
+"PaperIV.VertexCopy",
+"PaperIV.CopySelector"
+],
+"external": []
+},
+"PaperIV.FiniteLPDuality": {
+"path": "PaperIV/FiniteLPDuality.lean",
+"imports": [
+"Mathlib.Algebra.Ring.Action.Pointwise.Finset",
+"Mathlib.Analysis.Convex.Cone.InnerDual"
+],
+"local": [],
+"external": [
+"Mathlib.Algebra.Ring.Action.Pointwise.Finset",
+"Mathlib.Analysis.Convex.Cone.InnerDual"
+]
+},
+"PaperIV.FarRoundingRealLP": {
+"path": "PaperIV/FarRoundingRealLP.lean",
+"imports": [
+"PaperIV.FarRounding",
+"PaperIV.FiniteLPDuality"
+],
+"local": [
+"PaperIV.FarRounding",
+"PaperIV.FiniteLPDuality"
+],
+"external": []
+},
+"PaperIV.VertexCopyItems": {
+"path": "PaperIV/VertexCopyItems.lean",
+"imports": [
+"PaperIV.VertexCopy",
+"PaperIV.FarRoundingRealLP"
+],
+"local": [
+"PaperIV.VertexCopy",
+"PaperIV.FarRoundingRealLP"
+],
+"external": []
+},
+"PaperIV.VertexCopyTransport": {
+"path": "PaperIV/VertexCopyTransport.lean",
+"imports": [
+"PaperIV.VertexCopyItems"
+],
+"local": [
+"PaperIV.VertexCopyItems"
+],
+"external": []
+},
+"PaperIV.VertexCopyMonotone": {
+"path": "PaperIV/VertexCopyMonotone.lean",
+"imports": [
+"PaperIV.VertexCopyTransport",
+"PaperIV.VertexCopySelector"
+],
+"local": [
+"PaperIV.VertexCopyTransport",
+"PaperIV.VertexCopySelector"
+],
+"external": []
+},
+"PaperIV.VertexCopyRank": {
+"path": "PaperIV/VertexCopyRank.lean",
+"imports": [
+"PaperIV.VertexCopySelector",
+"PaperIV.CloneMeasure"
+],
+"local": [
+"PaperIV.VertexCopySelector",
+"PaperIV.CloneMeasure"
+],
+"external": []
+},
+"PaperIV.VertexCopyGate": {
+"path": "PaperIV/VertexCopyGate.lean",
+"imports": [
+"PaperIV.VertexCopyMonotone",
+"PaperIV.VertexCopyRank"
+],
+"local": [
+"PaperIV.VertexCopyMonotone",
+"PaperIV.VertexCopyRank"
+],
+"external": []
+},
+"PaperIV.GatedTerminalSplit": {
+"path": "PaperIV/GatedTerminalSplit.lean",
+"imports": [
+"PaperIV.VertexCopyGate",
+"PaperIV.TerminalSplitAdapter"
+],
+"local": [
+"PaperIV.VertexCopyGate",
+"PaperIV.TerminalSplitAdapter"
+],
+"external": []
+},
+"PaperIV.NearH1Calibration": {
+"path": "PaperIV/NearH1Calibration.lean",
+"imports": [
+"Mathlib.Algebra.Order.Ring.Star",
+"Mathlib.Analysis.Normed.Field.Lemmas",
+"Mathlib.Data.Rat.Star",
+"Mathlib.Tactic.Positivity"
+],
+"local": [],
+"external": [
+"Mathlib.Algebra.Order.Ring.Star",
+"Mathlib.Analysis.Normed.Field.Lemmas",
+"Mathlib.Data.Rat.Star",
+"Mathlib.Tactic.Positivity"
+]
+},
+"PaperIV.GraphFamilyDistance": {
+"path": "PaperIV/GraphFamilyDistance.lean",
+"imports": [
+"PaperIV.EditMetric",
+"Mathlib.Combinatorics.SimpleGraph.Finite"
+],
+"local": [
+"PaperIV.EditMetric"
+],
+"external": [
+"Mathlib.Combinatorics.SimpleGraph.Finite"
+]
+},
+"PaperIV.SplitComparatorFamily": {
+"path": "PaperIV/SplitComparatorFamily.lean",
+"imports": [
+"PaperIV.GraphFamilyDistance",
+"PaperIV.SplitUniformIncidence"
+],
+"local": [
+"PaperIV.GraphFamilyDistance",
+"PaperIV.SplitUniformIncidence"
+],
+"external": []
+},
+"PaperIV.FarRoundingToPhysical": {
+"path": "PaperIV/FarRoundingToPhysical.lean",
+"imports": [
+"PaperIV.FarRounding",
+"PaperIV.PhysicalCompletion"
+],
+"local": [
+"PaperIV.FarRounding",
+"PaperIV.PhysicalCompletion"
+],
+"external": []
+},
+"PaperIV.VertexCopyWBridge": {
+"path": "PaperIV/VertexCopyWBridge.lean",
+"imports": [
+"PaperIV.VertexCopyGate",
+"PaperIV.FarRoundingToPhysical"
+],
+"local": [
+"PaperIV.VertexCopyGate",
+"PaperIV.FarRoundingToPhysical"
+],
+"external": []
+},
+"PaperIV.F4EditRobustness": {
+"path": "PaperIV/F4EditRobustness.lean",
+"imports": [
+"PaperIV.VertexCopyWBridge",
+"PaperIV.EditMetric"
+],
+"local": [
+"PaperIV.VertexCopyWBridge",
+"PaperIV.EditMetric"
+],
+"external": []
+},
+"PaperIV.SplitPackingObstruction": {
+"path": "PaperIV/SplitPackingObstruction.lean",
+"imports": [
+"PaperIV.PhysicalCompletion",
+"PaperIV.SplitEdgeCount"
+],
+"local": [
+"PaperIV.PhysicalCompletion",
+"PaperIV.SplitEdgeCount"
+],
+"external": []
+},
+"PaperIV.ColourClasses": {
+"path": "PaperIV/ColourClasses.lean",
+"imports": [
+"Mathlib.Data.Sym.Sym2",
+"Mathlib.Tactic.Linarith",
+"Mathlib.Tactic.Positivity",
+"Mathlib.Tactic.Ring"
+],
+"local": [],
+"external": [
+"Mathlib.Data.Sym.Sym2",
+"Mathlib.Tactic.Linarith",
+"Mathlib.Tactic.Positivity",
+"Mathlib.Tactic.Ring"
+]
+},
+"PaperIV.Vizing": {
+"path": "PaperIV/Vizing.lean",
+"imports": [
+"Mathlib.Algebra.Group.Pointwise.Finset.Basic",
+"Mathlib.Combinatorics.SimpleGraph.Acyclic",
+"Mathlib.Combinatorics.SimpleGraph.Connectivity.WalkCounting",
+"Mathlib.Combinatorics.SimpleGraph.Ends.Defs",
+"Mathlib.Combinatorics.SimpleGraph.LineGraph",
+"Mathlib.ModelTheory.Graph",
+"Mathlib.Order.BourbakiWitt",
+"Mathlib.Tactic.Linarith",
+"Mathlib.Tactic.Positivity",
+"Mathlib.Tactic.Ring"
+],
+"local": [],
+"external": [
+"Mathlib.Algebra.Group.Pointwise.Finset.Basic",
+"Mathlib.Combinatorics.SimpleGraph.Acyclic",
+"Mathlib.Combinatorics.SimpleGraph.Connectivity.WalkCounting",
+"Mathlib.Combinatorics.SimpleGraph.Ends.Defs",
+"Mathlib.Combinatorics.SimpleGraph.LineGraph",
+"Mathlib.ModelTheory.Graph",
+"Mathlib.Order.BourbakiWitt",
+"Mathlib.Tactic.Linarith",
+"Mathlib.Tactic.Positivity",
+"Mathlib.Tactic.Ring"
+]
+},
+"PaperIV.LineGraphColouring": {
+"path": "PaperIV/LineGraphColouring.lean",
+"imports": [
+"PaperIV.ColourClasses",
+"PaperIV.Model",
+"PaperIV.Vizing"
+],
+"local": [
+"PaperIV.ColourClasses",
+"PaperIV.Model",
+"PaperIV.Vizing"
+],
+"external": []
+},
+"PaperIV.ExteriorTriangleLift": {
+"path": "PaperIV/ExteriorTriangleLift.lean",
+"imports": [
+"PaperIV.Model"
+],
+"local": [
+"PaperIV.Model"
+],
+"external": []
+},
+"PaperIV.PackingUnion": {
+"path": "PaperIV/PackingUnion.lean",
+"imports": [
+"PaperIV.Model"
+],
+"local": [
+"PaperIV.Model"
+],
+"external": []
+},
+"PaperIV.MultiHostTriangleLift": {
+"path": "PaperIV/MultiHostTriangleLift.lean",
+"imports": [
+"PaperIV.ExteriorTriangleLift",
+"PaperIV.PackingUnion",
+"Mathlib.Data.Fin.VecNotation",
+"Mathlib.Tactic.FinCases"
+],
+"local": [
+"PaperIV.ExteriorTriangleLift",
+"PaperIV.PackingUnion"
+],
+"external": [
+"Mathlib.Data.Fin.VecNotation",
+"Mathlib.Tactic.FinCases"
+]
+},
+"PaperIV.OneFactorization": {
+"path": "PaperIV/OneFactorization.lean",
+"imports": [
+"Mathlib.Combinatorics.SimpleGraph.Matching",
+"Mathlib.Data.ZMod.Basic",
+"Mathlib.Logic.Equiv.Fin.Basic",
+"Mathlib.Tactic.LinearCombination"
+],
+"local": [],
+"external": [
+"Mathlib.Combinatorics.SimpleGraph.Matching",
+"Mathlib.Data.ZMod.Basic",
+"Mathlib.Logic.Equiv.Fin.Basic",
+"Mathlib.Tactic.LinearCombination"
+]
+},
+"PaperIV.TransportedMatchings": {
+"path": "PaperIV/TransportedMatchings.lean",
+"imports": [
+"PaperIV.ColourClasses"
+],
+"local": [
+"PaperIV.ColourClasses"
+],
+"external": []
+},
+"PaperIV.RD09PhaseII": {
+"path": "PaperIV/RD09PhaseII.lean",
+"imports": [
+"PaperIV.MultiHostTriangleLift",
+"PaperIV.TransportedMatchings",
+"PaperIV.OneFactorization",
+"PaperIV.LineGraphColouring"
+],
+"local": [
+"PaperIV.MultiHostTriangleLift",
+"PaperIV.TransportedMatchings",
+"PaperIV.OneFactorization",
+"PaperIV.LineGraphColouring"
+],
+"external": []
+},
+"PaperIV.RD09RootFactorPhase": {
+"path": "PaperIV/RD09RootFactorPhase.lean",
+"imports": [
+"PaperIV.RD09PhaseII"
+],
+"local": [
+"PaperIV.RD09PhaseII"
+],
+"external": []
+},
+"PaperIV.RoundRobinPairs": {
+"path": "PaperIV/RoundRobinPairs.lean",
+"imports": [
+"Mathlib.Algebra.Lie.OfAssociative",
+"Mathlib.Data.ZMod.Basic",
+"Mathlib.Tactic.LinearCombination",
+"Mathlib.Tactic.Positivity"
+],
+"local": [],
+"external": [
+"Mathlib.Algebra.Lie.OfAssociative",
+"Mathlib.Data.ZMod.Basic",
+"Mathlib.Tactic.LinearCombination",
+"Mathlib.Tactic.Positivity"
+]
+},
+"PaperIV.SplitTriangleFactor": {
+"path": "PaperIV/SplitTriangleFactor.lean",
+"imports": [
+"PaperIV.RD09PhaseII",
+"PaperIV.RD09RootFactorPhase",
+"PaperIV.PhysicalCompletion",
+"PaperIV.SplitEdgeCount",
+"PaperIV.RoundRobinPairs"
+],
+"local": [
+"PaperIV.RD09PhaseII",
+"PaperIV.RD09RootFactorPhase",
+"PaperIV.PhysicalCompletion",
+"PaperIV.SplitEdgeCount",
+"PaperIV.RoundRobinPairs"
+],
+"external": []
+},
+"PaperIV.SplitTriangleFactorHighHost": {
+"path": "PaperIV/SplitTriangleFactorHighHost.lean",
+"imports": [
+"PaperIV.SplitTriangleFactor",
+"PaperIV.SplitPackingObstruction"
+],
+"local": [
+"PaperIV.SplitTriangleFactor",
+"PaperIV.SplitPackingObstruction"
+],
+"external": []
+},
+"PaperIV.GatedSplitTargetBridge": {
+"path": "PaperIV/GatedSplitTargetBridge.lean",
+"imports": [
+"PaperIV.GatedTerminalSplit",
+"PaperIV.VertexCopyWBridge",
+"PaperIV.SplitTriangleFactorHighHost"
+],
+"local": [
+"PaperIV.GatedTerminalSplit",
+"PaperIV.VertexCopyWBridge",
+"PaperIV.SplitTriangleFactorHighHost"
+],
+"external": []
+},
+"PaperIV.CriticalBranch": {
+"path": "PaperIV/CriticalBranch.lean",
+"imports": [
+"Mathlib.Tactic.Linarith",
+"Mathlib.Tactic.Positivity",
+"Mathlib.Tactic.Ring"
+],
+"local": [],
+"external": [
+"Mathlib.Tactic.Linarith",
+"Mathlib.Tactic.Positivity",
+"Mathlib.Tactic.Ring"
+]
+},
+"PaperIV.SharpEnvelope": {
+"path": "PaperIV/SharpEnvelope.lean",
+"imports": [
+"Mathlib.Algebra.Order.Ring.Star",
+"Mathlib.Analysis.Normed.Field.Lemmas",
+"Mathlib.Data.Rat.Star",
+"Mathlib.Tactic.Positivity"
+],
+"local": [],
+"external": [
+"Mathlib.Algebra.Order.Ring.Star",
+"Mathlib.Analysis.Normed.Field.Lemmas",
+"Mathlib.Data.Rat.Star",
+"Mathlib.Tactic.Positivity"
+]
+},
+"PaperIV.CriticalResidual": {
+"path": "PaperIV/CriticalResidual.lean",
+"imports": [
+"PaperIV.SharpEnvelope"
+],
+"local": [
+"PaperIV.SharpEnvelope"
+],
+"external": []
+},
+"PaperIV.TerminalSeparation": {
+"path": "PaperIV/TerminalSeparation.lean",
+"imports": [
+"PaperIV.SharpEnvelope"
+],
+"local": [
+"PaperIV.SharpEnvelope"
+],
+"external": []
+},
+"PaperIV.NearTerminalSynthesis": {
+"path": "PaperIV/NearTerminalSynthesis.lean",
+"imports": [
+"PaperIV.CriticalBranch",
+"PaperIV.CriticalResidual",
+"PaperIV.TerminalSeparation"
+],
+"local": [
+"PaperIV.CriticalBranch",
+"PaperIV.CriticalResidual",
+"PaperIV.TerminalSeparation"
+],
+"external": []
+},
+"PaperIV.SplitFamilyDisjoint": {
+"path": "PaperIV/SplitFamilyDisjoint.lean",
+"imports": [
+"PaperIV.SplitUniformIncidence"
+],
+"local": [
+"PaperIV.SplitUniformIncidence"
+],
+"external": []
+},
+"PaperIV.UniformWeightValue": {
+"path": "PaperIV/UniformWeightValue.lean",
+"imports": [
+"PaperIV.SplitUniformIncidence"
+],
+"local": [
+"PaperIV.SplitUniformIncidence"
+],
+"external": []
+},
+"PaperIV.SplitCanonicalWeight": {
+"path": "PaperIV/SplitCanonicalWeight.lean",
+"imports": [
+"PaperIV.SplitFamilyDisjoint",
+"PaperIV.UniformWeightValue"
+],
+"local": [
+"PaperIV.SplitFamilyDisjoint",
+"PaperIV.UniformWeightValue"
+],
+"external": []
+},
+"PaperIV.SplitItems": {
+"path": "PaperIV/SplitItems.lean",
+"imports": [
+"PaperIV.FarRounding",
+"PaperIV.SplitUniformIncidence"
+],
+"local": [
+"PaperIV.FarRounding",
+"PaperIV.SplitUniformIncidence"
+],
+"external": []
+},
+"PaperIV.SplitCanonicalSupportSum": {
+"path": "PaperIV/SplitCanonicalSupportSum.lean",
+"imports": [
+"PaperIV.SplitCanonicalWeight",
+"PaperIV.SplitItems"
+],
+"local": [
+"PaperIV.SplitCanonicalWeight",
+"PaperIV.SplitItems"
+],
+"external": []
+},
+"PaperIV.SplitFamilyNonempty": {
+"path": "PaperIV/SplitFamilyNonempty.lean",
+"imports": [
+"PaperIV.SplitUniformIncidence"
+],
+"local": [
+"PaperIV.SplitUniformIncidence"
+],
+"external": []
+},
+"PaperIV.SplitCanonicalValue": {
+"path": "PaperIV/SplitCanonicalValue.lean",
+"imports": [
+"PaperIV.SplitCanonicalSupportSum",
+"PaperIV.SplitFamilyNonempty"
+],
+"local": [
+"PaperIV.SplitCanonicalSupportSum",
+"PaperIV.SplitFamilyNonempty"
+],
+"external": []
+},
+"PaperIV.SplitTerminalLP": {
+"path": "PaperIV/SplitTerminalLP.lean",
+"imports": [
+"Mathlib.Algebra.CharP.Defs",
+"Mathlib.Algebra.Order.Ring.Star",
+"Mathlib.Analysis.Normed.Field.Lemmas",
+"Mathlib.Data.Rat.Star",
+"Mathlib.Tactic.Positivity"
+],
+"local": [],
+"external": [
+"Mathlib.Algebra.CharP.Defs",
+"Mathlib.Algebra.Order.Ring.Star",
+"Mathlib.Analysis.Normed.Field.Lemmas",
+"Mathlib.Data.Rat.Star",
+"Mathlib.Tactic.Positivity"
+]
+},
+"PaperIV.UniformSplitLoads": {
+"path": "PaperIV/UniformSplitLoads.lean",
+"imports": [
+"Mathlib.Algebra.Order.Ring.Star",
+"Mathlib.Analysis.Normed.Field.Lemmas",
+"Mathlib.Data.Rat.Star",
+"Mathlib.Tactic.Positivity"
+],
+"local": [],
+"external": [
+"Mathlib.Algebra.Order.Ring.Star",
+"Mathlib.Analysis.Normed.Field.Lemmas",
+"Mathlib.Data.Rat.Star",
+"Mathlib.Tactic.Positivity"
+]
+},
+"PaperIV.SplitLPToPhysicalLoads": {
+"path": "PaperIV/SplitLPToPhysicalLoads.lean",
+"imports": [
+"PaperIV.SplitTerminalLP",
+"PaperIV.SplitUniformIncidence",
+"PaperIV.UniformSplitLoads"
+],
+"local": [
+"PaperIV.SplitTerminalLP",
+"PaperIV.SplitUniformIncidence",
+"PaperIV.UniformSplitLoads"
+],
+"external": []
+},
+"PaperIV.SplitFarRounding": {
+"path": "PaperIV/SplitFarRounding.lean",
+"imports": [
+"PaperIV.FarRounding",
+"PaperIV.SplitLPToPhysicalLoads",
+"PaperIV.SplitCanonicalSupportSum",
+"PaperIV.SplitCanonicalWeight",
+"PaperIV.SplitFamilyNonempty",
+"PaperIV.SplitItems",
+"PaperIV.SplitCanonicalValue"
+],
+"local": [
+"PaperIV.FarRounding",
+"PaperIV.SplitLPToPhysicalLoads",
+"PaperIV.SplitCanonicalSupportSum",
+"PaperIV.SplitCanonicalWeight",
+"PaperIV.SplitFamilyNonempty",
+"PaperIV.SplitItems",
+"PaperIV.SplitCanonicalValue"
+],
+"external": []
+},
+"PaperIV.SplitComparatorResidual": {
+"path": "PaperIV/SplitComparatorResidual.lean",
+"imports": [
+"PaperIV.F4EditRobustness",
+"PaperIV.SplitFarRounding",
+"PaperIV.SplitEdgeCount",
+"PaperIV.NearTerminalSynthesis",
+"PaperIV.GatedSplitTargetBridge"
+],
+"local": [
+"PaperIV.F4EditRobustness",
+"PaperIV.SplitFarRounding",
+"PaperIV.SplitEdgeCount",
+"PaperIV.NearTerminalSynthesis",
+"PaperIV.GatedSplitTargetBridge"
+],
+"external": []
+},
+"PaperIV.NearH1SplitComparator": {
+"path": "PaperIV/NearH1SplitComparator.lean",
+"imports": [
+"PaperIV.SplitComparatorResidual",
+"PaperIV.SplitComparatorFamily",
+"PaperIV.NearH1Calibration"
+],
+"local": [
+"PaperIV.SplitComparatorResidual",
+"PaperIV.SplitComparatorFamily",
+"PaperIV.NearH1Calibration"
+],
+"external": []
+},
+"PaperIV.RD09FiniteAveraging": {
+"path": "PaperIV/RD09FiniteAveraging.lean",
+"imports": [
+"Mathlib.Analysis.Normed.Field.Lemmas",
+"Mathlib.Tactic.Positivity"
+],
+"local": [],
+"external": [
+"Mathlib.Analysis.Normed.Field.Lemmas",
+"Mathlib.Tactic.Positivity"
+]
+},
+"PaperIV.EquitableEdgeColouring": {
+"path": "PaperIV/EquitableEdgeColouring.lean",
+"imports": [
+"PaperIV.LineGraphColouring",
+"Mathlib.Algebra.Order.Floor.Div",
+"Mathlib.Analysis.Normed.Ring.Lemmas",
+"Mathlib.Data.Int.Star"
+],
+"local": [
+"PaperIV.LineGraphColouring"
+],
+"external": [
+"Mathlib.Algebra.Order.Floor.Div",
+"Mathlib.Analysis.Normed.Ring.Lemmas",
+"Mathlib.Data.Int.Star"
+]
+},
+"PaperIV.EquitableKempe": {
+"path": "PaperIV/EquitableKempe.lean",
+"imports": [
+"PaperIV.EquitableEdgeColouring",
+"Mathlib.Algebra.BigOperators.Fin"
+],
+"local": [
+"PaperIV.EquitableEdgeColouring"
+],
+"external": [
+"Mathlib.Algebra.BigOperators.Fin"
+]
+},
+"PaperIV.RD09LocalPhaseI": {
+"path": "PaperIV/RD09LocalPhaseI.lean",
+"imports": [
+"PaperIV.EquitableKempe",
+"PaperIV.RD09RootFactorPhase"
+],
+"local": [
+"PaperIV.EquitableKempe",
+"PaperIV.RD09RootFactorPhase"
+],
+"external": []
+},
+"PaperIV.RD09L1Adapter": {
+"path": "PaperIV/RD09L1Adapter.lean",
+"imports": [
+"PaperIV.RD09LocalPhaseI",
+"PaperIV.RD09FiniteAveraging",
+"Mathlib.Algebra.Field.ZMod",
+"Mathlib.Algebra.Group.TypeTags.Finite",
+"Mathlib.Data.Rat.Star"
+],
+"local": [
+"PaperIV.RD09LocalPhaseI",
+"PaperIV.RD09FiniteAveraging"
+],
+"external": [
+"Mathlib.Algebra.Field.ZMod",
+"Mathlib.Algebra.Group.TypeTags.Finite",
+"Mathlib.Data.Rat.Star"
+]
+},
+"PaperIV.RootedEliminationOrder": {
+"path": "PaperIV/RootedEliminationOrder.lean",
+"imports": [
+"PaperIV.CopySelector",
+"Mathlib.Data.List.NodupEquivFin",
+"Mathlib.Tactic.Bound"
+],
+"local": [
+"PaperIV.CopySelector"
+],
+"external": [
+"Mathlib.Data.List.NodupEquivFin",
+"Mathlib.Tactic.Bound"
+]
+},
+"PaperIV.RD09RootedOrderAdapter": {
+"path": "PaperIV/RD09RootedOrderAdapter.lean",
+"imports": [
+"PaperIV.RootedEliminationOrder",
+"PaperIV.RD09L1Adapter"
+],
+"local": [
+"PaperIV.RootedEliminationOrder",
+"PaperIV.RD09L1Adapter"
+],
+"external": []
+},
+"PaperIV.ClassCopyEdit": {
+"path": "PaperIV/ClassCopyEdit.lean",
+"imports": [
+"PaperIV.ChordalCopy",
+"PaperIV.EditMetric"
+],
+"local": [
+"PaperIV.ChordalCopy",
+"PaperIV.EditMetric"
+],
+"external": []
+},
+"PaperIV.PaddedEquitableColouring": {
+"path": "PaperIV/PaddedEquitableColouring.lean",
+"imports": [
+"PaperIV.EquitableKempe"
+],
+"local": [
+"PaperIV.EquitableKempe"
+],
+"external": []
+},
+"PaperIV.RootVocabulary": {
+"path": "PaperIV/RootVocabulary.lean",
+"imports": [
+"PaperIV.ChordalCopy",
+"PaperIV.PaddedEquitableColouring"
+],
+"local": [
+"PaperIV.ChordalCopy",
+"PaperIV.PaddedEquitableColouring"
+],
+"external": []
+},
+"PaperIV.RootEdgeSplit": {
+"path": "PaperIV/RootEdgeSplit.lean",
+"imports": [
+"PaperIV.RootVocabulary",
+"Mathlib.Combinatorics.SimpleGraph.Density"
+],
+"local": [
+"PaperIV.RootVocabulary"
+],
+"external": [
+"Mathlib.Combinatorics.SimpleGraph.Density"
+]
+},
+"PaperIV.RD09SplitEditAccount": {
+"path": "PaperIV/RD09SplitEditAccount.lean",
+"imports": [
+"PaperIV.ClassCopyEdit",
+"PaperIV.Model",
+"PaperIV.RootEdgeSplit",
+"PaperIV.SplitUniformIncidence"
+],
+"local": [
+"PaperIV.ClassCopyEdit",
+"PaperIV.Model",
+"PaperIV.RootEdgeSplit",
+"PaperIV.SplitUniformIncidence"
+],
+"external": []
+},
+"PaperIV.ChordalCoreMissing": {
+"path": "PaperIV/ChordalCoreMissing.lean",
+"imports": [
+"PaperIV.RD09RootedOrderAdapter",
+"PaperIV.RD09SplitEditAccount",
+"PaperIV.NearH1Calibration",
+"Mathlib.Data.Nat.Choose.Cast"
+],
+"local": [
+"PaperIV.RD09RootedOrderAdapter",
+"PaperIV.RD09SplitEditAccount",
+"PaperIV.NearH1Calibration"
+],
+"external": [
+"Mathlib.Data.Nat.Choose.Cast"
+]
+},
+"PaperIV.NearH1FinalScalars": {
+"path": "PaperIV/NearH1FinalScalars.lean",
+"imports": [
+"PaperIV.EquitableEdgeColouring",
+"Mathlib.Analysis.Normed.Field.Lemmas",
+"Mathlib.Data.Rat.Star"
+],
+"local": [
+"PaperIV.EquitableEdgeColouring"
+],
+"external": [
+"Mathlib.Analysis.Normed.Field.Lemmas",
+"Mathlib.Data.Rat.Star"
+]
+},
+"PaperIV.NearH1PromotionAccounts": {
+"path": "PaperIV/NearH1PromotionAccounts.lean",
+"imports": [
+"PaperIV.RootEdgeSplit"
+],
+"local": [
+"PaperIV.RootEdgeSplit"
+],
+"external": []
+},
+"PaperIV.NearH1RootRegularization": {
+"path": "PaperIV/NearH1RootRegularization.lean",
+"imports": [
+"PaperIV.RootEdgeSplit",
+"PaperIV.PaddedEquitableColouring",
+"PaperIV.NearH1PromotionAccounts",
+"PaperIV.NearH1FinalScalars"
+],
+"local": [
+"PaperIV.RootEdgeSplit",
+"PaperIV.PaddedEquitableColouring",
+"PaperIV.NearH1PromotionAccounts",
+"PaperIV.NearH1FinalScalars"
+],
+"external": []
+},
+"PaperIV.ChordalC4": {
+"path": "PaperIV/ChordalC4.lean",
+"imports": [
+"PaperIV.RootVocabulary"
+],
+"local": [
+"PaperIV.RootVocabulary"
+],
+"external": []
+},
+"PaperIV.OutsideCounting": {
+"path": "PaperIV/OutsideCounting.lean",
+"imports": [
+"PaperIV.RootVocabulary"
+],
+"local": [
+"PaperIV.RootVocabulary"
+],
+"external": []
+},
+"PaperIV.Regularization": {
+"path": "PaperIV/Regularization.lean",
+"imports": [
+"PaperIV.ChordalC4",
+"PaperIV.OutsideCounting"
+],
+"local": [
+"PaperIV.ChordalC4",
+"PaperIV.OutsideCounting"
+],
+"external": []
+},
+"PaperIV.RegularizationBounds": {
+"path": "PaperIV/RegularizationBounds.lean",
+"imports": [
+"PaperIV.Regularization"
+],
+"local": [
+"PaperIV.Regularization"
+],
+"external": []
+},
+"PaperIV.RegularizedRootGoal": {
+"path": "PaperIV/RegularizedRootGoal.lean",
+"imports": [
+"PaperIV.RegularizationBounds"
+],
+"local": [
+"PaperIV.RegularizationBounds"
+],
+"external": []
+},
+"PaperIV.RootRegularizationBridge": {
+"path": "PaperIV/RootRegularizationBridge.lean",
+"imports": [
+"PaperIV.RegularizedRootGoal",
+"PaperIV.NearH1RootRegularization"
+],
+"local": [
+"PaperIV.RegularizedRootGoal",
+"PaperIV.NearH1RootRegularization"
+],
+"external": []
+},
+"PaperIV.NearH1CalibratedRoot": {
+"path": "PaperIV/NearH1CalibratedRoot.lean",
+"imports": [
+"PaperIV.ChordalCoreMissing",
+"PaperIV.RootRegularizationBridge"
+],
+"local": [
+"PaperIV.ChordalCoreMissing",
+"PaperIV.RootRegularizationBridge"
+],
+"external": []
+},
+"PaperIV.ParametricBudget": {
+"path": "PaperIV/ParametricBudget.lean",
+"imports": [
+"Mathlib.Algebra.Order.Ring.Star",
+"Mathlib.Analysis.Normed.Field.Lemmas",
+"Mathlib.Data.Rat.Star",
+"Mathlib.Tactic.Positivity"
+],
+"local": [],
+"external": [
+"Mathlib.Algebra.Order.Ring.Star",
+"Mathlib.Analysis.Normed.Field.Lemmas",
+"Mathlib.Data.Rat.Star",
+"Mathlib.Tactic.Positivity"
+]
+},
+"PaperIV.CanonicalBudget": {
+"path": "PaperIV/CanonicalBudget.lean",
+"imports": [
+"PaperIV.ParametricBudget"
+],
+"local": [
+"PaperIV.ParametricBudget"
+],
+"external": []
+},
+"PaperIV.TerminalLedger": {
+"path": "PaperIV/TerminalLedger.lean",
+"imports": [
+"PaperIV.PhysicalCompletion",
+"PaperIV.CanonicalBudget"
+],
+"local": [
+"PaperIV.PhysicalCompletion",
+"PaperIV.CanonicalBudget"
+],
+"external": []
+},
+"PaperIV.H1LedgerArithmetic": {
+"path": "PaperIV/H1LedgerArithmetic.lean",
+"imports": [
+"PaperIV.TerminalLedger"
+],
+"local": [
+"PaperIV.TerminalLedger"
+],
+"external": []
+},
+"PaperIV.H1ImprovedConstants": {
+"path": "PaperIV/H1ImprovedConstants.lean",
+"imports": [
+"PaperIV.H1LedgerArithmetic"
+],
+"local": [
+"PaperIV.H1LedgerArithmetic"
+],
+"external": []
+},
+"PaperIV.FiniteHeavySelection": {
+"path": "PaperIV/FiniteHeavySelection.lean",
+"imports": [
+"Mathlib.Algebra.BigOperators.Ring.Finset",
+"Mathlib.Tactic.Linarith",
+"Mathlib.Tactic.Positivity",
+"Mathlib.Tactic.Ring"
+],
+"local": [],
+"external": [
+"Mathlib.Algebra.BigOperators.Ring.Finset",
+"Mathlib.Tactic.Linarith",
+"Mathlib.Tactic.Positivity",
+"Mathlib.Tactic.Ring"
+]
+},
+"PaperIV.RD09PaddedHostBase": {
+"path": "PaperIV/RD09PaddedHostBase.lean",
+"imports": [
+"PaperIV.PaddedEquitableColouring",
+"PaperIV.RD09L1Adapter",
+"PaperIV.FiniteHeavySelection"
+],
+"local": [
+"PaperIV.PaddedEquitableColouring",
+"PaperIV.RD09L1Adapter",
+"PaperIV.FiniteHeavySelection"
+],
+"external": []
+},
+"PaperIV.RD09PaddedL1Adapter": {
+"path": "PaperIV/RD09PaddedL1Adapter.lean",
+"imports": [
+"PaperIV.RD09PaddedHostBase",
+"PaperIV.RD09RootedOrderAdapter"
+],
+"local": [
+"PaperIV.RD09PaddedHostBase",
+"PaperIV.RD09RootedOrderAdapter"
+],
+"external": []
+},
+"PaperIV.RD09PaddedL1Mass": {
+"path": "PaperIV/RD09PaddedL1Mass.lean",
+"imports": [
+"PaperIV.RD09PaddedL1Adapter"
+],
+"local": [
+"PaperIV.RD09PaddedL1Adapter"
+],
+"external": []
+},
+"PaperIV.RD09RootExteriorAdapter": {
+"path": "PaperIV/RD09RootExteriorAdapter.lean",
+"imports": [
+"PaperIV.RD09PaddedL1Mass",
+"PaperIV.RootEdgeSplit",
+"Mathlib.Combinatorics.SimpleGraph.Finite"
+],
+"local": [
+"PaperIV.RD09PaddedL1Mass",
+"PaperIV.RootEdgeSplit"
+],
+"external": [
+"Mathlib.Combinatorics.SimpleGraph.Finite"
+]
+},
+"PaperIV.NearH1PhaseI": {
+"path": "PaperIV/NearH1PhaseI.lean",
+"imports": [
+"PaperIV.NearH1RootRegularization",
+"PaperIV.RD09RootExteriorAdapter"
+],
+"local": [
+"PaperIV.NearH1RootRegularization",
+"PaperIV.RD09RootExteriorAdapter"
+],
+"external": []
+},
+"PaperIV.RD09CandidateCounting": {
+"path": "PaperIV/RD09CandidateCounting.lean",
+"imports": [
+"Mathlib.Algebra.Group.Action.Defs",
+"Mathlib.Algebra.Group.Pointwise.Finset.Basic",
+"Mathlib.Data.Fintype.CardEmbedding",
+"Mathlib.Tactic.Linarith",
+"Mathlib.Tactic.Positivity",
+"Mathlib.Tactic.Ring"
+],
+"local": [],
+"external": [
+"Mathlib.Algebra.Group.Action.Defs",
+"Mathlib.Algebra.Group.Pointwise.Finset.Basic",
+"Mathlib.Data.Fintype.CardEmbedding",
+"Mathlib.Tactic.Linarith",
+"Mathlib.Tactic.Positivity",
+"Mathlib.Tactic.Ring"
+]
+},
+"PaperIV.RD09FactorCandidateMoments": {
+"path": "PaperIV/RD09FactorCandidateMoments.lean",
+"imports": [
+"Mathlib.Algebra.BigOperators.Ring.Finset",
+"Mathlib.Algebra.Group.Action.Defs",
+"Mathlib.Data.Fintype.Prod",
+"Mathlib.Tactic.Linarith",
+"Mathlib.Tactic.Positivity",
+"Mathlib.Tactic.Ring"
+],
+"local": [],
+"external": [
+"Mathlib.Algebra.BigOperators.Ring.Finset",
+"Mathlib.Algebra.Group.Action.Defs",
+"Mathlib.Data.Fintype.Prod",
+"Mathlib.Tactic.Linarith",
+"Mathlib.Tactic.Positivity",
+"Mathlib.Tactic.Ring"
+]
+},
+"PaperIV.RD09TerminalAssembly": {
+"path": "PaperIV/RD09TerminalAssembly.lean",
+"imports": [
+"PaperIV.RD09RootFactorPhase",
+"PaperIV.TerminalLedger"
+],
+"local": [
+"PaperIV.RD09RootFactorPhase",
+"PaperIV.TerminalLedger"
+],
+"external": []
+},
+"PaperIV.RD09PhysicalLedger": {
+"path": "PaperIV/RD09PhysicalLedger.lean",
+"imports": [
+"PaperIV.RD09TerminalAssembly",
+"PaperIV.SharpEnvelope"
+],
+"local": [
+"PaperIV.RD09TerminalAssembly",
+"PaperIV.SharpEnvelope"
+],
+"external": []
+},
+"PaperIV.RD09FactorCandidateAverage": {
+"path": "PaperIV/RD09FactorCandidateAverage.lean",
+"imports": [
+"PaperIV.RD09CandidateCounting",
+"PaperIV.RD09FactorCandidateMoments",
+"PaperIV.RD09FiniteAveraging",
+"PaperIV.RD09PhaseII",
+"PaperIV.RD09RootFactorPhase",
+"PaperIV.RD09PhysicalLedger"
+],
+"local": [
+"PaperIV.RD09CandidateCounting",
+"PaperIV.RD09FactorCandidateMoments",
+"PaperIV.RD09FiniteAveraging",
+"PaperIV.RD09PhaseII",
+"PaperIV.RD09RootFactorPhase",
+"PaperIV.RD09PhysicalLedger"
+],
+"external": []
+},
+"PaperIV.RD09SpokeCompatibility": {
+"path": "PaperIV/RD09SpokeCompatibility.lean",
+"imports": [
+"PaperIV.RD09PhaseII",
+"PaperIV.PhysicalCompletion",
+"PaperIV.RD09PhysicalLedger"
+],
+"local": [
+"PaperIV.RD09PhaseII",
+"PaperIV.PhysicalCompletion",
+"PaperIV.RD09PhysicalLedger"
+],
+"external": []
+},
+"PaperIV.RD09H1SpokeRealization": {
+"path": "PaperIV/RD09H1SpokeRealization.lean",
+"imports": [
+"PaperIV.RD09FactorCandidateAverage",
+"PaperIV.RD09SpokeCompatibility",
+"Mathlib.Data.Nat.Choose.Cast"
+],
+"local": [
+"PaperIV.RD09FactorCandidateAverage",
+"PaperIV.RD09SpokeCompatibility"
+],
+"external": [
+"Mathlib.Data.Nat.Choose.Cast"
+]
+},
+"PaperIV.RD09CanonicalBadAccounts": {
+"path": "PaperIV/RD09CanonicalBadAccounts.lean",
+"imports": [
+"PaperIV.RD09H1SpokeRealization",
+"PaperIV.RD09RootExteriorAdapter"
+],
+"local": [
+"PaperIV.RD09H1SpokeRealization",
+"PaperIV.RD09RootExteriorAdapter"
+],
+"external": []
+},
+"PaperIV.RD09CanonicalL2Assembly": {
+"path": "PaperIV/RD09CanonicalL2Assembly.lean",
+"imports": [
+"PaperIV.RD09CanonicalBadAccounts"
+],
+"local": [
+"PaperIV.RD09CanonicalBadAccounts"
+],
+"external": []
+},
+"PaperIV.RD09CompleteFactorAdapter": {
+"path": "PaperIV/RD09CompleteFactorAdapter.lean",
+"imports": [
+"PaperIV.LineGraphColouring",
+"PaperIV.RD09FactorCandidateAverage"
+],
+"local": [
+"PaperIV.LineGraphColouring",
+"PaperIV.RD09FactorCandidateAverage"
+],
+"external": []
+},
+"PaperIV.NearH1FinalAssembly": {
+"path": "PaperIV/NearH1FinalAssembly.lean",
+"imports": [
+"PaperIV.NearH1PhaseI",
+"PaperIV.RD09CanonicalL2Assembly",
+"PaperIV.RD09CompleteFactorAdapter",
+"PaperIV.RD09SplitEditAccount",
+"PaperIV.H1ImprovedConstants",
+"PaperIV.PhysicalCompletion"
+],
+"local": [
+"PaperIV.NearH1PhaseI",
+"PaperIV.RD09CanonicalL2Assembly",
+"PaperIV.RD09CompleteFactorAdapter",
+"PaperIV.RD09SplitEditAccount",
+"PaperIV.H1ImprovedConstants",
+"PaperIV.PhysicalCompletion"
+],
+"external": []
+},
+"PaperIV.NearH1StructureWitness": {
+"path": "PaperIV/NearH1StructureWitness.lean",
+"imports": [
+"PaperIV.NearH1CalibratedRoot",
+"PaperIV.NearH1PhaseI",
+"PaperIV.NearH1FinalAssembly",
+"PaperIV.NearH1SplitComparator"
+],
+"local": [
+"PaperIV.NearH1CalibratedRoot",
+"PaperIV.NearH1PhaseI",
+"PaperIV.NearH1FinalAssembly",
+"PaperIV.NearH1SplitComparator"
+],
+"external": []
+},
+"PaperIV.CertifiedF4Bridge": {
+"path": "PaperIV/CertifiedF4Bridge.lean",
+"imports": [
+"PaperIV.VertexCopyWBridge"
+],
+"local": [
+"PaperIV.VertexCopyWBridge"
+],
+"external": []
+},
+"PaperIV.PathDescentBridge": {
+"path": "PaperIV/PathDescentBridge.lean",
+"imports": [
+"PaperIV.VertexCopyGate"
+],
+"local": [
+"PaperIV.VertexCopyGate"
+],
+"external": []
+},
+"PaperIV.PathDescentBarrier": {
+"path": "PaperIV/PathDescentBarrier.lean",
+"imports": [
+"PaperIV.PathDescentBridge"
+],
+"local": [
+"PaperIV.PathDescentBridge"
+],
+"external": []
+},
+"PaperIV.SymmetrizationMetricStep": {
+"path": "PaperIV/SymmetrizationMetricStep.lean",
+"imports": [
+"PaperIV.GraphFamilyDistance",
+"PaperIV.VertexCopy"
+],
+"local": [
+"PaperIV.GraphFamilyDistance",
+"PaperIV.VertexCopy"
+],
+"external": []
+},
+"PaperIV.H1DescentBarrier": {
+"path": "PaperIV/H1DescentBarrier.lean",
+"imports": [
+"PaperIV.PathDescentBarrier",
+"PaperIV.GraphFamilyDistance",
+"PaperIV.SymmetrizationMetricStep"
+],
+"local": [
+"PaperIV.PathDescentBarrier",
+"PaperIV.GraphFamilyDistance",
+"PaperIV.SymmetrizationMetricStep"
+],
+"external": []
+},
+"PaperIV.SymmetrizationBarrier": {
+"path": "PaperIV/SymmetrizationBarrier.lean",
+"imports": [
+"PaperIV.VertexCopyGate",
+"PaperIV.GraphFamilyDistance"
+],
+"local": [
+"PaperIV.VertexCopyGate",
+"PaperIV.GraphFamilyDistance"
+],
+"external": []
+},
+"PaperIV.SymmetrizationInvariantBarrier": {
+"path": "PaperIV/SymmetrizationInvariantBarrier.lean",
+"imports": [
+"PaperIV.SymmetrizationBarrier"
+],
+"local": [
+"PaperIV.SymmetrizationBarrier"
+],
+"external": []
+},
+"PaperIV.LocalStabilityS01S03": {
+"path": "PaperIV/LocalStabilityS01S03.lean",
+"imports": [
+"PaperIV.RD09PhysicalLedger",
+"PaperIV.SymmetrizationInvariantBarrier",
+"PaperIV.H1DescentBarrier"
+],
+"local": [
+"PaperIV.RD09PhysicalLedger",
+"PaperIV.SymmetrizationInvariantBarrier",
+"PaperIV.H1DescentBarrier"
+],
+"external": []
+},
+"PaperIV.RD09RootSplitDistance": {
+"path": "PaperIV/RD09RootSplitDistance.lean",
+"imports": [
+"PaperIV.RD09SplitEditAccount"
+],
+"local": [
+"PaperIV.RD09SplitEditAccount"
+],
+"external": []
+},
+"PaperIV.NearH1WindowAccounts": {
+"path": "PaperIV/NearH1WindowAccounts.lean",
+"imports": [
+"PaperIV.SplitComparatorResidual",
+"PaperIV.SplitComparatorFamily",
+"PaperIV.NearH1SplitComparator",
+"PaperIV.CertifiedF4Bridge",
+"PaperIV.NearH1CalibratedRoot",
+"PaperIV.NearH1PhaseI",
+"PaperIV.NearH1FinalAssembly",
+"PaperIV.LocalStabilityS01S03",
+"PaperIV.RD09RootSplitDistance"
+],
+"local": [
+"PaperIV.SplitComparatorResidual",
+"PaperIV.SplitComparatorFamily",
+"PaperIV.NearH1SplitComparator",
+"PaperIV.CertifiedF4Bridge",
+"PaperIV.NearH1CalibratedRoot",
+"PaperIV.NearH1PhaseI",
+"PaperIV.NearH1FinalAssembly",
+"PaperIV.LocalStabilityS01S03",
+"PaperIV.RD09RootSplitDistance"
+],
+"external": []
+},
+"PaperIV.NearH1Localization": {
+"path": "PaperIV/NearH1Localization.lean",
+"imports": [
+"PaperIV.NearH1WindowAccounts",
+"PaperIV.GatedTerminalSplit",
+"PaperIV.NearH1SplitComparator",
+"PaperIV.NearH1StructureWitness"
+],
+"local": [
+"PaperIV.NearH1WindowAccounts",
+"PaperIV.GatedTerminalSplit",
+"PaperIV.NearH1SplitComparator",
+"PaperIV.NearH1StructureWitness"
+],
+"external": []
+},
+"MixedRounding.Defs": {
+"path": "MixedRounding/Defs.lean",
+"imports": [
+"Mathlib.Algebra.Order.Ring.Star",
+"Mathlib.Analysis.Normed.Field.Lemmas",
+"Mathlib.Combinatorics.SimpleGraph.Finite",
+"Mathlib.Data.Rat.Star",
+"Mathlib.Tactic.Positivity"
+],
+"local": [],
+"external": [
+"Mathlib.Algebra.Order.Ring.Star",
+"Mathlib.Analysis.Normed.Field.Lemmas",
+"Mathlib.Combinatorics.SimpleGraph.Finite",
+"Mathlib.Data.Rat.Star",
+"Mathlib.Tactic.Positivity"
+]
+},
+"MixedRounding.Cleanup": {
+"path": "MixedRounding/Cleanup.lean",
+"imports": [
+"MixedRounding.Defs"
+],
+"local": [
+"MixedRounding.Defs"
+],
+"external": []
+},
+"PaperIV.MixedRoundingAdapter": {
+"path": "PaperIV/MixedRoundingAdapter.lean",
+"imports": [
+"PaperIV.FarRounding",
+"MixedRounding.Cleanup"
+],
+"local": [
+"PaperIV.FarRounding",
+"MixedRounding.Cleanup"
+],
+"external": []
+},
+"PaperIV.TargetEnvelope": {
+"path": "PaperIV/TargetEnvelope.lean",
+"imports": [
+"PaperIV.SharpEnvelope"
+],
+"local": [
+"PaperIV.SharpEnvelope"
+],
+"external": []
+},
+"PaperIV.NB08Interface": {
+"path": "PaperIV/NB08Interface.lean",
+"imports": [
+"PaperIV.FarRounding",
+"PaperIV.TargetEnvelope"
+],
+"local": [
+"PaperIV.FarRounding",
+"PaperIV.TargetEnvelope"
+],
+"external": []
+},
+"PaperIV.RC01GlobalBudget": {
+"path": "PaperIV/RC01GlobalBudget.lean",
+"imports": [
+"Mathlib.Analysis.Normed.Field.Lemmas",
+"Mathlib.Tactic.Positivity"
+],
+"local": [],
+"external": [
+"Mathlib.Analysis.Normed.Field.Lemmas",
+"Mathlib.Tactic.Positivity"
+]
+},
+"PaperIV.FarRoundingBatchBridge": {
+"path": "PaperIV/FarRoundingBatchBridge.lean",
+"imports": [
+"PaperIV.FarRounding"
+],
+"local": [
+"PaperIV.FarRounding"
+],
+"external": []
+},
+"PaperIV.FarRoundingFromAssignment": {
+"path": "PaperIV/FarRoundingFromAssignment.lean",
+"imports": [
+"PaperIV.FarRoundingBatchBridge"
+],
+"local": [
+"PaperIV.FarRoundingBatchBridge"
+],
+"external": []
+},
+"PaperIV.AssignmentLemma": {
+"path": "PaperIV/AssignmentLemma.lean",
+"imports": [
+"PaperIV.FarRoundingFromAssignment"
+],
+"local": [
+"PaperIV.FarRoundingFromAssignment"
+],
+"external": []
+},
+"PaperIV.CliqueBagNibble": {
+"path": "PaperIV/CliqueBagNibble.lean",
+"imports": [
+"PaperIV.AssignmentLemma"
+],
+"local": [
+"PaperIV.AssignmentLemma"
+],
+"external": []
+},
+"PaperIV.DonationBudget": {
+"path": "PaperIV/DonationBudget.lean",
+"imports": [
+"PaperIV.CliqueBagNibble"
+],
+"local": [
+"PaperIV.CliqueBagNibble"
+],
+"external": []
+},
+"PaperIV.ChordalBridge": {
+"path": "PaperIV/ChordalBridge.lean",
+"imports": [
+"PaperIV.ChordalStructure",
+"PaperIV.DonationBudget"
+],
+"local": [
+"PaperIV.ChordalStructure",
+"PaperIV.DonationBudget"
+],
+"external": []
+},
+"PaperIV.DenseBagClosure": {
+"path": "PaperIV/DenseBagClosure.lean",
+"imports": [
+"PaperIV.ChordalBridge"
+],
+"local": [
+"PaperIV.ChordalBridge"
+],
+"external": []
+},
+"PaperIV.AssignmentEquivalence": {
+"path": "PaperIV/AssignmentEquivalence.lean",
+"imports": [
+"PaperIV.DenseBagClosure"
+],
+"local": [
+"PaperIV.DenseBagClosure"
+],
+"external": []
+},
+"PaperIV.TwoRegimeAccounting": {
+"path": "PaperIV/TwoRegimeAccounting.lean",
+"imports": [
+"PaperIV.AssignmentEquivalence"
+],
+"local": [
+"PaperIV.AssignmentEquivalence"
+],
+"external": []
+},
+"PaperIV.E01Ledger": {
+"path": "PaperIV/E01Ledger.lean",
+"imports": [
+"PaperIV.TwoRegimeAccounting"
+],
+"local": [
+"PaperIV.TwoRegimeAccounting"
+],
+"external": []
+},
+"PaperIV.NibblePort": {
+"path": "PaperIV/NibblePort.lean",
+"imports": [
+"PaperIV.E01Ledger"
+],
+"local": [
+"PaperIV.E01Ledger"
+],
+"external": []
+},
+"PaperIV.RootedCounting": {
+"path": "PaperIV/RootedCounting.lean",
+"imports": [
+"Mathlib.Algebra.Order.Ring.Star",
+"Mathlib.Analysis.Normed.Field.Lemmas",
+"Mathlib.Data.Rat.Star",
+"Mathlib.Tactic.Positivity"
+],
+"local": [],
+"external": [
+"Mathlib.Algebra.Order.Ring.Star",
+"Mathlib.Analysis.Normed.Field.Lemmas",
+"Mathlib.Data.Rat.Star",
+"Mathlib.Tactic.Positivity"
+]
+},
+"PaperIV.RootedCountingBridge": {
+"path": "PaperIV/RootedCountingBridge.lean",
+"imports": [
+"PaperIV.RootedCounting"
+],
+"local": [
+"PaperIV.RootedCounting"
+],
+"external": []
+},
+"PaperIV.CountingTelescope": {
+"path": "PaperIV/CountingTelescope.lean",
+"imports": [
+"PaperIV.RootedCountingBridge",
+"Mathlib.Algebra.CharP.Defs"
+],
+"local": [
+"PaperIV.RootedCountingBridge"
+],
+"external": [
+"Mathlib.Algebra.CharP.Defs"
+]
+},
+"PaperIV.OneStepEstimate": {
+"path": "PaperIV/OneStepEstimate.lean",
+"imports": [
+"PaperIV.CountingTelescope",
+"Mathlib.Combinatorics.SimpleGraph.Regularity.Uniform"
+],
+"local": [
+"PaperIV.CountingTelescope"
+],
+"external": [
+"Mathlib.Combinatorics.SimpleGraph.Regularity.Uniform"
+]
+},
+"PaperIV.TelescopeK3": {
+"path": "PaperIV/TelescopeK3.lean",
+"imports": [
+"PaperIV.OneStepEstimate"
+],
+"local": [
+"PaperIV.OneStepEstimate"
+],
+"external": []
+},
+"PaperIV.TelescopeK3Full": {
+"path": "PaperIV/TelescopeK3Full.lean",
+"imports": [
+"PaperIV.TelescopeK3"
+],
+"local": [
+"PaperIV.TelescopeK3"
+],
+"external": []
+},
+"PaperIV.TelescopeK4": {
+"path": "PaperIV/TelescopeK4.lean",
+"imports": [
+"PaperIV.TelescopeK3Full"
+],
+"local": [
+"PaperIV.TelescopeK3Full"
+],
+"external": []
+},
+"PaperIV.TelescopeK4Step2": {
+"path": "PaperIV/TelescopeK4Step2.lean",
+"imports": [
+"PaperIV.TelescopeK4"
+],
+"local": [
+"PaperIV.TelescopeK4"
+],
+"external": []
+},
+"PaperIV.TelescopeK4Full": {
+"path": "PaperIV/TelescopeK4Full.lean",
+"imports": [
+"PaperIV.TelescopeK4Step2"
+],
+"local": [
+"PaperIV.TelescopeK4Step2"
+],
+"external": []
+},
+"PaperIV.RegularityFormat": {
+"path": "PaperIV/RegularityFormat.lean",
+"imports": [
+"PaperIV.TelescopeK4Full",
+"Mathlib.Combinatorics.SimpleGraph.Regularity.Lemma",
+"Mathlib.Combinatorics.SimpleGraph.Ends.Defs",
+"Mathlib.ModelTheory.Graph"
+],
+"local": [
+"PaperIV.TelescopeK4Full"
+],
+"external": [
+"Mathlib.Combinatorics.SimpleGraph.Regularity.Lemma",
+"Mathlib.Combinatorics.SimpleGraph.Ends.Defs",
+"Mathlib.ModelTheory.Graph"
+]
+},
+"PaperIV.DoubledPattern": {
+"path": "PaperIV/DoubledPattern.lean",
+"imports": [
+"PaperIV.RegularityFormat"
+],
+"local": [
+"PaperIV.RegularityFormat"
+],
+"external": []
+},
+"PaperIV.PatternCounting": {
+"path": "PaperIV/PatternCounting.lean",
+"imports": [
+"PaperIV.DoubledPattern"
+],
+"local": [
+"PaperIV.DoubledPattern"
+],
+"external": []
+},
+"PaperIV.EighthMoment": {
+"path": "PaperIV/EighthMoment.lean",
+"imports": [
+"PaperIV.PatternCounting"
+],
+"local": [
+"PaperIV.PatternCounting"
+],
+"external": []
+},
+"PaperIV.RootedVariance": {
+"path": "PaperIV/RootedVariance.lean",
+"imports": [
+"PaperIV.EighthMoment"
+],
+"local": [
+"PaperIV.EighthMoment"
+],
+"external": []
+},
+"PaperIV.CopyCleanup": {
+"path": "PaperIV/CopyCleanup.lean",
+"imports": [
+"PaperIV.RootedVariance"
+],
+"local": [
+"PaperIV.RootedVariance"
+],
+"external": []
+},
+"PaperIV.PatternMass": {
+"path": "PaperIV/PatternMass.lean",
+"imports": [
+"PaperIV.FarRounding",
+"PaperIV.CopyCleanup"
+],
+"local": [
+"PaperIV.FarRounding",
+"PaperIV.CopyCleanup"
+],
+"external": []
+},
+"PaperIV.SimultaneousSelection": {
+"path": "PaperIV/SimultaneousSelection.lean",
+"imports": [
+"PaperIV.PatternMass",
+"PaperIV.EighthMoment"
+],
+"local": [
+"PaperIV.PatternMass",
+"PaperIV.EighthMoment"
+],
+"external": []
+},
+"PaperIV.CyclicLayering": {
+"path": "PaperIV/CyclicLayering.lean",
+"imports": [
+"PaperIV.SimultaneousSelection",
+"Mathlib.Algebra.Lie.OfAssociative"
+],
+"local": [
+"PaperIV.SimultaneousSelection"
+],
+"external": [
+"Mathlib.Algebra.Lie.OfAssociative"
+]
+},
+"PaperIV.OwnerCoins": {
+"path": "PaperIV/OwnerCoins.lean",
+"imports": [
+"PaperIV.CyclicLayering"
+],
+"local": [
+"PaperIV.CyclicLayering"
+],
+"external": []
+},
+"PaperIV.DegreeConcentration": {
+"path": "PaperIV/DegreeConcentration.lean",
+"imports": [
+"PaperIV.OwnerCoins"
+],
+"local": [
+"PaperIV.OwnerCoins"
+],
+"external": []
+},
+"PaperIV.CenteredMoments": {
+"path": "PaperIV/CenteredMoments.lean",
+"imports": [
+"PaperIV.DegreeConcentration"
+],
+"local": [
+"PaperIV.DegreeConcentration"
+],
+"external": []
+},
+"PaperIV.ResourceSizes": {
+"path": "PaperIV/ResourceSizes.lean",
+"imports": [
+"PaperIV.CenteredMoments"
+],
+"local": [
+"PaperIV.CenteredMoments"
+],
+"external": []
+},
+"PaperIV.WeightedCodegree": {
+"path": "PaperIV/WeightedCodegree.lean",
+"imports": [
+"PaperIV.ResourceSizes"
+],
+"local": [
+"PaperIV.ResourceSizes"
+],
+"external": []
+},
+"PaperIV.RC01Candidates": {
+"path": "PaperIV/RC01Candidates.lean",
+"imports": [
+"PaperIV.PatternCounting",
+"PaperIV.FarRounding",
+"PaperIV.NibblePort",
+"PaperIV.WeightedCodegree"
+],
+"local": [
+"PaperIV.PatternCounting",
+"PaperIV.FarRounding",
+"PaperIV.NibblePort",
+"PaperIV.WeightedCodegree"
+],
+"external": []
+},
+"PaperIV.RC01CandidatePool": {
+"path": "PaperIV/RC01CandidatePool.lean",
+"imports": [
+"PaperIV.RC01Candidates",
+"PaperIV.RegularityFormat"
+],
+"local": [
+"PaperIV.RC01Candidates",
+"PaperIV.RegularityFormat"
+],
+"external": []
+},
+"PaperIV.RC01CanonicalSlots": {
+"path": "PaperIV/RC01CanonicalSlots.lean",
+"imports": [
+"PaperIV.RC01CandidatePool"
+],
+"local": [
+"PaperIV.RC01CandidatePool"
+],
+"external": []
+},
+"PaperIV.K4UniformNibbleCounts": {
+"path": "PaperIV/K4UniformNibbleCounts.lean",
+"imports": [
+"PaperIV.NibblePort",
+"PaperIV.CliqueBagNibble",
+"Mathlib.Data.Nat.Choose.Cast",
+"Mathlib.Data.Real.StarOrdered",
+"Mathlib.Tactic.IntervalCases"
+],
+"local": [
+"PaperIV.NibblePort",
+"PaperIV.CliqueBagNibble"
+],
+"external": [
+"Mathlib.Data.Nat.Choose.Cast",
+"Mathlib.Data.Real.StarOrdered",
+"Mathlib.Tactic.IntervalCases"
+]
+},
+"PaperIV.RC01CanonicalSupports": {
+"path": "PaperIV/RC01CanonicalSupports.lean",
+"imports": [
+"PaperIV.RC01CanonicalSlots",
+"PaperIV.K4UniformNibbleCounts"
+],
+"local": [
+"PaperIV.RC01CanonicalSlots",
+"PaperIV.K4UniformNibbleCounts"
+],
+"external": []
+},
+"PaperIV.TriangleNibblePort": {
+"path": "PaperIV/TriangleNibblePort.lean",
+"imports": [
+"PaperIV.NibblePort"
+],
+"local": [
+"PaperIV.NibblePort"
+],
+"external": []
+},
+"PaperIV.RC01K3Pool": {
+"path": "PaperIV/RC01K3Pool.lean",
+"imports": [
+"PaperIV.RC01CanonicalSupports",
+"PaperIV.TriangleNibblePort"
+],
+"local": [
+"PaperIV.RC01CanonicalSupports",
+"PaperIV.TriangleNibblePort"
+],
+"external": []
+},
+"PaperIV.OwnerCoinMoments": {
+"path": "PaperIV/OwnerCoinMoments.lean",
+"imports": [
+"PaperIV.OwnerCoins",
+"PaperIV.SimultaneousSelection"
+],
+"local": [
+"PaperIV.OwnerCoins",
+"PaperIV.SimultaneousSelection"
+],
+"external": []
+},
+"PaperIV.WeightedMoments": {
+"path": "PaperIV/WeightedMoments.lean",
+"imports": [
+"PaperIV.OwnerCoinMoments"
+],
+"local": [
+"PaperIV.OwnerCoinMoments"
+],
+"external": []
+},
+"PaperIV.WeightedPatternCoins": {
+"path": "PaperIV/WeightedPatternCoins.lean",
+"imports": [
+"PaperIV.WeightedMoments"
+],
+"local": [
+"PaperIV.WeightedMoments"
+],
+"external": []
+},
+"PaperIV.RC01PatternCapacity": {
+"path": "PaperIV/RC01PatternCapacity.lean",
+"imports": [
+"PaperIV.PatternMass",
+"PaperIV.WeightedPatternCoins"
+],
+"local": [
+"PaperIV.PatternMass",
+"PaperIV.WeightedPatternCoins"
+],
+"external": []
+},
+"PaperIV.RC01MixedPatterns": {
+"path": "PaperIV/RC01MixedPatterns.lean",
+"imports": [
+"PaperIV.RC01PatternCapacity",
+"PaperIV.RC01CanonicalSlots",
+"PaperIV.RC01K3Pool"
+],
+"local": [
+"PaperIV.RC01PatternCapacity",
+"PaperIV.RC01CanonicalSlots",
+"PaperIV.RC01K3Pool"
+],
+"external": []
+},
+"PaperIV.WeightedCoin": {
+"path": "PaperIV/WeightedCoin.lean",
+"imports": [
+"PaperIV.OwnerCoins",
+"MixedRounding.Defs"
+],
+"local": [
+"PaperIV.OwnerCoins",
+"MixedRounding.Defs"
+],
+"external": []
+},
+"PaperIV.PatternCoin": {
+"path": "PaperIV/PatternCoin.lean",
+"imports": [
+"PaperIV.WeightedMoments",
+"PaperIV.WeightedCoin"
+],
+"local": [
+"PaperIV.WeightedMoments",
+"PaperIV.WeightedCoin"
+],
+"external": []
+},
+"PaperIV.PatternTransfer": {
+"path": "PaperIV/PatternTransfer.lean",
+"imports": [
+"PaperIV.PatternCoin"
+],
+"local": [
+"PaperIV.PatternCoin"
+],
+"external": []
+},
+"PaperIV.PartitionBridge": {
+"path": "PaperIV/PartitionBridge.lean",
+"imports": [
+"PaperIV.PatternTransfer",
+"PaperIV.RegularityFormat"
+],
+"local": [
+"PaperIV.PatternTransfer",
+"PaperIV.RegularityFormat"
+],
+"external": []
+},
+"PaperIV.NibbleHypotheses": {
+"path": "PaperIV/NibbleHypotheses.lean",
+"imports": [
+"PaperIV.NibblePort",
+"PaperIV.WeightedCodegree",
+"Mathlib.Data.Real.StarOrdered"
+],
+"local": [
+"PaperIV.NibblePort",
+"PaperIV.WeightedCodegree"
+],
+"external": [
+"Mathlib.Data.Real.StarOrdered"
+]
+},
+"PaperIV.PatternPoolGeometry": {
+"path": "PaperIV/PatternPoolGeometry.lean",
+"imports": [
+"PaperIV.PatternCounting",
+"PaperIV.NibbleHypotheses"
+],
+"local": [
+"PaperIV.PatternCounting",
+"PaperIV.NibbleHypotheses"
+],
+"external": []
+},
+"MixedRounding.Lift": {
+"path": "MixedRounding/Lift.lean",
+"imports": [
+"MixedRounding.Defs"
+],
+"local": [
+"MixedRounding.Defs"
+],
+"external": []
+},
+"MixedRounding.Producer": {
+"path": "MixedRounding/Producer.lean",
+"imports": [
+"MixedRounding.Lift",
+"Mathlib.Analysis.RCLike.Basic"
+],
+"local": [
+"MixedRounding.Lift"
+],
+"external": [
+"Mathlib.Analysis.RCLike.Basic"
+]
+},
+"PaperIV.MixedNibbleUnion": {
+"path": "PaperIV/MixedNibbleUnion.lean",
+"imports": [
+"PaperIV.TriangleNibblePort"
+],
+"local": [
+"PaperIV.TriangleNibblePort"
+],
+"external": []
+},
+"PaperIV.JointTypedNibbleGate": {
+"path": "PaperIV/JointTypedNibbleGate.lean",
+"imports": [
+"PaperIV.MixedNibbleUnion",
+"PaperIV.NibbleHypotheses"
+],
+"local": [
+"PaperIV.MixedNibbleUnion",
+"PaperIV.NibbleHypotheses"
+],
+"external": []
+},
+"PaperIV.JointTypedQuota": {
+"path": "PaperIV/JointTypedQuota.lean",
+"imports": [
+"Mathlib.Algebra.Order.Ring.Star",
+"Mathlib.Analysis.RCLike.Basic",
+"Mathlib.Data.Rat.Star",
+"Mathlib.Tactic.Positivity"
+],
+"local": [],
+"external": [
+"Mathlib.Algebra.Order.Ring.Star",
+"Mathlib.Analysis.RCLike.Basic",
+"Mathlib.Data.Rat.Star",
+"Mathlib.Tactic.Positivity"
+]
+},
+"Nibble.BeckFiala": {
+"path": "Nibble/BeckFiala.lean",
+"imports": [
+"Mathlib.Algebra.Order.Ring.Star",
+"Mathlib.Analysis.InnerProductSpace.Basic",
+"Mathlib.Analysis.RCLike.Lemmas",
+"Mathlib.Data.Int.Star",
+"Mathlib.Data.Real.StarOrdered"
+],
+"local": [],
+"external": [
+"Mathlib.Algebra.Order.Ring.Star",
+"Mathlib.Analysis.InnerProductSpace.Basic",
+"Mathlib.Analysis.RCLike.Lemmas",
+"Mathlib.Data.Int.Star",
+"Mathlib.Data.Real.StarOrdered"
+]
+},
+"Nibble.BeckFialaPairs": {
+"path": "Nibble/BeckFialaPairs.lean",
+"imports": [
+"Nibble.BeckFiala"
+],
+"local": [
+"Nibble.BeckFiala"
+],
+"external": []
+},
+"Nibble.Basic": {
+"path": "Nibble/Basic.lean",
+"imports": [
+"Mathlib.Algebra.BigOperators.Group.Finset.Sigma"
+],
+"local": [],
+"external": [
+"Mathlib.Algebra.BigOperators.Group.Finset.Sigma"
+]
+},
+"Nibble.FracMatchingBound": {
+"path": "Nibble/FracMatchingBound.lean",
+"imports": [
+"Nibble.Basic",
+"Mathlib.Analysis.Normed.Ring.Basic",
+"Mathlib.Tactic.Positivity"
+],
+"local": [
+"Nibble.Basic"
+],
+"external": [
+"Mathlib.Analysis.Normed.Ring.Basic",
+"Mathlib.Tactic.Positivity"
+]
+},
+"Nibble.Tight.Pruning": {
+"path": "Nibble/Tight/Pruning.lean",
+"imports": [
+"Nibble.Basic",
+"Mathlib.Algebra.BigOperators.Group.Finset.Piecewise",
+"Mathlib.Algebra.Group.Action.Defs",
+"Mathlib.Algebra.Order.BigOperators.Group.Finset"
+],
+"local": [
+"Nibble.Basic"
+],
+"external": [
+"Mathlib.Algebra.BigOperators.Group.Finset.Piecewise",
+"Mathlib.Algebra.Group.Action.Defs",
+"Mathlib.Algebra.Order.BigOperators.Group.Finset"
+]
+},
+"Nibble.Prelude": {
+"path": "Nibble/Prelude.lean",
+"imports": [
+"Mathlib.Algebra.Field.ZMod",
+"Mathlib.Algebra.Lie.OfAssociative",
+"Mathlib.Algebra.Order.Ring.Star",
+"Mathlib.Analysis.Complex.ExponentialBounds",
+"Mathlib.Analysis.Convex.Cone.InnerDual",
+"Mathlib.Combinatorics.Hall.Basic",
+"Mathlib.Combinatorics.SimpleGraph.Triangle.Removal",
+"Mathlib.Combinatorics.SimpleGraph.Tutte",
+"Mathlib.Data.Finset.Functor",
+"Mathlib.Data.Int.Star",
+"Mathlib.Data.List.GetD",
+"Mathlib.Data.NNRat.Floor",
+"Mathlib.Data.Real.CompleteField",
+"Mathlib.Data.Real.StarOrdered",
+"Mathlib.MeasureTheory.Integral.Average",
+"Mathlib.Order.BourbakiWitt",
+"Mathlib.Order.CompletePartialOrder",
+"Mathlib.Probability.Moments.SubGaussian",
+"Mathlib.Probability.ProbabilityMassFunction.Integrals",
+"Mathlib.Tactic.NormNum.BigOperators",
+"Mathlib.Tactic.NormNum.Prime",
+"Mathlib.Tactic.NormNum.RealSqrt",
+"Mathlib.Topology.Connected.Separation",
+"Mathlib.Topology.EMetricSpace.Paracompact",
+"Mathlib.Topology.Separation.Lemmas",
+"Mathlib.Topology.UniformSpace.Uniformizable"
+],
+"local": [],
+"external": [
+"Mathlib.Algebra.Field.ZMod",
+"Mathlib.Algebra.Lie.OfAssociative",
+"Mathlib.Algebra.Order.Ring.Star",
+"Mathlib.Analysis.Complex.ExponentialBounds",
+"Mathlib.Analysis.Convex.Cone.InnerDual",
+"Mathlib.Combinatorics.Hall.Basic",
+"Mathlib.Combinatorics.SimpleGraph.Triangle.Removal",
+"Mathlib.Combinatorics.SimpleGraph.Tutte",
+"Mathlib.Data.Finset.Functor",
+"Mathlib.Data.Int.Star",
+"Mathlib.Data.List.GetD",
+"Mathlib.Data.NNRat.Floor",
+"Mathlib.Data.Real.CompleteField",
+"Mathlib.Data.Real.StarOrdered",
+"Mathlib.MeasureTheory.Integral.Average",
+"Mathlib.Order.BourbakiWitt",
+"Mathlib.Order.CompletePartialOrder",
+"Mathlib.Probability.Moments.SubGaussian",
+"Mathlib.Probability.ProbabilityMassFunction.Integrals",
+"Mathlib.Tactic.NormNum.BigOperators",
+"Mathlib.Tactic.NormNum.Prime",
+"Mathlib.Tactic.NormNum.RealSqrt",
+"Mathlib.Topology.Connected.Separation",
+"Mathlib.Topology.EMetricSpace.Paracompact",
+"Mathlib.Topology.Separation.Lemmas",
+"Mathlib.Topology.UniformSpace.Uniformizable"
+]
+},
+"Nibble.Conflict": {
+"path": "Nibble/Conflict.lean",
+"imports": [
+"Nibble.Basic",
+"Mathlib.Algebra.Group.Action.Defs",
+"Mathlib.Algebra.Order.BigOperators.Group.Finset",
+"Mathlib.Tactic.Bound"
+],
+"local": [
+"Nibble.Basic"
+],
+"external": [
+"Mathlib.Algebra.Group.Action.Defs",
+"Mathlib.Algebra.Order.BigOperators.Group.Finset",
+"Mathlib.Tactic.Bound"
+]
+},
+"Nibble.Survival": {
+"path": "Nibble/Survival.lean",
+"imports": [
+"Nibble.Basic",
+"Nibble.Conflict",
+"Nibble.Prelude"
+],
+"local": [
+"Nibble.Basic",
+"Nibble.Conflict",
+"Nibble.Prelude"
+],
+"external": []
+},
+"Nibble.BernoulliSpace": {
+"path": "Nibble/BernoulliSpace.lean",
+"imports": [
+"Nibble.Basic",
+"Nibble.Survival",
+"Nibble.Prelude"
+],
+"local": [
+"Nibble.Basic",
+"Nibble.Survival",
+"Nibble.Prelude"
+],
+"external": []
+},
+"Nibble.Greedy": {
+"path": "Nibble/Greedy.lean",
+"imports": [
+"Nibble.Basic",
+"Mathlib.Algebra.Group.Action.Defs",
+"Mathlib.Algebra.Order.BigOperators.Group.Finset",
+"Mathlib.Tactic.Bound",
+"Mathlib.Tactic.Ring"
+],
+"local": [
+"Nibble.Basic"
+],
+"external": [
+"Mathlib.Algebra.Group.Action.Defs",
+"Mathlib.Algebra.Order.BigOperators.Group.Finset",
+"Mathlib.Tactic.Bound",
+"Mathlib.Tactic.Ring"
+]
+},
+"Nibble.Round": {
+"path": "Nibble/Round.lean",
+"imports": [
+"Nibble.Basic",
+"Nibble.Greedy"
+],
+"local": [
+"Nibble.Basic",
+"Nibble.Greedy"
+],
+"external": []
+},
+"Nibble.Covered": {
+"path": "Nibble/Covered.lean",
+"imports": [
+"Nibble.Basic",
+"Nibble.Round",
+"Nibble.Survival",
+"Nibble.Prelude"
+],
+"local": [
+"Nibble.Basic",
+"Nibble.Round",
+"Nibble.Survival",
+"Nibble.Prelude"
+],
+"external": []
+},
+"Nibble.Measurable": {
+"path": "Nibble/Measurable.lean",
+"imports": [
+"Nibble.Basic",
+"Nibble.Round",
+"Nibble.Survival",
+"Nibble.Covered",
+"Nibble.Prelude"
+],
+"local": [
+"Nibble.Basic",
+"Nibble.Round",
+"Nibble.Survival",
+"Nibble.Covered",
+"Nibble.Prelude"
+],
+"external": []
+},
+"Nibble.RoundConflict": {
+"path": "Nibble/RoundConflict.lean",
+"imports": [
+"Nibble.Basic",
+"Nibble.Round",
+"Nibble.Conflict"
+],
+"local": [
+"Nibble.Basic",
+"Nibble.Round",
+"Nibble.Conflict"
+],
+"external": []
+},
+"Nibble.CoveredExpectation": {
+"path": "Nibble/CoveredExpectation.lean",
+"imports": [
+"Nibble.Basic",
+"Nibble.Greedy",
+"Nibble.Round",
+"Nibble.Conflict",
+"Nibble.RoundConflict",
+"Nibble.Survival",
+"Nibble.Covered",
+"Nibble.Measurable",
+"Nibble.Prelude"
+],
+"local": [
+"Nibble.Basic",
+"Nibble.Greedy",
+"Nibble.Round",
+"Nibble.Conflict",
+"Nibble.RoundConflict",
+"Nibble.Survival",
+"Nibble.Covered",
+"Nibble.Measurable",
+"Nibble.Prelude"
+],
+"external": []
+},
+"Nibble.Tight.CoverProb": {
+"path": "Nibble/Tight/CoverProb.lean",
+"imports": [
+"Nibble.Basic",
+"Nibble.Round",
+"Nibble.Conflict",
+"Nibble.Survival",
+"Nibble.Covered",
+"Nibble.CoveredExpectation",
+"Nibble.Prelude"
+],
+"local": [
+"Nibble.Basic",
+"Nibble.Round",
+"Nibble.Conflict",
+"Nibble.Survival",
+"Nibble.Covered",
+"Nibble.CoveredExpectation",
+"Nibble.Prelude"
+],
+"external": []
+},
+"Nibble.Tight.SafeDegree": {
+"path": "Nibble/Tight/SafeDegree.lean",
+"imports": [
+"Nibble.Tight.CoverProb",
+"Nibble.Measurable",
+"Nibble.Prelude"
+],
+"local": [
+"Nibble.Tight.CoverProb",
+"Nibble.Measurable",
+"Nibble.Prelude"
+],
+"external": []
+},
+"Nibble.Tight.CoverWeight": {
+"path": "Nibble/Tight/CoverWeight.lean",
+"imports": [
+"Nibble.Basic",
+"Nibble.Tight.SafeDegree"
+],
+"local": [
+"Nibble.Basic",
+"Nibble.Tight.SafeDegree"
+],
+"external": []
+},
+"Nibble.Tight.CoverWeightMoments": {
+"path": "Nibble/Tight/CoverWeightMoments.lean",
+"imports": [
+"Nibble.Tight.CoverWeight",
+"Nibble.Tight.CoverProb",
+"Nibble.Measurable",
+"Nibble.Prelude"
+],
+"local": [
+"Nibble.Tight.CoverWeight",
+"Nibble.Tight.CoverProb",
+"Nibble.Measurable",
+"Nibble.Prelude"
+],
+"external": []
+},
+"Nibble.Tight.LossVariance": {
+"path": "Nibble/Tight/LossVariance.lean",
+"imports": [
+"Nibble.Tight.CoverWeightMoments",
+"Nibble.Prelude"
+],
+"local": [
+"Nibble.Tight.CoverWeightMoments",
+"Nibble.Prelude"
+],
+"external": []
+},
+"Nibble.Tight.PairWeightMean": {
+"path": "Nibble/Tight/PairWeightMean.lean",
+"imports": [
+"Nibble.Tight.CoverWeightMoments",
+"Nibble.Prelude"
+],
+"local": [
+"Nibble.Tight.CoverWeightMoments",
+"Nibble.Prelude"
+],
+"external": []
+},
+"Nibble.Tight.Selection": {
+"path": "Nibble/Tight/Selection.lean",
+"imports": [
+"Nibble.Prelude"
+],
+"local": [
+"Nibble.Prelude"
+],
+"external": []
+},
+"Nibble.Tight.TightRound": {
+"path": "Nibble/Tight/TightRound.lean",
+"imports": [
+"Nibble.Tight.CoverWeight",
+"Nibble.Tight.CoverWeightMoments",
+"Nibble.Tight.PairWeightMean",
+"Nibble.Tight.Selection",
+"Nibble.Prelude"
+],
+"local": [
+"Nibble.Tight.CoverWeight",
+"Nibble.Tight.CoverWeightMoments",
+"Nibble.Tight.PairWeightMean",
+"Nibble.Tight.Selection",
+"Nibble.Prelude"
+],
+"external": []
+},
+"Nibble.Tight.TightRoundConcrete": {
+"path": "Nibble/Tight/TightRoundConcrete.lean",
+"imports": [
+"Nibble.Tight.TightRound",
+"Nibble.Tight.LossVariance",
+"Nibble.Prelude"
+],
+"local": [
+"Nibble.Tight.TightRound",
+"Nibble.Tight.LossVariance",
+"Nibble.Prelude"
+],
+"external": []
+},
+"Nibble.Tight.ResidualBand": {
+"path": "Nibble/Tight/ResidualBand.lean",
+"imports": [
+"Nibble.Tight.TightRoundConcrete",
+"Nibble.Prelude"
+],
+"local": [
+"Nibble.Tight.TightRoundConcrete",
+"Nibble.Prelude"
+],
+"external": []
+},
+"Nibble.Tight.ConflictCount": {
+"path": "Nibble/Tight/ConflictCount.lean",
+"imports": [
+"Nibble.Basic",
+"Nibble.Conflict",
+"Mathlib.Algebra.Order.Ring.Star",
+"Mathlib.Analysis.Normed.Ring.Lemmas",
+"Mathlib.Data.Int.Star"
+],
+"local": [
+"Nibble.Basic",
+"Nibble.Conflict"
+],
+"external": [
+"Mathlib.Algebra.Order.Ring.Star",
+"Mathlib.Analysis.Normed.Ring.Lemmas",
+"Mathlib.Data.Int.Star"
+]
+},
+"Nibble.Tight.TwoEdgeMatch": {
+"path": "Nibble/Tight/TwoEdgeMatch.lean",
+"imports": [
+"Nibble.Basic",
+"Nibble.Round",
+"Nibble.Conflict",
+"Nibble.Survival",
+"Nibble.Covered",
+"Nibble.CoveredExpectation",
+"Nibble.Tight.CoverProb",
+"Nibble.Prelude"
+],
+"local": [
+"Nibble.Basic",
+"Nibble.Round",
+"Nibble.Conflict",
+"Nibble.Survival",
+"Nibble.Covered",
+"Nibble.CoveredExpectation",
+"Nibble.Tight.CoverProb",
+"Nibble.Prelude"
+],
+"external": []
+},
+"Nibble.Tight.PairExcessCodegree": {
+"path": "Nibble/Tight/PairExcessCodegree.lean",
+"imports": [
+"Nibble.Tight.TwoEdgeMatch",
+"Nibble.Tight.ConflictCount",
+"Nibble.Tight.LossVariance",
+"Nibble.Prelude"
+],
+"local": [
+"Nibble.Tight.TwoEdgeMatch",
+"Nibble.Tight.ConflictCount",
+"Nibble.Tight.LossVariance",
+"Nibble.Prelude"
+],
+"external": []
+},
+"Nibble.Tight.CoverVariance": {
+"path": "Nibble/Tight/CoverVariance.lean",
+"imports": [
+"Nibble.Tight.TightRound",
+"Nibble.Tight.PairExcessCodegree",
+"Nibble.Prelude"
+],
+"local": [
+"Nibble.Tight.TightRound",
+"Nibble.Tight.PairExcessCodegree",
+"Nibble.Prelude"
+],
+"external": []
+},
+"Nibble.Tight.TightRoundCheb": {
+"path": "Nibble/Tight/TightRoundCheb.lean",
+"imports": [
+"Nibble.Tight.CoverVariance",
+"Nibble.Prelude"
+],
+"local": [
+"Nibble.Tight.CoverVariance",
+"Nibble.Prelude"
+],
+"external": []
+},
+"Nibble.Tight.ResidualBandCheb": {
+"path": "Nibble/Tight/ResidualBandCheb.lean",
+"imports": [
+"Nibble.Tight.TightRoundCheb",
+"Nibble.Tight.TightRoundConcrete",
+"Nibble.Tight.ResidualBand",
+"Nibble.Prelude"
+],
+"local": [
+"Nibble.Tight.TightRoundCheb",
+"Nibble.Tight.TightRoundConcrete",
+"Nibble.Tight.ResidualBand",
+"Nibble.Prelude"
+],
+"external": []
+},
+"Nibble.Tight.RoundExplicit": {
+"path": "Nibble/Tight/RoundExplicit.lean",
+"imports": [
+"Nibble.Tight.ResidualBandCheb",
+"Nibble.BernoulliSpace",
+"Nibble.Prelude"
+],
+"local": [
+"Nibble.Tight.ResidualBandCheb",
+"Nibble.BernoulliSpace",
+"Nibble.Prelude"
+],
+"external": []
+},
+"Nibble.Tight.SharpRound": {
+"path": "Nibble/Tight/SharpRound.lean",
+"imports": [
+"Nibble.Tight.RoundExplicit",
+"Nibble.Tight.Pruning"
+],
+"local": [
+"Nibble.Tight.RoundExplicit",
+"Nibble.Tight.Pruning"
+],
+"external": []
+},
+"Nibble.Tight.CubeVariance": {
+"path": "Nibble/Tight/CubeVariance.lean",
+"imports": [
+"Mathlib.Analysis.Normed.Ring.Basic",
+"Mathlib.Data.Real.StarOrdered"
+],
+"local": [],
+"external": [
+"Mathlib.Analysis.Normed.Ring.Basic",
+"Mathlib.Data.Real.StarOrdered"
+]
+},
+"Nibble.Tight.CubeRetention": {
+"path": "Nibble/Tight/CubeRetention.lean",
+"imports": [
+"Nibble.Tight.CubeVariance",
+"Nibble.Covered",
+"Nibble.Prelude"
+],
+"local": [
+"Nibble.Tight.CubeVariance",
+"Nibble.Covered",
+"Nibble.Prelude"
+],
+"external": []
+},
+"Nibble.Tight.SafeDegreeVariance": {
+"path": "Nibble/Tight/SafeDegreeVariance.lean",
+"imports": [
+"Nibble.Tight.SafeDegree",
+"Nibble.Tight.LossVariance",
+"Nibble.Prelude"
+],
+"local": [
+"Nibble.Tight.SafeDegree",
+"Nibble.Tight.LossVariance",
+"Nibble.Prelude"
+],
+"external": []
+},
+"Nibble.Tight.SafeRoundCheb": {
+"path": "Nibble/Tight/SafeRoundCheb.lean",
+"imports": [
+"Nibble.Tight.SafeDegreeVariance",
+"Nibble.Tight.CoverVariance",
+"Nibble.Tight.Selection",
+"Nibble.Prelude"
+],
+"local": [
+"Nibble.Tight.SafeDegreeVariance",
+"Nibble.Tight.CoverVariance",
+"Nibble.Tight.Selection",
+"Nibble.Prelude"
+],
+"external": []
+},
+"Nibble.Tight.FlipStability": {
+"path": "Nibble/Tight/FlipStability.lean",
+"imports": [
+"Nibble.Round",
+"Nibble.Tight.SafeDegree",
+"Nibble.Tight.LossVariance"
+],
+"local": [
+"Nibble.Round",
+"Nibble.Tight.SafeDegree",
+"Nibble.Tight.LossVariance"
+],
+"external": []
+},
+"Nibble.Tight.SharpVariance": {
+"path": "Nibble/Tight/SharpVariance.lean",
+"imports": [
+"Nibble.Tight.CubeVariance",
+"Nibble.Tight.FlipStability",
+"Mathlib.Algebra.Order.Chebyshev"
+],
+"local": [
+"Nibble.Tight.CubeVariance",
+"Nibble.Tight.FlipStability"
+],
+"external": [
+"Mathlib.Algebra.Order.Chebyshev"
+]
+},
+"Nibble.Tight.SharpRoundProof": {
+"path": "Nibble/Tight/SharpRoundProof.lean",
+"imports": [
+"Nibble.Tight.SharpVariance",
+"Nibble.Tight.CubeRetention",
+"Nibble.Tight.SafeRoundCheb",
+"Nibble.Tight.Pruning",
+"Nibble.Prelude"
+],
+"local": [
+"Nibble.Tight.SharpVariance",
+"Nibble.Tight.CubeRetention",
+"Nibble.Tight.SafeRoundCheb",
+"Nibble.Tight.Pruning",
+"Nibble.Prelude"
+],
+"external": []
+},
+"Nibble.Tight.SharpRoundAssembly": {
+"path": "Nibble/Tight/SharpRoundAssembly.lean",
+"imports": [
+"Nibble.Tight.SharpRoundProof",
+"Nibble.Tight.SharpRound"
+],
+"local": [
+"Nibble.Tight.SharpRoundProof",
+"Nibble.Tight.SharpRound"
+],
+"external": []
+},
+"Nibble.Convergence": {
+"path": "Nibble/Convergence.lean",
+"imports": [
+"Mathlib.Analysis.Normed.Ring.Basic",
+"Mathlib.Data.Real.StarOrdered",
+"Mathlib.Tactic.Bound"
+],
+"local": [],
+"external": [
+"Mathlib.Analysis.Normed.Ring.Basic",
+"Mathlib.Data.Real.StarOrdered",
+"Mathlib.Tactic.Bound"
+]
+},
+"Nibble.Assembly": {
+"path": "Nibble/Assembly.lean",
+"imports": [
+"Nibble.Basic",
+"Nibble.Greedy"
+],
+"local": [
+"Nibble.Basic",
+"Nibble.Greedy"
+],
+"external": []
+},
+"Nibble.Iteration": {
+"path": "Nibble/Iteration.lean",
+"imports": [
+"Nibble.Basic",
+"Nibble.Round"
+],
+"local": [
+"Nibble.Basic",
+"Nibble.Round"
+],
+"external": []
+},
+"Nibble.Assemble": {
+"path": "Nibble/Assemble.lean",
+"imports": [
+"Nibble.Basic",
+"Nibble.Greedy",
+"Nibble.Round",
+"Nibble.Iteration",
+"Nibble.Assembly"
+],
+"local": [
+"Nibble.Basic",
+"Nibble.Greedy",
+"Nibble.Round",
+"Nibble.Iteration",
+"Nibble.Assembly"
+],
+"external": []
+},
+"Nibble.IterationSeq": {
+"path": "Nibble/IterationSeq.lean",
+"imports": [
+"Nibble.Basic",
+"Nibble.Greedy",
+"Nibble.Round",
+"Nibble.Iteration",
+"Nibble.Assemble"
+],
+"local": [
+"Nibble.Basic",
+"Nibble.Greedy",
+"Nibble.Round",
+"Nibble.Iteration",
+"Nibble.Assemble"
+],
+"external": []
+},
+"Nibble.DischargeSeq": {
+"path": "Nibble/DischargeSeq.lean",
+"imports": [
+"Nibble.Basic",
+"Nibble.Greedy",
+"Nibble.Round",
+"Nibble.IterationSeq",
+"Nibble.Convergence",
+"Mathlib.Analysis.RCLike.Basic"
+],
+"local": [
+"Nibble.Basic",
+"Nibble.Greedy",
+"Nibble.Round",
+"Nibble.IterationSeq",
+"Nibble.Convergence"
+],
+"external": [
+"Mathlib.Analysis.RCLike.Basic"
+]
+},
+"Nibble.AdaptiveRounds": {
+"path": "Nibble/AdaptiveRounds.lean",
+"imports": [
+"Nibble.IterationSeq",
+"Nibble.DischargeSeq"
+],
+"local": [
+"Nibble.IterationSeq",
+"Nibble.DischargeSeq"
+],
+"external": []
+},
+"Nibble.Regular": {
+"path": "Nibble/Regular.lean",
+"imports": [
+"Nibble.Basic",
+"Mathlib.Analysis.Normed.Ring.Basic"
+],
+"local": [
+"Nibble.Basic"
+],
+"external": [
+"Mathlib.Analysis.Normed.Ring.Basic"
+]
+},
+"Nibble.Interface": {
+"path": "Nibble/Interface.lean",
+"imports": [
+"Nibble.Basic",
+"Nibble.Regular"
+],
+"local": [
+"Nibble.Basic",
+"Nibble.Regular"
+],
+"external": []
+},
+"Nibble.RegularMost": {
+"path": "Nibble/RegularMost.lean",
+"imports": [
+"Nibble.Regular",
+"Nibble.Interface",
+"Mathlib.Tactic.Bound"
+],
+"local": [
+"Nibble.Regular",
+"Nibble.Interface"
+],
+"external": [
+"Mathlib.Tactic.Bound"
+]
+},
+"Nibble.AdaptiveAssembly": {
+"path": "Nibble/AdaptiveAssembly.lean",
+"imports": [
+"Nibble.AdaptiveRounds",
+"Nibble.DischargeSeq",
+"Nibble.RegularMost"
+],
+"local": [
+"Nibble.AdaptiveRounds",
+"Nibble.DischargeSeq",
+"Nibble.RegularMost"
+],
+"external": []
+},
+"Nibble.TightAssembly": {
+"path": "Nibble/TightAssembly.lean",
+"imports": [
+"Nibble.Tight.SharpRound",
+"Nibble.AdaptiveAssembly",
+"Nibble.Tight.LossVariance"
+],
+"local": [
+"Nibble.Tight.SharpRound",
+"Nibble.AdaptiveAssembly",
+"Nibble.Tight.LossVariance"
+],
+"external": []
+},
+"Nibble.TightSchedule": {
+"path": "Nibble/TightSchedule.lean",
+"imports": [
+"Nibble.TightAssembly"
+],
+"local": [
+"Nibble.TightAssembly"
+],
+"external": []
+},
+"Nibble.TightNibble": {
+"path": "Nibble/TightNibble.lean",
+"imports": [
+"Nibble.TightSchedule",
+"Nibble.Tight.SharpRoundAssembly"
+],
+"local": [
+"Nibble.TightSchedule",
+"Nibble.Tight.SharpRoundAssembly"
+],
+"external": []
+},
+"Nibble.WeightedSpreadNibble": {
+"path": "Nibble/WeightedSpreadNibble.lean",
+"imports": [
+"Nibble.BeckFialaPairs",
+"Nibble.FracMatchingBound",
+"Nibble.TightNibble"
+],
+"local": [
+"Nibble.BeckFialaPairs",
+"Nibble.FracMatchingBound",
+"Nibble.TightNibble"
+],
+"external": []
+},
+"Nibble.FracNibbleRepaired": {
+"path": "Nibble/FracNibbleRepaired.lean",
+"imports": [
+"Nibble.WeightedSpreadNibble"
+],
+"local": [
+"Nibble.WeightedSpreadNibble"
+],
+"external": []
+},
+"PaperIV.PaperIIINibbleAdapter": {
+"path": "PaperIV/PaperIIINibbleAdapter.lean",
+"imports": [
+"PaperIV.NibblePort",
+"Nibble.FracNibbleRepaired"
+],
+"local": [
+"PaperIV.NibblePort",
+"Nibble.FracNibbleRepaired"
+],
+"external": []
+},
+"PaperIV.MarkedQuotaNibble": {
+"path": "PaperIV/MarkedQuotaNibble.lean",
+"imports": [
+"PaperIV.PaperIIINibbleAdapter"
+],
+"local": [
+"PaperIV.PaperIIINibbleAdapter"
+],
+"external": []
+},
+"PaperIV.MarkedQuotaTokens": {
+"path": "PaperIV/MarkedQuotaTokens.lean",
+"imports": [
+"Mathlib.Algebra.BigOperators.Field",
+"Mathlib.Analysis.RCLike.Basic",
+"Mathlib.Tactic.Positivity"
+],
+"local": [],
+"external": [
+"Mathlib.Algebra.BigOperators.Field",
+"Mathlib.Analysis.RCLike.Basic",
+"Mathlib.Tactic.Positivity"
+]
+},
+"PaperIV.MarkedQuotaGate": {
+"path": "PaperIV/MarkedQuotaGate.lean",
+"imports": [
+"PaperIV.MarkedQuotaNibble",
+"PaperIV.MarkedQuotaTokens"
+],
+"local": [
+"PaperIV.MarkedQuotaNibble",
+"PaperIV.MarkedQuotaTokens"
+],
+"external": []
+},
+"Nibble.FracNibbleSlack": {
+"path": "Nibble/FracNibbleSlack.lean",
+"imports": [
+"Nibble.FracNibbleRepaired"
+],
+"local": [
+"Nibble.FracNibbleRepaired"
+],
+"external": []
+},
+"Nibble.FracNibbleSlackR": {
+"path": "Nibble/FracNibbleSlackR.lean",
+"imports": [
+"Nibble.FracNibbleSlack"
+],
+"local": [
+"Nibble.FracNibbleSlack"
+],
+"external": []
+},
+"Nibble.FracNibbleLE": {
+"path": "Nibble/FracNibbleLE.lean",
+"imports": [
+"Nibble.FracNibbleSlackR"
+],
+"local": [
+"Nibble.FracNibbleSlackR"
+],
+"external": []
+},
+"PaperIV.PaperIIISlackNibbleAdapter": {
+"path": "PaperIV/PaperIIISlackNibbleAdapter.lean",
+"imports": [
+"PaperIV.NibblePort",
+"Nibble.FracNibbleLE"
+],
+"local": [
+"PaperIV.NibblePort",
+"Nibble.FracNibbleLE"
+],
+"external": []
+},
+"PaperIV.MarkedQuotaSlackGate": {
+"path": "PaperIV/MarkedQuotaSlackGate.lean",
+"imports": [
+"PaperIV.MarkedQuotaGate",
+"PaperIV.PaperIIISlackNibbleAdapter"
+],
+"local": [
+"PaperIV.MarkedQuotaGate",
+"PaperIV.PaperIIISlackNibbleAdapter"
+],
+"external": []
+},
+"PaperIV.MarkedQuotaTypedGain": {
+"path": "PaperIV/MarkedQuotaTypedGain.lean",
+"imports": [
+"PaperIV.MarkedQuotaGate",
+"PaperIV.MarkedQuotaSlackGate",
+"PaperIV.JointTypedQuota"
+],
+"local": [
+"PaperIV.MarkedQuotaGate",
+"PaperIV.MarkedQuotaSlackGate",
+"PaperIV.JointTypedQuota"
+],
+"external": []
+},
+"PaperIV.TrianglePairingDefs": {
+"path": "PaperIV/TrianglePairingDefs.lean",
+"imports": [
+"PaperIV.NibblePort"
+],
+"local": [
+"PaperIV.NibblePort"
+],
+"external": []
+},
+"PaperIV.TrianglePairingSplit": {
+"path": "PaperIV/TrianglePairingSplit.lean",
+"imports": [
+"PaperIV.TrianglePairingDefs"
+],
+"local": [
+"PaperIV.TrianglePairingDefs"
+],
+"external": []
+},
+"PaperIV.TrianglePairingSums": {
+"path": "PaperIV/TrianglePairingSums.lean",
+"imports": [
+"PaperIV.TrianglePairingDefs",
+"Mathlib.Algebra.BigOperators.Field",
+"Mathlib.Data.Real.StarOrdered"
+],
+"local": [
+"PaperIV.TrianglePairingDefs"
+],
+"external": [
+"Mathlib.Algebra.BigOperators.Field",
+"Mathlib.Data.Real.StarOrdered"
+]
+},
+"PaperIV.MarkedQuotaPairing": {
+"path": "PaperIV/MarkedQuotaPairing.lean",
+"imports": [
+"PaperIV.MarkedQuotaTypedGain",
+"PaperIV.TrianglePairingSums",
+"PaperIV.TrianglePairingSplit"
+],
+"local": [
+"PaperIV.MarkedQuotaTypedGain",
+"PaperIV.TrianglePairingSums",
+"PaperIV.TrianglePairingSplit"
+],
+"external": []
+},
+"PaperIV.JointTwoQuotaPhysical": {
+"path": "PaperIV/JointTwoQuotaPhysical.lean",
+"imports": [
+"PaperIV.MarkedQuotaPairing",
+"PaperIV.JointTypedNibbleGate",
+"PaperIV.MixedRoundingAdapter",
+"MixedRounding.Producer"
+],
+"local": [
+"PaperIV.MarkedQuotaPairing",
+"PaperIV.JointTypedNibbleGate",
+"PaperIV.MixedRoundingAdapter",
+"MixedRounding.Producer"
+],
+"external": []
+},
+"PaperIV.RC01CanonicalFractional": {
+"path": "PaperIV/RC01CanonicalFractional.lean",
+"imports": [
+"MixedRounding.Defs"
+],
+"local": [
+"MixedRounding.Defs"
+],
+"external": []
+},
+"PaperIV.RC01CanonicalNormalization": {
+"path": "PaperIV/RC01CanonicalNormalization.lean",
+"imports": [
+"PaperIV.RC01CanonicalFractional",
+"PaperIV.WeightedPatternCoins"
+],
+"local": [
+"PaperIV.RC01CanonicalFractional",
+"PaperIV.WeightedPatternCoins"
+],
+"external": []
+},
+"PaperIV.RC01CanonicalSlackBridge": {
+"path": "PaperIV/RC01CanonicalSlackBridge.lean",
+"imports": [
+"PaperIV.RC01CanonicalNormalization",
+"PaperIV.JointTwoQuotaPhysical"
+],
+"local": [
+"PaperIV.RC01CanonicalNormalization",
+"PaperIV.JointTwoQuotaPhysical"
+],
+"external": []
+},
+"PaperIV.SpreadPacking": {
+"path": "PaperIV/SpreadPacking.lean",
+"imports": [
+"PaperIV.PatternTransfer"
+],
+"local": [
+"PaperIV.PatternTransfer"
+],
+"external": []
+},
+"PaperIV.RC01CleanedSpreadPacking": {
+"path": "PaperIV/RC01CleanedSpreadPacking.lean",
+"imports": [
+"PaperIV.SpreadPacking",
+"PaperIV.RC01CanonicalSlackBridge"
+],
+"local": [
+"PaperIV.SpreadPacking",
+"PaperIV.RC01CanonicalSlackBridge"
+],
+"external": []
+},
+"PaperIV.RC01DeviationCleanup": {
+"path": "PaperIV/RC01DeviationCleanup.lean",
+"imports": [
+"PaperIV.CopyCleanup",
+"PaperIV.RC01CanonicalNormalization"
+],
+"local": [
+"PaperIV.CopyCleanup",
+"PaperIV.RC01CanonicalNormalization"
+],
+"external": []
+},
+"PaperIV.RC01CleanFiber": {
+"path": "PaperIV/RC01CleanFiber.lean",
+"imports": [
+"PaperIV.RC01DeviationCleanup",
+"PaperIV.RC01CleanedSpreadPacking"
+],
+"local": [
+"PaperIV.RC01DeviationCleanup",
+"PaperIV.RC01CleanedSpreadPacking"
+],
+"external": []
+},
+"PaperIV.RC01RegularVolume": {
+"path": "PaperIV/RC01RegularVolume.lean",
+"imports": [
+"PaperIV.PatternPoolGeometry",
+"PaperIV.RC01CleanFiber",
+"PaperIV.RC01Candidates",
+"PaperIV.PartitionBridge"
+],
+"local": [
+"PaperIV.PatternPoolGeometry",
+"PaperIV.RC01CleanFiber",
+"PaperIV.RC01Candidates",
+"PaperIV.PartitionBridge"
+],
+"external": []
+},
+"PaperIV.RC01CanonicalProfile": {
+"path": "PaperIV/RC01CanonicalProfile.lean",
+"imports": [
+"PaperIV.RC01MixedPatterns",
+"PaperIV.RC01RegularVolume"
+],
+"local": [
+"PaperIV.RC01MixedPatterns",
+"PaperIV.RC01RegularVolume"
+],
+"external": []
+},
+"PaperIV.RC01CanonicalFiberProfile": {
+"path": "PaperIV/RC01CanonicalFiberProfile.lean",
+"imports": [
+"PaperIV.RC01CanonicalProfile"
+],
+"local": [
+"PaperIV.RC01CanonicalProfile"
+],
+"external": []
+},
+"PaperIV.RC01CleanedMixedCodegree": {
+"path": "PaperIV/RC01CleanedMixedCodegree.lean",
+"imports": [
+"PaperIV.RC01CleanFiber",
+"PaperIV.RC01CanonicalSlackBridge"
+],
+"local": [
+"PaperIV.RC01CleanFiber",
+"PaperIV.RC01CanonicalSlackBridge"
+],
+"external": []
+},
+"PaperIV.UniformDual": {
+"path": "PaperIV/UniformDual.lean",
+"imports": [
+"PaperIV.FarRounding",
+"Mathlib.Data.Nat.Choose.Cast"
+],
+"local": [
+"PaperIV.FarRounding"
+],
+"external": [
+"Mathlib.Data.Nat.Choose.Cast"
+]
+},
+"PaperIV.LowTriangleReduction": {
+"path": "PaperIV/LowTriangleReduction.lean",
+"imports": [
+"PaperIV.MixedRoundingAdapter",
+"PaperIV.UniformDual"
+],
+"local": [
+"PaperIV.MixedRoundingAdapter",
+"PaperIV.UniformDual"
+],
+"external": []
+},
+"PaperIV.RC01MarkedRounding": {
+"path": "PaperIV/RC01MarkedRounding.lean",
+"imports": [
+"PaperIV.JointTwoQuotaPhysical",
+"PaperIV.LowTriangleReduction"
+],
+"local": [
+"PaperIV.JointTwoQuotaPhysical",
+"PaperIV.LowTriangleReduction"
+],
+"external": []
+},
+"PaperIV.RC01PatternMassScale": {
+"path": "PaperIV/RC01PatternMassScale.lean",
+"imports": [
+"PaperIV.PatternTransfer"
+],
+"local": [
+"PaperIV.PatternTransfer"
+],
+"external": []
+},
+"PaperIV.RC01CleanedGate": {
+"path": "PaperIV/RC01CleanedGate.lean",
+"imports": [
+"PaperIV.RC01CleanedMixedCodegree",
+"PaperIV.RC01MarkedRounding",
+"PaperIV.RC01PatternMassScale"
+],
+"local": [
+"PaperIV.RC01CleanedMixedCodegree",
+"PaperIV.RC01MarkedRounding",
+"PaperIV.RC01PatternMassScale"
+],
+"external": []
+},
+"PaperIV.RC01CanonicalValueAccounting": {
+"path": "PaperIV/RC01CanonicalValueAccounting.lean",
+"imports": [
+"PaperIV.RC01CanonicalFiberProfile",
+"PaperIV.RC01CleanedGate"
+],
+"local": [
+"PaperIV.RC01CanonicalFiberProfile",
+"PaperIV.RC01CleanedGate"
+],
+"external": []
+},
+"PaperIV.RC01CanonicalTransferBridge": {
+"path": "PaperIV/RC01CanonicalTransferBridge.lean",
+"imports": [
+"PaperIV.RC01CanonicalValueAccounting",
+"PaperIV.PatternTransfer",
+"PaperIV.MixedRoundingAdapter"
+],
+"local": [
+"PaperIV.RC01CanonicalValueAccounting",
+"PaperIV.PatternTransfer",
+"PaperIV.MixedRoundingAdapter"
+],
+"external": []
+},
+"PaperIV.DiscardCounts": {
+"path": "PaperIV/DiscardCounts.lean",
+"imports": [
+"PaperIV.RegularityFormat"
+],
+"local": [
+"PaperIV.RegularityFormat"
+],
+"external": []
+},
+"PaperIV.RC01ResidualCoverage": {
+"path": "PaperIV/RC01ResidualCoverage.lean",
+"imports": [
+"PaperIV.RC01CanonicalValueAccounting",
+"PaperIV.DiscardCounts"
+],
+"local": [
+"PaperIV.RC01CanonicalValueAccounting",
+"PaperIV.DiscardCounts"
+],
+"external": []
+},
+"PaperIV.EpsilonBudgetFull": {
+"path": "PaperIV/EpsilonBudgetFull.lean",
+"imports": [
+"Mathlib.Analysis.Normed.Field.Lemmas",
+"Mathlib.Tactic.Positivity"
+],
+"local": [],
+"external": [
+"Mathlib.Analysis.Normed.Field.Lemmas",
+"Mathlib.Tactic.Positivity"
+]
+},
+"PaperIV.SpreadRestricted": {
+"path": "PaperIV/SpreadRestricted.lean",
+"imports": [
+"PaperIV.SpreadPacking"
+],
+"local": [
+"PaperIV.SpreadPacking"
+],
+"external": []
+},
+"PaperIV.SpreadValueTransfer": {
+"path": "PaperIV/SpreadValueTransfer.lean",
+"imports": [
+"PaperIV.SpreadRestricted",
+"PaperIV.PatternMass",
+"PaperIV.MixedRoundingAdapter",
+"PaperIV.EpsilonBudgetFull",
+"MixedRounding.Lift",
+"Mathlib.Data.Nat.Choose.Cast"
+],
+"local": [
+"PaperIV.SpreadRestricted",
+"PaperIV.PatternMass",
+"PaperIV.MixedRoundingAdapter",
+"PaperIV.EpsilonBudgetFull",
+"MixedRounding.Lift"
+],
+"external": [
+"Mathlib.Data.Nat.Choose.Cast"
+]
+},
+"PaperIV.RC01ResidualTransferClosure": {
+"path": "PaperIV/RC01ResidualTransferClosure.lean",
+"imports": [
+"PaperIV.RC01ResidualCoverage",
+"PaperIV.RC01CanonicalTransferBridge",
+"PaperIV.SpreadValueTransfer"
+],
+"local": [
+"PaperIV.RC01ResidualCoverage",
+"PaperIV.RC01CanonicalTransferBridge",
+"PaperIV.SpreadValueTransfer"
+],
+"external": []
+},
+"PaperIV.RC01PatternCardinality": {
+"path": "PaperIV/RC01PatternCardinality.lean",
+"imports": [
+"PaperIV.RC01CanonicalProfile",
+"PaperIV.RC01ResidualTransferClosure"
+],
+"local": [
+"PaperIV.RC01CanonicalProfile",
+"PaperIV.RC01ResidualTransferClosure"
+],
+"external": []
+},
+"PaperIV.RC01GlobalSchedule": {
+"path": "PaperIV/RC01GlobalSchedule.lean",
+"imports": [
+"PaperIV.RC01PatternCardinality",
+"PaperIV.RC01GlobalBudget"
+],
+"local": [
+"PaperIV.RC01PatternCardinality",
+"PaperIV.RC01GlobalBudget"
+],
+"external": []
+},
+"PaperIV.RC01DenseAssembly": {
+"path": "PaperIV/RC01DenseAssembly.lean",
+"imports": [
+"PaperIV.RC01ResidualTransferClosure",
+"PaperIV.RC01GlobalSchedule"
+],
+"local": [
+"PaperIV.RC01ResidualTransferClosure",
+"PaperIV.RC01GlobalSchedule"
+],
+"external": []
+},
+"PaperIV.SparseRegime": {
+"path": "PaperIV/SparseRegime.lean",
+"imports": [
+"PaperIV.UniformDual",
+"MixedRounding.Defs"
+],
+"local": [
+"PaperIV.UniformDual",
+"MixedRounding.Defs"
+],
+"external": []
+},
+"PaperIV.RoundingTrichotomy": {
+"path": "PaperIV/RoundingTrichotomy.lean",
+"imports": [
+"PaperIV.SparseRegime",
+"PaperIV.LowTriangleReduction"
+],
+"local": [
+"PaperIV.SparseRegime",
+"PaperIV.LowTriangleReduction"
+],
+"external": []
+},
+"PaperIV.Corollary73Assembly": {
+"path": "PaperIV/Corollary73Assembly.lean",
+"imports": [
+"PaperIV.RoundingTrichotomy",
+"PaperIV.RC01MarkedRounding"
+],
+"local": [
+"PaperIV.RoundingTrichotomy",
+"PaperIV.RC01MarkedRounding"
+],
+"external": []
+},
+"PaperIV.TriangleCover": {
+"path": "PaperIV/TriangleCover.lean",
+"imports": [
+"MixedRounding.Lift"
+],
+"local": [
+"MixedRounding.Lift"
+],
+"external": []
+},
+"PaperIV.TriangleSwap": {
+"path": "PaperIV/TriangleSwap.lean",
+"imports": [
+"PaperIV.TriangleCover",
+"PaperIV.LowTriangleReduction"
+],
+"local": [
+"PaperIV.TriangleCover",
+"PaperIV.LowTriangleReduction"
+],
+"external": []
+},
+"PaperIV.CleanedLowTriangleBridge": {
+"path": "PaperIV/CleanedLowTriangleBridge.lean",
+"imports": [
+"PaperIV.TriangleSwap",
+"PaperIV.Corollary73Assembly"
+],
+"local": [
+"PaperIV.TriangleSwap",
+"PaperIV.Corollary73Assembly"
+],
+"external": []
+},
+"PaperIV.RC01TriangleSchedule": {
+"path": "PaperIV/RC01TriangleSchedule.lean",
+"imports": [
+"PaperIV.CleanedLowTriangleBridge"
+],
+"local": [
+"PaperIV.CleanedLowTriangleBridge"
+],
+"external": []
+},
+"PaperIV.CleanedTriangleMass": {
+"path": "PaperIV/CleanedTriangleMass.lean",
+"imports": [
+"PaperIV.RC01CleanedGate",
+"PaperIV.LowTriangleReduction"
+],
+"local": [
+"PaperIV.RC01CleanedGate",
+"PaperIV.LowTriangleReduction"
+],
+"external": []
+},
+"PaperIV.RC01TriangleTransfer": {
+"path": "PaperIV/RC01TriangleTransfer.lean",
+"imports": [
+"PaperIV.RC01ResidualTransferClosure",
+"PaperIV.CleanedTriangleMass"
+],
+"local": [
+"PaperIV.RC01ResidualTransferClosure",
+"PaperIV.CleanedTriangleMass"
+],
+"external": []
+},
+"PaperIV.RC01RootwiseReference": {
+"path": "PaperIV/RC01RootwiseReference.lean",
+"imports": [
+"PaperIV.RC01CleanFiber"
+],
+"local": [
+"PaperIV.RC01CleanFiber"
+],
+"external": []
+},
+"PaperIV.RootedK3Counting": {
+"path": "PaperIV/RootedK3Counting.lean",
+"imports": [
+"PaperIV.RC01K3Pool",
+"PaperIV.RootedVariance",
+"PaperIV.NibbleHypotheses"
+],
+"local": [
+"PaperIV.RC01K3Pool",
+"PaperIV.RootedVariance",
+"PaperIV.NibbleHypotheses"
+],
+"external": []
+},
+"PaperIV.RootedK4Degree": {
+"path": "PaperIV/RootedK4Degree.lean",
+"imports": [
+"PaperIV.RC01CanonicalSupports",
+"PaperIV.RootedCountingBridge",
+"PaperIV.NibbleHypotheses"
+],
+"local": [
+"PaperIV.RC01CanonicalSupports",
+"PaperIV.RootedCountingBridge",
+"PaperIV.NibbleHypotheses"
+],
+"external": []
+},
+"PaperIV.RootedK4Counting": {
+"path": "PaperIV/RootedK4Counting.lean",
+"imports": [
+"PaperIV.RootedK4Degree"
+],
+"local": [
+"PaperIV.RootedK4Degree"
+],
+"external": []
+},
+"PaperIV.RC01RootedMomentAdapter": {
+"path": "PaperIV/RC01RootedMomentAdapter.lean",
+"imports": [
+"PaperIV.RC01RootwiseReference",
+"PaperIV.RC01CanonicalFiberProfile",
+"PaperIV.RootedK3Counting",
+"PaperIV.RootedK4Counting"
+],
+"local": [
+"PaperIV.RC01RootwiseReference",
+"PaperIV.RC01CanonicalFiberProfile",
+"PaperIV.RootedK3Counting",
+"PaperIV.RootedK4Counting"
+],
+"external": []
+},
+"PaperIV.RC01RootwiseCleanupBudget": {
+"path": "PaperIV/RC01RootwiseCleanupBudget.lean",
+"imports": [
+"Mathlib.Analysis.Normed.Field.Lemmas",
+"Mathlib.Tactic.Positivity"
+],
+"local": [],
+"external": [
+"Mathlib.Analysis.Normed.Field.Lemmas",
+"Mathlib.Tactic.Positivity"
+]
+},
+"PaperIV.RC01RootwiseRetention": {
+"path": "PaperIV/RC01RootwiseRetention.lean",
+"imports": [
+"PaperIV.RC01RootedMomentAdapter",
+"PaperIV.RC01RootwiseCleanupBudget"
+],
+"local": [
+"PaperIV.RC01RootedMomentAdapter",
+"PaperIV.RC01RootwiseCleanupBudget"
+],
+"external": []
+},
+"PaperIV.RootedK4Pool": {
+"path": "PaperIV/RootedK4Pool.lean",
+"imports": [
+"PaperIV.RootedK4Counting"
+],
+"local": [
+"PaperIV.RootedK4Counting"
+],
+"external": []
+},
+"PaperIV.RootedK3Pool": {
+"path": "PaperIV/RootedK3Pool.lean",
+"imports": [
+"PaperIV.RootedK3Counting",
+"PaperIV.RootedK4Pool"
+],
+"local": [
+"PaperIV.RootedK3Counting",
+"PaperIV.RootedK4Pool"
+],
+"external": []
+},
+"PaperIV.RC01DenseRootwiseRetention": {
+"path": "PaperIV/RC01DenseRootwiseRetention.lean",
+"imports": [
+"PaperIV.RC01RootwiseRetention",
+"PaperIV.RC01ResidualTransferClosure",
+"PaperIV.RootedK3Pool"
+],
+"local": [
+"PaperIV.RC01RootwiseRetention",
+"PaperIV.RC01ResidualTransferClosure",
+"PaperIV.RootedK3Pool"
+],
+"external": []
+},
+"PaperIV.RC01DensePhysicalGate": {
+"path": "PaperIV/RC01DensePhysicalGate.lean",
+"imports": [
+"PaperIV.RC01DenseRootwiseRetention",
+"PaperIV.RC01CleanedGate"
+],
+"local": [
+"PaperIV.RC01DenseRootwiseRetention",
+"PaperIV.RC01CleanedGate"
+],
+"external": []
+},
+"PaperIV.RC01UniformDenseGate": {
+"path": "PaperIV/RC01UniformDenseGate.lean",
+"imports": [
+"PaperIV.RC01DensePhysicalGate"
+],
+"local": [
+"PaperIV.RC01DensePhysicalGate"
+],
+"external": []
+},
+"PaperIV.RC01Final": {
+"path": "PaperIV/RC01Final.lean",
+"imports": [
+"PaperIV.RC01UniformDenseGate",
+"PaperIV.RC01TriangleTransfer",
+"PaperIV.RC01DenseAssembly",
+"PaperIV.RC01TriangleSchedule"
+],
+"local": [
+"PaperIV.RC01UniformDenseGate",
+"PaperIV.RC01TriangleTransfer",
+"PaperIV.RC01DenseAssembly",
+"PaperIV.RC01TriangleSchedule"
+],
+"external": []
+},
+"PaperIV.RC01FarAssembly": {
+"path": "PaperIV/RC01FarAssembly.lean",
+"imports": [
+"PaperIV.RC01Final",
+"PaperIV.MixedRoundingAdapter",
+"PaperIV.NB08Interface"
+],
+"local": [
+"PaperIV.RC01Final",
+"PaperIV.MixedRoundingAdapter",
+"PaperIV.NB08Interface"
+],
+"external": []
+},
+"PaperIV.SplitBaselineTarget": {
+"path": "PaperIV/SplitBaselineTarget.lean",
+"imports": [
+"PaperIV.SharpEnvelope",
+"PaperIV.TargetEnvelope"
+],
+"local": [
+"PaperIV.SharpEnvelope",
+"PaperIV.TargetEnvelope"
+],
+"external": []
+},
+"PaperIV.NearRegimePackingInterface": {
+"path": "PaperIV/NearRegimePackingInterface.lean",
+"imports": [
+"PaperIV.RC01FarAssembly",
+"PaperIV.FarRoundingToPhysical",
+"PaperIV.RD09PhysicalLedger",
+"PaperIV.SplitBaselineTarget"
+],
+"local": [
+"PaperIV.RC01FarAssembly",
+"PaperIV.FarRoundingToPhysical",
+"PaperIV.RD09PhysicalLedger",
+"PaperIV.SplitBaselineTarget"
+],
+"external": []
+},
+"PaperIV.NearH1TargetAssembly": {
+"path": "PaperIV/NearH1TargetAssembly.lean",
+"imports": [
+"PaperIV.NearH1StructureWitness",
+"PaperIV.NearRegimePackingInterface"
+],
+"local": [
+"PaperIV.NearH1StructureWitness",
+"PaperIV.NearRegimePackingInterface"
+],
+"external": []
+},
+"PaperIV.NearH1GlobalAssembly": {
+"path": "PaperIV/NearH1GlobalAssembly.lean",
+"imports": [
+"PaperIV.NearH1Localization",
+"PaperIV.NearH1TargetAssembly",
+"PaperIV.RC01FarAssembly"
+],
+"local": [
+"PaperIV.NearH1Localization",
+"PaperIV.NearH1TargetAssembly",
+"PaperIV.RC01FarAssembly"
+],
+"external": []
+},
+"PaperIV.Erdos81Unconditional": {
+"path": "PaperIV/Erdos81Unconditional.lean",
+"imports": [
+"PaperIV.NearH1GlobalAssembly",
+"PaperIV.TargetEnvelope",
+"PaperIV.CertifiedOptimumExistence"
+],
+"local": [
+"PaperIV.NearH1GlobalAssembly",
+"PaperIV.TargetEnvelope",
+"PaperIV.CertifiedOptimumExistence"
+],
+"external": []
+},
+"PaperIV.FarSlackQuantitative": {
+"path": "PaperIV/FarSlackQuantitative.lean",
+"imports": [
+"PaperIV.RC01FarAssembly",
+"PaperIV.TargetEnvelope"
+],
+"local": [
+"PaperIV.RC01FarAssembly",
+"PaperIV.TargetEnvelope"
+],
+"external": []
+},
+"PaperIV.HybridDichotomy": {
+"path": "PaperIV/HybridDichotomy.lean",
+"imports": [
+"PaperIV.NearH1Localization",
+"PaperIV.NearH1StructureWitness",
+"PaperIV.NearRegimePackingInterface",
+"PaperIV.RC01FarAssembly",
+"PaperIV.CertifiedOptimumExistence"
+],
+"local": [
+"PaperIV.NearH1Localization",
+"PaperIV.NearH1StructureWitness",
+"PaperIV.NearRegimePackingInterface",
+"PaperIV.RC01FarAssembly",
+"PaperIV.CertifiedOptimumExistence"
+],
+"external": []
+},
+"PaperIV.SplitEditIdentity": {
+"path": "PaperIV/SplitEditIdentity.lean",
+"imports": [
+"PaperIV.RD09SplitEditAccount",
+"PaperIV.GraphFamilyDistance"
+],
+"local": [
+"PaperIV.RD09SplitEditAccount",
+"PaperIV.GraphFamilyDistance"
+],
+"external": []
+},
+"PaperIV.IntegralStability": {
+"path": "PaperIV/IntegralStability.lean",
+"imports": [
+"PaperIV.HybridDichotomy",
+"PaperIV.NearRegimePackingInterface",
+"PaperIV.SplitBaselineTarget",
+"PaperIV.SplitEditIdentity",
+"PaperIV.FarSlackQuantitative"
+],
+"local": [
+"PaperIV.HybridDichotomy",
+"PaperIV.NearRegimePackingInterface",
+"PaperIV.SplitBaselineTarget",
+"PaperIV.SplitEditIdentity",
+"PaperIV.FarSlackQuantitative"
+],
+"external": []
+},
+"PaperIV.SubgraphPadding": {
+"path": "PaperIV/SubgraphPadding.lean",
+"imports": [
+"PaperIV.FarRounding"
+],
+"local": [
+"PaperIV.FarRounding"
+],
+"external": []
+},
+"PaperIV.DefectApexStability": {
+"path": "PaperIV/DefectApexStability.lean",
+"imports": [
+"PaperIV.IntegralStability",
+"PaperIV.Erdos81Unconditional",
+"PaperIV.DefectComparatorGraph",
+"PaperIV.SplitEditIdentity",
+"PaperIV.SubgraphPadding",
+"PaperIV.DefectTargetArithmetic",
+"PaperIV.SplitBaselineTarget"
+],
+"local": [
+"PaperIV.IntegralStability",
+"PaperIV.Erdos81Unconditional",
+"PaperIV.DefectComparatorGraph",
+"PaperIV.SplitEditIdentity",
+"PaperIV.SubgraphPadding",
+"PaperIV.DefectTargetArithmetic",
+"PaperIV.SplitBaselineTarget"
+],
+"external": []
+},
+"A4S1.DefectOneAbsorbedStability": {
+"path": "A4S1/DefectOneAbsorbedStability.lean",
+"imports": [
+"PaperIV.DefectApexStability",
+"A4S1.HostAbsorption"
+],
+"local": [
+"PaperIV.DefectApexStability",
+"A4S1.HostAbsorption"
+],
+"external": []
+},
+"A4S1.PerVertexAbsorption": {
+"path": "A4S1/PerVertexAbsorption.lean",
+"imports": [
+"A4S1.HostAbsorption"
+],
+"local": [
+"A4S1.HostAbsorption"
+],
+"external": []
+},
+"A4S1.ApexChordalSharp": {
+"path": "A4S1/ApexChordalSharp.lean",
+"imports": [
+"A4S1.DefectOneAbsorbedStability",
+"A4S1.PerVertexAbsorption"
+],
+"local": [
+"A4S1.DefectOneAbsorbedStability",
+"A4S1.PerVertexAbsorption"
+],
+"external": []
+},
+"PaperIV.RootedSimplicialDefect": {
+"path": "PaperIV/RootedSimplicialDefect.lean",
+"imports": [
+"PaperIV.RootedEliminationOrder"
+],
+"local": [
+"PaperIV.RootedEliminationOrder"
+],
+"external": []
+},
+"PaperIV.DefectDeletionRoute": {
+"path": "PaperIV/DefectDeletionRoute.lean",
+"imports": [
+"PaperIV.SubgraphPadding",
+"PaperIV.Erdos81Unconditional",
+"PaperIV.DefectTargetArithmetic",
+"PaperIV.RootedSimplicialDefect"
+],
+"local": [
+"PaperIV.SubgraphPadding",
+"PaperIV.Erdos81Unconditional",
+"PaperIV.DefectTargetArithmetic",
+"PaperIV.RootedSimplicialDefect"
+],
+"external": []
+},
+"A4S1.DefectOneReduction": {
+"path": "A4S1/DefectOneReduction.lean",
+"imports": [
+"A4S1.ApexChordalSharp",
+"PaperIV.DefectDeletionRoute"
+],
+"local": [
+"A4S1.ApexChordalSharp",
+"PaperIV.DefectDeletionRoute"
+],
+"external": []
+},
+"PaperIV.FarRegimeAllGraphs": {
+"path": "PaperIV/FarRegimeAllGraphs.lean",
+"imports": [
+"PaperIV.RC01FarAssembly",
+"PaperIV.CertifiedOptimumExistence",
+"PaperIV.CertifiedF4Bridge"
+],
+"local": [
+"PaperIV.RC01FarAssembly",
+"PaperIV.CertifiedOptimumExistence",
+"PaperIV.CertifiedF4Bridge"
+],
+"external": []
+},
+"A4S1.CriticalReduction": {
+"path": "A4S1/CriticalReduction.lean",
+"imports": [
+"A4S1.DefectOneReduction",
+"PaperIV.FarRegimeAllGraphs"
+],
+"local": [
+"A4S1.DefectOneReduction",
+"PaperIV.FarRegimeAllGraphs"
+],
+"external": []
+},
+"A4S1.IndepAbsorb": {
+"path": "A4S1/IndepAbsorb.lean",
+"imports": [
+"A4S1.PerVertexAbsorption"
+],
+"local": [
+"A4S1.PerVertexAbsorption"
+],
+"external": []
+},
+"PaperIV.GalvinRectangle": {
+"path": "PaperIV/GalvinRectangle.lean",
+"imports": [
+"Mathlib.Data.Finset.Max",
+"Mathlib.Data.Fintype.Prod",
+"Mathlib.Data.Nat.ModEq",
+"Mathlib.Order.Interval.Finset.Nat",
+"Mathlib.Tactic.Linarith",
+"Mathlib.Tactic.Positivity",
+"Mathlib.Tactic.Ring"
+],
+"local": [],
+"external": [
+"Mathlib.Data.Finset.Max",
+"Mathlib.Data.Fintype.Prod",
+"Mathlib.Data.Nat.ModEq",
+"Mathlib.Order.Interval.Finset.Nat",
+"Mathlib.Tactic.Linarith",
+"Mathlib.Tactic.Positivity",
+"Mathlib.Tactic.Ring"
+]
+},
+"PaperIV.DyadicHosting": {
+"path": "PaperIV/DyadicHosting.lean",
+"imports": [
+"PaperIV.GalvinRectangle",
+"Mathlib.Data.Nat.Lattice",
+"Mathlib.Data.Sym.Sym2"
+],
+"local": [
+"PaperIV.GalvinRectangle"
+],
+"external": [
+"Mathlib.Data.Nat.Lattice",
+"Mathlib.Data.Sym.Sym2"
+]
+},
+"PaperIV.PhysicalToCliquePartition": {
+"path": "PaperIV/PhysicalToCliquePartition.lean",
+"imports": [
+"PaperIV.Model",
+"PaperIV.FarRounding"
+],
+"local": [
+"PaperIV.Model",
+"PaperIV.FarRounding"
+],
+"external": []
+},
+"PaperIV.SplitCompleteExactValue": {
+"path": "PaperIV/SplitCompleteExactValue.lean",
+"imports": [
+"PaperIV.PhysicalToCliquePartition",
+"PaperIV.SplitTriangleFactorHighHost"
+],
+"local": [
+"PaperIV.PhysicalToCliquePartition",
+"PaperIV.SplitTriangleFactorHighHost"
+],
+"external": []
+},
+"PaperIV.SplitTriangleFactorOdd": {
+"path": "PaperIV/SplitTriangleFactorOdd.lean",
+"imports": [
+"PaperIV.SplitTriangleFactor"
+],
+"local": [
+"PaperIV.SplitTriangleFactor"
+],
+"external": []
+},
+"PaperIV.TwoRegimeAssembly": {
+"path": "PaperIV/TwoRegimeAssembly.lean",
+"imports": [
+"Mathlib.Algebra.Order.Ring.Star",
+"Mathlib.Analysis.Normed.Field.Lemmas",
+"Mathlib.Data.Rat.Star",
+"Mathlib.Tactic.Positivity"
+],
+"local": [],
+"external": [
+"Mathlib.Algebra.Order.Ring.Star",
+"Mathlib.Analysis.Normed.Field.Lemmas",
+"Mathlib.Data.Rat.Star",
+"Mathlib.Tactic.Positivity"
+]
+},
+"PaperIV.TerminalToNear": {
+"path": "PaperIV/TerminalToNear.lean",
+"imports": [
+"PaperIV.TerminalLedger",
+"PaperIV.TwoRegimeAssembly"
+],
+"local": [
+"PaperIV.TerminalLedger",
+"PaperIV.TwoRegimeAssembly"
+],
+"external": []
+},
+"PaperIV.SplitTerminalNear": {
+"path": "PaperIV/SplitTerminalNear.lean",
+"imports": [
+"PaperIV.SplitTriangleFactor",
+"PaperIV.SplitTriangleFactorOdd",
+"PaperIV.SplitTriangleFactorHighHost",
+"PaperIV.TerminalToNear"
+],
+"local": [
+"PaperIV.SplitTriangleFactor",
+"PaperIV.SplitTriangleFactorOdd",
+"PaperIV.SplitTriangleFactorHighHost",
+"PaperIV.TerminalToNear"
+],
+"external": []
+},
+"PaperIV.SplitTerminalTarget": {
+"path": "PaperIV/SplitTerminalTarget.lean",
+"imports": [
+"PaperIV.SplitTerminalNear",
+"PaperIV.SplitBaselineTarget",
+"PaperIV.PhysicalToCliquePartition"
+],
+"local": [
+"PaperIV.SplitTerminalNear",
+"PaperIV.SplitBaselineTarget",
+"PaperIV.PhysicalToCliquePartition"
+],
+"external": []
+},
+"PaperIV.SplitTriangleFactorOddHighHost": {
+"path": "PaperIV/SplitTriangleFactorOddHighHost.lean",
+"imports": [
+"PaperIV.SplitTriangleFactor",
+"PaperIV.SplitTerminalTarget"
+],
+"local": [
+"PaperIV.SplitTriangleFactor",
+"PaperIV.SplitTerminalTarget"
+],
+"external": []
+},
+"PaperIV.SplitCompleteExactValueAllParities": {
+"path": "PaperIV/SplitCompleteExactValueAllParities.lean",
+"imports": [
+"PaperIV.SplitCompleteExactValue",
+"PaperIV.SplitTriangleFactorOddHighHost"
+],
+"local": [
+"PaperIV.SplitCompleteExactValue",
+"PaperIV.SplitTriangleFactorOddHighHost"
+],
+"external": []
+},
+"PaperIV.SplitCompleteSharpLower": {
+"path": "PaperIV/SplitCompleteSharpLower.lean",
+"imports": [
+"PaperIV.SplitCompleteExactValueAllParities",
+"Mathlib.Algebra.Order.Floor.Semifield",
+"Mathlib.Data.Nat.Choose.Cast"
+],
+"local": [
+"PaperIV.SplitCompleteExactValueAllParities"
+],
+"external": [
+"Mathlib.Algebra.Order.Floor.Semifield",
+"Mathlib.Data.Nat.Choose.Cast"
+]
+},
+"PaperIV.SplitCompleteSharpValue": {
+"path": "PaperIV/SplitCompleteSharpValue.lean",
+"imports": [
+"PaperIV.SplitCompleteExactValueAllParities",
+"PaperIV.SplitCompleteSharpLower"
+],
+"local": [
+"PaperIV.SplitCompleteExactValueAllParities",
+"PaperIV.SplitCompleteSharpLower"
+],
+"external": []
+},
+"PaperIV.SplitCompleteRigidity": {
+"path": "PaperIV/SplitCompleteRigidity.lean",
+"imports": [
+"PaperIV.SplitCompleteSharpValue",
+"PaperIV.SplitUniformIncidence",
+"PaperIV.TargetEnvelope"
+],
+"local": [
+"PaperIV.SplitCompleteSharpValue",
+"PaperIV.SplitUniformIncidence",
+"PaperIV.TargetEnvelope"
+],
+"external": []
+},
+"PaperIV.LiftedPieceBudget": {
+"path": "PaperIV/LiftedPieceBudget.lean",
+"imports": [
+"PaperIV.FarRounding",
+"PaperIV.RootEdgeSplit",
+"PaperIV.SplitCompleteRigidity"
+],
+"local": [
+"PaperIV.FarRounding",
+"PaperIV.RootEdgeSplit",
+"PaperIV.SplitCompleteRigidity"
+],
+"external": []
+},
+"PaperIV.LiftedPieceGreedy": {
+"path": "PaperIV/LiftedPieceGreedy.lean",
+"imports": [
+"PaperIV.LiftedPieceBudget"
+],
+"local": [
+"PaperIV.LiftedPieceBudget"
+],
+"external": []
+},
+"PaperIV.LiftedHostingAssembly": {
+"path": "PaperIV/LiftedHostingAssembly.lean",
+"imports": [
+"PaperIV.LiftedPieceGreedy",
+"PaperIV.DyadicHosting"
+],
+"local": [
+"PaperIV.LiftedPieceGreedy",
+"PaperIV.DyadicHosting"
+],
+"external": []
+},
+"A4S1.TerminalPacking": {
+"path": "A4S1/TerminalPacking.lean",
+"imports": [
+"PaperIV.LiftedHostingAssembly"
+],
+"local": [
+"PaperIV.LiftedHostingAssembly"
+],
+"external": []
+},
+"A4S1.IndepHostingTools": {
+"path": "A4S1/IndepHostingTools.lean",
+"imports": [
+"A4S1.TerminalPacking",
+"PaperIV.PaddedEquitableColouring",
+"PaperIV.MultiHostTriangleLift"
+],
+"local": [
+"A4S1.TerminalPacking",
+"PaperIV.PaddedEquitableColouring",
+"PaperIV.MultiHostTriangleLift"
+],
+"external": []
+},
+"A4S1.IndepLedger": {
+"path": "A4S1/IndepLedger.lean",
+"imports": [
+"A4S1.IndepHostingTools"
+],
+"local": [
+"A4S1.IndepHostingTools"
+],
+"external": []
+},
+"A4S1.IndepPhaseOne": {
+"path": "A4S1/IndepPhaseOne.lean",
+"imports": [
+"PaperIV.RD09FiniteAveraging",
+"PaperIV.EquitableEdgeColouring"
+],
+"local": [
+"PaperIV.RD09FiniteAveraging",
+"PaperIV.EquitableEdgeColouring"
+],
+"external": []
+},
+"A4S1.IndepConstructor": {
+"path": "A4S1/IndepConstructor.lean",
+"imports": [
+"A4S1.IndepAbsorb",
+"A4S1.IndepPhaseOne",
+"A4S1.IndepLedger"
+],
+"local": [
+"A4S1.IndepAbsorb",
+"A4S1.IndepPhaseOne",
+"A4S1.IndepLedger"
+],
+"external": []
+},
+"PaperIV.EditRouteCliqueRecovery": {
+"path": "PaperIV/EditRouteCliqueRecovery.lean",
+"imports": [
+"Mathlib.Combinatorics.SimpleGraph.Extremal.Turan",
+"PaperIV.RootedSimplicialDefect"
+],
+"local": [
+"PaperIV.RootedSimplicialDefect"
+],
+"external": [
+"Mathlib.Combinatorics.SimpleGraph.Extremal.Turan"
+]
+},
+"PaperIV.ErdosKPartite": {
+"path": "PaperIV/ErdosKPartite.lean",
+"imports": [
+"Mathlib.Algebra.Order.Ring.Star",
+"Mathlib.Analysis.RCLike.Basic",
+"Mathlib.Data.Nat.Choose.Bounds",
+"Mathlib.Data.Real.StarOrdered",
+"Mathlib.Tactic.Positivity"
+],
+"local": [],
+"external": [
+"Mathlib.Algebra.Order.Ring.Star",
+"Mathlib.Analysis.RCLike.Basic",
+"Mathlib.Data.Nat.Choose.Bounds",
+"Mathlib.Data.Real.StarOrdered",
+"Mathlib.Tactic.Positivity"
+]
+},
+"PaperIV.EditRouteLemmaK": {
+"path": "PaperIV/EditRouteLemmaK.lean",
+"imports": [
+"PaperIV.ErdosKPartite",
+"PaperIV.EditRouteCliqueRecovery",
+"Mathlib.Combinatorics.SimpleGraph.Circulant"
+],
+"local": [
+"PaperIV.ErdosKPartite",
+"PaperIV.EditRouteCliqueRecovery"
+],
+"external": [
+"Mathlib.Combinatorics.SimpleGraph.Circulant"
+]
+},
+"PaperIV.EditRouteChordalBridge": {
+"path": "PaperIV/EditRouteChordalBridge.lean",
+"imports": [
+"PaperIV.EditRouteLemmaK",
+"PaperIV.ChordalStructure",
+"Mathlib.Combinatorics.SimpleGraph.Connectivity.Subgraph"
+],
+"local": [
+"PaperIV.EditRouteLemmaK",
+"PaperIV.ChordalStructure"
+],
+"external": [
+"Mathlib.Combinatorics.SimpleGraph.Connectivity.Subgraph"
+]
+},
+"PaperIV.CliqueTree.Basic": {
+"path": "PaperIV/CliqueTree/Basic.lean",
+"imports": [
+"PaperIV.ChordalStructure",
+"Mathlib.ModelTheory.Graph"
+],
+"local": [
+"PaperIV.ChordalStructure"
+],
+"external": [
+"Mathlib.ModelTheory.Graph"
+]
+},
+"PaperIV.CliqueTree.PEO": {
+"path": "PaperIV/CliqueTree/PEO.lean",
+"imports": [
+"PaperIV.CliqueTree.Basic"
+],
+"local": [
+"PaperIV.CliqueTree.Basic"
+],
+"external": []
+},
+"PaperIV.CliqueTree.Helly": {
+"path": "PaperIV/CliqueTree/Helly.lean",
+"imports": [
+"PaperIV.CliqueTree.PEO"
+],
+"local": [
+"PaperIV.CliqueTree.PEO"
+],
+"external": []
+},
+"PaperIV.CliqueTree.Characterization": {
+"path": "PaperIV/CliqueTree/Characterization.lean",
+"imports": [
+"PaperIV.CliqueTree.Helly"
+],
+"local": [
+"PaperIV.CliqueTree.Helly"
+],
+"external": []
+},
+"PaperIV.RootedDefectZeroChordal": {
+"path": "PaperIV/RootedDefectZeroChordal.lean",
+"imports": [
+"PaperIV.RootedSimplicialDefect",
+"PaperIV.CliqueTree.Characterization"
+],
+"local": [
+"PaperIV.RootedSimplicialDefect",
+"PaperIV.CliqueTree.Characterization"
+],
+"external": []
+},
+"PaperIV.FixedL4Localization": {
+"path": "PaperIV/FixedL4Localization.lean",
+"imports": [
+"PaperIV.NearH1Localization",
+"PaperIV.RootedDefectZeroChordal",
+"PaperIV.CertifiedOptimumExistence"
+],
+"local": [
+"PaperIV.NearH1Localization",
+"PaperIV.RootedDefectZeroChordal",
+"PaperIV.CertifiedOptimumExistence"
+],
+"external": []
+},
+"PaperIV.Erdos81AllOrders": {
+"path": "PaperIV/Erdos81AllOrders.lean",
+"imports": [
+"PaperIV.Erdos81Unconditional"
+],
+"local": [
+"PaperIV.Erdos81Unconditional"
+],
+"external": []
+},
+"PaperIV.SplitCompleteDefect": {
+"path": "PaperIV/SplitCompleteDefect.lean",
+"imports": [
+"PaperIV.SplitCompleteSharpLower"
+],
+"local": [
+"PaperIV.SplitCompleteSharpLower"
+],
+"external": []
+},
+"PaperIV.SplitMixedGap": {
+"path": "PaperIV/SplitMixedGap.lean",
+"imports": [
+"PaperIV.SplitCompleteDefect",
+"PaperIV.SplitCompleteSharpValue"
+],
+"local": [
+"PaperIV.SplitCompleteDefect",
+"PaperIV.SplitCompleteSharpValue"
+],
+"external": []
+},
+"PaperIV.LossBudget": {
+"path": "PaperIV/LossBudget.lean",
+"imports": [
+"PaperIV.SplitMixedGap",
+"PaperIV.Erdos81Unconditional",
+"PaperIV.Erdos81AllOrders"
+],
+"local": [
+"PaperIV.SplitMixedGap",
+"PaperIV.Erdos81Unconditional",
+"PaperIV.Erdos81AllOrders"
+],
+"external": []
+},
+"PaperIV.FixedL4LocalizationAllEps": {
+"path": "PaperIV/FixedL4LocalizationAllEps.lean",
+"imports": [
+"PaperIV.FixedL4Localization",
+"PaperIV.IntegralStability",
+"PaperIV.LossBudget"
+],
+"local": [
+"PaperIV.FixedL4Localization",
+"PaperIV.IntegralStability",
+"PaperIV.LossBudget"
+],
+"external": []
+},
+"PaperIV.EditRouteLocalization": {
+"path": "PaperIV/EditRouteLocalization.lean",
+"imports": [
+"PaperIV.FixedL4LocalizationAllEps",
+"PaperIV.CertifiedOptimumExistence",
+"PaperIV.RootedDefectZeroChordal",
+"PaperIV.EditRouteCliqueRecovery"
+],
+"local": [
+"PaperIV.FixedL4LocalizationAllEps",
+"PaperIV.CertifiedOptimumExistence",
+"PaperIV.RootedDefectZeroChordal",
+"PaperIV.EditRouteCliqueRecovery"
+],
+"external": []
+},
+"RequestProject.AS.Defs": {
+"path": "RequestProject/AS/Defs.lean",
+"imports": [
+"Mathlib",
+"Mathlib.Combinatorics.SimpleGraph.Ends.Defs",
+"Mathlib.Data.Real.Basic",
+"Mathlib.Tactic.Linarith",
+"Mathlib.Tactic.Module",
+"Mathlib.Tactic.Positivity"
+],
+"local": [],
+"external": [
+"Mathlib",
+"Mathlib.Combinatorics.SimpleGraph.Ends.Defs",
+"Mathlib.Data.Real.Basic",
+"Mathlib.Tactic.Linarith",
+"Mathlib.Tactic.Module",
+"Mathlib.Tactic.Positivity"
+]
+},
+"RequestProject.AS.ColoredHom": {
+"path": "RequestProject/AS/ColoredHom.lean",
+"imports": [
+"RequestProject.AS.Defs"
+],
+"local": [
+"RequestProject.AS.Defs"
+],
+"external": []
+},
+"RequestProject.AFKS.MeanSquare": {
+"path": "RequestProject/AFKS/MeanSquare.lean",
+"imports": [
+"Mathlib",
+"Mathlib.Combinatorics.SimpleGraph.Density",
+"Mathlib.Data.Real.Basic",
+"Mathlib.Tactic.Linarith",
+"Mathlib.Tactic.Module"
+],
+"local": [],
+"external": [
+"Mathlib",
+"Mathlib.Combinatorics.SimpleGraph.Density",
+"Mathlib.Data.Real.Basic",
+"Mathlib.Tactic.Linarith",
+"Mathlib.Tactic.Module"
+]
+},
+"RequestProject.AFKS.Refine": {
+"path": "RequestProject/AFKS/Refine.lean",
+"imports": [
+"Mathlib",
+"Mathlib.Combinatorics.SimpleGraph.Regularity.Increment"
+],
+"local": [],
+"external": [
+"Mathlib",
+"Mathlib.Combinatorics.SimpleGraph.Regularity.Increment"
+]
+},
+"RequestProject.AFKS.Lemma41": {
+"path": "RequestProject/AFKS/Lemma41.lean",
+"imports": [
+"RequestProject.AFKS.Refine",
+"RequestProject.AFKS.MeanSquare"
+],
+"local": [
+"RequestProject.AFKS.Refine",
+"RequestProject.AFKS.MeanSquare"
+],
+"external": []
+},
+"RequestProject.AFKS.Selection": {
+"path": "RequestProject/AFKS/Selection.lean",
+"imports": [
+"Mathlib",
+"Mathlib.Data.Fintype.BigOperators",
+"Mathlib.Data.Real.Basic",
+"Mathlib.Tactic.Linarith",
+"Mathlib.Tactic.Module",
+"Mathlib.Tactic.Positivity"
+],
+"local": [],
+"external": [
+"Mathlib",
+"Mathlib.Data.Fintype.BigOperators",
+"Mathlib.Data.Real.Basic",
+"Mathlib.Tactic.Linarith",
+"Mathlib.Tactic.Module",
+"Mathlib.Tactic.Positivity"
+]
+},
+"RequestProject.AFKS.Corollary42": {
+"path": "RequestProject/AFKS/Corollary42.lean",
+"imports": [
+"RequestProject.AFKS.Lemma41",
+"RequestProject.AFKS.Selection",
+"Mathlib.Data.Nat.Choose.Cast"
+],
+"local": [
+"RequestProject.AFKS.Lemma41",
+"RequestProject.AFKS.Selection"
+],
+"external": [
+"Mathlib.Data.Nat.Choose.Cast"
+]
+},
+"RequestProject.AS.Counting": {
+"path": "RequestProject/AS/Counting.lean",
+"imports": [
+"RequestProject.AFKS.Corollary42"
+],
+"local": [
+"RequestProject.AFKS.Corollary42"
+],
+"external": []
+},
+"RequestProject.AS.Ramsey": {
+"path": "RequestProject/AS/Ramsey.lean",
+"imports": [
+"Mathlib",
+"Mathlib.Algebra.Group.Pointwise.Finset.Basic",
+"Mathlib.Combinatorics.SimpleGraph.Basic",
+"Mathlib.Tactic.Linarith",
+"Mathlib.Tactic.Module",
+"Mathlib.Tactic.Positivity"
+],
+"local": [],
+"external": [
+"Mathlib",
+"Mathlib.Algebra.Group.Pointwise.Finset.Basic",
+"Mathlib.Combinatorics.SimpleGraph.Basic",
+"Mathlib.Tactic.Linarith",
+"Mathlib.Tactic.Module",
+"Mathlib.Tactic.Positivity"
+]
+},
+"RequestProject.AS.Lemma35": {
+"path": "RequestProject/AS/Lemma35.lean",
+"imports": [
+"RequestProject.AS.Counting",
+"RequestProject.AS.Ramsey",
+"Mathlib.Combinatorics.SimpleGraph.Maps"
+],
+"local": [
+"RequestProject.AS.Counting",
+"RequestProject.AS.Ramsey"
+],
+"external": [
+"Mathlib.Combinatorics.SimpleGraph.Maps"
+]
+},
+"RequestProject.AS.EditDist": {
+"path": "RequestProject/AS/EditDist.lean",
+"imports": [
+"RequestProject.AS.Defs"
+],
+"local": [
+"RequestProject.AS.Defs"
+],
+"external": []
+},
+"RequestProject.AS.Modify": {
+"path": "RequestProject/AS/Modify.lean",
+"imports": [
+"RequestProject.AS.EditDist",
+"RequestProject.AFKS.MeanSquare",
+"Mathlib.Tactic.Bound"
+],
+"local": [
+"RequestProject.AS.EditDist",
+"RequestProject.AFKS.MeanSquare"
+],
+"external": [
+"Mathlib.Tactic.Bound"
+]
+},
+"RequestProject.AS.Lemma42": {
+"path": "RequestProject/AS/Lemma42.lean",
+"imports": [
+"RequestProject.AS.Lemma35",
+"RequestProject.AS.ColoredHom",
+"RequestProject.AS.Modify"
+],
+"local": [
+"RequestProject.AS.Lemma35",
+"RequestProject.AS.ColoredHom",
+"RequestProject.AS.Modify"
+],
+"external": []
+},
+"RequestProject.AlonShapira": {
+"path": "RequestProject/AlonShapira.lean",
+"imports": [
+"RequestProject.AS.Lemma42",
+"Mathlib.Combinatorics.SimpleGraph.Circulant"
+],
+"local": [
+"RequestProject.AS.Lemma42"
+],
+"external": [
+"Mathlib.Combinatorics.SimpleGraph.Circulant"
+]
+},
+"PaperIV.EditRouteUnconditional": {
+"path": "PaperIV/EditRouteUnconditional.lean",
+"imports": [
+"RequestProject.AlonShapira",
+"PaperIV.EditRouteLemmaK",
+"PaperIV.EditRouteChordalBridge",
+"PaperIV.EditRouteLocalization"
+],
+"local": [
+"RequestProject.AlonShapira",
+"PaperIV.EditRouteLemmaK",
+"PaperIV.EditRouteChordalBridge",
+"PaperIV.EditRouteLocalization"
+],
+"external": []
+},
+"A4S1.MinDegreeTerminal": {
+"path": "A4S1/MinDegreeTerminal.lean",
+"imports": [
+"A4S1.CriticalReduction",
+"A4S1.TerminalPacking",
+"PaperIV.EditRouteUnconditional",
+"PaperIV.CertifiedF4Bridge",
+"PaperIV.CertifiedOptimumExistence"
+],
+"local": [
+"A4S1.CriticalReduction",
+"A4S1.TerminalPacking",
+"PaperIV.EditRouteUnconditional",
+"PaperIV.CertifiedF4Bridge",
+"PaperIV.CertifiedOptimumExistence"
+],
+"external": []
+},
+"PaperIV.A4AllDefects": {
+"path": "PaperIV/A4AllDefects.lean",
+"imports": [
+"PaperIV.EditRouteUnconditional",
+"PaperIV.FarRegimeAllGraphs",
+"PaperIV.DefectTargetArithmetic",
+"PaperIV.CertifiedF4Bridge",
+"PaperIV.CertifiedOptimumExistence"
+],
+"local": [
+"PaperIV.EditRouteUnconditional",
+"PaperIV.FarRegimeAllGraphs",
+"PaperIV.DefectTargetArithmetic",
+"PaperIV.CertifiedF4Bridge",
+"PaperIV.CertifiedOptimumExistence"
+],
+"external": []
+},
+"A4S1.MinDegreeAll": {
+"path": "A4S1/MinDegreeAll.lean",
+"imports": [
+"A4S1.MinDegreeTerminal",
+"PaperIV.A4AllDefects"
+],
+"local": [
+"A4S1.MinDegreeTerminal",
+"PaperIV.A4AllDefects"
+],
+"external": []
+},
+"PaperIV.A4ExceptionalBound": {
+"path": "PaperIV/A4ExceptionalBound.lean",
+"imports": [
+"PaperIV.RootedSimplicialDefect"
+],
+"local": [
+"PaperIV.RootedSimplicialDefect"
+],
+"external": []
+},
+"PaperIV.DefectOneRootStar": {
+"path": "PaperIV/DefectOneRootStar.lean",
+"imports": [
+"PaperIV.A4ExceptionalBound"
+],
+"local": [
+"PaperIV.A4ExceptionalBound"
+],
+"external": []
+},
+"A4S1.IndepAllTools": {
+"path": "A4S1/IndepAllTools.lean",
+"imports": [
+"A4S1.MinDegreeAll",
+"A4S1.IndepConstructor",
+"PaperIV.DefectOneRootStar"
+],
+"local": [
+"A4S1.MinDegreeAll",
+"A4S1.IndepConstructor",
+"PaperIV.DefectOneRootStar"
+],
+"external": []
+},
+"A4S1.IndepAllArith": {
+"path": "A4S1/IndepAllArith.lean",
+"imports": [
+"A4S1.IndepAllTools"
+],
+"local": [
+"A4S1.IndepAllTools"
+],
+"external": []
+},
+"A4S1.IndepAllPairs": {
+"path": "A4S1/IndepAllPairs.lean",
+"imports": [
+"A4S1.IndepAllTools"
+],
+"local": [
+"A4S1.IndepAllTools"
+],
+"external": []
+},
+"A4S1.IndepAllPeel": {
+"path": "A4S1/IndepAllPeel.lean",
+"imports": [
+"A4S1.IndepAllPairs"
+],
+"local": [
+"A4S1.IndepAllPairs"
+],
+"external": []
+},
+"A4S1.IndepAllSetup": {
+"path": "A4S1/IndepAllSetup.lean",
+"imports": [
+"A4S1.IndepAllArith",
+"A4S1.IndepAllPeel"
+],
+"local": [
+"A4S1.IndepAllArith",
+"A4S1.IndepAllPeel"
+],
+"external": []
+},
+"A4S1.IndepAllBounds": {
+"path": "A4S1/IndepAllBounds.lean",
+"imports": [
+"A4S1.IndepAllSetup"
+],
+"local": [
+"A4S1.IndepAllSetup"
+],
+"external": []
+},
+"A4S1.IndepAllObstr": {
+"path": "A4S1/IndepAllObstr.lean",
+"imports": [
+"A4S1.IndepAllBounds"
+],
+"local": [
+"A4S1.IndepAllBounds"
+],
+"external": []
+},
+"A4S1.IndepAllParams": {
+"path": "A4S1/IndepAllParams.lean",
+"imports": [
+"A4S1.IndepAllObstr"
+],
+"local": [
+"A4S1.IndepAllObstr"
+],
+"external": []
+},
+"A4S1.IndepAllBudget": {
+"path": "A4S1/IndepAllBudget.lean",
+"imports": [
+"A4S1.IndepAllParams"
+],
+"local": [
+"A4S1.IndepAllParams"
+],
+"external": []
+},
+"A4S1.IndepAllMain": {
+"path": "A4S1/IndepAllMain.lean",
+"imports": [
+"A4S1.IndepAllBudget"
+],
+"local": [
+"A4S1.IndepAllBudget"
+],
+"external": []
+},
+"E34.CycleCount": {
+"path": "E34/CycleCount.lean",
+"imports": [
+"PaperIV.EditRouteUnconditional"
+],
+"local": [
+"PaperIV.EditRouteUnconditional"
+],
+"external": []
+},
+"E34.CoBipartite": {
+"path": "E34/CoBipartite.lean",
+"imports": [
+"E34.CycleCount"
+],
+"local": [
+"E34.CycleCount"
+],
+"external": []
+},
+"E34.Trees": {
+"path": "E34/Trees.lean",
+"imports": [
+"E34.CoBipartite"
+],
+"local": [
+"E34.CoBipartite"
+],
+"external": []
+},
+"E34.Compress": {
+"path": "E34/Compress.lean",
+"imports": [
+"E34.Trees"
+],
+"local": [
+"E34.Trees"
+],
+"external": []
+},
+"E34.Sampling": {
+"path": "E34/Sampling.lean",
+"imports": [
+"Mathlib"
+],
+"local": [],
+"external": [
+"Mathlib"
+]
+},
+"E34.Pinned": {
+"path": "E34/Pinned.lean",
+"imports": [
+"E34.Compress",
+"E34.Sampling"
+],
+"local": [
+"E34.Compress",
+"E34.Sampling"
+],
+"external": []
+},
+"E34.SetColoring": {
+"path": "E34/SetColoring.lean",
+"imports": [
+"E34.Sampling"
+],
+"local": [
+"E34.Sampling"
+],
+"external": []
+},
+"E34.Theorem2": {
+"path": "E34/Theorem2.lean",
+"imports": [
+"E34.SetColoring"
+],
+"local": [
+"E34.SetColoring"
+],
+"external": []
+},
+"E34.Theorem6": {
+"path": "E34/Theorem6.lean",
+"imports": [
+"E34.Theorem2"
+],
+"local": [
+"E34.Theorem2"
+],
+"external": []
+},
+"E34.L11Claim2": {
+"path": "E34/L11Claim2.lean",
+"imports": [
+"E34.Pinned",
+"E34.Theorem6"
+],
+"local": [
+"E34.Pinned",
+"E34.Theorem6"
+],
+"external": []
+},
+"E34.L11Claim5": {
+"path": "E34/L11Claim5.lean",
+"imports": [
+"E34.L11Claim2"
+],
+"local": [
+"E34.L11Claim2"
+],
+"external": []
+},
+"E34.L11Subdiv": {
+"path": "E34/L11Subdiv.lean",
+"imports": [
+"E34.L11Claim5"
+],
+"local": [
+"E34.L11Claim5"
+],
+"external": []
+},
+"E34.L11Glue": {
+"path": "E34/L11Glue.lean",
+"imports": [
+"E34.L11Subdiv"
+],
+"local": [
+"E34.L11Subdiv"
+],
+"external": []
+},
+"E34.L11Claim6": {
+"path": "E34/L11Claim6.lean",
+"imports": [
+"E34.L11Glue",
+"E34.CycleCount"
+],
+"local": [
+"E34.L11Glue",
+"E34.CycleCount"
+],
+"external": []
+},
+"E34.SampleBound": {
+"path": "E34/SampleBound.lean",
+"imports": [
+"RequestProject.AlonShapira"
+],
+"local": [
+"RequestProject.AlonShapira"
+],
+"external": []
+},
+"E34.ChordalTools": {
+"path": "E34/ChordalTools.lean",
+"imports": [
+"E34.CoBipartite"
+],
+"local": [
+"E34.CoBipartite"
+],
+"external": []
+},
+"E34.Gavril": {
+"path": "E34/Gavril.lean",
+"imports": [
+"E34.Trees",
+"E34.ChordalTools"
+],
+"local": [
+"E34.Trees",
+"E34.ChordalTools"
+],
+"external": []
+},
+"E34.NearlySimplicial": {
+"path": "E34/NearlySimplicial.lean",
+"imports": [
+"E34.ChordalTools"
+],
+"local": [
+"E34.ChordalTools"
+],
+"external": []
+},
+"E34.Sec6Claim1": {
+"path": "E34/Sec6Claim1.lean",
+"imports": [
+"E34.NearlySimplicial"
+],
+"local": [
+"E34.NearlySimplicial"
+],
+"external": []
+},
+"E34.Sec6Claim2": {
+"path": "E34/Sec6Claim2.lean",
+"imports": [
+"E34.Pinned",
+"E34.Gavril",
+"E34.Sec6Claim1"
+],
+"local": [
+"E34.Pinned",
+"E34.Gavril",
+"E34.Sec6Claim1"
+],
+"external": []
+},
+"E34.Sec6Count": {
+"path": "E34/Sec6Count.lean",
+"imports": [
+"E34.Sec6Claim2"
+],
+"local": [
+"E34.Sec6Claim2"
+],
+"external": []
+},
+"E34.Sec6Main": {
+"path": "E34/Sec6Main.lean",
+"imports": [
+"E34.Sec6Count"
+],
+"local": [
+"E34.Sec6Count"
+],
+"external": []
+},
+"E34.Bridge": {
+"path": "E34/Bridge.lean",
+"imports": [
+"E34.Sec6Main",
+"E34.SampleBound"
+],
+"local": [
+"E34.Sec6Main",
+"E34.SampleBound"
+],
+"external": []
+},
+"E34.Params": {
+"path": "E34/Params.lean",
+"imports": [
+"E34.Bridge"
+],
+"local": [
+"E34.Bridge"
+],
+"external": []
+},
+"E34.L11Params": {
+"path": "E34/L11Params.lean",
+"imports": [
+"E34.Params"
+],
+"local": [
+"E34.Params"
+],
+"external": []
+},
+"E18.NibbleSchedule": {
+"path": "E18/NibbleSchedule.lean",
+"imports": [
+"Nibble.TightNibble"
+],
+"local": [
+"Nibble.TightNibble"
+],
+"external": []
+},
+"E18.NibbleOracle": {
+"path": "E18/NibbleOracle.lean",
+"imports": [
+"E18.NibbleSchedule"
+],
+"local": [
+"E18.NibbleSchedule"
+],
+"external": []
+},
+"E18.NibbleChain": {
+"path": "E18/NibbleChain.lean",
+"imports": [
+"E18.NibbleOracle",
+"Nibble.WeightedSpreadNibble",
+"Nibble.FracNibbleLE"
+],
+"local": [
+"E18.NibbleOracle",
+"Nibble.WeightedSpreadNibble",
+"Nibble.FracNibbleLE"
+],
+"external": []
+},
+"E18.Gate": {
+"path": "E18/Gate.lean",
+"imports": [
+"E18.NibbleChain",
+"PaperIV.RC01UniformDenseGate"
+],
+"local": [
+"E18.NibbleChain",
+"PaperIV.RC01UniformDenseGate"
+],
+"external": []
+},
+"E18.Rounding": {
+"path": "E18/Rounding.lean",
+"imports": [
+"E18.Gate",
+"PaperIV.RC01Final"
+],
+"local": [
+"E18.Gate",
+"PaperIV.RC01Final"
+],
+"external": []
+},
+"E18.Far": {
+"path": "E18/Far.lean",
+"imports": [
+"E18.Rounding",
+"PaperIV.FarRegimeAllGraphs"
+],
+"local": [
+"E18.Rounding",
+"PaperIV.FarRegimeAllGraphs"
+],
+"external": []
+},
+"E18.Numeric": {
+"path": "E18/Numeric.lean",
+"imports": [
+"E18.Far"
+],
+"local": [
+"E18.Far"
+],
+"external": []
+},
+"E19.ScheduleBounds": {
+"path": "E19/ScheduleBounds.lean",
+"imports": [
+"E18.NibbleSchedule"
+],
+"local": [
+"E18.NibbleSchedule"
+],
+"external": []
+},
+"E19.ChainBounds": {
+"path": "E19/ChainBounds.lean",
+"imports": [
+"E18.NibbleChain",
+"E19.ScheduleBounds"
+],
+"local": [
+"E18.NibbleChain",
+"E19.ScheduleBounds"
+],
+"external": []
+},
+"E19.GateBounds": {
+"path": "E19/GateBounds.lean",
+"imports": [
+"E18.Numeric",
+"E19.ChainBounds"
+],
+"local": [
+"E18.Numeric",
+"E19.ChainBounds"
+],
+"external": []
+},
+"E19.Tower": {
+"path": "E19/Tower.lean",
+"imports": [
+"Mathlib.Combinatorics.SimpleGraph.Regularity.Bound"
+],
+"local": [],
+"external": [
+"Mathlib.Combinatorics.SimpleGraph.Regularity.Bound"
+]
+},
+"E19.Main": {
+"path": "E19/Main.lean",
+"imports": [
+"E19.GateBounds",
+"E19.Tower"
+],
+"local": [
+"E19.GateBounds",
+"E19.Tower"
+],
+"external": []
+},
+"E33.FarExplicit": {
+"path": "E33/FarExplicit.lean",
+"imports": [
+"E18.Far",
+"E19.Main",
+"PaperIV.IntegralStability"
+],
+"local": [
+"E18.Far",
+"E19.Main",
+"PaperIV.IntegralStability"
+],
+"external": []
+},
+"E33.LocExplicit": {
+"path": "E33/LocExplicit.lean",
+"imports": [
+"E33.FarExplicit",
+"PaperIV.EditRouteUnconditional"
+],
+"local": [
+"E33.FarExplicit",
+"PaperIV.EditRouteUnconditional"
+],
+"external": []
+},
+"E33.Assembly": {
+"path": "E33/Assembly.lean",
+"imports": [
+"E33.LocExplicit",
+"A4S1.IndepAllMain"
+],
+"local": [
+"E33.LocExplicit",
+"A4S1.IndepAllMain"
+],
+"external": []
+},
+"E34.Reduction": {
+"path": "E34/Reduction.lean",
+"imports": [
+"E33.Assembly",
+"E34.CycleCount",
+"E34.SampleBound"
+],
+"local": [
+"E33.Assembly",
+"E34.CycleCount",
+"E34.SampleBound"
+],
+"external": []
+},
+"E34.Main": {
+"path": "E34/Main.lean",
+"imports": [
+"E34.Params",
+"E34.Reduction"
+],
+"local": [
+"E34.Params",
+"E34.Reduction"
+],
+"external": []
+},
+"E34.L11Main": {
+"path": "E34/L11Main.lean",
+"imports": [
+"E34.Main",
+"E34.L11Claim6",
+"E34.L11Params"
+],
+"local": [
+"E34.Main",
+"E34.L11Claim6",
+"E34.L11Params"
+],
+"external": []
+},
+"SublinearEdit": {
+"path": "SublinearEdit.lean",
+"imports": [
+"E34.L11Main"
+],
+"local": [
+"E34.L11Main"
+],
+"external": []
+},
+"PaperIV.DefectComparatorLower": {
+"path": "PaperIV/DefectComparatorLower.lean",
+"imports": [
+"PaperIV.DefectComparatorGraph",
+"PaperIV.SplitCompleteSharpLower"
+],
+"local": [
+"PaperIV.DefectComparatorGraph",
+"PaperIV.SplitCompleteSharpLower"
+],
+"external": []
+},
+"PaperIV.DefectComparatorRootedDefect": {
+"path": "PaperIV/DefectComparatorRootedDefect.lean",
+"imports": [
+"PaperIV.DefectComparatorGraph",
+"PaperIV.RootedSimplicialDefect"
+],
+"local": [
+"PaperIV.DefectComparatorGraph",
+"PaperIV.RootedSimplicialDefect"
+],
+"external": []
+},
+"PaperIV.E11Core": {
+"path": "PaperIV/E11Core.lean",
+"imports": [
+"Mathlib.Algebra.Star.BigOperators",
+"PaperIV.FarRounding"
+],
+"local": [
+"PaperIV.FarRounding"
+],
+"external": [
+"Mathlib.Algebra.Star.BigOperators"
+]
+},
+"PaperIV.E11K10": {
+"path": "PaperIV/E11K10.lean",
+"imports": [
+"PaperIV.E11Core"
+],
+"local": [
+"PaperIV.E11Core"
+],
+"external": []
+},
+"PaperIV.DefectSharpPublication": {
+"path": "PaperIV/DefectSharpPublication.lean",
+"imports": [
+"A4S1.IndepAllMain",
+"PaperIV.DefectComparatorLower",
+"PaperIV.DefectComparatorRootedDefect",
+"PaperIV.SplitCompleteSharpLower",
+"PaperIV.E11K10"
+],
+"local": [
+"A4S1.IndepAllMain",
+"PaperIV.DefectComparatorLower",
+"PaperIV.DefectComparatorRootedDefect",
+"PaperIV.SplitCompleteSharpLower",
+"PaperIV.E11K10"
+],
+"external": []
+},
+"PaperIV.CliquePartitionTransport": {
+"path": "PaperIV/CliquePartitionTransport.lean",
+"imports": [
+"PaperIV.FarRounding"
+],
+"local": [
+"PaperIV.FarRounding"
+],
+"external": []
+},
+"PaperIV.ExtremalClassification": {
+"path": "PaperIV/ExtremalClassification.lean",
+"imports": [
+"PaperIV.IntegralStability",
+"PaperIV.CliquePartitionTransport",
+"PaperIV.SplitCompleteRigidity",
+"PaperIV.SplitCompleteSharpValue",
+"PaperIV.Erdos81Unconditional"
+],
+"local": [
+"PaperIV.IntegralStability",
+"PaperIV.CliquePartitionTransport",
+"PaperIV.SplitCompleteRigidity",
+"PaperIV.SplitCompleteSharpValue",
+"PaperIV.Erdos81Unconditional"
+],
+"external": []
+},
+"E32.Basic": {
+"path": "E32/Basic.lean",
+"imports": [
+"PaperIV.DefectSharpPublication",
+"PaperIV.ExtremalClassification"
+],
+"local": [
+"PaperIV.DefectSharpPublication",
+"PaperIV.ExtremalClassification"
+],
+"external": []
+},
+"E32.Transfer": {
+"path": "E32/Transfer.lean",
+"imports": [
+"E32.Basic"
+],
+"local": [
+"E32.Basic"
+],
+"external": []
+},
+"RootedCliqueRecovery": {
+"path": "RootedCliqueRecovery.lean",
+"imports": [
+"E34.ChordalTools"
+],
+"local": [
+"E34.ChordalTools"
+],
+"external": []
+},
+"EditRootRecovery": {
+"path": "EditRootRecovery.lean",
+"imports": [
+"RootedCliqueRecovery",
+"PaperIV.EditRouteLocalization"
+],
+"local": [
+"RootedCliqueRecovery",
+"PaperIV.EditRouteLocalization"
+],
+"external": []
+},
+"PaperIV.RootPartitionStability": {
+"path": "PaperIV/RootPartitionStability.lean",
+"imports": [
+"PaperIV.IntegralStability",
+"PaperIV.SplitCompleteDefect",
+"PaperIV.RootEdgeSplit"
+],
+"local": [
+"PaperIV.IntegralStability",
+"PaperIV.SplitCompleteDefect",
+"PaperIV.RootEdgeSplit"
+],
+"external": []
+},
+"SublinearStabilityTransfer": {
+"path": "SublinearStabilityTransfer.lean",
+"imports": [
+"EditRootRecovery",
+"E32.Transfer",
+"PaperIV.RootPartitionStability"
+],
+"local": [
+"EditRootRecovery",
+"E32.Transfer",
+"PaperIV.RootPartitionStability"
+],
+"external": []
+},
+"SublinearStability": {
+"path": "SublinearStability.lean",
+"imports": [
+"SublinearStabilityTransfer",
+"SublinearEdit"
+],
+"local": [
+"SublinearStabilityTransfer",
+"SublinearEdit"
+],
+"external": []
+},
+"SublinearLocalization": {
+"path": "SublinearLocalization.lean",
+"imports": [
+"SublinearStability"
+],
+"local": [
+"SublinearStability"
+],
+"external": []
+},
+"RootScore": {
+"path": "RootScore.lean",
+"imports": [
+"SublinearLocalization"
+],
+"local": [
+"SublinearLocalization"
+],
+"external": []
+},
+"PieceEdgeStability": {
+"path": "PieceEdgeStability.lean",
+"imports": [
+"RootScore"
+],
+"local": [
+"RootScore"
+],
+"external": []
+},
+"AsymptoticTools": {
+"path": "AsymptoticTools.lean",
+"imports": [
+"Mathlib"
+],
+"local": [],
+"external": [
+"Mathlib"
+]
+},
+"SublinearPartitionBound": {
+"path": "SublinearPartitionBound.lean",
+"imports": [
+"SublinearEdit",
+"E32.Transfer",
+"PaperIV.Erdos81Unconditional"
+],
+"local": [
+"SublinearEdit",
+"E32.Transfer",
+"PaperIV.Erdos81Unconditional"
+],
+"external": []
+},
+"SublinearSequences": {
+"path": "SublinearSequences.lean",
+"imports": [
+"AsymptoticTools",
+"RootScore",
+"SublinearPartitionBound"
+],
+"local": [
+"AsymptoticTools",
+"RootScore",
+"SublinearPartitionBound"
+],
+"external": []
+},
+"ArbitraryOrderSequences": {
+"path": "ArbitraryOrderSequences.lean",
+"imports": [
+"SublinearSequences",
+"PieceEdgeStability"
+],
+"local": [
+"SublinearSequences",
+"PieceEdgeStability"
+],
+"external": []
+},
+"E32.Deletion": {
+"path": "E32/Deletion.lean",
+"imports": [
+"E32.Transfer",
+"A4S1.MinDegreeAll"
+],
+"local": [
+"E32.Transfer",
+"A4S1.MinDegreeAll"
+],
+"external": []
+},
+"E32.DeletionInduction": {
+"path": "E32/DeletionInduction.lean",
+"imports": [
+"E32.Deletion"
+],
+"local": [
+"E32.Deletion"
+],
+"external": []
+},
+"E32.PieceIdentity": {
+"path": "E32/PieceIdentity.lean",
+"imports": [
+"E32.Transfer"
+],
+"local": [
+"E32.Transfer"
+],
+"external": []
+},
+"E32.Consequences": {
+"path": "E32/Consequences.lean",
+"imports": [
+"E32.PieceIdentity",
+"E32.DeletionInduction"
+],
+"local": [
+"E32.PieceIdentity",
+"E32.DeletionInduction"
+],
+"external": []
+},
+"E32.FarMargin": {
+"path": "E32/FarMargin.lean",
+"imports": [
+"E32.Basic",
+"PaperIV.FarRegimeAllGraphs",
+"PaperIV.FarSlackQuantitative"
+],
+"local": [
+"E32.Basic",
+"PaperIV.FarRegimeAllGraphs",
+"PaperIV.FarSlackQuantitative"
+],
+"external": []
+},
+"E32.Main": {
+"path": "E32/Main.lean",
+"imports": [
+"E32.Consequences",
+"E32.FarMargin",
+"PaperIV.IntegralStability",
+"PaperIV.RootedDefectZeroChordal"
+],
+"local": [
+"E32.Consequences",
+"E32.FarMargin",
+"PaperIV.IntegralStability",
+"PaperIV.RootedDefectZeroChordal"
+],
+"external": []
+},
+"E32.Comparison": {
+"path": "E32/Comparison.lean",
+"imports": [
+"E32.Main"
+],
+"local": [
+"E32.Main"
+],
+"external": []
+},
+"E35.Sched": {
+"path": "E35/Sched.lean",
+"imports": [
+"E18.NibbleChain",
+"E19.ScheduleBounds"
+],
+"local": [
+"E18.NibbleChain",
+"E19.ScheduleBounds"
+],
+"external": []
+},
+"E35.Gate": {
+"path": "E35/Gate.lean",
+"imports": [
+"E18.Gate",
+"E35.Sched"
+],
+"local": [
+"E18.Gate",
+"E35.Sched"
+],
+"external": []
+},
+"E35.Numeric": {
+"path": "E35/Numeric.lean",
+"imports": [
+"E18.Far",
+"E35.Gate"
+],
+"local": [
+"E18.Far",
+"E35.Gate"
+],
+"external": []
+},
+"E35.Main": {
+"path": "E35/Main.lean",
+"imports": [
+"E35.Numeric",
+"E19.Tower"
+],
+"local": [
+"E35.Numeric",
+"E19.Tower"
+],
+"external": []
+},
+"E33.RemovalReduction": {
+"path": "E33/RemovalReduction.lean",
+"imports": [
+"E33.Assembly"
+],
+"local": [
+"E33.Assembly"
+],
+"external": []
+},
+"E33.ClosedForms": {
+"path": "E33/ClosedForms.lean",
+"imports": [
+"E33.RemovalReduction"
+],
+"local": [
+"E33.RemovalReduction"
+],
+"external": []
+},
+"E35.Edit": {
+"path": "E35/Edit.lean",
+"imports": [
+"E34.Main",
+"E19.Tower"
+],
+"local": [
+"E34.Main",
+"E19.Tower"
+],
+"external": []
+},
+"E35.Theorem": {
+"path": "E35/Theorem.lean",
+"imports": [
+"E35.Main",
+"E35.Edit",
+"E33.ClosedForms",
+"E34.L11Main"
+],
+"local": [
+"E35.Main",
+"E35.Edit",
+"E33.ClosedForms",
+"E34.L11Main"
+],
+"external": []
+},
+"CliqueShiftArithmetic": {
+"path": "CliqueShiftArithmetic.lean",
+"imports": [
+"Mathlib.Tactic"
+],
+"local": [],
+"external": [
+"Mathlib.Tactic"
+]
+},
+"CoreRepair": {
+"path": "CoreRepair.lean",
+"imports": [
+"A4S1.IndepAllPairs"
+],
+"local": [
+"A4S1.IndepAllPairs"
+],
+"external": []
+},
+"CoreCliqueAlternative": {
+"path": "CoreCliqueAlternative.lean",
+"imports": [
+"CoreRepair"
+],
+"local": [
+"CoreRepair"
+],
+"external": []
+},
+"LargeCliqueCore": {
+"path": "LargeCliqueCore.lean",
+"imports": [
+"CoreCliqueAlternative"
+],
+"local": [
+"CoreCliqueAlternative"
+],
+"external": []
+},
+"NormalizedCliqueCore": {
+"path": "NormalizedCliqueCore.lean",
+"imports": [
+"LargeCliqueCore",
+"A4S1.IndepAllObstr"
+],
+"local": [
+"LargeCliqueCore",
+"A4S1.IndepAllObstr"
+],
+"external": []
+},
+"BaselineCapacity": {
+"path": "BaselineCapacity.lean",
+"imports": [
+"A4S1.IndepAllArith"
+],
+"local": [
+"A4S1.IndepAllArith"
+],
+"external": []
+},
+"StrictBudget": {
+"path": "StrictBudget.lean",
+"imports": [
+"A4S1.IndepAllBudget"
+],
+"local": [
+"A4S1.IndepAllBudget"
+],
+"external": []
+},
+"StrictConstructor": {
+"path": "StrictConstructor.lean",
+"imports": [
+"A4S1.IndepAbsorb",
+"A4S1.IndepPhaseOne",
+"A4S1.IndepLedger"
+],
+"local": [
+"A4S1.IndepAbsorb",
+"A4S1.IndepPhaseOne",
+"A4S1.IndepLedger"
+],
+"external": []
+},
+"StrictParams": {
+"path": "StrictParams.lean",
+"imports": [
+"A4S1.IndepAllParams"
+],
+"local": [
+"A4S1.IndepAllParams"
+],
+"external": []
+},
+"StrictTerminal": {
+"path": "StrictTerminal.lean",
+"imports": [
+"StrictConstructor",
+"StrictParams",
+"StrictBudget",
+"A4S1.IndepAllMain"
+],
+"local": [
+"StrictConstructor",
+"StrictParams",
+"StrictBudget",
+"A4S1.IndepAllMain"
+],
+"external": []
+},
+"NormalizedDeficit": {
+"path": "NormalizedDeficit.lean",
+"imports": [
+"StrictTerminal",
+"BaselineCapacity"
+],
+"local": [
+"StrictTerminal",
+"BaselineCapacity"
+],
+"external": []
+},
+"ResidualExcess": {
+"path": "ResidualExcess.lean",
+"imports": [
+"StrictTerminal"
+],
+"local": [
+"StrictTerminal"
+],
+"external": []
+},
+"VertexEditBound": {
+"path": "VertexEditBound.lean",
+"imports": [
+"CoreRepair",
+"PaperIV.EditMetric"
+],
+"local": [
+"CoreRepair",
+"PaperIV.EditMetric"
+],
+"external": []
+},
+"TemplateDistance": {
+"path": "TemplateDistance.lean",
+"imports": [
+"VertexEditBound",
+"PaperIV.DefectComparatorGraph"
+],
+"local": [
+"VertexEditBound",
+"PaperIV.DefectComparatorGraph"
+],
+"external": []
+},
+"TemplateShift": {
+"path": "TemplateShift.lean",
+"imports": [
+"TemplateDistance"
+],
+"local": [
+"TemplateDistance"
+],
+"external": []
+},
+"RootPartition": {
+"path": "RootPartition.lean",
+"imports": [
+"TemplateShift"
+],
+"local": [
+"TemplateShift"
+],
+"external": []
+},
+"NormalizedStability": {
+"path": "NormalizedStability.lean",
+"imports": [
+"RootPartition",
+"NormalizedCliqueCore",
+"NormalizedDeficit",
+"ResidualExcess",
+"CliqueShiftArithmetic"
+],
+"local": [
+"RootPartition",
+"NormalizedCliqueCore",
+"NormalizedDeficit",
+"ResidualExcess",
+"CliqueShiftArithmetic"
+],
+"external": []
+},
+"E32Bridge": {
+"path": "E32Bridge.lean",
+"imports": [
+"NormalizedStability",
+"E32.Main"
+],
+"local": [
+"NormalizedStability",
+"E32.Main"
+],
+"external": []
+},
+"ExplicitFixedStability": {
+"path": "ExplicitFixedStability.lean",
+"imports": [
+"E32Bridge",
+"E34.L11Main"
+],
+"local": [
+"E32Bridge",
+"E34.L11Main"
+],
+"external": []
+},
+"DualBudgetArithmetic": {
+"path": "DualBudgetArithmetic.lean",
+"imports": [
+"Mathlib"
+],
+"local": [],
+"external": [
+"Mathlib"
+]
+},
+"E17.Cleanup": {
+"path": "E17/Cleanup.lean",
+"imports": [
+"PaperIV.FarRounding",
+"Mathlib.Tactic.IntervalCases"
+],
+"local": [
+"PaperIV.FarRounding"
+],
+"external": [
+"Mathlib.Tactic.IntervalCases"
+]
+},
+"E17.FarBudget": {
+"path": "E17/FarBudget.lean",
+"imports": [
+"E17.Cleanup",
+"PaperIV.RC01DenseAssembly"
+],
+"local": [
+"E17.Cleanup",
+"PaperIV.RC01DenseAssembly"
+],
+"external": []
+},
+"E17.ImprovedFarRounding": {
+"path": "E17/ImprovedFarRounding.lean",
+"imports": [
+"E17.Cleanup",
+"E17.FarBudget",
+"PaperIV.RC01TriangleTransfer",
+"PaperIV.RC01UniformDenseGate",
+"PaperIV.RC01DenseAssembly",
+"PaperIV.RC01TriangleSchedule"
+],
+"local": [
+"E17.Cleanup",
+"E17.FarBudget",
+"PaperIV.RC01TriangleTransfer",
+"PaperIV.RC01UniformDenseGate",
+"PaperIV.RC01DenseAssembly",
+"PaperIV.RC01TriangleSchedule"
+],
+"external": []
+},
+"OptimalCoreDistance": {
+"path": "OptimalCoreDistance.lean",
+"imports": [
+"ExplicitFixedStability"
+],
+"local": [
+"ExplicitFixedStability"
+],
+"external": []
+},
+"ComparatorResize": {
+"path": "ComparatorResize.lean",
+"imports": [
+"OptimalCoreDistance",
+"PaperIV.ClassCopyEdit"
+],
+"local": [
+"OptimalCoreDistance",
+"PaperIV.ClassCopyEdit"
+],
+"external": []
+},
+"ExtremalEditStability": {
+"path": "ExtremalEditStability.lean",
+"imports": [
+"ComparatorResize"
+],
+"local": [
+"ComparatorResize"
+],
+"external": []
+},
+"FixedDefectPieceEdges": {
+"path": "FixedDefectPieceEdges.lean",
+"imports": [
+"PieceEdgeStability",
+"ExplicitFixedStability"
+],
+"local": [
+"PieceEdgeStability",
+"ExplicitFixedStability"
+],
+"external": []
+},
+"PaperIV.BalancedReserve": {
+"path": "PaperIV/BalancedReserve.lean",
+"imports": [
+"Nibble.BeckFiala",
+"Mathlib.Combinatorics.SimpleGraph.Finite",
+"Mathlib.Combinatorics.SimpleGraph.Basic"
+],
+"local": [
+"Nibble.BeckFiala"
+],
+"external": [
+"Mathlib.Combinatorics.SimpleGraph.Finite",
+"Mathlib.Combinatorics.SimpleGraph.Basic"
+]
+},
+"PaperIV.CliqueTree.Counting": {
+"path": "PaperIV/CliqueTree/Counting.lean",
+"imports": [
+"PaperIV.CliqueTree.Basic"
+],
+"local": [
+"PaperIV.CliqueTree.Basic"
+],
+"external": []
+},
+"PaperIV.CliqueTree.Maximal": {
+"path": "PaperIV/CliqueTree/Maximal.lean",
+"imports": [
+"PaperIV.CliqueTree.PEO"
+],
+"local": [
+"PaperIV.CliqueTree.PEO"
+],
+"external": []
+},
+"PaperIV.CliqueTree.MaximalBridge": {
+"path": "PaperIV/CliqueTree/MaximalBridge.lean",
+"imports": [
+"PaperIV.CliqueTree.Maximal"
+],
+"local": [
+"PaperIV.CliqueTree.Maximal"
+],
+"external": []
+},
+"PaperIV.CliqueTree.Separator": {
+"path": "PaperIV/CliqueTree/Separator.lean",
+"imports": [
+"PaperIV.CliqueTree.Helly",
+"PaperIV.CliqueTree.Maximal",
+"Mathlib.Order.BourbakiWitt"
+],
+"local": [
+"PaperIV.CliqueTree.Helly",
+"PaperIV.CliqueTree.Maximal"
+],
+"external": [
+"Mathlib.Order.BourbakiWitt"
+]
+},
+"PaperIV.CliqueTree": {
+"path": "PaperIV/CliqueTree.lean",
+"imports": [
+"PaperIV.CliqueTree.Basic",
+"PaperIV.CliqueTree.PEO",
+"PaperIV.CliqueTree.Maximal",
+"PaperIV.CliqueTree.Helly",
+"PaperIV.CliqueTree.MaximalBridge",
+"PaperIV.CliqueTree.Characterization",
+"PaperIV.CliqueTree.Separator",
+"PaperIV.CliqueTree.Counting"
+],
+"local": [
+"PaperIV.CliqueTree.Basic",
+"PaperIV.CliqueTree.PEO",
+"PaperIV.CliqueTree.Maximal",
+"PaperIV.CliqueTree.Helly",
+"PaperIV.CliqueTree.MaximalBridge",
+"PaperIV.CliqueTree.Characterization",
+"PaperIV.CliqueTree.Separator",
+"PaperIV.CliqueTree.Counting"
+],
+"external": []
+},
+"PaperIV.DefectExplicitPublication": {
+"path": "PaperIV/DefectExplicitPublication.lean",
+"imports": [
+"E35.Theorem",
+"PaperIV.DefectSharpPublication"
+],
+"local": [
+"E35.Theorem",
+"PaperIV.DefectSharpPublication"
+],
+"external": []
+},
+"E17.ExplicitFarRounding": {
+"path": "E17/ExplicitFarRounding.lean",
+"imports": [
+"E18.Rounding",
+"E17.ImprovedFarRounding"
+],
+"local": [
+"E18.Rounding",
+"E17.ImprovedFarRounding"
+],
+"external": []
+},
+"E17.ExplicitFarAssembly": {
+"path": "E17/ExplicitFarAssembly.lean",
+"imports": [
+"E17.ExplicitFarRounding",
+"E19.Main"
+],
+"local": [
+"E17.ExplicitFarRounding",
+"E19.Main"
+],
+"external": []
+},
+"PaperIV.ExplicitThreshold": {
+"path": "PaperIV/ExplicitThreshold.lean",
+"imports": [
+"E17.ExplicitFarAssembly",
+"PaperIV.NearH1GlobalAssembly",
+"PaperIV.Erdos81AllOrders"
+],
+"local": [
+"E17.ExplicitFarAssembly",
+"PaperIV.NearH1GlobalAssembly",
+"PaperIV.Erdos81AllOrders"
+],
+"external": []
+},
+"PaperIV.FourHostClosure": {
+"path": "PaperIV/FourHostClosure.lean",
+"imports": [
+"PaperIV.MultiHostTriangleLift",
+"PaperIV.Vizing"
+],
+"local": [
+"PaperIV.MultiHostTriangleLift",
+"PaperIV.Vizing"
+],
+"external": []
+},
+"PaperIV.HybridRoute": {
+"path": "PaperIV/HybridRoute.lean",
+"imports": [
+"PaperIV.HybridDichotomy"
+],
+"local": [
+"PaperIV.HybridDichotomy"
+],
+"external": []
+},
+"PaperIV.PaperTheorems": {
+"path": "PaperIV/PaperTheorems.lean",
+"imports": [
+"PaperIV.Erdos81Unconditional",
+"PaperIV.HybridRoute",
+"PaperIV.SplitCompleteSharpValue",
+"PaperIV.CliqueTree"
+],
+"local": [
+"PaperIV.Erdos81Unconditional",
+"PaperIV.HybridRoute",
+"PaperIV.SplitCompleteSharpValue",
+"PaperIV.CliqueTree"
+],
+"external": []
+},
+"PaperIV.LinearCoefficient": {
+"path": "PaperIV/LinearCoefficient.lean",
+"imports": [
+"PaperIV.PaperTheorems"
+],
+"local": [
+"PaperIV.PaperTheorems"
+],
+"external": []
+},
+"PaperIV.ReserveIdentity": {
+"path": "PaperIV/ReserveIdentity.lean",
+"imports": [
+"PaperIV.SplitCompleteRigidity"
+],
+"local": [
+"PaperIV.SplitCompleteRigidity"
+],
+"external": []
+},
+"PaperIV.NearRootWindow": {
+"path": "PaperIV/NearRootWindow.lean",
+"imports": [
+"PaperIV.NearH1StructureWitness",
+"PaperIV.ReserveIdentity"
+],
+"local": [
+"PaperIV.NearH1StructureWitness",
+"PaperIV.ReserveIdentity"
+],
+"external": []
+},
+"PaperIV.NearEdgeDensity": {
+"path": "PaperIV/NearEdgeDensity.lean",
+"imports": [
+"PaperIV.NearRootWindow",
+"PaperIV.SplitEdgeCount"
+],
+"local": [
+"PaperIV.NearRootWindow",
+"PaperIV.SplitEdgeCount"
+],
+"external": []
+},
+"PaperIV.NearCriticalDichotomy": {
+"path": "PaperIV/NearCriticalDichotomy.lean",
+"imports": [
+"PaperIV.HybridDichotomy",
+"PaperIV.NearRootWindow",
+"PaperIV.NearEdgeDensity"
+],
+"local": [
+"PaperIV.HybridDichotomy",
+"PaperIV.NearRootWindow",
+"PaperIV.NearEdgeDensity"
+],
+"external": []
+},
+"PaperIV.NearH1LocalConstructor": {
+"path": "PaperIV/NearH1LocalConstructor.lean",
+"imports": [
+"PaperIV.NearH1SplitComparator",
+"PaperIV.NearH1StructureWitness",
+"PaperIV.NearRootWindow",
+"PaperIV.NearRegimePackingInterface",
+"PaperIV.CertifiedF4Bridge"
+],
+"local": [
+"PaperIV.NearH1SplitComparator",
+"PaperIV.NearH1StructureWitness",
+"PaperIV.NearRootWindow",
+"PaperIV.NearRegimePackingInterface",
+"PaperIV.CertifiedF4Bridge"
+],
+"external": []
+},
+"PaperIV.NearThresholdSensitivity": {
+"path": "PaperIV/NearThresholdSensitivity.lean",
+"imports": [
+"Mathlib.Algebra.Order.Ring.Star",
+"Mathlib.Analysis.Normed.Field.Lemmas",
+"Mathlib.Data.Rat.Star",
+"Mathlib.Tactic.Positivity"
+],
+"local": [],
+"external": [
+"Mathlib.Algebra.Order.Ring.Star",
+"Mathlib.Analysis.Normed.Field.Lemmas",
+"Mathlib.Data.Rat.Star",
+"Mathlib.Tactic.Positivity"
+]
+},
+"PaperIV.OptimalTemplateObstruction": {
+"path": "PaperIV/OptimalTemplateObstruction.lean",
+"imports": [
+"E32.Consequences",
+"Mathlib.Analysis.SpecialFunctions.Sqrt"
+],
+"local": [
+"E32.Consequences"
+],
+"external": [
+"Mathlib.Analysis.SpecialFunctions.Sqrt"
+]
+},
+"PaperIV.SeparationAbsorptionRoute": {
+"path": "PaperIV/SeparationAbsorptionRoute.lean",
+"imports": [
+"PaperIV.HybridDichotomy",
+"PaperIV.FarRounding"
+],
+"local": [
+"PaperIV.HybridDichotomy",
+"PaperIV.FarRounding"
+],
+"external": []
+},
+"PaperIV.SharpConstantOptimality": {
+"path": "PaperIV/SharpConstantOptimality.lean",
+"imports": [
+"PaperIV.PaperTheorems",
+"PaperIV.Erdos81AllOrders"
+],
+"local": [
+"PaperIV.PaperTheorems",
+"PaperIV.Erdos81AllOrders"
+],
+"external": []
+},
+"PaperIV.SimplicialReduction": {
+"path": "PaperIV/SimplicialReduction.lean",
+"imports": [
+"PaperIV.FarRounding",
+"PaperIV.ChordalStructure",
+"Mathlib.Tactic.IntervalCases"
+],
+"local": [
+"PaperIV.FarRounding",
+"PaperIV.ChordalStructure"
+],
+"external": [
+"Mathlib.Tactic.IntervalCases"
+]
+},
+"PaperIV.SimplicialReductionRefined": {
+"path": "PaperIV/SimplicialReductionRefined.lean",
+"imports": [
+"PaperIV.SimplicialReduction"
+],
+"local": [
+"PaperIV.SimplicialReduction"
+],
+"external": []
+},
+"Contrib.SpreadMatchingDirac": {
+"path": "Contrib/SpreadMatchingDirac.lean",
+"imports": [
+"Mathlib.Analysis.Normed.Ring.Basic",
+"Mathlib.Combinatorics.SimpleGraph.Ends.Defs",
+"Mathlib.Combinatorics.SimpleGraph.Matching",
+"Mathlib.ModelTheory.Graph",
+"Mathlib.Tactic.Positivity"
+],
+"local": [],
+"external": [
+"Mathlib.Analysis.Normed.Ring.Basic",
+"Mathlib.Combinatorics.SimpleGraph.Ends.Defs",
+"Mathlib.Combinatorics.SimpleGraph.Matching",
+"Mathlib.ModelTheory.Graph",
+"Mathlib.Tactic.Positivity"
+]
+},
+"PaperIV.SpreadAbsorption": {
+"path": "PaperIV/SpreadAbsorption.lean",
+"imports": [
+"Contrib.SpreadMatchingDirac",
+"PaperIV.ExteriorTriangleLift"
+],
+"local": [
+"Contrib.SpreadMatchingDirac",
+"PaperIV.ExteriorTriangleLift"
+],
+"external": []
+},
+"PaperIV.SpreadLedgerAbsorption": {
+"path": "PaperIV/SpreadLedgerAbsorption.lean",
+"imports": [
+"Mathlib.Combinatorics.SimpleGraph.DegreeSum",
+"PaperIV.SpreadAbsorption",
+"PaperIV.RD09PhysicalLedger",
+"Mathlib.Analysis.RCLike.Basic",
+"Mathlib.Data.Real.StarOrdered"
+],
+"local": [
+"PaperIV.SpreadAbsorption",
+"PaperIV.RD09PhysicalLedger"
+],
+"external": [
+"Mathlib.Combinatorics.SimpleGraph.DegreeSum",
+"Mathlib.Analysis.RCLike.Basic",
+"Mathlib.Data.Real.StarOrdered"
+]
+},
+"PaperIV.SpreadAbsorptionCompatibility": {
+"path": "PaperIV/SpreadAbsorptionCompatibility.lean",
+"imports": [
+"PaperIV.SpreadLedgerAbsorption",
+"PaperIV.PackingUnion"
+],
+"local": [
+"PaperIV.SpreadLedgerAbsorption",
+"PaperIV.PackingUnion"
+],
+"external": []
+},
+"PaperIVEditorial.ConstructorBudget": {
+"path": "PaperIVEditorial/ConstructorBudget.lean",
+"imports": [
+"A4S1.IndepAllMain"
+],
+"local": [
+"A4S1.IndepAllMain"
+],
+"external": []
+},
+"PublicationStability": {
+"path": "PublicationStability.lean",
+"imports": [
+"FixedDefectPieceEdges",
+"ExtremalEditStability"
+],
+"local": [
+"FixedDefectPieceEdges",
+"ExtremalEditStability"
+],
+"external": []
+},
+"RootStepBudget": {
+"path": "RootStepBudget.lean",
+"imports": [
+"PaperIV.RootedSimplicialDefect"
+],
+"local": [
+"PaperIV.RootedSimplicialDefect"
+],
+"external": []
+},
+"SignedDualModel": {
+"path": "SignedDualModel.lean",
+"imports": [
+"PaperIV.FarRounding"
+],
+"local": [
+"PaperIV.FarRounding"
+],
+"external": []
+},
+"SignedElimination": {
+"path": "SignedElimination.lean",
+"imports": [
+"SignedDualModel",
+"RootStepBudget",
+"DualBudgetArithmetic"
+],
+"local": [
+"SignedDualModel",
+"RootStepBudget",
+"DualBudgetArithmetic"
+],
+"external": []
+},
+"RootCliquePrices": {
+"path": "RootCliquePrices.lean",
+"imports": [
+"SignedElimination",
+"PaperIV.SplitUniformIncidence"
+],
+"local": [
+"SignedElimination",
+"PaperIV.SplitUniformIncidence"
+],
+"external": []
+},
+"RefinedFractionalBound": {
+"path": "RefinedFractionalBound.lean",
+"imports": [
+"RootCliquePrices",
+"SublinearStability"
+],
+"local": [
+"RootCliquePrices",
+"SublinearStability"
+],
+"external": []
+},
+"UniformFractionalBound": {
+"path": "UniformFractionalBound.lean",
+"imports": [
+"RefinedFractionalBound"
+],
+"local": [
+"RefinedFractionalBound"
+],
+"external": []
+},
+"SmallOrderFractional": {
+"path": "SmallOrderFractional.lean",
+"imports": [
+"UniformFractionalBound"
+],
+"local": [
+"UniformFractionalBound"
+],
+"external": []
+},
+"RefinedRounding": {
+"path": "RefinedRounding.lean",
+"imports": [
+"SmallOrderFractional",
+"PaperIV.RC01FarAssembly",
+"PaperIV.CertifiedOptimumExistence"
+],
+"local": [
+"SmallOrderFractional",
+"PaperIV.RC01FarAssembly",
+"PaperIV.CertifiedOptimumExistence"
+],
+"external": []
+},
+"PaperIV": {
+"path": "PaperIV.lean",
+"imports": [
+"PaperIV.AssignmentEquivalence",
+"PaperIV.AssignmentLemma",
+"PaperIV.CanonicalBudget",
+"PaperIV.CenteredMoments",
+"PaperIV.CertifiedF4Bridge",
+"PaperIV.CertifiedOptimumExistence",
+"PaperIV.ChordalBasics",
+"PaperIV.ChordalBridge",
+"PaperIV.ChordalCopy",
+"PaperIV.ChordalCoreMissing",
+"PaperIV.ChordalStructure",
+"PaperIV.ClassCopy",
+"PaperIV.ClassCopyEdit",
+"PaperIV.CleanedLowTriangleBridge",
+"PaperIV.CleanedTriangleMass",
+"PaperIV.CliqueBagNibble",
+"PaperIV.CloneMeasure",
+"PaperIV.ColourClasses",
+"PaperIV.CopyCleanup",
+"PaperIV.CopyPathNearEntry",
+"PaperIV.CopyPathWindow",
+"PaperIV.CopySelector",
+"PaperIV.Corollary73Assembly",
+"PaperIV.CountingTelescope",
+"PaperIV.CriticalBranch",
+"PaperIV.CriticalResidual",
+"PaperIV.CyclicLayering",
+"PaperIV.DeficitAlongPath",
+"PaperIV.DegreeConcentration",
+"PaperIV.DenseBagClosure",
+"PaperIV.Dirac1",
+"PaperIV.DiracEngine",
+"PaperIV.DiscardCounts",
+"PaperIV.DonationBudget",
+"PaperIV.DoubledPattern",
+"PaperIV.E01Ledger",
+"PaperIV.EditFirstEntry",
+"PaperIV.EditMetric",
+"PaperIV.EighthMoment",
+"PaperIV.EpsilonBudgetFull",
+"PaperIV.EquitableEdgeColouring",
+"PaperIV.EquitableKempe",
+"PaperIV.Erdos81Unconditional",
+"PaperIV.ExteriorTriangleLift",
+"PaperIV.F4EditRobustness",
+"PaperIV.FarRounding",
+"PaperIV.FarRoundingBatchBridge",
+"PaperIV.FarRoundingFromAssignment",
+"PaperIV.FarRoundingRealLP",
+"PaperIV.FarRoundingToPhysical",
+"PaperIV.FiniteHeavySelection",
+"PaperIV.FirstEntryWindow",
+"PaperIV.GatedSplitTargetBridge",
+"PaperIV.GatedTerminalSplit",
+"PaperIV.GraphFamilyDistance",
+"PaperIV.H1DescentBarrier",
+"PaperIV.H1ImprovedConstants",
+"PaperIV.H1LedgerArithmetic",
+"PaperIV.HybridDichotomy",
+"PaperIV.HybridRoute",
+"PaperIV.JointTwoQuotaPhysical",
+"PaperIV.JointTypedNibbleGate",
+"PaperIV.JointTypedQuota",
+"PaperIV.K4UniformNibbleCounts",
+"PaperIV.LineGraphColouring",
+"PaperIV.LocalStabilityS01S03",
+"PaperIV.LowTriangleReduction",
+"PaperIV.MarkedQuotaGate",
+"PaperIV.MarkedQuotaNibble",
+"PaperIV.MarkedQuotaPairing",
+"PaperIV.MarkedQuotaSlackGate",
+"PaperIV.MarkedQuotaTokens",
+"PaperIV.MarkedQuotaTypedGain",
+"PaperIV.MixedNibbleUnion",
+"PaperIV.MixedRoundingAdapter",
+"PaperIV.Model",
+"PaperIV.MultiHostTriangleLift",
+"PaperIV.NB08Interface",
+"PaperIV.NearH1CalibratedRoot",
+"PaperIV.NearH1Calibration",
+"PaperIV.NearH1FinalAssembly",
+"PaperIV.NearH1FinalScalars",
+"PaperIV.NearH1GlobalAssembly",
+"PaperIV.NearH1Localization",
+"PaperIV.NearH1LocalConstructor",
+"PaperIV.NearH1PhaseI",
+"PaperIV.NearH1PromotionAccounts",
+"PaperIV.NearH1RootRegularization",
+"PaperIV.NearH1SplitComparator",
+"PaperIV.NearH1StructureWitness",
+"PaperIV.NearH1TargetAssembly",
+"PaperIV.NearH1WindowAccounts",
+"PaperIV.NearCriticalDichotomy",
+"PaperIV.NearEdgeDensity",
+"PaperIV.NearRegimePackingInterface",
+"PaperIV.NearRootWindow",
+"PaperIV.NearTerminalSynthesis",
+"PaperIV.NibbleHypotheses",
+"PaperIV.NibblePort",
+"PaperIV.OneFactorization",
+"PaperIV.OneStepEstimate",
+"PaperIV.OwnerCoinMoments",
+"PaperIV.OwnerCoins",
+"PaperIV.PackingUnion",
+"PaperIV.PaddedEquitableColouring",
+"PaperIV.PaperIIINibbleAdapter",
+"PaperIV.PaperIIISlackNibbleAdapter",
+"PaperIV.ParametricBudget",
+"PaperIV.PartitionBridge",
+"PaperIV.PathDescentBarrier",
+"PaperIV.PathDescentBridge",
+"PaperIV.PatternCoin",
+"PaperIV.PatternCounting",
+"PaperIV.PatternMass",
+"PaperIV.PatternPoolGeometry",
+"PaperIV.PatternTransfer",
+"PaperIV.PhysicalCompletion",
+"PaperIV.RC01CandidatePool",
+"PaperIV.RC01Candidates",
+"PaperIV.RC01CanonicalFiberProfile",
+"PaperIV.RC01CanonicalFractional",
+"PaperIV.RC01CanonicalNormalization",
+"PaperIV.RC01CanonicalProfile",
+"PaperIV.RC01CanonicalSlackBridge",
+"PaperIV.RC01CanonicalSlots",
+"PaperIV.RC01CanonicalSupports",
+"PaperIV.RC01CanonicalTransferBridge",
+"PaperIV.RC01CanonicalValueAccounting",
+"PaperIV.RC01CleanFiber",
+"PaperIV.RC01CleanedGate",
+"PaperIV.RC01CleanedMixedCodegree",
+"PaperIV.RC01CleanedSpreadPacking",
+"PaperIV.RC01DenseAssembly",
+"PaperIV.RC01DensePhysicalGate",
+"PaperIV.RC01DenseRootwiseRetention",
+"PaperIV.RC01DeviationCleanup",
+"PaperIV.RC01FarAssembly",
+"PaperIV.FarRegimeAllGraphs",
+"PaperIV.DefectSharpPublication",
+"PaperIV.RC01Final",
+"PaperIV.RC01GlobalBudget",
+"PaperIV.RC01GlobalSchedule",
+"PaperIV.RC01K3Pool",
+"PaperIV.RC01MarkedRounding",
+"PaperIV.RC01MixedPatterns",
+"PaperIV.RC01PatternCapacity",
+"PaperIV.RC01PatternCardinality",
+"PaperIV.RC01PatternMassScale",
+"PaperIV.RC01RegularVolume",
+"PaperIV.RC01ResidualCoverage",
+"PaperIV.RC01ResidualTransferClosure",
+"PaperIV.RC01RootedMomentAdapter",
+"PaperIV.RC01RootwiseCleanupBudget",
+"PaperIV.RC01RootwiseReference",
+"PaperIV.RC01RootwiseRetention",
+"PaperIV.RC01TriangleSchedule",
+"PaperIV.RC01TriangleTransfer",
+"PaperIV.RC01UniformDenseGate",
+"PaperIV.RD09CandidateCounting",
+"PaperIV.RD09CanonicalBadAccounts",
+"PaperIV.RD09CanonicalL2Assembly",
+"PaperIV.RD09CompleteFactorAdapter",
+"PaperIV.RD09FactorCandidateAverage",
+"PaperIV.RD09FactorCandidateMoments",
+"PaperIV.RD09FiniteAveraging",
+"PaperIV.RD09H1SpokeRealization",
+"PaperIV.RD09L1Adapter",
+"PaperIV.RD09LocalPhaseI",
+"PaperIV.RD09PaddedHostBase",
+"PaperIV.RD09PaddedL1Adapter",
+"PaperIV.RD09PaddedL1Mass",
+"PaperIV.RD09PhaseII",
+"PaperIV.RD09PhysicalLedger",
+"PaperIV.RD09RootExteriorAdapter",
+"PaperIV.RD09RootFactorPhase",
+"PaperIV.RD09RootSplitDistance",
+"PaperIV.RD09RootedOrderAdapter",
+"PaperIV.RD09SplitEditAccount",
+"PaperIV.RD09SpokeCompatibility",
+"PaperIV.RD09TerminalAssembly",
+"PaperIV.RegularityFormat",
+"PaperIV.ResourceSizes",
+"PaperIV.RootedCounting",
+"PaperIV.RootedCountingBridge",
+"PaperIV.RootedEliminationOrder",
+"PaperIV.RootedK3Counting",
+"PaperIV.RootedK3Pool",
+"PaperIV.RootedK4Counting",
+"PaperIV.RootedK4Degree",
+"PaperIV.RootedK4Pool",
+"PaperIV.RootedVariance",
+"PaperIV.SeparationAbsorptionRoute",
+"PaperIV.RoundRobinPairs",
+"PaperIV.RoundingTrichotomy",
+"PaperIV.SharpConstantOptimality",
+"PaperIV.SharpEnvelope",
+"PaperIV.SimultaneousSelection",
+"PaperIV.SparseRegime",
+"PaperIV.SplitBaselineTarget",
+"PaperIV.SplitCanonicalSupportSum",
+"PaperIV.SplitCanonicalValue",
+"PaperIV.SplitCanonicalWeight",
+"PaperIV.SplitComparatorFamily",
+"PaperIV.SplitComparatorResidual",
+"PaperIV.SplitEdgeCount",
+"PaperIV.SplitFamilyDisjoint",
+"PaperIV.SplitFamilyNonempty",
+"PaperIV.SplitFarRounding",
+"PaperIV.SplitItems",
+"PaperIV.SplitLPToPhysicalLoads",
+"PaperIV.SplitPackingObstruction",
+"PaperIV.SplitTerminalLP",
+"PaperIV.SplitTriangleFactor",
+"PaperIV.SplitTriangleFactorHighHost",
+"PaperIV.SplitUniformIncidence",
+"PaperIV.SpreadPacking",
+"PaperIV.SpreadRestricted",
+"PaperIV.SpreadValueTransfer",
+"PaperIV.SymmetrizationBarrier",
+"PaperIV.SymmetrizationInvariantBarrier",
+"PaperIV.SymmetrizationMetricStep",
+"PaperIV.TargetEnvelope",
+"PaperIV.TelescopeK3",
+"PaperIV.TelescopeK3Full",
+"PaperIV.TelescopeK4",
+"PaperIV.TelescopeK4Full",
+"PaperIV.TelescopeK4Step2",
+"PaperIV.TerminalLedger",
+"PaperIV.TerminalSeparation",
+"PaperIV.TerminalSplit",
+"PaperIV.TerminalSplitAdapter",
+"PaperIV.TransportedMatchings",
+"PaperIV.TriangleCover",
+"PaperIV.TriangleNibblePort",
+"PaperIV.TrianglePairingDefs",
+"PaperIV.TrianglePairingSplit",
+"PaperIV.TrianglePairingSums",
+"PaperIV.TriangleSwap",
+"PaperIV.TwoRegimeAccounting",
+"PaperIV.UniformDual",
+"PaperIV.UniformSplitLoads",
+"PaperIV.UniformWeightValue",
+"PaperIV.VertexCopy",
+"PaperIV.VertexCopyGate",
+"PaperIV.VertexCopyItems",
+"PaperIV.VertexCopyMonotone",
+"PaperIV.VertexCopyRank",
+"PaperIV.VertexCopySelector",
+"PaperIV.VertexCopyTransport",
+"PaperIV.VertexCopyWBridge",
+"PaperIV.Vizing",
+"PaperIV.WeightedCodegree",
+"PaperIV.WeightedCoin",
+"PaperIV.WeightedMoments",
+"PaperIV.WeightedPatternCoins",
+"PaperIV.RootEdgeSplit",
+"PaperIV.CliqueTree",
+"PaperIV.SplitCompleteExactValue",
+"PaperIV.SplitCompleteExactValueAllParities",
+"PaperIV.SplitCompleteSharpLower",
+"PaperIV.SplitCompleteSharpValue",
+"PaperIV.SplitTerminalNear",
+"PaperIV.SplitTerminalTarget",
+"PaperIV.SplitTriangleFactorOdd",
+"PaperIV.TerminalToNear",
+"PaperIV.TwoRegimeAssembly",
+"PaperIV.SpreadAbsorption",
+"PaperIV.SpreadLedgerAbsorption",
+"PaperIV.PaperTheorems",
+"PaperIV.SpreadAbsorptionCompatibility",
+"PaperIV.SplitCompleteRigidity",
+"PaperIV.SplitCompleteDefect",
+"PaperIV.LinearCoefficient",
+"PaperIV.BalancedReserve",
+"PaperIV.SplitEditIdentity",
+"PaperIV.FarSlackQuantitative",
+"PaperIV.CliquePartitionTransport",
+"PaperIV.IntegralStability",
+"PaperIV.RootPartitionStability",
+"PaperIV.ExtremalClassification",
+"PaperIV.Erdos81AllOrders",
+"PaperIV.SplitMixedGap",
+"PaperIV.SimplicialReduction",
+"PaperIV.SimplicialReductionRefined",
+"PaperIV.ExplicitThreshold",
+"E17.ImprovedFarRounding",
+"PaperIV.FourHostClosure",
+"PaperIV.NearThresholdSensitivity",
+"PaperIVEditorial.ConstructorBudget",
+"RootedCliqueRecovery",
+"SublinearPartitionBound",
+"DualBudgetArithmetic",
+"RootStepBudget",
+"SublinearLocalization",
+"SignedDualModel",
+"RefinedRounding",
+"SublinearSequences",
+"ExplicitFixedStability",
+"ArbitraryOrderSequences",
+"ExtremalEditStability",
+"FixedDefectPieceEdges",
+"PublicationStability",
+"PaperIV.DefectExplicitPublication",
+"PaperIV.OptimalTemplateObstruction"
+],
+"local": [
+"PaperIV.AssignmentEquivalence",
+"PaperIV.AssignmentLemma",
+"PaperIV.CanonicalBudget",
+"PaperIV.CenteredMoments",
+"PaperIV.CertifiedF4Bridge",
+"PaperIV.CertifiedOptimumExistence",
+"PaperIV.ChordalBasics",
+"PaperIV.ChordalBridge",
+"PaperIV.ChordalCopy",
+"PaperIV.ChordalCoreMissing",
+"PaperIV.ChordalStructure",
+"PaperIV.ClassCopy",
+"PaperIV.ClassCopyEdit",
+"PaperIV.CleanedLowTriangleBridge",
+"PaperIV.CleanedTriangleMass",
+"PaperIV.CliqueBagNibble",
+"PaperIV.CloneMeasure",
+"PaperIV.ColourClasses",
+"PaperIV.CopyCleanup",
+"PaperIV.CopyPathNearEntry",
+"PaperIV.CopyPathWindow",
+"PaperIV.CopySelector",
+"PaperIV.Corollary73Assembly",
+"PaperIV.CountingTelescope",
+"PaperIV.CriticalBranch",
+"PaperIV.CriticalResidual",
+"PaperIV.CyclicLayering",
+"PaperIV.DeficitAlongPath",
+"PaperIV.DegreeConcentration",
+"PaperIV.DenseBagClosure",
+"PaperIV.Dirac1",
+"PaperIV.DiracEngine",
+"PaperIV.DiscardCounts",
+"PaperIV.DonationBudget",
+"PaperIV.DoubledPattern",
+"PaperIV.E01Ledger",
+"PaperIV.EditFirstEntry",
+"PaperIV.EditMetric",
+"PaperIV.EighthMoment",
+"PaperIV.EpsilonBudgetFull",
+"PaperIV.EquitableEdgeColouring",
+"PaperIV.EquitableKempe",
+"PaperIV.Erdos81Unconditional",
+"PaperIV.ExteriorTriangleLift",
+"PaperIV.F4EditRobustness",
+"PaperIV.FarRounding",
+"PaperIV.FarRoundingBatchBridge",
+"PaperIV.FarRoundingFromAssignment",
+"PaperIV.FarRoundingRealLP",
+"PaperIV.FarRoundingToPhysical",
+"PaperIV.FiniteHeavySelection",
+"PaperIV.FirstEntryWindow",
+"PaperIV.GatedSplitTargetBridge",
+"PaperIV.GatedTerminalSplit",
+"PaperIV.GraphFamilyDistance",
+"PaperIV.H1DescentBarrier",
+"PaperIV.H1ImprovedConstants",
+"PaperIV.H1LedgerArithmetic",
+"PaperIV.HybridDichotomy",
+"PaperIV.HybridRoute",
+"PaperIV.JointTwoQuotaPhysical",
+"PaperIV.JointTypedNibbleGate",
+"PaperIV.JointTypedQuota",
+"PaperIV.K4UniformNibbleCounts",
+"PaperIV.LineGraphColouring",
+"PaperIV.LocalStabilityS01S03",
+"PaperIV.LowTriangleReduction",
+"PaperIV.MarkedQuotaGate",
+"PaperIV.MarkedQuotaNibble",
+"PaperIV.MarkedQuotaPairing",
+"PaperIV.MarkedQuotaSlackGate",
+"PaperIV.MarkedQuotaTokens",
+"PaperIV.MarkedQuotaTypedGain",
+"PaperIV.MixedNibbleUnion",
+"PaperIV.MixedRoundingAdapter",
+"PaperIV.Model",
+"PaperIV.MultiHostTriangleLift",
+"PaperIV.NB08Interface",
+"PaperIV.NearH1CalibratedRoot",
+"PaperIV.NearH1Calibration",
+"PaperIV.NearH1FinalAssembly",
+"PaperIV.NearH1FinalScalars",
+"PaperIV.NearH1GlobalAssembly",
+"PaperIV.NearH1Localization",
+"PaperIV.NearH1LocalConstructor",
+"PaperIV.NearH1PhaseI",
+"PaperIV.NearH1PromotionAccounts",
+"PaperIV.NearH1RootRegularization",
+"PaperIV.NearH1SplitComparator",
+"PaperIV.NearH1StructureWitness",
+"PaperIV.NearH1TargetAssembly",
+"PaperIV.NearH1WindowAccounts",
+"PaperIV.NearCriticalDichotomy",
+"PaperIV.NearEdgeDensity",
+"PaperIV.NearRegimePackingInterface",
+"PaperIV.NearRootWindow",
+"PaperIV.NearTerminalSynthesis",
+"PaperIV.NibbleHypotheses",
+"PaperIV.NibblePort",
+"PaperIV.OneFactorization",
+"PaperIV.OneStepEstimate",
+"PaperIV.OwnerCoinMoments",
+"PaperIV.OwnerCoins",
+"PaperIV.PackingUnion",
+"PaperIV.PaddedEquitableColouring",
+"PaperIV.PaperIIINibbleAdapter",
+"PaperIV.PaperIIISlackNibbleAdapter",
+"PaperIV.ParametricBudget",
+"PaperIV.PartitionBridge",
+"PaperIV.PathDescentBarrier",
+"PaperIV.PathDescentBridge",
+"PaperIV.PatternCoin",
+"PaperIV.PatternCounting",
+"PaperIV.PatternMass",
+"PaperIV.PatternPoolGeometry",
+"PaperIV.PatternTransfer",
+"PaperIV.PhysicalCompletion",
+"PaperIV.RC01CandidatePool",
+"PaperIV.RC01Candidates",
+"PaperIV.RC01CanonicalFiberProfile",
+"PaperIV.RC01CanonicalFractional",
+"PaperIV.RC01CanonicalNormalization",
+"PaperIV.RC01CanonicalProfile",
+"PaperIV.RC01CanonicalSlackBridge",
+"PaperIV.RC01CanonicalSlots",
+"PaperIV.RC01CanonicalSupports",
+"PaperIV.RC01CanonicalTransferBridge",
+"PaperIV.RC01CanonicalValueAccounting",
+"PaperIV.RC01CleanFiber",
+"PaperIV.RC01CleanedGate",
+"PaperIV.RC01CleanedMixedCodegree",
+"PaperIV.RC01CleanedSpreadPacking",
+"PaperIV.RC01DenseAssembly",
+"PaperIV.RC01DensePhysicalGate",
+"PaperIV.RC01DenseRootwiseRetention",
+"PaperIV.RC01DeviationCleanup",
+"PaperIV.RC01FarAssembly",
+"PaperIV.FarRegimeAllGraphs",
+"PaperIV.DefectSharpPublication",
+"PaperIV.RC01Final",
+"PaperIV.RC01GlobalBudget",
+"PaperIV.RC01GlobalSchedule",
+"PaperIV.RC01K3Pool",
+"PaperIV.RC01MarkedRounding",
+"PaperIV.RC01MixedPatterns",
+"PaperIV.RC01PatternCapacity",
+"PaperIV.RC01PatternCardinality",
+"PaperIV.RC01PatternMassScale",
+"PaperIV.RC01RegularVolume",
+"PaperIV.RC01ResidualCoverage",
+"PaperIV.RC01ResidualTransferClosure",
+"PaperIV.RC01RootedMomentAdapter",
+"PaperIV.RC01RootwiseCleanupBudget",
+"PaperIV.RC01RootwiseReference",
+"PaperIV.RC01RootwiseRetention",
+"PaperIV.RC01TriangleSchedule",
+"PaperIV.RC01TriangleTransfer",
+"PaperIV.RC01UniformDenseGate",
+"PaperIV.RD09CandidateCounting",
+"PaperIV.RD09CanonicalBadAccounts",
+"PaperIV.RD09CanonicalL2Assembly",
+"PaperIV.RD09CompleteFactorAdapter",
+"PaperIV.RD09FactorCandidateAverage",
+"PaperIV.RD09FactorCandidateMoments",
+"PaperIV.RD09FiniteAveraging",
+"PaperIV.RD09H1SpokeRealization",
+"PaperIV.RD09L1Adapter",
+"PaperIV.RD09LocalPhaseI",
+"PaperIV.RD09PaddedHostBase",
+"PaperIV.RD09PaddedL1Adapter",
+"PaperIV.RD09PaddedL1Mass",
+"PaperIV.RD09PhaseII",
+"PaperIV.RD09PhysicalLedger",
+"PaperIV.RD09RootExteriorAdapter",
+"PaperIV.RD09RootFactorPhase",
+"PaperIV.RD09RootSplitDistance",
+"PaperIV.RD09RootedOrderAdapter",
+"PaperIV.RD09SplitEditAccount",
+"PaperIV.RD09SpokeCompatibility",
+"PaperIV.RD09TerminalAssembly",
+"PaperIV.RegularityFormat",
+"PaperIV.ResourceSizes",
+"PaperIV.RootedCounting",
+"PaperIV.RootedCountingBridge",
+"PaperIV.RootedEliminationOrder",
+"PaperIV.RootedK3Counting",
+"PaperIV.RootedK3Pool",
+"PaperIV.RootedK4Counting",
+"PaperIV.RootedK4Degree",
+"PaperIV.RootedK4Pool",
+"PaperIV.RootedVariance",
+"PaperIV.SeparationAbsorptionRoute",
+"PaperIV.RoundRobinPairs",
+"PaperIV.RoundingTrichotomy",
+"PaperIV.SharpConstantOptimality",
+"PaperIV.SharpEnvelope",
+"PaperIV.SimultaneousSelection",
+"PaperIV.SparseRegime",
+"PaperIV.SplitBaselineTarget",
+"PaperIV.SplitCanonicalSupportSum",
+"PaperIV.SplitCanonicalValue",
+"PaperIV.SplitCanonicalWeight",
+"PaperIV.SplitComparatorFamily",
+"PaperIV.SplitComparatorResidual",
+"PaperIV.SplitEdgeCount",
+"PaperIV.SplitFamilyDisjoint",
+"PaperIV.SplitFamilyNonempty",
+"PaperIV.SplitFarRounding",
+"PaperIV.SplitItems",
+"PaperIV.SplitLPToPhysicalLoads",
+"PaperIV.SplitPackingObstruction",
+"PaperIV.SplitTerminalLP",
+"PaperIV.SplitTriangleFactor",
+"PaperIV.SplitTriangleFactorHighHost",
+"PaperIV.SplitUniformIncidence",
+"PaperIV.SpreadPacking",
+"PaperIV.SpreadRestricted",
+"PaperIV.SpreadValueTransfer",
+"PaperIV.SymmetrizationBarrier",
+"PaperIV.SymmetrizationInvariantBarrier",
+"PaperIV.SymmetrizationMetricStep",
+"PaperIV.TargetEnvelope",
+"PaperIV.TelescopeK3",
+"PaperIV.TelescopeK3Full",
+"PaperIV.TelescopeK4",
+"PaperIV.TelescopeK4Full",
+"PaperIV.TelescopeK4Step2",
+"PaperIV.TerminalLedger",
+"PaperIV.TerminalSeparation",
+"PaperIV.TerminalSplit",
+"PaperIV.TerminalSplitAdapter",
+"PaperIV.TransportedMatchings",
+"PaperIV.TriangleCover",
+"PaperIV.TriangleNibblePort",
+"PaperIV.TrianglePairingDefs",
+"PaperIV.TrianglePairingSplit",
+"PaperIV.TrianglePairingSums",
+"PaperIV.TriangleSwap",
+"PaperIV.TwoRegimeAccounting",
+"PaperIV.UniformDual",
+"PaperIV.UniformSplitLoads",
+"PaperIV.UniformWeightValue",
+"PaperIV.VertexCopy",
+"PaperIV.VertexCopyGate",
+"PaperIV.VertexCopyItems",
+"PaperIV.VertexCopyMonotone",
+"PaperIV.VertexCopyRank",
+"PaperIV.VertexCopySelector",
+"PaperIV.VertexCopyTransport",
+"PaperIV.VertexCopyWBridge",
+"PaperIV.Vizing",
+"PaperIV.WeightedCodegree",
+"PaperIV.WeightedCoin",
+"PaperIV.WeightedMoments",
+"PaperIV.WeightedPatternCoins",
+"PaperIV.RootEdgeSplit",
+"PaperIV.CliqueTree",
+"PaperIV.SplitCompleteExactValue",
+"PaperIV.SplitCompleteExactValueAllParities",
+"PaperIV.SplitCompleteSharpLower",
+"PaperIV.SplitCompleteSharpValue",
+"PaperIV.SplitTerminalNear",
+"PaperIV.SplitTerminalTarget",
+"PaperIV.SplitTriangleFactorOdd",
+"PaperIV.TerminalToNear",
+"PaperIV.TwoRegimeAssembly",
+"PaperIV.SpreadAbsorption",
+"PaperIV.SpreadLedgerAbsorption",
+"PaperIV.PaperTheorems",
+"PaperIV.SpreadAbsorptionCompatibility",
+"PaperIV.SplitCompleteRigidity",
+"PaperIV.SplitCompleteDefect",
+"PaperIV.LinearCoefficient",
+"PaperIV.BalancedReserve",
+"PaperIV.SplitEditIdentity",
+"PaperIV.FarSlackQuantitative",
+"PaperIV.CliquePartitionTransport",
+"PaperIV.IntegralStability",
+"PaperIV.RootPartitionStability",
+"PaperIV.ExtremalClassification",
+"PaperIV.Erdos81AllOrders",
+"PaperIV.SplitMixedGap",
+"PaperIV.SimplicialReduction",
+"PaperIV.SimplicialReductionRefined",
+"PaperIV.ExplicitThreshold",
+"E17.ImprovedFarRounding",
+"PaperIV.FourHostClosure",
+"PaperIV.NearThresholdSensitivity",
+"PaperIVEditorial.ConstructorBudget",
+"RootedCliqueRecovery",
+"SublinearPartitionBound",
+"DualBudgetArithmetic",
+"RootStepBudget",
+"SublinearLocalization",
+"SignedDualModel",
+"RefinedRounding",
+"SublinearSequences",
+"ExplicitFixedStability",
+"ArbitraryOrderSequences",
+"ExtremalEditStability",
+"FixedDefectPieceEdges",
+"PublicationStability",
+"PaperIV.DefectExplicitPublication",
+"PaperIV.OptimalTemplateObstruction"
+],
+"external": []
+},
+"AuditorChecks": {
+"path": "AuditorChecks.lean",
+"imports": [
+"PaperIV",
+"PaperIV.DefectExplicitPublication",
+"PaperIV.OptimalTemplateObstruction",
+"PaperIV.ExplicitThreshold",
+"E35.Theorem",
+"E35.Main",
+"E32.Comparison",
+"E34.L11Main",
+"PublicationStability",
+"ExplicitFixedStability",
+"SmallOrderFractional",
+"RefinedRounding",
+"ArbitraryOrderSequences",
+"RootedCliqueRecovery",
+"EditRootRecovery",
+"Lean.Elab.Command"
+],
+"local": [
+"PaperIV",
+"PaperIV.DefectExplicitPublication",
+"PaperIV.OptimalTemplateObstruction",
+"PaperIV.ExplicitThreshold",
+"E35.Theorem",
+"E35.Main",
+"E32.Comparison",
+"E34.L11Main",
+"PublicationStability",
+"ExplicitFixedStability",
+"SmallOrderFractional",
+"RefinedRounding",
+"ArbitraryOrderSequences",
+"RootedCliqueRecovery",
+"EditRootRecovery"
+],
+"external": [
+"Lean.Elab.Command"
+]
+}
+}
+}

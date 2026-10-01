@@ -1,0 +1,27 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 PaperIV/NearH1LocalConstructor.lean -o /workspace/request-project/.lake/runner/lib/lean/PaperIV/NearH1LocalConstructor.olean -i /workspace/request-project/.lake/runner/lib/lean/PaperIV/NearH1LocalConstructor.ilean
+import took 4.2s
+.olean serialization took 105ms
+cumulative profiling times:
+	.olean serialization 105ms
+	attribute application 0.0679ms
+	compilation (IR) 0.804ms
+	compilation (LCNF base) 0.975ms
+	compilation (LCNF mono) 0.351ms
+	congr simp thm 12.4ms
+	elaboration 45ms
+	fix level params 0.41ms
+	import 4.2s
+	initialization 36.2ms
+	instantiate metavars 5.78ms
+	interpretation 489ms
+	let-to-have transformation 0.127ms
+	linting 10.4ms
+	norm_num 103ms
+	parsing 6.16ms
+	process pre-definitions 12.5ms
+	ring 10.7ms
+	share common exprs 4.08ms
+	simp 147ms
+	tactic execution 144ms
+	type checking 31.1ms
+	typeclass inference 649ms

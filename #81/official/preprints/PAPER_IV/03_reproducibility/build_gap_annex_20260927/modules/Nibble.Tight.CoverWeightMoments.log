@@ -1,0 +1,24 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 Nibble/Tight/CoverWeightMoments.lean -o /workspace/request-project/.lake/runner/lib/lean/Nibble/Tight/CoverWeightMoments.olean -i /workspace/request-project/.lake/runner/lib/lean/Nibble/Tight/CoverWeightMoments.ilean
+import took 5.31s
+.olean serialization took 106ms
+cumulative profiling times:
+	.olean serialization 106ms
+	attribute application 0.195ms
+	congr simp thm 14.6ms
+	elaboration 121ms
+	fix level params 1.64ms
+	import 5.31s
+	initialization 39.3ms
+	instantiate metavars 3.02ms
+	interpretation 412ms
+	let-to-have transformation 0.3ms
+	linting 21.9ms
+	norm_num 1.93ms
+	parsing 16.2ms
+	process pre-definitions 13.6ms
+	ring 19.8ms
+	share common exprs 6.8ms
+	simp 146ms
+	tactic execution 280ms
+	type checking 104ms
+	typeclass inference 360ms

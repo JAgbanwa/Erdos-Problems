@@ -1,0 +1,226 @@
+{
+  "version": "1.2",
+  "handoff_revision": "v1.2-r1",
+  "prepared": "2026-09-29",
+  "status": "BLOCKED_PENDING_INTERNAL_AUDIT",
+  "external_audit": "NOT_STARTED",
+  "execution_authorized": false,
+  "paths_relative_to": "C:/Users/jtraverso/e81p4-publish/preprints/PAPER_IV",
+  "result_directory": "02_validation/02_IA_ADVERSARIAL_AUDITS/run_v1.2_r1",
+  "source_cut": "piv-v12-fb459343d234",
+  "verified_source_files": [
+    {
+      "path": "03_reproducibility/build_piv-v12-fb459343d234/SOURCE_MANIFEST.json",
+      "sha256": "fb459343d234f968d7d32eff1491ea8a09aa2e135b313a80623012e7449042f5"
+    },
+    {
+      "path": "05_formalization/LEAN_SOURCE_piv-v12-fb459343d234.zip",
+      "sha256": "cb2741454380736ffe01b59933057b5079fa9f865d5bbdd3f67534bf808a62e6"
+    },
+    {
+      "path": "05_formalization/lean_piv-v12-fb459343d234/FREEZE_SCOPE.json",
+      "sha256": "cc9abf9a9d4ed113eab7bdf8262c225e9d84a266097bf74531880da518eafe49"
+    },
+    {
+      "path": "05_formalization/LEAN_BOUNDED_GAP_ANNEX_v1.0.zip",
+      "sha256": "2847a422865e06880d457ea806aae5b9f749d22359eff325349c09c01cb4837d"
+    }
+  ],
+  "expected_main_scope": {
+    "modules": 607,
+    "source_entries": 615,
+    "targets": [
+      "PaperIV",
+      "PaperIV.Audit",
+      "PaperIV.ConeAudit",
+      "PaperIV.PublicationIncrementAudit",
+      "A4S1.IndepAllAudit",
+      "ThreeRegime.AxiomCheck",
+      "FarExploration.AxiomCheck",
+      "PaperIV.CliqueTreeAudit",
+      "E17.ImprovedFarRoundingAudit",
+      "E17.ExplicitFarAudit",
+      "PaperIV.ExplicitThresholdAudit",
+      "ReleaseExportCheck",
+      "PaperIVEditorial.ConstructorBudgetAudit",
+      "ResearchAudit",
+      "FDCheck.FinalAudit",
+      "E35.Audit",
+      "FDCheck.ASCheck",
+      "E34.Audit",
+      "PaperIV.OptimalTemplateObstructionAudit"
+    ],
+    "export_checks": 224,
+    "axiom_record_count": 461,
+    "axiom_records_are_distinct_theorems": false
+  },
+  "intended_manuscript_directory": "01_manuscript/v1.2_full_rebuild_candidate",
+  "author_reconstruction": {
+    "first_segment": "03_reproducibility/full_rebuild_v12_20260929_r2",
+    "resumed_segment": "03_reproducibility/full_rebuild_v12_20260929_resume",
+    "protocol": "03_reproducibility/REBOOT_RECOVERY_v12_20260929.md",
+    "final_validation_status": "PASS_LOCAL_RECORDED_BUILD_REVALIDATION",
+    "evidence_manifest": {
+      "path": "03_reproducibility/full_rebuild_v12_20260929_seal/EVIDENCE_MANIFEST.json",
+      "sha256": "3168879f323605ca28dfb84d5cfaf6bffc80d13a22462ce4f9e4619d73c2e016",
+      "bytes": 257733
+    },
+    "unique_fresh_modules": 607,
+    "resumed_fresh_modules": 186,
+    "verified_first_segment_reuse": 421
+  },
+  "required_final_bindings": {
+    "manuscript_manifest": {
+      "path": "01_manuscript/v1.2_full_rebuild_candidate/MANUSCRIPT_MANIFEST.json",
+      "sha256": "2451d43bfacee76791a10bcd115100d6a7dfa68e4e3bda9de62032179151f8be",
+      "bytes": 16956
+    },
+    "manuscript_freeze_record": {
+      "path": "01_manuscript/v1.2_full_rebuild_candidate/MANUSCRIPT_FREEZE.json",
+      "sha256": "f0b866d1188c949f7e5b1b6817bb6cb6a8c277f547473e79d144038d41ab0163",
+      "bytes": 2148
+    },
+    "manuscript_archive": {
+      "path": "01_manuscript/frozen_manuscripts/piv-v12-manuscripts-2451d43bface.zip",
+      "sha256": "422b0be34cfec130eaece95d077975d4e01d7e3d4501461b8db64931e0d2e663",
+      "bytes": 16686023
+    },
+    "six_manuscript_files": [
+      {
+        "path": "01_manuscript/v1.2_full_rebuild_candidate/PAPER_IV_preprint_v1.2_en.md",
+        "sha256": "a501d53b527da22f20112db2b05917fb61f46dd8e080faf14b69349b240cc152",
+        "bytes": 211791
+      },
+      {
+        "path": "01_manuscript/v1.2_full_rebuild_candidate/PAPER_IV_preprint_v1.2_en.tex",
+        "sha256": "8068d4c6936cee54ad58d4e8e0bd12035c3aa2936101561647b6ab735a753995",
+        "bytes": 264183
+      },
+      {
+        "path": "01_manuscript/v1.2_full_rebuild_candidate/PAPER_IV_preprint_v1.2_en.pdf",
+        "sha256": "76a9ff8e3d9a02b8e745bcdd101b8272ff15430e285fc403c18b958c7073e667",
+        "bytes": 475288
+      },
+      {
+        "path": "01_manuscript/v1.2_full_rebuild_candidate/PAPER_IV_preprint_v1.2_es.md",
+        "sha256": "2b6f73bf09ef905ea2c92206ee254b4ae46e64f1a51533cb4d8bcdc4e68c7be9",
+        "bytes": 225939
+      },
+      {
+        "path": "01_manuscript/v1.2_full_rebuild_candidate/PAPER_IV_preprint_v1.2_es.tex",
+        "sha256": "356e844bf75d55505241f7dca00f38c79d98233a776bc191e267c2052575d6e5",
+        "bytes": 278601
+      },
+      {
+        "path": "01_manuscript/v1.2_full_rebuild_candidate/PAPER_IV_preprint_v1.2_es.pdf",
+        "sha256": "bfa83e0e9fa50f9d391af462bb6b24a786c68e7d39d47cf78786f09d6aa7afc4",
+        "bytes": 484998
+      }
+    ],
+    "author_full_build_evidence": [
+      {
+        "path": "03_reproducibility/full_rebuild_v12_20260929_seal/EVIDENCE_SEAL.json",
+        "sha256": "d0cfb1f1b19f876404e384b518e0d582186075086af2f71ee163c86c854773b5",
+        "bytes": 1495
+      },
+      {
+        "path": "03_reproducibility/full_rebuild_v12_20260929_seal/EVIDENCE_MANIFEST.json",
+        "sha256": "3168879f323605ca28dfb84d5cfaf6bffc80d13a22462ce4f9e4619d73c2e016",
+        "bytes": 257733
+      },
+      {
+        "path": "03_reproducibility/full_rebuild_v12_20260929_seal/FULL_REBUILD_EVIDENCE_v1.2.zip",
+        "sha256": "1e9ef82271149ed008c564911b0ea237b07ee84b25d2b9238b9d884293361dd0",
+        "bytes": 789094
+      }
+    ],
+    "supplementary_annex_reproduction_inputs": {
+      "files": [
+        {
+          "path": "05_formalization/LEAN_SOURCE_SNAPSHOT_v1.0.zip",
+          "sha256": "0a13c01cc4cf0198d5d138082d45b25df4c5ac0684c0ed85e7cc758575f8a7dd",
+          "bytes": 1582166
+        },
+        {
+          "path": "05_formalization/LEAN_BOUNDED_GAP_ANNEX_v1.0.zip",
+          "sha256": "2847a422865e06880d457ea806aae5b9f749d22359eff325349c09c01cb4837d",
+          "bytes": 103055
+        },
+        {
+          "path": "05_formalization/lean_v1.0_gap_annex/README.md",
+          "sha256": "b64873d3fb8d04fe279b0554cdc793b397ace86f9c54cedd3a95ade36b932c68",
+          "bytes": 1409
+        },
+        {
+          "path": "05_formalization/lean_v1.0_gap_annex/SOURCE_MANIFEST.sha256",
+          "sha256": "9b591789bb5c750668e6cd2161df314d7acb2423dcef4bb593d5e3a31bb2d2a0",
+          "bytes": 3810
+        },
+        {
+          "path": "05_formalization/lean_v1.0_freeze/lakefile.toml",
+          "sha256": "f9cb4c1b34a2800ae6a0c688a09514e4883454e7e9025ede0b974e9dad32c5bd",
+          "bytes": 1373
+        },
+        {
+          "path": "05_formalization/lean_v1.0_freeze/lake-manifest.json",
+          "sha256": "bac9b117fb6f817eb17a9dec751d91428b84775f3821546bbd085f691b4f3a8d",
+          "bytes": 3102
+        },
+        {
+          "path": "05_formalization/lean_v1.0_freeze/lean-toolchain",
+          "sha256": "db7bb24b756d745bbde83fe92718b51bd3625dae3701ba0f598d0eedcd3f3028",
+          "bytes": 25
+        }
+      ],
+      "method": "Overlay annex BoundedCliqueGap/ on a fresh extraction of the historical base; separate auditor project, serial after main build.",
+      "target": "BoundedCliqueGap.AxiomCheck",
+      "author_project_objects_permitted": false,
+      "dependencies": "Reuse pinned installed Mathlib/packages; verify both manifests; no installation."
+    },
+    "internal_audit_package": null,
+    "internal_audit_final_report": null,
+    "mandate_and_scope_hashes": [
+      {
+        "path": "02_validation/02_IA_ADVERSARIAL_AUDITS/EXTERNAL_ADVERSARIAL_AUDIT_REQUEST_v1.2.md",
+        "sha256": "d831158a3633242cbedb385201bacf0578e6ffa9b59986c96813ad7111ce17ad",
+        "bytes": 23863
+      },
+      {
+        "path": "02_validation/02_IA_ADVERSARIAL_AUDITS/LOCAL_INPUT_SCOPE_v1.2.json",
+        "sha256": "fa14bcae6cc7a36f2c1450d83a861f026feb03fa6d5df527606e5652375b47c2",
+        "bytes": 4063
+      },
+      {
+        "path": "02_validation/02_IA_ADVERSARIAL_AUDITS/README.md",
+        "sha256": "762f67204a438170f8430477a24aecc2e2be64f9addd96308df6f10616a75e9f",
+        "bytes": 4069
+      },
+      {
+        "path": "02_validation/02_IA_ADVERSARIAL_AUDITS/bind_v12_sealed_inputs.py",
+        "sha256": "12cac5b8e6e304ac5b47b56ee9bae8c5058935ba5ffaa2e4b9892c1378ad32f8",
+        "bytes": 6516
+      }
+    ]
+  },
+  "remaining_readiness_gates": [
+    "Complete the renewed v1.2 internal audit on these exact inputs and resolve blockers.",
+    "Bind the new internal-audit package/report and verify all final bindings.",
+    "Owner requests external execution; intake independently verifies the bound identity."
+  ],
+  "local_input_scope": "02_validation/02_IA_ADVERSARIAL_AUDITS/LOCAL_INPUT_SCOPE_v1.2.json",
+  "execution_order": [
+    "Readiness and E0 with lightweight environment checks",
+    "E7, E1/static E3, E2",
+    "E5, E6, preliminary E8 after independent first pass",
+    "PREBUILD_CHECKPOINT",
+    "E4 isolated main and annex build, complete E3/E8, recheck E0"
+  ],
+  "rules": [
+    "No second Mathlib or altered dependency pins.",
+    "No author project objects in external reproduction.",
+    "One heavy process at a time.",
+    "Stop on confirmed blockers; preserve evidence.",
+    "No publishing or external-service submissions authorized."
+  ],
+  "manuscript_freeze": "piv-v12-manuscripts-2451d43bface"
+}

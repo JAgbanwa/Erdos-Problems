@@ -1,0 +1,29 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 RequestProject/AFKS/Lemma41.lean -o /workspace/request-project/.lake/runner/lib/lean/RequestProject/AFKS/Lemma41.olean -i /workspace/request-project/.lake/runner/lib/lean/RequestProject/AFKS/Lemma41.ilean
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_nlinarith_1._boxed took 305ms
+interpretation of Batteries.Util.LibraryNote.libraryNoteExt took 109ms
+import took 7.24s
+.olean serialization took 251ms
+cumulative profiling times:
+	.olean serialization 251ms
+	attribute application 0.029ms
+	compilation (IR) 9.47ms
+	compilation (LCNF base) 8.32ms
+	compilation (LCNF mono) 3.73ms
+	congr simp thm 6.27ms
+	elaboration 32.9ms
+	fix level params 1.1ms
+	import 7.24s
+	initialization 48ms
+	instantiate metavars 14.4ms
+	interpretation 843ms
+	let-to-have transformation 0.0587ms
+	linting 14.2ms
+	norm_num 98.2ms
+	parsing 5.48ms
+	process pre-definitions 9.13ms
+	ring 15ms
+	share common exprs 7.82ms
+	simp 112ms
+	tactic execution 159ms
+	type checking 96.8ms
+	typeclass inference 693ms

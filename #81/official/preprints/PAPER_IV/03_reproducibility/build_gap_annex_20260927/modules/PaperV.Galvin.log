@@ -1,0 +1,118 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 PaperV/Galvin.lean -o /workspace/request-project/.lake/runner/lib/lean/PaperV/Galvin.olean -i /workspace/request-project/.lake/runner/lib/lean/PaperV/Galvin.ilean
+simp took 297ms
+grind took 144ms
+simp took 112ms
+simp took 104ms
+grind took 423ms
+PaperV/Galvin.lean:50:5: warning: unused variable `hirr`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+simp took 104ms
+simp took 144ms
+simp took 342ms
+simp took 296ms
+simp took 100ms
+PaperV/Galvin.lean:125:5: warning: unused variable `hr`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+PaperV/Galvin.lean:126:5: warning: unused variable `hPB`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+simp took 238ms
+simp took 240ms
+simp took 413ms
+simp took 423ms
+simp took 255ms
+simp took 169ms
+simp took 329ms
+simp took 105ms
+simp took 104ms
+simp took 102ms
+grind took 441ms
+grind took 380ms
+grind took 716ms
+PaperV/Galvin.lean:199:0: warning: automatically included section variable(s) unused in theorem `PaperV.Galvin.matching_saturates_max_left`:
+  [Fintype R]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype R] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_nlinarith_1._boxed took 119ms
+simp took 119ms
+simp took 108ms
+simp took 290ms
+simp took 107ms
+simp took 997ms
+simp took 118ms
+simp took 204ms
+PaperV/Galvin.lean:200:5: warning: unused variable `hdegU`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+simp took 225ms
+simp took 107ms
+simp took 540ms
+grind took 153ms
+grind took 163ms
+simp took 474ms
+simp took 144ms
+simp took 653ms
+simp took 345ms
+simp took 662ms
+simp took 357ms
+simp took 164ms
+simp took 109ms
+simp took 648ms
+simp took 325ms
+PaperV/Galvin.lean:376:155: warning: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+simp took 762ms
+simp took 284ms
+simp took 501ms
+simp took 169ms
+interpretation of Mathlib.Tactic.Tauto._aux_Mathlib_Tactic_Tauto___elabRules_Mathlib_Tactic_Tauto_tauto_1._boxed took 179ms
+simp took 561ms
+simp took 535ms
+simp took 184ms
+simp took 133ms
+simp took 553ms
+simp took 184ms
+simp took 456ms
+import took 2.73s
+.olean serialization took 195ms
+cumulative profiling times:
+	.olean serialization 195ms
+	aesop 354ms
+	attribute application 0.215ms
+	blocked (unaccounted) 171s
+	compilation (IR) 25.5ms
+	compilation (LCNF base) 33.7ms
+	compilation (LCNF mono) 12.5ms
+	congr simp thm 260ms
+	elaboration 173ms
+	fix level params 11.1ms
+	grind 3.31s
+	grind ac 5.24ms
+	grind canon 278ms
+	grind cutsat 18.8ms
+	grind ematch 1.72s
+	grind linarith 0.484ms
+	grind mark subsingleton 218ms
+	grind ring 47.9ms
+	grind simp 2.46s
+	grind typeclass inference 1.32s
+	import 2.73s
+	initialization 35.9ms
+	instantiate metavars 99.4ms
+	interpretation 1.06s
+	let-to-have transformation 0.362ms
+	linting 69.6ms
+	norm_num 2.18ms
+	parsing 25.3ms
+	process pre-definitions 44.1ms
+	ring 14.2ms
+	share common exprs 31.7ms
+	simp 24.9s
+	tactic execution 1s
+	type checking 643ms
+	typeclass inference 39.6s

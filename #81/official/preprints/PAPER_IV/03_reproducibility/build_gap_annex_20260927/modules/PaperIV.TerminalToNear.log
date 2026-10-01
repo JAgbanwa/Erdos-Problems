@@ -1,0 +1,23 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 PaperIV/TerminalToNear.lean -o /workspace/request-project/.lake/runner/lib/lean/PaperIV/TerminalToNear.olean -i /workspace/request-project/.lake/runner/lib/lean/PaperIV/TerminalToNear.ilean
+import took 3.5s
+cumulative profiling times:
+	.olean serialization 42.2ms
+	attribute application 0.029ms
+	congr simp thm 2.47ms
+	elaboration 18.7ms
+	fix level params 0.261ms
+	import 3.5s
+	initialization 37.9ms
+	instantiate metavars 0.183ms
+	interpretation 234ms
+	let-to-have transformation 0.0553ms
+	linting 3.21ms
+	norm_num 10.6ms
+	parsing 2.02ms
+	process pre-definitions 1.53ms
+	ring 5.31ms
+	share common exprs 1.14ms
+	simp 11.5ms
+	tactic execution 7.73ms
+	type checking 13.7ms
+	typeclass inference 73.1ms

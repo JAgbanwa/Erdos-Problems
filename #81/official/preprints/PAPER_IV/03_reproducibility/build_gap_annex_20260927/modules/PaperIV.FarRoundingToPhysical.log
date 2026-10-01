@@ -1,0 +1,39 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 PaperIV/FarRoundingToPhysical.lean -o /workspace/request-project/.lake/runner/lib/lean/PaperIV/FarRoundingToPhysical.olean -i /workspace/request-project/.lake/runner/lib/lean/PaperIV/FarRoundingToPhysical.ilean
+PaperIV/FarRoundingToPhysical.lean:22:0: warning: automatically included section variable(s) unused in theorem `PaperIV.FarRoundingToPhysical.isPiece_of_isItem`:
+  [Fintype V]
+  [DecidableEq V]
+  [DecidableRel G.Adj]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] [DecidableEq V] [DecidableRel G.Adj] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+PaperIV/FarRoundingToPhysical.lean:74:0: warning: automatically included section variable(s) unused in theorem `PaperIV.FarRoundingToPhysical.physical_gain_eq`:
+  [Fintype V]
+  [DecidableRel G.Adj]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] [DecidableRel G.Adj] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+import took 3.17s
+cumulative profiling times:
+	.olean serialization 48.3ms
+	attribute application 0.0764ms
+	compilation (IR) 0.206ms
+	compilation (LCNF base) 0.477ms
+	compilation (LCNF mono) 0.141ms
+	congr simp thm 4.87ms
+	elaboration 27.7ms
+	fix level params 0.252ms
+	import 3.17s
+	initialization 36.7ms
+	instantiate metavars 0.447ms
+	interpretation 185ms
+	let-to-have transformation 0.0772ms
+	linting 4.99ms
+	parsing 4.43ms
+	process pre-definitions 3.53ms
+	share common exprs 0.598ms
+	simp 14ms
+	tactic execution 27ms
+	type checking 4.5ms
+	typeclass inference 19.9ms

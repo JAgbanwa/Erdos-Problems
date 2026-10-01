@@ -1,0 +1,29 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 PaperIV/SplitMixedGap.lean -o /workspace/request-project/.lake/runner/lib/lean/PaperIV/SplitMixedGap.olean -i /workspace/request-project/.lake/runner/lib/lean/PaperIV/SplitMixedGap.ilean
+PaperIV/SplitMixedGap.lean:68:8: warning: automatically included section variable(s) unused in theorem `_private.PaperIV.SplitMixedGap.0.PaperIV.SplitMixedGap.innerPart_eq_filter`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+import took 3.14s
+cumulative profiling times:
+	.olean serialization 63.3ms
+	attribute application 0.068ms
+	congr simp thm 1.45ms
+	elaboration 36ms
+	fix level params 0.583ms
+	import 3.14s
+	initialization 38.2ms
+	instantiate metavars 1.54ms
+	interpretation 247ms
+	let-to-have transformation 0.124ms
+	linting 10.7ms
+	norm_num 1.76ms
+	parsing 6.41ms
+	process pre-definitions 7.93ms
+	ring 2.14ms
+	share common exprs 1.9ms
+	simp 5.49ms
+	tactic execution 142ms
+	type checking 108ms
+	typeclass inference 132ms

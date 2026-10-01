@@ -1,0 +1,127 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+\documentclass[
+]{article}
+\usepackage{xcolor}
+\usepackage{amsmath,amssymb}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math} % this also loads fontspec
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+\usepackage{lmodern}
+\ifPDFTeX\else
+  % xetex/luatex font selection
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{longtable,booktabs,array}
+\usepackage{caption}
+\captionsetup[table]{skip=6pt}
+\newcounter{none} % for unnumbered tables
+\usepackage{calc} % for calculating minipage widths
+% Correct order of tables after \paragraph or \subparagraph
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd\longtable{\par}{\if@noskipsec\mbox{}\fi\par}{}{}
+\makeatother
+% Allow footnotes in longtable head/foot
+\IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
+\makesavenoteenv{longtable}
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\usepackage{bookmark}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same}
+% fallback for those not using the hyperref driver hyperxmp:
+\makeatletter
+\@ifundefined{xmpquote}{\newcommand{\xmpquote}[1]{#1}}{}
+\makeatother
+\hypersetup{
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+
+\author{}
+\date{}
+
+\begin{document}
+
+\section{Informe de puerta E0 --- run\_v1.22\_r3 (Paper IV
+v1.22-r3)}\label{informe-de-puerta-e0--run_v122_r3-paper-iv-v122-r3}
+
+Veredicto actual: \textbf{PASS}. Evidencia: \texttt{20\_EVIDENCE/E0/}.
+Auditor: Claude Opus 5.5, misma sesión que las ejecuciones anteriores;
+no se ejecutó Lean.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section{E0 --- Identity (r3)}\label{e0--identity-r3}
+
+Script: \texttt{10\_SCRIPTS/e0\_v122r3.py} (read-only). It runs twice:
+\texttt{E0\_INITIAL.json} before the review and \texttt{E0\_FINAL.json}
+after it. The comparison between the two runs is in
+\texttt{30\_REPORT/FINAL\_CONSOLIDATED\_AUDIT\_REPORT.md} §11.
+
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}ll@{}}
+\toprule\noalign{}
+Check & Result \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+\texttt{AUDIT\_TARGET\_v1.22\_r3.json} (df89c3dd\ldots) vs. its sidecar
+& match \\
+r3 manifest (82217fe3\ldots), r3 package (c1acd866\ldots), mandate
+(abfcaec9\ldots), source manifest (fb459343\ldots), source ZIP
+(cb274145\ldots), annex (2847a422\ldots), base target r2
+(f9317763\ldots) & hash and bytes match \\
+Earlier evidence: r2, r1, v1.21 and v1.2 ZIPs, source ZIP, annex & hash
+and bytes match \\
+r3 manifest vs. directory: 226 files & 0 mismatches. Excluded by
+declaration: the manifest and its sidecar, the ZIP and its sidecar,
+\texttt{.aux}, \texttt{\_\_pycache\_\_} \\
+r3 ZIP: 228 members (226 + manifest + sidecar) & CRC OK; no unsafe
+paths; no missing members; 0 hash mismatches; the 2 extra members equal
+the files on disk \\
+Other ZIPs in r3 & none \\
+EN/ES MD, TeX and PDF vs. r2 & \textbf{all six differ, as declared}.
+Byte identity is recorded but not required (mandate §1). The protected
+content is checked in E6. \\
+r3 figures vs. r2 (figures/, figures\_en/; 18 files) &
+\textbf{identical}; no file missing \\
+r2 and r1 comparison cuts & directory = manifest (0f\ldots, d9\ldots);
+unchanged \\
+Lean: 615/615 entries, no extras; source ZIP with 615 members, CRC OK, =
+manifest & OK \\
+Annex: 40 members, CRC OK & OK \\
+run\_v1.2\_r1, run\_v1.21\_r1, run\_v1.22\_r1, run\_v1.22\_r2 & 1097 /
+340 / 188 / 182 manifest files unchanged; ZIP sidecars and CRC OK \\
+\end{longtable}
+}
+
+\textbf{E0 verdict (r3): PASS.}
+
+\end{document}

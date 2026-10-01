@@ -1,0 +1,79 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 PaperIV/RC01CanonicalNormalization.lean -o /workspace/request-project/.lake/runner/lib/lean/PaperIV/RC01CanonicalNormalization.olean -i /workspace/request-project/.lake/runner/lib/lean/PaperIV/RC01CanonicalNormalization.ilean
+PaperIV/RC01CanonicalNormalization.lean:36:0: warning: automatically included section variable(s) unused in theorem `PaperIV.RC01CanonicalNormalization.normalizedCoefficient_nonneg`:
+  [Fintype V]
+  [DecidableEq V]
+  [Fintype Pat]
+  [DecidableEq Pat]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] [DecidableEq V] [Fintype Pat] [DecidableEq Pat] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+PaperIV/RC01CanonicalNormalization.lean:58:8: warning: automatically included section variable(s) unused in theorem `_private.PaperIV.RC01CanonicalNormalization.0.PaperIV.RC01CanonicalNormalization.sum_indicator_eq_of_subset`:
+  [Fintype Pat]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype Pat] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+PaperIV/RC01CanonicalNormalization.lean:72:0: warning: automatically included section variable(s) unused in theorem `PaperIV.RC01CanonicalNormalization.normalized_load_le_one`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+PaperIV/RC01CanonicalNormalization.lean:165:0: warning: automatically included section variable(s) unused in theorem `PaperIV.RC01CanonicalNormalization.referenceCoefficient_nonneg`:
+  [Fintype Pat]
+  [DecidableEq Pat]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype Pat] [DecidableEq Pat] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+PaperIV/RC01CanonicalNormalization.lean:170:0: warning: automatically included section variable(s) unused in theorem `PaperIV.RC01CanonicalNormalization.reference_load_le_one`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+PaperIV/RC01CanonicalNormalization.lean:290:0: warning: automatically included section variable(s) unused in theorem `PaperIV.RC01CanonicalNormalization.budgetCoefficient_nonneg`:
+  [Fintype Pat]
+  [DecidableEq Pat]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype Pat] [DecidableEq Pat] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+PaperIV/RC01CanonicalNormalization.lean:336:16: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+PaperIV/RC01CanonicalNormalization.lean:336:16: warning: 'ring' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+PaperIV/RC01CanonicalNormalization.lean:340:0: warning: automatically included section variable(s) unused in theorem `PaperIV.RC01CanonicalNormalization.budget_load_le_one`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+import took 3.29s
+cumulative profiling times:
+	.olean serialization 92.5ms
+	attribute application 0.218ms
+	compilation (IR) 0.443ms
+	compilation (LCNF base) 0.487ms
+	compilation (LCNF mono) 0.183ms
+	congr simp thm 11.5ms
+	elaboration 178ms
+	fix level params 1.45ms
+	import 3.29s
+	initialization 38.7ms
+	instantiate metavars 2.8ms
+	interpretation 723ms
+	let-to-have transformation 0.601ms
+	linting 32.5ms
+	norm_num 35.7ms
+	parsing 18.8ms
+	process pre-definitions 36ms
+	ring 38.3ms
+	share common exprs 8.88ms
+	simp 81.2ms
+	tactic execution 357ms
+	type checking 119ms
+	typeclass inference 718ms

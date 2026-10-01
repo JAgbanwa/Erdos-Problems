@@ -1,0 +1,95 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+\documentclass[
+]{article}
+\usepackage{xcolor}
+\usepackage{amsmath,amssymb}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math} % this also loads fontspec
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+\usepackage{lmodern}
+\ifPDFTeX\else
+  % xetex/luatex font selection
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\usepackage{bookmark}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same}
+% fallback for those not using the hyperref driver hyperxmp:
+\makeatletter
+\@ifundefined{xmpquote}{\newcommand{\xmpquote}[1]{#1}}{}
+\makeatother
+\hypersetup{
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+
+\author{}
+\date{}
+
+\begin{document}
+
+\section{Informe de puerta E7 --- run\_v1.22\_r2 (Paper IV
+v1.22-r2)}\label{informe-de-puerta-e7--run_v122_r2-paper-iv-v122-r2}
+
+Veredicto actual: \textbf{PASS}. Evidencia: \texttt{20\_EVIDENCE/E7/}.
+Auditor: Claude Opus 5.5, misma sesión que las ejecuciones anteriores;
+no se ejecutó Lean.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section{E7 --- Literatura y atribución
+(r2)}\label{e7--literatura-y-atribuciuxf3n-r2}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Bibliografía.} La sección de referencias ES es idéntica a r1,
+  tanto en el MD como en el texto del PDF (\texttt{E6\_R2\_DELTA.json});
+  la inglesa es byte-idéntica.
+\item
+  \textbf{Títulos citados.} Los que contienen «packing(s)»/«matching»
+  ({[}6{]}, {[}7{]}, {[}9{]}, {[}12{]}) siguen sin traducir, como
+  corresponde.
+\item
+  \textbf{Literatura.} No se cita literatura nueva ni surge ninguna
+  cuestión nueva, así que no consulté fuentes externas en este ciclo.
+\item
+  \textbf{Herencia.} run\_v1.2\_r1 E7 (PASS\_WITH\_MINOR\_FINDINGS;
+  versiones posteriores de {[}15{]}, {[}22{]} y {[}5{]} comprobadas en
+  su fecha) → run\_v1.21\_r1 PASS (X-06\ldots X-11 resueltos) →
+  run\_v1.22\_r1 PASS (NEW-02 resuelto; ortografía de Preference Labs).
+  Las comparaciones bibliográficas se conservan con su versión y fecha
+  originales; no se trasladan a versiones posteriores.
+\end{itemize}
+
+\textbf{Veredicto E7 (r2): PASS} --- heredado y revalidado por
+identidad.
+
+\end{document}

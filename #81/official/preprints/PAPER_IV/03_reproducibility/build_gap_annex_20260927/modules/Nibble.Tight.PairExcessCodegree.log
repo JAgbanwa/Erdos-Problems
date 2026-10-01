@@ -1,0 +1,27 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 Nibble/Tight/PairExcessCodegree.lean -o /workspace/request-project/.lake/runner/lib/lean/Nibble/Tight/PairExcessCodegree.olean -i /workspace/request-project/.lake/runner/lib/lean/Nibble/Tight/PairExcessCodegree.ilean
+import took 4.49s
+.olean serialization took 103ms
+cumulative profiling times:
+	.olean serialization 103ms
+	attribute application 0.091ms
+	compilation (IR) 1.89ms
+	compilation (LCNF base) 2.17ms
+	compilation (LCNF mono) 0.81ms
+	congr simp thm 6.18ms
+	elaboration 107ms
+	fix level params 2.28ms
+	import 4.49s
+	initialization 44.8ms
+	instantiate metavars 20.6ms
+	interpretation 816ms
+	let-to-have transformation 0.172ms
+	linting 49.3ms
+	norm_num 14.5ms
+	parsing 28ms
+	process pre-definitions 27.3ms
+	ring 91.3ms
+	share common exprs 34.9ms
+	simp 91.6ms
+	tactic execution 409ms
+	type checking 96.8ms
+	typeclass inference 691ms

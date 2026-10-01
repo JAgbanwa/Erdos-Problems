@@ -1,0 +1,174 @@
+{
+ "tests": [
+  {
+   "id": "C2-1",
+   "claim": "33δ≤v u² a3³ and 138δ≤v u² a4³ with a3≥a³/2, a4≥a⁶/2 for 0<a≤1/10 (grid incl. η0 schedule)",
+   "pass": true,
+   "negative_control": "constant 138 replaced by 138*17 (must fail at a=1/10)",
+   "negative_rejected": true,
+   "note": ""
+  },
+  {
+   "id": "C2-2",
+   "claim": "138δ = a^21/16 identity",
+   "pass": true,
+   "negative_control": "138/2208 = 1/8",
+   "negative_rejected": true,
+   "note": ""
+  },
+  {
+   "id": "C2-3",
+   "claim": "deleted copies: 3 pairs × 11 = 33; 6 pairs × 23 = 138",
+   "pass": true,
+   "negative_control": null,
+   "negative_rejected": null,
+   "note": ""
+  },
+  {
+   "id": "C3-1",
+   "claim": "β0 ≥ 2^-66",
+   "pass": true,
+   "negative_control": "β0 ≥ 2^-65",
+   "negative_rejected": true,
+   "note": ""
+  },
+  {
+   "id": "C3-2",
+   "claim": "L_T=-log β0 ≤ 66 log2 ≤ 46",
+   "pass": true,
+   "negative_control": null,
+   "negative_rejected": null,
+   "note": ""
+  },
+  {
+   "id": "C3-3",
+   "claim": "M_T ≤ 5153",
+   "pass": true,
+   "negative_control": "M_T ≤ 5100",
+   "negative_rejected": true,
+   "note": ""
+  },
+  {
+   "id": "C3-4",
+   "claim": "8·5153+1 ≤ 59480 log2  (⇒ γ_T ≥ 2^-59485)",
+   "pass": true,
+   "negative_control": "8·5153+1 ≤ 59470 log2",
+   "negative_rejected": true,
+   "note": ""
+  },
+  {
+   "id": "C3-5",
+   "claim": "T_T ≤ 5153·2^a0+1 ≤ 2^(a0+13)",
+   "pass": true,
+   "negative_control": null,
+   "negative_rejected": null,
+   "note": ""
+  },
+  {
+   "id": "C3-6",
+   "claim": "4a0+5 ≤ 2^18",
+   "pass": true,
+   "negative_control": "4a0+5 ≤ 2^17",
+   "negative_rejected": true,
+   "note": ""
+  },
+  {
+   "id": "C3-7",
+   "claim": "(4a0+5)(a0+13 exponent) : 2^18·2^(a0+13)=2^(a0+31)=Y",
+   "pass": true,
+   "negative_control": null,
+   "negative_rejected": null,
+   "note": ""
+  },
+  {
+   "id": "C3-8",
+   "claim": "(12/7)(5153+1/8) ≤ 12748 log2",
+   "pass": true,
+   "negative_control": "(12/7)(5153+1/8) ≤ 12740 log2",
+   "negative_rejected": true,
+   "note": ""
+  },
+  {
+   "id": "C3-9",
+   "claim": "(1-x) ≥ 1/(1+2x) for 0≤x≤1/2 (exact at sampled rationals)",
+   "pass": true,
+   "negative_control": null,
+   "negative_rejected": null,
+   "note": ""
+  },
+  {
+   "id": "C3-10",
+   "claim": "D0 ≤ 2^(a0+146)",
+   "pass": true,
+   "negative_control": "D0 ≤ 2^(a0+144)",
+   "negative_rejected": true,
+   "note": ""
+  },
+  {
+   "id": "C3-11",
+   "claim": "69+134+17=220 and 1/(16384·7) ≥ 2^-17",
+   "pass": true,
+   "negative_control": null,
+   "negative_rejected": null,
+   "note": ""
+  },
+  {
+   "id": "C3-12",
+   "claim": "Z = 3a0+220+12749 = 191424",
+   "pass": true,
+   "negative_control": "Z=191432",
+   "negative_rejected": true,
+   "note": ""
+  },
+  {
+   "id": "C3-13",
+   "claim": "U = Y+Z+8 = Y+191432 (256=2^8) and 4(1+r²)=200≤256-2",
+   "pass": true,
+   "negative_control": null,
+   "negative_rejected": null,
+   "note": ""
+  },
+  {
+   "id": "C3-14",
+   "claim": "d0 ≤ 2^(a0+146+12749) ≤ 2^U (trivial vs Y)",
+   "pass": true,
+   "negative_control": null,
+   "negative_rejected": null,
+   "note": ""
+  },
+  {
+   "id": "C3-15",
+   "claim": "2·10^17·392 ≤ 2^67",
+   "pass": true,
+   "negative_control": "2·10^17·392 ≤ 2^66",
+   "negative_rejected": true,
+   "note": ""
+  },
+  {
+   "id": "C3-16",
+   "claim": "U+67 ≤ 2^59517 (U=2^59516+191432)",
+   "pass": true,
+   "negative_control": null,
+   "negative_rejected": null,
+   "note": ""
+  },
+  {
+   "id": "E1-1",
+   "claim": "normalization identities and bounds (εn²=λ²/1e41, nλ=ρ², exterior ≤2ρ²/1e31, |Y|≤4ρ/1e27, light missing <ρ/200, D≤(ρ/1e13)²)",
+   "pass": true,
+   "negative_control": null,
+   "negative_rejected": null,
+   "note": ""
+  },
+  {
+   "id": "E2d-1",
+   "claim": "(E.2d) error 2(ω+s)x + x(2νρ/40 + xλ/1e10) ≤ n/9",
+   "pass": true,
+   "negative_control": "same error ≤ n/12",
+   "negative_rejected": true,
+   "note": ""
+  }
+ ],
+ "all_pass": true,
+ "all_negatives_rejected": true
+}

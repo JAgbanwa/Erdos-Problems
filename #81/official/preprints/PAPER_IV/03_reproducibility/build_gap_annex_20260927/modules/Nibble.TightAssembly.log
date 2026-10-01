@@ -1,0 +1,45 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 Nibble/TightAssembly.lean -o /workspace/request-project/.lake/runner/lib/lean/Nibble/TightAssembly.olean -i /workspace/request-project/.lake/runner/lib/lean/Nibble/TightAssembly.ilean
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_nlinarith_1._boxed took 222ms
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_nlinarith_1._boxed took 229ms
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_nlinarith_1._boxed took 283ms
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_nlinarith_1._boxed took 355ms
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_linarith_1._boxed took 141ms
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_linarith_1._boxed took 101ms
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_linarith_1._boxed took 102ms
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_linarith_1._boxed took 140ms
+interpretation of Mathlib.Tactic.FieldSimp._aux_Mathlib_Tactic_FieldSimp___elabRules_Mathlib_Tactic_FieldSimp_fieldSimp_1._boxed took 505ms
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_linarith_1._boxed took 155ms
+interpretation of Mathlib.Meta.Positivity.evalNatCast._lam_1._boxed took 323ms
+interpretation of Mathlib.Tactic.FieldSimp._aux_Mathlib_Tactic_FieldSimp___elabRules_Mathlib_Tactic_FieldSimp_fieldSimp_1._boxed took 125ms
+interpretation of Mathlib.Meta.Positivity.evalNatCast._lam_1._boxed took 388ms
+interpretation of Mathlib.Tactic.FieldSimp._aux_Mathlib_Tactic_FieldSimp___elabRules_Mathlib_Tactic_FieldSimp_fieldSimp_1._boxed took 126ms
+instantiate metavars took 419ms
+type checking took 152ms
+linting took 112ms
+import took 3.94s
+.olean serialization took 174ms
+cumulative profiling times:
+	.olean serialization 174ms
+	attribute application 0.15ms
+	blocked (unaccounted) 11.4ms
+	compilation (IR) 18.8ms
+	compilation (LCNF base) 17.5ms
+	compilation (LCNF mono) 7.74ms
+	congr simp thm 55.3ms
+	elaboration 194ms
+	fix level params 7.33ms
+	import 3.94s
+	initialization 38.1ms
+	instantiate metavars 425ms
+	interpretation 4.89s
+	let-to-have transformation 0.281ms
+	linting 142ms
+	norm_num 495ms
+	parsing 24.7ms
+	process pre-definitions 85.4ms
+	ring 234ms
+	share common exprs 117ms
+	simp 929ms
+	tactic execution 816ms
+	type checking 263ms
+	typeclass inference 2.53s

@@ -1,0 +1,128 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+\documentclass[
+]{article}
+\usepackage{xcolor}
+\usepackage{amsmath,amssymb}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math} % this also loads fontspec
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+\usepackage{lmodern}
+\ifPDFTeX\else
+  % xetex/luatex font selection
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{longtable,booktabs,array}
+\usepackage{caption}
+\captionsetup[table]{skip=6pt}
+\newcounter{none} % for unnumbered tables
+\usepackage{calc} % for calculating minipage widths
+% Correct order of tables after \paragraph or \subparagraph
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd\longtable{\par}{\if@noskipsec\mbox{}\fi\par}{}{}
+\makeatother
+% Allow footnotes in longtable head/foot
+\IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
+\makesavenoteenv{longtable}
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\usepackage{bookmark}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same}
+% fallback for those not using the hyperref driver hyperxmp:
+\makeatletter
+\@ifundefined{xmpquote}{\newcommand{\xmpquote}[1]{#1}}{}
+\makeatother
+\hypersetup{
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+
+\author{}
+\date{}
+
+\begin{document}
+
+\section{Informe de puerta E5 --- run\_v1.22\_r2 (Paper IV
+v1.22-r2)}\label{informe-de-puerta-e5--run_v122_r2-paper-iv-v122-r2}
+
+Veredicto actual: \textbf{PASS}. Evidencia: \texttt{20\_EVIDENCE/E5/}.
+Auditor: Claude Opus 5.5, misma sesión que las ejecuciones anteriores;
+no se ejecutó Lean.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section{E5 --- Falsación y aritmética exacta
+(r2)}\label{e5--falsaciuxf3n-y-aritmuxe9tica-exacta-r2}
+
+El delta r2 no toca ninguna fórmula ni constante (E6), así que no hace
+falta ninguna prueba nueva. Para confirmar la integridad de la evidencia
+heredada repetí, sin Lean, los scripts aritméticos de run\_v1.22\_r1:
+
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}llll@{}}
+\toprule\noalign{}
+Conjunto & Origen & r2 & Resultado \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+T01--T24 (24 pruebas; Certo: certificado de partición exacta de 6 piezas
+de K3∨I3, solo factibilidad) & run\_v1.2\_r1 E5 & heredado (texto
+cubierto idéntico) & 24/24 PASS, controles negativos predeclarados
+rechazados \\
+21 comprobaciones v1.21 (C.2, calendario C.3, E.1, E.2d) &
+run\_v1.21\_r1 & \textbf{repetido}
+(\texttt{e5\_v121\_numerics\_RERUN.json}) & todas PASS, todos los
+negativos rechazados; idéntico a r1 \\
+C3a--C3n (14 comprobaciones del C.3 nuevo) & run\_v1.22\_r1 &
+\textbf{repetido} (\texttt{e5\_v122\_c3\_RERUN.json}) & 14/14 PASS; 7 de
+los 8 negativos en línea rechazados (C3m mal especificado, C2-01);
+idéntico a r1 \\
+Negativo corregido de C3m & run\_v1.22\_r1 & \textbf{repetido}
+(\texttt{e5\_v122\_c3\_negfix\_RERUN.json}; C3-03) & rechazado;
+idéntico \\
+Negativos complementarios para C3c, C3e, C3g, C3j, C3l, C3n &
+run\_v1.22\_r1 & \textbf{repetido} & 6/6 rechazados; idéntico \\
+\end{longtable}
+}
+
+\textbf{Recuentos sin doble suma.} Son 24 pruebas originales + 21 + 14
+comprobaciones = 59 comprobaciones distintas, más 1 + 6 controles
+negativos añadidos. Las repeticiones de r2 no son comprobaciones nuevas.
+
+\textbf{Tipo de evidencia.} C3a--C3g son identidades y desigualdades
+exactas en los parámetros fijados. C3h, C3i y C3l--C3n son una regresión
+finita sobre rangos de lemas universales elementales; su prueba
+universal está en E2 (run\_v1.22\_r1) y en los teoremas E19, cubiertos
+por E4.
+
+\textbf{Veredicto E5 (r2): PASS} --- heredado y revalidado por
+identidad, con repetición.
+
+\end{document}

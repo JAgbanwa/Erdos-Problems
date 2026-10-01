@@ -1,0 +1,40 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 MixedRounding/Lift.lean -o /workspace/request-project/.lake/runner/lib/lean/MixedRounding/Lift.olean -i /workspace/request-project/.lake/runner/lib/lean/MixedRounding/Lift.ilean
+MixedRounding/Lift.lean:54:0: warning: automatically included section variable(s) unused in theorem `MixedRounding.filter_isDiag_sym2`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+MixedRounding/Lift.lean:109:0: warning: automatically included section variable(s) unused in theorem `MixedRounding.two_le_card_of_isItem`:
+  [Fintype V]
+  [DecidableEq V]
+  [DecidableRel G.Adj]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] [DecidableEq V] [DecidableRel G.Adj] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+import took 2.96s
+cumulative profiling times:
+	.olean serialization 49ms
+	attribute application 0.164ms
+	compilation (IR) 0.865ms
+	compilation (LCNF base) 1.44ms
+	compilation (LCNF mono) 1.21ms
+	congr simp thm 3.13ms
+	elaboration 53.8ms
+	fix level params 1.14ms
+	import 2.96s
+	initialization 40.3ms
+	instantiate metavars 3.95ms
+	interpretation 239ms
+	let-to-have transformation 0.172ms
+	linting 20.9ms
+	norm_num 0.452ms
+	parsing 8.56ms
+	process pre-definitions 9.74ms
+	ring 2.51ms
+	share common exprs 2.7ms
+	simp 15.5ms
+	tactic execution 136ms
+	type checking 46.4ms
+	typeclass inference 93.9ms

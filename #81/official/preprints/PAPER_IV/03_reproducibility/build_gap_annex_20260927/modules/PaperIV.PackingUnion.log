@@ -1,0 +1,21 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 PaperIV/PackingUnion.lean -o /workspace/request-project/.lake/runner/lib/lean/PaperIV/PackingUnion.olean -i /workspace/request-project/.lake/runner/lib/lean/PaperIV/PackingUnion.ilean
+import took 3.02s
+cumulative profiling times:
+	.olean serialization 30ms
+	attribute application 0.113ms
+	congr simp thm 0.922ms
+	elaboration 40.5ms
+	fix level params 0.381ms
+	import 3.02s
+	initialization 40.2ms
+	instantiate metavars 0.938ms
+	interpretation 173ms
+	let-to-have transformation 0.0977ms
+	linting 8.86ms
+	parsing 4.51ms
+	process pre-definitions 2.13ms
+	share common exprs 0.791ms
+	simp 6.31ms
+	tactic execution 34.5ms
+	type checking 6.7ms
+	typeclass inference 37.2ms

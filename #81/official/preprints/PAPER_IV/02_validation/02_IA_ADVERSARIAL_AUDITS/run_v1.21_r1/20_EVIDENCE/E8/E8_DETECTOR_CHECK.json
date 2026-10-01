@@ -1,0 +1,82 @@
+{
+ "pattern": "sorryAx|declaration\\s+uses\\s+[`'\\\"‘’“”]*sorry\\b",
+ "cases": {
+  "real_captured_negative_log": {
+   "expected": true,
+   "got": true,
+   "ok": true
+  },
+  "backticks": {
+   "expected": true,
+   "got": true,
+   "ok": true
+  },
+  "single_quotes": {
+   "expected": true,
+   "got": true,
+   "ok": true
+  },
+  "double_quotes": {
+   "expected": true,
+   "got": true,
+   "ok": true
+  },
+  "curly": {
+   "expected": true,
+   "got": true,
+   "ok": true
+  },
+  "sorryAx_axiom_list": {
+   "expected": true,
+   "got": true,
+   "ok": true
+  },
+  "two_spaces_newline": {
+   "expected": true,
+   "got": true,
+   "ok": true
+  },
+  "clean_axioms": {
+   "expected": false,
+   "got": false,
+   "ok": true
+  },
+  "word_sorry_in_identifier_not_warning": {
+   "expected": false,
+   "got": false,
+   "ok": true
+  },
+  "sorry_prefix_word": {
+   "expected": false,
+   "got": false,
+   "ok": true
+  }
+ },
+ "all_cases_ok": true,
+ "scan": {
+  "C:\\Users\\jtraverso\\e81p4-publish\\preprints\\PAPER_IV\\02_validation\\02_IA_ADVERSARIAL_AUDITS\\run_v1.2_r1\\10_LOGS\\E4_main\\modules": {
+   "logs": 608,
+   "detector_hits": [],
+   "broad_sorry_hits": []
+  },
+  "C:\\Users\\jtraverso\\e81p4-publish\\preprints\\PAPER_IV\\02_validation\\02_IA_ADVERSARIAL_AUDITS\\run_v1.2_r1\\10_LOGS\\E4_annex\\modules": {
+   "logs": 50,
+   "detector_hits": [],
+   "broad_sorry_hits": []
+  },
+  "C:\\Users\\jtraverso\\e81p4-publish\\preprints\\PAPER_IV\\03_reproducibility\\full_rebuild_v12_20260929_r2\\combined\\modules": {
+   "logs": 422,
+   "detector_hits": [],
+   "broad_sorry_hits": []
+  },
+  "C:\\Users\\jtraverso\\e81p4-publish\\preprints\\PAPER_IV\\03_reproducibility\\full_rebuild_v12_20260929_resume\\combined\\modules": {
+   "logs": 186,
+   "detector_hits": [],
+   "broad_sorry_hits": []
+  }
+ },
+ "frozen_runner_sha256": {
+  "tools/paperiv_build.py": "8247989347985ee5973fdc937e60bfa4be3d79880597d47bb257cf8f6f4178a9",
+  "tools/audit_publication.py": "0a7e66a2e3cd3c7e9d90ea6475fb9ac9f89e55cb17e6de8c14001a11714f02cb"
+ }
+}

@@ -1,0 +1,13 @@
+$ c:\Users\jtraverso\.elan\toolchains\leanprover--lean4---v4.28.0\bin\lean.exe -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false PaperIV/RC01DeviationCleanup.lean -o C:\Users\jtraverso\e81p4\piv_v12_full_rebuild_20260929\.lake\runner\lib\lean\PaperIV\RC01DeviationCleanup.olean -i C:\Users\jtraverso\e81p4\piv_v12_full_rebuild_20260929\.lake\runner\lib\lean\PaperIV\RC01DeviationCleanup.ilean
+PaperIV/RC01DeviationCleanup.lean:32:0: warning: automatically included section variable(s) unused in theorem `PaperIV.RC01DeviationCleanup.mem_deviationBad_iff`:
+  [DecidableEq ρ]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq ρ] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+PaperIV/RC01DeviationCleanup.lean:46:0: warning: automatically included section variable(s) unused in theorem `PaperIV.RC01DeviationCleanup.abs_count_sub_le_of_notMem_deviationBad`:
+  [DecidableEq ρ]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq ρ] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`

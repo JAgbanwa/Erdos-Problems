@@ -1,0 +1,393 @@
+--- review_history\before-o1-o5-20260929\PAPER_IV_preprint_v1.2_en.md
++++ PAPER_IV_preprint_v1.2_en.md
+@@ -941,7 +941,7 @@
+ 
+ **Figure 4.** Theorem C′: low-degree deletion reaches the controlled terminal, and reinsertion transports its root back to the original graph. The retained accounts then control every partition on that same root. Resizing to an optimal template is a separate step (Corollary 6.3), with the square-root cost illustrated by Proposition 6.3a. The diagram is schematic; Appendix F.1 supplies the induction window.
+ 
+-**Proof.** We first explain the retained estimate at the minimum-degree terminal, then the passage to an arbitrary graph in the class. In the normalized presentation of Appendix E, let \(a\) count missing \(S\)–\(H\) links, \(m=e(G[H])\), \(w=|W|\), and
++**Proof.** We first explain the retained estimate at the minimum-degree terminal, then the passage to an arbitrary graph in the class. In the normalized presentation of Appendix E, let \(a\) count missing \(S\)–\(H\) links, \(m=e(G[H])\), \(t_W=|W|\), and
+ \[
+ E=e(G[S])-\binom{|S|-s}{2}\ge0.
+ \]
+@@ -949,13 +949,13 @@
+ \[
+ \begin{gathered}
+ a+\frac{m}{2000(s+1)^2}+R_*\le\delta,\qquad
+-nw\le800(s+1)^2R_*,\\
+-E\le R_*+nw,\qquad rn\le16sE,\\
+-d_E(G,T(C,D,H))\le a+m+E+2rn+2nw.
++nt_W\le800(s+1)^2R_*,\\
++E\le R_*+nt_W,\qquad rn\le16sE,\\
++d_E(G,T(C,D,H))\le a+m+E+2rn+2nt_W.
+ \end{gathered}
+ \tag{6.14}
+ \]
+-Here \(D,H\) in the last line are the final root classes, not necessarily the intermediate host class. The first line comes from comparing the constructed partition with \(Q_s(n)-\delta\), without discarding the residual credit in the budget of Appendix E. The next two lines pay for the exceptional vertices and the additional vertices removed to obtain a clique. These are separate charges: the term \(2rn+2nw\) includes both incidence costs. The graph-theoretic producers are NormalizedDeficit, ResidualExcess, NormalizedCliqueCore, and RootPartition; NormalizedStability combines them.
++Here \(D,H\) in the last line are the final root classes, not necessarily the intermediate host class. Appendix E.4 derives all five accounts: reducing the first-phase palette retains a positive multiple of \(m\), the strict exceptional-vertex budget pays \(nt_W\), and an actual clique is extracted from \(S\) before the final template is formed. In particular, the two charges \(rn\) have different origins: reducing the clique size in the interior count, and moving the remaining vertices to the host class. The graph-theoretic producers are NormalizedDeficit, ResidualExcess, NormalizedCliqueCore, and RootPartition; NormalizedStability combines them.
+ 
+ Substituting the middle bounds into the last gives
+ \[
+@@ -1031,7 +1031,7 @@
+ \tag{6.21}
+ \]
+ 
+-**Proof.** The clique core has at least two vertices and no more vertices than the host set. The comparator construction therefore gives a partition of order at most four with cost \(B_{s,n}(q+d)\). The weight argument of Appendix E.3 applies at this nonoptimal core size as well: every unrestricted partition has at least that many pieces. Subtracting this baseline from \(Q_s(n)\) gives (6.20).
++**Proof.** The rooted-defect argument in Appendix E.3 does not require an optimal core size: it applies to \(G_{s,q,d}\) and gives \(\operatorname{rsd}(G_{s,q,d})\le s\). The clique core has at least two vertices and no more vertices than the host set. The comparator construction therefore gives a partition of order at most four with cost \(B_{s,n}(q+d)\). The weight argument of Appendix E.3 applies at this nonoptimal core size as well: every unrestricted partition has at least that many pieces. Subtracting this baseline from \(Q_s(n)\) gives (6.20).
+ 
+ Since \(n+s=3q\), the unique optimal combined-core size is \(q\). Every optimal template consequently has the same edge count, independent of its labelling. Counting core edges and cross-links gives
+ \[
+@@ -1805,7 +1805,7 @@
+ 
+ First absorb the vertices \(w\in W\). For each, choose a matching \(M_w\) of links \(ah\) between \(S\) and \(H\), with both endpoints adjacent to \(w\); each link gives the triangle \(wah\). Balanced selection controls spoke consumption by row and column. Subsequent phases exclude occupied spokes.
+ 
+-In the first phase, color the edges of \(G[H]\) with \(k\) colors and balance the classes to have size at most \(q\). Averaging cyclic shifts of their assignment to hosts in \(S\) gives \(t\) hosted bases with \(2t\ge e(G[H])\). In the second phase, list hosting realizes all edges of \(G[S]\) using the remaining spokes. The dyadic construction applies Galvin to auxiliary bipartite problems, not to an arbitrary graph.
++In the first phase, color the edges of \(G[H]\) with \(k\) colors and balance the classes to have size at most \(q\). Averaging cyclic shifts of their assignment to hosts in \(S\) gives \(t_I\) hosted bases with \(2t_I\ge e(G[H])\). In the second phase, list hosting realizes all edges of \(G[S]\) using the remaining spokes. The dyadic construction applies Galvin to auxiliary bipartite problems, not to an arbitrary graph.
+ 
+ Among the conditions checked before the phases are
+ \[
+@@ -1818,34 +1818,34 @@
+ \]
+ Here \(d_{\max}\) denotes maximum degree. The parameters \(\sigma,\tau\) bound row and column absences, including reserves for \(W\); they are not chosen after constructing the partition. The three triangle families are edge-disjoint. Their completion satisfies
+ \[
+-|Q|+2\left(\sum_{w\in W}|M_w|+t+e(G[S])\right)=e(G).
++|Q|+2\left(\sum_{w\in W}|M_w|+t_I+e(G[S])\right)=e(G).
+ \tag{E.2}
+ \]
+-We now expand this account. Write \(c=|S|\), \(b=|H|\) and \(r=|W|\), so that \(n=c+b+r\). For each \(w\in W\), let \(u_w=|N(w)\cap S|\), \(v_w=|N(w)\cap H|\), and put
++We now expand this account. Write \(c=|S|\), \(b=|H|\) and \(t_W=|W|\), so that \(n=c+b+t_W\). For each \(w\in W\), let \(u_w=|N(w)\cap S|\), \(v_w=|N(w)\cap H|\), and put
+ \[
+ d_W=\sum_{w\in W}\deg(w),\qquad
+ m_W=\sum_{w\in W}\min(u_w,v_w).
+ \]
+ Let \(D\) bound the number of missing links between \(S\) and \(H\), and choose an integer \(L\ge\lfloor\sqrt D\rfloor\). Absorption gives
+-\(\min(u_w,v_w)\le |M_w|+r+L\).
+-Also, \(e(G)\le e(G[S])+e(G[H])+cb+d_W\): edges inside \(W\) are counted twice in the last summand, which is permissible in this upper bound. Substitution into (E.2), using \(2t\ge e(G[H])\) and summing the matching estimates, yields
+-\[
+-|Q|+e(G[S])+2m_W\le cb+d_W+2r(L+r).
++\(\min(u_w,v_w)\le |M_w|+t_W+L\).
++Also, \(e(G)\le e(G[S])+e(G[H])+cb+d_W\): edges inside \(W\) are counted twice in the last summand, which is permissible in this upper bound. Substitution into (E.2), using \(2t_I\ge e(G[H])\) and summing the matching estimates, yields
++\[
++|Q|+e(G[S])+2m_W\le cb+d_W+2t_W(L+t_W).
+ \tag{E.2a}
+ \]
+ 
+ The role of rooted defect is to pay the right-hand side of this account. The joint inequality derived from the normalized data is
+ \[
+ \begin{split}
+-&d_W+2r(L+r)+\binom c2+\binom{s+1}2\\
+-&\hspace{1em}\le e(G[S])+2m_W+sc+\frac{r(c+b+s)}3.
++&d_W+2t_W(L+t_W)+\binom c2+\binom{s+1}2\\
++&\hspace{1em}\le e(G[S])+2m_W+sc+\frac{t_W(c+b+s)}3.
+ \end{split}
+ \tag{E.2b}
+ \]
+-Adding (E.2a) and (E.2b) cancels \(d_W\), \(2r(L+r)\), \(e(G[S])\) and \(2m_W\). For the same physical partition \(Q\), this leaves
++Adding (E.2a) and (E.2b) cancels \(d_W\), \(2t_W(L+t_W)\), \(e(G[S])\) and \(2m_W\). For the same physical partition \(Q\), this leaves
+ \[
+ |Q|+\binom c2+\binom{s+1}2
+-\le c(b+s)+\frac{r(c+b+s)}3.
++\le c(b+s)+\frac{t_W(c+b+s)}3.
+ \tag{E.2c}
+ \]
+ No second partition is chosen to satisfy this last inequality.
+@@ -1856,25 +1856,32 @@
+ \]
+ For \(n\ge10^{50}(s+1)^8\), normalization and the choice of reserves give
+ \[
+-r\le\frac{4\rho}{10^{27}},\qquad
++t_W\le\frac{4\rho}{10^{27}},\qquad
+ L\le\frac{\rho}{10^{13}}+1,\qquad
+ |\mathcal L|-\frac n3\le c+\frac{4\lambda}{10^{31}}.
+ \]
+ These estimates precede the execution of the constructor. In particular, the reserves are not adjusted retrospectively to the piece count.
+ 
+-Let \(\nu\) be the maximum number of disjoint nonedge pairs within \(S\). The rooted-defect condition implies \(\nu\le s\). The extremal matching bound applied to the complement of \(G[S]\) gives
++Let \(\nu\) be the maximum number of disjoint nonedge pairs within \(S\). The rooted-defect condition, together with the normalized common-neighbor bounds, implies \(\nu\le s\); the argument is given in E.4 below. This is a property of the normalized core, not of every vertex subset in a graph of rooted defect at most \(s\). The extremal matching bound applied to the complement of \(G[S]\) gives
+ \[
+ M_S:=\binom c2-e(G[S])\le \nu c-\binom{\nu+1}2.
+ \]
+ To measure each exception's contribution, define
+ \[
+ \begin{split}
+-g_w&=\deg(w)-2\min(u_w,v_w)+2(L+r)-\frac{c+b+s}{3},\\
+-e_1&=4r+2L+\frac{4\rho}{10^{27}}.
++g_w&=\deg(w)-2\min(u_w,v_w)+2(L+t_W)-\frac{c+b+s}{3},\\
++e_1&=4t_W+2L+\frac{4\rho}{10^{27}}.
+ \end{split}
+ \]
+ Thus (E.2b) is equivalent to
+ \(\sum_{w\in W}g_w+M_S+\binom{s+1}2\le sc\).
++For the stability argument, retain the residual credit
++\[
++R_*=E-\sum_{w\in W}g_w,\qquad
++E=e(G[S])-\binom{c-s}{2}
++  =e(G[S])-\binom c2-\binom{s+1}2+sc.
++\]
++Equation (E.2b) asserts \(R_*\ge0\); E.4 will retain a strictly positive allowance per exceptional vertex. Throughout Appendix E, \(t_W=|W|\) counts exceptions, \(t_I\) counts first-phase triangles, and \(r\) is reserved for the additional vertices moved out of the core when extracting an actual clique.
+ The exceptions that may contribute positively lie in
+ \[
+ X=\{w\in W:v_w-u_w>n/3-\rho/400\},\qquad j=|X|.
+@@ -1925,12 +1932,12 @@
+ \[
+ \begin{gathered}
+ c(b+s)\le\binom c2+M(c+b+s),\\
+-Q_s(c+b)+rz\le Q_s(c+b+r).
++Q_s(c+b)+t_W z\le Q_s(c+b+t_W).
+ \end{gathered}
+ \tag{E.2e}
+ \]
+ Inserting the first inequality into (E.2c) gives
+-\(|Q|\le Q_s(c+b)+rz\); the second yields \(|Q|\le Q_s(n)\).
++\(|Q|\le Q_s(c+b)+t_W z\); the second yields \(|Q|\le Q_s(n)\).
+ IndepAllMain combines the construction with this arithmetic step. The additional ConstructorBudget interface retains both (E.2c) and the target bound for one partition.
+ 
+ The formal constructor used here invokes neither the results of [15] nor the historical modules of the replaced construction. The list bound and first-phase capacity window have the same form as conditions in [15, Lemma 4.1 and (4.4)]. Here they are justified by dyadic hosting, averaging over cyclic shifts, and balanced absorption. This comparison identifies the mechanisms and their shared conditions; it claims neither priority for those conditions nor historical independence on the basis of the dependency check in §7.
+@@ -1970,6 +1977,146 @@
+ \tag{E.5}
+ \]
+ pieces. The equality is the integer comparator identity for this choice of \(k\). Together with the eventual upper bound, it proves the maximum in Theorem C.
++
++### E.4. Retained accounts for same-root stability
++
++We derive (6.14) under the normalized terminal hypotheses of E.1. Write \(c=|S|\), \(b=|H|\), \(t_W=|W|\), \(n=c+b+t_W\), and retain the scales \(\rho=n/(s+1)^2\) and \(\lambda=n/(s+1)^4\). Let \(a=cb-e(S,H)\) be the number of missing cross-links and \(m=e(G[H])\). The exceptional contributions \(g_w\), the core excess \(E\), and the residual credit \(R_*\) are those defined in E.1. The argument uses the normalized terminal, including its minimum-degree, missing-link and exterior-degree bounds; rooted defect alone does not supply these bounds.
++
++**A smaller palette leaves a measurable saving.** Set
++\[
++d=\lfloor\rho/1000\rfloor,\qquad
++\kappa=2(c-2\sigma)-d,\qquad
++q=\lceil m/\kappa\rceil,\qquad
++\theta_s=\frac1{2000(s+1)^2}.
++\tag{E.6}
++\]
++Here \(\sigma,\tau\) are chosen before the construction, as the largest missing-link counts in the respective rows and columns, with \(2t_W\) added for reserved spokes. Normalization gives
++\[
++\begin{gathered}
++|c-n/3|\le\rho/10^{20},\qquad
++|b-2n/3|\le\rho/10^{20},\\
++\sigma\le\rho/200+12\rho/10^{27},\qquad
++\tau\le\rho/40+12\rho/10^{27},\qquad
++m\le2\rho^2/10^{31}.
++\end{gathered}
++\]
++The terminal threshold gives \(\rho\ge10^{50}\), so
++\(\rho/2000\le d\le\rho/1000\). Substitution in (E.6) yields
++\(c\le\kappa\le n\) and \(\kappa\ge n/2\). More explicitly,
++\(\kappa\ge2n/3-11\rho/500\). A light host has exterior degree at most \(\rho/10^4\); each of the remaining hosts misses more than \(\rho/40\) vertices of the light region, so its degree within \(H\) is at most \(b-\rho/40\). Both degree bounds, with one added for coloring, are at most \(\kappa\). For the second comparison, the gap between \(\rho/40\) and \(11\rho/500\) pays \(\rho/10^{20}+1\).
++
++Since \(\kappa\ge n/2\) and \(\rho\le n\), the edge bound gives \(q\le4\rho/10^{31}+1\). The same displayed estimates give
++\(3\lceil c/2\rceil+2\tau+4q\le b+2\).
++Thus all the capacity and list conditions in (E.1) still hold with this smaller palette. These are the inequalities established in StrictParams; no new coloring assumption is introduced.
++
++The cyclic averaging step now retains \(t_I\) hosted exterior bases with
++\(\kappa t_I\ge m(c-2\sigma)\). Hence its integer saving \(z=2t_I-m\) satisfies
++\[
++\kappa z\ge dm,\qquad
++z\ge\frac{\rho m}{2000n}=\theta_s m.
++\tag{E.7}
++\]
++The absorption and hosting phases still use disjoint edges. In their count, retain \(e(S,H)=cb-a\) rather than replace it by \(cb\). Equation (E.2a) therefore strengthens to
++\[
++|Q|+e(G[S])+2m_W+a+\theta_s m
++\le cb+d_W+2t_W(L+t_W).
++\tag{E.8}
++\]
++Define the rational terminal comparator
++\[
++F=cb-\binom c2-\binom{s+1}2+sc+
++       \frac{t_W(c+b+s)}3,\qquad
++D_0=Q_s(n)-F.
++\]
++The two inequalities in (E.2e) give \(D_0\ge0\), including their integer rounding. Substituting the definition of \(R_*\) into (E.8) gives
++\(|Q|+a+\theta_s m+R_*\le F\).
++The lower bound on every order-four partition now yields
++\[
++D_0+a+\theta_s m+R_*\le\delta.
++\tag{E.9}
++\]
++This proves the first account in (6.14), once the nonnegativity of \(R_*\) is retained. The partition here is the physical partition just constructed, not a separate optimizer.
++
++**Exceptions pay for their incidence costs.** The proof of (E.2b) has enough room to replace every \(g_w\) by \(\widetilde g_w=g_w+\rho/800\). We record why all three cases survive. Outside \(X\), the degree and normalization estimates give
++\[
++g_w\le-\rho/400+\frac{10t_W}{3}+2L.
++\]
++Using \(t_W\le4\rho/10^{27}\), \(L\le\rho/10^{13}+1\), and \(\rho\ge10^{50}\), the right-hand side is at most \(-\rho/800\). Thus \(\widetilde g_w\le0\) there.
++
++On \(X\), replace \(e_1\) by \(\widetilde e_1=e_1+\rho/800\). The loss of more than \(\rho/40\) light neighbors still gives
++\(\widetilde g_w\le c-\rho/80\): the added \(\rho/800\), the normalization error in \(|\mathcal L|-n/3-c\), and the original \(e_1\) together use less than \(\rho/80\). This proves the case \(1\le j\le s-\nu\) as before. In the case \(j=0\), all shifted contributions are nonpositive. In the remaining case, (E.2d) gives
++\[
++\sum_{w\in W}\widetilde g_w
++\le(s-\nu)c-\frac{2n}{9}
++  \frac{4(s+1)\lambda}{10^{31}}+(s+1)\widetilde e_1.
++\]
++Here \(\widetilde e_1\le20\rho/10^{27}+2\rho/10^{13}+2+\rho/800\). Since \(n=\rho(s+1)^2\), \((s+1)\lambda\le n\), and \(\binom{s+1}{2}\le\rho/(2\cdot10^{50})\), the negative term \(2n/9\) pays these errors and the binomial term. The same missing-pair bound used in E.1 therefore gives
++\(\sum\widetilde g_w\le E\). Equivalently,
++\[
++R_*\ge\frac{t_W\rho}{800}\ge0,\qquad
++nt_W\le800(s+1)^2R_*.
++\tag{E.10}
++\]
++This is the strict budget in StrictBudget, not an extra hypothesis on the constructor.
++
++**The remaining core excess is also paid.** The normalization bounds imply
++\(2(L+t_W)\le(c+b+s)/3\). Since the minimum subtracted in \(g_w\) is nonnegative, \(g_w\le\deg(w)\le n\). Consequently,
++\[
++E=R_*+\sum_{w\in W}g_w\le R_*+nt_W.
++\tag{E.11}
++\]
++This is the account in ResidualExcess. It uses the bound on the same \(L\) supplied by the constructor.
++
++**An actual clique, with a paid displacement.** First justify the missing-pair restriction on \(S\). Suppose \(s+1\) disjoint nonedge pairs have endpoints \(B\subseteq S\), and let \(U\subseteq\mathcal L\) be their common light neighbors. The normalized missing-link estimates and \(|B|=2(s+1)\) give
++\[
++|U|\ge\rho/10^4+s+2.
++\]
++Every clique in \(\mathcal L\) has fewer than \(\rho/10^4+1\) vertices, by the light exterior-degree bound. In the induced graph on \(B\cup U\), each vertex of \(B\) therefore has more than \(s\) neighbors outside any clique of its neighborhood. Each vertex of \(U\) has the same property: its neighborhood contains \(B\), and a clique can contain at most one endpoint of each missing pair. No vertex of this induced graph satisfies the rooted-defect condition with empty root, a contradiction. This is the argument in AllInput.no_core_pairs; the common-neighbor estimates are essential.
++
++For completeness, the finite core alternative used next is as follows. If \(c\ge20(s+1)^2\) and the complement of \(G[S]\) has no matching of size \(s+1\), then either \(S\) contains a clique of size \(c-s\), or
++\[
++c-s\le2\left(e(G[S])-\binom{c-s}{2}\right)=2E.
++\tag{E.12}
++\]
++One proves this by induction on \(s\). For \(s=0\), \(S\) is a clique. If some vertex has at least \(2s+1\) nonneighbors in \(S\), deleting it leaves no missing matching of size \(s\): such a matching would occupy only \(2s\) vertices, leaving a nonneighbor to extend it. Apply induction with \(s-1\); the target core size remains \(c-s\), and any lower bound on the edges of the smaller set also holds in \(S\). Otherwise the missing-edge graph has maximum degree at most \(2s\). Repeatedly deleting the two endpoints of a missing edge removes at most \(4s+1\) missing edges per step and stops after at most \(s\) steps. Thus it has at most \((4s+1)s\) edges. Substitution in \(E=e(G[S])-\binom{c-s}{2}\), using \(c\ge20(s+1)^2\), gives (E.12). This is CoreCliqueAlternative.
++
++In the first case, choose the clique \(C\) of size \(c-s\) and put \(r=0\). In the second case, the endpoints of a maximum missing matching meet every missing edge. Their complement is a clique of size at least \(c-2s\); trim it to that size and put \(r=s\). Then \(|C|+s+r=c\). Since \(c\ge2s\), (E.12) gives \(c\le4E\), and hence \(rc\le4sE\). Normalization also gives \(n\le4c\), so in both cases
++\[
++rn\le16sE.
++\tag{E.13}
++\]
++The construction preserves \(C\) as a clique of the original graph. The normalized size bounds also give \(2\le|C|\) and \(2|C|+s\le n\), as required for the final root.
++
++**Counting the edits on the original vertex set.** Start with the provisional template that has clique \(C\), independent set \(S\setminus C\), all links from \(S\) to \(H\), and isolated vertices \(W\). Because \(C\) is already a clique, comparison with \(G\) costs at most
++\[
++a+m+\left(e(G[S])-\binom{|C|}{2}\right)+nt_W.
++\]
++Choose \(D\subseteq S\setminus C\) with \(|D|=s\), put \(M=S\setminus(C\cup D)\), and move \(M\cup W\) to the host class \(J=H\cup M\cup W\). Here \(|M|=r\). Every changed pair in this second comparison meets \(M\cup W\), so it costs at most \(n(r+t_W)\). Finally,
++\[
++e(G[S])-\binom{|C|}{2}
++=E+\binom{|C|+r}{2}-\binom{|C|}{2}
++\le E+rn.
++\]
++Combining the two comparisons gives
++\[
++d_E(G,T(C,D,J))\le a+m+E+2rn+2nt_W.
++\tag{E.14}
++\]
++One \(rn\) pays the reduced clique size in the interior count; the other pays the change of host class. Likewise, \(W\) is first isolated and then placed in the host class. These are upper bounds on two successive edits, not a claim that all charged pairs are distinct. TemplateDistance, RootPartition and CliqueShiftArithmetic formalize these comparisons.
++
++**Combining the accounts.** Equations (E.11), (E.13) and (E.14) imply
++\[
++\begin{aligned}
++d_E(G,T)&\le a+m+(1+32s)E+2nt_W\\
++&\le a+m+(1+32s)R_*+(3+32s)nt_W\\
++&\le a+m+\bigl(1+32s+800(3+32s)(s+1)^2\bigr)R_*.
++\end{aligned}
++\]
++The final coefficient is at most \(38000(s+1)^3\). Equation (E.9), with \(D_0\ge0\), pays \(a+m\) with at most \(2000(s+1)^2\delta\), and pays \(R_*\) with at most \(\delta\). Therefore
++\[
++d_E(G,T)\le40000(s+1)^3\delta.
++\]
++This is the terminal estimate used in §6.6. Its constant pays for an actual clique of \(G\); a cheaper comparison that merely repairs the core into a clique would not supply the same-root conclusion of Theorem C′.
+ 
+ ## Appendix F. Parameters and proof interfaces for the extensions
+ 
+@@ -2038,7 +2185,43 @@
+ \]
+ For \(n\ge N(\xi)\) and \(s\le\theta(\xi)n\), a graph of rooted defect at most \(s\) is within \(\xi n^2\) edge edits of a chordal graph. The underlying removal proof is the one formalized from [22].
+ 
+-Let \(H\) be such a chordal graph and put \(t=d_E(G,H)\). Repairing bounded-order partitions transfers the integral lower bound with deficit at most \(\delta+4t\). Apply Theorem 6.1 in \(H\). A clique of \(H\) need not be a clique of \(G\); the root-recovery lemma removes at most \(s+u\) vertices when \(2t\le u^2\), producing a clique \(R\) in \(G\) itself. Counting changed edges and incidences yields
++The next lemma recovers a clique in the original graph. For a vertex set \(D\), let \(\operatorname{ordNE}(G,D)\) count ordered pairs of distinct, nonadjacent vertices of \(D\), and write \(x_+=\max\{x,0\}\).
++
++**Lemma F.3a (clique recovery with additive defect).** If \(\operatorname{rsd}(G)\le s\), every \(D\subseteq V(G)\) contains a clique \(C\) of \(G\) such that
++\[
++(|D|-|C|-s)_+^2\le\operatorname{ordNE}(G,D).
++\tag{F.5a}
++\]
++
++**Proof.** Induct on \(|D|\); the empty set is immediate. Apply the rooted condition to \(D\), with empty prescribed root. There is a vertex \(v\in D\) whose neighbors in \(D\) contain a clique \(P\) with at most \(s\) neighbors outside \(P\). Let \(y\) count the nonneighbors of \(v\) in \(D\setminus\{v\}\). Removing \(v\) removes precisely the two orientations of those \(y\) nonedges, so
++\[
++\operatorname{ordNE}(G,D)
++=\operatorname{ordNE}(G,D\setminus\{v\})+2y.
++\]
++By induction, \(D\setminus\{v\}\) contains a clique \(C'\) with
++\(x^2\le\operatorname{ordNE}(G,D\setminus\{v\})\), where
++\(x=(|D|-1-|C'|-s)_+\).
++If \(y\ge x+1\), take \(C=C'\). Then
++\[
++(|D|-|C'|-s)_+^2\le(x+1)^2
++\le x^2+2y\le\operatorname{ordNE}(G,D).
++\]
++Otherwise \(y\le x\), since both are integers. Take \(C=P\cup\{v\}\), which is a clique. The degree decomposition gives \(|P|+s\ge |D|-1-y\), so \((|D|-|C|-s)_+\le y\le x\). Squaring and using the induction bound proves (F.5a) in this case as well.
++
++**Corollary F.3b (recovery after edge deletion).** Suppose \(\operatorname{rsd}(G)\le s\), \(G,H\) have the same vertex set, and \(A\) is a clique of \(H\). If \(u\ge0\) and
++\[
++2|E(H)\setminus E(G)|\le u^2,
++\]
++then \(A\) contains a clique \(R\) of \(G\) with \(|A\setminus R|\le s+u\).
++
++**Proof.** Every unordered nonedge of \(G\) within \(A\) is an edge of \(H\) missing from \(G\). Consequently,
++\(\operatorname{ordNE}(G,A)\le2|E(H)\setminus E(G)|\).
++Apply (F.5a); taking nonnegative square roots gives
++\((|A|-|R|-s)_+\le u\), which is the required estimate.
++
++The formal interfaces are exists_clique_additive_defect and recover_clique_from_edit. The latter takes \(u\) rational and explicitly assumes \(u\ge0\); the displayed proof also applies to real \(u\). When \(s=0\), (F.5a) reduces to the chordal clique-extraction estimate (F.9). The loss in \(s\) is additive, rather than a factor multiplying the square-root term.
++
++Now let \(H\) be the chordal graph obtained above and put \(t=d_E(G,H)\). Repairing bounded-order partitions transfers the integral lower bound with deficit at most \(\delta+4t\). Apply Theorem 6.1 in \(H\). Its clique need not be a clique of \(G\); Corollary F.3b removes at most \(s+u\) vertices for any \(u\ge0\) with \(2t\le u^2\), producing a clique \(R\) in \(G\) itself. Counting changed edges and incidences yields
+ \[
+ \begin{aligned}
+ e(G-R)+A_R&\le16\delta+65t+n(s+u),\\
+@@ -2069,7 +2252,7 @@
+ 
+ The factor ten in the local inequality \(\binom{a+b}{2}\le10d(a,b)\), for positive defect, is sharp: the profile \((a,b)=(3,2)\) has ten edges and defect one. This does not prove optimality of \(480\), \(A_s\), or the global thresholds.
+ 
+-The proof outlines in §6.6 identify the retained graph accounts, but their complete structural derivations remain in the listed Lean modules. A renewed audit must examine those producers, the removal development, and their prose correspondence; the earlier coverage queries in Appendix A.2 remain relevant. Local compilation is not a substitute for that review.
++Appendix E.4 derives the retained terminal accounts used in §6.6, and F.3 proves clique recovery. Appendix F.5 explains the three-case assembly of the adapted pinned-sample bound. These additions expose the intermediate arguments for review; they are not a new audit verdict. A renewed audit must still check their correspondence with the formal producers and the lower-level removal lemmas. Local compilation is not a substitute for that review.
+ 
+ ### F.5. Auxiliary lemmas and adaptations of chordal removal
+ 
+@@ -2116,6 +2299,47 @@
+ 
+ **Table 10.** Adaptations of [22] relevant to the explicit threshold. The larger parameter bounds do not improve its sample-size exponent. The proof remains an implementation of its removal strategy, with these finite replacements and parameter choices.
+ 
++**Assembly of the adapted pinned-sample bound.** We give the three cases used in E34.lemma11_V, since changing the representation and the sampling convention requires checking the counting argument, not merely citing the published lemma. Fix a rooted tree \(\Gamma\) with \(K\) nodes and a prescribed pin \(x_v\in V(\Gamma)\) for every vertex of \(G\). A sample is *pinned* if its induced graph admits a representation by subtrees of another rooted tree \(T\), together with a path-preserving map \(\iota:\Gamma\to T\), such that the subtree for \(v\) contains \(\iota(x_v)\). This is the enlarged notion in Table 10.
++
++Assume \(G\) is \(\varepsilon\)-far from chordal: every chordal graph on its vertex set has edit distance greater than \(\varepsilon n^2\). Comparison with the empty graph forces \(n\ge1\) and \(\varepsilon<1/2\); the pin map then forces \(K\ge1\). For \(\varepsilon>0\), choose
++\[
++\begin{gathered}
++y=\left\lceil\frac{256K^2}{\varepsilon^2}\right\rceil,\qquad
++\delta_{11}=\frac1{4y^2},\qquad
++B=\left\lfloor\frac{8K}{\delta_{11}}\right\rfloor,\qquad
++\eta=\frac{\varepsilon}{2K},\\
++m=m_{11}(\varepsilon,K)
++ =\left\lceil\frac{2^{58}(K+1)^{15}}{\varepsilon^{12}}\right\rceil.
++\end{gathered}
++\tag{F.11}
++\]
++We must show that at most half of the \(n^m\) ordered samples of length \(m\), with replacement, are pinned.
++
++An admissible set-coloring assigns to \(v\) a subtree \(\psi(v)\) of \(\Gamma\) containing \(x_v\). For an edge \(uv\), compatibility requires the path from \(x_u\) to \(x_v\) to lie in \(\psi(u)\cup\psi(v)\); for a nonedge it requires \(\psi(u)\cap\psi(v)=\varnothing\). Let \(\operatorname{conf}(\psi)\) count ordered incompatible pairs of distinct vertices. A pinned sample induces a compatible set-coloring on its vertex set (properOn_of_pinned).
++
++*Case A: every admissible coloring has at least \(\delta_{11}n^2\) conflicts.* Apply the adapted set-coloring counting theorem with sample size \(m\) and \(B\) rounds. The numerical conditions are \(8K/\delta_{11}<B+1\) and the inequality thm2_ineq for the parameters (F.11). It follows that at most half of all samples admit a compatible set-coloring. Pinned samples form a subset, so the same bound holds for them.
++
++*Case B1: some admissible \(\psi\) has fewer than \(\delta_{11}n^2\) conflicts, but one section is far from every chain model.* Sections are indexed by the \(K\) nodes of \(\Gamma\); each section has two vertex classes and a rank model for their cross-adjacencies. In this case one section has more than \(\eta n^2\) mismatches for every rank assignment. The section-counting lemma claim5_count bounds the number of length-\(y\) samples inducing a chordal graph by
++\[
++(y+1)(1-\eta)^{y-1}n^y+
++y^2\operatorname{conf}(\psi)n^{y-2}.
++\]
++The parameter estimate block_ineq gives \((y+1)(1-\eta)^{y-1}\le1/4\). The second summand is at most \(n^y/4\), since \(y^2\delta_{11}=1/4\). Thus at most half of the length-\(y\) samples are chordal. We have \(y\le m\); every pinned length-\(m\) sample induces a chordal graph, and its prefix of length \(y\) does too. Each prefix has \(n^{m-y}\) extensions. Hence at most \(n^m/2\) full samples are pinned. This argument uses sequences throughout and does not assume their entries are distinct.
++
++*Case B2: every section has a rank assignment with at most \(\eta n^2\) mismatches.* Normalize each rank by replacing it with the number of vertices of strictly smaller rank. This preserves all strict rank comparisons, and therefore all section mismatches, while bounding every rank by \(n\). Subdivide the prescribed tree using this common bound and glue the section models. The resulting graph \(F\) is an intersection graph of subtrees, hence chordal. The gluing estimate charges every changed edge either to a conflict or to a section mismatch:
++\[
++\begin{aligned}
++d_E(G,F)&\le\operatorname{conf}(\psi)
++             \sum_{c\in V(\Gamma)}\operatorname{mis}_c\\
++&<\delta_{11}n^2+K\eta n^2
++\le\varepsilon n^2.
++\end{aligned}
++\tag{F.12}
++\]
++Here \(\delta_{11}\le\varepsilon/2\), by (F.11). This contradicts the assumed distance from chordality, so Case B2 cannot occur.
++
++The alternatives are exhaustive: either every coloring has many conflicts, or one has few, and its sections either include a distant one or all have close rank models. The formal proofs are l11_caseA, l11_caseB1 and l11_caseB2 in E34.L11Main. The set-coloring theorem, the section-counting lemma and the subtree-gluing lemma retain their roles from the removal strategy of [22]; the argument above identifies how their adapted versions fit together. It does not assert that the original published Lemma 11 has the modified statement or constants.
++
+ The new source freeze includes the four finite lemmas above and E35.theoremC_tower, theoremC_tower_uniform, theoremC_tower_uniform_sMax and NfarE_le_tower_poly for (6.28)–(6.29) and (C.4). The public adapter is PaperIV.DefectExplicitPublication; FDCheck.ASCheck checks the selected removal dependencies. Proposition 6.3a is supported by PaperIV.OptimalTemplateObstruction.shifted_template_witness, shifted_template_sqrt_witness and no_linear_optimal_template_bound; optimal_family_nonempty verifies that the comparison is not vacuous. Their fresh audit results and source identity are described in §7.
+ 
+ ## Appendix G. Packing gaps and limits of cleanup

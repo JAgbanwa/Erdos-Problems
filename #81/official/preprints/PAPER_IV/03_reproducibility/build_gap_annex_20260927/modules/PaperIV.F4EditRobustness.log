@@ -1,0 +1,58 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 PaperIV/F4EditRobustness.lean -o /workspace/request-project/.lake/runner/lib/lean/PaperIV/F4EditRobustness.olean -i /workspace/request-project/.lake/runner/lib/lean/PaperIV/F4EditRobustness.ilean
+PaperIV/F4EditRobustness.lean:19:0: warning: automatically included section variable(s) unused in theorem `PaperIV.F4EditRobustness.isItem_mono`:
+  [Fintype V]
+  [DecidableEq V]
+  [DecidableRel G.Adj]
+  [DecidableRel H.Adj]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] [DecidableEq V] [DecidableRel G.Adj] [DecidableRel H.Adj] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+PaperIV/F4EditRobustness.lean:117:38: warning: unused variable `hGH`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+PaperIV/F4EditRobustness.lean:133:0: warning: automatically included section variable(s) unused in theorem `PaperIV.F4EditRobustness.gainF_nonneg_real`:
+  [Fintype V]
+  [DecidableEq V]
+  [DecidableRel H.Adj]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] [DecidableEq V] [DecidableRel H.Adj] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+PaperIV/F4EditRobustness.lean:143:0: warning: automatically included section variable(s) unused in theorem `PaperIV.F4EditRobustness.gainF_le_five_real`:
+  [Fintype V]
+  [DecidableEq V]
+  [DecidableRel H.Adj]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] [DecidableEq V] [DecidableRel H.Adj] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_nlinarith_1._boxed took 159ms
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_nlinarith_1._boxed took 154ms
+import took 3.89s
+.olean serialization took 101ms
+cumulative profiling times:
+	.olean serialization 101ms
+	attribute application 2.54ms
+	compilation (IR) 1.53ms
+	compilation (LCNF base) 1.65ms
+	compilation (LCNF mono) 0.653ms
+	congr simp thm 13.1ms
+	dsimp 0.672ms
+	elaboration 97.9ms
+	fix level params 2.21ms
+	import 3.89s
+	initialization 48.9ms
+	instantiate metavars 8.1ms
+	interpretation 828ms
+	let-to-have transformation 0.355ms
+	linting 41ms
+	norm_num 19.8ms
+	parsing 15.7ms
+	process pre-definitions 27.4ms
+	ring 30.1ms
+	share common exprs 8.87ms
+	simp 184ms
+	tactic execution 314ms
+	type checking 121ms
+	typeclass inference 706ms

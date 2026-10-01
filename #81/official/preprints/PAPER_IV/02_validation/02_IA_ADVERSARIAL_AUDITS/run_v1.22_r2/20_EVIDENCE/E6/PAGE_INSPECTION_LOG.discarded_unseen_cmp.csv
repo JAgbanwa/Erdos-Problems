@@ -1,0 +1,10 @@
+lang,page,status,note
+es,16,VIEWED_CHANGED_OK,"r1|r2 at 110dpi: 'matchings' -> 'emparejamientos' in §5.2 last paragraph; paragraph reflows by one line inside the same page; rest of page (Fig 2, §5.3, displays) identical"
+es,18,VIEWED_CHANGED_OK,r1|r2: 'Factorizamos K_p en matchings' -> 'en emparejamientos'; one-paragraph reflow; equations (5.7)-(5.11) identical and in place
+es,20,VIEWED_CHANGED_OK,r1|r2: 'ni otro packing' -> 'ni otro empaquetamiento'; no reflow beyond that line; (5.16)-(5.18) identical
+es,21,VIEWED_CHANGED_OK,"r1|r2: 6.1 'k-1 matchings perfectos ... k matchings' -> 'emparejamientos'; paragraph gains no line, re-justified; (6.1)-(6.3) identical"
+es,35,VIEWED_CHANGED_OK,r1|r2: §7.2 'función de ganancia acotada de Model' -> 'de `Model`' in monospace (NEW-01 closed in PDF); no reflow; Tabla 4 identical
+es,55,VIEWED_CHANGED_OK,"r1|r2: E.1 'un matching M_w' -> 'un emparejamiento M_w', 'estimaciones de matching' -> 'de emparejamiento'; +2 lines; the 'La absorción da mín(u_w,v_w) ≤ |M_w|+t_W+L' line is re-justified (r1 had compressed math spacing) — same formula, explains the PDF-text token diffs 1-2; last sentence 'No se elige una segunda partición...' pushed to p56; (E.1)-(E.2c) identical"
+es,56,VIEWED_CHANGED_OK,r1|r2: carries the pushed sentence from p55 at top; 'La cota extremal de matching' -> 'de emparejamiento'; M_S display moves down within page; no content lost
+es,61,VIEWED_CHANGED_OK,"r1|r2: E.4 'no tiene un matching de tamaño s+1', 'sin matching ... tal matching', 'un matching máximo' -> emparejamiento(s); page break moves later (r2 page ends mid-sentence '...reduzcámosla a ese tamaño y pongamos', continued on p62); (E.10)-(E.12) identical"
+es,62,VIEWED_SHIFT_OK,"r1|r2: no term change on this page; text shifts earlier by ~3 lines (r2 page begins mid-sentence 'r = s. Entonces...'); (E.13),(E.14), Apéndice F.1 heading identical; no content lost or duplicated"

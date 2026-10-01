@@ -1,0 +1,25 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 PaperIV/MarkedQuotaTokens.lean -o /workspace/request-project/.lake/runner/lib/lean/PaperIV/MarkedQuotaTokens.olean -i /workspace/request-project/.lake/runner/lib/lean/PaperIV/MarkedQuotaTokens.ilean
+import took 2.77s
+cumulative profiling times:
+	.olean serialization 77.9ms
+	attribute application 3.45ms
+	compilation (IR) 1.59ms
+	compilation (LCNF base) 2.93ms
+	compilation (LCNF mono) 2.65ms
+	congr simp thm 13ms
+	elaboration 123ms
+	fix level params 1.41ms
+	import 2.77s
+	initialization 34.5ms
+	instantiate metavars 7.54ms
+	interpretation 377ms
+	let-to-have transformation 0.494ms
+	linting 32.9ms
+	norm_num 0.336ms
+	parsing 22ms
+	process pre-definitions 23ms
+	share common exprs 9.21ms
+	simp 363ms
+	tactic execution 250ms
+	type checking 72.8ms
+	typeclass inference 1.21s

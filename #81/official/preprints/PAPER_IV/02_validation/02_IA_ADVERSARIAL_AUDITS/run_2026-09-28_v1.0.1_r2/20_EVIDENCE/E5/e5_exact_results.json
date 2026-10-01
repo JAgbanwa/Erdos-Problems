@@ -1,0 +1,372 @@
+[
+ {
+  "check": "4.6a holds at n=4e12",
+  "result": "PASS",
+  "detail": "9.166666666667083e-13"
+ },
+ {
+  "check": "NEG:4.6a at n=3.6e12",
+  "result": "NEGCTRL ok",
+  "detail": "1.01851851851857e-12"
+ },
+ {
+  "check": "4.6a crossing in (3.6e12,4e12)",
+  "result": "PASS",
+  "detail": "3672542735042.735"
+ },
+ {
+  "check": "16D/n^2 < eps0-1/n at 4e12",
+  "result": "PASS",
+  "detail": ""
+ },
+ {
+  "check": "16*117/1825>1",
+  "result": "PASS",
+  "detail": ""
+ },
+ {
+  "check": "16*12687/20000>10",
+  "result": "PASS",
+  "detail": ""
+ },
+ {
+  "check": "5.15 coefficients",
+  "result": "PASS",
+  "detail": "(Fraction(-19, 365), Fraction(-253, 500))"
+ },
+ {
+  "check": "13/20 and 48/25",
+  "result": "PASS",
+  "detail": ""
+ },
+ {
+  "check": "5.15a coefficients",
+  "result": "PASS",
+  "detail": "(Fraction(-117, 1825), Fraction(-12687, 20000))"
+ },
+ {
+  "check": "39/50 and 971/500",
+  "result": "PASS",
+  "detail": ""
+ },
+ {
+  "check": "117/1825>1/16, 12687/20000>1/2, 19/365>=1/20, 253/500>=1/2",
+  "result": "PASS",
+  "detail": ""
+ },
+ {
+  "check": "11A/100+29f/1000 <= 7A/40 + f/25 coefficientwise",
+  "result": "PASS",
+  "detail": ""
+ },
+ {
+  "check": "2920*40/73=1600 and 2920*3/40=219",
+  "result": "PASS",
+  "detail": ""
+ },
+ {
+  "check": "5.12a: 1/64+3/57344<1/48",
+  "result": "PASS",
+  "detail": "0.015677315848214284"
+ },
+ {
+  "check": "5.13: Q0^2-Q0/1024 >= 393/100",
+  "result": "PASS",
+  "detail": "3.930082853871412"
+ },
+ {
+  "check": "NEG:5.13 with 3.931",
+  "result": "NEGCTRL ok",
+  "detail": "3.930082853871412"
+ },
+ {
+  "check": "5.14 A-coefficient <= 11/100",
+  "result": "PASS",
+  "detail": "0.10158722250074605"
+ },
+ {
+  "check": "5.14 f-coefficient <= 29/1000",
+  "result": "PASS",
+  "detail": "0.027827222779269876"
+ },
+ {
+  "check": "a/396+1 <= a/256 for a>=1024",
+  "result": "PASS",
+  "detail": ""
+ },
+ {
+  "check": "q/a lower bound >= 87947/44352",
+  "result": "PASS",
+  "detail": "1.9843575613839286"
+ },
+ {
+  "check": "48(2p-q)+ <= a",
+  "result": "PASS",
+  "detail": ""
+ },
+ {
+  "check": "3267n<=10000p & 3539p<=1188n => |3p-n|<=n/50",
+  "result": "PASS",
+  "detail": "(0.9801, 1.007064142413111)"
+ },
+ {
+  "check": "u(u+1)/2<=eps0 n^2 => u<=1.5e-6 n",
+  "result": "PASS",
+  "detail": ""
+ },
+ {
+  "check": "eps0+1.5e-6 <= 0.33^2/65536",
+  "result": "PASS",
+  "detail": "1.66168212890625e-06"
+ },
+ {
+  "check": "a>=1024 at n=4e12",
+  "result": "PASS",
+  "detail": ""
+ },
+ {
+  "check": "delta_C <= 6.1 eps0 n^2 at n=4e12",
+  "result": "PASS",
+  "detail": ""
+ },
+ {
+  "check": "(a/4)|X|<=a^2/65536 => 16384|X|<=a; (7a/4)|Y|<=2a^2/65536 => 57344|Y|<=a",
+  "result": "PASS",
+  "detail": ""
+ },
+ {
+  "check": "7a/2-129a/64=95a/64",
+  "result": "PASS",
+  "detail": ""
+ },
+ {
+  "check": "middle branch below envelope-n^2/40 for all n>0",
+  "result": "PASS",
+  "detail": "n**2/120 + n/10 + 1/30"
+ },
+ {
+  "check": "third branch below envelope-n^2/40 for n>=1",
+  "result": "PASS",
+  "detail": "7*n**2/120 + n/4 + 1/24"
+ },
+ {
+  "check": "max_r r(4n+1-5r)/6 = (4n+1)^2/120",
+  "result": "PASS",
+  "detail": ""
+ },
+ {
+  "check": "B_n(r) = (2n+1)^2/24 - (6r-2n-1)^2/24",
+  "result": "PASS",
+  "detail": ""
+ },
+ {
+  "check": "(6.3) identity 0<=k<=n<300",
+  "result": "PASS",
+  "detail": ""
+ },
+ {
+  "check": "(6.4) optimal cores within 2<=k<=n-k, 6<=n<400",
+  "result": "PASS",
+  "detail": ""
+ },
+ {
+  "check": "max_k f(n,k) = M(n), 6<=n<400",
+  "result": "PASS",
+  "detail": ""
+ },
+ {
+  "check": "ceil(n/3) in optimal cores and 2<=k<=n-k (n>=6)",
+  "result": "PASS",
+  "detail": ""
+ },
+ {
+  "check": "(6.12) reserve identity",
+  "result": "PASS",
+  "detail": ""
+ },
+ {
+  "check": "(E.3) increments floor((n+s+1)/3), all n>=1, s<20",
+  "result": "PASS",
+  "detail": ""
+ },
+ {
+  "check": "(E.5) witness count = Q_s(n) for n>=2s+2",
+  "result": "PASS",
+  "detail": ""
+ },
+ {
+  "check": "(E.2e) Q_s(m)+r*ceil((m+s)/3) <= Q_s(m+r)",
+  "result": "PASS",
+  "detail": ""
+ },
+ {
+  "check": "(E.2e) c(b+s) <= C(c,2)+M(c+b+s)",
+  "result": "PASS",
+  "detail": ""
+ },
+ {
+  "check": "Q_0 = M",
+  "result": "PASS",
+  "detail": ""
+ },
+ {
+  "check": "floor((2n+1)^2/24) = M(n)",
+  "result": "PASS",
+  "detail": ""
+ },
+ {
+  "check": "NEG:(2n+1)^2/24 == n(n+1)/6 (rational envelope equals floor)",
+  "result": "NEGCTRL ok",
+  "detail": ""
+ },
+ {
+  "check": "(D.2) C(n,2)-n(n-2)/3 = n(n+1)/6",
+  "result": "PASS",
+  "detail": ""
+ },
+ {
+  "check": "STS deletion: n(n+1)/6 - n/2 = n(n-2)/6",
+  "result": "PASS",
+  "detail": ""
+ },
+ {
+  "check": "(D.4) (3M+1)3M+3M=(3M+2)3M",
+  "result": "PASS",
+  "detail": ""
+ },
+ {
+  "check": "D.2: n=6r+4 => ceil(n(n+1)/6)=M(n)+1",
+  "result": "PASS",
+  "detail": ""
+ },
+ {
+  "check": "M(10)=18",
+  "result": "PASS",
+  "detail": ""
+ },
+ {
+  "check": "Table 8 rows cover every n in [2,290]",
+  "result": "PASS",
+  "detail": ""
+ },
+ {
+  "check": "max r+A+3m s.t. r+A/2+m/16<=1 equals 48 (constant 48 tight for account 6.7)",
+  "result": "PASS",
+  "detail": "48.0"
+ },
+ {
+  "check": "NEG:47 suffices for account (6.7)",
+  "result": "NEGCTRL ok",
+  "detail": ""
+ },
+ {
+  "check": "max m+A s.t. m/16+A/2<=1 equals 16 (constant 16 tight for account 6.7)",
+  "result": "PASS",
+  "detail": "16.0"
+ },
+ {
+  "check": "(6.7a) closed form",
+  "result": "PASS",
+  "detail": ""
+ },
+ {
+  "check": "d_R(K)=0 iff (a,b) in {(1,1),(2,1)} among pieces with >=2 vertices",
+  "result": "PASS",
+  "detail": "[(1, 1), (2, 1)]"
+ },
+ {
+  "check": "(6.6) zero defect with one host iff s in {1,2}",
+  "result": "PASS",
+  "detail": ""
+ },
+ {
+  "check": "M(n) >= (n^2+n)/6 - 1",
+  "result": "PASS",
+  "detail": ""
+ },
+ {
+  "check": "M(n) >= n^2/6 for n>=6 (Cor 3.5)",
+  "result": "PASS",
+  "detail": ""
+ },
+ {
+  "check": "NEG:M(n) >= n^2/6 for all n>=1",
+  "result": "NEGCTRL ok",
+  "detail": ""
+ },
+ {
+  "check": "(5.18) expansion",
+  "result": "PASS",
+  "detail": ""
+ },
+ {
+  "check": "|6k-2n-1|<=rad => |t|<=n/30000",
+  "result": "PASS",
+  "detail": "2.006949080492627e-06"
+ },
+ {
+  "check": "(5.18) total error <= n^2/1e4",
+  "result": "PASS",
+  "detail": "2.222277881944861e-05"
+ },
+ {
+  "check": "t=34: t^2/16 = 72.25 > 72",
+  "result": "PASS",
+  "detail": ""
+ },
+ {
+  "check": "mass hypothesis holds: 7M >= 0.3(2M+1) for M>=1",
+  "result": "PASS",
+  "detail": ""
+ },
+ {
+  "check": "contradiction: 7M(2M+1) > (9/4)(2M+1)^2 for M>=1",
+  "result": "PASS",
+  "detail": ""
+ },
+ {
+  "check": "(8.5) eps n^2/30 - 1 <= (2n-3)/3 => n <= 20/eps (sample eps)",
+  "result": "PASS",
+  "detail": ""
+ },
+ {
+  "check": "a = 1/(9e19)",
+  "result": "PASS",
+  "detail": ""
+ },
+ {
+  "check": "z = 1/(2e17)",
+  "result": "PASS",
+  "detail": ""
+ },
+ {
+  "check": "k0 = 3e19+1",
+  "result": "PASS",
+  "detail": ""
+ },
+ {
+  "check": "h = 4/(delta/8)^5 with delta=a^21/2208",
+  "result": "PASS",
+  "detail": ""
+ },
+ {
+  "check": "L_T(beta0)=ln(64e18) <= 46",
+  "result": "PASS",
+  "detail": "45.6054147572525"
+ },
+ {
+  "check": "M_T(7,beta0) <= 16*7*46+1 = 5153",
+  "result": "PASS",
+  "detail": ""
+ },
+ {
+  "check": "N^2 <= 2^N for N>=4",
+  "result": "PASS",
+  "detail": ""
+ },
+ {
+  "check": "n(n+1) mod 6 in {0,2}",
+  "result": "PASS",
+  "detail": ""
+ }
+]

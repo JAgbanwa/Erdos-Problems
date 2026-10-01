@@ -1,0 +1,25 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 PaperIV/VertexCopySelector.lean -o /workspace/request-project/.lake/runner/lib/lean/PaperIV/VertexCopySelector.olean -i /workspace/request-project/.lake/runner/lib/lean/PaperIV/VertexCopySelector.ilean
+PaperIV/VertexCopySelector.lean:46:4: warning: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+import took 4.96s
+cumulative profiling times:
+	.olean serialization 60.8ms
+	attribute application 0.0295ms
+	blocked (unaccounted) 13.3ms
+	congr simp thm 2.56ms
+	elaboration 28.2ms
+	fix level params 0.097ms
+	import 4.96s
+	initialization 54.5ms
+	instantiate metavars 0.234ms
+	interpretation 212ms
+	let-to-have transformation 0.0355ms
+	linting 3.96ms
+	parsing 2.44ms
+	process pre-definitions 0.522ms
+	share common exprs 0.151ms
+	simp 1.53ms
+	tactic execution 4.2ms
+	type checking 8.69ms
+	typeclass inference 5.75ms

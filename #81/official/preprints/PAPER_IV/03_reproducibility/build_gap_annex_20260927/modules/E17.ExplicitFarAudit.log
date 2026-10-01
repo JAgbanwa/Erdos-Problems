@@ -1,0 +1,56 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 E17/ExplicitFarAudit.lean -o /workspace/request-project/.lake/runner/lib/lean/E17/ExplicitFarAudit.olean -i /workspace/request-project/.lake/runner/lib/lean/E17/ExplicitFarAudit.ilean
+PASS B7 numerical link E17Bridge.ExplicitSchedule.uniformRoundingTarget_explicit: 34373 constants; axioms [propext,
+ Classical.choice,
+ Quot.sound]
+PASS B7 numerical link E17Bridge.exists_improvedGateGap_explicit: 34380 constants; axioms [propext,
+ Classical.choice,
+ Quot.sound]
+PASS B7 numerical link E17Bridge.improved_far_loss_explicit: 34384 constants; axioms [propext,
+ Classical.choice,
+ Quot.sound]
+PASS B7 numerical link E17Bridge.ExplicitAssembly.uniformTransferAt_explicit: 34380 constants; axioms [propext,
+ Classical.choice,
+ Quot.sound]
+PASS B7 numerical link E17Bridge.ExplicitAssembly.farRegime_allGraphs_explicit: 36385 constants; axioms [propext,
+ Classical.choice,
+ Quot.sound]
+PASS B7 numerical link E17Bridge.ExplicitAssembly.farRegime_eta0_tower: 40697 constants; axioms [propext,
+ Classical.choice,
+ Quot.sound]
+PASS B7 numerical link PaperIV.ExplicitThreshold.erdos81_sharp_explicit: 44118 constants; axioms [propext,
+ Classical.choice,
+ Quot.sound]
+PASS B7 numerical link PaperIV.ExplicitThreshold.erdos81_all_orders_explicit: 44123 constants; axioms [propext,
+ Classical.choice,
+ Quot.sound]
+PASS B7 numerical link PaperIV.ExplicitThreshold.erdos81_all_orders_bounded_additive: 44129 constants; axioms [propext,
+ Classical.choice,
+ Quot.sound]
+interpretation of E17Bridge.ExplicitAudit._aux_E17_ExplicitFarAudit___elabRules_E17Bridge_ExplicitAudit_commandAuditExplicitB7_1._boxed took 16.1s
+'E17Bridge.improved_far_loss_explicit' depends on axioms: [propext, Classical.choice, Quot.sound]
+elaboration took 1.15s
+'PaperIV.ExplicitThreshold.erdos81_all_orders_bounded_additive' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+elaboration took 1.85s
+import took 4.32s
+cumulative profiling times:
+	.olean serialization 12.9ms
+	attribute application 0.253ms
+	blocked (unaccounted) 121ms
+	compilation (IR) 8.37ms
+	compilation (LCNF base) 61.4ms
+	compilation (LCNF mono) 10.1ms
+	elaboration 3.07s
+	fix level params 0.0661ms
+	import 4.32s
+	initialization 34.8ms
+	instantiate metavars 0.0246ms
+	interpretation 16.4s
+	let-to-have transformation 1.34ms
+	linting 4.3ms
+	parsing 2.75ms
+	process pre-definitions 3.94ms
+	share common exprs 0.63ms
+	type checking 2.73ms
+	typeclass inference 33.6ms

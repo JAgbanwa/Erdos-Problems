@@ -1,0 +1,152 @@
+# Gate E5 report — run_v1.2_r1 (Paper IV v1.2)
+
+Verdict: **PASS (finite scope)**. Evidence directory: `20_EVIDENCE/E5/`.
+
+---
+
+## E5 predeclared tests and kill-switches (written 2026-09-30 before any E5 computation)
+
+Evidence type for all: exact rational (Python `fractions`, integers) or exhaustive finite; exact ILP/LP only
+with exact certificate re-verification. Finite tests never establish universal (∀n) claims.
+"FAIL" of a positive test ⇒ suspend the claim and open a finding. "PASS" of a negative control is
+REQUIRED (the corrupted variant must be rejected); a negative control that is accepted invalidates the test.
+
+| ID | Claim (EN md line) | Test | Confirming outcome | Falsifying outcome | Limits |
+|---|---|---|---|---|---|
+| T01 | (4.6a) l.380-386 | exact eval at n=4e12; monotone LHS; failure at 3.6e12 | holds at 4e12, fails at 3.6e12 | holds at 3.6e12 or fails at 4e12 | exact |
+| T02 | Lemma 4.2 l.366-368 | 16·117/1825>1, 16·12687/20000>10 | both true | either false | exact |
+| T03 | Lemma 5.3 coefficients l.672-688 | recompute all four coefficient pairs from Table 2 | equal to −19/365, −253/500, −117/1825, −12687/20000 | mismatch | exact |
+| T04 | (5.12)-(5.14) l.618-655 | exact evaluation of both coefficient bounds, (5.13) value, (5.12a) | ≤ 11/100, ≤ 29/1000, ≥393/100, < a/48 | any violated | exact; given the premises |
+| T05 | Thm 5.0 size window l.440 | from a≥33n/100 (and \|n-3a\|≤a/64), 99a≤100p, 48(2p−q)+≤a derive 3267n≤10000p, 3539p≤1188n, \|3p−n\|≤n/50 | LP/rational derivation succeeds | a counter-assignment exists satisfying premises and violating a conclusion | exact LP over rationals (z3) |
+| T06 | (5.1)-(5.4) scalar steps l.456-514 | 1e-12+1.5e-6 ≤ (0.33)^2/65536 ; u(u+1)/2≤ε0n² ⇒ u≤3n/(2·10^6) ; 7a/2−129a/64=95a/64; (5.1a) branch bounds vs (2n+1)^2/24−n²/40 for n≥9 | all true | any false | exact / symbolic |
+| T07 | identity (6.3)/(6.8), (D.8), E.5 identity, (E.3) increments, (6.4) core sizes | exhaustive n≤400, all k | identities hold | any mismatch | finite exhaustive |
+| T08 | (6.7a) identity and C(a+b,2)≤10·d_R when d_R>0; zero iff canonical; sharp at (3,2) | exhaustive a,b≤60 | holds, (3,2) equality | violation; factor 9 (neg. control) must fail | finite |
+| T09 | (6.19) dist(k,K)^2 ≤ Q_s(n)−B_{s,n}(k) | exhaustive s≤20, n≤300, admissible k | holds | violation | finite |
+| T10 | Prop 6.3a (6.20)-(6.21) | symbolic (sympy) + exhaustive small (s,q,d); brute-force rsd of G_{s,q,d} for small; exact cp via ILP for tiny instances | formulas hold; rsd≤s; cp=c4=Q_s−δ_d | any mismatch | ILP only tiny n |
+| T11 | E.3 witness rsd≤s and cp=Q_s(n) (tiny n exact cp) | brute force | holds | fails | tiny n |
+| T12 | Lemma F.3a (F.5a) | exhaustive all graphs n≤7 (labelled up to iso via networkx atlas n≤7), all s with rsd≤s, all D | holds | counterexample | finite; neg. control: replace s by s−1 must fail somewhere |
+| T13 | (F.7) indCopies(C_k,G) ≤ 2ks n^{k−1} | exhaustive n≤7 | holds | violation | finite, weak test |
+| T14 | (F.9) chordal clique extraction | exhaustive chordal n≤7 | holds | violation | finite |
+| T15 | Prop 6.4 (6.22),(6.23) F_4 ≤ ... | all graphs n≤7 (atlas) with rsd≤s: compute F_4 exactly (LP + exact dual/primal certificate) | holds | violation | finite |
+| T16 | Prop D.1 c4(K_n)≤M(n) small n; Prop D.2 K_n order≤3 needs >M(n) for n≡4 mod 6 | ILP small n (≤13) / parity argument check n=10 | D.1: packing found; D.2: ILP min with ≤3 pieces = M(n)+1 at n=10 | otherwise | small n |
+| T17 | D.3 W*(S)=W(S)=2C(k,2) for K_k∨I_h, 2≤k≤h | exact LP small k,h | equality | mismatch | small |
+| T18 | Thm C′ constants: max{40000(s+1)^3, 2/ε_s}=2e41(s+1)^8 ∀s≥0; E.4 coefficient 1+32s+800(3+32s)(s+1)^2 ≤ 38000(s+1)^3; total ≤40000(s+1)^3 | symbolic polynomial inequality over s≥0 | true | false | exact |
+| T19 | F.1 deletion invariant algebra l.2141-2146 | symbolic check with γ0 ≤ ε/4, ε N0 ≥ 1 | invariant preserved | not | exact symbolic |
+| T20 | (E.2e) and (E.13) arithmetic; (E.12) finite core alternative | exhaustive small c,s (graphs on c≤8 vertices, s≤2) for CoreCliqueAlternative hypothesis c≥20(s+1)^2 is too large → test the combinatorial induction claim "missing graph max degree ≤2s and no matching s+1 ⇒ ≤(4s+1)s edges" exhaustively on small graphs | holds | counterexample | finite |
+| T21 | Lemma 2.1/(1.3a) accounting; (2.4); Table 1 | symbolic | ok | – | trivial |
+| T22 | Theorem 6.1/Cor 6.1a constants: r+A+3m≤48δ from (6.7); LP optimum of the account | exact LP | 48 optimal from (6.7); 47 fails (neg. control) | otherwise | exact |
+| T23 | (G.4),(G.5) | exhaustive chordal K4-free n≤8 e≤2n−3 ; algebra of (G.5) | holds | violation | finite |
+| T24 | (6.5a)/(6.5) and Thm A arithmetic: M(n)≥n(n+1)/6−1 ; N^2 ≤ 2^N for N≥4 | exact | ok | – | trivial |
+| T25 | Certo | Only if a Certo certificate is bound in the target; else record NOT_APPLICABLE with reason | – | – | – |
+
+---
+
+## E5 record: independent falsification by exact computation
+
+- **Gate:** E5, external adversarial audit of Paper IV v1.2, run `run_v1.2_r1`. Date: 2026-09-30.
+- **Target:** `01_manuscript/v1.2_full_rebuild_candidate/PAPER_IV_preprint_v1.2_en.md`, sha256 `a501d53b527da22f20112db2b05917fb61f46dd8e080faf14b69349b240cc152`.
+- **Predeclaration:** `E5_PREDECLARATION.md`, sha256 `e542a6566792bd4c996749db438c83847ed8956a231abaa4e340863a8b32e392`. It was written before any E5 computation and has not been modified.
+- **Reading boundary:** only the manuscript, the predeclaration, the designated logging tool `tools/acclog.py` (with the header rows of `INPUT_ACCESS_LOG.csv`, read to confirm the format) and files created here. Every read is logged in `00_CONTROL/INPUT_ACCESS_LOG.csv`. No Lean sources, internal reports, author scripts or network resources were used.
+- **Machine-readable output:** `E5_RESULTS.json`. Raw outputs are in `results/`, scripts in `scripts/` and run logs in `logs/`.
+
+## Verdict summary
+
+**24 PASS, 0 FAIL, 0 INCONCLUSIVE, 1 NOT_APPLICABLE (T25).** Every predeclared negative control was rejected, as the predeclaration requires. T13 and T21 have no predeclared negative control. T15 has only an added power check, which is informational.
+
+No computation falsified any claim tested. **No suspected mathematical defect was found.** The minor editorial observations below are not errors.
+
+## Method conventions
+
+- A verdict is decided only in exact arithmetic: Python `int` and `Fraction`, sympy polynomial identities, or z3 decision procedures for linear and nonlinear real arithmetic.
+- **LP values W\*.** HiGHS proposes a solution. It is then rebuilt as exact rationals in one of two ways: `limit_denominator`, or, as a fallback, an exact Gaussian solve of the optimal simplex basis returned by HiGHS. Primal feasibility, dual feasibility and equal objective are all verified exactly. An instance without such a certificate would be INCONCLUSIVE. In the final runs, every LP (1253 in T15, 36 in T06s, 36 in T17) is exactly certified.
+- **ILP values (cp, c_r).** CBC returns a partition, which is re-verified exactly: every piece is a clique, of order ≥2 and ≤r, and every edge is covered exactly once. A value is labelled exact only if an independent exact lower bound matches it. The bounds used are:
+  - an exhaustively checked weight (dual) certificate, where every clique has weight ≤1 (T10, T11);
+  - the parity argument (T16);
+  - ⌈F_4⌉ from an exact W\* (INFO_c4).
+
+  Otherwise the value is solver-dependent.
+- **rsd.** Computed by brute force over all U ⊆ V and all cliques R ⊊ U, taking the maximum over maximal cliques of G[U], which is equivalent. Self-test: rsd = 0 ⟺ chordal on all 1253 atlas graphs, with zero mismatches (`networkx.is_chordal`). Also rsd(C4) = 1 and rsd(K_{3,3}) = 2.
+
+## Per-test table
+
+| ID | Claim (EN md lines) | Method | Evidence | Range | Result | Negative control | Runtime (s) |
+|---|---|---|---|---|---|---|---|
+| T01 | (4.6a) contraction at n=4e12; fails at 3.6e12 (380-386) | Fraction eval; sympy equivalence with 16D/n²<ε0−1/n; derivative sign; exact crossover | exact | point + monotone | PASS | factor 20 rejected: PASS | 0.4 |
+| T02 | Lemma 4.2: 16·117/1825>1, 16·12687/20000>10 (366-368) | Fraction; LP max (m+10A)/D ≈ 15.77 ≤ 16 | exact | – | PASS | factor 15 rejected: PASS | 0.0 |
+| T03 | Lemma 5.3 coefficients from Table 2 (539-549, 672-688) | exact substitution chain; sympy (5.4a) | exact | – | PASS | corrupted 8A/40 rejected: PASS | 0.0 |
+| T04 | (5.12)-(5.14): coefA=0.10159≤11/100, coeff=0.02783≤29/1000, (5.13)=3.930083≥3.93, (5.12a) (618-655) | Fraction; independent re-linearisation of (5.11) | exact, given the premises (5.12) | – | PASS | R0=3.94 and bound 1/10 rejected: PASS | 0.0 |
+| T05 | Thm 5.0 size window (433, 440) | z3 LRA: premises ∧ ¬conclusion UNSAT | exact | real | PASS | \|3p−n\|≤n/100 SAT; dropping 99a≤100p SAT: PASS | 0.1 |
+| T06 | (5.1)-(5.4) scalar steps, (5.1a) branches (456-514) | Fraction, sympy, z3 LRA/NRA, integer scan | exact/symbolic + finite scan | branch scan n=9..1500 | PASS (supp. T06s exact LP: PASS) | 1.7e-6 and n²/8−1 rejected: PASS | 1.2 (+4.8) |
+| T07 | (6.3)/(6.8), (6.4), (D.8), E.5, (E.3), Q_s≥B (692-695, 759-775, 1785-1796, 1953-1979) | exhaustive integers | finite exhaustive | n≤400, all k in [−n−2,2n+2], s≤60 | PASS | corrupted (6.3), (E.3) rejected: PASS | 1.8 |
+| T08 | (6.7a) identity; zero iff canonical; C(a+b,2)≤10d; sharp (3,2) (862-877, 2253) | exhaustive integers | finite exhaustive | a,b≤60 | PASS (unique equality at (3,2)) | factor 9 fails at (3,2): PASS | 0.0 |
+| T09 | (6.19) dist(k,K)² ≤ Q_s−B_{s,n}(k) (1004-1012) | exhaustive; K=argmax B also checked | finite exhaustive | s≤20, n≤300, admissible and all k | PASS | 2·dist² rejected (3302 cases): PASS | 1.6 |
+| T10 | Prop 6.3a (6.20)-(6.21) (1016-1052) | sympy; integer scan; brute-force rsd; ILP + weight certificate; brute-force min d_E over all labelled optimal templates | symbolic + finite + exact (tiny) | scan s≤20, q≤200; 11 instances n≤16 | PASS | δ_d=d² rejected; rsd≤s−1 rejected: PASS | 52.5 |
+| T11 | E.3 witness: rsd≤s, cp=Q_s(n) (1967-1979) | brute-force rsd; ILP cp and c3; exact weight certificate | exact per instance | s≤3, 2s+2≤n≤14 | PASS (rsd=s, cp=c3=Q_s(n) in all 40 instances) | rsd≤s−1 rejected: PASS | 20.4 |
+| T12 | Lemma F.3a (F.5a) (2190-2209) | all atlas graphs, s=rsd(G), all D | finite exhaustive | n≤7 (144,923 pairs) | PASS | s−1 fails in 409 cases: PASS | 0.3 |
+| T13 | (F.7) induced C_k count (2261-2266) | all atlas graphs, all k | finite exhaustive (weak) | n≤7 | PASS (max ratio 12/343) | none predeclared | 0.1 |
+| T14 | (F.9) chordal clique extraction (2275-2280) | all chordal atlas graphs, all D | finite exhaustive | n≤7, 532 chordal graphs | PASS | (added) factor 1 rejected: PASS | 0.1 |
+| T15 | Prop 6.4 (6.22), (6.23) (1058-1070) | exact W\* (certified LP) for all atlas graphs, all s∈[rsd,n] | finite exhaustive; LP exact | n≤7; 8974 / 1744 checks | PASS (min slack 0 for both) | (added power check) INFO | 3.5 |
+| T16 | Prop D.1 c4(K_n)≤M(n); Prop D.2 (1705-1761) | ILP constructions verified; parity lower bound | exact constructions; exact c3 values | D.1 n≤13; D.2 n=4,10,16 | PASS (c3(K10)=19, c3(K16)=46) | n=9 (3 mod 6) rejected: c3(K9)=12≤15: PASS | 140.7 |
+| T17 | Prop D.3 W\*=W=2C(k,2) (1765-1781) | exact LP + explicit 1-factorisation packing | exact | 2≤k≤7, k≤h, k+h≤13 | PASS | k>h instances differ: PASS | 1.0 |
+| T18 | Thm C′ constants; E.4 coefficient; 40000(s+1)³; 1+7A_s (101-107, 910-965, 2107-2118) | sympy (coefficients ≥0 after x=1+y); z3 chain for s=0..60 | exact | all s≥0 (symbolic) | PASS | 25000(s+1)³ rejected: PASS | 0.1 |
+| T19 | F.1 deletion invariant (2141-2146) | z3 NRA | exact | real | PASS | γ0≤ε, and no εN0≥1, both SAT: PASS | 0.0 |
+| T20 | (E.2e), (E.13) arithmetic; CoreCliqueAlternative counting step (1931-1940, 2076-2086) | exhaustive integers + z3; atlas graphs as missing graphs; SAT (CaDiCaL) N=8 | finite + exact; SAT solver-dependent | c,b≤80, s≤15, t_W≤30; graphs n≤8 | PASS | 15 in (E.13) SAT; e≤2s rejected: PASS | 4.5 |
+| T21 | Table 1, (1.3), (1.3a), (2.1), (2.4) (113-138, 196-238) | symbolic + 3759 random verified partitions + all exact W\* | symbolic + finite | n≤7 | PASS | none (trivial) | 0.6 |
+| T22 | Thm 6.1/Cor 6.1a: r+A+3m≤48δ optimal, m+A≤16δ, 480 (837-877) | exact LP (vertex enumeration) + HiGHS | exact | – | PASS | 47 rejected: PASS | 3.5 |
+| T23 | (G.4) e≤2n−3; (G.5) n≤20/ε (2390-2402) | chordal K4-free atlas + all simplicial extensions to n=8; z3 NRA | finite exhaustive + exact | 2≤n≤8 | PASS (max e = 2n−3 attained) | 2n−4 rejected; 19/ε SAT: PASS | 0.1 |
+| T24 | (6.5a)/(6.5), §2.3 floor, N²≤2^N (250, 301, 779-809) | exhaustive integers + sympy induction step | exact | n≤1e5, N≤2000 + induction | PASS | N=3 and −1/4 rejected: PASS | 0.3 |
+| T25 | Certo (2414, 2444) | binding check | n/a | – | NOT_APPLICABLE | n/a | 0 |
+
+### Supplementary checks (not predeclared; labelled as such)
+
+- **S1.** Identity (6.7b) and inequality (6.16) (lines 872-877, 981-989) were tested on 4000 random graphs with n=4..9. The clique partitions were random, of unrestricted order, and exactly verified. The roots were random cliques (4000 checks) and random template roots with all s (10,786 checks). **PASS.**
+- **T06s.** Exact LP of F_4(K_r∨I_h) against the (5.1a) branch bounds, for 4≤r≤11 and r+h≤12. **PASS.**
+- **INFO_c4.** c4 was computed for all 1253 graphs with n≤7. 1132 values are exact via ⌈F_4⌉; 121 are solver-dependent optimal. Every upper bound is an exactly verified partition. Consequently c4(G) ≤ Q_{rsd(G)}(n) holds exactly for every graph with n≤7. In particular, c4 ≤ M(n) for every chordal graph with n≤7. This bears only on the open b=0 question of §G.1 and does not bear on Theorem C, which is eventual.
+
+## Range reductions and deviations (declared)
+
+- **T10.** Brute-force rsd, exact cp and the template-distance minimum were computed for 11 instances with n≤16 (s≤2). The closed-form claims were checked for s≤20, q≤200, 1≤d≤q/2.
+- **T11.** "Tiny n" was taken as n≤14 and s≤3.
+- **T16 (D.2).** At n=16 the second, infeasibility ILP solve was skipped because a first attempt exceeded the time budget (it hit the run's 595 s timeout, and CBC raised an error). c3(K_16)=46=M(16)+1 is still certified exactly, by the parity lower bound and a verified partition. At n=4 and n=10 both solves ran; the "≤M(n)" ILP was infeasible, which is solver-dependent.
+- **T17.** Ranges 2≤k≤7, k≤h, k+h≤13.
+- **T20.** The predeclaration asks for graphs with c≤8 vertices and s≤2.
+  - n≤7 is covered exhaustively by the atlas.
+  - N=8 is covered by SAT (UNSAT for s=1,2,3; s=3 is trivially impossible). SAT UNSAT is solver-dependent.
+  - For s=1 the check is complete on all graph sizes: edges lie in a vertex cover of ≤2s vertices of degree ≤2s, so there are at most 6 non-isolated vertices.
+- **T06s (process note).** In the first T06s run, 2 of 36 LPs (K_12 and K_10∨I_2) had no exact certificate from the `limit_denominator` step. The first script version mislabelled this as FAIL; under the protocol it should have been INCONCLUSIVE, and no bound was violated. An exact reconstruction from the HiGHS optimal basis was then added. This changes the verification method only; no threshold or claim was changed. The rerun certified all 36 LPs exactly and PASS. The rerun is the recorded result; the first run's console output was not kept.
+- **Added negative controls.** Controls not in the predeclaration (T14 factor 1, T15 band power check, T20 e≤2s) are labelled "(added)" in the JSON.
+
+## Discussion of power and non-results
+
+- **No FAIL and no INCONCLUSIVE** in the recorded results.
+- **Low power in T13.** The bound (F.7) is extremely loose at n≤7 (maximum ratio 12/343). Beyond confirming that there are zero induced long cycles when rsd=0, it has almost no falsifying power.
+- **Low power in the T15 band condition.** At n≤7 the refined bound (6.23) was never violated even for s outside the band 4s≤n. The test therefore does not exercise the necessity of the band. It does exercise both bounds: the minimum slack is 0 for each.
+- **Low power in T20.** The counting step is loose: the true maxima are 3 (s=1) and 10 (s=2) against 5 and 18. It also follows analytically, since e ≤ (2s)(2s) = 4s² ≤ (4s+1)s.
+- **(E.12) not tested at its hypothesis.** Its hypothesis c≥20(s+1)² is out of exhaustive range. Without that hypothesis it fails for small c (24 cases with c≤7). This is expected and is not a finding.
+- **T04 is conditional.** It verifies the arithmetic of (5.12)-(5.14) *given* the premises (5.12). The derivation of those premises from the regularisation estimates (5.4), (5.7) is a proof obligation; the manuscript lists it in A.2 as "not fully expanded". Finite computation cannot establish it.
+
+## Minor editorial observations (not defects)
+
+1. **l.440.** The size window follows from a≥33n/100, 99a≤100p and 48(2p−q)_+≤a alone. |n−3a|≤a/64 is not needed; z3 confirms this. This is harmless.
+2. **l.386.** The exact crossover of (4.6a) is n\*=3,672,542,735,043. The statement "fails for n≤3.6·10¹²" is correct but conservative.
+3. **l.468.** (4n+1)²/120 is the unconstrained maximum of (2b0−a0)/3. On the branch a0≤b0≤2a0 the maximum is about (n²−1)/8. The stated bound is valid but loose.
+4. **l.1953-1956.** (E.3), Q_s(n)−Q_s(n−1)=⌊(n+s+1)/3⌋, holds for every n≥1 in the tested range, not only for sufficiently large n.
+5. **l.2081.** Deleting both endpoints of a missing edge removes at most 4s−1 missing edges, not 4s+1. The stated count is an overcount and remains valid.
+
+## What these finite tests cannot establish
+
+- They cannot establish any universal (∀n, ∀G) claim: Theorems A, B, C, C′, 6.1, 6.5, Proposition 6.4 for n>7, or Lemma F.3a for n>7.
+- They say nothing about the existence or correctness of the asymptotic thresholds: N, N_s, N_s^stab, the tower bounds of §6.3 and Corollary 6.6, or (C.1)-(C.4).
+- They do not cover the correctness of the rounding theorem (Thm 3.1, Appendix C), the localisation (Prop 4.3), the regularisation estimates (5.4)/(5.7), the normalisation estimates of Appendix E, or the removal argument of F.3/F.5.
+- They do not cover the correspondence between the manuscript and the Lean sources.
+
+Scalar and symbolic checks (T01-T06, T18, T19, T22, T24, and T05/T19 via z3) verify the stated arithmetic steps exactly for all real or integer values, *given their premises*. The small-graph checks can only falsify; within their ranges they found nothing to falsify.
+
+---
+
+## E5 — lead-auditor verification
+- Predeclaration (E5_PREDECLARATION.md) written by the lead auditor before any computation; the delegated implementation followed it (T01–T25).
+- Reproduction: `t_scalar.py` and `t_integer.py` rerun by the lead auditor on 2026-09-30; outputs identical to the delegated results (excluding timings). Logs: `lead_rerun/`.
+- Graph/LP/ILP tests (T10–T17, T15 LP certificates) were not rerun by the lead auditor (runtime); their outputs carry exact certificates re-verified in-script.
+- Process deviation C-03/AUD-P1 recorded (lost first-run output of supplementary T06s).
+- Status: **E5 PASS within finite scope** (24 PASS, T25 NOT_APPLICABLE: no Certo certificate is bound to any claim). Finite tests do not establish universal claims.

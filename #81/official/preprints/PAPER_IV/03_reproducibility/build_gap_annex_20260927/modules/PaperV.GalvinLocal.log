@@ -1,0 +1,31 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 PaperV/GalvinLocal.lean -o /workspace/request-project/.lake/runner/lib/lean/PaperV/GalvinLocal.olean -i /workspace/request-project/.lake/runner/lib/lean/PaperV/GalvinLocal.ilean
+PaperV/GalvinLocal.lean:35:0: warning: automatically included section variable(s) unused in theorem `PaperV.Host.bkw_host_assignment`:
+  [DecidableEq H]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq H] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+typeclass inference of Nonempty took 101ms
+import took 2.77s
+cumulative profiling times:
+	.olean serialization 61.2ms
+	attribute application 0.0609ms
+	compilation (IR) 0.575ms
+	compilation (LCNF base) 0.729ms
+	compilation (LCNF mono) 0.915ms
+	congr simp thm 3.76ms
+	elaboration 46.5ms
+	fix level params 0.822ms
+	import 2.77s
+	initialization 37.2ms
+	instantiate metavars 6.39ms
+	interpretation 208ms
+	let-to-have transformation 0.104ms
+	linting 11ms
+	parsing 7.47ms
+	process pre-definitions 5.98ms
+	share common exprs 2.75ms
+	simp 52.4ms
+	tactic execution 97.7ms
+	type checking 15.8ms
+	typeclass inference 385ms

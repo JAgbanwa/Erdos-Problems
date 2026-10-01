@@ -1,0 +1,27 @@
+{
+  "commands": [
+    {
+      "name": "supplement_build",
+      "command": [
+        "lake",
+        "build",
+        "ThreeRegime.CompleteStateAllOrders",
+        "FarExploration.CleanupRigidVerdict"
+      ],
+      "exit_code": 0,
+      "log_sha256": "8ad318366fa11c032feecfd176414ec7d0da7fc2c81e483ebb16333f89df6447"
+    },
+    {
+      "name": "supplement_after_build",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "C:\\Users\\jtraverso\\e81p4-publish\\preprints\\PAPER_IV\\03_reproducibility\\recorded_lean_audits\\SupplementAudit.lean"
+      ],
+      "exit_code": 0,
+      "log_sha256": "9503678633e76ec1e8a95dbee1514e6eea503c072ef2128d5ca0175368d3cc7f"
+    }
+  ],
+  "sources_unchanged": true
+}

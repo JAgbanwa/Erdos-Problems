@@ -1,0 +1,40 @@
+$ c:\Users\jtraverso\.elan\toolchains\leanprover--lean4---v4.28.0\bin\lean.exe -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false PaperIV/PublicationIncrementAudit.lean -o C:\Users\jtraverso\e81p4\clean_stability_build_20260928\.lake\runner\lib\lean\PaperIV\PublicationIncrementAudit.olean -i C:\Users\jtraverso\e81p4\clean_stability_build_20260928\.lake\runner\lib\lean\PaperIV\PublicationIncrementAudit.ilean
+'PaperIV.DefectSharpPublication.rooted_defect_eventual' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PaperIV.DefectSharpPublication.comparator_baseline_eq_target' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PaperIV.DefectSharpPublication.exists_defect_lower_witness' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PaperIV.DefectSharpPublication.rooted_defect_maximum' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PaperIV.DefectSharpPublication.order_three_insufficient' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PaperIV.RootedDefectZero.rootedDefect_zero_iff_isChordal' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PaperIV.DefectComparatorLower.cliquePartition_size_ge_defect_baseline' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PaperIV.DefectComparatorRootedDefect.rootedDefectAt_defSplitGraph' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+PASS PaperIV.DefectSharpPublication.rooted_defect_eventual: 41430 transitive constants; axioms [propext,
+ Classical.choice,
+ Quot.sound]
+PASS PaperIV.DefectSharpPublication.comparator_baseline_eq_target: 12029 transitive constants; axioms [propext,
+ Classical.choice,
+ Quot.sound]
+PASS PaperIV.DefectSharpPublication.exists_defect_lower_witness: 13042 transitive constants; axioms [propext,
+ Classical.choice,
+ Quot.sound]
+PASS PaperIV.DefectSharpPublication.rooted_defect_maximum: 41523 transitive constants; axioms [propext,
+ Classical.choice,
+ Quot.sound]
+PASS PaperIV.DefectSharpPublication.order_three_insufficient: 6737 transitive constants; axioms [propext,
+ Classical.choice,
+ Quot.sound]
+PASS PaperIV.RootedDefectZero.rootedDefect_zero_iff_isChordal: 13774 transitive constants; axioms [propext,
+ Classical.choice,
+ Quot.sound]
+PASS PaperIV.DefectComparatorLower.cliquePartition_size_ge_defect_baseline: 4944 transitive constants; axioms [propext,
+ Classical.choice,
+ Quot.sound]
+PASS PaperIV.DefectComparatorRootedDefect.rootedDefectAt_defSplitGraph: 4049 transitive constants; axioms [propext,
+ Classical.choice,
+ Quot.sound]
+Publication increment: constant-cone, axiom whitelist and import checks PASSED.

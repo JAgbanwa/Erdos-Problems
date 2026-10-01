@@ -1,0 +1,51 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 Nibble/Tight/RoundExplicit.lean -o /workspace/request-project/.lake/runner/lib/lean/Nibble/Tight/RoundExplicit.olean -i /workspace/request-project/.lake/runner/lib/lean/Nibble/Tight/RoundExplicit.ilean
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_nlinarith_1._boxed took 119ms
+tactic execution of Mathlib.Tactic.nlinarith took 106ms
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_nlinarith_1._boxed took 133ms
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_nlinarith_1._boxed took 148ms
+interpretation of Mathlib.Tactic.FieldSimp._aux_Mathlib_Tactic_FieldSimp___elabRules_Mathlib_Tactic_FieldSimp_fieldSimp_1._boxed took 142ms
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_linarith_1._boxed took 143ms
+tactic execution of Mathlib.Tactic.linarith took 129ms
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_linarith_1._boxed took 169ms
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_linarith_1._boxed took 164ms
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_linarith_1._boxed took 218ms
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_linarith_1._boxed took 196ms
+share common exprs took 102ms
+type checking took 186ms
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_linarith_1._boxed took 131ms
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_linarith_1._boxed took 120ms
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_linarith_1._boxed took 103ms
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_linarith_1._boxed took 132ms
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_linarith_1._boxed took 124ms
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_linarith_1._boxed took 133ms
+tactic execution of Lean.Parser.Tactic.exact took 113ms
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_linarith_1._boxed took 109ms
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_linarith_1._boxed took 126ms
+instantiate metavars took 108ms
+type checking took 102ms
+import took 4.3s
+.olean serialization took 176ms
+cumulative profiling times:
+	.olean serialization 176ms
+	attribute application 0.159ms
+	compilation (IR) 29.9ms
+	compilation (LCNF base) 27.7ms
+	compilation (LCNF mono) 12.8ms
+	congr simp thm 30.1ms
+	elaboration 254ms
+	fix level params 6.87ms
+	import 4.3s
+	initialization 39.3ms
+	instantiate metavars 194ms
+	interpretation 6.56s
+	let-to-have transformation 0.365ms
+	linting 214ms
+	norm_num 2.36s
+	parsing 25.5ms
+	process pre-definitions 139ms
+	ring 565ms
+	share common exprs 237ms
+	simp 389ms
+	tactic execution 1.48s
+	type checking 510ms
+	typeclass inference 4.8s

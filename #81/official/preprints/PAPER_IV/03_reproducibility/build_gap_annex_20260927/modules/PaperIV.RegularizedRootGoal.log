@@ -1,0 +1,31 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 PaperIV/RegularizedRootGoal.lean -o /workspace/request-project/.lake/runner/lib/lean/PaperIV/RegularizedRootGoal.olean -i /workspace/request-project/.lake/runner/lib/lean/PaperIV/RegularizedRootGoal.ilean
+type checking took 103ms
+type checking took 126ms
+type checking took 107ms
+type checking took 133ms
+type checking took 148ms
+type checking took 153ms
+import took 2.98s
+.olean serialization took 141ms
+cumulative profiling times:
+	.olean serialization 141ms
+	attribute application 0.0207ms
+	blocked (unaccounted) 21.5ms
+	congr simp thm 10.5ms
+	elaboration 61.9ms
+	fix level params 0.337ms
+	import 2.98s
+	initialization 38.1ms
+	instantiate metavars 2.76ms
+	interpretation 215ms
+	let-to-have transformation 0.0308ms
+	linting 8.44ms
+	norm_num 0.808ms
+	parsing 4.63ms
+	process pre-definitions 5.54ms
+	ring 6.7ms
+	share common exprs 2.68ms
+	simp 1.13ms
+	tactic execution 394ms
+	type checking 1.18s
+	typeclass inference 563ms

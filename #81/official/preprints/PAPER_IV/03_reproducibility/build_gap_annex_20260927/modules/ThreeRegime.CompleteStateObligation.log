@@ -1,0 +1,34 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 ThreeRegime/CompleteStateObligation.lean -o /workspace/request-project/.lake/runner/lib/lean/ThreeRegime/CompleteStateObligation.olean -i /workspace/request-project/.lake/runner/lib/lean/ThreeRegime/CompleteStateObligation.ilean
+ThreeRegime/CompleteStateObligation.lean:50:0: warning: automatically included section variable(s) unused in theorem `ThreeRegime.gain_of_all_triangles`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_nlinarith_1._boxed took 132ms
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_nlinarith_1._boxed took 102ms
+import took 3.34s
+cumulative profiling times:
+	.olean serialization 56.7ms
+	attribute application 0.0754ms
+	compilation (IR) 4.1ms
+	compilation (LCNF base) 4.23ms
+	compilation (LCNF mono) 1.77ms
+	congr simp thm 4.81ms
+	elaboration 30.6ms
+	fix level params 0.512ms
+	import 3.34s
+	initialization 39.7ms
+	instantiate metavars 2.21ms
+	interpretation 440ms
+	let-to-have transformation 0.105ms
+	linting 7.12ms
+	norm_num 3.8ms
+	parsing 5.3ms
+	process pre-definitions 5.78ms
+	ring 13.3ms
+	share common exprs 3.43ms
+	simp 168ms
+	tactic execution 68ms
+	type checking 124ms
+	typeclass inference 366ms

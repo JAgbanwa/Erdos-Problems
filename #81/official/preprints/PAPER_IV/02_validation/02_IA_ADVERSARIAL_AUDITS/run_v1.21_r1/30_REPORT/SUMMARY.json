@@ -1,0 +1,23 @@
+{
+  "run": "run_v1.21_r1",
+  "revision": "v1.21-r1",
+  "target_sha256": "574352e89474badc59899db37aa48f1de362b086293b7d9a0043189787daf2a7",
+  "auditor": "Claude Opus 5.5 (claude-opus-5-5); same session as run_v1.2_r1; not blind; not cross-family",
+  "overall_verdict": "INCONCLUSIVE",
+  "open_mandatory_item": "E2 A2-4 / X-05: regularity recurrence and final tower comparison N_far(eta0) <= T(h+7) in C.3 not derived; A.2 cites a non-existent 'recurrence in 6.3'. Affects explicit threshold values only.",
+  "gates": {
+    "E0": "PASS", "E1": "PASS_WITH_MINOR", "E2": "INCONCLUSIVE", "E3": "PASS",
+    "E4": {"verdict": "PASS", "method": "reused_verified_external_build", "recompiled_this_cycle": false},
+    "E5": "PASS", "E6": "PASS_WITH_FINDINGS", "E7": "PASS", "E8": "PASS_WITH_OBSERVATIONS"
+  },
+  "a2_verdicts": {"A2-1": "ACCEPTABLE_SUMMARY", "A2-2": "ACCEPTABLE_SUMMARY", "A2-3": "ACCEPTABLE_SUMMARY", "A2-4": "REQUIRES_EXPANSION", "A2-5": "ACCEPTABLE_SUMMARY", "A2-6": "ACCEPTABLE_SUMMARY", "A2-7": "ACCEPTABLE_SUMMARY"},
+  "resolved": ["X-01","X-02","X-03","X-04","X-06","X-07","X-08","X-09","X-10","X-11","X-13","X-14","X-16","X-20","X-21","X-23","X-25","X-27"],
+  "partial": ["X-05","X-12","X-15"],
+  "mitigated": ["X-28"],
+  "new": ["NEW-01 MINOR", "NEW-02 MINOR", "R-01 OBS", "R-02 OBS", "E8-01 OBS", "E8-02 OBS", "E8-03 OBS"],
+  "repeated_checks": ["E0 x2", "auditor diff + rederivation", "21 exact numerics", "identifier resolution", "X-27 text vs probe log", "literature later versions", "detector tests + 1266-log rescan", "E4 record re-verification", "143/143 page inspection"],
+  "reused_evidence": ["run_v1.2_r1 E4 build (607/607, 19 targets, 50/50 annex, 607 byte-identical oleans, cones)", "run_v1.2_r1 E5 T01-T24", "run_v1.2_r1 E3 dynamic"],
+  "lean_executed_this_cycle": false,
+  "limitations": ["same session/model as prior run", "same family as manuscript assistant", "same machine and shared Mathlib cache", "no kernel replay", "E6 parity by rate-limited subagent; page viewing by lead auditor at 90 dpi 2-up"],
+  "not": ["human peer review", "permission to publish"]
+}

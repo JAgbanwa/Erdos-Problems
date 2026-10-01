@@ -1,0 +1,34 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 PaperIV/EditRouteLocalization.lean -o /workspace/request-project/.lake/runner/lib/lean/PaperIV/EditRouteLocalization.olean -i /workspace/request-project/.lake/runner/lib/lean/PaperIV/EditRouteLocalization.ilean
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_nlinarith_1._boxed took 818ms
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_nlinarith_1._boxed took 2.08s
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_linarith_1._boxed took 119ms
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_linarith_1._boxed took 126ms
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_linarith_1._boxed took 113ms
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_nlinarith_1._boxed took 209ms
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_nlinarith_1._boxed took 186ms
+import took 4.53s
+.olean serialization took 130ms
+cumulative profiling times:
+	.olean serialization 130ms
+	attribute application 0.15ms
+	compilation (IR) 29.9ms
+	compilation (LCNF base) 27.2ms
+	compilation (LCNF mono) 12.6ms
+	congr simp thm 30.9ms
+	elaboration 115ms
+	fix level params 2.97ms
+	import 4.53s
+	initialization 48.2ms
+	instantiate metavars 66.5ms
+	interpretation 5.22s
+	let-to-have transformation 0.231ms
+	linting 69.3ms
+	norm_num 338ms
+	parsing 24.1ms
+	process pre-definitions 49ms
+	ring 142ms
+	share common exprs 40.5ms
+	simp 576ms
+	tactic execution 848ms
+	type checking 244ms
+	typeclass inference 2.66s

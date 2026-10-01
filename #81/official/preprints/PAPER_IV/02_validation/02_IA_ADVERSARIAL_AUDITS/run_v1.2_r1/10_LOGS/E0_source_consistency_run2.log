@@ -1,0 +1,354 @@
+{
+ "manifest_entries": 615,
+ "manifest_vs_zip_missing_in_zip": [],
+ "manifest_vs_zip_extra_in_zip": [],
+ "manifest_vs_zip_hash_mismatch": [],
+ "non_lean_entries": [
+  "FREEZE_SCOPE.json",
+  "docs/PUBLICATION_AUDIT.md",
+  "lake-manifest.json",
+  "lakefile.toml",
+  "lean-toolchain",
+  "tools/audit_publication.py",
+  "tools/freeze_publication.py",
+  "tools/paperiv_build.py"
+ ],
+ "config_files_present": [
+  "lakefile.toml",
+  "lean-toolchain",
+  "lake-manifest.json"
+ ],
+ "lean_toolchain": "leanprover/lean4:v4.28.0",
+ "lake_manifest_packages": [
+  {
+   "name": "mathlib",
+   "rev": "8f9d9cff6bd728b17a24e163c9402775d9e6a365",
+   "inputRev": "v4.28.0",
+   "url": "https://github.com/leanprover-community/mathlib4.git",
+   "type": "git",
+   "scope": ""
+  },
+  {
+   "name": "plausible",
+   "rev": "55c8532eb21ec9f6d565d51d96b8ca50bd1fbef3",
+   "inputRev": "main",
+   "url": "https://github.com/leanprover-community/plausible",
+   "type": "git",
+   "scope": "leanprover-community"
+  },
+  {
+   "name": "LeanSearchClient",
+   "rev": "c5d5b8fe6e5158def25cd28eb94e4141ad97c843",
+   "inputRev": "main",
+   "url": "https://github.com/leanprover-community/LeanSearchClient",
+   "type": "git",
+   "scope": "leanprover-community"
+  },
+  {
+   "name": "importGraph",
+   "rev": "85b59af46828c029a9168f2f9c35119bd0721e6e",
+   "inputRev": "main",
+   "url": "https://github.com/leanprover-community/import-graph",
+   "type": "git",
+   "scope": "leanprover-community"
+  },
+  {
+   "name": "proofwidgets",
+   "rev": "be3b2e63b1bbf496c478cef98b86972a37c1417d",
+   "inputRev": "v0.0.87",
+   "url": "https://github.com/leanprover-community/ProofWidgets4",
+   "type": "git",
+   "scope": "leanprover-community"
+  },
+  {
+   "name": "aesop",
+   "rev": "f642a64c76df8ba9cb53dba3b919425a0c2aeaf1",
+   "inputRev": "master",
+   "url": "https://github.com/leanprover-community/aesop",
+   "type": "git",
+   "scope": "leanprover-community"
+  },
+  {
+   "name": "Qq",
+   "rev": "b8f98e9087e02c8553945a2c5abf07cec8e798c3",
+   "inputRev": "master",
+   "url": "https://github.com/leanprover-community/quote4",
+   "type": "git",
+   "scope": "leanprover-community"
+  },
+  {
+   "name": "batteries",
+   "rev": "495c008c3e3f4fb4256ff5582ddb3abf3198026f",
+   "inputRev": "main",
+   "url": "https://github.com/leanprover-community/batteries",
+   "type": "git",
+   "scope": "leanprover-community"
+  },
+  {
+   "name": "Cli",
+   "rev": "4f10f47646cb7d5748d6f423f4a07f98f7bbcc9e",
+   "inputRev": "v4.28.0",
+   "url": "https://github.com/leanprover/lean4-cli",
+   "type": "git",
+   "scope": "leanprover"
+  }
+ ],
+ "own_module_count": 607,
+ "targets": [
+  "PaperIV",
+  "PaperIV.Audit",
+  "PaperIV.ConeAudit",
+  "PaperIV.PublicationIncrementAudit",
+  "A4S1.IndepAllAudit",
+  "ThreeRegime.AxiomCheck",
+  "FarExploration.AxiomCheck",
+  "PaperIV.CliqueTreeAudit",
+  "E17.ImprovedFarRoundingAudit",
+  "E17.ExplicitFarAudit",
+  "PaperIV.ExplicitThresholdAudit",
+  "ReleaseExportCheck",
+  "PaperIVEditorial.ConstructorBudgetAudit",
+  "ResearchAudit",
+  "FDCheck.FinalAudit",
+  "E35.Audit",
+  "FDCheck.ASCheck",
+  "E34.Audit",
+  "PaperIV.OptimalTemplateObstructionAudit"
+ ],
+ "targets_missing_as_modules": [],
+ "per_target_own_closure_size": {
+  "PaperIV": 553,
+  "PaperIV.Audit": 463,
+  "PaperIV.ConeAudit": 463,
+  "PaperIV.PublicationIncrementAudit": 413,
+  "A4S1.IndepAllAudit": 408,
+  "ThreeRegime.AxiomCheck": 23,
+  "FarExploration.AxiomCheck": 206,
+  "PaperIV.CliqueTreeAudit": 11,
+  "E17.ImprovedFarRoundingAudit": 187,
+  "E17.ExplicitFarAudit": 342,
+  "PaperIV.ExplicitThresholdAudit": 343,
+  "ReleaseExportCheck": 554,
+  "PaperIVEditorial.ConstructorBudgetAudit": 409,
+  "ResearchAudit": 512,
+  "FDCheck.FinalAudit": 487,
+  "E35.Audit": 459,
+  "FDCheck.ASCheck": 512,
+  "E34.Audit": 451,
+  "PaperIV.OptimalTemplateObstructionAudit": 422
+ },
+ "union_closure_size": 607,
+ "modules_not_in_any_target_closure": [],
+ "external_import_roots": [
+  "Lean",
+  "Mathlib"
+ ],
+ "text_scan_counts": {
+  "sorry": 36,
+  "admit": 4,
+  "axiom_decl": 0,
+  "unsafe": 0,
+  "implemented_by": 3,
+  "extern": 0,
+  "native_decide": 3,
+  "opaque": 0,
+  "debug_skipKernelTC": 0,
+  "ofReduceBool": 1
+ },
+ "packages_root": "C:\\Users\\jtraverso\\e81p4\\preprints\\PAPER_IV\\05_formalization\\lean\\.lake\\packages",
+ "packages_root_resolved": "C:\\Users\\jtraverso\\e81p4\\preprints\\PAPER_IV\\05_formalization\\lean\\.lake\\packages",
+ "dependencies": [
+  {
+   "name": "mathlib",
+   "manifest_rev": "8f9d9cff6bd728b17a24e163c9402775d9e6a365",
+   "exists": true,
+   "resolved": "C:\\Users\\jtraverso\\e81p4\\preprints\\PAPER_IV\\05_formalization\\lean\\.lake\\packages\\mathlib",
+   "head": "8f9d9cff6bd728b17a24e163c9402775d9e6a365",
+   "tracked_changes": 0,
+   "head_match": true
+  },
+  {
+   "name": "plausible",
+   "manifest_rev": "55c8532eb21ec9f6d565d51d96b8ca50bd1fbef3",
+   "exists": true,
+   "resolved": "C:\\Users\\jtraverso\\e81p4\\preprints\\PAPER_IV\\05_formalization\\lean\\.lake\\packages\\plausible",
+   "head": "55c8532eb21ec9f6d565d51d96b8ca50bd1fbef3",
+   "tracked_changes": 0,
+   "head_match": true
+  },
+  {
+   "name": "LeanSearchClient",
+   "manifest_rev": "c5d5b8fe6e5158def25cd28eb94e4141ad97c843",
+   "exists": true,
+   "resolved": "C:\\Users\\jtraverso\\e81p4\\preprints\\PAPER_IV\\05_formalization\\lean\\.lake\\packages\\LeanSearchClient",
+   "head": "c5d5b8fe6e5158def25cd28eb94e4141ad97c843",
+   "tracked_changes": 0,
+   "head_match": true
+  },
+  {
+   "name": "importGraph",
+   "manifest_rev": "85b59af46828c029a9168f2f9c35119bd0721e6e",
+   "exists": true,
+   "resolved": "C:\\Users\\jtraverso\\e81p4\\preprints\\PAPER_IV\\05_formalization\\lean\\.lake\\packages\\importGraph",
+   "head": "85b59af46828c029a9168f2f9c35119bd0721e6e",
+   "tracked_changes": 0,
+   "head_match": true
+  },
+  {
+   "name": "proofwidgets",
+   "manifest_rev": "be3b2e63b1bbf496c478cef98b86972a37c1417d",
+   "exists": true,
+   "resolved": "C:\\Users\\jtraverso\\e81p4\\preprints\\PAPER_IV\\05_formalization\\lean\\.lake\\packages\\proofwidgets",
+   "head": "be3b2e63b1bbf496c478cef98b86972a37c1417d",
+   "tracked_changes": 0,
+   "head_match": true
+  },
+  {
+   "name": "aesop",
+   "manifest_rev": "f642a64c76df8ba9cb53dba3b919425a0c2aeaf1",
+   "exists": true,
+   "resolved": "C:\\Users\\jtraverso\\e81p4\\preprints\\PAPER_IV\\05_formalization\\lean\\.lake\\packages\\aesop",
+   "head": "f642a64c76df8ba9cb53dba3b919425a0c2aeaf1",
+   "tracked_changes": 0,
+   "head_match": true
+  },
+  {
+   "name": "Qq",
+   "manifest_rev": "b8f98e9087e02c8553945a2c5abf07cec8e798c3",
+   "exists": true,
+   "resolved": "C:\\Users\\jtraverso\\e81p4\\preprints\\PAPER_IV\\05_formalization\\lean\\.lake\\packages\\Qq",
+   "head": "b8f98e9087e02c8553945a2c5abf07cec8e798c3",
+   "tracked_changes": 0,
+   "head_match": true
+  },
+  {
+   "name": "batteries",
+   "manifest_rev": "495c008c3e3f4fb4256ff5582ddb3abf3198026f",
+   "exists": true,
+   "resolved": "C:\\Users\\jtraverso\\e81p4\\preprints\\PAPER_IV\\05_formalization\\lean\\.lake\\packages\\batteries",
+   "head": "495c008c3e3f4fb4256ff5582ddb3abf3198026f",
+   "tracked_changes": 0,
+   "head_match": true
+  },
+  {
+   "name": "Cli",
+   "manifest_rev": "4f10f47646cb7d5748d6f423f4a07f98f7bbcc9e",
+   "exists": true,
+   "resolved": "C:\\Users\\jtraverso\\e81p4\\preprints\\PAPER_IV\\05_formalization\\lean\\.lake\\packages\\Cli",
+   "head": "4f10f47646cb7d5748d6f423f4a07f98f7bbcc9e",
+   "tracked_changes": 0,
+   "head_match": true
+  }
+ ],
+ "elan_toolchains": "leanprover/lean4:v4.28.0\nleanprover/lean4:v4.31.0\n"
+}
+name = "PaperIV"
+version = "0.1.0"
+keywords = ["math", "erdos-81", "chordal-graphs", "clique-partitions"]
+defaultTargets = ["PaperIV"]
+
+[leanOptions]
+pp.unicode.fun = true
+relaxedAutoImplicit = false
+linter.unusedSimpArgs = false
+
+[[require]]
+name = "mathlib"
+scope = "leanprover-community"
+rev = "v4.28.0"
+
+[[lean_lib]]
+name = "PaperIV"
+moreLeanArgs = ["-s", "32768"]
+
+[[lean_lib]]
+name = "Nibble"
+globs = ["Nibble.+"]
+
+[[lean_lib]]
+name = "Contrib"
+globs = ["Contrib.+"]
+
+[[lean_lib]]
+name = "MixedRounding"
+moreLeanArgs = ["-s", "32768"]
+
+[[lean_lib]]
+name = "PaperI"
+moreLeanArgs = ["-s", "32768"]
+
+[[lean_lib]]
+name = "FarExploration"
+globs = ["FarExploration.+"]
+moreLeanArgs = ["-s", "32768"]
+
+[[lean_lib]]
+name = "ExactReduction"
+globs = ["ExactReduction.+"]
+moreLeanArgs = ["-s", "32768"]
+
+[[lean_lib]]
+name = "ThreeRegime"
+globs = ["ThreeRegime.+"]
+moreLeanArgs = ["-s", "32768"]
+
+[[lean_lib]]
+name = "BoundedCliqueGap"
+globs = ["BoundedCliqueGap.+"]
+moreLeanArgs = ["-s", "32768"]
+
+[[lean_lib]]
+name = "A4S1"
+moreLeanArgs = ["-s", "32768"]
+
+[[lean_lib]]
+name = "RequestProject"
+moreLeanArgs = ["-s", "32768"]
+
+[[lean_lib]]
+name = "E17"
+
+[[lean_lib]]
+name = "PaperV"
+
+[[lean_lib]]
+name = "E18"
+
+[[lean_lib]]
+name = "E19"
+
+[[lean_lib]]
+name = "PaperIVEditorial"
+globs = ["PaperIVEditorial.+"]
+moreLeanArgs = ["-s", "32768"]
+
+[[lean_lib]]
+name = "E32"
+globs = ["E32.+"]
+moreLeanArgs = ["-s", "32768"]
+
+[[lean_lib]]
+name = "E33"
+globs = ["E33.+"]
+moreLeanArgs = ["-s", "32768"]
+
+[[lean_lib]]
+name = "E34"
+globs = ["E34.+"]
+moreLeanArgs = ["-s", "32768"]
+
+[[lean_lib]]
+name = "E35"
+globs = ["E35.+"]
+moreLeanArgs = ["-s", "32768"]
+
+[[lean_lib]]
+name = "FDCheck"
+globs = ["FDCheck.+"]
+moreLeanArgs = ["-s", "32768"]
+
+[[lean_lib]]
+name = "StabilityPublication"
+roots = ["ArbitraryOrderSequences", "AsymptoticTools", "BaselineCapacity", "CliqueShiftArithmetic", "ComparatorResize", "CoreCliqueAlternative", "CoreRepair", "DualBudgetArithmetic", "E32Bridge", "EditRootRecovery", "ExplicitFixedStability", "ExtremalEditStability", "FixedDefectConclusion", "FixedDefectPieceEdges", "LargeCliqueCore", "NormalizedCliqueCore", "NormalizedDeficit", "NormalizedStability", "OptimalCoreDistance", "PieceEdgeStability", "PublicationStability", "RefinedFractionalBound", "RefinedRounding", "ResearchAudit", "ResidualExcess", "RootCliquePrices", "RootedCliqueRecovery", "RootPartition", "RootScore", "RootStepBudget", "SignedDualModel", "SignedElimination", "SmallOrderFractional", "StrictBudget", "StrictConstructor", "StrictParams", "StrictTerminal", "SublinearEdit", "SublinearLocalization", "SublinearPartitionBound", "SublinearSequences", "SublinearStability", "SublinearStabilityTransfer", "TemplateDistance", "TemplateShift", "UniformFractionalBound", "VertexEditBound"]
+moreLeanArgs = ["-s", "32768"]
+

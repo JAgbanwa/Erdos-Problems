@@ -1,0 +1,94 @@
+=================== IsDefectRoot  (5 hit(s))
+--- E32/Basic.lean:31  (namespaces opened before: ['E32'], ended: [])
+structure IsDefectRoot (G : SimpleGraph V) (s : ℕ) (C D H : Finset V) : Prop where
+--- E32/Consequences.lean:160  (namespaces opened before: ['E32'], ended: [])
+theorem IsDefectRoot.card_sum {n : ℕ} {G : SimpleGraph (Fin n)} {s : ℕ} {C D H : Finset (Fin n)}
+    (hR : IsDefectRoot G s C D H) : C.card + s + H.card = n := by
+--- E32/PieceIdentity.lean:117  (namespaces opened before: ['E32'], ended: [])
+theorem IsDefectRoot.disjXH (hR : IsDefectRoot G s C D H) : Disjoint (C ∪ D) H :=
+--- E32/PieceIdentity.lean:121  (namespaces opened before: ['E32'], ended: [])
+theorem IsDefectRoot.piece_eq (hR : IsDefectRoot G s C D H) (K : Finset V) :
+    K = (K ∩ (C ∪ D)) ∪ (K ∩ H) := by
+--- E32/PieceIdentity.lean:135  (namespaces opened before: ['E32'], ended: [])
+theorem IsDefectRoot.edit_ge (hR : IsDefectRoot G s C D H) :
+    ((G.edgeFinset ∩ pairs (C ∪ D)) \ pairs C).card + (G.edgeFinset ∩ pairs H).card +
+      (crossEdges (C ∪ D) H \ G.edgeFinset).card ≤ rootEdit G C D H := by
+
+=================== rootEdit  (1 hit(s))
+--- E32/Basic.lean:42  (namespaces opened before: ['E32'], ended: [])
+def rootEdit (G : SimpleGraph V) [DecidableRel G.Adj] (C D H : Finset V) : ℕ :=
+
+=================== rootBaseline  (1 hit(s))
+--- E32/Basic.lean:46  (namespaces opened before: ['E32'], ended: [])
+def rootBaseline (C D H : Finset V) : ℕ := (C.card + D.card) * H.card - C.card.choose 2
+
+=================== IsCanonicalPiece  (1 hit(s))
+--- E32/Basic.lean:49  (namespaces opened before: ['E32'], ended: [])
+def IsCanonicalPiece (C D H K : Finset V) : Prop :=
+
+=================== defectNoncanonicalEdgeMass  (1 hit(s))
+--- FixedDefectPieceEdges.lean:186  (namespaces opened before: ['E32', 'PaperIV.SublinearResearch'], ended: ['E32'])
+noncomputable def defectNoncanonicalEdgeMass {V : Type*} [Fintype V] [DecidableEq V]
+    {G : SimpleGraph V} [DecidableRel G.Adj] (C D H : Finset V) (Q : CliquePartition G) : ℕ := by
+
+=================== IsAdmissibleExtremal  (1 hit(s))
+--- E32/Basic.lean:59  (namespaces opened before: ['E32'], ended: [])
+def IsAdmissibleExtremal (G : SimpleGraph V) (s : ℕ) : Prop :=
+
+=================== stabilityThreshold  (1 hit(s))
+--- ExplicitFixedStability.lean:25  (namespaces opened before: ['PaperIV.SublinearResearch.FixedExplicit'], ended: [])
+noncomputable def stabilityThreshold (s : ℕ) : ℕ :=
+
+=================== stabilityGamma  (1 hit(s))
+--- ExplicitFixedStability.lean:16  (namespaces opened before: ['PaperIV.SublinearResearch.FixedExplicit'], ended: [])
+def stabilityGamma (s : ℕ) : ℚ := min (terminalGamma s) (epsS s/4)/2
+
+=================== stabilityConstant  (1 hit(s))
+--- ExplicitFixedStability.lean:14  (namespaces opened before: ['PaperIV.SublinearResearch.FixedExplicit'], ended: [])
+def stabilityConstant (s : ℕ) : ℚ := max (terminalConstant s) (2/epsS s)
+
+=================== terminalConstant  (1 hit(s))
+--- ExplicitFixedStability.lean:13  (namespaces opened before: ['PaperIV.SublinearResearch.FixedExplicit'], ended: [])
+def terminalConstant (s : ℕ) : ℚ := 40000*((s : ℚ)+1)^3
+
+=================== noncanonicalPieces  (1 hit(s))
+--- PaperIV/RootPartitionStability.lean:291  (namespaces opened before: ['PaperIV.RootPartitionStability'], ended: [])
+noncomputable def noncanonicalPieces (R : Finset V)
+    (Q : CliquePartition G) : Finset (Finset V) := by
+
+=================== noncanonicalEdgeMass  (1 hit(s))
+--- PieceEdgeStability.lean:57  (namespaces opened before: ['PaperIV.SublinearResearch'], ended: [])
+noncomputable def noncanonicalEdgeMass (R : Finset V) (Q : CliquePartition G) : ℕ :=
+
+=================== splitGraph  (1 hit(s))
+--- PaperIV/SplitUniformIncidence.lean:161  (namespaces opened before: ['PaperIV.SplitUniformIncidence'], ended: [])
+def splitGraph (Core Hosts : Finset V) : SimpleGraph V where
+
+=================== graphEdgeSupport  (1 hit(s))
+--- PaperIV/GraphFamilyDistance.lean:20  (namespaces opened before: ['PaperIV.GraphFamilyDistance'], ended: [])
+noncomputable def graphEdgeSupport (X : SimpleGraph V) : Finset (Sym2 V) := by
+
+=================== outsideEdges  (1 hit(s))
+--- PaperIV/RootVocabulary.lean:29  (namespaces opened before: ['PaperIV.RootVocab'], ended: [])
+noncomputable def outsideEdges (G : SimpleGraph V) [DecidableRel G.Adj]
+    (P : Finset V) : Finset (Sym2 V) := by
+
+=================== missingIncidences  (2 hit(s))
+--- PaperIV/RD09L1Adapter.lean:123  (namespaces opened before: ['PaperIV.RD09L1Adapter'], ended: [])
+def missingIncidences (G : SimpleGraph V) [DecidableRel G.Adj] (root : I → V) (f : A ↪ V) :
+    Finset (I × A) :=
+--- PaperIV/RootVocabulary.lean:67  (namespaces opened before: ['PaperIV.RootVocab'], ended: [])
+noncomputable def missingIncidences (G : SimpleGraph V) [DecidableRel G.Adj]
+    (P : Finset V) : ℕ :=
+
+=================== splitBaseline  (1 hit(s))
+--- PaperIV/SharpEnvelope.lean:16  (namespaces opened before: ['PaperIV'], ended: [])
+def splitBaseline (n p : ℚ) : ℚ := p * (n - p) - p * (p - 1) / 2
+
+=================== gamma  (1 hit(s))
+--- PaperIV/IntegralStability.lean:70  (namespaces opened before: ['PaperIV.IntegralStability'], ended: [])
+def gamma : ℚ := PaperIV.NearH1Calibration.eta / 4
+
+=================== epsS  (1 hit(s))
+--- A4S1/IndepAllSetup.lean:33  (namespaces opened before: ['A4S1.IndepAll'], ended: [])
+def epsS (s : ℕ) : ℚ := 1 / (10 ^ 41 * ((s : ℚ) + 1) ^ 8)

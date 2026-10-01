@@ -1,0 +1,41 @@
+{
+  "freeze_id": "piv-v12-manuscripts-2451d43bface",
+  "created_at_utc": "2026-09-30T01:33:21.682989+00:00",
+  "status": "LOCAL_BILINGUAL_MANUSCRIPT_FREEZE",
+  "version": "1.2",
+  "source_freeze": "piv-v12-fb459343d234",
+  "source_freeze_record": "../../04_integrity/FREEZE_piv-v12-fb459343d234.json",
+  "source_manifest_sha256": "fb459343d234f968d7d32eff1491ea8a09aa2e135b313a80623012e7449042f5",
+  "source_archive_sha256": "cb2741454380736ffe01b59933057b5079fa9f865d5bbdd3f67534bf808a62e6",
+  "author_full_build_evidence_seal": "../../03_reproducibility/full_rebuild_v12_20260929_seal/EVIDENCE_SEAL.json",
+  "author_full_build_evidence_seal_sha256": "d0cfb1f1b19f876404e384b518e0d582186075086af2f71ee163c86c854773b5",
+  "manifest_sha256": "2451d43bfacee76791a10bcd115100d6a7dfa68e4e3bda9de62032179151f8be",
+  "manifest_files": 105,
+  "archive": "C:\\Users\\jtraverso\\e81p4-publish\\preprints\\PAPER_IV\\01_manuscript\\frozen_manuscripts\\piv-v12-manuscripts-2451d43bface.zip",
+  "archive_sha256": "422b0be34cfec130eaece95d077975d4e01d7e3d4501461b8db64931e0d2e663",
+  "zip_members": 106,
+  "zip_members_and_hashes_verified": true,
+  "manuscripts": {
+    "en": {
+      "pages": 68,
+      "md_sha256": "a501d53b527da22f20112db2b05917fb61f46dd8e080faf14b69349b240cc152",
+      "tex_sha256": "8068d4c6936cee54ad58d4e8e0bd12035c3aa2936101561647b6ab735a753995",
+      "pdf_sha256": "76a9ff8e3d9a02b8e745bcdd101b8272ff15430e285fc403c18b958c7073e667",
+      "underfull_warnings": 11,
+      "fontconfig_environment_notice": true,
+      "all_pdf_fonts_embedded_or_type3_charprocs": true
+    },
+    "es": {
+      "pages": 69,
+      "md_sha256": "2b6f73bf09ef905ea2c92206ee254b4ae46e64f1a51533cb4d8bcdc4e68c7be9",
+      "tex_sha256": "356e844bf75d55505241f7dca00f38c79d98233a776bc191e267c2052575d6e5",
+      "pdf_sha256": "bfa83e0e9fa50f9d391af462bb6b24a786c68e7d39d47cf78786f09d6aa7afc4",
+      "underfull_warnings": 3,
+      "fontconfig_environment_notice": true,
+      "all_pdf_fonts_embedded_or_type3_charprocs": true
+    }
+  },
+  "internal_audit": "PENDING_NEW_EXECUTION",
+  "external_audit": "PENDING_NEW_EXECUTION",
+  "publication": "NOT_PUBLISHED"
+}

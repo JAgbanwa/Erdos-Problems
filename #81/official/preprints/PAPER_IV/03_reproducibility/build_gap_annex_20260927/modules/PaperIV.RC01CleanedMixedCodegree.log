@@ -1,0 +1,49 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 PaperIV/RC01CleanedMixedCodegree.lean -o /workspace/request-project/.lake/runner/lib/lean/PaperIV/RC01CleanedMixedCodegree.olean -i /workspace/request-project/.lake/runner/lib/lean/PaperIV/RC01CleanedMixedCodegree.ilean
+PaperIV/RC01CleanedMixedCodegree.lean:93:0: warning: automatically included section variable(s) unused in theorem `PaperIV.RC01CleanedMixedCodegree.card_two_resources_le_one`:
+  [Nonempty V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Nonempty V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+PaperIV/RC01CleanedMixedCodegree.lean:125:4: warning: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+PaperIV/RC01CleanedMixedCodegree.lean:115:0: warning: automatically included section variable(s) unused in theorem `PaperIV.RC01CleanedMixedCodegree.card_two_resources_le_t`:
+  [Nonempty V]
+  [Fintype P]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Nonempty V] [Fintype P] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_nlinarith_1._boxed took 298ms
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_nlinarith_1._boxed took 352ms
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_nlinarith_1._boxed took 325ms
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_nlinarith_1._boxed took 161ms
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_nlinarith_1._boxed took 175ms
+interpretation of Mathlib.Tactic.FieldSimp._aux_Mathlib_Tactic_FieldSimp___elabRules_Mathlib_Tactic_FieldSimp_fieldSimp_1._boxed took 144ms
+import took 4.09s
+.olean serialization took 112ms
+cumulative profiling times:
+	.olean serialization 112ms
+	attribute application 0.0877ms
+	compilation (IR) 4.88ms
+	compilation (LCNF base) 4.88ms
+	compilation (LCNF mono) 2.95ms
+	congr simp thm 8.44ms
+	elaboration 105ms
+	fix level params 1.9ms
+	import 4.09s
+	initialization 37.4ms
+	instantiate metavars 15.4ms
+	interpretation 2.27s
+	let-to-have transformation 0.185ms
+	linting 48.7ms
+	norm_num 45.6ms
+	parsing 21.8ms
+	process pre-definitions 20.7ms
+	ring 64.4ms
+	share common exprs 19.1ms
+	simp 93ms
+	tactic execution 397ms
+	type checking 149ms
+	typeclass inference 1.35s

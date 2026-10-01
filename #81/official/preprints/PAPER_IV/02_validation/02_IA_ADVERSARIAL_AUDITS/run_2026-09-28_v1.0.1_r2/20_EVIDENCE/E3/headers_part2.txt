@@ -1,0 +1,150 @@
+====================================================================================================
+QUERY DefectSharpPublication.rooted_defect_eventual hits 1
+--- PaperIV/DefectSharpPublication.lean:14
+theorem rooted_defect_eventual (s : ℕ) :
+    ∃ N, ∀ n, N ≤ n → ∀ G : SimpleGraph (Fin n), ∀ [DecidableRel G.Adj],
+      RootedDefectAt G s →
+      ∃ Q : CliquePartition G, Q.OrderAtMost 4 ∧ Q.size ≤ defectTarget s n :=
+====================================================================================================
+QUERY DefectSharpPublication.rooted_defect_maximum hits 1
+--- PaperIV/DefectSharpPublication.lean:99
+theorem rooted_defect_maximum (s : ℕ) :
+    ∃ N, ∀ n, N ≤ n →
+      (∀ G : SimpleGraph (Fin n), ∀ [DecidableRel G.Adj], RootedDefectAt G s →
+        ∃ Q : CliquePartition G, Q.OrderAtMost 4 ∧ Q.size ≤ defectTarget s n) ∧
+      (∃ (G : SimpleGraph (Fin n)) (_ : DecidableRel G.Adj), RootedDefectAt G s ∧
+        ∃ Q : CliquePartition G, Q.OrderAtMost 4 ∧ Q.size = defectTarget s n ∧
+          ∀ R : CliquePartition G, Q.size ≤ R.size) := by
+====================================================================================================
+QUERY DefectSharpPublication.order_three_insufficient hits 1
+--- PaperIV/DefectSharpPublication.lean:116
+theorem order_three_insufficient (n : ℕ) (hn : n % 6 = 4)
+    (Q : CliquePartition (⊤ : SimpleGraph (Fin n))) (hQ : Q.OrderAtMost 3) :
+    targetSize n < Q.size := E11.targetSize_lt_of_orderAtMost_three_aux n hn Q hQ
+
+end PaperIV.DefectSharpPublication
+====================================================================================================
+QUERY SplitMixedGap.mixed_gap_zero hits 1
+--- PaperIV/SplitMixedGap.lean:167
+theorem mixed_gap_zero {Core Hosts : Finset V} (hd : Disjoint Core Hosts)
+    (hcore : 2 ≤ Core.card) (hhosts : Core.card ≤ Hosts.card) :
+    (∀ x : FracPacking (splitGraph Core Hosts) ℚ,
+        x.value ≤ 2 * (Core.card.choose 2 : ℚ)) ∧
+      ∃ Q : CliquePartition (splitGraph Core Hosts),
+        ∑ K ∈ Q.pieces, FarRounding.gainOf K = 2 * Core.card.choose 2 :=
+====================================================================================================
+QUERY RC01Final.rc01_uniformRoundingTarget hits 1
+--- PaperIV/RC01Final.lean:170
+theorem rc01_uniformRoundingTarget (ε : ℚ) (hε : 0 < ε) :
+    MixedRounding.UniformRoundingTarget ε := by
+====================================================================================================
+QUERY FarRegimeAllGraphs.farRegime_cliquePartition_allGraphs hits 1
+--- PaperIV/FarRegimeAllGraphs.lean:20
+theorem farRegime_cliquePartition_allGraphs (η : ℚ) (hη : 0 < η) :
+    ∃ N : ℕ, ∀ n : ℕ, N ≤ n → ∀ (G : SimpleGraph (Fin n)) [DecidableRel G.Adj],
+      PaperIV.VertexCopyGate.F4' G < (n : ℝ) ^ 2 / 6 - (η : ℝ) * (n : ℝ) ^ 2 →
+        ∃ Q : CliquePartition G, Q.OrderAtMost 4 ∧ Q.size ≤ targetSize n := by
+====================================================================================================
+QUERY HybridDichotomy.chordal_far_or_nearStructure hits 1
+--- PaperIV/HybridDichotomy.lean:69
+theorem chordal_far_or_nearStructure :
+    ∃ N : ℕ, ∀ n : ℕ, N ≤ n → ∀ (G : SimpleGraph (Fin n)) [DecidableRel G.Adj],
+      PaperIV.FarRounding.IsChordal G → ∀ w : ℚ, CertifiedFractionalOptimum G w →
+        ((G.edgeFinset.card : ℚ) - w <
+            (n : ℚ) ^ 2 / 6 - PaperIV.NearH1Calibration.eta * (n : ℚ) ^ 2) ∨
+          Nonempty (NearStructureWitness G) := by
+====================================================================================================
+QUERY NearH1LocalConstructor.exists_near_partition_paid_by_root_sharp hits 1
+--- PaperIV/NearH1LocalConstructor.lean:36
+theorem exists_near_partition_paid_by_root_sharp {n : ℕ}
+    (hn : 4 * 10 ^ 12 ≤ n)
+    (G : SimpleGraph (Fin n)) [DecidableRel G.Adj]
+    (hG : PaperIV.IsChordal G) {w : ℚ}
+    (hw : CertifiedFractionalOptimum G w)
+    (hdist : graphFamDistNorm
+      (allSplitSupports (V := Fin n)) allSplitSupports_nonempty G
+        ((n : ℚ) ^ 2) < PaperIV.NearH1Calibration.eps)
+    (hnear : (n : ℚ) ^ 2 / 6 -
+        PaperIV.NearH1Calibration.eta * (n : ℚ) ^ 2 ≤
+      (G.edgeFinset.card : ℚ) - w) :
+    ∃ (R : Finset (Fin n)) (Q : CliquePartition G),
+      G.IsClique (R : Set (Fin n)) ∧
+      |3 * (R.card : ℚ) - (n : ℚ)| ≤ (n : ℚ) / 50 ∧
+      Q.OrderAtMost 4 ∧
+      (Q.size : ℚ) ≤
+        splitBaseline (n : ℚ) (R.card : ℚ) -
+          ((outsideEdges G R).card : ℚ) / 20 -
+          (missingIncidences G R : ℚ) / 2 := by
+====================================================================================================
+QUERY NearCriticalDichotomy.chordal_far_or_criticalRoot hits 1
+--- PaperIV/NearCriticalDichotomy.lean:41
+theorem chordal_far_or_criticalRoot :
+    ∃ N : ℕ, ∀ n : ℕ, N ≤ n → ∀ (G : SimpleGraph (Fin n)) [DecidableRel G.Adj],
+      PaperIV.FarRounding.IsChordal G → ∀ w : ℚ, CertifiedFractionalOptimum G w →
+        ((G.edgeFinset.card : ℚ) - w <
+            (n : ℚ) ^ 2 / 6 - PaperIV.NearH1Calibration.eta * (n : ℚ) ^ 2) ∨
+          ∃ R C : Finset (Fin n),
+            G.IsClique (R : Set (Fin n)) ∧
+            |3 * (R.card : ℚ) - (n : ℚ)| ≤ (n : ℚ) / 50 ∧
+            C.Nonempty ∧
+            (PaperIV.EditMetric.editDist G.edgeFinset
+                (graphEdgeSupport
+                  (PaperIV.SplitUniformIncidence.splitGraph C
+                    (Finset.univ \ C))) : ℚ) ≤
+              PaperIV.NearH1Calibration.eps * (n : ℚ) ^ 2 ∧
+            |3 * (C.card : ℚ) - (n : ℚ)| ≤ (n : ℚ) / 10000 ∧
+            |(R.card : ℚ) - (C.card : ℚ)| ≤ (n : ℚ) / 100 := by
+====================================================================================================
+QUERY NearCriticalDichotomy.chordal_far_or_edge_density hits 1
+--- PaperIV/NearCriticalDichotomy.lean:103
+theorem chordal_far_or_edge_density :
+    ∃ N : ℕ, ∀ n : ℕ, N ≤ n → ∀ (G : SimpleGraph (Fin n)) [DecidableRel G.Adj],
+      PaperIV.FarRounding.IsChordal G → ∀ w : ℚ, CertifiedFractionalOptimum G w →
+        ((G.edgeFinset.card : ℚ) - w <
+            (n : ℚ) ^ 2 / 6 - PaperIV.NearH1Calibration.eta * (n : ℚ) ^ 2) ∨
+          |(G.edgeFinset.card : ℚ) - 5 * (n : ℚ) ^ 2 / 18| ≤ (n : ℚ) ^ 2 / 10000 := by
+====================================================================================================
+QUERY SharpConstantOptimality.erdos81_quadratic_constant_optimal hits 1
+--- PaperIV/SharpConstantOptimality.lean:52
+theorem erdos81_quadratic_constant_optimal {c C : ℚ} {N : ℕ}
+    (h : ∀ n : ℕ, N ≤ n → ∀ (G : SimpleGraph (Fin n)) (_ : DecidableRel G.Adj),
+      SimpleGraph.IsChordal G → ∃ Q : CliquePartition G, (Q.size : ℚ) ≤ c * (n : ℚ) ^ 2 +
+        C * (n : ℚ)) :
+    1 / 6 ≤ c := by
+====================================================================================================
+QUERY SharpConstantOptimality.erdos81_quadratic_constant_isLeast hits 1
+--- PaperIV/SharpConstantOptimality.lean:93
+theorem erdos81_quadratic_constant_isLeast :
+    IsLeast {c : ℚ | ∃ (C : ℚ) (N : ℕ), ∀ n : ℕ, N ≤ n →
+      ∀ (G : SimpleGraph (Fin n)) (_ : DecidableRel G.Adj), SimpleGraph.IsChordal G →
+        ∃ Q : CliquePartition G, (Q.size : ℚ) ≤ c * (n : ℚ) ^ 2 + C * (n : ℚ)}
+      (1 / 6) := by
+====================================================================================================
+QUERY LinearCoefficient.linear_coefficient_optimal hits 1
+--- PaperIV/LinearCoefficient.lean:49
+theorem linear_coefficient_optimal (c B : ℚ) (hc : c < 1 / 6) :
+    ∃ N : ℕ, ∀ n : ℕ, N ≤ n →
+      ∃ (G : SimpleGraph (Fin n)) (_ : DecidableRel G.Adj),
+        SimpleGraph.IsChordal G ∧
+        ∀ Q : CliquePartition G, (n : ℚ) ^ 2 / 6 + c * (n : ℚ) + B < (Q.size : ℚ) := by
+====================================================================================================
+QUERY numericDefect hits 1
+--- PaperIV/RootPartitionStability.lean:23
+def numericDefect (a b : ℕ) : ℚ :=
+====================================================================================================
+QUERY OptimalCore hits 1
+--- PaperIV/ExtremalClassification.lean:54
+def OptimalCore (n k : ℕ) : Prop :=
+====================================================================================================
+QUERY ExplicitThreshold.erdos81_sharp_explicit hits 1
+--- PaperIV/ExplicitThreshold.lean:34
+theorem erdos81_sharp_explicit (n : ℕ) (hn : sharpThreshold ≤ n)
+    (G : SimpleGraph (Fin n)) [DecidableRel G.Adj] (hG : IsChordal G) :
+    ∃ Q : CliquePartition G, Q.OrderAtMost 4 ∧ Q.size ≤ targetSize n := by
+====================================================================================================
+QUERY ExplicitThreshold.erdos81_all_orders_bounded_additive hits 1
+--- PaperIV/ExplicitThreshold.lean:97
+theorem erdos81_all_orders_bounded_additive :
+    ∃ b : ℕ, b ≤ E19.tower2 (E18.Numeric.hIter + 8) ∧
+      ∀ (n : ℕ) (G : SimpleGraph (Fin n)) [DecidableRel G.Adj], IsChordal G →
+        ∃ Q : CliquePartition G, Q.OrderAtMost 4 ∧ Q.size ≤ targetSize n + b :=

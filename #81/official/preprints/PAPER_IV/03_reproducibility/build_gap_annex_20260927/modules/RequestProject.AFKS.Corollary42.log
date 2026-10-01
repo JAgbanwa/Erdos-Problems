@@ -1,0 +1,51 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 RequestProject/AFKS/Corollary42.lean -o /workspace/request-project/.lake/runner/lib/lean/RequestProject/AFKS/Corollary42.olean -i /workspace/request-project/.lake/runner/lib/lean/RequestProject/AFKS/Corollary42.ilean
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_nlinarith_1._boxed took 179ms
+interpretation of Mathlib.Meta.Positivity.evalMul._lam_3._boxed took 142ms
+interpretation of Mathlib.Meta.Positivity.evalMul._lam_3._boxed took 159ms
+interpretation of Mathlib.Meta.Positivity.evalDiv._lam_0._boxed took 132ms
+interpretation of Mathlib.Meta.Positivity.evalNatCast._lam_1._boxed took 112ms
+interpretation of Mathlib.Meta.Positivity.evalNatCast._lam_1._boxed took 233ms
+interpretation of Mathlib.Meta.Positivity.evalDiv._lam_0._boxed took 152ms
+interpretation of Mathlib.Meta.Positivity.evalMul._lam_3._boxed took 167ms
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_nlinarith_1._boxed took 884ms
+interpretation of Mathlib.Meta.Positivity.evalPow._lam_4._boxed took 120ms
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_nlinarith_1._boxed took 929ms
+interpretation of Mathlib.Meta.Positivity.evalMul._lam_3._boxed took 544ms
+interpretation of Mathlib.Meta.Positivity.evalNatCast._lam_1._boxed took 244ms
+interpretation of Mathlib.Meta.Positivity.evalNatCast._lam_1._boxed took 249ms
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_nlinarith_1._boxed took 1.33s
+interpretation of Mathlib.Meta.Positivity.evalMul._lam_3._boxed took 641ms
+interpretation of Mathlib.Meta.Positivity.evalNatCast._lam_1._boxed took 355ms
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_linarith_1._boxed took 107ms
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_linarith_1._boxed took 121ms
+interpretation of Lean.Elab.Tactic._aux_Mathlib_Tactic_Widget_Calc___elabRules_Lean_calcTactic_1._boxed took 184ms
+instantiate metavars took 145ms
+type checking took 119ms
+import took 7.05s
+.olean serialization took 293ms
+cumulative profiling times:
+	.olean serialization 293ms
+	attribute application 0.142ms
+	blocked (unaccounted) 13.1s
+	compilation (IR) 66.2ms
+	compilation (LCNF base) 56.6ms
+	compilation (LCNF mono) 27.5ms
+	congr simp thm 143ms
+	dsimp 1.62ms
+	elaboration 153ms
+	fix level params 9ms
+	import 7.05s
+	initialization 39ms
+	instantiate metavars 162ms
+	interpretation 10.1s
+	let-to-have transformation 0.269ms
+	linting 73.6ms
+	norm_num 597ms
+	parsing 42.9ms
+	process pre-definitions 69.4ms
+	ring 151ms
+	share common exprs 84.6ms
+	simp 7.12s
+	tactic execution 1.61s
+	type checking 432ms
+	typeclass inference 5.9s

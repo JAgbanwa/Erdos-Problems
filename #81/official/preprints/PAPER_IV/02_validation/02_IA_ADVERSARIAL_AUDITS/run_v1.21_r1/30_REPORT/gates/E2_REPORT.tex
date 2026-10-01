@@ -1,0 +1,197 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+\documentclass[
+]{article}
+\usepackage{xcolor}
+\usepackage{amsmath,amssymb}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math} % this also loads fontspec
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+\usepackage{lmodern}
+\ifPDFTeX\else
+  % xetex/luatex font selection
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{longtable,booktabs,array}
+\usepackage{caption}
+\captionsetup[table]{skip=6pt}
+\newcounter{none} % for unnumbered tables
+\usepackage{calc} % for calculating minipage widths
+% Correct order of tables after \paragraph or \subparagraph
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd\longtable{\par}{\if@noskipsec\mbox{}\fi\par}{}{}
+\makeatother
+% Allow footnotes in longtable head/foot
+\IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
+\makesavenoteenv{longtable}
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\usepackage{bookmark}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same}
+% fallback for those not using the hyperref driver hyperxmp:
+\makeatletter
+\@ifundefined{xmpquote}{\newcommand{\xmpquote}[1]{#1}}{}
+\makeatother
+\hypersetup{
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+
+\author{}
+\date{}
+
+\begin{document}
+
+\section{Gate E2 report --- run\_v1.21\_r1 (Paper IV
+v1.21)}\label{gate-e2-report--run_v121_r1-paper-iv-v121}
+
+Verdict: \textbf{INCONCLUSIVE}. Evidence: \texttt{20\_EVIDENCE/E2/}.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\subsection{E2 --- Mathematics revalidation (v1.21 against v1.2
+findings)}\label{e2--mathematics-revalidation-v121-against-v12-findings}
+
+Method: the auditor\textquotesingle s own unified diff of v1.2 → v1.21
+(\texttt{auditor\_diff\_en.diff}, \texttt{auditor\_diff\_es.diff}),
+pen-and-paper rederivation of every added passage, and exact checks of
+the new numerics (\texttt{20\_EVIDENCE/E5/e5\_v121\_numerics.py}, 21
+checks, all PASS, all negative controls rejected). The author response
+(\texttt{RESPONSE\_TO\_AUDIT\_v1.21.md}) was read only after these
+conclusions were written. No Lean was run (mandate §2).
+
+\subsection{Theorems unchanged}\label{theorems-unchanged}
+
+No theorem statement, hypothesis, constant, equation tag or Lean code
+block changed (diff). The only formula edits are the declared
+descriptive subscripts: N\_lej/N\_lejano→N\_far, e\_cruz→e\_cross,
+x\^{}limpio→x\^{}clean, E\_cub→E\_covered. These are semantic no-ops
+(N\_far already named the same far-branch threshold in (C.4)).
+
+\subsection{A.2 items --- rederivation and
+verdicts}\label{a2-items--rederivation-and-verdicts}
+
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}lllll@{}}
+\toprule\noalign{}
+Item & v1.21 location & Rederivation performed & Verdict &
+Explanation \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+A2-1 & §5.1, new sentence before "The retained columns\ldots" & Yes.
+X-columns miss ≥a/4 of ≤129a/64 old exterior vertices ⇒ ≤113a/64; non-Y
+exterior degree \textless7a/4 ≤113a/64; +\textbar X\textbar{} &
+\textbf{ACCEPTABLE\_SUMMARY} & X-23 closed. \\
+A2-2 & C.2 (3.10), unchanged & As in run\_v1.2\_r1 &
+\textbf{ACCEPTABLE\_SUMMARY} & Unchanged; standard bookkeeping. \\
+A2-3 & C.2, four new paragraphs after (3.13) & Yes, complete. (i) Load:
+surviving copies through a good root ≤(1+u)A\_\{H,q\}=(1+u)V\_H/d\_q,
+weight ψ\_H/((1+u)V\_H) ⇒ contribution ≤ψ\_H/d\_q; with Σ\_\{H serving
+q\}ψ\_H ≤ d\_q the load is ≤1. (ii) Retention: B\_q ≤ 11δt²/(u²a₃²) (K₄:
+23δt²/(u²a₄²)); ≤t (resp. t²) copies per root; 3 (resp. 6) pairs ⇒
+≤33δt³/(u²a₃²), 138δt⁴/(u²a₄²) deleted; with V\_H ≥ a₃t³ (a₄t⁴) the
+deleted fraction is ≤ v under 33δ ≤ vu²a₃³, 138δ ≤ vu²a₄³. (iii)
+Schedule: d=u=v=a, δ=a²¹/2208, a₃≥a³/2, a₄≥a⁶/2, 138δ=a²¹/16 ≤ a²¹/8 (E5
+C2-1\ldots C2-3). (iv) Weight retained ≥(1−v)/(1+u). &
+\textbf{ACCEPTABLE\_SUMMARY} & \textbf{X-01 resolved.} Residual
+OBSERVATION R-01: the second-moment inputs "B\_q u²a₃² ≤ 11δt², B\_q
+u²a₄² ≤ 23δt²" are cited from the rooted second-moment (counting-lemma)
+estimates, not derived; they are standard consequences of δ-regularity.
+Wording note R-02: "H serving q" must mean every active profile
+containing the pair q (the load bound needs all profiles through q);
+with the earlier sentence "every active profile serves a pair of
+classes" the reader could take it as one pair per profile. Checked in
+the frozen source: \texttt{PatternTransfer.servingT} is exactly the set
+of patterns containing both parts of the pair, so the argument is
+correct under that reading. \\
+A2-4 & C.3, new schedule definitions and numerical chain & Yes for the
+schedule → selector → three integers: β₀ ≥ 2⁻⁶⁶, L\_T ≤ 46, M\_T ≤ 5153,
+γ\_T ≥ 2⁻⁵⁹⁴⁸⁵, T\_T ≤ 2\^{}\{a₀+13\}, 2G\_T ≤ 2\^{}\{4a₀+5\},
+(2G\_T)\^{}\{T\_T\} ≤ 2\^{}Y, η\_T ≥ 2\^{}\{−(Y+69)\}, ℓ\_T ≥ 2⁻¹²⁷⁴⁹,
+D₀ ≤ 2\^{}\{a₀+146\}, c₀ ≥ 2\^{}\{−(Y+3a₀+220)\}, Z = 191424, U =
+Y+191432, G₃ ≤ 2\^{}\{U+67\} (E5 C3-1\ldots C3-16). \textbf{Not
+possible} for the last step: "The regularity recurrence, iterated h
+times \ldots, dominates these three quantities after just its first two
+iterations. Absorbing the five terms of (C.1) then gives N\_far(η₀) ≤
+T(h+7)." The regularity bound B (C.3 l.1646) and its recurrence are
+never defined in the manuscript, and A.2 (l.1355) refers to "the
+recurrence in §6.3", but §6.3 defines only T and h. &
+\textbf{REQUIRES\_EXPANSION} (MINOR impact, narrowed) & X-05
+\textbf{partially resolved}. Exact remaining step: state the regularity
+bound used (the recurrence whose h-fold iterate bounds B at parameters
+(δ/8, k₀); h = 4/(δ/8)⁵ in the displayed factorization), prove the
+two-iteration domination of G₁\ldots G₃, and show the absorption of the
+five (C.1) terms into T(h+7). Affects only the explicit values T(h+7),
+T(h+8) (§6.3) and the c\_far/h\_iter part of P(s) (6.28), not the
+existence of thresholds or any theorem. The author\textquotesingle s
+response also says this comparison "remains symbolic". \\
+A2-5 & E.1, three new paragraphs (normalization counts) and σ, τ, D, L &
+Yes, complete: εn²=λ²/10⁴¹, nλ=ρ²; \textbar A∖A₀\textbar{} ≤ λ/10³¹;
+\textbar A₀\textbar{} window; e(R₀) ≤ 2ρ²/10³¹; \textbar Y\textbar{} ≤
+4ρ/10²⁷; Y\_c/Y\_r/W partition; \textbar c−n/3\textbar{} ≤ ρ/10²⁰;
+light-vertex missing ≤ ρ/10⁴+2λ/10⁴¹ \textless{} ρ/200; σ ≤
+ρ/200+12ρ/10²⁷; τ ≤ ρ/40+12ρ/10²⁷; D ≤ (ρ/10¹³)²; L = ⌊√D⌋+1 (E5 E1-1).
+& \textbf{ACCEPTABLE\_SUMMARY} & \textbf{X-02 resolved.} The
+localization input (clique A with ε-bounds and minimum degree) is named
+as produced by fixed-defect localization (E33/E34, {[}22{]}); that is a
+separately attributed component, not part of A2-5. \\
+A2-6 & E.1, new derivation of (E.2d) & Yes, complete: choice of a\_w (w
+∈ W misses \textgreater ρ/200 in A₀), Z = common light neighbours of U₀,
+three-case elimination with charges s−ν, ω+s, (ω+s)x, each incidence
+charged once; e(Z,X\textquotesingle) ≤ (s−ν)\textbar Z\textbar+2(ω+s)x;
+restoration \textbar 𝓛∖Z\textbar{} ≤ 2νρ/40 + xλ/10¹⁰; error ≤
+n/10+4n/10⁴+4ρ/10¹⁰+4ρ/10⁵⁰ ≤ n/9 (E5 E2d-1, negative control n/12
+rejected). & \textbf{ACCEPTABLE\_SUMMARY} & \textbf{X-03 resolved.} \\
+A2-7 & D.1, unchanged & As before & \textbf{ACCEPTABLE\_SUMMARY} &
+Unchanged. \\
+\end{longtable}
+}
+
+\subsection{Other E2 items}\label{other-e2-items}
+
+\begin{itemize}
+\tightlist
+\item
+  The added Figure 3 citation and the audit-status paragraphs carry no
+  mathematics.
+\item
+  X-24 (optional constant tightenings) not adopted: acceptable.
+\end{itemize}
+
+\subsection{E2 verdict}\label{e2-verdict}
+
+\textbf{INCONCLUSIVE}, narrowly: six of seven A.2 rows are now
+ACCEPTABLE\_SUMMARY, and X-01, X-02, X-03, X-23 are resolved.
+\textbf{A2-4 still REQUIRES\_EXPANSION} at one exact step (regularity
+recurrence and final tower comparison in C.3, plus the dangling
+"recurrence in §6.3" reference). No mathematical error was found.
+
+\end{document}

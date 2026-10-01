@@ -1,0 +1,107 @@
+{
+ "started": "20260928-235212",
+ "scope": "freeze",
+ "targets": [
+  "PaperIV",
+  "PaperIV.Audit",
+  "PaperIV.ConeAudit",
+  "PaperIV.PublicationIncrementAudit",
+  "A4S1.IndepAllAudit",
+  "ThreeRegime.AxiomCheck",
+  "FarExploration.AxiomCheck",
+  "PaperIV.CliqueTreeAudit",
+  "E17.ImprovedFarRoundingAudit",
+  "E17.ExplicitFarAudit",
+  "PaperIV.ExplicitThresholdAudit",
+  "ReleaseExportCheck",
+  "PaperIVEditorial.ConstructorBudgetAudit",
+  "ResearchAudit",
+  "FDCheck.FinalAudit",
+  "FDCheck.TowerAudit",
+  "E34.Audit"
+ ],
+ "modules": 599,
+ "lean": "Lean (version 4.28.0, x86_64-w64-windows-gnu, commit 7e01a1bf5c70fc6167d49c345d3bf80596e9a79b, Release)",
+ "leanBinary": "c:\\Users\\jtraverso\\.elan\\toolchains\\leanprover--lean4---v4.28.0\\bin\\lean.exe",
+ "toolchain": "leanprover/lean4:v4.28.0",
+ "dependencyPins": [
+  {
+   "name": "mathlib",
+   "manifestRev": "8f9d9cff6bd728b17a24e163c9402775d9e6a365",
+   "head": "8f9d9cff6bd728b17a24e163c9402775d9e6a365",
+   "trackedChanges": false
+  },
+  {
+   "name": "plausible",
+   "manifestRev": "55c8532eb21ec9f6d565d51d96b8ca50bd1fbef3",
+   "head": "55c8532eb21ec9f6d565d51d96b8ca50bd1fbef3",
+   "trackedChanges": false
+  },
+  {
+   "name": "LeanSearchClient",
+   "manifestRev": "c5d5b8fe6e5158def25cd28eb94e4141ad97c843",
+   "head": "c5d5b8fe6e5158def25cd28eb94e4141ad97c843",
+   "trackedChanges": false
+  },
+  {
+   "name": "importGraph",
+   "manifestRev": "85b59af46828c029a9168f2f9c35119bd0721e6e",
+   "head": "85b59af46828c029a9168f2f9c35119bd0721e6e",
+   "trackedChanges": false
+  },
+  {
+   "name": "proofwidgets",
+   "manifestRev": "be3b2e63b1bbf496c478cef98b86972a37c1417d",
+   "head": "be3b2e63b1bbf496c478cef98b86972a37c1417d",
+   "trackedChanges": false
+  },
+  {
+   "name": "aesop",
+   "manifestRev": "f642a64c76df8ba9cb53dba3b919425a0c2aeaf1",
+   "head": "f642a64c76df8ba9cb53dba3b919425a0c2aeaf1",
+   "trackedChanges": false
+  },
+  {
+   "name": "Qq",
+   "manifestRev": "b8f98e9087e02c8553945a2c5abf07cec8e798c3",
+   "head": "b8f98e9087e02c8553945a2c5abf07cec8e798c3",
+   "trackedChanges": false
+  },
+  {
+   "name": "batteries",
+   "manifestRev": "495c008c3e3f4fb4256ff5582ddb3abf3198026f",
+   "head": "495c008c3e3f4fb4256ff5582ddb3abf3198026f",
+   "trackedChanges": false
+  },
+  {
+   "name": "Cli",
+   "manifestRev": "4f10f47646cb7d5748d6f423f4a07f98f7bbcc9e",
+   "head": "4f10f47646cb7d5748d6f423f4a07f98f7bbcc9e",
+   "trackedChanges": false
+  }
+ ],
+ "leanOptions": {
+  "pp.unicode.fun": "true",
+  "relaxedAutoImplicit": "false",
+  "linter.unusedSimpArgs": "false"
+ },
+ "threads": "1",
+ "profile": false,
+ "clean": false,
+ "envResolveSeconds": 9.861,
+ "artifactDir": "C:\\Users\\jtraverso\\e81p4\\clean_stability_build_20260928\\.lake\\runner\\lib\\lean",
+ "leanPathDependencies": [
+  "C:\\Users\\jtraverso\\e81p4\\preprints\\PAPER_IV\\05_formalization\\lean\\.lake\\packages\\Cli\\.lake\\build\\lib\\lean",
+  "C:\\Users\\jtraverso\\e81p4\\preprints\\PAPER_IV\\05_formalization\\lean\\.lake\\packages\\batteries\\.lake\\build\\lib\\lean",
+  "C:\\Users\\jtraverso\\e81p4\\preprints\\PAPER_IV\\05_formalization\\lean\\.lake\\packages\\Qq\\.lake\\build\\lib\\lean",
+  "C:\\Users\\jtraverso\\e81p4\\preprints\\PAPER_IV\\05_formalization\\lean\\.lake\\packages\\aesop\\.lake\\build\\lib\\lean",
+  "C:\\Users\\jtraverso\\e81p4\\preprints\\PAPER_IV\\05_formalization\\lean\\.lake\\packages\\proofwidgets\\.lake\\build\\lib\\lean",
+  "C:\\Users\\jtraverso\\e81p4\\preprints\\PAPER_IV\\05_formalization\\lean\\.lake\\packages\\importGraph\\.lake\\build\\lib\\lean",
+  "C:\\Users\\jtraverso\\e81p4\\preprints\\PAPER_IV\\05_formalization\\lean\\.lake\\packages\\LeanSearchClient\\.lake\\build\\lib\\lean",
+  "C:\\Users\\jtraverso\\e81p4\\preprints\\PAPER_IV\\05_formalization\\lean\\.lake\\packages\\plausible\\.lake\\build\\lib\\lean",
+  "C:\\Users\\jtraverso\\e81p4\\preprints\\PAPER_IV\\05_formalization\\lean\\.lake\\packages\\mathlib\\.lake\\build\\lib\\lean",
+  "c:\\Users\\jtraverso\\.elan\\toolchains\\leanprover--lean4---v4.28.0\\lib\\lean"
+ ],
+ "python": "3.12.10",
+ "platform": "win32"
+}

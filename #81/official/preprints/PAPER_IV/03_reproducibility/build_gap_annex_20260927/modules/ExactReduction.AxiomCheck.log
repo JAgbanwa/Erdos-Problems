@@ -1,0 +1,41 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 ExactReduction/AxiomCheck.lean -o /workspace/request-project/.lake/runner/lib/lean/ExactReduction/AxiomCheck.olean -i /workspace/request-project/.lake/runner/lib/lean/ExactReduction/AxiomCheck.ilean
+'ExactReduction.targetSize_succ' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ExactReduction.targetSize_sub_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ExactReduction.leafShell_budget_lt' depends on axioms: [propext, Classical.choice, Quot.sound]
+elaboration took 242ms
+'ExactReduction.deleteAt_isChordal' depends on axioms: [propext, Quot.sound]
+'ExactReduction.exists_cliquePartition_of_deleteAt' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ExactReduction.target_of_small_degree' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ExactReduction.minDegree_of_minimal_counterexample' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ExactReduction.exists_large_clique_of_minimal_counterexample' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+elaboration took 294ms
+'ExactReduction.card_eq_of_minimal_counterexample' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ExactReduction.card_edges_of_minimal_counterexample' depends on axioms: [propext, Classical.choice, Quot.sound]
+elaboration took 117ms
+'ExactReduction.kernel_of_minimal_counterexample' depends on axioms: [propext, Classical.choice, Quot.sound]
+elaboration took 294ms
+'ExactReduction.targetOn_of_small_degree_vertex' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ExactReduction.ShellObstruction.shellCover_card_ge' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ExactReduction.ShellObstruction.card_trivialShellCover' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ExactReduction.ShellObstruction.leafShell_reduction_fails' depends on axioms: [propext, Classical.choice, Quot.sound]
+elaboration took 243ms
+'ExactReduction.ShellObstruction.shell_three_two_exceeds_budget' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ExactReduction.ShellObstruction.shellCoverCredit_card_ge' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ExactReduction.ShellObstruction.credit_bound_within_budget' depends on axioms: [propext, Classical.choice, Quot.sound]
+elaboration took 252ms
+'ExactReduction.JointStar.starCover_card_ge' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ExactReduction.JointStar.star_bound_within_target' depends on axioms: [propext, Classical.choice, Quot.sound]
+elaboration took 231ms
+import took 3.14s
+cumulative profiling times:
+	.olean serialization 3.1ms
+	elaboration 2.62s
+	import 3.14s
+	initialization 37.9ms
+	interpretation 190ms
+	linting 3.12ms
+	parsing 1.68ms

@@ -1,0 +1,27 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 PaperIV/RC01CleanedGate.lean -o /workspace/request-project/.lake/runner/lib/lean/PaperIV/RC01CleanedGate.olean -i /workspace/request-project/.lake/runner/lib/lean/PaperIV/RC01CleanedGate.ilean
+import took 4.01s
+.olean serialization took 179ms
+cumulative profiling times:
+	.olean serialization 179ms
+	attribute application 0.333ms
+	compilation (IR) 1.52ms
+	compilation (LCNF base) 2.16ms
+	compilation (LCNF mono) 0.878ms
+	congr simp thm 22ms
+	elaboration 517ms
+	fix level params 5.15ms
+	import 4.01s
+	initialization 39.9ms
+	instantiate metavars 40.8ms
+	interpretation 668ms
+	let-to-have transformation 0.854ms
+	linting 51.9ms
+	norm_num 14.4ms
+	parsing 35.4ms
+	process pre-definitions 29.9ms
+	ring 19.2ms
+	share common exprs 13.1ms
+	simp 59.6ms
+	tactic execution 382ms
+	type checking 145ms
+	typeclass inference 852ms

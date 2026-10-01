@@ -1,0 +1,346 @@
+{
+ "RSD_atlas": {
+  "distribution": {
+   "0": 532,
+   "1": 688,
+   "2": 33
+  },
+  "chordal_iff_rsd0_mismatches": [],
+  "named": {
+   "C4": 1,
+   "C5": 1,
+   "K33": 2,
+   "octahedron": 2,
+   "C6": 1,
+   "K7": 0
+  },
+  "runtime_s": 0.69
+ },
+ "T12": {
+  "id": "T12",
+  "claim": "Lemma F.3a (F.5a): rsd<=s => every D contains a clique C with (|D|-|C|-s)_+^2 <= ordNE(G,D)",
+  "manuscript_lines": "2190-2209",
+  "method": "all atlas graphs n<=7, s=rsd(G) (strongest admissible s; larger s is weaker), all 2^n subsets D, C = maximum clique of G[D]",
+  "evidence_type": "finite exhaustive",
+  "parameters": {
+   "n": [
+    0,
+    7
+   ],
+   "graphs": 1253
+  },
+  "details": {
+   "pairs_checked": 144923,
+   "violations": [],
+   "nontrivial_equality_cases": 0
+  },
+  "result": "PASS",
+  "negative_control": {
+   "description": "replace s by s-1 (graphs with rsd>=1) must fail somewhere",
+   "failures_found": 409,
+   "examples(i,D,n,s,|D|,omega,ordNE)": [
+    [
+     44,
+     31,
+     5,
+     1,
+     5,
+     2,
+     8
+    ],
+    [
+     91,
+     31,
+     6,
+     1,
+     5,
+     2,
+     8
+    ],
+    [
+     121,
+     62,
+     6,
+     1,
+     5,
+     2,
+     8
+    ],
+    [
+     125,
+     62,
+     6,
+     1,
+     5,
+     2,
+     8
+    ],
+    [
+     146,
+     55,
+     6,
+     1,
+     5,
+     2,
+     8
+    ]
+   ],
+   "result": "PASS (rejected)"
+  },
+  "runtime_s": 0.31
+ },
+ "T13": {
+  "id": "T13",
+  "claim": "(F.7) indCopies(C_k,G) <= 2ks n^{k-1} (labelled induced embeddings), k>=4",
+  "manuscript_lines": "2261-2266",
+  "method": "all atlas graphs n<=7, s=rsd(G), all k=4..n; induced k-cycles counted by vertex subsets x 2k labellings",
+  "evidence_type": "finite exhaustive (weak test)",
+  "parameters": {
+   "n": [
+    0,
+    7
+   ]
+  },
+  "details": {
+   "violations": [],
+   "instances_with_induced_cycles": 826,
+   "max_ratio_emb/bound": "12/343",
+   "note": "for s=0 the bound forces zero induced cycles (chordal); ratio far below 1 so the test has little power"
+  },
+  "result": "PASS",
+  "negative_control": {
+   "description": "none predeclared (weak test)",
+   "result": "N/A"
+  },
+  "runtime_s": 0.08
+ },
+ "T14": {
+  "id": "T14",
+  "claim": "(F.9) G[D] chordal => D contains a clique C with (d-|C|)^2 <= 2M (M unordered nonedges)",
+  "manuscript_lines": "2275-2280",
+  "method": "all chordal atlas graphs n<=7 (chordality = rsd 0, cross-checked with networkx), all subsets D (induced subgraphs chordal), C=max clique",
+  "evidence_type": "finite exhaustive",
+  "parameters": {
+   "n": [
+    0,
+    7
+   ],
+   "chordal_graphs": 532
+  },
+  "details": {
+   "pairs_checked": 57387,
+   "violations": []
+  },
+  "result": "PASS",
+  "negative_control": {
+   "description": "(not predeclared; added) factor 1 instead of 2 must fail somewhere",
+   "failures": 11038,
+   "result": "PASS (rejected)"
+  },
+  "runtime_s": 0.11
+ },
+ "T15": {
+  "id": "T15",
+  "claim": "Prop 6.4: rsd<=s<=n => F_4 <= M(n-s)+ns (6.22); 4s<=n => F_4 <= M(n-s)+ns-C(s+1,2) (6.23)",
+  "manuscript_lines": "1058-1070, 2148-2177",
+  "method": "all atlas graphs n<=7; W* by HiGHS then exact rational reconstruction of primal x and dual y, both verified exactly with equal objective; all s in [rsd(G), n]",
+  "evidence_type": "finite exhaustive; each LP value exact (verified primal+dual certificate)",
+  "parameters": {
+   "n": [
+    0,
+    7
+   ]
+  },
+  "details": {
+   "lp_status_counts": {
+    "exact": 1253
+   },
+   "checked_6.22": 8974,
+   "checked_6.23": 1744,
+   "viol_6.22": [],
+   "viol_6.23": [],
+   "min_slack_6.22": "0",
+   "min_slack_6.23": "0",
+   "inconclusive_graph_indices": []
+  },
+  "result": "PASS",
+  "negative_control": {
+   "description": "(not predeclared) power check: refined bound (6.23) applied outside its band 4s<=n; violations there show the band is not vacuous",
+   "violations_outside_band": 0,
+   "examples(i,n,s,F4)": [],
+   "result": "INFO (no violations outside band at n<=7)"
+  },
+  "runtime_s": 3.52
+ },
+ "T21b": {
+  "id": "T21b",
+  "claim": "(1.3a) g(Q)+|Q|=e(G) for clique partitions; (2.4) W*<=5e/6",
+  "manuscript_lines": "128-138, 234-238",
+  "method": "random clique partitions (3 per atlas graph, exactly verified) and all exact W* values",
+  "evidence_type": "finite (random sample) / exact",
+  "parameters": {
+   "random_partitions": 3759
+  },
+  "details": {
+   "fail_1.3a": [],
+   "fail_2.4": []
+  },
+  "result": "PASS",
+  "negative_control": {
+   "description": "none",
+   "result": "N/A"
+  },
+  "runtime_s": 0.58
+ },
+ "T20b": {
+  "id": "T20b",
+  "claim": "CoreCliqueAlternative step (E.12 proof): missing graph with max degree <=2s and no matching of size s+1 has <=(4s+1)s edges",
+  "manuscript_lines": "2076-2081",
+  "method": "all atlas graphs n<=7 as missing graphs, s in {1,2}; for s=1 this is complete (edges lie in a vertex cover of size <=2s with degrees <=2s, so <=2s+4s^2=6 non-isolated vertices); s=2 continued by SAT in t_sat.py",
+  "evidence_type": "finite exhaustive (complete for s=1; n<=7 for s=2)",
+  "parameters": {
+   "n": [
+    0,
+    7
+   ],
+   "s": [
+    1,
+    2
+   ]
+  },
+  "details": {
+   "graphs_satisfying_hypothesis": {
+    "1": 24,
+    "2": 161
+   },
+   "max_edges_found": {
+    "1": 3,
+    "2": 10
+   },
+   "bounds": {
+    "1": 5,
+    "2": 18
+   },
+   "violations": [],
+   "INFO_(E.12)_without_size_hypothesis_failures(i,c,s)": [
+    [
+     7,
+     3,
+     1
+    ],
+    [
+     12,
+     4,
+     1
+    ],
+    [
+     18,
+     4,
+     2
+    ],
+    [
+     23,
+     5,
+     1
+    ],
+    [
+     39,
+     5,
+     2
+    ],
+    [
+     41,
+     5,
+     2
+    ],
+    [
+     42,
+     5,
+     2
+    ],
+    [
+     43,
+     5,
+     2
+    ],
+    [
+     45,
+     5,
+     2
+    ],
+    [
+     47,
+     5,
+     2
+    ]
+   ],
+   "INFO_(E.12)_failures_count": 24
+  },
+  "result": "PASS",
+  "negative_control": {
+   "description": "(added, not predeclared) corrupted bound e<=2s must fail somewhere (e.g. triangle for s=1, K5 for s=2); note the true maxima found are far below (4s+1)s, so the test has limited power",
+   "result": "PASS (rejected)"
+  },
+  "runtime_s": 0.69
+ },
+ "T23": {
+  "id": "T23",
+  "claim": "(G.4) chordal K4-free, n>=2 => e<=2n-3; (G.5) algebra => n<=20/eps",
+  "manuscript_lines": "2390-2402",
+  "method": "all chordal K4-free atlas graphs n<=7; n=8 by all simplicial extensions of 7-vertex ones (complete up to isomorphism); (G.5) by z3 in t_integer.py",
+  "evidence_type": "finite exhaustive + exact (NRA)",
+  "parameters": {
+   "n": [
+    2,
+    8
+   ]
+  },
+  "details": {
+   "graphs_n<=7": 314,
+   "extensions_n=8": 3245,
+   "max_edges_by_n": {
+    "0": 0,
+    "1": 0,
+    "2": 1,
+    "3": 3,
+    "4": 5,
+    "5": 7,
+    "6": 9,
+    "7": 11,
+    "8": 13
+   },
+   "violations": [],
+   "sample_extensions_chordal": true
+  },
+  "result": "PASS",
+  "negative_control": {
+   "description": "bound 2n-4 must fail (2-trees attain 2n-3)",
+   "failures": 154,
+   "result": "PASS (rejected)"
+  },
+  "runtime_s": 0.06
+ },
+ "S1": {
+  "id": "S1 (supplementary, not predeclared)",
+  "claim": "(6.7b) sum d_R(K)=|Q|-B_n(|R|)+A+3m for every clique R; (6.16) N_bad<=|Q|-B_{s,n}(k)+3d_E(G,T), E_bad<=10(...) for every template root",
+  "manuscript_lines": "872-877, 981-989",
+  "method": "4000 random graphs n=4..9, random exactly-verified clique partitions (unrestricted order), random clique roots / template roots (all s)",
+  "evidence_type": "finite random sample (exact arithmetic)",
+  "parameters": {
+   "trials": 4000
+  },
+  "details": {
+   "checked_6.7b": 4000,
+   "checked_6.16": 10786,
+   "fail_6.7b": [],
+   "fail_6.16": []
+  },
+  "result": "PASS",
+  "negative_control": {
+   "description": "none",
+   "result": "N/A"
+  },
+  "runtime_s": 1.66
+ },
+ "total_runtime_s": 7.8
+}

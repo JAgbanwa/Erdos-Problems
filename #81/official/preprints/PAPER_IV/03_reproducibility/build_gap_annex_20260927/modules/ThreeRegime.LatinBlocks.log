@@ -1,0 +1,145 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 ThreeRegime/LatinBlocks.lean -o /workspace/request-project/.lake/runner/lib/lean/ThreeRegime/LatinBlocks.olean -i /workspace/request-project/.lake/runner/lib/lean/ThreeRegime/LatinBlocks.ilean
+ThreeRegime/LatinBlocks.lean:105:0: warning: automatically included section variable(s) unused in theorem `ThreeRegime.Latin.pt_inj`:
+  [Fintype Q]
+  [DecidableEq Q]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype Q] [DecidableEq Q] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+ThreeRegime/LatinBlocks.lean:108:8: warning: automatically included section variable(s) unused in theorem `ThreeRegime.Latin.pt_eq_pt`:
+  [Fintype Q]
+  [DecidableEq Q]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype Q] [DecidableEq Q] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+ThreeRegime/LatinBlocks.lean:112:8: warning: automatically included section variable(s) unused in theorem `ThreeRegime.Latin.pt_ne_star`:
+  [Fintype Q]
+  [DecidableEq Q]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype Q] [DecidableEq Q] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+ThreeRegime/LatinBlocks.lean:188:0: warning: automatically included section variable(s) unused in theorem `ThreeRegime.Latin.Frame.rowBlock_comm`:
+  [Fintype Q]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype Q] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+ThreeRegime/LatinBlocks.lean:194:0: warning: automatically included section variable(s) unused in theorem `ThreeRegime.Latin.Frame.ownIn_eq`:
+  [Fintype Q]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype Q] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+ThreeRegime/LatinBlocks.lean:197:0: warning: automatically included section variable(s) unused in theorem `ThreeRegime.Latin.Frame.ownIn_succ`:
+  [Fintype Q]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype Q] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+ThreeRegime/LatinBlocks.lean:202:0: warning: automatically included section variable(s) unused in theorem `ThreeRegime.Latin.Frame.ownIn_succ_diag`:
+  [Fintype Q]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype Q] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+ThreeRegime/LatinBlocks.lean:207:0: warning: automatically included section variable(s) unused in theorem `ThreeRegime.Latin.Frame.ownIn_pred`:
+  [Fintype Q]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype Q] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+ThreeRegime/LatinBlocks.lean:213:0: warning: automatically included section variable(s) unused in theorem `ThreeRegime.Latin.Frame.ownIn_pred_diag`:
+  [Fintype Q]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype Q] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+ThreeRegime/LatinBlocks.lean:219:8: warning: automatically included section variable(s) unused in theorem `ThreeRegime.Latin.Frame.own_inl_inl`:
+  [Fintype Q]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype Q] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+ThreeRegime/LatinBlocks.lean:222:8: warning: automatically included section variable(s) unused in theorem `ThreeRegime.Latin.Frame.own_inl_inr`:
+  [Fintype Q]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype Q] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+ThreeRegime/LatinBlocks.lean:225:8: warning: automatically included section variable(s) unused in theorem `ThreeRegime.Latin.Frame.own_inr_inl`:
+  [Fintype Q]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype Q] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+ThreeRegime/LatinBlocks.lean:231:0: warning: automatically included section variable(s) unused in theorem `ThreeRegime.Latin.Frame.mem_colBlock`:
+  [Fintype Q]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype Q] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+ThreeRegime/LatinBlocks.lean:296:0: warning: automatically included section variable(s) unused in theorem `ThreeRegime.Latin.Frame.mem_starBlock`:
+  [Fintype Q]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype Q] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+typeclass inference of CharZero took 132ms
+typeclass inference of NeZero took 132ms
+ThreeRegime/LatinBlocks.lean:341:0: warning: automatically included section variable(s) unused in theorem `ThreeRegime.Latin.Frame.card_rowBlock`:
+  [Fintype Q]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype Q] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+ThreeRegime/LatinBlocks.lean:344:0: warning: automatically included section variable(s) unused in theorem `ThreeRegime.Latin.Frame.card_starBlock`:
+  [Fintype Q]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype Q] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+typeclass inference of CharZero took 120ms
+typeclass inference of NeZero took 128ms
+typeclass inference of CharZero took 125ms
+typeclass inference of NeZero took 137ms
+typeclass inference of CharZero took 123ms
+typeclass inference of NeZero took 130ms
+typeclass inference of CharZero took 124ms
+typeclass inference of NeZero took 131ms
+typeclass inference of CharZero took 120ms
+typeclass inference of NeZero took 126ms
+ThreeRegime/LatinBlocks.lean:573:0: warning: automatically included section variable(s) unused in theorem `ThreeRegime.Latin.Frame.card_Pt`:
+  [DecidableEq Q]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq Q] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+import took 3.67s
+.olean serialization took 133ms
+cumulative profiling times:
+	.olean serialization 133ms
+	attribute application 6.34ms
+	blocked (unaccounted) 8.48s
+	compilation (IR) 8.65ms
+	compilation (LCNF base) 21.9ms
+	compilation (LCNF mono) 14.9ms
+	congr simp thm 19.7ms
+	elaboration 344ms
+	fix level params 5.91ms
+	import 3.67s
+	initialization 39ms
+	instantiate metavars 21.1ms
+	interpretation 613ms
+	let-to-have transformation 1.42ms
+	linting 96.7ms
+	norm_num 0.98ms
+	parsing 39.5ms
+	process pre-definitions 50.2ms
+	ring 6.06ms
+	share common exprs 16.9ms
+	simp 272ms
+	tactic execution 586ms
+	type checking 142ms
+	typeclass inference 2.23s

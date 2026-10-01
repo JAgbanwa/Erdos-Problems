@@ -1,0 +1,95 @@
+{
+  "scope": "Editorial artifact validation and existing-source identity; no new Lean build or internal/adversarial audit.",
+  "status": "PASS_ARTIFACT_CHECKS",
+  "checks": {
+    "approved_english_input": true,
+    "protected_inline_display_and_code": true,
+    "bilingual_blocks": true,
+    "bilingual_math_code": true,
+    "bilingual_headings": true,
+    "bilingual_equation_labels": true,
+    "bilingual_figures": true,
+    "status_not_english_only": true,
+    "five_literal_lean_blocks": true,
+    "source_manifest": true,
+    "source_files": true,
+    "source_archive": true,
+    "recorded_evidence_files": true,
+    "recorded_build_complete": true,
+    "recorded_build_exit": true,
+    "recorded_modules_complete": true,
+    "recorded_targets_executed": true,
+    "full_reconstruction_seal": true,
+    "full_reconstruction_manifest": true,
+    "full_reconstruction_evidence_unchanged": true,
+    "full_reconstruction_archive": true,
+    "full_reconstruction_scope": true,
+    "en_only_authorized_status_and_build_edits": true,
+    "en_mathematical_displays_preserved": true,
+    "es_only_authorized_status_and_build_edits": true,
+    "es_mathematical_displays_preserved": true,
+    "en_compiler_output": true,
+    "en_two_tex_passes": true,
+    "en_no_fatal_or_overflow": true,
+    "en_fresh_pdf": true,
+    "en_renders_bound": true,
+    "en_four_figures": true,
+    "en_page_renders": true,
+    "es_compiler_output": true,
+    "es_two_tex_passes": true,
+    "es_no_fatal_or_overflow": true,
+    "es_fresh_pdf": true,
+    "es_renders_bound": true,
+    "es_four_figures": true,
+    "es_page_renders": true
+  },
+  "artifacts": {
+    "en": {
+      "pages": 68,
+      "md_sha256": "a501d53b527da22f20112db2b05917fb61f46dd8e080faf14b69349b240cc152",
+      "tex_sha256": "8068d4c6936cee54ad58d4e8e0bd12035c3aa2936101561647b6ab735a753995",
+      "pdf_sha256": "76a9ff8e3d9a02b8e745bcdd101b8272ff15430e285fc403c18b958c7073e667",
+      "underfull_warnings": 11,
+      "fontconfig_environment_notice": true,
+      "all_pdf_fonts_embedded_or_type3_charprocs": true
+    },
+    "es": {
+      "pages": 69,
+      "md_sha256": "2b6f73bf09ef905ea2c92206ee254b4ae46e64f1a51533cb4d8bcdc4e68c7be9",
+      "tex_sha256": "356e844bf75d55505241f7dca00f38c79d98233a776bc191e267c2052575d6e5",
+      "pdf_sha256": "bfa83e0e9fa50f9d391af462bb6b24a786c68e7d39d47cf78786f09d6aa7afc4",
+      "underfull_warnings": 3,
+      "fontconfig_environment_notice": true,
+      "all_pdf_fonts_embedded_or_type3_charprocs": true
+    }
+  },
+  "english_displays": 227,
+  "literal_lean_blocks": 5,
+  "source_freeze": "piv-v12-fb459343d234",
+  "source_mismatches": [],
+  "recorded_evidence_mismatches": [],
+  "full_reconstruction_evidence_mismatches": [],
+  "full_reconstruction_seal_sha256": "d0cfb1f1b19f876404e384b518e0d582186075086af2f71ee163c86c854773b5",
+  "authorized_revision": {
+    "en": {
+      "input_sha256": "52fc772e6f375ea019cc6ae71b7beb5b8e3a9bcb173f1c6d8d1cd31c7692b5a7",
+      "output_sha256": "a501d53b527da22f20112db2b05917fb61f46dd8e080faf14b69349b240cc152",
+      "changed_lines": [
+        11,
+        1179
+      ],
+      "allowed_edit": "Formal evidence/status prose and evidence locator only"
+    },
+    "es": {
+      "input_sha256": "8f13e4a77336a90a615dbda7d64ecb0d2c0a4aa68930912b3fc735d0c15b1fca",
+      "output_sha256": "2b6f73bf09ef905ea2c92206ee254b4ae46e64f1a51533cb4d8bcdc4e68c7be9",
+      "changed_lines": [
+        11,
+        1179
+      ],
+      "allowed_edit": "Formal evidence/status prose and evidence locator only"
+    }
+  },
+  "mathematical_audit": "PENDING",
+  "publication": "NOT_AUTHORIZED"
+}

@@ -1,0 +1,78 @@
+====================================================================================================
+QUERY RootedDefectAt hits 1
+--- PaperIV/RootedSimplicialDefect.lean:25
+def RootedDefectAt (s : ℕ) : Prop :=
+====================================================================================================
+QUERY defectTarget hits 1
+--- PaperIV/DefectTargetArithmetic.lean:14
+def defectTarget (s n : ℕ) : ℕ := targetSize (n + s) - Nat.choose (s + 1) 2
+
+/-- On orders larger than the defect, the defect target dominates `M(n)`. -/
+theorem targetSize_le_defectTarget (s n : ℕ) (hn : s + 1 ≤ n) :
+    targetSize n ≤ defectTarget s n := by
+====================================================================================================
+QUERY UniformRoundingTarget hits 1
+--- MixedRounding/Defs.lean:135
+def UniformRoundingTarget (ε : ℚ) : Prop :=
+====================================================================================================
+QUERY F4' hits 1
+--- PaperIV/VertexCopyGate.lean:257
+noncomputable def F4' (G : SimpleGraph V) : ℝ := @F4 V _ _ G (Classical.decRel _)
+
+open Classical in
+/-- The ordered clone pair count, with a classical decidability instance. -/
+noncomputable def clonePairs' (G : SimpleGraph V) : ℕ :=
+====================================================================================================
+QUERY allSplitSupports hits 1
+--- PaperIV/SplitComparatorFamily.lean:18
+noncomputable def allSplitSupports : Finset (Finset (Sym2 V)) := by
+====================================================================================================
+QUERY graphFamDistNorm hits 1
+--- PaperIV/GraphFamilyDistance.lean:32
+noncomputable def graphFamDistNorm
+    (F : Finset (Finset (Sym2 V))) (hF : F.Nonempty)
+    (X : SimpleGraph V) (scale : ℚ) : ℚ :=
+====================================================================================================
+QUERY sharpThreshold hits 0
+====================================================================================================
+QUERY hIter hits 1
+--- E18/Numeric.lean:27
+def hIter : ℕ := 4 * 8 ^ 5 * 2208 ^ 5 * 4500 ^ 105 * (2 * 10 ^ 16) ^ 105
+
+/-- `k₀ = 3·10^19 + 1`. -/
+def k0num : ℕ := 3 * 10 ^ 19 + 1
+
+/-- The iterate `T = stepBound^[h] k₀` (a notation, not a definition, so that no
+definitional unfolding can ever ask to evaluate this astronomically large number). -/
+scoped notation "Tnum" => SzemerediRegularity.stepBound^[E18.Numeric.hIter] E18.Numeric.k0num
+
+/-- The regularity bound `B = T · 16^T`. -/
+scoped notation "Bnum" => Tnum * 16 ^ Tnum
+
+theorem sE_eta0 : sE (eta0 / 2) = 1 / (9 * 10 ^ 19) := by
+====================================================================================================
+QUERY tower2 hits 1
+--- E19/Tower.lean:21
+def tower2 : ℕ → ℕ
+  | 0 => 1
+  | m + 1 => 2 ^ tower2 m
+
+@[simp] theorem tower2_zero : tower2 0 = 1 := rfl
+
+theorem tower2_succ (m : ℕ) : tower2 (m + 1) = 2 ^ tower2 m := rfl
+
+theorem tower2_pos (m : ℕ) : 0 < tower2 m := by
+====================================================================================================
+QUERY CertifiedFractionalOptimum hits 1
+--- PaperIV/FarRounding.lean:459
+def CertifiedFractionalOptimum (w : ℚ) : Prop :=
+====================================================================================================
+QUERY NearStructureWitness hits 1
+--- PaperIV/NearH1StructureWitness.lean:37
+structure NearStructureWitness (G : SimpleGraph V) [DecidableRel G.Adj] where
+====================================================================================================
+QUERY FracPacking hits 2
+--- MixedRounding/Defs.lean:105
+structure FracPacking where
+--- PaperIV/FarRounding.lean:209
+structure FracPacking where

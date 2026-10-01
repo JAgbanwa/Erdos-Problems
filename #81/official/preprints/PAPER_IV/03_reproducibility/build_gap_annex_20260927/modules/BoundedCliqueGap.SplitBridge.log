@@ -1,0 +1,36 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 BoundedCliqueGap/SplitBridge.lean -o /workspace/request-project/.lake/runner/lib/lean/BoundedCliqueGap/SplitBridge.olean -i /workspace/request-project/.lake/runner/lib/lean/BoundedCliqueGap/SplitBridge.ilean
+BoundedCliqueGap/SplitBridge.lean:35:8: warning: automatically included section variable(s) unused in theorem `BoundedCliqueGap.mem_csCore`:
+  [Fintype S]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype S] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+BoundedCliqueGap/SplitBridge.lean:38:8: warning: automatically included section variable(s) unused in theorem `BoundedCliqueGap.mem_csHosts`:
+  [Fintype K]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype K] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+import took 2.66s
+cumulative profiling times:
+	.olean serialization 54.9ms
+	attribute application 1.64ms
+	compilation (IR) 0.681ms
+	compilation (LCNF base) 1.29ms
+	compilation (LCNF mono) 0.988ms
+	congr simp thm 4.2ms
+	elaboration 19.8ms
+	fix level params 0.434ms
+	import 2.66s
+	initialization 37.1ms
+	instantiate metavars 1.7ms
+	interpretation 168ms
+	let-to-have transformation 0.0655ms
+	linting 3.81ms
+	parsing 3.25ms
+	process pre-definitions 3.75ms
+	share common exprs 1.07ms
+	simp 75.4ms
+	tactic execution 18.5ms
+	type checking 9.57ms
+	typeclass inference 143ms

@@ -1,0 +1,26 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 ThreeRegime/CentreDefectArithmetic.lean -o /workspace/request-project/.lake/runner/lib/lean/ThreeRegime/CentreDefectArithmetic.olean -i /workspace/request-project/.lake/runner/lib/lean/ThreeRegime/CentreDefectArithmetic.ilean
+import took 2.96s
+cumulative profiling times:
+	.olean serialization 48.1ms
+	attribute application 0.0822ms
+	compilation (IR) 1.63ms
+	compilation (LCNF base) 2.32ms
+	compilation (LCNF mono) 0.841ms
+	congr simp thm 2.29ms
+	elaboration 18.8ms
+	fix level params 0.244ms
+	import 2.96s
+	initialization 35.3ms
+	instantiate metavars 0.829ms
+	interpretation 296ms
+	let-to-have transformation 0.0864ms
+	linting 6.1ms
+	norm_num 8.32ms
+	parsing 3.28ms
+	process pre-definitions 6.68ms
+	ring 9.53ms
+	share common exprs 2.18ms
+	simp 64.4ms
+	tactic execution 60.3ms
+	type checking 157ms
+	typeclass inference 136ms

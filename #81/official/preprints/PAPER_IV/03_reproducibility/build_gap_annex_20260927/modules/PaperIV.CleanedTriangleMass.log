@@ -1,0 +1,32 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 PaperIV/CleanedTriangleMass.lean -o /workspace/request-project/.lake/runner/lib/lean/PaperIV/CleanedTriangleMass.olean -i /workspace/request-project/.lake/runner/lib/lean/PaperIV/CleanedTriangleMass.ilean
+PaperIV/CleanedTriangleMass.lean:68:0: warning: automatically included section variable(s) unused in theorem `PaperIV.CleanedTriangleMass.canonicalWeight_cardMass_eq`:
+  [Fintype Pat]
+  [DecidableEq Pat]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype Pat] [DecidableEq Pat] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+tactic execution of Mathlib.Tactic.nlinarith took 144ms
+import took 4.25s
+.olean serialization took 107ms
+cumulative profiling times:
+	.olean serialization 107ms
+	attribute application 0.0496ms
+	congr simp thm 5.84ms
+	elaboration 57.1ms
+	fix level params 0.605ms
+	import 4.25s
+	initialization 38.9ms
+	instantiate metavars 1.57ms
+	interpretation 424ms
+	let-to-have transformation 0.128ms
+	linting 11.9ms
+	norm_num 15.7ms
+	parsing 7.97ms
+	process pre-definitions 6.65ms
+	ring 10.2ms
+	share common exprs 2.73ms
+	simp 36.5ms
+	tactic execution 222ms
+	type checking 30.7ms
+	typeclass inference 315ms

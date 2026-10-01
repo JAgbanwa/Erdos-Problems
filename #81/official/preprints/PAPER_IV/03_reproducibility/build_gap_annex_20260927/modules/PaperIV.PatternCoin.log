@@ -1,0 +1,26 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 PaperIV/PatternCoin.lean -o /workspace/request-project/.lake/runner/lib/lean/PaperIV/PatternCoin.olean -i /workspace/request-project/.lake/runner/lib/lean/PaperIV/PatternCoin.ilean
+import took 3.8s
+cumulative profiling times:
+	.olean serialization 89.5ms
+	attribute application 0.152ms
+	compilation (IR) 0.256ms
+	compilation (LCNF base) 0.509ms
+	compilation (LCNF mono) 0.283ms
+	congr simp thm 6.42ms
+	elaboration 108ms
+	fix level params 0.794ms
+	import 3.8s
+	initialization 36.8ms
+	instantiate metavars 1.08ms
+	interpretation 376ms
+	let-to-have transformation 0.477ms
+	linting 20.2ms
+	norm_num 3.26ms
+	parsing 9.81ms
+	process pre-definitions 9.72ms
+	ring 15.4ms
+	share common exprs 3.65ms
+	simp 81ms
+	tactic execution 90.6ms
+	type checking 48.4ms
+	typeclass inference 209ms

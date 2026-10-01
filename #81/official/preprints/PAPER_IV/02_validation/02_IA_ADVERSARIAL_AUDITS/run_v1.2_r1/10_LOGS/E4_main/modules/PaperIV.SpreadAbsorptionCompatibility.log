@@ -1,0 +1,18 @@
+$ C:\Users\jtraverso\.elan\toolchains\leanprover--lean4---v4.28.0\bin\lean.exe -j 8 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false PaperIV/SpreadAbsorptionCompatibility.lean -o C:\Users\jtraverso\e81p4-publish\preprints\PAPER_IV\02_validation\02_IA_ADVERSARIAL_AUDITS\run_v1.2_r1\05_BUILD\main\obj\PaperIV\SpreadAbsorptionCompatibility.olean -i C:\Users\jtraverso\e81p4-publish\preprints\PAPER_IV\02_validation\02_IA_ADVERSARIAL_AUDITS\run_v1.2_r1\05_BUILD\main\obj\PaperIV\SpreadAbsorptionCompatibility.ilean
+PaperIV/SpreadAbsorptionCompatibility.lean:50:0: warning: automatically included section variable(s) unused in theorem `PaperIV.SpreadAbsorptionCompatibility.absorber_piece_subset`:
+  [Fintype V]
+  [DecidableRel G.Adj]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] [DecidableRel G.Adj] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+PaperIV/SpreadAbsorptionCompatibility.lean:92:0: warning: automatically included section variable(s) unused in theorem `PaperIV.SpreadAbsorptionCompatibility.totalGain_union_absorber`:
+  [Fintype V]
+  [DecidableRel G.Adj]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] [DecidableRel G.Adj] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+PaperIV/SpreadAbsorptionCompatibility.lean:94:5: warning: unused variable `hNne`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`

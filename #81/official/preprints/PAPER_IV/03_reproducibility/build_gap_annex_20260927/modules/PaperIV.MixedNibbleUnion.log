@@ -1,0 +1,27 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 PaperIV/MixedNibbleUnion.lean -o /workspace/request-project/.lake/runner/lib/lean/PaperIV/MixedNibbleUnion.olean -i /workspace/request-project/.lake/runner/lib/lean/PaperIV/MixedNibbleUnion.ilean
+PaperIV/MixedNibbleUnion.lean:26:0: warning: automatically included section variable(s) unused in theorem `PaperIV.MixedNibbleUnion.pairs_ne_empty_of_isItem`:
+  [DecidableRel G.Adj]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableRel G.Adj] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+import took 3.19s
+cumulative profiling times:
+	.olean serialization 56.7ms
+	attribute application 0.0393ms
+	congr simp thm 0.753ms
+	elaboration 23ms
+	fix level params 0.546ms
+	import 3.19s
+	initialization 40.3ms
+	instantiate metavars 2.21ms
+	interpretation 217ms
+	let-to-have transformation 0.0533ms
+	linting 11.5ms
+	parsing 6.37ms
+	process pre-definitions 4.96ms
+	share common exprs 1.8ms
+	simp 3.74ms
+	tactic execution 153ms
+	type checking 28.8ms
+	typeclass inference 69.1ms

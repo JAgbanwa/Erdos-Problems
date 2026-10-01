@@ -1,0 +1,26 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 Nibble/Tight/ResidualBand.lean -o /workspace/request-project/.lake/runner/lib/lean/Nibble/Tight/ResidualBand.olean -i /workspace/request-project/.lake/runner/lib/lean/Nibble/Tight/ResidualBand.ilean
+import took 4.05s
+cumulative profiling times:
+	.olean serialization 88ms
+	attribute application 0.0415ms
+	compilation (IR) 2.08ms
+	compilation (LCNF base) 2.45ms
+	compilation (LCNF mono) 0.937ms
+	congr simp thm 4.99ms
+	elaboration 60ms
+	fix level params 0.766ms
+	import 4.05s
+	initialization 38.2ms
+	instantiate metavars 8.86ms
+	interpretation 515ms
+	let-to-have transformation 0.112ms
+	linting 21ms
+	norm_num 66.1ms
+	parsing 9.08ms
+	process pre-definitions 13.1ms
+	ring 35.5ms
+	share common exprs 6.66ms
+	simp 50.6ms
+	tactic execution 105ms
+	type checking 35.2ms
+	typeclass inference 291ms

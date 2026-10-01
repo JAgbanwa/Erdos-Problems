@@ -1,0 +1,56 @@
+{
+ "started_utc": "2026-09-30T15:07:11.547528+00:00",
+ "src": "C:\\Users\\jtraverso\\e81p4-publish\\preprints\\PAPER_IV\\02_validation\\02_IA_ADVERSARIAL_AUDITS\\run_v1.2_r1\\05_BUILD\\main\\src",
+ "obj": "C:\\Users\\jtraverso\\e81p4-publish\\preprints\\PAPER_IV\\02_validation\\02_IA_ADVERSARIAL_AUDITS\\run_v1.2_r1\\05_BUILD\\main\\obj",
+ "targets": [
+  "PaperIV",
+  "PaperIV.Audit",
+  "PaperIV.ConeAudit",
+  "PaperIV.PublicationIncrementAudit",
+  "A4S1.IndepAllAudit",
+  "ThreeRegime.AxiomCheck",
+  "FarExploration.AxiomCheck",
+  "PaperIV.CliqueTreeAudit",
+  "E17.ImprovedFarRoundingAudit",
+  "E17.ExplicitFarAudit",
+  "PaperIV.ExplicitThresholdAudit",
+  "ReleaseExportCheck",
+  "PaperIVEditorial.ConstructorBudgetAudit",
+  "ResearchAudit",
+  "FDCheck.FinalAudit",
+  "E35.Audit",
+  "FDCheck.ASCheck",
+  "E34.Audit",
+  "PaperIV.OptimalTemplateObstructionAudit"
+ ],
+ "modules_planned": 607,
+ "lean": "Lean (version 4.28.0, x86_64-w64-windows-gnu, commit 7e01a1bf5c70fc6167d49c345d3bf80596e9a79b, Release)",
+ "lean_binary": "C:\\Users\\jtraverso\\.elan\\toolchains\\leanprover--lean4---v4.28.0\\bin\\lean.exe",
+ "lean_sha256": "6a66c4a5739fa17146b88ac81bab2bca1924806cac321ddad6b96006dde9c691",
+ "LEAN_PATH": [
+  "C:\\Users\\jtraverso\\e81p4\\preprints\\PAPER_IV\\05_formalization\\lean\\.lake\\packages\\mathlib\\.lake\\build\\lib\\lean",
+  "C:\\Users\\jtraverso\\e81p4\\preprints\\PAPER_IV\\05_formalization\\lean\\.lake\\packages\\plausible\\.lake\\build\\lib\\lean",
+  "C:\\Users\\jtraverso\\e81p4\\preprints\\PAPER_IV\\05_formalization\\lean\\.lake\\packages\\LeanSearchClient\\.lake\\build\\lib\\lean",
+  "C:\\Users\\jtraverso\\e81p4\\preprints\\PAPER_IV\\05_formalization\\lean\\.lake\\packages\\importGraph\\.lake\\build\\lib\\lean",
+  "C:\\Users\\jtraverso\\e81p4\\preprints\\PAPER_IV\\05_formalization\\lean\\.lake\\packages\\proofwidgets\\.lake\\build\\lib\\lean",
+  "C:\\Users\\jtraverso\\e81p4\\preprints\\PAPER_IV\\05_formalization\\lean\\.lake\\packages\\aesop\\.lake\\build\\lib\\lean",
+  "C:\\Users\\jtraverso\\e81p4\\preprints\\PAPER_IV\\05_formalization\\lean\\.lake\\packages\\Qq\\.lake\\build\\lib\\lean",
+  "C:\\Users\\jtraverso\\e81p4\\preprints\\PAPER_IV\\05_formalization\\lean\\.lake\\packages\\batteries\\.lake\\build\\lib\\lean",
+  "C:\\Users\\jtraverso\\e81p4-publish\\preprints\\PAPER_IV\\02_validation\\02_IA_ADVERSARIAL_AUDITS\\run_v1.2_r1\\05_BUILD\\main\\obj"
+ ],
+ "threads": "8",
+ "package_options": [
+  "-D",
+  "pp={'unicode': {'fun': True}}",
+  "-D",
+  "relaxedAutoImplicit=false",
+  "-D",
+  "linter={'unusedSimpArgs': False}"
+ ],
+ "external_import_roots": [
+  "Lean",
+  "Mathlib"
+ ],
+ "runner": "auditor_build.py (auditor-written)",
+ "runner_sha256": "9a0b6ccddf47cf0cf1c081741c5f7904c014b5cde42ff28e308a6b460910369e"
+}

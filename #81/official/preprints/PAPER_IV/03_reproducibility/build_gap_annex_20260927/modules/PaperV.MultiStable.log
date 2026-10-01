@@ -1,0 +1,21 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 PaperV/MultiStable.lean -o /workspace/request-project/.lake/runner/lib/lean/PaperV/MultiStable.olean -i /workspace/request-project/.lake/runner/lib/lean/PaperV/MultiStable.ilean
+import took 2.26s
+cumulative profiling times:
+	.olean serialization 31.9ms
+	attribute application 0.0117ms
+	congr simp thm 1.2ms
+	elaboration 12.8ms
+	fix level params 0.574ms
+	import 2.26s
+	initialization 36.2ms
+	instantiate metavars 7.41ms
+	interpretation 154ms
+	let-to-have transformation 0.0276ms
+	linting 7.11ms
+	parsing 3.83ms
+	process pre-definitions 2.48ms
+	share common exprs 1.22ms
+	simp 7.39ms
+	tactic execution 80.8ms
+	type checking 27ms
+	typeclass inference 40.7ms

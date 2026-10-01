@@ -1,0 +1,33 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 PaperIV/PatternPoolGeometry.lean -o /workspace/request-project/.lake/runner/lib/lean/PaperIV/PatternPoolGeometry.olean -i /workspace/request-project/.lake/runner/lib/lean/PaperIV/PatternPoolGeometry.ilean
+PaperIV/PatternPoolGeometry.lean:128:0: warning: automatically included section variable(s) unused in theorem `PaperIV.PatternPoolGeometry.prod_card_eq_size_pow`:
+  [DecidableEq ι]
+  [DecidableEq β]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq ι] [DecidableEq β] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+PaperIV/PatternPoolGeometry.lean:195:5: warning: unused variable `hd₁`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+import took 3.32s
+cumulative profiling times:
+	.olean serialization 86ms
+	attribute application 0.126ms
+	congr simp thm 19.5ms
+	elaboration 94.7ms
+	fix level params 1.1ms
+	import 3.32s
+	initialization 40.5ms
+	instantiate metavars 1.83ms
+	interpretation 453ms
+	let-to-have transformation 0.319ms
+	linting 22.4ms
+	norm_num 7.04ms
+	parsing 12.9ms
+	process pre-definitions 10.7ms
+	ring 32.3ms
+	share common exprs 4.53ms
+	simp 58.4ms
+	tactic execution 133ms
+	type checking 51.1ms
+	typeclass inference 261ms

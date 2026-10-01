@@ -1,0 +1,15 @@
+{
+  "run": "run_v1.22_r2",
+  "revision": "v1.22-r2",
+  "started_utc": "2026-10-01T11:00:18Z",
+  "owner_request": "Owner requested in chat: 'haz la rerevision' with the path to EXTERNAL_ADVERSARIAL_REVALIDATION_v1.22_r2.md.",
+  "auditor_model": "Claude Opus 5.5 (claude-opus-5-5)",
+  "provider_family": "Anthropic (Claude)",
+  "session": "Continuation of the SAME Claude Code desktop session that produced run_v1.2_r1, run_v1.21_r1 and run_v1.22_r1 (with context compaction). Not a new session.",
+  "prior_exposure": "Full: this auditor wrote all three prior reports, including the X-15 count and NEW-01/NEW-03 findings re-examined here. Not blind.",
+  "cross_family_independence": false,
+  "note_on_independence": "The manuscript declares Claude (Anthropic) among the AI tools used; this auditor is the same family. No family independence is claimed.",
+  "dynamic_execution": "No lean, lake, leanchecker, kernel replay or any build. Only Python read-only scripts (hashing, zip CRC, text diff, PDF text/raster with PyMuPDF) and the pandoc+PyMuPDF report renderer used in prior runs.",
+  "shared_resources": "Same machine; the pinned Mathlib cache used by run_v1.2_r1 is not touched in this run.",
+  "prohibitions_acknowledged": ["no build", "no modification of inputs or prior runs", "no install", "no publish/push/tag/DOI/external service", "write only under run_v1.22_r2"]
+}

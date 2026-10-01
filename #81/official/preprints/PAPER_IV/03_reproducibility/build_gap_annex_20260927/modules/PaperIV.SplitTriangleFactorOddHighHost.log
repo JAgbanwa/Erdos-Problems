@@ -1,0 +1,71 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 PaperIV/SplitTriangleFactorOddHighHost.lean -o /workspace/request-project/.lake/runner/lib/lean/PaperIV/SplitTriangleFactorOddHighHost.olean -i /workspace/request-project/.lake/runner/lib/lean/PaperIV/SplitTriangleFactorOddHighHost.ilean
+PaperIV/SplitTriangleFactorOddHighHost.lean:125:0: warning: automatically included section variable(s) unused in theorem `PaperIV.SplitTriangleFactorOddHighHost.OddLabelling.cv_mem`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+PaperIV/SplitTriangleFactorOddHighHost.lean:128:0: warning: automatically included section variable(s) unused in theorem `PaperIV.SplitTriangleFactorOddHighHost.OddLabelling.hv_mem`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+PaperIV/SplitTriangleFactorOddHighHost.lean:149:8: warning: automatically included section variable(s) unused in theorem `PaperIV.SplitTriangleFactorOddHighHost.hubOf_apply`:
+  [Fintype V]
+  [DecidableEq V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] [DecidableEq V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+PaperIV/SplitTriangleFactorOddHighHost.lean:151:0: warning: automatically included section variable(s) unused in theorem `PaperIV.SplitTriangleFactorOddHighHost.baseOf_toFinset`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+PaperIV/SplitTriangleFactorOddHighHost.lean:189:0: warning: automatically included section variable(s) unused in theorem `PaperIV.SplitTriangleFactorOddHighHost.OddLabelling.image_opair_disjoint`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+PaperIV/SplitTriangleFactorOddHighHost.lean:193:0: warning: automatically included section variable(s) unused in theorem `PaperIV.SplitTriangleFactorOddHighHost.OddLabelling.image_opair_inter_card_le_one`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+PaperIV/SplitTriangleFactorOddHighHost.lean:294:0: warning: automatically included section variable(s) unused in theorem `PaperIV.SplitTriangleFactorOddHighHost.exists_oddLabelling`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_linarith_1._boxed took 104ms
+import took 3.26s
+cumulative profiling times:
+	.olean serialization 99.8ms
+	attribute application 1.82ms
+	blocked (unaccounted) 298ms
+	compilation (IR) 7.5ms
+	compilation (LCNF base) 11.9ms
+	compilation (LCNF mono) 5.12ms
+	congr simp thm 15ms
+	elaboration 206ms
+	fix level params 1.89ms
+	import 3.26s
+	initialization 37.6ms
+	instantiate metavars 9.39ms
+	interpretation 547ms
+	let-to-have transformation 0.603ms
+	linting 61.5ms
+	norm_num 49.7ms
+	parsing 24.5ms
+	process pre-definitions 27ms
+	ring 28.5ms
+	share common exprs 11.9ms
+	simp 260ms
+	tactic execution 363ms
+	type checking 341ms
+	typeclass inference 589ms

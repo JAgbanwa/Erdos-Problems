@@ -1,0 +1,103 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+\documentclass[
+]{article}
+\usepackage{xcolor}
+\usepackage{amsmath,amssymb}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math} % this also loads fontspec
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+\usepackage{lmodern}
+\ifPDFTeX\else
+  % xetex/luatex font selection
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\usepackage{bookmark}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same}
+% fallback for those not using the hyperref driver hyperxmp:
+\makeatletter
+\@ifundefined{xmpquote}{\newcommand{\xmpquote}[1]{#1}}{}
+\makeatother
+\hypersetup{
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+
+\author{}
+\date{}
+
+\begin{document}
+
+\section{Gate E7 report --- run\_v1.22\_r1 (Paper IV
+v1.22-r1)}\label{gate-e7-report--run_v122_r1-paper-iv-v122-r1}
+
+Verdict: \textbf{PASS}. Evidence: \texttt{20\_EVIDENCE/E7/}. Auditor:
+Claude Opus 5.5, same session as run\_v1.2\_r1/run\_v1.21\_r1; no Lean
+executed.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section{E7 --- Literature and attribution
+(regression)}\label{e7--literature-and-attribution-regression}
+
+\begin{itemize}
+\tightlist
+\item
+  The reference list is unchanged in number and order: 23 entries in EN
+  and in ES. Only two reference lines differ in the diff:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    {[}5{]} now spells "Preference Labs" (EN "Jacobian at Preference
+    Labs", ES "Jacobian de Preference Labs"). This closes the X-10
+    spelling observation.
+  \item
+    ES {[}6{]} has its original title restored: «Integer and fractional
+    packings in dense graphs». \textbf{NEW-02 RESOLVED.}
+  \end{itemize}
+\item
+  No new literature is cited. C.3 relies on the pinned Mathlib
+  dependency {[}11{]}, which is already cited, and names its
+  definitions; I checked them literally in the pinned source (E2/E3).
+\item
+  Cited titles are not translated; I verified {[}6{]}, {[}7{]} and
+  {[}9{]} on EN p71 and ES p72.
+\item
+  X-06 to X-11: the text is unchanged from v1.21 (diff), so these stay
+  RESOLVED and the run\_v1.21\_r1 literature checks are inherited.
+\item
+  No external source was consulted or fetched in this cycle. None was
+  needed, because no citation was added.
+\end{itemize}
+
+\textbf{E7 verdict: PASS.}
+
+\end{document}

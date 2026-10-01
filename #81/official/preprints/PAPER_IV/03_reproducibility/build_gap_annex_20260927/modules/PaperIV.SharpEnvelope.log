@@ -1,0 +1,26 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 PaperIV/SharpEnvelope.lean -o /workspace/request-project/.lake/runner/lib/lean/PaperIV/SharpEnvelope.olean -i /workspace/request-project/.lake/runner/lib/lean/PaperIV/SharpEnvelope.ilean
+import took 2.71s
+cumulative profiling times:
+	.olean serialization 65.6ms
+	attribute application 0.0521ms
+	compilation (IR) 0.444ms
+	compilation (LCNF base) 1.84ms
+	compilation (LCNF mono) 0.464ms
+	congr simp thm 0.788ms
+	elaboration 11.3ms
+	fix level params 0.186ms
+	import 2.71s
+	initialization 38.3ms
+	instantiate metavars 0.0804ms
+	interpretation 179ms
+	let-to-have transformation 0.0444ms
+	linting 2.15ms
+	norm_num 3.3ms
+	parsing 1.33ms
+	process pre-definitions 3.13ms
+	ring 11.8ms
+	share common exprs 2.07ms
+	simp 2.26ms
+	tactic execution 6.91ms
+	type checking 23.6ms
+	typeclass inference 43.3ms

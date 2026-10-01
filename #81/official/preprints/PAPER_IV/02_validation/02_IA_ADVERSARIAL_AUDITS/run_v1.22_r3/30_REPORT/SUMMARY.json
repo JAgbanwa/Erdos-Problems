@@ -1,0 +1,173 @@
+{
+ "run": "run_v1.22_r3",
+ "revision": "v1.22-r3",
+ "manuscript_version": "1.22",
+ "status": "COMPLETED",
+ "started_utc": "2026-10-01T14:52:23Z",
+ "target": {
+  "audit_target_sha256": "df89c3dd33df19be5ddc4a42afaf5dd9053977623c7bc2a30fd12143b1044970",
+  "candidate_manifest_sha256": "82217fe36719f4d2373bd63d30eb4efdb68e70b3ad95ef2f98217d3a6a5765bb",
+  "candidate_package_sha256": "c1acd8669d6cbcd89f7835933130416ae716c407250c5e690e5cf64fa837d2ec",
+  "six_sha256": {
+   "PAPER_IV_preprint_v1.22_en.md": "d3415df365ad8910b37f37dd1cdd5de04a4315e36811a285b3112c07a8b6cc7b",
+   "PAPER_IV_preprint_v1.22_en.tex": "c6b14105d6646754a15d96e3129e28539fbda23019dc01946290da4be1c28f75",
+   "PAPER_IV_preprint_v1.22_en.pdf": "4280b03e410664b6bf73f54d8544b75fc79b2f91e9624f98675532606c1b85c2",
+   "PAPER_IV_preprint_v1.22_es.md": "81db7bbb005f945899e7c2261304a910dc085935e67a7a425473e10069ddd46c",
+   "PAPER_IV_preprint_v1.22_es.tex": "17c1306da4aa0fa796a8ad310714cde4250fce25c486ad7ba077a87567b0344f",
+   "PAPER_IV_preprint_v1.22_es.pdf": "d1048a6286a3ed8689703764d9130ef9b9aa3046e5e206ae9e39441a705c6716"
+  },
+  "en_es_byte_identical_to_r2": "not required; all six differ by declaration",
+  "figures_identical_to_r2": true,
+  "lean_source_manifest_sha256": "fb459343d234f968d7d32eff1491ea8a09aa2e135b313a80623012e7449042f5",
+  "lean_source_zip_sha256": "cb2741454380736ffe01b59933057b5079fa9f865d5bbdd3f67534bf808a62e6",
+  "annex_zip_sha256": "2847a422865e06880d457ea806aae5b9f749d22359eff325349c09c01cb4837d"
+ },
+ "historical_packages": {
+  "run_v1.2_r1": "886ed7f033bca42a530944d48f91ef45e79f6be4cb0d74080c5d8d6efc4f5e2b",
+  "run_v1.21_r1": "11659a97b0a4f2bffadb6968159cc5b66562b4470053939a45c1e8a42db7a638",
+  "run_v1.22_r1": "9c74d673206ab17a5b4586209ececca30536f1768fcc91ffdd39db551193a1fa",
+  "run_v1.22_r2": "626571be12839325a918109b446fe3e6f8d446d7f5c5911c6407af2f1e480684"
+ },
+ "auditor": "Claude Opus 5.5 (claude-opus-5-5), Anthropic; continuation of the SAME session as all four prior runs; not blind; not cross-family",
+ "overall_verdict": "PASS_WITH_FINDINGS",
+ "overall_reason": "All mandated checks completed; NEW-04 closed; X-28 control action and E8-02 closed; 12 new semantic rows MATCH; one new MINOR open finding NEW-05 (two ES terms in r3 rewrites) with a pre-publication action. No mathematical, formal or identity defect.",
+ "path_to_PASS": "Correct NEW-05 (two ES words) and confirm by documentary revalidation that only those words changed; limits and seven accepted observations would remain explicit.",
+ "gates_current": {
+  "E0": {
+   "verdict": "PASS",
+   "basis": "ejecutado en r3"
+  },
+  "E1": {
+   "verdict": "PASS",
+   "basis": "21 rows heredado y revalidado por identidad + 12 new rows ejecutado en r3",
+   "new_rows": 12,
+   "new_rows_match": 12
+  },
+  "E2": {
+   "verdict": "PASS",
+   "basis": "heredado y revalidado por identidad",
+   "observations": [
+    "R-01"
+   ]
+  },
+  "E3": {
+   "verdict": "PASS",
+   "basis": "heredado y revalidado por identidad + static headers ejecutado en r3"
+  },
+  "E4": {
+   "verdict": "PASS",
+   "method": "reused_verified_external_build",
+   "basis": "heredado y revalidado por identidad",
+   "new_build": false,
+   "kernel_replay": false,
+   "scope": {
+    "main_modules": 607,
+    "targets": 19,
+    "export_checks": 224,
+    "annex_modules": 50,
+    "axiom_records": 461,
+    "print_axioms": 314,
+    "headline_print_axioms": 18,
+    "public_cones": 50
+   }
+  },
+  "E5": {
+   "verdict": "PASS",
+   "basis": "heredado y revalidado por identidad",
+   "distinct_checks": 59,
+   "added_negative_controls": 7
+  },
+  "E6": {
+   "verdict": "PASS_WITH_FINDINGS",
+   "basis": "ejecutado en r3",
+   "findings": [
+    "NEW-05 MINOR"
+   ],
+   "closed": [
+    "NEW-04"
+   ]
+  },
+  "E7": {
+   "verdict": "PASS",
+   "basis": "heredado y revalidado por identidad"
+  },
+  "E8": {
+   "verdict": "PASS_WITH_OBSERVATIONS",
+   "basis": "ejecutado en r3 + inherited attribution",
+   "closed": [
+    "E8-02",
+    "X-28 control action"
+   ],
+   "kept": [
+    "X-28 historical runner observation"
+   ],
+   "logs": 1266,
+   "unit_cases": 15,
+   "cli_corruptions": 4
+  }
+ },
+ "history": {
+  "v1.2 (run_v1.2_r1)": "INCONCLUSIVE",
+  "v1.21 (run_v1.21_r1)": "INCONCLUSIVE",
+  "v1.22-r1 (run_v1.22_r1)": "PASS (MINOR non-blocking)",
+  "v1.22-r2 (run_v1.22_r2)": "PASS_WITH_OBSERVATIONS",
+  "v1.22-r3 (run_v1.22_r3)": "PASS_WITH_FINDINGS"
+ },
+ "a2_current": {
+  "A2-1": "ACCEPTABLE_SUMMARY (v1.2)",
+  "A2-2": "ACCEPTABLE_SUMMARY (v1.2)",
+  "A2-3": "ACCEPTABLE_SUMMARY (v1.21)",
+  "A2-4": "ACCEPTABLE_SUMMARY (v1.22-r1)",
+  "A2-5": "ACCEPTABLE_SUMMARY (v1.21)",
+  "A2-6": "ACCEPTABLE_SUMMARY (v1.21)",
+  "A2-7": "ACCEPTABLE_SUMMARY (v1.2)"
+ },
+ "closed_this_cycle": [
+  "NEW-04",
+  "E8-02",
+  "X-28 control action (historical observation kept)"
+ ],
+ "new_this_cycle": [
+  "NEW-05 MINOR open",
+  "X-17 extended to N8 (observation)"
+ ],
+ "accepted_observations": {
+  "X-17": "none",
+  "X-18": "none",
+  "X-19": "none",
+  "X-22": "none (historical)",
+  "X-24": "none (author choice)",
+  "X-29": "none (historical)",
+  "R-01": "none (documented limit)"
+ },
+ "actions_before_publication": [
+  "NEW-05: restore 'calendario numérico' (ES A.2) and 'muestras con anclajes' (ES F.4); repeat ES identity + E6"
+ ],
+ "findings_counts": {
+  "rows": 53,
+  "OPEN": 1,
+  "CLOSED": 29,
+  "MITIGATED": 1,
+  "ACCEPTED_OBSERVATION": 7,
+  "KEPT_INFO": 1,
+  "PRESERVED_CORRECTION": 14
+ },
+ "auditor_corrections_this_cycle": [
+  "C4-01 unconfirmed comparison images re-logged",
+  "C4-02 withdrawn third terminology item",
+  "C4-03 test-copy patch"
+ ],
+ "lean_executed_this_cycle": false,
+ "limitations": [
+  "same session/model/family as prior runs and as manuscript AI assistant",
+  "same machine and shared cache",
+  "no new build, no kernel replay",
+  "summary-level written-proof check; not human peer review",
+  "new semantic rows are static header comparisons, not newly elaborated types"
+ ],
+ "not": [
+  "human peer review",
+  "permission to publish",
+  "a new formal build"
+ ]
+}

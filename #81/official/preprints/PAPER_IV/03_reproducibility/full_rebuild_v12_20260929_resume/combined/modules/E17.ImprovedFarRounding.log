@@ -1,0 +1,35 @@
+$ c:\Users\jtraverso\.elan\toolchains\leanprover--lean4---v4.28.0\bin\lean.exe -j 1 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false E17/ImprovedFarRounding.lean -o C:\Users\jtraverso\e81p4\piv_v12_full_rebuild_20260929\.lake\runner\lib\lean\E17\ImprovedFarRounding.olean -i C:\Users\jtraverso\e81p4\piv_v12_full_rebuild_20260929\.lake\runner\lib\lean\E17\ImprovedFarRounding.ilean
+'E17Bridge.faceTransfer_loss' depends on axioms: [propext, Classical.choice, Quot.sound]
+'E17Bridge.faceTransfer_weight_four' depends on axioms: [propext, Classical.choice, Quot.sound]
+'E17Bridge.transfer_avoids' depends on axioms: [propext, Classical.choice, Quot.sound]
+'E17Bridge.profileCleanup_loss' depends on axioms: [propext, Classical.choice, Quot.sound]
+'E17Bridge.profileCleanup_zero_or_heavy' depends on axioms: [propext, Classical.choice, Quot.sound]
+'E17Bridge.profileCleanup_offCanonical_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'E17Bridge.selected_mass_le_r3_add_card' depends on axioms: [propext, Classical.choice, Quot.sound]
+'E17Bridge.triangle_mass_le_r3_add_card' depends on axioms: [propext, Classical.choice, Quot.sound]
+'E17Bridge.profileCleanup_triangleMass_loss' depends on axioms: [propext, Classical.choice, Quot.sound]
+E17/ImprovedFarRounding.lean:574:37: warning: unused variable `hθ`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+E17/ImprovedFarRounding.lean:574:63: warning: unused variable `hv`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+E17/ImprovedFarRounding.lean:575:9: warning: unused variable `huv`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+E17/ImprovedFarRounding.lean:577:9: warning: unused variable `hchoice3`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+E17/ImprovedFarRounding.lean:578:9: warning: unused variable `hchoice4`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+'E17Bridge.exists_improvedGateGap_of_high_mass' depends on axioms: [propext, Classical.choice, Quot.sound]
+'E17Bridge.cleanedR3_loss' depends on axioms: [propext, Classical.choice, Quot.sound]
+'E17Bridge.cleanedR3_original_value_le_profiles_oldBudget' depends on axioms: [propext, Classical.choice, Quot.sound]
+'E17Bridge.cleanedR3_original_triangle_le_profiles_oldBudget' depends on axioms: [propext, Classical.choice, Quot.sound]
+'E17Bridge.UniformSchedule.uniformRoundingTarget_via_r3_f1' depends on axioms: [propext, Classical.choice, Quot.sound]
+E17/ImprovedFarRounding.lean:1215:17: warning: unused variable `hδ`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+'E17Bridge.exists_improvedGateGap_eventually' depends on axioms: [propext, Classical.choice, Quot.sound]
+'E17Bridge.improved_far_loss_eventually' depends on axioms: [propext, Classical.choice, Quot.sound]

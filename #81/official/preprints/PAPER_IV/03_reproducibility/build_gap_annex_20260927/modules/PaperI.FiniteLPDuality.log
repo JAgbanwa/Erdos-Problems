@@ -1,0 +1,27 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 PaperI/FiniteLPDuality.lean -o /workspace/request-project/.lake/runner/lib/lean/PaperI/FiniteLPDuality.olean -i /workspace/request-project/.lake/runner/lib/lean/PaperI/FiniteLPDuality.ilean
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_nlinarith_1._boxed took 152ms
+import took 3.04s
+cumulative profiling times:
+	.olean serialization 51.9ms
+	attribute application 0.204ms
+	compilation (IR) 2.18ms
+	compilation (LCNF base) 4.28ms
+	compilation (LCNF mono) 2.6ms
+	congr simp thm 10.4ms
+	elaboration 76.1ms
+	fix level params 1.2ms
+	import 3.04s
+	initialization 39.4ms
+	instantiate metavars 32.7ms
+	interpretation 657ms
+	let-to-have transformation 0.0989ms
+	linting 30.3ms
+	norm_num 4.03ms
+	parsing 17.2ms
+	process pre-definitions 23.3ms
+	ring 58.9ms
+	share common exprs 18.5ms
+	simp 456ms
+	tactic execution 383ms
+	type checking 72.6ms
+	typeclass inference 938ms

@@ -1,0 +1,34 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 E17/Probability.lean -o /workspace/request-project/.lake/runner/lib/lean/E17/Probability.olean -i /workspace/request-project/.lake/runner/lib/lean/E17/Probability.ilean
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_nlinarith_1._boxed took 268ms
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_nlinarith_1._boxed took 629ms
+E17/Probability.lean:85:0: warning: automatically included section variable(s) unused in theorem `E17.Probability.two_mul_card_filter_of_flip`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+import took 3.27s
+cumulative profiling times:
+	.olean serialization 75.6ms
+	attribute application 0.12ms
+	compilation (IR) 1.88ms
+	compilation (LCNF base) 3.39ms
+	compilation (LCNF mono) 2.07ms
+	congr simp thm 11.3ms
+	elaboration 63.5ms
+	fix level params 2.83ms
+	import 3.27s
+	initialization 38.2ms
+	instantiate metavars 19.3ms
+	interpretation 1.69s
+	let-to-have transformation 0.155ms
+	linting 50ms
+	norm_num 83.2ms
+	parsing 11ms
+	process pre-definitions 27.8ms
+	ring 95.3ms
+	share common exprs 31.5ms
+	simp 264ms
+	tactic execution 348ms
+	type checking 150ms
+	typeclass inference 736ms

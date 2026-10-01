@@ -1,0 +1,37 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 PaperIV/DenseBagClosure.lean -o /workspace/request-project/.lake/runner/lib/lean/PaperIV/DenseBagClosure.olean -i /workspace/request-project/.lake/runner/lib/lean/PaperIV/DenseBagClosure.ilean
+PaperIV/DenseBagClosure.lean:101:0: warning: automatically included section variable(s) unused in theorem `PaperIV.DenseBagClosure.loss_le_of_local_fraction`:
+  [DecidableEq ι]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq ι] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+PaperIV/DenseBagClosure.lean:101:43: warning: unused variable `hβ`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_nlinarith_1._boxed took 158ms
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_nlinarith_1._boxed took 192ms
+import took 3.03s
+cumulative profiling times:
+	.olean serialization 57.8ms
+	attribute application 0.0819ms
+	compilation (IR) 0.959ms
+	compilation (LCNF base) 0.92ms
+	compilation (LCNF mono) 0.347ms
+	congr simp thm 4.65ms
+	elaboration 58ms
+	fix level params 0.769ms
+	import 3.03s
+	initialization 46.1ms
+	instantiate metavars 2.71ms
+	interpretation 778ms
+	let-to-have transformation 0.13ms
+	linting 14.3ms
+	norm_num 125ms
+	parsing 7.05ms
+	process pre-definitions 12.7ms
+	ring 27.2ms
+	share common exprs 8.23ms
+	simp 21.5ms
+	tactic execution 44.6ms
+	type checking 73.6ms
+	typeclass inference 411ms

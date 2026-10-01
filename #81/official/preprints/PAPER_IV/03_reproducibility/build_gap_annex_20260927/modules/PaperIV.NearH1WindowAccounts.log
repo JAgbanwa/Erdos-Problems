@@ -1,0 +1,30 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 PaperIV/NearH1WindowAccounts.lean -o /workspace/request-project/.lake/runner/lib/lean/PaperIV/NearH1WindowAccounts.olean -i /workspace/request-project/.lake/runner/lib/lean/PaperIV/NearH1WindowAccounts.ilean
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_nlinarith_1._boxed took 1.46s
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_linarith_1._boxed took 119ms
+import took 4.18s
+.olean serialization took 126ms
+cumulative profiling times:
+	.olean serialization 126ms
+	attribute application 0.0206ms
+	compilation (IR) 1.81ms
+	compilation (LCNF base) 1.96ms
+	compilation (LCNF mono) 0.73ms
+	congr simp thm 35.4ms
+	dsimp 9ms
+	elaboration 42.8ms
+	fix level params 1.86ms
+	import 4.18s
+	initialization 44.4ms
+	instantiate metavars 44.5ms
+	interpretation 2.24s
+	let-to-have transformation 0.0544ms
+	linting 13ms
+	norm_num 191ms
+	parsing 5.5ms
+	process pre-definitions 10.6ms
+	ring 32.5ms
+	share common exprs 37.5ms
+	simp 438ms
+	tactic execution 233ms
+	type checking 107ms
+	typeclass inference 1.12s

@@ -1,0 +1,21 @@
+{
+  "domain": "all labelled graphs n=0..6",
+  "graphs": 33868,
+  "chordal": 19049,
+  "partition_checked": 33868,
+  "budget_checks": 19049,
+  "counterexamples": [],
+  "negative_reasons": [
+    "edge_reused",
+    "edge_omitted",
+    "nonclique_piece",
+    "bad_piece_order_or_vertices",
+    "vertex_outside_graph"
+  ],
+  "gain_checks": {
+    "triangle": true,
+    "K4": true,
+    "order5_gain_formulas_diverge": true
+  },
+  "limit": "Finite regression only; no universal or threshold proof."
+}

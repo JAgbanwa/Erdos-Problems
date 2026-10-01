@@ -1,0 +1,140 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+\documentclass[
+]{article}
+\usepackage{xcolor}
+\usepackage{amsmath,amssymb}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math} % this also loads fontspec
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+\usepackage{lmodern}
+\ifPDFTeX\else
+  % xetex/luatex font selection
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\usepackage{bookmark}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same}
+% fallback for those not using the hyperref driver hyperxmp:
+\makeatletter
+\@ifundefined{xmpquote}{\newcommand{\xmpquote}[1]{#1}}{}
+\makeatother
+\hypersetup{
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+
+\author{}
+\date{}
+
+\begin{document}
+
+\section{Informe de puerta E1 --- run\_v1.22\_r3 (Paper IV
+v1.22-r3)}\label{informe-de-puerta-e1--run_v122_r3-paper-iv-v122-r3}
+
+Veredicto actual: \textbf{PASS}. Evidencia: \texttt{20\_EVIDENCE/E1/}.
+Auditor: Claude Opus 5.5, misma sesión que las ejecuciones anteriores;
+no se ejecutó Lean.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section{E1 --- Statements (r3)}\label{e1--statements-r3}
+
+\subsection{Impact control}\label{impact-control}
+
+\texttt{IMPACT\_CHECK.json} and \texttt{E6\_R3\_DELTA.json} show that
+only five documentary paragraphs per language changed. No statement,
+formula, tag, table row, heading or reference changed. The 21 historical
+rows of the run\_v1.2\_r1 map are therefore \textbf{inherited and
+revalidated by identity}; all are MATCH, and G.2 was "not re-extracted".
+
+\subsection{Supplementary rows (executed in
+r3)}\label{supplementary-rows-executed-in-r3}
+
+The 13 headers in \texttt{SEMANTIC\_HEADERS.json} were verified
+independently against the original files
+(\texttt{10\_SCRIPTS/e1e3\_headers\_check.py} →
+\texttt{E1E3\_HEADERS\_CHECK.json}):
+
+\begin{itemize}
+\tightlist
+\item
+  the source sha256 equals both the manifest and the JSON;
+\item
+  the line number is correct;
+\item
+  the header text equals an independent re-extraction (stopping at
+  \texttt{:=} at bracket depth 0);
+\item
+  the namespace is correct, and no hidden hypotheses come from
+  \texttt{variable} declarations;
+\item
+  the run\_v1.2\_r1 log is hash-bound and its module is PASS with exit
+  0.
+\end{itemize}
+
+The definitions used (\texttt{splitBaseline}, \texttt{outsideEdges},
+\texttt{missingIncidences}, \texttt{graphFamDistNorm},
+\texttt{allSplitSupports}, \texttt{CertifiedFractionalOptimum},
+\texttt{NearStructureWitness}, \texttt{RegularizedRoot.isClique},
+\texttt{rootPieceDefect}/\texttt{numericDefect}, \texttt{splitGraph},
+\texttt{CleanupAtWith}, \texttt{eps}/\texttt{eta}) were read in the
+frozen sources.
+
+Result: 12 new rows N1--N12, all \textbf{MATCH}
+(\texttt{30\_REPORT/CLAIM\_MAP\_CONSOLIDATED.md}). They are labelled as
+new and are not attributed to the original E1. The cautions of the
+mandate were checked:
+
+\begin{itemize}
+\tightlist
+\item
+  C is not a clique of G (N3);
+\item
+  the size difference is not a symmetric difference (N3);
+\item
+  D.3 also requires the bounded constructor plus identity (1.3a) (N10);
+\item
+  real coefficients go through rational enlargement (N6, N8);
+\item
+  G.2 is closed (N11, N12).
+\end{itemize}
+
+One new scope observation: the linear-coefficient header (N8) is
+existential in G, and the identity cp(G) = M(n) for the named witness
+comes from (6.2) and Theorem B. This is the same nature as X-17,
+recorded as an extension of X-17.
+
+Observations still in force: X-17 (now also N8) and X-18. Both are scope
+limits; no action is needed before publication.
+
+\textbf{E1 verdict (r3): PASS.} Historical rows inherited and
+revalidated by identity; 12 new rows executed in r3.
+
+\end{document}

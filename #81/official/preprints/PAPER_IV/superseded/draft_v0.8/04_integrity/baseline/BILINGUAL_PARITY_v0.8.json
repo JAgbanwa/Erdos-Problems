@@ -1,0 +1,550 @@
+{
+  "status": "PASS_EDITORIAL_PARITY",
+  "not_a_new_mathematical_or_Lean_audit": true,
+  "source_sha256": "83823cf8a061934ebe3c6769982d376f06aa7f91274a885eacd20598198b8457",
+  "english_md_sha256": "fb71a4a19df8d344dbf42f2990ee944a409d6096d70dabad99c04178e714ee30",
+  "english_tex_sha256": "5818e572187418e78dc65cb4b1e102d6923266645c39a224192bb6e42fbb81b9",
+  "english_pdf_sha256": "f7b1df774585b0356c40f898d1830781d2121a5fc9ab3b7a02d39513964acc50",
+  "translation_blocks": 322,
+  "protected_math_and_code_blocks": 1052,
+  "display_formulas": 118,
+  "equation_labels": [
+    "A",
+    "1.1",
+    "1.2",
+    "1.3",
+    "1.3a",
+    "1.3b",
+    "1.4",
+    "1.5",
+    "2.1",
+    "2.2",
+    "2.3",
+    "2.4",
+    "2.5",
+    "3.1",
+    "4.1",
+    "4.2",
+    "4.3",
+    "4.4",
+    "4.5",
+    "4.6",
+    "4.6a",
+    "4.7",
+    "4.8",
+    "5.0",
+    "5.1",
+    "5.1a",
+    "5.2",
+    "5.3",
+    "5.4",
+    "5.4a",
+    "5.5",
+    "5.6",
+    "5.7",
+    "5.8",
+    "5.9",
+    "5.10",
+    "5.11",
+    "5.12",
+    "5.12a",
+    "5.13",
+    "5.14",
+    "5.15",
+    "5.16",
+    "6.1",
+    "6.2",
+    "6.3",
+    "6.4",
+    "6.5",
+    "6.6",
+    "6.7",
+    "6.8",
+    "6.9",
+    "6.10",
+    "6.11",
+    "6.12",
+    "8.1",
+    "8.1a",
+    "8.2",
+    "8.3",
+    "8.4",
+    "8.5",
+    "B.1",
+    "B.2",
+    "B.3",
+    "B.4",
+    "3.2",
+    "3.3",
+    "3.4",
+    "3.5",
+    "3.6",
+    "3.7",
+    "3.8",
+    "3.9",
+    "3.10",
+    "3.11",
+    "3.12",
+    "3.13",
+    "3.14",
+    "D.1",
+    "D.2",
+    "D.3",
+    "D.4"
+  ],
+  "literal_Lean_blocks": 5,
+  "headings": 62,
+  "tables": 9,
+  "numbered_table_captions": [
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8"
+  ],
+  "figures": [
+    "fig1_proof_map.png",
+    "fig2_host_realization.png",
+    "fig3_budget_comparison.png"
+  ],
+  "references": 20,
+  "pdf_pages": 40,
+  "text_annotation_translations": {
+    " cordal": " chordal",
+    "o": "or",
+    "testigo estructural cercano de ": "near-structure witness for ",
+    "aristas exteriores": "exterior edges",
+    "enlaces ausentes": "missing links",
+    " completo-split con núcleo óptimo": " complete-split with an optimal core",
+    "enlaces ausentes entre ": "missing links between ",
+    " y ": " and ",
+    " o ": " or ",
+    " es completo-split con núcleo óptimo": " is complete-split with an optimal core",
+    " activo": " active"
+  },
+  "math_symbols_preserved_including_Spanish_subscripts": true,
+  "protected_identifiers_urls_citation_order_table_shape": "unchanged",
+  "spanish_source_unchanged": true,
+  "english_changes_limited_to_three_titles_and_three_figure_paths": true,
+  "sections_7_8_and_other_bibliographic_entries_unchanged": true,
+  "series_titles_checked_against_English_TeX_sources": [
+    "C:/Users/jtraverso/e81p4/preprints/PAPER_I/01_manuscript/PAPER_I_preprint_v1.3_en.tex",
+    "C:/Users/jtraverso/e81p4/preprints/PAPER_II/01_manuscript/PAPER_II_preprint_v1.2_en.tex",
+    "C:/Users/jtraverso/e81p4/preprints/PAPER_III/01_manuscript/PAPER_III_preprint_v1.5_en.tex"
+  ],
+  "heading_map": [
+    {
+      "es": "Particiones de cliques en grafos cordales: redondeo mixto y construcción del régimen crítico",
+      "en": "Clique partitions of chordal graphs: mixed rounding and construction in the critical regime"
+    },
+    {
+      "es": "Resumen",
+      "en": "Abstract"
+    },
+    {
+      "es": "1. Introducción",
+      "en": "1. Introduction"
+    },
+    {
+      "es": "Teorema A. Cota para todos los órdenes",
+      "en": "Theorem A. Bound for all orders"
+    },
+    {
+      "es": "Teorema B. Cota aguda y máximo eventual",
+      "en": "Theorem B. Sharp bound and eventual maximum"
+    },
+    {
+      "es": "1.1. La condición común: presupuesto de pérdida",
+      "en": "1.1. The common condition: a loss budget"
+    },
+    {
+      "es": "1.2. Dicotomía estructural y mecanismos de resolución",
+      "en": "1.2. Structural dichotomy and resolution mechanisms"
+    },
+    {
+      "es": "1.3. Organización y uso de la cordalidad",
+      "en": "1.3. Organization and use of chordality"
+    },
+    {
+      "es": "2. Ganancia mixta, dualidad y particiones",
+      "en": "2. Mixed gain, duality and partitions"
+    },
+    {
+      "es": "2.1. Por qué se redondea una ganancia",
+      "en": "2.1. Why gain is the quantity to round"
+    },
+    {
+      "es": "Lema 2.1",
+      "en": "Lemma 2.1"
+    },
+    {
+      "es": "2.2. El óptimo fraccional y su certificado",
+      "en": "2.2. The fractional optimum and its certificate"
+    },
+    {
+      "es": "2.3. Relación con los funcionales anteriores",
+      "en": "2.3. Relation to the earlier functionals"
+    },
+    {
+      "es": "2.4. Notación de las dos ramas",
+      "en": "2.4. Notation for the two branches"
+    },
+    {
+      "es": "3. Redondeo mixto y régimen con holgura",
+      "en": "3. Mixed rounding and the regime with margin"
+    },
+    {
+      "es": "Teorema 3.1",
+      "en": "Theorem 3.1"
+    },
+    {
+      "es": "Corolario 3.5",
+      "en": "Corollary 3.5"
+    },
+    {
+      "es": "4. Localización del régimen crítico",
+      "en": "4. Localization of the critical regime"
+    },
+    {
+      "es": "4.1. Distancia a una familia fija",
+      "en": "4.1. Distance to a fixed family"
+    },
+    {
+      "es": "4.2. Descenso desde el terminal",
+      "en": "4.2. Descent from the terminal graph"
+    },
+    {
+      "es": "Proposición 4.3",
+      "en": "Proposition 4.3"
+    },
+    {
+      "es": "5. Raíz regularizada y cuentas físicas",
+      "en": "5. Regularized root and physical accounting"
+    },
+    {
+      "es": "Teorema 5.0. Constructor cercano bajo hipótesis locales",
+      "en": "Theorem 5.0. Near constructor under local hypotheses"
+    },
+    {
+      "es": "5.1. Regularización sobre el grafo original",
+      "en": "5.1. Regularization on the original graph"
+    },
+    {
+      "es": "5.2. De emparejamientos a triángulos",
+      "en": "5.2. From matchings to triangles"
+    },
+    {
+      "es": "5.3. Las tres cuentas que pagan la construcción",
+      "en": "5.3. The three accounts that pay for the construction"
+    },
+    {
+      "es": "Lema 5.3",
+      "en": "Lemma 5.3"
+    },
+    {
+      "es": "5.4. El testigo que conserva la prueba",
+      "en": "5.4. The witness retained by the proof"
+    },
+    {
+      "es": "6. Ensamblaje y valor extremo",
+      "en": "6. Assembly and extremal value"
+    },
+    {
+      "es": "Demostración del Teorema B: cota superior",
+      "en": "Proof of Theorem B: upper bound"
+    },
+    {
+      "es": "6.1. Optimalidad irrestricta en completo-split",
+      "en": "6.1. Unrestricted optimality for complete-split graphs"
+    },
+    {
+      "es": "6.2. El máximo eventual",
+      "en": "6.2. The eventual maximum"
+    },
+    {
+      "es": "6.3. Todos los órdenes y optimalidad del término lineal",
+      "en": "6.3. All orders and optimality of the linear term"
+    },
+    {
+      "es": "6.4. El exceso de una partición completo-split",
+      "en": "6.4. The excess of a complete-split partition"
+    },
+    {
+      "es": "6.5. Estabilidad integral y clasificación de los extremizadores",
+      "en": "6.5. Integral stability and classification of extremizers"
+    },
+    {
+      "es": "6.6. Coincidencia de los óptimos mixtos en completo-split",
+      "en": "6.6. Equality of mixed optima in complete-split graphs"
+    },
+    {
+      "es": "6.7. Reserva exacta por desplazamiento del núcleo",
+      "en": "6.7. Exact reserve from core displacement"
+    },
+    {
+      "es": "7. Formalización, código y reproducibilidad",
+      "en": "7. Formalization, code and reproducibility"
+    },
+    {
+      "es": "7.1. Repositorios y contribuciones",
+      "en": "7.1. Repositories and contributions"
+    },
+    {
+      "es": "7.2. Puente de modelos y convención de ganancia",
+      "en": "7.2. Model bridge and gain convention"
+    },
+    {
+      "es": "8. Comparación de mecanismos y alcance",
+      "en": "8. Comparison of mechanisms and scope"
+    },
+    {
+      "es": "8.1. El antecedente de defecto simplicial acotado",
+      "en": "8.1. The bounded simplicial defect antecedent"
+    },
+    {
+      "es": "8.2. Dos preguntas que la cota eventual no resuelve",
+      "en": "8.2. Two questions not settled by the eventual bound"
+    },
+    {
+      "es": "8.3. Una obstrucción cuantitativa para la limpieza de codegrado",
+      "en": "8.3. A quantitative obstruction to codegree cleanup"
+    },
+    {
+      "es": "Apéndice A. Correspondencia formal y reproducción",
+      "en": "Appendix A. Formal correspondence and reproduction"
+    },
+    {
+      "es": "A.1. Enunciados y comprobaciones",
+      "en": "A.1. Statements and checks"
+    },
+    {
+      "es": "A.2. Contratos intermedios de las pruebas",
+      "en": "A.2. Intermediate proof contracts"
+    },
+    {
+      "es": "A.3. Límites del resultado",
+      "en": "A.3. Limits of the result"
+    },
+    {
+      "es": "Apéndice B. Herramientas de construcción complementarias",
+      "en": "Appendix B. Complementary construction tools"
+    },
+    {
+      "es": "B.1. Absorción compatible con presupuesto",
+      "en": "B.1. Budgeted compatible absorption"
+    },
+    {
+      "es": "B.2. Reservas equilibradas",
+      "en": "B.2. Balanced reserves"
+    },
+    {
+      "es": "B.3. Remate con cuatro anfitriones",
+      "en": "B.3. Completion with four hosts"
+    },
+    {
+      "es": "Apéndice C. Prueba técnica del redondeo mixto",
+      "en": "Appendix C. Technical proof of mixed rounding"
+    },
+    {
+      "es": "Lema 3.2. Nibble de rango acotado con holgura, entrada de Paper III",
+      "en": "Lemma 3.2. Bounded-rank nibble with slack, input from Paper III"
+    },
+    {
+      "es": "Lema 3.3. Selección simultánea de masa total y marcada",
+      "en": "Lemma 3.3. Simultaneous selection of total and marked mass"
+    },
+    {
+      "es": "Lema 3.4. Selector mixto físico",
+      "en": "Lemma 3.4. Physical mixed selector"
+    },
+    {
+      "es": "C.1. Limpieza, selección y realización",
+      "en": "C.1. Cleaning, selection, and realization"
+    },
+    {
+      "es": "C.2. Qué se descarta y por qué el umbral es uniforme",
+      "en": "C.2. What is discarded and why the threshold is uniform"
+    },
+    {
+      "es": "Apéndice D. El grafo completo en todos los órdenes",
+      "en": "Appendix D. The complete graph at every order"
+    },
+    {
+      "es": "Agradecimientos",
+      "en": "Acknowledgments"
+    },
+    {
+      "es": "Uso de inteligencia artificial y herramientas computacionales",
+      "en": "Use of artificial intelligence and computational tools"
+    },
+    {
+      "es": "Referencias",
+      "en": "References"
+    }
+  ],
+  "pdf_page_contents": [
+    {
+      "page": 1,
+      "opening": "Clique partitions of chordal graphs:\nmixed rounding and construction in the critical regime\nJuan Pablo Traverso Gianini\nIndependent researcher, Santiago, Chile\n"
+    },
+    {
+      "page": 2,
+      "opening": "1. Introduction\nA clique partition of a graph G is a family of cliques whose edge sets are disjoint and whose\nunion is E(G). We write cp(G) for the smallest num"
+    },
+    {
+      "page": 3,
+      "opening": "For the same orders, increasing N if necessary,\nmax\n|V (G)|=n\nG chordal\ncp(G) = M(n).\n(1.2)\nThe second assertion follows from the upper bound and a complete-spl"
+    },
+    {
+      "page": 4,
+      "opening": "where the last term permits every order up to n. With the same convention, c4(G) ≥cL(G) ≥\ncp(G). The margin inequalities need not be strict. Moreover, for a fix"
+    },
+    {
+      "page": 5,
+      "opening": "Model and certified optimum · §2\nBranch L: margin available\nTheorem 3.1: RC01 rounding\nCorollary 3.5: loss covered\nBranch C: critical value\nProposition 4.3: loc"
+    },
+    {
+      "page": 6,
+      "opening": "2.1. Why gain is the quantity to round\nLet K(G) be the family of cliques of order three or four.\nA mixed packing is a subfamily\nP ⊆K(G) of edge-disjoint copies."
+    },
+    {
+      "page": 7,
+      "opening": "2.3. Relation to the earlier functionals\nExtending a triangular packing by zero gives\nW ∗(G) ≥2ν∗\n3(G),\nF4(G) ≤e(G) −2ν∗\n3(G).\n(2.5)\nPaper II [3, Theorem 1.1] b"
+    },
+    {
+      "page": 8,
+      "opening": "To apply that selector to an arbitrary graph, a regular partition and profile cleanup produce a\nsystem with controlled loads and codegrees. Removed mass is char"
+    },
+    {
+      "page": 9,
+      "opening": "Lemma 4.1 (admissible mixed path). Every chordal graph G admits a finite sequence\nG = G0, . . . , Gℓon the same vertex set such that Gℓis complete-split, every "
+    },
+    {
+      "page": 10,
+      "opening": "clique, dE(X, SR) = m + A ≤20D, proving (4.5). This lemma uses the local construction\nunder proximity, not global localization: the latter is proved next using "
+    },
+    {
+      "page": 11,
+      "opening": "There is a nonempty set C ⊆V (G) such that\ndE(G, SC) ≤ε0n2,\n(4.7)\n(6|C| −2n −1)2 ≤24\n(\n(η0 + 6ε0)n2 + n\n6 + 1\n24\n)\n.\n(4.8)\nThe preceding localization and the co"
+    },
+    {
+      "page": 12,
+      "opening": "These three constructions apply for r ≥4 and a nonempty exterior. The middle branch is\nbounded by (4n + 1)2/120, and the third by n(n −1)/12. For n ≥9, both lie"
+    },
+    {
+      "page": 13,
+      "opening": "member of Y then forces at least a/4 missing links in the column of x; hence x ∈X. This\nproves that R is a clique.\nFor the remaining bounds, count the resources"
+    },
+    {
+      "page": 14,
+      "opening": "were no exterior edges, the reference cost would be\nBn(p) = p(n −p) −\n(p\n2\n)\n.\nIndeed, covering the complete-split edges individually would cost p(n −p) +\n(p\n2\n"
+    },
+    {
+      "page": 15,
+      "opening": "Take a perfect elimination ordering ending in R and orient every exterior edge toward its later\nendpoint. If u →v, the later neighbors of u form a clique, so ev"
+    },
+    {
+      "page": 16,
+      "opening": "Now average over the uniform choice of the s single-candidate factors and over candidate in-\njections. A base with one candidate fails with probability be/q; wi"
+    },
+    {
+      "page": 17,
+      "opening": "Lemma 5.3\nThe three accounts in Table 2 imply\n|Q| ≤Bn(p) −19\n365m −253\n500A ≤Bn(p) −m\n20 −A\n2 .\n(5.15)\nProof. The second-phase account gives ℓ≤7A/40 + f/25. Sub"
+    },
+    {
+      "page": 18,
+      "opening": "Every clique contains at most one host. If it contains one host and s ≥1 core vertices, its\nweight is\ns −\n(s\n2\n)\n≤1.\nIf it lies entirely in the core, its weight"
+    },
+    {
+      "page": 19,
+      "opening": "6.3. All orders and optimality of the linear term\nProof of Theorem A. Fix a global threshold N from Theorem B and put b = N2. If n ≥N,\nthere is already a partit"
+    },
+    {
+      "page": 20,
+      "opening": "if it has no host, d(C) = 1+\n(|C|\n2\n)\n> 0. No piece consists solely of hosts: they form an independent\nset, and pieces have at least two vertices. The preceding"
+    },
+    {
+      "page": 21,
+      "opening": "6.6. Equality of mixed optima in complete-split graphs\nProposition 6.3 (zero mixed gap in complete-split graphs). Let S = Kk ∨Ih, with\n2 ≤k ≤h, and let W(S) be "
+    },
+    {
+      "page": 22,
+      "opening": "Häggkvist–Janssen and a packing transfer that includes certificates of rational optimality. These\ninputs are explicit parameters, not hidden axioms. Here the in"
+    },
+    {
+      "page": 23,
+      "opening": "The local audits for this version check the final statements and their dependencies. Their axiom\nfootprints contain only propext, Classical.choice and Quot.soun"
+    },
+    {
+      "page": 24,
+      "opening": "by the bounded gain function from Model. Since partition pieces have at least two vertices,\ntruncated subtraction there agrees with ordinary subtraction.\n8. Com"
+    },
+    {
+      "page": 25,
+      "opening": "Preprint [5]\nThis work\nLarge chordal graph: two cases\nLarge chordal graph: two cases\nWith margin\nSubquadratic\ntransfer\nCritical\nFirst entry\nand stabilization\nBr"
+    },
+    {
+      "page": 26,
+      "opening": "bound linear in the deficit in our Theorem 6.1.\nComponent\nOkechukwu [15]\nThis work\nLocalization\nSigned dual, Theorem 3.3\nDescent by copies, §4\nTransfer\nHaxell–R"
+    },
+    {
+      "page": 27,
+      "opening": "library, included in the supplement and audited separately, proves that every fractional triangle\npacking x satisfies\n∑\nT\nxT ≤ν3(G) +\n(\n10 + d\n2\n)\nn.\n(8.1a)\nHer"
+    },
+    {
+      "page": 28,
+      "opening": "M exp(−4√log M). If 7ε ≤exp(−4√log M) and M ≥1, this count satisfies the mass hypothesis\nand contradicts (8.3): the order 6M + 3 must be smaller than N0.\nNow ta"
+    },
+    {
+      "page": 29,
+      "opening": "Result\nLean declaration\nTheorem A, additive form\nErdos81AllOrders.erdos81_all_orders_additive\nTheorem B, upper bound\nErdos81Unconditional.erdos81_cliquePartitio"
+    },
+    {
+      "page": 30,
+      "opening": "theorem erdos81_all_orders_additive :\n∃b : N, ∀(n : N) (G : SimpleGraph (Fin n)) [DecidableRel G.Adj],\nPaperIV.FarRounding.IsChordal G →\n∃Q : CliquePartition G,"
+    },
+    {
+      "page": 31,
+      "opening": "Experimental checks of small orders are not used as premises. Their documentation, including\ncompleteness and certification requirements, belongs to the separat"
+    },
+    {
+      "page": 32,
+      "opening": "B.2. Balanced reserves\nFor every finite graph F and every real fraction 0 ≤θ ≤1, there is R ⊆E(F) such that\n|dR(v) −θdF (v)| ≤2\n(v ∈V (F)).\n(B.4)\nThis is the Be"
+    },
+    {
+      "page": 33,
+      "opening": "Lemma 3.3. Simultaneous selection of total and marked mass\nLet r ≥2, β > 0, and ϵ > 0. There exist γ, C > 0 such that, for every r-uniform family H with\nnonnega"
+    },
+    {
+      "page": 34,
+      "opening": "Together with the supports of K4, this gives a 6-uniform family. Mark the latter supports. The\ntwo families cannot coincide: two triangles contained in the same"
+    },
+    {
+      "page": 35,
+      "opening": "A hypergraph is then formed on the single resource set E(G): each triangle contributes its three\nedges and each K4 its six. Lemma 3.4 performs the selection aft"
+    },
+    {
+      "page": 36,
+      "opening": "This formula separates the budgets.\nThe proof chooses the small parameters so that their\ncoeﬀicients use only part of the requested accuracy; a threshold in n t"
+    },
+    {
+      "page": 37,
+      "opening": "Proposition D.1. For every integer n ≥0, there is a partition of Kn into pieces of order at\nmost four with at most M(n) pieces.\nProof. For n = 0, 1, use the emp"
+    },
+    {
+      "page": 38,
+      "opening": "Acknowledgments\nThe author is deeply grateful to his wife María Paz and his children Lucas, Juan Cristóbal,\nFrancisca, Raimundo, and Benjamín for their love, pa"
+    },
+    {
+      "page": 39,
+      "opening": "References\n[1] P. Erdős, E. T. Ordman, and Y. Zalcstein, “Clique partitions of chordal graphs,” Combinatorics,\nProbability and Computing 2 (1993), 409–415.\n[2] "
+    },
+    {
+      "page": 40,
+      "opening": "[10] L. de Moura and S. Ullrich, “The Lean 4 Theorem Prover and Programming Language,” in Automated\nDeduction – CADE 28, LNCS 12699, Springer, 2021, 625–635.\n[1"
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 PaperIV/TriangleOnlySharpObstruction.lean -o /workspace/request-project/.lake/runner/lib/lean/PaperIV/TriangleOnlySharpObstruction.olean -i /workspace/request-project/.lake/runner/lib/lean/PaperIV/TriangleOnlySharpObstruction.ilean
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_nlinarith_1._boxed took 567ms
+import took 3.57s
+cumulative profiling times:
+	.olean serialization 79.5ms
+	attribute application 0.702ms
+	compilation (IR) 4.71ms
+	compilation (LCNF base) 5.67ms
+	compilation (LCNF mono) 2.38ms
+	congr simp thm 6.63ms
+	elaboration 23.6ms
+	fix level params 0.564ms
+	import 3.57s
+	initialization 39.7ms
+	instantiate metavars 3.37ms
+	interpretation 790ms
+	let-to-have transformation 0.0891ms
+	linting 7.39ms
+	norm_num 3.07ms
+	parsing 3.96ms
+	process pre-definitions 6.44ms
+	ring 9.73ms
+	share common exprs 3.3ms
+	simp 130ms
+	tactic execution 112ms
+	type checking 184ms
+	typeclass inference 336ms

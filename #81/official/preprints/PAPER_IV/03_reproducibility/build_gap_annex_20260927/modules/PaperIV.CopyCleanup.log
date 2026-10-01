@@ -1,0 +1,63 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 PaperIV/CopyCleanup.lean -o /workspace/request-project/.lake/runner/lib/lean/PaperIV/CopyCleanup.olean -i /workspace/request-project/.lake/runner/lib/lean/PaperIV/CopyCleanup.ilean
+PaperIV/CopyCleanup.lean:49:0: warning: automatically included section variable(s) unused in theorem `PaperIV.CopyCleanup.cleaned_subset`:
+  [DecidableEq κ]
+  [DecidableEq ι]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq κ] [DecidableEq ι] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+PaperIV/CopyCleanup.lean:52:0: warning: automatically included section variable(s) unused in theorem `PaperIV.CopyCleanup.card_cleaned_add_removed`:
+  [DecidableEq κ]
+  [DecidableEq ι]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq κ] [DecidableEq ι] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+PaperIV/CopyCleanup.lean:70:0: warning: automatically included section variable(s) unused in theorem `PaperIV.CopyCleanup.card_removed_le`:
+  [DecidableEq ι]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq ι] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+PaperIV/CopyCleanup.lean:155:67: warning: unused variable `hθ`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+PaperIV/CopyCleanup.lean:184:0: warning: automatically included section variable(s) unused in theorem `PaperIV.CopyCleanup.cleaned_count_ge`:
+  [DecidableEq κ]
+  [DecidableEq ι]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq κ] [DecidableEq ι] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+PaperIV/CopyCleanup.lean:193:0: warning: automatically included section variable(s) unused in theorem `PaperIV.CopyCleanup.fiber_cleaned_eq_empty`:
+  [DecidableEq κ]
+  [DecidableEq ι]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq κ] [DecidableEq ι] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+import took 3.95s
+cumulative profiling times:
+	.olean serialization 71.2ms
+	attribute application 0.153ms
+	compilation (IR) 2.47ms
+	compilation (LCNF base) 3.31ms
+	compilation (LCNF mono) 2.43ms
+	congr simp thm 7.82ms
+	elaboration 63ms
+	fix level params 1ms
+	import 3.95s
+	initialization 37.9ms
+	instantiate metavars 1.32ms
+	interpretation 404ms
+	let-to-have transformation 0.228ms
+	linting 15.4ms
+	norm_num 2.28ms
+	parsing 11.8ms
+	process pre-definitions 9.2ms
+	ring 18ms
+	share common exprs 3.73ms
+	simp 45.9ms
+	tactic execution 87.4ms
+	type checking 50.2ms
+	typeclass inference 236ms

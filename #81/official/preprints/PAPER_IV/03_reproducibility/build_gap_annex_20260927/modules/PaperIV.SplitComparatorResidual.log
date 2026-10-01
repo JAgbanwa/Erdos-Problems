@@ -1,0 +1,36 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 PaperIV/SplitComparatorResidual.lean -o /workspace/request-project/.lake/runner/lib/lean/PaperIV/SplitComparatorResidual.olean -i /workspace/request-project/.lake/runner/lib/lean/PaperIV/SplitComparatorResidual.ilean
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_nlinarith_1._boxed took 165ms
+PaperIV/SplitComparatorResidual.lean:36:5: warning: unused variable `hab`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+PaperIV/SplitComparatorResidual.lean:36:19: warning: unused variable `hba`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_nlinarith_1._boxed took 133ms
+import took 3.96s
+.olean serialization took 109ms
+cumulative profiling times:
+	.olean serialization 109ms
+	attribute application 0.123ms
+	compilation (IR) 17.3ms
+	compilation (LCNF base) 16.9ms
+	compilation (LCNF mono) 7.6ms
+	congr simp thm 28.1ms
+	dsimp 8.24ms
+	elaboration 78.1ms
+	fix level params 2.67ms
+	import 3.96s
+	initialization 38.8ms
+	instantiate metavars 9.47ms
+	interpretation 1.6s
+	let-to-have transformation 0.215ms
+	linting 42.1ms
+	norm_num 408ms
+	parsing 16.2ms
+	process pre-definitions 26.3ms
+	ring 87.4ms
+	share common exprs 29.5ms
+	simp 431ms
+	tactic execution 430ms
+	type checking 296ms
+	typeclass inference 1.25s

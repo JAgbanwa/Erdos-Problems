@@ -1,0 +1,200 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+\documentclass[
+]{article}
+\usepackage{xcolor}
+\usepackage{amsmath,amssymb}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math} % this also loads fontspec
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+\usepackage{lmodern}
+\ifPDFTeX\else
+  % xetex/luatex font selection
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\usepackage{bookmark}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same}
+% fallback for those not using the hyperref driver hyperxmp:
+\makeatletter
+\@ifundefined{xmpquote}{\newcommand{\xmpquote}[1]{#1}}{}
+\makeatother
+\hypersetup{
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+
+\author{}
+\date{}
+
+\begin{document}
+
+\section{Gate E0 report --- run\_v1.2\_r1 (Paper IV
+v1.2)}\label{gate-e0-report--run_v12_r1-paper-iv-v12}
+
+Verdict: \textbf{PASS}. Evidence directory: \texttt{20\_EVIDENCE/E0/}.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\subsection{E0 Identity --- initial pass (2026-09-30,
+\textasciitilde12:25
+UTC)}\label{e0-identity--initial-pass-2026-09-30-1225-utc}
+
+Scripts (auditor-written): \texttt{e0\_identity.py},
+\texttt{e0\_source\_consistency.py}, \texttt{e0\_manifests.py}. Raw
+outputs: \texttt{E0\_IDENTITY.json},
+\texttt{E0\_SOURCE\_CONSISTENCY.json}, \texttt{E0\_MANIFESTS.json},
+\texttt{source\_file\_hashes.json}, \texttt{import\_graph.json}. Logs in
+\texttt{10\_LOGS/E0\_*.log}.
+
+\subsection{Readiness}\label{readiness}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Owner requested execution in chat on 2026-09-30 → met.
+  (\texttt{AUDIT\_TARGET\_v1.2.json} still says
+  \texttt{execution\_authorized:\ false}; that field predates the
+  request and is not modified by the auditor.)
+\item
+  Target status \texttt{READY\_FOR\_EXTERNAL\_AUDIT}; all mandatory
+  bindings present; target sha256 \texttt{d1eb542d…fdc29} equals the
+  value in \texttt{PREPARATION.json}. 3--5. Bound author validation /
+  internal audit exist by hash (contents deferred per mandate §3).
+  Readiness is not an E0 PASS.
+\end{enumerate}
+
+\subsection{Source identity
+(piv-v12-fb459343d234)}\label{source-identity-piv-v12-fb459343d234}
+
+\begin{itemize}
+\tightlist
+\item
+  All 30+ bound files: sha256 and byte counts match
+  (\texttt{all\_bound\_hashes\_match:\ true}).
+\item
+  Source ZIP: 615 members, no CRC errors, no unsafe
+  paths/duplicates/symlinks.
+\item
+  ZIP ↔ directory ↔ SOURCE\_MANIFEST: 615 = 615 = 615, zero content
+  mismatches.
+\item
+  607 \texttt{.lean} modules (recomputed); 8 non-Lean entries
+  (FREEZE\_SCOPE.json, docs/PUBLICATION\_AUDIT.md, lakefile.toml,
+  lake-manifest.json, lean-toolchain, 3 tools/*.py).
+\item
+  FREEZE\_SCOPE lists exactly the 19 targets named in the mandate; all
+  exist as modules.
+\item
+  Toolchain \texttt{leanprover/lean4:v4.28.0}; Mathlib rev
+  \texttt{8f9d9cff6bd728b17a24e163c9402775d9e6a365}. All 9 packages in
+  the shared cache have git HEAD equal to the frozen manifest revs with
+  0 tracked modifications. Packages root is not a junction (realpath =
+  itself).
+\item
+  Import graph: union of the 19 target closures = \textbf{607} own
+  modules (all modules), matching §7\textquotesingle s statement that
+  every local module lies in the closure of the 19 targets.
+  \textbf{CORRECTION C-01 (auditor):} the first run of
+  \texttt{e0\_source\_consistency.py} used an import regex that missed
+  Lean module-system \texttt{public\ import} lines (21 occurrences, 20
+  files with \texttt{module} header) and reported 594 with 13
+  \texttt{RequestProject.AFKS/AS} modules outside every closure. That
+  result was an auditor parsing error; the regex was fixed and rerun
+  (\texttt{10\_LOGS/E0\_source\_consistency\_run2.log}). Original run
+  log preserved (\texttt{10\_LOGS/E0\_source\_consistency.log}). Static
+  closure is still to be confirmed by E4\textquotesingle s actual build
+  graph.
+\item
+  Lakefile declares \texttt{lean\_lib} names \texttt{PaperV},
+  \texttt{E18}, \texttt{E19} etc.; no \texttt{PaperV.*} module exists in
+  the cut (OBSERVATION E0-O2, configuration residue, no content).
+\item
+  Textual scan for
+  sorry/admit/axiom/unsafe/implemented\_by/extern/native\_decide/opaque/ofReduceBool:
+  all hits are inside doc comments (\texttt{/-!\ …\ -/}); no code-level
+  occurrence. Kernel-level confirmation deferred to E4.
+\end{itemize}
+
+\subsection{Manuscript identity
+(piv-v12-manuscripts-2451d43bface)}\label{manuscript-identity-piv-v12-manuscripts-2451d43bface}
+
+\begin{itemize}
+\tightlist
+\item
+  MANUSCRIPT\_MANIFEST (105 files) matches directory bytes; ZIP has 106
+  members = 105 + manifest, all hashes equal.
+\item
+  Directory holds 212 additional unbound files (editorial reports, QA
+  PNGs, history) --- not part of the identity.
+\item
+  PDFs: EN 68 pages, ES 69 pages (pymupdf, independently counted) ---
+  match the stated counts.
+\end{itemize}
+
+\subsection{Author-build evidence
+identity}\label{author-build-evidence-identity}
+
+\begin{itemize}
+\tightlist
+\item
+  EVIDENCE\_MANIFEST: 1238 entries; all present on disk with matching
+  hashes; ZIP has 1239 members (1238 + manifest) and every manifest hash
+  occurs in the ZIP. Contents not read yet (deferred to E8).
+\end{itemize}
+
+\subsection{Annex}\label{annex}
+
+\begin{itemize}
+\tightlist
+\item
+  Annex ZIP: 40 members = 38 \texttt{BoundedCliqueGap/*.lean} + README +
+  SOURCE\_MANIFEST.sha256; all 39 manifest entries match ZIP content.
+\item
+  v1.0 base ZIP: 508 members, 504 \texttt{.lean}, no BoundedCliqueGap
+  files; its lakefile/manifest/toolchain equal the bound
+  \texttt{lean\_v1.0\_freeze} files; lakefile declares BoundedCliqueGap;
+  package revs equal v1.2\textquotesingle s.
+\end{itemize}
+
+Status: \textbf{E0 initial checks PASS; final E0 requires the end-of-run
+immutability recheck.} Status: \textbf{E0 initial checks PASS; final E0
+requires the end-of-run immutability recheck.}
+
+\subsection{Final recheck (2026-09-30 22:04
+UTC)}\label{final-recheck-2026-09-30-2204-utc}
+
+\texttt{e0\_identity.py} rerun: all 31 bound files and all ZIP integrity
+results identical to intake; source ZIP ↔ directory ↔ manifest still
+615/615 with no mismatch (\texttt{10\_LOGS/E0\_identity\_final.log},
+\texttt{E0\_IDENTITY\_initial.json} vs \texttt{E0\_IDENTITY.json}).
+\textbf{E0 = PASS.}
+
+\end{document}

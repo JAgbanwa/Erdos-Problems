@@ -1,0 +1,26 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 PaperIV/CanonicalBudget.lean -o /workspace/request-project/.lake/runner/lib/lean/PaperIV/CanonicalBudget.olean -i /workspace/request-project/.lake/runner/lib/lean/PaperIV/CanonicalBudget.ilean
+import took 3.57s
+cumulative profiling times:
+	.olean serialization 41.7ms
+	attribute application 0.0674ms
+	compilation (IR) 0.4ms
+	compilation (LCNF base) 1.16ms
+	compilation (LCNF mono) 0.323ms
+	congr simp thm 1.69ms
+	elaboration 17.6ms
+	fix level params 0.282ms
+	import 3.57s
+	initialization 37.1ms
+	instantiate metavars 0.264ms
+	interpretation 281ms
+	let-to-have transformation 0.0718ms
+	linting 8.31ms
+	norm_num 38.3ms
+	parsing 2.05ms
+	process pre-definitions 5.59ms
+	ring 17.5ms
+	share common exprs 3.37ms
+	simp 6.86ms
+	tactic execution 16ms
+	type checking 35.6ms
+	typeclass inference 90.3ms

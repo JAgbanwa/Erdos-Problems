@@ -1,0 +1,24 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 PaperIV/EditRouteLemmaK.lean -o /workspace/request-project/.lake/runner/lib/lean/PaperIV/EditRouteLemmaK.olean -i /workspace/request-project/.lake/runner/lib/lean/PaperIV/EditRouteLemmaK.ilean
+import took 3.26s
+cumulative profiling times:
+	.olean serialization 67.8ms
+	attribute application 0.0531ms
+	compilation (IR) 0.731ms
+	compilation (LCNF base) 1.5ms
+	compilation (LCNF mono) 1.08ms
+	congr simp thm 2.87ms
+	elaboration 20.7ms
+	fix level params 0.248ms
+	import 3.26s
+	initialization 38.6ms
+	instantiate metavars 5.58ms
+	interpretation 241ms
+	let-to-have transformation 0.0912ms
+	linting 11.5ms
+	parsing 6.58ms
+	process pre-definitions 8.11ms
+	share common exprs 1.52ms
+	simp 15.5ms
+	tactic execution 173ms
+	type checking 227ms
+	typeclass inference 47.5ms

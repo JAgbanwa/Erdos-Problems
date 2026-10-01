@@ -1,0 +1,31 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 A4S1/MinDegreeAll.lean -o /workspace/request-project/.lake/runner/lib/lean/A4S1/MinDegreeAll.olean -i /workspace/request-project/.lake/runner/lib/lean/A4S1/MinDegreeAll.ilean
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_nlinarith_1._boxed took 204ms
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_nlinarith_1._boxed took 246ms
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_nlinarith_1._boxed took 189ms
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_nlinarith_1._boxed took 346ms
+import took 8.75s
+.olean serialization took 361ms
+cumulative profiling times:
+	.olean serialization 361ms
+	attribute application 0.144ms
+	compilation (IR) 7.74ms
+	compilation (LCNF base) 7.55ms
+	compilation (LCNF mono) 5.02ms
+	congr simp thm 11.2ms
+	elaboration 68.7ms
+	fix level params 0.925ms
+	import 8.75s
+	initialization 37.8ms
+	instantiate metavars 20.2ms
+	interpretation 1.69s
+	let-to-have transformation 0.163ms
+	linting 21.9ms
+	norm_num 187ms
+	parsing 18.2ms
+	process pre-definitions 22.2ms
+	ring 48.9ms
+	share common exprs 19.3ms
+	simp 181ms
+	tactic execution 485ms
+	type checking 684ms
+	typeclass inference 1.17s

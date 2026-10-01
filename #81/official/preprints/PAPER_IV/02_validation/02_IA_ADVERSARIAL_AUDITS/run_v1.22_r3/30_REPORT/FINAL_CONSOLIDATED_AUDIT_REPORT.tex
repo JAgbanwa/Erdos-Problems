@@ -1,0 +1,710 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+\documentclass[
+]{article}
+\usepackage{xcolor}
+\usepackage{amsmath,amssymb}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math} % this also loads fontspec
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+\usepackage{lmodern}
+\ifPDFTeX\else
+  % xetex/luatex font selection
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{longtable,booktabs,array}
+\usepackage{caption}
+\captionsetup[table]{skip=6pt}
+\newcounter{none} % for unnumbered tables
+\usepackage{calc} % for calculating minipage widths
+% Correct order of tables after \paragraph or \subparagraph
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd\longtable{\par}{\if@noskipsec\mbox{}\fi\par}{}{}
+\makeatother
+% Allow footnotes in longtable head/foot
+\IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
+\makesavenoteenv{longtable}
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\usepackage{bookmark}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same}
+% fallback for those not using the hyperref driver hyperxmp:
+\makeatletter
+\@ifundefined{xmpquote}{\newcommand{\xmpquote}[1]{#1}}{}
+\makeatother
+\hypersetup{
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+
+\author{}
+\date{}
+
+\begin{document}
+
+\section{Paper IV v1.22-r3 --- Informe final consolidado de auditoría
+externa adversarial
+(E0--E8)}\label{paper-iv-v122-r3--informe-final-consolidado-de-auditoruxeda-externa-adversarial-e0e8}
+
+\textbf{Ejecución:} \texttt{run\_v1.22\_r3}. Se completó el 2026-10-01,
+con inicio a las 14:52:23 UTC y el E0 inicial a las 14:53:23 UTC; el E0
+final está en la §11. La solicitó el propietario en el chat con el
+mandato \texttt{EXTERNAL\_ADVERSARIAL\_REVALIDATION\_v1.22\_r3.md}.
+
+\textbf{Veredicto global actual: PASS\_WITH\_FINDINGS.}
+
+\begin{itemize}
+\tightlist
+\item
+  Todas las comprobaciones del encargo se completaron.
+\item
+  NEW-04 (estado documental desactualizado) queda cerrado. Quedan
+  cerradas también la acción de control de X-28 y el hallazgo E8-02.
+\item
+  Se añaden 12 filas semánticas nuevas, todas MATCH.
+\item
+  Queda abierto \textbf{un hallazgo MINOR nuevo, NEW-05}: dos términos
+  españoles introducidos en los párrafos reescritos en r3. Exige una
+  corrección de dos palabras antes de publicar.
+\item
+  No hay ningún defecto matemático, formal ni de identidad.
+\item
+  Siguen vigentes siete observaciones aceptadas, que son límites
+  documentados y no exigen acción, más la mitigación X-28.
+\item
+  Esta revisión no sustituye una revisión por pares ni autoriza la
+  publicación.
+\end{itemize}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\subsection{1. Identidad actual}\label{1-identidad-actual}
+
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}lll@{}}
+\toprule\noalign{}
+Objeto & Ruta & SHA-256 \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+Objetivo r3 &
+\texttt{02\_validation/02\_IA\_ADVERSARIAL\_AUDITS/AUDIT\_TARGET\_v1.22\_r3.json}
+&
+\texttt{df89c3dd33df19be5ddc4a42afaf5dd9053977623c7bc2a30fd12143b1044970}
+(coincide con su sidecar) \\
+Mandato r3 &
+\texttt{…/EXTERNAL\_ADVERSARIAL\_REVALIDATION\_v1.22\_r3.md} &
+\texttt{abfcaec9ae3ce5759b4177e0152bcd570e7ee31bb15e3f3df53553e6fb50d92f} \\
+Manuscrito & \textbf{versión 1.22}, paquete \textbf{r3}, en
+\texttt{01\_manuscript/v1.22\_editorial\_candidate\_r3/} & --- \\
+Manifiesto r3 (226 archivos) &
+\texttt{MANUSCRIPT\_REVIEW\_MANIFEST.json} &
+\texttt{82217fe36719f4d2373bd63d30eb4efdb68e70b3ad95ef2f98217d3a6a5765bb} \\
+ZIP r3 (228 miembros, CRC correcto) &
+\texttt{PAPER\_IV\_v1.22\_REVIEW\_PACKAGE\_r3.zip} &
+\texttt{c1acd8669d6cbcd89f7835933130416ae716c407250c5e690e5cf64fa837d2ec} \\
+ES MD / TeX / PDF (73 p.) & \texttt{PAPER\_IV\_preprint\_v1.22\_es.*} &
+\texttt{81db7bbb…} / \texttt{17c1306d…} / \texttt{d1048a62…} \\
+EN MD / TeX / PDF (72 p.) & \texttt{PAPER\_IV\_preprint\_v1.22\_en.*} &
+\texttt{d3415df3…} / \texttt{c6b14105…} / \texttt{4280b03e…} \\
+Figuras (18 archivos) & \texttt{figures/}, \texttt{figures\_en/} &
+idénticas a r2 \\
+Freeze Lean (615 entradas) &
+\texttt{05\_formalization/lean\_piv-v12-fb459343d234/} & manifiesto
+\texttt{fb459343d234f968d7d32eff1491ea8a09aa2e135b313a80623012e7449042f5} \\
+ZIP de fuentes Lean (615 miembros) &
+\texttt{05\_formalization/LEAN\_SOURCE\_piv-v12-fb459343d234.zip} &
+\texttt{cb2741454380736ffe01b59933057b5079fa9f865d5bbdd3f67534bf808a62e6} \\
+Anexo (40 miembros) &
+\texttt{05\_formalization/LEAN\_BOUNDED\_GAP\_ANNEX\_v1.0.zip} &
+\texttt{2847a422865e06880d457ea806aae5b9f749d22359eff325349c09c01cb4837d} \\
+Paquetes históricos &
+\texttt{run\_v1.2\_r1/…/EXTERNAL\_AUDIT\_run\_v1.2\_r1.zip} &
+\texttt{886ed7f0…f5e2b} \\
+& \texttt{run\_v1.21\_r1/…/EXTERNAL\_REVALIDATION\_run\_v1.21\_r1.zip} &
+\texttt{11659a97…7a638} \\
+& \texttt{run\_v1.22\_r1/…/EXTERNAL\_REVALIDATION\_run\_v1.22\_r1.zip} &
+\texttt{9c74d673…193a1fa} \\
+& \texttt{run\_v1.22\_r2/…/EXTERNAL\_REVALIDATION\_run\_v1.22\_r2.zip} &
+\texttt{626571be…1e480684} \\
+\end{longtable}
+}
+
+Notas sobre la identidad:
+
+\begin{itemize}
+\tightlist
+\item
+  Los hashes completos están en
+  \texttt{20\_EVIDENCE/E0/E0\_INITIAL.json}.
+\item
+  En r3 cambian el inglés y el español, como declara el editor.
+  \textbf{No se exige ni se afirma identidad byte a byte del inglés con
+  r2.} Lo que sí se exige y se verifica es la identidad del contenido
+  protegido (E6), de Lean y de las figuras, y que los antecedentes no
+  hayan cambiado.
+\end{itemize}
+
+\subsection{2. Veredictos actuales
+E0--E8}\label{2-veredictos-actuales-e0e8}
+
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}llllll@{}}
+\toprule\noalign{}
+Puerta & Veredicto actual & Alcance & Base & Procedencia & Evidencia \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+E0 & \textbf{PASS} & identidad completa & \textbf{ejecutado en r3}
+(inicial y final) & run\_v1.22\_r3 &
+\texttt{20\_EVIDENCE/E0/E0\_INITIAL.json}, \texttt{E0\_FINAL.json} \\
+E1 & \textbf{PASS} & 21 filas históricas + 12 nuevas & \textbf{heredado
+y revalidado por identidad} (21) + \textbf{ejecutado en r3} (12) &
+run\_v1.2\_r1 E1; run\_v1.22\_r3 &
+\texttt{30\_REPORT/CLAIM\_MAP\_CONSOLIDATED.md};
+\texttt{20\_EVIDENCE/E1/E1E3\_HEADERS\_CHECK.json} \\
+E2 & \textbf{PASS} (observación R-01) & 56 componentes; las siete filas
+de A.2 & \textbf{heredado y revalidado por identidad} & A2-1/2/7: v1.2;
+A2-3/5/6: v1.21; A2-4: v1.22-r1 & \texttt{E2\_RECORD.md} de
+run\_v1.2\_r1, run\_v1.21\_r1 y run\_v1.22\_r1 \\
+E3 & \textbf{PASS} & cabeceras, identificadores, X-27 & \textbf{heredado
+y revalidado por identidad} + cabeceras estáticas \textbf{ejecutadas en
+r3} & run\_v1.2\_r1 → r3 & \texttt{20\_EVIDENCE/E3/E3\_RECORD.md} \\
+E4 & \textbf{PASS --- reused\_verified\_external\_build} & 607 módulos,
+19 targets, 224 export checks, 50 módulos del anexo & \textbf{heredado y
+revalidado por identidad}; \textbf{sin build nuevo ni replay del kernel}
+& build de run\_v1.2\_r1 (2026-09-30, 15:09--21:33 UTC) & consola
+\texttt{ef5b01c7…}, records \texttt{0f2d8495…}, anexo
+\texttt{57ce1895…}; \texttt{20\_EVIDENCE/E4/E4\_REUSE\_CHECK.json} \\
+E5 & \textbf{PASS} & 59 comprobaciones + 7 controles & \textbf{heredado
+y revalidado por identidad} & v1.2, v1.21, v1.22-r1 &
+\texttt{20\_EVIDENCE/E5/E5\_RECORD.md} \\
+E6 & \textbf{PASS\_WITH\_FINDINGS} (NEW-05) & delta EN+ES, 145 páginas,
+PDF frente a TeX & \textbf{ejecutado en r3} & run\_v1.22\_r3 &
+\texttt{20\_EVIDENCE/E6/E6\_RECORD.md}, \texttt{E6\_R3\_DELTA.json},
+\texttt{PAGE\_INSPECTION\_LOG.csv} \\
+E7 & \textbf{PASS} & bibliografía y atribución & \textbf{heredado y
+revalidado por identidad} (referencias idénticas) & v1.2 → r2 &
+\texttt{20\_EVIDENCE/E7/E7\_RECORD.md} \\
+E8 & \textbf{PASS\_WITH\_OBSERVATIONS} (observación histórica X-28) &
+verificador suplementario, 1266 logs, alcance 1266/844 &
+\textbf{ejecutado en r3} + atribución heredada & run\_v1.21\_r1
+(barrido); run\_v1.22\_r3 & \texttt{20\_EVIDENCE/E8/E8\_RECORD.md},
+\texttt{E8\_R3\_CHECK.json} \\
+\end{longtable}
+}
+
+La matriz por puerta (veredicto en cada revisión, comprobación nueva,
+evidencia heredada y enlace de identidad) está en
+\texttt{30\_REPORT/TRACEABILITY\_MATRIX.csv}.
+
+\subsection{3. Historial original de
+veredictos}\label{3-historial-original-de-veredictos}
+
+Los veredictos INCONCLUSIVE se conservan como veredictos de sus
+revisiones; no se reescriben.
+
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}llll@{}}
+\toprule\noalign{}
+Revisión & Ejecución & Veredicto global original & Puertas no PASS \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+v1.2 & run\_v1.2\_r1 (2026-09-30) & \textbf{INCONCLUSIVE} & E2
+INCONCLUSIVE (A2-3, A2-4, A2-5, A2-6); E3/E6/E8 PASS\_WITH\_FINDINGS; E7
+PASS\_WITH\_MINOR\_FINDINGS \\
+v1.21 & run\_v1.21\_r1 & \textbf{INCONCLUSIVE} & E2 INCONCLUSIVE (A2-4);
+E1 PASS\_WITH\_MINOR; E6 PASS\_WITH\_FINDINGS; E8
+PASS\_WITH\_OBSERVATIONS \\
+v1.22-r1 & run\_v1.22\_r1 & \textbf{PASS} con hallazgos MINOR no
+bloqueantes & E6 PASS\_WITH\_FINDINGS; E8 PASS\_WITH\_OBSERVATIONS \\
+v1.22-r2 & run\_v1.22\_r2 & \textbf{PASS\_WITH\_OBSERVATIONS} & E6, E8
+PASS\_WITH\_OBSERVATIONS \\
+v1.22-r3 & \textbf{run\_v1.22\_r3} & \textbf{PASS\_WITH\_FINDINGS} & E6
+PASS\_WITH\_FINDINGS (NEW-05); E8 PASS\_WITH\_OBSERVATIONS \\
+\end{longtable}
+}
+
+Todos los PASS históricos siguen siendo aplicables a r3, porque la
+identidad está verificada:
+
+\begin{itemize}
+\tightlist
+\item
+  E1, E3, E5 y E7 de run\_v1.2\_r1;
+\item
+  el build de E4;
+\item
+  las aceptaciones de A.2 de v1.21 y v1.22-r1;
+\item
+  el cierre de X-15, NEW-01 y NEW-03 en r2.
+\end{itemize}
+
+\subsection{4. Mapa de afirmaciones y cobertura
+matemática}\label{4-mapa-de-afirmaciones-y-cobertura-matemuxe1tica}
+
+El mapa completo está en
+\texttt{30\_REPORT/CLAIM\_MAP\_CONSOLIDATED.md}. Tiene dos tipos de
+filas:
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{H}: las 21 filas históricas de run\_v1.2\_r1. Todas son MATCH
+  salvo G.2, que en v1.2 quedó «no re-extraída» y ahora cubren N11 y
+  N12.
+\item
+  \textbf{N}: 12 filas \textbf{nuevas de r3, diferenciadas}. No estaban
+  en el E1 original.
+\end{itemize}
+
+Filas nuevas:
+
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}llll@{}}
+\toprule\noalign{}
+Fila & Afirmación & Declaración & Veredicto \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+N1 & Teorema 5.0, ventana reforzada &
+\texttt{NearH1LocalConstructor.exists\_near\_partition\_paid\_by\_root\_sharp}
+& MATCH \\
+N2 & Teorema 5.0, interfaz anterior &
+\texttt{…exists\_near\_partition\_paid\_by\_root} & MATCH \\
+N3 & Corolario 5.4, geometría (5.17) &
+\texttt{NearCriticalDichotomy.chordal\_far\_or\_criticalRoot} & MATCH.
+Lean es algo más fuerte: añade
+\textbar\textbar R\textbar−\textbar C\textbar\textbar{} ≤ n/100, que es
+diferencia de tamaños, no diferencia simétrica. No se afirma que C sea
+clique de G. \\
+N4 & Corolario 5.4, densidad (5.18) &
+\texttt{…chordal\_far\_or\_edge\_density} & MATCH, tomando el máximo de
+ambos umbrales \\
+N5 & Dicotomía (1.5) &
+\texttt{HybridDichotomy.chordal\_far\_or\_nearStructure} & MATCH. Los
+campos de \texttt{NearStructureWitness} contienen el comparador, una
+raíz que es clique (\texttt{RegularizedRoot.isClique}), el
+empaquetamiento del grafo original y las cuentas. \\
+N6, N7 & Optimalidad del coeficiente cuadrático &
+\texttt{SharpConstantOptimality.erdos81\_quadratic\_constant\_optimal},
+\texttt{…\_isLeast} & MATCH. El caso real se obtiene por ampliación
+racional, argumento válido. \\
+N8 & Optimalidad del coeficiente lineal &
+\texttt{LinearCoefficient.linear\_coefficient\_optimal} & MATCH.
+Observación de tipo X-17: la cabecera es existencial en G. \\
+N9 & Identidad (6.7b) &
+\texttt{RootPartitionStability.sum\_rootPieceDefect\_eq} & MATCH \\
+N10 & Proposición D.3 & \texttt{SplitMixedGap.mixed\_gap\_zero}
+\textbf{y}
+\texttt{SplitCompleteSharpValue.exists\_sharp\_cliquePartition\_allParities}
+& MATCH. Hacen falta ambas declaraciones más (1.3a). \\
+N11, N12 & G.2 / Proposición G.1 &
+\texttt{FarExploration.CleanupRigidVerdict.threshold\_gt\_exp},
+\texttt{…\_seventy\_two} & MATCH. Cierra el «no re-extraída» histórico
+de G.2. \\
+\end{longtable}
+}
+
+Cómo se verificaron las 13 cabeceras:
+
+\begin{itemize}
+\tightlist
+\item
+  Coinciden con los fuentes congelados (hash de manifiesto, línea, texto
+  reextraído, namespace y variables en alcance) y con los logs del build
+  externo (hash, módulo PASS, salida 0).
+\item
+  Son extracciones estáticas, \textbf{no tipos elaborados nuevos}.
+\end{itemize}
+
+\textbf{Las siete derivaciones de A.2}:
+
+\begin{itemize}
+\tightlist
+\item
+  A2-1 «§5.1, (5.4) y (5.7)»: ACCEPTABLE\_SUMMARY desde v1.2.
+\item
+  A2-2 «C.2, (3.8) y (3.10)»: ACCEPTABLE\_SUMMARY desde v1.2.
+\item
+  A2-3 «Lema 3.2 y C.1--C.2»: REQUIRES\_EXPANSION en v1.2;
+  ACCEPTABLE\_SUMMARY desde v1.21.
+\item
+  A2-4 «C.3, Tabla C.1»: REQUIRES\_EXPANSION en v1.2 y v1.21;
+  ACCEPTABLE\_SUMMARY desde v1.22-r1.
+\item
+  A2-5 «E.1»: ACCEPTABLE\_SUMMARY desde v1.21.
+\item
+  A2-6 «E.1, (E.2b), (E.2d)»: ACCEPTABLE\_SUMMARY desde v1.21.
+\item
+  A2-7 «D.1»: ACCEPTABLE\_SUMMARY desde v1.2.
+\end{itemize}
+
+\textbf{R-01} (cotas de segundo momento citadas en C.2) sigue vigente
+como límite expositivo declarado.
+
+\textbf{Límite de la revisión escrita:} es una comprobación a nivel de
+resumen frente a enunciados formales congelados, no una revisión humana
+por pares.
+
+\subsection{5. E4: evidencia formal}\label{5-e4-evidencia-formal}
+
+\textbf{Lo que se hizo} (run\_v1.2\_r1, intento 2):
+
+\begin{itemize}
+\tightlist
+\item
+  Runner propio del auditor, sin Lake. Lean 4.28.0, fuentes extraídas
+  del ZIP (615/615) y objetos nuevos. Mathlib compartido en solo
+  lectura, con la caché de 113 821 archivos sin cambios.
+\end{itemize}
+
+\textbf{Registros originales:}
+
+\begin{itemize}
+\tightlist
+\item
+  Consola: \texttt{modules\_planned\ 607,\ pass\ 607}, sin fallos, 607
+  líneas \texttt{PASS\ n\ 607}, \texttt{EXIT\ 0}, y los 19 targets en
+  PASS.
+\item
+  \texttt{records.jsonl}: 608 filas, todas PASS con salida 0.
+\item
+  \texttt{ReleaseExportCheck}: 224 \texttt{\#check} y 0 errores.
+\item
+  Anexo: 50/50 PASS, con 633 declaraciones y axiomas estándar.
+\item
+  Los 607 oleans son idénticos byte a byte a los del autor.
+\end{itemize}
+
+\textbf{Axiomas} (no son teoremas distintos):
+
+\begin{itemize}
+\tightlist
+\item
+  461 \emph{registros} de axiomas, de los cuales 314 son salidas de
+  \texttt{\#print\ axioms}; el resto son repeticiones.
+\item
+  \texttt{\#print\ axioms} sobre \textbf{18 declaraciones principales}:
+  siempre \{propext, Classical.choice, Quot.sound\}.
+\item
+  \textbf{Conos de 50 declaraciones públicas}: 0 axiomas no estándar, 0
+  \texttt{sorryAx} y 0 \texttt{Erdos81}.
+\end{itemize}
+
+El \texttt{SUMMARY.json} de E4\_main, sobrescrito por AuditorChecks,
+\textbf{no se usa}.
+
+\textbf{Validez en r3:} r3 solo cambia prosa documental. E0 confirma que
+Lean, el ZIP de fuentes, el anexo y la evidencia de run\_v1.2\_r1 no han
+cambiado, y el script documental (sha \texttt{db2eddb8…}) da un
+resultado idéntico al de r2. \textbf{No se ejecutó un build nuevo ni un
+replay del kernel.}
+
+\subsection{6. E5 y E8}\label{6-e5-y-e8}
+
+\textbf{E5:}
+
+\begin{itemize}
+\tightlist
+\item
+  59 comprobaciones distintas: T01--T24, 21 de v1.21 y 14 de C.3. A
+  ellas se suman 7 controles negativos añadidos, todos rechazados.
+\item
+  Las repeticiones no se suman como pruebas nuevas.
+\item
+  Las pruebas finitas y el certificado Certo (partición exacta de K3∨I3
+  en 6 piezas, solo factibilidad) no sustituyen las pruebas universales.
+\item
+  Los controles del lector de logs pertenecen a E8 y no prueban
+  teoremas.
+\end{itemize}
+
+\textbf{E8, el verificador suplementario
+\texttt{verify\_frozen\_logs.py}:}
+
+\begin{itemize}
+\tightlist
+\item
+  Funciona con cierre seguro: un log ausente, sobrante, con hash
+  distinto o con alerta lo hace fallar, igual que un recuento distinto
+  de 1266.
+\item
+  Lo repetí en su sitio con salida propia: \textbf{PASS, 1266 logs}.
+\item
+  Lo repetí en una copia de prueba, cuyo único cambio es la ruta raíz:
+  \textbf{15/15 casos unitarios y 4/4 corrupciones de CLI} con salida 1.
+  El inventario y los casos coinciden con lo sellado, y el paquete no se
+  sobrescribió.
+\item
+  \textbf{E8-02:} la regla de errores es literalmente la alternativa
+  histórica de \texttt{audit\_publication.py}, sensible a mayúsculas,
+  sin \texttt{re.I}. El refuerzo de sorry va en una regex separada.
+  \textbf{Cerrado.}
+\item
+  \textbf{Cuatro agrupaciones:} 608 + 50 (auditor) + 422 + 186 (autor) =
+  \textbf{1266 archivos, no 1266 pruebas}. Se cuentan una sola vez
+  aunque se barrieron en v1.21, en r2 y dos veces en r3. El barrido
+  antiguo del autor cubría 844 = 1266 − 422 (E8-01).
+\item
+  \textbf{Matiz histórico:} la regla congelada detecta el log negativo
+  real solo por \texttt{sorryAx} en la impresión de axiomas, no por el
+  aviso de \texttt{sorry}, que lleva backticks.
+  \texttt{paperiv\_build.py} no lo detecta.
+\end{itemize}
+
+\textbf{X-28:}
+
+\begin{itemize}
+\tightlist
+\item
+  La acción de control de la entrega queda \textbf{cerrada}: el
+  verificador es un control obligatorio del perfil de reproducción r3.
+\item
+  Se mantiene la \textbf{observación histórica}: los runners congelados
+  conservan su patrón insuficiente y no se afirma que se hayan
+  parcheado.
+\item
+  La evidencia de axiomas y conos (18 declaraciones y 50 conos) sigue
+  siendo el control sustantivo.
+\end{itemize}
+
+\subsection{7. NEW-04 y paridad (E6)}\label{7-new-04-y-paridad-e6}
+
+Hay cinco párrafos documentales por lengua: portada, §7, la nota de la
+Tabla 7, A.2 y F.4. Los comparé íntegramente con la evidencia de r2.
+\textbf{C.3 y las siete filas de A.2 ya no figuran como pendientes}, y
+el estado de r2 se describe como PASS\_WITH\_OBSERVATIONS, sin inventar
+un PASS limpio. Se conservan los INCONCLUSIVE históricos y los límites.
+\textbf{NEW-04 queda CERRADO.}
+
+Esos párrafos son registros fechados de r2. El dictamen sobre r3 es este
+informe; no hace falta editar el manuscrito retroactivamente.
+
+Comprobaciones:
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Contenido protegido idéntico en EN y ES:} fórmulas en display
+  y en línea, etiquetas, bloques de código, filas de tablas,
+  encabezados, imágenes y bibliografía. Los dos códigos en línea
+  añadidos son nombres de ejecuciones.
+\item
+  \textbf{Diffs:} el diff del editor coincide con el del auditor.
+\item
+  \textbf{El PDF corresponde a su TeX:} todas las regiones de diferencia
+  en el texto extraído se explican por los párrafos cambiados.
+\item
+  \textbf{Páginas:} cambian EN 1, 33, 39, 40 y 64, y ES 1--6, 34--36,
+  39, 40 y 66. Revisé visualmente las 145 páginas.
+\end{itemize}
+
+\textbf{NEW-05 (MINOR, nuevo).} El español reescrito en r3 usa dos
+términos distintos de los ya establecidos en el manuscrito:
+
+\begin{itemize}
+\tightlist
+\item
+  «programación numérica de C.3» en A.2 (l.1355), cuando el texto usa
+  «calendario numérico» y el encabezado de C.3 es «Un calendario
+  explícito»;
+\item
+  «cota adaptada con muestra fijada» en F.4 (l.2356), cuando F.5 y la
+  Tabla 10 dicen «muestras con anclajes».
+\end{itemize}
+
+\textbf{Acción antes de publicar:} restituir esos dos términos y repetir
+el control de identidad ES y E6.
+
+\subsection{8. Hallazgos: estado
+actual}\label{8-hallazgos-estado-actual}
+
+\texttt{FINDINGS.csv} tiene 53 filas: todas las históricas, más NEW-05 y
+las correcciones del auditor C4-01, C4-02 y C4-03.
+
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}lll@{}}
+\toprule\noalign{}
+Clase & IDs & Acción antes de publicar \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+\textbf{Abierto} & NEW-05 (MINOR) & \textbf{Sí:} dos términos en ES \\
+\textbf{Cerrados (29)} & X-01\ldots X-16, X-20, X-21, X-23, X-25, X-27,
+NEW-01\ldots NEW-04, R-02, E8-01, E8-02, E8-03 & ninguna \\
+\textbf{Mitigado} & X-28 & ninguna, siempre que el perfil de
+reproducción mantenga obligatorio el verificador \\
+\textbf{Observaciones aceptadas (7)} & X-17 (ahora también N8), X-18,
+X-19, X-22, X-24, X-29, R-01 & ninguna; son límites documentados o
+hechos históricos \\
+\textbf{Información} & X-26 (independencia) & ninguna; se recomienda
+revisión humana por pares antes de decidir publicar \\
+\textbf{Correcciones conservadas (14)} & AUD-P1, AUD-C1, AUD-C2,
+C2-01\ldots C2-08, C3-01\ldots C3-03, C4-01\ldots C4-03 & ninguna \\
+\end{longtable}
+}
+
+Responsabilidades: el editor o autor corrigió los textos; el auditor
+verificó cada cierre en la revisión indicada en \texttt{FINDINGS.csv}
+(columna \texttt{revision\_verified\_r3}).
+
+\subsection{9. Independencia y
+límites}\label{9-independencia-y-luxedmites}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Modelo:} Claude Opus 5.5 (\texttt{claude-opus-5-5}), proveedor
+  Anthropic.
+\item
+  \textbf{Sesión:} esta revalidación es \textbf{continuación de la misma
+  sesión} de Claude Code que produjo las cuatro ejecuciones anteriores,
+  con compactación de contexto.
+\item
+  \textbf{Independencia:} no es una sesión nueva, no es ciega y no es
+  independiente de familia. El manuscrito declara el uso de Claude, que
+  es la misma familia. Que haya continuidad entre revisiones no la
+  convierte en independiente.
+\item
+  \textbf{Lecturas:} leí la evidencia previa y los documentos del
+  editor, y los contrasté con evidencia propia. Todo está registrado en
+  \texttt{00\_CONTROL/INPUT\_ACCESS\_LOG.csv}.
+\item
+  \textbf{Entorno:} misma máquina y misma caché que el build histórico.
+\item
+  \textbf{Ejecución:} no hubo ejecución dinámica nueva de Lean, ni
+  build, ni replay del kernel. Se ejecutaron solo scripts Python de solo
+  lectura y el verificador de logs del autor, en su sitio y en una
+  copia.
+\item
+  \textbf{Inspección visual:} hojas 4-up a 70 dpi y comparaciones a 105
+  dpi. Las imágenes que no pudieron confirmarse se volvieron a registrar
+  desde hojas que sí se vieron (C4-01).
+\end{itemize}
+
+\subsection{10. Veredicto razonado}\label{10-veredicto-razonado}
+
+\textbf{PASS\_WITH\_FINDINGS.}
+
+\textbf{Por qué no es PASS limpio:} queda una acción abierta antes de
+publicar, NEW-05. Es menor, pero real, y es una incoherencia
+terminológica nueva introducida en r3. Por criterio del mandato no se
+emite PASS con acciones abiertas.
+
+\textbf{Por qué no es INCONCLUSIVE ni FAIL:}
+
+\begin{itemize}
+\tightlist
+\item
+  todas las comprobaciones se completaron;
+\item
+  no hay ningún defecto matemático, de correspondencia formal ni de
+  identidad;
+\item
+  NEW-05 no altera ningún enunciado ni ninguna prueba.
+\end{itemize}
+
+\textbf{Qué certifica esta revisión:}
+
+\begin{itemize}
+\tightlist
+\item
+  la identidad exacta del paquete r3;
+\item
+  que el estado documental (NEW-04) es correcto y coherente con r2;
+\item
+  que el contenido protegido es idéntico a r2 y que cada PDF corresponde
+  a su TeX;
+\item
+  que las 12 filas semánticas nuevas corresponden a sus declaraciones;
+\item
+  que el verificador suplementario funciona y protege el perfil de
+  reproducción;
+\item
+  que los PASS históricos siguen enlazados por identidad a su evidencia
+  original.
+\end{itemize}
+
+\textbf{Qué no certifica:}
+
+\begin{itemize}
+\tightlist
+\item
+  que el manuscrito esté listo para publicar mientras NEW-05 siga
+  abierto;
+\item
+  una revisión humana por pares;
+\item
+  un build nuevo o un replay del kernel;
+\item
+  independencia de familia o de sesión;
+\item
+  novedad universal;
+\item
+  autorización para publicar.
+\end{itemize}
+
+\textbf{Si solo se corrige NEW-05} y una revalidación documental
+confirma que únicamente cambiaron esas dos palabras en ES, no quedarían
+acciones abiertas. El veredicto podría ser entonces PASS, manteniendo
+explícitos los límites de la §9 y las siete observaciones aceptadas, que
+son límites de alcance y no defectos.
+
+\subsection{11. E0 final y sellado}\label{11-e0-final-y-sellado}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{E0 final:} \texttt{20\_EVIDENCE/E0/E0\_FINAL.json}. El objeto
+  \texttt{checks} es idéntico al inicial
+  (\texttt{20\_EVIDENCE/logs/E0\_final.log}).
+\item
+  \textbf{Paquete:}
+  \texttt{40\_PACKAGE/EXTERNAL\_REVALIDATION\_run\_v1.22\_r3.zip}, con
+  su \texttt{RUN\_MANIFEST.json} y su sidecar SHA-256. Los ZIP
+  históricos no se duplican; se enlazan por ruta y hash (§1).
+\item
+  \textbf{PDF:} generado con pandoc (Markdown → HTML y TeX
+  independiente) más PyMuPDF Story (HTML → PDF). \textbf{No se compiló
+  desde TeX.} Se revisó visualmente
+  (\texttt{30\_REPORT/PDF\_VISUAL\_CHECK.csv}).
+\item
+  \textbf{Sin efectos externos:} no se publicó nada, no se hizo push ni
+  se enviaron datos a terceros. No se modificaron el manuscrito, los
+  originales ni los informes previos.
+\end{itemize}
+
+\end{document}

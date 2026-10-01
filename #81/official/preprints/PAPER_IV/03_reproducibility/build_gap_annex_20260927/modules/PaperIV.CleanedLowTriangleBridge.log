@@ -1,0 +1,23 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 PaperIV/CleanedLowTriangleBridge.lean -o /workspace/request-project/.lake/runner/lib/lean/PaperIV/CleanedLowTriangleBridge.olean -i /workspace/request-project/.lake/runner/lib/lean/PaperIV/CleanedLowTriangleBridge.ilean
+import took 4.73s
+cumulative profiling times:
+	.olean serialization 92.6ms
+	attribute application 0.0302ms
+	congr simp thm 3.07ms
+	elaboration 35.1ms
+	fix level params 0.301ms
+	import 4.73s
+	initialization 37.9ms
+	instantiate metavars 2.81ms
+	interpretation 345ms
+	let-to-have transformation 0.0723ms
+	linting 9.2ms
+	norm_num 5.05ms
+	parsing 3.9ms
+	process pre-definitions 4.54ms
+	ring 29.9ms
+	share common exprs 3.76ms
+	simp 24.8ms
+	tactic execution 59.8ms
+	type checking 29.9ms
+	typeclass inference 152ms

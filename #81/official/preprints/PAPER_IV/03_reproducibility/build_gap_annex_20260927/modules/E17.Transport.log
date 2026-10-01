@@ -1,0 +1,35 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 E17/Transport.lean -o /workspace/request-project/.lake/runner/lib/lean/E17/Transport.olean -i /workspace/request-project/.lake/runner/lib/lean/E17/Transport.ilean
+E17/Transport.lean:54:0: warning: automatically included section variable(s) unused in theorem `E17.Transport.piece_subset_range`:
+  [DecidableEq W]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq W] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+E17/Transport.lean:172:0: warning: automatically included section variable(s) unused in theorem `E17.Transport.crossEdges_map`:
+  [Fintype W]
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype W] [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+tactic execution of Lean.Parser.Tactic.congr took 191ms
+import took 3.03s
+cumulative profiling times:
+	.olean serialization 68.2ms
+	attribute application 0.113ms
+	congr simp thm 9.07ms
+	elaboration 44.8ms
+	fix level params 1.82ms
+	import 3.03s
+	initialization 40.7ms
+	instantiate metavars 9.41ms
+	interpretation 242ms
+	let-to-have transformation 0.133ms
+	linting 17.7ms
+	parsing 9.12ms
+	process pre-definitions 10.7ms
+	share common exprs 4.33ms
+	simp 75.6ms
+	tactic execution 468ms
+	type checking 55.3ms
+	typeclass inference 109ms

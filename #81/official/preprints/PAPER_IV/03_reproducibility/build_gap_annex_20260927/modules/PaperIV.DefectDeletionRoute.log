@@ -1,0 +1,28 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 PaperIV/DefectDeletionRoute.lean -o /workspace/request-project/.lake/runner/lib/lean/PaperIV/DefectDeletionRoute.olean -i /workspace/request-project/.lake/runner/lib/lean/PaperIV/DefectDeletionRoute.ilean
+type checking took 152ms
+import took 3.91s
+.olean serialization took 105ms
+cumulative profiling times:
+	.olean serialization 105ms
+	attribute application 0.0512ms
+	compilation (IR) 0.162ms
+	compilation (LCNF base) 0.415ms
+	compilation (LCNF mono) 0.115ms
+	congr simp thm 1.64ms
+	elaboration 20.7ms
+	fix level params 0.203ms
+	import 3.91s
+	initialization 34.5ms
+	instantiate metavars 4.96ms
+	interpretation 261ms
+	let-to-have transformation 0.0738ms
+	linting 8.6ms
+	norm_num 0.746ms
+	parsing 4.98ms
+	process pre-definitions 9.15ms
+	ring 7.22ms
+	share common exprs 2.02ms
+	simp 18.4ms
+	tactic execution 103ms
+	type checking 174ms
+	typeclass inference 123ms

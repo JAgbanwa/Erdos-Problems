@@ -1,0 +1,77 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 PaperIV/FiniteLPDuality.lean -o /workspace/request-project/.lake/runner/lib/lean/PaperIV/FiniteLPDuality.olean -i /workspace/request-project/.lake/runner/lib/lean/PaperIV/FiniteLPDuality.ilean
+simp took 119ms
+simp took 941ms
+simp took 121ms
+simp took 941ms
+simp took 116ms
+simp took 1.27s
+simp took 137ms
+simp took 149ms
+simp took 145ms
+simp took 133ms
+simp took 124ms
+simp took 126ms
+simp took 134ms
+simp took 129ms
+simp took 129ms
+simp took 1.05s
+simp took 113ms
+simp took 136ms
+simp took 1.09s
+simp took 104ms
+simp took 131ms
+simp took 121ms
+simp took 188ms
+simp took 213ms
+simp took 180ms
+simp took 205ms
+simp took 280ms
+simp took 186ms
+simp took 193ms
+simp took 183ms
+simp took 193ms
+simp took 199ms
+simp took 188ms
+simp took 143ms
+simp took 140ms
+simp took 116ms
+simp took 137ms
+simp took 136ms
+simp took 113ms
+import took 3.6s
+.olean serialization took 102ms
+cumulative profiling times:
+	.olean serialization 102ms
+	attribute application 0.68ms
+	compilation (IR) 11.7ms
+	compilation (LCNF base) 12.1ms
+	compilation (LCNF mono) 5.4ms
+	congr simp thm 135ms
+	dsimp 0.783ms
+	elaboration 87.4ms
+	fix level params 5.75ms
+	grind 152ms
+	grind ac 0.0291ms
+	grind canon 23.2ms
+	grind cutsat 0.0969ms
+	grind ematch 11.8ms
+	grind linarith 0.215ms
+	grind mark subsingleton 11.1ms
+	grind ring 0.583ms
+	grind simp 94.7ms
+	grind typeclass inference 1.14s
+	import 3.6s
+	initialization 44.6ms
+	instantiate metavars 58.3ms
+	interpretation 954ms
+	let-to-have transformation 0.263ms
+	linting 52.3ms
+	norm_num 4.81ms
+	parsing 31.8ms
+	process pre-definitions 34.4ms
+	ring 33.3ms
+	share common exprs 30.9ms
+	simp 14.2s
+	tactic execution 931ms
+	type checking 301ms
+	typeclass inference 28.4s

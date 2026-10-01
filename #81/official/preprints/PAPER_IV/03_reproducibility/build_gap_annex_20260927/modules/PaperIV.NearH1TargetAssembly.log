@@ -1,0 +1,20 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 PaperIV/NearH1TargetAssembly.lean -o /workspace/request-project/.lake/runner/lib/lean/PaperIV/NearH1TargetAssembly.olean -i /workspace/request-project/.lake/runner/lib/lean/PaperIV/NearH1TargetAssembly.ilean
+import took 4s
+.olean serialization took 116ms
+cumulative profiling times:
+	.olean serialization 116ms
+	attribute application 0.0094ms
+	elaboration 18.3ms
+	fix level params 0.06ms
+	import 4s
+	initialization 37.7ms
+	instantiate metavars 0.0783ms
+	interpretation 218ms
+	let-to-have transformation 0.0356ms
+	linting 2.43ms
+	parsing 1.59ms
+	process pre-definitions 0.341ms
+	share common exprs 0.318ms
+	tactic execution 6.52ms
+	type checking 1.54ms
+	typeclass inference 36.2ms

@@ -1,0 +1,66 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{booktabs,longtable,array,calc}
+\usepackage{fontspec}
+\setmainfont{lmroman10-regular.otf}[BoldFont=lmroman10-bold.otf,ItalicFont=lmroman10-italic.otf,BoldItalicFont=lmroman10-bolditalic.otf]
+\setmonofont{lmmono10-regular.otf}[Scale=MatchLowercase]
+\usepackage{microtype,amsmath,amssymb}
+\usepackage{xurl}
+\usepackage[hidelinks]{hyperref}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.5em}
+\setlength{\emergencystretch}{3em}
+\setcounter{secnumdepth}{-\maxdimen}
+\providecommand{\tightlist}{\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\begin{document}
+\section{B09: Estructura cordal y clique
+recovery}\label{b09-estructura-cordal-y-clique-recovery}
+
+Corte Lean \nolinkurl{piv-v12-fb459343d234}; manuscritos
+\nolinkurl{piv-v12-manuscripts-2451d43bface}. Auditoría interna del lado
+del autor, no independiente. Fecha: 30 de septiembre de 2026.
+
+\subsection{Obligación e hipótesis}\label{obligaciuxf3n-e-hipuxf3tesis}
+
+Casos degenerados, recuperación de clique real y tres casos exhaustivos
+del muestreo adaptado.
+
+\subsection{Revisión y resultados}\label{revisiuxf3n-y-resultados}
+
+Se revisaron F.3a, F.3b y F.5 contra sus declaraciones. Los
+contraejemplos finitos incluyen grafo vacío, bolsas duplicadas, árbol
+aislado y hoja con más de un vértice privado.
+
+El cotejo matemático detallado está en
+\nolinkurl{G1_CLAIMS/MATHEMATICAL_REVIEW.md}; las declaraciones y tipos
+se vinculan en \nolinkurl{CLAIM_MAP.csv}.
+
+\subsection{Negativos e incidentes}\label{negativos-e-incidentes}
+
+Los ejemplos rechazan identificar hoja con un único vértice simplicial o
+intersección duplicada con separador minimal. Parte positiva y
+orientación doble de las no-aristas se conservan.
+
+\subsection{Reproducción y evidencia}\label{reproducciuxf3n-y-evidencia}
+
+Ejecutar \nolinkurl{00_CONTROL/extension_checks.py} desde el expediente
+extraído. Los JSON, stdout y stderr de \nolinkurl{results/} son la
+evidencia de ejecución. El runner guarda comandos, duración, límite y
+código de salida. Las ampliaciones exactas usan
+\nolinkurl{extension_checks.py}; no invocan Lean.
+
+Un solo proceso propio a la vez; las regresiones serializadas tienen
+límite de 2 GiB y 120 segundos, Certo 60 segundos por instancia. Se usan
+versiones registradas en \nolinkurl{ENVIRONMENT.json}, sin instalar
+dependencias.
+
+\subsection{Dictamen y límites}\label{dictamen-y-luxedmites}
+
+\textbf{PASS interno}, combinando evidencia formal registrada y
+regresión finita donde corresponde. Las extracciones contrib fuera del
+corte no se certifican. La adaptación de de Joannis de Verclos se
+atribuye y no se confunde con el enunciado publicado literal. Los
+archivos de entrada comunes se resuelven por \nolinkurl{TARGET.json}, no
+por otra carpeta mutable de trabajo.
+
+\end{document}

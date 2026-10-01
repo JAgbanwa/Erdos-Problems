@@ -1,0 +1,143 @@
+@@205
+Ésta es una banda exacta uniforme, no una cota exacta para toda sucesión de defectos sublineales. Su altura es polinómica en {{0}}, pero el umbral mismo es una torre. No se pretende utilidad numérica. Acota el umbral del Teorema C, no automáticamente el umbral de estabilidad {{1}} de (F.1).
+@@210
+La configuración declara Mathlib como paquete de terceros y una selección de módulos {{0}} de Paper III como dependencia local de la serie. {{1}} recorre los tipos y términos de prueba de las declaraciones seleccionadas y comprueba que sus dependencias transitivas no contengan nombres bajo la raíz {{2}}, utilizada por [5]. Nuestros módulos PaperIV.Erdos81Unconditional y PaperIV.Erdos81AllOrders tienen raíz de espacio de nombres PaperIV; no son la raíz excluida Erdos81 que usa [5]. La ausencia de estos nombres es un resultado de auditoría reproducible, no una inferencia de la lista de importaciones. Su alcance es preciso: certifica esa exclusión en el corte examinado; por sí sola no detectaría código trasladado y renombrado ni determinaría la procedencia histórica de cada argumento. La atribución de fuentes se documenta por separado. El mismo control de espacios de nombres no permite emitir un veredicto sobre [15]. La extensión utiliza el método de estrella con signos de [15, Lema 3.1] y el método de remoción de [22]; demostrar sus implementaciones en este suplemento no convierte esos métodos en nuevos.
+@@211
+La interfaz pública del Teorema C en esta revisión es DefectExplicitPublication: utiliza E34.theoremC_fully_explicit_final y el testigo inferior irrestricto ya demostrado en DefectSharpPublication. El ensamblaje existencial anterior permanece como comparación histórica, no como la prueba seleccionada para el Teorema C. Su localización utiliza remoción inducida de Alon–Shapira [23]; el ensamblaje explícito seleccionado utiliza, en cambio, el desarrollo de remoción cordal polinómica de [22]. El control adicional FDCheck.ASCheck recorre términos de prueba y tipos para comprobar la exclusión de los resultados de remoción identificados en estas declaraciones seleccionadas. Esto no excluye el espacio de nombres AlonShapira: se siguen usando definiciones compartidas de cordalidad, distancia de edición y copias inducidas.
+@@212
+El punto único de ejecución es {{0}}. Lee los 19 objetivos de FREEZE_SCOPE.json, los ejecuta secuencialmente y conserva sus registros individuales; las dependencias sin cambios reutilizan la caché fijada. Se ejecutan de nuevo los objetivos de auditoría deliberadamente, porque importar un módulo de auditoría ya compilado no volvería a ejecutar todos sus comandos. PublicationIncrementAudit conserva los controles históricos; ResearchAudit y FDCheck.FinalAudit cubren las interfaces de la extensión; E34.Audit cubre remoción; E35.Audit cubre las nuevas cotas de umbral; OptimalTemplateObstructionAudit comprueba las seis declaraciones que sostienen la Proposición 6.3a. ReleaseExportCheck comprueba las exportaciones públicas sólo a través de PaperIV. La interfaz del constructor PaperIV.Editorial.ConstructorBudget conserva una misma partición en ambas conclusiones del Apéndice E. Las identidades de ejecución y la lista literal de objetivos especifican qué controles se ejecutaron; la auditoría interna histórica no reemplaza una nueva revisión de correspondencia entre fuentes y manuscrito para la versión 1.2.
+@@213
+| Resultado en el texto | Módulo de referencia |
+|:--|:--|
+| **Entradas y construcción** | |
+| Óptimo racional alcanzado | {{0}}, {{1}} |
+| Redondeo mixto uniforme, Teorema 3.1 | {{2}}, {{3}}; infraestructura {{4}} de Paper III |
+| Corolario 3.5, régimen lejano para todos los grafos | {{5}}; versión explícita en {{6}} |
+| Limpieza mejorada completa y umbral explícito | {{7}}, {{8}}, {{9}}, {{10}}; constantes de {{11}} y {{12}} |
+| Selección fraccional por nibble, Paper III | {{13}}, {{14}}; adaptadores {{15}}, {{16}} |
+| Localización, raíz y ventana crítica | {{17}}, {{18}}, {{19}} |
+| Dicotomía e interfaz absorbible | {{20}}, {{21}} |
+| Contabilidad y partición cercana | {{22}}, {{23}}, {{24}} |
+| **Conclusiones extremales** | |
+| Cota aguda y máximo eventual | {{25}}, {{26}} |
+| Cotas para todos los órdenes | {{27}}; cota explícita en {{28}} |
+| Defecto enraizado fijo y máximo, Teorema C | {{29}}; ensamblaje explícito {{30}}; testigo inferior {{31}} |
+| Necesidad del orden cuatro, Proposición D.2 | {{32}}, {{33}} |
+| Presupuesto general y paso a {{34}} | {{35}}, {{36}} |
+| Estabilidad del grafo, estabilidad de particiones y clasificación extremal | {{37}}, {{38}}, {{39}} |
+| Valor completo-split y núcleos | {{40}}, {{41}} |
+| Defecto de partición y coeficientes óptimos | {{42}}, {{43}}, {{44}} |
+| Densidad de aristas en la rama crítica | {{45}}, {{46}} |
+| Igualdad de óptimos mixtos, Apéndice D.2 | {{47}}, {{48}} |
+| **Herramientas complementarias** | |
+| Absorción compatible con presupuesto | {{49}} |
+| Reserva equilibrada, Apéndice B.2 | {{50}}, {{51}} de Paper III |
+| Completación con cuatro anfitriones, Apéndice B.3 | {{52}}; Vizing y {{53}} |
+| Reserva exacta y sensibilidad del umbral | {{54}}, {{55}} |
+| Estructura cordal reutilizable | {{56}} |
+@@217
+El control de exportación contiene 224 comandos literales {{0}} sólo a través de {{1}}. Todos pasaron en el nuevo corte. Esto establece el acceso a esa lista, no que toda declaración del suplemento pertenezca a la interfaz canónica. ResearchAudit recorre tipos y términos de prueba de 75 declaraciones seleccionadas de la extensión; OptimalTemplateObstructionAudit, con seis declaraciones, y los demás objetivos proporcionan sus propios controles de alcance delimitado. BoundedCliqueGap permanece como anexo separado, no como premisa del teorema principal.
+@@218
+El corte fuente {{0}} contiene 607 módulos Lean y 615 entradas de fuentes, configuración y documentación. La ejecución secuencial final compiló 19 módulos y validó 588 aciertos de caché; ninguno falló, quedó bloqueado ni fue omitido. Los 19 objetivos seleccionados se ejecutaron de nuevo con código de salida cero. La salida contiene 461 registros de axiomas, cada uno restringido a {{1}}, {{2}}, {{3}} o un subconjunto; estos registros no cuentan teoremas distintos. Cada objeto local se vinculó a un registro de compilación satisfactorio y a los hashes actuales de su fuente y dependencias. El SHA-256 del manifiesto es {{4}}; el del archivo de sólo fuentes es {{5}}. Los registros, la procedencia y las listas de objetivos se conservan en {{6}}. Éste es un control formal local y un congelado de fuentes, no una auditoría interna o independiente completada de la versión 1.2.
+@@219
+El corte anterior {{0}} y las ejecuciones separadas de integración se conservan bajo sus identidades originales. El nuevo corte los sustituye como identidad fuente seleccionada; no reescribe su evidencia. Los cuatro módulos E35L y FDCheck.TowerAudit se retiraron del nuevo árbol porque E35 reemplaza sus estimaciones y ninguno pertenece al conjunto de dependencias seleccionado. Todos los módulos Lean locales restantes pertenecen al cierre de dependencias de los 19 objetivos seleccionados. Ese cierre incluye definiciones históricas y controles comparativos; no se afirma que sea la biblioteca de prueba más pequeña posible.
+@@221
+El repositorio de la serie, disponible en <https://github.com/jtraverso/erdos-81-chordal-clique-partitions>, contiene los manuscritos y materiales de Papers I–III [2–4] y el borrador público v0.8 de Paper IV, identificado por el commit {{0}}. Ese commit identifica sólo la versión anterior. El nuevo congelado de fuentes que sostiene esta candidata se identifica localmente arriba; no se ha asignado a esta candidata un commit de repositorio ni una fecha de publicación.
+@@242
+Okechukwu [15, Teorema 1.1] establece el máximo eventual para defecto fijo, una cota aditiva para todos los órdenes para {{0}} y la clasificación de los grafos de igualdad. La clase de grafos, {{1}} y la familia que alcanza el máximo coinciden con los nuestros, y utilizamos su definición de defecto enraizado. Los Teoremas C y C′ implican las tres cláusulas: la cota superior vale con piezas de orden a lo sumo cuatro; el rango finito restante se absorbe en una constante aditiva; y el déficit cero da la clasificación irrestricta de la igualdad. Ni la fórmula extremal ni la familia de igualdad se presentan como nuevas. Esta comparación no afirma que el método de [15] no pueda dar la cota más fuerte sobre el tamaño de las piezas.
+@@247
+El Teorema C′ da estabilidad lineal por ediciones hacia una plantilla de defecto cuyo núcleo no se exige de tamaño óptimo. La comparación con la familia óptima pertinente a [15, Corolario 5.5] es, en cambio, (6.17), que conserva el término de raíz cuadrada. Para {{0}} fijo y {{1}}, la cota normalizada es {{2}}, que tiende a cero con {{3}}. Esto da una cota superior explícita en dirección a la pregunta cuantitativa de [15, §7], bajo la hipótesis más fuerte de casi extremalidad sobre {{4}}; también se aplica cuando la hipótesis se enuncia para {{5}}, pues {{6}}. La Proposición 6.3a da la misma escala de raíz cuadrada a lo largo de una familia explícita, para cada {{7}} fijo. No establece constantes óptimas ni dependencia óptima respecto de {{8}}.
+@@248
+El Teorema 6.5 recupera la conclusión estructural de [15, Teorema 1.3] y añade control simultáneo de particiones. La Proposición 6.4 junto con (6.24) da la versión de orden cuatro de su aproximación (1.5), con la expresión finita {{0}} en la banda {{1}}. Su argumento de estrella con signos se atribuye explícitamente a [15, Lema 3.1]. Estas conclusiones no dan distancia lineal a la familia de tamaño óptimo, constantes uniformes de estabilidad lineal para defecto creciente ni un reemplazo de [15, §6].
+@@249
+El término {{0}} de la prueba de [15, Teorema 3.3] también aparece en nuestra calibración: en ambos casos {{1}}. Proviene de la envolvente cuadrática continua; por sí solo no es el error de piso de {{2}}. El perfil entero del Apéndice D.3 conserva también ese piso. Los núcleos óptimos de [15, Corolario 1.2], descritos por los enteros más cercanos a {{3}}, coinciden con (6.4), incluido el empate cuando {{4}}.
+@@251
+El control cuantitativo del defecto también aparece en [5]: su lema estricto de regularización de raíz acota el coste construido por {{0}}. Por tanto, no presentamos la existencia de una estimación lineal del defecto, ni la constante {{1}}, como una mejora sobre esa estimación local. Las conclusiones que destacamos son la extensión enunciada para defecto fijo, el control simultáneo de particiones irrestrictas sobre una misma raíz y las interfaces cuantitativas verificadas.
+@@256
+| Resultado | Declaración Lean |
+|:--|:--|
+| Teorema A, forma aditiva | {{0}} |
+| Teorema B, cota superior | {{1}} |
+| Teorema B, máximo | {{2}} |
+| Teorema 3.1 | {{3}} |
+| Corolario 3.5 | {{4}} |
+| Dicotomía (1.5) | {{5}} |
+| Teorema 5.0, ventana reforzada | {{6}} |
+| Teorema 5.0, interfaz anterior | {{7}} |
+| Corolario 5.4, tamaño y densidad | {{8}}, {{9}} |
+| Coeficiente cuadrático óptimo | {{10}}, {{11}} |
+| Teorema 6.1, forma reforzada | {{12}} |
+| Teorema 6.1, interfaz anterior | {{13}} |
+| Corolario 6.1a, número de piezas | {{14}} |
+| Corolario 6.1a, cotas reales conjuntas de piezas y aristas | {{15}} en {{16}} |
+| Identidad (6.7b) | {{17}} |
+| Corolario 6.2 | {{18}} |
+| Proposición D.3 | {{19}} junto con la construcción acotada de {{20}} |
+@@258
+El comando único de auditoría descrito en §7 ejecuta los 19 objetivos, incluidos la raíz, los objetivos individuales de auditoría y el control de exportación. Las revisiones de Lean y sus dependencias están registradas en lean-toolchain y lake-manifest.json. Compilación, exportación pública, inspección de axiomas y correspondencia semántica son controles distintos. El nuevo congelado de fuentes se identifica localmente; las nuevas revisiones interna y adversarial de este par ampliado de fuentes y manuscritos siguen pendientes.
+@@279
+Las adiciones de esta revisión tienen puntos de entrada públicos separados. El Teorema C y su máximo son PaperIV.DefectExplicitPublication.rooted_defect_eventual y rooted_defect_maximum; el espacio de nombres histórico DefectSharpPublication conserva el testigo inferior y order_three_insufficient para la Proposición D.2. E35.theoremC_tower y sus variantes uniformes dan el Corolario 6.6. La cuenta completa (3.11) es E17Bridge.improved_far_loss_explicit. El Corolario 3.5 con umbral explícito es E17Bridge.ExplicitAssembly.farRegime_allGraphs_explicit. Finalmente, PaperIV.ExplicitThreshold.erdos81_sharp_explicit y erdos81_all_orders_bounded_additive dan el resultado global con la torre de §6.3. Estos nombres identifican declaraciones, no nuevas hipótesis.
+@@340
+El umbral también admite una cota uniforme en el margen. Para todo racional {{0}}, la misma elección de parámetros satisface
+{{1}}
+Éste es E35.NfarE_le_tower_poly. Acota los parámetros de selección, regularidad y limpieza antes de elegir el grafo; no se permite que {{2}} dependa del grafo de entrada una vez fijado el umbral. La cota numérica especializada de §6.3 sigue siendo válida. La fórmula (C.4) es la comparación adicional necesaria para la banda exacta de defecto creciente del Corolario 6.6.
+@@341
+## Apéndice D. Grafos completos e identidades del comparador
+@@342
+### D.1. El grafo completo a todo orden
+@@353
+Por ejemplo, {{0}} requiere al menos 19 piezas si sólo se permiten aristas y triángulos, mientras que la Proposición D.1 da a lo sumo {{1}} cuando también se permite {{2}}. La restricción de orden cuatro en la cota aguda no puede reemplazarse uniformemente por orden tres. Esta obstrucción no se extiende al residuo cinco.
+@@354
+### D.2. Igualdad de óptimos mixtos en grafos completo-split
+@@357
+### D.3. Reserva exacta por desplazamiento del núcleo
+@@365
+En la primera fase, coloreamos las aristas de {{0}} con {{1}} colores y equilibramos las clases para que tengan tamaño a lo sumo {{2}}. Promediar desplazamientos cíclicos de su asignación a anfitriones en {{3}} da {{4}} bases hospedadas con {{5}}. En la segunda fase, el hospedaje por listas realiza todas las aristas de {{6}} usando los radios restantes. La construcción diádica aplica Galvin a problemas bipartitos auxiliares, no a un grafo arbitrario.
+@@366
+Entre las condiciones comprobadas antes de las fases están
+{{0}}
+Aquí {{1}} denota el grado máximo. Los parámetros {{2}} acotan ausencias por fila y columna, incluidas las reservas para {{3}}; no se eligen después de construir la partición. Las tres familias de triángulos son disjuntas por aristas. Su completación satisface
+{{4}}
+Desarrollamos ahora esta cuenta. Escribamos {{5}}, {{6}} y {{7}}, de modo que {{8}}. Para cada {{9}}, sean {{10}}, {{11}}, y pongamos
+{{12}}
+Sea {{13}} una cota para el número de enlaces ausentes entre {{14}} y {{15}}, y elijamos un entero {{16}}. La absorción da
+{{17}}.
+Además, {{18}}: las aristas dentro de {{19}} se cuentan dos veces en el último sumando, lo que es admisible en esta cota superior. Sustituir en (E.2), usando {{20}} y sumando las estimaciones de matching, da
+{{21}}
+@@367
+El papel del defecto enraizado es pagar el lado derecho de esta cuenta. La desigualdad conjunta deducida de los datos normalizados es
+{{0}}
+Sumar (E.2a) y (E.2b) cancela {{1}}, {{2}}, {{3}} y {{4}}. Para la misma partición física {{5}}, queda
+{{6}}
+No se elige una segunda partición para satisfacer esta última desigualdad.
+@@368
+Explicamos el origen de (E.2b), pues no se deduce sólo de la contabilidad física. La normalización parte de una clique {{0}} de tamaño cercano a {{1}}. Se retiran sus vértices con muchos enlaces ausentes; en el exterior, se separan los vértices de grado exterior grande de los de grado exterior pequeño. Entre los primeros, los que tienen pocos enlaces ausentes hacia la región ligera se añaden a {{2}}, y los que tienen pocos enlaces ausentes hacia la raíz conservada se añaden a {{3}}. Los restantes forman {{4}}. Sea {{5}} la región ligera. Las escalas son
+{{6}}
+Para {{7}}, la normalización y la elección de reservas dan
+{{8}}
+Estas estimaciones preceden a la ejecución del constructor. En particular, las reservas no se ajustan retrospectivamente al número de piezas.
+@@369
+Sea {{0}} el máximo número de pares disjuntos de no-aristas dentro de {{1}}. La condición de defecto enraizado, junto con las cotas normalizadas de vecinos comunes, implica {{2}}; el argumento se da en E.4. Es una propiedad del núcleo normalizado, no de todo subconjunto de vértices de un grafo de defecto enraizado a lo sumo {{3}}. La cota extremal de matching aplicada al complemento de {{4}} da
+{{5}}
+Para medir la contribución de cada excepción, definamos
+{{6}}
+Así, (E.2b) equivale a
+{{7}}.
+Para el argumento de estabilidad, conservemos el crédito residual
+{{8}}
+La ecuación (E.2b) afirma {{9}}; E.4 conservará una asignación estrictamente positiva por vértice excepcional. En todo el Apéndice E, {{10}} cuenta excepciones, {{11}} cuenta triángulos de la primera fase, y {{12}} se reserva para los vértices adicionales trasladados fuera del núcleo al extraer una clique real.
+Las excepciones que pueden contribuir positivamente pertenecen a
+{{13}}
+Fuera de {{14}}, {{15}}; dentro, {{16}}.
+@@374
+Finalmente, pongamos {{0}}. La parábola del comparador entero y la suma de sus incrementos dan, cuando {{1}},
+{{2}}
+Insertar la primera desigualdad en (E.2c) da
+{{3}}; la segunda da {{4}}.
+IndepAllMain combina la construcción con este paso aritmético. La interfaz adicional ConstructorBudget conserva tanto (E.2c) como la cota objetivo para una misma partición.
+@@377
+La prueba explícita seleccionada sigue la reducción al terminal y al grado mínimo que se describe a continuación. E34 proporciona su localización, y sus umbrales se evalúan explícitamente; el ensamblaje existencial histórico tiene la misma estructura de reducción.
+@@379
+La prueba seleccionada aquí es E34.theoremC_fully_explicit_final, con {{0}}. Su paso de edición hacia un cordal se formaliza a partir de [22], con las adaptaciones registradas en el Apéndice F.5. Un ensamblaje existencial anterior utilizaba el lema de remoción inducida de Alon–Shapira [23]. Se conserva por procedencia, pero no es la prueba pública elegida aquí. El Corolario 6.6 acota {{1}} por una torre explícita.
+@@386
+### E.4. Cuentas conservadas para la estabilidad con una misma raíz

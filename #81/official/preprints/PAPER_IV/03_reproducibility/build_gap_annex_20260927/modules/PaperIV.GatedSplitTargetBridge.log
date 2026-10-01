@@ -1,0 +1,26 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 PaperIV/GatedSplitTargetBridge.lean -o /workspace/request-project/.lake/runner/lib/lean/PaperIV/GatedSplitTargetBridge.olean -i /workspace/request-project/.lake/runner/lib/lean/PaperIV/GatedSplitTargetBridge.ilean
+import took 3.82s
+cumulative profiling times:
+	.olean serialization 93.2ms
+	attribute application 0.105ms
+	compilation (IR) 0.378ms
+	compilation (LCNF base) 1.19ms
+	compilation (LCNF mono) 0.364ms
+	congr simp thm 3.11ms
+	elaboration 61.3ms
+	fix level params 1.15ms
+	import 3.82s
+	initialization 38.1ms
+	instantiate metavars 7.77ms
+	interpretation 303ms
+	let-to-have transformation 0.135ms
+	linting 18.9ms
+	norm_num 0.406ms
+	parsing 12.4ms
+	process pre-definitions 9.83ms
+	ring 2.77ms
+	share common exprs 3.37ms
+	simp 55.7ms
+	tactic execution 275ms
+	type checking 296ms
+	typeclass inference 306ms

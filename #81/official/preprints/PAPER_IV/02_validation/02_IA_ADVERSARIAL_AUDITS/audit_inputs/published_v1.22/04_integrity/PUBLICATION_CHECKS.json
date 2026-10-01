@@ -1,0 +1,41 @@
+{
+  "status": "PASS",
+  "prepared_utc": "2026-10-01T17:04:34.475922+00:00",
+  "purpose": "Local publication packaging; no new mathematical audit",
+  "current_version": "1.22",
+  "audited_revision": "v1.22-r4",
+  "public_predecessor": "0.8 SUPERSEDED",
+  "manuscripts_byte_identical_to_audited_target": true,
+  "formal_entries_verified": 615,
+  "historical_v08_git_files_verified": 672,
+  "historical_audit_manifest_counts": {
+    "run_v1.2_r1": 1097,
+    "run_v1.21_r1": 340,
+    "run_v1.22_r1": 188,
+    "run_v1.22_r2": 182,
+    "run_v1.22_r3": 165,
+    "run_v1.22_r4": 93
+  },
+  "relocated_artifacts_verified": 8736,
+  "zip_sidecars_and_crc_verified": 88,
+  "navigation_links_checked": 77,
+  "required_log_verifier": {
+    "status": "PASS",
+    "logs_checked": 1266,
+    "errors": [],
+    "sorry_pattern": "\\bsorryAx\\b|declaration\\s+uses\\s+[`'\\\"‘’“”]*sorry\\b",
+    "error_pattern": "^.*error(?:\\(|:)",
+    "lean_executed": false
+  },
+  "papers_I_II_III_unchanged": true,
+  "no_compiled_caches_or_credentials_detected": true,
+  "no_files_over_github_100MiB_limit": true,
+  "lean_executed": false,
+  "pdf_rebuilt": false,
+  "git_commit_push_tag_or_deposit_performed": false,
+  "pending": [
+    "Author review and explicit publication authorization",
+    "New Zenodo version DOI when assigned"
+  ],
+  "package_legal_text_identical_to_repository": true
+}

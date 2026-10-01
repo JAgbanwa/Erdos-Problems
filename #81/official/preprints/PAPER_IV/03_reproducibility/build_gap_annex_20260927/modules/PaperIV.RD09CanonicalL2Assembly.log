@@ -1,0 +1,19 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 PaperIV/RD09CanonicalL2Assembly.lean -o /workspace/request-project/.lake/runner/lib/lean/PaperIV/RD09CanonicalL2Assembly.olean -i /workspace/request-project/.lake/runner/lib/lean/PaperIV/RD09CanonicalL2Assembly.ilean
+import took 3.48s
+cumulative profiling times:
+	.olean serialization 82.7ms
+	attribute application 0.0296ms
+	elaboration 84.6ms
+	fix level params 0.313ms
+	import 3.48s
+	initialization 38.2ms
+	instantiate metavars 0.436ms
+	interpretation 228ms
+	let-to-have transformation 0.0914ms
+	linting 9.1ms
+	parsing 4.93ms
+	process pre-definitions 1.51ms
+	share common exprs 0.726ms
+	tactic execution 21ms
+	type checking 5.65ms
+	typeclass inference 59.9ms

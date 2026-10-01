@@ -1,0 +1,27 @@
+$ c:\Users\jtraverso\.elan\toolchains\leanprover--lean4---v4.28.0\bin\lean.exe -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false PaperIV/ExplicitThresholdAudit.lean -o C:\Users\jtraverso\e81p4\clean_stability_build_20260928\.lake\runner\lib\lean\PaperIV\ExplicitThresholdAudit.olean -i C:\Users\jtraverso\e81p4\clean_stability_build_20260928\.lake\runner\lib\lean\PaperIV\ExplicitThresholdAudit.ilean
+PASS E17Bridge.ExplicitSchedule.uniformRoundingTarget_explicit: 34373 transitive constants; axioms [propext,
+ Classical.choice,
+ Quot.sound]
+PASS E17Bridge.ExplicitAssembly.farRegime_allGraphs_explicit: 36385 transitive constants; axioms [propext,
+ Classical.choice,
+ Quot.sound]
+PASS E19.NfarE_eta0_le_tower: 26498 transitive constants; axioms [propext, Classical.choice, Quot.sound]
+PASS PaperIV.ExplicitThreshold.nearThreshold_le: 3267 transitive constants; axioms [propext,
+ Classical.choice,
+ Quot.sound]
+PASS PaperIV.ExplicitThreshold.erdos81_sharp_explicit: 44118 transitive constants; axioms [propext,
+ Classical.choice,
+ Quot.sound]
+PASS PaperIV.ExplicitThreshold.additiveConstant_le_tower: 11770 transitive constants; axioms [propext,
+ Classical.choice,
+ Quot.sound]
+PASS PaperIV.ExplicitThreshold.erdos81_all_orders_explicit: 44123 transitive constants; axioms [propext,
+ Classical.choice,
+ Quot.sound]
+PASS PaperIV.ExplicitThreshold.erdos81_all_orders_bounded_additive: 44129 transitive constants; axioms [propext,
+ Classical.choice,
+ Quot.sound]
+'PaperIV.ExplicitThreshold.erdos81_sharp_explicit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PaperIV.ExplicitThreshold.erdos81_all_orders_bounded_additive' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

@@ -1,0 +1,47 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 PaperIV/NibbleHypotheses.lean -o /workspace/request-project/.lake/runner/lib/lean/PaperIV/NibbleHypotheses.olean -i /workspace/request-project/.lake/runner/lib/lean/PaperIV/NibbleHypotheses.ilean
+PaperIV/NibbleHypotheses.lean:60:0: warning: automatically included section variable(s) unused in theorem `PaperIV.NibbleHypotheses.load_eq`:
+  [Fintype W]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype W] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+PaperIV/NibbleHypotheses.lean:65:0: warning: automatically included section variable(s) unused in theorem `PaperIV.NibbleHypotheses.codegree_eq`:
+  [Fintype W]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype W] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+PaperIV/NibbleHypotheses.lean:70:0: warning: automatically included section variable(s) unused in theorem `PaperIV.NibbleHypotheses.total_eq`:
+  [Fintype W]
+  [DecidableEq W]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype W] [DecidableEq W] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_nlinarith_1._boxed took 172ms
+tactic execution of Mathlib.Tactic.nlinarith took 221ms
+import took 3.8s
+cumulative profiling times:
+	.olean serialization 71.6ms
+	attribute application 0.155ms
+	compilation (IR) 1.79ms
+	compilation (LCNF base) 2.65ms
+	compilation (LCNF mono) 1.54ms
+	congr simp thm 2.94ms
+	elaboration 75.1ms
+	fix level params 0.901ms
+	import 3.8s
+	initialization 39ms
+	instantiate metavars 5.48ms
+	interpretation 793ms
+	let-to-have transformation 0.228ms
+	linting 19.6ms
+	norm_num 50.2ms
+	parsing 11.5ms
+	process pre-definitions 20.9ms
+	ring 45ms
+	share common exprs 9.55ms
+	simp 12.8ms
+	tactic execution 367ms
+	type checking 90.7ms
+	typeclass inference 626ms

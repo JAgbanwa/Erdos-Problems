@@ -1,0 +1,27 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 FarExploration/RigidThreshold.lean -o /workspace/request-project/.lake/runner/lib/lean/FarExploration/RigidThreshold.olean -i /workspace/request-project/.lake/runner/lib/lean/FarExploration/RigidThreshold.ilean
+import took 4.19s
+.olean serialization took 103ms
+cumulative profiling times:
+	.olean serialization 103ms
+	attribute application 0.0656ms
+	compilation (IR) 1.44ms
+	compilation (LCNF base) 1.59ms
+	compilation (LCNF mono) 0.59ms
+	congr simp thm 4.69ms
+	elaboration 45.8ms
+	fix level params 0.356ms
+	import 4.19s
+	initialization 45.2ms
+	instantiate metavars 3.33ms
+	interpretation 381ms
+	let-to-have transformation 0.138ms
+	linting 10.2ms
+	norm_num 4.25ms
+	parsing 7.08ms
+	process pre-definitions 6.3ms
+	ring 26.7ms
+	share common exprs 3.84ms
+	simp 31.7ms
+	tactic execution 59.3ms
+	type checking 28ms
+	typeclass inference 183ms

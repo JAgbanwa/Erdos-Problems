@@ -1,0 +1,31 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 A4S1/IndepAllBounds.lean -o /workspace/request-project/.lake/runner/lib/lean/A4S1/IndepAllBounds.olean -i /workspace/request-project/.lake/runner/lib/lean/A4S1/IndepAllBounds.ilean
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_nlinarith_1._boxed took 116ms
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_nlinarith_1._boxed took 325ms
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_nlinarith_1._boxed took 135ms
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_nlinarith_1._boxed took 396ms
+import took 9.13s
+.olean serialization took 374ms
+cumulative profiling times:
+	.olean serialization 374ms
+	attribute application 0.66ms
+	compilation (IR) 8.61ms
+	compilation (LCNF base) 8.63ms
+	compilation (LCNF mono) 3.6ms
+	congr simp thm 61.7ms
+	elaboration 360ms
+	fix level params 7.66ms
+	import 9.13s
+	initialization 39.4ms
+	instantiate metavars 16.3ms
+	interpretation 3.11s
+	let-to-have transformation 1.01ms
+	linting 59.6ms
+	norm_num 588ms
+	parsing 45.2ms
+	process pre-definitions 73.1ms
+	ring 219ms
+	share common exprs 57.7ms
+	simp 349ms
+	tactic execution 569ms
+	type checking 720ms
+	typeclass inference 3.5s

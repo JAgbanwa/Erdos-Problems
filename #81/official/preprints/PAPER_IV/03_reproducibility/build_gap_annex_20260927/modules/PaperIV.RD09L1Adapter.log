@@ -1,0 +1,28 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 PaperIV/RD09L1Adapter.lean -o /workspace/request-project/.lake/runner/lib/lean/PaperIV/RD09L1Adapter.olean -i /workspace/request-project/.lake/runner/lib/lean/PaperIV/RD09L1Adapter.ilean
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_nlinarith_1._boxed took 130ms
+import took 3.06s
+.olean serialization took 128ms
+cumulative profiling times:
+	.olean serialization 128ms
+	attribute application 2.61ms
+	compilation (IR) 3.42ms
+	compilation (LCNF base) 8.93ms
+	compilation (LCNF mono) 4.36ms
+	congr simp thm 26.7ms
+	elaboration 382ms
+	fix level params 2.72ms
+	import 3.06s
+	initialization 39.8ms
+	instantiate metavars 7.82ms
+	interpretation 609ms
+	let-to-have transformation 1.25ms
+	linting 56.1ms
+	norm_num 1.67ms
+	parsing 30.8ms
+	process pre-definitions 30.9ms
+	ring 7.05ms
+	share common exprs 8.39ms
+	simp 174ms
+	tactic execution 318ms
+	type checking 169ms
+	typeclass inference 886ms

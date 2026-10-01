@@ -1,0 +1,26 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 PaperIV/SymmetrizationBarrier.lean -o /workspace/request-project/.lake/runner/lib/lean/PaperIV/SymmetrizationBarrier.olean -i /workspace/request-project/.lake/runner/lib/lean/PaperIV/SymmetrizationBarrier.ilean
+import took 3.7s
+cumulative profiling times:
+	.olean serialization 74.9ms
+	attribute application 0.073ms
+	compilation (IR) 0.887ms
+	compilation (LCNF base) 1.12ms
+	compilation (LCNF mono) 0.427ms
+	congr simp thm 1.64ms
+	elaboration 62.4ms
+	fix level params 0.633ms
+	import 3.7s
+	initialization 41.6ms
+	instantiate metavars 1.8ms
+	interpretation 324ms
+	let-to-have transformation 0.166ms
+	linting 13.2ms
+	norm_num 0.955ms
+	parsing 11.9ms
+	process pre-definitions 5.48ms
+	ring 10.9ms
+	share common exprs 2.65ms
+	simp 5.24ms
+	tactic execution 75.7ms
+	type checking 32ms
+	typeclass inference 274ms

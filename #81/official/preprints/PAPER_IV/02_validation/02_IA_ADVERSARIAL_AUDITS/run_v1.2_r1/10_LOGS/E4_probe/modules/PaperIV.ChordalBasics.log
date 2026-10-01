@@ -1,0 +1,7 @@
+$ C:\Users\jtraverso\.elan\toolchains\leanprover--lean4---v4.28.0\bin\lean.exe -j 8 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false PaperIV/ChordalBasics.lean -o C:\Users\jtraverso\e81p4-publish\preprints\PAPER_IV\02_validation\02_IA_ADVERSARIAL_AUDITS\run_v1.2_r1\05_BUILD\main\obj\PaperIV\ChordalBasics.olean -i C:\Users\jtraverso\e81p4-publish\preprints\PAPER_IV\02_validation\02_IA_ADVERSARIAL_AUDITS\run_v1.2_r1\05_BUILD\main\obj\PaperIV\ChordalBasics.ilean
+PaperIV/ChordalBasics.lean:15:0: warning: automatically included section variable(s) unused in theorem `PaperIV.ChordalBasics.neighborFinset_isClique_of_simplicial`:
+  [DecidableEq V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`

@@ -1,0 +1,57 @@
+{
+ "seg1_rows": 422,
+ "seg1_status_counts": {
+  "PASS": 422
+ },
+ "seg2_rows": 607,
+ "seg2_status_counts": {
+  "UP-TO-DATE": 421,
+  "PASS": 186
+ },
+ "seg1_status_file": "RUNNING 423/607 E34.SampleBound 2026-09-29T17:27:46.018767",
+ "seg2_status_file": "PASS {\"modulesPlanned\": 607, \"pass\": 186, \"upToDate\": 421, \"fail\": [], \"blocked\": [], \"notRun\": 0, \"sourcesChangedDuringRun\": [], \"sumModuleWallSeconds\": 13975.62, \"runWallSeconds\": 14019.14, \"status\"",
+ "seg2_exit": "EXIT_CODE=0",
+ "meta_diff": {},
+ "seg1_clean": false,
+ "seg2_clean": false,
+ "seg1_artifactDir": "C:\\Users\\jtraverso\\e81p4\\piv_v12_full_rebuild_20260929\\.lake\\runner\\lib\\lean",
+ "seg2_artifactDir": "C:\\Users\\jtraverso\\e81p4\\piv_v12_full_rebuild_20260929\\.lake\\runner\\lib\\lean",
+ "seg2_source_hash_mismatch_vs_manifest": [],
+ "seg1_source_hash_mismatch_vs_manifest": [],
+ "reused_count": 421,
+ "fresh_seg2_count": 186,
+ "reuse_problems": [],
+ "reuse_problems_n": 0,
+ "seg2_fresh_problems": [],
+ "seg2_fresh_problems_n": 0,
+ "union_distinct_modules": 607,
+ "overlap": [],
+ "seg1_pass_not_reused": [
+  "A4S1.IndepAllAudit"
+ ],
+ "axiom_record_total_depends_on": 314,
+ "axiom_sets": {
+  "Classical.choice,Quot.sound,propext": 305,
+  "Quot.sound,propext": 9
+ },
+ "nonstandard_axiom_sets": []
+}
+PaperIV {'status': 'PASS', 'exit': 0, 'axiom_records': 0, 'no_axiom_records': 0, 'sorry': False, 'has_error_word': False, 'PASS_lines': 0}
+PaperIV.Audit {'status': 'PASS', 'exit': 0, 'axiom_records': 107, 'no_axiom_records': 0, 'sorry': False, 'has_error_word': False, 'PASS_lines': 0}
+PaperIV.ConeAudit {'status': 'PASS', 'exit': 0, 'axiom_records': 0, 'no_axiom_records': 0, 'sorry': False, 'has_error_word': False, 'PASS_lines': 0}
+PaperIV.PublicationIncrementAudit {'status': 'PASS', 'exit': 0, 'axiom_records': 8, 'no_axiom_records': 0, 'sorry': False, 'has_error_word': False, 'PASS_lines': 9}
+A4S1.IndepAllAudit {'status': 'PASS', 'exit': 0, 'axiom_records': 26, 'no_axiom_records': 0, 'sorry': False, 'has_error_word': False, 'PASS_lines': 1}
+ThreeRegime.AxiomCheck {'status': 'PASS', 'exit': 0, 'axiom_records': 35, 'no_axiom_records': 0, 'sorry': False, 'has_error_word': False, 'PASS_lines': 0}
+FarExploration.AxiomCheck {'status': 'PASS', 'exit': 0, 'axiom_records': 51, 'no_axiom_records': 0, 'sorry': False, 'has_error_word': False, 'PASS_lines': 0}
+PaperIV.CliqueTreeAudit {'status': 'PASS', 'exit': 0, 'axiom_records': 53, 'no_axiom_records': 0, 'sorry': False, 'has_error_word': False, 'PASS_lines': 0}
+E17.ImprovedFarRoundingAudit {'status': 'PASS', 'exit': 0, 'axiom_records': 0, 'no_axiom_records': 0, 'sorry': False, 'has_error_word': False, 'PASS_lines': 11}
+E17.ExplicitFarAudit {'status': 'PASS', 'exit': 0, 'axiom_records': 2, 'no_axiom_records': 0, 'sorry': False, 'has_error_word': False, 'PASS_lines': 9}
+PaperIV.ExplicitThresholdAudit {'status': 'PASS', 'exit': 0, 'axiom_records': 2, 'no_axiom_records': 0, 'sorry': False, 'has_error_word': False, 'PASS_lines': 8}
+ReleaseExportCheck {'status': 'PASS', 'exit': 0, 'axiom_records': 0, 'no_axiom_records': 0, 'sorry': False, 'has_error_word': False, 'PASS_lines': 0}
+PaperIVEditorial.ConstructorBudgetAudit {'status': 'PASS', 'exit': 0, 'axiom_records': 2, 'no_axiom_records': 0, 'sorry': False, 'has_error_word': False, 'PASS_lines': 3}
+ResearchAudit {'status': 'PASS', 'exit': 0, 'axiom_records': 0, 'no_axiom_records': 0, 'sorry': False, 'has_error_word': False, 'PASS_lines': 76}
+FDCheck.FinalAudit {'status': 'PASS', 'exit': 0, 'axiom_records': 5, 'no_axiom_records': 0, 'sorry': False, 'has_error_word': False, 'PASS_lines': 8}
+E35.Audit {'status': 'PASS', 'exit': 0, 'axiom_records': 8, 'no_axiom_records': 0, 'sorry': False, 'has_error_word': False, 'PASS_lines': 9}
+FDCheck.ASCheck {'status': 'PASS', 'exit': 0, 'axiom_records': 2, 'no_axiom_records': 0, 'sorry': False, 'has_error_word': False, 'PASS_lines': 6}
+E34.Audit {'status': 'PASS', 'exit': 0, 'axiom_records': 13, 'no_axiom_records': 0, 'sorry': False, 'has_error_word': False, 'PASS_lines': 22}
+PaperIV.OptimalTemplateObstructionAudit {'status': 'PASS', 'exit': 0, 'axiom_records': 0, 'no_axiom_records': 0, 'sorry': False, 'has_error_word': False, 'PASS_lines': 1}

@@ -1,0 +1,73 @@
+{
+ "sealed_utc": "2026-09-30T22:15:34.441422+00:00",
+ "gate_zips": [
+  {
+   "zip": "GATE_E0_run_v1.2_r1.zip",
+   "sha256": "add053e92b572b7e7573da9f8c92072e80eb070adda77ea88a9c1cd9f0a13615",
+   "members": 14,
+   "bytes": 437208
+  },
+  {
+   "zip": "GATE_E1_run_v1.2_r1.zip",
+   "sha256": "a9229f9442214d83afa71da0d40375c72bfdef76feb9b8c0cabe4b5955bd121d",
+   "members": 4,
+   "bytes": 914133
+  },
+  {
+   "zip": "GATE_E2_run_v1.2_r1.zip",
+   "sha256": "4eeccbc1c66ce31b542cbff1952fe1026dec5f27e011ca91e0ce0b4b5f8d4749",
+   "members": 4,
+   "bytes": 626730
+  },
+  {
+   "zip": "GATE_E3_run_v1.2_r1.zip",
+   "sha256": "34a5d6645d2273bbc8570b381d0ddb5031bb94126fc20e63bd82c41fda60089d",
+   "members": 9,
+   "bytes": 578001
+  },
+  {
+   "zip": "GATE_E4_run_v1.2_r1.zip",
+   "sha256": "e7772bef6b42010eebe90f18a22072ed1964219298e2d4e9fa1d985893783663",
+   "members": 739,
+   "bytes": 3451070
+  },
+  {
+   "zip": "GATE_E5_run_v1.2_r1.zip",
+   "sha256": "d83adaceeb651e073ba3b945d61b431f092e3f1c3a43de70147d30617f7f1f98",
+   "members": 42,
+   "bytes": 1016879
+  },
+  {
+   "zip": "GATE_E6_run_v1.2_r1.zip",
+   "sha256": "d9bdd4e9b1559f2ccc6571e8b3539b653e74c6fac661d4523184943376d46bf4",
+   "members": 168,
+   "bytes": 27749519
+  },
+  {
+   "zip": "GATE_E7_run_v1.2_r1.zip",
+   "sha256": "ee2befed427a390b8eb980f7415f1039c79cddfe01a69952b32e4fc926d2a35b",
+   "members": 44,
+   "bytes": 2633073
+  },
+  {
+   "zip": "GATE_E8_run_v1.2_r1.zip",
+   "sha256": "55b8d50368d3f4bc8525a56817893ca327f3e82ed6f2f185880f72fa68f947a9",
+   "members": 6,
+   "bytes": 607765
+  }
+ ],
+ "final_zip": {
+  "zip": "EXTERNAL_AUDIT_run_v1.2_r1.zip",
+  "sha256": "886ed7f033bca42a530944d48f91ef45e79f6be4cb0d74080c5d8d6efc4f5e2b",
+  "members": 1098,
+  "bytes": 42489289
+ },
+ "manifest_sha256": "a6eda81eac57ff041ada0ccc12404aca3f2b3a32c2f23dfb2d00c7f197aedda4",
+ "manifest_files": 1097,
+ "excluded": [
+  "05_BUILD (compiled objects, extracted sources)",
+  "shared Mathlib/packages",
+  "runtimes",
+  "credentials (none present)"
+ ]
+}

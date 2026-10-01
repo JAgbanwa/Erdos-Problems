@@ -1,0 +1,26 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 Nibble/Tight/FlipStability.lean -o /workspace/request-project/.lake/runner/lib/lean/Nibble/Tight/FlipStability.olean -i /workspace/request-project/.lake/runner/lib/lean/Nibble/Tight/FlipStability.ilean
+import took 4.12s
+cumulative profiling times:
+	.olean serialization 90.9ms
+	attribute application 0.112ms
+	compilation (IR) 0.344ms
+	compilation (LCNF base) 0.618ms
+	compilation (LCNF mono) 0.659ms
+	congr simp thm 2.64ms
+	elaboration 52.1ms
+	fix level params 1.03ms
+	import 4.12s
+	initialization 38.8ms
+	instantiate metavars 3.5ms
+	interpretation 341ms
+	let-to-have transformation 0.239ms
+	linting 17.3ms
+	norm_num 0.759ms
+	parsing 10.4ms
+	process pre-definitions 7ms
+	ring 5.59ms
+	share common exprs 3.76ms
+	simp 77.1ms
+	tactic execution 117ms
+	type checking 45ms
+	typeclass inference 244ms

@@ -1,0 +1,23 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 PaperIV/JointTypedQuota.lean -o /workspace/request-project/.lake/runner/lib/lean/PaperIV/JointTypedQuota.olean -i /workspace/request-project/.lake/runner/lib/lean/PaperIV/JointTypedQuota.ilean
+import took 3.26s
+cumulative profiling times:
+	.olean serialization 61.3ms
+	attribute application 0.0906ms
+	congr simp thm 1.19ms
+	elaboration 39.2ms
+	fix level params 0.575ms
+	import 3.26s
+	initialization 38.6ms
+	instantiate metavars 1.64ms
+	interpretation 486ms
+	let-to-have transformation 0.679ms
+	linting 12.3ms
+	norm_num 42.6ms
+	parsing 4.65ms
+	process pre-definitions 15ms
+	ring 38.3ms
+	share common exprs 7.21ms
+	simp 3.91ms
+	tactic execution 24.7ms
+	type checking 55.3ms
+	typeclass inference 200ms

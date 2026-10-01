@@ -1,0 +1,106 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+\documentclass[
+]{article}
+\usepackage{xcolor}
+\usepackage{amsmath,amssymb}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math} % this also loads fontspec
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+\usepackage{lmodern}
+\ifPDFTeX\else
+  % xetex/luatex font selection
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\usepackage{bookmark}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same}
+% fallback for those not using the hyperref driver hyperxmp:
+\makeatletter
+\@ifundefined{xmpquote}{\newcommand{\xmpquote}[1]{#1}}{}
+\makeatother
+\hypersetup{
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+
+\author{}
+\date{}
+
+\begin{document}
+
+\section{Informe de puerta E2 --- run\_v1.22\_r3 (Paper IV
+v1.22-r3)}\label{informe-de-puerta-e2--run_v122_r3-paper-iv-v122-r3}
+
+Veredicto actual: \textbf{PASS (R-01)}. Evidencia:
+\texttt{20\_EVIDENCE/E2/}. Auditor: Claude Opus 5.5, misma sesión que
+las ejecuciones anteriores; no se ejecutó Lean.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section{E2 --- Mathematics (r3)}\label{e2--mathematics-r3}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Delta.} No line of proof or mathematics changed in r3 (E6: the
+  five changed paragraphs per language contain no inline mathematics,
+  and every formula is identical). The new text of the A.2 paragraph
+  \emph{describes} the state of the seven rows without changing them.
+\item
+  \textbf{Inherited and revalidated by identity}, as consolidated in
+  run\_v1.22\_r2:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    A2-1, A2-2, A2-7: ACCEPTABLE\_SUMMARY since run\_v1.2\_r1.
+  \item
+    A2-3, A2-5, A2-6: ACCEPTABLE\_SUMMARY since run\_v1.21\_r1.
+  \item
+    A2-4: ACCEPTABLE\_SUMMARY since run\_v1.22\_r1 (six C.3 checks
+    against pinned Mathlib and E18/E19).
+  \item
+    The 56-component ledger of run\_v1.2\_r1 E2 also carries over.
+  \end{itemize}
+\item
+  \textbf{R-01} (OBSERVATION, in force): the second-moment bounds of C.2
+  are cited, not derived. It is a declared expository limit; no action
+  is needed before publication. Expanding it would be an editorial
+  option, not a requirement.
+\item
+  \textbf{Limit of the written-proof check.} It is summary-level against
+  frozen formal statements and is not human peer review.
+\end{itemize}
+
+\textbf{E2 verdict (r3): PASS} (observation R-01). Inherited and
+revalidated by identity; no mathematics was re-run, because there was no
+reason to.
+
+\end{document}

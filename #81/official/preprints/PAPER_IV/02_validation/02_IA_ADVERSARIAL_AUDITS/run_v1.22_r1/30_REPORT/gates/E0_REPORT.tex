@@ -1,0 +1,125 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+\documentclass[
+]{article}
+\usepackage{xcolor}
+\usepackage{amsmath,amssymb}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math} % this also loads fontspec
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+\usepackage{lmodern}
+\ifPDFTeX\else
+  % xetex/luatex font selection
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{longtable,booktabs,array}
+\usepackage{caption}
+\captionsetup[table]{skip=6pt}
+\newcounter{none} % for unnumbered tables
+\usepackage{calc} % for calculating minipage widths
+% Correct order of tables after \paragraph or \subparagraph
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd\longtable{\par}{\if@noskipsec\mbox{}\fi\par}{}{}
+\makeatother
+% Allow footnotes in longtable head/foot
+\IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
+\makesavenoteenv{longtable}
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\usepackage{bookmark}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same}
+% fallback for those not using the hyperref driver hyperxmp:
+\makeatletter
+\@ifundefined{xmpquote}{\newcommand{\xmpquote}[1]{#1}}{}
+\makeatother
+\hypersetup{
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+
+\author{}
+\date{}
+
+\begin{document}
+
+\section{Gate E0 report --- run\_v1.22\_r1 (Paper IV
+v1.22-r1)}\label{gate-e0-report--run_v122_r1-paper-iv-v122-r1}
+
+Verdict: \textbf{PASS}. Evidence: \texttt{20\_EVIDENCE/E0/}. Auditor:
+Claude Opus 5.5, same session as run\_v1.2\_r1/run\_v1.21\_r1; no Lean
+executed.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section{E0 --- Identity, integrity and preservation (initial and
+final)}\label{e0--identity-integrity-and-preservation-initial-and-final}
+
+Script: \texttt{e0\_v122.py} (auditor-written, read-only). Runs:
+\texttt{E0\_INITIAL.json} (2026-10-01T09:54Z, before any review) and
+\texttt{E0\_FINAL.json} (2026-10-01T10:35Z, after E2--E8). \textbf{The
+two \texttt{checks} objects are identical.}
+
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}ll@{}}
+\toprule\noalign{}
+Check & Result \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+\texttt{AUDIT\_TARGET\_v1.22.json} sha256 cbe0fd6e\ldots{} matches its
+sidecar & True \\
+Candidate manifest \texttt{MANUSCRIPT\_REVIEW\_MANIFEST.json}
+(d9e559a3\ldots) sha and bytes as bound & True / True \\
+Package \texttt{PAPER\_IV\_v1.22\_REVIEW\_PACKAGE\_r1.zip}
+(2b87b746\ldots) sha and bytes as bound; sidecar & True / True / True \\
+Mandate (7dee0923\ldots) and frozen source manifest (fb459343\ldots) as
+bound & True \\
+Earlier evidence: run\_v1.2\_r1 ZIP, run\_v1.21\_r1 ZIP, Lean source ZIP
+(cb274145\ldots), annex ZIP (2847a422\ldots) & all sha and bytes True \\
+Manifest vs directory: 223 files, 0 mismatches & OK \\
+ZIP: 225 members (= 223 + manifest + sidecar), testzip OK, no unsafe
+paths, no hash mismatch, no extra or missing member & OK \\
+Other ZIPs in the candidate directory & none (single package; E8-03) \\
+Lean cut \texttt{lean\_piv-v12-fb459343d234}: 615/615 manifest entries
+match, no extra files & OK \\
+run\_v1.2\_r1: 1097 manifest files unchanged on disk; ZIP sidecar
+matches; testzip OK & OK \\
+run\_v1.21\_r1: 340 manifest files unchanged on disk; ZIP sidecar
+matches; testzip OK & OK \\
+\end{longtable}
+}
+
+The PDFs have 72 pages (EN) and 73 pages (ES).
+
+\textbf{E0 verdict: PASS.} The identity is complete and matching, so the
+review was allowed to start. Neither the inputs nor the historical
+evidence changed during the review.
+
+\end{document}

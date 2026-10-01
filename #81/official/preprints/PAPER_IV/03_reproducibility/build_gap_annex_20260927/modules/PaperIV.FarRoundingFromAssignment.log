@@ -1,0 +1,26 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 PaperIV/FarRoundingFromAssignment.lean -o /workspace/request-project/.lake/runner/lib/lean/PaperIV/FarRoundingFromAssignment.olean -i /workspace/request-project/.lake/runner/lib/lean/PaperIV/FarRoundingFromAssignment.ilean
+import took 3.83s
+cumulative profiling times:
+	.olean serialization 48.7ms
+	attribute application 0.0355ms
+	compilation (IR) 0.713ms
+	compilation (LCNF base) 0.856ms
+	compilation (LCNF mono) 0.321ms
+	congr simp thm 2.98ms
+	elaboration 27.9ms
+	fix level params 0.245ms
+	import 3.83s
+	initialization 41.5ms
+	instantiate metavars 2.93ms
+	interpretation 275ms
+	let-to-have transformation 0.0515ms
+	linting 5.81ms
+	norm_num 31.8ms
+	parsing 4.29ms
+	process pre-definitions 3.86ms
+	ring 7.92ms
+	share common exprs 1.92ms
+	simp 20ms
+	tactic execution 30.1ms
+	type checking 14.7ms
+	typeclass inference 75.3ms

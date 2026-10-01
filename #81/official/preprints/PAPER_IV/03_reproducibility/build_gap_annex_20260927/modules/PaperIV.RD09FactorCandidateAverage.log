@@ -1,0 +1,112 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 PaperIV/RD09FactorCandidateAverage.lean -o /workspace/request-project/.lake/runner/lib/lean/PaperIV/RD09FactorCandidateAverage.olean -i /workspace/request-project/.lake/runner/lib/lean/PaperIV/RD09FactorCandidateAverage.ilean
+tactic execution of Lean.Parser.Tactic.congr took 228ms
+PaperIV/RD09FactorCandidateAverage.lean:334:0: warning: automatically included section variable(s) unused in theorem `PaperIV.RD09FactorCandidateAverage.mem_failedBases`:
+  [Fintype Cand]
+  [DecidableEq Z]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype Cand] [DecidableEq Z] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+PaperIV/RD09FactorCandidateAverage.lean:340:0: warning: automatically included section variable(s) unused in theorem `PaperIV.RD09FactorCandidateAverage.sum_card_failedBases`:
+  [DecidableEq Z]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq Z] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+PaperIV/RD09FactorCandidateAverage.lean:369:0: warning: automatically included section variable(s) unused in theorem `PaperIV.RD09FactorCandidateAverage.card_assign_pos`:
+  [DecidableEq Cand]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq Cand] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+interpretation of Mathlib.Meta.Positivity.evalAdd._lam_0._boxed took 156ms
+interpretation of Mathlib.Meta.Positivity.evalNatCast._lam_1._boxed took 106ms
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_nlinarith_1._boxed took 2.04s
+interpretation of Mathlib.Tactic.FieldSimp._aux_Mathlib_Tactic_FieldSimp___elabRules_Mathlib_Tactic_FieldSimp_fieldSimp_1._boxed took 124ms
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_linarith_1._boxed took 126ms
+PaperIV/RD09FactorCandidateAverage.lean:481:29: warning: 'ring' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+PaperIV/RD09FactorCandidateAverage.lean:481:29: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+PaperIV/RD09FactorCandidateAverage.lean:535:0: warning: automatically included section variable(s) unused in theorem `PaperIV.RD09FactorCandidateAverage.mem_survivingBases`:
+  [Fintype Cand]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype Cand] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+PaperIV/RD09FactorCandidateAverage.lean:561:8: warning: automatically included section variable(s) unused in theorem `PaperIV.RD09FactorCandidateAverage.survivingHub_apply`:
+  [Fintype Cand]
+  [Fintype V]
+  [DecidableEq V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype Cand] [Fintype V] [DecidableEq V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+PaperIV/RD09FactorCandidateAverage.lean:564:8: warning: automatically included section variable(s) unused in theorem `PaperIV.RD09FactorCandidateAverage.survivingBaseEdge_apply`:
+  [Fintype Cand]
+  [Fintype V]
+  [DecidableEq V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype Cand] [Fintype V] [DecidableEq V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+PaperIV/RD09FactorCandidateAverage.lean:572:0: warning: automatically included section variable(s) unused in theorem `PaperIV.RD09FactorCandidateAverage.mem_survivingPiece`:
+  [Fintype Cand]
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype Cand] [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+PaperIV/RD09FactorCandidateAverage.lean:578:0: warning: automatically included section variable(s) unused in theorem `PaperIV.RD09FactorCandidateAverage.eq_of_two_common`:
+  [DecidableEq Z]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq Z] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+PaperIV/RD09FactorCandidateAverage.lean:710:0: warning: automatically included section variable(s) unused in theorem `PaperIV.RD09FactorCandidateAverage.isPhaseISeparated_usedBases`:
+  [Fintype Cand]
+  [DecidableEq Cand]
+  [DecidableEq Z]
+  [Fintype V]
+  [DecidableEq I]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype Cand] [DecidableEq Cand] [DecidableEq Z] [Fintype V] [DecidableEq I] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+PaperIV/RD09FactorCandidateAverage.lean:725:0: warning: automatically included section variable(s) unused in theorem `PaperIV.RD09FactorCandidateAverage.isPhaseCompatible_surviving`:
+  [Fintype I]
+  [DecidableEq I]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype I] [DecidableEq I] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+typeclass inference of Nonempty took 141ms
+import took 3.49s
+.olean serialization took 185ms
+cumulative profiling times:
+	.olean serialization 185ms
+	attribute application 3.08ms
+	blocked (unaccounted) 8.66s
+	compilation (IR) 26.1ms
+	compilation (LCNF base) 34.6ms
+	compilation (LCNF mono) 15.5ms
+	congr simp thm 37.5ms
+	elaboration 534ms
+	fix level params 9.8ms
+	import 3.49s
+	initialization 38.3ms
+	instantiate metavars 50.5ms
+	interpretation 3.95s
+	let-to-have transformation 1.13ms
+	linting 125ms
+	norm_num 113ms
+	parsing 60.8ms
+	process pre-definitions 75.7ms
+	ring 79.1ms
+	share common exprs 40ms
+	simp 1.32s
+	tactic execution 1.01s
+	type checking 330ms
+	typeclass inference 2.79s

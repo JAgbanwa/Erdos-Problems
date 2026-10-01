@@ -1,0 +1,31 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 FarExploration/CodegreeCleanup.lean -o /workspace/request-project/.lake/runner/lib/lean/FarExploration/CodegreeCleanup.olean -i /workspace/request-project/.lake/runner/lib/lean/FarExploration/CodegreeCleanup.ilean
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_nlinarith_1._boxed took 317ms
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_linarith_1._boxed took 117ms
+FarExploration/CodegreeCleanup.lean:141:4: warning: 'push_cast at hP' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+import took 4.49s
+cumulative profiling times:
+	.olean serialization 96.8ms
+	attribute application 0.0334ms
+	compilation (IR) 16.6ms
+	compilation (LCNF base) 15.5ms
+	compilation (LCNF mono) 7.37ms
+	congr simp thm 18.3ms
+	elaboration 33ms
+	fix level params 0.942ms
+	import 4.49s
+	initialization 33.6ms
+	instantiate metavars 27.1ms
+	interpretation 1.45s
+	let-to-have transformation 0.0362ms
+	linting 21.9ms
+	norm_num 545ms
+	parsing 7.45ms
+	process pre-definitions 29.6ms
+	ring 73ms
+	share common exprs 23.5ms
+	simp 281ms
+	tactic execution 259ms
+	type checking 69.9ms
+	typeclass inference 927ms

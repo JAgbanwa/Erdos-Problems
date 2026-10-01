@@ -1,0 +1,28 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 ExactReduction/JointStar.lean -o /workspace/request-project/.lake/runner/lib/lean/ExactReduction/JointStar.olean -i /workspace/request-project/.lake/runner/lib/lean/ExactReduction/JointStar.ilean
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_nlinarith_1._boxed took 284ms
+import took 3.06s
+cumulative profiling times:
+	.olean serialization 82.2ms
+	attribute application 0.15ms
+	blocked (unaccounted) 17.7ms
+	compilation (IR) 3.4ms
+	compilation (LCNF base) 4.33ms
+	compilation (LCNF mono) 2.67ms
+	congr simp thm 8.28ms
+	elaboration 95.5ms
+	fix level params 1.75ms
+	import 3.06s
+	initialization 49.4ms
+	instantiate metavars 13.3ms
+	interpretation 658ms
+	let-to-have transformation 0.16ms
+	linting 24.1ms
+	norm_num 15.1ms
+	parsing 12.6ms
+	process pre-definitions 18.3ms
+	ring 25.5ms
+	share common exprs 8.05ms
+	simp 106ms
+	tactic execution 218ms
+	type checking 169ms
+	typeclass inference 378ms

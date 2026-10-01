@@ -1,0 +1,28 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 PaperIV/EditRouteCliqueRecovery.lean -o /workspace/request-project/.lake/runner/lib/lean/PaperIV/EditRouteCliqueRecovery.olean -i /workspace/request-project/.lake/runner/lib/lean/PaperIV/EditRouteCliqueRecovery.ilean
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_nlinarith_1._boxed took 392ms
+import took 3.4s
+.olean serialization took 150ms
+cumulative profiling times:
+	.olean serialization 150ms
+	attribute application 0.221ms
+	compilation (IR) 4.32ms
+	compilation (LCNF base) 5.58ms
+	compilation (LCNF mono) 3.52ms
+	congr simp thm 19.3ms
+	elaboration 140ms
+	fix level params 3.51ms
+	import 3.4s
+	initialization 38.8ms
+	instantiate metavars 38.6ms
+	interpretation 964ms
+	let-to-have transformation 0.308ms
+	linting 53.5ms
+	norm_num 2.48ms
+	parsing 27ms
+	process pre-definitions 44.7ms
+	ring 17.9ms
+	share common exprs 12.9ms
+	simp 470ms
+	tactic execution 922ms
+	type checking 1.25s
+	typeclass inference 1.02s

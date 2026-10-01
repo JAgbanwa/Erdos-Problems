@@ -1,0 +1,18 @@
+{
+  "status": "PASS",
+  "certificate_sha256": "44efc496cfab891f422bd50ced38a1e53114ddfce526fbecb340dd5cbddc48f8",
+  "independent_checker": true,
+  "covered_edges": 12,
+  "parts": 6,
+  "optimality": "Separate exact clique-weight lower bound 6; certificate itself certifies coverage only.",
+  "mutations_rejected": [
+    "omit",
+    "repeat",
+    "wrong_size",
+    "wrong_universe",
+    "nonclique"
+  ],
+  "wall_seconds_total": 0.06299999999987449,
+  "script_sha256": "cf20f8ea12086b5978d7220118ce293e0626ed106039c8d3cab811418e6407eb",
+  "python": "3.12.10"
+}

@@ -1,0 +1,105 @@
+$ c:\Users\jtraverso\.elan\toolchains\leanprover--lean4---v4.28.0\bin\lean.exe -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false PaperIV/ChordalStructure.lean -o C:\Users\jtraverso\e81p4\opt_build_20260927\.lake\runner\lib\lean\PaperIV\ChordalStructure.olean -i C:\Users\jtraverso\e81p4\opt_build_20260927\.lake\runner\lib\lean\PaperIV\ChordalStructure.ilean
+PaperIV/ChordalStructure.lean:135:8: warning: automatically included section variable(s) unused in theorem `_private.PaperIV.ChordalStructure.0.SimpleGraph.isSimplicial_of_rsimplicial`:
+  [Fintype V]
+  [DecidableEq V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] [DecidableEq V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+PaperIV/ChordalStructure.lean:141:8: warning: automatically included section variable(s) unused in theorem `_private.PaperIV.ChordalStructure.0.SimpleGraph.rstep_symm`:
+  [Fintype V]
+  [DecidableEq V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] [DecidableEq V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+PaperIV/ChordalStructure.lean:157:8: warning: automatically included section variable(s) unused in theorem `_private.PaperIV.ChordalStructure.0.SimpleGraph.rreach_erase`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+PaperIV/ChordalStructure.lean:187:53: warning: unused variable `huD`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+PaperIV/ChordalStructure.lean:199:8: warning: automatically included section variable(s) unused in theorem `_private.PaperIV.ChordalStructure.0.SimpleGraph.component_sep`:
+  [Fintype V]
+  [DecidableEq V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] [DecidableEq V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+PaperIV/ChordalStructure.lean:210:8: warning: automatically included section variable(s) unused in theorem `_private.PaperIV.ChordalStructure.0.SimpleGraph.avoidReach_symm`:
+  [Fintype V]
+  [DecidableEq V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] [DecidableEq V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+PaperIV/ChordalStructure.lean:227:8: warning: automatically included section variable(s) unused in theorem `_private.PaperIV.ChordalStructure.0.SimpleGraph.avoidReach_notMem`:
+  [Fintype V]
+  [DecidableEq V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] [DecidableEq V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+PaperIV/ChordalStructure.lean:235:8: warning: automatically included section variable(s) unused in theorem `_private.PaperIV.ChordalStructure.0.SimpleGraph.avoidReach_walk`:
+  [Fintype V]
+  [DecidableEq V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] [DecidableEq V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+PaperIV/ChordalStructure.lean:248:8: warning: automatically included section variable(s) unused in theorem `_private.PaperIV.ChordalStructure.0.SimpleGraph.sep_exists_aside_nbr`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+PaperIV/ChordalStructure.lean:266:8: warning: automatically included section variable(s) unused in theorem `_private.PaperIV.ChordalStructure.0.SimpleGraph.reachable_induce_of_walk`:
+  [Fintype V]
+  [DecidableEq V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] [DecidableEq V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+PaperIV/ChordalStructure.lean:333:8: warning: automatically included section variable(s) unused in theorem `_private.PaperIV.ChordalStructure.0.SimpleGraph.two_induced_paths_not_chordal`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+PaperIV/ChordalStructure.lean:389:0: warning: automatically included section variable(s) unused in theorem `SimpleGraph.IsChordal.induce`:
+  [Fintype V]
+  [DecidableEq V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] [DecidableEq V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+PaperIV/ChordalStructure.lean:400:8: warning: automatically included section variable(s) unused in theorem `_private.PaperIV.ChordalStructure.0.SimpleGraph.rsimplicial_of_induce_simplicial`:
+  [Fintype V]
+  [DecidableEq V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] [DecidableEq V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+PaperIV/ChordalStructure.lean:412:8: warning: automatically included section variable(s) unused in theorem `_private.PaperIV.ChordalStructure.0.SimpleGraph.isSimplicial_of_induce`:
+  [Fintype V]
+  [DecidableEq V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] [DecidableEq V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+PaperIV/ChordalStructure.lean:450:8: warning: automatically included section variable(s) unused in theorem `_private.PaperIV.ChordalStructure.0.SimpleGraph.exists_minimal_separator`:
+  [DecidableEq V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+PaperIV/ChordalStructure.lean:737:8: warning: automatically included section variable(s) unused in theorem `_private.PaperIV.ChordalStructure.0.SimpleGraph.avoidReach_iff_set`:
+  [Fintype V]
+  [DecidableEq V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] [DecidableEq V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`

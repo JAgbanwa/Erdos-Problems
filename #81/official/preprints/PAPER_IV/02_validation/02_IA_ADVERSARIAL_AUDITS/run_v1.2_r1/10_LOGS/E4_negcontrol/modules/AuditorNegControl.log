@@ -1,0 +1,4 @@
+$ C:\Users\jtraverso\.elan\toolchains\leanprover--lean4---v4.28.0\bin\lean.exe -j 8 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false AuditorNegControl.lean -o C:\Users\jtraverso\e81p4-publish\preprints\PAPER_IV\02_validation\02_IA_ADVERSARIAL_AUDITS\run_v1.2_r1\05_BUILD\main\obj\AuditorNegControl.olean -i C:\Users\jtraverso\e81p4-publish\preprints\PAPER_IV\02_validation\02_IA_ADVERSARIAL_AUDITS\run_v1.2_r1\05_BUILD\main\obj\AuditorNegControl.ilean
+AuditorNegControl.lean:7:8: warning: declaration uses `sorry`
+'AuditorNeg.uses_bogus' depends on axioms: [AuditorNeg.bogus]
+'AuditorNeg.uses_sorry' depends on axioms: [sorryAx]

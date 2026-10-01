@@ -1,0 +1,27 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 PaperIV/SplitTriangleFactorOdd.lean -o /workspace/request-project/.lake/runner/lib/lean/PaperIV/SplitTriangleFactorOdd.olean -i /workspace/request-project/.lake/runner/lib/lean/PaperIV/SplitTriangleFactorOdd.ilean
+PaperIV/SplitTriangleFactorOdd.lean:32:0: warning: automatically included section variable(s) unused in theorem `PaperIV.SplitTriangleFactorOdd.splitGraph_mono`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+import took 3.12s
+cumulative profiling times:
+	.olean serialization 65.7ms
+	attribute application 0.0582ms
+	elaboration 37.3ms
+	fix level params 0.512ms
+	import 3.12s
+	initialization 37.8ms
+	instantiate metavars 3.88ms
+	interpretation 200ms
+	let-to-have transformation 0.15ms
+	linting 6.82ms
+	norm_num 0.589ms
+	parsing 4.8ms
+	process pre-definitions 4.23ms
+	ring 5.91ms
+	share common exprs 2.07ms
+	tactic execution 72.6ms
+	type checking 110ms
+	typeclass inference 107ms

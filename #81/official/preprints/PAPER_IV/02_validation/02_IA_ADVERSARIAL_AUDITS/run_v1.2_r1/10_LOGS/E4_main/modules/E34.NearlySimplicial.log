@@ -1,0 +1,25 @@
+$ C:\Users\jtraverso\.elan\toolchains\leanprover--lean4---v4.28.0\bin\lean.exe -j 8 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false E34/NearlySimplicial.lean -o C:\Users\jtraverso\e81p4-publish\preprints\PAPER_IV\02_validation\02_IA_ADVERSARIAL_AUDITS\run_v1.2_r1\05_BUILD\main\obj\E34\NearlySimplicial.olean -i C:\Users\jtraverso\e81p4-publish\preprints\PAPER_IV\02_validation\02_IA_ADVERSARIAL_AUDITS\run_v1.2_r1\05_BUILD\main\obj\E34\NearlySimplicial.ilean
+E34/NearlySimplicial.lean:119:0: warning: automatically included section variable(s) unused in theorem `E34.Hg_adj_XX`:
+  [DecidableRel G.Adj]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableRel G.Adj] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+E34/NearlySimplicial.lean:123:0: warning: automatically included section variable(s) unused in theorem `E34.Hg_adj_XY`:
+  [DecidableRel G.Adj]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableRel G.Adj] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+E34/NearlySimplicial.lean:133:0: warning: automatically included section variable(s) unused in theorem `E34.Hg_adj_YY`:
+  [DecidableRel G.Adj]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableRel G.Adj] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+E34/NearlySimplicial.lean:168:5: warning: unused variable `hPA`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+E34/NearlySimplicial.lean:590:20: warning: 'push_cast [← Nat.cast_add]' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`

@@ -1,0 +1,136 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+\documentclass[
+]{article}
+\usepackage{xcolor}
+\usepackage{amsmath,amssymb}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math} % this also loads fontspec
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+\usepackage{lmodern}
+\ifPDFTeX\else
+  % xetex/luatex font selection
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{longtable,booktabs,array}
+\usepackage{caption}
+\captionsetup[table]{skip=6pt}
+\newcounter{none} % for unnumbered tables
+\usepackage{calc} % for calculating minipage widths
+% Correct order of tables after \paragraph or \subparagraph
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd\longtable{\par}{\if@noskipsec\mbox{}\fi\par}{}{}
+\makeatother
+% Allow footnotes in longtable head/foot
+\IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
+\makesavenoteenv{longtable}
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\usepackage{bookmark}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same}
+% fallback for those not using the hyperref driver hyperxmp:
+\makeatletter
+\@ifundefined{xmpquote}{\newcommand{\xmpquote}[1]{#1}}{}
+\makeatother
+\hypersetup{
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+
+\author{}
+\date{}
+
+\begin{document}
+
+\section{Gate E8 report --- run\_v1.22\_r1 (Paper IV
+v1.22-r1)}\label{gate-e8-report--run_v122_r1-paper-iv-v122-r1}
+
+Verdict: \textbf{PASS\_WITH\_OBSERVATIONS}. Evidence:
+\texttt{20\_EVIDENCE/E8/}. Auditor: Claude Opus 5.5, same session as
+run\_v1.2\_r1/run\_v1.21\_r1; no Lean executed.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section{E8 --- Author evidence, scope attribution and
+packaging}\label{e8--author-evidence-scope-attribution-and-packaging}
+
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}lll@{}}
+\toprule\noalign{}
+Item & Examination & Result \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+E8-01: 1266-log scan & The E8-01 row of
+\texttt{RESPONSE\_TO\_REVALIDATION\_v1.22.md} says the
+author\textquotesingle s earlier scan covered 844 logs and the auditor
+extended it to 1266, with zero alerts, and that this evidence is reused
+with attribution. This matches the run\_v1.21\_r1 E8 record. I
+re-executed the run\_v1.21\_r1 detector script read-only
+(\texttt{e8\_detector\_check.py} → \texttt{E8\_DETECTOR\_RERUN.json}):
+10/10 cases correct; 608 + 50 + 422 + 186 = \textbf{1266} logs, 0
+detector hits, 0 broad "sorry" hits. The result is identical to the
+v1.21 JSON. & \textbf{Correctly attributed.} The 1266 scope is the prior
+auditor\textquotesingle s scan, not the old author script. \\
+E8-02 / X-28: runner patch & The frozen runners
+\texttt{tools/paperiv\_build.py} and
+\texttt{tools/audit\_publication.py} still have their SOURCE\_MANIFEST
+hashes. There is no \texttt{.patch} file in the v1.22 candidate
+directory, and the response says the patch is not applied. & \textbf{Not
+applied.} X-28 stays MITIGATED by the external detector, and the
+limitation stays declared. \\
+E8-03: single package & E0:
+\texttt{PAPER\_IV\_v1.22\_REVIEW\_PACKAGE\_r1.zip}, bound by
+AUDIT\_TARGET and its sidecar, is the only ZIP in
+\texttt{v1.22\_editorial\_candidate/}. & \textbf{RESOLVED} \\
+Response claims: X-15 and NEW-01 & X-15 says the prose was translated,
+but 13 residual occurrences remain. NEW-01 says \texttt{Model} was
+restored, but only the EN text was fixed (E6). & \textbf{Inaccurate
+claims (MINOR)} \\
+Response claims: C.3 Lean correspondence & The listed declarations exist
+and match the prose (E2/E3). & Correct \\
+Response claims: R-01 kept, R-02 clarified & Confirmed (E2). &
+Correct \\
+Other author objects (\texttt{PROTECTED\_BASELINE.json},
+\texttt{SEMANTIC\_CHECKS.json}, \texttt{EXACT\_CHECKS.json},
+\texttt{LEAN\_IDENTITY\_CHECK.json}, \texttt{VISUAL\_REVIEW\_v1.22.md})
+& All are bound by the manifest (E0). They were used only as claims to
+contrast, never as an inherited PASS. \texttt{VISUAL\_REVIEW} claims
+"valor base" and the restored {[}6{]}, which is correct; it does not
+claim the prose translation. & Noted \\
+Historical items & X-19, X-22, X-24, X-26, X-29, AUD-P1, AUD-C1, AUD-C2
+and the C-* / C1-* corrections are preserved in their runs, which are
+unchanged (E0). & Preserved \\
+\end{longtable}
+}
+
+\textbf{E8 verdict: PASS\_WITH\_OBSERVATIONS.}
+
+\end{document}

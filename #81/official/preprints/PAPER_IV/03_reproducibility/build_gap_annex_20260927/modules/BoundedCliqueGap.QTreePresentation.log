@@ -1,0 +1,16 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 BoundedCliqueGap/QTreePresentation.lean -o /workspace/request-project/.lake/runner/lib/lean/BoundedCliqueGap/QTreePresentation.olean -i /workspace/request-project/.lake/runner/lib/lean/BoundedCliqueGap/QTreePresentation.ilean
+import took 3.61s
+cumulative profiling times:
+	.olean serialization 82ms
+	attribute application 0.00796ms
+	blocked (unaccounted) 12.3ms
+	congr simp thm 12.3ms
+	elaboration 50.8ms
+	import 3.61s
+	initialization 37.9ms
+	interpretation 204ms
+	linting 1.93ms
+	parsing 1.88ms
+	simp 1.39ms
+	type checking 19ms
+	typeclass inference 4.74ms

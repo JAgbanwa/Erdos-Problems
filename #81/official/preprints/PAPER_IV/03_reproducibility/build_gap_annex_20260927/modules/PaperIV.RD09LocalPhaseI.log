@@ -1,0 +1,25 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 PaperIV/RD09LocalPhaseI.lean -o /workspace/request-project/.lake/runner/lib/lean/PaperIV/RD09LocalPhaseI.olean -i /workspace/request-project/.lake/runner/lib/lean/PaperIV/RD09LocalPhaseI.ilean
+import took 3.28s
+cumulative profiling times:
+	.olean serialization 95.1ms
+	attribute application 1.34ms
+	blocked (unaccounted) 356ms
+	compilation (IR) 3.31ms
+	compilation (LCNF base) 9.87ms
+	compilation (LCNF mono) 4.86ms
+	congr simp thm 4.85ms
+	elaboration 385ms
+	fix level params 1.45ms
+	import 3.28s
+	initialization 40.5ms
+	instantiate metavars 3.13ms
+	interpretation 423ms
+	let-to-have transformation 0.756ms
+	linting 53.4ms
+	parsing 22.7ms
+	process pre-definitions 17ms
+	share common exprs 4.16ms
+	simp 40.5ms
+	tactic execution 209ms
+	type checking 97.3ms
+	typeclass inference 298ms

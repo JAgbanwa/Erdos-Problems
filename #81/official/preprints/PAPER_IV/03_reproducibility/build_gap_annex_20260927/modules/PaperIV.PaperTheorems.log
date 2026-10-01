@@ -1,0 +1,39 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 PaperIV/PaperTheorems.lean -o /workspace/request-project/.lake/runner/lib/lean/PaperIV/PaperTheorems.olean -i /workspace/request-project/.lake/runner/lib/lean/PaperIV/PaperTheorems.ilean
+PaperIV/PaperTheorems.lean:67:8: warning: automatically included section variable(s) unused in theorem `_private.PaperIV.PaperTheorems.0.PaperIV.PaperTheorems.mem_core_of_adj_of_notMem`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+PaperIV/PaperTheorems.lean:75:8: warning: automatically included section variable(s) unused in theorem `_private.PaperIV.PaperTheorems.0.PaperIV.PaperTheorems.core_isClique`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+import took 4.05s
+.olean serialization took 107ms
+cumulative profiling times:
+	.olean serialization 107ms
+	attribute application 0.0812ms
+	compilation (IR) 1.01ms
+	compilation (LCNF base) 1.77ms
+	compilation (LCNF mono) 0.681ms
+	congr simp thm 3.76ms
+	elaboration 37.8ms
+	fix level params 0.497ms
+	import 4.05s
+	initialization 35.2ms
+	instantiate metavars 4.57ms
+	interpretation 362ms
+	let-to-have transformation 0.121ms
+	linting 10.9ms
+	norm_num 36.9ms
+	parsing 9.22ms
+	process pre-definitions 6.43ms
+	ring 11.4ms
+	share common exprs 3.18ms
+	simp 62.4ms
+	tactic execution 127ms
+	type checking 129ms
+	typeclass inference 177ms

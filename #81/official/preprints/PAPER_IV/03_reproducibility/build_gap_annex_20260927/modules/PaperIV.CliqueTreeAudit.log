@@ -1,0 +1,79 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 PaperIV/CliqueTreeAudit.lean -o /workspace/request-project/.lake/runner/lib/lean/PaperIV/CliqueTreeAudit.olean -i /workspace/request-project/.lake/runner/lib/lean/PaperIV/CliqueTreeAudit.ilean
+'SimpleGraph.IsChordal.exists_isPEO' depends on axioms: [propext, Classical.choice, Quot.sound]
+elaboration took 328ms
+'SimpleGraph.IsChordal.nonempty_cliqueTree' depends on axioms: [propext, Classical.choice, Quot.sound]
+elaboration took 329ms
+'SimpleGraph.IsPEO.cliqueTree' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SimpleGraph.IsPEO.peoBag_isClique' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SimpleGraph.IsPEO.exists_peoBag_of_adj' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SimpleGraph.IsPEO.card_edgeFinset_eq_sum_card_laterNbrs' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SimpleGraph.IsPEO.card_edgeFinset_add_card_eq_sum_card_peoBag' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'SimpleGraph.CliqueTree.isAncestor_top_of_mem_bag' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SimpleGraph.CliqueTree.mem_bag_of_isAncestor' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SimpleGraph.CliqueTree.branch_separator' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SimpleGraph.CliqueTree.not_adj_of_branch_separator' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SimpleGraph.CliqueTree.exists_isLeaf' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SimpleGraph.CliqueTree.isSimplicial_of_mem_privateVerts' depends on axioms: [propext, Quot.sound]
+'SimpleGraph.CliqueTree.exists_bag_ne_of_isLeaf' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SimpleGraph.CliqueTree.existsUnique_edgeBag' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SimpleGraph.CliqueTree.mem_bag_edgeBag' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SimpleGraph.CliqueTree.card_edgeFinset_eq_sum_fiber' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SimpleGraph.CliqueTree.subset_bag_of_mem_fiber' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SimpleGraph.exists_isMaximalCliqueOn' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SimpleGraph.exists_maxCliqueForest' depends on axioms: [propext, Classical.choice, Quot.sound]
+elaboration took 281ms
+'SimpleGraph.IsChordal.exists_maximalCliqueTree' depends on axioms: [propext, Classical.choice, Quot.sound]
+elaboration took 294ms
+'SimpleGraph.IsPEO.exists_eq_peoBag_of_isMaximalCliqueOn' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SimpleGraph.CliqueTree.top_comparable_of_mem_bag' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SimpleGraph.CliqueTree.isAncestor_top_of_rank_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SimpleGraph.CliqueTree.mem_bag_top_of_rank_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SimpleGraph.CliqueTree.exists_subset_bag' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SimpleGraph.CliqueTree.exists_subset_bag'' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SimpleGraph.CliqueTree.exists_subset_bag_set' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SimpleGraph.CliqueTree.cliqueNum_eq_sup_card_bag' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SimpleGraph.CliqueTree.exists_isMaximumClique_bag' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SimpleGraph.IsPEO.cliqueNum_eq_sup_card_peoBag' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SimpleGraph.isMaximalCliqueOn_univ_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SimpleGraph.MaxCliqueForest.exists_top_eq' depends on axioms: [propext, Quot.sound]
+'SimpleGraph.MaxCliqueForest.bag_nonempty' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SimpleGraph.MaxCliqueForest.size_le_card' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SimpleGraph.MaxCliqueForest.size_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SimpleGraph.CliqueTree.exists_top_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SimpleGraph.CliqueTree.card_le_card_of_isMaximalCliqueOn' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SimpleGraph.IsChordal.exists_maximalCliqueTree_card_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+elaboration took 306ms
+'SimpleGraph.IsChordal.card_maximalCliques_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+elaboration took 308ms
+'SimpleGraph.IsChordal.of_nonempty_cliqueTree' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SimpleGraph.isChordal_iff_nonempty_cliqueTree' depends on axioms: [propext, Classical.choice, Quot.sound]
+elaboration took 302ms
+'SimpleGraph.IsPEO.isChordal' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SimpleGraph.isChordal_iff_exists_isPEO' depends on axioms: [propext, Classical.choice, Quot.sound]
+elaboration took 299ms
+'SimpleGraph.CliqueTree.separates_bag_inter' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SimpleGraph.CliqueTree.isMinimalSeparator_bag_inter' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SimpleGraph.CliqueTree.exists_parent_eq_of_isMinimalSeparator' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'SimpleGraph.CliqueTree.not_exists_isMinimalSeparator_dupBagTree' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'SimpleGraph.CliqueTree.not_exists_parent_eq_isolatedTree' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SimpleGraph.CliqueTree.mem_parentSep_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SimpleGraph.CliqueTree.card_parentSep' depends on axioms: [propext, Quot.sound]
+'SimpleGraph.CliqueTree.card_eq_sum_card_bag_sub_sum_card_inter' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'SimpleGraph.CliqueTree.card_add_sum_card_parentSep' depends on axioms: [propext, Classical.choice, Quot.sound]
+import took 3.12s
+cumulative profiling times:
+	.olean serialization 3.54ms
+	elaboration 4.32s
+	import 3.12s
+	initialization 36.2ms
+	interpretation 222ms
+	linting 8.55ms
+	parsing 4.1ms

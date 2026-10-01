@@ -1,0 +1,27 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 PaperIV/SpreadLedgerAbsorption.lean -o /workspace/request-project/.lake/runner/lib/lean/PaperIV/SpreadLedgerAbsorption.olean -i /workspace/request-project/.lake/runner/lib/lean/PaperIV/SpreadLedgerAbsorption.ilean
+tactic execution of Mathlib.Tactic.nlinarith took 117ms
+import took 2.89s
+cumulative profiling times:
+	.olean serialization 61.9ms
+	attribute application 0.108ms
+	compilation (IR) 2.07ms
+	compilation (LCNF base) 2.21ms
+	compilation (LCNF mono) 1.31ms
+	congr simp thm 9.19ms
+	elaboration 56.9ms
+	fix level params 1.03ms
+	import 2.89s
+	initialization 36.1ms
+	instantiate metavars 2.18ms
+	interpretation 391ms
+	let-to-have transformation 0.157ms
+	linting 12.5ms
+	norm_num 62.7ms
+	parsing 7.81ms
+	process pre-definitions 9.41ms
+	ring 14ms
+	share common exprs 4.47ms
+	simp 31ms
+	tactic execution 204ms
+	type checking 40.4ms
+	typeclass inference 308ms

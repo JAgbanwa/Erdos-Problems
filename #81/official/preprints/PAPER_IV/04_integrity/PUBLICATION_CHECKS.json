@@ -1,0 +1,39 @@
+{
+  "status": "PASS",
+  "prepared_utc": "2026-10-01T19:24:57.880293+00:00",
+  "purpose": "Local editorial/package verification, not a new external audit",
+  "current_version": "1.23",
+  "external_audited_revision": "v1.22-r4",
+  "external_audit_of_v123": false,
+  "editorial_changes": 12,
+  "formal_entries_unchanged": 615,
+  "historical_audit_manifest_counts": {
+    "run_v1.2_r1": 1097,
+    "run_v1.21_r1": 340,
+    "run_v1.22_r1": 188,
+    "run_v1.22_r2": 182,
+    "run_v1.22_r3": 165,
+    "run_v1.22_r4": 93
+  },
+  "mapped_artifacts": 8736,
+  "relocated_active_manuscripts": 6,
+  "zip_sidecars_and_crc": 88,
+  "navigation_links_checked": 91,
+  "required_log_verifier": {
+    "status": "PASS",
+    "logs_checked": 1266,
+    "errors": [],
+    "sorry_pattern": "\\bsorryAx\\b|declaration\\s+uses\\s+[`'\\\"‘’“”]*sorry\\b",
+    "error_pattern": "^.*error(?:\\(|:)",
+    "lean_executed": false
+  },
+  "papers_I_II_III_and_v08_unchanged": true,
+  "credentials_or_compiled_caches_detected": false,
+  "lean_executed": false,
+  "pdf_rebuilt": true,
+  "git_commit_push_tag_or_deposit_performed": false,
+  "github_publication_authorized": true,
+  "pending": [
+    "Apply new homepage only after publishing index.html"
+  ]
+}

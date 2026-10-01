@@ -1,0 +1,182 @@
+{
+ "inventory_regenerated_equals_sealed": true,
+ "groups": [
+  [
+   "02_validation/02_IA_ADVERSARIAL_AUDITS/run_v1.2_r1/10_LOGS/E4_main/modules",
+   608
+  ],
+  [
+   "02_validation/02_IA_ADVERSARIAL_AUDITS/run_v1.2_r1/10_LOGS/E4_annex/modules",
+   50
+  ],
+  [
+   "03_reproducibility/full_rebuild_v12_20260929_r2/combined/modules",
+   422
+  ],
+  [
+   "03_reproducibility/full_rebuild_v12_20260929_resume/combined/modules",
+   186
+  ]
+ ],
+ "expected_total": 1266,
+ "duplicate_entries": [],
+ "independent_hash_mismatch": [],
+ "groups_equal_historical_E8_dirs": true,
+ "unit_cases_equal_sealed": true,
+ "cli_negative_cases_sealed": [
+  [
+   "sorry_warning",
+   1,
+   "FAIL",
+   [
+    "ERROR_OR_SORRY"
+   ]
+  ],
+  [
+   "error",
+   1,
+   "FAIL",
+   [
+    "ERROR_OR_SORRY"
+   ]
+  ],
+  [
+   "changed",
+   1,
+   "FAIL",
+   [
+    "HASH_MISMATCH"
+   ]
+  ],
+  [
+   "missing",
+   1,
+   "FAIL",
+   [
+    "set/count",
+    "set/count"
+   ]
+  ]
+ ],
+ "cli_negative_cases_auditor": [
+  [
+   "sorry_warning",
+   1,
+   "FAIL",
+   [
+    "ERROR_OR_SORRY"
+   ]
+  ],
+  [
+   "error",
+   1,
+   "FAIL",
+   [
+    "ERROR_OR_SORRY"
+   ]
+  ],
+  [
+   "changed",
+   1,
+   "FAIL",
+   [
+    "HASH_MISMATCH"
+   ]
+  ],
+  [
+   "missing",
+   1,
+   "FAIL",
+   [
+    "set/count",
+    "set/count"
+   ]
+  ]
+ ],
+ "historical_scan_sealed_vs_auditor": [
+  "PASS",
+  1266,
+  "PASS",
+  1266
+ ],
+ "error_rule_flags": {
+  "ignorecase": false,
+  "multiline": true,
+  "pattern_equals_frozen_error_alternative": true
+ },
+ "error_case_sensitivity_identical_to_frozen": true,
+ "probe_table": {
+  "error: x": {
+   "new_sorry": false,
+   "new_error": true,
+   "frozen_audit_publication": true,
+   "frozen_build": false
+  },
+  "f.lean:1:2: error: x": {
+   "new_sorry": false,
+   "new_error": true,
+   "frozen_audit_publication": true,
+   "frozen_build": false
+  },
+  "ERROR: x": {
+   "new_sorry": false,
+   "new_error": false,
+   "frozen_audit_publication": false,
+   "frozen_build": false
+  },
+  "Error: x": {
+   "new_sorry": false,
+   "new_error": false,
+   "frozen_audit_publication": false,
+   "frozen_build": false
+  },
+  "error(foo)": {
+   "new_sorry": false,
+   "new_error": true,
+   "frozen_audit_publication": true,
+   "frozen_build": false
+  },
+  "no errors here": {
+   "new_sorry": false,
+   "new_error": false,
+   "frozen_audit_publication": false,
+   "frozen_build": false
+  },
+  "declaration uses 'sorry'": {
+   "new_sorry": true,
+   "new_error": false,
+   "frozen_audit_publication": true,
+   "frozen_build": true
+  },
+  "declaration uses `sorry`": {
+   "new_sorry": true,
+   "new_error": false,
+   "frozen_audit_publication": false,
+   "frozen_build": false
+  },
+  "Declaration uses `sorry`": {
+   "new_sorry": true,
+   "new_error": false,
+   "frozen_audit_publication": false,
+   "frozen_build": false
+  },
+  "sorryAx": {
+   "new_sorry": true,
+   "new_error": false,
+   "frozen_audit_publication": true,
+   "frozen_build": false
+  },
+  "sorryax": {
+   "new_sorry": true,
+   "new_error": false,
+   "frozen_audit_publication": false,
+   "frozen_build": false
+  }
+ },
+ "real_negative_log": {
+  "new_detects": true,
+  "frozen_audit_publication_detects": true,
+  "frozen_build_detects": false,
+  "sha256": "4498f4ea4ee6ddf2a5249696fe18f75285a56b8e38c7f0b3f08c62afb7ce32b1"
+ }
+}

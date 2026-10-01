@@ -1,0 +1,51 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 PaperIV/RegularityFormat.lean -o /workspace/request-project/.lake/runner/lib/lean/PaperIV/RegularityFormat.olean -i /workspace/request-project/.lake/runner/lib/lean/PaperIV/RegularityFormat.ilean
+PaperIV/RegularityFormat.lean:58:0: warning: automatically included section variable(s) unused in theorem `PaperIV.RegularityFormat.trim_subset`:
+  [DecidableEq α]
+  [Fintype α]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq α] [Fintype α] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+PaperIV/RegularityFormat.lean:62:0: warning: automatically included section variable(s) unused in theorem `PaperIV.RegularityFormat.card_trim`:
+  [DecidableEq α]
+  [Fintype α]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq α] [Fintype α] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+PaperIV/RegularityFormat.lean:69:0: warning: automatically included section variable(s) unused in theorem `PaperIV.RegularityFormat.isUniform_of_real`:
+  [DecidableEq α]
+  [Fintype α]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq α] [Fintype α] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+tactic execution of Mathlib.Tactic.nlinarith took 751ms
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_linarith_1._boxed took 105ms
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_nlinarith_1._boxed took 571ms
+import took 3.1s
+cumulative profiling times:
+	.olean serialization 85.2ms
+	attribute application 0.0634ms
+	blocked (unaccounted) 136ms
+	compilation (IR) 58.5ms
+	compilation (LCNF base) 54ms
+	compilation (LCNF mono) 25.3ms
+	congr simp thm 34.6ms
+	elaboration 83.7ms
+	fix level params 1.39ms
+	import 3.1s
+	initialization 37.2ms
+	instantiate metavars 16.8ms
+	interpretation 1.84s
+	let-to-have transformation 0.0665ms
+	linting 29ms
+	norm_num 281ms
+	parsing 10.6ms
+	process pre-definitions 25.8ms
+	ring 34.1ms
+	share common exprs 13ms
+	simp 636ms
+	tactic execution 1.2s
+	type checking 89.3ms
+	typeclass inference 1.2s

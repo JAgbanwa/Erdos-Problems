@@ -1,0 +1,36 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 PaperIV/RootedSimplicialDefect.lean -o /workspace/request-project/.lake/runner/lib/lean/PaperIV/RootedSimplicialDefect.olean -i /workspace/request-project/.lake/runner/lib/lean/PaperIV/RootedSimplicialDefect.ilean
+PaperIV/RootedSimplicialDefect.lean:29:0: warning: automatically included section variable(s) unused in theorem `PaperIV.RootedSimplicialDefect.rootedDefectAt_mono`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+PaperIV/RootedSimplicialDefect.lean:47:0: warning: automatically included section variable(s) unused in theorem `PaperIV.RootedSimplicialDefect.exists_root_step_with_exceptional_budget`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+import took 2.87s
+cumulative profiling times:
+	.olean serialization 47.3ms
+	attribute application 0.0625ms
+	compilation (IR) 0.241ms
+	compilation (LCNF base) 0.441ms
+	compilation (LCNF mono) 0.247ms
+	congr simp thm 1.63ms
+	elaboration 27.1ms
+	fix level params 0.44ms
+	import 2.87s
+	initialization 37.1ms
+	instantiate metavars 2.23ms
+	interpretation 198ms
+	let-to-have transformation 0.077ms
+	linting 7.47ms
+	parsing 4.59ms
+	process pre-definitions 4.36ms
+	share common exprs 1.15ms
+	simp 11.6ms
+	tactic execution 55.2ms
+	type checking 33.5ms
+	typeclass inference 102ms

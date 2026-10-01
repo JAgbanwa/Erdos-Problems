@@ -1,0 +1,158 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+\documentclass[
+]{article}
+\usepackage{xcolor}
+\usepackage{amsmath,amssymb}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math} % this also loads fontspec
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+\usepackage{lmodern}
+\ifPDFTeX\else
+  % xetex/luatex font selection
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{longtable,booktabs,array}
+\usepackage{caption}
+\captionsetup[table]{skip=6pt}
+\newcounter{none} % for unnumbered tables
+\usepackage{calc} % for calculating minipage widths
+% Correct order of tables after \paragraph or \subparagraph
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd\longtable{\par}{\if@noskipsec\mbox{}\fi\par}{}{}
+\makeatother
+% Allow footnotes in longtable head/foot
+\IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
+\makesavenoteenv{longtable}
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\usepackage{bookmark}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same}
+% fallback for those not using the hyperref driver hyperxmp:
+\makeatletter
+\@ifundefined{xmpquote}{\newcommand{\xmpquote}[1]{#1}}{}
+\makeatother
+\hypersetup{
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+
+\author{}
+\date{}
+
+\begin{document}
+
+\section{Gate E8 report --- run\_v1.21\_r1 (Paper IV
+v1.21)}\label{gate-e8-report--run_v121_r1-paper-iv-v121}
+
+Verdict: \textbf{PASS with observations}. Evidence:
+\texttt{20\_EVIDENCE/E8/}.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\subsection{E8 --- Author evidence and packaging
+revalidation}\label{e8--author-evidence-and-packaging-revalidation}
+
+Author objects examined (manuscript directory, bound by
+MANUSCRIPT\_REVIEW\_MANIFEST): \texttt{sorry\_log\_recheck.py},
+\texttt{SORRY\_RECHECK.json},
+\texttt{RUNNER\_SORRY\_FIX\_NOT\_APPLIED.patch},
+\texttt{AXIOM\_COUNT\_RECONCILIATION.json},
+\texttt{EVIDENCE\_AND\_ANNEX\_CORRIGENDUM.md},
+\texttt{LEAN\_IDENTITY\_CHECK.json},
+\texttt{EXTERNAL\_EVIDENCE\_BINDING.json},
+\texttt{RESPONSE\_TO\_AUDIT\_v1.21.md},
+\texttt{EDITORIAL\_CHANGE\_REPORT\_v1.21.md} (grep only). They are not
+inherited verdicts. Each was contrasted with the
+auditor\textquotesingle s own checks.
+
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}lll@{}}
+\toprule\noalign{}
+Item & Examination & Result \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+X-28 detector & The pattern was copied literally from
+\texttt{sorry\_log\_recheck.py} into the auditor\textquotesingle s
+\texttt{e8\_detector\_check.py}, not imported. 10 cases were tested,
+including the real captured negative log (sha256 58441539\ldots). All
+1266 existing logs across the 4 sets were scanned. & Correct: all
+positives detected, all negatives accepted, 0 hits in the logs. The
+frozen runners are unchanged (sha256 82479893\ldots{} / 0a7e66a2\ldots{}
+equal the manifest), and the patch is proposed and not applied.
+\textbf{Mitigated; the historical runners keep their insufficient
+pattern.} OBSERVATION E8-01: the author\textquotesingle s rescan omits
+the 422 logs of author segment 1; the auditor\textquotesingle s scan
+covers them (0 hits). OBSERVATION E8-02: the proposed
+\texttt{audit\_publication.py} patch also adds \texttt{re.I} to the
+\texttt{error} alternative, which broadens that check (acceptable, but a
+change of scope). \\
+X-20 axiom count & \texttt{AXIOM\_COUNT\_RECONCILIATION.json}: 314 + 147
+= 461 & Equals the auditor\textquotesingle s recount on the reused
+auditor logs (E4\_REUSE\_CHECK). The erratum "313" of the internal
+report is corrected by a separate note, without rewriting history.
+\textbf{Kept as errata; resolved.} \\
+X-25 annex README & The corrigendum reads "§8.2" as "Appendix G.1". The
+annex ZIP is unchanged (2847a422\ldots). & \textbf{Resolved by
+supplement} (annex file untouched). \\
+X-19 lakefile residue & Kept deliberately and documented. & Acceptable;
+OBSERVATION kept. \\
+X-21 / X-29 & The corrigendum and §7 record the
+auditor\textquotesingle s byte-identical reproduction and keep the
+historical doubt. & Correct. The historical limitation remains
+recorded. \\
+X-22 disagreement & Kept in both the corrigendum and the response. &
+Correct. \\
+X-26 independence & The corrigendum describes the v1.2 run as a separate
+fresh session. & Correct for run\_v1.2\_r1. \textbf{This v1.21
+revalidation ran in the same session as run\_v1.2\_r1}, as the auditor
+declares (not blind, not independent of that run). \\
+AUD-P1, C-01\ldots C-08 & Preserved in run\_v1.2\_r1 and unaltered (E0:
+prior manifest unchanged). & Correct. \\
+Evidence binding & \texttt{EXTERNAL\_EVIDENCE\_BINDING.json}: 18 items
+and the archive; all hashes match. & Correct. \\
+Response claims & "No theorem, hypothesis, constant, equation tag or
+Lean block changed; five declared renamings". & Confirmed by the
+auditor\textquotesingle s own diff (E2). However, the
+author\textquotesingle s header comparison "allowing only monospacing"
+let a descriptive heading word become a code identifier (NEW-01,
+E1/E6). \\
+Manuscript package & MANUSCRIPT\_REVIEW\_MANIFEST has 88 files; the r1
+ZIP has 90 members (88 + manifest + its sidecar), all hashes equal. The
+non-r1 \texttt{PAPER\_IV\_v1.21\_REVIEW\_PACKAGE.zip} also exists in the
+directory but is not the bound target. & Correct. OBSERVATION E8-03: an
+earlier unbound package sits next to the bound r1 package. \\
+\end{longtable}
+}
+
+\textbf{E8 verdict: PASS with observations.}
+
+\end{document}

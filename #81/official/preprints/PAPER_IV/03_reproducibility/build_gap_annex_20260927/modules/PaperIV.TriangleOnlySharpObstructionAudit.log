@@ -1,0 +1,18 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 PaperIV/TriangleOnlySharpObstructionAudit.lean -o /workspace/request-project/.lake/runner/lib/lean/PaperIV/TriangleOnlySharpObstructionAudit.olean -i /workspace/request-project/.lake/runner/lib/lean/PaperIV/TriangleOnlySharpObstructionAudit.ilean
+'PaperIV.TriangleOnlySharpObstruction.size_add_twice_triangles' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+elaboration took 107ms
+'PaperIV.TriangleOnlySharpObstruction.target_lt_size_of_four_mod_six' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+elaboration took 280ms
+import took 3.34s
+cumulative profiling times:
+	.olean serialization 2.54ms
+	elaboration 387ms
+	import 3.34s
+	initialization 38.5ms
+	interpretation 157ms
+	linting 0.45ms
+	parsing 0.156ms

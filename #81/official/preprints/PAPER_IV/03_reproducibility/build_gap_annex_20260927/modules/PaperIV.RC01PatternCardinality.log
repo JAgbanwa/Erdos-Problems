@@ -1,0 +1,26 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 PaperIV/RC01PatternCardinality.lean -o /workspace/request-project/.lake/runner/lib/lean/PaperIV/RC01PatternCardinality.olean -i /workspace/request-project/.lake/runner/lib/lean/PaperIV/RC01PatternCardinality.ilean
+import took 4.12s
+cumulative profiling times:
+	.olean serialization 99.1ms
+	attribute application 0.0949ms
+	compilation (IR) 1.52ms
+	compilation (LCNF base) 1.58ms
+	compilation (LCNF mono) 0.66ms
+	congr simp thm 1.79ms
+	elaboration 44.3ms
+	fix level params 0.507ms
+	import 4.12s
+	initialization 40.6ms
+	instantiate metavars 0.806ms
+	interpretation 368ms
+	let-to-have transformation 0.132ms
+	linting 10.8ms
+	norm_num 1.31ms
+	parsing 5.82ms
+	process pre-definitions 6.47ms
+	ring 11.6ms
+	share common exprs 1.73ms
+	simp 21.6ms
+	tactic execution 55.3ms
+	type checking 26.7ms
+	typeclass inference 165ms

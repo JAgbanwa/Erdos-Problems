@@ -1,0 +1,3750 @@
+{
+  "en": [
+    {
+      "kind": "display",
+      "line": 21,
+      "text": "\\[\nM(n)=\\left\\lfloor\\frac{n(n+1)}6\\right\\rfloor,\\qquad\nQ_s(n)=M(n+s)-\\binom{s+1}{2}.\n\\]",
+      "sha256": "f9f70924a7d1bdc7b2d93485da697a424041969395c8a8fad763559f28bd664b"
+    },
+    {
+      "kind": "display",
+      "line": 56,
+      "text": "\\[\n\\operatorname{cp}(G)\\le c_4(G)\\le M(n)+b\n\\le\\frac{n^2}{6}+\\frac n6+b.\n\\tag{A}\n\\]",
+      "sha256": "77e0ea440441568c151fd063898801d3448393c8dfa680908e05d026e589038e"
+    },
+    {
+      "kind": "display",
+      "line": 66,
+      "text": "\\[\n\\operatorname{cp}(G)\\le c_4(G)\\le M(n).\n\\tag{1.1}\n\\]",
+      "sha256": "66c2c33c4f896701c51d6dda610db44117bbb678824619e052f9cef26bb9d1e6"
+    },
+    {
+      "kind": "display",
+      "line": 71,
+      "text": "\\[\n\\max_{\\substack{|V(G)|=n\\\\G\\text{ chordal}}}\\operatorname{cp}(G)=M(n).\n\\tag{1.2}\n\\]",
+      "sha256": "7bedf5a51440799e30e9165d11cc68f4890c535a44949dd40a552a060aec5842"
+    },
+    {
+      "kind": "display",
+      "line": 87,
+      "text": "\\[\n\\operatorname{cp}(G)\\le c_4(G)\\le Q_s(n),\n\\qquad\nQ_s(n):=M(n+s)-\\binom{s+1}{2}.\n\\tag{C}\n\\]",
+      "sha256": "70d5f3961d7964318f855d5f2806ece7a1ccd75823e94051db785a017a4b0740"
+    },
+    {
+      "kind": "display",
+      "line": 102,
+      "text": "\\[\nd_E(G,T)\\le A_s\\delta,\\qquad\n0\\le Q_s(n)-\\left(k(n-k)-\\binom{k-s}{2}\\right)\\le(1+4A_s)\\delta,\n\\quad k=|C|+s.\n\\]",
+      "sha256": "94acf3772055ad3193167422f91810ad9ac207d126c0b4b7531caefe09430853"
+    },
+    {
+      "kind": "display",
+      "line": 114,
+      "text": "\\[\nF_4(G)=e(G)-W^*(G),\\qquad \\Delta(G)=M(n)-F_4(G).\n\\]",
+      "sha256": "eb37320477374eb0828bb0565fa486d18b3e70d8d7a093430e66e860d43252ed"
+    },
+    {
+      "kind": "display",
+      "line": 118,
+      "text": "\\[\n\\boxed{\ne(G)-g(\\mathcal P)\\le M(n)\n\\quad\\Longleftrightarrow\\quad\nW^*(G)-g(\\mathcal P)\\le\\Delta(G).\n}\n\\tag{1.3}\n\\]",
+      "sha256": "5d845c5d5becec5aa8b0cdc5625ea92cc2d554e3633f9d972ed35ab75e3b50fe"
+    },
+    {
+      "kind": "display",
+      "line": 129,
+      "text": "\\[\ng(Q)=\\sum_{K\\in Q}\\left(\\binom{|K|}{2}-1\\right).\n\\]",
+      "sha256": "69fb2a87560e1ddc01779860e27c8fde433495c19b3dfe8332d5a601c7103c57"
+    },
+    {
+      "kind": "display",
+      "line": 133,
+      "text": "\\[\ng(Q)+|Q|=e(G),\\qquad\n|Q|\\le T\\quad\\Longleftrightarrow\\quad e(G)\\le g(Q)+T.\n\\tag{1.3a}\n\\]",
+      "sha256": "2e98e99dd1b4577e3705cbe82fc59ff7292a994f67c151618b857b646c208202"
+    },
+    {
+      "kind": "display",
+      "line": 141,
+      "text": "\\[\n\\Delta_{\\{3,4\\}}(G)\\le\\Delta_{\\{3,\\ldots,L\\}}(G)\n\\le\\Delta_{\\mathrm{cp}}(G),\n\\tag{1.3b}\n\\]",
+      "sha256": "63d57f6504946bd9629aa02193995ac8aefeac568f094fe2264acd7dd0389872"
+    },
+    {
+      "kind": "display",
+      "line": 151,
+      "text": "\\[\ne(G)-g(\\mathcal P)\n\\le B_n(p)-\\frac m{20}-\\frac A2\n\\le M(n),\n\\tag{1.4}\n\\]",
+      "sha256": "3b60669b4512dfc93b4a946a6e7624600daf6d9eabb9fc67a5cb96b92867ec1f"
+    },
+    {
+      "kind": "display",
+      "line": 164,
+      "text": "\\[\n\\boxed{\nF_4(G)<\\frac{n^2}{6}-\\eta_0n^2\n\\quad\\text{or}\\quad\n\\exists\\,\\text{near-structure witness for }G.\n}\n\\tag{1.5}\n\\]",
+      "sha256": "3d40ea14b8e51649d65972b154e8742dbce5e513780332121c5d5f2315f65eff"
+    },
+    {
+      "kind": "display",
+      "line": 197,
+      "text": "\\[\ng(K)=\\binom{|K|}{2}-1,\\qquad\ng(\\mathcal P)=\\sum_{K\\in\\mathcal P}g(K).\n\\]",
+      "sha256": "955cad471e45412f03cbdfeb9e8e0aebb38abb1718fa1abc5245e49f97c78e93"
+    },
+    {
+      "kind": "display",
+      "line": 213,
+      "text": "\\[\n|Q|=e(G)-g(\\mathcal P).\n\\tag{2.1}\n\\]",
+      "sha256": "e6af2a1bfd2325ee3b9608123236fe0845f9de68ac37fe805c07003812e8c44f"
+    },
+    {
+      "kind": "display",
+      "line": 222,
+      "text": "\\[\n\\sum_{K:e\\in E(K)}x_K\\le1\\qquad(e\\in E(G)).\n\\tag{2.2}\n\\]",
+      "sha256": "167163f52f054414091b63be309b0c04093624c0e3adccfd3f9123082d2b2690"
+    },
+    {
+      "kind": "display",
+      "line": 227,
+      "text": "\\[\n\\sum_{e\\in E(T)}y_e\\ge2,\\qquad\n\\sum_{e\\in E(Q)}y_e\\ge5.\n\\tag{2.3}\n\\]",
+      "sha256": "3a743d5e86be426750b6384fc09e1f76d2274248d6f9099807c00c22373e94f7"
+    },
+    {
+      "kind": "display",
+      "line": 235,
+      "text": "\\[\nw(x)\\le\\frac56\\sum_K |E(K)|x_K\\le\\frac56e(G).\n\\tag{2.4}\n\\]",
+      "sha256": "16eeb993c56bfba8d59960ebdf2d903e980bce81d2ff07bc43d48e195d8053ff"
+    },
+    {
+      "kind": "display",
+      "line": 244,
+      "text": "\\[\nW^*(G)\\ge2\\nu_3^*(G),\\qquad\nF_4(G)\\le e(G)-2\\nu_3^*(G).\n\\tag{2.5}\n\\]",
+      "sha256": "2a509b487384627f4403a406c91ed78bfde2b5459d90c929dad93a405bb0d64d"
+    },
+    {
+      "kind": "display",
+      "line": 276,
+      "text": "\\[\nw(x)-g(\\mathcal P)\\le\\xi n^2.\n\\tag{3.1}\n\\]",
+      "sha256": "ee4f6528d64bfa1537ba6d4a3c1969b7e0c6bfc84518cbab845496536e3f559f"
+    },
+    {
+      "kind": "display",
+      "line": 296,
+      "text": "\\[\nc_4(G)\\le e(G)-g(\\mathcal P)\n\\le F_4(G)+\\frac\\eta2n^2\n<\\frac{n^2}{6}-\\frac\\eta2n^2.\n\\]",
+      "sha256": "ffff21cc94fcc1e73950868e156e5efae2d68e03441f40efe4915e58228d0c35"
+    },
+    {
+      "kind": "display",
+      "line": 310,
+      "text": "\\[\n\\varepsilon_0=10^{-12},\\qquad \\eta_0=10^{-16}.\n\\tag{4.1}\n\\]",
+      "sha256": "ffec03729bb0f252e3a070e4683d7461103706a77e81dad416c6516d399f543e"
+    },
+    {
+      "kind": "display",
+      "line": 322,
+      "text": "\\[\nd(G)=\\frac1{n^2}\\min_C d_E(G,S_C).\n\\]",
+      "sha256": "a86730fdaaf49908496c3e534af9e8ddbb7e896e46cd94d50f1f2b433ad248b9"
+    },
+    {
+      "kind": "display",
+      "line": 326,
+      "text": "\\[\n|d(G)-d(H)|\\le\\frac{d_E(G,H)}{n^2}.\n\\tag{4.2}\n\\]",
+      "sha256": "9a6650c5c3587c53fe48d6b4ed416e37e115cd16c382cc88358c0e58b666199e"
+    },
+    {
+      "kind": "display",
+      "line": 335,
+      "text": "\\[\nF_4(G_i)\\le F_4(G_{i+1}),\\qquad\nd_E(G_i,G_{i+1})\\le n-1.\n\\tag{4.3}\n\\]",
+      "sha256": "e5e36d722a172360f6eff4c89dc74955631d86e5916049b7ebc1f9361131e12e"
+    },
+    {
+      "kind": "display",
+      "line": 342,
+      "text": "\\[\nW^*(G_{u\\to v})+W^*(G_{v\\to u})\\le2W^*(G).\n\\tag{4.4}\n\\]",
+      "sha256": "898b28343377afc888a2c0634f9914545d36da2d2e89eae2b27e13f1445be4d2"
+    },
+    {
+      "kind": "display",
+      "line": 355,
+      "text": "\\[\nd(X)\\le16D/n^2,\\qquad D=\\eta_0n^2+n/6+1/24.\n\\tag{4.5}\n\\]",
+      "sha256": "433f1df7a822bdc7cac4c2950ef4b33ff759a0d76f1ce68505e1880232a590f4"
+    },
+    {
+      "kind": "display",
+      "line": 361,
+      "text": "\\[\nF_4(X)\\le |Q|\\le B_n(|R|)-\\frac{117}{1825}m-\\frac{12687}{20000}A.\n\\]",
+      "sha256": "da32f00b9c54c909edd3c7c774aafbef21196f25f99e57d622e7e98b4e25c760"
+    },
+    {
+      "kind": "display",
+      "line": 365,
+      "text": "\\[\n\\frac{117}{1825}m+\\frac{12687}{20000}A\\le D.\n\\]",
+      "sha256": "94199193e4e7360358fde56023efb4270141d18aed424fefd42770eed0f6c10f"
+    },
+    {
+      "kind": "display",
+      "line": 373,
+      "text": "\\[\nd(X)\\le\\frac{16D}{n^2}<\\varepsilon_0-\\frac1n,\\qquad\nD=\\eta_0n^2+\\frac n6+\\frac1{24}.\n\\tag{4.6}\n\\]",
+      "sha256": "44182b09a9e9368aa357ee83acb9167e947e775bcf95349997a9ab8ca4629fca"
+    },
+    {
+      "kind": "display",
+      "line": 381,
+      "text": "\\[\n\\frac{16}{6n}+\\frac1n+\\frac{16}{24n^2}\n<\\varepsilon_0-16\\eta_0.\n\\tag{4.6a}\n\\]",
+      "sha256": "0c17ec642be89d7d99d144a589fa7bad9db288d81ea1dd0144131d0d401428cf"
+    },
+    {
+      "kind": "display",
+      "line": 389,
+      "text": "\\[\nd(G_i)<\\varepsilon_0.\n\\]",
+      "sha256": "d452e3107518f4ff8d877b038b77d81f00604643d893f857215f9fd06bdb95cc"
+    },
+    {
+      "kind": "display",
+      "line": 399,
+      "text": "\\[\n\\varepsilon=\\frac{\\alpha^4}{8B^2},\\qquad\n1280B^2\\eta\\le\\alpha^4,\\qquad\nn\\ge\\frac{1280B^2}{\\alpha^4}\n\\]",
+      "sha256": "f96bed3321921fac99f241e1b44e16285283af1168363ee3bf11feeebe7a74f7"
+    },
+    {
+      "kind": "display",
+      "line": 409,
+      "text": "\\[\nF_4(G)\\ge n^2/6-\\eta_0n^2.\n\\]",
+      "sha256": "dec0152ea2da1290e9d17dd3a68cb809105f1948a2621099abfd577bb9cad07a"
+    },
+    {
+      "kind": "display",
+      "line": 413,
+      "text": "\\[\nd_E(G,S_C)\\le\\varepsilon_0n^2,\n\\tag{4.7}\n\\]",
+      "sha256": "82ef6888cab8b85feda2cbd9ad457e3adcb75b75b13b43f543174a1c6816654b"
+    },
+    {
+      "kind": "display",
+      "line": 417,
+      "text": "\\[\n(6|C|-2n-1)^2\n\\le24\\left((\\eta_0+6\\varepsilon_0)n^2+\\frac n6+\\frac1{24}\\right).\n\\tag{4.8}\n\\]",
+      "sha256": "b497f11a574ec43ab37d839a56b08b0caa294bff36c640dd42e5f6d4ae0f5cbd"
+    },
+    {
+      "kind": "display",
+      "line": 430,
+      "text": "\\[\nd(G)<\\varepsilon_0,\\qquad F_4(G)\\ge n^2/6-\\eta_0n^2.\n\\]",
+      "sha256": "2d5f3f8b57408da725b0f9807c3dc540c6a5b9dfd38db0d514b87f18894325c1"
+    },
+    {
+      "kind": "display",
+      "line": 434,
+      "text": "\\[\n|Q|\\le B_n(p)-\\frac m{20}-\\frac A2,\\qquad\nB_n(p)=p(n-p)-\\binom p2.\n\\tag{5.0}\n\\]",
+      "sha256": "091e36457df36a83e8dcd5184e565c9a6da5919a99f18149063e110613673387"
+    },
+    {
+      "kind": "display",
+      "line": 447,
+      "text": "\\[\n\\begin{gathered}\na\\ge1024,\\qquad |n-3a|\\le a/64,\\\\\ne(G-P)+\\#\\{\\text{missing links between }P\\text{ and }V\\setminus P\\}\n\\le a^2/65536.\n\\end{gathered}\n\\tag{5.1}\n\\]",
+      "sha256": "b773b5c64c340a7e435575cd1ee640a69e5299f7ce84ff72d47684c12ab265cc"
+    },
+    {
+      "kind": "display",
+      "line": 459,
+      "text": "\\[\nF_4(S_C)\\le\n\\begin{cases}\nb_0-a_0,&b_0\\ge2a_0,\\\\\n(2b_0-a_0)/3,&a_0\\le b_0\\le2a_0,\\\\\n(a_0+b_0)/6,&b_0\\le a_0.\n\\end{cases}\n\\tag{5.1a}\n\\]",
+      "sha256": "1eb3dffbdb897f6ecd66d6ba6d8de66769c7fc3b96db3f8f1cd8917efdeeef22"
+    },
+    {
+      "kind": "display",
+      "line": 471,
+      "text": "\\[\n\\binom r2-\\left((a-1)r-\\binom a2\\right)\n=\\binom{u+1}{2}\n\\]",
+      "sha256": "792af780fce83a1435053d910bb6fddc3e0ecd4bf33108c774eb65e918de2f72"
+    },
+    {
+      "kind": "display",
+      "line": 478,
+      "text": "\\[\n\\varepsilon_0n^2+un\\le(10^{-12}+1.5\\cdot10^{-6})n^2\n\\le\\frac{(33n/100)^2}{65536}\\le\\frac{a^2}{65536}.\n\\]",
+      "sha256": "1376500417b534f1440918d0516d73b4a9c700d0c9a9dfcebb47bf97e2faf769"
+    },
+    {
+      "kind": "display",
+      "line": 485,
+      "text": "\\[\nR=(P\\setminus X)\\cup Y.\n\\tag{5.2}\n\\]",
+      "sha256": "e26b5f4c92c75cacdeaecef2a89f812101fd18864cf978c6399516230e36fd1c"
+    },
+    {
+      "kind": "display",
+      "line": 490,
+      "text": "\\[\n16384|X|\\le |P|,\\qquad 57344|Y|\\le |P|.\n\\tag{5.3}\n\\]",
+      "sha256": "405159ee7c4021bbe316928220fcac91f1c64d3f3af660aec0638944a4d97e9c"
+    },
+    {
+      "kind": "display",
+      "line": 495,
+      "text": "\\[\n\\begin{gathered}\n99a/100\\le p\\le101a/100,\\quad q\\ge p,\\quad\n44352q\\ge87947a,\\\\\n48(2p-q)_+\\le a,\\quad 3D\\le a,\\quad\n400m<a^2,\\quad2000(A+2m)\\le11a^2.\n\\end{gathered}\n\\tag{5.4}\n\\]",
+      "sha256": "01cfdc920eceb736b8f1ca987460ab4ec0a4ca4451ef213cb806916b63d53b77"
+    },
+    {
+      "kind": "display",
+      "line": 510,
+      "text": "\\[\n64d_{\\max}(G-R)\\le113a+64|X|,\\qquad\n128\\omega(G-R)\\le a+128+128|X|.\n\\]",
+      "sha256": "64c6ce4baac82df2e10f7e946f4717c231f9ddd2f6f7da026d53d7967ac8a96b"
+    },
+    {
+      "kind": "display",
+      "line": 531,
+      "text": "\\[\nB_n(p)=p(n-p)-\\binom p2.\n\\]",
+      "sha256": "78fd0341288b55147cba7652c38849f834f0c79aefbfdf95fe7a2cc06fc26981"
+    },
+    {
+      "kind": "display",
+      "line": 545,
+      "text": "\\[\n|Q|=\\binom p2+pq+m-A-2\\left(f+\\binom p2-\\ell\\right)\n=B_n(p)+m-A-2f+2\\ell.\n\\tag{5.4a}\n\\]",
+      "sha256": "60060a740507e8825a136b4e2525649fe74c6788c4b43c71d9e856acbfd6e3c9"
+    },
+    {
+      "kind": "display",
+      "line": 559,
+      "text": "\\[\nm_0\\ge\\frac pc\\,m.\n\\tag{5.5}\n\\]",
+      "sha256": "640c804a5c53ea73e648bf933ff203a328834b1453be8c07ad8e362e46e9ae23"
+    },
+    {
+      "kind": "display",
+      "line": 566,
+      "text": "\\[\nf\\ge m_0-\\frac{w-1}{p}A\n\\ge\\frac pc\\,m-\\frac{w-1}{p}A.\n\\tag{5.6}\n\\]",
+      "sha256": "11886fc23f44b9511bbb7e584c1c25bb4ae5254181823a104dadfd64ad190479"
+    },
+    {
+      "kind": "display",
+      "line": 572,
+      "text": "\\[\n40c\\le73p,\\qquad 40(w-1)\\le3p.\n\\tag{5.7}\n\\]",
+      "sha256": "693772f38b8957a79300e5c67d7013aa8ba30625e30d3027023cc714ee067f2f"
+    },
+    {
+      "kind": "display",
+      "line": 581,
+      "text": "\\[\n\\sum_xa_x=A,\\quad \\sum_xu_x=2f,\\quad\na_x\\le D,\\quad u_x\\le2t,\\quad\nS:=\\sum_xd_x=A+2f,\n\\tag{5.8}\n\\]",
+      "sha256": "9b25f5f6ae318a58b95d49f9b560514bba211b9f7c8b3f0d68f68b7559bc5a3f"
+    },
+    {
+      "kind": "display",
+      "line": 590,
+      "text": "\\[\n\\begin{aligned}\n\\sum_e b_e&\\le(p-1)S,\\\\\n\\sum_e b_e^2&\\le(p-2)\\sum_xd_x^2+S^2,\\\\\n\\sum_xd_x^2&\\le(D+4t)A+4tf.\n\\end{aligned}\n\\tag{5.9}\n\\]",
+      "sha256": "4876ea0e5bc5642f6b69ae8cc660fc940cb8bdead41b528173298cc75ce6aef8"
+    },
+    {
+      "kind": "display",
+      "line": 599,
+      "text": "\\[\n(a_x+u_x)^2\\le Da_x+4ta_x+2tu_x,\n\\]",
+      "sha256": "69e5f0fed192273799e06c123eee6a6e84c186e4bc3f9f527d4adfae68333507"
+    },
+    {
+      "kind": "display",
+      "line": 605,
+      "text": "\\[\n\\frac{s}{p}\\frac{b_e}{q}\n+\\left(1-\\frac{s}{p}\\right)\\frac{b_e(b_e-1)}{q(q-1)}.\n\\tag{5.10}\n\\]",
+      "sha256": "d3d512ed4da40103e04afa60d289f94ea6aacf93f21809058bbb85a0d1ed9ea3"
+    },
+    {
+      "kind": "display",
+      "line": 611,
+      "text": "\\[\n\\ell\\le\\frac{s}{q}(A+2f)\n+\\frac{(p-2)((D+4t)A+4tf)+(A+2f)^2}{q(q-1)}.\n\\tag{5.11}\n\\]",
+      "sha256": "abadbd6bae355e13651f7393cd0b206ef4d1bedc7f20fc60517cc764a76acfc7"
+    },
+    {
+      "kind": "display",
+      "line": 619,
+      "text": "\\[\n\\begin{gathered}\na\\ge1024,\\quad \\frac qa\\ge\\frac{87947}{44352},\\quad\n\\frac pa\\le\\frac{101}{100},\\quad \\frac Da\\le\\frac13,\\\\\n\\frac ta\\le\\frac1{256},\\quad \\frac sa\\le\\frac1{48},\\quad\n\\frac{A+2f}{a^2}\\le\\frac{11}{2000}.\n\\end{gathered}\n\\tag{5.12}\n\\]",
+      "sha256": "3dcff065247d095846023d140fe9b1ca26e3fed5210ee8edc6408a52571d4d6f"
+    },
+    {
+      "kind": "display",
+      "line": 630,
+      "text": "\\[\n2p-q=2a-q_P-3|X|+3|Y|\n\\le a/64+3a/57344<a/48.\n\\tag{5.12a}\n\\]",
+      "sha256": "792e76839338daf083a6215c5672d39aa4a45d1c487b47b94fa87094e139088b"
+    },
+    {
+      "kind": "display",
+      "line": 636,
+      "text": "\\[\n\\frac{q(q-1)}{a^2}\\ge\n\\left(\\frac{87947}{44352}\\right)^2\n-\\frac{87947}{44352\\cdot1024}\\ge\\frac{393}{100}.\n\\tag{5.13}\n\\]",
+      "sha256": "841e24ba941283f2c9c90a34bf27ef5f0460139137f11ca69f27f0458904cc50"
+    },
+    {
+      "kind": "display",
+      "line": 644,
+      "text": "\\[\n\\begin{aligned}\n\\frac{1}{48Q_0}\n+\\frac{(101/100)(1/3+1/64)+11/2000}{R_0}\n&\\le\\frac{11}{100},\\\\\n\\frac{1}{24Q_0}\n+\\frac{(101/100)/64+11/1000}{R_0}\n&\\le\\frac{29}{1000}.\n\\end{aligned}\n\\tag{5.14}\n\\]",
+      "sha256": "dec31aebf18b6a8f8f80128e82a25cad33afe5d0d629e747d975970e2fd70b88"
+    },
+    {
+      "kind": "display",
+      "line": 660,
+      "text": "\\[\n|Q|\\le B_n(p)-\\frac{117}{1825}m-\\frac{12687}{20000}A\n\\le B_n(p)-\\frac m{16}-\\frac A2.\n\\tag{5.15a}\n\\]",
+      "sha256": "aa4e4ebc393fc560a42b7ff19c0511cdf26131db2f5c4cf15b16bd3003ff8a18"
+    },
+    {
+      "kind": "display",
+      "line": 666,
+      "text": "\\[\n|Q|\\le B_n(p)-\\frac{19}{365}m-\\frac{253}{500}A\n\\le B_n(p)-\\frac m{20}-\\frac A2.\n\\tag{5.15}\n\\]",
+      "sha256": "914900d72e65abea09826680ac44dbc9cb8be4d8e6ab003e469686a35ae40543"
+    },
+    {
+      "kind": "display",
+      "line": 674,
+      "text": "\\[\n|Q|\\le B_n(p)+m-\\frac{13}{20}A-\\frac{48}{25}f.\n\\]",
+      "sha256": "9504514279d6d0ae7f8705a7377bfefbb25a0df390daffbcd1e4bbe2c171eb6d"
+    },
+    {
+      "kind": "display",
+      "line": 678,
+      "text": "\\[\n1-\\frac{48}{25}\\frac{40}{73}=-\\frac{19}{365},\\qquad\n-\\frac{13}{20}+\\frac{48}{25}\\frac3{40}=-\\frac{253}{500}.\n\\]",
+      "sha256": "0eeda82c3beaa62ae44e8257dadca5620f4ad66a3612fd28c6547b0cb891e8f1"
+    },
+    {
+      "kind": "display",
+      "line": 685,
+      "text": "\\[\n|Q|\\le B_n(p)+m-\\frac{39}{50}A-\\frac{971}{500}f.\n\\]",
+      "sha256": "275cd11357bb95da1d20f23dfc7c35beab8fa5c92e7e93e6ade6e8e080940b65"
+    },
+    {
+      "kind": "display",
+      "line": 691,
+      "text": "\\[\nB_n(p)=\\frac{(2n+1)^2}{24}-\\frac{(6p-2n-1)^2}{24}.\n\\tag{5.16}\n\\]",
+      "sha256": "6a0d251100729859f142127690d98f438d2b1cad57a5cf2fc082f3795b741077"
+    },
+    {
+      "kind": "display",
+      "line": 704,
+      "text": "\\[\n|3|R|-n|\\le\\frac n{50},\\qquad\n|3|C|-n|\\le\\frac n{10^4},\\qquad\nd_E(G,S_C)\\le\\varepsilon_0n^2,\n\\tag{5.17}\n\\]",
+      "sha256": "946f6e3a08fea61047c6c97d7b2c333cd68a8c22842ccd0168f87741770aaff5"
+    },
+    {
+      "kind": "display",
+      "line": 711,
+      "text": "\\[\n\\left|e(G)-\\frac{5n^2}{18}\\right|\\le\\frac{n^2}{10^4}.\n\\tag{5.18}\n\\]",
+      "sha256": "1cd33e3a52c36ed4034a0eb4429945329d02177411af7db799463b4bf4957036"
+    },
+    {
+      "kind": "display",
+      "line": 716,
+      "text": "\\[\ne(S_C)=\\binom k2+k(n-k)\n=\\frac{5n^2}{18}+\\frac{2nt}{3}-\\frac{t^2}{2}-\\frac{k}{2}.\n\\]",
+      "sha256": "dedfec79b73aa54e616a3b8eb6144c64d2b022e9196d8cb2c6e3d42454695d81"
+    },
+    {
+      "kind": "display",
+      "line": 737,
+      "text": "\\[\ns-\\binom s2\\le1.\n\\]",
+      "sha256": "29d1530b5a439c33bd86e2958267e21f4d674756f8cc62503f008337eb299f55"
+    },
+    {
+      "kind": "display",
+      "line": 741,
+      "text": "\\[\n|\\mathcal Q|\\ge kh-\\binom k2.\n\\tag{6.1}\n\\]",
+      "sha256": "371dc5441e8eb61df6ce0de768386db19f25130d285f8cbb971c85cd77fb02c0"
+    },
+    {
+      "kind": "display",
+      "line": 747,
+      "text": "\\[\n\\binom k2+kh-2\\binom k2=kh-\\binom k2.\n\\]",
+      "sha256": "f1a2a442a8607f967ac95b1f372a5d25cebc6486bded37191449e040f46728ec"
+    },
+    {
+      "kind": "display",
+      "line": 751,
+      "text": "\\[\n\\operatorname{cp}(S)=c_3(S)=c_4(S)=kh-\\binom k2.\n\\tag{6.2}\n\\]",
+      "sha256": "a96286b14ccc182a9a3fed15cbc9c0aa008003bb81da3314b8d28d7d489e7edc"
+    },
+    {
+      "kind": "display",
+      "line": 760,
+      "text": "\\[\n6f(n,k)+(n-3k)(n-3k+1)=n(n+1).\n\\tag{6.3}\n\\]",
+      "sha256": "ab82d8c367c59c93f9b45d3dc74840a2abfde9181fb87afb7a6a705c7238308f"
+    },
+    {
+      "kind": "display",
+      "line": 765,
+      "text": "\\[\n\\begin{cases}\nk=r,& n=3r,\\\\\nk=r\\text{ or }r+1,& n=3r+1,\\\\\nk=r+1,& n=3r+2.\n\\end{cases}\n\\tag{6.4}\n\\]",
+      "sha256": "48b6eb78acfa2f4555804977d9f8c0efe05f9381929aff016bcb4892a7ccb194"
+    },
+    {
+      "kind": "display",
+      "line": 780,
+      "text": "\\[\ne(G)\\le\\binom n2\\le N^2\\le M(n)+b.\n\\]",
+      "sha256": "6f497d9c34abe4773a3e7c56d29ed54ef89efedf34ac4ea106bd10d027bbb915"
+    },
+    {
+      "kind": "display",
+      "line": 786,
+      "text": "\\[\nh=4\\cdot8^5\\cdot2208^5\\cdot4500^{105}\\cdot(2\\cdot10^{16})^{105}.\n\\]",
+      "sha256": "a7afd076d893a73f66b74952abfccd57744b5ec9aaf3500c9e548e3aa4628c7e"
+    },
+    {
+      "kind": "display",
+      "line": 790,
+      "text": "\\[\nN=T(h+7),\\qquad b=N^2\\le T(h+8).\n\\]",
+      "sha256": "f0ae06406c88234d00c6b9ee7e1270d17d3bbe18bc847ed4468771ba26b5fe66"
+    },
+    {
+      "kind": "display",
+      "line": 798,
+      "text": "\\[\n\\frac{n^2+n}{6}-1\\le M(n)\\le cn^2+Cn.\n\\tag{6.5a}\n\\]",
+      "sha256": "b640e54b3a6cb1f3922d8d40da1bf9abaf4f3162092ccc0c27e2fbd08fb8a07a"
+    },
+    {
+      "kind": "display",
+      "line": 805,
+      "text": "\\[\n\\operatorname{cp}(G)=M(n)\n\\ge\\frac{n^2}{6}+\\frac n6-1\n>\\frac{n^2}{6}+cn+B_0.\n\\tag{6.5}\n\\]",
+      "sha256": "ffe78925678f59138889c3956a39841fabff91d8ab244241b6ce9405a5a6d21f"
+    },
+    {
+      "kind": "display",
+      "line": 818,
+      "text": "\\[\nd(C)=1+e_{\\rm int}(C)-e_{\\rm cruz}(C),\n\\]",
+      "sha256": "1b6b21cc9f1477348be6f969ac55ff87afe83296e740b6b96d253ee1df0507d5"
+    },
+    {
+      "kind": "display",
+      "line": 822,
+      "text": "\\[\n|\\mathcal Q|-\\left(kh-\\binom k2\\right)\n=\\sum_{C\\in\\mathcal Q}d(C).\n\\tag{6.6}\n\\]",
+      "sha256": "35b8db139bf1f02d248433cee7a92c73af6187ec5c7b50bcbecfe6359ca9d22a"
+    },
+    {
+      "kind": "display",
+      "line": 828,
+      "text": "\\[\nd(C)=1+\\binom s2-s=\\frac{(s-1)(s-2)}2\\ge0;\n\\]",
+      "sha256": "ff0b85690b99a5f3c505235579aa34a576b389ae4ff8e7e78e10a205e81b3083"
+    },
+    {
+      "kind": "display",
+      "line": 838,
+      "text": "\\[\n\\bigl(M(n)-B_n(|R|)\\bigr)+\\frac m{16}+\\frac A2\\le\\delta,\n\\qquad\nd_E(G,S_R)=m+A\\le16\\delta.\n\\tag{6.7}\n\\]",
+      "sha256": "9bb18d2c1a91f0c35193517287339cd31c0274f01bd9a7cfdd2dc901ef0330ad"
+    },
+    {
+      "kind": "display",
+      "line": 847,
+      "text": "\\[\n|Q|<\\frac{n^2}{6}-\\frac{\\eta_0}{2}n^2\n\\le M(n)-\\frac{\\eta_0}{2}n^2.\n\\]",
+      "sha256": "161a24098930ba3eea07570b912ace75bbaf8c598931876eef42acaf8bf5beac"
+    },
+    {
+      "kind": "display",
+      "line": 852,
+      "text": "\\[\nM(n)-\\delta\\le |Q|\n\\le B_n(|R|)-\\frac m{16}-\\frac A2,\n\\]",
+      "sha256": "ec1f46f3af75d1d92a6bf11a8675f6338904a54cbe3aa77d893d8654a513ef16"
+    },
+    {
+      "kind": "display",
+      "line": 857,
+      "text": "\\[\nm+A\\le16\\left(\\frac m{16}+\\frac A2\\right)\\le16\\delta.\n\\]",
+      "sha256": "f6f38ecb243a3aa58ecd5d7a8a93ac2ec41ffd8938f4125c9cd0357440d0da94"
+    },
+    {
+      "kind": "display",
+      "line": 863,
+      "text": "\\[\nd_R(K)=1+\\binom{a_K}{2}+3\\binom{b_K}{2}-a_Kb_K\n=\\frac{(a_K-b_K)(a_K-b_K-1)}2+(b_K-1)^2.\n\\tag{6.7a}\n\\]",
+      "sha256": "374f9711316adfaf255f36e26d5cd37e459be9028cf156fe40a293fbb07b6265"
+    },
+    {
+      "kind": "display",
+      "line": 873,
+      "text": "\\[\n\\sum_{K\\in Q}d_R(K)=|Q|-B_n(|R|)+A+3m.\n\\tag{6.7b}\n\\]",
+      "sha256": "e222c3885c42e0a0102f54644412b9c5f69aa175e3d16d298bd316dc26d7077c"
+    },
+    {
+      "kind": "display",
+      "line": 882,
+      "text": "\\[\n6B_n(k)+(n-3k)(n-3k+1)=n(n+1)\n\\tag{6.8}\n\\]",
+      "sha256": "345091a984eee29bd45b2852a54a49468b59a4c009c129fd696c4d571abf6206"
+    },
+    {
+      "kind": "display",
+      "line": 887,
+      "text": "\\[\n\\operatorname{cp}(G)=M(n)\n\\quad\\Longleftrightarrow\\quad\nc_4(G)=M(n)\n\\quad\\Longleftrightarrow\\quad\nG\\text{ is complete-split with an optimal core},\n\\tag{6.9}\n\\]",
+      "sha256": "d8b58aea6adc3d4eb2466f62c63f47edf77a2e2f06b37ca3411279a9b042fd7f"
+    },
+    {
+      "kind": "display",
+      "line": 900,
+      "text": "\\[\nT(C,D,H)=(K_C\\sqcup I_D)\\vee I_H.\n\\]",
+      "sha256": "e4f7c5e93f88acedf338cbef1d0cb7187c506c4d382f2d01d619e2b47bd680bd"
+    },
+    {
+      "kind": "display",
+      "line": 904,
+      "text": "\\[\nB_{s,n}(k)=k(n-k)-\\binom{k-s}{2}.\n\\tag{6.10}\n\\]",
+      "sha256": "38487837fcc0210862fb48d62f462819f518097b6a929111dabd420334ce3f64"
+    },
+    {
+      "kind": "display",
+      "line": 911,
+      "text": "\\[\n\\epsilon_s=\\frac1{10^{41}(s+1)^8},\\qquad\nA_s=\\max\\{40000(s+1)^3,\\,2/\\epsilon_s\\}.\n\\tag{6.11}\n\\]",
+      "sha256": "2c73e8dbcae2827de15c7917e98e56455ac7180bf2a8d2381091a04f349e02e7"
+    },
+    {
+      "kind": "display",
+      "line": 917,
+      "text": "\\[\nc_4(G)\\ge Q_s(n)-\\delta,\\qquad 0\\le\\delta\\le\\gamma_s n^2,\n\\]",
+      "sha256": "deca27ab8652bf43c12f45ff40a55bee4fc9d13a4b51229dc8f006efb5a78bf5"
+    },
+    {
+      "kind": "display",
+      "line": 921,
+      "text": "\\[\n\\begin{aligned}\nd_E(G,T(C,D,H))&\\le A_s\\delta,\\\\\n0\\le Q_s(n)-B_{s,n}(k)&\\le(1+4A_s)\\delta.\n\\end{aligned}\n\\tag{6.12}\n\\]",
+      "sha256": "f69ecba4200059bd4de6353f06fc6fb039b238118dc90b774b3a13d48940a8cf"
+    },
+    {
+      "kind": "display",
+      "line": 929,
+      "text": "\\[\n\\begin{aligned}\nN_{\\rm bad}(Q)&\\le\\tau+(1+7A_s)\\delta,\\\\\nE_{\\rm bad}(Q)&\\le10\\tau+10(1+7A_s)\\delta.\n\\end{aligned}\n\\tag{6.13}\n\\]",
+      "sha256": "e5c4f827a6798fe566d58eb3dd5b60db60b111ca5a57fecbd1fde2889373c3d0"
+    },
+    {
+      "kind": "display",
+      "line": 945,
+      "text": "\\[\nE=e(G[S])-\\binom{|S|-s}{2}\\ge0.\n\\]",
+      "sha256": "cf2acbf25c94db6d438621dd7220b4ce8e88d28e6617f20988dd1de06053f451"
+    },
+    {
+      "kind": "display",
+      "line": 949,
+      "text": "\\[\n\\begin{gathered}\na+\\frac{m}{2000(s+1)^2}+R_*\\le\\delta,\\qquad\nnt_W\\le800(s+1)^2R_*,\\\\\nE\\le R_*+nt_W,\\qquad rn\\le16sE,\\\\\nd_E(G,T(C,D,H))\\le a+m+E+2rn+2nt_W.\n\\end{gathered}\n\\tag{6.14}\n\\]",
+      "sha256": "5460e973fb475aaf3faaf76153b9d5534d6b9c99cff74dbbc96b3ba1b257ad9e"
+    },
+    {
+      "kind": "display",
+      "line": 961,
+      "text": "\\[\nd_E(G,T)\\le a+m+\n\\bigl(1+32s+800(3+32s)(s+1)^2\\bigr)R_*.\n\\]",
+      "sha256": "0a1081e87ea5f9ba8fde52f44b317a8def8e710c6c884a37edfbbf235aa1a331"
+    },
+    {
+      "kind": "display",
+      "line": 968,
+      "text": "\\[\nu=Q_s(t)-Q_s(t-1),\\qquad\n\\delta'=\\delta+\\deg(v)-u.\n\\tag{6.15}\n\\]",
+      "sha256": "74f069c1a68a69a97bce0cdd1da99dd32bfc4ff217651fc91dee5b46e672aab1"
+    },
+    {
+      "kind": "display",
+      "line": 974,
+      "text": "\\[\n\\delta'\\le\\delta-\\epsilon_s t+\\frac13.\n\\]",
+      "sha256": "ce98c48964333305fd56fb4f6cd46544fa65a2c6132158543791a70b3b80d382"
+    },
+    {
+      "kind": "display",
+      "line": 982,
+      "text": "\\[\n\\begin{aligned}\nN_{\\rm bad}(Q)&\\le |Q|-B_{s,n}(k)+3d_E(G,T),\\\\\nE_{\\rm bad}(Q)&\\le10\\bigl(|Q|-B_{s,n}(k)+3d_E(G,T)\\bigr).\n\\end{aligned}\n\\tag{6.16}\n\\]",
+      "sha256": "3681d876c7f98bed481b61f48e7b97ad705bc95228880eb4a4c7c79d4fa3f1eb"
+    },
+    {
+      "kind": "display",
+      "line": 992,
+      "text": "\\[\nd_E(G,T_*)\\le A_s\\delta+n\\sqrt{(1+4A_s)\\delta}.\n\\tag{6.17}\n\\]",
+      "sha256": "457df03a072fd4c753353259738c2e6c8f208b7e2ab87857a0632e7ab6cb9d89"
+    },
+    {
+      "kind": "display",
+      "line": 997,
+      "text": "\\[\n\\operatorname{cp}(G)=Q_s(n)\n\\quad\\Longleftrightarrow\\quad c_4(G)=Q_s(n)\n\\quad\\Longleftrightarrow\\quad\nG\\cong(K_{k-s}\\sqcup I_s)\\vee I_{n-k},\n\\tag{6.18}\n\\]",
+      "sha256": "d6a6d667ac06001abe2e752c76fb5ca8a768a2fc430b5c0f6457324e2ede2d1a"
+    },
+    {
+      "kind": "display",
+      "line": 1007,
+      "text": "\\[\n\\operatorname{dist}(k,\\mathcal K_{s,n})^2\n\\le Q_s(n)-B_{s,n}(k).\n\\tag{6.19}\n\\]",
+      "sha256": "ed3e3f36087216ef151741337ecda6fc3b9d4e33c70d8b316c60c2b06ebc8876"
+    },
+    {
+      "kind": "display",
+      "line": 1017,
+      "text": "\\[\nG_{s,q,d}=(K_{q+d-s}\\sqcup I_s)\\vee I_{2q-s-d}\n\\]",
+      "sha256": "73c1cadc14a218f2ce0c187d65944015ecc7f631f10e45022249e2c33f18b833"
+    },
+    {
+      "kind": "display",
+      "line": 1021,
+      "text": "\\[\n\\operatorname{cp}(G_{s,q,d})=c_4(G_{s,q,d})\n=Q_s(n)-\\delta_d,\\qquad\n\\delta_d=d^2+\\binom d2=\\frac{3d^2-d}{2}.\n\\tag{6.20}\n\\]",
+      "sha256": "d049d8c3f0a13c1cee01c77599121f6a8f5ae19f158e8953af6af6d917bb26da"
+    },
+    {
+      "kind": "display",
+      "line": 1028,
+      "text": "\\[\nd_E(G_{s,q,d},T)\\ge\\frac{nd}{4}\n\\ge\\frac{n\\sqrt{\\delta_d}}8.\n\\tag{6.21}\n\\]",
+      "sha256": "d9e42b26f10da721b7c3c7a64572b1ea2561c8cb01301a7dc9dc0f3d5d9d128a"
+    },
+    {
+      "kind": "display",
+      "line": 1037,
+      "text": "\\[\n2\\bigl(e(G_{s,q,d})-e(T)\\bigr)\n=d(4q-4s-d-1).\n\\]",
+      "sha256": "f64dc8e6332d598a849ebd4dade3ac2c79f7863fcdb2c43f8a39356c53b33573"
+    },
+    {
+      "kind": "display",
+      "line": 1042,
+      "text": "\\[\n4\\bigl(e(G_{s,q,d})-e(T)\\bigr)-nd\n=d(5q-7s-2d-2)\\ge0.\n\\]",
+      "sha256": "c430db0933061703a1fe06cc58d59ff39035a2983e45e1327ec39ce234c87ba5"
+    },
+    {
+      "kind": "display",
+      "line": 1059,
+      "text": "\\[\nF_4(G)\\le M(n-s)+ns.\n\\tag{6.22}\n\\]",
+      "sha256": "bcb1b20aa7d29f67fa0fa1ec08b01159977dbda33528b72730c9772b3116d1e2"
+    },
+    {
+      "kind": "display",
+      "line": 1064,
+      "text": "\\[\nF_4(G)\\le M(n-s)+ns-\\binom{s+1}{2}.\n\\tag{6.23}\n\\]",
+      "sha256": "200c2f6d75148a5aced369d462d07cb178537f4ea4a1843ba14a0479b1d4e1e3"
+    },
+    {
+      "kind": "display",
+      "line": 1073,
+      "text": "\\[\n\\max\\{0,|Q_j|-n_j^2/6\\}=o(n_j^2).\n\\tag{6.24}\n\\]",
+      "sha256": "2a71ca264cf10d917060604ec0efca0d78ccb94062d52963f0ec334e696793db"
+    },
+    {
+      "kind": "display",
+      "line": 1078,
+      "text": "\\[\nc_4(G_j)\\ge n_j^2/6-\\delta_j,\\qquad \\delta_j=o(n_j^2).\n\\]",
+      "sha256": "c70968d0c7b0d2681eb6ed166a9e66abdf2ecaf26ad2d525c4613dcf2d96865b"
+    },
+    {
+      "kind": "display",
+      "line": 1082,
+      "text": "\\[\n|R_j|=n_j/3+o(n_j),\\qquad\nd_E(G_j,S_{R_j})=o(n_j^2),\n\\tag{6.25}\n\\]",
+      "sha256": "fb6dd23cd81b3008d6676ab5ae61a4f2e6059827b21de02f87df670b2317a612"
+    },
+    {
+      "kind": "display",
+      "line": 1088,
+      "text": "\\[\nN_{\\rm bad}(Q)\\le\\tau+e_j,\\qquad\nE_{\\rm bad}(Q)\\le10\\tau+10e_j.\n\\tag{6.26}\n\\]",
+      "sha256": "920de8ceb00901153ba170d076a869c5a9cf020d74e5f391d27fa584f298ebde"
+    },
+    {
+      "kind": "display",
+      "line": 1098,
+      "text": "\\[\n\\mathcal S_G(R)=n\\bigl||R|-n/3\\bigr|\n +e(G-R)+A_R+\\bigl(M(n)-B_n(|R|)\\bigr),\n\\tag{6.27}\n\\]",
+      "sha256": "50c1215ead2d41a3169bc2a02a2c4d9f692a0cd369d80157f2ff8f1a33c2fee6"
+    },
+    {
+      "kind": "display",
+      "line": 1106,
+      "text": "\\[\n\\begin{aligned}\nc_{\\rm poly}&=4\\cdot17664^5\\cdot9000^{105}+3006,\\\\\nc_{\\rm far}&=c_{\\rm poly}(128\\cdot10^{82})^{105},\\\\\nc_T&=h_{\\rm iter}+c_{\\rm far}+841780,\\qquad\nP(s)=c_T(s+1)^{1680},\n\\end{aligned}\n\\tag{6.28}\n\\]",
+      "sha256": "05d1635fbef6e0606401e6f7e7df5bc01706207743f3b13e97f8353fd2f8b9cb"
+    },
+    {
+      "kind": "display",
+      "line": 1118,
+      "text": "\\[\ns_{\\max}(n)=\\max\\{S\\in\\mathbb N:S\\le n,\\ T(P(S))\\le n\\}.\n\\tag{6.29}\n\\]",
+      "sha256": "db5a7ca6b1422275ee6b214eb2375d9714cf59a36b981efc63a9657e559fb458"
+    },
+    {
+      "kind": "display",
+      "line": 1218,
+      "text": "\\[\nW^*(G)-g(\\mathcal P)\n=\\bigl(e(G)-g(\\mathcal P)\\bigr)-F_4(G)\n\\le M(n)-F_4(G)=\\Delta(G).\n\\tag{8.1}\n\\]",
+      "sha256": "beb753b189238e058039848241041a82778aa0922b99798bf2c5e2d5348c1f2a"
+    },
+    {
+      "kind": "display",
+      "line": 1392,
+      "text": "\\[\nd_{G[U]}(v)\\ge |U|/2+t\\qquad(v\\in U),\n\\tag{B.1}\n\\]",
+      "sha256": "6bf7bfdbdb9f12a0e06cc20aa09266979041da15438ca409cc9902531d47e3dc"
+    },
+    {
+      "kind": "display",
+      "line": 1399,
+      "text": "\\[\n\\sum_{u\\in U}b(u,f(u))\n\\le\\frac1{t+1}\\sum_{u\\in U}\\sum_{v\\in U}b(u,v).\n\\tag{B.2}\n\\]",
+      "sha256": "91ab5ea4658cb2186eba727d2b157eb0f4a5b58e3a4c1a6ad5a870d05cba4e49"
+    },
+    {
+      "kind": "display",
+      "line": 1407,
+      "text": "\\[\ng(\\mathcal P\\cup\\mathcal A)=g(\\mathcal P)+|U|.\n\\tag{B.3}\n\\]",
+      "sha256": "d3a01bc3a952ee812fc2d4889a3bc9d11c8011f6debfe8c4544fbc5f9206a328"
+    },
+    {
+      "kind": "display",
+      "line": 1414,
+      "text": "\\[\n\\sum_{u\\in U}\\sum_{v\\in U}b(u,v)\\le(t+1)B_{\\rm abs},\n\\]",
+      "sha256": "4472120392a8e52f55872089e8fa931b23c42719f47b79b1429de1c366159acc"
+    },
+    {
+      "kind": "display",
+      "line": 1424,
+      "text": "\\[\n|d_R(v)-\\theta d_F(v)|\\le2\\qquad(v\\in V(F)).\n\\tag{B.4}\n\\]",
+      "sha256": "03a4cc0727a6b6805416f15c35cfb6720db06294601e6441ced5afd8f6d2dd76"
+    },
+    {
+      "kind": "display",
+      "line": 1447,
+      "text": "\\[\n\\sum_{H\\ni v}z_H\\le1,\\qquad\n\\sum_{H\\supseteq\\{v,w\\}}z_H\\le\\gamma\\quad(v\\ne w).\n\\tag{3.2}\n\\]",
+      "sha256": "f983fc9ba526467766f9937517cf6bb4c9665af062a2ccc62aa3fc57a0767238"
+    },
+    {
+      "kind": "display",
+      "line": 1453,
+      "text": "\\[\n|\\mathcal M|\\ge(1-\\beta)\\sum_{H\\in\\mathcal H}z_H-\\beta|U|-C.\n\\tag{3.3}\n\\]",
+      "sha256": "00ffca322f1b58d6586fbc18676924c4b51b11c53afe407ed88aad5b8948f5b7"
+    },
+    {
+      "kind": "display",
+      "line": 1462,
+      "text": "\\[\n\\begin{aligned}\n|\\mathcal M|&\\ge(1-\\beta)\\sum_{H\\in\\mathcal H}z_H-\\epsilon|U|-C,\\\\\n|\\mathcal M\\cap\\mathcal A|&\\ge(1-\\beta)\\sum_{H\\in\\mathcal A}z_H-\\epsilon|U|-C.\n\\end{aligned}\n\\tag{3.4}\n\\]",
+      "sha256": "ed615bbe08392068cb25cc9fe2b84133e62c242636e69f524cb41d5d1bb1ac51"
+    },
+    {
+      "kind": "display",
+      "line": 1471,
+      "text": "\\[\np=\\max\\{\\lceil u\\rceil,k_0\\},\\qquad\nq=\\max\\{\\lceil a\\rceil,k_0\\}.\n\\]",
+      "sha256": "60bdb4eb09db8669a541a14fee5be3735eda2e5d5390dd46577d168659693533"
+    },
+    {
+      "kind": "display",
+      "line": 1478,
+      "text": "\\[\nm\\ge(1-b)(u+a)-b(|U|+p+q)-C_0,\n\\qquad |\\mathcal M\\cap\\mathcal A|\\ge m-p.\n\\]",
+      "sha256": "80689bdff4ce479f5ad861cea14ba08d47a6dd9f60e2aec8867b780053a60071"
+    },
+    {
+      "kind": "display",
+      "line": 1488,
+      "text": "\\[\n\\sum_{K:\\ e,f\\in E(K)}x_K\\le\\gamma\\qquad(e\\ne f).\n\\tag{3.5}\n\\]",
+      "sha256": "a485658a87b3916e06bd31caef402b2386e019e56cffb62743cc43af847e4d27"
+    },
+    {
+      "kind": "display",
+      "line": 1493,
+      "text": "\\[\ng(\\mathcal P)\\ge(1-\\beta)(2t_3+5t_4-6)\n -5\\epsilon\\binom{n+1}{2}-5D.\n\\tag{3.6}\n\\]",
+      "sha256": "837841da2a4e495fc8d4895d00b5f5054b925fbe369532e9289590e55ac0227b"
+    },
+    {
+      "kind": "display",
+      "line": 1513,
+      "text": "\\[\n(1-u-v)S-g(\\mathcal P)\\le\\zeta n^2,\n\\]",
+      "sha256": "2ce63b74411eb5d1276da6a5df38525598d577f25ac763b79c07deb3f44b05e8"
+    },
+    {
+      "kind": "display",
+      "line": 1517,
+      "text": "\\[\nw(x)-g(\\mathcal P)\n\\le L+\\left(\\zeta+\\frac56(u+v)\\right)n^2.\n\\tag{3.7}\n\\]",
+      "sha256": "0fffed4f2283c9b9504623e1348a57b32d684bdd3d6ea49429c34212bdd5ad89"
+    },
+    {
+      "kind": "display",
+      "line": 1523,
+      "text": "\\[\n\\begin{aligned}\nw(x)-g(\\mathcal P)\n={}&(w(x)-L-S)+((1-u-v)S-g(\\mathcal P))\\\\\n&+L+(u+v)S.\n\\end{aligned}\n\\]",
+      "sha256": "5401ee692c168bd0d94f97aa71b0a7d874b22e000cab111534275808ec18886f"
+    },
+    {
+      "kind": "display",
+      "line": 1533,
+      "text": "\\[\n30C\\le\\xi n^2,\\qquad 2\\zeta\\le\\xi\n\\]",
+      "sha256": "fe49c39cb8ae105210cd7818e535cb06b10aabe6257e422258c1c18b812ecfbf"
+    },
+    {
+      "kind": "display",
+      "line": 1539,
+      "text": "\\[\n(1-v)\\operatorname{vol}(H)\n\\le |\\operatorname{cleanFiber}(H)|.\n\\tag{3.8}\n\\]",
+      "sha256": "6d98f2c0fc29683d5ba8e52d2227662604562b35b17486cea08652c7adbc674d"
+    },
+    {
+      "kind": "display",
+      "line": 1547,
+      "text": "\\[\n2(a-b)+5b=2a+3b.\n\\tag{3.9}\n\\]",
+      "sha256": "0309b93fcd7d90e6721fe92e738e7de683c42d9da474f1b13621970ba86b14c4"
+    },
+    {
+      "kind": "display",
+      "line": 1556,
+      "text": "\\[\ns=\\min\\{\\xi/4500,1/10\\},\\qquad\nd=u=v=s,\\qquad \\delta=s^{21}/2208.\n\\]",
+      "sha256": "3d2d8c14d8c136b54ecef589fd828dc553318d98bb0b858b7b76fa73c6098d58"
+    },
+    {
+      "kind": "display",
+      "line": 1567,
+      "text": "\\[\nS=\\sum_{H\\text{ active}}g(H)\\psi_H.\n\\]",
+      "sha256": "0b2356ea6f26c4ec86da83e1a30bd3c761880c8d2ae3e0459e6b8a53d37e0ac4"
+    },
+    {
+      "kind": "display",
+      "line": 1573,
+      "text": "\\[\nw(x)-S\\le L,\\qquad\nL=3\\left(3\\delta+\\frac1{k_0}+d\\right)n^2\n  +(N_4+2N_3)\\theta.\n\\tag{3.10}\n\\]",
+      "sha256": "f9ae0ba5a8ca0c68f86333ea0e9526f695409ecd56d93a566ada52f6909a9301"
+    },
+    {
+      "kind": "display",
+      "line": 1584,
+      "text": "\\[\n\\begin{aligned}\nw(x)-g(\\mathcal P)\\le{}&\n\\left(9\\delta+\\frac3{k_0}+3d+\\zeta\n             +\\frac56(u+v)\\right)n^2\\\\\n&+(N_4+2N_3)\\theta .\n\\end{aligned}\n\\tag{3.11}\n\\]",
+      "sha256": "5456de692706de32171d4b124291ac5c5a0a94e683b6d1f64c73284fa8f06836"
+    },
+    {
+      "kind": "display",
+      "line": 1598,
+      "text": "\\[\na_3=d^3-3\\delta>0,\\qquad a_4=d^6-6\\delta>0,\n\\]",
+      "sha256": "94f2f3cb3d38a016c7b752e6c2381084a8e10656f185932bf85b2770ef2f39e8"
+    },
+    {
+      "kind": "display",
+      "line": 1602,
+      "text": "\\[\nk_3a_4+k_4a_3\\le\\gamma a_3a_4t,\n\\tag{3.12}\n\\]",
+      "sha256": "ca238d1c6d1bb3797e44afa02f11370fbf7648c95f7c653f6149222edb9d2c92"
+    },
+    {
+      "kind": "display",
+      "line": 1609,
+      "text": "\\[\n\\sum_{K:e,f\\in E(K)}x_K^{\\rm limpio}\n\\le\\frac{k_3}{a_3t}+\\frac{k_4}{a_4t}\n=\\frac{k_3a_4+k_4a_3}{a_3a_4t}\\le\\gamma.\n\\tag{3.13}\n\\]",
+      "sha256": "723d6053746b774718c709b97691dba3744291757908aac2544246cae3d45d95"
+    },
+    {
+      "kind": "display",
+      "line": 1618,
+      "text": "\\[\n12+10D\\le\\zeta n^2,\n\\tag{3.14}\n\\]",
+      "sha256": "cec696fd648b9ddab1cb2311e44dfb97bf82fdded051fd84f9f45bcce31e3b05"
+    },
+    {
+      "kind": "display",
+      "line": 1629,
+      "text": "\\[\na=\\min\\{\\xi/4500,1/10\\},\\quad\n\\delta=a^{21}/2208,\\quad z=\\min\\{\\xi/10,1\\},\\quad\nk_0=\\lceil1500/\\xi\\rceil+1.\n\\]",
+      "sha256": "6687d4ec573ed1a0f677ef33a028dddb145ff1b21ad3d7d98d99010a2ae410f3"
+    },
+    {
+      "kind": "display",
+      "line": 1635,
+      "text": "\\[\n\\gamma=\\frac1{\\lceil1/\\gamma_*\\rceil},\\qquad C=\\lceil C_*\\rceil,\\qquad\na_3=a^3-3\\delta,\\quad a_4=a^6-6\\delta.\n\\]",
+      "sha256": "83102e7f9c6a9989b41a851031746954baf1eaf0014d37b73bce578f2013c065"
+    },
+    {
+      "kind": "display",
+      "line": 1640,
+      "text": "\\[\n\\begin{split}\nN_E(\\xi)=1+\\max\\biggl\\{&\nk_0,\\ \\left\\lceil B/\\delta\\right\\rceil,\\\n\\left\\lceil(12+10D_*)/z\\right\\rceil,\\\\\n&\\left\\lceil\\frac{4B^5(a_3+a_4)}{\\gamma a_3a_4}\\right\\rceil,\\\n\\left\\lceil\\frac{50(1+2C)}{\\xi}\\right\\rceil\n\\biggr\\}.\n\\end{split}\n\\tag{C.1}\n\\]",
+      "sha256": "9fd2928b49abda7515a3708156d4baecd55beb68e2b777d720e2d1fcf65d3ca9"
+    },
+    {
+      "kind": "display",
+      "line": 1654,
+      "text": "\\[\nw(x)-g(\\mathcal P)\\le\\xi n^2\n\\qquad(n\\ge N_E(\\xi))\n\\tag{C.2}\n\\]",
+      "sha256": "419666e35fea6de8744addc61819ab1d514dfb3dd1bd28bf34f022db7352f0ca"
+    },
+    {
+      "kind": "display",
+      "line": 1662,
+      "text": "\\[\na=(9\\cdot10^{19})^{-1},\\qquad\n\\delta=\\frac1{2208(9\\cdot10^{19})^{21}},\\qquad\nz=(2\\cdot10^{17})^{-1},\\qquad k_0=3\\cdot10^{19}+1.\n\\]",
+      "sha256": "2710fb493f3a87db08bece27e3a1dc78fef75dfc6101901620d971860692f605"
+    },
+    {
+      "kind": "display",
+      "line": 1668,
+      "text": "\\[\nG_1=\\lceil1/\\gamma_*\\rceil,\\quad G_2=\\lceil C_*\\rceil,\\quad\nG_3=\\lceil2\\cdot10^{17}(12+10D_*)\\rceil.\n\\]",
+      "sha256": "6f73e1d9aba46012c90e26c1f5968ac6dbee0e71c6e7dd19f97f60968d4678ef"
+    },
+    {
+      "kind": "display",
+      "line": 1684,
+      "text": "\\[\nN_{\\rm lejano}(\\eta_0)\\le T(h+7).\n\\tag{C.3}\n\\]",
+      "sha256": "4504491877173c3e1aa0158b3712df90602066fd973d6de411f06c48603036c0"
+    },
+    {
+      "kind": "display",
+      "line": 1691,
+      "text": "\\[\nN_{\\rm far}(\\eta)\\le\nT\\!\\left(\\left\\lceil\\frac{c_{\\rm poly}}{\\eta^{105}}\\right\\rceil\\right),\n\\qquad c_{\\rm poly}=4\\cdot17664^5\\cdot9000^{105}+3006.\n\\tag{C.4}\n\\]",
+      "sha256": "d92e2e4824ee50ba91d776d45156fd51a7411b8ed0e8f8266e3e2d65d04bb3cf"
+    },
+    {
+      "kind": "display",
+      "line": 1708,
+      "text": "\\[\nn(n-2)\\le3g(\\mathcal P).\n\\tag{D.1}\n\\]",
+      "sha256": "9dba624690aa2bb3a830844bbd12e0db84e1f3d9474ca73b3a86a46589c89333"
+    },
+    {
+      "kind": "display",
+      "line": 1713,
+      "text": "\\[\n|Q|=\\binom n2-g(\\mathcal P)\n\\le\\frac{n(n-1)}2-\\frac{n(n-2)}3\n=\\frac{n(n+1)}6.\n\\tag{D.2}\n\\]",
+      "sha256": "5c3e4429652ea3bfd1d47271676e0a2c8c212f53c22c7cfed8d9a2ee06a86044"
+    },
+    {
+      "kind": "display",
+      "line": 1735,
+      "text": "\\[\n3g(\\mathcal P)=2|E_{\\rm cub}|+3b_4.\n\\tag{D.3}\n\\]",
+      "sha256": "656a736b385bec4343c26a88a06229c259b7856f760b40d4c7619af36ba301c0"
+    },
+    {
+      "kind": "display",
+      "line": 1740,
+      "text": "\\[\n3g(\\mathcal P)=(3M+1)3M+3M=(3M+2)3M=n(n-2).\n\\tag{D.4}\n\\]",
+      "sha256": "0ef43fab1a0f0d9499b347cdd01c4d20989d94f4b27135b8ed74352f2f09edfa"
+    },
+    {
+      "kind": "display",
+      "line": 1751,
+      "text": "\\[\na+3t=\\binom n2,\\qquad |Q|=a+t=\\frac{\\binom n2+2a}{3}.\n\\tag{D.5}\n\\]",
+      "sha256": "23a90b3160a75ccc6d1033528310fc2f7c19b4328702667af2ff7bf03d9fd3a1"
+    },
+    {
+      "kind": "display",
+      "line": 1756,
+      "text": "\\[\n|Q|\\ge\\frac{\\binom n2+n}{3}=\\frac{n(n+1)}6.\n\\]",
+      "sha256": "d9b86402b37a19ba272c7c84b163d9759cb4cfa125561bbc8a6a49eafa196a34"
+    },
+    {
+      "kind": "display",
+      "line": 1766,
+      "text": "\\[\nW^*(S)=W(S)=2\\binom k2.\n\\tag{D.6}\n\\]",
+      "sha256": "bb25ed21b19160d7d61c2e5e152d604afabb20ad10414d9b7355a3597ccfbc9b"
+    },
+    {
+      "kind": "display",
+      "line": 1771,
+      "text": "\\[\n\\begin{aligned}\nw(x)&\\le2\\sum_K j(K)x_K\\\\\n&=2\\sum_{e\\in E(K_k)}\\sum_{K:e\\in E(K)}x_K\n\\le2\\binom k2.\n\\end{aligned}\n\\tag{D.7}\n\\]",
+      "sha256": "966471ac42fc7dc248352382ab6b2173180d7b9e5f35282338eec3da4786af76"
+    },
+    {
+      "kind": "display",
+      "line": 1786,
+      "text": "\\[\nd_{n,k}=\\begin{cases}n-3k,&3k\\le n,\\\\3k-n-1,&3k>n.\\end{cases}\n\\]",
+      "sha256": "49a3c98869b618255278d146b08b5cd93ae35c6b9a92816a27964f3ade28b3fb"
+    },
+    {
+      "kind": "display",
+      "line": 1790,
+      "text": "\\[\nM(n)=B_n(k)+M(d_{n,k}).\n\\tag{D.8}\n\\]",
+      "sha256": "d25606cdd578761287d02ea4b6199a0ea8096569bc89463758ffb87b7a1f082d"
+    },
+    {
+      "kind": "display",
+      "line": 1811,
+      "text": "\\[\n\\begin{gathered}\nd_{\\max}(G[H])+1\\le k,\\quad |S|\\le k\\le2(|S|-2\\sigma),\\quad\nq\\ge\\left\\lceil e(G[H])/k\\right\\rceil,\\\\\n3\\lceil|S|/2\\rceil+2\\tau+4q\\le |H|+2.\n\\end{gathered}\n\\tag{E.1}\n\\]",
+      "sha256": "4a05fe552360d22e1b4cf51692847f60e03ad186632326b3d9f47d4f9fc25942"
+    },
+    {
+      "kind": "display",
+      "line": 1820,
+      "text": "\\[\n|Q|+2\\left(\\sum_{w\\in W}|M_w|+t_I+e(G[S])\\right)=e(G).\n\\tag{E.2}\n\\]",
+      "sha256": "c5e532bf1417b5b2153357f32851e4e67ac3e30fec3b55f0b8596c0c48f5cb2f"
+    },
+    {
+      "kind": "display",
+      "line": 1825,
+      "text": "\\[\nd_W=\\sum_{w\\in W}\\deg(w),\\qquad\nm_W=\\sum_{w\\in W}\\min(u_w,v_w).\n\\]",
+      "sha256": "9185a7974604a14570ca9c72187e488fa68bb71516582a124b67d367febe5c7c"
+    },
+    {
+      "kind": "display",
+      "line": 1832,
+      "text": "\\[\n|Q|+e(G[S])+2m_W\\le cb+d_W+2t_W(L+t_W).\n\\tag{E.2a}\n\\]",
+      "sha256": "3a21fb48f6e7a00f4dba13fd503c8fa674139b1e21e10ce064aa5a659b15d64c"
+    },
+    {
+      "kind": "display",
+      "line": 1838,
+      "text": "\\[\n\\begin{split}\n&d_W+2t_W(L+t_W)+\\binom c2+\\binom{s+1}2\\\\\n&\\hspace{1em}\\le e(G[S])+2m_W+sc+\\frac{t_W(c+b+s)}3.\n\\end{split}\n\\tag{E.2b}\n\\]",
+      "sha256": "3365c6a4d44df270e50327425686fc71544b818dd588bbc6019b0a5f984894fe"
+    },
+    {
+      "kind": "display",
+      "line": 1846,
+      "text": "\\[\n|Q|+\\binom c2+\\binom{s+1}2\n\\le c(b+s)+\\frac{t_W(c+b+s)}3.\n\\tag{E.2c}\n\\]",
+      "sha256": "d68b58ad3953a76c790b8c55a1e38705b29aef36ce70739034140bbc8bec402f"
+    },
+    {
+      "kind": "display",
+      "line": 1854,
+      "text": "\\[\n\\rho=\\frac{n}{(s+1)^2},\\qquad \\lambda=\\frac{n}{(s+1)^4}.\n\\]",
+      "sha256": "63bb1f863582bdacd37278faa7eaef36f4a1f213841260f258573b1f8a2f3f8b"
+    },
+    {
+      "kind": "display",
+      "line": 1858,
+      "text": "\\[\nt_W\\le\\frac{4\\rho}{10^{27}},\\qquad\nL\\le\\frac{\\rho}{10^{13}}+1,\\qquad\n|\\mathcal L|-\\frac n3\\le c+\\frac{4\\lambda}{10^{31}}.\n\\]",
+      "sha256": "46a334d0fa3ec3fd06f5e32286e534b59a3ac18919f3d972447270e8f74e0403"
+    },
+    {
+      "kind": "display",
+      "line": 1866,
+      "text": "\\[\nM_S:=\\binom c2-e(G[S])\\le \\nu c-\\binom{\\nu+1}2.\n\\]",
+      "sha256": "48ba2c9a9464315f242a493e2588eaa6350c6768c32366eabc431a387992310b"
+    },
+    {
+      "kind": "display",
+      "line": 1870,
+      "text": "\\[\n\\begin{split}\ng_w&=\\deg(w)-2\\min(u_w,v_w)+2(L+t_W)-\\frac{c+b+s}{3},\\\\\ne_1&=4t_W+2L+\\frac{4\\rho}{10^{27}}.\n\\end{split}\n\\]",
+      "sha256": "40fe42f4e84699250a6817624052f2d605bbe0e9a143081bf3f8c599b1b9e7a1"
+    },
+    {
+      "kind": "display",
+      "line": 1879,
+      "text": "\\[\nR_*=E-\\sum_{w\\in W}g_w,\\qquad\nE=e(G[S])-\\binom{c-s}{2}\n  =e(G[S])-\\binom c2-\\binom{s+1}2+sc.\n\\]",
+      "sha256": "17188979ab0e428af8e8fd4a602b07888abd8d6dc6aca876802bae1b535c9510"
+    },
+    {
+      "kind": "display",
+      "line": 1886,
+      "text": "\\[\nX=\\{w\\in W:v_w-u_w>n/3-\\rho/400\\},\\qquad j=|X|.\n\\]",
+      "sha256": "a1b4f6abe1308b14161e3882ee3fa8acefbd5d99ad2f8279382812944f6e00e1"
+    },
+    {
+      "kind": "display",
+      "line": 1892,
+      "text": "\\[\n\\sum_{w\\in X'}|N(w)\\cap\\mathcal L|\n\\le (s-\\nu)|\\mathcal L|+\\frac n9\n\\quad\\text{if }X'\\subseteq W,\\quad |X'|\\le2(s+1).\n\\tag{E.2d}\n\\]",
+      "sha256": "69cfccecb2389b97f7f494fb433edb1e48a1b52e199b572c38581f2b783a7142"
+    },
+    {
+      "kind": "display",
+      "line": 1905,
+      "text": "\\[\n   sc-\\nu c-\\binom{s+1}2+\\binom{\\nu+1}2\n   =(s-\\nu)\\left(c-\\frac{s+\\nu+1}{2}\\right)\\ge0,\n   \\]",
+      "sha256": "579e7a866157480fac01c1d98c69389d8da4a8b345c93d9bc54a6b4db7270f3b"
+    },
+    {
+      "kind": "display",
+      "line": 1911,
+      "text": "\\[\n   \\sum_{w\\in W}g_w+M_S+\\binom{s+1}2\n   \\le(j+\\nu)c-\\frac{j\\rho}{80}\n        -\\binom{\\nu+1}2+\\binom{s+1}2\\le sc.\n   \\]",
+      "sha256": "8a3a27c1668aa7c3ce98928251bca421c7d0a4fa30c224f2b7ce6e2c4890b761"
+    },
+    {
+      "kind": "display",
+      "line": 1919,
+      "text": "\\[\n   \\sum_{w\\in W}g_w\n   \\le (s-\\nu)c-\\frac{2n}{9}\n      +\\frac{4(s+1)\\lambda}{10^{31}}+(s+1)e_1.\n   \\]",
+      "sha256": "ac630f631d4ace6a7819e44b6b3301a46c09954d530ec50a73caf98fa09531f7"
+    },
+    {
+      "kind": "display",
+      "line": 1932,
+      "text": "\\[\n\\begin{gathered}\nc(b+s)\\le\\binom c2+M(c+b+s),\\\\\nQ_s(c+b)+t_W z\\le Q_s(c+b+t_W).\n\\end{gathered}\n\\tag{E.2e}\n\\]",
+      "sha256": "9e5405fb0e7bbba5139fbf6d809a2c02649c8ab3ef55aa1601f9c69fda74bfb5"
+    },
+    {
+      "kind": "display",
+      "line": 1954,
+      "text": "\\[\nQ_s(n)-Q_s(n-1)=\\left\\lfloor\\frac{n+s+1}{3}\\right\\rfloor.\n\\tag{E.3}\n\\]",
+      "sha256": "acfb5b5a447b2100c59b2987cdd1b241ddae2079d1808e8faf4f0aea458e6575"
+    },
+    {
+      "kind": "display",
+      "line": 1961,
+      "text": "\\[\n\\deg(v)+K_s\\le\\left\\lfloor\\frac{n+s+1}{3}\\right\\rfloor,\n\\tag{E.4}\n\\]",
+      "sha256": "2dbf0c45ae1b8b712cf0c94a9966b530b82c0184274fae890ca2c7b28b0acce5"
+    },
+    {
+      "kind": "display",
+      "line": 1974,
+      "text": "\\[\nk(n-k)-\\binom{k-s}{2}\n=M(n+s)-\\binom{s+1}{2}=Q_s(n)\n\\tag{E.5}\n\\]",
+      "sha256": "8cb09beaeeccafc08df4ed060ce43b2f058713e5998a1255e76097181cfebf45"
+    },
+    {
+      "kind": "display",
+      "line": 1986,
+      "text": "\\[\nd=\\lfloor\\rho/1000\\rfloor,\\qquad\n\\kappa=2(c-2\\sigma)-d,\\qquad\nq=\\lceil m/\\kappa\\rceil,\\qquad\n\\theta_s=\\frac1{2000(s+1)^2}.\n\\tag{E.6}\n\\]",
+      "sha256": "1fd86670726b2de3ab3c2778e1849833504d5f5a2198b584ef6beea7819b76be"
+    },
+    {
+      "kind": "display",
+      "line": 1994,
+      "text": "\\[\n\\begin{gathered}\n|c-n/3|\\le\\rho/10^{20},\\qquad\n|b-2n/3|\\le\\rho/10^{20},\\\\\n\\sigma\\le\\rho/200+12\\rho/10^{27},\\qquad\n\\tau\\le\\rho/40+12\\rho/10^{27},\\qquad\nm\\le2\\rho^2/10^{31}.\n\\end{gathered}\n\\]",
+      "sha256": "3f6730de7c12086730db3cb48fa172e32ee335c6265c04b6a65d7ab77a7d492d"
+    },
+    {
+      "kind": "display",
+      "line": 2014,
+      "text": "\\[\n\\kappa z\\ge dm,\\qquad\nz\\ge\\frac{\\rho m}{2000n}=\\theta_s m.\n\\tag{E.7}\n\\]",
+      "sha256": "76e013cd8f3623c4f940c688dfb7b2ca1ba32eea8b1f04213fc589b8094a2ca4"
+    },
+    {
+      "kind": "display",
+      "line": 2020,
+      "text": "\\[\n|Q|+e(G[S])+2m_W+a+\\theta_s m\n\\le cb+d_W+2t_W(L+t_W).\n\\tag{E.8}\n\\]",
+      "sha256": "0b3db70b23717d3c2923e6b2f697998647cdc2c3012c3c4622e667dff69df965"
+    },
+    {
+      "kind": "display",
+      "line": 2026,
+      "text": "\\[\nF=cb-\\binom c2-\\binom{s+1}2+sc+\n       \\frac{t_W(c+b+s)}3,\\qquad\nD_0=Q_s(n)-F.\n\\]",
+      "sha256": "27c140de2a2f3472cbf2828b37c4e3611349a5275b49989f67bbc15b8540d4cd"
+    },
+    {
+      "kind": "display",
+      "line": 2034,
+      "text": "\\[\nD_0+a+\\theta_s m+R_*\\le\\delta.\n\\tag{E.9}\n\\]",
+      "sha256": "57ef92f7b088d3c5fc0e55212ada1ad00d29786c0f5fd22fc48fc32c33fa6c54"
+    },
+    {
+      "kind": "display",
+      "line": 2041,
+      "text": "\\[\ng_w\\le-\\rho/400+\\frac{10t_W}{3}+2L.\n\\]",
+      "sha256": "ca4675dc1a05a16216d0ee37e36616ff15d9465fea5c0a59679c83684cdb31f5"
+    },
+    {
+      "kind": "display",
+      "line": 2048,
+      "text": "\\[\n\\sum_{w\\in W}\\widetilde g_w\n\\le(s-\\nu)c-\\frac{2n}{9}+\n  \\frac{4(s+1)\\lambda}{10^{31}}+(s+1)\\widetilde e_1.\n\\]",
+      "sha256": "e1d2afee3e4fcfd8a36ce9e3f44a42f00c999f514c7becbcbc9c2341f6de9aba"
+    },
+    {
+      "kind": "display",
+      "line": 2055,
+      "text": "\\[\nR_*\\ge\\frac{t_W\\rho}{800}\\ge0,\\qquad\nnt_W\\le800(s+1)^2R_*.\n\\tag{E.10}\n\\]",
+      "sha256": "23387a2d9cf5a3c69bb5cd9486b0f1d6c19d8dee264fb4c0f7c022fe8eb06638"
+    },
+    {
+      "kind": "display",
+      "line": 2064,
+      "text": "\\[\nE=R_*+\\sum_{w\\in W}g_w\\le R_*+nt_W.\n\\tag{E.11}\n\\]",
+      "sha256": "12ee4f0e47409a581a1db0f8fb6e3f7fb5b1e2b3cbf1b232abe8542ae86ed454"
+    },
+    {
+      "kind": "display",
+      "line": 2071,
+      "text": "\\[\n|U|\\ge\\rho/10^4+s+2.\n\\]",
+      "sha256": "14ef6c728b4affc20b9a412bfaa6061cf78b38553dd5ab979c27b977c6ccd654"
+    },
+    {
+      "kind": "display",
+      "line": 2077,
+      "text": "\\[\nc-s\\le2\\left(e(G[S])-\\binom{c-s}{2}\\right)=2E.\n\\tag{E.12}\n\\]",
+      "sha256": "87afef263e216f1dc527683cc2d6bdec3998409a8588cf4e5007a0e013e2d481"
+    },
+    {
+      "kind": "display",
+      "line": 2084,
+      "text": "\\[\nrn\\le16sE.\n\\tag{E.13}\n\\]",
+      "sha256": "c70e554d0d9e94e54855e21a8294afd9dbb2d113922a219c307e50fc45f22d0d"
+    },
+    {
+      "kind": "display",
+      "line": 2091,
+      "text": "\\[\na+m+\\left(e(G[S])-\\binom{|C|}{2}\\right)+nt_W.\n\\]",
+      "sha256": "03292eeaebaffee374054fb0a1e5f2ff44fc5c574e089e4a97df1bda903ae372"
+    },
+    {
+      "kind": "display",
+      "line": 2095,
+      "text": "\\[\ne(G[S])-\\binom{|C|}{2}\n=E+\\binom{|C|+r}{2}-\\binom{|C|}{2}\n\\le E+rn.\n\\]",
+      "sha256": "6b56c3271cd4a4ead40934f12994af986c471dfc695c07f8e4d09610b6b29390"
+    },
+    {
+      "kind": "display",
+      "line": 2101,
+      "text": "\\[\nd_E(G,T(C,D,J))\\le a+m+E+2rn+2nt_W.\n\\tag{E.14}\n\\]",
+      "sha256": "f1afc971d690ec0d0a7720d2939355616f8ca3ecde5c428ec84ceb8de048877d"
+    },
+    {
+      "kind": "display",
+      "line": 2108,
+      "text": "\\[\n\\begin{aligned}\nd_E(G,T)&\\le a+m+(1+32s)E+2nt_W\\\\\n&\\le a+m+(1+32s)R_*+(3+32s)nt_W\\\\\n&\\le a+m+\\bigl(1+32s+800(3+32s)(s+1)^2\\bigr)R_*.\n\\end{aligned}\n\\]",
+      "sha256": "02aaa518e4cce1475c8a8b1005aea19400ea74cc77e90ca15326de4a077cb94c"
+    },
+    {
+      "kind": "display",
+      "line": 2116,
+      "text": "\\[\nd_E(G,T)\\le40000(s+1)^3\\delta.\n\\]",
+      "sha256": "36cb6dac3f7d23ff64fba4122e8ad96b3126c38e349f4a5c0bfd7c3c09718096"
+    },
+    {
+      "kind": "display",
+      "line": 2128,
+      "text": "\\[\n\\begin{aligned}\n\\gamma_s&=\\tfrac12\\min\\{1,\\eta_s/4,\\epsilon_s/4\\},\\\\\nN_s^{\\rm deg}&=\\lceil10^{50}(s+1)^8\\rceil+L_s+\n                    N_{\\rm far}(\\eta_s)+s+5,\\\\\nN_{0,s}&=N_s^{\\rm deg}+F_s+s+3+\n                 \\lceil1/\\epsilon_s\\rceil+\\lceil A_s\\rceil+1,\\\\\nN_s^{\\rm stab}&=2N_{0,s}+F_s+s+4.\n\\end{aligned}\n\\tag{F.1}\n\\]",
+      "sha256": "acdb8856eb3795bc0e39122e3027158d9d029d8be7ad428d6535dd2f13e5547d"
+    },
+    {
+      "kind": "display",
+      "line": 2142,
+      "text": "\\[\n0\\le\\delta\\le\\gamma_0t(t-N_{0,s}),\\qquad\n\\gamma_0=\\min\\{1,\\eta_s/4,\\epsilon_s/4\\}.\n\\]",
+      "sha256": "eb4c4edf018cb1dcf70c676dd0c0ae5c41cda0069ebf8d90f3cec37a390cd790"
+    },
+    {
+      "kind": "display",
+      "line": 2151,
+      "text": "\\[\n\\begin{aligned}\nF_4(G)&\\le(n-2c+1)\\alpha+\\binom c2+\n                \\sum_{j=0}^{n-c-1}\\min(s,j),\\\\\nF_4(G)&\\le(n-c)\\alpha+\\frac16\\binom c2+s(n-c)\n                   &&(c\\ge4).\n\\end{aligned}\n\\tag{F.2}\n\\]",
+      "sha256": "8e5757f6259c1e36fab391396ac3697ab3a9efdb05f33aaeec3ca9e077a5f811"
+    },
+    {
+      "kind": "display",
+      "line": 2163,
+      "text": "\\[\ns(n-c)-\\binom{s+1}{2}.\n\\tag{F.3}\n\\]",
+      "sha256": "14d0d58ca50efaf2c2af327dc22396f7f7f52f62a831d12c167502f5b7e7c088"
+    },
+    {
+      "kind": "display",
+      "line": 2168,
+      "text": "\\[\nF_4(G)\\le B_{n-s}(c)+ns-\\binom{s+1}{2}\n\\le M(n-s)+ns-\\binom{s+1}{2}.\n\\]",
+      "sha256": "a20f201ace9f576555e5e5bad332650051b40f375c960e1502e72f21b1dac137"
+    },
+    {
+      "kind": "display",
+      "line": 2173,
+      "text": "\\[\nF_4(G)\\le\\frac{c(5n-4c-1)}{12}+s(n-c).\n\\tag{F.4}\n\\]",
+      "sha256": "f95d09d15b8819810805721de56882c1a68a0709b9d822640d5ad0ef3466aa20"
+    },
+    {
+      "kind": "display",
+      "line": 2182,
+      "text": "\\[\n\\theta(\\xi)=\\frac1{16m^{m+1}+1},\\qquad N(\\xi)=\\max\\{m,1\\}.\n\\tag{F.5}\n\\]",
+      "sha256": "0e709972a8bdfa9e8fc597c90f8da5a5c4cb668caf91949fe8e0df7617599c0d"
+    },
+    {
+      "kind": "display",
+      "line": 2191,
+      "text": "\\[\n(|D|-|C|-s)_+^2\\le\\operatorname{ordNE}(G,D).\n\\tag{F.5a}\n\\]",
+      "sha256": "4c16780af5c9074dacc772bbab91a1820174f97101d7854d6d0395e580736c7f"
+    },
+    {
+      "kind": "display",
+      "line": 2197,
+      "text": "\\[\n\\operatorname{ordNE}(G,D)\n=\\operatorname{ordNE}(G,D\\setminus\\{v\\})+2y.\n\\]",
+      "sha256": "7095b13789e414c791724018a5fbe4bd5273711cb4c5428ea6bb65b13b525425"
+    },
+    {
+      "kind": "display",
+      "line": 2205,
+      "text": "\\[\n(|D|-|C'|-s)_+^2\\le(x+1)^2\n\\le x^2+2y\\le\\operatorname{ordNE}(G,D).\n\\]",
+      "sha256": "4d99df2aa8e4ce4f11a44f60acb1ded860c3d8ed5dae317e0e9e182df7abe2c9"
+    },
+    {
+      "kind": "display",
+      "line": 2212,
+      "text": "\\[\n2|E(H)\\setminus E(G)|\\le u^2,\n\\]",
+      "sha256": "c8644aad25de10e2cee048bb177e6e50680aadc21caa694cced9998cb0d1db3d"
+    },
+    {
+      "kind": "display",
+      "line": 2225,
+      "text": "\\[\n\\begin{aligned}\ne(G-R)+A_R&\\le16\\delta+65t+n(s+u),\\\\\nM(n)-B_n(|R|)&\\le\\delta+4t+2n(s+u).\n\\end{aligned}\n\\tag{F.6}\n\\]",
+      "sha256": "ea39ccce9f268a0100bf173f775e921aac2161177bb43aad5bba94cfdb12e483"
+    },
+    {
+      "kind": "display",
+      "line": 2262,
+      "text": "\\[\n\\operatorname{indCopies}(C_k,G)\\le2ks\\,n^{k-1}.\n\\tag{F.7}\n\\]",
+      "sha256": "496405d4bb3563b4ac3e731979d8da1e1e2441e975cfeecb469bd30142311dfc"
+    },
+    {
+      "kind": "display",
+      "line": 2269,
+      "text": "\\[\nd_E(G,H)\\le2\\sqrt{s}\\,n\\sqrt n+n.\n\\tag{F.8}\n\\]",
+      "sha256": "8d96a7fa5a54e1694168541a7ae3f7450a75454bb30b9f486e4837977cdf2c9f"
+    },
+    {
+      "kind": "display",
+      "line": 2276,
+      "text": "\\[\n(d-|C|)^2\\le2M,\\qquad |C|\\ge d-\\sqrt{2M}.\n\\tag{F.9}\n\\]",
+      "sha256": "16e774dce2e0c04569546c84840682ea61569c5b0635b8a2e84fb8f06774c44b"
+    },
+    {
+      "kind": "display",
+      "line": 2283,
+      "text": "\\[\nd_E(G,H)\\le8\\sqrt{\\varepsilon}\\,n^2,\\qquad H[Y]=G[Y].\n\\tag{F.10}\n\\]",
+      "sha256": "a6e3ceb3b39786af9f01e4f6628b6c7ad84e7a491c241534d6c7ba35136472f7"
+    },
+    {
+      "kind": "display",
+      "line": 2305,
+      "text": "\\[\n\\begin{gathered}\ny=\\left\\lceil\\frac{256K^2}{\\varepsilon^2}\\right\\rceil,\\qquad\n\\delta_{11}=\\frac1{4y^2},\\qquad\nB=\\left\\lfloor\\frac{8K}{\\delta_{11}}\\right\\rfloor,\\qquad\n\\eta=\\frac{\\varepsilon}{2K},\\\\\nm=m_{11}(\\varepsilon,K)\n =\\left\\lceil\\frac{2^{58}(K+1)^{15}}{\\varepsilon^{12}}\\right\\rceil.\n\\end{gathered}\n\\tag{F.11}\n\\]",
+      "sha256": "e3517ffce90bfedb4d379749575e6ddc16401b6c1507c6dbe30934e191f62348"
+    },
+    {
+      "kind": "display",
+      "line": 2323,
+      "text": "\\[\n(y+1)(1-\\eta)^{y-1}n^y+\ny^2\\operatorname{conf}(\\psi)n^{y-2}.\n\\]",
+      "sha256": "b950283da680bf7ca1707ff8c7716453ed180c51e9b6135c4a9b191d81fa49ef"
+    },
+    {
+      "kind": "display",
+      "line": 2330,
+      "text": "\\[\n\\begin{aligned}\nd_E(G,F)&\\le\\operatorname{conf}(\\psi)+\n             \\sum_{c\\in V(\\Gamma)}\\operatorname{mis}_c\\\\\n&<\\delta_{11}n^2+K\\eta n^2\n\\le\\varepsilon n^2.\n\\end{aligned}\n\\tag{F.12}\n\\]",
+      "sha256": "a5201592ae6a30aa2103c27383da6e2ceefa2545a10ccfad1e6fd9fee8ee6df7"
+    },
+    {
+      "kind": "display",
+      "line": 2354,
+      "text": "\\[\n\\sum_T x_T\\le \\nu_3(G)+\\left(10+\\frac d2\\right)n.\n\\tag{G.1}\n\\]",
+      "sha256": "566b678fdc215e9942ebc5827d070a1264f3fc4390a63d0937a4dfa1a1a773c5"
+    },
+    {
+      "kind": "display",
+      "line": 2371,
+      "text": "\\[\nN_0>\\exp(t^2/16).\n\\tag{G.2}\n\\]",
+      "sha256": "d397a001581e45d92e18531502696d63d89405ca408ad3ac811dc2c64cbb2cbe"
+    },
+    {
+      "kind": "display",
+      "line": 2378,
+      "text": "\\[\n2(1-\\gamma)T\\le\\frac{\\varepsilon}{4}n^2.\n\\tag{G.3}\n\\]",
+      "sha256": "31276580e958bed3b051d7d607bb415d23e81ab6f134e3b89b14cd5869834e7e"
+    },
+    {
+      "kind": "display",
+      "line": 2391,
+      "text": "\\[\ne(G)\\le2(n-2)+1=2n-3.\n\\tag{G.4}\n\\]",
+      "sha256": "41d8030717b4923daceb72dc9dfb68346721d0861c91b5a3b704cbb820659997"
+    },
+    {
+      "kind": "display",
+      "line": 2396,
+      "text": "\\[\n\\frac{\\varepsilon n^2}{30}-1\n\\le T\\le\\frac{2n-3}{3}\n\\quad\\Longrightarrow\\quad n\\le\\frac{20}{\\varepsilon}.\n\\tag{G.5}\n\\]",
+      "sha256": "e1fdb179075c01ba3eb39c81a17f3fbe171d9568f4b4ab1e4f39839ed3e248fc"
+    },
+    {
+      "kind": "code",
+      "line": 1303,
+      "text": "```lean\ndef IsChordal (G : SimpleGraph V) : Prop :=\n  ∀ ⦃v : V⦄ (c : G.Walk v v), c.IsCycle → 4 ≤ c.length →\n    ∃ x y : V, x ∈ c.support ∧ y ∈ c.support ∧ G.Adj x y ∧ s(x, y) ∉ c.edges\n```",
+      "sha256": "127db437f6d87fb222a352028d24617e2d014cf889c14484a52ba3835838891e"
+    },
+    {
+      "kind": "code",
+      "line": 1309,
+      "text": "```lean\ndef pairs (K : Finset V) : Finset (Sym2 V) := K.sym2.filter fun e => ¬ e.IsDiag\n\nstructure CliquePartition where\n  pieces : Finset (Finset V)\n  isClique : ∀ K ∈ pieces, ∀ a ∈ K, ∀ b ∈ K, a ≠ b → G.Adj a b\n  two_le_card : ∀ K ∈ pieces, 2 ≤ K.card\n  edgeDisjoint : ∀ K ∈ pieces, ∀ L ∈ pieces, K ≠ L → Disjoint (pairs K) (pairs L)\n  covers : pieces.biUnion pairs = G.edgeFinset\n\ndef CliquePartition.size (Q : CliquePartition G) : ℕ := Q.pieces.card\n\ndef CliquePartition.OrderAtMost (Q : CliquePartition G) (r : ℕ) : Prop :=\n  ∀ K ∈ Q.pieces, K.card ≤ r\n```",
+      "sha256": "b304dd7b6d607133aa58ec164ad3a5a4bca4abffc80b0d81e4007438fa6d75d2"
+    },
+    {
+      "kind": "code",
+      "line": 1325,
+      "text": "```lean\ndef targetSize (n : ℕ) : ℕ := n * (n + 1) / 6\n```",
+      "sha256": "fe5744f3ffb923957fa191fd2f82eb878a4550aaef279fab4025f040ce9933c1"
+    },
+    {
+      "kind": "code",
+      "line": 1333,
+      "text": "```lean\ntheorem erdos81_all_orders_additive :\n    ∃ b : ℕ, ∀ (n : ℕ) (G : SimpleGraph (Fin n)) [DecidableRel G.Adj],\n      PaperIV.FarRounding.IsChordal G →\n        ∃ Q : CliquePartition G, Q.OrderAtMost 4 ∧ Q.size ≤ PaperIV.targetSize n + b\n```",
+      "sha256": "3883d65f15282a1174406bfd46b4e7c2a06678088cb1c7ecd1ee5c938342b9a9"
+    },
+    {
+      "kind": "code",
+      "line": 1340,
+      "text": "```lean\ntheorem erdos81_cliquePartition :\n    ∃ N : ℕ, ∀ n : ℕ, N ≤ n → ∀ (G : SimpleGraph (Fin n)) [DecidableRel G.Adj],\n      PaperIV.FarRounding.IsChordal G →\n        ∃ Q : CliquePartition G, Q.OrderAtMost 4 ∧ Q.size ≤ targetSize n\n```",
+      "sha256": "8543132fba6fa26c326dfcb4309e12f21f82375833655053c11370cb6826bb4d"
+    },
+    {
+      "kind": "heading",
+      "line": 1,
+      "text": "# Clique partitions with rooted simplicial defect: quantitative stability and sharp eventual bounds",
+      "sha256": "a449ccf58bab4f92a8d29be408519865899d6f564b8968cd181d2bc94a10eca8"
+    },
+    {
+      "kind": "heading",
+      "line": 16,
+      "text": "## Abstract",
+      "sha256": "266c21b810ae65751fa70f388a867e94d180e79fd15c69ed54dae7df1d29166b"
+    },
+    {
+      "kind": "heading",
+      "line": 31,
+      "text": "## 1. Introduction",
+      "sha256": "e569d07d3d78b3857cd1582a9bd94ee38bd3c9c8dd7ff6e5f1bc25777006fefd"
+    },
+    {
+      "kind": "heading",
+      "line": 53,
+      "text": "### Theorem A. Bound for all orders",
+      "sha256": "28481eaa047c2da25559c0dd62ed5a7397ef288706af157f589e04bf88fbd4f2"
+    },
+    {
+      "kind": "heading",
+      "line": 63,
+      "text": "### Theorem B. Sharp bound and eventual maximum",
+      "sha256": "39cc9b3298114b5e90324cc3d9df729267eb25faa3ffdef1e0996141d3298f9d"
+    },
+    {
+      "kind": "heading",
+      "line": 82,
+      "text": "### Theorem C. Fixed rooted simplicial defect",
+      "sha256": "6df3e3fda4cb6229abd9922d599a7e1f037d35d82722b8f82d88310d5fe20b00"
+    },
+    {
+      "kind": "heading",
+      "line": 99,
+      "text": "### Theorem C′. Fixed-defect same-root stability",
+      "sha256": "7692610f9ac0c4e401314ebf4797083f8a042b37f19adab8a5ef29e4c20cc757"
+    },
+    {
+      "kind": "heading",
+      "line": 111,
+      "text": "### 1.1. The common condition: a loss budget",
+      "sha256": "9f274c1f54eb75e72e4f677a584975faa607eb77296f40ff75fe6a746082d9df"
+    },
+    {
+      "kind": "heading",
+      "line": 161,
+      "text": "### 1.2. Structural dichotomy and resolution mechanisms",
+      "sha256": "d7436fa1beec25ac770ccf2bce302911116f657929990edd05d328659743be36"
+    },
+    {
+      "kind": "heading",
+      "line": 182,
+      "text": "### 1.3. Organization and use of chordality",
+      "sha256": "9beb88e25712593b04b2c0e5b6cdc7234eaf2cc7e4d318166d5b96a4fe872e22"
+    },
+    {
+      "kind": "heading",
+      "line": 190,
+      "text": "## 2. Mixed gain, duality and partitions",
+      "sha256": "b545196b92b858b0e425b4dd799297d8554d791c19527495ce492002500805ab"
+    },
+    {
+      "kind": "heading",
+      "line": 194,
+      "text": "### 2.1. Why gain is the quantity to round",
+      "sha256": "1fcdb114bc6c018eae7a1257b2e745200c67ff7e0ec2aa7d8fa33c4aeea44921"
+    },
+    {
+      "kind": "heading",
+      "line": 210,
+      "text": "### Lemma 2.1",
+      "sha256": "ceecfdd25f91133fe51a3f88f51d26915c25c2e4348556c97be05f54bcff2ae7"
+    },
+    {
+      "kind": "heading",
+      "line": 219,
+      "text": "### 2.2. The fractional optimum and its certificate",
+      "sha256": "ab4c804d9114a1d4fda496aebb14c6481c8b3f5aaffe5717dae1503cac091bdc"
+    },
+    {
+      "kind": "heading",
+      "line": 241,
+      "text": "### 2.3. Relation to the earlier functionals",
+      "sha256": "937b69fd9424503fe7e606a7c48fdd60010a653751408d02723944030c5babc6"
+    },
+    {
+      "kind": "heading",
+      "line": 252,
+      "text": "### 2.4. Notation for the two branches",
+      "sha256": "d9d905e89428d1e1676797df088ef7111e8ac8fba7b0e800636c0166b5ee3ec0"
+    },
+    {
+      "kind": "heading",
+      "line": 269,
+      "text": "## 3. Mixed rounding and the regime with margin",
+      "sha256": "0f4c808a646a7c02f06db44d7ab3737d8a4e274ab5f3c072810fb48db34dc579"
+    },
+    {
+      "kind": "heading",
+      "line": 273,
+      "text": "### Theorem 3.1",
+      "sha256": "b949515fca1c176fa3c7b978b017f2bf5c5ce32bed9c88ccd20b5fc3f233b3a1"
+    },
+    {
+      "kind": "heading",
+      "line": 290,
+      "text": "### Corollary 3.5",
+      "sha256": "2b591bd1a8f5e33ae94d563e4e8d8eda50f2024165b54e091bd0fea96f5e81fd"
+    },
+    {
+      "kind": "heading",
+      "line": 305,
+      "text": "## 4. Localization of the critical regime",
+      "sha256": "3c7a6c753d78d215cd6b6d457f6559dc6e3e73ab85a8103aa9e4d89830c0fbba"
+    },
+    {
+      "kind": "heading",
+      "line": 316,
+      "text": "### 4.1. Distance to a fixed family",
+      "sha256": "59ec1f85df007d54dc098fca505602cc15c80a921c9ad52efc1dbb5f85bd514e"
+    },
+    {
+      "kind": "heading",
+      "line": 370,
+      "text": "### 4.2. Descent from the terminal graph",
+      "sha256": "e243888a4ddc9c98a37c4a8affd07d16b4058f6cc09f605ddab0b2bd413e0f13"
+    },
+    {
+      "kind": "heading",
+      "line": 406,
+      "text": "### Proposition 4.3",
+      "sha256": "f514e98168cb3b6a83d52c51aa635f7ab603ba4d599d040b2483da787a6496b1"
+    },
+    {
+      "kind": "heading",
+      "line": 425,
+      "text": "## 5. Regularized root and physical accounting",
+      "sha256": "8dc3d5d73f8433f71d83f7a5080becc8decdb650a00cefd4fe10ebc946ef7d8d"
+    },
+    {
+      "kind": "heading",
+      "line": 427,
+      "text": "### Theorem 5.0. Near constructor under local hypotheses",
+      "sha256": "4a42f751441a5e88363b644a2161e895a8f469728a919fc82699ceac266188b6"
+    },
+    {
+      "kind": "heading",
+      "line": 442,
+      "text": "### 5.1. Regularization on the original graph",
+      "sha256": "56abaa2fb75914f4312895956d07f159797170e0672463f7a6c0131781d4eecc"
+    },
+    {
+      "kind": "heading",
+      "line": 518,
+      "text": "### 5.2. From matchings to triangles",
+      "sha256": "01dbc493cfdac9152f30aac59136f071d3653018977cf67fd83c1f3d1ad3f407"
+    },
+    {
+      "kind": "heading",
+      "line": 528,
+      "text": "### 5.3. The three accounts that pay for the construction",
+      "sha256": "4bba3bb0689ce2d629750ca5abc2746d60808b888a5c10ff11e760f7cf999675"
+    },
+    {
+      "kind": "heading",
+      "line": 657,
+      "text": "### Lemma 5.3",
+      "sha256": "0ceb0ea784a3a17fe9ce62259960f374bb25cec5f01b6682360e9549537cec8d"
+    },
+    {
+      "kind": "heading",
+      "line": 697,
+      "text": "### 5.4. The witness retained by the proof",
+      "sha256": "a893124fa1e116f8ee6fdcd7af96c6ad3eec2c9b5887290f46a2048f8818609e"
+    },
+    {
+      "kind": "heading",
+      "line": 722,
+      "text": "## 6. Assembly and extremal value",
+      "sha256": "7fff1e18f100cbfc0b7eec64d2611d6d54060e611ef32e8ae3cf862c25de5f64"
+    },
+    {
+      "kind": "heading",
+      "line": 724,
+      "text": "### Proof of Theorem B: upper bound",
+      "sha256": "bff6cd78be6c1c9393b2f2af96e41852845635a895293f48694e0d3a4dc16a43"
+    },
+    {
+      "kind": "heading",
+      "line": 732,
+      "text": "### 6.1. Unrestricted optimality for complete-split graphs",
+      "sha256": "c434998833b5ec3e176b1301012c260be043a811a5b6e594565689b3fec62aff"
+    },
+    {
+      "kind": "heading",
+      "line": 757,
+      "text": "### 6.2. The eventual maximum",
+      "sha256": "2f5613d10b213c7d233fa5f69f6e518fbd8c54d8018bd561ec182e3bc92542aa"
+    },
+    {
+      "kind": "heading",
+      "line": 777,
+      "text": "### 6.3. All orders and optimality of the linear term",
+      "sha256": "9e07a9cf1c432fbd4d0f31cdbe1799271794d3bf8827682d0fb1b58ceb7ce5a9"
+    },
+    {
+      "kind": "heading",
+      "line": 815,
+      "text": "### 6.4. The excess of a complete-split partition",
+      "sha256": "30aa514b992be2eb79682767cff8eaef82855e0e0c3fd6eff857935dbc6c80f8"
+    },
+    {
+      "kind": "heading",
+      "line": 833,
+      "text": "### 6.5. Integral stability and classification of extremizers",
+      "sha256": "2d48e79be39bf1cc81b166b0d31ee14ca1c41b9fe0de788a80c51eff86584181"
+    },
+    {
+      "kind": "heading",
+      "line": 897,
+      "text": "### 6.6. Fixed-defect stability on one root",
+      "sha256": "67114ce61ec2aa865b1e38516301fd8e4e74c0feac4f6bcf3c52edd5f9ba52dd"
+    },
+    {
+      "kind": "heading",
+      "line": 1054,
+      "text": "### 6.7. Uniform bounds and sublinear defect",
+      "sha256": "50245d5add3a10be6bfcb0cf262ea0d74ab7bc8221bfd71a735b3cdfe449bd19"
+    },
+    {
+      "kind": "heading",
+      "line": 1128,
+      "text": "## 7. Formalization, code and reproducibility",
+      "sha256": "c79911108474054a13ba8395ceeedb52abf1447c13152423d5730328a4be541f"
+    },
+    {
+      "kind": "heading",
+      "line": 1183,
+      "text": "### 7.1. Repositories and contributions",
+      "sha256": "8573c9e9c81f60d0d273a05e04dc08a0d67d36f816a4d7633fcb17787e5f5304"
+    },
+    {
+      "kind": "heading",
+      "line": 1195,
+      "text": "### 7.2. Model bridge and gain convention",
+      "sha256": "8110535b04504c463fcc20c30ad620deac662cb0359c8cad9df4708496e40d1f"
+    },
+    {
+      "kind": "heading",
+      "line": 1201,
+      "text": "## 8. Comparison of mechanisms and scope",
+      "sha256": "9556eb7c3c860b7bba09c22c927f8ed99b3d6fefd81ae34696eea9bd1d00a5f2"
+    },
+    {
+      "kind": "heading",
+      "line": 1243,
+      "text": "### 8.1. The bounded simplicial defect antecedent",
+      "sha256": "3fc6d11cacc7dfe55a153f6b4efff1da32d09c8eb10884e0080d5b351d884d38"
+    },
+    {
+      "kind": "heading",
+      "line": 1271,
+      "text": "## Appendix A. Formal correspondence and reproduction",
+      "sha256": "85ff03272adb869c17febc50556a1ec81ad05348fee93fa4d41df52bbbe64e38"
+    },
+    {
+      "kind": "heading",
+      "line": 1273,
+      "text": "### A.1. Statements and checks",
+      "sha256": "279080087f6b948ef6e6e2b841a86f2105d3e2f66a9899f9edcdf5f9ebf99fc7"
+    },
+    {
+      "kind": "heading",
+      "line": 1349,
+      "text": "### A.2. Intermediate proof contracts",
+      "sha256": "a5864b824562871a4701affdcc89a0d6d0b3d3487a9ff7c1f20cdddb6dad704a"
+    },
+    {
+      "kind": "heading",
+      "line": 1377,
+      "text": "### A.3. Limits of the result",
+      "sha256": "eabac46fa507e033580682d55b9af793c82de51836b8861d836c2539173ad730"
+    },
+    {
+      "kind": "heading",
+      "line": 1385,
+      "text": "## Appendix B. Complementary construction tools",
+      "sha256": "ec4a88feaa5ff315efbe1abd46966e9ea6940eb46a528439307be3cbc0924c87"
+    },
+    {
+      "kind": "heading",
+      "line": 1387,
+      "text": "### B.1. Budgeted compatible absorption",
+      "sha256": "8c2974c4b90fa598ced9204d136d93aba5761bdba8e7d7f09e78fee91d4475c6"
+    },
+    {
+      "kind": "heading",
+      "line": 1421,
+      "text": "### B.2. Balanced reserves",
+      "sha256": "14b82e8e82e27a09789db5ba5fa7cc56f4bc5aa92df7ac58a3e052e59a2bbc37"
+    },
+    {
+      "kind": "heading",
+      "line": 1432,
+      "text": "### B.3. Completion with four hosts",
+      "sha256": "edc9231721be154876bfdc0053a65d71be89527e29ff113261f2326783cb4820"
+    },
+    {
+      "kind": "heading",
+      "line": 1440,
+      "text": "## Appendix C. Technical proof of mixed rounding",
+      "sha256": "1647a6c40f596e7280d435657371cf9eae8bc40f221afb0989096affbb171ed4"
+    },
+    {
+      "kind": "heading",
+      "line": 1444,
+      "text": "### Lemma 3.2. Bounded-rank nibble with slack, input from Paper III",
+      "sha256": "04eb571b2261bef381c835c183515f42508d0269f0665b36231c9a76edd1ab17"
+    },
+    {
+      "kind": "heading",
+      "line": 1459,
+      "text": "### Lemma 3.3. Simultaneous selection of total and marked mass",
+      "sha256": "f1391b13910ad18a3eac62bc0d5733766624de278e6022b855b1100d50c5f650"
+    },
+    {
+      "kind": "heading",
+      "line": 1485,
+      "text": "### Lemma 3.4. Physical mixed selector",
+      "sha256": "caa01651da384783c90f45d1500a00b3d778f979cb3286d119cbdadcda9a8e08"
+    },
+    {
+      "kind": "heading",
+      "line": 1506,
+      "text": "### C.1. Cleaning, selection, and realization",
+      "sha256": "3a662aeee02d1feec6b77d1ce29d481fd4ba51dfe06dc305c7406bfbe585b698"
+    },
+    {
+      "kind": "heading",
+      "line": 1564,
+      "text": "### C.2. What is discarded and why the threshold is uniform",
+      "sha256": "89008b7554b36a2e9a4f95a80e45ba900b43cc538716f325f00ce153be3f22f1"
+    },
+    {
+      "kind": "heading",
+      "line": 1626,
+      "text": "### C.3. An explicit schedule and its propagation",
+      "sha256": "8863fe53cf2d181396f2b9b9896b7742f9aef81cea2cd307d70d5f04f59dc45d"
+    },
+    {
+      "kind": "heading",
+      "line": 1699,
+      "text": "## Appendix D. Complete graphs and comparator identities",
+      "sha256": "6acb73ecf4e96aae5f13e41b3b386f07f84291232f6a059e460a9683a474b5f0"
+    },
+    {
+      "kind": "heading",
+      "line": 1701,
+      "text": "### D.1. The complete graph at every order",
+      "sha256": "a08477cd459bb1fbeb17ca254c2c336cd26f2de43c8568b81f0a6f4b65966ea9"
+    },
+    {
+      "kind": "heading",
+      "line": 1763,
+      "text": "### D.2. Equality of mixed optima in complete-split graphs",
+      "sha256": "19efacc0b2eaf15fc30d5ed604b6feceb65736c3a86ced1d5fb5854bf0799cde"
+    },
+    {
+      "kind": "heading",
+      "line": 1783,
+      "text": "### D.3. Exact reserve from core displacement",
+      "sha256": "fd194cee9a111391879409eecb56bfee59c75b71b97183cc1e285b636a0362ea"
+    },
+    {
+      "kind": "heading",
+      "line": 1798,
+      "text": "## Appendix E. The fixed-defect extension",
+      "sha256": "7769fb5760b92f5c0aeb5b1b3571337930f05102954b2c02796225bf6dd9d831"
+    },
+    {
+      "kind": "heading",
+      "line": 1802,
+      "text": "### E.1. Constructor and accounting",
+      "sha256": "c83eff2c6860a2a6d03ac41f9fba6d412de77350f3404ce451860c42eb1b6c88"
+    },
+    {
+      "kind": "heading",
+      "line": 1945,
+      "text": "### E.2. From the terminal to the eventual theorem",
+      "sha256": "36a602e4e4660547673acdb903c3c59cd318a83cfaf178c2bf67ebbd4e0a851d"
+    },
+    {
+      "kind": "heading",
+      "line": 1967,
+      "text": "### E.3. An unrestricted lower witness",
+      "sha256": "54d72a9fa5675156ce4d4c9ca69ad7b6a881e7b96c9cd06d312feec8c0ead626"
+    },
+    {
+      "kind": "heading",
+      "line": 1981,
+      "text": "### E.4. Retained accounts for same-root stability",
+      "sha256": "70c3f749b8f7ff1fcda6446d0c2e9543c49ee5903a187e5a8ab241afda6a0f0c"
+    },
+    {
+      "kind": "heading",
+      "line": 2121,
+      "text": "## Appendix F. Parameters and proof interfaces for the extensions",
+      "sha256": "fd8b94f5c3acf36a41ba7e907aa1ee4043d2b63c9f7a8b1dffdb77a0406f305a"
+    },
+    {
+      "kind": "heading",
+      "line": 2123,
+      "text": "### F.1. Explicit fixed-defect parameters",
+      "sha256": "43e15e9eed2e6a501dc72f57062d51794a10058095075308425cf9ced7780422"
+    },
+    {
+      "kind": "heading",
+      "line": 2148,
+      "text": "### F.2. Fractional star accounting and small orders",
+      "sha256": "878907140a1cb0fc7c9095fc161f772cb968b9ab9d145c348b7b60802e555c11"
+    },
+    {
+      "kind": "heading",
+      "line": 2179,
+      "text": "### F.3. Uniform localization through a chordal edit",
+      "sha256": "f7767e52f7757cd79c1081dcf925200236a6762c36ed69d8c67180fad5a69544"
+    },
+    {
+      "kind": "heading",
+      "line": 2234,
+      "text": "### F.4. New public interfaces and limits of this revision",
+      "sha256": "f121e2be6cc941250deeae13353338c3d03f9ff63a17a0c3fc09ed6ac6b8559f"
+    },
+    {
+      "kind": "heading",
+      "line": 2257,
+      "text": "### F.5. Auxiliary lemmas and adaptations of chordal removal",
+      "sha256": "7c6dd3e7a02248731b876f2123784c537c3d5c3eea1784bc485042ab49bc442e"
+    },
+    {
+      "kind": "heading",
+      "line": 2345,
+      "text": "## Appendix G. Packing gaps and limits of cleanup",
+      "sha256": "2bb6f896038b1c9336264364ec201cc88deabc487d8777bd48507cbf80fd80f3"
+    },
+    {
+      "kind": "heading",
+      "line": 2347,
+      "text": "### G.1. The all-order bound and packing gaps",
+      "sha256": "01a52137b4c604877cf14a2c71f1df3187102121a69de2ad8a18bd7f0b5069d6"
+    },
+    {
+      "kind": "heading",
+      "line": 2364,
+      "text": "### G.2. A quantitative obstruction to codegree cleanup",
+      "sha256": "e6e0dca1f92fab7fccc59ba4119d289fa081cf056ced4676c4cf5f5b104e0171"
+    },
+    {
+      "kind": "heading",
+      "line": 2406,
+      "text": "## Acknowledgments",
+      "sha256": "37aeb2c1bb8671c318353cacc1a3129c53a55aa5fe89a60ffe6c8626aaf5b47a"
+    },
+    {
+      "kind": "heading",
+      "line": 2410,
+      "text": "## Use of artificial intelligence and computational tools",
+      "sha256": "e09cd2cb1bcc33bb7fb48b78b478c3205e0d6141d8e2334e26a125f7296e3aa5"
+    },
+    {
+      "kind": "heading",
+      "line": 2418,
+      "text": "## References",
+      "sha256": "65b72d86eeeb214ab8ca5fd24cb7cd7773e58084e95b670040df03e21e8c6fa7"
+    }
+  ],
+  "es": [
+    {
+      "kind": "display",
+      "line": 21,
+      "text": "\\[\nM(n)=\\left\\lfloor\\frac{n(n+1)}6\\right\\rfloor,\\qquad\nQ_s(n)=M(n+s)-\\binom{s+1}{2}.\n\\]",
+      "sha256": "f9f70924a7d1bdc7b2d93485da697a424041969395c8a8fad763559f28bd664b"
+    },
+    {
+      "kind": "display",
+      "line": 56,
+      "text": "\\[\n\\operatorname{cp}(G)\\le c_4(G)\\le M(n)+b\n\\le\\frac{n^2}{6}+\\frac n6+b.\n\\tag{A}\n\\]",
+      "sha256": "77e0ea440441568c151fd063898801d3448393c8dfa680908e05d026e589038e"
+    },
+    {
+      "kind": "display",
+      "line": 66,
+      "text": "\\[\n\\operatorname{cp}(G)\\le c_4(G)\\le M(n).\n\\tag{1.1}\n\\]",
+      "sha256": "66c2c33c4f896701c51d6dda610db44117bbb678824619e052f9cef26bb9d1e6"
+    },
+    {
+      "kind": "display",
+      "line": 71,
+      "text": "\\[\n\\max_{\\substack{|V(G)|=n\\\\G\\text{ cordal}}}\\operatorname{cp}(G)=M(n).\n\\tag{1.2}\n\\]",
+      "sha256": "414cef54a1fe8266189925e0daa58a8c4eff7bcb02f6f69483a63d41051c009f"
+    },
+    {
+      "kind": "display",
+      "line": 87,
+      "text": "\\[\n\\operatorname{cp}(G)\\le c_4(G)\\le Q_s(n),\n\\qquad\nQ_s(n):=M(n+s)-\\binom{s+1}{2}.\n\\tag{C}\n\\]",
+      "sha256": "70d5f3961d7964318f855d5f2806ece7a1ccd75823e94051db785a017a4b0740"
+    },
+    {
+      "kind": "display",
+      "line": 102,
+      "text": "\\[\nd_E(G,T)\\le A_s\\delta,\\qquad\n0\\le Q_s(n)-\\left(k(n-k)-\\binom{k-s}{2}\\right)\\le(1+4A_s)\\delta,\n\\quad k=|C|+s.\n\\]",
+      "sha256": "94acf3772055ad3193167422f91810ad9ac207d126c0b4b7531caefe09430853"
+    },
+    {
+      "kind": "display",
+      "line": 114,
+      "text": "\\[\nF_4(G)=e(G)-W^*(G),\\qquad \\Delta(G)=M(n)-F_4(G).\n\\]",
+      "sha256": "eb37320477374eb0828bb0565fa486d18b3e70d8d7a093430e66e860d43252ed"
+    },
+    {
+      "kind": "display",
+      "line": 118,
+      "text": "\\[\n\\boxed{\ne(G)-g(\\mathcal P)\\le M(n)\n\\quad\\Longleftrightarrow\\quad\nW^*(G)-g(\\mathcal P)\\le\\Delta(G).\n}\n\\tag{1.3}\n\\]",
+      "sha256": "5d845c5d5becec5aa8b0cdc5625ea92cc2d554e3633f9d972ed35ab75e3b50fe"
+    },
+    {
+      "kind": "display",
+      "line": 129,
+      "text": "\\[\ng(Q)=\\sum_{K\\in Q}\\left(\\binom{|K|}{2}-1\\right).\n\\]",
+      "sha256": "69fb2a87560e1ddc01779860e27c8fde433495c19b3dfe8332d5a601c7103c57"
+    },
+    {
+      "kind": "display",
+      "line": 133,
+      "text": "\\[\ng(Q)+|Q|=e(G),\\qquad\n|Q|\\le T\\quad\\Longleftrightarrow\\quad e(G)\\le g(Q)+T.\n\\tag{1.3a}\n\\]",
+      "sha256": "2e98e99dd1b4577e3705cbe82fc59ff7292a994f67c151618b857b646c208202"
+    },
+    {
+      "kind": "display",
+      "line": 141,
+      "text": "\\[\n\\Delta_{\\{3,4\\}}(G)\\le\\Delta_{\\{3,\\ldots,L\\}}(G)\n\\le\\Delta_{\\mathrm{cp}}(G),\n\\tag{1.3b}\n\\]",
+      "sha256": "63d57f6504946bd9629aa02193995ac8aefeac568f094fe2264acd7dd0389872"
+    },
+    {
+      "kind": "display",
+      "line": 151,
+      "text": "\\[\ne(G)-g(\\mathcal P)\n\\le B_n(p)-\\frac m{20}-\\frac A2\n\\le M(n),\n\\tag{1.4}\n\\]",
+      "sha256": "3b60669b4512dfc93b4a946a6e7624600daf6d9eabb9fc67a5cb96b92867ec1f"
+    },
+    {
+      "kind": "display",
+      "line": 164,
+      "text": "\\[\n\\boxed{\nF_4(G)<\\frac{n^2}{6}-\\eta_0n^2\n\\quad\\text{o}\\quad\n\\exists\\,\\text{testigo estructural cercano de }G.\n}\n\\tag{1.5}\n\\]",
+      "sha256": "1f1dd9cf548634748205ba77391379aa9083cfd785cebb477ebeb99050587e75"
+    },
+    {
+      "kind": "display",
+      "line": 197,
+      "text": "\\[\ng(K)=\\binom{|K|}{2}-1,\\qquad\ng(\\mathcal P)=\\sum_{K\\in\\mathcal P}g(K).\n\\]",
+      "sha256": "955cad471e45412f03cbdfeb9e8e0aebb38abb1718fa1abc5245e49f97c78e93"
+    },
+    {
+      "kind": "display",
+      "line": 213,
+      "text": "\\[\n|Q|=e(G)-g(\\mathcal P).\n\\tag{2.1}\n\\]",
+      "sha256": "e6af2a1bfd2325ee3b9608123236fe0845f9de68ac37fe805c07003812e8c44f"
+    },
+    {
+      "kind": "display",
+      "line": 222,
+      "text": "\\[\n\\sum_{K:e\\in E(K)}x_K\\le1\\qquad(e\\in E(G)).\n\\tag{2.2}\n\\]",
+      "sha256": "167163f52f054414091b63be309b0c04093624c0e3adccfd3f9123082d2b2690"
+    },
+    {
+      "kind": "display",
+      "line": 227,
+      "text": "\\[\n\\sum_{e\\in E(T)}y_e\\ge2,\\qquad\n\\sum_{e\\in E(Q)}y_e\\ge5.\n\\tag{2.3}\n\\]",
+      "sha256": "3a743d5e86be426750b6384fc09e1f76d2274248d6f9099807c00c22373e94f7"
+    },
+    {
+      "kind": "display",
+      "line": 235,
+      "text": "\\[\nw(x)\\le\\frac56\\sum_K |E(K)|x_K\\le\\frac56e(G).\n\\tag{2.4}\n\\]",
+      "sha256": "16eeb993c56bfba8d59960ebdf2d903e980bce81d2ff07bc43d48e195d8053ff"
+    },
+    {
+      "kind": "display",
+      "line": 244,
+      "text": "\\[\nW^*(G)\\ge2\\nu_3^*(G),\\qquad\nF_4(G)\\le e(G)-2\\nu_3^*(G).\n\\tag{2.5}\n\\]",
+      "sha256": "2a509b487384627f4403a406c91ed78bfde2b5459d90c929dad93a405bb0d64d"
+    },
+    {
+      "kind": "display",
+      "line": 276,
+      "text": "\\[\nw(x)-g(\\mathcal P)\\le\\xi n^2.\n\\tag{3.1}\n\\]",
+      "sha256": "ee4f6528d64bfa1537ba6d4a3c1969b7e0c6bfc84518cbab845496536e3f559f"
+    },
+    {
+      "kind": "display",
+      "line": 296,
+      "text": "\\[\nc_4(G)\\le e(G)-g(\\mathcal P)\n\\le F_4(G)+\\frac\\eta2n^2\n<\\frac{n^2}{6}-\\frac\\eta2n^2.\n\\]",
+      "sha256": "ffff21cc94fcc1e73950868e156e5efae2d68e03441f40efe4915e58228d0c35"
+    },
+    {
+      "kind": "display",
+      "line": 310,
+      "text": "\\[\n\\varepsilon_0=10^{-12},\\qquad \\eta_0=10^{-16}.\n\\tag{4.1}\n\\]",
+      "sha256": "ffec03729bb0f252e3a070e4683d7461103706a77e81dad416c6516d399f543e"
+    },
+    {
+      "kind": "display",
+      "line": 322,
+      "text": "\\[\nd(G)=\\frac1{n^2}\\min_C d_E(G,S_C).\n\\]",
+      "sha256": "a86730fdaaf49908496c3e534af9e8ddbb7e896e46cd94d50f1f2b433ad248b9"
+    },
+    {
+      "kind": "display",
+      "line": 326,
+      "text": "\\[\n|d(G)-d(H)|\\le\\frac{d_E(G,H)}{n^2}.\n\\tag{4.2}\n\\]",
+      "sha256": "9a6650c5c3587c53fe48d6b4ed416e37e115cd16c382cc88358c0e58b666199e"
+    },
+    {
+      "kind": "display",
+      "line": 335,
+      "text": "\\[\nF_4(G_i)\\le F_4(G_{i+1}),\\qquad\nd_E(G_i,G_{i+1})\\le n-1.\n\\tag{4.3}\n\\]",
+      "sha256": "e5e36d722a172360f6eff4c89dc74955631d86e5916049b7ebc1f9361131e12e"
+    },
+    {
+      "kind": "display",
+      "line": 342,
+      "text": "\\[\nW^*(G_{u\\to v})+W^*(G_{v\\to u})\\le2W^*(G).\n\\tag{4.4}\n\\]",
+      "sha256": "898b28343377afc888a2c0634f9914545d36da2d2e89eae2b27e13f1445be4d2"
+    },
+    {
+      "kind": "display",
+      "line": 355,
+      "text": "\\[\nd(X)\\le16D/n^2,\\qquad D=\\eta_0n^2+n/6+1/24.\n\\tag{4.5}\n\\]",
+      "sha256": "433f1df7a822bdc7cac4c2950ef4b33ff759a0d76f1ce68505e1880232a590f4"
+    },
+    {
+      "kind": "display",
+      "line": 361,
+      "text": "\\[\nF_4(X)\\le |Q|\\le B_n(|R|)-\\frac{117}{1825}m-\\frac{12687}{20000}A.\n\\]",
+      "sha256": "da32f00b9c54c909edd3c7c774aafbef21196f25f99e57d622e7e98b4e25c760"
+    },
+    {
+      "kind": "display",
+      "line": 365,
+      "text": "\\[\n\\frac{117}{1825}m+\\frac{12687}{20000}A\\le D.\n\\]",
+      "sha256": "94199193e4e7360358fde56023efb4270141d18aed424fefd42770eed0f6c10f"
+    },
+    {
+      "kind": "display",
+      "line": 373,
+      "text": "\\[\nd(X)\\le\\frac{16D}{n^2}<\\varepsilon_0-\\frac1n,\\qquad\nD=\\eta_0n^2+\\frac n6+\\frac1{24}.\n\\tag{4.6}\n\\]",
+      "sha256": "44182b09a9e9368aa357ee83acb9167e947e775bcf95349997a9ab8ca4629fca"
+    },
+    {
+      "kind": "display",
+      "line": 381,
+      "text": "\\[\n\\frac{16}{6n}+\\frac1n+\\frac{16}{24n^2}\n<\\varepsilon_0-16\\eta_0.\n\\tag{4.6a}\n\\]",
+      "sha256": "0c17ec642be89d7d99d144a589fa7bad9db288d81ea1dd0144131d0d401428cf"
+    },
+    {
+      "kind": "display",
+      "line": 389,
+      "text": "\\[\nd(G_i)<\\varepsilon_0.\n\\]",
+      "sha256": "d452e3107518f4ff8d877b038b77d81f00604643d893f857215f9fd06bdb95cc"
+    },
+    {
+      "kind": "display",
+      "line": 399,
+      "text": "\\[\n\\varepsilon=\\frac{\\alpha^4}{8B^2},\\qquad\n1280B^2\\eta\\le\\alpha^4,\\qquad\nn\\ge\\frac{1280B^2}{\\alpha^4}\n\\]",
+      "sha256": "f96bed3321921fac99f241e1b44e16285283af1168363ee3bf11feeebe7a74f7"
+    },
+    {
+      "kind": "display",
+      "line": 409,
+      "text": "\\[\nF_4(G)\\ge n^2/6-\\eta_0n^2.\n\\]",
+      "sha256": "dec0152ea2da1290e9d17dd3a68cb809105f1948a2621099abfd577bb9cad07a"
+    },
+    {
+      "kind": "display",
+      "line": 413,
+      "text": "\\[\nd_E(G,S_C)\\le\\varepsilon_0n^2,\n\\tag{4.7}\n\\]",
+      "sha256": "82ef6888cab8b85feda2cbd9ad457e3adcb75b75b13b43f543174a1c6816654b"
+    },
+    {
+      "kind": "display",
+      "line": 417,
+      "text": "\\[\n(6|C|-2n-1)^2\n\\le24\\left((\\eta_0+6\\varepsilon_0)n^2+\\frac n6+\\frac1{24}\\right).\n\\tag{4.8}\n\\]",
+      "sha256": "b497f11a574ec43ab37d839a56b08b0caa294bff36c640dd42e5f6d4ae0f5cbd"
+    },
+    {
+      "kind": "display",
+      "line": 430,
+      "text": "\\[\nd(G)<\\varepsilon_0,\\qquad F_4(G)\\ge n^2/6-\\eta_0n^2.\n\\]",
+      "sha256": "2d5f3f8b57408da725b0f9807c3dc540c6a5b9dfd38db0d514b87f18894325c1"
+    },
+    {
+      "kind": "display",
+      "line": 434,
+      "text": "\\[\n|Q|\\le B_n(p)-\\frac m{20}-\\frac A2,\\qquad\nB_n(p)=p(n-p)-\\binom p2.\n\\tag{5.0}\n\\]",
+      "sha256": "091e36457df36a83e8dcd5184e565c9a6da5919a99f18149063e110613673387"
+    },
+    {
+      "kind": "display",
+      "line": 447,
+      "text": "\\[\n\\begin{gathered}\na\\ge1024,\\qquad |n-3a|\\le a/64,\\\\\ne(G-P)+\\#\\{\\text{enlaces ausentes entre }P\\text{ y }V\\setminus P\\}\n\\le a^2/65536.\n\\end{gathered}\n\\tag{5.1}\n\\]",
+      "sha256": "927cead0e44215ced1a23d6ff48b932b4c07d9c02bd4b5bf15c72c1ac095baeb"
+    },
+    {
+      "kind": "display",
+      "line": 459,
+      "text": "\\[\nF_4(S_C)\\le\n\\begin{cases}\nb_0-a_0,&b_0\\ge2a_0,\\\\\n(2b_0-a_0)/3,&a_0\\le b_0\\le2a_0,\\\\\n(a_0+b_0)/6,&b_0\\le a_0.\n\\end{cases}\n\\tag{5.1a}\n\\]",
+      "sha256": "1eb3dffbdb897f6ecd66d6ba6d8de66769c7fc3b96db3f8f1cd8917efdeeef22"
+    },
+    {
+      "kind": "display",
+      "line": 471,
+      "text": "\\[\n\\binom r2-\\left((a-1)r-\\binom a2\\right)\n=\\binom{u+1}{2}\n\\]",
+      "sha256": "792af780fce83a1435053d910bb6fddc3e0ecd4bf33108c774eb65e918de2f72"
+    },
+    {
+      "kind": "display",
+      "line": 478,
+      "text": "\\[\n\\varepsilon_0n^2+un\\le(10^{-12}+1.5\\cdot10^{-6})n^2\n\\le\\frac{(33n/100)^2}{65536}\\le\\frac{a^2}{65536}.\n\\]",
+      "sha256": "1376500417b534f1440918d0516d73b4a9c700d0c9a9dfcebb47bf97e2faf769"
+    },
+    {
+      "kind": "display",
+      "line": 485,
+      "text": "\\[\nR=(P\\setminus X)\\cup Y.\n\\tag{5.2}\n\\]",
+      "sha256": "e26b5f4c92c75cacdeaecef2a89f812101fd18864cf978c6399516230e36fd1c"
+    },
+    {
+      "kind": "display",
+      "line": 490,
+      "text": "\\[\n16384|X|\\le |P|,\\qquad 57344|Y|\\le |P|.\n\\tag{5.3}\n\\]",
+      "sha256": "405159ee7c4021bbe316928220fcac91f1c64d3f3af660aec0638944a4d97e9c"
+    },
+    {
+      "kind": "display",
+      "line": 495,
+      "text": "\\[\n\\begin{gathered}\n99a/100\\le p\\le101a/100,\\quad q\\ge p,\\quad\n44352q\\ge87947a,\\\\\n48(2p-q)_+\\le a,\\quad 3D\\le a,\\quad\n400m<a^2,\\quad2000(A+2m)\\le11a^2.\n\\end{gathered}\n\\tag{5.4}\n\\]",
+      "sha256": "01cfdc920eceb736b8f1ca987460ab4ec0a4ca4451ef213cb806916b63d53b77"
+    },
+    {
+      "kind": "display",
+      "line": 510,
+      "text": "\\[\n64d_{\\max}(G-R)\\le113a+64|X|,\\qquad\n128\\omega(G-R)\\le a+128+128|X|.\n\\]",
+      "sha256": "64c6ce4baac82df2e10f7e946f4717c231f9ddd2f6f7da026d53d7967ac8a96b"
+    },
+    {
+      "kind": "display",
+      "line": 531,
+      "text": "\\[\nB_n(p)=p(n-p)-\\binom p2.\n\\]",
+      "sha256": "78fd0341288b55147cba7652c38849f834f0c79aefbfdf95fe7a2cc06fc26981"
+    },
+    {
+      "kind": "display",
+      "line": 545,
+      "text": "\\[\n|Q|=\\binom p2+pq+m-A-2\\left(f+\\binom p2-\\ell\\right)\n=B_n(p)+m-A-2f+2\\ell.\n\\tag{5.4a}\n\\]",
+      "sha256": "60060a740507e8825a136b4e2525649fe74c6788c4b43c71d9e856acbfd6e3c9"
+    },
+    {
+      "kind": "display",
+      "line": 559,
+      "text": "\\[\nm_0\\ge\\frac pc\\,m.\n\\tag{5.5}\n\\]",
+      "sha256": "640c804a5c53ea73e648bf933ff203a328834b1453be8c07ad8e362e46e9ae23"
+    },
+    {
+      "kind": "display",
+      "line": 566,
+      "text": "\\[\nf\\ge m_0-\\frac{w-1}{p}A\n\\ge\\frac pc\\,m-\\frac{w-1}{p}A.\n\\tag{5.6}\n\\]",
+      "sha256": "11886fc23f44b9511bbb7e584c1c25bb4ae5254181823a104dadfd64ad190479"
+    },
+    {
+      "kind": "display",
+      "line": 572,
+      "text": "\\[\n40c\\le73p,\\qquad 40(w-1)\\le3p.\n\\tag{5.7}\n\\]",
+      "sha256": "693772f38b8957a79300e5c67d7013aa8ba30625e30d3027023cc714ee067f2f"
+    },
+    {
+      "kind": "display",
+      "line": 581,
+      "text": "\\[\n\\sum_xa_x=A,\\quad \\sum_xu_x=2f,\\quad\na_x\\le D,\\quad u_x\\le2t,\\quad\nS:=\\sum_xd_x=A+2f,\n\\tag{5.8}\n\\]",
+      "sha256": "9b25f5f6ae318a58b95d49f9b560514bba211b9f7c8b3f0d68f68b7559bc5a3f"
+    },
+    {
+      "kind": "display",
+      "line": 590,
+      "text": "\\[\n\\begin{aligned}\n\\sum_e b_e&\\le(p-1)S,\\\\\n\\sum_e b_e^2&\\le(p-2)\\sum_xd_x^2+S^2,\\\\\n\\sum_xd_x^2&\\le(D+4t)A+4tf.\n\\end{aligned}\n\\tag{5.9}\n\\]",
+      "sha256": "4876ea0e5bc5642f6b69ae8cc660fc940cb8bdead41b528173298cc75ce6aef8"
+    },
+    {
+      "kind": "display",
+      "line": 599,
+      "text": "\\[\n(a_x+u_x)^2\\le Da_x+4ta_x+2tu_x,\n\\]",
+      "sha256": "69e5f0fed192273799e06c123eee6a6e84c186e4bc3f9f527d4adfae68333507"
+    },
+    {
+      "kind": "display",
+      "line": 605,
+      "text": "\\[\n\\frac{s}{p}\\frac{b_e}{q}\n+\\left(1-\\frac{s}{p}\\right)\\frac{b_e(b_e-1)}{q(q-1)}.\n\\tag{5.10}\n\\]",
+      "sha256": "d3d512ed4da40103e04afa60d289f94ea6aacf93f21809058bbb85a0d1ed9ea3"
+    },
+    {
+      "kind": "display",
+      "line": 611,
+      "text": "\\[\n\\ell\\le\\frac{s}{q}(A+2f)\n+\\frac{(p-2)((D+4t)A+4tf)+(A+2f)^2}{q(q-1)}.\n\\tag{5.11}\n\\]",
+      "sha256": "abadbd6bae355e13651f7393cd0b206ef4d1bedc7f20fc60517cc764a76acfc7"
+    },
+    {
+      "kind": "display",
+      "line": 619,
+      "text": "\\[\n\\begin{gathered}\na\\ge1024,\\quad \\frac qa\\ge\\frac{87947}{44352},\\quad\n\\frac pa\\le\\frac{101}{100},\\quad \\frac Da\\le\\frac13,\\\\\n\\frac ta\\le\\frac1{256},\\quad \\frac sa\\le\\frac1{48},\\quad\n\\frac{A+2f}{a^2}\\le\\frac{11}{2000}.\n\\end{gathered}\n\\tag{5.12}\n\\]",
+      "sha256": "3dcff065247d095846023d140fe9b1ca26e3fed5210ee8edc6408a52571d4d6f"
+    },
+    {
+      "kind": "display",
+      "line": 630,
+      "text": "\\[\n2p-q=2a-q_P-3|X|+3|Y|\n\\le a/64+3a/57344<a/48.\n\\tag{5.12a}\n\\]",
+      "sha256": "792e76839338daf083a6215c5672d39aa4a45d1c487b47b94fa87094e139088b"
+    },
+    {
+      "kind": "display",
+      "line": 636,
+      "text": "\\[\n\\frac{q(q-1)}{a^2}\\ge\n\\left(\\frac{87947}{44352}\\right)^2\n-\\frac{87947}{44352\\cdot1024}\\ge\\frac{393}{100}.\n\\tag{5.13}\n\\]",
+      "sha256": "841e24ba941283f2c9c90a34bf27ef5f0460139137f11ca69f27f0458904cc50"
+    },
+    {
+      "kind": "display",
+      "line": 644,
+      "text": "\\[\n\\begin{aligned}\n\\frac{1}{48Q_0}\n+\\frac{(101/100)(1/3+1/64)+11/2000}{R_0}\n&\\le\\frac{11}{100},\\\\\n\\frac{1}{24Q_0}\n+\\frac{(101/100)/64+11/1000}{R_0}\n&\\le\\frac{29}{1000}.\n\\end{aligned}\n\\tag{5.14}\n\\]",
+      "sha256": "dec31aebf18b6a8f8f80128e82a25cad33afe5d0d629e747d975970e2fd70b88"
+    },
+    {
+      "kind": "display",
+      "line": 660,
+      "text": "\\[\n|Q|\\le B_n(p)-\\frac{117}{1825}m-\\frac{12687}{20000}A\n\\le B_n(p)-\\frac m{16}-\\frac A2.\n\\tag{5.15a}\n\\]",
+      "sha256": "aa4e4ebc393fc560a42b7ff19c0511cdf26131db2f5c4cf15b16bd3003ff8a18"
+    },
+    {
+      "kind": "display",
+      "line": 666,
+      "text": "\\[\n|Q|\\le B_n(p)-\\frac{19}{365}m-\\frac{253}{500}A\n\\le B_n(p)-\\frac m{20}-\\frac A2.\n\\tag{5.15}\n\\]",
+      "sha256": "914900d72e65abea09826680ac44dbc9cb8be4d8e6ab003e469686a35ae40543"
+    },
+    {
+      "kind": "display",
+      "line": 674,
+      "text": "\\[\n|Q|\\le B_n(p)+m-\\frac{13}{20}A-\\frac{48}{25}f.\n\\]",
+      "sha256": "9504514279d6d0ae7f8705a7377bfefbb25a0df390daffbcd1e4bbe2c171eb6d"
+    },
+    {
+      "kind": "display",
+      "line": 678,
+      "text": "\\[\n1-\\frac{48}{25}\\frac{40}{73}=-\\frac{19}{365},\\qquad\n-\\frac{13}{20}+\\frac{48}{25}\\frac3{40}=-\\frac{253}{500}.\n\\]",
+      "sha256": "0eeda82c3beaa62ae44e8257dadca5620f4ad66a3612fd28c6547b0cb891e8f1"
+    },
+    {
+      "kind": "display",
+      "line": 685,
+      "text": "\\[\n|Q|\\le B_n(p)+m-\\frac{39}{50}A-\\frac{971}{500}f.\n\\]",
+      "sha256": "275cd11357bb95da1d20f23dfc7c35beab8fa5c92e7e93e6ade6e8e080940b65"
+    },
+    {
+      "kind": "display",
+      "line": 691,
+      "text": "\\[\nB_n(p)=\\frac{(2n+1)^2}{24}-\\frac{(6p-2n-1)^2}{24}.\n\\tag{5.16}\n\\]",
+      "sha256": "6a0d251100729859f142127690d98f438d2b1cad57a5cf2fc082f3795b741077"
+    },
+    {
+      "kind": "display",
+      "line": 704,
+      "text": "\\[\n|3|R|-n|\\le\\frac n{50},\\qquad\n|3|C|-n|\\le\\frac n{10^4},\\qquad\nd_E(G,S_C)\\le\\varepsilon_0n^2,\n\\tag{5.17}\n\\]",
+      "sha256": "946f6e3a08fea61047c6c97d7b2c333cd68a8c22842ccd0168f87741770aaff5"
+    },
+    {
+      "kind": "display",
+      "line": 711,
+      "text": "\\[\n\\left|e(G)-\\frac{5n^2}{18}\\right|\\le\\frac{n^2}{10^4}.\n\\tag{5.18}\n\\]",
+      "sha256": "1cd33e3a52c36ed4034a0eb4429945329d02177411af7db799463b4bf4957036"
+    },
+    {
+      "kind": "display",
+      "line": 716,
+      "text": "\\[\ne(S_C)=\\binom k2+k(n-k)\n=\\frac{5n^2}{18}+\\frac{2nt}{3}-\\frac{t^2}{2}-\\frac{k}{2}.\n\\]",
+      "sha256": "dedfec79b73aa54e616a3b8eb6144c64d2b022e9196d8cb2c6e3d42454695d81"
+    },
+    {
+      "kind": "display",
+      "line": 737,
+      "text": "\\[\ns-\\binom s2\\le1.\n\\]",
+      "sha256": "29d1530b5a439c33bd86e2958267e21f4d674756f8cc62503f008337eb299f55"
+    },
+    {
+      "kind": "display",
+      "line": 741,
+      "text": "\\[\n|\\mathcal Q|\\ge kh-\\binom k2.\n\\tag{6.1}\n\\]",
+      "sha256": "371dc5441e8eb61df6ce0de768386db19f25130d285f8cbb971c85cd77fb02c0"
+    },
+    {
+      "kind": "display",
+      "line": 747,
+      "text": "\\[\n\\binom k2+kh-2\\binom k2=kh-\\binom k2.\n\\]",
+      "sha256": "f1a2a442a8607f967ac95b1f372a5d25cebc6486bded37191449e040f46728ec"
+    },
+    {
+      "kind": "display",
+      "line": 751,
+      "text": "\\[\n\\operatorname{cp}(S)=c_3(S)=c_4(S)=kh-\\binom k2.\n\\tag{6.2}\n\\]",
+      "sha256": "a96286b14ccc182a9a3fed15cbc9c0aa008003bb81da3314b8d28d7d489e7edc"
+    },
+    {
+      "kind": "display",
+      "line": 760,
+      "text": "\\[\n6f(n,k)+(n-3k)(n-3k+1)=n(n+1).\n\\tag{6.3}\n\\]",
+      "sha256": "ab82d8c367c59c93f9b45d3dc74840a2abfde9181fb87afb7a6a705c7238308f"
+    },
+    {
+      "kind": "display",
+      "line": 765,
+      "text": "\\[\n\\begin{cases}\nk=r,& n=3r,\\\\\nk=r\\text{ o }r+1,& n=3r+1,\\\\\nk=r+1,& n=3r+2.\n\\end{cases}\n\\tag{6.4}\n\\]",
+      "sha256": "5268f4b1569167061efc16b83e130030860776900b550665c7e005fe497ca7c3"
+    },
+    {
+      "kind": "display",
+      "line": 780,
+      "text": "\\[\ne(G)\\le\\binom n2\\le N^2\\le M(n)+b.\n\\]",
+      "sha256": "6f497d9c34abe4773a3e7c56d29ed54ef89efedf34ac4ea106bd10d027bbb915"
+    },
+    {
+      "kind": "display",
+      "line": 786,
+      "text": "\\[\nh=4\\cdot8^5\\cdot2208^5\\cdot4500^{105}\\cdot(2\\cdot10^{16})^{105}.\n\\]",
+      "sha256": "a7afd076d893a73f66b74952abfccd57744b5ec9aaf3500c9e548e3aa4628c7e"
+    },
+    {
+      "kind": "display",
+      "line": 790,
+      "text": "\\[\nN=T(h+7),\\qquad b=N^2\\le T(h+8).\n\\]",
+      "sha256": "f0ae06406c88234d00c6b9ee7e1270d17d3bbe18bc847ed4468771ba26b5fe66"
+    },
+    {
+      "kind": "display",
+      "line": 798,
+      "text": "\\[\n\\frac{n^2+n}{6}-1\\le M(n)\\le cn^2+Cn.\n\\tag{6.5a}\n\\]",
+      "sha256": "b640e54b3a6cb1f3922d8d40da1bf9abaf4f3162092ccc0c27e2fbd08fb8a07a"
+    },
+    {
+      "kind": "display",
+      "line": 805,
+      "text": "\\[\n\\operatorname{cp}(G)=M(n)\n\\ge\\frac{n^2}{6}+\\frac n6-1\n>\\frac{n^2}{6}+cn+B_0.\n\\tag{6.5}\n\\]",
+      "sha256": "ffe78925678f59138889c3956a39841fabff91d8ab244241b6ce9405a5a6d21f"
+    },
+    {
+      "kind": "display",
+      "line": 818,
+      "text": "\\[\nd(C)=1+e_{\\rm int}(C)-e_{\\rm cruz}(C),\n\\]",
+      "sha256": "1b6b21cc9f1477348be6f969ac55ff87afe83296e740b6b96d253ee1df0507d5"
+    },
+    {
+      "kind": "display",
+      "line": 822,
+      "text": "\\[\n|\\mathcal Q|-\\left(kh-\\binom k2\\right)\n=\\sum_{C\\in\\mathcal Q}d(C).\n\\tag{6.6}\n\\]",
+      "sha256": "35b8db139bf1f02d248433cee7a92c73af6187ec5c7b50bcbecfe6359ca9d22a"
+    },
+    {
+      "kind": "display",
+      "line": 828,
+      "text": "\\[\nd(C)=1+\\binom s2-s=\\frac{(s-1)(s-2)}2\\ge0;\n\\]",
+      "sha256": "ff0b85690b99a5f3c505235579aa34a576b389ae4ff8e7e78e10a205e81b3083"
+    },
+    {
+      "kind": "display",
+      "line": 838,
+      "text": "\\[\n\\bigl(M(n)-B_n(|R|)\\bigr)+\\frac m{16}+\\frac A2\\le\\delta,\n\\qquad\nd_E(G,S_R)=m+A\\le16\\delta.\n\\tag{6.7}\n\\]",
+      "sha256": "9bb18d2c1a91f0c35193517287339cd31c0274f01bd9a7cfdd2dc901ef0330ad"
+    },
+    {
+      "kind": "display",
+      "line": 847,
+      "text": "\\[\n|Q|<\\frac{n^2}{6}-\\frac{\\eta_0}{2}n^2\n\\le M(n)-\\frac{\\eta_0}{2}n^2.\n\\]",
+      "sha256": "161a24098930ba3eea07570b912ace75bbaf8c598931876eef42acaf8bf5beac"
+    },
+    {
+      "kind": "display",
+      "line": 852,
+      "text": "\\[\nM(n)-\\delta\\le |Q|\n\\le B_n(|R|)-\\frac m{16}-\\frac A2,\n\\]",
+      "sha256": "ec1f46f3af75d1d92a6bf11a8675f6338904a54cbe3aa77d893d8654a513ef16"
+    },
+    {
+      "kind": "display",
+      "line": 857,
+      "text": "\\[\nm+A\\le16\\left(\\frac m{16}+\\frac A2\\right)\\le16\\delta.\n\\]",
+      "sha256": "f6f38ecb243a3aa58ecd5d7a8a93ac2ec41ffd8938f4125c9cd0357440d0da94"
+    },
+    {
+      "kind": "display",
+      "line": 863,
+      "text": "\\[\nd_R(K)=1+\\binom{a_K}{2}+3\\binom{b_K}{2}-a_Kb_K\n=\\frac{(a_K-b_K)(a_K-b_K-1)}2+(b_K-1)^2.\n\\tag{6.7a}\n\\]",
+      "sha256": "374f9711316adfaf255f36e26d5cd37e459be9028cf156fe40a293fbb07b6265"
+    },
+    {
+      "kind": "display",
+      "line": 873,
+      "text": "\\[\n\\sum_{K\\in Q}d_R(K)=|Q|-B_n(|R|)+A+3m.\n\\tag{6.7b}\n\\]",
+      "sha256": "e222c3885c42e0a0102f54644412b9c5f69aa175e3d16d298bd316dc26d7077c"
+    },
+    {
+      "kind": "display",
+      "line": 882,
+      "text": "\\[\n6B_n(k)+(n-3k)(n-3k+1)=n(n+1)\n\\tag{6.8}\n\\]",
+      "sha256": "345091a984eee29bd45b2852a54a49468b59a4c009c129fd696c4d571abf6206"
+    },
+    {
+      "kind": "display",
+      "line": 887,
+      "text": "\\[\n\\operatorname{cp}(G)=M(n)\n\\quad\\Longleftrightarrow\\quad\nc_4(G)=M(n)\n\\quad\\Longleftrightarrow\\quad\nG\\text{ es completo-split con núcleo óptimo},\n\\tag{6.9}\n\\]",
+      "sha256": "38fcfe07aed297ead7f80deadf074e8534e1851d1259f1e250c549557f6f3b07"
+    },
+    {
+      "kind": "display",
+      "line": 900,
+      "text": "\\[\nT(C,D,H)=(K_C\\sqcup I_D)\\vee I_H.\n\\]",
+      "sha256": "e4f7c5e93f88acedf338cbef1d0cb7187c506c4d382f2d01d619e2b47bd680bd"
+    },
+    {
+      "kind": "display",
+      "line": 904,
+      "text": "\\[\nB_{s,n}(k)=k(n-k)-\\binom{k-s}{2}.\n\\tag{6.10}\n\\]",
+      "sha256": "38487837fcc0210862fb48d62f462819f518097b6a929111dabd420334ce3f64"
+    },
+    {
+      "kind": "display",
+      "line": 911,
+      "text": "\\[\n\\epsilon_s=\\frac1{10^{41}(s+1)^8},\\qquad\nA_s=\\max\\{40000(s+1)^3,\\,2/\\epsilon_s\\}.\n\\tag{6.11}\n\\]",
+      "sha256": "2c73e8dbcae2827de15c7917e98e56455ac7180bf2a8d2381091a04f349e02e7"
+    },
+    {
+      "kind": "display",
+      "line": 917,
+      "text": "\\[\nc_4(G)\\ge Q_s(n)-\\delta,\\qquad 0\\le\\delta\\le\\gamma_s n^2,\n\\]",
+      "sha256": "deca27ab8652bf43c12f45ff40a55bee4fc9d13a4b51229dc8f006efb5a78bf5"
+    },
+    {
+      "kind": "display",
+      "line": 921,
+      "text": "\\[\n\\begin{aligned}\nd_E(G,T(C,D,H))&\\le A_s\\delta,\\\\\n0\\le Q_s(n)-B_{s,n}(k)&\\le(1+4A_s)\\delta.\n\\end{aligned}\n\\tag{6.12}\n\\]",
+      "sha256": "f69ecba4200059bd4de6353f06fc6fb039b238118dc90b774b3a13d48940a8cf"
+    },
+    {
+      "kind": "display",
+      "line": 929,
+      "text": "\\[\n\\begin{aligned}\nN_{\\rm bad}(Q)&\\le\\tau+(1+7A_s)\\delta,\\\\\nE_{\\rm bad}(Q)&\\le10\\tau+10(1+7A_s)\\delta.\n\\end{aligned}\n\\tag{6.13}\n\\]",
+      "sha256": "e5c4f827a6798fe566d58eb3dd5b60db60b111ca5a57fecbd1fde2889373c3d0"
+    },
+    {
+      "kind": "display",
+      "line": 945,
+      "text": "\\[\nE=e(G[S])-\\binom{|S|-s}{2}\\ge0.\n\\]",
+      "sha256": "cf2acbf25c94db6d438621dd7220b4ce8e88d28e6617f20988dd1de06053f451"
+    },
+    {
+      "kind": "display",
+      "line": 949,
+      "text": "\\[\n\\begin{gathered}\na+\\frac{m}{2000(s+1)^2}+R_*\\le\\delta,\\qquad\nnt_W\\le800(s+1)^2R_*,\\\\\nE\\le R_*+nt_W,\\qquad rn\\le16sE,\\\\\nd_E(G,T(C,D,H))\\le a+m+E+2rn+2nt_W.\n\\end{gathered}\n\\tag{6.14}\n\\]",
+      "sha256": "5460e973fb475aaf3faaf76153b9d5534d6b9c99cff74dbbc96b3ba1b257ad9e"
+    },
+    {
+      "kind": "display",
+      "line": 961,
+      "text": "\\[\nd_E(G,T)\\le a+m+\n\\bigl(1+32s+800(3+32s)(s+1)^2\\bigr)R_*.\n\\]",
+      "sha256": "0a1081e87ea5f9ba8fde52f44b317a8def8e710c6c884a37edfbbf235aa1a331"
+    },
+    {
+      "kind": "display",
+      "line": 968,
+      "text": "\\[\nu=Q_s(t)-Q_s(t-1),\\qquad\n\\delta'=\\delta+\\deg(v)-u.\n\\tag{6.15}\n\\]",
+      "sha256": "74f069c1a68a69a97bce0cdd1da99dd32bfc4ff217651fc91dee5b46e672aab1"
+    },
+    {
+      "kind": "display",
+      "line": 974,
+      "text": "\\[\n\\delta'\\le\\delta-\\epsilon_s t+\\frac13.\n\\]",
+      "sha256": "ce98c48964333305fd56fb4f6cd46544fa65a2c6132158543791a70b3b80d382"
+    },
+    {
+      "kind": "display",
+      "line": 982,
+      "text": "\\[\n\\begin{aligned}\nN_{\\rm bad}(Q)&\\le |Q|-B_{s,n}(k)+3d_E(G,T),\\\\\nE_{\\rm bad}(Q)&\\le10\\bigl(|Q|-B_{s,n}(k)+3d_E(G,T)\\bigr).\n\\end{aligned}\n\\tag{6.16}\n\\]",
+      "sha256": "3681d876c7f98bed481b61f48e7b97ad705bc95228880eb4a4c7c79d4fa3f1eb"
+    },
+    {
+      "kind": "display",
+      "line": 992,
+      "text": "\\[\nd_E(G,T_*)\\le A_s\\delta+n\\sqrt{(1+4A_s)\\delta}.\n\\tag{6.17}\n\\]",
+      "sha256": "457df03a072fd4c753353259738c2e6c8f208b7e2ab87857a0632e7ab6cb9d89"
+    },
+    {
+      "kind": "display",
+      "line": 997,
+      "text": "\\[\n\\operatorname{cp}(G)=Q_s(n)\n\\quad\\Longleftrightarrow\\quad c_4(G)=Q_s(n)\n\\quad\\Longleftrightarrow\\quad\nG\\cong(K_{k-s}\\sqcup I_s)\\vee I_{n-k},\n\\tag{6.18}\n\\]",
+      "sha256": "d6a6d667ac06001abe2e752c76fb5ca8a768a2fc430b5c0f6457324e2ede2d1a"
+    },
+    {
+      "kind": "display",
+      "line": 1007,
+      "text": "\\[\n\\operatorname{dist}(k,\\mathcal K_{s,n})^2\n\\le Q_s(n)-B_{s,n}(k).\n\\tag{6.19}\n\\]",
+      "sha256": "ed3e3f36087216ef151741337ecda6fc3b9d4e33c70d8b316c60c2b06ebc8876"
+    },
+    {
+      "kind": "display",
+      "line": 1017,
+      "text": "\\[\nG_{s,q,d}=(K_{q+d-s}\\sqcup I_s)\\vee I_{2q-s-d}\n\\]",
+      "sha256": "73c1cadc14a218f2ce0c187d65944015ecc7f631f10e45022249e2c33f18b833"
+    },
+    {
+      "kind": "display",
+      "line": 1021,
+      "text": "\\[\n\\operatorname{cp}(G_{s,q,d})=c_4(G_{s,q,d})\n=Q_s(n)-\\delta_d,\\qquad\n\\delta_d=d^2+\\binom d2=\\frac{3d^2-d}{2}.\n\\tag{6.20}\n\\]",
+      "sha256": "d049d8c3f0a13c1cee01c77599121f6a8f5ae19f158e8953af6af6d917bb26da"
+    },
+    {
+      "kind": "display",
+      "line": 1028,
+      "text": "\\[\nd_E(G_{s,q,d},T)\\ge\\frac{nd}{4}\n\\ge\\frac{n\\sqrt{\\delta_d}}8.\n\\tag{6.21}\n\\]",
+      "sha256": "d9e42b26f10da721b7c3c7a64572b1ea2561c8cb01301a7dc9dc0f3d5d9d128a"
+    },
+    {
+      "kind": "display",
+      "line": 1037,
+      "text": "\\[\n2\\bigl(e(G_{s,q,d})-e(T)\\bigr)\n=d(4q-4s-d-1).\n\\]",
+      "sha256": "f64dc8e6332d598a849ebd4dade3ac2c79f7863fcdb2c43f8a39356c53b33573"
+    },
+    {
+      "kind": "display",
+      "line": 1042,
+      "text": "\\[\n4\\bigl(e(G_{s,q,d})-e(T)\\bigr)-nd\n=d(5q-7s-2d-2)\\ge0.\n\\]",
+      "sha256": "c430db0933061703a1fe06cc58d59ff39035a2983e45e1327ec39ce234c87ba5"
+    },
+    {
+      "kind": "display",
+      "line": 1059,
+      "text": "\\[\nF_4(G)\\le M(n-s)+ns.\n\\tag{6.22}\n\\]",
+      "sha256": "bcb1b20aa7d29f67fa0fa1ec08b01159977dbda33528b72730c9772b3116d1e2"
+    },
+    {
+      "kind": "display",
+      "line": 1064,
+      "text": "\\[\nF_4(G)\\le M(n-s)+ns-\\binom{s+1}{2}.\n\\tag{6.23}\n\\]",
+      "sha256": "200c2f6d75148a5aced369d462d07cb178537f4ea4a1843ba14a0479b1d4e1e3"
+    },
+    {
+      "kind": "display",
+      "line": 1073,
+      "text": "\\[\n\\max\\{0,|Q_j|-n_j^2/6\\}=o(n_j^2).\n\\tag{6.24}\n\\]",
+      "sha256": "2a71ca264cf10d917060604ec0efca0d78ccb94062d52963f0ec334e696793db"
+    },
+    {
+      "kind": "display",
+      "line": 1078,
+      "text": "\\[\nc_4(G_j)\\ge n_j^2/6-\\delta_j,\\qquad \\delta_j=o(n_j^2).\n\\]",
+      "sha256": "c70968d0c7b0d2681eb6ed166a9e66abdf2ecaf26ad2d525c4613dcf2d96865b"
+    },
+    {
+      "kind": "display",
+      "line": 1082,
+      "text": "\\[\n|R_j|=n_j/3+o(n_j),\\qquad\nd_E(G_j,S_{R_j})=o(n_j^2),\n\\tag{6.25}\n\\]",
+      "sha256": "fb6dd23cd81b3008d6676ab5ae61a4f2e6059827b21de02f87df670b2317a612"
+    },
+    {
+      "kind": "display",
+      "line": 1088,
+      "text": "\\[\nN_{\\rm bad}(Q)\\le\\tau+e_j,\\qquad\nE_{\\rm bad}(Q)\\le10\\tau+10e_j.\n\\tag{6.26}\n\\]",
+      "sha256": "920de8ceb00901153ba170d076a869c5a9cf020d74e5f391d27fa584f298ebde"
+    },
+    {
+      "kind": "display",
+      "line": 1098,
+      "text": "\\[\n\\mathcal S_G(R)=n\\bigl||R|-n/3\\bigr|\n +e(G-R)+A_R+\\bigl(M(n)-B_n(|R|)\\bigr),\n\\tag{6.27}\n\\]",
+      "sha256": "50c1215ead2d41a3169bc2a02a2c4d9f692a0cd369d80157f2ff8f1a33c2fee6"
+    },
+    {
+      "kind": "display",
+      "line": 1106,
+      "text": "\\[\n\\begin{aligned}\nc_{\\rm poly}&=4\\cdot17664^5\\cdot9000^{105}+3006,\\\\\nc_{\\rm far}&=c_{\\rm poly}(128\\cdot10^{82})^{105},\\\\\nc_T&=h_{\\rm iter}+c_{\\rm far}+841780,\\qquad\nP(s)=c_T(s+1)^{1680},\n\\end{aligned}\n\\tag{6.28}\n\\]",
+      "sha256": "05d1635fbef6e0606401e6f7e7df5bc01706207743f3b13e97f8353fd2f8b9cb"
+    },
+    {
+      "kind": "display",
+      "line": 1118,
+      "text": "\\[\ns_{\\max}(n)=\\max\\{S\\in\\mathbb N:S\\le n,\\ T(P(S))\\le n\\}.\n\\tag{6.29}\n\\]",
+      "sha256": "db5a7ca6b1422275ee6b214eb2375d9714cf59a36b981efc63a9657e559fb458"
+    },
+    {
+      "kind": "display",
+      "line": 1218,
+      "text": "\\[\nW^*(G)-g(\\mathcal P)\n=\\bigl(e(G)-g(\\mathcal P)\\bigr)-F_4(G)\n\\le M(n)-F_4(G)=\\Delta(G).\n\\tag{8.1}\n\\]",
+      "sha256": "beb753b189238e058039848241041a82778aa0922b99798bf2c5e2d5348c1f2a"
+    },
+    {
+      "kind": "display",
+      "line": 1392,
+      "text": "\\[\nd_{G[U]}(v)\\ge |U|/2+t\\qquad(v\\in U),\n\\tag{B.1}\n\\]",
+      "sha256": "6bf7bfdbdb9f12a0e06cc20aa09266979041da15438ca409cc9902531d47e3dc"
+    },
+    {
+      "kind": "display",
+      "line": 1399,
+      "text": "\\[\n\\sum_{u\\in U}b(u,f(u))\n\\le\\frac1{t+1}\\sum_{u\\in U}\\sum_{v\\in U}b(u,v).\n\\tag{B.2}\n\\]",
+      "sha256": "91ab5ea4658cb2186eba727d2b157eb0f4a5b58e3a4c1a6ad5a870d05cba4e49"
+    },
+    {
+      "kind": "display",
+      "line": 1407,
+      "text": "\\[\ng(\\mathcal P\\cup\\mathcal A)=g(\\mathcal P)+|U|.\n\\tag{B.3}\n\\]",
+      "sha256": "d3a01bc3a952ee812fc2d4889a3bc9d11c8011f6debfe8c4544fbc5f9206a328"
+    },
+    {
+      "kind": "display",
+      "line": 1414,
+      "text": "\\[\n\\sum_{u\\in U}\\sum_{v\\in U}b(u,v)\\le(t+1)B_{\\rm abs},\n\\]",
+      "sha256": "4472120392a8e52f55872089e8fa931b23c42719f47b79b1429de1c366159acc"
+    },
+    {
+      "kind": "display",
+      "line": 1424,
+      "text": "\\[\n|d_R(v)-\\theta d_F(v)|\\le2\\qquad(v\\in V(F)).\n\\tag{B.4}\n\\]",
+      "sha256": "03a4cc0727a6b6805416f15c35cfb6720db06294601e6441ced5afd8f6d2dd76"
+    },
+    {
+      "kind": "display",
+      "line": 1447,
+      "text": "\\[\n\\sum_{H\\ni v}z_H\\le1,\\qquad\n\\sum_{H\\supseteq\\{v,w\\}}z_H\\le\\gamma\\quad(v\\ne w).\n\\tag{3.2}\n\\]",
+      "sha256": "f983fc9ba526467766f9937517cf6bb4c9665af062a2ccc62aa3fc57a0767238"
+    },
+    {
+      "kind": "display",
+      "line": 1453,
+      "text": "\\[\n|\\mathcal M|\\ge(1-\\beta)\\sum_{H\\in\\mathcal H}z_H-\\beta|U|-C.\n\\tag{3.3}\n\\]",
+      "sha256": "00ffca322f1b58d6586fbc18676924c4b51b11c53afe407ed88aad5b8948f5b7"
+    },
+    {
+      "kind": "display",
+      "line": 1462,
+      "text": "\\[\n\\begin{aligned}\n|\\mathcal M|&\\ge(1-\\beta)\\sum_{H\\in\\mathcal H}z_H-\\epsilon|U|-C,\\\\\n|\\mathcal M\\cap\\mathcal A|&\\ge(1-\\beta)\\sum_{H\\in\\mathcal A}z_H-\\epsilon|U|-C.\n\\end{aligned}\n\\tag{3.4}\n\\]",
+      "sha256": "ed615bbe08392068cb25cc9fe2b84133e62c242636e69f524cb41d5d1bb1ac51"
+    },
+    {
+      "kind": "display",
+      "line": 1471,
+      "text": "\\[\np=\\max\\{\\lceil u\\rceil,k_0\\},\\qquad\nq=\\max\\{\\lceil a\\rceil,k_0\\}.\n\\]",
+      "sha256": "60bdb4eb09db8669a541a14fee5be3735eda2e5d5390dd46577d168659693533"
+    },
+    {
+      "kind": "display",
+      "line": 1478,
+      "text": "\\[\nm\\ge(1-b)(u+a)-b(|U|+p+q)-C_0,\n\\qquad |\\mathcal M\\cap\\mathcal A|\\ge m-p.\n\\]",
+      "sha256": "80689bdff4ce479f5ad861cea14ba08d47a6dd9f60e2aec8867b780053a60071"
+    },
+    {
+      "kind": "display",
+      "line": 1488,
+      "text": "\\[\n\\sum_{K:\\ e,f\\in E(K)}x_K\\le\\gamma\\qquad(e\\ne f).\n\\tag{3.5}\n\\]",
+      "sha256": "a485658a87b3916e06bd31caef402b2386e019e56cffb62743cc43af847e4d27"
+    },
+    {
+      "kind": "display",
+      "line": 1493,
+      "text": "\\[\ng(\\mathcal P)\\ge(1-\\beta)(2t_3+5t_4-6)\n -5\\epsilon\\binom{n+1}{2}-5D.\n\\tag{3.6}\n\\]",
+      "sha256": "837841da2a4e495fc8d4895d00b5f5054b925fbe369532e9289590e55ac0227b"
+    },
+    {
+      "kind": "display",
+      "line": 1513,
+      "text": "\\[\n(1-u-v)S-g(\\mathcal P)\\le\\zeta n^2,\n\\]",
+      "sha256": "2ce63b74411eb5d1276da6a5df38525598d577f25ac763b79c07deb3f44b05e8"
+    },
+    {
+      "kind": "display",
+      "line": 1517,
+      "text": "\\[\nw(x)-g(\\mathcal P)\n\\le L+\\left(\\zeta+\\frac56(u+v)\\right)n^2.\n\\tag{3.7}\n\\]",
+      "sha256": "0fffed4f2283c9b9504623e1348a57b32d684bdd3d6ea49429c34212bdd5ad89"
+    },
+    {
+      "kind": "display",
+      "line": 1523,
+      "text": "\\[\n\\begin{aligned}\nw(x)-g(\\mathcal P)\n={}&(w(x)-L-S)+((1-u-v)S-g(\\mathcal P))\\\\\n&+L+(u+v)S.\n\\end{aligned}\n\\]",
+      "sha256": "5401ee692c168bd0d94f97aa71b0a7d874b22e000cab111534275808ec18886f"
+    },
+    {
+      "kind": "display",
+      "line": 1533,
+      "text": "\\[\n30C\\le\\xi n^2,\\qquad 2\\zeta\\le\\xi\n\\]",
+      "sha256": "fe49c39cb8ae105210cd7818e535cb06b10aabe6257e422258c1c18b812ecfbf"
+    },
+    {
+      "kind": "display",
+      "line": 1539,
+      "text": "\\[\n(1-v)\\operatorname{vol}(H)\n\\le |\\operatorname{cleanFiber}(H)|.\n\\tag{3.8}\n\\]",
+      "sha256": "6d98f2c0fc29683d5ba8e52d2227662604562b35b17486cea08652c7adbc674d"
+    },
+    {
+      "kind": "display",
+      "line": 1547,
+      "text": "\\[\n2(a-b)+5b=2a+3b.\n\\tag{3.9}\n\\]",
+      "sha256": "0309b93fcd7d90e6721fe92e738e7de683c42d9da474f1b13621970ba86b14c4"
+    },
+    {
+      "kind": "display",
+      "line": 1556,
+      "text": "\\[\ns=\\min\\{\\xi/4500,1/10\\},\\qquad\nd=u=v=s,\\qquad \\delta=s^{21}/2208.\n\\]",
+      "sha256": "3d2d8c14d8c136b54ecef589fd828dc553318d98bb0b858b7b76fa73c6098d58"
+    },
+    {
+      "kind": "display",
+      "line": 1567,
+      "text": "\\[\nS=\\sum_{H\\text{ activo}}g(H)\\psi_H.\n\\]",
+      "sha256": "0d365a3ca73e74beca1cd71b5c7a989ff190466384a6f9894a0cf38ea6ac4d4f"
+    },
+    {
+      "kind": "display",
+      "line": 1573,
+      "text": "\\[\nw(x)-S\\le L,\\qquad\nL=3\\left(3\\delta+\\frac1{k_0}+d\\right)n^2\n  +(N_4+2N_3)\\theta.\n\\tag{3.10}\n\\]",
+      "sha256": "f9ae0ba5a8ca0c68f86333ea0e9526f695409ecd56d93a566ada52f6909a9301"
+    },
+    {
+      "kind": "display",
+      "line": 1584,
+      "text": "\\[\n\\begin{aligned}\nw(x)-g(\\mathcal P)\\le{}&\n\\left(9\\delta+\\frac3{k_0}+3d+\\zeta\n             +\\frac56(u+v)\\right)n^2\\\\\n&+(N_4+2N_3)\\theta .\n\\end{aligned}\n\\tag{3.11}\n\\]",
+      "sha256": "5456de692706de32171d4b124291ac5c5a0a94e683b6d1f64c73284fa8f06836"
+    },
+    {
+      "kind": "display",
+      "line": 1598,
+      "text": "\\[\na_3=d^3-3\\delta>0,\\qquad a_4=d^6-6\\delta>0,\n\\]",
+      "sha256": "94f2f3cb3d38a016c7b752e6c2381084a8e10656f185932bf85b2770ef2f39e8"
+    },
+    {
+      "kind": "display",
+      "line": 1602,
+      "text": "\\[\nk_3a_4+k_4a_3\\le\\gamma a_3a_4t,\n\\tag{3.12}\n\\]",
+      "sha256": "ca238d1c6d1bb3797e44afa02f11370fbf7648c95f7c653f6149222edb9d2c92"
+    },
+    {
+      "kind": "display",
+      "line": 1609,
+      "text": "\\[\n\\sum_{K:e,f\\in E(K)}x_K^{\\rm limpio}\n\\le\\frac{k_3}{a_3t}+\\frac{k_4}{a_4t}\n=\\frac{k_3a_4+k_4a_3}{a_3a_4t}\\le\\gamma.\n\\tag{3.13}\n\\]",
+      "sha256": "723d6053746b774718c709b97691dba3744291757908aac2544246cae3d45d95"
+    },
+    {
+      "kind": "display",
+      "line": 1618,
+      "text": "\\[\n12+10D\\le\\zeta n^2,\n\\tag{3.14}\n\\]",
+      "sha256": "cec696fd648b9ddab1cb2311e44dfb97bf82fdded051fd84f9f45bcce31e3b05"
+    },
+    {
+      "kind": "display",
+      "line": 1629,
+      "text": "\\[\na=\\min\\{\\xi/4500,1/10\\},\\quad\n\\delta=a^{21}/2208,\\quad z=\\min\\{\\xi/10,1\\},\\quad\nk_0=\\lceil1500/\\xi\\rceil+1.\n\\]",
+      "sha256": "6687d4ec573ed1a0f677ef33a028dddb145ff1b21ad3d7d98d99010a2ae410f3"
+    },
+    {
+      "kind": "display",
+      "line": 1635,
+      "text": "\\[\n\\gamma=\\frac1{\\lceil1/\\gamma_*\\rceil},\\qquad C=\\lceil C_*\\rceil,\\qquad\na_3=a^3-3\\delta,\\quad a_4=a^6-6\\delta.\n\\]",
+      "sha256": "83102e7f9c6a9989b41a851031746954baf1eaf0014d37b73bce578f2013c065"
+    },
+    {
+      "kind": "display",
+      "line": 1640,
+      "text": "\\[\n\\begin{split}\nN_E(\\xi)=1+\\max\\biggl\\{&\nk_0,\\ \\left\\lceil B/\\delta\\right\\rceil,\\\n\\left\\lceil(12+10D_*)/z\\right\\rceil,\\\\\n&\\left\\lceil\\frac{4B^5(a_3+a_4)}{\\gamma a_3a_4}\\right\\rceil,\\\n\\left\\lceil\\frac{50(1+2C)}{\\xi}\\right\\rceil\n\\biggr\\}.\n\\end{split}\n\\tag{C.1}\n\\]",
+      "sha256": "9fd2928b49abda7515a3708156d4baecd55beb68e2b777d720e2d1fcf65d3ca9"
+    },
+    {
+      "kind": "display",
+      "line": 1654,
+      "text": "\\[\nw(x)-g(\\mathcal P)\\le\\xi n^2\n\\qquad(n\\ge N_E(\\xi))\n\\tag{C.2}\n\\]",
+      "sha256": "419666e35fea6de8744addc61819ab1d514dfb3dd1bd28bf34f022db7352f0ca"
+    },
+    {
+      "kind": "display",
+      "line": 1662,
+      "text": "\\[\na=(9\\cdot10^{19})^{-1},\\qquad\n\\delta=\\frac1{2208(9\\cdot10^{19})^{21}},\\qquad\nz=(2\\cdot10^{17})^{-1},\\qquad k_0=3\\cdot10^{19}+1.\n\\]",
+      "sha256": "2710fb493f3a87db08bece27e3a1dc78fef75dfc6101901620d971860692f605"
+    },
+    {
+      "kind": "display",
+      "line": 1668,
+      "text": "\\[\nG_1=\\lceil1/\\gamma_*\\rceil,\\quad G_2=\\lceil C_*\\rceil,\\quad\nG_3=\\lceil2\\cdot10^{17}(12+10D_*)\\rceil.\n\\]",
+      "sha256": "6f73e1d9aba46012c90e26c1f5968ac6dbee0e71c6e7dd19f97f60968d4678ef"
+    },
+    {
+      "kind": "display",
+      "line": 1684,
+      "text": "\\[\nN_{\\rm lejano}(\\eta_0)\\le T(h+7).\n\\tag{C.3}\n\\]",
+      "sha256": "4504491877173c3e1aa0158b3712df90602066fd973d6de411f06c48603036c0"
+    },
+    {
+      "kind": "display",
+      "line": 1691,
+      "text": "\\[\nN_{\\rm far}(\\eta)\\le\nT\\!\\left(\\left\\lceil\\frac{c_{\\rm poly}}{\\eta^{105}}\\right\\rceil\\right),\n\\qquad c_{\\rm poly}=4\\cdot17664^5\\cdot9000^{105}+3006.\n\\tag{C.4}\n\\]",
+      "sha256": "d92e2e4824ee50ba91d776d45156fd51a7411b8ed0e8f8266e3e2d65d04bb3cf"
+    },
+    {
+      "kind": "display",
+      "line": 1708,
+      "text": "\\[\nn(n-2)\\le3g(\\mathcal P).\n\\tag{D.1}\n\\]",
+      "sha256": "9dba624690aa2bb3a830844bbd12e0db84e1f3d9474ca73b3a86a46589c89333"
+    },
+    {
+      "kind": "display",
+      "line": 1713,
+      "text": "\\[\n|Q|=\\binom n2-g(\\mathcal P)\n\\le\\frac{n(n-1)}2-\\frac{n(n-2)}3\n=\\frac{n(n+1)}6.\n\\tag{D.2}\n\\]",
+      "sha256": "5c3e4429652ea3bfd1d47271676e0a2c8c212f53c22c7cfed8d9a2ee06a86044"
+    },
+    {
+      "kind": "display",
+      "line": 1735,
+      "text": "\\[\n3g(\\mathcal P)=2|E_{\\rm cub}|+3b_4.\n\\tag{D.3}\n\\]",
+      "sha256": "656a736b385bec4343c26a88a06229c259b7856f760b40d4c7619af36ba301c0"
+    },
+    {
+      "kind": "display",
+      "line": 1740,
+      "text": "\\[\n3g(\\mathcal P)=(3M+1)3M+3M=(3M+2)3M=n(n-2).\n\\tag{D.4}\n\\]",
+      "sha256": "0ef43fab1a0f0d9499b347cdd01c4d20989d94f4b27135b8ed74352f2f09edfa"
+    },
+    {
+      "kind": "display",
+      "line": 1751,
+      "text": "\\[\na+3t=\\binom n2,\\qquad |Q|=a+t=\\frac{\\binom n2+2a}{3}.\n\\tag{D.5}\n\\]",
+      "sha256": "23a90b3160a75ccc6d1033528310fc2f7c19b4328702667af2ff7bf03d9fd3a1"
+    },
+    {
+      "kind": "display",
+      "line": 1756,
+      "text": "\\[\n|Q|\\ge\\frac{\\binom n2+n}{3}=\\frac{n(n+1)}6.\n\\]",
+      "sha256": "d9b86402b37a19ba272c7c84b163d9759cb4cfa125561bbc8a6a49eafa196a34"
+    },
+    {
+      "kind": "display",
+      "line": 1766,
+      "text": "\\[\nW^*(S)=W(S)=2\\binom k2.\n\\tag{D.6}\n\\]",
+      "sha256": "bb25ed21b19160d7d61c2e5e152d604afabb20ad10414d9b7355a3597ccfbc9b"
+    },
+    {
+      "kind": "display",
+      "line": 1771,
+      "text": "\\[\n\\begin{aligned}\nw(x)&\\le2\\sum_K j(K)x_K\\\\\n&=2\\sum_{e\\in E(K_k)}\\sum_{K:e\\in E(K)}x_K\n\\le2\\binom k2.\n\\end{aligned}\n\\tag{D.7}\n\\]",
+      "sha256": "966471ac42fc7dc248352382ab6b2173180d7b9e5f35282338eec3da4786af76"
+    },
+    {
+      "kind": "display",
+      "line": 1786,
+      "text": "\\[\nd_{n,k}=\\begin{cases}n-3k,&3k\\le n,\\\\3k-n-1,&3k>n.\\end{cases}\n\\]",
+      "sha256": "49a3c98869b618255278d146b08b5cd93ae35c6b9a92816a27964f3ade28b3fb"
+    },
+    {
+      "kind": "display",
+      "line": 1790,
+      "text": "\\[\nM(n)=B_n(k)+M(d_{n,k}).\n\\tag{D.8}\n\\]",
+      "sha256": "d25606cdd578761287d02ea4b6199a0ea8096569bc89463758ffb87b7a1f082d"
+    },
+    {
+      "kind": "display",
+      "line": 1811,
+      "text": "\\[\n\\begin{gathered}\nd_{\\max}(G[H])+1\\le k,\\quad |S|\\le k\\le2(|S|-2\\sigma),\\quad\nq\\ge\\left\\lceil e(G[H])/k\\right\\rceil,\\\\\n3\\lceil|S|/2\\rceil+2\\tau+4q\\le |H|+2.\n\\end{gathered}\n\\tag{E.1}\n\\]",
+      "sha256": "4a05fe552360d22e1b4cf51692847f60e03ad186632326b3d9f47d4f9fc25942"
+    },
+    {
+      "kind": "display",
+      "line": 1820,
+      "text": "\\[\n|Q|+2\\left(\\sum_{w\\in W}|M_w|+t_I+e(G[S])\\right)=e(G).\n\\tag{E.2}\n\\]",
+      "sha256": "c5e532bf1417b5b2153357f32851e4e67ac3e30fec3b55f0b8596c0c48f5cb2f"
+    },
+    {
+      "kind": "display",
+      "line": 1825,
+      "text": "\\[\nd_W=\\sum_{w\\in W}\\deg(w),\\qquad\nm_W=\\sum_{w\\in W}\\min(u_w,v_w).\n\\]",
+      "sha256": "9185a7974604a14570ca9c72187e488fa68bb71516582a124b67d367febe5c7c"
+    },
+    {
+      "kind": "display",
+      "line": 1832,
+      "text": "\\[\n|Q|+e(G[S])+2m_W\\le cb+d_W+2t_W(L+t_W).\n\\tag{E.2a}\n\\]",
+      "sha256": "3a21fb48f6e7a00f4dba13fd503c8fa674139b1e21e10ce064aa5a659b15d64c"
+    },
+    {
+      "kind": "display",
+      "line": 1838,
+      "text": "\\[\n\\begin{split}\n&d_W+2t_W(L+t_W)+\\binom c2+\\binom{s+1}2\\\\\n&\\hspace{1em}\\le e(G[S])+2m_W+sc+\\frac{t_W(c+b+s)}3.\n\\end{split}\n\\tag{E.2b}\n\\]",
+      "sha256": "3365c6a4d44df270e50327425686fc71544b818dd588bbc6019b0a5f984894fe"
+    },
+    {
+      "kind": "display",
+      "line": 1846,
+      "text": "\\[\n|Q|+\\binom c2+\\binom{s+1}2\n\\le c(b+s)+\\frac{t_W(c+b+s)}3.\n\\tag{E.2c}\n\\]",
+      "sha256": "d68b58ad3953a76c790b8c55a1e38705b29aef36ce70739034140bbc8bec402f"
+    },
+    {
+      "kind": "display",
+      "line": 1854,
+      "text": "\\[\n\\rho=\\frac{n}{(s+1)^2},\\qquad \\lambda=\\frac{n}{(s+1)^4}.\n\\]",
+      "sha256": "63bb1f863582bdacd37278faa7eaef36f4a1f213841260f258573b1f8a2f3f8b"
+    },
+    {
+      "kind": "display",
+      "line": 1858,
+      "text": "\\[\nt_W\\le\\frac{4\\rho}{10^{27}},\\qquad\nL\\le\\frac{\\rho}{10^{13}}+1,\\qquad\n|\\mathcal L|-\\frac n3\\le c+\\frac{4\\lambda}{10^{31}}.\n\\]",
+      "sha256": "46a334d0fa3ec3fd06f5e32286e534b59a3ac18919f3d972447270e8f74e0403"
+    },
+    {
+      "kind": "display",
+      "line": 1866,
+      "text": "\\[\nM_S:=\\binom c2-e(G[S])\\le \\nu c-\\binom{\\nu+1}2.\n\\]",
+      "sha256": "48ba2c9a9464315f242a493e2588eaa6350c6768c32366eabc431a387992310b"
+    },
+    {
+      "kind": "display",
+      "line": 1870,
+      "text": "\\[\n\\begin{split}\ng_w&=\\deg(w)-2\\min(u_w,v_w)+2(L+t_W)-\\frac{c+b+s}{3},\\\\\ne_1&=4t_W+2L+\\frac{4\\rho}{10^{27}}.\n\\end{split}\n\\]",
+      "sha256": "40fe42f4e84699250a6817624052f2d605bbe0e9a143081bf3f8c599b1b9e7a1"
+    },
+    {
+      "kind": "display",
+      "line": 1879,
+      "text": "\\[\nR_*=E-\\sum_{w\\in W}g_w,\\qquad\nE=e(G[S])-\\binom{c-s}{2}\n  =e(G[S])-\\binom c2-\\binom{s+1}2+sc.\n\\]",
+      "sha256": "17188979ab0e428af8e8fd4a602b07888abd8d6dc6aca876802bae1b535c9510"
+    },
+    {
+      "kind": "display",
+      "line": 1886,
+      "text": "\\[\nX=\\{w\\in W:v_w-u_w>n/3-\\rho/400\\},\\qquad j=|X|.\n\\]",
+      "sha256": "a1b4f6abe1308b14161e3882ee3fa8acefbd5d99ad2f8279382812944f6e00e1"
+    },
+    {
+      "kind": "display",
+      "line": 1892,
+      "text": "\\[\n\\sum_{w\\in X'}|N(w)\\cap\\mathcal L|\n\\le (s-\\nu)|\\mathcal L|+\\frac n9\n\\quad\\text{si }X'\\subseteq W,\\quad |X'|\\le2(s+1).\n\\tag{E.2d}\n\\]",
+      "sha256": "cc41811b338b3ed8a7f1ac08df5de062f760941d237f6a62e26130098db55819"
+    },
+    {
+      "kind": "display",
+      "line": 1903,
+      "text": "\\[\n   sc-\\nu c-\\binom{s+1}2+\\binom{\\nu+1}2\n   =(s-\\nu)\\left(c-\\frac{s+\\nu+1}{2}\\right)\\ge0,\n   \\]",
+      "sha256": "579e7a866157480fac01c1d98c69389d8da4a8b345c93d9bc54a6b4db7270f3b"
+    },
+    {
+      "kind": "display",
+      "line": 1909,
+      "text": "\\[\n   \\sum_{w\\in W}g_w+M_S+\\binom{s+1}2\n   \\le(j+\\nu)c-\\frac{j\\rho}{80}\n        -\\binom{\\nu+1}2+\\binom{s+1}2\\le sc.\n   \\]",
+      "sha256": "8a3a27c1668aa7c3ce98928251bca421c7d0a4fa30c224f2b7ce6e2c4890b761"
+    },
+    {
+      "kind": "display",
+      "line": 1917,
+      "text": "\\[\n   \\sum_{w\\in W}g_w\n   \\le (s-\\nu)c-\\frac{2n}{9}\n      +\\frac{4(s+1)\\lambda}{10^{31}}+(s+1)e_1.\n   \\]",
+      "sha256": "ac630f631d4ace6a7819e44b6b3301a46c09954d530ec50a73caf98fa09531f7"
+    },
+    {
+      "kind": "display",
+      "line": 1930,
+      "text": "\\[\n\\begin{gathered}\nc(b+s)\\le\\binom c2+M(c+b+s),\\\\\nQ_s(c+b)+t_W z\\le Q_s(c+b+t_W).\n\\end{gathered}\n\\tag{E.2e}\n\\]",
+      "sha256": "9e5405fb0e7bbba5139fbf6d809a2c02649c8ab3ef55aa1601f9c69fda74bfb5"
+    },
+    {
+      "kind": "display",
+      "line": 1952,
+      "text": "\\[\nQ_s(n)-Q_s(n-1)=\\left\\lfloor\\frac{n+s+1}{3}\\right\\rfloor.\n\\tag{E.3}\n\\]",
+      "sha256": "acfb5b5a447b2100c59b2987cdd1b241ddae2079d1808e8faf4f0aea458e6575"
+    },
+    {
+      "kind": "display",
+      "line": 1959,
+      "text": "\\[\n\\deg(v)+K_s\\le\\left\\lfloor\\frac{n+s+1}{3}\\right\\rfloor,\n\\tag{E.4}\n\\]",
+      "sha256": "2dbf0c45ae1b8b712cf0c94a9966b530b82c0184274fae890ca2c7b28b0acce5"
+    },
+    {
+      "kind": "display",
+      "line": 1972,
+      "text": "\\[\nk(n-k)-\\binom{k-s}{2}\n=M(n+s)-\\binom{s+1}{2}=Q_s(n)\n\\tag{E.5}\n\\]",
+      "sha256": "8cb09beaeeccafc08df4ed060ce43b2f058713e5998a1255e76097181cfebf45"
+    },
+    {
+      "kind": "display",
+      "line": 1984,
+      "text": "\\[\nd=\\lfloor\\rho/1000\\rfloor,\\qquad\n\\kappa=2(c-2\\sigma)-d,\\qquad\nq=\\lceil m/\\kappa\\rceil,\\qquad\n\\theta_s=\\frac1{2000(s+1)^2}.\n\\tag{E.6}\n\\]",
+      "sha256": "1fd86670726b2de3ab3c2778e1849833504d5f5a2198b584ef6beea7819b76be"
+    },
+    {
+      "kind": "display",
+      "line": 1992,
+      "text": "\\[\n\\begin{gathered}\n|c-n/3|\\le\\rho/10^{20},\\qquad\n|b-2n/3|\\le\\rho/10^{20},\\\\\n\\sigma\\le\\rho/200+12\\rho/10^{27},\\qquad\n\\tau\\le\\rho/40+12\\rho/10^{27},\\qquad\nm\\le2\\rho^2/10^{31}.\n\\end{gathered}\n\\]",
+      "sha256": "3f6730de7c12086730db3cb48fa172e32ee335c6265c04b6a65d7ab77a7d492d"
+    },
+    {
+      "kind": "display",
+      "line": 2012,
+      "text": "\\[\n\\kappa z\\ge dm,\\qquad\nz\\ge\\frac{\\rho m}{2000n}=\\theta_s m.\n\\tag{E.7}\n\\]",
+      "sha256": "76e013cd8f3623c4f940c688dfb7b2ca1ba32eea8b1f04213fc589b8094a2ca4"
+    },
+    {
+      "kind": "display",
+      "line": 2018,
+      "text": "\\[\n|Q|+e(G[S])+2m_W+a+\\theta_s m\n\\le cb+d_W+2t_W(L+t_W).\n\\tag{E.8}\n\\]",
+      "sha256": "0b3db70b23717d3c2923e6b2f697998647cdc2c3012c3c4622e667dff69df965"
+    },
+    {
+      "kind": "display",
+      "line": 2024,
+      "text": "\\[\nF=cb-\\binom c2-\\binom{s+1}2+sc+\n       \\frac{t_W(c+b+s)}3,\\qquad\nD_0=Q_s(n)-F.\n\\]",
+      "sha256": "27c140de2a2f3472cbf2828b37c4e3611349a5275b49989f67bbc15b8540d4cd"
+    },
+    {
+      "kind": "display",
+      "line": 2032,
+      "text": "\\[\nD_0+a+\\theta_s m+R_*\\le\\delta.\n\\tag{E.9}\n\\]",
+      "sha256": "57ef92f7b088d3c5fc0e55212ada1ad00d29786c0f5fd22fc48fc32c33fa6c54"
+    },
+    {
+      "kind": "display",
+      "line": 2039,
+      "text": "\\[\ng_w\\le-\\rho/400+\\frac{10t_W}{3}+2L.\n\\]",
+      "sha256": "ca4675dc1a05a16216d0ee37e36616ff15d9465fea5c0a59679c83684cdb31f5"
+    },
+    {
+      "kind": "display",
+      "line": 2046,
+      "text": "\\[\n\\sum_{w\\in W}\\widetilde g_w\n\\le(s-\\nu)c-\\frac{2n}{9}+\n  \\frac{4(s+1)\\lambda}{10^{31}}+(s+1)\\widetilde e_1.\n\\]",
+      "sha256": "e1d2afee3e4fcfd8a36ce9e3f44a42f00c999f514c7becbcbc9c2341f6de9aba"
+    },
+    {
+      "kind": "display",
+      "line": 2053,
+      "text": "\\[\nR_*\\ge\\frac{t_W\\rho}{800}\\ge0,\\qquad\nnt_W\\le800(s+1)^2R_*.\n\\tag{E.10}\n\\]",
+      "sha256": "23387a2d9cf5a3c69bb5cd9486b0f1d6c19d8dee264fb4c0f7c022fe8eb06638"
+    },
+    {
+      "kind": "display",
+      "line": 2062,
+      "text": "\\[\nE=R_*+\\sum_{w\\in W}g_w\\le R_*+nt_W.\n\\tag{E.11}\n\\]",
+      "sha256": "12ee4f0e47409a581a1db0f8fb6e3f7fb5b1e2b3cbf1b232abe8542ae86ed454"
+    },
+    {
+      "kind": "display",
+      "line": 2069,
+      "text": "\\[\n|U|\\ge\\rho/10^4+s+2.\n\\]",
+      "sha256": "14ef6c728b4affc20b9a412bfaa6061cf78b38553dd5ab979c27b977c6ccd654"
+    },
+    {
+      "kind": "display",
+      "line": 2075,
+      "text": "\\[\nc-s\\le2\\left(e(G[S])-\\binom{c-s}{2}\\right)=2E.\n\\tag{E.12}\n\\]",
+      "sha256": "87afef263e216f1dc527683cc2d6bdec3998409a8588cf4e5007a0e013e2d481"
+    },
+    {
+      "kind": "display",
+      "line": 2082,
+      "text": "\\[\nrn\\le16sE.\n\\tag{E.13}\n\\]",
+      "sha256": "c70e554d0d9e94e54855e21a8294afd9dbb2d113922a219c307e50fc45f22d0d"
+    },
+    {
+      "kind": "display",
+      "line": 2089,
+      "text": "\\[\na+m+\\left(e(G[S])-\\binom{|C|}{2}\\right)+nt_W.\n\\]",
+      "sha256": "03292eeaebaffee374054fb0a1e5f2ff44fc5c574e089e4a97df1bda903ae372"
+    },
+    {
+      "kind": "display",
+      "line": 2093,
+      "text": "\\[\ne(G[S])-\\binom{|C|}{2}\n=E+\\binom{|C|+r}{2}-\\binom{|C|}{2}\n\\le E+rn.\n\\]",
+      "sha256": "6b56c3271cd4a4ead40934f12994af986c471dfc695c07f8e4d09610b6b29390"
+    },
+    {
+      "kind": "display",
+      "line": 2099,
+      "text": "\\[\nd_E(G,T(C,D,J))\\le a+m+E+2rn+2nt_W.\n\\tag{E.14}\n\\]",
+      "sha256": "f1afc971d690ec0d0a7720d2939355616f8ca3ecde5c428ec84ceb8de048877d"
+    },
+    {
+      "kind": "display",
+      "line": 2106,
+      "text": "\\[\n\\begin{aligned}\nd_E(G,T)&\\le a+m+(1+32s)E+2nt_W\\\\\n&\\le a+m+(1+32s)R_*+(3+32s)nt_W\\\\\n&\\le a+m+\\bigl(1+32s+800(3+32s)(s+1)^2\\bigr)R_*.\n\\end{aligned}\n\\]",
+      "sha256": "02aaa518e4cce1475c8a8b1005aea19400ea74cc77e90ca15326de4a077cb94c"
+    },
+    {
+      "kind": "display",
+      "line": 2114,
+      "text": "\\[\nd_E(G,T)\\le40000(s+1)^3\\delta.\n\\]",
+      "sha256": "36cb6dac3f7d23ff64fba4122e8ad96b3126c38e349f4a5c0bfd7c3c09718096"
+    },
+    {
+      "kind": "display",
+      "line": 2126,
+      "text": "\\[\n\\begin{aligned}\n\\gamma_s&=\\tfrac12\\min\\{1,\\eta_s/4,\\epsilon_s/4\\},\\\\\nN_s^{\\rm deg}&=\\lceil10^{50}(s+1)^8\\rceil+L_s+\n                    N_{\\rm far}(\\eta_s)+s+5,\\\\\nN_{0,s}&=N_s^{\\rm deg}+F_s+s+3+\n                 \\lceil1/\\epsilon_s\\rceil+\\lceil A_s\\rceil+1,\\\\\nN_s^{\\rm stab}&=2N_{0,s}+F_s+s+4.\n\\end{aligned}\n\\tag{F.1}\n\\]",
+      "sha256": "acdb8856eb3795bc0e39122e3027158d9d029d8be7ad428d6535dd2f13e5547d"
+    },
+    {
+      "kind": "display",
+      "line": 2140,
+      "text": "\\[\n0\\le\\delta\\le\\gamma_0t(t-N_{0,s}),\\qquad\n\\gamma_0=\\min\\{1,\\eta_s/4,\\epsilon_s/4\\}.\n\\]",
+      "sha256": "eb4c4edf018cb1dcf70c676dd0c0ae5c41cda0069ebf8d90f3cec37a390cd790"
+    },
+    {
+      "kind": "display",
+      "line": 2149,
+      "text": "\\[\n\\begin{aligned}\nF_4(G)&\\le(n-2c+1)\\alpha+\\binom c2+\n                \\sum_{j=0}^{n-c-1}\\min(s,j),\\\\\nF_4(G)&\\le(n-c)\\alpha+\\frac16\\binom c2+s(n-c)\n                   &&(c\\ge4).\n\\end{aligned}\n\\tag{F.2}\n\\]",
+      "sha256": "8e5757f6259c1e36fab391396ac3697ab3a9efdb05f33aaeec3ca9e077a5f811"
+    },
+    {
+      "kind": "display",
+      "line": 2161,
+      "text": "\\[\ns(n-c)-\\binom{s+1}{2}.\n\\tag{F.3}\n\\]",
+      "sha256": "14d0d58ca50efaf2c2af327dc22396f7f7f52f62a831d12c167502f5b7e7c088"
+    },
+    {
+      "kind": "display",
+      "line": 2166,
+      "text": "\\[\nF_4(G)\\le B_{n-s}(c)+ns-\\binom{s+1}{2}\n\\le M(n-s)+ns-\\binom{s+1}{2}.\n\\]",
+      "sha256": "a20f201ace9f576555e5e5bad332650051b40f375c960e1502e72f21b1dac137"
+    },
+    {
+      "kind": "display",
+      "line": 2171,
+      "text": "\\[\nF_4(G)\\le\\frac{c(5n-4c-1)}{12}+s(n-c).\n\\tag{F.4}\n\\]",
+      "sha256": "f95d09d15b8819810805721de56882c1a68a0709b9d822640d5ad0ef3466aa20"
+    },
+    {
+      "kind": "display",
+      "line": 2180,
+      "text": "\\[\n\\theta(\\xi)=\\frac1{16m^{m+1}+1},\\qquad N(\\xi)=\\max\\{m,1\\}.\n\\tag{F.5}\n\\]",
+      "sha256": "0e709972a8bdfa9e8fc597c90f8da5a5c4cb668caf91949fe8e0df7617599c0d"
+    },
+    {
+      "kind": "display",
+      "line": 2189,
+      "text": "\\[\n(|D|-|C|-s)_+^2\\le\\operatorname{ordNE}(G,D).\n\\tag{F.5a}\n\\]",
+      "sha256": "4c16780af5c9074dacc772bbab91a1820174f97101d7854d6d0395e580736c7f"
+    },
+    {
+      "kind": "display",
+      "line": 2195,
+      "text": "\\[\n\\operatorname{ordNE}(G,D)\n=\\operatorname{ordNE}(G,D\\setminus\\{v\\})+2y.\n\\]",
+      "sha256": "7095b13789e414c791724018a5fbe4bd5273711cb4c5428ea6bb65b13b525425"
+    },
+    {
+      "kind": "display",
+      "line": 2203,
+      "text": "\\[\n(|D|-|C'|-s)_+^2\\le(x+1)^2\n\\le x^2+2y\\le\\operatorname{ordNE}(G,D).\n\\]",
+      "sha256": "4d99df2aa8e4ce4f11a44f60acb1ded860c3d8ed5dae317e0e9e182df7abe2c9"
+    },
+    {
+      "kind": "display",
+      "line": 2210,
+      "text": "\\[\n2|E(H)\\setminus E(G)|\\le u^2,\n\\]",
+      "sha256": "c8644aad25de10e2cee048bb177e6e50680aadc21caa694cced9998cb0d1db3d"
+    },
+    {
+      "kind": "display",
+      "line": 2223,
+      "text": "\\[\n\\begin{aligned}\ne(G-R)+A_R&\\le16\\delta+65t+n(s+u),\\\\\nM(n)-B_n(|R|)&\\le\\delta+4t+2n(s+u).\n\\end{aligned}\n\\tag{F.6}\n\\]",
+      "sha256": "ea39ccce9f268a0100bf173f775e921aac2161177bb43aad5bba94cfdb12e483"
+    },
+    {
+      "kind": "display",
+      "line": 2260,
+      "text": "\\[\n\\operatorname{indCopies}(C_k,G)\\le2ks\\,n^{k-1}.\n\\tag{F.7}\n\\]",
+      "sha256": "496405d4bb3563b4ac3e731979d8da1e1e2441e975cfeecb469bd30142311dfc"
+    },
+    {
+      "kind": "display",
+      "line": 2267,
+      "text": "\\[\nd_E(G,H)\\le2\\sqrt{s}\\,n\\sqrt n+n.\n\\tag{F.8}\n\\]",
+      "sha256": "8d96a7fa5a54e1694168541a7ae3f7450a75454bb30b9f486e4837977cdf2c9f"
+    },
+    {
+      "kind": "display",
+      "line": 2274,
+      "text": "\\[\n(d-|C|)^2\\le2M,\\qquad |C|\\ge d-\\sqrt{2M}.\n\\tag{F.9}\n\\]",
+      "sha256": "16e774dce2e0c04569546c84840682ea61569c5b0635b8a2e84fb8f06774c44b"
+    },
+    {
+      "kind": "display",
+      "line": 2281,
+      "text": "\\[\nd_E(G,H)\\le8\\sqrt{\\varepsilon}\\,n^2,\\qquad H[Y]=G[Y].\n\\tag{F.10}\n\\]",
+      "sha256": "a6e3ceb3b39786af9f01e4f6628b6c7ad84e7a491c241534d6c7ba35136472f7"
+    },
+    {
+      "kind": "display",
+      "line": 2303,
+      "text": "\\[\n\\begin{gathered}\ny=\\left\\lceil\\frac{256K^2}{\\varepsilon^2}\\right\\rceil,\\qquad\n\\delta_{11}=\\frac1{4y^2},\\qquad\nB=\\left\\lfloor\\frac{8K}{\\delta_{11}}\\right\\rfloor,\\qquad\n\\eta=\\frac{\\varepsilon}{2K},\\\\\nm=m_{11}(\\varepsilon,K)\n =\\left\\lceil\\frac{2^{58}(K+1)^{15}}{\\varepsilon^{12}}\\right\\rceil.\n\\end{gathered}\n\\tag{F.11}\n\\]",
+      "sha256": "e3517ffce90bfedb4d379749575e6ddc16401b6c1507c6dbe30934e191f62348"
+    },
+    {
+      "kind": "display",
+      "line": 2321,
+      "text": "\\[\n(y+1)(1-\\eta)^{y-1}n^y+\ny^2\\operatorname{conf}(\\psi)n^{y-2}.\n\\]",
+      "sha256": "b950283da680bf7ca1707ff8c7716453ed180c51e9b6135c4a9b191d81fa49ef"
+    },
+    {
+      "kind": "display",
+      "line": 2328,
+      "text": "\\[\n\\begin{aligned}\nd_E(G,F)&\\le\\operatorname{conf}(\\psi)+\n             \\sum_{c\\in V(\\Gamma)}\\operatorname{mis}_c\\\\\n&<\\delta_{11}n^2+K\\eta n^2\n\\le\\varepsilon n^2.\n\\end{aligned}\n\\tag{F.12}\n\\]",
+      "sha256": "a5201592ae6a30aa2103c27383da6e2ceefa2545a10ccfad1e6fd9fee8ee6df7"
+    },
+    {
+      "kind": "display",
+      "line": 2352,
+      "text": "\\[\n\\sum_T x_T\\le \\nu_3(G)+\\left(10+\\frac d2\\right)n.\n\\tag{G.1}\n\\]",
+      "sha256": "566b678fdc215e9942ebc5827d070a1264f3fc4390a63d0937a4dfa1a1a773c5"
+    },
+    {
+      "kind": "display",
+      "line": 2369,
+      "text": "\\[\nN_0>\\exp(t^2/16).\n\\tag{G.2}\n\\]",
+      "sha256": "d397a001581e45d92e18531502696d63d89405ca408ad3ac811dc2c64cbb2cbe"
+    },
+    {
+      "kind": "display",
+      "line": 2376,
+      "text": "\\[\n2(1-\\gamma)T\\le\\frac{\\varepsilon}{4}n^2.\n\\tag{G.3}\n\\]",
+      "sha256": "31276580e958bed3b051d7d607bb415d23e81ab6f134e3b89b14cd5869834e7e"
+    },
+    {
+      "kind": "display",
+      "line": 2389,
+      "text": "\\[\ne(G)\\le2(n-2)+1=2n-3.\n\\tag{G.4}\n\\]",
+      "sha256": "41d8030717b4923daceb72dc9dfb68346721d0861c91b5a3b704cbb820659997"
+    },
+    {
+      "kind": "display",
+      "line": 2394,
+      "text": "\\[\n\\frac{\\varepsilon n^2}{30}-1\n\\le T\\le\\frac{2n-3}{3}\n\\quad\\Longrightarrow\\quad n\\le\\frac{20}{\\varepsilon}.\n\\tag{G.5}\n\\]",
+      "sha256": "e1fdb179075c01ba3eb39c81a17f3fbe171d9568f4b4ab1e4f39839ed3e248fc"
+    },
+    {
+      "kind": "code",
+      "line": 1303,
+      "text": "```lean\ndef IsChordal (G : SimpleGraph V) : Prop :=\n  ∀ ⦃v : V⦄ (c : G.Walk v v), c.IsCycle → 4 ≤ c.length →\n    ∃ x y : V, x ∈ c.support ∧ y ∈ c.support ∧ G.Adj x y ∧ s(x, y) ∉ c.edges\n```",
+      "sha256": "127db437f6d87fb222a352028d24617e2d014cf889c14484a52ba3835838891e"
+    },
+    {
+      "kind": "code",
+      "line": 1309,
+      "text": "```lean\ndef pairs (K : Finset V) : Finset (Sym2 V) := K.sym2.filter fun e => ¬ e.IsDiag\n\nstructure CliquePartition where\n  pieces : Finset (Finset V)\n  isClique : ∀ K ∈ pieces, ∀ a ∈ K, ∀ b ∈ K, a ≠ b → G.Adj a b\n  two_le_card : ∀ K ∈ pieces, 2 ≤ K.card\n  edgeDisjoint : ∀ K ∈ pieces, ∀ L ∈ pieces, K ≠ L → Disjoint (pairs K) (pairs L)\n  covers : pieces.biUnion pairs = G.edgeFinset\n\ndef CliquePartition.size (Q : CliquePartition G) : ℕ := Q.pieces.card\n\ndef CliquePartition.OrderAtMost (Q : CliquePartition G) (r : ℕ) : Prop :=\n  ∀ K ∈ Q.pieces, K.card ≤ r\n```",
+      "sha256": "b304dd7b6d607133aa58ec164ad3a5a4bca4abffc80b0d81e4007438fa6d75d2"
+    },
+    {
+      "kind": "code",
+      "line": 1325,
+      "text": "```lean\ndef targetSize (n : ℕ) : ℕ := n * (n + 1) / 6\n```",
+      "sha256": "fe5744f3ffb923957fa191fd2f82eb878a4550aaef279fab4025f040ce9933c1"
+    },
+    {
+      "kind": "code",
+      "line": 1333,
+      "text": "```lean\ntheorem erdos81_all_orders_additive :\n    ∃ b : ℕ, ∀ (n : ℕ) (G : SimpleGraph (Fin n)) [DecidableRel G.Adj],\n      PaperIV.FarRounding.IsChordal G →\n        ∃ Q : CliquePartition G, Q.OrderAtMost 4 ∧ Q.size ≤ PaperIV.targetSize n + b\n```",
+      "sha256": "3883d65f15282a1174406bfd46b4e7c2a06678088cb1c7ecd1ee5c938342b9a9"
+    },
+    {
+      "kind": "code",
+      "line": 1340,
+      "text": "```lean\ntheorem erdos81_cliquePartition :\n    ∃ N : ℕ, ∀ n : ℕ, N ≤ n → ∀ (G : SimpleGraph (Fin n)) [DecidableRel G.Adj],\n      PaperIV.FarRounding.IsChordal G →\n        ∃ Q : CliquePartition G, Q.OrderAtMost 4 ∧ Q.size ≤ targetSize n\n```",
+      "sha256": "8543132fba6fa26c326dfcb4309e12f21f82375833655053c11370cb6826bb4d"
+    },
+    {
+      "kind": "heading",
+      "line": 1,
+      "text": "# Particiones de cliques con defecto simplicial enraizado: estabilidad cuantitativa y cotas agudas para órdenes grandes",
+      "sha256": "08b39503e169cfa37d4c0df077d8f79c4d3e4c39e291f1f0262ee6050233351f"
+    },
+    {
+      "kind": "heading",
+      "line": 16,
+      "text": "## Resumen",
+      "sha256": "1b924cc323054cf3f917fd5c4cde93508d8551224046da2e7d1d7016489c6fa9"
+    },
+    {
+      "kind": "heading",
+      "line": 31,
+      "text": "## 1. Introducción",
+      "sha256": "44218f0f04a280d74c9980e62108805ad747ceb2abaa3cdd7ad2ccd1c4343ded"
+    },
+    {
+      "kind": "heading",
+      "line": 53,
+      "text": "### Teorema A. Cota para todos los órdenes",
+      "sha256": "d1c64a79299cdb9f97897a6b7c956b7b78e54f1e909d52c14275db83a0af0d3b"
+    },
+    {
+      "kind": "heading",
+      "line": 63,
+      "text": "### Teorema B. Cota aguda y máximo eventual",
+      "sha256": "523a1e6f437e70b3e46ca1c4e70385418395b7ba41f7496ea8b493c6b54beb2e"
+    },
+    {
+      "kind": "heading",
+      "line": 82,
+      "text": "### Teorema C. Defecto simplicial enraizado fijo",
+      "sha256": "e665aaecde80a0e2eacfe687ac71835824cce22a5521ad9980a7fbcc37a6b95f"
+    },
+    {
+      "kind": "heading",
+      "line": 99,
+      "text": "### Teorema C′. Estabilidad con una misma raíz para defecto fijo",
+      "sha256": "4055eae29339707e1e79c5b74d41ed68a9c97540e88a41f90a169d03659f5d0b"
+    },
+    {
+      "kind": "heading",
+      "line": 111,
+      "text": "### 1.1. La condición común: presupuesto de pérdida",
+      "sha256": "0cf5bec352fd8a5bb2b1d42766ccca8ebe809cba31199805e2b0ffa47262b022"
+    },
+    {
+      "kind": "heading",
+      "line": 161,
+      "text": "### 1.2. Dicotomía estructural y mecanismos de resolución",
+      "sha256": "11d61d497981c4647eb2dbc6e8030e375dfc22c4698cf1e3caf5902ca687399f"
+    },
+    {
+      "kind": "heading",
+      "line": 182,
+      "text": "### 1.3. Organización y uso de la cordalidad",
+      "sha256": "0c245de9dcf25dcada03d732109b1fbad7258266007801cd689b136b9b3b75e5"
+    },
+    {
+      "kind": "heading",
+      "line": 190,
+      "text": "## 2. Ganancia mixta, dualidad y particiones",
+      "sha256": "a301a32184fe9d3bac4b3208ec78e1e00d65d0225dddb2ea667016a8dd9e5c7b"
+    },
+    {
+      "kind": "heading",
+      "line": 194,
+      "text": "### 2.1. Por qué se redondea una ganancia",
+      "sha256": "c7b1e091e56765aad7a9fc0e1ada03b41d530bed4a9ccc87af1007a76cd5b79d"
+    },
+    {
+      "kind": "heading",
+      "line": 210,
+      "text": "### Lema 2.1",
+      "sha256": "eab935369a8f078cfe30878dfd54aec06e5bf866b3b587102b33f83e80dcf195"
+    },
+    {
+      "kind": "heading",
+      "line": 219,
+      "text": "### 2.2. El óptimo fraccional y su certificado",
+      "sha256": "b62c296e3cc4c3fbd28967d90812e1660caae8a33fdef0639d6a2595ca56e701"
+    },
+    {
+      "kind": "heading",
+      "line": 241,
+      "text": "### 2.3. Relación con los funcionales anteriores",
+      "sha256": "5111982ad9e2ab5aee512525ad596d7f84bc09c991719f38b6cd34cf4bd260a0"
+    },
+    {
+      "kind": "heading",
+      "line": 252,
+      "text": "### 2.4. Notación de las dos ramas",
+      "sha256": "ae4ac678c1fcab41c4e0b6ab06b415f3bc88f266c1b78b78583428548e5af35a"
+    },
+    {
+      "kind": "heading",
+      "line": 269,
+      "text": "## 3. Redondeo mixto y régimen con holgura",
+      "sha256": "0ea997955465e4ad1db4bd99e0ce336f38768e61e3da2c99ca248ad84bdcc50a"
+    },
+    {
+      "kind": "heading",
+      "line": 273,
+      "text": "### Teorema 3.1",
+      "sha256": "b086faaac0f265f35fba6a6d48d0f9dc538cb96de2a7347e57bd67afd58b4cc7"
+    },
+    {
+      "kind": "heading",
+      "line": 290,
+      "text": "### Corolario 3.5",
+      "sha256": "a18ba442d5d7961199f9408446b0607ac77d0ae1e46fc5cc58bc62ca526fa9c0"
+    },
+    {
+      "kind": "heading",
+      "line": 305,
+      "text": "## 4. Localización del régimen crítico",
+      "sha256": "878a005a711545e50d630caddcf96e097743a0f034ef75ea2550697ffbc200a1"
+    },
+    {
+      "kind": "heading",
+      "line": 316,
+      "text": "### 4.1. Distancia a una familia fija",
+      "sha256": "2033fd8aa8a0fecd454acd38af4e1cee4f18568f2279e8fced7311a45690303c"
+    },
+    {
+      "kind": "heading",
+      "line": 370,
+      "text": "### 4.2. Descenso desde el terminal",
+      "sha256": "e388a75ff8540520c18639b5cd5c829d296bd7e56d88821a31b3366b069fc7b8"
+    },
+    {
+      "kind": "heading",
+      "line": 406,
+      "text": "### Proposición 4.3",
+      "sha256": "837f427d327a4143d17374d690a46b8d825f8d9644fc08bbaa1d64f6f9833593"
+    },
+    {
+      "kind": "heading",
+      "line": 425,
+      "text": "## 5. Raíz regularizada y cuentas físicas",
+      "sha256": "c9f0c37d75f3071a7056e67e71a24bba97432169dc9f254db4ac6c4a73b55ba8"
+    },
+    {
+      "kind": "heading",
+      "line": 427,
+      "text": "### Teorema 5.0. Constructor cercano bajo hipótesis locales",
+      "sha256": "f582c03ddec65626776e0c4211122a4196991d2435a584234ce9254d71b600b5"
+    },
+    {
+      "kind": "heading",
+      "line": 442,
+      "text": "### 5.1. Regularización sobre el grafo original",
+      "sha256": "51e000c8f39d398a6327220a0d4bad8b6bc482a711da14d6f9742a6f0ad2e520"
+    },
+    {
+      "kind": "heading",
+      "line": 518,
+      "text": "### 5.2. De emparejamientos a triángulos",
+      "sha256": "b11555be0c5e6ac7c9d0d8dedaa63d842cc43dbd188b930238820a56f6977d83"
+    },
+    {
+      "kind": "heading",
+      "line": 528,
+      "text": "### 5.3. Las tres cuentas que pagan la construcción",
+      "sha256": "fedafb6343a72f73d5ecb83ceab3b19ff779c38ee9fb6ad1fe945028bb2e9e70"
+    },
+    {
+      "kind": "heading",
+      "line": 657,
+      "text": "### Lema 5.3",
+      "sha256": "b25f0b887e1ba1fbfa61bab93638cfbf928c6b7ad2d00b831b5eb3713c14fcff"
+    },
+    {
+      "kind": "heading",
+      "line": 697,
+      "text": "### 5.4. El testigo que conserva la prueba",
+      "sha256": "8a99d30890448c1f70bcff68bfab3b0b368913dda3aeb6886f4252f464942365"
+    },
+    {
+      "kind": "heading",
+      "line": 722,
+      "text": "## 6. Ensamblaje y valor extremo",
+      "sha256": "ae654e5e5d1022d44deb521a902f5cec9bc32c0131516f5eb9467b96e08b2791"
+    },
+    {
+      "kind": "heading",
+      "line": 724,
+      "text": "### Demostración del Teorema B: cota superior",
+      "sha256": "73cd698c56fe4574b5ce09f58a2b2437329008a723dc934e0761c24741468a42"
+    },
+    {
+      "kind": "heading",
+      "line": 732,
+      "text": "### 6.1. Optimalidad irrestricta en completo-split",
+      "sha256": "b74e74069001b7a9c4fc3efdd2d37bad58e4af9e0dea4075ad1752af95c62a8d"
+    },
+    {
+      "kind": "heading",
+      "line": 757,
+      "text": "### 6.2. El máximo eventual",
+      "sha256": "a1085886e8d23d6a778e48da02c47605f4b481d5a7abf27a77a7dfca4af4a4f2"
+    },
+    {
+      "kind": "heading",
+      "line": 777,
+      "text": "### 6.3. Todos los órdenes y optimalidad del término lineal",
+      "sha256": "65e00665c8584adfda63421f92f93ed4745e8800269320c3d276ae578779c269"
+    },
+    {
+      "kind": "heading",
+      "line": 815,
+      "text": "### 6.4. El exceso de una partición completo-split",
+      "sha256": "22de5727450345567ef4b4d6a37158fec728bc1ff4ee48f70922ce0f83113168"
+    },
+    {
+      "kind": "heading",
+      "line": 833,
+      "text": "### 6.5. Estabilidad integral y clasificación de los extremizadores",
+      "sha256": "6c8f915cbbd44491fa53815308f9bd810f9be4fed0fc9a26fc8a5fd7b3607551"
+    },
+    {
+      "kind": "heading",
+      "line": 897,
+      "text": "### 6.6. Estabilidad para defecto fijo sobre una misma raíz",
+      "sha256": "e411a23eee9dcc30f36e1cbb1c0660dff0a7a353ffacc0856b41f9dc7cf271dc"
+    },
+    {
+      "kind": "heading",
+      "line": 1054,
+      "text": "### 6.7. Cotas uniformes y defecto sublineal",
+      "sha256": "8fc45f7d7c478b7275e640684cfe06dff5a599c48281c8cb2d951ad21cba2165"
+    },
+    {
+      "kind": "heading",
+      "line": 1128,
+      "text": "## 7. Formalización, código y reproducibilidad",
+      "sha256": "88ae1fe761a8e977f6453ec57bdddd7e70bc68e8ac4a401eb09dd965be041d60"
+    },
+    {
+      "kind": "heading",
+      "line": 1183,
+      "text": "### 7.1. Repositorios y contribuciones",
+      "sha256": "5bb965958617edffe0a79975c90ff1c43747ea52aeebebc94f8d88b0e0df0194"
+    },
+    {
+      "kind": "heading",
+      "line": 1195,
+      "text": "### 7.2. Puente de modelos y convención de ganancia",
+      "sha256": "c5a872e0d8c229414f084d96f342c021a834ec00091f48e1c5d125ab32b2d94a"
+    },
+    {
+      "kind": "heading",
+      "line": 1201,
+      "text": "## 8. Comparación de mecanismos y alcance",
+      "sha256": "3d7bc44673563990278fac702ca914e6578e71c0d7bdc1dfafaf27e5aab238d2"
+    },
+    {
+      "kind": "heading",
+      "line": 1243,
+      "text": "### 8.1. El antecedente de defecto simplicial acotado",
+      "sha256": "c860e0e14a1148ec6d03fbae779fc1f8c967b6f0be63678ab19ae261aa4b3a5e"
+    },
+    {
+      "kind": "heading",
+      "line": 1271,
+      "text": "## Apéndice A. Correspondencia formal y reproducción",
+      "sha256": "9711bf0e006ae8aa95868e4141ef2870793f2930fc6b0fc20322278a9535cc64"
+    },
+    {
+      "kind": "heading",
+      "line": 1273,
+      "text": "### A.1. Enunciados y comprobaciones",
+      "sha256": "17d0bef156b9d36338062d1a1574dc471baf9a1fd2a35b92149ae2b642773760"
+    },
+    {
+      "kind": "heading",
+      "line": 1349,
+      "text": "### A.2. Contratos intermedios de las pruebas",
+      "sha256": "b42464b8961aa2789c13b4ab601b8c28b1cc11fbb293728fb33146d3752e8224"
+    },
+    {
+      "kind": "heading",
+      "line": 1377,
+      "text": "### A.3. Límites del resultado",
+      "sha256": "9f226ce7fc00ca3ce83c0df4623b988d3abf67d7d3210e7a9e406f06ef378abf"
+    },
+    {
+      "kind": "heading",
+      "line": 1385,
+      "text": "## Apéndice B. Herramientas de construcción complementarias",
+      "sha256": "d2976e0dd00ffea5ca5e9798e148c78c6051fd8ad96d99e5f36b28224be69347"
+    },
+    {
+      "kind": "heading",
+      "line": 1387,
+      "text": "### B.1. Absorción compatible con presupuesto",
+      "sha256": "2469197c16cbf51dd7d4fdc7ae8b3351bf110aa6e9287de7a37308b722b570c3"
+    },
+    {
+      "kind": "heading",
+      "line": 1421,
+      "text": "### B.2. Reservas equilibradas",
+      "sha256": "27a30131b5b3025ed19b346c7435bb263893ec7065437727667596c98c786341"
+    },
+    {
+      "kind": "heading",
+      "line": 1432,
+      "text": "### B.3. Remate con cuatro anfitriones",
+      "sha256": "2d2ae55e7882df8d9f61c94ddb3369da2f995d4f4fe24cbe3163755ec681c692"
+    },
+    {
+      "kind": "heading",
+      "line": 1440,
+      "text": "## Apéndice C. Prueba técnica del redondeo mixto",
+      "sha256": "b5da360fddb5568582fa4cee3005c9ba47947af4529c88abb9432dba790e194c"
+    },
+    {
+      "kind": "heading",
+      "line": 1444,
+      "text": "### Lema 3.2. Nibble de rango acotado con holgura, entrada de Paper III",
+      "sha256": "f96a898209c7ab1b0d253d3751fa69f29c7c847ba5da3677f924c50b2cedd029"
+    },
+    {
+      "kind": "heading",
+      "line": 1459,
+      "text": "### Lema 3.3. Selección simultánea de masa total y marcada",
+      "sha256": "161d140fdbaf7d3699fc60f2b415b4b38b2ab03facc25959cb30cc9cfeee2e2e"
+    },
+    {
+      "kind": "heading",
+      "line": 1485,
+      "text": "### Lema 3.4. Selector mixto físico",
+      "sha256": "c82bc019dae89f0ac2f2e3405a6077199e21fa2a1a9ddbfa51f6561d6030b990"
+    },
+    {
+      "kind": "heading",
+      "line": 1506,
+      "text": "### C.1. Limpieza, selección y realización",
+      "sha256": "d8bf31e9d417577866406c2d48eb13a294a0ba2b9c82508a11d4a599731f4e80"
+    },
+    {
+      "kind": "heading",
+      "line": 1564,
+      "text": "### C.2. Qué se descarta y por qué el umbral es uniforme",
+      "sha256": "06df611147705710e5eacd02f0b87a9fb2a0b61422fa1d31754ecbd1b39f9ad0"
+    },
+    {
+      "kind": "heading",
+      "line": 1626,
+      "text": "### C.3. Un calendario explícito y su propagación",
+      "sha256": "42786a720cefd16adb6a0533e412e7dbd8d23b04c7abcf9a76f23fce050e93f9"
+    },
+    {
+      "kind": "heading",
+      "line": 1699,
+      "text": "## Apéndice D. Grafos completos e identidades del comparador",
+      "sha256": "36b8b6dfca43e2033d4127f35482181c3c7d4667d781eac99cc21dc2b405ed29"
+    },
+    {
+      "kind": "heading",
+      "line": 1701,
+      "text": "### D.1. El grafo completo a todo orden",
+      "sha256": "349f13edd289e1deccec80599920e90766baf5c4e74d354727b4b4bec17eb47e"
+    },
+    {
+      "kind": "heading",
+      "line": 1763,
+      "text": "### D.2. Igualdad de óptimos mixtos en grafos completo-split",
+      "sha256": "42ed7e0cfe75a0514674e988a7251291f7125073b0d27d9ba4d69867037d4103"
+    },
+    {
+      "kind": "heading",
+      "line": 1783,
+      "text": "### D.3. Reserva exacta por desplazamiento del núcleo",
+      "sha256": "273540ad76ca2699ddc406d4c46b76042e92ebe8b20c99e1c218cb41b2ef54a0"
+    },
+    {
+      "kind": "heading",
+      "line": 1798,
+      "text": "## Apéndice E. La extensión a defecto fijo",
+      "sha256": "2eba1eef3ba0baac18efbb0fe07f0f309fab58f8ddb43c6336c86e2dadfc7cd9"
+    },
+    {
+      "kind": "heading",
+      "line": 1802,
+      "text": "### E.1. Constructor y cuentas",
+      "sha256": "11f1a0579407cfe44bd7c03a2857bf5c5fd80559a5f49fca3e7e84a80d2b9fc8"
+    },
+    {
+      "kind": "heading",
+      "line": 1943,
+      "text": "### E.2. Del terminal al teorema eventual",
+      "sha256": "b6257b639fc6e8d3897a2357fb97474fb51476424ced4d022cd7fb815027121f"
+    },
+    {
+      "kind": "heading",
+      "line": 1965,
+      "text": "### E.3. Testigo inferior sin restricción en las piezas",
+      "sha256": "afa4f79d5789c2629ae06852a0f27b32f2d2f0e87f265a309afd1793c6232e06"
+    },
+    {
+      "kind": "heading",
+      "line": 1979,
+      "text": "### E.4. Cuentas conservadas para la estabilidad con una misma raíz",
+      "sha256": "e5930105086547ee4c87a14065e014f4eb481fabe52780c0637c462fbf8abc12"
+    },
+    {
+      "kind": "heading",
+      "line": 2119,
+      "text": "## Apéndice F. Parámetros e interfaces de prueba de las extensiones",
+      "sha256": "d4da927393d2e980470cc5e26c19be8108fd6d942edecbe22e63e630fab8ca6e"
+    },
+    {
+      "kind": "heading",
+      "line": 2121,
+      "text": "### F.1. Parámetros explícitos para defecto fijo",
+      "sha256": "16be45f7ad2c65b43cf5a30b30efcf7b472e8747f07d5fbb857c69054757d80c"
+    },
+    {
+      "kind": "heading",
+      "line": 2146,
+      "text": "### F.2. Contabilidad fraccional por estrellas y órdenes pequeños",
+      "sha256": "3e3f6fd663b59ba59398186c322c8343a95e15ff48779adab1eff70099f546b6"
+    },
+    {
+      "kind": "heading",
+      "line": 2177,
+      "text": "### F.3. Localización uniforme mediante edición hacia un cordal",
+      "sha256": "29e68e70822773c48ecf3273fe14dd16d01f640a96abee0b7cafeca731f98acf"
+    },
+    {
+      "kind": "heading",
+      "line": 2232,
+      "text": "### F.4. Nuevas interfaces públicas y límites de esta revisión",
+      "sha256": "9e5cffe397c45985bafa411f2aa0fa5e15c1d54acb3118ef4cff7b24190c29cb"
+    },
+    {
+      "kind": "heading",
+      "line": 2255,
+      "text": "### F.5. Lemas auxiliares y adaptaciones de remoción cordal",
+      "sha256": "5ebe4d4352a17f4d863b05c6443140b6441d61d96c1082a7bc727d487711cd24"
+    },
+    {
+      "kind": "heading",
+      "line": 2343,
+      "text": "## Apéndice G. Brechas de empaquetamiento y límites de la limpieza",
+      "sha256": "e486b8aa39f803319c695c8e58863fe966b088d7bd0d2080816131ab979816a0"
+    },
+    {
+      "kind": "heading",
+      "line": 2345,
+      "text": "### G.1. La cota para todos los órdenes y las brechas de empaquetamiento",
+      "sha256": "4ff082c74b3160f5d249521071a99caff40d98b93aa102ae54cf285868d1905c"
+    },
+    {
+      "kind": "heading",
+      "line": 2362,
+      "text": "### G.2. Una obstrucción cuantitativa a la limpieza de codegrado",
+      "sha256": "6fdf2c8193863a45c63567be3e679ede7f01d6da5c2f4192e1e4e1e615ec1d59"
+    },
+    {
+      "kind": "heading",
+      "line": 2404,
+      "text": "## Agradecimientos",
+      "sha256": "f5faa0ee9e925b0d493479e95263d3719197f9c8b681f77e11495a3eaf8b3a96"
+    },
+    {
+      "kind": "heading",
+      "line": 2408,
+      "text": "## Uso de inteligencia artificial y herramientas computacionales",
+      "sha256": "f7118e2df8680f40e299bbe410c8b22a80e967314d100ddcf9dd4b35f69fa2d3"
+    },
+    {
+      "kind": "heading",
+      "line": 2416,
+      "text": "## Referencias",
+      "sha256": "ab7a4b8d55a90d1d598ff67e1fc4c26ed84f5863023f2449fdf710b11758cd8c"
+    }
+  ]
+}

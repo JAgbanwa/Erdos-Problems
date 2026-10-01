@@ -1,0 +1,25 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 PaperIV/TrianglePairingSums.lean -o /workspace/request-project/.lake/runner/lib/lean/PaperIV/TrianglePairingSums.olean -i /workspace/request-project/.lake/runner/lib/lean/PaperIV/TrianglePairingSums.ilean
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_nlinarith_1._boxed took 219ms
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_nlinarith_1._boxed took 266ms
+import took 2.88s
+cumulative profiling times:
+	.olean serialization 84.4ms
+	attribute application 0.235ms
+	congr simp thm 14.3ms
+	elaboration 127ms
+	fix level params 4.47ms
+	import 2.88s
+	initialization 38.1ms
+	instantiate metavars 23.5ms
+	interpretation 1.77s
+	let-to-have transformation 0.416ms
+	linting 60.1ms
+	norm_num 132ms
+	parsing 31.7ms
+	process pre-definitions 53.9ms
+	ring 82.9ms
+	share common exprs 37.7ms
+	simp 133ms
+	tactic execution 553ms
+	type checking 192ms
+	typeclass inference 980ms

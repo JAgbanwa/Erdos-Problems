@@ -1,0 +1,195 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+\documentclass[
+]{article}
+\usepackage{xcolor}
+\usepackage{amsmath,amssymb}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math} % this also loads fontspec
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+\usepackage{lmodern}
+\ifPDFTeX\else
+  % xetex/luatex font selection
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{longtable,booktabs,array}
+\usepackage{caption}
+\captionsetup[table]{skip=6pt}
+\newcounter{none} % for unnumbered tables
+\usepackage{calc} % for calculating minipage widths
+% Correct order of tables after \paragraph or \subparagraph
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd\longtable{\par}{\if@noskipsec\mbox{}\fi\par}{}{}
+\makeatother
+% Allow footnotes in longtable head/foot
+\IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
+\makesavenoteenv{longtable}
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\usepackage{bookmark}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same}
+% fallback for those not using the hyperref driver hyperxmp:
+\makeatletter
+\@ifundefined{xmpquote}{\newcommand{\xmpquote}[1]{#1}}{}
+\makeatother
+\hypersetup{
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+
+\author{}
+\date{}
+
+\begin{document}
+
+\section{Gate E6 report --- run\_v1.21\_r1 (Paper IV
+v1.21)}\label{gate-e6-report--run_v121_r1-paper-iv-v121}
+
+Verdict: \textbf{PASS with findings}. Evidence:
+\texttt{20\_EVIDENCE/E6/}.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\subsection{E6 --- Bilingual artifacts revalidation
+(v1.21)}\label{e6--bilingual-artifacts-revalidation-v121}
+
+\textbf{Coverage.}
+
+\begin{itemize}
+\tightlist
+\item
+  Identities: all six target files (EN/ES × MD/TeX/PDF) match
+  \texttt{E0\_INITIAL.json}. Page counts are EN 71 and ES 72 (pymupdf).
+\item
+  Automated parity: done by the delegated sub-agent (same model) before
+  two rate-limit interruptions. Its outputs are in \texttt{results/}:
+  equation/section reference parity, key-number counts across the four
+  sources, a prime check, headings set as code, a "holgura" scan, line
+  alignment, and PDF text and font checks.
+\item
+  Page inspection: after the second interruption the lead auditor
+  rendered both PDFs again at 90 dpi as 2-up sheets
+  (\texttt{scripts/make\_pairs.py}, \texttt{pairs/}) and viewed every
+  sheet itself: \textbf{143/143 pages} (71 EN + 72 ES), logged in
+  \texttt{PAGE\_INSPECTION\_LOG.csv}. Zooms in \texttt{results/}
+  (binder, figures) were used where needed. Because of the 90 dpi 2-up
+  render, fine glyph defects on dense pages may have been missed.
+\end{itemize}
+
+\textbf{Parity.}
+
+\begin{itemize}
+\tightlist
+\item
+  Key numbers of the new passages (33δ, 138δ, 11δ, 23δ, 2208, 59485,
+  a₀+31, 191424, 12748, 12749, 392, ρ/40, ρ/200, 10\^{}10, n/9, 4n/10⁴,
+  2\^{}-59485) occur the same number of times in EN.md, ES.md, EN.tex
+  and ES.tex.
+\item
+  No "§3.2" remains. C′ is a typographic prime in MD; the TeX uses
+  C\textquotesingle{} in math (renders as a prime in both PDFs).
+\item
+  The Figure 2 reference (EN p.15 → figure on p.16; ES p.16) and the new
+  Figure 3 citation in §6.6 (EN p.25 → p.26; ES p.26) resolve correctly.
+\item
+  The page-1 status paragraph is accurate in both editions.
+\end{itemize}
+
+\subsection{Resolution of earlier
+findings}\label{resolution-of-earlier-findings}
+
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}lll@{}}
+\toprule\noalign{}
+ID & Status & Evidence \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+X-04 "holgura" for the margin & \textbf{RESOLVED} & ES uses "margen" for
+Δ(G) everywhere (incl. §3 title "régimen con margen"); "holgura"
+survives only as "holgura del selector" (l.159) and for the slack nibble
+(Lemma 3.2 title, l.1461), which is the selector-slack notion. \\
+X-12 Lean identifiers in roman / unmarked breaks & \textbf{PARTIAL} &
+Breaks now carry the continuation arrow throughout (e.g. EN pp.17, 22,
+31--33, 39, 64; ES pp.17, 31--33, 39, 41, 61). Residual:
+\texttt{E34.lemma3} and \texttt{E34.transfer} are still plain text in MD
+l.2342/2348 (EN p.64--65; ES p.66). \\
+X-13 Spanish subscripts in EN math & \textbf{RESOLVED} & far, cross,
+clean and covered appear in both languages; mis\_c is defined. \\
+X-14 literal Lean excerpt & \textbf{RESOLVED} & EN p.39 and ES p.40:
+strict-implicit binder ⦃v : V⦄ and indentation are preserved. \\
+X-15 untranslated English words in ES & \textbf{PARTIAL} &
+baseline/build/target/log/gap were translated. Residual: "matching(s)"
+×12 in prose (e.g. l.526, 578, 746, 1845, 1870, 1912, 2130--2137), "ni
+otro packing" (l.688), and "Cotas de edición y baseline" inside the ES
+Figure 3 (rendered p.26). \\
+X-16 "§3.2" & \textbf{RESOLVED} & A.2 row now reads "Lemma 3.2 and
+C.1--C.2" / "Lema 3.2 y C.1--C.2". \\
+\end{longtable}
+}
+
+\subsection{New findings (v1.21)}\label{new-findings-v121}
+
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}llll@{}}
+\toprule\noalign{}
+ID & Severity & Location & Description \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+NEW-02 & \textbf{MINOR} (bibliographic) & ES md l.2484; ES PDF p.71 &
+The translation pass altered a cited title. The Haxell--Rödl reference
+{[}6{]} now reads «Integer and fractional \textbf{empaquetamientos} in
+dense graphs». v1.2 ES and v1.21 EN have the correct title «Integer and
+fractional packings in dense graphs». The author\textquotesingle s
+response says bibliographic titles were not translated, so this is an
+accidental corruption of the reference list. \\
+NEW-01 & MINOR & EN §5.1 heading (p.13) and A.2 row (p.40); ES Lemma 3.2
+heading (p.44) & Descriptive words are typeset as code identifiers
+(\texttt{Regularization}, \texttt{Nibble}). The headings are
+inconsistent between languages: EN "5.1. \texttt{Regularization}\ldots"
+vs ES "5.1. Regularización\ldots"; ES "Lema 3.2. \texttt{Nibble}\ldots"
+vs EN "Bounded-rank nibble". \\
+OBS-1 & OBSERVATION & EN §7.2 & "the bounded gain function from Model"
+lost its code markup, although it names the Lean namespace
+\texttt{Model}. \\
+OBS-2 & OBSERVATION & ES p.33 & \texttt{\#check} is rendered with
+letter-spacing; the text remains legible. \\
+OBS-3 & OBSERVATION & EN p.70 / ES p.71 & The reference {[}5{]} note
+writes "PreferenceLabs"; the README writes "Preference Labs". \\
+\end{longtable}
+}
+
+\textbf{E6 verdict: PASS with findings.} No statement, number or
+qualifier differs between EN and ES. One new MINOR bibliographic error
+(NEW-02). Two earlier findings are only partially resolved (X-12, X-15).
+
+\end{document}

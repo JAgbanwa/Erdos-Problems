@@ -1,0 +1,32 @@
+$ c:\Users\jtraverso\.elan\toolchains\leanprover--lean4---v4.28.0\bin\lean.exe -j 1 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false E17/ExplicitFarAudit.lean -o C:\Users\jtraverso\e81p4\piv_v12_full_rebuild_20260929\.lake\runner\lib\lean\E17\ExplicitFarAudit.olean -i C:\Users\jtraverso\e81p4\piv_v12_full_rebuild_20260929\.lake\runner\lib\lean\E17\ExplicitFarAudit.ilean
+PASS B7 numerical link E17Bridge.ExplicitSchedule.uniformRoundingTarget_explicit: 34373 constants; axioms [propext,
+ Classical.choice,
+ Quot.sound]
+PASS B7 numerical link E17Bridge.exists_improvedGateGap_explicit: 34380 constants; axioms [propext,
+ Classical.choice,
+ Quot.sound]
+PASS B7 numerical link E17Bridge.improved_far_loss_explicit: 34384 constants; axioms [propext,
+ Classical.choice,
+ Quot.sound]
+PASS B7 numerical link E17Bridge.ExplicitAssembly.uniformTransferAt_explicit: 34380 constants; axioms [propext,
+ Classical.choice,
+ Quot.sound]
+PASS B7 numerical link E17Bridge.ExplicitAssembly.farRegime_allGraphs_explicit: 36385 constants; axioms [propext,
+ Classical.choice,
+ Quot.sound]
+PASS B7 numerical link E17Bridge.ExplicitAssembly.farRegime_eta0_tower: 40697 constants; axioms [propext,
+ Classical.choice,
+ Quot.sound]
+PASS B7 numerical link PaperIV.ExplicitThreshold.erdos81_sharp_explicit: 44118 constants; axioms [propext,
+ Classical.choice,
+ Quot.sound]
+PASS B7 numerical link PaperIV.ExplicitThreshold.erdos81_all_orders_explicit: 44123 constants; axioms [propext,
+ Classical.choice,
+ Quot.sound]
+PASS B7 numerical link PaperIV.ExplicitThreshold.erdos81_all_orders_bounded_additive: 44129 constants; axioms [propext,
+ Classical.choice,
+ Quot.sound]
+'E17Bridge.improved_far_loss_explicit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PaperIV.ExplicitThreshold.erdos81_all_orders_bounded_additive' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

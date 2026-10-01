@@ -1,0 +1,291 @@
+{
+  "status": "TRACE_BUILT",
+  "exports": 233,
+  "public_rows": 66,
+  "headings": [
+    {
+      "line": 53,
+      "heading": "Theorem A. Bound for all orders",
+      "sha256": "28481eaa047c2da25559c0dd62ed5a7397ef288706af157f589e04bf88fbd4f2",
+      "declarations": [
+        "PaperIV.Erdos81AllOrders.erdos81_all_orders",
+        "PaperIV.Erdos81AllOrders.erdos81_all_orders_additive"
+      ]
+    },
+    {
+      "line": 63,
+      "heading": "Theorem B. Sharp bound and eventual maximum",
+      "sha256": "39cc9b3298114b5e90324cc3d9df729267eb25faa3ffdef1e0996141d3298f9d",
+      "declarations": [
+        "PaperIV.Erdos81Unconditional.erdos81_cliquePartition",
+        "PaperIV.PaperTheorems.erdos81_max_eq"
+      ]
+    },
+    {
+      "line": 82,
+      "heading": "Theorem C. Fixed rooted simplicial defect",
+      "sha256": "6df3e3fda4cb6229abd9922d599a7e1f037d35d82722b8f82d88310d5fe20b00",
+      "declarations": [
+        "PaperIV.DefectSharpPublication.rooted_defect_eventual",
+        "PaperIV.DefectSharpPublication.rooted_defect_maximum",
+        "PaperIV.SublinearResearch.FixedExplicit.fixed_defect_stability_explicit",
+        "PaperIV.SublinearResearch.fixed_defect_joint_stability_real",
+        "PaperIV.DefectExplicitPublication.rooted_defect_eventual",
+        "PaperIV.DefectExplicitPublication.rooted_defect_maximum"
+      ]
+    },
+    {
+      "line": 99,
+      "heading": "Theorem C′. Fixed-defect same-root stability",
+      "sha256": "7692610f9ac0c4e401314ebf4797083f8a042b37f19adab8a5ef29e4c20cc757",
+      "declarations": [
+        "PaperIV.SublinearResearch.fixed_defect_joint_stability_real"
+      ]
+    },
+    {
+      "line": 210,
+      "heading": "Lemma 2.1",
+      "sha256": "ceecfdd25f91133fe51a3f88f51d26915c25c2e4348556c97be05f54bcff2ae7",
+      "declarations": [
+        "PaperIV.LossBudget.size_add_gain_eq"
+      ]
+    },
+    {
+      "line": 273,
+      "heading": "Theorem 3.1",
+      "sha256": "b949515fca1c176fa3c7b978b017f2bf5c5ce32bed9c88ccd20b5fc3f233b3a1",
+      "declarations": [
+        "PaperIV.RC01Final.rc01_uniformRoundingTarget"
+      ]
+    },
+    {
+      "line": 290,
+      "heading": "Corollary 3.5",
+      "sha256": "2b591bd1a8f5e33ae94d563e4e8d8eda50f2024165b54e091bd0fea96f5e81fd",
+      "declarations": [
+        "PaperIV.FarRegimeAllGraphs.farRegime_cliquePartition_allGraphs"
+      ]
+    },
+    {
+      "line": 334,
+      "heading": "Lemma 4.1 (admissible mixed path).",
+      "sha256": "de90c57519e7f88ec4210ab212ca9fe394a0cbe6747aecb8ccd82461804ac0ae",
+      "declarations": [
+        "PaperIV.GatedTerminalSplit.exists_split_terminal_symmetrizationPath"
+      ]
+    },
+    {
+      "line": 354,
+      "heading": "Lemma 4.2 (accounting inside the window).",
+      "sha256": "0f515b080f98f80dabbb38912217b99bff46f570bc4c01e64b3d9c5e629ee7e8",
+      "declarations": [
+        "PaperIV.NearH1WindowAccounts.exists_window_accounts"
+      ]
+    },
+    {
+      "line": 406,
+      "heading": "Proposition 4.3",
+      "sha256": "f514e98168cb3b6a83d52c51aa635f7ab603ba4d599d040b2483da787a6496b1",
+      "declarations": [
+        "PaperIV.NearH1Localization.exists_localized_split_core"
+      ]
+    },
+    {
+      "line": 427,
+      "heading": "Theorem 5.0. Near constructor under local hypotheses",
+      "sha256": "4a42f751441a5e88363b644a2161e895a8f469728a919fc82699ceac266188b6",
+      "declarations": [
+        "PaperIV.NearH1LocalConstructor.exists_near_partition_paid_by_root",
+        "PaperIV.NearH1LocalConstructor.exists_near_partition_paid_by_root_sharp"
+      ]
+    },
+    {
+      "line": 446,
+      "heading": "Lemma 5.1 (extraction of an actual clique).",
+      "sha256": "eca86405d3d425a93d8d1c9fd1b8c8eb2ecaeb479b3587b1ef4b4d7693974106",
+      "declarations": [
+        "PaperIV.ChordalCoreMissing.exists_core_clique_with_calibration"
+      ]
+    },
+    {
+      "line": 494,
+      "heading": "Proposition 5.2 (regularization).",
+      "sha256": "36386b219a1b633624622166e88513c3e0c41d5b203463d3923b195aebb6a692",
+      "declarations": [
+        "PaperIV.RootRegularizationBridge.exists_regularizedRoot_engineFree"
+      ]
+    },
+    {
+      "line": 657,
+      "heading": "Lemma 5.3",
+      "sha256": "0ceb0ea784a3a17fe9ce62259960f374bb25cec5f01b6682360e9549537cec8d",
+      "declarations": [
+        "PaperIV.NearH1StructureWitness.exists_nearStructureWitness_of_split_comparator"
+      ]
+    },
+    {
+      "line": 703,
+      "heading": "Corollary 5.4 (quantitative geometry of the critical branch).",
+      "sha256": "56015d2624613504600fb6fbd6107a7249b97bf5cce4e5a7d58dcc61263dfee1",
+      "declarations": [
+        "PaperIV.NearCriticalDichotomy.chordal_far_or_criticalRoot",
+        "PaperIV.NearCriticalDichotomy.chordal_far_or_edge_density"
+      ]
+    },
+    {
+      "line": 837,
+      "heading": "Theorem 6.1 (integral stability).",
+      "sha256": "d4f3201dda67d02ed147e76c2fa3ef3073936bf8ad761eba8da8857d24dad5ba",
+      "declarations": [
+        "PaperIV.IntegralStability.chordal_linear_stability_sixteen"
+      ]
+    },
+    {
+      "line": 870,
+      "heading": "Corollary 6.1a (stability of partitions).",
+      "sha256": "e08f8251c90004df09d8d7f91d9e7e4ad91375fbc658411241822f9ffaeb5e73",
+      "declarations": [
+        "PaperIV.RootPartitionStability.chordal_partition_stability",
+        "PaperIV.SublinearResearch.chordal_joint_stability_real"
+      ]
+    },
+    {
+      "line": 879,
+      "heading": "Corollary 6.2 (eventual classification).",
+      "sha256": "c0084780a3baee66ea6d98bb138d4a0f8a24d2d19267f23b75c9539a437237df",
+      "declarations": [
+        "PaperIV.ExtremalClassification.chordal_extremal_classification"
+      ]
+    },
+    {
+      "line": 910,
+      "heading": "Theorem C′ (fixed-defect same-root stability).",
+      "sha256": "0d4bde7edc6a2e883d9184eb759cb1d31778cab590e9cc22645186a88584fff6",
+      "declarations": [
+        "PaperIV.SublinearResearch.fixed_defect_joint_stability_real"
+      ]
+    },
+    {
+      "line": 991,
+      "heading": "Corollary 6.3 (optimal-size comparison and equality).",
+      "sha256": "03b461439fc5d94aea47e14a4bdb9787de3e9bba4807627c7a8e2289fbb5a854",
+      "declarations": [
+        "PaperIV.SublinearResearch.fixed_defect_exact_extremal_edit_real"
+      ]
+    },
+    {
+      "line": 1016,
+      "heading": "Proposition 6.3a (a square-root obstruction).",
+      "sha256": "e98bde3ff5f77e13e5819ab3192f2ae1fb1a9907d558bc7390de2f3aab73665b",
+      "declarations": [
+        "PaperIV.OptimalTemplateObstruction.shifted_template_witness",
+        "PaperIV.OptimalTemplateObstruction.shifted_template_sqrt_witness",
+        "PaperIV.OptimalTemplateObstruction.no_linear_optimal_template_bound"
+      ]
+    },
+    {
+      "line": 1058,
+      "heading": "Proposition 6.4 (finite fractional bounds).",
+      "sha256": "9c875a0398097fd5bdd6a60874b534ab64cb186b6a979e8a4ff9beed289e8471",
+      "declarations": [
+        "PaperIV.SublinearResearch.certified_shifted_fractional_bound_all_orders",
+        "PaperIV.SublinearResearch.certified_refined_fractional_bound_all_orders",
+        "PaperIV.SublinearResearch.uniform_shifted_partition_bound",
+        "PaperIV.SublinearResearch.uniform_refined_partition_bound"
+      ]
+    },
+    {
+      "line": 1072,
+      "heading": "Theorem 6.5 (sublinear defect and a root for all partitions).",
+      "sha256": "38241a4fed4324eaaad31b328739dcbdcbde78aea52eead6cdf9508c579df077",
+      "declarations": [
+        "PaperIV.SublinearResearch.sequence_arbitrary_orders_partition_bound",
+        "PaperIV.SublinearResearch.sequence_arbitrary_orders_stability"
+      ]
+    },
+    {
+      "line": 1105,
+      "heading": "Corollary 6.6 (exact bound, uniform in the defect).",
+      "sha256": "3287dbf59910836c5a1cbc04e4e4c6a3c12f504e3ab0610fc17d56e0eda79342",
+      "declarations": [
+        "E35.theoremC_tower",
+        "E35.theoremC_tower_uniform",
+        "E35.theoremC_tower_uniform_sMax"
+      ]
+    },
+    {
+      "line": 1444,
+      "heading": "Lemma 3.2. Bounded-rank nibble with slack, input from Paper III",
+      "sha256": "04eb571b2261bef381c835c183515f42508d0269f0665b36231c9a76edd1ab17",
+      "declarations": [
+        "PaperIV.PaperIIISlackNibbleAdapter.boundedRankNibbleAt"
+      ]
+    },
+    {
+      "line": 1459,
+      "heading": "Lemma 3.3. Simultaneous selection of total and marked mass",
+      "sha256": "f1391b13910ad18a3eac62bc0d5733766624de278e6022b855b1100d50c5f650",
+      "declarations": [
+        "PaperIV.MarkedQuotaSlackGate.slackMarkedQuotaNibbleAt_proved"
+      ]
+    },
+    {
+      "line": 1485,
+      "heading": "Lemma 3.4. Physical mixed selector",
+      "sha256": "caa01651da384783c90f45d1500a00b3d778f979cb3286d119cbdadcda9a8e08",
+      "declarations": [
+        "PaperIV.JointTwoQuotaPhysical.mixed_physical_packing_of_slackMarkedQuota"
+      ]
+    },
+    {
+      "line": 1705,
+      "heading": "Proposition D.1.",
+      "sha256": "bf7d488ec241bdd15f2907669263da0d6e5d8713188531bfa83820d69dca3177",
+      "declarations": [
+        "ThreeRegime.CompleteStateAllOrders.complete_state_closes"
+      ]
+    },
+    {
+      "line": 1748,
+      "heading": "Proposition D.2.",
+      "sha256": "7aa7487bfc90de9b155ddd2651df59d07b73bf7053d5fd7270b740ecf4bd945d",
+      "declarations": [
+        "PaperIV.DefectSharpPublication.order_three_insufficient"
+      ]
+    },
+    {
+      "line": 1765,
+      "heading": "Proposition D.3 (zero mixed gap in complete-split graphs).",
+      "sha256": "be591bdd20d663f86d0204e4393d1c9da713850074dc38ff4ac2c1c194f462be",
+      "declarations": [
+        "PaperIV.SplitMixedGap.mixed_gap_zero"
+      ]
+    },
+    {
+      "line": 2190,
+      "heading": "Lemma F.3a (clique recovery with additive defect).",
+      "sha256": "f639ecba37ab147398a42e1e7ce7d52df2f89b154f31f6cbcffb5b9215e793e7",
+      "declarations": [
+        "PaperIV.SublinearResearch.exists_clique_additive_defect"
+      ]
+    },
+    {
+      "line": 2211,
+      "heading": "Corollary F.3b (recovery after edge deletion).",
+      "sha256": "46ee4356849aeb3c4a9146d0a05469d92a9c9e2f54617d4ee9dd41391d51e279",
+      "declarations": [
+        "PaperIV.SublinearResearch.recover_clique_from_edit"
+      ]
+    },
+    {
+      "line": 2370,
+      "heading": "Proposition G.1 (limitation of this contract).",
+      "sha256": "859de665614e8720a88b9cba6f15eea3708f4aa256ad9e25ba3d288587f73281",
+      "declarations": [
+        "FarExploration.CleanupRigidVerdict.threshold_gt_exp",
+        "FarExploration.CleanupRigidVerdict.threshold_gt_exp_seventy_two"
+      ]
+    }
+  ],
+  "limits": "Statement hashes are source headers, which can include context comments. Elaborated types in EXPORT_TYPES.txt resolve all implicit hypotheses. Semantic decisions are in MATHEMATICAL_REVIEW.md."
+}

@@ -1,0 +1,21 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 PaperIV/OutsideCounting.lean -o /workspace/request-project/.lake/runner/lib/lean/PaperIV/OutsideCounting.olean -i /workspace/request-project/.lake/runner/lib/lean/PaperIV/OutsideCounting.ilean
+import took 3.01s
+cumulative profiling times:
+	.olean serialization 53.4ms
+	attribute application 1.19ms
+	congr simp thm 4.21ms
+	elaboration 24.3ms
+	fix level params 0.595ms
+	import 3.01s
+	initialization 40.7ms
+	instantiate metavars 1.14ms
+	interpretation 238ms
+	let-to-have transformation 0.0788ms
+	linting 9.49ms
+	parsing 6.08ms
+	process pre-definitions 4.92ms
+	share common exprs 1.33ms
+	simp 32.4ms
+	tactic execution 64.2ms
+	type checking 9.69ms
+	typeclass inference 55.9ms

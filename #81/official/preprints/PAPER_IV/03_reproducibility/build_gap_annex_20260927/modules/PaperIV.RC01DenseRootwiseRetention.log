@@ -1,0 +1,34 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 PaperIV/RC01DenseRootwiseRetention.lean -o /workspace/request-project/.lake/runner/lib/lean/PaperIV/RC01DenseRootwiseRetention.olean -i /workspace/request-project/.lake/runner/lib/lean/PaperIV/RC01DenseRootwiseRetention.ilean
+PaperIV/RC01DenseRootwiseRetention.lean:38:8: warning: automatically included section variable(s) unused in theorem `_private.PaperIV.RC01DenseRootwiseRetention.0.PaperIV.RC01DenseRootwiseRetention.canonicalTriple_mem_slot`:
+  [Nonempty α]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Nonempty α] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+PaperIV/RC01DenseRootwiseRetention.lean:45:8: warning: automatically included section variable(s) unused in theorem `_private.PaperIV.RC01DenseRootwiseRetention.0.PaperIV.RC01DenseRootwiseRetention.canonicalTuple_mem_slot`:
+  [Nonempty α]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Nonempty α] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+import took 4.93s
+.olean serialization took 108ms
+cumulative profiling times:
+	.olean serialization 108ms
+	attribute application 0.127ms
+	congr simp thm 6.57ms
+	elaboration 114ms
+	fix level params 1.75ms
+	import 4.93s
+	initialization 41.7ms
+	instantiate metavars 4.73ms
+	interpretation 338ms
+	let-to-have transformation 0.247ms
+	linting 45.6ms
+	parsing 11.4ms
+	process pre-definitions 8.74ms
+	share common exprs 2.79ms
+	simp 80.2ms
+	tactic execution 233ms
+	type checking 28.8ms
+	typeclass inference 325ms

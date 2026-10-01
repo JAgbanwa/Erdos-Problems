@@ -1,0 +1,22 @@
+--- a/tools/paperiv_build.py
++++ b/tools/paperiv_build.py
+@@ -397,7 +397,7 @@
+         log_file = run_dir / "modules" / f"{m}.log"
+         log_file.write_text("$ " + " ".join(cmd) + "\n" + log, encoding="utf-8")
+         (run_dir / "modules" / f"{m}.exit").write_text(f"EXIT_CODE={p.returncode}\n", encoding="utf-8")
+-        sorry = "declaration uses 'sorry'" in log
++        sorry = bool(re.search('sorryAx|declaration\\s+uses\\s+[`\'\\"‘’“”]*sorry\\b', log, re.I))
+         ok = p.returncode == 0 and not sorry and olean.exists()
+         row.update(status="PASS" if ok else "FAIL", exitCode=p.returncode, wallSeconds=round(wall, 3),
+                    sorryWarning=sorry)
+--- a/tools/audit_publication.py
++++ b/tools/audit_publication.py
+@@ -49,7 +49,7 @@
+         check(row['status'] == 'PASS' and row['exitCode'] == 0, 'Target not reexecuted: ' + target)
+         log = (run / 'modules' / (target + '.log')).read_text(encoding='utf-8')
+         check((run / 'modules' / (target + '.exit')).read_text().strip() == 'EXIT_CODE=0', target)
+-        check(not re.search(r"sorryAx|declaration uses 'sorry'|^.*error(?:\(|:)", log, re.M),
++        check(not re.search(r"sorryAx|declaration\s+uses\s+.*?sorry\b|^.*error(?:\(|:)", log, re.M | re.I),
+               'Error or sorry in ' + target)
+         for values in re.findall(r'(?:depends on axioms:|axioms)\s*\[([^\]]*)\]', log):
+             check({v.strip() for v in values.split(',') if v.strip()} <= ALLOWED,

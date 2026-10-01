@@ -1,0 +1,218 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+\documentclass[
+]{article}
+\usepackage{xcolor}
+\usepackage{amsmath,amssymb}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math} % this also loads fontspec
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+\usepackage{lmodern}
+\ifPDFTeX\else
+  % xetex/luatex font selection
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{longtable,booktabs,array}
+\usepackage{caption}
+\captionsetup[table]{skip=6pt}
+\newcounter{none} % for unnumbered tables
+\usepackage{calc} % for calculating minipage widths
+% Correct order of tables after \paragraph or \subparagraph
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd\longtable{\par}{\if@noskipsec\mbox{}\fi\par}{}{}
+\makeatother
+% Allow footnotes in longtable head/foot
+\IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
+\makesavenoteenv{longtable}
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\usepackage{bookmark}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same}
+% fallback for those not using the hyperref driver hyperxmp:
+\makeatletter
+\@ifundefined{xmpquote}{\newcommand{\xmpquote}[1]{#1}}{}
+\makeatother
+\hypersetup{
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+
+\author{}
+\date{}
+
+\begin{document}
+
+\section{Gate E8 report --- run\_v1.2\_r1 (Paper IV
+v1.2)}\label{gate-e8-report--run_v12_r1-paper-iv-v12}
+
+Verdict: \textbf{PASS with findings}. Evidence directory:
+\texttt{20\_EVIDENCE/E8/}.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\subsection{E8 --- Internal evidence and packaging (preliminary, after
+independent first
+pass)}\label{e8--internal-evidence-and-packaging-preliminary-after-independent-first-pass}
+
+Independent first-pass records saved before any author
+verdict/derivation was read: E1\_RECORD.md, E3\_STATIC\_RECORD.md,
+E7\_FIRST\_PASS.md + E7\_LEAD\_VERIFICATION.md, E2\_RECORD.md,
+E5\_RESULTS.json/E5\_RECORD.md, E6\_RECORD.md (timestamps in the files).
+Only then were read: author build evidence (r2, resume,
+recovery/provenance/validation JSON), internal-audit final report,
+FINDINGS.md, MATHEMATICAL\_REVIEW.md §A.2, B01 Certo run. Access logged.
+
+\subsection{\texorpdfstring{A. Author two-segment reconstruction (script
+\texttt{e8\_author\_build\_check.py}, output
+E8\_AUTHOR\_BUILD\_CHECK.json)}{A. Author two-segment reconstruction (script e8\_author\_build\_check.py, output E8\_AUTHOR\_BUILD\_CHECK.json)}}\label{a-author-two-segment-reconstruction-script-e8_author_build_checkpy-output-e8_author_build_checkjson}
+
+\begin{itemize}
+\tightlist
+\item
+  Segment 1 (\texttt{full\_rebuild\_v12\_20260929\_r2}): 422 PASS rows,
+  status file preserved as \texttt{RUNNING\ 423/607\ E34.SampleBound}
+  (interruption evidence preserved). All 422 exits 0, logs present, no
+  sorry/error; sources equal the manifest.
+\item
+  Segment 2 (\texttt{…\_resume}): 607 rows = 421 UP-TO-DATE + 186 PASS;
+  union = 607 distinct, no overlap; BUILD.exit 0; no
+  failed/blocked/not-run; sources unchanged.
+\item
+  Every reused module has a segment-1 PASS with identical source hash
+  and library; run metadata (Lean binary/version, options, threads,
+  dependency pins, LEAN\_PATH, targets) identical across segments;
+  RECOVERY\_CHECK olean hashes equal segment-1 RESULTS olean hashes for
+  all 422; \texttt{A4S1.IndepAllAudit} (a target) passed in segment 1
+  and was re-executed in segment 2 (the "one re-executed completion").
+\item
+  All 19 targets PASS with exit 0 in segment 2; no sorryAx/sorry; no
+  non-standard axiom.
+\item
+  Limitation: reuse validity also depends on the author
+  runner\textquotesingle s dependency-olean trace files, which are in
+  the author work directory and not in the evidence set; the auditor
+  could verify record consistency, not re-hash the reused objects.
+\item
+  \textbf{Axiom-record count reconciled:} the author\textquotesingle s
+  regex
+  \texttt{(?:depends\ on\ axioms:\textbar{}axioms)\textbackslash{}s*\textbackslash{}{[}…\textbackslash{}{]}}
+  yields exactly \textbf{461} over the 19 target logs; of these
+  \textbf{314} are genuine \texttt{\#print\ axioms} outputs and
+  \textbf{147} are axiom lists printed by the custom audit elaborators
+  (ResearchAudit 75, E34 extra, etc.). The internal report cites "313
+  nominal prints over 307 distinct declarations" (1-record difference
+  from the auditor\textquotesingle s 314, OBSERVATION E8-O1). The
+  manuscript correctly says the 461 records are not distinct theorems.
+\item
+  This is author-build evidence. It does not replace E4.
+\end{itemize}
+
+\subsection{B. Internal audit (PASS\_INTERNAL\_AUTHOR\_SIDE) ---
+challenges}\label{b-internal-audit-pass_internal_author_side--challenges}
+
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}llll@{}}
+\toprule\noalign{}
+\# & Internal position & Auditor challenge & Effect \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+B1 & All seven A.2 items ACCEPTABLE\_SUMMARY "for the paper accompanied
+by its sources" & The mandate asks for adequacy for a human referee, not
+with the Lean sources. Internal item 5 itself says normalization is
+"exposition by contracts with named implementations, not a proof in
+prose". Internal item 3 (fibres) did not detect that per-edge
+feasibility needs the two-sided deviation cleanup, absent from the
+prose. Auditor: A2-3, A2-4, A2-5, A2-6 REQUIRES\_EXPANSION. &
+Disagreement preserved; auditor verdicts stand (E2). \\
+B2 & G5/G6 bilingual \& visual PASS & Missed E6-01 ("holgura" for margin
+in ES, contradicting its own l.159 terminology), E6-03 (Spanish
+subscripts in EN math), E6-04 (A.1 "literal" Lean excerpt rendered
+\texttt{\{\{v\ :\ V\}\}}). & MINOR/MODERATE findings added. \\
+B3 & I-05: \textquotesingle§3.2\textquotesingle{} in A.2 is an erratum
+kept outside the sealed manuscript & Confirmed: EN A.2 row "§3.2 and
+C.2" has no target section. Stays in the audited manuscript. & MINOR
+finding (F-A2REF). \\
+B4 & Certo 0.20.1 certificate for K3∨I3 & Audited by its actual
+specification: universe = the 12 edges of K3∨I3; 6 parts; each part is
+the full edge set of a clique; exact cover (auditor\textquotesingle s
+own checker, no Certo import). The certificate proves feasibility (a
+6-part partition) only; Certo itself warns it is not optimality.
+Optimality 6 = kh−C(k,2) comes from the weight argument (6.1). The
+tamper run lists \texttt{cliques}/\texttt{exact} as "excused" mutations,
+so the clique property was not tamper-tested by Certo; the
+auditor\textquotesingle s checker covers it. & E5 T25 updated: Certo
+item AUDITED (feasibility-only, correct). \\
+B5 & "No other build was launched" & Internal G4 relied on recorded
+author builds; E4 of this run is the first external isolated build. &
+--- \\
+\end{longtable}
+}
+
+\subsection{C. Packaging}\label{c-packaging}
+
+\begin{itemize}
+\tightlist
+\item
+  Internal package ZIP 488 members / 487 manifest entries
+  (PACKAGE\_VERIFICATION); hash equals the binding (E0).
+\item
+  Author evidence ZIP 1239 = 1238 + manifest; all hashes verified (E0).
+\end{itemize}
+
+Status: \textbf{preliminary E8 PASS on evidence consistency;
+disagreements B1--B3 recorded as findings.} Final E8 after E4 (compare
+own build outputs with author records).
+
+\subsection{Final E8 (after E4)}\label{final-e8-after-e4}
+
+\begin{itemize}
+\tightlist
+\item
+  The auditor\textquotesingle s isolated build reproduces all 607 author
+  olean hashes and all 19 target logs byte for byte (apart from the
+  command line), which corroborates the two-segment reuse record (X-21
+  resolved).
+\item
+  The author runner\textquotesingle s per-module sorry detection uses
+  the pattern
+  \texttt{declaration\ uses\ \textquotesingle{}sorry\textquotesingle{}},
+  which Lean 4.28 does not print (it uses backticks). The
+  internal/author validation therefore relied on it ineffectively,
+  though no sorry exists in any log (X-28, MINOR).
+\item
+  The internal audit did not notice X-27 (cp classification cone on the
+  historical Alon--Shapira route).
+\end{itemize}
+
+\textbf{E8 verdict: PASS with findings} (disagreements B1--B3, X-27,
+X-28 recorded).
+
+\end{document}

@@ -1,0 +1,27 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 PaperIV/ChordalBasics.lean -o /workspace/request-project/.lake/runner/lib/lean/PaperIV/ChordalBasics.olean -i /workspace/request-project/.lake/runner/lib/lean/PaperIV/ChordalBasics.ilean
+PaperIV/ChordalBasics.lean:15:0: warning: automatically included section variable(s) unused in theorem `PaperIV.ChordalBasics.neighborFinset_isClique_of_simplicial`:
+  [DecidableEq V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+import took 2.93s
+cumulative profiling times:
+	.olean serialization 39.9ms
+	attribute application 0.0102ms
+	congr simp thm 0.407ms
+	elaboration 4.57ms
+	fix level params 0.0332ms
+	import 2.93s
+	initialization 36.8ms
+	instantiate metavars 0.013ms
+	interpretation 159ms
+	let-to-have transformation 0.0198ms
+	linting 1.46ms
+	parsing 0.847ms
+	process pre-definitions 0.153ms
+	share common exprs 0.0455ms
+	simp 1.29ms
+	tactic execution 0.89ms
+	type checking 0.41ms
+	typeclass inference 2.79ms

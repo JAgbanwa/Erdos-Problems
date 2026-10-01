@@ -1,0 +1,33 @@
+note: using only cached resource files
+note: Running TeX ...
+note: Writing `C:\Users\jtraverso\e81p4-publish\preprints\PAPER_IV\01_manuscript\v1.21_editorial_candidate\PAPER_IV_preprint_v1.21_en.log` (5.83984375 KiB)
+
+Fontconfig error: Cannot load default config file: No such file: (null)
+warning: open of input [C:/Windows/Fonts/seguisym.ttf]/OT failed
+caused by: El nombre de archivo, el nombre de directorio o la sintaxis de la etiqueta del volumen no son correctos. (os error 123)
+error: PAPER_IV_preprint_v1.21_en.tex:8: Package fontspec Error: The font "seguisym" cannot be found.
+
+For immediate help type H <return>
+error: something bad happened inside XeTeX; its output follows:
+
+===============================================================================
+(PAPER_IV_preprint_v1.21_en.tex
+LaTeX2e <2021-11-15> patch level 1
+L3 programming layer <2022-02-24> (article.cls
+Document Class: article 2021/10/04 v1.4n Standard LaTeX document class
+(size11.clo)) (geometry.sty (keyval.sty) (ifvtex.sty (iftex.sty)))
+(fontspec.sty (xparse.sty (expl3.sty (l3backend-xetex.def)))
+(fontspec-xetex.sty (fontenc.sty) (fontspec.cfg)))
+
+! Package fontspec Error: The font "seguisym" cannot be found.
+
+For immediate help type H <return>.
+ ...                                              
+                                                  
+l.8 ...mbols{seguisym.ttf}[Path=C:/Windows/Fonts/]
+                                                  
+No pages of output.
+Transcript written on PAPER_IV_preprint_v1.21_en.log.
+===============================================================================
+error: the XeTeX engine had an unrecoverable error
+caused by: halted on potentially-recoverable error as specified

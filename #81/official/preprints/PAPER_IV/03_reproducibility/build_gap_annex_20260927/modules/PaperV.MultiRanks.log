@@ -1,0 +1,22 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 PaperV/MultiRanks.lean -o /workspace/request-project/.lake/runner/lib/lean/PaperV/MultiRanks.olean -i /workspace/request-project/.lake/runner/lib/lean/PaperV/MultiRanks.ilean
+import took 2.22s
+cumulative profiling times:
+	.olean serialization 82.3ms
+	attribute application 0.14ms
+	congr simp thm 9.1ms
+	elaboration 88ms
+	fix level params 3.19ms
+	import 2.22s
+	initialization 36.4ms
+	instantiate metavars 69.1ms
+	interpretation 377ms
+	let-to-have transformation 0.235ms
+	linting 37.4ms
+	norm_num 0.149ms
+	parsing 21.3ms
+	process pre-definitions 20ms
+	share common exprs 6.72ms
+	simp 124ms
+	tactic execution 536ms
+	type checking 463ms
+	typeclass inference 213ms

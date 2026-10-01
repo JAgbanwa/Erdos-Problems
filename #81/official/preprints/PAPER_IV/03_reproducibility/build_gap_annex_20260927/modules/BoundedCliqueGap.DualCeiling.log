@@ -1,0 +1,23 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 BoundedCliqueGap/DualCeiling.lean -o /workspace/request-project/.lake/runner/lib/lean/BoundedCliqueGap/DualCeiling.olean -i /workspace/request-project/.lake/runner/lib/lean/BoundedCliqueGap/DualCeiling.ilean
+import took 3.2s
+cumulative profiling times:
+	.olean serialization 56.3ms
+	attribute application 0.0642ms
+	congr simp thm 5.13ms
+	elaboration 28.1ms
+	fix level params 0.86ms
+	import 3.2s
+	initialization 41.7ms
+	instantiate metavars 1.39ms
+	interpretation 276ms
+	let-to-have transformation 0.1ms
+	linting 12ms
+	norm_num 0.891ms
+	parsing 5.34ms
+	process pre-definitions 7.83ms
+	ring 14.5ms
+	share common exprs 3.02ms
+	simp 37.4ms
+	tactic execution 145ms
+	type checking 36.7ms
+	typeclass inference 210ms

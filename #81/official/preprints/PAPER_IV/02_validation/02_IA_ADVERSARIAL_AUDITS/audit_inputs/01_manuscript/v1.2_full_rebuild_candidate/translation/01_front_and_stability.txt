@@ -1,0 +1,95 @@
+@@0
+# Particiones de cliques con defecto simplicial enraizado: estabilidad cuantitativa y cotas agudas para órdenes grandes
+@@2
+**Paper IV de la serie**  
+**Preprint:** versión 1.2, candidata a revisión matemática.  
+**Fecha de esta revisión:** 29 de septiembre de 2026.  
+**Estado:** edición bilingüe preparada para una nueva auditoría. Las fuentes Lean están congeladas localmente como {{0}}, tras el build combinado y la ejecución nueva de los 19 objetivos seleccionados. El corte incluye E35, el Teorema C público explícito y la obstrucción de raíz cuadrada. Las nuevas auditorías interna y adversarial externa del manuscrito ampliado permanecen pendientes. Los veredictos anteriores no certifican esta edición. No se ha publicado ni se le ha asignado un DOI propio.
+**DOI de concepto de la serie:** <https://doi.org/10.5281/zenodo.21273143>. El DOI de versión del depósito que reunirá Papers I–IV todavía no está asignado.
+@@4
+## Resumen
+@@5
+Estudiamos cómo un número de partición en cliques grande restringe la estructura de un grafo y de sus particiones casi óptimas. Para cada defecto simplicial enraizado fijo {{0}}, demostramos estabilidad cuantitativa en el modelo {{1}}, cuyas piezas tienen orden a lo sumo cuatro. Si {{2}}, con {{3}} y {{4}} por encima de un umbral explícito, el grafo está a distancia de a lo sumo {{5}} ediciones de aristas de una plantilla de defecto sobre una clique real del grafo. Esa misma raíz controla toda partición irrestricta casi óptima, tanto en su número de piezas no canónicas como en la cantidad total de aristas que contienen. La aproximación por una plantilla de tamaño óptimo tiene una cota separada {{6}}. Una familia explícita está a distancia de al menos {{7}} de toda plantilla de tamaño óptimo, lo que explica por qué deben distinguirse ambas formas de aproximación.
+@@6
+Para grafos cordales, las constantes especializadas son {{0}} ediciones, {{1}} piezas no canónicas y {{2}} aristas en esas piezas cuando la partición tiene a lo sumo {{3}} partes. Aquí
+{{4}}
+Nuestra construcción alcanza la cota superior eventual {{5}} con piezas de orden a lo sumo cuatro y recupera la familia extremal irrestricta de Okechukwu [15, Teorema 1.1]. Para grafos cordales da una prueba formal de {{6}} a todo orden y, por tanto, de la cota pedida en el problema 81 de Erdős. Esta conclusión para todos los órdenes también se deduce de la cota eventual de [5]. No se reclama prioridad del valor extremal.
+@@15
+El preprint público [5] también establece el máximo eventual para grafos cordales, del que se deduce una cota aditiva para todos los órdenes. Okechukwu [15, Teorema 1.1] demuestra el máximo eventual para cada defecto simplicial enraizado fijo, junto con una cota aditiva para todos los órdenes para particiones irrestrictas y una clasificación de la igualdad; su caso cordal es [15, Corolario 1.2]. No se reclama prioridad de estos enunciados. El Teorema C demuestra la cota superior con piezas de orden a lo sumo cuatro, y el Teorema C′ recupera la clasificación de la igualdad. Junto con el Corolario 6.3, da una forma cuantitativa de la estabilidad cualitativa por ediciones de [15, Corolario 5.5]. El Teorema 6.5 recupera la conclusión estructural de [15, Teorema 1.3] y añade control simultáneo de las particiones casi óptimas.
+@@16
+Las cadenas formales de los resultados cordales y de los Teoremas C y C′ no invocan los resultados de [5,15] como entradas. Esto no afirma independencia de todos los métodos del paper ampliado: la Proposición 6.4 y, en consecuencia, la aproximación del Teorema 6.5 siguen el argumento de estrella con signos de [15, Lema 3.1], con atribución e implementación completa. El paso de edición hacia un cordal sigue a de Joannis de Verclos [22]. La Sección 8 compara los enunciados y mecanismos.
+@@21
+Existe una constante absoluta {{0}} tal que, para todo {{1}} y todo grafo cordal {{2}} de orden {{3}},
+{{4}}
+En consecuencia, existe {{5}} tal que {{6}} para todos esos grafos. Esto da la cota pedida en el problema 81 de Erdős [1,8] para todo orden, sin excepciones; también se deduce de la cota eventual de [5], como se discute en §8.1. La constante aditiva {{7}} no se afirma óptima.
+@@31
+El máximo irrestricto y la familia de igualdad son los de [15, Teorema 1.1]; no se reclama prioridad de ellos. Todo grafo cordal pertenece a la clase {{0}}, y {{1}}. El Apéndice E demuestra el Teorema C mediante la cadena explícita de localización. El Corolario 6.6 da una cota de torre para su umbral, uniforme en el defecto. El umbral de estabilidad que sigue se especifica por separado; no debe asignarse el mismo umbral a la cota exacta y a la de estabilidad sin una comparación adicional.
+@@32
+### Teorema C′. Estabilidad con una misma raíz para defecto fijo
+@@33
+Para cada {{0}} fijo, existen {{1}}, {{2}} y {{3}} explícitos con la siguiente propiedad. Supongamos {{4}}, {{5}} y {{6}}, donde {{7}}. Entonces {{8}} admite una partición {{9}}, con {{10}} una clique de {{11}}, {{12}} y {{13}}, tal que la plantilla {{14}} satisface
+{{15}}
+Para esta misma raíz, toda partición irrestricta en cliques con a lo sumo {{16}} piezas tiene a lo sumo {{17}} piezas no canónicas, que contienen a lo sumo {{18}} aristas en total. Aquí las piezas canónicas son las aristas entre {{19}} y {{20}}, y los triángulos con dos vértices en {{21}} y uno en {{22}}.
+@@34
+La Sección 6.6 da los parámetros y la prueba. Con déficit cero se recupera la clasificación de la igualdad; con déficit positivo, el núcleo no tiene por qué tener tamaño óptimo. El Corolario 6.3 cuantifica el coste adicional de exigir tamaño óptimo. La Proposición 6.3a proporciona ejemplos a escala de raíz cuadrada, incluidos grafos de déficit exactamente uno cuya distancia a toda plantilla de tamaño óptimo crece con el orden. Estas constantes de defecto fijo no se sustituyen en un límite con {{0}} creciente: §6.7 trata ese límite por separado.
+@@50
+La Sección 2 fija el modelo. La Sección 3 enuncia el resultado de redondeo y explica su uso; el Apéndice C desarrolla su prueba técnica. Las Secciones 4 y 5 establecen la localización y la construcción crítica. La Sección 6 ensambla la prueba cordal y obtiene estabilidad, clasificación y valores exactos. Las Secciones 6.6 y 6.7 extienden después la estabilidad al defecto enraizado fijo y sublineal; el Apéndice F registra sus parámetros, interfaces de prueba y procedencia adicional. La Sección 7 resume el alcance formal; el Apéndice A da las declaraciones y su correspondencia. La Sección 8 compara los mecanismos con [5,15]. El Apéndice B reúne herramientas complementarias. El Apéndice D también registra las identidades del comparador, y el Apéndice G trata la brecha triangular con clique acotada y la limitación separada del contrato de limpieza.
+@@149
+### Demostración del Teorema B: cota superior
+@@174
+**Demostración.** La cobertura exacta cuenta las aristas internas de {{0}}, las exteriores a {{1}} y las que cruzan el corte como {{2}}, {{3}} y {{4}}, respectivamente. Al sumar (6.7a) sobre las piezas se obtiene
+{{5}}
+Cada pieza no canónica aporta al menos uno. Si {{6}}, la hipótesis sobre {{7}} acota el defecto total por {{8}}. La reserva de (6.7) implica {{9}}. Para contar las aristas, la cota numérica local {{10}} vale siempre que {{11}}, donde {{12}} y {{13}}. Las piezas de defecto cero son exactamente las canónicas. Sumando esta desigualdad sobre las piezas no canónicas se acotan sus aristas por diez veces el mismo defecto total, lo que da {{14}}. La raíz proviene del testigo del Teorema 6.1 y no depende de {{15}}.
+@@177
+### 6.6. Estabilidad para defecto fijo sobre una misma raíz
+@@180
+El máximo de (6.11) es {{0}}: su segundo término domina la constante terminal {{1}} para todo {{2}}. No se afirma que los coeficientes sean óptimos. Para {{3}}, sigue siendo preferible el argumento cordal especializado: da {{4}}, {{5}} y {{6}}, en lugar de las grandes constantes de (6.11).
+@@181
+![Estructura de la prueba de estabilidad con una misma raíz para defecto fijo.](figures_en/fig4_same_root_stability.png)
+@@182
+**Figura 4.** Teorema C′: el borrado de vértices de grado bajo alcanza el terminal controlado, y la reinserción transporta su raíz al grafo original. Las cuentas conservadas controlan entonces toda partición sobre esa misma raíz. Ajustar el tamaño para obtener una plantilla óptima es un paso separado (Corolario 6.3), cuyo coste de raíz cuadrada ilustra la Proposición 6.3a. El diagrama es esquemático; el Apéndice F.1 proporciona la ventana de inducción.
+@@183
+**Demostración.** Primero explicamos la estimación conservada en el terminal de grado mínimo, y luego el paso a un grafo arbitrario de la clase. En la presentación normalizada del Apéndice E, sea {{0}} el número de enlaces ausentes entre {{1}} y {{2}}, {{3}}, {{4}}, y
+{{5}}
+El constructor conserva un crédito residual no negativo {{6}}. La extracción de una clique real {{7}} da {{8}}, con {{9}}. Las cuentas conservadas son
+{{10}}
+Aquí {{11}} en la última línea son las clases finales de la raíz, no necesariamente la clase intermedia de anfitriones. El Apéndice E.4 deduce las cinco cuentas: reducir la paleta de la primera fase conserva un múltiplo positivo de {{12}}, el presupuesto estricto de los vértices excepcionales paga {{13}}, y se extrae una clique real de {{14}} antes de formar la plantilla final. En particular, los dos cargos {{15}} tienen orígenes distintos: reducir el tamaño de la clique en la cuenta interior y trasladar los vértices restantes a la clase de anfitriones. Los productores estructurales son NormalizedDeficit, ResidualExcess, NormalizedCliqueCore y RootPartition; NormalizedStability los combina.
+@@188
+**Corolario 6.3 (comparación con tamaño óptimo e igualdad).** Bajo las hipótesis del Teorema C′ existe una plantilla extremal de tamaño óptimo {{0}} con
+{{1}}
+Para {{2}} y {{3}} suficientemente grande,
+{{4}}
+donde {{5}} es un entero más cercano a {{6}}.
+@@191
+**Proposición 6.3a (una obstrucción de raíz cuadrada).** Fijemos {{0}}. Sean {{1}} enteros con {{2}} y {{3}}, y pongamos {{4}}. El grafo
+{{5}}
+tiene defecto simplicial enraizado a lo sumo {{6}} y satisface
+{{7}}
+Para toda plantilla de tamaño óptimo {{8}} sobre el mismo conjunto de vértices, con cualquier etiquetado,
+{{9}}
+@@192
+**Demostración.** El argumento de defecto enraizado del Apéndice E.3 no requiere un núcleo de tamaño óptimo: se aplica a {{0}} y da {{1}}. El núcleo clique tiene al menos dos vértices y no tiene más vértices que el conjunto de anfitriones. Por tanto, la construcción del comparador da una partición de orden a lo sumo cuatro con coste {{2}}. El argumento de pesos del Apéndice E.3 también se aplica a este núcleo de tamaño no óptimo: toda partición irrestricta tiene al menos ese número de piezas. Restar este baseline de {{3}} da (6.20).
+@@193
+Como {{0}}, el único tamaño óptimo del núcleo combinado es {{1}}. Toda plantilla óptima tiene, en consecuencia, el mismo número de aristas, independientemente de su etiquetado. Al contar las aristas del núcleo y los enlaces cruzados se obtiene
+{{2}}
+En particular,
+{{3}}
+Para la última desigualdad, escribamos el segundo factor como
+{{4}}.
+Una edición cambia el número total de aristas a lo sumo en uno, luego
+{{5}}.
+Finalmente, {{6}}, lo que prueba (6.21). {{7}}
+@@194
+Tomar {{0}} da déficit exactamente uno y distancia no acotada a toda la familia de tamaño óptimo cuando {{1}} crece. Por tanto, ningún coeficiente que dependa sólo de {{2}} puede reemplazar (6.17) por una cota lineal en {{3}}. Estos ejemplos pertenecen a cualquier ventana positiva fija de casi extremalidad una vez que su orden es suficientemente grande. Más generalmente, (6.21) exhibe la escala de raíz cuadrada a lo largo de la familia de déficits indicada. Es una obstrucción de peor caso, no una cota inferior puntual para todo grafo o todo déficit real, y no afirma constantes óptimas. Es compatible con el Teorema C′: cada ejemplo ya es una plantilla, pero su núcleo no tiene tamaño óptimo.
+@@195
+### 6.7. Cotas uniformes y defecto sublineal
+@@202
+**Corolario 6.6 (cota exacta, uniforme en el defecto).** Sean {{0}}, {{1}}, como en §6.3, y definamos
+{{2}}
+donde {{3}} es el entero explícito definido en §6.3. Si {{4}} y {{5}}, entonces {{6}}. Más generalmente, {{7}} basta simultáneamente para todo {{8}}.
+@@203
+Para {{0}}, el conjunto finito siguiente no es vacío y podemos poner
+{{1}}
+Entonces la cota exacta vale simultáneamente para todos los {{2}}. La restricción inferior sobre {{3}} es esencial para esta formulación: por debajo de ella, la inversa formal devuelve cero aunque el predicado que la define pueda no tener solución.
+@@204
+**Demostración.** E35.Fexp_le_tower prueba {{0}} para el umbral explícito del Apéndice E.2. Su cuenta numérica combina la cota lejana uniforme (C.4), el umbral de edición hacia un cordal y los costes finitos de ensamblaje. Apliquemos el Teorema C con {{1}}. Tanto {{2}} como {{3}} son no decrecientes, de modo que el mismo umbral para {{4}} cubre todos los {{5}}. Finalmente, el predicado que define {{6}} se cumple porque el conjunto contiene cero. {{7}}

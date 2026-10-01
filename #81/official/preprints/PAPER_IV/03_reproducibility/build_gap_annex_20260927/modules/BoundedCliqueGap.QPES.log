@@ -1,0 +1,14 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 BoundedCliqueGap/QPES.lean -o /workspace/request-project/.lake/runner/lib/lean/BoundedCliqueGap/QPES.olean -i /workspace/request-project/.lake/runner/lib/lean/BoundedCliqueGap/QPES.ilean
+import took 2.29s
+cumulative profiling times:
+	.olean serialization 31.5ms
+	attribute application 0.00961ms
+	blocked (unaccounted) 2.14ms
+	elaboration 10.8ms
+	import 2.29s
+	initialization 37.1ms
+	interpretation 139ms
+	linting 1.67ms
+	parsing 1.01ms
+	type checking 2.71ms
+	typeclass inference 0.424ms

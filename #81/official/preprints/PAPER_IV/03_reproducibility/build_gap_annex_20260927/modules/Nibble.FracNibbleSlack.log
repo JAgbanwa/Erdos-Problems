@@ -1,0 +1,36 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 Nibble/FracNibbleSlack.lean -o /workspace/request-project/.lake/runner/lib/lean/Nibble/FracNibbleSlack.olean -i /workspace/request-project/.lake/runner/lib/lean/Nibble/FracNibbleSlack.ilean
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_nlinarith_1._boxed took 158ms
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_nlinarith_1._boxed took 338ms
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_nlinarith_1._boxed took 389ms
+typeclass inference of Nonempty took 140ms
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_nlinarith_1._boxed took 607ms
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_nlinarith_1._boxed took 169ms
+'Nibble.fracNibble_withSlack' depends on axioms: [propext, Classical.choice, Quot.sound]
+elaboration took 1.2s
+import took 4.1s
+.olean serialization took 142ms
+cumulative profiling times:
+	.olean serialization 142ms
+	attribute application 2.64ms
+	blocked (unaccounted) 7.23s
+	compilation (IR) 10.5ms
+	compilation (LCNF base) 12.1ms
+	compilation (LCNF mono) 6.64ms
+	congr simp thm 36.1ms
+	elaboration 1.37s
+	fix level params 3.01ms
+	import 4.1s
+	initialization 39.4ms
+	instantiate metavars 67.2ms
+	interpretation 2.99s
+	let-to-have transformation 0.609ms
+	linting 65.3ms
+	norm_num 192ms
+	parsing 34ms
+	process pre-definitions 56.1ms
+	ring 63.8ms
+	share common exprs 41ms
+	simp 527ms
+	tactic execution 641ms
+	type checking 208ms
+	typeclass inference 2.61s

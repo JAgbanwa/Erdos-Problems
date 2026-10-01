@@ -1,0 +1,28 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 Nibble/Tight/TightRound.lean -o /workspace/request-project/.lake/runner/lib/lean/Nibble/Tight/TightRound.olean -i /workspace/request-project/.lake/runner/lib/lean/Nibble/Tight/TightRound.ilean
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_nlinarith_1._boxed took 474ms
+import took 4.05s
+.olean serialization took 129ms
+cumulative profiling times:
+	.olean serialization 129ms
+	attribute application 0.153ms
+	compilation (IR) 3.04ms
+	compilation (LCNF base) 3.25ms
+	compilation (LCNF mono) 1.46ms
+	congr simp thm 23.9ms
+	elaboration 174ms
+	fix level params 4.05ms
+	import 4.05s
+	initialization 36.5ms
+	instantiate metavars 35.6ms
+	interpretation 1.75s
+	let-to-have transformation 0.711ms
+	linting 75.2ms
+	norm_num 264ms
+	parsing 22.7ms
+	process pre-definitions 35ms
+	ring 149ms
+	share common exprs 53.8ms
+	simp 110ms
+	tactic execution 603ms
+	type checking 196ms
+	typeclass inference 1.25s

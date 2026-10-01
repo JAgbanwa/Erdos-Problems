@@ -1,0 +1,27 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 Nibble/Tight/SafeDegree.lean -o /workspace/request-project/.lake/runner/lib/lean/Nibble/Tight/SafeDegree.olean -i /workspace/request-project/.lake/runner/lib/lean/Nibble/Tight/SafeDegree.ilean
+import took 4.37s
+.olean serialization took 102ms
+cumulative profiling times:
+	.olean serialization 102ms
+	attribute application 0.144ms
+	compilation (IR) 0.413ms
+	compilation (LCNF base) 1.05ms
+	compilation (LCNF mono) 0.691ms
+	congr simp thm 4.9ms
+	elaboration 78.2ms
+	fix level params 1.24ms
+	import 4.37s
+	initialization 40ms
+	instantiate metavars 2.35ms
+	interpretation 392ms
+	let-to-have transformation 0.303ms
+	linting 16ms
+	norm_num 0.661ms
+	parsing 12.6ms
+	process pre-definitions 10.8ms
+	ring 7.32ms
+	share common exprs 4.82ms
+	simp 94.1ms
+	tactic execution 182ms
+	type checking 60.3ms
+	typeclass inference 262ms

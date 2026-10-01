@@ -1,0 +1,27 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 Contrib/SpreadMatchingDirac.lean -o /workspace/request-project/.lake/runner/lib/lean/Contrib/SpreadMatchingDirac.olean -i /workspace/request-project/.lake/runner/lib/lean/Contrib/SpreadMatchingDirac.ilean
+import took 3.03s
+cumulative profiling times:
+	.olean serialization 68ms
+	attribute application 0.303ms
+	blocked (unaccounted) 57.6ms
+	compilation (IR) 0.373ms
+	compilation (LCNF base) 0.645ms
+	compilation (LCNF mono) 0.571ms
+	congr simp thm 9.05ms
+	elaboration 138ms
+	fix level params 3.16ms
+	import 3.03s
+	initialization 53.7ms
+	instantiate metavars 31.5ms
+	interpretation 513ms
+	let-to-have transformation 0.347ms
+	linting 52.2ms
+	norm_num 2.24ms
+	parsing 30.4ms
+	process pre-definitions 30.8ms
+	ring 18.3ms
+	share common exprs 9.66ms
+	simp 109ms
+	tactic execution 461ms
+	type checking 246ms
+	typeclass inference 475ms

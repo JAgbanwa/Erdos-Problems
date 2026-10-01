@@ -1,0 +1,27 @@
+{
+  "scope": "Two operator restorations and two prose edits; no Lean execution.",
+  "input_sha256": "51a1dd71a6a6cfe47bb3b8c8c7e4f3d890f42e4ce03adf4bf69e9f1a1cb6629c",
+  "output_sha256": "7881b035b73cac09ad84da55090002788cd7da8cae238baa0c742ed6d71f5298",
+  "input_identity_matches": true,
+  "each_replacement_unique": true,
+  "only_four_declared_edits": true,
+  "display_count": 227,
+  "lean_blocks_unchanged": true,
+  "both_negative_operator_controls_detected": true,
+  "continuation_warnings_before": [
+    {
+      "line": 2051,
+      "previous": "\\le(s-\\nu)c-\\frac{2n}{9}",
+      "current": "\\frac{4(s+1)\\lambda}{10^{31}}+(s+1)\\widetilde e_1."
+    },
+    {
+      "line": 2333,
+      "previous": "d_E(G,F)&\\le\\operatorname{conf}(\\psi)",
+      "current": "\\sum_{c\\in V(\\Gamma)}\\operatorname{mis}_c\\\\"
+    }
+  ],
+  "continuation_warnings_after": [],
+  "warning_policy": "Heuristic only; inspect warnings, never insert operators automatically.",
+  "editorial_verdict": "EDITORIAL_DRAFT_WITH_OPEN_GATES",
+  "static_check_status": "PASS"
+}

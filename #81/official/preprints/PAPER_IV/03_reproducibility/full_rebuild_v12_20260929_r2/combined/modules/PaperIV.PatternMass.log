@@ -1,0 +1,26 @@
+$ c:\Users\jtraverso\.elan\toolchains\leanprover--lean4---v4.28.0\bin\lean.exe -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false PaperIV/PatternMass.lean -o C:\Users\jtraverso\e81p4\piv_v12_full_rebuild_20260929\.lake\runner\lib\lean\PaperIV\PatternMass.olean -i C:\Users\jtraverso\e81p4\piv_v12_full_rebuild_20260929\.lake\runner\lib\lean\PaperIV\PatternMass.ilean
+PaperIV/PatternMass.lean:49:0: warning: automatically included section variable(s) unused in theorem `PaperIV.PatternMass.gainF_nonneg`:
+  [Fintype V]
+  [DecidableEq V]
+  [DecidableRel G.Adj]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] [DecidableEq V] [DecidableRel G.Adj] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+PaperIV/PatternMass.lean:56:0: warning: automatically included section variable(s) unused in theorem `PaperIV.PatternMass.gainF_le_five`:
+  [Fintype V]
+  [DecidableEq V]
+  [DecidableRel G.Adj]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] [DecidableEq V] [DecidableRel G.Adj] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+PaperIV/PatternMass.lean:138:0: warning: automatically included section variable(s) unused in theorem `PaperIV.PatternMass.card_crossEdges`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+PaperIV/PatternMass.lean:185:26: warning: unused variable `hnn`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`

@@ -1,0 +1,35 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 PaperIV/Erdos81AllOrders.lean -o /workspace/request-project/.lake/runner/lib/lean/PaperIV/Erdos81AllOrders.olean -i /workspace/request-project/.lake/runner/lib/lean/PaperIV/Erdos81AllOrders.ilean
+PaperIV/Erdos81AllOrders.lean:55:8: warning: automatically included section variable(s) unused in theorem `_private.PaperIV.Erdos81AllOrders.0.PaperIV.Erdos81AllOrders.card_edgeFinset_le`:
+  [DecidableEq V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_nlinarith_1._boxed took 279ms
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_nlinarith_1._boxed took 267ms
+import took 4.56s
+.olean serialization took 116ms
+cumulative profiling times:
+	.olean serialization 116ms
+	attribute application 0.0481ms
+	compilation (IR) 2.21ms
+	compilation (LCNF base) 2.04ms
+	compilation (LCNF mono) 0.896ms
+	congr simp thm 4.36ms
+	elaboration 23.7ms
+	fix level params 0.485ms
+	import 4.56s
+	initialization 38.7ms
+	instantiate metavars 4.87ms
+	interpretation 851ms
+	let-to-have transformation 0.0886ms
+	linting 6.47ms
+	norm_num 41.1ms
+	parsing 5.03ms
+	process pre-definitions 5.05ms
+	ring 21.8ms
+	share common exprs 4.1ms
+	simp 75.9ms
+	tactic execution 79.8ms
+	type checking 122ms
+	typeclass inference 523ms

@@ -1,0 +1,18 @@
+$ c:\Users\jtraverso\.elan\toolchains\leanprover--lean4---v4.28.0\bin\lean.exe -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false E35/Audit.lean -o C:\Users\jtraverso\e81p4\piv_v12_full_rebuild_20260929\.lake\runner\lib\lean\E35\Audit.olean -i C:\Users\jtraverso\e81p4\piv_v12_full_rebuild_20260929\.lake\runner\lib\lean\E35\Audit.ilean
+'E35.NE_le_tower' depends on axioms: [propext, Classical.choice, Quot.sound]
+'E35.NfarE_le_tower' depends on axioms: [propext, Classical.choice, Quot.sound]
+'E35.NfarE_le_tower_poly' depends on axioms: [propext, Classical.choice, Quot.sound]
+'E35.NeditE_le_tower' depends on axioms: [propext, Classical.choice, Quot.sound]
+'E35.Fexp_le_tower' depends on axioms: [propext, Classical.choice, Quot.sound]
+'E35.theoremC_tower' depends on axioms: [propext, Classical.choice, Quot.sound]
+'E35.theoremC_tower_uniform' depends on axioms: [propext, Classical.choice, Quot.sound]
+'E35.theoremC_tower_uniform_sMax' depends on axioms: [propext, Classical.choice, Quot.sound]
+PASS E35.NE_le_tower: 26482 transitive constants; axioms [propext, Classical.choice, Quot.sound]
+PASS E35.NfarE_le_tower: 26485 transitive constants; axioms [propext, Classical.choice, Quot.sound]
+PASS E35.NfarE_le_tower_poly: 26492 transitive constants; axioms [propext, Classical.choice, Quot.sound]
+PASS E35.NeditE_le_tower: 13678 transitive constants; axioms [propext, Classical.choice, Quot.sound]
+PASS E35.Fexp_le_tower: 26846 transitive constants; axioms [propext, Classical.choice, Quot.sound]
+PASS E35.theoremC_tower: 46361 transitive constants; axioms [propext, Classical.choice, Quot.sound]
+PASS E35.theoremC_tower_uniform: 46364 transitive constants; axioms [propext, Classical.choice, Quot.sound]
+PASS E35.theoremC_tower_uniform_sMax: 46367 transitive constants; axioms [propext, Classical.choice, Quot.sound]
+E35 audit PASSED: 8 targets; 10438 modules, none forbidden.

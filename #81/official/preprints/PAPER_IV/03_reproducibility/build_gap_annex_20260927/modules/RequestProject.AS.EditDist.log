@@ -1,0 +1,24 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 RequestProject/AS/EditDist.lean -o /workspace/request-project/.lake/runner/lib/lean/RequestProject/AS/EditDist.olean -i /workspace/request-project/.lake/runner/lib/lean/RequestProject/AS/EditDist.ilean
+interpretation of Batteries.Util.LibraryNote.libraryNoteExt took 111ms
+import took 7.48s
+.olean serialization took 257ms
+cumulative profiling times:
+	.olean serialization 257ms
+	attribute application 0.0292ms
+	blocked (unaccounted) 24ms
+	congr simp thm 3.09ms
+	elaboration 10.4ms
+	fix level params 0.149ms
+	import 7.48s
+	initialization 35.3ms
+	instantiate metavars 3.25ms
+	interpretation 560ms
+	let-to-have transformation 0.0358ms
+	linting 3.47ms
+	parsing 2.83ms
+	process pre-definitions 5.55ms
+	share common exprs 1.32ms
+	simp 17.7ms
+	tactic execution 81ms
+	type checking 7.93ms
+	typeclass inference 52.2ms

@@ -1,0 +1,54 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 PaperIV/H1ImprovedConstants.lean -o /workspace/request-project/.lake/runner/lib/lean/PaperIV/H1ImprovedConstants.olean -i /workspace/request-project/.lake/runner/lib/lean/PaperIV/H1ImprovedConstants.ilean
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_nlinarith_1._boxed took 103ms
+PaperIV/H1ImprovedConstants.lean:73:32: warning: unused variable `hP0`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+PaperIV/H1ImprovedConstants.lean:78:29: warning: unused variable `hS0`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+tactic execution of Mathlib.Tactic.nlinarith took 170ms
+PaperIV/H1ImprovedConstants.lean:103:32: warning: unused variable `hP0`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+PaperIV/H1ImprovedConstants.lean:107:29: warning: unused variable `hS0`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_nlinarith_1._boxed took 374ms
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_nlinarith_1._boxed took 309ms
+interpretation of Mathlib.Tactic.FieldSimp._aux_Mathlib_Tactic_FieldSimp___elabRules_Mathlib_Tactic_FieldSimp_fieldSimp_1._boxed took 104ms
+PaperIV/H1ImprovedConstants.lean:151:5: warning: unused variable `hp`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+PaperIV/H1ImprovedConstants.lean:151:44: warning: unused variable `hs`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_nlinarith_1._boxed took 375ms
+PaperIV/H1ImprovedConstants.lean:237:5: warning: unused variable `hA`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+PaperIV/H1ImprovedConstants.lean:237:18: warning: unused variable `hf`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+import took 2.87s
+cumulative profiling times:
+	.olean serialization 68.1ms
+	attribute application 0.148ms
+	congr simp thm 10.4ms
+	dsimp 8.04ms
+	elaboration 123ms
+	fix level params 3.04ms
+	import 2.87s
+	initialization 37.7ms
+	instantiate metavars 13.9ms
+	interpretation 3.06s
+	let-to-have transformation 0.335ms
+	linting 57.6ms
+	norm_num 854ms
+	parsing 13.6ms
+	process pre-definitions 54.7ms
+	ring 148ms
+	share common exprs 54.3ms
+	simp 70.3ms
+	tactic execution 392ms
+	type checking 250ms
+	typeclass inference 2.15s

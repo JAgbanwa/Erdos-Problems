@@ -1,0 +1,23 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 PaperIV/RC01DenseAssembly.lean -o /workspace/request-project/.lake/runner/lib/lean/PaperIV/RC01DenseAssembly.olean -i /workspace/request-project/.lake/runner/lib/lean/PaperIV/RC01DenseAssembly.ilean
+import took 4.33s
+cumulative profiling times:
+	.olean serialization 100ms
+	attribute application 0.0504ms
+	congr simp thm 5.4ms
+	elaboration 62.1ms
+	fix level params 0.327ms
+	import 4.33s
+	initialization 43.8ms
+	instantiate metavars 0.676ms
+	interpretation 366ms
+	let-to-have transformation 0.14ms
+	linting 11.4ms
+	norm_num 24.6ms
+	parsing 6.12ms
+	process pre-definitions 9.76ms
+	ring 20ms
+	share common exprs 3.48ms
+	simp 104ms
+	tactic execution 48.9ms
+	type checking 25.6ms
+	typeclass inference 306ms

@@ -1,0 +1,821 @@
+{
+ "gate": "E5",
+ "title": "Independent falsification by exact computation",
+ "generated_utc": "2026-09-30T13:08:26Z",
+ "target_manuscript": {
+  "path": "C:/Users/jtraverso/e81p4-publish/preprints/PAPER_IV/01_manuscript/v1.2_full_rebuild_candidate/PAPER_IV_preprint_v1.2_en.md",
+  "sha256": "a501d53b527da22f20112db2b05917fb61f46dd8e080faf14b69349b240cc152"
+ },
+ "predeclaration_sha256": "e542a6566792bd4c996749db438c83847ed8956a231abaa4e340863a8b32e392",
+ "summary": {
+  "PASS": 24,
+  "NOT_APPLICABLE": 1
+ },
+ "tests": [
+  {
+   "id": "T01",
+   "claim": "(4.6a): 16/(6n)+1/n+16/(24n^2) < eps0-16eta0 holds at n=4e12, LHS decreasing, fails for n<=3.6e12",
+   "manuscript_lines": "380-386",
+   "method": "exact Fraction evaluation; sympy equivalence with 16D/n^2<eps0-1/n; sympy derivative sign; exact binary search for crossover",
+   "evidence_type": "exact",
+   "parameters": {
+    "eps0": "1e-12",
+    "eta0": "1e-16"
+   },
+   "result": "PASS",
+   "negative_control": {
+    "description": "old budget factor 20 (instead of 16) at n=4e12 must violate the contraction",
+    "result": "PASS (rejected)"
+   },
+   "runtime_s": 0.372,
+   "raw_result_file": "results/scalar_tests.json",
+   "range_reduction": null,
+   "notes": "exact crossover n*=3672542735043: (4.6a) fails for all n<n*, consistent with \"fails for n<=3.6e12\""
+  },
+  {
+   "id": "T02",
+   "claim": "Lemma 4.2: 16*117/1825 > 1 and 16*12687/20000 > 10, hence m+10A <= 16D",
+   "manuscript_lines": "366-368",
+   "method": "exact Fraction; LP optimum of max m+10A s.t. (117/1825)m+(12687/20000)A<=D by vertex enumeration",
+   "evidence_type": "exact",
+   "parameters": {},
+   "result": "PASS",
+   "negative_control": {
+    "description": "factor 15 in place of 16 must fail (15*117/1825 > 1 false)",
+    "result": "PASS (rejected)"
+   },
+   "runtime_s": 0.0,
+   "raw_result_file": "results/scalar_tests.json",
+   "range_reduction": null,
+   "notes": null
+  },
+  {
+   "id": "T03",
+   "claim": "Lemma 5.3 coefficients -19/365, -253/500 (from Table 2) and -117/1825, -12687/20000 (from l<=11A/100+29f/1000)",
+   "manuscript_lines": "539-549, 655-688",
+   "method": "exact recomputation of substitution chain; sympy check of (5.4a)",
+   "evidence_type": "exact",
+   "parameters": {},
+   "result": "PASS",
+   "negative_control": {
+    "description": "corrupted second-phase ratio 8A/40 (instead of 7A/40) must NOT reproduce -253/500",
+    "result": "PASS (rejected)"
+   },
+   "runtime_s": 0.006,
+   "raw_result_file": "results/scalar_tests.json",
+   "range_reduction": null,
+   "notes": null
+  },
+  {
+   "id": "T04",
+   "claim": "(5.14) coefficient bounds <=11/100 and <=29/1000; (5.13) q(q-1)/a^2 >= Q0^2-Q0/1024 >= 393/100; (5.12a) a/64+3a/57344 < a/48; (5.12) t/a<=1/256",
+   "manuscript_lines": "618-655",
+   "method": "exact Fraction evaluation; independent re-linearisation of (5.11) using (5.12)",
+   "evidence_type": "exact (given the premises (5.12))",
+   "parameters": {
+    "Q0": "87947/44352",
+    "R0": "393/100"
+   },
+   "result": "PASS",
+   "negative_control": {
+    "description": "corrupted R0=394/100 must fail (5.13); corrupted A-coefficient bound 1/10 must fail",
+    "result": "PASS (rejected)"
+   },
+   "runtime_s": 0.0,
+   "raw_result_file": "results/scalar_tests.json",
+   "range_reduction": null,
+   "notes": "conditional on the premises (5.12); the premises themselves (regularisation bounds (5.4),(5.7)) are not finite-checkable here"
+  },
+  {
+   "id": "T05",
+   "claim": "Thm 5.0 window: a>=33n/100, 99a<=100p, 48(2p-q)_+<=a, q=n-p imply 3267n<=10000p, 3539p<=1188n, |3p-n|<=n/50",
+   "manuscript_lines": "433, 440",
+   "method": "z3 linear real arithmetic: premises AND NOT(conclusion) unsat; truncated premise replaced by weaker untruncated one (conservative)",
+   "evidence_type": "exact (decision procedure for LRA)",
+   "parameters": {},
+   "result": "PASS",
+   "negative_control": {
+    "description": "corrupted conclusion |3p-n|<=n/100 must be refutable (sat); dropping 99a<=100p must make 3267n<=10000p refutable",
+    "result": "PASS (rejected)"
+   },
+   "runtime_s": 0.051,
+   "raw_result_file": "results/scalar_tests.json",
+   "range_reduction": null,
+   "notes": "|n-3a|<=a/64 is not needed for the size window"
+  },
+  {
+   "id": "T06",
+   "claim": "(5.1)-(5.4) scalar steps: 1e-12+1.5e-6<=0.33^2/65536; u(u+1)/2<=eps0 n^2 => u<=3n/2e6; 7a/2-129a/64=95a/64; (5.1a) middle/third branch bounds below (2n+1)^2/24-n^2/40 for n>=9",
+   "manuscript_lines": "456-514",
+   "method": "exact Fractions, sympy polynomial coefficients, z3 (LRA/NRA), exhaustive integer branch scan n=9..1500",
+   "evidence_type": "exact / symbolic (+ finite exhaustive scan for the branch bounds)",
+   "parameters": {
+    "branch_scan_n": [
+     9,
+     1500
+    ]
+   },
+   "result": "PASS",
+   "negative_control": {
+    "description": "(a) with 1.7e-6 must fail; middle-branch max <= n^2/8-1 must fail somewhere (true max (n^2-1)/8 at r=(n+1)/2)",
+    "result": "PASS (rejected)"
+   },
+   "runtime_s": 1.155,
+   "raw_result_file": "results/scalar_tests.json",
+   "range_reduction": null,
+   "notes": "supplementary T06s: exact LP of F_4(K_r v I_h) against (5.1a) for 4<=r<=11, r+h<=12: PASS. First T06s run: 2/36 LPs (K_12 and K_10 v I_2) had no exact certificate from limit_denominator reconstruction and the first script version mislabelled this as FAIL (protocol: INCONCLUSIVE; no bound was violated). After adding exact reconstruction from the HiGHS optimal basis (verification method only, no threshold change) all 36 are exactly certified.",
+   "supplementary": {
+    "T06s": {
+     "result": "PASS",
+     "method": "exact LP with verified certificates for K_r v I_h, 4<=r<=11, r+h<=12",
+     "violations": [],
+     "inexact_lp": []
+    }
+   }
+  },
+  {
+   "id": "T07",
+   "claim": "(6.3)/(6.8) 6f+(n-3k)(n-3k+1)=n(n+1); (6.4) optimal cores; k=ceil(n/3) optimal (n>=6); (D.8) M(n)=B_n(k)+M(d_{n,k}) and zero reserve iff d<=1; E.5 B_{s,n}(floor((n+s+1)/3))=Q_s(n) (n>=2s+2); (E.3) Q_s(n)-Q_s(n-1)=floor((n+s+1)/3); Q_s(n)>=B_{s,n}(k) all k",
+   "manuscript_lines": "692-695, 759-775, 881-895, 1785-1796, 1953-1956, 1969-1979",
+   "method": "exhaustive exact integer arithmetic",
+   "evidence_type": "finite exhaustive",
+   "parameters": {
+    "n": [
+     0,
+     400
+    ],
+    "k(6.3)": "[-n-2, 2n+2]",
+    "s": [
+     0,
+     60
+    ]
+   },
+   "result": "PASS",
+   "negative_control": {
+    "description": "corrupted (6.3) with (n-3k)(n-3k-1) and corrupted (E.3) floor((n+s)/3) must fail somewhere",
+    "result": "PASS (rejected)"
+   },
+   "runtime_s": 1.801,
+   "raw_result_file": "results/integer_tests.json",
+   "range_reduction": null,
+   "notes": "(E.3) increment identity holds for every n>=1 in range (manuscript states it for sufficiently large n)"
+  },
+  {
+   "id": "T08",
+   "claim": "(6.7a) d_R=1+C(a,2)+3C(b,2)-ab=(a-b)(a-b-1)/2+(b-1)^2 >=0; zero iff canonical (a,b) in {(1,1),(2,1)}; C(a+b,2)<=10 d_R when d_R>0; sharp at (3,2)",
+   "manuscript_lines": "862-877, 2253",
+   "method": "exhaustive exact integers",
+   "evidence_type": "finite exhaustive",
+   "parameters": {
+    "a,b": [
+     0,
+     60
+    ]
+   },
+   "result": "PASS",
+   "negative_control": {
+    "description": "factor 9 must fail somewhere",
+    "result": "PASS (rejected)"
+   },
+   "runtime_s": 0.004,
+   "raw_result_file": "results/integer_tests.json",
+   "range_reduction": null,
+   "notes": null
+  },
+  {
+   "id": "T09",
+   "claim": "(6.19) dist(k,K_{s,n})^2 <= Q_s(n)-B_{s,n}(k), K_{s,n}=integers nearest (2(n+s)+1)/6",
+   "manuscript_lines": "1004-1012",
+   "method": "exhaustive exact integers; K computed with exact Fractions; also checked K = argmax_k B_{s,n}(k) and max = Q_s(n)",
+   "evidence_type": "finite exhaustive",
+   "parameters": {
+    "s": [
+     0,
+     20
+    ],
+    "n": [
+     0,
+     300
+    ],
+    "admissible_k": "s+2<=k, k-s<=n-k",
+    "also_all_k": "0<=k<=n"
+   },
+   "result": "PASS",
+   "negative_control": {
+    "description": "corrupted 2*dist^2 <= Q_s-B must fail somewhere",
+    "result": "PASS (rejected)"
+   },
+   "runtime_s": 1.593,
+   "raw_result_file": "results/integer_tests.json",
+   "range_reduction": null,
+   "notes": null
+  },
+  {
+   "id": "T10",
+   "claim": "Prop 6.3a: G_{s,q,d}=(K_{q+d-s} u I_s) v I_{2q-s-d}, n=3q-s: rsd<=s; cp=c4=Q_s(n)-delta_d, delta_d=(3d^2-d)/2; d_E(G,T)>=nd/4>=n sqrt(delta_d)/8 for every optimal-size T",
+   "manuscript_lines": "1016-1052",
+   "method": "sympy identities; exhaustive integers s<=20, q<=200; brute-force rsd, CBC ILP cp/c4 with exact weight certificate, brute-force min d_E over all labelled optimal-size templates for tiny instances",
+   "evidence_type": "symbolic + finite exhaustive + exact (tiny instances)",
+   "parameters": {
+    "integer_scan": "s<=20, 2s+2<=q<=200, 1<=d<=q/2",
+    "instances": [
+     [
+      0,
+      2,
+      1
+     ],
+     [
+      0,
+      3,
+      1
+     ],
+     [
+      0,
+      4,
+      1
+     ],
+     [
+      0,
+      4,
+      2
+     ],
+     [
+      1,
+      4,
+      1
+     ],
+     [
+      1,
+      4,
+      2
+     ],
+     [
+      1,
+      5,
+      1
+     ],
+     [
+      1,
+      5,
+      2
+     ],
+     [
+      2,
+      6,
+      1
+     ],
+     [
+      2,
+      6,
+      2
+     ],
+     [
+      2,
+      6,
+      3
+     ]
+    ]
+   },
+   "result": "PASS",
+   "negative_control": {
+    "description": "corrupted delta_d=d^2 must be rejected on some d>=2 instance; rsd<=s-1 must fail on s>=1 instances",
+    "result": "PASS (rejected)"
+   },
+   "runtime_s": 52.54,
+   "raw_result_file": "results/templates_T10.json",
+   "range_reduction": "brute-force rsd / exact cp only for 11 instances with n<=16 (s<=2); formulas checked for s<=20, q<=200",
+   "notes": null
+  },
+  {
+   "id": "T11",
+   "claim": "E.3 witness (K_{k-s} u I_s) v I_{n-k}, k=floor((n+s+1)/3), n>=2s+2: rsd<=s and cp=Q_s(n) (unrestricted lower bound by weights)",
+   "manuscript_lines": "1967-1979",
+   "method": "brute-force rsd over all (U,R); cp and c3 by CBC ILP over all cliques, partition verified exactly, lower bound by exact weight certificate (every clique weight<=1 enumerated)",
+   "evidence_type": "exact for listed instances (ILP partition verified + exact dual weight certificate)",
+   "parameters": {
+    "plan(s: n-range)": {
+     "0": [
+      2,
+      14
+     ],
+     "1": [
+      4,
+      14
+     ],
+     "2": [
+      6,
+      14
+     ],
+     "3": [
+      8,
+      14
+     ]
+    }
+   },
+   "result": "PASS",
+   "negative_control": {
+    "description": "rsd<=s-1 must fail for s>=1 (brute-force rsd equals s); cp<=Q_s(n)-1 excluded by the exact weight bound",
+    "result": "PASS (rejected)"
+   },
+   "runtime_s": 20.44,
+   "raw_result_file": "results/templates_T11.json",
+   "range_reduction": "n<=14, s<=3",
+   "notes": null
+  },
+  {
+   "id": "T12",
+   "claim": "Lemma F.3a (F.5a): rsd<=s => every D contains a clique C with (|D|-|C|-s)_+^2 <= ordNE(G,D)",
+   "manuscript_lines": "2190-2209",
+   "method": "all atlas graphs n<=7, s=rsd(G) (strongest admissible s; larger s is weaker), all 2^n subsets D, C = maximum clique of G[D]",
+   "evidence_type": "finite exhaustive",
+   "parameters": {
+    "n": [
+     0,
+     7
+    ],
+    "graphs": 1253
+   },
+   "result": "PASS",
+   "negative_control": {
+    "description": "replace s by s-1 (graphs with rsd>=1) must fail somewhere",
+    "result": "PASS (rejected)"
+   },
+   "runtime_s": 0.31,
+   "raw_result_file": "results/graph_tests.json",
+   "range_reduction": null,
+   "notes": null
+  },
+  {
+   "id": "T13",
+   "claim": "(F.7) indCopies(C_k,G) <= 2ks n^{k-1} (labelled induced embeddings), k>=4",
+   "manuscript_lines": "2261-2266",
+   "method": "all atlas graphs n<=7, s=rsd(G), all k=4..n; induced k-cycles counted by vertex subsets x 2k labellings",
+   "evidence_type": "finite exhaustive (weak test)",
+   "parameters": {
+    "n": [
+     0,
+     7
+    ]
+   },
+   "result": "PASS",
+   "negative_control": {
+    "description": "none predeclared (weak test)",
+    "result": "N/A"
+   },
+   "runtime_s": 0.08,
+   "raw_result_file": "results/graph_tests.json",
+   "range_reduction": null,
+   "notes": "weak test: max ratio embeddings/bound = 12/343"
+  },
+  {
+   "id": "T14",
+   "claim": "(F.9) G[D] chordal => D contains a clique C with (d-|C|)^2 <= 2M (M unordered nonedges)",
+   "manuscript_lines": "2275-2280",
+   "method": "all chordal atlas graphs n<=7 (chordality = rsd 0, cross-checked with networkx), all subsets D (induced subgraphs chordal), C=max clique",
+   "evidence_type": "finite exhaustive",
+   "parameters": {
+    "n": [
+     0,
+     7
+    ],
+    "chordal_graphs": 532
+   },
+   "result": "PASS",
+   "negative_control": {
+    "description": "(not predeclared; added) factor 1 instead of 2 must fail somewhere",
+    "result": "PASS (rejected)"
+   },
+   "runtime_s": 0.11,
+   "raw_result_file": "results/graph_tests.json",
+   "range_reduction": null,
+   "notes": null
+  },
+  {
+   "id": "T15",
+   "claim": "Prop 6.4: rsd<=s<=n => F_4 <= M(n-s)+ns (6.22); 4s<=n => F_4 <= M(n-s)+ns-C(s+1,2) (6.23)",
+   "manuscript_lines": "1058-1070, 2148-2177",
+   "method": "all atlas graphs n<=7; W* by HiGHS then exact rational reconstruction of primal x and dual y, both verified exactly with equal objective; all s in [rsd(G), n]",
+   "evidence_type": "finite exhaustive; each LP value exact (verified primal+dual certificate)",
+   "parameters": {
+    "n": [
+     0,
+     7
+    ]
+   },
+   "result": "PASS",
+   "negative_control": {
+    "description": "(not predeclared) power check: refined bound (6.23) applied outside its band 4s<=n; violations there show the band is not vacuous",
+    "result": "INFO (no violations outside band at n<=7)"
+   },
+   "runtime_s": 3.52,
+   "raw_result_file": "results/graph_tests.json",
+   "range_reduction": null,
+   "notes": "all 1253 LPs exactly certified; min slack 0 for both (6.22) and (6.23). Power note: at n<=7 the refined bound (6.23) was never violated even outside its band 4s<=n, so the band condition is not exercised."
+  },
+  {
+   "id": "T16",
+   "claim": "Prop D.1: c4(K_n)<=M(n) (n<=13 checked); Prop D.2: n=4 mod 6 => every order<=3 partition of K_n has >M(n) pieces (c3(K_10)=M(10)+1=19)",
+   "manuscript_lines": "1705-1761",
+   "method": "CBC ILP constructs packings; completions verified exactly; D.2 lower bound by exact parity argument (independent), upper bound by verified partition; second ILP solve with <=M(n) (solver-dependent)",
+   "evidence_type": "exact constructions (D.1); exact value certified by parity bound + verified partition (D.2); ILP infeasibility solver-dependent",
+   "parameters": {
+    "D.1 n": [
+     0,
+     13
+    ],
+    "D.2 n": [
+     4,
+     10,
+     16
+    ],
+    "note": "D.2 second (infeasibility) ILP solve only for n<=10; for n=16 it exceeded the time budget in a first attempt and was skipped"
+   },
+   "result": "PASS",
+   "negative_control": {
+    "description": "corrupted D.2 at n=9 (3 mod 6): order<=3 partition with <=M(9) pieces must exist (claim rejected)",
+    "result": "PASS (rejected)"
+   },
+   "runtime_s": 140.73,
+   "raw_result_file": "results/templates_T16.json",
+   "range_reduction": "D.2: second (infeasibility) ILP solve skipped at n=16 after exceeding the time budget; parity lower bound + verified partition certify c3(K_16)=46=M(16)+1 exactly",
+   "notes": null
+  },
+  {
+   "id": "T17",
+   "claim": "Prop D.3: S=K_k v I_h, 2<=k<=h: W*(S)=W(S)=2C(k,2)",
+   "manuscript_lines": "1765-1781",
+   "method": "exact LP (HiGHS + exact primal/dual certificate); integral packing built from a 1-factorisation with distinct hosts and verified",
+   "evidence_type": "exact (small k,h)",
+   "parameters": {
+    "k": [
+     2,
+     7
+    ],
+    "h": "k..9, k+h<=13"
+   },
+   "result": "PASS",
+   "negative_control": {
+    "description": "outside the hypothesis (k>h) the equality must fail somewhere (only exact-status instances count)",
+    "result": "PASS (rejected)"
+   },
+   "runtime_s": 0.97,
+   "raw_result_file": "results/templates_T17.json",
+   "range_reduction": "2<=k<=7, k<=h, k+h<=13",
+   "notes": null
+  },
+  {
+   "id": "T18",
+   "claim": "Thm C' constants: max{40000(s+1)^3, 2/eps_s} = 2e41(s+1)^8; 1+32s+800(3+32s)(s+1)^2 <= 38000(s+1)^3; d_E<=40000(s+1)^3 delta; 1+7A_s",
+   "manuscript_lines": "101-107, 910-965, 2107-2118",
+   "method": "sympy polynomial with nonnegative coefficients after x=1+y; z3 LRA for the (6.14) chain for each s=0..60",
+   "evidence_type": "exact / symbolic",
+   "parameters": {
+    "z3_chain_s": [
+     0,
+     60
+    ]
+   },
+   "result": "PASS",
+   "negative_control": {
+    "description": "corrupted coefficient bound 25000(s+1)^3 must fail for large s (leading coefficient 25600)",
+    "result": "PASS (rejected)"
+   },
+   "runtime_s": 0.131,
+   "raw_result_file": "results/scalar_tests.json",
+   "range_reduction": null,
+   "notes": null
+  },
+  {
+   "id": "T19",
+   "claim": "F.1 deletion invariant 0<=delta<=g0 t(t-N0), g0<=eps/4, eps N0>=1, delta'<=delta-eps t+1/3 => delta'<=g0(t-1)(t-1-N0); bottom order contradiction",
+   "manuscript_lines": "2141-2146 (with 973-977)",
+   "method": "z3 nonlinear real arithmetic (nlsat); premises AND NOT(conclusion) unsat",
+   "evidence_type": "exact (decision procedure, NRA)",
+   "parameters": {},
+   "result": "PASS",
+   "negative_control": {
+    "description": "with g0<=eps (not eps/4), or without eps N0>=1, the invariant must be refutable (sat)",
+    "result": "PASS (rejected)"
+   },
+   "runtime_s": 0.017,
+   "raw_result_file": "results/scalar_tests.json",
+   "range_reduction": null,
+   "notes": null
+  },
+  {
+   "id": "T20",
+   "claim": "(E.2e) and (E.13) arithmetic; CoreCliqueAlternative counting step: missing graph with max degree <=2s and no matching of size s+1 has <=(4s+1)s edges",
+   "manuscript_lines": "1931-1940, 2076-2086",
+   "method": "exhaustive integers + z3 (E.2e/E.13); all atlas graphs n<=7 as missing graphs (s=1,2); SAT (CaDiCaL) on N=8 vertices for s=1,2,3",
+   "evidence_type": "finite exhaustive + exact LRA; SAT UNSAT is solver-dependent",
+   "parameters": {
+    "E.2e": {
+     "s": [
+      0,
+      15
+     ],
+     "c,b": [
+      0,
+      80
+     ],
+     "t_W": [
+      0,
+      30
+     ],
+     "E.13 s": [
+      0,
+      30
+     ]
+    },
+    "graphs": "n<=7 atlas, N=8 SAT"
+   },
+   "result": "PASS",
+   "negative_control": {
+    "description": "constant 15 in (E.13) must be refutable for s>=1 (equality case c=2s, E=s/2, n=4c); (added, not predeclared) corrupted bound e<=2s must fail somewhere (e.g. triangle for s=1, K5 for s=2); note the true maxima found are far below (4s+1)s, so the test has limited power",
+    "result": "PASS (rejected)"
+   },
+   "runtime_s": 4.53,
+   "raw_result_file": [
+    "results/integer_tests.json",
+    "results/graph_tests.json",
+    "results/T20_sat.json"
+   ],
+   "range_reduction": null,
+   "notes": "max edges found: s=1 -> 3, s=2 -> 10 (bound 5, 18). The step also follows analytically: endpoints of a maximum missing matching (<=2s vertices, degree <=2s) cover all missing edges, so e<=4s^2<=(4s+1)s. (E.12) itself (hypothesis c>=20(s+1)^2) is out of exhaustive range; without the size hypothesis it fails for small c (INFO, expected).",
+   "details": {
+    "T20a": {
+     "E.2e_first_checked": 104976,
+     "E.2e_second_checked": 3224248,
+     "viol_first": [],
+     "viol_second": [],
+     "first_ineq_holds_without_side_condition": true,
+     "E.13_unsat_all_s": true
+    },
+    "T20b": {
+     "graphs_satisfying_hypothesis": {
+      "1": 24,
+      "2": 161
+     },
+     "max_edges_found": {
+      "1": 3,
+      "2": 10
+     },
+     "bounds": {
+      "1": 5,
+      "2": 18
+     },
+     "violations": [],
+     "INFO_(E.12)_without_size_hypothesis_failures(i,c,s)": [
+      [
+       7,
+       3,
+       1
+      ],
+      [
+       12,
+       4,
+       1
+      ],
+      [
+       18,
+       4,
+       2
+      ],
+      [
+       23,
+       5,
+       1
+      ],
+      [
+       39,
+       5,
+       2
+      ],
+      [
+       41,
+       5,
+       2
+      ],
+      [
+       42,
+       5,
+       2
+      ],
+      [
+       43,
+       5,
+       2
+      ],
+      [
+       45,
+       5,
+       2
+      ],
+      [
+       47,
+       5,
+       2
+      ]
+     ],
+     "INFO_(E.12)_failures_count": 24
+    },
+    "sat": {
+     "s=1,N=8": {
+      "query": "exists graph with >= 6 edges",
+      "sat": false,
+      "matching_clauses": 210,
+      "sec": 0.0
+     },
+     "s=2,N=8": {
+      "query": "exists graph with >= 19 edges",
+      "sat": false,
+      "matching_clauses": 420,
+      "sec": 0.0
+     },
+     "s=3,N=8": {
+      "query": "exists graph with >= 40 edges",
+      "sat": false,
+      "note": "trivially impossible: bound exceeds C(N,2)"
+     },
+     "s=2,N=8 max": {
+      "max_edges": 10,
+      "sec": 0.04
+     }
+    }
+   }
+  },
+  {
+   "id": "T21",
+   "claim": "Table 1 gains; Lemma 2.1 |Q|=e-g(P); (1.3) equivalence; (1.3a) g(Q)+|Q|=e; (2.4) w<=5/6 e",
+   "manuscript_lines": "113-138, 196-238",
+   "method": "symbolic identities here; (1.3a)/(2.1) on random partitions and (2.4) on all exact W* values are in t_graphs.py (T21b) + random clique partitions (3 per atlas graph, exactly verified) and all exact W* values",
+   "evidence_type": "symbolic + finite",
+   "parameters": {
+    "random_partitions": 3759
+   },
+   "result": "PASS",
+   "negative_control": {
+    "description": "none predeclared (trivial)",
+    "result": "N/A"
+   },
+   "runtime_s": 0.58,
+   "raw_result_file": [
+    "results/scalar_tests.json",
+    "results/graph_tests.json"
+   ],
+   "range_reduction": null,
+   "notes": null
+  },
+  {
+   "id": "T22",
+   "claim": "Thm 6.1/Cor 6.1a: from (6.7) r+m/16+A/2<=delta (r,m,A>=0): r+A+3m<=48delta (optimal), m+A<=16delta, edges 10tau+480delta",
+   "manuscript_lines": "837-877",
+   "method": "exact LP by vertex enumeration of the simplex r+m/16+A/2<=1; HiGHS cross-check",
+   "evidence_type": "exact",
+   "parameters": {},
+   "result": "PASS",
+   "negative_control": {
+    "description": "constant 47 must fail (vertex m=16delta gives 48delta)",
+    "result": "PASS (rejected)"
+   },
+   "runtime_s": 3.535,
+   "raw_result_file": "results/scalar_tests.json",
+   "range_reduction": null,
+   "notes": null
+  },
+  {
+   "id": "T23",
+   "claim": "(G.4) chordal K4-free, n>=2 => e<=2n-3; (G.5) algebra => n<=20/eps",
+   "manuscript_lines": "2390-2402",
+   "method": "all chordal K4-free atlas graphs n<=7; n=8 by all simplicial extensions of 7-vertex ones (complete up to isomorphism); (G.5) by z3 in t_integer.py",
+   "evidence_type": "finite exhaustive + exact (NRA)",
+   "parameters": {
+    "n": [
+     2,
+     8
+    ]
+   },
+   "result": "PASS",
+   "negative_control": {
+    "description": "bound 2n-4 must fail (2-trees attain 2n-3); (G.5) with 19/eps must be refutable",
+    "result": "PASS (rejected)"
+   },
+   "runtime_s": 0.06,
+   "raw_result_file": "results/graph_tests.json",
+   "range_reduction": null,
+   "notes": null,
+   "details": {
+    "G.4": {
+     "graphs_n<=7": 314,
+     "extensions_n=8": 3245,
+     "max_edges_by_n": {
+      "0": 0,
+      "1": 0,
+      "2": 1,
+      "3": 3,
+      "4": 5,
+      "5": 7,
+      "6": 9,
+      "7": 11,
+      "8": 13
+     },
+     "violations": [],
+     "sample_extensions_chordal": true
+    },
+    "G.5": {
+     "claim": "(G.5) eps n^2/30-1 <= T <= (2n-3)/3 => n <= 20/eps",
+     "z3": "unsat",
+     "neg_19": "sat",
+     "neg_model": "[T = 31/32,\n ep = 13/2,\n nv = 3,\n /0 = [(19, 13/2) -> 38/13, else -> 0]]",
+     "runtime_s": 0.016
+    }
+   }
+  },
+  {
+   "id": "T24",
+   "claim": "(6.5a)/(6.5): M(n)>=n(n+1)/6-1; M(n)<=n^2/6+n/6; M(n)>=n^2/6 (n>=6, Cor 3.5); floor((2n+1)^2/24)=M(n) (\u00a72.3); N^2<=2^N for N>=4 (\u00a76.3)",
+   "manuscript_lines": "250, 301, 779-809",
+   "method": "exhaustive exact integers n<=1e5, N<=2000; sympy induction step (N+1)^2<=2N^2 for N>=3",
+   "evidence_type": "exact (finite exhaustive + symbolic induction step)",
+   "parameters": {
+    "n_max": 100000,
+    "N_max": 2000
+   },
+   "result": "PASS",
+   "negative_control": {
+    "description": "N=3 must violate N^2<=2^N; M(n)>=n(n+1)/6-1/4 must fail (remainder 2/6)",
+    "result": "PASS (rejected)"
+   },
+   "runtime_s": 0.259,
+   "raw_result_file": "results/scalar_tests.json",
+   "range_reduction": null,
+   "notes": null
+  },
+  {
+   "id": "T25",
+   "claim": "Certo certificates",
+   "manuscript_lines": "2414, 2444",
+   "method": "binding check",
+   "evidence_type": "n/a",
+   "parameters": null,
+   "result": "NOT_APPLICABLE",
+   "negative_control": {
+    "description": "n/a",
+    "result": "N/A"
+   },
+   "runtime_s": 0,
+   "raw_result_file": null,
+   "range_reduction": null,
+   "notes": "The manuscript mentions Certo [13] only as an exploration tool and states \"The version used in the experiments must be fixed together with its certificates in the supplement\" (l.2444); no Certo certificate is bound as an input of any claim, and Certo files are outside the E5 reading boundary: not bound / not accessible; not audited."
+  }
+ ],
+ "supplementary": [
+  {
+   "id": "S1",
+   "result": "PASS",
+   "claim": "(6.7b) sum d_R(K)=|Q|-B_n(|R|)+A+3m for every clique R; (6.16) N_bad<=|Q|-B_{s,n}(k)+3d_E(G,T), E_bad<=10(...) for every template root",
+   "manuscript_lines": "872-877, 981-989",
+   "method": "4000 random graphs n=4..9, random exactly-verified clique partitions (unrestricted order), random clique roots / template roots (all s)",
+   "details": {
+    "checked_6.7b": 4000,
+    "checked_6.16": 10786,
+    "fail_6.7b": [],
+    "fail_6.16": []
+   },
+   "note": "supplementary, not predeclared"
+  },
+  {
+   "id": "INFO_c4",
+   "result": "INFO",
+   "claim": "information only: c4(G) vs Q_{rsd}(n) for all graphs n<=7 (Theorem C asserts c4<=Q_s(n) only for n>=N_s)",
+   "graphs": 1253,
+   "graphs_with_c4>Q_rsd(n)": 0,
+   "c4_exact_by_LP_ceiling": 1132,
+   "c4_solver_dependent": 121,
+   "note": "upper bounds c4<=Q_rsd(n) are exact (verified partitions) for all 1253 graphs n<=7; in particular c4<=M(n) for every chordal graph with n<=7 (relevant to the open b=0 question, G.1). Not predeclared."
+  },
+  {
+   "id": "RSD_atlas",
+   "result": "INFO",
+   "details": {
+    "distribution": {
+     "0": 532,
+     "1": 688,
+     "2": 33
+    },
+    "chordal_iff_rsd0_mismatches": [],
+    "named": {
+     "C4": 1,
+     "C5": 1,
+     "K33": 2,
+     "octahedron": 2,
+     "C6": 1,
+     "K7": 0
+    },
+    "runtime_s": 0.69
+   },
+   "note": "self-test of the rsd implementation: rsd=0 iff chordal on all 1253 atlas graphs"
+  }
+ ],
+ "limits": "Finite tests never establish universal (for all n) claims; exact LP values are certified per instance; ILP optimality is solver-dependent unless certified by an exact lower bound (weight certificate, parity argument, or LP ceiling), as recorded per instance."
+}

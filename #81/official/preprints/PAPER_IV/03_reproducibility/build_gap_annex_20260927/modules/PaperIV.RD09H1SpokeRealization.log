@@ -1,0 +1,58 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 PaperIV/RD09H1SpokeRealization.lean -o /workspace/request-project/.lake/runner/lib/lean/PaperIV/RD09H1SpokeRealization.olean -i /workspace/request-project/.lake/runner/lib/lean/PaperIV/RD09H1SpokeRealization.ilean
+PaperIV/RD09H1SpokeRealization.lean:38:8: warning: automatically included section variable(s) unused in theorem `PaperIV.RD09H1SpokeRealization.mem_canonicalBad`:
+  [Fintype V]
+  [DecidableEq I]
+  [Fintype Z]
+  [DecidableEq Z]
+  [LinearOrder Z]
+  [DecidableEq Cand]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] [DecidableEq I] [Fintype Z] [DecidableEq Z] [LinearOrder Z] [DecidableEq Cand] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+PaperIV/RD09H1SpokeRealization.lean:141:0: warning: automatically included section variable(s) unused in theorem `PaperIV.RD09H1SpokeRealization.card_surviving_empty_add_card_failed`:
+  [Fintype Cand]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype Cand] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+PaperIV/RD09H1SpokeRealization.lean:155:0: warning: automatically included section variable(s) unused in theorem `PaperIV.RD09H1SpokeRealization.card_failedEdgePieces`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+PaperIV/RD09H1SpokeRealization.lean:186:0: warning: automatically included section variable(s) unused in theorem `PaperIV.RD09H1SpokeRealization.totalGain_eq_two_mul_card_of_triangles`:
+  [Fintype V]
+  [DecidableEq V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] [DecidableEq V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_linarith_1._boxed took 104ms
+import took 3.17s
+cumulative profiling times:
+	.olean serialization 97.8ms
+	attribute application 2.13ms
+	compilation (IR) 5.92ms
+	compilation (LCNF base) 8.69ms
+	compilation (LCNF mono) 4.4ms
+	congr simp thm 17.2ms
+	dsimp 1.72ms
+	elaboration 159ms
+	fix level params 1.56ms
+	import 3.17s
+	initialization 39.6ms
+	instantiate metavars 6.5ms
+	interpretation 473ms
+	let-to-have transformation 2.06ms
+	linting 36.5ms
+	norm_num 36.1ms
+	parsing 15.5ms
+	process pre-definitions 18.3ms
+	ring 16ms
+	share common exprs 7.36ms
+	simp 277ms
+	tactic execution 221ms
+	type checking 177ms
+	typeclass inference 560ms

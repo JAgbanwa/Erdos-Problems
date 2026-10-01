@@ -1,0 +1,32 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 PaperIV/SparseRegime.lean -o /workspace/request-project/.lake/runner/lib/lean/PaperIV/SparseRegime.olean -i /workspace/request-project/.lake/runner/lib/lean/PaperIV/SparseRegime.ilean
+PaperIV/SparseRegime.lean:82:0: warning: automatically included section variable(s) unused in theorem `PaperIV.SparseRegime.emptyPacking_gain`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+import took 2.87s
+cumulative profiling times:
+	.olean serialization 52.9ms
+	attribute application 0.0565ms
+	compilation (IR) 0.216ms
+	compilation (LCNF base) 0.527ms
+	compilation (LCNF mono) 0.183ms
+	congr simp thm 2.27ms
+	elaboration 32.9ms
+	fix level params 0.238ms
+	import 2.87s
+	initialization 40.7ms
+	instantiate metavars 0.43ms
+	interpretation 270ms
+	let-to-have transformation 0.0844ms
+	linting 6.93ms
+	norm_num 35.7ms
+	parsing 3.86ms
+	process pre-definitions 4.54ms
+	ring 13.3ms
+	share common exprs 2.21ms
+	simp 17ms
+	tactic execution 13.9ms
+	type checking 24.4ms
+	typeclass inference 113ms

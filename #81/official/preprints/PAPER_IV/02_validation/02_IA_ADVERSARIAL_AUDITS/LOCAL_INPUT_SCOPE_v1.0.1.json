@@ -1,0 +1,83 @@
+{
+  "manuscript_version": "1.0.1",
+  "handoff_revision": "r3",
+  "policy": "Operational allowlist, not an OS-enforced sandbox",
+  "repository_root": "C:/Users/jtraverso/e81p4-publish",
+  "paths_relative_to": "preprints/PAPER_IV",
+  "allowed_from_intake": [
+    "04_integrity/revision_r3/AUTHOR_RESPONSE_r2.md",
+    "02_validation/02_IA_ADVERSARIAL_AUDITS/run_2026-09-28_v1.0.1_r2/",
+    "02_validation/02_IA_ADVERSARIAL_AUDITS/EXTERNAL_ADVERSARIAL_AUDIT_REQUEST_v1.0.1.md",
+    "02_validation/02_IA_ADVERSARIAL_AUDITS/AUDIT_TARGET_v1.0.1.json",
+    "02_validation/02_IA_ADVERSARIAL_AUDITS/LOCAL_INPUT_SCOPE_v1.0.1.json",
+    "02_validation/02_IA_ADVERSARIAL_AUDITS/verify_audit_target.py",
+    "01_manuscript/v1.0.1_candidate/PAPER_IV_preprint_v1.0.1_en.md",
+    "01_manuscript/v1.0.1_candidate/PAPER_IV_preprint_v1.0.1_en.tex",
+    "01_manuscript/v1.0.1_candidate/PAPER_IV_preprint_v1.0.1_en.pdf",
+    "01_manuscript/v1.0.1_candidate/PAPER_IV_preprint_v1.0.1_es.md",
+    "01_manuscript/v1.0.1_candidate/PAPER_IV_preprint_v1.0.1_es.tex",
+    "01_manuscript/v1.0.1_candidate/PAPER_IV_preprint_v1.0.1_es.pdf",
+    "01_manuscript/v1.0.1_candidate/figures/",
+    "01_manuscript/v1.0.1_candidate/figures_en/",
+    "01_manuscript/v1.0.1_candidate/series_template.tex",
+    "01_manuscript/v1.0.1_candidate/series_template_en.tex",
+    "01_manuscript/v1.0.1_candidate/MANIFEST.json",
+    "01_manuscript/v1.0.1_candidate/MANIFEST_SHA256.md",
+    "05_formalization/LEAN_SOURCE_SNAPSHOT_v1.0.zip",
+    "05_formalization/LEAN_BOUNDED_GAP_ANNEX_v1.0.zip",
+    "03_reproducibility/build_v1.0_20260927/RUN_META.json",
+    "03_reproducibility/build_v1.0_20260927/SOURCES.json",
+    "02_validation/01_INTERNAL_AUDITS/run_20260927_v1.0_f1769273dd2c/00_CONTROL/TARGET.json",
+    "02_validation/01_INTERNAL_AUDITS/run_20260927_v1.0_f1769273dd2c/00_CONTROL/CLAIM_MAP.csv",
+    "02_validation/01_INTERNAL_AUDITS/run_20260927_v1.0_f1769273dd2c/20_EVIDENCE/G1_CLAIMS/PUBLIC_HEADERS.md"
+  ],
+  "initial_hash_or_crc_only": [
+    "All remaining bound files in AUDIT_TARGET_v1.0.1.json",
+    "All candidate members checked by verify_audit_target.py"
+  ],
+  "after_independent_first_pass_only": [
+    "01_manuscript/v1.0.1_candidate/",
+    "01_manuscript/v1.0_candidate/",
+    "02_validation/INTERNAL_AUDIT_STANDARD_v1.0.md",
+    "02_validation/01_INTERNAL_AUDITS/run_20260927_v1.0_f1769273dd2c/",
+    "03_reproducibility/build_v1.0_20260927/",
+    "03_reproducibility/build_gap_annex_20260927/",
+    "04_integrity/AUDIT_READINESS_v1.0.1.md",
+    "04_integrity/HANDOFF_CHECKS_v1.0.1.json",
+    "04_integrity/MANUSCRIPT_CANDIDATE_v1.0.1.zip",
+    "04_integrity/MANUSCRIPT_CANDIDATE_v1.0.1.zip.sha256",
+    "04_integrity/seal_editorial_candidate.py",
+    "05_formalization/LEAN_FREEZE_v1.0.md",
+    "RELEASE_PREPARATION_v1.0.md",
+    "README.md",
+    "01_manuscript/README.md",
+    "02_validation/README.md",
+    "02_validation/02_IA_ADVERSARIAL_AUDITS/README.md",
+    "03_reproducibility/README.md",
+    "04_integrity/README.md",
+    "05_formalization/README.md"
+  ],
+  "additional_navigation_after_first_pass": [
+    "C:/Users/jtraverso/e81p4-publish/README.md",
+    "C:/Users/jtraverso/e81p4-publish/preprints/README.md",
+    "C:/Users/jtraverso/e81p4-publish/CITATION.md",
+    "C:/Users/jtraverso/e81p4-publish/CITATION.bib",
+    "C:/Users/jtraverso/e81p4-publish/LICENSE"
+  ],
+  "technical_exceptions": {
+    "shared_dependencies": "Resolve and record the pinned packages from RUN_META.json; initial known Mathlib path C:/Users/jtraverso/e81p4/preprints/PAPER_IV/05_formalization/lean/.lake/packages/mathlib. Access sibling packages only when required by lake-manifest.json. No broader research-tree access.",
+    "tools": "Lean/Lake and document/test runtime binaries, their libraries, tool documentation and applicable skill instructions. Log resolved roots/versions. No unrelated personal files or credentials.",
+    "existing_document_tools": "C:/Users/jtraverso/.cache/e81-editorial-tools/tectonic/tectonic.exe and C:/Users/jtraverso/.cache/e81-editorial-tools/pandoc/pandoc-3.11/pandoc.exe, their existing cache and runtime libraries. No new engine installation. Record actual versions and compilation route.",
+    "process_check": "Read-only process/resource inspection to avoid overlapping heavy builds; do not terminate others' work.",
+    "auditor_outputs": "Own new run directory and isolated build directory registered in 00_CONTROL before use. No author-built project artifacts."
+  },
+  "literature": "Cited primary sources and independent public prior-art search allowed. Save exact versions, URLs, dates and hashes to the audit run. No access to unpublished local research via this exception.",
+  "unlisted_local_research": "Requires recorded owner approval BEFORE reading; log accidental exposure and stop if material.",
+  "explicit_exclusions": [
+    "ar_* and handoff_* working trees",
+    "Other Aristotle/proof-development trees or chats",
+    "Unpublished Paper V documents",
+    "C:/Users/jtraverso/e81p4-editorial-history/",
+    "Credentials and .env files"
+  ]
+}

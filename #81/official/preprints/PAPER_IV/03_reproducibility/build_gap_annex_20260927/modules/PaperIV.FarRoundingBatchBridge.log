@@ -1,0 +1,37 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 PaperIV/FarRoundingBatchBridge.lean -o /workspace/request-project/.lake/runner/lib/lean/PaperIV/FarRoundingBatchBridge.olean -i /workspace/request-project/.lake/runner/lib/lean/PaperIV/FarRoundingBatchBridge.ilean
+PaperIV/FarRoundingBatchBridge.lean:90:0: warning: automatically included section variable(s) unused in theorem `PaperIV.FarRoundingBatchBridge.two_mul_card_le_card_edgeFinset`:
+  [DecidableEq V]
+  [DecidableEq ι]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq V] [DecidableEq ι] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+PaperIV/FarRoundingBatchBridge.lean:127:0: warning: automatically included section variable(s) unused in theorem `PaperIV.FarRoundingBatchBridge.exists_packing_of_batches`:
+  [DecidableRel G.Adj]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableRel G.Adj] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+import took 3.27s
+cumulative profiling times:
+	.olean serialization 57.9ms
+	attribute application 0.121ms
+	compilation (IR) 0.708ms
+	compilation (LCNF base) 2.26ms
+	compilation (LCNF mono) 1.01ms
+	congr simp thm 0.829ms
+	elaboration 54.7ms
+	fix level params 0.52ms
+	import 3.27s
+	initialization 47.4ms
+	instantiate metavars 1.09ms
+	interpretation 268ms
+	let-to-have transformation 0.167ms
+	linting 15.4ms
+	parsing 10ms
+	process pre-definitions 9.06ms
+	share common exprs 2.74ms
+	simp 7.78ms
+	tactic execution 138ms
+	type checking 62.1ms
+	typeclass inference 97.2ms

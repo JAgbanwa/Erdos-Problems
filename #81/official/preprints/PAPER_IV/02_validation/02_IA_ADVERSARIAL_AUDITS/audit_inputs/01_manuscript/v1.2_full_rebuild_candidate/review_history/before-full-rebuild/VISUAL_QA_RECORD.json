@@ -1,0 +1,38 @@
+{
+  "scope": "Author-side editorial layout review, not a mathematical audit.",
+  "review_date": "2026-09-29",
+  "renderer": "PyMuPDF; 1.45 scale page images and six-page contact sheets",
+  "reviewer": "Codex editorial agent; not independent of manuscript preparation",
+  "en": {
+    "pdf_sha256": "3817f67373e1b2a5f73bb90a9aed629d01fdcbbe73e3b2388a49e50c79206b92",
+    "pages": 68,
+    "all_pages_inspected_on_contact_sheets": true,
+    "contact_sheets": 12,
+    "full_resolution_pages": [1, 7, 26, 38, 40, 54, 62, 68]
+  },
+  "es": {
+    "pdf_sha256": "ea6fa73b3507f5df6862bbc5eff6a02f29e1585251cb494cdfb80c2d9a051e2e",
+    "pages": 69,
+    "all_pages_inspected_on_contact_sheets": true,
+    "contact_sheets": 12,
+    "full_resolution_pages": [1, 26, 36, 39, 63, 69]
+  },
+  "reference": {
+    "pdf": "../../../PAPER_III/01_manuscript/PAPER_III_preprint_v1.5_en.pdf",
+    "pages_compared": [1, 6, 12, 19, 46],
+    "style": "Series adaptation: A4, one-inch margins, 11pt Latin Modern, centered metadata, bold result headings, visible URLs and numbered references."
+  },
+  "findings_resolved": [
+    "C-prime represented explicitly with math glyph and bookmark fallback",
+    "Long identifiers use visible continuation markers",
+    "Figure numbering follows appearance: proof map 1, host 2, stability 3, comparison 4",
+    "Figure 3 has one integrated caption",
+    "E.2 long inline expression fits without overflow"
+  ],
+  "remaining_nonblocking_notices": [
+    "11 English and 3 Spanish underfull-box warnings; inspected identifier-heavy paragraphs remain readable.",
+    "Fontconfig default configuration notice; actual text fonts embedded and figure Type 3 CharProcs present."
+  ],
+  "layout_verdict": "PASS_EDITORIAL_VISUAL_QA",
+  "mathematical_audit": "PENDING"
+}

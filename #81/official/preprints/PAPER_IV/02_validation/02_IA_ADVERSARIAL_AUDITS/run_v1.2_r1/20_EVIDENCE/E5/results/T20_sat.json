@@ -1,0 +1,23 @@
+{
+ "s=1,N=8": {
+  "query": "exists graph with >= 6 edges",
+  "sat": false,
+  "matching_clauses": 210,
+  "sec": 0.0
+ },
+ "s=2,N=8": {
+  "query": "exists graph with >= 19 edges",
+  "sat": false,
+  "matching_clauses": 420,
+  "sec": 0.0
+ },
+ "s=3,N=8": {
+  "query": "exists graph with >= 40 edges",
+  "sat": false,
+  "note": "trivially impossible: bound exceeds C(N,2)"
+ },
+ "s=2,N=8 max": {
+  "max_edges": 10,
+  "sec": 0.04
+ }
+}

@@ -1,0 +1,50 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 PaperIV/SpreadRestricted.lean -o /workspace/request-project/.lake/runner/lib/lean/PaperIV/SpreadRestricted.olean -i /workspace/request-project/.lake/runner/lib/lean/PaperIV/SpreadRestricted.ilean
+PaperIV/SpreadRestricted.lean:65:0: warning: automatically included section variable(s) unused in theorem `PaperIV.SpreadRestricted.spreadWeightNorm_nonneg`:
+  [Fintype P]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype P] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+PaperIV/SpreadRestricted.lean:75:0: warning: automatically included section variable(s) unused in theorem `PaperIV.SpreadRestricted.loadNorm_eq`:
+  [Fintype P]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype P] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_nlinarith_1._boxed took 123ms
+PaperIV/SpreadRestricted.lean:171:0: warning: automatically included section variable(s) unused in theorem `PaperIV.SpreadRestricted.restrictedCopies_subset`:
+  [Fintype P]
+  [DecidableEq P]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype P] [DecidableEq P] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+PaperIV/SpreadRestricted.lean:177:0: warning: automatically included section variable(s) unused in theorem `PaperIV.SpreadRestricted.spreadFiber_restricted_eq_empty`:
+  [Fintype P]
+  [DecidableEq P]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype P] [DecidableEq P] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+import took 3.43s
+cumulative profiling times:
+	.olean serialization 71.3ms
+	attribute application 0.108ms
+	congr simp thm 4.77ms
+	elaboration 79.7ms
+	fix level params 1.06ms
+	import 3.43s
+	initialization 38.6ms
+	instantiate metavars 2.69ms
+	interpretation 416ms
+	let-to-have transformation 0.226ms
+	linting 18.3ms
+	norm_num 7.6ms
+	parsing 10.7ms
+	process pre-definitions 12.5ms
+	ring 6.75ms
+	share common exprs 3.51ms
+	simp 36.2ms
+	tactic execution 136ms
+	type checking 34.9ms
+	typeclass inference 312ms

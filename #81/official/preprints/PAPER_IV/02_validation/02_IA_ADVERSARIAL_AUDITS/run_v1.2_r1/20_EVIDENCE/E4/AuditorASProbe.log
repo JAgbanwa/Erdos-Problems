@@ -1,0 +1,21 @@
+$ C:\Users\jtraverso\.elan\toolchains\leanprover--lean4---v4.28.0\bin\lean.exe -j 8 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false AuditorASProbe.lean -o C:\Users\jtraverso\e81p4-publish\preprints\PAPER_IV\02_validation\02_IA_ADVERSARIAL_AUDITS\run_v1.2_r1\05_BUILD\main\obj\AuditorASProbe.olean -i C:\Users\jtraverso\e81p4-publish\preprints\PAPER_IV\02_validation\02_IA_ADVERSARIAL_AUDITS\run_v1.2_r1\05_BUILD\main\obj\AuditorASProbe.ilean
+PROBE E32.cp_classification_of_theoremCPrimeC: keys present = [AlonShapira.lemma_4_2,
+ AlonShapira.near_chordal_of_induced_cycles_littleO',
+ PaperIV.EditRoute.editApproxAt_all,
+ PaperIV.EditRoute.fixedL4Localization_unconditional,
+ AFKS.strong_regularity,
+ PaperIV.DefectSharpPublication.rooted_defect_eventual,
+ A4S1.IndepAll.a4Sharp_all_indep,
+ E32.theoremC_at]
+PROBE PaperIV.SublinearResearch.FixedExplicit.fixed_defect_stability_explicit: keys present = [E34.theoremC_fully_explicit_final]
+PROBE PaperIV.DefectExplicitPublication.rooted_defect_maximum: keys present = [E34.theoremC_fully_explicit_final]
+PROBE E32.ref15Theorem11_of_theoremCPrimeC: keys present = [AlonShapira.lemma_4_2,
+ AlonShapira.near_chordal_of_induced_cycles_littleO',
+ PaperIV.EditRoute.editApproxAt_all,
+ PaperIV.EditRoute.fixedL4Localization_unconditional,
+ AFKS.strong_regularity,
+ PaperIV.DefectSharpPublication.rooted_defect_eventual,
+ A4S1.IndepAll.a4Sharp_all_indep,
+ E32.theoremC_at]
+PROBE FDCheck.FinalAudit.ref15_all: not in environment
+PROBE PaperIV.SublinearResearch.sequence_arbitrary_orders_stability: keys present = []

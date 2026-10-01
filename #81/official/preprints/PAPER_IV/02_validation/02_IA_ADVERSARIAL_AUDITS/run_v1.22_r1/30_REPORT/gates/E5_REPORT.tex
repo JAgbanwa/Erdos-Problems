@@ -1,0 +1,144 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+\documentclass[
+]{article}
+\usepackage{xcolor}
+\usepackage{amsmath,amssymb}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math} % this also loads fontspec
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+\usepackage{lmodern}
+\ifPDFTeX\else
+  % xetex/luatex font selection
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{longtable,booktabs,array}
+\usepackage{caption}
+\captionsetup[table]{skip=6pt}
+\newcounter{none} % for unnumbered tables
+\usepackage{calc} % for calculating minipage widths
+% Correct order of tables after \paragraph or \subparagraph
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd\longtable{\par}{\if@noskipsec\mbox{}\fi\par}{}{}
+\makeatother
+% Allow footnotes in longtable head/foot
+\IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
+\makesavenoteenv{longtable}
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\usepackage{bookmark}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same}
+% fallback for those not using the hyperref driver hyperxmp:
+\makeatletter
+\@ifundefined{xmpquote}{\newcommand{\xmpquote}[1]{#1}}{}
+\makeatother
+\hypersetup{
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+
+\author{}
+\date{}
+
+\begin{document}
+
+\section{Gate E5 report --- run\_v1.22\_r1 (Paper IV
+v1.22-r1)}\label{gate-e5-report--run_v122_r1-paper-iv-v122-r1}
+
+Verdict: \textbf{PASS}. Evidence: \texttt{20\_EVIDENCE/E5/}. Auditor:
+Claude Opus 5.5, same session as run\_v1.2\_r1/run\_v1.21\_r1; no Lean
+executed.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section{E5 --- Exact arithmetic (no
+Lean)}\label{e5--exact-arithmetic-no-lean}
+
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}lll@{}}
+\toprule\noalign{}
+Script & Status this cycle & Result \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+\texttt{e5\_v122\_c3.py} → \texttt{E5\_V122\_C3.json} (new,
+auditor-written) & \textbf{Executed} & 14 checks (C3a--C3n) of the new
+C.3 text: all PASS. 8 of them carry an inline negative control. 7 of
+those controls were rejected; the C3m control was mis-specified, because
+its variant 2\^{}\{29R\} is also true (CORRECTIONS C2-01). \\
+\texttt{e5\_v122\_c3\_negfix.py} → \texttt{E5\_V122\_C3\_negfix.json} &
+\textbf{Executed} & Corrected C3m control: (R·16\^{}R)⁶ ≤ 2\^{}\{24R\}
+is false on 1..50 and is rejected as required. \\
+\texttt{e5\_v122\_c3\_neg\_supplement.py} →
+\texttt{E5\_V122\_C3\_neg\_supplement.json} & \textbf{Executed} &
+Negative controls for the six checks that had none (C3c, C3e, C3g, C3j,
+C3l, C3n): all 6 perturbed claims are false and rejected. With this
+file, every C.3 check has a rejected negative control. \\
+\texttt{e5\_v121\_numerics.py} → \texttt{E5\_V121\_RERUN.json} (copied
+from run\_v1.21\_r1) & \textbf{Repeated} & The 21 v1.21 checks (C.2, the
+C.3 schedule and selector chain, E.1, E.2d): all PASS, all negatives
+rejected. Table C.1 of C.3 is unchanged. \\
+run\_v1.2\_r1 T01--T24 & \textbf{Inherited} & The covered text is
+unchanged (diff). \\
+\end{longtable}
+}
+
+\subsection{Typing of the evidence}\label{typing-of-the-evidence}
+
+\begin{itemize}
+\tightlist
+\item
+  C3a--C3g are exact rational and integer identities and inequalities at
+  the fixed parameters, computed with \texttt{fractions.Fraction} and
+  Python big integers.
+\item
+  C3h, C3i, C3l, C3m and C3n check elementary universal lemmas only on
+  finite ranges: x·4\^{}x ≥ 2\^{}x, 16\^{}x ≥ 4x, 8q ≤ 2\^{}q (q ≥ 6),
+  256B² ≤ B⁶ (B ≥ 4), 4x·4\^{}x ≤ 2\^{}\{4x\}, R⁶ ≤ 2\^{}\{6R\}, and 30R
+  ≤ 8q given 4R ≤ q. \textbf{This is a finite regression, not a
+  universal proof.}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    The universal statements were proved by hand in E2; they are
+    one-line inductions or monotonicity arguments.
+  \item
+    They are also covered by the frozen E19 theorems, whose build E4
+    confirms by reuse.
+  \end{itemize}
+\item
+  Quantities such as R, B and T(h+7) are never materialised; the
+  argument works on exponents.
+\end{itemize}
+
+\textbf{E5 verdict: PASS.}
+
+\end{document}

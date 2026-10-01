@@ -1,0 +1,1101 @@
+{
+ "math_counts": {
+  "en": 2045,
+  "es": 2045
+ },
+ "math_diffs": [
+  {
+   "op": "replace",
+   "en": [
+    [
+     170,
+     "\\boxed{\nF_4(G)<\\frac{n^2}{6}-\\eta_0n^2\n\\quad\\text{or}\\quad\n\\exists\\,\\text{near-structure witness for }G.\n}\n\\tag{1.5}"
+    ]
+   ],
+   "es": [
+    [
+     170,
+     "\\boxed{\nF_4(G)<\\frac{n^2}{6}-\\eta_0n^2\n\\quad\\text{o}\\quad\n\\exists\\,\\text{testigo estructural cercano de }G.\n}\n\\tag{1.5}"
+    ]
+   ]
+  },
+  {
+   "op": "replace",
+   "en": [
+    [
+     436,
+     "\\begin{gathered}\na\\ge1024,\\qquad |n-3a|\\le a/64,\\\\\ne(G-P)+\\#\\{\\text{missing links between }P\\text{ and }V\\setminus P\\}\n\\le a^2/65536.\n\\end{gathered}\n\\tag{5.1}"
+    ]
+   ],
+   "es": [
+    [
+     436,
+     "\\begin{gathered}\na\\ge1024,\\qquad |n-3a|\\le a/64,\\\\\ne(G-P)+\\#\\{\\text{enlaces ausentes entre }P\\text{ y }V\\setminus P\\}\n\\le a^2/65536.\n\\end{gathered}\n\\tag{5.1}"
+    ]
+   ]
+  },
+  {
+   "op": "replace",
+   "en": [
+    [
+     708,
+     "\\begin{cases}\nk=r,& n=3r,\\\\\nk=r\\text{ or }r+1,& n=3r+1,\\\\\nk=r+1,& n=3r+2.\n\\end{cases}\n\\tag{6.4}"
+    ]
+   ],
+   "es": [
+    [
+     708,
+     "\\begin{cases}\nk=r,& n=3r,\\\\\nk=r\\text{ o }r+1,& n=3r+1,\\\\\nk=r+1,& n=3r+2.\n\\end{cases}\n\\tag{6.4}"
+    ]
+   ]
+  },
+  {
+   "op": "replace",
+   "en": [
+    [
+     1785,
+     "\\sum_{w\\in X'}|N(w)\\cap\\mathcal L|\n\\le (s-\\nu)|\\mathcal L|+\\frac n9\n\\quad\\text{if }X'\\subseteq W,\\quad |X'|\\le2(s+1).\n\\tag{E.2d}"
+    ]
+   ],
+   "es": [
+    [
+     1785,
+     "\\sum_{w\\in X'}|N(w)\\cap\\mathcal L|\n\\le (s-\\nu)|\\mathcal L|+\\frac n9\n\\quad\\text{si }X'\\subseteq W,\\quad |X'|\\le2(s+1).\n\\tag{E.2d}"
+    ]
+   ]
+  }
+ ],
+ "tokens": {
+  "backtick": {
+   "n_en": 1,
+   "n_es": 0,
+   "only_en": {
+    "chordal'' with ": 1
+   },
+   "only_es": {},
+   "seqdiff": [
+    {
+     "op": "delete",
+     "en": [
+      [
+       1722,
+       "chordal'' with "
+      ]
+     ],
+     "es": []
+    }
+   ]
+  },
+  "url": {
+   "n_en": 31,
+   "n_es": 31,
+   "only_en": {},
+   "only_es": {},
+   "seqdiff": []
+  },
+  "hash": {
+   "n_en": 21,
+   "n_es": 21,
+   "only_en": {},
+   "only_es": {},
+   "seqdiff": []
+  },
+  "cite": {
+   "n_en": 1,
+   "n_es": 1,
+   "only_en": {},
+   "only_es": {},
+   "seqdiff": []
+  },
+  "number": {
+   "n_en": 847,
+   "n_es": 846,
+   "only_en": {
+    "256": 1
+   },
+   "only_es": {},
+   "seqdiff": [
+    {
+     "op": "delete",
+     "en": [
+      [
+       1060,
+       "256"
+      ]
+     ],
+     "es": []
+    }
+   ]
+  },
+  "eqref": {
+   "n_en": 196,
+   "n_es": 196,
+   "only_en": {},
+   "only_es": {},
+   "seqdiff": []
+  },
+  "thmref": {
+   "n_en": 329,
+   "n_es": 326,
+   "only_en": {
+    "S:6.6": 1,
+    "S:4": 2,
+    "S:a": 2
+   },
+   "only_es": {
+    "T:e": 1,
+    "L:a": 1
+   },
+   "seqdiff": [
+    {
+     "op": "delete",
+     "en": [
+      [
+       195,
+       "S:4"
+      ]
+     ],
+     "es": []
+    },
+    {
+     "op": "delete",
+     "en": [
+      [
+       195,
+       "S:6.6"
+      ]
+     ],
+     "es": []
+    },
+    {
+     "op": "delete",
+     "en": [
+      [
+       681,
+       "S:4"
+      ]
+     ],
+     "es": []
+    },
+    {
+     "op": "insert",
+     "en": [],
+     "es": [
+      [
+       1288,
+       "T:e"
+      ]
+     ]
+    },
+    {
+     "op": "insert",
+     "en": [],
+     "es": [
+      [
+       2072,
+       "L:a"
+      ]
+     ]
+    },
+    {
+     "op": "delete",
+     "en": [
+      [
+       2116,
+       "S:a"
+      ]
+     ],
+     "es": []
+    },
+    {
+     "op": "delete",
+     "en": [
+      [
+       2143,
+       "S:a"
+      ]
+     ],
+     "es": []
+    }
+   ]
+  },
+  "sect": {
+   "n_en": 52,
+   "n_es": 52,
+   "only_en": {},
+   "only_es": {},
+   "seqdiff": []
+  },
+  "tt": {
+   "n_en": 36,
+   "n_es": 36,
+   "only_en": {},
+   "only_es": {},
+   "seqdiff": []
+  }
+ },
+ "headings": {
+  "n_en": 79,
+  "n_es": 79,
+  "mismatches": [
+   {
+    "idx": 0,
+    "en": [
+     46,
+     "subsection",
+     "Abstract}\\label{abstract"
+    ],
+    "es": [
+     46,
+     "subsection",
+     "Resumen}\\label{resumen"
+    ]
+   },
+   {
+    "idx": 30,
+    "en": [
+     679,
+     "subsubsection",
+     "Proof of Theorem B: upper bound}\\label{proof-of-theorem-b-upper-bound"
+    ],
+    "es": [
+     679,
+     "subsubsection",
+     "Demostración del Teorema B: cota superior}\\label{demostracion-del-teorema-b-cota-superior"
+    ]
+   },
+   {
+    "idx": 76,
+    "en": [
+     2213,
+     "subsection",
+     "Acknowledgments}\\label{acknowledgments"
+    ],
+    "es": [
+     2213,
+     "subsection",
+     "Agradecimientos}\\label{agradecimientos"
+    ]
+   },
+   {
+    "idx": 77,
+    "en": [
+     2217,
+     "subsection",
+     "Use of artificial intelligence and computational tools}\\label{use-of-artificial-intelligence-and-computational-tools"
+    ],
+    "es": [
+     2217,
+     "subsection",
+     "Uso de inteligencia artificial y herramientas computacionales}\\label{uso-de-inteligencia-artificial-y-herramientas-computacionales"
+    ]
+   }
+  ],
+  "en": [
+   [
+    46,
+    "subsection",
+    "Abstract}\\label{abstract"
+   ],
+   [
+    59,
+    "subsection",
+    "1. Introduction}\\label{introduction"
+   ],
+   [
+    81,
+    "subsubsection",
+    "Theorem A. Bound for all orders}\\label{theorem-a.-bound-for-all-orders"
+   ],
+   [
+    89,
+    "subsubsection",
+    "Theorem B. Sharp bound and eventual maximum}\\label{theorem-b.-sharp-bound-and-eventual-maximum"
+   ],
+   [
+    105,
+    "subsubsection",
+    "Theorem C. Fixed rooted simplicial defect}\\label{theorem-c.-fixed-rooted-simplicial-defect"
+   ],
+   [
+    120,
+    "subsubsection",
+    "Theorem \\texorpdfstring{C\\ensuremath{^{\\prime}}}{C'}. Fixed-defect same-root stability}\\label{theorem-c.-fixed-defect-same-root-stability"
+   ],
+   [
+    130,
+    "subsubsection",
+    "1.1. The common condition: a loss budget}\\label{the-common-condition-a-loss-budget"
+   ],
+   [
+    168,
+    "subsubsection",
+    "1.2. Structural dichotomy and resolution mechanisms}\\label{structural-dichotomy-and-resolution-mechanisms"
+   ],
+   [
+    191,
+    "subsubsection",
+    "1.3. Organization and use of chordality}\\label{organization-and-use-of-chordality"
+   ],
+   [
+    199,
+    "subsection",
+    "2. Mixed gain, duality and partitions}\\label{mixed-gain-duality-and-partitions"
+   ],
+   [
+    203,
+    "subsubsection",
+    "2.1. Why gain is the quantity to round}\\label{why-gain-is-the-quantity-to-round"
+   ],
+   [
+    228,
+    "subsubsection",
+    "Lemma 2.1}\\label{lemma-2.1"
+   ],
+   [
+    235,
+    "subsubsection",
+    "2.2. The fractional optimum and its certificate}\\label{the-fractional-optimum-and-its-certificate"
+   ],
+   [
+    251,
+    "subsubsection",
+    "2.3. Relation to the earlier functionals}\\label{relation-to-the-earlier-functionals"
+   ],
+   [
+    259,
+    "subsubsection",
+    "2.4. Notation for the two branches}\\label{notation-for-the-two-branches"
+   ],
+   [
+    290,
+    "subsection",
+    "3. Mixed rounding and the regime with margin}\\label{mixed-rounding-and-the-regime-with-margin"
+   ],
+   [
+    294,
+    "subsubsection",
+    "Theorem 3.1}\\label{theorem-3.1"
+   ],
+   [
+    309,
+    "subsubsection",
+    "Corollary 3.5}\\label{corollary-3.5"
+   ],
+   [
+    321,
+    "subsection",
+    "4. Localization of the critical regime}\\label{localization-of-the-critical-regime"
+   ],
+   [
+    330,
+    "subsubsection",
+    "4.1. Distance to a fixed family}\\label{distance-to-a-fixed-family"
+   ],
+   [
+    373,
+    "subsubsection",
+    "4.2. Descent from the terminal graph}\\label{descent-from-the-terminal-graph"
+   ],
+   [
+    401,
+    "subsubsection",
+    "Proposition 4.3}\\label{proposition-4.3"
+   ],
+   [
+    416,
+    "subsection",
+    "5. Regularized root and physical accounting}\\label{regularized-root-and-physical-accounting"
+   ],
+   [
+    418,
+    "subsubsection",
+    "Theorem 5.0. Near constructor under local hypotheses}\\label{theorem-5.0.-near-constructor-under-local-hypotheses"
+   ],
+   [
+    430,
+    "subsubsection",
+    "5.1. Regularization on the original graph}\\label{regularization-on-the-original-graph"
+   ],
+   [
+    496,
+    "subsubsection",
+    "5.2. From matchings to triangles}\\label{from-matchings-to-triangles"
+   ],
+   [
+    510,
+    "subsubsection",
+    "5.3. The three accounts that pay for the construction}\\label{the-three-accounts-that-pay-for-the-construction"
+   ],
+   [
+    628,
+    "subsubsection",
+    "Lemma 5.3}\\label{lemma-5.3"
+   ],
+   [
+    656,
+    "subsubsection",
+    "5.4. The witness retained by the proof}\\label{the-witness-retained-by-the-proof"
+   ],
+   [
+    677,
+    "subsection",
+    "6. Assembly and extremal value}\\label{assembly-and-extremal-value"
+   ],
+   [
+    679,
+    "subsubsection",
+    "Proof of Theorem B: upper bound}\\label{proof-of-theorem-b-upper-bound"
+   ],
+   [
+    685,
+    "subsubsection",
+    "6.1. Unrestricted optimality for complete-split graphs}\\label{unrestricted-optimality-for-complete-split-graphs"
+   ],
+   [
+    703,
+    "subsubsection",
+    "6.2. The eventual maximum}\\label{the-eventual-maximum"
+   ],
+   [
+    719,
+    "subsubsection",
+    "6.3. All orders and optimality of the linear term}\\label{all-orders-and-optimality-of-the-linear-term"
+   ],
+   [
+    747,
+    "subsubsection",
+    "6.4. The excess of a complete-split partition}\\label{the-excess-of-a-complete-split-partition"
+   ],
+   [
+    759,
+    "subsubsection",
+    "6.5. Integral stability and classification of extremizers}\\label{integral-stability-and-classification-of-extremizers"
+   ],
+   [
+    813,
+    "subsubsection",
+    "6.6. Fixed-defect stability on one root}\\label{fixed-defect-stability-on-one-root"
+   ],
+   [
+    933,
+    "subsubsection",
+    "6.7. Uniform bounds and sublinear defect}\\label{uniform-bounds-and-sublinear-defect"
+   ],
+   [
+    995,
+    "subsection",
+    "7. Formalization, code and reproducibility}\\label{formalization-code-and-reproducibility"
+   ],
+   [
+    1064,
+    "subsubsection",
+    "7.1. Repositories and contributions}\\label{repositories-and-contributions"
+   ],
+   [
+    1076,
+    "subsubsection",
+    "7.2. Model bridge and gain convention}\\label{model-bridge-and-gain-convention"
+   ],
+   [
+    1082,
+    "subsection",
+    "8. Comparison of mechanisms and scope}\\label{comparison-of-mechanisms-and-scope"
+   ],
+   [
+    1167,
+    "subsubsection",
+    "8.1. The bounded simplicial defect antecedent}\\label{the-bounded-simplicial-defect-antecedent"
+   ],
+   [
+    1214,
+    "subsection",
+    "Appendix A. Formal correspondence and reproduction}\\label{appendix-a.-formal-correspondence-and-reproduction"
+   ],
+   [
+    1216,
+    "subsubsection",
+    "A.1. Statements and checks}\\label{a.1.-statements-and-checks"
+   ],
+   [
+    1306,
+    "subsubsection",
+    "A.2. Intermediate proof contracts}\\label{a.2.-intermediate-proof-contracts"
+   ],
+   [
+    1350,
+    "subsubsection",
+    "A.3. Limits of the result}\\label{a.3.-limits-of-the-result"
+   ],
+   [
+    1358,
+    "subsection",
+    "Appendix B. Complementary construction tools}\\label{appendix-b.-complementary-construction-tools"
+   ],
+   [
+    1360,
+    "subsubsection",
+    "B.1. Budgeted compatible absorption}\\label{b.1.-budgeted-compatible-absorption"
+   ],
+   [
+    1386,
+    "subsubsection",
+    "B.2. Balanced reserves}\\label{b.2.-balanced-reserves"
+   ],
+   [
+    1395,
+    "subsubsection",
+    "B.3. Completion with four hosts}\\label{b.3.-completion-with-four-hosts"
+   ],
+   [
+    1403,
+    "subsection",
+    "Appendix C. Technical proof of mixed rounding}\\label{appendix-c.-technical-proof-of-mixed-rounding"
+   ],
+   [
+    1407,
+    "subsubsection",
+    "Lemma 3.2. Bounded-rank nibble with slack, input from Paper III}\\label{lemma-3.2.-bounded-rank-nibble-with-slack-input-from-paper-iii"
+   ],
+   [
+    1418,
+    "subsubsection",
+    "Lemma 3.3. Simultaneous selection of total and marked mass}\\label{lemma-3.3.-simultaneous-selection-of-total-and-marked-mass"
+   ],
+   [
+    1438,
+    "subsubsection",
+    "Lemma 3.4. Physical mixed selector}\\label{lemma-3.4.-physical-mixed-selector"
+   ],
+   [
+    1455,
+    "subsubsection",
+    "C.1. Cleaning, selection, and realization}\\label{c.1.-cleaning-selection-and-realization"
+   ],
+   [
+    1499,
+    "subsubsection",
+    "C.2. What is discarded and why the threshold is uniform}\\label{c.2.-what-is-discarded-and-why-the-threshold-is-uniform"
+   ],
+   [
+    1547,
+    "subsubsection",
+    "C.3. An explicit schedule and its propagation}\\label{c.3.-an-explicit-schedule-and-its-propagation"
+   ],
+   [
+    1620,
+    "subsection",
+    "Appendix D. Complete graphs and comparator identities}\\label{appendix-d.-complete-graphs-and-comparator-identities"
+   ],
+   [
+    1622,
+    "subsubsection",
+    "D.1. The complete graph at every order}\\label{d.1.-the-complete-graph-at-every-order"
+   ],
+   [
+    1693,
+    "subsubsection",
+    "D.2. Equality of mixed optima in complete-split graphs}\\label{d.2.-equality-of-mixed-optima-in-complete-split-graphs"
+   ],
+   [
+    1709,
+    "subsubsection",
+    "D.3. Exact reserve from core displacement}\\label{d.3.-exact-reserve-from-core-displacement"
+   ],
+   [
+    1720,
+    "subsection",
+    "Appendix E. The fixed-defect extension}\\label{appendix-e.-the-fixed-defect-extension"
+   ],
+   [
+    1724,
+    "subsubsection",
+    "E.1. Constructor and accounting}\\label{e.1.-constructor-and-accounting"
+   ],
+   [
+    1828,
+    "subsubsection",
+    "E.2. From the terminal to the eventual theorem}\\label{e.2.-from-the-terminal-to-the-eventual-theorem"
+   ],
+   [
+    1846,
+    "subsubsection",
+    "E.3. An unrestricted lower witness}\\label{e.3.-an-unrestricted-lower-witness"
+   ],
+   [
+    1858,
+    "subsubsection",
+    "E.4. Retained accounts for same-root stability}\\label{e.4.-retained-accounts-for-same-root-stability"
+   ],
+   [
+    1951,
+    "subsection",
+    "Appendix F. Parameters and proof interfaces for the extensions}\\label{appendix-f.-parameters-and-proof-interfaces-for-the-extensions"
+   ],
+   [
+    1953,
+    "subsubsection",
+    "F.1. Explicit fixed-defect parameters}\\label{f.1.-explicit-fixed-defect-parameters"
+   ],
+   [
+    1974,
+    "subsubsection",
+    "F.2. Fractional star accounting and small orders}\\label{f.2.-fractional-star-accounting-and-small-orders"
+   ],
+   [
+    1997,
+    "subsubsection",
+    "F.3. Uniform localization through a chordal edit}\\label{f.3.-uniform-localization-through-a-chordal-edit"
+   ],
+   [
+    2035,
+    "subsubsection",
+    "F.4. New public interfaces and limits of this revision}\\label{f.4.-new-public-interfaces-and-limits-of-this-revision"
+   ],
+   [
+    2072,
+    "subsubsection",
+    "F.5. Auxiliary lemmas and adaptations of chordal removal}\\label{f.5.-auxiliary-lemmas-and-adaptations-of-chordal-removal"
+   ],
+   [
+    2162,
+    "subsection",
+    "Appendix G. Packing gaps and limits of cleanup}\\label{appendix-g.-packing-gaps-and-limits-of-cleanup"
+   ],
+   [
+    2164,
+    "subsubsection",
+    "G.1. The all-order bound and packing gaps}\\label{g.1.-the-all-order-bound-and-packing-gaps"
+   ],
+   [
+    2179,
+    "subsubsection",
+    "G.2. A quantitative obstruction to codegree cleanup}\\label{g.2.-a-quantitative-obstruction-to-codegree-cleanup"
+   ],
+   [
+    2213,
+    "subsection",
+    "Acknowledgments}\\label{acknowledgments"
+   ],
+   [
+    2217,
+    "subsection",
+    "Use of artificial intelligence and computational tools}\\label{use-of-artificial-intelligence-and-computational-tools"
+   ],
+   [
+    2226,
+    "subsection",
+    "References"
+   ]
+  ],
+  "es": [
+   [
+    46,
+    "subsection",
+    "Resumen}\\label{resumen"
+   ],
+   [
+    59,
+    "subsection",
+    "1. Introducción}\\label{introduccion"
+   ],
+   [
+    81,
+    "subsubsection",
+    "Teorema A. Cota para todos los órdenes}\\label{teorema-a.-cota-para-todos-los-ordenes"
+   ],
+   [
+    89,
+    "subsubsection",
+    "Teorema B. Cota aguda y máximo eventual}\\label{teorema-b.-cota-aguda-y-maximo-eventual"
+   ],
+   [
+    105,
+    "subsubsection",
+    "Teorema C. Defecto simplicial enraizado fijo}\\label{teorema-c.-defecto-simplicial-enraizado-fijo"
+   ],
+   [
+    120,
+    "subsubsection",
+    "Teorema \\texorpdfstring{C\\ensuremath{^{\\prime}}}{C'}. Estabilidad con una misma raíz para defecto fijo}\\label{teorema-c.-estabilidad-con-una-misma-raiz-para-defecto-fijo"
+   ],
+   [
+    130,
+    "subsubsection",
+    "1.1. La condición común: presupuesto de pérdida}\\label{la-condicion-comun-presupuesto-de-perdida"
+   ],
+   [
+    168,
+    "subsubsection",
+    "1.2. Dicotomía estructural y mecanismos de resolución}\\label{dicotomia-estructural-y-mecanismos-de-resolucion"
+   ],
+   [
+    191,
+    "subsubsection",
+    "1.3. Organización y uso de la cordalidad}\\label{organizacion-y-uso-de-la-cordalidad"
+   ],
+   [
+    199,
+    "subsection",
+    "2. Ganancia mixta, dualidad y particiones}\\label{ganancia-mixta-dualidad-y-particiones"
+   ],
+   [
+    203,
+    "subsubsection",
+    "2.1. Por qué se redondea una ganancia}\\label{por-que-se-redondea-una-ganancia"
+   ],
+   [
+    228,
+    "subsubsection",
+    "Lema 2.1}\\label{lema-2.1"
+   ],
+   [
+    235,
+    "subsubsection",
+    "2.2. El óptimo fraccional y su certificado}\\label{el-optimo-fraccional-y-su-certificado"
+   ],
+   [
+    251,
+    "subsubsection",
+    "2.3. Relación con los funcionales anteriores}\\label{relacion-con-los-funcionales-anteriores"
+   ],
+   [
+    259,
+    "subsubsection",
+    "2.4. Notación de las dos ramas}\\label{notacion-de-las-dos-ramas"
+   ],
+   [
+    290,
+    "subsection",
+    "3. Redondeo mixto y régimen con holgura}\\label{redondeo-mixto-y-regimen-con-holgura"
+   ],
+   [
+    294,
+    "subsubsection",
+    "Teorema 3.1}\\label{teorema-3.1"
+   ],
+   [
+    309,
+    "subsubsection",
+    "Corolario 3.5}\\label{corolario-3.5"
+   ],
+   [
+    321,
+    "subsection",
+    "4. Localización del régimen crítico}\\label{localizacion-del-regimen-critico"
+   ],
+   [
+    330,
+    "subsubsection",
+    "4.1. Distancia a una familia fija}\\label{distancia-a-una-familia-fija"
+   ],
+   [
+    373,
+    "subsubsection",
+    "4.2. Descenso desde el terminal}\\label{descenso-desde-el-terminal"
+   ],
+   [
+    401,
+    "subsubsection",
+    "Proposición 4.3}\\label{proposicion-4.3"
+   ],
+   [
+    416,
+    "subsection",
+    "5. Raíz regularizada y cuentas físicas}\\label{raiz-regularizada-y-cuentas-fisicas"
+   ],
+   [
+    418,
+    "subsubsection",
+    "Teorema 5.0. Constructor cercano bajo hipótesis locales}\\label{teorema-5.0.-constructor-cercano-bajo-hipotesis-locales"
+   ],
+   [
+    430,
+    "subsubsection",
+    "5.1. Regularización sobre el grafo original}\\label{regularizacion-sobre-el-grafo-original"
+   ],
+   [
+    496,
+    "subsubsection",
+    "5.2. De emparejamientos a triángulos}\\label{de-emparejamientos-a-triangulos"
+   ],
+   [
+    510,
+    "subsubsection",
+    "5.3. Las tres cuentas que pagan la construcción}\\label{las-tres-cuentas-que-pagan-la-construccion"
+   ],
+   [
+    628,
+    "subsubsection",
+    "Lema 5.3}\\label{lema-5.3"
+   ],
+   [
+    656,
+    "subsubsection",
+    "5.4. El testigo que conserva la prueba}\\label{el-testigo-que-conserva-la-prueba"
+   ],
+   [
+    677,
+    "subsection",
+    "6. Ensamblaje y valor extremo}\\label{ensamblaje-y-valor-extremo"
+   ],
+   [
+    679,
+    "subsubsection",
+    "Demostración del Teorema B: cota superior}\\label{demostracion-del-teorema-b-cota-superior"
+   ],
+   [
+    685,
+    "subsubsection",
+    "6.1. Optimalidad irrestricta en completo-split}\\label{optimalidad-irrestricta-en-completo-split"
+   ],
+   [
+    703,
+    "subsubsection",
+    "6.2. El máximo eventual}\\label{el-maximo-eventual"
+   ],
+   [
+    719,
+    "subsubsection",
+    "6.3. Todos los órdenes y optimalidad del término lineal}\\label{todos-los-ordenes-y-optimalidad-del-termino-lineal"
+   ],
+   [
+    747,
+    "subsubsection",
+    "6.4. El exceso de una partición completo-split}\\label{el-exceso-de-una-particion-completo-split"
+   ],
+   [
+    759,
+    "subsubsection",
+    "6.5. Estabilidad integral y clasificación de los extremizadores}\\label{estabilidad-integral-y-clasificacion-de-los-extremizadores"
+   ],
+   [
+    813,
+    "subsubsection",
+    "6.6. Estabilidad para defecto fijo sobre una misma raíz}\\label{estabilidad-para-defecto-fijo-sobre-una-misma-raiz"
+   ],
+   [
+    933,
+    "subsubsection",
+    "6.7. Cotas uniformes y defecto sublineal}\\label{cotas-uniformes-y-defecto-sublineal"
+   ],
+   [
+    995,
+    "subsection",
+    "7. Formalización, código y reproducibilidad}\\label{formalizacion-codigo-y-reproducibilidad"
+   ],
+   [
+    1064,
+    "subsubsection",
+    "7.1. Repositorios y contribuciones}\\label{repositorios-y-contribuciones"
+   ],
+   [
+    1076,
+    "subsubsection",
+    "7.2. Puente de modelos y convención de ganancia}\\label{puente-de-modelos-y-convencion-de-ganancia"
+   ],
+   [
+    1082,
+    "subsection",
+    "8. Comparación de mecanismos y alcance}\\label{comparacion-de-mecanismos-y-alcance"
+   ],
+   [
+    1167,
+    "subsubsection",
+    "8.1. El antecedente de defecto simplicial acotado}\\label{el-antecedente-de-defecto-simplicial-acotado"
+   ],
+   [
+    1214,
+    "subsection",
+    "Apéndice A. Correspondencia formal y reproducción}\\label{apendice-a.-correspondencia-formal-y-reproduccion"
+   ],
+   [
+    1216,
+    "subsubsection",
+    "A.1. Enunciados y comprobaciones}\\label{a.1.-enunciados-y-comprobaciones"
+   ],
+   [
+    1306,
+    "subsubsection",
+    "A.2. Contratos intermedios de las pruebas}\\label{a.2.-contratos-intermedios-de-las-pruebas"
+   ],
+   [
+    1350,
+    "subsubsection",
+    "A.3. Límites del resultado}\\label{a.3.-limites-del-resultado"
+   ],
+   [
+    1358,
+    "subsection",
+    "Apéndice B. Herramientas de construcción complementarias}\\label{apendice-b.-herramientas-de-construccion-complementarias"
+   ],
+   [
+    1360,
+    "subsubsection",
+    "B.1. Absorción compatible con presupuesto}\\label{b.1.-absorcion-compatible-con-presupuesto"
+   ],
+   [
+    1386,
+    "subsubsection",
+    "B.2. Reservas equilibradas}\\label{b.2.-reservas-equilibradas"
+   ],
+   [
+    1395,
+    "subsubsection",
+    "B.3. Remate con cuatro anfitriones}\\label{b.3.-remate-con-cuatro-anfitriones"
+   ],
+   [
+    1403,
+    "subsection",
+    "Apéndice C. Prueba técnica del redondeo mixto}\\label{apendice-c.-prueba-tecnica-del-redondeo-mixto"
+   ],
+   [
+    1407,
+    "subsubsection",
+    "Lema 3.2. Nibble de rango acotado con holgura, entrada de Paper III}\\label{lema-3.2.-nibble-de-rango-acotado-con-holgura-entrada-de-paper-iii"
+   ],
+   [
+    1418,
+    "subsubsection",
+    "Lema 3.3. Selección simultánea de masa total y marcada}\\label{lema-3.3.-seleccion-simultanea-de-masa-total-y-marcada"
+   ],
+   [
+    1438,
+    "subsubsection",
+    "Lema 3.4. Selector mixto físico}\\label{lema-3.4.-selector-mixto-fisico"
+   ],
+   [
+    1455,
+    "subsubsection",
+    "C.1. Limpieza, selección y realización}\\label{c.1.-limpieza-seleccion-y-realizacion"
+   ],
+   [
+    1499,
+    "subsubsection",
+    "C.2. Qué se descarta y por qué el umbral es uniforme}\\label{c.2.-que-se-descarta-y-por-que-el-umbral-es-uniforme"
+   ],
+   [
+    1547,
+    "subsubsection",
+    "C.3. Un calendario explícito y su propagación}\\label{c.3.-un-calendario-explicito-y-su-propagacion"
+   ],
+   [
+    1620,
+    "subsection",
+    "Apéndice D. Grafos completos e identidades del comparador}\\label{apendice-d.-grafos-completos-e-identidades-del-comparador"
+   ],
+   [
+    1622,
+    "subsubsection",
+    "D.1. El grafo completo a todo orden}\\label{d.1.-el-grafo-completo-a-todo-orden"
+   ],
+   [
+    1693,
+    "subsubsection",
+    "D.2. Igualdad de óptimos mixtos en grafos completo-split}\\label{d.2.-igualdad-de-optimos-mixtos-en-grafos-completo-split"
+   ],
+   [
+    1709,
+    "subsubsection",
+    "D.3. Reserva exacta por desplazamiento del núcleo}\\label{d.3.-reserva-exacta-por-desplazamiento-del-nucleo"
+   ],
+   [
+    1720,
+    "subsection",
+    "Apéndice E. La extensión a defecto fijo}\\label{apendice-e.-la-extension-a-defecto-fijo"
+   ],
+   [
+    1724,
+    "subsubsection",
+    "E.1. Constructor y cuentas}\\label{e.1.-constructor-y-cuentas"
+   ],
+   [
+    1828,
+    "subsubsection",
+    "E.2. Del terminal al teorema eventual}\\label{e.2.-del-terminal-al-teorema-eventual"
+   ],
+   [
+    1846,
+    "subsubsection",
+    "E.3. Testigo inferior sin restricción en las piezas}\\label{e.3.-testigo-inferior-sin-restriccion-en-las-piezas"
+   ],
+   [
+    1858,
+    "subsubsection",
+    "E.4. Cuentas conservadas para la estabilidad con una misma raíz}\\label{e.4.-cuentas-conservadas-para-la-estabilidad-con-una-misma-raiz"
+   ],
+   [
+    1951,
+    "subsection",
+    "Apéndice F. Parámetros e interfaces de prueba de las extensiones}\\label{apendice-f.-parametros-e-interfaces-de-prueba-de-las-extensiones"
+   ],
+   [
+    1953,
+    "subsubsection",
+    "F.1. Parámetros explícitos para defecto fijo}\\label{f.1.-parametros-explicitos-para-defecto-fijo"
+   ],
+   [
+    1974,
+    "subsubsection",
+    "F.2. Contabilidad fraccional por estrellas y órdenes pequeños}\\label{f.2.-contabilidad-fraccional-por-estrellas-y-ordenes-pequenos"
+   ],
+   [
+    1997,
+    "subsubsection",
+    "F.3. Localización uniforme mediante edición hacia un cordal}\\label{f.3.-localizacion-uniforme-mediante-edicion-hacia-un-cordal"
+   ],
+   [
+    2035,
+    "subsubsection",
+    "F.4. Nuevas interfaces públicas y límites de esta revisión}\\label{f.4.-nuevas-interfaces-publicas-y-limites-de-esta-revision"
+   ],
+   [
+    2072,
+    "subsubsection",
+    "F.5. Lemas auxiliares y adaptaciones de remoción cordal}\\label{f.5.-lemas-auxiliares-y-adaptaciones-de-remocion-cordal"
+   ],
+   [
+    2162,
+    "subsection",
+    "Apéndice G. Brechas de empaquetamiento y límites de la limpieza}\\label{apendice-g.-brechas-de-empaquetamiento-y-limites-de-la-limpieza"
+   ],
+   [
+    2164,
+    "subsubsection",
+    "G.1. La cota para todos los órdenes y las brechas de empaquetamiento}\\label{g.1.-la-cota-para-todos-los-ordenes-y-las-brechas-de-empaquetamiento"
+   ],
+   [
+    2179,
+    "subsubsection",
+    "G.2. Una obstrucción cuantitativa a la limpieza de codegrado}\\label{g.2.-una-obstruccion-cuantitativa-a-la-limpieza-de-codegrado"
+   ],
+   [
+    2213,
+    "subsection",
+    "Agradecimientos}\\label{agradecimientos"
+   ],
+   [
+    2217,
+    "subsection",
+    "Uso de inteligencia artificial y herramientas computacionales}\\label{uso-de-inteligencia-artificial-y-herramientas-computacionales"
+   ],
+   [
+    2226,
+    "subsection",
+    "Referencias"
+   ]
+  ]
+ },
+ "line_numeric": [
+  {
+   "en_line": 1060,
+   "es_line": 1060,
+   "only_en": {
+    "256": 1
+   },
+   "only_es": {},
+   "en": "The source cut {\\ttfamily\\small piv-\\discretionary{\\hbox{\\ensuremath{\\hookrightarrow}}}{}{}v12-\\discretionary{\\hbox{\\ensuremath{\\hookrightarrow}}}{}{}fb459343d234} contains 607 Lean modules and 615 source/\\allowbreak{}configuration/\\allowbreak{}documentation e",
+   "es": "El corte fuente {\\ttfamily\\small piv-\\discretionary{\\hbox{\\ensuremath{\\hookrightarrow}}}{}{}v12-\\discretionary{\\hbox{\\ensuremath{\\hookrightarrow}}}{}{}fb459343d234} contiene 607 módulos Lean y 615 entradas de fuentes, configuración y documentación. La reconstr"
+  }
+ ]
+}

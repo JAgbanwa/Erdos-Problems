@@ -1,0 +1,22 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 RequestProject/AS/ColoredHom.lean -o /workspace/request-project/.lake/runner/lib/lean/RequestProject/AS/ColoredHom.olean -i /workspace/request-project/.lake/runner/lib/lean/RequestProject/AS/ColoredHom.ilean
+import took 6.25s
+.olean serialization took 204ms
+cumulative profiling times:
+	.olean serialization 204ms
+	attribute application 0.126ms
+	congr simp thm 0.421ms
+	elaboration 13.8ms
+	fix level params 0.063ms
+	import 6.25s
+	initialization 41.4ms
+	instantiate metavars 0.0775ms
+	interpretation 352ms
+	let-to-have transformation 0.0481ms
+	linting 3.73ms
+	parsing 3.39ms
+	process pre-definitions 3.1ms
+	share common exprs 0.327ms
+	simp 2.17ms
+	tactic execution 6.79ms
+	type checking 1.75ms
+	typeclass inference 17.6ms

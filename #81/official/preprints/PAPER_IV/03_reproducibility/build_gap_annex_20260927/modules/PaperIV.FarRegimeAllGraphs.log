@@ -1,0 +1,21 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 PaperIV/FarRegimeAllGraphs.lean -o /workspace/request-project/.lake/runner/lib/lean/PaperIV/FarRegimeAllGraphs.olean -i /workspace/request-project/.lake/runner/lib/lean/PaperIV/FarRegimeAllGraphs.ilean
+import took 4.26s
+cumulative profiling times:
+	.olean serialization 95.5ms
+	attribute application 0.0131ms
+	congr simp thm 3.42ms
+	elaboration 13.6ms
+	fix level params 0.0649ms
+	import 4.26s
+	initialization 36.1ms
+	instantiate metavars 0.524ms
+	interpretation 253ms
+	let-to-have transformation 0.0331ms
+	linting 2.55ms
+	parsing 1.76ms
+	process pre-definitions 0.859ms
+	share common exprs 0.586ms
+	simp 28.6ms
+	tactic execution 60.9ms
+	type checking 7.02ms
+	typeclass inference 54.4ms

@@ -1,0 +1,27 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 PaperIV/FourHostClosure.lean -o /workspace/request-project/.lake/runner/lib/lean/PaperIV/FourHostClosure.olean -i /workspace/request-project/.lake/runner/lib/lean/PaperIV/FourHostClosure.ilean
+PaperIV/FourHostClosure.lean:69:8: warning: automatically included section variable(s) unused in theorem `_private.PaperIV.FourHostClosure.0.PaperIV.FourHostClosure.sum_card_colourClass`:
+  [DecidableEq V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+import took 2.47s
+cumulative profiling times:
+	.olean serialization 40ms
+	attribute application 0.0464ms
+	congr simp thm 0.308ms
+	elaboration 31.9ms
+	fix level params 0.595ms
+	import 2.47s
+	initialization 36.1ms
+	instantiate metavars 4.18ms
+	interpretation 175ms
+	let-to-have transformation 0.133ms
+	linting 16ms
+	parsing 4.35ms
+	process pre-definitions 3.25ms
+	share common exprs 1.56ms
+	simp 0.839ms
+	tactic execution 86ms
+	type checking 11.8ms
+	typeclass inference 42.8ms

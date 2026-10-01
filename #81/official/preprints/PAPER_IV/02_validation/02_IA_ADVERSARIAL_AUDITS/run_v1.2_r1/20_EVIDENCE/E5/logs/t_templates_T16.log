@@ -1,0 +1,16 @@
+{'n': 2, 'M': 1, 'status': 'Optimal', 'pieces': 1, 'gain': 0, 'verified': True, 'ok': True}
+{'n': 3, 'M': 2, 'status': 'Optimal', 'pieces': 1, 'gain': 2, 'verified': True, 'ok': True}
+{'n': 4, 'M': 3, 'status': 'Optimal', 'pieces': 1, 'gain': 5, 'verified': True, 'ok': True}
+{'n': 5, 'M': 5, 'status': 'Optimal', 'pieces': 5, 'gain': 5, 'verified': True, 'ok': True}
+{'n': 6, 'M': 7, 'status': 'Optimal', 'pieces': 7, 'gain': 8, 'verified': True, 'ok': True}
+{'n': 7, 'M': 9, 'status': 'Optimal', 'pieces': 7, 'gain': 14, 'verified': True, 'ok': True}
+{'n': 8, 'M': 12, 'status': 'Optimal', 'pieces': 11, 'gain': 17, 'verified': True, 'ok': True}
+{'n': 9, 'M': 15, 'status': 'Optimal', 'pieces': 12, 'gain': 24, 'verified': True, 'ok': True}
+{'n': 10, 'M': 18, 'status': 'Optimal', 'pieces': 12, 'gain': 33, 'verified': True, 'ok': True}
+{'n': 11, 'M': 22, 'status': 'Optimal', 'pieces': 13, 'gain': 42, 'verified': True, 'ok': True}
+{'n': 12, 'M': 26, 'status': 'Optimal', 'pieces': 13, 'gain': 53, 'verified': True, 'ok': True}
+{'n': 13, 'M': 30, 'status': 'Optimal', 'pieces': 13, 'gain': 65, 'verified': True, 'ok': True}
+{'n': 4, 'M': 3, 'c3_found': 4, 'parity_lower_bound': 4, 'verified': True, 'certified_exact': True, 'ILP_with_<=M(n)_status': 'Infeasible', 'ok': True}
+{'n': 10, 'M': 18, 'c3_found': 19, 'parity_lower_bound': 19, 'verified': True, 'certified_exact': True, 'ILP_with_<=M(n)_status': 'Infeasible', 'ok': True}
+{'n': 16, 'M': 45, 'c3_found': 46, 'parity_lower_bound': 46, 'verified': True, 'certified_exact': True, 'ILP_with_<=M(n)_status': 'skipped (time budget)', 'ok': True}
+T16 PASS | negctl: PASS (rejected) | 140.73

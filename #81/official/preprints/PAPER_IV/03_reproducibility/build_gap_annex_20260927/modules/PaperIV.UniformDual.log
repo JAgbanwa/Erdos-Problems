@@ -1,0 +1,26 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 PaperIV/UniformDual.lean -o /workspace/request-project/.lake/runner/lib/lean/PaperIV/UniformDual.olean -i /workspace/request-project/.lake/runner/lib/lean/PaperIV/UniformDual.ilean
+import took 2.95s
+cumulative profiling times:
+	.olean serialization 53.6ms
+	attribute application 0.049ms
+	compilation (IR) 0.374ms
+	compilation (LCNF base) 1.43ms
+	compilation (LCNF mono) 0.385ms
+	congr simp thm 2.69ms
+	elaboration 21.9ms
+	fix level params 0.31ms
+	import 2.95s
+	initialization 36.8ms
+	instantiate metavars 0.345ms
+	interpretation 276ms
+	let-to-have transformation 0.0685ms
+	linting 4.85ms
+	norm_num 30.7ms
+	parsing 3.57ms
+	process pre-definitions 7.04ms
+	ring 9.44ms
+	share common exprs 2.2ms
+	simp 2.29ms
+	tactic execution 37ms
+	type checking 29ms
+	typeclass inference 135ms

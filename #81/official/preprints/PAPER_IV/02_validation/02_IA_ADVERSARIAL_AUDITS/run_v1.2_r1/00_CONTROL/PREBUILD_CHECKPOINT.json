@@ -1,0 +1,41 @@
+{
+  "run": "run_v1.2_r1",
+  "recorded_utc": "2026-09-30T15:06:00Z",
+  "target_hashes": {
+    "AUDIT_TARGET_v1.2.json": "d1eb542d9cd7c700bd7350987cfc6d8154419e25fa9f4a1477d2597f5c8fdc29",
+    "source_manifest": "fb459343d234f968d7d32eff1491ea8a09aa2e135b313a80623012e7449042f5",
+    "source_zip": "cb2741454380736ffe01b59933057b5079fa9f865d5bbdd3f67534bf808a62e6",
+    "annex_zip": "2847a422865e06880d457ea806aae5b9f749d22359eff325349c09c01cb4837d",
+    "v1_0_base_zip": "0a13c01cc4cf0198d5d138082d45b25df4c5ac0684c0ed85e7cc758575f8a7dd",
+    "manuscript_manifest": "2451d43bfacee76791a10bcd115100d6a7dfa68e4e3bda9de62032179151f8be",
+    "manuscript_zip": "422b0be34cfec130eaece95d077975d4e01d7e3d4501461b8db64931e0d2e663"
+  },
+  "completed_checks": {
+    "E0": "PASS (initial; final recheck pending)",
+    "E1": "PASS (first pass)",
+    "E3_static": "PASS (dynamic pending)",
+    "E7": "PASS with MINOR findings; r2 blocker F-01 resolved in v1.2",
+    "E2": "INCONCLUSIVE: no mathematical error; A2-3, A2-4, A2-5, A2-6 REQUIRES_EXPANSION",
+    "E5": "PASS within finite scope (24 PASS, Certo item audited in E8 as feasibility-only, correct)",
+    "E6": "PASS with findings (1 MODERATE terminology, 4 MINOR)",
+    "E8_preliminary": "PASS on evidence consistency; disagreements with internal audit recorded"
+  },
+  "unresolved_issues": [
+    "Exposition gaps A2-3 (per-edge feasibility of RC01 cleaned system omits two-sided deviation cleanup), A2-4, A2-5, A2-6: not counterexamples; correctness to be supported by the formal build.",
+    "Minor attribution/wording items E7-M1..M6, E1-O3, E6-01..05, A.2 '§3.2' reference."
+  ],
+  "confirmed_blockers": [],
+  "blocker_assessment": "No confirmed mathematical, attribution or identity blocker. The exposition gaps are MODERATE and are exactly the kind of steps the formal build is meant to certify; E4 is therefore required, not moot.",
+  "machine_load": "CPU 4%, 15 GB free RAM, 57.8 GB free disk; two idle lake processes of another session (not touched).",
+  "build_plan": {
+    "runner": "20_EVIDENCE/E4/auditor_build.py (auditor-written, no Lake, no author runner)",
+    "main_project": "05_BUILD/main/src (fresh extraction of the source ZIP, verified 615/615), objects in 05_BUILD/main/obj",
+    "annex_project": "05_BUILD/annex/extract/lean_v1.0_freeze (fresh v1.0 base + 38 overlaid annex files, verified), objects in 05_BUILD/annex/obj",
+    "dependencies": "shared pinned package build dirs read-only via LEAN_PATH; snapshot before/after",
+    "threads": 8,
+    "targets_main": "all 19 FREEZE_SCOPE targets (closure = 607 modules), then AuditorChecks.lean and AuditorNegControl.lean",
+    "target_annex": "BoundedCliqueGap.AxiomCheck",
+    "caps": "main 10 h, annex 2 h; serial, one lean process at a time"
+  },
+  "decision": "PROCEED_TO_BUILD"
+}

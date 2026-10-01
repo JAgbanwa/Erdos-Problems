@@ -1,0 +1,286 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+\documentclass[
+]{article}
+\usepackage{xcolor}
+\usepackage{amsmath,amssymb}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math} % this also loads fontspec
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+\usepackage{lmodern}
+\ifPDFTeX\else
+  % xetex/luatex font selection
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{longtable,booktabs,array}
+\usepackage{caption}
+\captionsetup[table]{skip=6pt}
+\newcounter{none} % for unnumbered tables
+\usepackage{calc} % for calculating minipage widths
+% Correct order of tables after \paragraph or \subparagraph
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd\longtable{\par}{\if@noskipsec\mbox{}\fi\par}{}{}
+\makeatother
+% Allow footnotes in longtable head/foot
+\IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
+\makesavenoteenv{longtable}
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\usepackage{bookmark}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same}
+% fallback for those not using the hyperref driver hyperxmp:
+\makeatletter
+\@ifundefined{xmpquote}{\newcommand{\xmpquote}[1]{#1}}{}
+\makeatother
+\hypersetup{
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+
+\author{}
+\date{}
+
+\begin{document}
+
+\section{Gate E3 report --- run\_v1.2\_r1 (Paper IV
+v1.2)}\label{gate-e3-report--run_v12_r1-paper-iv-v12}
+
+Verdict: \textbf{PASS with finding X-27}. Evidence directory:
+\texttt{20\_EVIDENCE/E3/}.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\subsection{E3 --- Formal conformance, static part (first pass, before
+any
+build)}\label{e3--formal-conformance-static-part-first-pass-before-any-build}
+
+Method: literal header extraction from the frozen source directory
+(identical to ZIP and manifest, E0) with the auditor\textquotesingle s
+\texttt{extract\_headers.py}; outputs \texttt{headers\_defs.txt},
+\texttt{headers\_defs2.txt}, \texttt{headers\_ext.txt},
+\texttt{headers\_chordal.txt}. Definitions opened manually:
+\texttt{RootedSimplicialDefect}, \texttt{E32/Basic.lean},
+\texttt{ExplicitFixedStability.lean},
+\texttt{PublicationStability.lean},
+\texttt{DefectExplicitPublication.lean},
+\texttt{DefectSharpPublication.lean}, \texttt{E32/Consequences.lean},
+\texttt{E32/Comparison.lean}, \texttt{E32/DeletionInduction.lean},
+\texttt{E34/L11Main.lean}, \texttt{E34/L11Params.lean},
+\texttt{E34/Params.lean}, \texttt{E34/Pinned.lean},
+\texttt{RootPartitionStability}, \texttt{PieceEdgeStability},
+\texttt{FixedDefectPieceEdges}, \texttt{OptimalTemplateObstruction},
+\texttt{E35/Theorem.lean}, \texttt{E35/Main.lean},
+\texttt{E18/Numeric.lean}, \texttt{MixedRounding/Defs.lean}, annex
+\texttt{BoundedCliqueGap/\{Gap,Defs,AxiomCheck\}.lean}. The elaborated
+types are NOT yet kernel-confirmed (E4 will
+\texttt{\#check}/\texttt{\#print\ axioms} them in the auditor build).
+
+\subsection{Definitions vs manuscript}\label{definitions-vs-manuscript}
+
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}llll@{}}
+\toprule\noalign{}
+Notion & Lean & Manuscript & Verdict \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+clique partition & \texttt{FarRounding.CliquePartition}: cliques,
+card≥2, pairwise edge-disjoint \texttt{pairs},
+\texttt{biUnion\ pairs\ =\ edgeFinset} & exact edge partition (A.1) &
+MATCH \\
+M(n) & \texttt{targetSize\ n\ =\ n*(n+1)/6} (ℕ) & ⌊n(n+1)/6⌋ & MATCH \\
+Q\_s(n) & \texttt{defectTarget\ s\ n\ =\ targetSize\ (n+s)\ −\ C(s+1,2)}
+(ℕ truncated) & M(n+s)−C(s+1,2) & MATCH for n large (truncation only
+when M(n+s)\textless C(s+1,2)) \\
+rsd ≤ s & \texttt{RootedDefectAt}: ∀U R, R⊆U, R clique, U∖R≠∅ → ∃v∈U∖R
+∃C⊆N\_U(v) clique, \textbar N\_U(v)\textbar≤\textbar C\textbar+s & §1
+l.84 & MATCH; \texttt{E32.rsd} = Nat.find, \texttt{rsd\_le\_iff} \\
+template T(C,D,H) & \texttt{defSplitGraph\ C\ D\ H}: C--C, (C∪D)--H
+adjacent, nothing else & (K\_C⊔I\_D)∨I\_H & MATCH \\
+root & \texttt{E32.IsDefectRoot}: disjoint cover, C clique of G,
+\textbar D\textbar=s, 2≤\textbar C\textbar≤\textbar H\textbar{} & l.101,
+l.899 & MATCH \\
+baseline &
+\texttt{rootBaseline\ =\ (\textbar{}C\textbar{}+\textbar{}D\textbar{})\textbar{}H\textbar{}\ −\ C(\textbar{}C\textbar{},2)}
+& (6.10) k(n−k)−C(k−s,2) & MATCH \\
+canonical piece (defect) & \texttt{IsCanonicalPiece}: \{x,h\}, x∈C∪D,
+h∈H or \{c,c\textquotesingle,h\} & l.908 & MATCH \\
+canonical piece (chordal) & \texttt{IsCanonicalAt\ R\ K}:
+\textbar K∖R\textbar=1 ∧ \textbar K∩R\textbar∈\{1,2\} & l.868 & MATCH \\
+E\_bad & Σ over noncanonical pieces of C(\textbar K\textbar,2) & l.908 &
+MATCH \\
+optimal template & \texttt{IsAdmissibleExtremal}: G = defSplitGraph C D
+H, \textbar D\textbar=s, NearestCore(n+s,\textbar C\textbar+s) =
+\textbar6k−(2m+1)\textbar≤3 & "nearest integer to (2(n+s)+1)/6" &
+MATCH \\
+γ\_s, A\_s, N\_s\^{}stab &
+\texttt{stabilityGamma\ =\ min(min\ 1\ (etaNF/4),\ epsS/4)/2};
+\texttt{stabilityConstant\ =\ max(40000(s+1)\^{}3,\ 2/epsS)};
+\texttt{stabilityThreshold\ =\ 2·deletionBase\ +\ sharpThreshold\ +\ s\ +\ 4},
+\texttt{deletionBase\ =\ minDegThreshold\ +\ F\_s\ +\ s\ +\ 3\ +\ ⌈1/ε\_s⌉\ +\ ⌈A\_s⌉\ +\ 1},
+\texttt{minDegThreshold\ =\ ⌈10\^{}50(s+1)\^{}8⌉\ +\ NLoc(NeditE,s,ε\_s)\ +\ NfarE(etaNF\ s)\ +\ s\ +\ 5};
+\texttt{epsS\ =\ 1/(10\^{}41(s+1)\^{}8)} & (6.11), (F.1) & MATCH (term
+by term) \\
+F.11 parameters & \texttt{y11\ =\ ⌈256K²/ε²⌉}, \texttt{δ11\ =\ 1/(4y²)},
+\texttt{B11\ =\ ⌊8K/δ11⌋},
+\texttt{m11V\ =\ ⌈2\^{}58(K+1)\^{}15/ε\^{}12⌉} & (F.11) & MATCH \\
+pinned sample & \texttt{PinnedOn}: ∃ tree T, map ι preserving on-path
+relation (not required injective), subtrees T\_u ∋ ι(x\_u), adjacency ⇔
+intersection & F.5 & MATCH \\
+tower & \texttt{E19.tower2}, \texttt{E35.Ptower\ s\ =\ cT(s+1)\^{}1680},
+\texttt{cT\ =\ hIter\ +\ cFar\ +\ 841780},
+\texttt{cFar\ =\ cPoly(128·10\^{}82)\^{}105},
+\texttt{cPoly\ =\ 4·17664\^{}5·9000\^{}105+3006},
+\texttt{hIter\ =\ 4·8\^{}5·2208\^{}5·4500\^{}105·(2·10\^{}16)\^{}105} &
+§6.3, (6.28) & MATCH \\
+s\_max &
+\texttt{sMaxT\ n\ =\ Nat.findGreatest\ (tower2(Ptower\ S)\ ≤\ n)\ n} &
+(6.29) & MATCH incl. the stated caveat \\
+\end{longtable}
+}
+
+\subsection{Headline theorems}\label{headline-theorems}
+
+All entries of E1\textquotesingle s claim map were compared with the
+literal headers: quantifier order, exact coverage, order bounds,
+unrestricted lower bounds, real/rational deficits and the "root before Q
+and τ" order all match. See E1\_RECORD.md for the table.
+
+\subsection{F.5 case structure (static)}\label{f5-case-structure-static}
+
+\texttt{E34.lemma11\_V} = by\_cases on (A) every admissible ψ has conf ≥
+δ11 n² → \texttt{l11\_caseA} (thm2 + pinned⇒proper); else fix ψ with
+conf \textless{} δ11 n²; by\_cases (B1) some section c has all rank
+assignments with mismatch \textgreater{} ε/(2K) n² →
+\texttt{l11\_caseB1} (claim5\_count, block\_ineq, δ11·y²=1/4, prefix
+counting with \texttt{card\_prefix\_le}); else (B2) \texttt{l11\_caseB2}
+produces a chordal glued F with d\_E(G,F) \textless{} εn², contradicting
+farness. The three cases are exhaustive by construction (two nested
+\texttt{by\_cases}), the common conclusion is "at most half of the
+n\^{}m ordered samples are pinned". Matches Appendix F.5 text
+l.2320-2341.
+
+\subsection{Export and target scope
+(static)}\label{export-and-target-scope-static}
+
+\begin{itemize}
+\tightlist
+\item
+  \texttt{ReleaseExportCheck.lean}: only import \texttt{PaperIV};
+  exactly \textbf{224} \texttt{\#check} lines (recount).
+\item
+  19 targets = FREEZE\_SCOPE list; union of their import closures = all
+  607 modules (after correction C-01).
+\item
+  \texttt{ResearchAudit} custom cone check over \textbf{75} literal
+  targets (recount = manuscript\textquotesingle s 75): forbids roots
+  Erdos81/GalvinRoute/RouteB and any axiom outside \{propext,
+  Classical.choice, Quot.sound\}.
+\item
+  \texttt{OptimalTemplateObstructionAudit}: 6 targets, union cone, same
+  checks.
+\item
+  \texttt{FDCheck.ASCheck}: 6 selected declarations (public Theorem C
+  eventual/maximum, E35.theoremC\_tower,
+  fixed\_defect\_stability\_explicit,
+  fixed\_defect\_joint\_stability\_real,
+  sequence\_arbitrary\_orders\_stability); forbids 6 named removal keys
+  (\texttt{AlonShapira.lemma\_4\_2}, two \texttt{near\_chordal\_of\_*}
+  lemmas, \texttt{EditRoute.editApproxAt\_all},
+  \texttt{EditRoute.fixedL4Localization\_unconditional},
+  \texttt{AFKS.strong\_regularity}). Scope = named lemmas only, as the
+  manuscript states (§7 l.1138).
+\item
+  Cone traversal code: type + value constants, recursive; axioms
+  detected via \texttt{axiomInfo}. Limitation: does not detect
+  relocated/renamed copies (stated in §7), and a constant missing from
+  the environment is silently skipped (cannot happen for elaborated
+  terms).
+\end{itemize}
+
+\subsection{Observations}\label{observations}
+
+\begin{itemize}
+\tightlist
+\item
+  E3-O1: E34 uses \texttt{AlonShapira.IsChordal} /
+  \texttt{AlonShapira.editDist} (definitions in the RequestProject tree)
+  --- the manuscript discloses that shared definitions remain (§7).
+  Their agreement with the paper\textquotesingle s chordality is used
+  through bridge lemmas; dynamic confirmation that the public types use
+  \texttt{PaperIV.FarRounding.IsChordal}/ \texttt{RootedDefectAt} only
+  (they do, statically) is sufficient for the public statements.
+\item
+  E3-O2: Several audit targets (ResearchAudit,
+  OptimalTemplateObstructionAudit, E17.ImprovedFarRoundingAudit) contain
+  no \texttt{\#print\ axioms}; they rely on custom elaborators. E4 will
+  not rely on them: the auditor writes an independent
+  \texttt{\#print\ axioms}/cone file.
+\end{itemize}
+
+\textbf{E3 static status: PASS (no conformance defect found); dynamic
+part pending (E4).}
+
+\subsection{Dynamic part (after E4, 2026-09-30 22:00
+UTC)}\label{dynamic-part-after-e4-2026-09-30-2200-utc}
+
+\begin{itemize}
+\tightlist
+\item
+  Elaborated types printed by \texttt{AuditorChecks.lean} agree with the
+  static headers; all 50 listed public declarations exist in the
+  environment built from the cut; 224 exports compile through
+  \texttt{import\ PaperIV} alone.
+\item
+  The 19 targets are exactly FREEZE\_SCOPE; their closure is 607 modules
+  (runner PLAN.json).
+\item
+  Cone checks: standard axioms only; no \texttt{Erdos81} root; ASCheck
+  exclusions confirmed on the six named cones.
+\item
+  \textbf{X-27 (MODERATE):}
+  \texttt{E32.cp\_classification\_of\_theoremCPrimeC} (cited in Table 9
+  for the unrestricted equality classification) and
+  \texttt{E32.ref15Theorem11\_of\_theoremCPrimeC} depend, via
+  \texttt{E32.theoremC\_at} →
+  \texttt{DefectSharpPublication.rooted\_defect\_eventual}, on the
+  historical Alon--Shapira removal chain
+  (\texttt{AlonShapira.lemma\_4\_2}, \texttt{AFKS.strong\_regularity},
+  \texttt{EditRoute.fixedL4Localization\_unconditional}, \ldots). The
+  manuscript presents that chain as historical and not selected (§7
+  l.1138, E.2 l.1951, ref. {[}23{]}) without saying that the cp-part of
+  (6.18) and the formal comparison with {[}15, Theorem 1.1{]} still use
+  it.
+\end{itemize}
+
+\textbf{E3 verdict: PASS with one MODERATE provenance finding (X-27).}
+No statement--type mismatch.
+
+\end{document}

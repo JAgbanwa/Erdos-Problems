@@ -1,0 +1,24 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 PaperIV/ParametricBudget.lean -o /workspace/request-project/.lake/runner/lib/lean/PaperIV/ParametricBudget.olean -i /workspace/request-project/.lake/runner/lib/lean/PaperIV/ParametricBudget.ilean
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_nlinarith_1._boxed took 115ms
+import took 2.81s
+cumulative profiling times:
+	.olean serialization 42.8ms
+	attribute application 0.0794ms
+	congr simp thm 2.94ms
+	elaboration 36.1ms
+	fix level params 0.523ms
+	import 2.81s
+	initialization 36.6ms
+	instantiate metavars 0.948ms
+	interpretation 367ms
+	let-to-have transformation 0.108ms
+	linting 8.25ms
+	norm_num 64ms
+	parsing 2.75ms
+	process pre-definitions 6.32ms
+	ring 23.7ms
+	share common exprs 6.35ms
+	simp 32.1ms
+	tactic execution 19.2ms
+	type checking 55.8ms
+	typeclass inference 223ms

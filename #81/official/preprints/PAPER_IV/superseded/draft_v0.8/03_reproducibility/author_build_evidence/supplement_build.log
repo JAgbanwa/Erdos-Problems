@@ -1,0 +1,1084 @@
+⚠ [8072/8151] Replayed Nibble.TightSchedule
+warning: Nibble/TightSchedule.lean:40:22: unused variable `hgam8`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Nibble/TightSchedule.lean:51:22: unused variable `hgam8`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [8097/8151] Replayed Nibble.LPDuality
+warning: Nibble/LPDuality.lean:29:8: automatically included section variable(s) unused in theorem `_private.Nibble.LPDuality.0.LPDuality.zero_isPacking`:
+  [Fintype C]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype C] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: Nibble/LPDuality.lean:68:8: automatically included section variable(s) unused in theorem `_private.Nibble.LPDuality.0.LPDuality.coverOpt_le_value`:
+  [Fintype O]
+  [DecidableEq C]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype O] [DecidableEq C] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: Nibble/LPDuality.lean:105:8: automatically included section variable(s) unused in theorem `_private.Nibble.LPDuality.0.LPDuality.coverMap_apply_row`:
+  [DecidableEq C]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq C] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: Nibble/LPDuality.lean:109:8: automatically included section variable(s) unused in theorem `_private.Nibble.LPDuality.0.LPDuality.coverMap_apply_value`:
+  [DecidableEq C]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq C] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: Nibble/LPDuality.lean:605:8: automatically included section variable(s) unused in theorem `_private.Nibble.LPDuality.0.LPDuality.coverOpt_eq_zero_of_empty_row`:
+  [Fintype O]
+  [DecidableEq C]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype O] [DecidableEq C] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [8104/8151] Replayed Nibble.BeckFialaPairs
+warning: Nibble/BeckFialaPairs.lean:30:0: automatically included section variable(s) unused in theorem `Nibble.BeckFiala.mem_pairClosure`:
+  [DecidableEq V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+ℹ [8109/8198] Replayed Nibble.FracNibbleSlack
+info: Nibble/FracNibbleSlack.lean:579:0: 'Nibble.fracNibble_withSlack' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [8110/8198] Replayed Nibble.FracNibbleSlackR
+info: Nibble/FracNibbleSlackR.lean:642:0: 'Nibble.SlackR.fracNibbleR_withSlack' depends on axioms: [propext, Classical.choice, Quot.sound]
+⚠ [8111/8198] Replayed Nibble.FracNibbleLE
+warning: Nibble/FracNibbleLE.lean:153:0: automatically included section variable(s) unused in theorem `Nibble.LEUnif.padWtLE_nonneg`:
+  [DecidableEq X]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq X] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: Nibble/FracNibbleLE.lean:201:0: automatically included section variable(s) unused in theorem `Nibble.LEUnif.sum_over_i`:
+  [DecidableEq X]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq X] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+info: Nibble/FracNibbleLE.lean:608:0: 'Nibble.fracNibble_leUniform' depends on axioms: [propext, Classical.choice, Quot.sound]
+⚠ [8113/8198] Replayed PaperIV.ChordalStructure
+warning: PaperIV/ChordalStructure.lean:127:8: automatically included section variable(s) unused in theorem `_private.PaperIV.ChordalStructure.0.SimpleGraph.isSimplicial_of_rsimplicial`:
+  [Fintype V]
+  [DecidableEq V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] [DecidableEq V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: PaperIV/ChordalStructure.lean:133:8: automatically included section variable(s) unused in theorem `_private.PaperIV.ChordalStructure.0.SimpleGraph.rstep_symm`:
+  [Fintype V]
+  [DecidableEq V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] [DecidableEq V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: PaperIV/ChordalStructure.lean:149:8: automatically included section variable(s) unused in theorem `_private.PaperIV.ChordalStructure.0.SimpleGraph.rreach_erase`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: PaperIV/ChordalStructure.lean:179:53: unused variable `huD`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: PaperIV/ChordalStructure.lean:191:8: automatically included section variable(s) unused in theorem `_private.PaperIV.ChordalStructure.0.SimpleGraph.component_sep`:
+  [Fintype V]
+  [DecidableEq V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] [DecidableEq V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: PaperIV/ChordalStructure.lean:202:8: automatically included section variable(s) unused in theorem `_private.PaperIV.ChordalStructure.0.SimpleGraph.avoidReach_symm`:
+  [Fintype V]
+  [DecidableEq V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] [DecidableEq V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: PaperIV/ChordalStructure.lean:219:8: automatically included section variable(s) unused in theorem `_private.PaperIV.ChordalStructure.0.SimpleGraph.avoidReach_notMem`:
+  [Fintype V]
+  [DecidableEq V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] [DecidableEq V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: PaperIV/ChordalStructure.lean:227:8: automatically included section variable(s) unused in theorem `_private.PaperIV.ChordalStructure.0.SimpleGraph.avoidReach_walk`:
+  [Fintype V]
+  [DecidableEq V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] [DecidableEq V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: PaperIV/ChordalStructure.lean:240:8: automatically included section variable(s) unused in theorem `_private.PaperIV.ChordalStructure.0.SimpleGraph.sep_exists_aside_nbr`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: PaperIV/ChordalStructure.lean:258:8: automatically included section variable(s) unused in theorem `_private.PaperIV.ChordalStructure.0.SimpleGraph.reachable_induce_of_walk`:
+  [Fintype V]
+  [DecidableEq V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] [DecidableEq V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: PaperIV/ChordalStructure.lean:325:8: automatically included section variable(s) unused in theorem `_private.PaperIV.ChordalStructure.0.SimpleGraph.two_induced_paths_not_chordal`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: PaperIV/ChordalStructure.lean:381:0: automatically included section variable(s) unused in theorem `SimpleGraph.IsChordal.induce`:
+  [Fintype V]
+  [DecidableEq V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] [DecidableEq V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: PaperIV/ChordalStructure.lean:392:8: automatically included section variable(s) unused in theorem `_private.PaperIV.ChordalStructure.0.SimpleGraph.rsimplicial_of_induce_simplicial`:
+  [Fintype V]
+  [DecidableEq V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] [DecidableEq V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: PaperIV/ChordalStructure.lean:404:8: automatically included section variable(s) unused in theorem `_private.PaperIV.ChordalStructure.0.SimpleGraph.isSimplicial_of_induce`:
+  [Fintype V]
+  [DecidableEq V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] [DecidableEq V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: PaperIV/ChordalStructure.lean:442:8: automatically included section variable(s) unused in theorem `_private.PaperIV.ChordalStructure.0.SimpleGraph.exists_minimal_separator`:
+  [DecidableEq V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: PaperIV/ChordalStructure.lean:729:8: automatically included section variable(s) unused in theorem `_private.PaperIV.ChordalStructure.0.SimpleGraph.avoidReach_iff_set`:
+  [Fintype V]
+  [DecidableEq V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] [DecidableEq V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [8114/8198] Replayed PaperIV.FarRounding
+warning: PaperIV/FarRounding.lean:120:0: automatically included section variable(s) unused in theorem `PaperIV.FarRounding.gainOf_of_card_eq_three`:
+  [DecidableEq V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: PaperIV/FarRounding.lean:123:0: automatically included section variable(s) unused in theorem `PaperIV.FarRounding.gainOf_of_card_eq_four`:
+  [DecidableEq V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: PaperIV/FarRounding.lean:167:0: automatically included section variable(s) unused in theorem `PaperIV.FarRounding.one_le_choose_two_of_isItem`:
+  [Fintype V]
+  [DecidableEq V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] [DecidableEq V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: PaperIV/FarRounding.lean:282:0: automatically included section variable(s) unused in theorem `PaperIV.FarRounding.Packing.pairwiseDisjoint`:
+  [Fintype V]
+  [DecidableRel G.Adj]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] [DecidableRel G.Adj] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: PaperIV/FarRounding.lean:509:0: automatically included section variable(s) unused in theorem `PaperIV.FarRounding.gainF_eq_gainOf`:
+  [DecidableRel G.Adj]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableRel G.Adj] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [8115/8198] Replayed ThreeRegime.PackingTransport
+warning: ThreeRegime/PackingTransport.lean:28:0: automatically included section variable(s) unused in theorem `ThreeRegime.Transport.isItem_top_iff`:
+  [Fintype V]
+  [DecidableEq V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] [DecidableEq V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: ThreeRegime/PackingTransport.lean:49:0: automatically included section variable(s) unused in theorem `ThreeRegime.Transport.pairs_map`:
+  [Fintype V]
+  [Fintype W]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] [Fintype W] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: ThreeRegime/PackingTransport.lean:150:8: automatically included section variable(s) unused in theorem `_private.ThreeRegime.PackingTransport.0.ThreeRegime.Transport.map_preimage_eq`:
+  [Fintype V]
+  [DecidableEq V]
+  [Fintype W]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] [DecidableEq V] [Fintype W] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [8120/8198] Replayed ThreeRegime.CompleteStateObligation
+warning: ThreeRegime/CompleteStateObligation.lean:49:0: automatically included section variable(s) unused in theorem `ThreeRegime.gain_of_all_triangles`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [8121/8198] Replayed ThreeRegime.TrianglePackingParity
+warning: ThreeRegime/TrianglePackingParity.lean:54:0: automatically included section variable(s) unused in theorem `ThreeRegime.TrianglePackingParity.filter_mem_pairs`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: ThreeRegime/TrianglePackingParity.lean:84:8: automatically included section variable(s) unused in theorem `_private.ThreeRegime.TrianglePackingParity.0.ThreeRegime.TrianglePackingParity.pairs_mono`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [8122/8198] Replayed ThreeRegime.OwnerPacking
+warning: ThreeRegime/OwnerPacking.lean:53:8: automatically included section variable(s) unused in theorem `ThreeRegime.Owner.subPacking_pieces`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: ThreeRegime/OwnerPacking.lean:72:8: automatically included section variable(s) unused in theorem `_private.ThreeRegime.OwnerPacking.0.ThreeRegime.Owner.pairs_mono'`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [8123/8198] Replayed ThreeRegime.LatinBlocks
+warning: ThreeRegime/LatinBlocks.lean:103:0: automatically included section variable(s) unused in theorem `ThreeRegime.Latin.pt_inj`:
+  [Fintype Q]
+  [DecidableEq Q]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype Q] [DecidableEq Q] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: ThreeRegime/LatinBlocks.lean:106:8: automatically included section variable(s) unused in theorem `ThreeRegime.Latin.pt_eq_pt`:
+  [Fintype Q]
+  [DecidableEq Q]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype Q] [DecidableEq Q] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: ThreeRegime/LatinBlocks.lean:110:8: automatically included section variable(s) unused in theorem `ThreeRegime.Latin.pt_ne_star`:
+  [Fintype Q]
+  [DecidableEq Q]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype Q] [DecidableEq Q] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: ThreeRegime/LatinBlocks.lean:186:0: automatically included section variable(s) unused in theorem `ThreeRegime.Latin.Frame.rowBlock_comm`:
+  [Fintype Q]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype Q] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: ThreeRegime/LatinBlocks.lean:192:0: automatically included section variable(s) unused in theorem `ThreeRegime.Latin.Frame.ownIn_eq`:
+  [Fintype Q]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype Q] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: ThreeRegime/LatinBlocks.lean:195:0: automatically included section variable(s) unused in theorem `ThreeRegime.Latin.Frame.ownIn_succ`:
+  [Fintype Q]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype Q] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: ThreeRegime/LatinBlocks.lean:200:0: automatically included section variable(s) unused in theorem `ThreeRegime.Latin.Frame.ownIn_succ_diag`:
+  [Fintype Q]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype Q] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: ThreeRegime/LatinBlocks.lean:205:0: automatically included section variable(s) unused in theorem `ThreeRegime.Latin.Frame.ownIn_pred`:
+  [Fintype Q]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype Q] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: ThreeRegime/LatinBlocks.lean:211:0: automatically included section variable(s) unused in theorem `ThreeRegime.Latin.Frame.ownIn_pred_diag`:
+  [Fintype Q]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype Q] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: ThreeRegime/LatinBlocks.lean:217:8: automatically included section variable(s) unused in theorem `ThreeRegime.Latin.Frame.own_inl_inl`:
+  [Fintype Q]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype Q] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: ThreeRegime/LatinBlocks.lean:220:8: automatically included section variable(s) unused in theorem `ThreeRegime.Latin.Frame.own_inl_inr`:
+  [Fintype Q]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype Q] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: ThreeRegime/LatinBlocks.lean:223:8: automatically included section variable(s) unused in theorem `ThreeRegime.Latin.Frame.own_inr_inl`:
+  [Fintype Q]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype Q] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: ThreeRegime/LatinBlocks.lean:229:0: automatically included section variable(s) unused in theorem `ThreeRegime.Latin.Frame.mem_colBlock`:
+  [Fintype Q]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype Q] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: ThreeRegime/LatinBlocks.lean:294:0: automatically included section variable(s) unused in theorem `ThreeRegime.Latin.Frame.mem_starBlock`:
+  [Fintype Q]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype Q] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: ThreeRegime/LatinBlocks.lean:339:0: automatically included section variable(s) unused in theorem `ThreeRegime.Latin.Frame.card_rowBlock`:
+  [Fintype Q]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype Q] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: ThreeRegime/LatinBlocks.lean:342:0: automatically included section variable(s) unused in theorem `ThreeRegime.Latin.Frame.card_starBlock`:
+  [Fintype Q]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype Q] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: ThreeRegime/LatinBlocks.lean:571:0: automatically included section variable(s) unused in theorem `ThreeRegime.Latin.Frame.card_Pt`:
+  [DecidableEq Q]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq Q] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [8127/8198] Replayed PaperIV.FarRoundingBatchBridge
+warning: PaperIV/FarRoundingBatchBridge.lean:90:0: automatically included section variable(s) unused in theorem `PaperIV.FarRoundingBatchBridge.two_mul_card_le_card_edgeFinset`:
+  [DecidableEq V]
+  [DecidableEq ι]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq V] [DecidableEq ι] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: PaperIV/FarRoundingBatchBridge.lean:127:0: automatically included section variable(s) unused in theorem `PaperIV.FarRoundingBatchBridge.exists_packing_of_batches`:
+  [DecidableRel G.Adj]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableRel G.Adj] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [8129/8198] Replayed PaperIV.AssignmentLemma
+warning: PaperIV/AssignmentLemma.lean:68:0: automatically included section variable(s) unused in theorem `PaperIV.AssignmentLemma.ownParts_disjoint`:
+  [DecidableEq V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: PaperIV/AssignmentLemma.lean:96:0: automatically included section variable(s) unused in theorem `PaperIV.AssignmentLemma.loss_decomposition`:
+  [Fintype V]
+  [DecidableRel G.Adj]
+  [DecidableEq β]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] [DecidableRel G.Adj] [DecidableEq β] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [8130/8198] Replayed PaperIV.CliqueBagNibble
+warning: PaperIV/CliqueBagNibble.lean:121:0: automatically included section variable(s) unused in theorem `PaperIV.CliqueBagNibble.exists_packing_of_k4Family`:
+  [Fintype V]
+  [DecidableRel G.Adj]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] [DecidableRel G.Adj] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [8132/8198] Replayed PaperIV.ChordalBridge
+warning: PaperIV/ChordalBridge.lean:57:0: automatically included section variable(s) unused in theorem `PaperIV.ChordalBridge.isChordal_iff`:
+  [Fintype V]
+  [DecidableEq V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] [DecidableEq V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: PaperIV/ChordalBridge.lean:62:0: automatically included section variable(s) unused in theorem `PaperIV.ChordalBridge.exists_isSimplicial`:
+  [DecidableRel G.Adj]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableRel G.Adj] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: PaperIV/ChordalBridge.lean:68:0: automatically included section variable(s) unused in theorem `PaperIV.ChordalBridge.minimalSeparator_isClique`:
+  [DecidableRel G.Adj]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableRel G.Adj] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: PaperIV/ChordalBridge.lean:82:0: automatically included section variable(s) unused in theorem `PaperIV.ChordalBridge.ownerOf_eq`:
+  [Fintype V]
+  [DecidableRel G.Adj]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] [DecidableRel G.Adj] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [8133/8198] Replayed PaperIV.DenseBagClosure
+warning: PaperIV/DenseBagClosure.lean:101:0: automatically included section variable(s) unused in theorem `PaperIV.DenseBagClosure.loss_le_of_local_fraction`:
+  [DecidableEq ι]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq ι] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: PaperIV/DenseBagClosure.lean:101:43: unused variable `hβ`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [8135/8198] Replayed PaperIV.TwoRegimeAccounting
+warning: PaperIV/TwoRegimeAccounting.lean:72:0: automatically included section variable(s) unused in theorem `PaperIV.TwoRegimeAccounting.loss_le_two_regimes`:
+  [Fintype V]
+  [DecidableRel G.Adj]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] [DecidableRel G.Adj] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: PaperIV/TwoRegimeAccounting.lean:72:39: unused variable `hβ`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: PaperIV/TwoRegimeAccounting.lean:126:0: automatically included section variable(s) unused in theorem `PaperIV.TwoRegimeAccounting.loss_eq_assignment_of_all_split`:
+  [Fintype V]
+  [DecidableRel G.Adj]
+  [DecidableEq ι]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] [DecidableRel G.Adj] [DecidableEq ι] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [8137/8198] Replayed PaperIV.NibblePort
+warning: PaperIV/NibblePort.lean:153:0: automatically included section variable(s) unused in theorem `PaperIV.NibblePort.cliqueOf_pairs`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [8151/8198] Replayed PaperIV.MixedNibbleUnion
+warning: PaperIV/MixedNibbleUnion.lean:26:0: automatically included section variable(s) unused in theorem `PaperIV.MixedNibbleUnion.pairs_ne_empty_of_isItem`:
+  [DecidableRel G.Adj]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableRel G.Adj] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [8152/8198] Replayed PaperIV.RootedCounting
+warning: PaperIV/RootedCounting.lean:85:0: automatically included section variable(s) unused in theorem `PaperIV.RootedCounting.second_moment_eq`:
+  [DecidableEq ρ]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq ρ] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: PaperIV/RootedCounting.lean:127:0: automatically included section variable(s) unused in theorem `PaperIV.RootedCounting.card_bad_roots_le`:
+  [DecidableEq ρ]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq ρ] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [8153/8198] Replayed PaperIV.RootedCountingBridge
+warning: PaperIV/RootedCountingBridge.lean:62:0: automatically included section variable(s) unused in theorem `PaperIV.RootedCountingBridge.sum_fiber_card`:
+  [DecidableEq κ]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq κ] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: PaperIV/RootedCountingBridge.lean:68:0: automatically included section variable(s) unused in theorem `PaperIV.RootedCountingBridge.filter_product_eq`:
+  [DecidableEq κ]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq κ] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [8154/8198] Replayed PaperIV.CountingTelescope
+warning: PaperIV/CountingTelescope.lean:55:47: unused variable `hε`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: PaperIV/CountingTelescope.lean:79:18: unused variable `hd`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [8155/8198] Replayed PaperIV.OneStepEstimate
+warning: PaperIV/OneStepEstimate.lean:65:0: automatically included section variable(s) unused in theorem `PaperIV.OneStepEstimate.card_interedges_eq`:
+  [DecidableEq α]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq α] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: PaperIV/OneStepEstimate.lean:160:0: automatically included section variable(s) unused in theorem `PaperIV.OneStepEstimate.DiscrepAt.mono`:
+  [DecidableEq α]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq α] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: PaperIV/OneStepEstimate.lean:188:0: automatically included section variable(s) unused in theorem `PaperIV.OneStepEstimate.DiscrepAt.restrict`:
+  [DecidableEq α]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq α] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [8156/8198] Replayed PaperIV.TelescopeK3
+warning: PaperIV/TelescopeK3.lean:61:0: automatically included section variable(s) unused in theorem `PaperIV.TelescopeK3.mem_nbrs`:
+  [DecidableEq α]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq α] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [8158/8198] Replayed PaperIV.TelescopeK4
+warning: PaperIV/TelescopeK4.lean:58:0: automatically included section variable(s) unused in theorem `PaperIV.TelescopeK4.mem_nbrs2`:
+  [DecidableEq α]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq α] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: PaperIV/TelescopeK4.lean:75:0: automatically included section variable(s) unused in theorem `PaperIV.TelescopeK4.mem_k4s`:
+  [DecidableEq α]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq α] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [8159/8198] Replayed PaperIV.TelescopeK4Step2
+warning: PaperIV/TelescopeK4Step2.lean:78:0: automatically included section variable(s) unused in theorem `PaperIV.TelescopeK4Step2.mem_books`:
+  [DecidableEq α]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq α] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [8160/8198] Replayed PaperIV.TelescopeK4Full
+warning: PaperIV/TelescopeK4Full.lean:65:0: automatically included section variable(s) unused in theorem `PaperIV.TelescopeK4Full.mem_fans`:
+  [DecidableEq α]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq α] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [8161/8198] Replayed PaperIV.RegularityFormat
+warning: PaperIV/RegularityFormat.lean:56:0: automatically included section variable(s) unused in theorem `PaperIV.RegularityFormat.trim_subset`:
+  [DecidableEq α]
+  [Fintype α]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq α] [Fintype α] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: PaperIV/RegularityFormat.lean:60:0: automatically included section variable(s) unused in theorem `PaperIV.RegularityFormat.card_trim`:
+  [DecidableEq α]
+  [Fintype α]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq α] [Fintype α] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: PaperIV/RegularityFormat.lean:67:0: automatically included section variable(s) unused in theorem `PaperIV.RegularityFormat.isUniform_of_real`:
+  [DecidableEq α]
+  [Fintype α]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq α] [Fintype α] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [8163/8198] Replayed PaperIV.PatternCounting
+warning: PaperIV/PatternCounting.lean:64:0: automatically included section variable(s) unused in theorem `PaperIV.PatternCounting.adjInd_nonneg`:
+  [Fintype α]
+  [DecidableEq α]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype α] [DecidableEq α] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: PaperIV/PatternCounting.lean:67:0: automatically included section variable(s) unused in theorem `PaperIV.PatternCounting.adjInd_le_one`:
+  [Fintype α]
+  [DecidableEq α]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype α] [DecidableEq α] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: PaperIV/PatternCounting.lean:85:0: automatically included section variable(s) unused in theorem `PaperIV.PatternCounting.setTwo_left`:
+  [Fintype ι]
+  [Fintype α]
+  [DecidableEq α]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype ι] [Fintype α] [DecidableEq α] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: PaperIV/PatternCounting.lean:88:0: automatically included section variable(s) unused in theorem `PaperIV.PatternCounting.setTwo_right`:
+  [Fintype ι]
+  [Fintype α]
+  [DecidableEq α]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype ι] [Fintype α] [DecidableEq α] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: PaperIV/PatternCounting.lean:92:0: automatically included section variable(s) unused in theorem `PaperIV.PatternCounting.setTwo_other`:
+  [Fintype ι]
+  [Fintype α]
+  [DecidableEq α]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype ι] [Fintype α] [DecidableEq α] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: PaperIV/PatternCounting.lean:194:0: automatically included section variable(s) unused in theorem `PaperIV.PatternCounting.ne_j_of_mem_touch`:
+  [Fintype ι]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype ι] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: PaperIV/PatternCounting.lean:282:0: automatically included section variable(s) unused in theorem `PaperIV.PatternCounting.prod_adjInd_zero_or_one`:
+  [Fintype ι]
+  [DecidableEq ι]
+  [Fintype α]
+  [DecidableEq α]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype ι] [DecidableEq ι] [Fintype α] [DecidableEq α] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: PaperIV/PatternCounting.lean:292:0: automatically included section variable(s) unused in theorem `PaperIV.PatternCounting.prod_adjInd_nonneg`:
+  [Fintype ι]
+  [DecidableEq ι]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype ι] [DecidableEq ι] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: PaperIV/PatternCounting.lean:294:26: unused variable `e`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: PaperIV/PatternCounting.lean:296:0: automatically included section variable(s) unused in theorem `PaperIV.PatternCounting.prod_adjInd_le_one`:
+  [Fintype ι]
+  [DecidableEq ι]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype ι] [DecidableEq ι] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: PaperIV/PatternCounting.lean:298:26: unused variable `e`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: PaperIV/PatternCounting.lean:298:57: unused variable `e`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: PaperIV/PatternCounting.lean:301:0: automatically included section variable(s) unused in theorem `PaperIV.PatternCounting.sum_adjInd_eq_card_interedges`:
+  [Fintype α]
+  [DecidableEq α]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype α] [DecidableEq α] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: PaperIV/PatternCounting.lean:314:0: automatically included section variable(s) unused in theorem `PaperIV.PatternCounting.sum_mul_indicator`:
+  [Fintype α]
+  [DecidableEq α]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype α] [DecidableEq α] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: PaperIV/PatternCounting.lean:326:0: automatically included section variable(s) unused in theorem `PaperIV.PatternCounting.card_freeze_mul`:
+  [Fintype α]
+  [DecidableEq α]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype α] [DecidableEq α] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: PaperIV/PatternCounting.lean:364:5: unused variable `hε`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: PaperIV/PatternCounting.lean:466:0: automatically included section variable(s) unused in theorem `PaperIV.PatternCounting.patCount_empty`:
+  [Fintype α]
+  [DecidableEq α]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype α] [DecidableEq α] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: PaperIV/PatternCounting.lean:550:0: automatically included section variable(s) unused in theorem `PaperIV.PatternCounting.patCount_eq_card`:
+  [Fintype α]
+  [DecidableEq α]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype α] [DecidableEq α] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: PaperIV/PatternCounting.lean:594:9: unused variable `e`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: PaperIV/PatternCounting.lean:595:9: unused variable `e`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [8164/8198] Replayed PaperIV.EighthMoment
+warning: PaperIV/EighthMoment.lean:68:0: automatically included section variable(s) unused in theorem `PaperIV.EighthMoment.FinProb.expect_const`:
+  [DecidableEq Ω]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq Ω] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: PaperIV/EighthMoment.lean:72:0: automatically included section variable(s) unused in theorem `PaperIV.EighthMoment.FinProb.expect_mono`:
+  [DecidableEq Ω]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq Ω] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: PaperIV/EighthMoment.lean:76:0: automatically included section variable(s) unused in theorem `PaperIV.EighthMoment.FinProb.abs_expect_le`:
+  [DecidableEq Ω]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq Ω] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: PaperIV/EighthMoment.lean:85:0: automatically included section variable(s) unused in theorem `PaperIV.EighthMoment.FinProb.expect_sum`:
+  [DecidableEq Ω]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq Ω] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: PaperIV/EighthMoment.lean:91:0: automatically included section variable(s) unused in theorem `PaperIV.EighthMoment.FinProb.prob_nonneg`:
+  [DecidableEq Ω]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq Ω] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: PaperIV/EighthMoment.lean:95:0: automatically included section variable(s) unused in theorem `PaperIV.EighthMoment.FinProb.markov`:
+  [DecidableEq Ω]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq Ω] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: PaperIV/EighthMoment.lean:149:0: automatically included section variable(s) unused in theorem `PaperIV.EighthMoment.expect_prod_eq_zero`:
+  [DecidableEq Ω]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq Ω] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: PaperIV/EighthMoment.lean:258:0: automatically included section variable(s) unused in theorem `PaperIV.EighthMoment.FinProb.prob_mono`:
+  [DecidableEq Ω]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq Ω] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [8165/8198] Replayed PaperIV.RootedVariance
+warning: PaperIV/RootedVariance.lean:59:0: automatically included section variable(s) unused in theorem `PaperIV.RootedVariance.card_pairs_eq_card_doubled`:
+  [Fintype α]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype α] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: PaperIV/RootedVariance.lean:205:26: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: PaperIV/RootedVariance.lean:230:26: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: PaperIV/RootedVariance.lean:205:26: 'ring' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: PaperIV/RootedVariance.lean:230:26: 'ring' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: PaperIV/RootedVariance.lean:282:0: automatically included section variable(s) unused in theorem `PaperIV.RootedVariance.card_pairs_eq_card_doubledK4`:
+  [Fintype α]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype α] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: PaperIV/RootedVariance.lean:449:26: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: PaperIV/RootedVariance.lean:482:26: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: PaperIV/RootedVariance.lean:449:26: 'ring' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: PaperIV/RootedVariance.lean:482:26: 'ring' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+⚠ [8166/8198] Replayed PaperIV.CopyCleanup
+warning: PaperIV/CopyCleanup.lean:49:0: automatically included section variable(s) unused in theorem `PaperIV.CopyCleanup.cleaned_subset`:
+  [DecidableEq κ]
+  [DecidableEq ι]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq κ] [DecidableEq ι] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: PaperIV/CopyCleanup.lean:52:0: automatically included section variable(s) unused in theorem `PaperIV.CopyCleanup.card_cleaned_add_removed`:
+  [DecidableEq κ]
+  [DecidableEq ι]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq κ] [DecidableEq ι] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: PaperIV/CopyCleanup.lean:70:0: automatically included section variable(s) unused in theorem `PaperIV.CopyCleanup.card_removed_le`:
+  [DecidableEq ι]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq ι] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: PaperIV/CopyCleanup.lean:155:67: unused variable `hθ`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: PaperIV/CopyCleanup.lean:184:0: automatically included section variable(s) unused in theorem `PaperIV.CopyCleanup.cleaned_count_ge`:
+  [DecidableEq κ]
+  [DecidableEq ι]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq κ] [DecidableEq ι] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: PaperIV/CopyCleanup.lean:193:0: automatically included section variable(s) unused in theorem `PaperIV.CopyCleanup.fiber_cleaned_eq_empty`:
+  [DecidableEq κ]
+  [DecidableEq ι]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq κ] [DecidableEq ι] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [8167/8198] Replayed PaperIV.PatternMass
+warning: PaperIV/PatternMass.lean:49:0: automatically included section variable(s) unused in theorem `PaperIV.PatternMass.gainF_nonneg`:
+  [Fintype V]
+  [DecidableEq V]
+  [DecidableRel G.Adj]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] [DecidableEq V] [DecidableRel G.Adj] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: PaperIV/PatternMass.lean:56:0: automatically included section variable(s) unused in theorem `PaperIV.PatternMass.gainF_le_five`:
+  [Fintype V]
+  [DecidableEq V]
+  [DecidableRel G.Adj]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] [DecidableEq V] [DecidableRel G.Adj] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: PaperIV/PatternMass.lean:138:0: automatically included section variable(s) unused in theorem `PaperIV.PatternMass.card_crossEdges`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: PaperIV/PatternMass.lean:185:26: unused variable `hnn`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [8168/8198] Replayed PaperIV.SimultaneousSelection
+warning: PaperIV/SimultaneousSelection.lean:39:0: automatically included section variable(s) unused in theorem `PaperIV.SimultaneousSelection.prob_univ`:
+  [DecidableEq Ω]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq Ω] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [8170/8198] Replayed PaperIV.OwnerCoins
+warning: PaperIV/OwnerCoins.lean:56:0: automatically included section variable(s) unused in theorem `PaperIV.OwnerCoins.ownerDist_nonneg`:
+  [Fintype π]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype π] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: PaperIV/OwnerCoins.lean:158:0: automatically included section variable(s) unused in theorem `PaperIV.OwnerCoins.cond_all_owned`:
+  [Fintype ρ]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype ρ] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [8171/8198] Replayed PaperIV.DegreeConcentration
+warning: PaperIV/DegreeConcentration.lean:130:46: unused variable `hcard`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [8172/8198] Replayed PaperIV.CenteredMoments
+warning: PaperIV/CenteredMoments.lean:50:0: automatically included section variable(s) unused in theorem `PaperIV.CenteredMoments.expect_affine`:
+  [DecidableEq Ω]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq Ω] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: PaperIV/CenteredMoments.lean:155:38: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: PaperIV/CenteredMoments.lean:158:38: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: PaperIV/CenteredMoments.lean:195:0: automatically included section variable(s) unused in theorem `PaperIV.CenteredMoments.block_indicator_mem`:
+  [Fintype ρ]
+  [DecidableEq ρ]
+  [Fintype κ]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype ρ] [DecidableEq ρ] [Fintype κ] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [8173/8198] Replayed PaperIV.ResourceSizes
+warning: PaperIV/ResourceSizes.lean:45:0: automatically included section variable(s) unused in theorem `PaperIV.ResourceSizes.singleton_pairwiseDisjoint`:
+  [Fintype ρ]
+  [DecidableEq ρ]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype ρ] [DecidableEq ρ] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [8174/8198] Replayed PaperIV.WeightedCodegree
+warning: PaperIV/WeightedCodegree.lean:158:0: automatically included section variable(s) unused in theorem `PaperIV.WeightedCodegree.index_unique`:
+  [Fintype ι]
+  [DecidableEq α]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype ι] [DecidableEq α] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: PaperIV/WeightedCodegree.lean:165:0: automatically included section variable(s) unused in theorem `PaperIV.WeightedCodegree.three_le_card_union`:
+  [Fintype ι]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype ι] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: PaperIV/WeightedCodegree.lean:184:32: unused variable `ht`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [8175/8198] Replayed PaperIV.NibbleHypotheses
+warning: PaperIV/NibbleHypotheses.lean:59:0: automatically included section variable(s) unused in theorem `PaperIV.NibbleHypotheses.load_eq`:
+  [Fintype W]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype W] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: PaperIV/NibbleHypotheses.lean:64:0: automatically included section variable(s) unused in theorem `PaperIV.NibbleHypotheses.codegree_eq`:
+  [Fintype W]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype W] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: PaperIV/NibbleHypotheses.lean:69:0: automatically included section variable(s) unused in theorem `PaperIV.NibbleHypotheses.total_eq`:
+  [Fintype W]
+  [DecidableEq W]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype W] [DecidableEq W] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [8177/8198] Replayed MixedRounding.Defs
+warning: MixedRounding/Defs.lean:42:0: automatically included section variable(s) unused in theorem `MixedRounding.mem_pairs`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: MixedRounding/Defs.lean:46:0: automatically included section variable(s) unused in theorem `MixedRounding.mk_mem_pairs`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: MixedRounding/Defs.lean:71:0: automatically included section variable(s) unused in theorem `MixedRounding.gainF_le_five`:
+  [Fintype V]
+  [DecidableEq V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] [DecidableEq V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: MixedRounding/Defs.lean:78:0: automatically included section variable(s) unused in theorem `MixedRounding.gainF_nonneg`:
+  [Fintype V]
+  [DecidableEq V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] [DecidableEq V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [8178/8198] Replayed MixedRounding.Cleanup
+warning: MixedRounding/Cleanup.lean:127:31: unused variable `hε`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [8179/8198] Replayed PaperIV.MixedRoundingAdapter
+warning: PaperIV/MixedRoundingAdapter.lean:30:0: automatically included section variable(s) unused in theorem `PaperIV.MixedRoundingAdapter.pairs_eq`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: PaperIV/MixedRoundingAdapter.lean:32:0: automatically included section variable(s) unused in theorem `PaperIV.MixedRoundingAdapter.isItem_iff`:
+  [Fintype V]
+  [DecidableEq V]
+  [DecidableRel G.Adj]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] [DecidableEq V] [DecidableRel G.Adj] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: PaperIV/MixedRoundingAdapter.lean:35:0: automatically included section variable(s) unused in theorem `PaperIV.MixedRoundingAdapter.gainF_eq`:
+  [Fintype V]
+  [DecidableEq V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] [DecidableEq V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: PaperIV/MixedRoundingAdapter.lean:38:0: automatically included section variable(s) unused in theorem `PaperIV.MixedRoundingAdapter.gainOf_eq`:
+  [Fintype V]
+  [DecidableEq V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] [DecidableEq V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [8180/8198] Replayed MixedRounding.Lift
+warning: MixedRounding/Lift.lean:54:0: automatically included section variable(s) unused in theorem `MixedRounding.filter_isDiag_sym2`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: MixedRounding/Lift.lean:109:0: automatically included section variable(s) unused in theorem `MixedRounding.two_le_card_of_isItem`:
+  [Fintype V]
+  [DecidableEq V]
+  [DecidableRel G.Adj]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] [DecidableEq V] [DecidableRel G.Adj] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [8182/8198] Replayed PaperIV.JointTwoQuotaPhysical
+warning: PaperIV/JointTwoQuotaPhysical.lean:50:0: automatically included section variable(s) unused in theorem `PaperIV.JointTwoQuotaPhysical.subset_of_pairs_subset`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: PaperIV/JointTwoQuotaPhysical.lean:336:24: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: PaperIV/JointTwoQuotaPhysical.lean:432:24: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+⚠ [8185/8198] Replayed PaperIV.RC01MarkedRounding
+warning: PaperIV/RC01MarkedRounding.lean:106:17: unused variable `hn`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [8186/8198] Replayed PaperIV.TriangleCover
+warning: PaperIV/TriangleCover.lean:145:0: automatically included section variable(s) unused in theorem `PaperIV.TriangleCover.exists_tri_subset`:
+  [Fintype V]
+  [DecidableEq V]
+  [DecidableRel G.Adj]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] [DecidableEq V] [DecidableRel G.Adj] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: PaperIV/TriangleCover.lean:192:8: automatically included section variable(s) unused in theorem `PaperIV.TriangleCover.emptyPacking_gain`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [8187/8198] Replayed PaperIV.TriangleSwap
+warning: PaperIV/TriangleSwap.lean:90:0: automatically included section variable(s) unused in theorem `PaperIV.TriangleSwap.isTriFamily_subset`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [8188/8198] Replayed PaperIV.SparseRegime
+warning: PaperIV/SparseRegime.lean:82:0: automatically included section variable(s) unused in theorem `PaperIV.SparseRegime.emptyPacking_gain`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [8190/8198] Replayed PaperIV.Corollary73Assembly
+warning: PaperIV/Corollary73Assembly.lean:76:33: unused variable `hn`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: PaperIV/Corollary73Assembly.lean:77:13: unused variable `hζ`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: PaperIV/Corollary73Assembly.lean:77:26: unused variable `hζ1`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [8193/8198] Replayed FarExploration.CodegreeCleanup
+warning: FarExploration/CodegreeCleanup.lean:141:4: 'push_cast at hP' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+⚠ [8197/8198] Replayed FarExploration.RuzsaSzemeredi
+warning: FarExploration/RuzsaSzemeredi.lean:245:0: automatically included section variable(s) unused in theorem `FarExploration.RuzsaSzemeredi.item_card_eq_three`:
+  [NeZero N]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [NeZero N] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+Build completed successfully (8198 jobs).

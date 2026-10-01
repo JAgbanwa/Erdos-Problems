@@ -1,0 +1,36 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 PaperIV/RootedK4Counting.lean -o /workspace/request-project/.lake/runner/lib/lean/PaperIV/RootedK4Counting.olean -i /workspace/request-project/.lake/runner/lib/lean/PaperIV/RootedK4Counting.ilean
+type checking took 114ms
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_nlinarith_1._boxed took 215ms
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_nlinarith_1._boxed took 291ms
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_nlinarith_1._boxed took 173ms
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_nlinarith_1._boxed took 253ms
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_nlinarith_1._boxed took 377ms
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_nlinarith_1._boxed took 482ms
+interpretation of Mathlib.Tactic.Positivity._aux_Mathlib_Tactic_Positivity_Core___elabRules_Mathlib_Tactic_Positivity_positivity_1._boxed took 185ms
+tactic execution of Mathlib.Tactic.nlinarith took 464ms
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_nlinarith_1._boxed took 743ms
+import took 3.14s
+cumulative profiling times:
+	.olean serialization 89.7ms
+	attribute application 0.161ms
+	compilation (IR) 3.99ms
+	compilation (LCNF base) 9.83ms
+	compilation (LCNF mono) 2.81ms
+	congr simp thm 17.4ms
+	elaboration 123ms
+	fix level params 2.56ms
+	import 3.14s
+	initialization 36.6ms
+	instantiate metavars 9.19ms
+	interpretation 3.33s
+	let-to-have transformation 0.444ms
+	linting 42.4ms
+	norm_num 13.5ms
+	parsing 19.7ms
+	process pre-definitions 30ms
+	ring 90ms
+	share common exprs 24.5ms
+	simp 78.1ms
+	tactic execution 942ms
+	type checking 242ms
+	typeclass inference 1.46s

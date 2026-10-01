@@ -1,0 +1,41 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 A4S1/PerVertexAbsorption.lean -o /workspace/request-project/.lake/runner/lib/lean/A4S1/PerVertexAbsorption.olean -i /workspace/request-project/.lake/runner/lib/lean/A4S1/PerVertexAbsorption.ilean
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_nlinarith_1._boxed took 345ms
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_nlinarith_1._boxed took 531ms
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_nlinarith_1._boxed took 269ms
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_nlinarith_1._boxed took 574ms
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_nlinarith_1._boxed took 335ms
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_nlinarith_1._boxed took 463ms
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_nlinarith_1._boxed took 475ms
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_nlinarith_1._boxed took 321ms
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_nlinarith_1._boxed took 485ms
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_nlinarith_1._boxed took 331ms
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_nlinarith_1._boxed took 319ms
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_nlinarith_1._boxed took 1.35s
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_nlinarith_1._boxed took 344ms
+share common exprs took 146ms
+type checking took 160ms
+import took 3.36s
+cumulative profiling times:
+	.olean serialization 93.7ms
+	attribute application 0.0679ms
+	compilation (IR) 10.9ms
+	compilation (LCNF base) 11.3ms
+	compilation (LCNF mono) 5.38ms
+	congr simp thm 10.8ms
+	elaboration 99.4ms
+	fix level params 7.65ms
+	import 3.36s
+	initialization 35.7ms
+	instantiate metavars 112ms
+	interpretation 6.89s
+	let-to-have transformation 0.124ms
+	linting 94.5ms
+	norm_num 106ms
+	parsing 17.2ms
+	process pre-definitions 43.9ms
+	ring 189ms
+	share common exprs 155ms
+	simp 269ms
+	tactic execution 695ms
+	type checking 442ms
+	typeclass inference 1.88s

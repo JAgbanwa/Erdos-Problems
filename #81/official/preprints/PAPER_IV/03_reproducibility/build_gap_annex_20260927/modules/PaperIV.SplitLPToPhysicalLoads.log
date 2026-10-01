@@ -1,0 +1,25 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 PaperIV/SplitLPToPhysicalLoads.lean -o /workspace/request-project/.lake/runner/lib/lean/PaperIV/SplitLPToPhysicalLoads.olean -i /workspace/request-project/.lake/runner/lib/lean/PaperIV/SplitLPToPhysicalLoads.ilean
+PaperIV/SplitLPToPhysicalLoads.lean:58:4: warning: 'push_cast' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+import took 2.83s
+cumulative profiling times:
+	.olean serialization 40.6ms
+	attribute application 0.063ms
+	congr simp thm 2.19ms
+	elaboration 21.8ms
+	fix level params 0.334ms
+	import 2.83s
+	initialization 38.6ms
+	instantiate metavars 0.375ms
+	interpretation 203ms
+	let-to-have transformation 0.0761ms
+	linting 6.09ms
+	norm_num 0.178ms
+	parsing 3.59ms
+	process pre-definitions 2.67ms
+	share common exprs 0.76ms
+	simp 8.49ms
+	tactic execution 34.1ms
+	type checking 13.4ms
+	typeclass inference 50.2ms

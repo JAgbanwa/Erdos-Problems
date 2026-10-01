@@ -1,0 +1,33 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 PaperIV/TerminalSplitAdapter.lean -o /workspace/request-project/.lake/runner/lib/lean/PaperIV/TerminalSplitAdapter.olean -i /workspace/request-project/.lake/runner/lib/lean/PaperIV/TerminalSplitAdapter.ilean
+PaperIV/TerminalSplitAdapter.lean:23:8: warning: automatically included section variable(s) unused in theorem `PaperIV.TerminalSplitAdapter.mem_coreFinset`:
+  [DecidableEq V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+PaperIV/TerminalSplitAdapter.lean:27:8: warning: automatically included section variable(s) unused in theorem `PaperIV.TerminalSplitAdapter.mem_hostFinset`:
+  [DecidableEq V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+import took 3.84s
+cumulative profiling times:
+	.olean serialization 51.1ms
+	attribute application 3.57ms
+	congr simp thm 1.26ms
+	elaboration 19.9ms
+	fix level params 0.321ms
+	import 3.84s
+	initialization 44.6ms
+	instantiate metavars 0.957ms
+	interpretation 219ms
+	let-to-have transformation 0.0669ms
+	linting 5.99ms
+	parsing 4.76ms
+	process pre-definitions 2.79ms
+	share common exprs 0.606ms
+	simp 12.9ms
+	tactic execution 29.2ms
+	type checking 4.61ms
+	typeclass inference 105ms

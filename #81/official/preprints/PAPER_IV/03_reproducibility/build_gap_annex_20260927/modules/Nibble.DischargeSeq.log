@@ -1,0 +1,26 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 Nibble/DischargeSeq.lean -o /workspace/request-project/.lake/runner/lib/lean/Nibble/DischargeSeq.olean -i /workspace/request-project/.lake/runner/lib/lean/Nibble/DischargeSeq.ilean
+import took 2.62s
+cumulative profiling times:
+	.olean serialization 46.1ms
+	attribute application 0.0461ms
+	compilation (IR) 0.977ms
+	compilation (LCNF base) 1.08ms
+	compilation (LCNF mono) 0.457ms
+	congr simp thm 2.34ms
+	elaboration 34.3ms
+	fix level params 0.444ms
+	import 2.62s
+	initialization 38.5ms
+	instantiate metavars 1.15ms
+	interpretation 261ms
+	let-to-have transformation 0.0936ms
+	linting 10.9ms
+	norm_num 2.16ms
+	parsing 7.36ms
+	process pre-definitions 3.95ms
+	ring 16.3ms
+	share common exprs 2.35ms
+	simp 14.5ms
+	tactic execution 54.9ms
+	type checking 25.5ms
+	typeclass inference 119ms

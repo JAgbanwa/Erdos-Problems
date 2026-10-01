@@ -1,0 +1,31 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 PaperIV/Regularization.lean -o /workspace/request-project/.lake/runner/lib/lean/PaperIV/Regularization.olean -i /workspace/request-project/.lake/runner/lib/lean/PaperIV/Regularization.ilean
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_nlinarith_1._boxed took 121ms
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_nlinarith_1._boxed took 109ms
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_nlinarith_1._boxed took 210ms
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_nlinarith_1._boxed took 216ms
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_nlinarith_1._boxed took 215ms
+import took 3.66s
+cumulative profiling times:
+	.olean serialization 82.6ms
+	attribute application 2.47ms
+	compilation (IR) 12.5ms
+	compilation (LCNF base) 12.2ms
+	compilation (LCNF mono) 5.99ms
+	congr simp thm 24.9ms
+	elaboration 73.7ms
+	fix level params 2.29ms
+	import 3.66s
+	initialization 39.9ms
+	instantiate metavars 6.97ms
+	interpretation 1.2s
+	let-to-have transformation 0.297ms
+	linting 32.4ms
+	norm_num 11.1ms
+	parsing 13.8ms
+	process pre-definitions 16.2ms
+	ring 40ms
+	share common exprs 9.25ms
+	simp 403ms
+	tactic execution 270ms
+	type checking 316ms
+	typeclass inference 886ms

@@ -1,0 +1,178 @@
+=================== shifted_template_witness  (1 hit(s))
+--- PaperIV/OptimalTemplateObstruction.lean:157  (namespaces opened before: ['PaperIV.OptimalTemplateObstruction'], ended: [])
+theorem shifted_template_witness (n s q d : ℕ)
+    (hn : n+s=3*q) (hq : 2*s+2 ≤ q)
+    (hd1 : 1 ≤ d) (hd : 2*d ≤ q) :
+    ∃ (G : SimpleGraph (Fin n)) (_ : DecidableRel G.Adj),
+      RootedDefectAt G s ∧
+      ∃ Q : CliquePartition G, Q.OrderAtMost 4 ∧
+        Q.size + displacementDeficit d = defectTarget s n ∧
+        (∀ R : CliquePartition G, Q.size ≤ R.size) ∧
+        ∀ (T : SimpleGraph (Fin n)) [DecidableRel T.Adj],
+          E32.IsAdmissibleExtremal T s →
+          n*d ≤ 4*PaperIV.EditMetric.editDist G.edgeFinset T.edgeFinset := by
+
+=================== shifted_template_sqrt_witness  (1 hit(s))
+--- PaperIV/OptimalTemplateObstruction.lean:237  (namespaces opened before: ['PaperIV.OptimalTemplateObstruction'], ended: [])
+theorem shifted_template_sqrt_witness (n s q d : ℕ)
+    (hn : n+s=3*q) (hq : 2*s+2 ≤ q)
+    (hd1 : 1 ≤ d) (hd : 2*d ≤ q) :
+    ∃ (G : SimpleGraph (Fin n)) (_ : DecidableRel G.Adj),
+      RootedDefectAt G s ∧
+      ∃ Q : CliquePartition G, Q.OrderAtMost 4 ∧
+        Q.size + displacementDeficit d = defectTarget s n ∧
+        (∀ R : CliquePartition G, Q.size ≤ R.size) ∧
+        ∀ (T : SimpleGraph (Fin n)) [DecidableRel T.Adj],
+          E32.IsAdmissibleExtremal T s →
+          (n : ℝ)*Real.sqrt (displacementDeficit d)/8 ≤
+            (PaperIV.EditMetric.editDist G.edgeFinset T.edgeFinset : ℝ) := by
+
+=================== no_linear_optimal_template_bound  (1 hit(s))
+--- PaperIV/OptimalTemplateObstruction.lean:270  (namespaces opened before: ['PaperIV.OptimalTemplateObstruction'], ended: [])
+theorem no_linear_optimal_template_bound (s A N : ℕ) :
+    ∃ n, N ≤ n ∧ ∃ (G : SimpleGraph (Fin n)) (_ : DecidableRel G.Adj),
+      RootedDefectAt G s ∧
+      ∃ Q : CliquePartition G, Q.OrderAtMost 4 ∧
+        Q.size+1=defectTarget s n ∧
+        (∀ R : CliquePartition G, Q.size ≤ R.size) ∧
+        ∀ (T : SimpleGraph (Fin n)) [DecidableRel T.Adj],
+          E32.IsAdmissibleExtremal T s →
+            A < PaperIV.EditMetric.editDist G.edgeFinset T.edgeFinset := by
+
+=================== optimal_family_nonempty  (1 hit(s))
+--- PaperIV/OptimalTemplateObstruction.lean:130  (namespaces opened before: ['PaperIV.OptimalTemplateObstruction'], ended: [])
+theorem optimal_family_nonempty (n s q : ℕ)
+    (hn : n+s=3*q) (hq : 2*s+2 ≤ q) :
+    ∃ T : SimpleGraph (Fin n), E32.IsAdmissibleExtremal T s := by
+
+=================== certified_shifted_fractional_bound_all_orders  (1 hit(s))
+--- SmallOrderFractional.lean:39  (namespaces opened before: ['PaperIV.SublinearResearch'], ended: [])
+theorem certified_shifted_fractional_bound_all_orders {n s : ℕ} (hs : s ≤ n)
+    (G : SimpleGraph (Fin n)) [DecidableRel G.Adj] (hG : RootedDefectAt G s)
+    {w : ℚ} (hw : CertifiedFractionalOptimum G w) :
+    (G.edgeFinset.card : ℚ)-w ≤ (targetSize (n-s) : ℚ)+(n : ℚ)*s := by
+
+=================== certified_refined_fractional_bound_all_orders  (1 hit(s))
+--- SmallOrderFractional.lean:80  (namespaces opened before: ['PaperIV.SublinearResearch'], ended: [])
+theorem certified_refined_fractional_bound_all_orders {n s : ℕ} (hs : 4*s ≤ n)
+    (G : SimpleGraph (Fin n)) [DecidableRel G.Adj] (hG : RootedDefectAt G s)
+    {w : ℚ} (hw : CertifiedFractionalOptimum G w) :
+    (G.edgeFinset.card : ℚ)-w ≤
+      (targetSize (n-s) : ℚ)+(n : ℚ)*s-((s+1).choose 2 : ℚ) := by
+
+=================== uniform_shifted_partition_bound  (1 hit(s))
+--- RefinedRounding.lean:11  (namespaces opened before: ['PaperIV.SublinearResearch'], ended: [])
+theorem uniform_shifted_partition_bound (ε : ℚ) (hε : 0 < ε) :
+    ∃ N : ℕ, ∀ n s : ℕ, N ≤ n → s ≤ n →
+    ∀ G : SimpleGraph (Fin n), ∀ [DecidableRel G.Adj], RootedDefectAt G s →
+      ∃ Q : CliquePartition G, Q.OrderAtMost 4 ∧
+        (Q.size : ℚ) ≤ (targetSize (n-s) : ℚ)+(n : ℚ)*s+ε*(n : ℚ)^2 := by
+
+=================== uniform_refined_partition_bound  (1 hit(s))
+--- RefinedRounding.lean:27  (namespaces opened before: ['PaperIV.SublinearResearch'], ended: [])
+theorem uniform_refined_partition_bound (ε : ℚ) (hε : 0 < ε) :
+    ∃ N : ℕ, ∀ n s : ℕ, N ≤ n → 4*s ≤ n →
+    ∀ G : SimpleGraph (Fin n), ∀ [DecidableRel G.Adj], RootedDefectAt G s →
+      ∃ Q : CliquePartition G, Q.OrderAtMost 4 ∧
+        (Q.size : ℚ) ≤ (targetSize (n-s) : ℚ)+(n : ℚ)*s-
+          ((s+1).choose 2 : ℚ)+ε*(n : ℚ)^2 := by
+
+=================== sequence_arbitrary_orders_partition_bound  (1 hit(s))
+--- ArbitraryOrderSequences.lean:10  (namespaces opened before: ['PaperIV.SublinearResearch'], ended: [])
+theorem sequence_arbitrary_orders_partition_bound
+    (order : ℕ → ℕ) (horder : Tendsto order atTop atTop)
+    (G : ∀ n : ℕ, SimpleGraph (Fin (order n))) [∀ n, DecidableRel (G n).Adj]
+    (s : ℕ → ℕ) (hG : ∀ n, RootedDefectAt (G n) (s n))
+    (hs : (fun n => (s n : ℝ)) =o[atTop] (fun n => (order n : ℝ))) :
+    ∃ Q : ∀ n, CliquePartition (G n), (∀ n, (Q n).OrderAtMost 4) ∧
+      (fun n => max 0 (((Q n).size : ℝ)-(order n : ℝ)^2/6))
+        =o[atTop] (fun n => (order n : ℝ)^2) := by
+
+=================== sequence_arbitrary_orders_stability  (1 hit(s))
+--- ArbitraryOrderSequences.lean:43  (namespaces opened before: ['PaperIV.SublinearResearch'], ended: [])
+theorem sequence_arbitrary_orders_stability
+    (order : ℕ → ℕ) (horder : Tendsto order atTop atTop)
+    (G : ∀ n : ℕ, SimpleGraph (Fin (order n))) [∀ n, DecidableRel (G n).Adj]
+    (s : ℕ → ℕ) (δ : ℕ → ℚ)
+    (hG : ∀ n, RootedDefectAt (G n) (s n))
+    (hs : (fun n => (s n : ℝ)) =o[atTop] (fun n => (order n : ℝ)))
+    (hδ : (fun n => (δ n : ℝ)) =o[atTop] (fun n => (order n : ℝ)^2))
+    (hnear : ∀ᶠ n in atTop, ∀ Q : CliquePartition (G n), Q.OrderAtMost 4 →
+      (order n : ℚ)^2/6-δ n ≤ Q.size) :
+    ∃ R : ∀ n, Finset (Fin (order n)), (∀ n, (G n).IsClique (R n : Set (Fin (order n)))) ∧
+      (fun n => ((R n).card : ℝ)-(order n : ℝ)/3) =o[atTop] (fun n => (order n : ℝ)) ∧
+      (fun n => (missingIncidences (G n) (R n) : ℝ)+(outsideEdges (G n) (R n)).card)
+        =o[atTop] (fun n => (order n : ℝ)^2) ∧
+      ∃ e : ℕ → ℚ, (∀ n, 0 ≤ e n) ∧
+        (fun n => (e n : ℝ)) =o[atTop] (fun n => (order n : ℝ)^2) ∧
+        (∀ n (Q : CliquePartition (G n)) (τ : ℚ), (Q.size : ℚ) ≤ targetSize (order n)+τ →
+          ((noncanonicalPieces (R n) Q).card : ℚ) ≤ τ+e n) ∧
+        (∀ n (Q : CliquePartition (G n)) (τ : ℚ), (Q.size : ℚ) ≤ targetSize (order n)+τ →
+          (noncanonicalEdgeMass (R n) Q : ℚ) ≤ 10*τ+10*e n) := by
+
+=================== theoremC_tower  (1 hit(s))
+--- E35/Theorem.lean:229  (namespaces opened before: ['E35'], ended: [])
+theorem theoremC_tower (s n : ℕ) (hn : tower2 (Ptower s) ≤ n)
+    (G : SimpleGraph (Fin n)) [DecidableRel G.Adj] (hdef : RootedDefectAt G s) :
+    ∃ Q : CliquePartition G, Q.OrderAtMost 4 ∧ Q.size ≤ defectTarget s n :=
+
+=================== theoremC_tower_uniform  (1 hit(s))
+--- E35/Theorem.lean:237  (namespaces opened before: ['E35'], ended: [])
+theorem theoremC_tower_uniform (n S : ℕ) (hn : tower2 (Ptower S) ≤ n) :
+    ∀ s : ℕ, s ≤ S → ∀ (G : SimpleGraph (Fin n)) [DecidableRel G.Adj],
+      RootedDefectAt G s →
+        ∃ Q : CliquePartition G, Q.OrderAtMost 4 ∧ Q.size ≤ defectTarget s n := by
+
+=================== theoremC_tower_uniform_sMax  (1 hit(s))
+--- E35/Theorem.lean:255  (namespaces opened before: ['E35'], ended: [])
+theorem theoremC_tower_uniform_sMax (n : ℕ) (h0 : tower2 (Ptower 0) ≤ n) :
+    ∀ s : ℕ, s ≤ sMaxT n → ∀ (G : SimpleGraph (Fin n)) [DecidableRel G.Adj],
+      RootedDefectAt G s →
+        ∃ Q : CliquePartition G, Q.OrderAtMost 4 ∧ Q.size ≤ defectTarget s n :=
+
+=================== NfarE_le_tower_poly  (1 hit(s))
+--- E35/Main.lean:245  (namespaces opened before: ['E35'], ended: [])
+theorem NfarE_le_tower_poly (η : ℚ) (h0 : 0 < η) (h1 : η ≤ 1) :
+    E18.NfarE η ≤ tower2 ⌈(cPoly : ℝ) / (η : ℝ) ^ 105⌉₊ := by
+
+=================== Ptower  (1 hit(s))
+--- E35/Theorem.lean:29  (namespaces opened before: ['E35'], ended: [])
+def Ptower (s : ℕ) : ℕ := cT * (s + 1) ^ 1680
+
+=================== tower2  (1 hit(s))
+--- E19/Tower.lean:21  (namespaces opened before: ['E19'], ended: [])
+def tower2 : ℕ → ℕ
+  | 0 => 1
+  | m + 1 => 2 ^ tower2 m
+
+@[simp] theorem tower2_zero : tower2 0 = 1 := rfl
+
+=================== exists_clique_additive_defect  (1 hit(s))
+--- RootedCliqueRecovery.lean:13  (namespaces opened before: ['PaperIV.SublinearResearch'], ended: [])
+theorem exists_clique_additive_defect {n s : ℕ} (G : SimpleGraph (Fin n))
+    [DecidableRel G.Adj] (hG : RootedDefectAt G s) (D : Finset (Fin n)) :
+    ∃ C ⊆ D, G.IsClique (C : Set (Fin n)) ∧
+      (D.card - C.card - s)^2 ≤ E34.ordNE G D := by
+
+=================== recover_clique_from_edit  (1 hit(s))
+--- EditRootRecovery.lean:41  (namespaces opened before: ['PaperIV.SublinearResearch'], ended: [])
+theorem recover_clique_from_edit {n s : ℕ} (G H : SimpleGraph (Fin n))
+    [DecidableRel G.Adj] [DecidableRel H.Adj] (hG : RootedDefectAt G s)
+    (A : Finset (Fin n)) (hA : H.IsClique (A : Set (Fin n)))
+    (u : ℚ) (hu : 0 ≤ u)
+    (hedit : 2 * ((H.edgeFinset \ G.edgeFinset).card : ℚ) ≤ u^2) :
+    ∃ R ⊆ A, G.IsClique (R : Set (Fin n)) ∧
+      ((A \ R).card : ℚ) ≤ s + u := by
+
+=================== ordNE  (1 hit(s))
+--- E34/ChordalTools.lean:69  (namespaces opened before: ['E34'], ended: [])
+def ordNE (D : Finset (Fin n)) : ℕ :=
+
+=================== theoremC_fully_explicit_final  (1 hit(s))
+--- E34/L11Main.lean:285  (namespaces opened before: ['E34'], ended: ['Cases'])
+theorem theoremC_fully_explicit_final (s n : ℕ)
+    (hn : E33.Fexp NeditE s ≤ n) (G : SimpleGraph (Fin n)) [DecidableRel G.Adj]
+    (hdef : RootedDefectAt G s) :
+    ∃ Q : CliquePartition G, Q.OrderAtMost 4 ∧ Q.size ≤ defectTarget s n :=
+
+=================== fractionalCost  (0 hit(s))

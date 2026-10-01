@@ -1,0 +1,21 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 PaperIV/SplitComparatorFamily.lean -o /workspace/request-project/.lake/runner/lib/lean/PaperIV/SplitComparatorFamily.olean -i /workspace/request-project/.lake/runner/lib/lean/PaperIV/SplitComparatorFamily.ilean
+import took 2.77s
+cumulative profiling times:
+	.olean serialization 43.9ms
+	attribute application 0.0553ms
+	congr simp thm 0.822ms
+	elaboration 18.1ms
+	fix level params 0.382ms
+	import 2.77s
+	initialization 39.6ms
+	instantiate metavars 0.712ms
+	interpretation 168ms
+	let-to-have transformation 0.0682ms
+	linting 4.65ms
+	parsing 2.94ms
+	process pre-definitions 3.95ms
+	share common exprs 0.922ms
+	simp 4.79ms
+	tactic execution 36.6ms
+	type checking 7.53ms
+	typeclass inference 76.8ms

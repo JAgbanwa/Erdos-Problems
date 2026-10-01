@@ -1,0 +1,27 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 PaperIV/RC01CandidatePool.lean -o /workspace/request-project/.lake/runner/lib/lean/PaperIV/RC01CandidatePool.olean -i /workspace/request-project/.lake/runner/lib/lean/PaperIV/RC01CandidatePool.ilean
+PaperIV/RC01CandidatePool.lean:101:6: warning: unused variable `S`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+import took 3.63s
+cumulative profiling times:
+	.olean serialization 91.2ms
+	attribute application 0.737ms
+	compilation (IR) 1.93ms
+	compilation (LCNF base) 2.5ms
+	compilation (LCNF mono) 2.88ms
+	congr simp thm 2.73ms
+	elaboration 124ms
+	fix level params 1.28ms
+	import 3.63s
+	initialization 43.2ms
+	instantiate metavars 2.46ms
+	interpretation 312ms
+	let-to-have transformation 0.556ms
+	linting 46ms
+	parsing 18ms
+	process pre-definitions 11.6ms
+	share common exprs 2.78ms
+	simp 42.1ms
+	tactic execution 156ms
+	type checking 40.3ms
+	typeclass inference 264ms

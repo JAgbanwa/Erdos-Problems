@@ -1,0 +1,21 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 PaperIV/A4ExceptionalBound.lean -o /workspace/request-project/.lake/runner/lib/lean/PaperIV/A4ExceptionalBound.olean -i /workspace/request-project/.lake/runner/lib/lean/PaperIV/A4ExceptionalBound.ilean
+import took 3.5s
+cumulative profiling times:
+	.olean serialization 58ms
+	attribute application 0.0323ms
+	congr simp thm 0.868ms
+	elaboration 24ms
+	fix level params 0.345ms
+	import 3.5s
+	initialization 50ms
+	instantiate metavars 5.53ms
+	interpretation 213ms
+	let-to-have transformation 0.0531ms
+	linting 9.04ms
+	parsing 4.15ms
+	process pre-definitions 4.94ms
+	share common exprs 1.07ms
+	simp 13.6ms
+	tactic execution 84.6ms
+	type checking 41.3ms
+	typeclass inference 35.1ms

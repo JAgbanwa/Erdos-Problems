@@ -1,0 +1,24 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 PaperV/RealizabilityDefect.lean -o /workspace/request-project/.lake/runner/lib/lean/PaperV/RealizabilityDefect.olean -i /workspace/request-project/.lake/runner/lib/lean/PaperV/RealizabilityDefect.ilean
+import took 2.28s
+cumulative profiling times:
+	.olean serialization 57.1ms
+	attribute application 0.291ms
+	compilation (IR) 2.57ms
+	compilation (LCNF base) 4.34ms
+	compilation (LCNF mono) 5.52ms
+	congr simp thm 3.94ms
+	elaboration 85.5ms
+	fix level params 1.21ms
+	import 2.28s
+	initialization 37.1ms
+	instantiate metavars 5.86ms
+	interpretation 249ms
+	let-to-have transformation 0.384ms
+	linting 19.6ms
+	parsing 14.3ms
+	process pre-definitions 9.25ms
+	share common exprs 2.99ms
+	simp 31.1ms
+	tactic execution 107ms
+	type checking 68.5ms
+	typeclass inference 82.1ms

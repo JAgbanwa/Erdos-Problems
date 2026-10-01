@@ -1,0 +1,23 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 Nibble/Convergence.lean -o /workspace/request-project/.lake/runner/lib/lean/Nibble/Convergence.olean -i /workspace/request-project/.lake/runner/lib/lean/Nibble/Convergence.ilean
+import took 2.7s
+cumulative profiling times:
+	.olean serialization 38ms
+	attribute application 0.0846ms
+	congr simp thm 0.512ms
+	elaboration 32.4ms
+	fix level params 0.265ms
+	import 2.7s
+	initialization 37ms
+	instantiate metavars 0.623ms
+	interpretation 232ms
+	let-to-have transformation 0.159ms
+	linting 7.77ms
+	norm_num 0.864ms
+	parsing 5.67ms
+	process pre-definitions 3.86ms
+	ring 13.8ms
+	share common exprs 1.73ms
+	simp 4.28ms
+	tactic execution 14.5ms
+	type checking 24.2ms
+	typeclass inference 92.4ms

@@ -1,0 +1,32 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 PaperIV/DefectAugmentedSplitArithmetic.lean -o /workspace/request-project/.lake/runner/lib/lean/PaperIV/DefectAugmentedSplitArithmetic.olean -i /workspace/request-project/.lake/runner/lib/lean/PaperIV/DefectAugmentedSplitArithmetic.ilean
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_nlinarith_1._boxed took 151ms
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_nlinarith_1._boxed took 328ms
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_linarith_1._boxed took 117ms
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_linarith_1._boxed took 122ms
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_linarith_1._boxed took 148ms
+import took 3.38s
+cumulative profiling times:
+	.olean serialization 67.7ms
+	attribute application 0.0703ms
+	compilation (IR) 27.2ms
+	compilation (LCNF base) 26.5ms
+	compilation (LCNF mono) 11.9ms
+	congr simp thm 11.8ms
+	dsimp 4.29ms
+	elaboration 32.2ms
+	fix level params 0.625ms
+	import 3.38s
+	initialization 35.4ms
+	instantiate metavars 8.6ms
+	interpretation 1.35s
+	let-to-have transformation 0.0768ms
+	linting 15.8ms
+	norm_num 20.9ms
+	parsing 7.74ms
+	process pre-definitions 17.8ms
+	ring 84.2ms
+	share common exprs 12ms
+	simp 645ms
+	tactic execution 142ms
+	type checking 220ms
+	typeclass inference 1.29s

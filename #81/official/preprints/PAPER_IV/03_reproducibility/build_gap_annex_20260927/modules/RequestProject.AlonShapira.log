@@ -1,0 +1,22 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 RequestProject/AlonShapira.lean -o /workspace/request-project/.lake/runner/lib/lean/RequestProject/AlonShapira.olean -i /workspace/request-project/.lake/runner/lib/lean/RequestProject/AlonShapira.ilean
+import took 7.4s
+.olean serialization took 225ms
+cumulative profiling times:
+	.olean serialization 225ms
+	attribute application 0.126ms
+	congr simp thm 1.45ms
+	elaboration 60.7ms
+	fix level params 0.253ms
+	import 7.4s
+	initialization 37.5ms
+	instantiate metavars 1.53ms
+	interpretation 409ms
+	let-to-have transformation 0.226ms
+	linting 9.88ms
+	parsing 10.9ms
+	process pre-definitions 4.56ms
+	share common exprs 1.29ms
+	simp 2.46ms
+	tactic execution 30.9ms
+	type checking 7.87ms
+	typeclass inference 51.4ms

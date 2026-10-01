@@ -1,0 +1,30 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 E18/Numeric.lean -o /workspace/request-project/.lake/runner/lib/lean/E18/Numeric.olean -i /workspace/request-project/.lake/runner/lib/lean/E18/Numeric.ilean
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_linarith_1._boxed took 102ms
+type checking took 236ms
+import took 4.35s
+.olean serialization took 112ms
+cumulative profiling times:
+	.olean serialization 112ms
+	attribute application 0.714ms
+	blocked (unaccounted) 54ms
+	compilation (IR) 3.56ms
+	compilation (LCNF base) 19.3ms
+	compilation (LCNF mono) 2.88ms
+	congr simp thm 12.4ms
+	elaboration 112ms
+	fix level params 0.983ms
+	import 4.35s
+	initialization 39.6ms
+	instantiate metavars 2.08ms
+	interpretation 838ms
+	let-to-have transformation 0.306ms
+	linting 14ms
+	norm_num 386ms
+	parsing 17.9ms
+	process pre-definitions 20.9ms
+	ring 12.8ms
+	share common exprs 20.1ms
+	simp 173ms
+	tactic execution 326ms
+	type checking 381ms
+	typeclass inference 1.3s

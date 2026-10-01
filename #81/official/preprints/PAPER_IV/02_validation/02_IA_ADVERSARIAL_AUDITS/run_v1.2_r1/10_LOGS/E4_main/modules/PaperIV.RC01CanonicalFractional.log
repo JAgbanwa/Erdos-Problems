@@ -1,0 +1,39 @@
+$ C:\Users\jtraverso\.elan\toolchains\leanprover--lean4---v4.28.0\bin\lean.exe -j 8 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false PaperIV/RC01CanonicalFractional.lean -o C:\Users\jtraverso\e81p4-publish\preprints\PAPER_IV\02_validation\02_IA_ADVERSARIAL_AUDITS\run_v1.2_r1\05_BUILD\main\obj\PaperIV\RC01CanonicalFractional.olean -i C:\Users\jtraverso\e81p4-publish\preprints\PAPER_IV\02_validation\02_IA_ADVERSARIAL_AUDITS\run_v1.2_r1\05_BUILD\main\obj\PaperIV\RC01CanonicalFractional.ilean
+PaperIV/RC01CanonicalFractional.lean:37:0: warning: automatically included section variable(s) unused in theorem `PaperIV.RC01CanonicalFractional.canonicalWeight_nonneg`:
+  [Fintype V]
+  [Fintype Pat]
+  [DecidableEq Pat]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] [Fintype Pat] [DecidableEq Pat] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+PaperIV/RC01CanonicalFractional.lean:57:0: warning: automatically included section variable(s) unused in theorem `PaperIV.RC01CanonicalFractional.oneCount_mono`:
+  [Fintype V]
+  [Fintype Pat]
+  [DecidableEq Pat]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] [Fintype Pat] [DecidableEq Pat] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+PaperIV/RC01CanonicalFractional.lean:66:0: warning: automatically included section variable(s) unused in theorem `PaperIV.RC01CanonicalFractional.twoCount_mono`:
+  [Fintype V]
+  [Fintype Pat]
+  [DecidableEq Pat]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] [Fintype Pat] [DecidableEq Pat] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+PaperIV/RC01CanonicalFractional.lean:103:0: warning: automatically included section variable(s) unused in theorem `PaperIV.RC01CanonicalFractional.load_eq`:
+  [Fintype Pat]
+  [DecidableEq Pat]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype Pat] [DecidableEq Pat] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+PaperIV/RC01CanonicalFractional.lean:128:0: warning: automatically included section variable(s) unused in theorem `PaperIV.RC01CanonicalFractional.codegree_eq`:
+  [Fintype Pat]
+  [DecidableEq Pat]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype Pat] [DecidableEq Pat] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`

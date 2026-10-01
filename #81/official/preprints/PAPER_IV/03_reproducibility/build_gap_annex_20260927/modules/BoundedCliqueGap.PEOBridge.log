@@ -1,0 +1,27 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 BoundedCliqueGap/PEOBridge.lean -o /workspace/request-project/.lake/runner/lib/lean/BoundedCliqueGap/PEOBridge.olean -i /workspace/request-project/.lake/runner/lib/lean/BoundedCliqueGap/PEOBridge.ilean
+BoundedCliqueGap/PEOBridge.lean:50:0: warning: automatically included section variable(s) unused in theorem `BoundedCliqueGap.revPES_peoRank`:
+  [DecidableEq V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+import took 3.22s
+cumulative profiling times:
+	.olean serialization 49.6ms
+	attribute application 0.0653ms
+	congr simp thm 1.15ms
+	elaboration 14.8ms
+	fix level params 0.146ms
+	import 3.22s
+	initialization 46.6ms
+	instantiate metavars 0.566ms
+	interpretation 207ms
+	let-to-have transformation 0.053ms
+	linting 6.14ms
+	parsing 3.85ms
+	process pre-definitions 2.65ms
+	share common exprs 0.538ms
+	simp 19.4ms
+	tactic execution 42ms
+	type checking 26.7ms
+	typeclass inference 99.8ms

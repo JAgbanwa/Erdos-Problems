@@ -1,0 +1,124 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+\documentclass[
+]{article}
+\usepackage{xcolor}
+\usepackage{amsmath,amssymb}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math} % this also loads fontspec
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+\usepackage{lmodern}
+\ifPDFTeX\else
+  % xetex/luatex font selection
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{longtable,booktabs,array}
+\usepackage{caption}
+\captionsetup[table]{skip=6pt}
+\newcounter{none} % for unnumbered tables
+\usepackage{calc} % for calculating minipage widths
+% Correct order of tables after \paragraph or \subparagraph
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd\longtable{\par}{\if@noskipsec\mbox{}\fi\par}{}{}
+\makeatother
+% Allow footnotes in longtable head/foot
+\IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
+\makesavenoteenv{longtable}
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\usepackage{bookmark}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same}
+% fallback for those not using the hyperref driver hyperxmp:
+\makeatletter
+\@ifundefined{xmpquote}{\newcommand{\xmpquote}[1]{#1}}{}
+\makeatother
+\hypersetup{
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+
+\author{}
+\date{}
+
+\begin{document}
+
+\section{Informe de puerta E0 --- run\_v1.22\_r2 (Paper IV
+v1.22-r2)}\label{informe-de-puerta-e0--run_v122_r2-paper-iv-v122-r2}
+
+Veredicto actual: \textbf{PASS}. Evidencia: \texttt{20\_EVIDENCE/E0/}.
+Auditor: Claude Opus 5.5, misma sesión que las ejecuciones anteriores;
+no se ejecutó Lean.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section{E0 --- Identidad (r2)}\label{e0--identidad-r2}
+
+Script: \texttt{10\_SCRIPTS/e0\_v122r2.py}, de solo lectura.
+Ejecuciones: inicial (2026-10-01T11:01:08Z, antes de cualquier revisión)
+y final (2026-10-01T11:23:33Z, tras el dictamen). \textbf{Los dos
+objetos \texttt{checks} son idénticos.}
+
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}ll@{}}
+\toprule\noalign{}
+Comprobación & Resultado \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+\texttt{AUDIT\_TARGET\_v1.22\_r2.json} (f9317763\ldots) frente a su
+sidecar & coincide \\
+Manifiesto r2, ZIP r2, mandato, manifiesto de fuentes y objetivo base
+r1: hash y bytes según lo declarado & todo coincide \\
+Evidencia anterior: los ZIP de run\_v1.22\_r1, run\_v1.21\_r1 y
+run\_v1.2\_r1, el ZIP de fuentes Lean y el anexo & hash y bytes
+coinciden \\
+Manifiesto r2 frente al directorio: 127 archivos & 0 discrepancias.
+Fuera del manifiesto, por declaración, quedan el propio manifiesto y su
+sidecar, el ZIP y su sidecar, \texttt{.aux} y
+\texttt{\_\_pycache\_\_} \\
+ZIP r2: 129 miembros (127 + manifiesto + sidecar) & CRC correcto
+(testzip None), sin rutas inseguras ni faltantes, 0 discrepancias de
+hash, y los 2 miembros extra iguales a los archivos en disco \\
+Otros ZIP en el directorio r2 & ninguno \\
+Inglés MD, TeX y PDF de r2 frente a r1 & \textbf{byte-idénticos} \\
+Corte r1 de comparación & manifiesto d9e559a3\ldots{} y directorio sin
+cambios; paquete 2b87b746\ldots{} \\
+Lean & 615/615 entradas, sin extras; ZIP de fuentes con 615 miembros,
+CRC correcto e igual al manifiesto \\
+Anexo & 2847a422\ldots, 40 miembros, CRC correcto \\
+run\_v1.2\_r1, run\_v1.21\_r1 y run\_v1.22\_r1 & 1097, 340 y 188
+archivos del manifiesto sin cambios; sidecars de los ZIP correctos; CRC
+correcto en los tres \\
+\end{longtable}
+}
+
+\textbf{Veredicto E0 (r2): PASS.}
+
+\end{document}

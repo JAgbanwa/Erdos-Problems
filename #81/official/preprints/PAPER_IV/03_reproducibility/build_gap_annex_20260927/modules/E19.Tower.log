@@ -1,0 +1,26 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 E19/Tower.lean -o /workspace/request-project/.lake/runner/lib/lean/E19/Tower.olean -i /workspace/request-project/.lake/runner/lib/lean/E19/Tower.ilean
+import took 3.05s
+cumulative profiling times:
+	.olean serialization 57.2ms
+	attribute application 2.45ms
+	compilation (IR) 0.217ms
+	compilation (LCNF base) 0.817ms
+	compilation (LCNF mono) 0.222ms
+	congr simp thm 1.26ms
+	elaboration 49.7ms
+	fix level params 0.304ms
+	import 3.05s
+	initialization 34.9ms
+	instantiate metavars 0.935ms
+	interpretation 246ms
+	let-to-have transformation 0.26ms
+	linting 11.3ms
+	norm_num 7.28ms
+	parsing 9.3ms
+	process pre-definitions 9.57ms
+	ring 6.63ms
+	share common exprs 2.05ms
+	simp 17.2ms
+	tactic execution 70.5ms
+	type checking 88.6ms
+	typeclass inference 127ms

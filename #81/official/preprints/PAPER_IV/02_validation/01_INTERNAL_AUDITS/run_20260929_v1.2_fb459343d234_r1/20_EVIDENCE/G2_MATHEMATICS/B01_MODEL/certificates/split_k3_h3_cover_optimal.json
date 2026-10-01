@@ -1,0 +1,181 @@
+{
+  "schema": 5,
+  "kind": "exact_cover",
+  "solver_free": true,
+  "note_key": "cert.note.exact_cover",
+  "note_args": {},
+  "note": "every element of the universe in exactly one part",
+  "provenance": {
+    "certo_version": "0.20.1",
+    "created": "2026-09-30T10:46:57+00:00",
+    "spec_path": "C:\\Users\\jtraverso\\e81p4-publish\\preprints\\PAPER_IV\\02_validation\\01_INTERNAL_AUDITS\\run_20260929_v1.2_fb459343d234_r1\\20_EVIDENCE\\G2_MATHEMATICS\\B01_MODEL\\inputs\\split_k3_h3_cover.py",
+    "spec_sha256": "1a8e5018321791f6fa4dedbc81706f83151bb7a940ea0c3aab493b57717c453f"
+  },
+  "payload": {
+    "universe": [
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        2
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        0,
+        3
+      ],
+      [
+        0,
+        4
+      ],
+      [
+        0,
+        5
+      ],
+      [
+        1,
+        3
+      ],
+      [
+        1,
+        4
+      ],
+      [
+        1,
+        5
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        2,
+        4
+      ],
+      [
+        2,
+        5
+      ]
+    ],
+    "parts": [
+      [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          3
+        ]
+      ],
+      [
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          2,
+          4
+        ]
+      ],
+      [
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          2,
+          5
+        ]
+      ],
+      [
+        [
+          0,
+          5
+        ]
+      ],
+      [
+        [
+          1,
+          4
+        ]
+      ],
+      [
+        [
+          2,
+          3
+        ]
+      ]
+    ],
+    "exact": true,
+    "cliques": true,
+    "multiplicities": {},
+    "part_report": [
+      {
+        "vertices": [
+          "0",
+          "1",
+          "3"
+        ],
+        "edges": 3
+      },
+      {
+        "vertices": [
+          "0",
+          "2",
+          "4"
+        ],
+        "edges": 3
+      },
+      {
+        "vertices": [
+          "1",
+          "2",
+          "5"
+        ],
+        "edges": 3
+      },
+      {
+        "vertices": [
+          "0",
+          "5"
+        ],
+        "edges": 1
+      },
+      {
+        "vertices": [
+          "1",
+          "4"
+        ],
+        "edges": 1
+      },
+      {
+        "vertices": [
+          "2",
+          "3"
+        ],
+        "edges": 1
+      }
+    ],
+    "max_size": null,
+    "size": 6,
+    "title": "Literal K3 join I3 partition"
+  }
+}

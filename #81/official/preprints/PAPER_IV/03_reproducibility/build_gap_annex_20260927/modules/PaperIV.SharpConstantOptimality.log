@@ -1,0 +1,28 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 PaperIV/SharpConstantOptimality.lean -o /workspace/request-project/.lake/runner/lib/lean/PaperIV/SharpConstantOptimality.olean -i /workspace/request-project/.lake/runner/lib/lean/PaperIV/SharpConstantOptimality.ilean
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_nlinarith_1._boxed took 780ms
+import took 4.21s
+.olean serialization took 102ms
+cumulative profiling times:
+	.olean serialization 102ms
+	attribute application 0.0378ms
+	compilation (IR) 5.88ms
+	compilation (LCNF base) 5.65ms
+	compilation (LCNF mono) 2.48ms
+	congr simp thm 5.65ms
+	elaboration 25.3ms
+	fix level params 0.623ms
+	import 4.21s
+	initialization 37.1ms
+	instantiate metavars 12.6ms
+	interpretation 1.44s
+	let-to-have transformation 0.0675ms
+	linting 11.2ms
+	norm_num 206ms
+	parsing 4.36ms
+	process pre-definitions 9.22ms
+	ring 48.9ms
+	share common exprs 10ms
+	simp 71.9ms
+	tactic execution 96.2ms
+	type checking 82.4ms
+	typeclass inference 595ms

@@ -1,0 +1,25 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 PaperIV/CliqueTree/PEO.lean -o /workspace/request-project/.lake/runner/lib/lean/PaperIV/CliqueTree/PEO.olean -i /workspace/request-project/.lake/runner/lib/lean/PaperIV/CliqueTree/PEO.ilean
+import took 3.69s
+cumulative profiling times:
+	.olean serialization 63.4ms
+	attribute application 4.24ms
+	blocked (unaccounted) 1.3ms
+	compilation (IR) 0.802ms
+	compilation (LCNF base) 1.74ms
+	compilation (LCNF mono) 1.03ms
+	congr simp thm 13.3ms
+	elaboration 91ms
+	fix level params 1.54ms
+	import 3.69s
+	initialization 37ms
+	instantiate metavars 8.18ms
+	interpretation 322ms
+	let-to-have transformation 0.241ms
+	linting 27.4ms
+	parsing 16.6ms
+	process pre-definitions 12.4ms
+	share common exprs 3.67ms
+	simp 122ms
+	tactic execution 178ms
+	type checking 83.3ms
+	typeclass inference 340ms

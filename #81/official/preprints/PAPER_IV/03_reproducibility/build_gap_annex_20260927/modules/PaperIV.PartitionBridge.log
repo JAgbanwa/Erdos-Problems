@@ -1,0 +1,21 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 PaperIV/PartitionBridge.lean -o /workspace/request-project/.lake/runner/lib/lean/PaperIV/PartitionBridge.olean -i /workspace/request-project/.lake/runner/lib/lean/PaperIV/PartitionBridge.ilean
+import took 4.57s
+cumulative profiling times:
+	.olean serialization 68.2ms
+	attribute application 0.0683ms
+	congr simp thm 1.81ms
+	elaboration 38.5ms
+	fix level params 0.43ms
+	import 4.57s
+	initialization 40.1ms
+	instantiate metavars 0.336ms
+	interpretation 227ms
+	let-to-have transformation 0.107ms
+	linting 10.1ms
+	parsing 4.72ms
+	process pre-definitions 2.37ms
+	share common exprs 0.878ms
+	simp 10.3ms
+	tactic execution 28.8ms
+	type checking 6.56ms
+	typeclass inference 40.5ms

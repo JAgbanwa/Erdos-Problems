@@ -1,0 +1,484 @@
+{
+  "audit_class": "internal author-side packaging, formal contracts and reproducibility; not independent mathematical review",
+  "checks": [
+    {
+      "check": "G0.archive_hash",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "G0.archive_crc",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "G0.archive_paths",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "G3.archive_source_identity",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "G0.archive_allowlist",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "G8.archive_secret_scan",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "G3.extracted_source_identity",
+      "pass": true,
+      "detail": "479 frozen entries"
+    },
+    {
+      "check": "G3.no_unmanifested_lean",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "G3.extracted_package_exact",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "G3.token_sorry",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "G3.token_admit",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "G3.token_axiom",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "G3.token_native_decide",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "G3.token_implemented_by",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "G3.token_sorryAx",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "G3.scanner_rejects_live_token",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "G3.scanner_ignores_prose",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "G3.scanner_preserves_boundary",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "G3.manifest_hash",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "G3.toolchain",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "G3.pinned_git_dependencies",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "G3.only_local_series_package",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "G3.cached_dependency_revisions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "G3.cached_dependency_sources_clean",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "G3.import_closure_complete",
+      "pass": true,
+      "detail": "[]"
+    },
+    {
+      "check": "G3.no_external_Erdos81_import",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "G3.root_exports_Erdos81Unconditional",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "G3.root_exports_Erdos81AllOrders",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "G3.root_exports_PaperTheorems",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "G1.manuscript_lean_excerpts_literal",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "G0.all_six_manuscripts_bound",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "G5.es_draft_status",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "G6.es_compiler_success",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "G6.es_no_layout_errors",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "G6.es_figures_present",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "G6.es_balanced_displays",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "G6.es_qa_pdf_binding",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "G6.es_series_layout",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "G6.es_unique_labels",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "G0.en_md_baseline",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "G0.en_tex_baseline",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "G0.en_pdf_baseline",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "G5.en_draft_status",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "G6.en_compiler_success",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "G6.en_no_layout_errors",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "G6.en_figures_present",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "G6.en_balanced_displays",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "G6.en_qa_pdf_binding",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "G6.en_series_layout",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "G6.en_unique_labels",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "G5.equations_identical_modulo_reviewed_text",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "G5.lean_blocks_identical",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "G5.heading_levels_identical",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "G5.references_20_each",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "G4.all_six_commands_completed",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "G4.all_exit_codes_zero",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "G4.sources_unchanged",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "G4.fresh_logs_bound",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "G4.axioms_footprints",
+      "pass": true,
+      "detail": "83"
+    },
+    {
+      "check": "G4.axioms_no_error",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "G4.supplement_footprints",
+      "pass": true,
+      "detail": "7"
+    },
+    {
+      "check": "G4.supplement_no_error",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "G4.public_contracts_footprints",
+      "pass": true,
+      "detail": "4"
+    },
+    {
+      "check": "G4.public_contracts_no_error",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "G4.bounded_footprints",
+      "pass": true,
+      "detail": "5"
+    },
+    {
+      "check": "G4.bounded_no_error",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "G4.57_constant_cones",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "G4.supplement_closure_rebuilt",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "G4.supplement_postbuild_footprints",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "G4.tampered_axiom_rejected",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "G0.tampered_hash_rejected",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "G8.no_cache_credentials_or_superseded_drafts",
+      "pass": true,
+      "detail": "[]"
+    },
+    {
+      "check": "G8.secret_scan",
+      "pass": true,
+      "detail": "[]"
+    },
+    {
+      "check": "G8.active_manuscripts_exactly_six",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "G2.baseline_identity_n_le_1000",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "G2.critical_core_attains_n_le_1000",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "G2.target_increment_n_le_1000",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "G2.baseline_upper_n_le_1000",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "G2.wrong_baseline_coefficient_rejected",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "G8.document_README.md",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "G8.document_04_integrity/PROVENANCE_AND_TRUST.md",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "G8.document_03_reproducibility/README.md",
+      "pass": true,
+      "detail": ""
+    }
+  ],
+  "passed": 82,
+  "total": 82,
+  "source_entry_count": 479,
+  "lean_source_count": 474,
+  "dependency_checks": [
+    {
+      "name": "mathlib",
+      "expected": "8f9d9cff6bd728b17a24e163c9402775d9e6a365",
+      "actual": "8f9d9cff6bd728b17a24e163c9402775d9e6a365",
+      "revision_matches": true,
+      "tracked_clean": true
+    },
+    {
+      "name": "plausible",
+      "expected": "55c8532eb21ec9f6d565d51d96b8ca50bd1fbef3",
+      "actual": "55c8532eb21ec9f6d565d51d96b8ca50bd1fbef3",
+      "revision_matches": true,
+      "tracked_clean": true
+    },
+    {
+      "name": "LeanSearchClient",
+      "expected": "c5d5b8fe6e5158def25cd28eb94e4141ad97c843",
+      "actual": "c5d5b8fe6e5158def25cd28eb94e4141ad97c843",
+      "revision_matches": true,
+      "tracked_clean": true
+    },
+    {
+      "name": "importGraph",
+      "expected": "85b59af46828c029a9168f2f9c35119bd0721e6e",
+      "actual": "85b59af46828c029a9168f2f9c35119bd0721e6e",
+      "revision_matches": true,
+      "tracked_clean": true
+    },
+    {
+      "name": "proofwidgets",
+      "expected": "be3b2e63b1bbf496c478cef98b86972a37c1417d",
+      "actual": "be3b2e63b1bbf496c478cef98b86972a37c1417d",
+      "revision_matches": true,
+      "tracked_clean": true
+    },
+    {
+      "name": "aesop",
+      "expected": "f642a64c76df8ba9cb53dba3b919425a0c2aeaf1",
+      "actual": "f642a64c76df8ba9cb53dba3b919425a0c2aeaf1",
+      "revision_matches": true,
+      "tracked_clean": true
+    },
+    {
+      "name": "Qq",
+      "expected": "b8f98e9087e02c8553945a2c5abf07cec8e798c3",
+      "actual": "b8f98e9087e02c8553945a2c5abf07cec8e798c3",
+      "revision_matches": true,
+      "tracked_clean": true
+    },
+    {
+      "name": "batteries",
+      "expected": "495c008c3e3f4fb4256ff5582ddb3abf3198026f",
+      "actual": "495c008c3e3f4fb4256ff5582ddb3abf3198026f",
+      "revision_matches": true,
+      "tracked_clean": true
+    },
+    {
+      "name": "Cli",
+      "expected": "4f10f47646cb7d5748d6f423f4a07f98f7bbcc9e",
+      "actual": "4f10f47646cb7d5748d6f423f4a07f98f7bbcc9e",
+      "revision_matches": true,
+      "tracked_clean": true
+    }
+  ]
+}

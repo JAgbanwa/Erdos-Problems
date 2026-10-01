@@ -1,0 +1,3389 @@
+[
+  {
+    "language": "en",
+    "kind": "display",
+    "line": 19,
+    "sha256": "1b6e3f6f5442028627114565b92f20af834dc6ce4de07ec4ce1c67672477298e",
+    "text": "\\[\nc_4(G)\\le M(n)+b,\\qquad M(n)=\\left\\lfloor\\frac{n(n+1)}6\\right\\rfloor,\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "en",
+    "kind": "display",
+    "line": 57,
+    "sha256": "77e0ea440441568c151fd063898801d3448393c8dfa680908e05d026e589038e",
+    "text": "\\[\n\\operatorname{cp}(G)\\le c_4(G)\\le M(n)+b\n\\le\\frac{n^2}{6}+\\frac n6+b.\n\\tag{A}\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "en",
+    "kind": "display",
+    "line": 67,
+    "sha256": "66c2c33c4f896701c51d6dda610db44117bbb678824619e052f9cef26bb9d1e6",
+    "text": "\\[\n\\operatorname{cp}(G)\\le c_4(G)\\le M(n).\n\\tag{1.1}\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "en",
+    "kind": "display",
+    "line": 72,
+    "sha256": "7bedf5a51440799e30e9165d11cc68f4890c535a44949dd40a552a060aec5842",
+    "text": "\\[\n\\max_{\\substack{|V(G)|=n\\\\G\\text{ chordal}}}\\operatorname{cp}(G)=M(n).\n\\tag{1.2}\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "en",
+    "kind": "display",
+    "line": 88,
+    "sha256": "70d5f3961d7964318f855d5f2806ece7a1ccd75823e94051db785a017a4b0740",
+    "text": "\\[\n\\operatorname{cp}(G)\\le c_4(G)\\le Q_s(n),\n\\qquad\nQ_s(n):=M(n+s)-\\binom{s+1}{2}.\n\\tag{C}\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "en",
+    "kind": "display",
+    "line": 103,
+    "sha256": "eb37320477374eb0828bb0565fa486d18b3e70d8d7a093430e66e860d43252ed",
+    "text": "\\[\nF_4(G)=e(G)-W^*(G),\\qquad \\Delta(G)=M(n)-F_4(G).\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "en",
+    "kind": "display",
+    "line": 107,
+    "sha256": "5d845c5d5becec5aa8b0cdc5625ea92cc2d554e3633f9d972ed35ab75e3b50fe",
+    "text": "\\[\n\\boxed{\ne(G)-g(\\mathcal P)\\le M(n)\n\\quad\\Longleftrightarrow\\quad\nW^*(G)-g(\\mathcal P)\\le\\Delta(G).\n}\n\\tag{1.3}\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "en",
+    "kind": "display",
+    "line": 118,
+    "sha256": "69fb2a87560e1ddc01779860e27c8fde433495c19b3dfe8332d5a601c7103c57",
+    "text": "\\[\ng(Q)=\\sum_{K\\in Q}\\left(\\binom{|K|}{2}-1\\right).\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "en",
+    "kind": "display",
+    "line": 122,
+    "sha256": "2e98e99dd1b4577e3705cbe82fc59ff7292a994f67c151618b857b646c208202",
+    "text": "\\[\ng(Q)+|Q|=e(G),\\qquad\n|Q|\\le T\\quad\\Longleftrightarrow\\quad e(G)\\le g(Q)+T.\n\\tag{1.3a}\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "en",
+    "kind": "display",
+    "line": 130,
+    "sha256": "63d57f6504946bd9629aa02193995ac8aefeac568f094fe2264acd7dd0389872",
+    "text": "\\[\n\\Delta_{\\{3,4\\}}(G)\\le\\Delta_{\\{3,\\ldots,L\\}}(G)\n\\le\\Delta_{\\mathrm{cp}}(G),\n\\tag{1.3b}\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "en",
+    "kind": "display",
+    "line": 140,
+    "sha256": "3b60669b4512dfc93b4a946a6e7624600daf6d9eabb9fc67a5cb96b92867ec1f",
+    "text": "\\[\ne(G)-g(\\mathcal P)\n\\le B_n(p)-\\frac m{20}-\\frac A2\n\\le M(n),\n\\tag{1.4}\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "en",
+    "kind": "display",
+    "line": 153,
+    "sha256": "3d40ea14b8e51649d65972b154e8742dbce5e513780332121c5d5f2315f65eff",
+    "text": "\\[\n\\boxed{\nF_4(G)<\\frac{n^2}{6}-\\eta_0n^2\n\\quad\\text{or}\\quad\n\\exists\\,\\text{near-structure witness for }G.\n}\n\\tag{1.5}\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "en",
+    "kind": "display",
+    "line": 186,
+    "sha256": "955cad471e45412f03cbdfeb9e8e0aebb38abb1718fa1abc5245e49f97c78e93",
+    "text": "\\[\ng(K)=\\binom{|K|}{2}-1,\\qquad\ng(\\mathcal P)=\\sum_{K\\in\\mathcal P}g(K).\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "en",
+    "kind": "display",
+    "line": 202,
+    "sha256": "e6af2a1bfd2325ee3b9608123236fe0845f9de68ac37fe805c07003812e8c44f",
+    "text": "\\[\n|Q|=e(G)-g(\\mathcal P).\n\\tag{2.1}\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "en",
+    "kind": "display",
+    "line": 211,
+    "sha256": "167163f52f054414091b63be309b0c04093624c0e3adccfd3f9123082d2b2690",
+    "text": "\\[\n\\sum_{K:e\\in E(K)}x_K\\le1\\qquad(e\\in E(G)).\n\\tag{2.2}\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "en",
+    "kind": "display",
+    "line": 216,
+    "sha256": "3a743d5e86be426750b6384fc09e1f76d2274248d6f9099807c00c22373e94f7",
+    "text": "\\[\n\\sum_{e\\in E(T)}y_e\\ge2,\\qquad\n\\sum_{e\\in E(Q)}y_e\\ge5.\n\\tag{2.3}\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "en",
+    "kind": "display",
+    "line": 224,
+    "sha256": "16eeb993c56bfba8d59960ebdf2d903e980bce81d2ff07bc43d48e195d8053ff",
+    "text": "\\[\nw(x)\\le\\frac56\\sum_K |E(K)|x_K\\le\\frac56e(G).\n\\tag{2.4}\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "en",
+    "kind": "display",
+    "line": 233,
+    "sha256": "2a509b487384627f4403a406c91ed78bfde2b5459d90c929dad93a405bb0d64d",
+    "text": "\\[\nW^*(G)\\ge2\\nu_3^*(G),\\qquad\nF_4(G)\\le e(G)-2\\nu_3^*(G).\n\\tag{2.5}\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "en",
+    "kind": "display",
+    "line": 265,
+    "sha256": "ee4f6528d64bfa1537ba6d4a3c1969b7e0c6bfc84518cbab845496536e3f559f",
+    "text": "\\[\nw(x)-g(\\mathcal P)\\le\\xi n^2.\n\\tag{3.1}\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "en",
+    "kind": "display",
+    "line": 285,
+    "sha256": "ffff21cc94fcc1e73950868e156e5efae2d68e03441f40efe4915e58228d0c35",
+    "text": "\\[\nc_4(G)\\le e(G)-g(\\mathcal P)\n\\le F_4(G)+\\frac\\eta2n^2\n<\\frac{n^2}{6}-\\frac\\eta2n^2.\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "en",
+    "kind": "display",
+    "line": 299,
+    "sha256": "ffec03729bb0f252e3a070e4683d7461103706a77e81dad416c6516d399f543e",
+    "text": "\\[\n\\varepsilon_0=10^{-12},\\qquad \\eta_0=10^{-16}.\n\\tag{4.1}\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "en",
+    "kind": "display",
+    "line": 311,
+    "sha256": "a86730fdaaf49908496c3e534af9e8ddbb7e896e46cd94d50f1f2b433ad248b9",
+    "text": "\\[\nd(G)=\\frac1{n^2}\\min_C d_E(G,S_C).\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "en",
+    "kind": "display",
+    "line": 315,
+    "sha256": "9a6650c5c3587c53fe48d6b4ed416e37e115cd16c382cc88358c0e58b666199e",
+    "text": "\\[\n|d(G)-d(H)|\\le\\frac{d_E(G,H)}{n^2}.\n\\tag{4.2}\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "en",
+    "kind": "display",
+    "line": 324,
+    "sha256": "e5e36d722a172360f6eff4c89dc74955631d86e5916049b7ebc1f9361131e12e",
+    "text": "\\[\nF_4(G_i)\\le F_4(G_{i+1}),\\qquad\nd_E(G_i,G_{i+1})\\le n-1.\n\\tag{4.3}\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "en",
+    "kind": "display",
+    "line": 331,
+    "sha256": "898b28343377afc888a2c0634f9914545d36da2d2e89eae2b27e13f1445be4d2",
+    "text": "\\[\nW^*(G_{u\\to v})+W^*(G_{v\\to u})\\le2W^*(G).\n\\tag{4.4}\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "en",
+    "kind": "display",
+    "line": 344,
+    "sha256": "433f1df7a822bdc7cac4c2950ef4b33ff759a0d76f1ce68505e1880232a590f4",
+    "text": "\\[\nd(X)\\le16D/n^2,\\qquad D=\\eta_0n^2+n/6+1/24.\n\\tag{4.5}\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "en",
+    "kind": "display",
+    "line": 350,
+    "sha256": "da32f00b9c54c909edd3c7c774aafbef21196f25f99e57d622e7e98b4e25c760",
+    "text": "\\[\nF_4(X)\\le |Q|\\le B_n(|R|)-\\frac{117}{1825}m-\\frac{12687}{20000}A.\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "en",
+    "kind": "display",
+    "line": 354,
+    "sha256": "94199193e4e7360358fde56023efb4270141d18aed424fefd42770eed0f6c10f",
+    "text": "\\[\n\\frac{117}{1825}m+\\frac{12687}{20000}A\\le D.\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "en",
+    "kind": "display",
+    "line": 362,
+    "sha256": "44182b09a9e9368aa357ee83acb9167e947e775bcf95349997a9ab8ca4629fca",
+    "text": "\\[\nd(X)\\le\\frac{16D}{n^2}<\\varepsilon_0-\\frac1n,\\qquad\nD=\\eta_0n^2+\\frac n6+\\frac1{24}.\n\\tag{4.6}\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "en",
+    "kind": "display",
+    "line": 370,
+    "sha256": "0c17ec642be89d7d99d144a589fa7bad9db288d81ea1dd0144131d0d401428cf",
+    "text": "\\[\n\\frac{16}{6n}+\\frac1n+\\frac{16}{24n^2}\n<\\varepsilon_0-16\\eta_0.\n\\tag{4.6a}\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "en",
+    "kind": "display",
+    "line": 378,
+    "sha256": "d452e3107518f4ff8d877b038b77d81f00604643d893f857215f9fd06bdb95cc",
+    "text": "\\[\nd(G_i)<\\varepsilon_0.\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "en",
+    "kind": "display",
+    "line": 388,
+    "sha256": "f96bed3321921fac99f241e1b44e16285283af1168363ee3bf11feeebe7a74f7",
+    "text": "\\[\n\\varepsilon=\\frac{\\alpha^4}{8B^2},\\qquad\n1280B^2\\eta\\le\\alpha^4,\\qquad\nn\\ge\\frac{1280B^2}{\\alpha^4}\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "en",
+    "kind": "display",
+    "line": 398,
+    "sha256": "dec0152ea2da1290e9d17dd3a68cb809105f1948a2621099abfd577bb9cad07a",
+    "text": "\\[\nF_4(G)\\ge n^2/6-\\eta_0n^2.\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "en",
+    "kind": "display",
+    "line": 402,
+    "sha256": "82ef6888cab8b85feda2cbd9ad457e3adcb75b75b13b43f543174a1c6816654b",
+    "text": "\\[\nd_E(G,S_C)\\le\\varepsilon_0n^2,\n\\tag{4.7}\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "en",
+    "kind": "display",
+    "line": 406,
+    "sha256": "b497f11a574ec43ab37d839a56b08b0caa294bff36c640dd42e5f6d4ae0f5cbd",
+    "text": "\\[\n(6|C|-2n-1)^2\n\\le24\\left((\\eta_0+6\\varepsilon_0)n^2+\\frac n6+\\frac1{24}\\right).\n\\tag{4.8}\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "en",
+    "kind": "display",
+    "line": 419,
+    "sha256": "2d5f3f8b57408da725b0f9807c3dc540c6a5b9dfd38db0d514b87f18894325c1",
+    "text": "\\[\nd(G)<\\varepsilon_0,\\qquad F_4(G)\\ge n^2/6-\\eta_0n^2.\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "en",
+    "kind": "display",
+    "line": 423,
+    "sha256": "091e36457df36a83e8dcd5184e565c9a6da5919a99f18149063e110613673387",
+    "text": "\\[\n|Q|\\le B_n(p)-\\frac m{20}-\\frac A2,\\qquad\nB_n(p)=p(n-p)-\\binom p2.\n\\tag{5.0}\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "en",
+    "kind": "display",
+    "line": 436,
+    "sha256": "b773b5c64c340a7e435575cd1ee640a69e5299f7ce84ff72d47684c12ab265cc",
+    "text": "\\[\n\\begin{gathered}\na\\ge1024,\\qquad |n-3a|\\le a/64,\\\\\ne(G-P)+\\#\\{\\text{missing links between }P\\text{ and }V\\setminus P\\}\n\\le a^2/65536.\n\\end{gathered}\n\\tag{5.1}\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "en",
+    "kind": "display",
+    "line": 448,
+    "sha256": "1eb3dffbdb897f6ecd66d6ba6d8de66769c7fc3b96db3f8f1cd8917efdeeef22",
+    "text": "\\[\nF_4(S_C)\\le\n\\begin{cases}\nb_0-a_0,&b_0\\ge2a_0,\\\\\n(2b_0-a_0)/3,&a_0\\le b_0\\le2a_0,\\\\\n(a_0+b_0)/6,&b_0\\le a_0.\n\\end{cases}\n\\tag{5.1a}\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "en",
+    "kind": "display",
+    "line": 460,
+    "sha256": "792af780fce83a1435053d910bb6fddc3e0ecd4bf33108c774eb65e918de2f72",
+    "text": "\\[\n\\binom r2-\\left((a-1)r-\\binom a2\\right)\n=\\binom{u+1}{2}\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "en",
+    "kind": "display",
+    "line": 467,
+    "sha256": "1376500417b534f1440918d0516d73b4a9c700d0c9a9dfcebb47bf97e2faf769",
+    "text": "\\[\n\\varepsilon_0n^2+un\\le(10^{-12}+1.5\\cdot10^{-6})n^2\n\\le\\frac{(33n/100)^2}{65536}\\le\\frac{a^2}{65536}.\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "en",
+    "kind": "display",
+    "line": 474,
+    "sha256": "e26b5f4c92c75cacdeaecef2a89f812101fd18864cf978c6399516230e36fd1c",
+    "text": "\\[\nR=(P\\setminus X)\\cup Y.\n\\tag{5.2}\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "en",
+    "kind": "display",
+    "line": 479,
+    "sha256": "405159ee7c4021bbe316928220fcac91f1c64d3f3af660aec0638944a4d97e9c",
+    "text": "\\[\n16384|X|\\le |P|,\\qquad 57344|Y|\\le |P|.\n\\tag{5.3}\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "en",
+    "kind": "display",
+    "line": 484,
+    "sha256": "01cfdc920eceb736b8f1ca987460ab4ec0a4ca4451ef213cb806916b63d53b77",
+    "text": "\\[\n\\begin{gathered}\n99a/100\\le p\\le101a/100,\\quad q\\ge p,\\quad\n44352q\\ge87947a,\\\\\n48(2p-q)_+\\le a,\\quad 3D\\le a,\\quad\n400m<a^2,\\quad2000(A+2m)\\le11a^2.\n\\end{gathered}\n\\tag{5.4}\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "en",
+    "kind": "display",
+    "line": 499,
+    "sha256": "64c6ce4baac82df2e10f7e946f4717c231f9ddd2f6f7da026d53d7967ac8a96b",
+    "text": "\\[\n64d_{\\max}(G-R)\\le113a+64|X|,\\qquad\n128\\omega(G-R)\\le a+128+128|X|.\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "en",
+    "kind": "display",
+    "line": 520,
+    "sha256": "78fd0341288b55147cba7652c38849f834f0c79aefbfdf95fe7a2cc06fc26981",
+    "text": "\\[\nB_n(p)=p(n-p)-\\binom p2.\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "en",
+    "kind": "display",
+    "line": 534,
+    "sha256": "60060a740507e8825a136b4e2525649fe74c6788c4b43c71d9e856acbfd6e3c9",
+    "text": "\\[\n|Q|=\\binom p2+pq+m-A-2\\left(f+\\binom p2-\\ell\\right)\n=B_n(p)+m-A-2f+2\\ell.\n\\tag{5.4a}\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "en",
+    "kind": "display",
+    "line": 548,
+    "sha256": "640c804a5c53ea73e648bf933ff203a328834b1453be8c07ad8e362e46e9ae23",
+    "text": "\\[\nm_0\\ge\\frac pc\\,m.\n\\tag{5.5}\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "en",
+    "kind": "display",
+    "line": 555,
+    "sha256": "11886fc23f44b9511bbb7e584c1c25bb4ae5254181823a104dadfd64ad190479",
+    "text": "\\[\nf\\ge m_0-\\frac{w-1}{p}A\n\\ge\\frac pc\\,m-\\frac{w-1}{p}A.\n\\tag{5.6}\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "en",
+    "kind": "display",
+    "line": 561,
+    "sha256": "693772f38b8957a79300e5c67d7013aa8ba30625e30d3027023cc714ee067f2f",
+    "text": "\\[\n40c\\le73p,\\qquad 40(w-1)\\le3p.\n\\tag{5.7}\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "en",
+    "kind": "display",
+    "line": 570,
+    "sha256": "9b25f5f6ae318a58b95d49f9b560514bba211b9f7c8b3f0d68f68b7559bc5a3f",
+    "text": "\\[\n\\sum_xa_x=A,\\quad \\sum_xu_x=2f,\\quad\na_x\\le D,\\quad u_x\\le2t,\\quad\nS:=\\sum_xd_x=A+2f,\n\\tag{5.8}\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "en",
+    "kind": "display",
+    "line": 579,
+    "sha256": "4876ea0e5bc5642f6b69ae8cc660fc940cb8bdead41b528173298cc75ce6aef8",
+    "text": "\\[\n\\begin{aligned}\n\\sum_e b_e&\\le(p-1)S,\\\\\n\\sum_e b_e^2&\\le(p-2)\\sum_xd_x^2+S^2,\\\\\n\\sum_xd_x^2&\\le(D+4t)A+4tf.\n\\end{aligned}\n\\tag{5.9}\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "en",
+    "kind": "display",
+    "line": 588,
+    "sha256": "69e5f0fed192273799e06c123eee6a6e84c186e4bc3f9f527d4adfae68333507",
+    "text": "\\[\n(a_x+u_x)^2\\le Da_x+4ta_x+2tu_x,\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "en",
+    "kind": "display",
+    "line": 594,
+    "sha256": "d3d512ed4da40103e04afa60d289f94ea6aacf93f21809058bbb85a0d1ed9ea3",
+    "text": "\\[\n\\frac{s}{p}\\frac{b_e}{q}\n+\\left(1-\\frac{s}{p}\\right)\\frac{b_e(b_e-1)}{q(q-1)}.\n\\tag{5.10}\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "en",
+    "kind": "display",
+    "line": 600,
+    "sha256": "abadbd6bae355e13651f7393cd0b206ef4d1bedc7f20fc60517cc764a76acfc7",
+    "text": "\\[\n\\ell\\le\\frac{s}{q}(A+2f)\n+\\frac{(p-2)((D+4t)A+4tf)+(A+2f)^2}{q(q-1)}.\n\\tag{5.11}\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "en",
+    "kind": "display",
+    "line": 608,
+    "sha256": "3dcff065247d095846023d140fe9b1ca26e3fed5210ee8edc6408a52571d4d6f",
+    "text": "\\[\n\\begin{gathered}\na\\ge1024,\\quad \\frac qa\\ge\\frac{87947}{44352},\\quad\n\\frac pa\\le\\frac{101}{100},\\quad \\frac Da\\le\\frac13,\\\\\n\\frac ta\\le\\frac1{256},\\quad \\frac sa\\le\\frac1{48},\\quad\n\\frac{A+2f}{a^2}\\le\\frac{11}{2000}.\n\\end{gathered}\n\\tag{5.12}\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "en",
+    "kind": "display",
+    "line": 619,
+    "sha256": "792e76839338daf083a6215c5672d39aa4a45d1c487b47b94fa87094e139088b",
+    "text": "\\[\n2p-q=2a-q_P-3|X|+3|Y|\n\\le a/64+3a/57344<a/48.\n\\tag{5.12a}\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "en",
+    "kind": "display",
+    "line": 625,
+    "sha256": "841e24ba941283f2c9c90a34bf27ef5f0460139137f11ca69f27f0458904cc50",
+    "text": "\\[\n\\frac{q(q-1)}{a^2}\\ge\n\\left(\\frac{87947}{44352}\\right)^2\n-\\frac{87947}{44352\\cdot1024}\\ge\\frac{393}{100}.\n\\tag{5.13}\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "en",
+    "kind": "display",
+    "line": 633,
+    "sha256": "dec31aebf18b6a8f8f80128e82a25cad33afe5d0d629e747d975970e2fd70b88",
+    "text": "\\[\n\\begin{aligned}\n\\frac{1}{48Q_0}\n+\\frac{(101/100)(1/3+1/64)+11/2000}{R_0}\n&\\le\\frac{11}{100},\\\\\n\\frac{1}{24Q_0}\n+\\frac{(101/100)/64+11/1000}{R_0}\n&\\le\\frac{29}{1000}.\n\\end{aligned}\n\\tag{5.14}\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "en",
+    "kind": "display",
+    "line": 649,
+    "sha256": "aa4e4ebc393fc560a42b7ff19c0511cdf26131db2f5c4cf15b16bd3003ff8a18",
+    "text": "\\[\n|Q|\\le B_n(p)-\\frac{117}{1825}m-\\frac{12687}{20000}A\n\\le B_n(p)-\\frac m{16}-\\frac A2.\n\\tag{5.15a}\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "en",
+    "kind": "display",
+    "line": 655,
+    "sha256": "914900d72e65abea09826680ac44dbc9cb8be4d8e6ab003e469686a35ae40543",
+    "text": "\\[\n|Q|\\le B_n(p)-\\frac{19}{365}m-\\frac{253}{500}A\n\\le B_n(p)-\\frac m{20}-\\frac A2.\n\\tag{5.15}\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "en",
+    "kind": "display",
+    "line": 663,
+    "sha256": "9504514279d6d0ae7f8705a7377bfefbb25a0df390daffbcd1e4bbe2c171eb6d",
+    "text": "\\[\n|Q|\\le B_n(p)+m-\\frac{13}{20}A-\\frac{48}{25}f.\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "en",
+    "kind": "display",
+    "line": 667,
+    "sha256": "0eeda82c3beaa62ae44e8257dadca5620f4ad66a3612fd28c6547b0cb891e8f1",
+    "text": "\\[\n1-\\frac{48}{25}\\frac{40}{73}=-\\frac{19}{365},\\qquad\n-\\frac{13}{20}+\\frac{48}{25}\\frac3{40}=-\\frac{253}{500}.\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "en",
+    "kind": "display",
+    "line": 674,
+    "sha256": "275cd11357bb95da1d20f23dfc7c35beab8fa5c92e7e93e6ade6e8e080940b65",
+    "text": "\\[\n|Q|\\le B_n(p)+m-\\frac{39}{50}A-\\frac{971}{500}f.\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "en",
+    "kind": "display",
+    "line": 680,
+    "sha256": "6a0d251100729859f142127690d98f438d2b1cad57a5cf2fc082f3795b741077",
+    "text": "\\[\nB_n(p)=\\frac{(2n+1)^2}{24}-\\frac{(6p-2n-1)^2}{24}.\n\\tag{5.16}\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "en",
+    "kind": "display",
+    "line": 693,
+    "sha256": "946f6e3a08fea61047c6c97d7b2c333cd68a8c22842ccd0168f87741770aaff5",
+    "text": "\\[\n|3|R|-n|\\le\\frac n{50},\\qquad\n|3|C|-n|\\le\\frac n{10^4},\\qquad\nd_E(G,S_C)\\le\\varepsilon_0n^2,\n\\tag{5.17}\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "en",
+    "kind": "display",
+    "line": 700,
+    "sha256": "1cd33e3a52c36ed4034a0eb4429945329d02177411af7db799463b4bf4957036",
+    "text": "\\[\n\\left|e(G)-\\frac{5n^2}{18}\\right|\\le\\frac{n^2}{10^4}.\n\\tag{5.18}\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "en",
+    "kind": "display",
+    "line": 705,
+    "sha256": "dedfec79b73aa54e616a3b8eb6144c64d2b022e9196d8cb2c6e3d42454695d81",
+    "text": "\\[\ne(S_C)=\\binom k2+k(n-k)\n=\\frac{5n^2}{18}+\\frac{2nt}{3}-\\frac{t^2}{2}-\\frac{k}{2}.\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "en",
+    "kind": "display",
+    "line": 726,
+    "sha256": "29d1530b5a439c33bd86e2958267e21f4d674756f8cc62503f008337eb299f55",
+    "text": "\\[\ns-\\binom s2\\le1.\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "en",
+    "kind": "display",
+    "line": 730,
+    "sha256": "371dc5441e8eb61df6ce0de768386db19f25130d285f8cbb971c85cd77fb02c0",
+    "text": "\\[\n|\\mathcal Q|\\ge kh-\\binom k2.\n\\tag{6.1}\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "en",
+    "kind": "display",
+    "line": 736,
+    "sha256": "f1a2a442a8607f967ac95b1f372a5d25cebc6486bded37191449e040f46728ec",
+    "text": "\\[\n\\binom k2+kh-2\\binom k2=kh-\\binom k2.\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "en",
+    "kind": "display",
+    "line": 740,
+    "sha256": "a96286b14ccc182a9a3fed15cbc9c0aa008003bb81da3314b8d28d7d489e7edc",
+    "text": "\\[\n\\operatorname{cp}(S)=c_3(S)=c_4(S)=kh-\\binom k2.\n\\tag{6.2}\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "en",
+    "kind": "display",
+    "line": 749,
+    "sha256": "ab82d8c367c59c93f9b45d3dc74840a2abfde9181fb87afb7a6a705c7238308f",
+    "text": "\\[\n6f(n,k)+(n-3k)(n-3k+1)=n(n+1).\n\\tag{6.3}\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "en",
+    "kind": "display",
+    "line": 754,
+    "sha256": "48b6eb78acfa2f4555804977d9f8c0efe05f9381929aff016bcb4892a7ccb194",
+    "text": "\\[\n\\begin{cases}\nk=r,& n=3r,\\\\\nk=r\\text{ or }r+1,& n=3r+1,\\\\\nk=r+1,& n=3r+2.\n\\end{cases}\n\\tag{6.4}\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "en",
+    "kind": "display",
+    "line": 769,
+    "sha256": "6f497d9c34abe4773a3e7c56d29ed54ef89efedf34ac4ea106bd10d027bbb915",
+    "text": "\\[\ne(G)\\le\\binom n2\\le N^2\\le M(n)+b.\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "en",
+    "kind": "display",
+    "line": 775,
+    "sha256": "a7afd076d893a73f66b74952abfccd57744b5ec9aaf3500c9e548e3aa4628c7e",
+    "text": "\\[\nh=4\\cdot8^5\\cdot2208^5\\cdot4500^{105}\\cdot(2\\cdot10^{16})^{105}.\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "en",
+    "kind": "display",
+    "line": 779,
+    "sha256": "f0ae06406c88234d00c6b9ee7e1270d17d3bbe18bc847ed4468771ba26b5fe66",
+    "text": "\\[\nN=T(h+7),\\qquad b=N^2\\le T(h+8).\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "en",
+    "kind": "display",
+    "line": 787,
+    "sha256": "b640e54b3a6cb1f3922d8d40da1bf9abaf4f3162092ccc0c27e2fbd08fb8a07a",
+    "text": "\\[\n\\frac{n^2+n}{6}-1\\le M(n)\\le cn^2+Cn.\n\\tag{6.5a}\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "en",
+    "kind": "display",
+    "line": 794,
+    "sha256": "ffe78925678f59138889c3956a39841fabff91d8ab244241b6ce9405a5a6d21f",
+    "text": "\\[\n\\operatorname{cp}(G)=M(n)\n\\ge\\frac{n^2}{6}+\\frac n6-1\n>\\frac{n^2}{6}+cn+B_0.\n\\tag{6.5}\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "en",
+    "kind": "display",
+    "line": 807,
+    "sha256": "1b6b21cc9f1477348be6f969ac55ff87afe83296e740b6b96d253ee1df0507d5",
+    "text": "\\[\nd(C)=1+e_{\\rm int}(C)-e_{\\rm cruz}(C),\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "en",
+    "kind": "display",
+    "line": 811,
+    "sha256": "35b8db139bf1f02d248433cee7a92c73af6187ec5c7b50bcbecfe6359ca9d22a",
+    "text": "\\[\n|\\mathcal Q|-\\left(kh-\\binom k2\\right)\n=\\sum_{C\\in\\mathcal Q}d(C).\n\\tag{6.6}\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "en",
+    "kind": "display",
+    "line": 817,
+    "sha256": "ff0b85690b99a5f3c505235579aa34a576b389ae4ff8e7e78e10a205e81b3083",
+    "text": "\\[\nd(C)=1+\\binom s2-s=\\frac{(s-1)(s-2)}2\\ge0;\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "en",
+    "kind": "display",
+    "line": 827,
+    "sha256": "9bb18d2c1a91f0c35193517287339cd31c0274f01bd9a7cfdd2dc901ef0330ad",
+    "text": "\\[\n\\bigl(M(n)-B_n(|R|)\\bigr)+\\frac m{16}+\\frac A2\\le\\delta,\n\\qquad\nd_E(G,S_R)=m+A\\le16\\delta.\n\\tag{6.7}\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "en",
+    "kind": "display",
+    "line": 836,
+    "sha256": "161a24098930ba3eea07570b912ace75bbaf8c598931876eef42acaf8bf5beac",
+    "text": "\\[\n|Q|<\\frac{n^2}{6}-\\frac{\\eta_0}{2}n^2\n\\le M(n)-\\frac{\\eta_0}{2}n^2.\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "en",
+    "kind": "display",
+    "line": 841,
+    "sha256": "ec1f46f3af75d1d92a6bf11a8675f6338904a54cbe3aa77d893d8654a513ef16",
+    "text": "\\[\nM(n)-\\delta\\le |Q|\n\\le B_n(|R|)-\\frac m{16}-\\frac A2,\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "en",
+    "kind": "display",
+    "line": 846,
+    "sha256": "f6f38ecb243a3aa58ecd5d7a8a93ac2ec41ffd8938f4125c9cd0357440d0da94",
+    "text": "\\[\nm+A\\le16\\left(\\frac m{16}+\\frac A2\\right)\\le16\\delta.\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "en",
+    "kind": "display",
+    "line": 852,
+    "sha256": "374f9711316adfaf255f36e26d5cd37e459be9028cf156fe40a293fbb07b6265",
+    "text": "\\[\nd_R(K)=1+\\binom{a_K}{2}+3\\binom{b_K}{2}-a_Kb_K\n=\\frac{(a_K-b_K)(a_K-b_K-1)}2+(b_K-1)^2.\n\\tag{6.7a}\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "en",
+    "kind": "display",
+    "line": 862,
+    "sha256": "e222c3885c42e0a0102f54644412b9c5f69aa175e3d16d298bd316dc26d7077c",
+    "text": "\\[\n\\sum_{K\\in Q}d_R(K)=|Q|-B_n(|R|)+A+3m.\n\\tag{6.7b}\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "en",
+    "kind": "display",
+    "line": 871,
+    "sha256": "345091a984eee29bd45b2852a54a49468b59a4c009c129fd696c4d571abf6206",
+    "text": "\\[\n6B_n(k)+(n-3k)(n-3k+1)=n(n+1)\n\\tag{6.8}\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "en",
+    "kind": "display",
+    "line": 876,
+    "sha256": "d8b58aea6adc3d4eb2466f62c63f47edf77a2e2f06b37ca3411279a9b042fd7f",
+    "text": "\\[\n\\operatorname{cp}(G)=M(n)\n\\quad\\Longleftrightarrow\\quad\nc_4(G)=M(n)\n\\quad\\Longleftrightarrow\\quad\nG\\text{ is complete-split with an optimal core},\n\\tag{6.9}\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "en",
+    "kind": "display",
+    "line": 889,
+    "sha256": "dd2c38ad7c368aa1499ecebc10e3fd0c9cda348802eed5d27f5a9d65dee656d8",
+    "text": "\\[\nW^*(S)=W(S)=2\\binom k2.\n\\tag{6.10}\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "en",
+    "kind": "display",
+    "line": 894,
+    "sha256": "e6616b172653b4879bd6f91e12bce8345b73850455ef13e5451839caed0baa72",
+    "text": "\\[\n\\begin{aligned}\nw(x)&\\le2\\sum_K j(K)x_K\\\\\n&=2\\sum_{e\\in E(K_k)}\\sum_{K:e\\in E(K)}x_K\n\\le2\\binom k2.\n\\end{aligned}\n\\tag{6.11}\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "en",
+    "kind": "display",
+    "line": 909,
+    "sha256": "49a3c98869b618255278d146b08b5cd93ae35c6b9a92816a27964f3ade28b3fb",
+    "text": "\\[\nd_{n,k}=\\begin{cases}n-3k,&3k\\le n,\\\\3k-n-1,&3k>n.\\end{cases}\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "en",
+    "kind": "display",
+    "line": 913,
+    "sha256": "911315c76db464d3b5ead2667d129b96cebed60df8fc07401c9f0c21119cf465",
+    "text": "\\[\nM(n)=B_n(k)+M(d_{n,k}).\n\\tag{6.12}\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "en",
+    "kind": "display",
+    "line": 1007,
+    "sha256": "beb753b189238e058039848241041a82778aa0922b99798bf2c5e2d5348c1f2a",
+    "text": "\\[\nW^*(G)-g(\\mathcal P)\n=\\bigl(e(G)-g(\\mathcal P)\\bigr)-F_4(G)\n\\le M(n)-F_4(G)=\\Delta(G).\n\\tag{8.1}\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "en",
+    "kind": "display",
+    "line": 1063,
+    "sha256": "b75380deef97afa11f12b1e11e8e79006a16498d44ffa1feef1fbf71950f4b69",
+    "text": "\\[\n\\sum_T x_T\\le \\nu_3(G)+\\left(10+\\frac d2\\right)n.\n\\tag{8.1a}\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "en",
+    "kind": "display",
+    "line": 1080,
+    "sha256": "8c02459f251f9a3658a500b3b658e1e86e41ba4120ce16668841a9d149edf5b3",
+    "text": "\\[\nN_0>\\exp(t^2/16).\n\\tag{8.2}\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "en",
+    "kind": "display",
+    "line": 1087,
+    "sha256": "689afd103d733d2d88f5f1baddf3e9fb0df3ae0af9a0bee5a92271c2e7f45cf7",
+    "text": "\\[\n2(1-\\gamma)T\\le\\frac{\\varepsilon}{4}n^2.\n\\tag{8.3}\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "en",
+    "kind": "display",
+    "line": 1100,
+    "sha256": "d0c6b4edfd46c9ae3f745541a2b0719bbd9fee0a6cca9ffed6947278ed7deb51",
+    "text": "\\[\ne(G)\\le2(n-2)+1=2n-3.\n\\tag{8.4}\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "en",
+    "kind": "display",
+    "line": 1105,
+    "sha256": "32dee05b52e6746f05408e217f9a0f915810a4f48e373bba9dcdc3db44f2ebe0",
+    "text": "\\[\n\\frac{\\varepsilon n^2}{30}-1\n\\le T\\le\\frac{2n-3}{3}\n\\quad\\Longrightarrow\\quad n\\le\\frac{20}{\\varepsilon}.\n\\tag{8.5}\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "en",
+    "kind": "display",
+    "line": 1235,
+    "sha256": "6bf7bfdbdb9f12a0e06cc20aa09266979041da15438ca409cc9902531d47e3dc",
+    "text": "\\[\nd_{G[U]}(v)\\ge |U|/2+t\\qquad(v\\in U),\n\\tag{B.1}\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "en",
+    "kind": "display",
+    "line": 1242,
+    "sha256": "91ab5ea4658cb2186eba727d2b157eb0f4a5b58e3a4c1a6ad5a870d05cba4e49",
+    "text": "\\[\n\\sum_{u\\in U}b(u,f(u))\n\\le\\frac1{t+1}\\sum_{u\\in U}\\sum_{v\\in U}b(u,v).\n\\tag{B.2}\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "en",
+    "kind": "display",
+    "line": 1250,
+    "sha256": "d3a01bc3a952ee812fc2d4889a3bc9d11c8011f6debfe8c4544fbc5f9206a328",
+    "text": "\\[\ng(\\mathcal P\\cup\\mathcal A)=g(\\mathcal P)+|U|.\n\\tag{B.3}\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "en",
+    "kind": "display",
+    "line": 1257,
+    "sha256": "4472120392a8e52f55872089e8fa931b23c42719f47b79b1429de1c366159acc",
+    "text": "\\[\n\\sum_{u\\in U}\\sum_{v\\in U}b(u,v)\\le(t+1)B_{\\rm abs},\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "en",
+    "kind": "display",
+    "line": 1267,
+    "sha256": "03a4cc0727a6b6805416f15c35cfb6720db06294601e6441ced5afd8f6d2dd76",
+    "text": "\\[\n|d_R(v)-\\theta d_F(v)|\\le2\\qquad(v\\in V(F)).\n\\tag{B.4}\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "en",
+    "kind": "display",
+    "line": 1290,
+    "sha256": "f983fc9ba526467766f9937517cf6bb4c9665af062a2ccc62aa3fc57a0767238",
+    "text": "\\[\n\\sum_{H\\ni v}z_H\\le1,\\qquad\n\\sum_{H\\supseteq\\{v,w\\}}z_H\\le\\gamma\\quad(v\\ne w).\n\\tag{3.2}\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "en",
+    "kind": "display",
+    "line": 1296,
+    "sha256": "00ffca322f1b58d6586fbc18676924c4b51b11c53afe407ed88aad5b8948f5b7",
+    "text": "\\[\n|\\mathcal M|\\ge(1-\\beta)\\sum_{H\\in\\mathcal H}z_H-\\beta|U|-C.\n\\tag{3.3}\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "en",
+    "kind": "display",
+    "line": 1305,
+    "sha256": "ed615bbe08392068cb25cc9fe2b84133e62c242636e69f524cb41d5d1bb1ac51",
+    "text": "\\[\n\\begin{aligned}\n|\\mathcal M|&\\ge(1-\\beta)\\sum_{H\\in\\mathcal H}z_H-\\epsilon|U|-C,\\\\\n|\\mathcal M\\cap\\mathcal A|&\\ge(1-\\beta)\\sum_{H\\in\\mathcal A}z_H-\\epsilon|U|-C.\n\\end{aligned}\n\\tag{3.4}\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "en",
+    "kind": "display",
+    "line": 1314,
+    "sha256": "60bdb4eb09db8669a541a14fee5be3735eda2e5d5390dd46577d168659693533",
+    "text": "\\[\np=\\max\\{\\lceil u\\rceil,k_0\\},\\qquad\nq=\\max\\{\\lceil a\\rceil,k_0\\}.\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "en",
+    "kind": "display",
+    "line": 1321,
+    "sha256": "80689bdff4ce479f5ad861cea14ba08d47a6dd9f60e2aec8867b780053a60071",
+    "text": "\\[\nm\\ge(1-b)(u+a)-b(|U|+p+q)-C_0,\n\\qquad |\\mathcal M\\cap\\mathcal A|\\ge m-p.\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "en",
+    "kind": "display",
+    "line": 1331,
+    "sha256": "a485658a87b3916e06bd31caef402b2386e019e56cffb62743cc43af847e4d27",
+    "text": "\\[\n\\sum_{K:\\ e,f\\in E(K)}x_K\\le\\gamma\\qquad(e\\ne f).\n\\tag{3.5}\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "en",
+    "kind": "display",
+    "line": 1336,
+    "sha256": "837841da2a4e495fc8d4895d00b5f5054b925fbe369532e9289590e55ac0227b",
+    "text": "\\[\ng(\\mathcal P)\\ge(1-\\beta)(2t_3+5t_4-6)\n -5\\epsilon\\binom{n+1}{2}-5D.\n\\tag{3.6}\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "en",
+    "kind": "display",
+    "line": 1356,
+    "sha256": "2ce63b74411eb5d1276da6a5df38525598d577f25ac763b79c07deb3f44b05e8",
+    "text": "\\[\n(1-u-v)S-g(\\mathcal P)\\le\\zeta n^2,\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "en",
+    "kind": "display",
+    "line": 1360,
+    "sha256": "0fffed4f2283c9b9504623e1348a57b32d684bdd3d6ea49429c34212bdd5ad89",
+    "text": "\\[\nw(x)-g(\\mathcal P)\n\\le L+\\left(\\zeta+\\frac56(u+v)\\right)n^2.\n\\tag{3.7}\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "en",
+    "kind": "display",
+    "line": 1366,
+    "sha256": "5401ee692c168bd0d94f97aa71b0a7d874b22e000cab111534275808ec18886f",
+    "text": "\\[\n\\begin{aligned}\nw(x)-g(\\mathcal P)\n={}&(w(x)-L-S)+((1-u-v)S-g(\\mathcal P))\\\\\n&+L+(u+v)S.\n\\end{aligned}\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "en",
+    "kind": "display",
+    "line": 1376,
+    "sha256": "fe49c39cb8ae105210cd7818e535cb06b10aabe6257e422258c1c18b812ecfbf",
+    "text": "\\[\n30C\\le\\xi n^2,\\qquad 2\\zeta\\le\\xi\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "en",
+    "kind": "display",
+    "line": 1382,
+    "sha256": "6d98f2c0fc29683d5ba8e52d2227662604562b35b17486cea08652c7adbc674d",
+    "text": "\\[\n(1-v)\\operatorname{vol}(H)\n\\le |\\operatorname{cleanFiber}(H)|.\n\\tag{3.8}\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "en",
+    "kind": "display",
+    "line": 1390,
+    "sha256": "0309b93fcd7d90e6721fe92e738e7de683c42d9da474f1b13621970ba86b14c4",
+    "text": "\\[\n2(a-b)+5b=2a+3b.\n\\tag{3.9}\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "en",
+    "kind": "display",
+    "line": 1399,
+    "sha256": "3d2d8c14d8c136b54ecef589fd828dc553318d98bb0b858b7b76fa73c6098d58",
+    "text": "\\[\ns=\\min\\{\\xi/4500,1/10\\},\\qquad\nd=u=v=s,\\qquad \\delta=s^{21}/2208.\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "en",
+    "kind": "display",
+    "line": 1410,
+    "sha256": "0b2356ea6f26c4ec86da83e1a30bd3c761880c8d2ae3e0459e6b8a53d37e0ac4",
+    "text": "\\[\nS=\\sum_{H\\text{ active}}g(H)\\psi_H.\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "en",
+    "kind": "display",
+    "line": 1416,
+    "sha256": "f9ae0ba5a8ca0c68f86333ea0e9526f695409ecd56d93a566ada52f6909a9301",
+    "text": "\\[\nw(x)-S\\le L,\\qquad\nL=3\\left(3\\delta+\\frac1{k_0}+d\\right)n^2\n  +(N_4+2N_3)\\theta.\n\\tag{3.10}\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "en",
+    "kind": "display",
+    "line": 1427,
+    "sha256": "5456de692706de32171d4b124291ac5c5a0a94e683b6d1f64c73284fa8f06836",
+    "text": "\\[\n\\begin{aligned}\nw(x)-g(\\mathcal P)\\le{}&\n\\left(9\\delta+\\frac3{k_0}+3d+\\zeta\n             +\\frac56(u+v)\\right)n^2\\\\\n&+(N_4+2N_3)\\theta .\n\\end{aligned}\n\\tag{3.11}\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "en",
+    "kind": "display",
+    "line": 1441,
+    "sha256": "94f2f3cb3d38a016c7b752e6c2381084a8e10656f185932bf85b2770ef2f39e8",
+    "text": "\\[\na_3=d^3-3\\delta>0,\\qquad a_4=d^6-6\\delta>0,\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "en",
+    "kind": "display",
+    "line": 1445,
+    "sha256": "ca238d1c6d1bb3797e44afa02f11370fbf7648c95f7c653f6149222edb9d2c92",
+    "text": "\\[\nk_3a_4+k_4a_3\\le\\gamma a_3a_4t,\n\\tag{3.12}\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "en",
+    "kind": "display",
+    "line": 1452,
+    "sha256": "723d6053746b774718c709b97691dba3744291757908aac2544246cae3d45d95",
+    "text": "\\[\n\\sum_{K:e,f\\in E(K)}x_K^{\\rm limpio}\n\\le\\frac{k_3}{a_3t}+\\frac{k_4}{a_4t}\n=\\frac{k_3a_4+k_4a_3}{a_3a_4t}\\le\\gamma.\n\\tag{3.13}\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "en",
+    "kind": "display",
+    "line": 1461,
+    "sha256": "cec696fd648b9ddab1cb2311e44dfb97bf82fdded051fd84f9f45bcce31e3b05",
+    "text": "\\[\n12+10D\\le\\zeta n^2,\n\\tag{3.14}\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "en",
+    "kind": "display",
+    "line": 1472,
+    "sha256": "6687d4ec573ed1a0f677ef33a028dddb145ff1b21ad3d7d98d99010a2ae410f3",
+    "text": "\\[\na=\\min\\{\\xi/4500,1/10\\},\\quad\n\\delta=a^{21}/2208,\\quad z=\\min\\{\\xi/10,1\\},\\quad\nk_0=\\lceil1500/\\xi\\rceil+1.\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "en",
+    "kind": "display",
+    "line": 1478,
+    "sha256": "83102e7f9c6a9989b41a851031746954baf1eaf0014d37b73bce578f2013c065",
+    "text": "\\[\n\\gamma=\\frac1{\\lceil1/\\gamma_*\\rceil},\\qquad C=\\lceil C_*\\rceil,\\qquad\na_3=a^3-3\\delta,\\quad a_4=a^6-6\\delta.\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "en",
+    "kind": "display",
+    "line": 1483,
+    "sha256": "9fd2928b49abda7515a3708156d4baecd55beb68e2b777d720e2d1fcf65d3ca9",
+    "text": "\\[\n\\begin{split}\nN_E(\\xi)=1+\\max\\biggl\\{&\nk_0,\\ \\left\\lceil B/\\delta\\right\\rceil,\\\n\\left\\lceil(12+10D_*)/z\\right\\rceil,\\\\\n&\\left\\lceil\\frac{4B^5(a_3+a_4)}{\\gamma a_3a_4}\\right\\rceil,\\\n\\left\\lceil\\frac{50(1+2C)}{\\xi}\\right\\rceil\n\\biggr\\}.\n\\end{split}\n\\tag{C.1}\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "en",
+    "kind": "display",
+    "line": 1497,
+    "sha256": "419666e35fea6de8744addc61819ab1d514dfb3dd1bd28bf34f022db7352f0ca",
+    "text": "\\[\nw(x)-g(\\mathcal P)\\le\\xi n^2\n\\qquad(n\\ge N_E(\\xi))\n\\tag{C.2}\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "en",
+    "kind": "display",
+    "line": 1505,
+    "sha256": "2710fb493f3a87db08bece27e3a1dc78fef75dfc6101901620d971860692f605",
+    "text": "\\[\na=(9\\cdot10^{19})^{-1},\\qquad\n\\delta=\\frac1{2208(9\\cdot10^{19})^{21}},\\qquad\nz=(2\\cdot10^{17})^{-1},\\qquad k_0=3\\cdot10^{19}+1.\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "en",
+    "kind": "display",
+    "line": 1511,
+    "sha256": "6f73e1d9aba46012c90e26c1f5968ac6dbee0e71c6e7dd19f97f60968d4678ef",
+    "text": "\\[\nG_1=\\lceil1/\\gamma_*\\rceil,\\quad G_2=\\lceil C_*\\rceil,\\quad\nG_3=\\lceil2\\cdot10^{17}(12+10D_*)\\rceil.\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "en",
+    "kind": "display",
+    "line": 1527,
+    "sha256": "4504491877173c3e1aa0158b3712df90602066fd973d6de411f06c48603036c0",
+    "text": "\\[\nN_{\\rm lejano}(\\eta_0)\\le T(h+7).\n\\tag{C.3}\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "en",
+    "kind": "display",
+    "line": 1540,
+    "sha256": "9dba624690aa2bb3a830844bbd12e0db84e1f3d9474ca73b3a86a46589c89333",
+    "text": "\\[\nn(n-2)\\le3g(\\mathcal P).\n\\tag{D.1}\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "en",
+    "kind": "display",
+    "line": 1545,
+    "sha256": "5c3e4429652ea3bfd1d47271676e0a2c8c212f53c22c7cfed8d9a2ee06a86044",
+    "text": "\\[\n|Q|=\\binom n2-g(\\mathcal P)\n\\le\\frac{n(n-1)}2-\\frac{n(n-2)}3\n=\\frac{n(n+1)}6.\n\\tag{D.2}\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "en",
+    "kind": "display",
+    "line": 1567,
+    "sha256": "656a736b385bec4343c26a88a06229c259b7856f760b40d4c7619af36ba301c0",
+    "text": "\\[\n3g(\\mathcal P)=2|E_{\\rm cub}|+3b_4.\n\\tag{D.3}\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "en",
+    "kind": "display",
+    "line": 1572,
+    "sha256": "0ef43fab1a0f0d9499b347cdd01c4d20989d94f4b27135b8ed74352f2f09edfa",
+    "text": "\\[\n3g(\\mathcal P)=(3M+1)3M+3M=(3M+2)3M=n(n-2).\n\\tag{D.4}\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "en",
+    "kind": "display",
+    "line": 1583,
+    "sha256": "23a90b3160a75ccc6d1033528310fc2f7c19b4328702667af2ff7bf03d9fd3a1",
+    "text": "\\[\na+3t=\\binom n2,\\qquad |Q|=a+t=\\frac{\\binom n2+2a}{3}.\n\\tag{D.5}\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "en",
+    "kind": "display",
+    "line": 1588,
+    "sha256": "d9b86402b37a19ba272c7c84b163d9759cb4cfa125561bbc8a6a49eafa196a34",
+    "text": "\\[\n|Q|\\ge\\frac{\\binom n2+n}{3}=\\frac{n(n+1)}6.\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "en",
+    "kind": "display",
+    "line": 1608,
+    "sha256": "4a05fe552360d22e1b4cf51692847f60e03ad186632326b3d9f47d4f9fc25942",
+    "text": "\\[\n\\begin{gathered}\nd_{\\max}(G[H])+1\\le k,\\quad |S|\\le k\\le2(|S|-2\\sigma),\\quad\nq\\ge\\left\\lceil e(G[H])/k\\right\\rceil,\\\\\n3\\lceil|S|/2\\rceil+2\\tau+4q\\le |H|+2.\n\\end{gathered}\n\\tag{E.1}\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "en",
+    "kind": "display",
+    "line": 1617,
+    "sha256": "5977e0dc221b82a46edbb852e61dbdfb4657cb1330a3ae5f7fa6b605d889432f",
+    "text": "\\[\n|Q|+2\\left(\\sum_{w\\in W}|M_w|+t+e(G[S])\\right)=e(G).\n\\tag{E.2}\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "en",
+    "kind": "display",
+    "line": 1622,
+    "sha256": "9185a7974604a14570ca9c72187e488fa68bb71516582a124b67d367febe5c7c",
+    "text": "\\[\nd_W=\\sum_{w\\in W}\\deg(w),\\qquad\nm_W=\\sum_{w\\in W}\\min(u_w,v_w).\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "en",
+    "kind": "display",
+    "line": 1629,
+    "sha256": "1eee4731c5b4e4134c03e3d3dd3c9878b04779b7d5a55754b22e7d7d5588b214",
+    "text": "\\[\n|Q|+e(G[S])+2m_W\\le cb+d_W+2r(L+r).\n\\tag{E.2a}\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "en",
+    "kind": "display",
+    "line": 1635,
+    "sha256": "7d01ad6521ea478a0a5dc61c4cc6d380b4ba7a01efd6e8635028e1f8ea23bfef",
+    "text": "\\[\n\\begin{split}\n&d_W+2r(L+r)+\\binom c2+\\binom{s+1}2\\\\\n&\\hspace{1em}\\le e(G[S])+2m_W+sc+\\frac{r(c+b+s)}3.\n\\end{split}\n\\tag{E.2b}\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "en",
+    "kind": "display",
+    "line": 1643,
+    "sha256": "7b3ab7b8dfcbf5eedbb2ed35d675c7732ab190c4d57a24f02988fe53a670bc0c",
+    "text": "\\[\n|Q|+\\binom c2+\\binom{s+1}2\n\\le c(b+s)+\\frac{r(c+b+s)}3.\n\\tag{E.2c}\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "en",
+    "kind": "display",
+    "line": 1651,
+    "sha256": "63bb1f863582bdacd37278faa7eaef36f4a1f213841260f258573b1f8a2f3f8b",
+    "text": "\\[\n\\rho=\\frac{n}{(s+1)^2},\\qquad \\lambda=\\frac{n}{(s+1)^4}.\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "en",
+    "kind": "display",
+    "line": 1655,
+    "sha256": "5a1aad8e5c1eebdb2529e529be47ba4bb348f5c1cf6f2c9b6067dd5d5e64669f",
+    "text": "\\[\nr\\le\\frac{4\\rho}{10^{27}},\\qquad\nL\\le\\frac{\\rho}{10^{13}}+1,\\qquad\n|\\mathcal L|-\\frac n3\\le c+\\frac{4\\lambda}{10^{31}}.\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "en",
+    "kind": "display",
+    "line": 1663,
+    "sha256": "48ba2c9a9464315f242a493e2588eaa6350c6768c32366eabc431a387992310b",
+    "text": "\\[\nM_S:=\\binom c2-e(G[S])\\le \\nu c-\\binom{\\nu+1}2.\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "en",
+    "kind": "display",
+    "line": 1667,
+    "sha256": "d55b5c517b324db882ca9ada2405f58bbb0e1768697489471bb90dc5d4b20b91",
+    "text": "\\[\n\\begin{split}\ng_w&=\\deg(w)-2\\min(u_w,v_w)+2(L+r)-\\frac{c+b+s}{3},\\\\\ne_1&=4r+2L+\\frac{4\\rho}{10^{27}}.\n\\end{split}\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "en",
+    "kind": "display",
+    "line": 1676,
+    "sha256": "a1b4f6abe1308b14161e3882ee3fa8acefbd5d99ad2f8279382812944f6e00e1",
+    "text": "\\[\nX=\\{w\\in W:v_w-u_w>n/3-\\rho/400\\},\\qquad j=|X|.\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "en",
+    "kind": "display",
+    "line": 1682,
+    "sha256": "69cfccecb2389b97f7f494fb433edb1e48a1b52e199b572c38581f2b783a7142",
+    "text": "\\[\n\\sum_{w\\in X'}|N(w)\\cap\\mathcal L|\n\\le (s-\\nu)|\\mathcal L|+\\frac n9\n\\quad\\text{if }X'\\subseteq W,\\quad |X'|\\le2(s+1).\n\\tag{E.2d}\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "en",
+    "kind": "display",
+    "line": 1695,
+    "sha256": "579e7a866157480fac01c1d98c69389d8da4a8b345c93d9bc54a6b4db7270f3b",
+    "text": "\\[\n   sc-\\nu c-\\binom{s+1}2+\\binom{\\nu+1}2\n   =(s-\\nu)\\left(c-\\frac{s+\\nu+1}{2}\\right)\\ge0,\n   \\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "en",
+    "kind": "display",
+    "line": 1701,
+    "sha256": "8a3a27c1668aa7c3ce98928251bca421c7d0a4fa30c224f2b7ce6e2c4890b761",
+    "text": "\\[\n   \\sum_{w\\in W}g_w+M_S+\\binom{s+1}2\n   \\le(j+\\nu)c-\\frac{j\\rho}{80}\n        -\\binom{\\nu+1}2+\\binom{s+1}2\\le sc.\n   \\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "en",
+    "kind": "display",
+    "line": 1709,
+    "sha256": "ac630f631d4ace6a7819e44b6b3301a46c09954d530ec50a73caf98fa09531f7",
+    "text": "\\[\n   \\sum_{w\\in W}g_w\n   \\le (s-\\nu)c-\\frac{2n}{9}\n      +\\frac{4(s+1)\\lambda}{10^{31}}+(s+1)e_1.\n   \\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "en",
+    "kind": "display",
+    "line": 1722,
+    "sha256": "8777db8d98d171a30fa33fe351b6f9f15795470d0b6c6efb8ef667eafbd9908a",
+    "text": "\\[\n\\begin{gathered}\nc(b+s)\\le\\binom c2+M(c+b+s),\\\\\nQ_s(c+b)+rz\\le Q_s(c+b+r).\n\\end{gathered}\n\\tag{E.2e}\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "en",
+    "kind": "display",
+    "line": 1740,
+    "sha256": "acfb5b5a447b2100c59b2987cdd1b241ddae2079d1808e8faf4f0aea458e6575",
+    "text": "\\[\nQ_s(n)-Q_s(n-1)=\\left\\lfloor\\frac{n+s+1}{3}\\right\\rfloor.\n\\tag{E.3}\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "en",
+    "kind": "display",
+    "line": 1747,
+    "sha256": "2dbf0c45ae1b8b712cf0c94a9966b530b82c0184274fae890ca2c7b28b0acce5",
+    "text": "\\[\n\\deg(v)+K_s\\le\\left\\lfloor\\frac{n+s+1}{3}\\right\\rfloor,\n\\tag{E.4}\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "en",
+    "kind": "display",
+    "line": 1760,
+    "sha256": "8cb09beaeeccafc08df4ed060ce43b2f058713e5998a1255e76097181cfebf45",
+    "text": "\\[\nk(n-k)-\\binom{k-s}{2}\n=M(n+s)-\\binom{s+1}{2}=Q_s(n)\n\\tag{E.5}\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "en",
+    "kind": "lean",
+    "line": 1146,
+    "sha256": "127db437f6d87fb222a352028d24617e2d014cf889c14484a52ba3835838891e",
+    "text": "```lean\ndef IsChordal (G : SimpleGraph V) : Prop :=\n  ∀ ⦃v : V⦄ (c : G.Walk v v), c.IsCycle → 4 ≤ c.length →\n    ∃ x y : V, x ∈ c.support ∧ y ∈ c.support ∧ G.Adj x y ∧ s(x, y) ∉ c.edges\n```",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "en",
+    "kind": "lean",
+    "line": 1152,
+    "sha256": "b304dd7b6d607133aa58ec164ad3a5a4bca4abffc80b0d81e4007438fa6d75d2",
+    "text": "```lean\ndef pairs (K : Finset V) : Finset (Sym2 V) := K.sym2.filter fun e => ¬ e.IsDiag\n\nstructure CliquePartition where\n  pieces : Finset (Finset V)\n  isClique : ∀ K ∈ pieces, ∀ a ∈ K, ∀ b ∈ K, a ≠ b → G.Adj a b\n  two_le_card : ∀ K ∈ pieces, 2 ≤ K.card\n  edgeDisjoint : ∀ K ∈ pieces, ∀ L ∈ pieces, K ≠ L → Disjoint (pairs K) (pairs L)\n  covers : pieces.biUnion pairs = G.edgeFinset\n\ndef CliquePartition.size (Q : CliquePartition G) : ℕ := Q.pieces.card\n\ndef CliquePartition.OrderAtMost (Q : CliquePartition G) (r : ℕ) : Prop :=\n  ∀ K ∈ Q.pieces, K.card ≤ r\n```",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "en",
+    "kind": "lean",
+    "line": 1168,
+    "sha256": "fe5744f3ffb923957fa191fd2f82eb878a4550aaef279fab4025f040ce9933c1",
+    "text": "```lean\ndef targetSize (n : ℕ) : ℕ := n * (n + 1) / 6\n```",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "en",
+    "kind": "lean",
+    "line": 1176,
+    "sha256": "3883d65f15282a1174406bfd46b4e7c2a06678088cb1c7ecd1ee5c938342b9a9",
+    "text": "```lean\ntheorem erdos81_all_orders_additive :\n    ∃ b : ℕ, ∀ (n : ℕ) (G : SimpleGraph (Fin n)) [DecidableRel G.Adj],\n      PaperIV.FarRounding.IsChordal G →\n        ∃ Q : CliquePartition G, Q.OrderAtMost 4 ∧ Q.size ≤ PaperIV.targetSize n + b\n```",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "en",
+    "kind": "lean",
+    "line": 1183,
+    "sha256": "8543132fba6fa26c326dfcb4309e12f21f82375833655053c11370cb6826bb4d",
+    "text": "```lean\ntheorem erdos81_cliquePartition :\n    ∃ N : ℕ, ∀ n : ℕ, N ≤ n → ∀ (G : SimpleGraph (Fin n)) [DecidableRel G.Adj],\n      PaperIV.FarRounding.IsChordal G →\n        ∃ Q : CliquePartition G, Q.OrderAtMost 4 ∧ Q.size ≤ targetSize n\n```",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "en",
+    "kind": "result_heading",
+    "line": 54,
+    "sha256": "28481eaa047c2da25559c0dd62ed5a7397ef288706af157f589e04bf88fbd4f2",
+    "text": "### Theorem A. Bound for all orders",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "en",
+    "kind": "result_heading",
+    "line": 64,
+    "sha256": "39cc9b3298114b5e90324cc3d9df729267eb25faa3ffdef1e0996141d3298f9d",
+    "text": "### Theorem B. Sharp bound and eventual maximum",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "en",
+    "kind": "result_heading",
+    "line": 83,
+    "sha256": "6df3e3fda4cb6229abd9922d599a7e1f037d35d82722b8f82d88310d5fe20b00",
+    "text": "### Theorem C. Fixed rooted simplicial defect",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "en",
+    "kind": "result_heading",
+    "line": 199,
+    "sha256": "ceecfdd25f91133fe51a3f88f51d26915c25c2e4348556c97be05f54bcff2ae7",
+    "text": "### Lemma 2.1",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "en",
+    "kind": "result_heading",
+    "line": 262,
+    "sha256": "b949515fca1c176fa3c7b978b017f2bf5c5ce32bed9c88ccd20b5fc3f233b3a1",
+    "text": "### Theorem 3.1",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "en",
+    "kind": "result_heading",
+    "line": 279,
+    "sha256": "2b591bd1a8f5e33ae94d563e4e8d8eda50f2024165b54e091bd0fea96f5e81fd",
+    "text": "### Corollary 3.5",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "en",
+    "kind": "result_heading",
+    "line": 323,
+    "sha256": "de90c57519e7f88ec4210ab212ca9fe394a0cbe6747aecb8ccd82461804ac0ae",
+    "text": "**Lemma 4.1 (admissible mixed path).** Every chordal graph \\(G\\) admits a finite sequence \\(G=G_0,\\ldots,G_\\ell\\) on the same vertex set such that \\(G_\\ell\\) is complete-split, every \\(G_i\\) is chordal, each step copies a single nonadjacent simplicial vertex, and",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "en",
+    "kind": "result_heading",
+    "line": 343,
+    "sha256": "0f515b080f98f80dabbb38912217b99bff46f570bc4c01e64b3d9c5e629ee7e8",
+    "text": "**Lemma 4.2 (accounting inside the window).** If \\(X\\) is chordal, \\(n\\ge4\\cdot10^{12}\\), \\(F_4(X)\\ge n^2/6-\\eta_0n^2\\) and \\(d(X)<\\varepsilon_0\\), then",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "en",
+    "kind": "result_heading",
+    "line": 395,
+    "sha256": "f514e98168cb3b6a83d52c51aa635f7ab603ba4d599d040b2483da787a6496b1",
+    "text": "### Proposition 4.3",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "en",
+    "kind": "result_heading",
+    "line": 416,
+    "sha256": "4a42f751441a5e88363b644a2161e895a8f469728a919fc82699ceac266188b6",
+    "text": "### Theorem 5.0. Near constructor under local hypotheses",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "en",
+    "kind": "result_heading",
+    "line": 435,
+    "sha256": "eca86405d3d425a93d8d1c9fd1b8c8eb2ecaeb479b3587b1ef4b4d7693974106",
+    "text": "**Lemma 5.1 (extraction of an actual clique).** Under these hypotheses and \\(n\\ge4\\cdot10^{12}\\), there is a clique \\(P\\) of \\(G\\) of size \\(a\\) such that",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "en",
+    "kind": "result_heading",
+    "line": 483,
+    "sha256": "36386b219a1b633624622166e88513c3e0c41d5b203463d3923b195aebb6a692",
+    "text": "**Proposition 5.2 (regularization).** The root \\(R\\) in (5.2) is a clique. If \\(p=|R|\\), \\(q=n-p\\), \\(m=e(G-R)\\), \\(A\\) is its cross defect and \\(D\\) is the maximum defect of a column, it satisfies the palette and width bounds in (5.7), and",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "en",
+    "kind": "result_heading",
+    "line": 646,
+    "sha256": "0ceb0ea784a3a17fe9ce62259960f374bb25cec5f01b6682360e9549537cec8d",
+    "text": "### Lemma 5.3",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "en",
+    "kind": "result_heading",
+    "line": 692,
+    "sha256": "56015d2624613504600fb6fbd6107a7249b97bf5cce4e5a7d58dcc61263dfee1",
+    "text": "**Corollary 5.4 (quantitative geometry of the critical branch).** For every sufficiently large chordal graph \\(G\\), either \\(F_4(G)<n^2/6-\\eta_0n^2\\), or there are a clique \\(R\\) of the original graph and a comparator core \\(C\\) such that",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "en",
+    "kind": "result_heading",
+    "line": 826,
+    "sha256": "d4f3201dda67d02ed147e76c2fa3ef3073936bf8ad761eba8da8857d24dad5ba",
+    "text": "**Theorem 6.1 (integral stability).** There exist \\(\\gamma>0\\) and a threshold \\(N_{\\rm est}\\) such that, if \\(n\\ge N_{\\rm est}\\), \\(G\\) is chordal, \\(0\\le\\delta\\le\\gamma n^2\\), and every partition of order at most four has at least \\(M(n)-\\delta\\) pieces, then there is a clique \\(R\\) of \\(G\\) for which",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "en",
+    "kind": "result_heading",
+    "line": 859,
+    "sha256": "fc2856f1c521a44665b2e20420c0ae939a9f7871261dbe9f0bd144482b238044",
+    "text": "**Corollary 6.1a (stability of partitions).** Under the hypotheses of Theorem 6.1, the root \\(R\\) can be chosen so that, for every clique partition \\(Q\\) of \\(G\\), with no restriction on piece order, if \\(|Q|\\le M(n)+\\tau\\) with \\(\\tau\\ge0\\), then \\(Q\\) has at most \\(\\tau+48\\delta\\) pieces other than these two canonical forms.",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "en",
+    "kind": "result_heading",
+    "line": 868,
+    "sha256": "c0084780a3baee66ea6d98bb138d4a0f8a24d2d19267f23b75c9539a437237df",
+    "text": "**Corollary 6.2 (eventual classification).** Extremal chordal graphs of sufficiently large order are exactly the complete-split graphs with the core sizes in (6.4).",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "en",
+    "kind": "result_heading",
+    "line": 888,
+    "sha256": "4e8d1466fbaa3f9c5d23f35c8c798505e10c76b4cc2da9b2e66e57ee251ce5e3",
+    "text": "**Proposition 6.3 (zero mixed gap in complete-split graphs).** Let \\(S=K_k\\vee I_h\\), with \\(2\\le k\\le h\\), and let \\(W(S)\\) be the maximum gain of a physical mixed packing. Then",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "en",
+    "kind": "result_heading",
+    "line": 1079,
+    "sha256": "909e9300205eaa6c20568a5e8e9af95ab4440af482d1cc12e8421e2a85a4dda3",
+    "text": "**Proposition 8.1 (limitation of this contract).** If \\(N_0\\) satisfies the preceding contract, \\(t\\ge4\\) and \\(7\\varepsilon\\le e^{-t}\\), then",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "en",
+    "kind": "result_heading",
+    "line": 1287,
+    "sha256": "04eb571b2261bef381c835c183515f42508d0269f0665b36231c9a76edd1ab17",
+    "text": "### Lemma 3.2. Bounded-rank nibble with slack, input from Paper III",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "en",
+    "kind": "result_heading",
+    "line": 1302,
+    "sha256": "f1391b13910ad18a3eac62bc0d5733766624de278e6022b855b1100d50c5f650",
+    "text": "### Lemma 3.3. Simultaneous selection of total and marked mass",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "en",
+    "kind": "result_heading",
+    "line": 1328,
+    "sha256": "caa01651da384783c90f45d1500a00b3d778f979cb3286d119cbdadcda9a8e08",
+    "text": "### Lemma 3.4. Physical mixed selector",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "en",
+    "kind": "result_heading",
+    "line": 1537,
+    "sha256": "bf7d488ec241bdd15f2907669263da0d6e5d8713188531bfa83820d69dca3177",
+    "text": "**Proposition D.1.** For every integer \\(n\\ge0\\), there is a partition of \\(K_n\\) into pieces of order at most four with at most \\(M(n)\\) pieces.",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "en",
+    "kind": "result_heading",
+    "line": 1580,
+    "sha256": "7aa7487bfc90de9b155ddd2651df59d07b73bf7053d5fd7270b740ecf4bd945d",
+    "text": "**Proposition D.2.** If \\(n\\equiv4\\pmod6\\), every partition of \\(K_n\\) into pieces of order at most three has more than \\(M(n)\\) pieces.",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "en",
+    "kind": "baseline_file",
+    "file": "C:\\Users\\jtraverso\\e81p4-publish\\preprints\\PAPER_IV\\01_manuscript\\v1.0.1_candidate\\PAPER_IV_preprint_v1.0.1_en.md",
+    "sha256": "d2175d22d2388e718d00cee1cd09571d3075820cddae3af0b92ec3638abe03fb"
+  },
+  {
+    "language": "es",
+    "kind": "display",
+    "line": 19,
+    "sha256": "1b6e3f6f5442028627114565b92f20af834dc6ce4de07ec4ce1c67672477298e",
+    "text": "\\[\nc_4(G)\\le M(n)+b,\\qquad M(n)=\\left\\lfloor\\frac{n(n+1)}6\\right\\rfloor,\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "es",
+    "kind": "display",
+    "line": 57,
+    "sha256": "77e0ea440441568c151fd063898801d3448393c8dfa680908e05d026e589038e",
+    "text": "\\[\n\\operatorname{cp}(G)\\le c_4(G)\\le M(n)+b\n\\le\\frac{n^2}{6}+\\frac n6+b.\n\\tag{A}\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "es",
+    "kind": "display",
+    "line": 67,
+    "sha256": "66c2c33c4f896701c51d6dda610db44117bbb678824619e052f9cef26bb9d1e6",
+    "text": "\\[\n\\operatorname{cp}(G)\\le c_4(G)\\le M(n).\n\\tag{1.1}\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "es",
+    "kind": "display",
+    "line": 72,
+    "sha256": "414cef54a1fe8266189925e0daa58a8c4eff7bcb02f6f69483a63d41051c009f",
+    "text": "\\[\n\\max_{\\substack{|V(G)|=n\\\\G\\text{ cordal}}}\\operatorname{cp}(G)=M(n).\n\\tag{1.2}\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "es",
+    "kind": "display",
+    "line": 88,
+    "sha256": "70d5f3961d7964318f855d5f2806ece7a1ccd75823e94051db785a017a4b0740",
+    "text": "\\[\n\\operatorname{cp}(G)\\le c_4(G)\\le Q_s(n),\n\\qquad\nQ_s(n):=M(n+s)-\\binom{s+1}{2}.\n\\tag{C}\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "es",
+    "kind": "display",
+    "line": 103,
+    "sha256": "eb37320477374eb0828bb0565fa486d18b3e70d8d7a093430e66e860d43252ed",
+    "text": "\\[\nF_4(G)=e(G)-W^*(G),\\qquad \\Delta(G)=M(n)-F_4(G).\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "es",
+    "kind": "display",
+    "line": 107,
+    "sha256": "5d845c5d5becec5aa8b0cdc5625ea92cc2d554e3633f9d972ed35ab75e3b50fe",
+    "text": "\\[\n\\boxed{\ne(G)-g(\\mathcal P)\\le M(n)\n\\quad\\Longleftrightarrow\\quad\nW^*(G)-g(\\mathcal P)\\le\\Delta(G).\n}\n\\tag{1.3}\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "es",
+    "kind": "display",
+    "line": 118,
+    "sha256": "69fb2a87560e1ddc01779860e27c8fde433495c19b3dfe8332d5a601c7103c57",
+    "text": "\\[\ng(Q)=\\sum_{K\\in Q}\\left(\\binom{|K|}{2}-1\\right).\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "es",
+    "kind": "display",
+    "line": 122,
+    "sha256": "2e98e99dd1b4577e3705cbe82fc59ff7292a994f67c151618b857b646c208202",
+    "text": "\\[\ng(Q)+|Q|=e(G),\\qquad\n|Q|\\le T\\quad\\Longleftrightarrow\\quad e(G)\\le g(Q)+T.\n\\tag{1.3a}\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "es",
+    "kind": "display",
+    "line": 130,
+    "sha256": "63d57f6504946bd9629aa02193995ac8aefeac568f094fe2264acd7dd0389872",
+    "text": "\\[\n\\Delta_{\\{3,4\\}}(G)\\le\\Delta_{\\{3,\\ldots,L\\}}(G)\n\\le\\Delta_{\\mathrm{cp}}(G),\n\\tag{1.3b}\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "es",
+    "kind": "display",
+    "line": 140,
+    "sha256": "3b60669b4512dfc93b4a946a6e7624600daf6d9eabb9fc67a5cb96b92867ec1f",
+    "text": "\\[\ne(G)-g(\\mathcal P)\n\\le B_n(p)-\\frac m{20}-\\frac A2\n\\le M(n),\n\\tag{1.4}\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "es",
+    "kind": "display",
+    "line": 153,
+    "sha256": "1f1dd9cf548634748205ba77391379aa9083cfd785cebb477ebeb99050587e75",
+    "text": "\\[\n\\boxed{\nF_4(G)<\\frac{n^2}{6}-\\eta_0n^2\n\\quad\\text{o}\\quad\n\\exists\\,\\text{testigo estructural cercano de }G.\n}\n\\tag{1.5}\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "es",
+    "kind": "display",
+    "line": 186,
+    "sha256": "955cad471e45412f03cbdfeb9e8e0aebb38abb1718fa1abc5245e49f97c78e93",
+    "text": "\\[\ng(K)=\\binom{|K|}{2}-1,\\qquad\ng(\\mathcal P)=\\sum_{K\\in\\mathcal P}g(K).\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "es",
+    "kind": "display",
+    "line": 202,
+    "sha256": "e6af2a1bfd2325ee3b9608123236fe0845f9de68ac37fe805c07003812e8c44f",
+    "text": "\\[\n|Q|=e(G)-g(\\mathcal P).\n\\tag{2.1}\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "es",
+    "kind": "display",
+    "line": 211,
+    "sha256": "167163f52f054414091b63be309b0c04093624c0e3adccfd3f9123082d2b2690",
+    "text": "\\[\n\\sum_{K:e\\in E(K)}x_K\\le1\\qquad(e\\in E(G)).\n\\tag{2.2}\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "es",
+    "kind": "display",
+    "line": 216,
+    "sha256": "3a743d5e86be426750b6384fc09e1f76d2274248d6f9099807c00c22373e94f7",
+    "text": "\\[\n\\sum_{e\\in E(T)}y_e\\ge2,\\qquad\n\\sum_{e\\in E(Q)}y_e\\ge5.\n\\tag{2.3}\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "es",
+    "kind": "display",
+    "line": 224,
+    "sha256": "16eeb993c56bfba8d59960ebdf2d903e980bce81d2ff07bc43d48e195d8053ff",
+    "text": "\\[\nw(x)\\le\\frac56\\sum_K |E(K)|x_K\\le\\frac56e(G).\n\\tag{2.4}\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "es",
+    "kind": "display",
+    "line": 233,
+    "sha256": "2a509b487384627f4403a406c91ed78bfde2b5459d90c929dad93a405bb0d64d",
+    "text": "\\[\nW^*(G)\\ge2\\nu_3^*(G),\\qquad\nF_4(G)\\le e(G)-2\\nu_3^*(G).\n\\tag{2.5}\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "es",
+    "kind": "display",
+    "line": 265,
+    "sha256": "ee4f6528d64bfa1537ba6d4a3c1969b7e0c6bfc84518cbab845496536e3f559f",
+    "text": "\\[\nw(x)-g(\\mathcal P)\\le\\xi n^2.\n\\tag{3.1}\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "es",
+    "kind": "display",
+    "line": 285,
+    "sha256": "ffff21cc94fcc1e73950868e156e5efae2d68e03441f40efe4915e58228d0c35",
+    "text": "\\[\nc_4(G)\\le e(G)-g(\\mathcal P)\n\\le F_4(G)+\\frac\\eta2n^2\n<\\frac{n^2}{6}-\\frac\\eta2n^2.\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "es",
+    "kind": "display",
+    "line": 299,
+    "sha256": "ffec03729bb0f252e3a070e4683d7461103706a77e81dad416c6516d399f543e",
+    "text": "\\[\n\\varepsilon_0=10^{-12},\\qquad \\eta_0=10^{-16}.\n\\tag{4.1}\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "es",
+    "kind": "display",
+    "line": 311,
+    "sha256": "a86730fdaaf49908496c3e534af9e8ddbb7e896e46cd94d50f1f2b433ad248b9",
+    "text": "\\[\nd(G)=\\frac1{n^2}\\min_C d_E(G,S_C).\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "es",
+    "kind": "display",
+    "line": 315,
+    "sha256": "9a6650c5c3587c53fe48d6b4ed416e37e115cd16c382cc88358c0e58b666199e",
+    "text": "\\[\n|d(G)-d(H)|\\le\\frac{d_E(G,H)}{n^2}.\n\\tag{4.2}\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "es",
+    "kind": "display",
+    "line": 324,
+    "sha256": "e5e36d722a172360f6eff4c89dc74955631d86e5916049b7ebc1f9361131e12e",
+    "text": "\\[\nF_4(G_i)\\le F_4(G_{i+1}),\\qquad\nd_E(G_i,G_{i+1})\\le n-1.\n\\tag{4.3}\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "es",
+    "kind": "display",
+    "line": 331,
+    "sha256": "898b28343377afc888a2c0634f9914545d36da2d2e89eae2b27e13f1445be4d2",
+    "text": "\\[\nW^*(G_{u\\to v})+W^*(G_{v\\to u})\\le2W^*(G).\n\\tag{4.4}\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "es",
+    "kind": "display",
+    "line": 344,
+    "sha256": "433f1df7a822bdc7cac4c2950ef4b33ff759a0d76f1ce68505e1880232a590f4",
+    "text": "\\[\nd(X)\\le16D/n^2,\\qquad D=\\eta_0n^2+n/6+1/24.\n\\tag{4.5}\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "es",
+    "kind": "display",
+    "line": 350,
+    "sha256": "da32f00b9c54c909edd3c7c774aafbef21196f25f99e57d622e7e98b4e25c760",
+    "text": "\\[\nF_4(X)\\le |Q|\\le B_n(|R|)-\\frac{117}{1825}m-\\frac{12687}{20000}A.\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "es",
+    "kind": "display",
+    "line": 354,
+    "sha256": "94199193e4e7360358fde56023efb4270141d18aed424fefd42770eed0f6c10f",
+    "text": "\\[\n\\frac{117}{1825}m+\\frac{12687}{20000}A\\le D.\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "es",
+    "kind": "display",
+    "line": 362,
+    "sha256": "44182b09a9e9368aa357ee83acb9167e947e775bcf95349997a9ab8ca4629fca",
+    "text": "\\[\nd(X)\\le\\frac{16D}{n^2}<\\varepsilon_0-\\frac1n,\\qquad\nD=\\eta_0n^2+\\frac n6+\\frac1{24}.\n\\tag{4.6}\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "es",
+    "kind": "display",
+    "line": 370,
+    "sha256": "0c17ec642be89d7d99d144a589fa7bad9db288d81ea1dd0144131d0d401428cf",
+    "text": "\\[\n\\frac{16}{6n}+\\frac1n+\\frac{16}{24n^2}\n<\\varepsilon_0-16\\eta_0.\n\\tag{4.6a}\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "es",
+    "kind": "display",
+    "line": 378,
+    "sha256": "d452e3107518f4ff8d877b038b77d81f00604643d893f857215f9fd06bdb95cc",
+    "text": "\\[\nd(G_i)<\\varepsilon_0.\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "es",
+    "kind": "display",
+    "line": 388,
+    "sha256": "f96bed3321921fac99f241e1b44e16285283af1168363ee3bf11feeebe7a74f7",
+    "text": "\\[\n\\varepsilon=\\frac{\\alpha^4}{8B^2},\\qquad\n1280B^2\\eta\\le\\alpha^4,\\qquad\nn\\ge\\frac{1280B^2}{\\alpha^4}\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "es",
+    "kind": "display",
+    "line": 398,
+    "sha256": "dec0152ea2da1290e9d17dd3a68cb809105f1948a2621099abfd577bb9cad07a",
+    "text": "\\[\nF_4(G)\\ge n^2/6-\\eta_0n^2.\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "es",
+    "kind": "display",
+    "line": 402,
+    "sha256": "82ef6888cab8b85feda2cbd9ad457e3adcb75b75b13b43f543174a1c6816654b",
+    "text": "\\[\nd_E(G,S_C)\\le\\varepsilon_0n^2,\n\\tag{4.7}\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "es",
+    "kind": "display",
+    "line": 406,
+    "sha256": "b497f11a574ec43ab37d839a56b08b0caa294bff36c640dd42e5f6d4ae0f5cbd",
+    "text": "\\[\n(6|C|-2n-1)^2\n\\le24\\left((\\eta_0+6\\varepsilon_0)n^2+\\frac n6+\\frac1{24}\\right).\n\\tag{4.8}\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "es",
+    "kind": "display",
+    "line": 419,
+    "sha256": "2d5f3f8b57408da725b0f9807c3dc540c6a5b9dfd38db0d514b87f18894325c1",
+    "text": "\\[\nd(G)<\\varepsilon_0,\\qquad F_4(G)\\ge n^2/6-\\eta_0n^2.\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "es",
+    "kind": "display",
+    "line": 423,
+    "sha256": "091e36457df36a83e8dcd5184e565c9a6da5919a99f18149063e110613673387",
+    "text": "\\[\n|Q|\\le B_n(p)-\\frac m{20}-\\frac A2,\\qquad\nB_n(p)=p(n-p)-\\binom p2.\n\\tag{5.0}\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "es",
+    "kind": "display",
+    "line": 436,
+    "sha256": "927cead0e44215ced1a23d6ff48b932b4c07d9c02bd4b5bf15c72c1ac095baeb",
+    "text": "\\[\n\\begin{gathered}\na\\ge1024,\\qquad |n-3a|\\le a/64,\\\\\ne(G-P)+\\#\\{\\text{enlaces ausentes entre }P\\text{ y }V\\setminus P\\}\n\\le a^2/65536.\n\\end{gathered}\n\\tag{5.1}\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "es",
+    "kind": "display",
+    "line": 448,
+    "sha256": "1eb3dffbdb897f6ecd66d6ba6d8de66769c7fc3b96db3f8f1cd8917efdeeef22",
+    "text": "\\[\nF_4(S_C)\\le\n\\begin{cases}\nb_0-a_0,&b_0\\ge2a_0,\\\\\n(2b_0-a_0)/3,&a_0\\le b_0\\le2a_0,\\\\\n(a_0+b_0)/6,&b_0\\le a_0.\n\\end{cases}\n\\tag{5.1a}\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "es",
+    "kind": "display",
+    "line": 460,
+    "sha256": "792af780fce83a1435053d910bb6fddc3e0ecd4bf33108c774eb65e918de2f72",
+    "text": "\\[\n\\binom r2-\\left((a-1)r-\\binom a2\\right)\n=\\binom{u+1}{2}\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "es",
+    "kind": "display",
+    "line": 467,
+    "sha256": "1376500417b534f1440918d0516d73b4a9c700d0c9a9dfcebb47bf97e2faf769",
+    "text": "\\[\n\\varepsilon_0n^2+un\\le(10^{-12}+1.5\\cdot10^{-6})n^2\n\\le\\frac{(33n/100)^2}{65536}\\le\\frac{a^2}{65536}.\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "es",
+    "kind": "display",
+    "line": 474,
+    "sha256": "e26b5f4c92c75cacdeaecef2a89f812101fd18864cf978c6399516230e36fd1c",
+    "text": "\\[\nR=(P\\setminus X)\\cup Y.\n\\tag{5.2}\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "es",
+    "kind": "display",
+    "line": 479,
+    "sha256": "405159ee7c4021bbe316928220fcac91f1c64d3f3af660aec0638944a4d97e9c",
+    "text": "\\[\n16384|X|\\le |P|,\\qquad 57344|Y|\\le |P|.\n\\tag{5.3}\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "es",
+    "kind": "display",
+    "line": 484,
+    "sha256": "01cfdc920eceb736b8f1ca987460ab4ec0a4ca4451ef213cb806916b63d53b77",
+    "text": "\\[\n\\begin{gathered}\n99a/100\\le p\\le101a/100,\\quad q\\ge p,\\quad\n44352q\\ge87947a,\\\\\n48(2p-q)_+\\le a,\\quad 3D\\le a,\\quad\n400m<a^2,\\quad2000(A+2m)\\le11a^2.\n\\end{gathered}\n\\tag{5.4}\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "es",
+    "kind": "display",
+    "line": 499,
+    "sha256": "64c6ce4baac82df2e10f7e946f4717c231f9ddd2f6f7da026d53d7967ac8a96b",
+    "text": "\\[\n64d_{\\max}(G-R)\\le113a+64|X|,\\qquad\n128\\omega(G-R)\\le a+128+128|X|.\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "es",
+    "kind": "display",
+    "line": 520,
+    "sha256": "78fd0341288b55147cba7652c38849f834f0c79aefbfdf95fe7a2cc06fc26981",
+    "text": "\\[\nB_n(p)=p(n-p)-\\binom p2.\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "es",
+    "kind": "display",
+    "line": 534,
+    "sha256": "60060a740507e8825a136b4e2525649fe74c6788c4b43c71d9e856acbfd6e3c9",
+    "text": "\\[\n|Q|=\\binom p2+pq+m-A-2\\left(f+\\binom p2-\\ell\\right)\n=B_n(p)+m-A-2f+2\\ell.\n\\tag{5.4a}\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "es",
+    "kind": "display",
+    "line": 548,
+    "sha256": "640c804a5c53ea73e648bf933ff203a328834b1453be8c07ad8e362e46e9ae23",
+    "text": "\\[\nm_0\\ge\\frac pc\\,m.\n\\tag{5.5}\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "es",
+    "kind": "display",
+    "line": 555,
+    "sha256": "11886fc23f44b9511bbb7e584c1c25bb4ae5254181823a104dadfd64ad190479",
+    "text": "\\[\nf\\ge m_0-\\frac{w-1}{p}A\n\\ge\\frac pc\\,m-\\frac{w-1}{p}A.\n\\tag{5.6}\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "es",
+    "kind": "display",
+    "line": 561,
+    "sha256": "693772f38b8957a79300e5c67d7013aa8ba30625e30d3027023cc714ee067f2f",
+    "text": "\\[\n40c\\le73p,\\qquad 40(w-1)\\le3p.\n\\tag{5.7}\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "es",
+    "kind": "display",
+    "line": 570,
+    "sha256": "9b25f5f6ae318a58b95d49f9b560514bba211b9f7c8b3f0d68f68b7559bc5a3f",
+    "text": "\\[\n\\sum_xa_x=A,\\quad \\sum_xu_x=2f,\\quad\na_x\\le D,\\quad u_x\\le2t,\\quad\nS:=\\sum_xd_x=A+2f,\n\\tag{5.8}\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "es",
+    "kind": "display",
+    "line": 579,
+    "sha256": "4876ea0e5bc5642f6b69ae8cc660fc940cb8bdead41b528173298cc75ce6aef8",
+    "text": "\\[\n\\begin{aligned}\n\\sum_e b_e&\\le(p-1)S,\\\\\n\\sum_e b_e^2&\\le(p-2)\\sum_xd_x^2+S^2,\\\\\n\\sum_xd_x^2&\\le(D+4t)A+4tf.\n\\end{aligned}\n\\tag{5.9}\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "es",
+    "kind": "display",
+    "line": 588,
+    "sha256": "69e5f0fed192273799e06c123eee6a6e84c186e4bc3f9f527d4adfae68333507",
+    "text": "\\[\n(a_x+u_x)^2\\le Da_x+4ta_x+2tu_x,\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "es",
+    "kind": "display",
+    "line": 594,
+    "sha256": "d3d512ed4da40103e04afa60d289f94ea6aacf93f21809058bbb85a0d1ed9ea3",
+    "text": "\\[\n\\frac{s}{p}\\frac{b_e}{q}\n+\\left(1-\\frac{s}{p}\\right)\\frac{b_e(b_e-1)}{q(q-1)}.\n\\tag{5.10}\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "es",
+    "kind": "display",
+    "line": 600,
+    "sha256": "abadbd6bae355e13651f7393cd0b206ef4d1bedc7f20fc60517cc764a76acfc7",
+    "text": "\\[\n\\ell\\le\\frac{s}{q}(A+2f)\n+\\frac{(p-2)((D+4t)A+4tf)+(A+2f)^2}{q(q-1)}.\n\\tag{5.11}\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "es",
+    "kind": "display",
+    "line": 608,
+    "sha256": "3dcff065247d095846023d140fe9b1ca26e3fed5210ee8edc6408a52571d4d6f",
+    "text": "\\[\n\\begin{gathered}\na\\ge1024,\\quad \\frac qa\\ge\\frac{87947}{44352},\\quad\n\\frac pa\\le\\frac{101}{100},\\quad \\frac Da\\le\\frac13,\\\\\n\\frac ta\\le\\frac1{256},\\quad \\frac sa\\le\\frac1{48},\\quad\n\\frac{A+2f}{a^2}\\le\\frac{11}{2000}.\n\\end{gathered}\n\\tag{5.12}\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "es",
+    "kind": "display",
+    "line": 619,
+    "sha256": "792e76839338daf083a6215c5672d39aa4a45d1c487b47b94fa87094e139088b",
+    "text": "\\[\n2p-q=2a-q_P-3|X|+3|Y|\n\\le a/64+3a/57344<a/48.\n\\tag{5.12a}\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "es",
+    "kind": "display",
+    "line": 625,
+    "sha256": "841e24ba941283f2c9c90a34bf27ef5f0460139137f11ca69f27f0458904cc50",
+    "text": "\\[\n\\frac{q(q-1)}{a^2}\\ge\n\\left(\\frac{87947}{44352}\\right)^2\n-\\frac{87947}{44352\\cdot1024}\\ge\\frac{393}{100}.\n\\tag{5.13}\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "es",
+    "kind": "display",
+    "line": 633,
+    "sha256": "dec31aebf18b6a8f8f80128e82a25cad33afe5d0d629e747d975970e2fd70b88",
+    "text": "\\[\n\\begin{aligned}\n\\frac{1}{48Q_0}\n+\\frac{(101/100)(1/3+1/64)+11/2000}{R_0}\n&\\le\\frac{11}{100},\\\\\n\\frac{1}{24Q_0}\n+\\frac{(101/100)/64+11/1000}{R_0}\n&\\le\\frac{29}{1000}.\n\\end{aligned}\n\\tag{5.14}\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "es",
+    "kind": "display",
+    "line": 649,
+    "sha256": "aa4e4ebc393fc560a42b7ff19c0511cdf26131db2f5c4cf15b16bd3003ff8a18",
+    "text": "\\[\n|Q|\\le B_n(p)-\\frac{117}{1825}m-\\frac{12687}{20000}A\n\\le B_n(p)-\\frac m{16}-\\frac A2.\n\\tag{5.15a}\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "es",
+    "kind": "display",
+    "line": 655,
+    "sha256": "914900d72e65abea09826680ac44dbc9cb8be4d8e6ab003e469686a35ae40543",
+    "text": "\\[\n|Q|\\le B_n(p)-\\frac{19}{365}m-\\frac{253}{500}A\n\\le B_n(p)-\\frac m{20}-\\frac A2.\n\\tag{5.15}\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "es",
+    "kind": "display",
+    "line": 663,
+    "sha256": "9504514279d6d0ae7f8705a7377bfefbb25a0df390daffbcd1e4bbe2c171eb6d",
+    "text": "\\[\n|Q|\\le B_n(p)+m-\\frac{13}{20}A-\\frac{48}{25}f.\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "es",
+    "kind": "display",
+    "line": 667,
+    "sha256": "0eeda82c3beaa62ae44e8257dadca5620f4ad66a3612fd28c6547b0cb891e8f1",
+    "text": "\\[\n1-\\frac{48}{25}\\frac{40}{73}=-\\frac{19}{365},\\qquad\n-\\frac{13}{20}+\\frac{48}{25}\\frac3{40}=-\\frac{253}{500}.\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "es",
+    "kind": "display",
+    "line": 674,
+    "sha256": "275cd11357bb95da1d20f23dfc7c35beab8fa5c92e7e93e6ade6e8e080940b65",
+    "text": "\\[\n|Q|\\le B_n(p)+m-\\frac{39}{50}A-\\frac{971}{500}f.\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "es",
+    "kind": "display",
+    "line": 680,
+    "sha256": "6a0d251100729859f142127690d98f438d2b1cad57a5cf2fc082f3795b741077",
+    "text": "\\[\nB_n(p)=\\frac{(2n+1)^2}{24}-\\frac{(6p-2n-1)^2}{24}.\n\\tag{5.16}\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "es",
+    "kind": "display",
+    "line": 693,
+    "sha256": "946f6e3a08fea61047c6c97d7b2c333cd68a8c22842ccd0168f87741770aaff5",
+    "text": "\\[\n|3|R|-n|\\le\\frac n{50},\\qquad\n|3|C|-n|\\le\\frac n{10^4},\\qquad\nd_E(G,S_C)\\le\\varepsilon_0n^2,\n\\tag{5.17}\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "es",
+    "kind": "display",
+    "line": 700,
+    "sha256": "1cd33e3a52c36ed4034a0eb4429945329d02177411af7db799463b4bf4957036",
+    "text": "\\[\n\\left|e(G)-\\frac{5n^2}{18}\\right|\\le\\frac{n^2}{10^4}.\n\\tag{5.18}\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "es",
+    "kind": "display",
+    "line": 705,
+    "sha256": "dedfec79b73aa54e616a3b8eb6144c64d2b022e9196d8cb2c6e3d42454695d81",
+    "text": "\\[\ne(S_C)=\\binom k2+k(n-k)\n=\\frac{5n^2}{18}+\\frac{2nt}{3}-\\frac{t^2}{2}-\\frac{k}{2}.\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "es",
+    "kind": "display",
+    "line": 726,
+    "sha256": "29d1530b5a439c33bd86e2958267e21f4d674756f8cc62503f008337eb299f55",
+    "text": "\\[\ns-\\binom s2\\le1.\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "es",
+    "kind": "display",
+    "line": 730,
+    "sha256": "371dc5441e8eb61df6ce0de768386db19f25130d285f8cbb971c85cd77fb02c0",
+    "text": "\\[\n|\\mathcal Q|\\ge kh-\\binom k2.\n\\tag{6.1}\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "es",
+    "kind": "display",
+    "line": 736,
+    "sha256": "f1a2a442a8607f967ac95b1f372a5d25cebc6486bded37191449e040f46728ec",
+    "text": "\\[\n\\binom k2+kh-2\\binom k2=kh-\\binom k2.\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "es",
+    "kind": "display",
+    "line": 740,
+    "sha256": "a96286b14ccc182a9a3fed15cbc9c0aa008003bb81da3314b8d28d7d489e7edc",
+    "text": "\\[\n\\operatorname{cp}(S)=c_3(S)=c_4(S)=kh-\\binom k2.\n\\tag{6.2}\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "es",
+    "kind": "display",
+    "line": 749,
+    "sha256": "ab82d8c367c59c93f9b45d3dc74840a2abfde9181fb87afb7a6a705c7238308f",
+    "text": "\\[\n6f(n,k)+(n-3k)(n-3k+1)=n(n+1).\n\\tag{6.3}\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "es",
+    "kind": "display",
+    "line": 754,
+    "sha256": "5268f4b1569167061efc16b83e130030860776900b550665c7e005fe497ca7c3",
+    "text": "\\[\n\\begin{cases}\nk=r,& n=3r,\\\\\nk=r\\text{ o }r+1,& n=3r+1,\\\\\nk=r+1,& n=3r+2.\n\\end{cases}\n\\tag{6.4}\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "es",
+    "kind": "display",
+    "line": 769,
+    "sha256": "6f497d9c34abe4773a3e7c56d29ed54ef89efedf34ac4ea106bd10d027bbb915",
+    "text": "\\[\ne(G)\\le\\binom n2\\le N^2\\le M(n)+b.\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "es",
+    "kind": "display",
+    "line": 775,
+    "sha256": "a7afd076d893a73f66b74952abfccd57744b5ec9aaf3500c9e548e3aa4628c7e",
+    "text": "\\[\nh=4\\cdot8^5\\cdot2208^5\\cdot4500^{105}\\cdot(2\\cdot10^{16})^{105}.\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "es",
+    "kind": "display",
+    "line": 779,
+    "sha256": "f0ae06406c88234d00c6b9ee7e1270d17d3bbe18bc847ed4468771ba26b5fe66",
+    "text": "\\[\nN=T(h+7),\\qquad b=N^2\\le T(h+8).\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "es",
+    "kind": "display",
+    "line": 787,
+    "sha256": "b640e54b3a6cb1f3922d8d40da1bf9abaf4f3162092ccc0c27e2fbd08fb8a07a",
+    "text": "\\[\n\\frac{n^2+n}{6}-1\\le M(n)\\le cn^2+Cn.\n\\tag{6.5a}\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "es",
+    "kind": "display",
+    "line": 794,
+    "sha256": "ffe78925678f59138889c3956a39841fabff91d8ab244241b6ce9405a5a6d21f",
+    "text": "\\[\n\\operatorname{cp}(G)=M(n)\n\\ge\\frac{n^2}{6}+\\frac n6-1\n>\\frac{n^2}{6}+cn+B_0.\n\\tag{6.5}\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "es",
+    "kind": "display",
+    "line": 807,
+    "sha256": "1b6b21cc9f1477348be6f969ac55ff87afe83296e740b6b96d253ee1df0507d5",
+    "text": "\\[\nd(C)=1+e_{\\rm int}(C)-e_{\\rm cruz}(C),\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "es",
+    "kind": "display",
+    "line": 811,
+    "sha256": "35b8db139bf1f02d248433cee7a92c73af6187ec5c7b50bcbecfe6359ca9d22a",
+    "text": "\\[\n|\\mathcal Q|-\\left(kh-\\binom k2\\right)\n=\\sum_{C\\in\\mathcal Q}d(C).\n\\tag{6.6}\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "es",
+    "kind": "display",
+    "line": 817,
+    "sha256": "ff0b85690b99a5f3c505235579aa34a576b389ae4ff8e7e78e10a205e81b3083",
+    "text": "\\[\nd(C)=1+\\binom s2-s=\\frac{(s-1)(s-2)}2\\ge0;\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "es",
+    "kind": "display",
+    "line": 827,
+    "sha256": "9bb18d2c1a91f0c35193517287339cd31c0274f01bd9a7cfdd2dc901ef0330ad",
+    "text": "\\[\n\\bigl(M(n)-B_n(|R|)\\bigr)+\\frac m{16}+\\frac A2\\le\\delta,\n\\qquad\nd_E(G,S_R)=m+A\\le16\\delta.\n\\tag{6.7}\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "es",
+    "kind": "display",
+    "line": 836,
+    "sha256": "161a24098930ba3eea07570b912ace75bbaf8c598931876eef42acaf8bf5beac",
+    "text": "\\[\n|Q|<\\frac{n^2}{6}-\\frac{\\eta_0}{2}n^2\n\\le M(n)-\\frac{\\eta_0}{2}n^2.\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "es",
+    "kind": "display",
+    "line": 841,
+    "sha256": "ec1f46f3af75d1d92a6bf11a8675f6338904a54cbe3aa77d893d8654a513ef16",
+    "text": "\\[\nM(n)-\\delta\\le |Q|\n\\le B_n(|R|)-\\frac m{16}-\\frac A2,\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "es",
+    "kind": "display",
+    "line": 846,
+    "sha256": "f6f38ecb243a3aa58ecd5d7a8a93ac2ec41ffd8938f4125c9cd0357440d0da94",
+    "text": "\\[\nm+A\\le16\\left(\\frac m{16}+\\frac A2\\right)\\le16\\delta.\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "es",
+    "kind": "display",
+    "line": 852,
+    "sha256": "374f9711316adfaf255f36e26d5cd37e459be9028cf156fe40a293fbb07b6265",
+    "text": "\\[\nd_R(K)=1+\\binom{a_K}{2}+3\\binom{b_K}{2}-a_Kb_K\n=\\frac{(a_K-b_K)(a_K-b_K-1)}2+(b_K-1)^2.\n\\tag{6.7a}\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "es",
+    "kind": "display",
+    "line": 862,
+    "sha256": "e222c3885c42e0a0102f54644412b9c5f69aa175e3d16d298bd316dc26d7077c",
+    "text": "\\[\n\\sum_{K\\in Q}d_R(K)=|Q|-B_n(|R|)+A+3m.\n\\tag{6.7b}\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "es",
+    "kind": "display",
+    "line": 871,
+    "sha256": "345091a984eee29bd45b2852a54a49468b59a4c009c129fd696c4d571abf6206",
+    "text": "\\[\n6B_n(k)+(n-3k)(n-3k+1)=n(n+1)\n\\tag{6.8}\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "es",
+    "kind": "display",
+    "line": 876,
+    "sha256": "38fcfe07aed297ead7f80deadf074e8534e1851d1259f1e250c549557f6f3b07",
+    "text": "\\[\n\\operatorname{cp}(G)=M(n)\n\\quad\\Longleftrightarrow\\quad\nc_4(G)=M(n)\n\\quad\\Longleftrightarrow\\quad\nG\\text{ es completo-split con núcleo óptimo},\n\\tag{6.9}\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "es",
+    "kind": "display",
+    "line": 889,
+    "sha256": "dd2c38ad7c368aa1499ecebc10e3fd0c9cda348802eed5d27f5a9d65dee656d8",
+    "text": "\\[\nW^*(S)=W(S)=2\\binom k2.\n\\tag{6.10}\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "es",
+    "kind": "display",
+    "line": 894,
+    "sha256": "e6616b172653b4879bd6f91e12bce8345b73850455ef13e5451839caed0baa72",
+    "text": "\\[\n\\begin{aligned}\nw(x)&\\le2\\sum_K j(K)x_K\\\\\n&=2\\sum_{e\\in E(K_k)}\\sum_{K:e\\in E(K)}x_K\n\\le2\\binom k2.\n\\end{aligned}\n\\tag{6.11}\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "es",
+    "kind": "display",
+    "line": 909,
+    "sha256": "49a3c98869b618255278d146b08b5cd93ae35c6b9a92816a27964f3ade28b3fb",
+    "text": "\\[\nd_{n,k}=\\begin{cases}n-3k,&3k\\le n,\\\\3k-n-1,&3k>n.\\end{cases}\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "es",
+    "kind": "display",
+    "line": 913,
+    "sha256": "911315c76db464d3b5ead2667d129b96cebed60df8fc07401c9f0c21119cf465",
+    "text": "\\[\nM(n)=B_n(k)+M(d_{n,k}).\n\\tag{6.12}\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "es",
+    "kind": "display",
+    "line": 1008,
+    "sha256": "beb753b189238e058039848241041a82778aa0922b99798bf2c5e2d5348c1f2a",
+    "text": "\\[\nW^*(G)-g(\\mathcal P)\n=\\bigl(e(G)-g(\\mathcal P)\\bigr)-F_4(G)\n\\le M(n)-F_4(G)=\\Delta(G).\n\\tag{8.1}\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "es",
+    "kind": "display",
+    "line": 1064,
+    "sha256": "b75380deef97afa11f12b1e11e8e79006a16498d44ffa1feef1fbf71950f4b69",
+    "text": "\\[\n\\sum_T x_T\\le \\nu_3(G)+\\left(10+\\frac d2\\right)n.\n\\tag{8.1a}\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "es",
+    "kind": "display",
+    "line": 1081,
+    "sha256": "8c02459f251f9a3658a500b3b658e1e86e41ba4120ce16668841a9d149edf5b3",
+    "text": "\\[\nN_0>\\exp(t^2/16).\n\\tag{8.2}\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "es",
+    "kind": "display",
+    "line": 1088,
+    "sha256": "689afd103d733d2d88f5f1baddf3e9fb0df3ae0af9a0bee5a92271c2e7f45cf7",
+    "text": "\\[\n2(1-\\gamma)T\\le\\frac{\\varepsilon}{4}n^2.\n\\tag{8.3}\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "es",
+    "kind": "display",
+    "line": 1101,
+    "sha256": "d0c6b4edfd46c9ae3f745541a2b0719bbd9fee0a6cca9ffed6947278ed7deb51",
+    "text": "\\[\ne(G)\\le2(n-2)+1=2n-3.\n\\tag{8.4}\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "es",
+    "kind": "display",
+    "line": 1106,
+    "sha256": "32dee05b52e6746f05408e217f9a0f915810a4f48e373bba9dcdc3db44f2ebe0",
+    "text": "\\[\n\\frac{\\varepsilon n^2}{30}-1\n\\le T\\le\\frac{2n-3}{3}\n\\quad\\Longrightarrow\\quad n\\le\\frac{20}{\\varepsilon}.\n\\tag{8.5}\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "es",
+    "kind": "display",
+    "line": 1236,
+    "sha256": "6bf7bfdbdb9f12a0e06cc20aa09266979041da15438ca409cc9902531d47e3dc",
+    "text": "\\[\nd_{G[U]}(v)\\ge |U|/2+t\\qquad(v\\in U),\n\\tag{B.1}\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "es",
+    "kind": "display",
+    "line": 1243,
+    "sha256": "91ab5ea4658cb2186eba727d2b157eb0f4a5b58e3a4c1a6ad5a870d05cba4e49",
+    "text": "\\[\n\\sum_{u\\in U}b(u,f(u))\n\\le\\frac1{t+1}\\sum_{u\\in U}\\sum_{v\\in U}b(u,v).\n\\tag{B.2}\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "es",
+    "kind": "display",
+    "line": 1251,
+    "sha256": "d3a01bc3a952ee812fc2d4889a3bc9d11c8011f6debfe8c4544fbc5f9206a328",
+    "text": "\\[\ng(\\mathcal P\\cup\\mathcal A)=g(\\mathcal P)+|U|.\n\\tag{B.3}\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "es",
+    "kind": "display",
+    "line": 1258,
+    "sha256": "4472120392a8e52f55872089e8fa931b23c42719f47b79b1429de1c366159acc",
+    "text": "\\[\n\\sum_{u\\in U}\\sum_{v\\in U}b(u,v)\\le(t+1)B_{\\rm abs},\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "es",
+    "kind": "display",
+    "line": 1268,
+    "sha256": "03a4cc0727a6b6805416f15c35cfb6720db06294601e6441ced5afd8f6d2dd76",
+    "text": "\\[\n|d_R(v)-\\theta d_F(v)|\\le2\\qquad(v\\in V(F)).\n\\tag{B.4}\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "es",
+    "kind": "display",
+    "line": 1291,
+    "sha256": "f983fc9ba526467766f9937517cf6bb4c9665af062a2ccc62aa3fc57a0767238",
+    "text": "\\[\n\\sum_{H\\ni v}z_H\\le1,\\qquad\n\\sum_{H\\supseteq\\{v,w\\}}z_H\\le\\gamma\\quad(v\\ne w).\n\\tag{3.2}\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "es",
+    "kind": "display",
+    "line": 1297,
+    "sha256": "00ffca322f1b58d6586fbc18676924c4b51b11c53afe407ed88aad5b8948f5b7",
+    "text": "\\[\n|\\mathcal M|\\ge(1-\\beta)\\sum_{H\\in\\mathcal H}z_H-\\beta|U|-C.\n\\tag{3.3}\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "es",
+    "kind": "display",
+    "line": 1306,
+    "sha256": "ed615bbe08392068cb25cc9fe2b84133e62c242636e69f524cb41d5d1bb1ac51",
+    "text": "\\[\n\\begin{aligned}\n|\\mathcal M|&\\ge(1-\\beta)\\sum_{H\\in\\mathcal H}z_H-\\epsilon|U|-C,\\\\\n|\\mathcal M\\cap\\mathcal A|&\\ge(1-\\beta)\\sum_{H\\in\\mathcal A}z_H-\\epsilon|U|-C.\n\\end{aligned}\n\\tag{3.4}\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "es",
+    "kind": "display",
+    "line": 1315,
+    "sha256": "60bdb4eb09db8669a541a14fee5be3735eda2e5d5390dd46577d168659693533",
+    "text": "\\[\np=\\max\\{\\lceil u\\rceil,k_0\\},\\qquad\nq=\\max\\{\\lceil a\\rceil,k_0\\}.\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "es",
+    "kind": "display",
+    "line": 1322,
+    "sha256": "80689bdff4ce479f5ad861cea14ba08d47a6dd9f60e2aec8867b780053a60071",
+    "text": "\\[\nm\\ge(1-b)(u+a)-b(|U|+p+q)-C_0,\n\\qquad |\\mathcal M\\cap\\mathcal A|\\ge m-p.\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "es",
+    "kind": "display",
+    "line": 1332,
+    "sha256": "a485658a87b3916e06bd31caef402b2386e019e56cffb62743cc43af847e4d27",
+    "text": "\\[\n\\sum_{K:\\ e,f\\in E(K)}x_K\\le\\gamma\\qquad(e\\ne f).\n\\tag{3.5}\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "es",
+    "kind": "display",
+    "line": 1337,
+    "sha256": "837841da2a4e495fc8d4895d00b5f5054b925fbe369532e9289590e55ac0227b",
+    "text": "\\[\ng(\\mathcal P)\\ge(1-\\beta)(2t_3+5t_4-6)\n -5\\epsilon\\binom{n+1}{2}-5D.\n\\tag{3.6}\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "es",
+    "kind": "display",
+    "line": 1357,
+    "sha256": "2ce63b74411eb5d1276da6a5df38525598d577f25ac763b79c07deb3f44b05e8",
+    "text": "\\[\n(1-u-v)S-g(\\mathcal P)\\le\\zeta n^2,\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "es",
+    "kind": "display",
+    "line": 1361,
+    "sha256": "0fffed4f2283c9b9504623e1348a57b32d684bdd3d6ea49429c34212bdd5ad89",
+    "text": "\\[\nw(x)-g(\\mathcal P)\n\\le L+\\left(\\zeta+\\frac56(u+v)\\right)n^2.\n\\tag{3.7}\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "es",
+    "kind": "display",
+    "line": 1367,
+    "sha256": "5401ee692c168bd0d94f97aa71b0a7d874b22e000cab111534275808ec18886f",
+    "text": "\\[\n\\begin{aligned}\nw(x)-g(\\mathcal P)\n={}&(w(x)-L-S)+((1-u-v)S-g(\\mathcal P))\\\\\n&+L+(u+v)S.\n\\end{aligned}\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "es",
+    "kind": "display",
+    "line": 1377,
+    "sha256": "fe49c39cb8ae105210cd7818e535cb06b10aabe6257e422258c1c18b812ecfbf",
+    "text": "\\[\n30C\\le\\xi n^2,\\qquad 2\\zeta\\le\\xi\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "es",
+    "kind": "display",
+    "line": 1383,
+    "sha256": "6d98f2c0fc29683d5ba8e52d2227662604562b35b17486cea08652c7adbc674d",
+    "text": "\\[\n(1-v)\\operatorname{vol}(H)\n\\le |\\operatorname{cleanFiber}(H)|.\n\\tag{3.8}\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "es",
+    "kind": "display",
+    "line": 1391,
+    "sha256": "0309b93fcd7d90e6721fe92e738e7de683c42d9da474f1b13621970ba86b14c4",
+    "text": "\\[\n2(a-b)+5b=2a+3b.\n\\tag{3.9}\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "es",
+    "kind": "display",
+    "line": 1400,
+    "sha256": "3d2d8c14d8c136b54ecef589fd828dc553318d98bb0b858b7b76fa73c6098d58",
+    "text": "\\[\ns=\\min\\{\\xi/4500,1/10\\},\\qquad\nd=u=v=s,\\qquad \\delta=s^{21}/2208.\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "es",
+    "kind": "display",
+    "line": 1411,
+    "sha256": "0d365a3ca73e74beca1cd71b5c7a989ff190466384a6f9894a0cf38ea6ac4d4f",
+    "text": "\\[\nS=\\sum_{H\\text{ activo}}g(H)\\psi_H.\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "es",
+    "kind": "display",
+    "line": 1417,
+    "sha256": "f9ae0ba5a8ca0c68f86333ea0e9526f695409ecd56d93a566ada52f6909a9301",
+    "text": "\\[\nw(x)-S\\le L,\\qquad\nL=3\\left(3\\delta+\\frac1{k_0}+d\\right)n^2\n  +(N_4+2N_3)\\theta.\n\\tag{3.10}\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "es",
+    "kind": "display",
+    "line": 1428,
+    "sha256": "5456de692706de32171d4b124291ac5c5a0a94e683b6d1f64c73284fa8f06836",
+    "text": "\\[\n\\begin{aligned}\nw(x)-g(\\mathcal P)\\le{}&\n\\left(9\\delta+\\frac3{k_0}+3d+\\zeta\n             +\\frac56(u+v)\\right)n^2\\\\\n&+(N_4+2N_3)\\theta .\n\\end{aligned}\n\\tag{3.11}\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "es",
+    "kind": "display",
+    "line": 1442,
+    "sha256": "94f2f3cb3d38a016c7b752e6c2381084a8e10656f185932bf85b2770ef2f39e8",
+    "text": "\\[\na_3=d^3-3\\delta>0,\\qquad a_4=d^6-6\\delta>0,\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "es",
+    "kind": "display",
+    "line": 1446,
+    "sha256": "ca238d1c6d1bb3797e44afa02f11370fbf7648c95f7c653f6149222edb9d2c92",
+    "text": "\\[\nk_3a_4+k_4a_3\\le\\gamma a_3a_4t,\n\\tag{3.12}\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "es",
+    "kind": "display",
+    "line": 1453,
+    "sha256": "723d6053746b774718c709b97691dba3744291757908aac2544246cae3d45d95",
+    "text": "\\[\n\\sum_{K:e,f\\in E(K)}x_K^{\\rm limpio}\n\\le\\frac{k_3}{a_3t}+\\frac{k_4}{a_4t}\n=\\frac{k_3a_4+k_4a_3}{a_3a_4t}\\le\\gamma.\n\\tag{3.13}\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "es",
+    "kind": "display",
+    "line": 1462,
+    "sha256": "cec696fd648b9ddab1cb2311e44dfb97bf82fdded051fd84f9f45bcce31e3b05",
+    "text": "\\[\n12+10D\\le\\zeta n^2,\n\\tag{3.14}\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "es",
+    "kind": "display",
+    "line": 1473,
+    "sha256": "6687d4ec573ed1a0f677ef33a028dddb145ff1b21ad3d7d98d99010a2ae410f3",
+    "text": "\\[\na=\\min\\{\\xi/4500,1/10\\},\\quad\n\\delta=a^{21}/2208,\\quad z=\\min\\{\\xi/10,1\\},\\quad\nk_0=\\lceil1500/\\xi\\rceil+1.\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "es",
+    "kind": "display",
+    "line": 1479,
+    "sha256": "83102e7f9c6a9989b41a851031746954baf1eaf0014d37b73bce578f2013c065",
+    "text": "\\[\n\\gamma=\\frac1{\\lceil1/\\gamma_*\\rceil},\\qquad C=\\lceil C_*\\rceil,\\qquad\na_3=a^3-3\\delta,\\quad a_4=a^6-6\\delta.\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "es",
+    "kind": "display",
+    "line": 1484,
+    "sha256": "9fd2928b49abda7515a3708156d4baecd55beb68e2b777d720e2d1fcf65d3ca9",
+    "text": "\\[\n\\begin{split}\nN_E(\\xi)=1+\\max\\biggl\\{&\nk_0,\\ \\left\\lceil B/\\delta\\right\\rceil,\\\n\\left\\lceil(12+10D_*)/z\\right\\rceil,\\\\\n&\\left\\lceil\\frac{4B^5(a_3+a_4)}{\\gamma a_3a_4}\\right\\rceil,\\\n\\left\\lceil\\frac{50(1+2C)}{\\xi}\\right\\rceil\n\\biggr\\}.\n\\end{split}\n\\tag{C.1}\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "es",
+    "kind": "display",
+    "line": 1498,
+    "sha256": "419666e35fea6de8744addc61819ab1d514dfb3dd1bd28bf34f022db7352f0ca",
+    "text": "\\[\nw(x)-g(\\mathcal P)\\le\\xi n^2\n\\qquad(n\\ge N_E(\\xi))\n\\tag{C.2}\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "es",
+    "kind": "display",
+    "line": 1506,
+    "sha256": "2710fb493f3a87db08bece27e3a1dc78fef75dfc6101901620d971860692f605",
+    "text": "\\[\na=(9\\cdot10^{19})^{-1},\\qquad\n\\delta=\\frac1{2208(9\\cdot10^{19})^{21}},\\qquad\nz=(2\\cdot10^{17})^{-1},\\qquad k_0=3\\cdot10^{19}+1.\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "es",
+    "kind": "display",
+    "line": 1512,
+    "sha256": "6f73e1d9aba46012c90e26c1f5968ac6dbee0e71c6e7dd19f97f60968d4678ef",
+    "text": "\\[\nG_1=\\lceil1/\\gamma_*\\rceil,\\quad G_2=\\lceil C_*\\rceil,\\quad\nG_3=\\lceil2\\cdot10^{17}(12+10D_*)\\rceil.\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "es",
+    "kind": "display",
+    "line": 1528,
+    "sha256": "4504491877173c3e1aa0158b3712df90602066fd973d6de411f06c48603036c0",
+    "text": "\\[\nN_{\\rm lejano}(\\eta_0)\\le T(h+7).\n\\tag{C.3}\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "es",
+    "kind": "display",
+    "line": 1541,
+    "sha256": "9dba624690aa2bb3a830844bbd12e0db84e1f3d9474ca73b3a86a46589c89333",
+    "text": "\\[\nn(n-2)\\le3g(\\mathcal P).\n\\tag{D.1}\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "es",
+    "kind": "display",
+    "line": 1546,
+    "sha256": "5c3e4429652ea3bfd1d47271676e0a2c8c212f53c22c7cfed8d9a2ee06a86044",
+    "text": "\\[\n|Q|=\\binom n2-g(\\mathcal P)\n\\le\\frac{n(n-1)}2-\\frac{n(n-2)}3\n=\\frac{n(n+1)}6.\n\\tag{D.2}\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "es",
+    "kind": "display",
+    "line": 1568,
+    "sha256": "656a736b385bec4343c26a88a06229c259b7856f760b40d4c7619af36ba301c0",
+    "text": "\\[\n3g(\\mathcal P)=2|E_{\\rm cub}|+3b_4.\n\\tag{D.3}\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "es",
+    "kind": "display",
+    "line": 1573,
+    "sha256": "0ef43fab1a0f0d9499b347cdd01c4d20989d94f4b27135b8ed74352f2f09edfa",
+    "text": "\\[\n3g(\\mathcal P)=(3M+1)3M+3M=(3M+2)3M=n(n-2).\n\\tag{D.4}\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "es",
+    "kind": "display",
+    "line": 1584,
+    "sha256": "23a90b3160a75ccc6d1033528310fc2f7c19b4328702667af2ff7bf03d9fd3a1",
+    "text": "\\[\na+3t=\\binom n2,\\qquad |Q|=a+t=\\frac{\\binom n2+2a}{3}.\n\\tag{D.5}\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "es",
+    "kind": "display",
+    "line": 1589,
+    "sha256": "d9b86402b37a19ba272c7c84b163d9759cb4cfa125561bbc8a6a49eafa196a34",
+    "text": "\\[\n|Q|\\ge\\frac{\\binom n2+n}{3}=\\frac{n(n+1)}6.\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "es",
+    "kind": "display",
+    "line": 1609,
+    "sha256": "4a05fe552360d22e1b4cf51692847f60e03ad186632326b3d9f47d4f9fc25942",
+    "text": "\\[\n\\begin{gathered}\nd_{\\max}(G[H])+1\\le k,\\quad |S|\\le k\\le2(|S|-2\\sigma),\\quad\nq\\ge\\left\\lceil e(G[H])/k\\right\\rceil,\\\\\n3\\lceil|S|/2\\rceil+2\\tau+4q\\le |H|+2.\n\\end{gathered}\n\\tag{E.1}\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "es",
+    "kind": "display",
+    "line": 1618,
+    "sha256": "5977e0dc221b82a46edbb852e61dbdfb4657cb1330a3ae5f7fa6b605d889432f",
+    "text": "\\[\n|Q|+2\\left(\\sum_{w\\in W}|M_w|+t+e(G[S])\\right)=e(G).\n\\tag{E.2}\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "es",
+    "kind": "display",
+    "line": 1623,
+    "sha256": "9185a7974604a14570ca9c72187e488fa68bb71516582a124b67d367febe5c7c",
+    "text": "\\[\nd_W=\\sum_{w\\in W}\\deg(w),\\qquad\nm_W=\\sum_{w\\in W}\\min(u_w,v_w).\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "es",
+    "kind": "display",
+    "line": 1630,
+    "sha256": "1eee4731c5b4e4134c03e3d3dd3c9878b04779b7d5a55754b22e7d7d5588b214",
+    "text": "\\[\n|Q|+e(G[S])+2m_W\\le cb+d_W+2r(L+r).\n\\tag{E.2a}\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "es",
+    "kind": "display",
+    "line": 1636,
+    "sha256": "7d01ad6521ea478a0a5dc61c4cc6d380b4ba7a01efd6e8635028e1f8ea23bfef",
+    "text": "\\[\n\\begin{split}\n&d_W+2r(L+r)+\\binom c2+\\binom{s+1}2\\\\\n&\\hspace{1em}\\le e(G[S])+2m_W+sc+\\frac{r(c+b+s)}3.\n\\end{split}\n\\tag{E.2b}\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "es",
+    "kind": "display",
+    "line": 1644,
+    "sha256": "7b3ab7b8dfcbf5eedbb2ed35d675c7732ab190c4d57a24f02988fe53a670bc0c",
+    "text": "\\[\n|Q|+\\binom c2+\\binom{s+1}2\n\\le c(b+s)+\\frac{r(c+b+s)}3.\n\\tag{E.2c}\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "es",
+    "kind": "display",
+    "line": 1652,
+    "sha256": "63bb1f863582bdacd37278faa7eaef36f4a1f213841260f258573b1f8a2f3f8b",
+    "text": "\\[\n\\rho=\\frac{n}{(s+1)^2},\\qquad \\lambda=\\frac{n}{(s+1)^4}.\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "es",
+    "kind": "display",
+    "line": 1656,
+    "sha256": "5a1aad8e5c1eebdb2529e529be47ba4bb348f5c1cf6f2c9b6067dd5d5e64669f",
+    "text": "\\[\nr\\le\\frac{4\\rho}{10^{27}},\\qquad\nL\\le\\frac{\\rho}{10^{13}}+1,\\qquad\n|\\mathcal L|-\\frac n3\\le c+\\frac{4\\lambda}{10^{31}}.\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "es",
+    "kind": "display",
+    "line": 1664,
+    "sha256": "48ba2c9a9464315f242a493e2588eaa6350c6768c32366eabc431a387992310b",
+    "text": "\\[\nM_S:=\\binom c2-e(G[S])\\le \\nu c-\\binom{\\nu+1}2.\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "es",
+    "kind": "display",
+    "line": 1668,
+    "sha256": "d55b5c517b324db882ca9ada2405f58bbb0e1768697489471bb90dc5d4b20b91",
+    "text": "\\[\n\\begin{split}\ng_w&=\\deg(w)-2\\min(u_w,v_w)+2(L+r)-\\frac{c+b+s}{3},\\\\\ne_1&=4r+2L+\\frac{4\\rho}{10^{27}}.\n\\end{split}\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "es",
+    "kind": "display",
+    "line": 1677,
+    "sha256": "a1b4f6abe1308b14161e3882ee3fa8acefbd5d99ad2f8279382812944f6e00e1",
+    "text": "\\[\nX=\\{w\\in W:v_w-u_w>n/3-\\rho/400\\},\\qquad j=|X|.\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "es",
+    "kind": "display",
+    "line": 1683,
+    "sha256": "cc41811b338b3ed8a7f1ac08df5de062f760941d237f6a62e26130098db55819",
+    "text": "\\[\n\\sum_{w\\in X'}|N(w)\\cap\\mathcal L|\n\\le (s-\\nu)|\\mathcal L|+\\frac n9\n\\quad\\text{si }X'\\subseteq W,\\quad |X'|\\le2(s+1).\n\\tag{E.2d}\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "es",
+    "kind": "display",
+    "line": 1696,
+    "sha256": "579e7a866157480fac01c1d98c69389d8da4a8b345c93d9bc54a6b4db7270f3b",
+    "text": "\\[\n   sc-\\nu c-\\binom{s+1}2+\\binom{\\nu+1}2\n   =(s-\\nu)\\left(c-\\frac{s+\\nu+1}{2}\\right)\\ge0,\n   \\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "es",
+    "kind": "display",
+    "line": 1702,
+    "sha256": "8a3a27c1668aa7c3ce98928251bca421c7d0a4fa30c224f2b7ce6e2c4890b761",
+    "text": "\\[\n   \\sum_{w\\in W}g_w+M_S+\\binom{s+1}2\n   \\le(j+\\nu)c-\\frac{j\\rho}{80}\n        -\\binom{\\nu+1}2+\\binom{s+1}2\\le sc.\n   \\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "es",
+    "kind": "display",
+    "line": 1710,
+    "sha256": "ac630f631d4ace6a7819e44b6b3301a46c09954d530ec50a73caf98fa09531f7",
+    "text": "\\[\n   \\sum_{w\\in W}g_w\n   \\le (s-\\nu)c-\\frac{2n}{9}\n      +\\frac{4(s+1)\\lambda}{10^{31}}+(s+1)e_1.\n   \\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "es",
+    "kind": "display",
+    "line": 1723,
+    "sha256": "8777db8d98d171a30fa33fe351b6f9f15795470d0b6c6efb8ef667eafbd9908a",
+    "text": "\\[\n\\begin{gathered}\nc(b+s)\\le\\binom c2+M(c+b+s),\\\\\nQ_s(c+b)+rz\\le Q_s(c+b+r).\n\\end{gathered}\n\\tag{E.2e}\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "es",
+    "kind": "display",
+    "line": 1741,
+    "sha256": "acfb5b5a447b2100c59b2987cdd1b241ddae2079d1808e8faf4f0aea458e6575",
+    "text": "\\[\nQ_s(n)-Q_s(n-1)=\\left\\lfloor\\frac{n+s+1}{3}\\right\\rfloor.\n\\tag{E.3}\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "es",
+    "kind": "display",
+    "line": 1748,
+    "sha256": "2dbf0c45ae1b8b712cf0c94a9966b530b82c0184274fae890ca2c7b28b0acce5",
+    "text": "\\[\n\\deg(v)+K_s\\le\\left\\lfloor\\frac{n+s+1}{3}\\right\\rfloor,\n\\tag{E.4}\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "es",
+    "kind": "display",
+    "line": 1761,
+    "sha256": "8cb09beaeeccafc08df4ed060ce43b2f058713e5998a1255e76097181cfebf45",
+    "text": "\\[\nk(n-k)-\\binom{k-s}{2}\n=M(n+s)-\\binom{s+1}{2}=Q_s(n)\n\\tag{E.5}\n\\]",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "es",
+    "kind": "lean",
+    "line": 1147,
+    "sha256": "127db437f6d87fb222a352028d24617e2d014cf889c14484a52ba3835838891e",
+    "text": "```lean\ndef IsChordal (G : SimpleGraph V) : Prop :=\n  ∀ ⦃v : V⦄ (c : G.Walk v v), c.IsCycle → 4 ≤ c.length →\n    ∃ x y : V, x ∈ c.support ∧ y ∈ c.support ∧ G.Adj x y ∧ s(x, y) ∉ c.edges\n```",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "es",
+    "kind": "lean",
+    "line": 1153,
+    "sha256": "b304dd7b6d607133aa58ec164ad3a5a4bca4abffc80b0d81e4007438fa6d75d2",
+    "text": "```lean\ndef pairs (K : Finset V) : Finset (Sym2 V) := K.sym2.filter fun e => ¬ e.IsDiag\n\nstructure CliquePartition where\n  pieces : Finset (Finset V)\n  isClique : ∀ K ∈ pieces, ∀ a ∈ K, ∀ b ∈ K, a ≠ b → G.Adj a b\n  two_le_card : ∀ K ∈ pieces, 2 ≤ K.card\n  edgeDisjoint : ∀ K ∈ pieces, ∀ L ∈ pieces, K ≠ L → Disjoint (pairs K) (pairs L)\n  covers : pieces.biUnion pairs = G.edgeFinset\n\ndef CliquePartition.size (Q : CliquePartition G) : ℕ := Q.pieces.card\n\ndef CliquePartition.OrderAtMost (Q : CliquePartition G) (r : ℕ) : Prop :=\n  ∀ K ∈ Q.pieces, K.card ≤ r\n```",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "es",
+    "kind": "lean",
+    "line": 1169,
+    "sha256": "fe5744f3ffb923957fa191fd2f82eb878a4550aaef279fab4025f040ce9933c1",
+    "text": "```lean\ndef targetSize (n : ℕ) : ℕ := n * (n + 1) / 6\n```",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "es",
+    "kind": "lean",
+    "line": 1177,
+    "sha256": "3883d65f15282a1174406bfd46b4e7c2a06678088cb1c7ecd1ee5c938342b9a9",
+    "text": "```lean\ntheorem erdos81_all_orders_additive :\n    ∃ b : ℕ, ∀ (n : ℕ) (G : SimpleGraph (Fin n)) [DecidableRel G.Adj],\n      PaperIV.FarRounding.IsChordal G →\n        ∃ Q : CliquePartition G, Q.OrderAtMost 4 ∧ Q.size ≤ PaperIV.targetSize n + b\n```",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "es",
+    "kind": "lean",
+    "line": 1184,
+    "sha256": "8543132fba6fa26c326dfcb4309e12f21f82375833655053c11370cb6826bb4d",
+    "text": "```lean\ntheorem erdos81_cliquePartition :\n    ∃ N : ℕ, ∀ n : ℕ, N ≤ n → ∀ (G : SimpleGraph (Fin n)) [DecidableRel G.Adj],\n      PaperIV.FarRounding.IsChordal G →\n        ∃ Q : CliquePartition G, Q.OrderAtMost 4 ∧ Q.size ≤ targetSize n\n```",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "es",
+    "kind": "result_heading",
+    "line": 54,
+    "sha256": "d1c64a79299cdb9f97897a6b7c956b7b78e54f1e909d52c14275db83a0af0d3b",
+    "text": "### Teorema A. Cota para todos los órdenes",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "es",
+    "kind": "result_heading",
+    "line": 64,
+    "sha256": "523a1e6f437e70b3e46ca1c4e70385418395b7ba41f7496ea8b493c6b54beb2e",
+    "text": "### Teorema B. Cota aguda y máximo eventual",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "es",
+    "kind": "result_heading",
+    "line": 83,
+    "sha256": "e665aaecde80a0e2eacfe687ac71835824cce22a5521ad9980a7fbcc37a6b95f",
+    "text": "### Teorema C. Defecto simplicial enraizado fijo",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "es",
+    "kind": "result_heading",
+    "line": 199,
+    "sha256": "eab935369a8f078cfe30878dfd54aec06e5bf866b3b587102b33f83e80dcf195",
+    "text": "### Lema 2.1",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "es",
+    "kind": "result_heading",
+    "line": 262,
+    "sha256": "b086faaac0f265f35fba6a6d48d0f9dc538cb96de2a7347e57bd67afd58b4cc7",
+    "text": "### Teorema 3.1",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "es",
+    "kind": "result_heading",
+    "line": 279,
+    "sha256": "a18ba442d5d7961199f9408446b0607ac77d0ae1e46fc5cc58bc62ca526fa9c0",
+    "text": "### Corolario 3.5",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "es",
+    "kind": "result_heading",
+    "line": 323,
+    "sha256": "ce02b1c9117680db8106955d4d0648ba57906bdb4ea2c79f3f1e3e8b16fca01b",
+    "text": "**Lema 4.1 (camino mixto admisible).** Todo cordal \\(G\\) admite una sucesión finita \\(G=G_0,\\ldots,G_\\ell\\), sobre sus mismos vértices, tal que \\(G_\\ell\\) es completo-split, cada \\(G_i\\) es cordal, cada paso copia un único vértice no adyacente y simplicial, y",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "es",
+    "kind": "result_heading",
+    "line": 343,
+    "sha256": "9fe9c4a95585386c26d72727e7404e345574b8c2abb1c3cae23b40ae74876692",
+    "text": "**Lema 4.2 (cuenta dentro de la ventana).** Si \\(X\\) es cordal, \\(n\\ge4\\cdot10^{12}\\), \\(F_4(X)\\ge n^2/6-\\eta_0n^2\\) y \\(d(X)<\\varepsilon_0\\), entonces",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "es",
+    "kind": "result_heading",
+    "line": 395,
+    "sha256": "837f427d327a4143d17374d690a46b8d825f8d9644fc08bbaa1d64f6f9833593",
+    "text": "### Proposición 4.3",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "es",
+    "kind": "result_heading",
+    "line": 416,
+    "sha256": "f582c03ddec65626776e0c4211122a4196991d2435a584234ce9254d71b600b5",
+    "text": "### Teorema 5.0. Constructor cercano bajo hipótesis locales",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "es",
+    "kind": "result_heading",
+    "line": 435,
+    "sha256": "b0237d41f891df540e072b41f715ad611a36009ce6e8eb88c1de8ca768113523",
+    "text": "**Lema 5.1 (extracción de una clique real).** Bajo esas hipótesis y \\(n\\ge4\\cdot10^{12}\\), existe una clique \\(P\\) de \\(G\\), de tamaño \\(a\\), tal que",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "es",
+    "kind": "result_heading",
+    "line": 483,
+    "sha256": "e08fece21aff1fe6040c5ef3349c6d75b77528620fafb803a18125b553d61646",
+    "text": "**Proposición 5.2 (regularización).** La raíz \\(R\\) de (5.2) es clique. Si \\(p=|R|\\), \\(q=n-p\\), \\(m=e(G-R)\\), \\(A\\) es su defecto cruzado y \\(D\\) el máximo defecto de una columna, satisface las cotas de paleta y anchura de (5.7), y",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "es",
+    "kind": "result_heading",
+    "line": 646,
+    "sha256": "b25f0b887e1ba1fbfa61bab93638cfbf928c6b7ad2d00b831b5eb3713c14fcff",
+    "text": "### Lema 5.3",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "es",
+    "kind": "result_heading",
+    "line": 692,
+    "sha256": "1f2e287ae6ef8297a665fa4f440d103309fe54f201aeddab9d62a9988ff2ddd9",
+    "text": "**Corolario 5.4 (geometría cuantitativa de la rama crítica).** Para todo cordal \\(G\\) de orden suficientemente grande, o bien \\(F_4(G)<n^2/6-\\eta_0n^2\\), o bien existen una clique \\(R\\) del grafo original y un núcleo comparador \\(C\\) tales que",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "es",
+    "kind": "result_heading",
+    "line": 826,
+    "sha256": "a82c1d7c55bf7f65e96f33d88c17c3144a3679d81938ea4b37bd165cecc7aeaa",
+    "text": "**Teorema 6.1 (estabilidad integral).** Existe \\(\\gamma>0\\) y un umbral \\(N_{\\rm est}\\) tales que, si \\(n\\ge N_{\\rm est}\\), \\(G\\) es cordal, \\(0\\le\\delta\\le\\gamma n^2\\) y toda partición de orden a lo sumo cuatro tiene al menos \\(M(n)-\\delta\\) piezas, entonces existe una clique \\(R\\) de \\(G\\) para la cual",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "es",
+    "kind": "result_heading",
+    "line": 859,
+    "sha256": "b044e9a0ff78d289371ff42d4e5797a5312005b78632586d4b865646b71c0a6b",
+    "text": "**Corolario 6.1a (estabilidad de las particiones).** Bajo las hipótesis del Teorema 6.1, la raíz \\(R\\) puede elegirse de forma que, para toda partición \\(Q\\) en cliques de \\(G\\), sin restricción en el orden de sus piezas, si \\(|Q|\\le M(n)+\\tau\\) con \\(\\tau\\ge0\\), entonces \\(Q\\) tiene a lo sumo \\(\\tau+48\\delta\\) piezas distintas de esas dos formas canónicas.",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "es",
+    "kind": "result_heading",
+    "line": 868,
+    "sha256": "e100bad12e77bc9fb8872714e3c9127095e26dbea34ff45e720ae89dd20bbfab",
+    "text": "**Corolario 6.2 (clasificación eventual).** Los cordales extremales de orden suficientemente grande son exactamente los completo-split con los tamaños de núcleo de (6.4).",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "es",
+    "kind": "result_heading",
+    "line": 888,
+    "sha256": "b7ed8ab3ae56f04115199eded8d70f0642df53fa81b4aa2b8e1558058abb629f",
+    "text": "**Proposición 6.3 (gap mixto nulo en completo-split).** Sea \\(S=K_k\\vee I_h\\), con \\(2\\le k\\le h\\), y sea \\(W(S)\\) la máxima ganancia de un empaquetamiento mixto físico. Entonces",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "es",
+    "kind": "result_heading",
+    "line": 1080,
+    "sha256": "9e05735e3e5e4ab9322c3ebac17810c64d3204f5488c26379540d4dafe954300",
+    "text": "**Proposición 8.1 (límite de ese contrato).** Si \\(N_0\\) satisface el contrato anterior, \\(t\\ge4\\) y \\(7\\varepsilon\\le e^{-t}\\), entonces",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "es",
+    "kind": "result_heading",
+    "line": 1175,
+    "sha256": "433c7286f21a0f2821ebd3d57dd66ca2ac1650f66782402138df73e5fa7899b8",
+    "text": "**Teoremas exportados.** En `PaperIV.Erdos81AllOrders` y `PaperIV.Erdos81Unconditional`, respectivamente, las cabeceras exactas son:",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "es",
+    "kind": "result_heading",
+    "line": 1288,
+    "sha256": "f96a898209c7ab1b0d253d3751fa69f29c7c847ba5da3677f924c50b2cedd029",
+    "text": "### Lema 3.2. Nibble de rango acotado con holgura, entrada de Paper III",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "es",
+    "kind": "result_heading",
+    "line": 1303,
+    "sha256": "161d140fdbaf7d3699fc60f2b415b4b38b2ab03facc25959cb30cc9cfeee2e2e",
+    "text": "### Lema 3.3. Selección simultánea de masa total y marcada",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "es",
+    "kind": "result_heading",
+    "line": 1329,
+    "sha256": "c82bc019dae89f0ac2f2e3405a6077199e21fa2a1a9ddbfa51f6561d6030b990",
+    "text": "### Lema 3.4. Selector mixto físico",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "es",
+    "kind": "result_heading",
+    "line": 1538,
+    "sha256": "b9266bd95e8e0df3353fbfe22953784dc2fc9cf4a5c6f54104abb44f2399963f",
+    "text": "**Proposición D.1.** Para todo entero \\(n\\ge0\\), existe una partición de \\(K_n\\) en piezas de orden a lo sumo cuatro con a lo sumo \\(M(n)\\) piezas.",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "es",
+    "kind": "result_heading",
+    "line": 1581,
+    "sha256": "d47cf4c2653d8b4cb5bb0239d1f485fc397d0531a2060c26ee77cfd6072fd8e8",
+    "text": "**Proposición D.2.** Si \\(n\\equiv4\\pmod6\\), toda partición de \\(K_n\\) en piezas de orden a lo sumo tres tiene más de \\(M(n)\\) piezas.",
+    "owner": "author",
+    "edit_class": "protected: retain; additions separately mapped"
+  },
+  {
+    "language": "es",
+    "kind": "baseline_file",
+    "file": "C:\\Users\\jtraverso\\e81p4-publish\\preprints\\PAPER_IV\\01_manuscript\\v1.0.1_candidate\\PAPER_IV_preprint_v1.0.1_es.md",
+    "sha256": "4c2e28d6c0b443c1dcce88658ae45258b0aee93078a8406688d4896a342d952f"
+  }
+]

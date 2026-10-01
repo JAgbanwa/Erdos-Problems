@@ -1,0 +1,27 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 PaperIV/ExplicitThreshold.lean -o /workspace/request-project/.lake/runner/lib/lean/PaperIV/ExplicitThreshold.olean -i /workspace/request-project/.lake/runner/lib/lean/PaperIV/ExplicitThreshold.ilean
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_nlinarith_1._boxed took 291ms
+import took 3.82s
+cumulative profiling times:
+	.olean serialization 98.6ms
+	attribute application 0.133ms
+	compilation (IR) 4.11ms
+	compilation (LCNF base) 5.01ms
+	compilation (LCNF mono) 2.04ms
+	congr simp thm 6.39ms
+	elaboration 24.6ms
+	fix level params 0.475ms
+	import 3.82s
+	initialization 36.7ms
+	instantiate metavars 2.14ms
+	interpretation 626ms
+	let-to-have transformation 0.121ms
+	linting 9.05ms
+	norm_num 12.9ms
+	parsing 4.26ms
+	process pre-definitions 7.09ms
+	ring 20.3ms
+	share common exprs 4.53ms
+	simp 121ms
+	tactic execution 109ms
+	type checking 74.5ms
+	typeclass inference 449ms

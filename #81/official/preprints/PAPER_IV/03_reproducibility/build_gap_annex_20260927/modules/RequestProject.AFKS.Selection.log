@@ -1,0 +1,27 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 RequestProject/AFKS/Selection.lean -o /workspace/request-project/.lake/runner/lib/lean/RequestProject/AFKS/Selection.olean -i /workspace/request-project/.lake/runner/lib/lean/RequestProject/AFKS/Selection.ilean
+import took 7.1s
+.olean serialization took 242ms
+cumulative profiling times:
+	.olean serialization 242ms
+	attribute application 0.0269ms
+	compilation (IR) 0.606ms
+	compilation (LCNF base) 0.612ms
+	compilation (LCNF mono) 0.228ms
+	congr simp thm 4.95ms
+	elaboration 18.2ms
+	fix level params 0.702ms
+	import 7.1s
+	initialization 36.7ms
+	instantiate metavars 3.33ms
+	interpretation 401ms
+	let-to-have transformation 0.0502ms
+	linting 12.7ms
+	norm_num 1.26ms
+	parsing 5.3ms
+	process pre-definitions 5.2ms
+	ring 4.37ms
+	share common exprs 2.45ms
+	simp 112ms
+	tactic execution 94.2ms
+	type checking 19.2ms
+	typeclass inference 194ms

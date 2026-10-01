@@ -1,0 +1,253 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+\documentclass[
+]{article}
+\usepackage{xcolor}
+\usepackage{amsmath,amssymb}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math} % this also loads fontspec
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+\usepackage{lmodern}
+\ifPDFTeX\else
+  % xetex/luatex font selection
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{longtable,booktabs,array}
+\usepackage{caption}
+\captionsetup[table]{skip=6pt}
+\newcounter{none} % for unnumbered tables
+\usepackage{calc} % for calculating minipage widths
+% Correct order of tables after \paragraph or \subparagraph
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd\longtable{\par}{\if@noskipsec\mbox{}\fi\par}{}{}
+\makeatother
+% Allow footnotes in longtable head/foot
+\IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
+\makesavenoteenv{longtable}
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\usepackage{bookmark}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same}
+% fallback for those not using the hyperref driver hyperxmp:
+\makeatletter
+\@ifundefined{xmpquote}{\newcommand{\xmpquote}[1]{#1}}{}
+\makeatother
+\hypersetup{
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+
+\author{}
+\date{}
+
+\begin{document}
+
+\section{Gate E1 report --- run\_v1.2\_r1 (Paper IV
+v1.2)}\label{gate-e1-report--run_v12_r1-paper-iv-v12}
+
+Verdict: \textbf{PASS}. Evidence directory: \texttt{20\_EVIDENCE/E1/}.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\subsection{E1 --- Claim semantics (first pass,
+independent)}\label{e1--claim-semantics-first-pass-independent}
+
+Inputs: EN md \texttt{a501d53b…} (line numbers below), literal Lean
+headers extracted by \texttt{20\_EVIDENCE/E3/extract\_headers.py}
+(\texttt{headers\_*.txt}). No author verdict/report was used. Labels:
+FACT\_WITHIN\_SCOPE = statement reading; the Lean column is the literal
+type (static; kernel confirmation is E4).
+
+\subsection{Claim map (headline and
+quantitative)}\label{claim-map-headline-and-quantitative}
+
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}llllll@{}}
+\toprule\noalign{}
+ID & Claim (EN line) & Scope type & Literal hypotheses/quantifiers &
+Lean declaration (static) & Semantic verdict \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+A & Thm A l.53-61: ∃b ∀n≥0 ∀ chordal G: cp≤c4≤M(n)+b & all-order
+additive & b before n,G; chordal = cycle-chord def; M(n)=⌊n(n+1)/6⌋ (ℕ
+div) & \texttt{Erdos81AllOrders.erdos81\_all\_orders\_additive};
+explicit b≤T(h+8):
+\texttt{ExplicitThreshold.erdos81\_all\_orders\_bounded\_additive} &
+MATCH \\
+B1 & Thm B (1.1) l.63-68 & eventual exact upper & ∃N ∀n≥N ∀ chordal G ∃Q
+order≤4, \textbar Q\textbar≤M(n) &
+\texttt{Erdos81Unconditional.erdos81\_cliquePartition} & MATCH \\
+B2 & Thm B (1.2) max over chordal = M(n) & eventual exact max,
+unrestricted & witness Q order≤4, size M(n), minimal among all
+partitions & \texttt{PaperTheorems.erdos81\_max\_eq} & MATCH \\
+C & Thm C l.82-97: ∀s ∃N\_s ∀n≥N\_s, rsd≤s ⇒ c4≤Q\_s(n); ∃ attaining G
+with cp=Q\_s & fixed-defect, eventual; lower witness unrestricted & rsd
+def: ∀U ∀ clique R⊊U (∅ allowed) ∃v∈U∖R, ∃ clique C⊆N\_U(v),
+\textbar N\_U(v)\textbar≤\textbar C\textbar+s &
+\texttt{DefectExplicitPublication.rooted\_defect\_eventual/\_maximum};
+def \texttt{RootedSimplicialDefect.RootedDefectAt};
+\texttt{defectTarget\ s\ n\ =\ targetSize(n+s)\ −\ C(s+1,2)} (ℕ
+truncation irrelevant for n≥N) & MATCH (definition equivalent to
+{[}15{]} rsd; see E7) \\
+C′a & Thm C′ (6.12) l.910-936 & fixed s; explicit γ\_s, N\_s\^{}stab,
+A\_s=max(40000(s+1)\^{}3,2/ε\_s)=2·10\^{}41(s+1)\^{}8 & real δ, 0≤δ≤γ\_s
+n²; hyp c4(G)≥Q\_s(n)−δ (∀ order-4 Q); root C clique of G,
+\textbar D\textbar=s, 2≤\textbar C\textbar≤\textbar H\textbar, partition
+of V & \texttt{SublinearResearch.fixed\_defect\_joint\_stability\_real}
+(\texttt{E32.IsDefectRoot}, \texttt{rootEdit},
+\texttt{rootBaseline=(\textbar{}C\textbar{}+\textbar{}D\textbar{})\textbar{}H\textbar{}−C(\textbar{}C\textbar{},2)})
+& MATCH \\
+C′b & (6.13) N\_bad, E\_bad for every unrestricted Q, real τ; root
+before Q,τ & same-root, unrestricted partitions & ∀Q ∀τ∈ℝ,
+\textbar Q\textbar≤Q\_s+τ & same; canonical =
+\texttt{E32.IsCanonicalPiece} (C∪D--H edges; C,C,H triangles); E\_bad =
+Σ C(\textbar K\textbar,2) over noncanonical & MATCH (Lean allows any
+real τ, not only τ≥0: stronger) \\
+C′c & Cor 6.3 (6.17) optimal-size template, square-root term & fixed s &
+same hyp.; T admissible extremal (core size nearest to (2(n+s)+1)/6) &
+\texttt{fixed\_defect\_exact\_extremal\_edit\_real} & MATCH; resized
+core not claimed clique ✓ \\
+C′d & (6.18) cp=Q\_s ⇔ c4=Q\_s ⇔ G≅E\_s(n,k), k nearest & eventual
+classification & --- &
+\texttt{E32.cp\_classification\_of\_theoremCPrimeC} +
+\texttt{FixedExplicit.fixed\_defect\_stability\_explicit} (premise
+supplied) & MATCH (the implication alone is conditional; the claim map
+says so) \\
+6.3a & Prop 6.3a (6.20)-(6.21) & explicit family, each fixed s & n+s=3q,
+2s+2≤q, 1≤d, 2d≤q; every labelled optimal template &
+\texttt{OptimalTemplateObstruction.shifted\_template\_witness/\_sqrt\_witness/no\_linear\_optimal\_template\_bound/optimal\_family\_nonempty}
+& MATCH, but Lean statement is existential (∃G) while the text names the
+explicit graph G\_\{s,q,d\}; explicit form lives in the proof
+(OBSERVATION E1-O1) \\
+6.1 & Thm 6.1 (6.7) chordal: M−B+m/16+A/2≤δ, d\_E=m+A≤16δ; γ=η0/4 &
+chordal, eventual & rational δ in
+\texttt{chordal\_linear\_stability\_sixteen}; real δ in
+\texttt{chordal\_joint\_stability\_real} & IntegralStability /
+PublicationStability & MATCH (Lean also gives
+2≤\textbar R\textbar≤n−\textbar R\textbar{} and the 117/1825,
+12687/20000 form) \\
+6.1a & Cor 6.1a τ+48δ, 10τ+480δ, same root, unrestricted Q & chordal &
+text says τ≥0; Lean any real τ &
+\texttt{chordal\_joint\_stability\_real} & MATCH (Lean stronger in τ) \\
+6.2 & Cor 6.2 / (6.9) eventual classification cp \& c4 & chordal
+eventual & --- &
+\texttt{ExtremalClassification.chordal\_extremal\_classification} &
+MATCH \\
+6.4 & Prop 6.4 (6.22) all orders incl. 0, s≤n; (6.23) band 4s≤n & finite
+fractional bound; uniform integral version & certified optimum w (not a
+feasible dual) &
+\texttt{certified\_shifted/refined\_fractional\_bound\_all\_orders};
+\texttt{uniform\_shifted/refined\_partition\_bound} (∃N ∀n s, N≤n, s≤n
+--- threshold independent of s) & MATCH \\
+6.5 & Thm 6.5 sequences: orders→∞ (no monotonicity), s\_j=o(n\_j);
+(6.24) upper excess o(n²); (6.25)-(6.26) with eventual near-extremality,
+rational δ\_j, τ & sublinear, arbitrary order sequences & Tendsto order
+atTop atTop; ∀ᶠ hypothesis &
+\texttt{sequence\_arbitrary\_orders\_partition\_bound/\_stability} &
+MATCH ((6.25) d\_E expressed as missing+outside, equal to d\_E(G,S\_R)
+for a clique R) \\
+6.6 & Cor 6.6 tower T(P(s)), uniform ≤S, s\_max(n) & exact bound,
+uniform band & P(s)=c\_T(s+1)\^{}1680, c\_T=h+c\_far+841780,
+c\_far=c\_poly(128·10\^{}82)\^{}105 &
+\texttt{E35.theoremC\_tower/\_uniform/\_uniform\_sMax};
+\texttt{sMaxT\ =\ Nat.findGreatest} & MATCH (inverse caveat stated) \\
+C.4 & N\_far(η)≤T(⌈c\_poly/η\^{}105⌉), 0\textless η≤1 rational & uniform
+in margin & --- & \texttt{E35.NfarE\_le\_tower\_poly} (cPoly =
+4·17664\^{}5·9000\^{}105+3006) & MATCH \\
+3.1 & Thm 3.1 ∀ξ\textgreater0 ∃N ∀G ∀ rational x: w(x)−g(P)≤ξn² (all
+graphs) & uniform transfer & --- &
+\texttt{RC01Final.rc01\_uniformRoundingTarget}
+(\texttt{MixedRounding.UniformRoundingTarget}) & MATCH \\
+D.2 & Prop D.2 n≡4 mod 6, K\_n order≤3 ⇒ \textgreater M(n) & fixed
+family & --- &
+\texttt{DefectSharpPublication.order\_three\_insufficient} & MATCH;
+scope limited to s=0/K\_n (stated) \\
+F.3a/b & Lemma F.3a (\textbar D\textbar−\textbar C\textbar−s)\_+²≤ordNE;
+Cor F.3b & finite, all D & ℕ truncated subtraction = positive part;
+ordered nonedges & \texttt{exists\_clique\_additive\_defect},
+\texttt{recover\_clique\_from\_edit} (u rational ≥0) & MATCH \\
+G.1 & Σx\_T ≤ ν3+(10+d/2)n, chordal K\_\{d+2\}-free (annex) & fixed d,
+triangle (not mixed) gap & --- &
+\texttt{BoundedCliqueGap.chordal\_gap\_linear\_cliqueFree} (annex,
+separate) & MATCH \\
+G.2 & Prop G.1 N0\textgreater exp(t²/16) for the CleanupAtWith contract
+& contract-specific & ε rational &
+\texttt{FarExploration.CleanupRigidVerdict.threshold\_gt\_exp} (not
+re-extracted) & Not re-extracted (static text only) \\
+\end{longtable}
+}
+
+\subsection{Required distinctions (mandate §4 E1) ---
+checked}\label{required-distinctions-mandate-4-e1--checked}
+
+\begin{itemize}
+\tightlist
+\item
+  All-order additive (Thm A) vs eventual exact (Thm B, C) vs
+  fixed-defect (C, C′, 6.3, 6.3a) vs uniform-in-defect (6.4, 6.6, (C.4))
+  vs sublinear sequences (6.5): kept separate in text and Lean. No
+  growing s is substituted into a fixed-s theorem (6.5 goes through
+  \texttt{SublinearEdit}/{[}22{]} and \texttt{RootScore}).
+\item
+  Unrestricted partitions: lower bounds (6.1),(6.2),(E.5),(6.20) and
+  partition-control (6.13),(6.26),Cor 6.1a quantify over all
+  \texttt{CliquePartition} (no order bound); upper bounds are order ≤4.
+\item
+  Actual vs resized root: C′ root C is a clique of G; Cor 6.3 resized
+  core is explicitly not claimed a clique (text l.1012; Lean gives only
+  an admissible extremal T).
+\item
+  Thresholds: (F.1) N\_s\^{}stab is separate from F\_s; Cor 6.6 bounds
+  F\_s only (stated l.1126).
+\end{itemize}
+
+\subsection{E1 observations}\label{e1-observations}
+
+\begin{itemize}
+\tightlist
+\item
+  E1-O1 (OBSERVATION): Prop 6.3a / abstract "An explicit family" ---
+  Lean statements are existential; the explicit family is in the proof
+  term, not the type.
+\item
+  E1-O2 (OBSERVATION): Cor 6.1a text "τ ≥ 0" and (6.13) "τ≥0"; Lean
+  proves the bounds for all real τ (harmless strengthening).
+\item
+  E1-O3 (MINOR, wording, l.1259): "under the stronger near-extremality
+  hypothesis on c4" --- c4(G)≥Q−δ is the \emph{weaker} hypothesis
+  (implied by cp(G)≥Q−δ since cp≤c4); the same sentence then correctly
+  says it applies to cp. Also reported by E7 (E7-M2).
+\end{itemize}
+
+\textbf{E1 first-pass status: PASS} (no semantic defect in headline
+statements; dynamic confirmation of elaborated types is part of E3/E4).
+
+\end{document}

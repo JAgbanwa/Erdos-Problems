@@ -1,0 +1,19 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 PaperIV/PaperIIINibbleAdapter.lean -o /workspace/request-project/.lake/runner/lib/lean/PaperIV/PaperIIINibbleAdapter.olean -i /workspace/request-project/.lake/runner/lib/lean/PaperIV/PaperIIINibbleAdapter.ilean
+import took 4.12s
+cumulative profiling times:
+	.olean serialization 83.1ms
+	attribute application 0.0127ms
+	elaboration 2.24ms
+	fix level params 0.0559ms
+	import 4.12s
+	initialization 35.5ms
+	instantiate metavars 1.3ms
+	interpretation 207ms
+	let-to-have transformation 0.0105ms
+	linting 1.73ms
+	parsing 0.782ms
+	process pre-definitions 0.634ms
+	share common exprs 0.445ms
+	tactic execution 13ms
+	type checking 3.27ms
+	typeclass inference 0.357ms

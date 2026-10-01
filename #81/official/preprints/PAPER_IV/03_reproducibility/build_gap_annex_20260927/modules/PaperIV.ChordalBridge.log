@@ -1,0 +1,49 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 PaperIV/ChordalBridge.lean -o /workspace/request-project/.lake/runner/lib/lean/PaperIV/ChordalBridge.olean -i /workspace/request-project/.lake/runner/lib/lean/PaperIV/ChordalBridge.ilean
+PaperIV/ChordalBridge.lean:57:0: warning: automatically included section variable(s) unused in theorem `PaperIV.ChordalBridge.isChordal_iff`:
+  [Fintype V]
+  [DecidableEq V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] [DecidableEq V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+PaperIV/ChordalBridge.lean:62:0: warning: automatically included section variable(s) unused in theorem `PaperIV.ChordalBridge.exists_isSimplicial`:
+  [DecidableRel G.Adj]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableRel G.Adj] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+PaperIV/ChordalBridge.lean:68:0: warning: automatically included section variable(s) unused in theorem `PaperIV.ChordalBridge.minimalSeparator_isClique`:
+  [DecidableRel G.Adj]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableRel G.Adj] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+PaperIV/ChordalBridge.lean:82:0: warning: automatically included section variable(s) unused in theorem `PaperIV.ChordalBridge.ownerOf_eq`:
+  [Fintype V]
+  [DecidableRel G.Adj]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] [DecidableRel G.Adj] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+import took 3.36s
+cumulative profiling times:
+	.olean serialization 61.7ms
+	attribute application 0.0991ms
+	congr simp thm 5.53ms
+	elaboration 45.2ms
+	fix level params 1.26ms
+	import 3.36s
+	initialization 51.9ms
+	instantiate metavars 6.71ms
+	interpretation 234ms
+	let-to-have transformation 0.146ms
+	linting 14ms
+	norm_num 0.138ms
+	parsing 8.8ms
+	process pre-definitions 7.81ms
+	ring 1.44ms
+	share common exprs 1.63ms
+	simp 34.6ms
+	tactic execution 76.3ms
+	type checking 9.98ms
+	typeclass inference 59.1ms

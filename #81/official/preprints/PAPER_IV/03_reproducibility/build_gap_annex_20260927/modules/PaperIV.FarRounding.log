@@ -1,0 +1,61 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 PaperIV/FarRounding.lean -o /workspace/request-project/.lake/runner/lib/lean/PaperIV/FarRounding.olean -i /workspace/request-project/.lake/runner/lib/lean/PaperIV/FarRounding.ilean
+PaperIV/FarRounding.lean:126:0: warning: automatically included section variable(s) unused in theorem `PaperIV.FarRounding.gainOf_of_card_eq_three`:
+  [DecidableEq V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+PaperIV/FarRounding.lean:129:0: warning: automatically included section variable(s) unused in theorem `PaperIV.FarRounding.gainOf_of_card_eq_four`:
+  [DecidableEq V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+PaperIV/FarRounding.lean:173:0: warning: automatically included section variable(s) unused in theorem `PaperIV.FarRounding.one_le_choose_two_of_isItem`:
+  [Fintype V]
+  [DecidableEq V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] [DecidableEq V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+PaperIV/FarRounding.lean:288:0: warning: automatically included section variable(s) unused in theorem `PaperIV.FarRounding.Packing.pairwiseDisjoint`:
+  [Fintype V]
+  [DecidableRel G.Adj]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] [DecidableRel G.Adj] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+PaperIV/FarRounding.lean:515:0: warning: automatically included section variable(s) unused in theorem `PaperIV.FarRounding.gainF_eq_gainOf`:
+  [DecidableRel G.Adj]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableRel G.Adj] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_nlinarith_1._boxed took 322ms
+import took 4.2s
+.olean serialization took 204ms
+cumulative profiling times:
+	.olean serialization 204ms
+	attribute application 1.3ms
+	blocked (unaccounted) 931ms
+	compilation (IR) 12.3ms
+	compilation (LCNF base) 19ms
+	compilation (LCNF mono) 11.3ms
+	congr simp thm 40ms
+	elaboration 367ms
+	fix level params 5.5ms
+	import 4.2s
+	initialization 43ms
+	instantiate metavars 36.8ms
+	interpretation 1.41s
+	let-to-have transformation 0.674ms
+	linting 107ms
+	norm_num 186ms
+	parsing 38.4ms
+	process pre-definitions 57.1ms
+	ring 54.2ms
+	share common exprs 35.5ms
+	simp 270ms
+	tactic execution 748ms
+	type checking 354ms
+	typeclass inference 1.38s

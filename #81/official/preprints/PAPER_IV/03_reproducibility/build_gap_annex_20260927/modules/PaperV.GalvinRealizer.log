@@ -1,0 +1,58 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 PaperV/GalvinRealizer.lean -o /workspace/request-project/.lake/runner/lib/lean/PaperV/GalvinRealizer.olean -i /workspace/request-project/.lake/runner/lib/lean/PaperV/GalvinRealizer.ilean
+PaperV/GalvinRealizer.lean:40:0: warning: automatically included section variable(s) unused in theorem `PaperV.Host.not_disjoint_bipEnds_iff`:
+  [Fintype U]
+  [Fintype R]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype U] [Fintype R] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+PaperV/GalvinRealizer.lean:52:0: warning: automatically included section variable(s) unused in theorem `PaperV.Host.properOn_of_matching`:
+  [Fintype H]
+  [DecidableEq H]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype H] [DecidableEq H] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+PaperV/GalvinRealizer.lean:73:0: warning: automatically included section variable(s) unused in theorem `PaperV.Host.galvin_host_assignment`:
+  [DecidableEq H]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq H] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+PaperV/GalvinRealizer.lean:133:0: warning: automatically included section variable(s) unused in theorem `PaperV.Host.exists_heavy_colour_class`:
+  [Fintype U]
+  [Fintype R]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype U] [Fintype R] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+PaperV/GalvinRealizer.lean:213:0: warning: automatically included section variable(s) unused in theorem `PaperV.Host.galvin_heavy_single_host`:
+  [Fintype U]
+  [Fintype R]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype U] [Fintype R] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+import took 3.21s
+cumulative profiling times:
+	.olean serialization 61.8ms
+	attribute application 0.125ms
+	compilation (IR) 0.507ms
+	compilation (LCNF base) 0.867ms
+	compilation (LCNF mono) 0.721ms
+	congr simp thm 6.58ms
+	elaboration 80ms
+	fix level params 1.43ms
+	import 3.21s
+	initialization 41.6ms
+	instantiate metavars 5.91ms
+	interpretation 310ms
+	let-to-have transformation 0.23ms
+	linting 21.4ms
+	parsing 14.6ms
+	process pre-definitions 9.59ms
+	share common exprs 3.2ms
+	simp 52.8ms
+	tactic execution 139ms
+	type checking 32.9ms
+	typeclass inference 158ms

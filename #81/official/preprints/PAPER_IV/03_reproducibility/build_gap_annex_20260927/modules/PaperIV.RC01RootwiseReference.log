@@ -1,0 +1,74 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 PaperIV/RC01RootwiseReference.lean -o /workspace/request-project/.lake/runner/lib/lean/PaperIV/RC01RootwiseReference.olean -i /workspace/request-project/.lake/runner/lib/lean/PaperIV/RC01RootwiseReference.ilean
+PaperIV/RC01RootwiseReference.lean:44:0: warning: automatically included section variable(s) unused in theorem `PaperIV.RC01RootwiseReference.pairScale_pos`:
+  [DecidableEq V]
+  [Nonempty V]
+  [Fintype P]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq V] [Nonempty V] [Fintype P] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+PaperIV/RC01RootwiseReference.lean:48:0: warning: automatically included section variable(s) unused in theorem `PaperIV.RC01RootwiseReference.densT_eq_pairScale`:
+  [DecidableEq V]
+  [Nonempty V]
+  [Fintype P]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq V] [Nonempty V] [Fintype P] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+PaperIV/RC01RootwiseReference.lean:51:0: warning: automatically included section variable(s) unused in theorem `PaperIV.RC01RootwiseReference.profileVolume_nonneg`:
+  [Nonempty V]
+  [Fintype P]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Nonempty V] [Fintype P] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+PaperIV/RC01RootwiseReference.lean:80:0: warning: automatically included section variable(s) unused in theorem `PaperIV.RC01RootwiseReference.profileVolume_eq_card`:
+  [Nonempty V]
+  [Fintype P]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Nonempty V] [Fintype P] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+PaperIV/RC01RootwiseReference.lean:83:0: warning: automatically included section variable(s) unused in theorem `PaperIV.RC01RootwiseReference.profileVolume_pos_iff`:
+  [Nonempty V]
+  [Fintype P]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Nonempty V] [Fintype P] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+PaperIV/RC01RootwiseReference.lean:90:0: warning: automatically included section variable(s) unused in theorem `PaperIV.RC01RootwiseReference.crossPair_pair_eq_interedges_image`:
+  [Nonempty V]
+  [Fintype P]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Nonempty V] [Fintype P] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+PaperIV/RC01RootwiseReference.lean:136:0: warning: automatically included section variable(s) unused in theorem `PaperIV.RC01RootwiseReference.rootEdge_mem_crossPair_of_active`:
+  [Fintype P]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype P] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+import took 3.98s
+.olean serialization took 120ms
+cumulative profiling times:
+	.olean serialization 120ms
+	attribute application 2.02ms
+	congr simp thm 19.8ms
+	elaboration 119ms
+	fix level params 1.88ms
+	import 3.98s
+	initialization 38.3ms
+	instantiate metavars 7.31ms
+	interpretation 570ms
+	let-to-have transformation 0.345ms
+	linting 29.3ms
+	norm_num 3.04ms
+	parsing 17.5ms
+	process pre-definitions 13.8ms
+	ring 14.7ms
+	share common exprs 6.73ms
+	simp 98.2ms
+	tactic execution 230ms
+	type checking 79ms
+	typeclass inference 391ms

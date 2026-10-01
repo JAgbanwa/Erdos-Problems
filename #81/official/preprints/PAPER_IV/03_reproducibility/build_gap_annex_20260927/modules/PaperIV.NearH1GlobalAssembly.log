@@ -1,0 +1,23 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 PaperIV/NearH1GlobalAssembly.lean -o /workspace/request-project/.lake/runner/lib/lean/PaperIV/NearH1GlobalAssembly.olean -i /workspace/request-project/.lake/runner/lib/lean/PaperIV/NearH1GlobalAssembly.ilean
+import took 4.12s
+cumulative profiling times:
+	.olean serialization 91.8ms
+	attribute application 0.0169ms
+	congr simp thm 1.74ms
+	dsimp 0.593ms
+	elaboration 2.92ms
+	fix level params 0.0376ms
+	import 4.12s
+	initialization 34.8ms
+	instantiate metavars 0.375ms
+	interpretation 241ms
+	let-to-have transformation 0.0186ms
+	linting 1.63ms
+	norm_num 0.335ms
+	parsing 0.834ms
+	process pre-definitions 0.717ms
+	share common exprs 0.205ms
+	simp 24.3ms
+	tactic execution 7.49ms
+	type checking 5.69ms
+	typeclass inference 121ms

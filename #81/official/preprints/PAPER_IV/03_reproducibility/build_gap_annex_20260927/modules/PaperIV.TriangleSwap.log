@@ -1,0 +1,32 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 PaperIV/TriangleSwap.lean -o /workspace/request-project/.lake/runner/lib/lean/PaperIV/TriangleSwap.olean -i /workspace/request-project/.lake/runner/lib/lean/PaperIV/TriangleSwap.ilean
+PaperIV/TriangleSwap.lean:90:0: warning: automatically included section variable(s) unused in theorem `PaperIV.TriangleSwap.isTriFamily_subset`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+import took 2.9s
+cumulative profiling times:
+	.olean serialization 65.6ms
+	attribute application 0.153ms
+	compilation (IR) 0.748ms
+	compilation (LCNF base) 0.913ms
+	compilation (LCNF mono) 0.372ms
+	congr simp thm 5.14ms
+	elaboration 75.2ms
+	fix level params 1.79ms
+	import 2.9s
+	initialization 37.4ms
+	instantiate metavars 4.7ms
+	interpretation 413ms
+	let-to-have transformation 0.252ms
+	linting 26.7ms
+	norm_num 7.58ms
+	parsing 13.9ms
+	process pre-definitions 14.6ms
+	ring 15.4ms
+	share common exprs 5.25ms
+	simp 65.6ms
+	tactic execution 250ms
+	type checking 58.5ms
+	typeclass inference 288ms

@@ -1,0 +1,24 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 PaperIV/RD09RootSplitDistance.lean -o /workspace/request-project/.lake/runner/lib/lean/PaperIV/RD09RootSplitDistance.olean -i /workspace/request-project/.lake/runner/lib/lean/PaperIV/RD09RootSplitDistance.ilean
+import took 3.41s
+cumulative profiling times:
+	.olean serialization 49.2ms
+	attribute application 0.682ms
+	compilation (IR) 0.389ms
+	compilation (LCNF base) 2.26ms
+	compilation (LCNF mono) 0.878ms
+	congr simp thm 2.58ms
+	elaboration 19.1ms
+	fix level params 0.439ms
+	import 3.41s
+	initialization 39.7ms
+	instantiate metavars 3.68ms
+	interpretation 201ms
+	let-to-have transformation 0.0661ms
+	linting 9.97ms
+	parsing 4.09ms
+	process pre-definitions 4.17ms
+	share common exprs 1.04ms
+	simp 31ms
+	tactic execution 81.3ms
+	type checking 9.57ms
+	typeclass inference 245ms

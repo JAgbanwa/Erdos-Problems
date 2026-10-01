@@ -1,0 +1,93 @@
+--- v1.22-r1/es.md
++++ v1.22-r2/es.md
+@@ -523,7 +523,7 @@
+ 
+ Para varios anfitriones se exige, además, que sean distintos, que ningún anfitrión sea extremo de las bases y que las familias de bases sean disjuntas. Esas condiciones prueban la compatibilidad entre clases; no se suma la ganancia de construcciones cuya disjunción no haya sido verificada.
+ 
+-La primera fase aplica esta realización a aristas exteriores usando vértices de la raíz como anfitriones. Una coloración equilibrada y el orden de eliminación enraizado controlan cuántas bases pueden alojarse. La segunda fase factoriza las aristas de la raíz en matchings y les asigna candidatos exteriores. Las listas de candidatos excluyen tanto enlaces ausentes como recursos ya utilizados por la primera fase.
++La primera fase aplica esta realización a aristas exteriores usando vértices de la raíz como anfitriones. Una coloración equilibrada y el orden de eliminación enraizado controlan cuántas bases pueden alojarse. La segunda fase factoriza las aristas de la raíz en emparejamientos y les asigna candidatos exteriores. Las listas de candidatos excluyen tanto enlaces ausentes como recursos ya utilizados por la primera fase.
+ 
+ ### 5.3. Las tres cuentas que pagan la construcción
+ 
+@@ -575,7 +575,7 @@
+ \]
+ Al sustituirlas en (5.6), resulta \(f\ge40m/73-3A/40\). Multiplicar por \(2920\) da precisamente \(1600m\le2920f+219A\), la primera estimación de la Tabla 2. El Apéndice A.2 identifica las declaraciones de selección y promedio.
+ 
+-**Segunda fase: uno o dos candidatos por factor.** Factorizamos \(K_p\) en matchings y, si hace falta, añadimos una clase vacía para trabajar con \(p\) factores. Puesto que \(q\ge p\), podemos dar un candidato a cada factor. Sea \(s=\max\{2p-q,0\}\). Elegimos \(s\) factores con un solo candidato y damos dos a cada factor restante. Los \(2p-s\) puestos disponibles se asignan inyectivamente a vértices exteriores: ningún candidato pertenece a dos factores.
++**Segunda fase: uno o dos candidatos por factor.** Factorizamos \(K_p\) en emparejamientos y, si hace falta, añadimos una clase vacía para trabajar con \(p\) factores. Puesto que \(q\ge p\), podemos dar un candidato a cada factor. Sea \(s=\max\{2p-q,0\}\). Elegimos \(s\) factores con un solo candidato y damos dos a cada factor restante. Los \(2p-s\) puestos disponibles se asignan inyectivamente a vértices exteriores: ningún candidato pertenece a dos factores.
+ 
+ Para \(x\in R\), sean \(a_x\) el número de enlaces ausentes y \(u_x\) el número de enlaces ya usados por la primera fase. Definamos \(d_x=a_x+u_x\). Tenemos
+ \[
+@@ -685,7 +685,7 @@
+ \[
+ |Q|\le B_n(p)+m-\frac{39}{50}A-\frac{971}{500}f.
+ \]
+-Al usar de nuevo \(f\ge40m/73-3A/40\), los coeficientes se convierten en \(-117/1825\) y \(-12687/20000\). Finalmente \(117/1825>1/16\) y \(12687/20000>1/2\). Esta reserva no requiere elegir otra raíz ni otro packing.
++Al usar de nuevo \(f\ge40m/73-3A/40\), los coeficientes se convierten en \(-117/1825\) y \(-12687/20000\). Finalmente \(117/1825>1/16\) y \(12687/20000>1/2\). Esta reserva no requiere elegir otra raíz ni otro empaquetamiento.
+ 
+ Por otra parte,
+ \[
+@@ -743,7 +743,7 @@
+ \tag{6.1}
+ \]
+ 
+-Para alcanzar la cota, se factorizan las aristas de \(K_k\) en \(k-1\) matchings perfectos si \(k\) es par y en \(k\) matchings si \(k\) es impar. En el segundo caso basta factorizar \(K_{k+1}\) y retirar el vértice añadido. Como \(h\ge k\), cada clase recibe un anfitrión distinto. Se obtiene un triángulo por arista del núcleo, sin compartir enlaces. Tras completar los enlaces restantes con aristas individuales, el número total de piezas es
++Para alcanzar la cota, se factorizan las aristas de \(K_k\) en \(k-1\) emparejamientos perfectos si \(k\) es par y en \(k\) emparejamientos si \(k\) es impar. En el segundo caso basta factorizar \(K_{k+1}\) y retirar el vértice añadido. Como \(h\ge k\), cada clase recibe un anfitrión distinto. Se obtiene un triángulo por arista del núcleo, sin compartir enlaces. Tras completar los enlaces restantes con aristas individuales, el número total de piezas es
+ \[
+ \binom k2+kh-2\binom k2=kh-\binom k2.
+ \]
+@@ -1200,7 +1200,7 @@
+ 
+ El refinamiento de representación de la Figura 1 se verifica en `MixedRoundingAdapter`. El adaptador identifica las aristas de una pieza y el predicado de copia admisible, transporta las capacidades de un empaquetamiento fraccional y prueba la igualdad de valores mediante `value_toFarFrac`. Para un empaquetamiento entero, `gain_toFarPacking` conserva la ganancia. Por tanto, el Teorema 3.1 puede utilizarse a través de esta presentación neutral sin cambiar el presupuesto (1.3). Esto no constituye una nueva demostración del redondeo.
+ 
+-Hay dos funciones llamadas `gainOf` cuyo dominio de uso debe distinguirse. `Model.gainOf` vale dos en cardinal tres, cinco en cardinal cuatro y cero en los demás cardinales. `FarRounding.gainOf` vale \(\binom{|K|}{2}\mathbin{\dot-}1\), donde \(\dot-\) es la resta truncada en los naturales. Coinciden en cardinales de cero a cuatro, pero desde cinco dejan de coincidir. En los ítems mixtos, que tienen cardinal tres o cuatro, el transporte es legítimo. Para particiones irrestrictas, como las de la Sección 6.4, se usa la cuenta de aristas o `FarRounding.gainOf`; nunca se sustituye por la función de ganancia acotada de Model. Puesto que las piezas de una partición tienen al menos dos vértices, allí la resta truncada coincide con la resta ordinaria.
++Hay dos funciones llamadas `gainOf` cuyo dominio de uso debe distinguirse. `Model.gainOf` vale dos en cardinal tres, cinco en cardinal cuatro y cero en los demás cardinales. `FarRounding.gainOf` vale \(\binom{|K|}{2}\mathbin{\dot-}1\), donde \(\dot-\) es la resta truncada en los naturales. Coinciden en cardinales de cero a cuatro, pero desde cinco dejan de coincidir. En los ítems mixtos, que tienen cardinal tres o cuatro, el transporte es legítimo. Para particiones irrestrictas, como las de la Sección 6.4, se usa la cuenta de aristas o `FarRounding.gainOf`; nunca se sustituye por la función de ganancia acotada de `Model`. Puesto que las piezas de una partición tienen al menos dos vértices, allí la resta truncada coincide con la resta ordinaria.
+ 
+ ## 8. Comparación de mecanismos y alcance
+ 
+@@ -1889,7 +1889,7 @@
+ 
+ La localización y la normalización producen \(V=S\sqcup H\sqcup W\): \(S\) es la región de bases, \(H\) la de anfitriones y \(W\) la de excepciones. No se exige que todas las parejas de \(S\) sean aristas. El constructor sólo hospeda las aristas reales de \(G[S]\).
+ 
+-Primero se absorben los vértices \(w\in W\). Para cada uno se elige un matching \(M_w\) de enlaces \(ah\) entre \(S\) y \(H\), con ambos extremos adyacentes a \(w\); cada enlace da el triángulo \(wah\). La selección equilibrada controla el consumo de radios por fila y columna. Las fases siguientes excluyen los radios ocupados.
++Primero se absorben los vértices \(w\in W\). Para cada uno se elige un emparejamiento \(M_w\) de enlaces \(ah\) entre \(S\) y \(H\), con ambos extremos adyacentes a \(w\); cada enlace da el triángulo \(wah\). La selección equilibrada controla el consumo de radios por fila y columna. Las fases siguientes excluyen los radios ocupados.
+ 
+ En la primera fase, coloreamos las aristas de \(G[H]\) con \(k\) colores y equilibramos las clases para que tengan tamaño a lo sumo \(q\). Promediar desplazamientos cíclicos de su asignación a anfitriones en \(S\) da \(t_I\) bases hospedadas con \(2t_I\ge e(G[H])\). En la segunda fase, el hospedaje por listas realiza todas las aristas de \(G[S]\) usando los radios restantes. La construcción diádica aplica Galvin a problemas bipartitos auxiliares, no a un grafo arbitrario.
+ 
+@@ -1914,7 +1914,7 @@
+ \]
+ Sea \(D\) una cota para el número de enlaces ausentes entre \(S\) y \(H\), y elijamos un entero \(L\ge\lfloor\sqrt D\rfloor\). La absorción da
+ \(\min(u_w,v_w)\le |M_w|+t_W+L\).
+-Además, \(e(G)\le e(G[S])+e(G[H])+cb+d_W\): las aristas dentro de \(W\) se cuentan dos veces en el último sumando, lo que es admisible en esta cota superior. Sustituir en (E.2), usando \(2t_I\ge e(G[H])\) y sumando las estimaciones de matching, da
++Además, \(e(G)\le e(G[S])+e(G[H])+cb+d_W\): las aristas dentro de \(W\) se cuentan dos veces en el último sumando, lo que es admisible en esta cota superior. Sustituir en (E.2), usando \(2t_I\ge e(G[H])\) y sumando las estimaciones de emparejamiento, da
+ \[
+ |Q|+e(G[S])+2m_W\le cb+d_W+2t_W(L+t_W).
+ \tag{E.2a}
+@@ -1956,7 +1956,7 @@
+ 
+ Por último, sea \(D\) el número total de enlaces ausentes entre \(S\) y \(H\). Separarlos entre \(A_0\!:\!\mathcal L\), \(A_0\!:\!Y_r\) y \(Y_c\!:\!H\) da \(D\le\lambda^2/10^{41}+|Y_r|\rho/200+|Y_c|(\rho/40+|Y_r|)\le(\rho/10^{13})^2\). La elección \(L=\lfloor\sqrt D\rfloor+1\) da \(D<L^2\) y \(L\le\rho/10^{13}+1\). Estas estimaciones, demostradas en `IndepAllBounds` e `IndepAllParams`, preceden a la ejecución del constructor. En particular, las reservas no se ajustan retrospectivamente al número de piezas.
+ 
+-Sea \(\nu\) el máximo número de pares disjuntos de no-aristas dentro de \(S\). La condición de defecto enraizado, junto con las cotas normalizadas de vecinos comunes, implica \(\nu\le s\); el argumento se da en E.4. Es una propiedad del núcleo normalizado, no de todo subconjunto de vértices de un grafo de defecto enraizado a lo sumo \(s\). La cota extremal de matching aplicada al complemento de \(G[S]\) da
++Sea \(\nu\) el máximo número de pares disjuntos de no-aristas dentro de \(S\). La condición de defecto enraizado, junto con las cotas normalizadas de vecinos comunes, implica \(\nu\le s\); el argumento se da en E.4. Es una propiedad del núcleo normalizado, no de todo subconjunto de vértices de un grafo de defecto enraizado a lo sumo \(s\). La cota extremal de emparejamiento aplicada al complemento de \(G[S]\) da
+ \[
+ M_S:=\binom c2-e(G[S])\le \nu c-\binom{\nu+1}2.
+ \]
+@@ -2174,14 +2174,14 @@
+ \]
+ Toda clique de \(\mathcal L\) tiene a lo sumo \(\rho/10^4+1\) vértices, por la cota de grado exterior ligero. En el grafo inducido por \(B\cup U\), cada vértice de \(B\) tiene entonces más de \(s\) vecinos fuera de cualquier clique de su vecindario. Cada vértice de \(U\) tiene la misma propiedad: su vecindario contiene \(B\), y una clique puede contener a lo sumo un extremo de cada par ausente. Ningún vértice de este inducido satisface la condición de defecto enraizado con raíz vacía, una contradicción. Éste es el argumento de `AllInput.no_core_pairs`; las estimaciones de vecinos comunes son esenciales.
+ 
+-Para completar la exposición, la alternativa finita del núcleo utilizada a continuación es la siguiente. Si \(c\ge20(s+1)^2\) y el complemento de \(G[S]\) no tiene un matching de tamaño \(s+1\), entonces \(S\) contiene una clique de tamaño \(c-s\), o bien
++Para completar la exposición, la alternativa finita del núcleo utilizada a continuación es la siguiente. Si \(c\ge20(s+1)^2\) y el complemento de \(G[S]\) no tiene un emparejamiento de tamaño \(s+1\), entonces \(S\) contiene una clique de tamaño \(c-s\), o bien
+ \[
+ c-s\le2\left(e(G[S])-\binom{c-s}{2}\right)=2E.
+ \tag{E.12}
+ \]
+-Se prueba por inducción en \(s\). Para \(s=0\), \(S\) es una clique. Si algún vértice tiene al menos \(2s+1\) no-vecinos en \(S\), eliminarlo deja un grafo sin matching de no-aristas de tamaño \(s\): tal matching ocuparía sólo \(2s\) vértices, dejando un no-vecino para extenderlo. Apliquemos la inducción con \(s-1\); el tamaño objetivo del núcleo sigue siendo \(c-s\), y toda cota inferior para las aristas del conjunto menor también vale en \(S\). En otro caso, el grafo de aristas ausentes tiene grado máximo a lo sumo \(2s\). Eliminar repetidamente los dos extremos de una arista ausente retira a lo sumo \(4s+1\) aristas ausentes por paso y termina tras a lo sumo \(s\) pasos. Por tanto, tiene a lo sumo \((4s+1)s\) aristas. Sustituir en \(E=e(G[S])-\binom{c-s}{2}\), usando \(c\ge20(s+1)^2\), da (E.12). Éste es `CoreCliqueAlternative`.
+-
+-En el primer caso, elijamos la clique \(C\) de tamaño \(c-s\) y pongamos \(r=0\). En el segundo, los extremos de un matching máximo de no-aristas tocan toda arista ausente. Su complemento es una clique de tamaño al menos \(c-2s\); reduzcámosla a ese tamaño y pongamos \(r=s\). Entonces \(|C|+s+r=c\). Como \(c\ge2s\), (E.12) da \(c\le4E\) y, por tanto, \(rc\le4sE\). La normalización también da \(n\le4c\), de modo que en ambos casos
++Se prueba por inducción en \(s\). Para \(s=0\), \(S\) es una clique. Si algún vértice tiene al menos \(2s+1\) no-vecinos en \(S\), eliminarlo deja un grafo sin emparejamiento de no-aristas de tamaño \(s\): tal emparejamiento ocuparía sólo \(2s\) vértices, dejando un no-vecino para extenderlo. Apliquemos la inducción con \(s-1\); el tamaño objetivo del núcleo sigue siendo \(c-s\), y toda cota inferior para las aristas del conjunto menor también vale en \(S\). En otro caso, el grafo de aristas ausentes tiene grado máximo a lo sumo \(2s\). Eliminar repetidamente los dos extremos de una arista ausente retira a lo sumo \(4s+1\) aristas ausentes por paso y termina tras a lo sumo \(s\) pasos. Por tanto, tiene a lo sumo \((4s+1)s\) aristas. Sustituir en \(E=e(G[S])-\binom{c-s}{2}\), usando \(c\ge20(s+1)^2\), da (E.12). Éste es `CoreCliqueAlternative`.
++
++En el primer caso, elijamos la clique \(C\) de tamaño \(c-s\) y pongamos \(r=0\). En el segundo, los extremos de un emparejamiento máximo de no-aristas tocan toda arista ausente. Su complemento es una clique de tamaño al menos \(c-2s\); reduzcámosla a ese tamaño y pongamos \(r=s\). Entonces \(|C|+s+r=c\). Como \(c\ge2s\), (E.12) da \(c\le4E\) y, por tanto, \(rc\le4sE\). La normalización también da \(n\le4c\), de modo que en ambos casos
+ \[
+ rn\le16sE.
+ \tag{E.13}

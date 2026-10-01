@@ -1,0 +1,13 @@
+$ c:\Users\jtraverso\.elan\toolchains\leanprover--lean4---v4.28.0\bin\lean.exe -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false PaperIV/OwnerCoins.lean -o C:\Users\jtraverso\e81p4\opt_build_20260927\.lake\runner\lib\lean\PaperIV\OwnerCoins.olean -i C:\Users\jtraverso\e81p4\opt_build_20260927\.lake\runner\lib\lean\PaperIV\OwnerCoins.ilean
+PaperIV/OwnerCoins.lean:56:0: warning: automatically included section variable(s) unused in theorem `PaperIV.OwnerCoins.ownerDist_nonneg`:
+  [Fintype π]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype π] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+PaperIV/OwnerCoins.lean:158:0: warning: automatically included section variable(s) unused in theorem `PaperIV.OwnerCoins.cond_all_owned`:
+  [Fintype ρ]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype ρ] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`

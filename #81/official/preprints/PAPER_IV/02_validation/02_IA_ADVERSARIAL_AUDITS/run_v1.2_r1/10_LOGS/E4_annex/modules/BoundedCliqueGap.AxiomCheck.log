@@ -1,0 +1,7 @@
+$ C:\Users\jtraverso\.elan\toolchains\leanprover--lean4---v4.28.0\bin\lean.exe -j 8 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false BoundedCliqueGap/AxiomCheck.lean -o C:\Users\jtraverso\e81p4-publish\preprints\PAPER_IV\02_validation\02_IA_ADVERSARIAL_AUDITS\run_v1.2_r1\05_BUILD\annex\obj\BoundedCliqueGap\AxiomCheck.olean -i C:\Users\jtraverso\e81p4-publish\preprints\PAPER_IV\02_validation\02_IA_ADVERSARIAL_AUDITS\run_v1.2_r1\05_BUILD\annex\obj\BoundedCliqueGap\AxiomCheck.ilean
+BoundedCliqueGap: 633 declarations audited; axioms ⊆ [propext, Classical.choice, Quot.sound]; no `Erdos81*` name; `Vizing.PEC` declared once, in [PaperIV.Vizing]
+'BoundedCliqueGap.chordal_gap_linear_cliqueFree' depends on axioms: [propext, Classical.choice, Quot.sound]
+'BoundedCliqueGap.chordal_gap_linear_of_cliqueTree_width' depends on axioms: [propext, Classical.choice, Quot.sound]
+'BoundedCliqueGap.exists_cliqueTree_width_le_iff_cliqueFree' depends on axioms: [propext, Classical.choice, Quot.sound]
+'BoundedCliqueGap.gap_linear_of_revPES' depends on axioms: [propext, Classical.choice, Quot.sound]
+'BoundedCliqueGap.exists_revPES_of_simpleGraph_isChordal' depends on axioms: [propext, Classical.choice, Quot.sound]

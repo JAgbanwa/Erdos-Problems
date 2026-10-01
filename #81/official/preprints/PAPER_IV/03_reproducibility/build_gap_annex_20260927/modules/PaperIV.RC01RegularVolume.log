@@ -1,0 +1,30 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 PaperIV/RC01RegularVolume.lean -o /workspace/request-project/.lake/runner/lib/lean/PaperIV/RC01RegularVolume.olean -i /workspace/request-project/.lake/runner/lib/lean/PaperIV/RC01RegularVolume.ilean
+PaperIV/RC01RegularVolume.lean:134:0: warning: automatically included section variable(s) unused in theorem `PaperIV.RC01RegularVolume.card_regularPattern`:
+  [Fintype α]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype α] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+import took 4s
+.olean serialization took 112ms
+cumulative profiling times:
+	.olean serialization 112ms
+	attribute application 0.15ms
+	congr simp thm 4.8ms
+	elaboration 122ms
+	fix level params 1.36ms
+	import 4s
+	initialization 38.4ms
+	instantiate metavars 2.14ms
+	interpretation 403ms
+	let-to-have transformation 0.32ms
+	linting 26.1ms
+	norm_num 1.89ms
+	parsing 13.6ms
+	process pre-definitions 11.8ms
+	ring 14.2ms
+	share common exprs 4.29ms
+	simp 13.6ms
+	tactic execution 244ms
+	type checking 45.3ms
+	typeclass inference 352ms

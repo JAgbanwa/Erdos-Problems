@@ -1,0 +1,694 @@
+{
+"order": [
+"BoundedCliqueGap.Defs",
+"BoundedCliqueGap.Ladder",
+"BoundedCliqueGap.QPES",
+"PaperIV.ChordalStructure",
+"PaperIV.CliqueTree.Basic",
+"PaperIV.CliqueTree.PEO",
+"PaperIV.CliqueTree.Helly",
+"PaperIV.CliqueTree.Characterization",
+"PaperIV.CliqueTree.Counting",
+"PaperIV.CliqueTree.Maximal",
+"PaperIV.CliqueTree.MaximalBridge",
+"PaperIV.CliqueTree.Separator",
+"PaperIV.CliqueTree",
+"BoundedCliqueGap.PEOBridge",
+"BoundedCliqueGap.SteinerTools",
+"BoundedCliqueGap.Bose",
+"BoundedCliqueGap.CompleteSplit",
+"BoundedCliqueGap.CSPorts",
+"PaperIV.Vizing",
+"BoundedCliqueGap.GVizing",
+"BoundedCliqueGap.BoseSub",
+"BoundedCliqueGap.CSPortRich",
+"BoundedCliqueGap.CSPortFull",
+"BoundedCliqueGap.CSLower",
+"BoundedCliqueGap.NuAdd",
+"BoundedCliqueGap.Flower",
+"BoundedCliqueGap.DualCeiling",
+"BoundedCliqueGap.FlowerLP",
+"BoundedCliqueGap.FlowerFull",
+"BoundedCliqueGap.Shell",
+"BoundedCliqueGap.JRelative",
+"BoundedCliqueGap.Transport",
+"BoundedCliqueGap.LInterface",
+"BoundedCliqueGap.NChain",
+"BoundedCliqueGap.QTree",
+"BoundedCliqueGap.QTreePresentation",
+"BoundedCliqueGap.QChordalTree",
+"BoundedCliqueGap.TTreeLift",
+"BoundedCliqueGap.MTLift",
+"BoundedCliqueGap.KDonation",
+"BoundedCliqueGap.KShellFull",
+"BoundedCliqueGap.TResidual",
+"BoundedCliqueGap.TTree",
+"BoundedCliqueGap.THPartition",
+"BoundedCliqueGap.THForeign",
+"BoundedCliqueGap.THMaster",
+"BoundedCliqueGap.Gap",
+"PaperIV.SplitUniformIncidence",
+"BoundedCliqueGap.SplitBridge",
+"BoundedCliqueGap.AxiomCheck"
+],
+"graph": {
+"BoundedCliqueGap.Defs": {
+"path": "BoundedCliqueGap/Defs.lean",
+"imports": [
+"Mathlib.Algebra.Order.Ring.Star",
+"Mathlib.Combinatorics.SimpleGraph.Basic",
+"Mathlib.Data.Finset.Sym",
+"Mathlib.Data.Fintype.Powerset",
+"Mathlib.Data.Nat.Lattice",
+"Mathlib.Tactic.Linarith",
+"Mathlib.Tactic.Positivity",
+"Mathlib.Tactic.Ring"
+],
+"local": [],
+"external": [
+"Mathlib.Algebra.Order.Ring.Star",
+"Mathlib.Combinatorics.SimpleGraph.Basic",
+"Mathlib.Data.Finset.Sym",
+"Mathlib.Data.Fintype.Powerset",
+"Mathlib.Data.Nat.Lattice",
+"Mathlib.Tactic.Linarith",
+"Mathlib.Tactic.Positivity",
+"Mathlib.Tactic.Ring"
+]
+},
+"BoundedCliqueGap.Ladder": {
+"path": "BoundedCliqueGap/Ladder.lean",
+"imports": [
+"BoundedCliqueGap.Defs"
+],
+"local": [
+"BoundedCliqueGap.Defs"
+],
+"external": []
+},
+"BoundedCliqueGap.QPES": {
+"path": "BoundedCliqueGap/QPES.lean",
+"imports": [
+"BoundedCliqueGap.Ladder"
+],
+"local": [
+"BoundedCliqueGap.Ladder"
+],
+"external": []
+},
+"PaperIV.ChordalStructure": {
+"path": "PaperIV/ChordalStructure.lean",
+"imports": [
+"Mathlib.Algebra.Order.Ring.Star",
+"Mathlib.Analysis.Normed.Ring.Lemmas",
+"Mathlib.Combinatorics.SimpleGraph.Clique",
+"Mathlib.Combinatorics.SimpleGraph.Connectivity.WalkCounting",
+"Mathlib.Combinatorics.SimpleGraph.Ends.Defs",
+"Mathlib.Combinatorics.SimpleGraph.Metric",
+"Mathlib.Data.Int.Star",
+"Mathlib.Tactic.Cases",
+"Mathlib.Tactic.Positivity"
+],
+"local": [],
+"external": [
+"Mathlib.Algebra.Order.Ring.Star",
+"Mathlib.Analysis.Normed.Ring.Lemmas",
+"Mathlib.Combinatorics.SimpleGraph.Clique",
+"Mathlib.Combinatorics.SimpleGraph.Connectivity.WalkCounting",
+"Mathlib.Combinatorics.SimpleGraph.Ends.Defs",
+"Mathlib.Combinatorics.SimpleGraph.Metric",
+"Mathlib.Data.Int.Star",
+"Mathlib.Tactic.Cases",
+"Mathlib.Tactic.Positivity"
+]
+},
+"PaperIV.CliqueTree.Basic": {
+"path": "PaperIV/CliqueTree/Basic.lean",
+"imports": [
+"PaperIV.ChordalStructure",
+"Mathlib.ModelTheory.Graph"
+],
+"local": [
+"PaperIV.ChordalStructure"
+],
+"external": [
+"Mathlib.ModelTheory.Graph"
+]
+},
+"PaperIV.CliqueTree.PEO": {
+"path": "PaperIV/CliqueTree/PEO.lean",
+"imports": [
+"PaperIV.CliqueTree.Basic"
+],
+"local": [
+"PaperIV.CliqueTree.Basic"
+],
+"external": []
+},
+"PaperIV.CliqueTree.Helly": {
+"path": "PaperIV/CliqueTree/Helly.lean",
+"imports": [
+"PaperIV.CliqueTree.PEO"
+],
+"local": [
+"PaperIV.CliqueTree.PEO"
+],
+"external": []
+},
+"PaperIV.CliqueTree.Characterization": {
+"path": "PaperIV/CliqueTree/Characterization.lean",
+"imports": [
+"PaperIV.CliqueTree.Helly"
+],
+"local": [
+"PaperIV.CliqueTree.Helly"
+],
+"external": []
+},
+"PaperIV.CliqueTree.Counting": {
+"path": "PaperIV/CliqueTree/Counting.lean",
+"imports": [
+"PaperIV.CliqueTree.Basic"
+],
+"local": [
+"PaperIV.CliqueTree.Basic"
+],
+"external": []
+},
+"PaperIV.CliqueTree.Maximal": {
+"path": "PaperIV/CliqueTree/Maximal.lean",
+"imports": [
+"PaperIV.CliqueTree.PEO"
+],
+"local": [
+"PaperIV.CliqueTree.PEO"
+],
+"external": []
+},
+"PaperIV.CliqueTree.MaximalBridge": {
+"path": "PaperIV/CliqueTree/MaximalBridge.lean",
+"imports": [
+"PaperIV.CliqueTree.Maximal"
+],
+"local": [
+"PaperIV.CliqueTree.Maximal"
+],
+"external": []
+},
+"PaperIV.CliqueTree.Separator": {
+"path": "PaperIV/CliqueTree/Separator.lean",
+"imports": [
+"PaperIV.CliqueTree.Helly",
+"PaperIV.CliqueTree.Maximal",
+"Mathlib.Order.BourbakiWitt"
+],
+"local": [
+"PaperIV.CliqueTree.Helly",
+"PaperIV.CliqueTree.Maximal"
+],
+"external": [
+"Mathlib.Order.BourbakiWitt"
+]
+},
+"PaperIV.CliqueTree": {
+"path": "PaperIV/CliqueTree.lean",
+"imports": [
+"PaperIV.CliqueTree.Basic",
+"PaperIV.CliqueTree.PEO",
+"PaperIV.CliqueTree.Maximal",
+"PaperIV.CliqueTree.Helly",
+"PaperIV.CliqueTree.MaximalBridge",
+"PaperIV.CliqueTree.Characterization",
+"PaperIV.CliqueTree.Separator",
+"PaperIV.CliqueTree.Counting"
+],
+"local": [
+"PaperIV.CliqueTree.Basic",
+"PaperIV.CliqueTree.PEO",
+"PaperIV.CliqueTree.Maximal",
+"PaperIV.CliqueTree.Helly",
+"PaperIV.CliqueTree.MaximalBridge",
+"PaperIV.CliqueTree.Characterization",
+"PaperIV.CliqueTree.Separator",
+"PaperIV.CliqueTree.Counting"
+],
+"external": []
+},
+"BoundedCliqueGap.PEOBridge": {
+"path": "BoundedCliqueGap/PEOBridge.lean",
+"imports": [
+"BoundedCliqueGap.QPES",
+"PaperIV.CliqueTree"
+],
+"local": [
+"BoundedCliqueGap.QPES",
+"PaperIV.CliqueTree"
+],
+"external": []
+},
+"BoundedCliqueGap.SteinerTools": {
+"path": "BoundedCliqueGap/SteinerTools.lean",
+"imports": [
+"BoundedCliqueGap.Ladder",
+"Mathlib.Combinatorics.SimpleGraph.Finite"
+],
+"local": [
+"BoundedCliqueGap.Ladder"
+],
+"external": [
+"Mathlib.Combinatorics.SimpleGraph.Finite"
+]
+},
+"BoundedCliqueGap.Bose": {
+"path": "BoundedCliqueGap/Bose.lean",
+"imports": [
+"BoundedCliqueGap.SteinerTools",
+"Mathlib.Algebra.Algebra.Defs",
+"Mathlib.Data.ZMod.Basic",
+"Mathlib.Tactic.LinearCombination"
+],
+"local": [
+"BoundedCliqueGap.SteinerTools"
+],
+"external": [
+"Mathlib.Algebra.Algebra.Defs",
+"Mathlib.Data.ZMod.Basic",
+"Mathlib.Tactic.LinearCombination"
+]
+},
+"BoundedCliqueGap.CompleteSplit": {
+"path": "BoundedCliqueGap/CompleteSplit.lean",
+"imports": [
+"BoundedCliqueGap.SteinerTools"
+],
+"local": [
+"BoundedCliqueGap.SteinerTools"
+],
+"external": []
+},
+"BoundedCliqueGap.CSPorts": {
+"path": "BoundedCliqueGap/CSPorts.lean",
+"imports": [
+"BoundedCliqueGap.CompleteSplit"
+],
+"local": [
+"BoundedCliqueGap.CompleteSplit"
+],
+"external": []
+},
+"PaperIV.Vizing": {
+"path": "PaperIV/Vizing.lean",
+"imports": [
+"Mathlib.Algebra.Group.Pointwise.Finset.Basic",
+"Mathlib.Combinatorics.SimpleGraph.Acyclic",
+"Mathlib.Combinatorics.SimpleGraph.Connectivity.WalkCounting",
+"Mathlib.Combinatorics.SimpleGraph.Ends.Defs",
+"Mathlib.Combinatorics.SimpleGraph.LineGraph",
+"Mathlib.ModelTheory.Graph",
+"Mathlib.Order.BourbakiWitt",
+"Mathlib.Tactic.Linarith",
+"Mathlib.Tactic.Positivity",
+"Mathlib.Tactic.Ring"
+],
+"local": [],
+"external": [
+"Mathlib.Algebra.Group.Pointwise.Finset.Basic",
+"Mathlib.Combinatorics.SimpleGraph.Acyclic",
+"Mathlib.Combinatorics.SimpleGraph.Connectivity.WalkCounting",
+"Mathlib.Combinatorics.SimpleGraph.Ends.Defs",
+"Mathlib.Combinatorics.SimpleGraph.LineGraph",
+"Mathlib.ModelTheory.Graph",
+"Mathlib.Order.BourbakiWitt",
+"Mathlib.Tactic.Linarith",
+"Mathlib.Tactic.Positivity",
+"Mathlib.Tactic.Ring"
+]
+},
+"BoundedCliqueGap.GVizing": {
+"path": "BoundedCliqueGap/GVizing.lean",
+"imports": [
+"BoundedCliqueGap.CSPorts",
+"PaperIV.Vizing"
+],
+"local": [
+"BoundedCliqueGap.CSPorts",
+"PaperIV.Vizing"
+],
+"external": []
+},
+"BoundedCliqueGap.BoseSub": {
+"path": "BoundedCliqueGap/BoseSub.lean",
+"imports": [
+"BoundedCliqueGap.Bose",
+"BoundedCliqueGap.GVizing",
+"Mathlib.Algebra.Lie.OfAssociative"
+],
+"local": [
+"BoundedCliqueGap.Bose",
+"BoundedCliqueGap.GVizing"
+],
+"external": [
+"Mathlib.Algebra.Lie.OfAssociative"
+]
+},
+"BoundedCliqueGap.CSPortRich": {
+"path": "BoundedCliqueGap/CSPortRich.lean",
+"imports": [
+"BoundedCliqueGap.CSPorts",
+"Mathlib.Data.ZMod.Defs"
+],
+"local": [
+"BoundedCliqueGap.CSPorts"
+],
+"external": [
+"Mathlib.Data.ZMod.Defs"
+]
+},
+"BoundedCliqueGap.CSPortFull": {
+"path": "BoundedCliqueGap/CSPortFull.lean",
+"imports": [
+"BoundedCliqueGap.BoseSub",
+"BoundedCliqueGap.CSPortRich"
+],
+"local": [
+"BoundedCliqueGap.BoseSub",
+"BoundedCliqueGap.CSPortRich"
+],
+"external": []
+},
+"BoundedCliqueGap.CSLower": {
+"path": "BoundedCliqueGap/CSLower.lean",
+"imports": [
+"BoundedCliqueGap.CSPortFull",
+"Mathlib.Analysis.Normed.Field.Lemmas",
+"Mathlib.Data.Rat.Star"
+],
+"local": [
+"BoundedCliqueGap.CSPortFull"
+],
+"external": [
+"Mathlib.Analysis.Normed.Field.Lemmas",
+"Mathlib.Data.Rat.Star"
+]
+},
+"BoundedCliqueGap.NuAdd": {
+"path": "BoundedCliqueGap/NuAdd.lean",
+"imports": [
+"BoundedCliqueGap.SteinerTools"
+],
+"local": [
+"BoundedCliqueGap.SteinerTools"
+],
+"external": []
+},
+"BoundedCliqueGap.Flower": {
+"path": "BoundedCliqueGap/Flower.lean",
+"imports": [
+"BoundedCliqueGap.CSLower",
+"BoundedCliqueGap.NuAdd"
+],
+"local": [
+"BoundedCliqueGap.CSLower",
+"BoundedCliqueGap.NuAdd"
+],
+"external": []
+},
+"BoundedCliqueGap.DualCeiling": {
+"path": "BoundedCliqueGap/DualCeiling.lean",
+"imports": [
+"BoundedCliqueGap.Flower"
+],
+"local": [
+"BoundedCliqueGap.Flower"
+],
+"external": []
+},
+"BoundedCliqueGap.FlowerLP": {
+"path": "BoundedCliqueGap/FlowerLP.lean",
+"imports": [
+"BoundedCliqueGap.DualCeiling"
+],
+"local": [
+"BoundedCliqueGap.DualCeiling"
+],
+"external": []
+},
+"BoundedCliqueGap.FlowerFull": {
+"path": "BoundedCliqueGap/FlowerFull.lean",
+"imports": [
+"BoundedCliqueGap.FlowerLP"
+],
+"local": [
+"BoundedCliqueGap.FlowerLP"
+],
+"external": []
+},
+"BoundedCliqueGap.Shell": {
+"path": "BoundedCliqueGap/Shell.lean",
+"imports": [
+"BoundedCliqueGap.FlowerFull"
+],
+"local": [
+"BoundedCliqueGap.FlowerFull"
+],
+"external": []
+},
+"BoundedCliqueGap.JRelative": {
+"path": "BoundedCliqueGap/JRelative.lean",
+"imports": [
+"BoundedCliqueGap.Shell"
+],
+"local": [
+"BoundedCliqueGap.Shell"
+],
+"external": []
+},
+"BoundedCliqueGap.Transport": {
+"path": "BoundedCliqueGap/Transport.lean",
+"imports": [
+"BoundedCliqueGap.SteinerTools"
+],
+"local": [
+"BoundedCliqueGap.SteinerTools"
+],
+"external": []
+},
+"BoundedCliqueGap.LInterface": {
+"path": "BoundedCliqueGap/LInterface.lean",
+"imports": [
+"BoundedCliqueGap.JRelative",
+"BoundedCliqueGap.Transport"
+],
+"local": [
+"BoundedCliqueGap.JRelative",
+"BoundedCliqueGap.Transport"
+],
+"external": []
+},
+"BoundedCliqueGap.NChain": {
+"path": "BoundedCliqueGap/NChain.lean",
+"imports": [
+"BoundedCliqueGap.LInterface"
+],
+"local": [
+"BoundedCliqueGap.LInterface"
+],
+"external": []
+},
+"BoundedCliqueGap.QTree": {
+"path": "BoundedCliqueGap/QTree.lean",
+"imports": [
+"BoundedCliqueGap.NChain"
+],
+"local": [
+"BoundedCliqueGap.NChain"
+],
+"external": []
+},
+"BoundedCliqueGap.QTreePresentation": {
+"path": "BoundedCliqueGap/QTreePresentation.lean",
+"imports": [
+"BoundedCliqueGap.Ladder",
+"BoundedCliqueGap.QTree"
+],
+"local": [
+"BoundedCliqueGap.Ladder",
+"BoundedCliqueGap.QTree"
+],
+"external": []
+},
+"BoundedCliqueGap.QChordalTree": {
+"path": "BoundedCliqueGap/QChordalTree.lean",
+"imports": [
+"BoundedCliqueGap.QPES",
+"BoundedCliqueGap.QTreePresentation"
+],
+"local": [
+"BoundedCliqueGap.QPES",
+"BoundedCliqueGap.QTreePresentation"
+],
+"external": []
+},
+"BoundedCliqueGap.TTreeLift": {
+"path": "BoundedCliqueGap/TTreeLift.lean",
+"imports": [
+"BoundedCliqueGap.QTree"
+],
+"local": [
+"BoundedCliqueGap.QTree"
+],
+"external": []
+},
+"BoundedCliqueGap.MTLift": {
+"path": "BoundedCliqueGap/MTLift.lean",
+"imports": [
+"BoundedCliqueGap.QChordalTree",
+"BoundedCliqueGap.TTreeLift"
+],
+"local": [
+"BoundedCliqueGap.QChordalTree",
+"BoundedCliqueGap.TTreeLift"
+],
+"external": []
+},
+"BoundedCliqueGap.KDonation": {
+"path": "BoundedCliqueGap/KDonation.lean",
+"imports": [
+"BoundedCliqueGap.JRelative"
+],
+"local": [
+"BoundedCliqueGap.JRelative"
+],
+"external": []
+},
+"BoundedCliqueGap.KShellFull": {
+"path": "BoundedCliqueGap/KShellFull.lean",
+"imports": [
+"BoundedCliqueGap.KDonation"
+],
+"local": [
+"BoundedCliqueGap.KDonation"
+],
+"external": []
+},
+"BoundedCliqueGap.TResidual": {
+"path": "BoundedCliqueGap/TResidual.lean",
+"imports": [
+"BoundedCliqueGap.KShellFull",
+"BoundedCliqueGap.Transport"
+],
+"local": [
+"BoundedCliqueGap.KShellFull",
+"BoundedCliqueGap.Transport"
+],
+"external": []
+},
+"BoundedCliqueGap.TTree": {
+"path": "BoundedCliqueGap/TTree.lean",
+"imports": [
+"BoundedCliqueGap.QTree"
+],
+"local": [
+"BoundedCliqueGap.QTree"
+],
+"external": []
+},
+"BoundedCliqueGap.THPartition": {
+"path": "BoundedCliqueGap/THPartition.lean",
+"imports": [
+"BoundedCliqueGap.MTLift",
+"BoundedCliqueGap.TResidual",
+"BoundedCliqueGap.TTree"
+],
+"local": [
+"BoundedCliqueGap.MTLift",
+"BoundedCliqueGap.TResidual",
+"BoundedCliqueGap.TTree"
+],
+"external": []
+},
+"BoundedCliqueGap.THForeign": {
+"path": "BoundedCliqueGap/THForeign.lean",
+"imports": [
+"BoundedCliqueGap.THPartition"
+],
+"local": [
+"BoundedCliqueGap.THPartition"
+],
+"external": []
+},
+"BoundedCliqueGap.THMaster": {
+"path": "BoundedCliqueGap/THMaster.lean",
+"imports": [
+"BoundedCliqueGap.THForeign"
+],
+"local": [
+"BoundedCliqueGap.THForeign"
+],
+"external": []
+},
+"BoundedCliqueGap.Gap": {
+"path": "BoundedCliqueGap/Gap.lean",
+"imports": [
+"BoundedCliqueGap.PEOBridge",
+"BoundedCliqueGap.THMaster"
+],
+"local": [
+"BoundedCliqueGap.PEOBridge",
+"BoundedCliqueGap.THMaster"
+],
+"external": []
+},
+"PaperIV.SplitUniformIncidence": {
+"path": "PaperIV/SplitUniformIncidence.lean",
+"imports": [
+"Mathlib.Algebra.CharP.Defs",
+"Mathlib.Algebra.Order.Ring.Star",
+"Mathlib.Analysis.Normed.Field.Lemmas",
+"Mathlib.Combinatorics.SimpleGraph.Clique",
+"Mathlib.Data.Int.Star",
+"Mathlib.Tactic.IntervalCases",
+"Mathlib.Tactic.LinearCombination",
+"Mathlib.Tactic.Positivity"
+],
+"local": [],
+"external": [
+"Mathlib.Algebra.CharP.Defs",
+"Mathlib.Algebra.Order.Ring.Star",
+"Mathlib.Analysis.Normed.Field.Lemmas",
+"Mathlib.Combinatorics.SimpleGraph.Clique",
+"Mathlib.Data.Int.Star",
+"Mathlib.Tactic.IntervalCases",
+"Mathlib.Tactic.LinearCombination",
+"Mathlib.Tactic.Positivity"
+]
+},
+"BoundedCliqueGap.SplitBridge": {
+"path": "BoundedCliqueGap/SplitBridge.lean",
+"imports": [
+"BoundedCliqueGap.CompleteSplit",
+"PaperIV.SplitUniformIncidence"
+],
+"local": [
+"BoundedCliqueGap.CompleteSplit",
+"PaperIV.SplitUniformIncidence"
+],
+"external": []
+},
+"BoundedCliqueGap.AxiomCheck": {
+"path": "BoundedCliqueGap/AxiomCheck.lean",
+"imports": [
+"BoundedCliqueGap.Gap",
+"BoundedCliqueGap.SplitBridge",
+"Lean.Elab.Command"
+],
+"local": [
+"BoundedCliqueGap.Gap",
+"BoundedCliqueGap.SplitBridge"
+],
+"external": [
+"Lean.Elab.Command"
+]
+}
+}
+}

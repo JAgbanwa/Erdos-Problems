@@ -1,0 +1,49 @@
+$ C:\Users\jtraverso\.elan\toolchains\leanprover--lean4---v4.28.0\bin\lean.exe -j 8 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false PaperIV/EighthMoment.lean -o C:\Users\jtraverso\e81p4-publish\preprints\PAPER_IV\02_validation\02_IA_ADVERSARIAL_AUDITS\run_v1.2_r1\05_BUILD\main\obj\PaperIV\EighthMoment.olean -i C:\Users\jtraverso\e81p4-publish\preprints\PAPER_IV\02_validation\02_IA_ADVERSARIAL_AUDITS\run_v1.2_r1\05_BUILD\main\obj\PaperIV\EighthMoment.ilean
+PaperIV/EighthMoment.lean:68:0: warning: automatically included section variable(s) unused in theorem `PaperIV.EighthMoment.FinProb.expect_const`:
+  [DecidableEq Ω]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq Ω] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+PaperIV/EighthMoment.lean:72:0: warning: automatically included section variable(s) unused in theorem `PaperIV.EighthMoment.FinProb.expect_mono`:
+  [DecidableEq Ω]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq Ω] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+PaperIV/EighthMoment.lean:76:0: warning: automatically included section variable(s) unused in theorem `PaperIV.EighthMoment.FinProb.abs_expect_le`:
+  [DecidableEq Ω]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq Ω] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+PaperIV/EighthMoment.lean:85:0: warning: automatically included section variable(s) unused in theorem `PaperIV.EighthMoment.FinProb.expect_sum`:
+  [DecidableEq Ω]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq Ω] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+PaperIV/EighthMoment.lean:91:0: warning: automatically included section variable(s) unused in theorem `PaperIV.EighthMoment.FinProb.prob_nonneg`:
+  [DecidableEq Ω]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq Ω] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+PaperIV/EighthMoment.lean:95:0: warning: automatically included section variable(s) unused in theorem `PaperIV.EighthMoment.FinProb.markov`:
+  [DecidableEq Ω]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq Ω] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+PaperIV/EighthMoment.lean:149:0: warning: automatically included section variable(s) unused in theorem `PaperIV.EighthMoment.expect_prod_eq_zero`:
+  [DecidableEq Ω]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq Ω] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+PaperIV/EighthMoment.lean:258:0: warning: automatically included section variable(s) unused in theorem `PaperIV.EighthMoment.FinProb.prob_mono`:
+  [DecidableEq Ω]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq Ω] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`

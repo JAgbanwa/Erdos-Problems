@@ -1,0 +1,36 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 PaperV/UnitBoundaryWitnesses.lean -o /workspace/request-project/.lake/runner/lib/lean/PaperV/UnitBoundaryWitnesses.olean -i /workspace/request-project/.lake/runner/lib/lean/PaperV/UnitBoundaryWitnesses.ilean
+PaperV/UnitBoundaryWitnesses.lean:69:0: warning: automatically included section variable(s) unused in theorem `PaperV.UnitBoundary.packOpt_eq_of`:
+  [Fintype α]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype α] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+PaperV/UnitBoundaryWitnesses.lean:77:0: warning: automatically included section variable(s) unused in theorem `PaperV.UnitBoundary.nuAvoid_eq_of`:
+  [Fintype α]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype α] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+import took 2.35s
+cumulative profiling times:
+	.olean serialization 56.1ms
+	attribute application 0.649ms
+	compilation (IR) 3.06ms
+	compilation (LCNF base) 9.18ms
+	compilation (LCNF mono) 5.65ms
+	congr simp thm 1.38ms
+	elaboration 172ms
+	fix level params 0.759ms
+	import 2.35s
+	initialization 37.6ms
+	instantiate metavars 1.37ms
+	interpretation 253ms
+	let-to-have transformation 0.426ms
+	linting 24.5ms
+	parsing 13.5ms
+	process pre-definitions 15.6ms
+	share common exprs 2.94ms
+	simp 7.71ms
+	tactic execution 349ms
+	type checking 290ms
+	typeclass inference 241ms

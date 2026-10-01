@@ -1,0 +1,28 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 MixedRounding/Cleanup.lean -o /workspace/request-project/.lake/runner/lib/lean/MixedRounding/Cleanup.olean -i /workspace/request-project/.lake/runner/lib/lean/MixedRounding/Cleanup.ilean
+MixedRounding/Cleanup.lean:127:31: warning: unused variable `hε`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+import took 2.82s
+cumulative profiling times:
+	.olean serialization 44.7ms
+	attribute application 0.0698ms
+	compilation (IR) 0.482ms
+	compilation (LCNF base) 0.687ms
+	compilation (LCNF mono) 0.631ms
+	dsimp 1.23ms
+	elaboration 33.8ms
+	fix level params 0.468ms
+	import 2.82s
+	initialization 41.8ms
+	instantiate metavars 0.38ms
+	interpretation 279ms
+	let-to-have transformation 0.106ms
+	linting 10.4ms
+	norm_num 6.33ms
+	parsing 5.73ms
+	process pre-definitions 6.24ms
+	ring 9.76ms
+	share common exprs 1.96ms
+	tactic execution 74.1ms
+	type checking 26.5ms
+	typeclass inference 177ms

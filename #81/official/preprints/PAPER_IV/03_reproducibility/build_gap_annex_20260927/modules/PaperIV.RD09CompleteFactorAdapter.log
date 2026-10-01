@@ -1,0 +1,20 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 PaperIV/RD09CompleteFactorAdapter.lean -o /workspace/request-project/.lake/runner/lib/lean/PaperIV/RD09CompleteFactorAdapter.olean -i /workspace/request-project/.lake/runner/lib/lean/PaperIV/RD09CompleteFactorAdapter.ilean
+import took 4.21s
+cumulative profiling times:
+	.olean serialization 64.2ms
+	attribute application 0.0326ms
+	dsimp 2.64ms
+	elaboration 20.5ms
+	fix level params 0.195ms
+	import 4.21s
+	initialization 48.6ms
+	instantiate metavars 0.599ms
+	interpretation 209ms
+	let-to-have transformation 0.123ms
+	linting 7.82ms
+	parsing 3.72ms
+	process pre-definitions 1.88ms
+	share common exprs 0.49ms
+	tactic execution 52.4ms
+	type checking 5.66ms
+	typeclass inference 25.6ms

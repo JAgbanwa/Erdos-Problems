@@ -1,0 +1,28 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 Nibble/Tight/TwoEdgeMatch.lean -o /workspace/request-project/.lake/runner/lib/lean/Nibble/Tight/TwoEdgeMatch.olean -i /workspace/request-project/.lake/runner/lib/lean/Nibble/Tight/TwoEdgeMatch.ilean
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_nlinarith_1._boxed took 306ms
+import took 4.01s
+.olean serialization took 118ms
+cumulative profiling times:
+	.olean serialization 118ms
+	attribute application 0.103ms
+	compilation (IR) 1.15ms
+	compilation (LCNF base) 1.32ms
+	compilation (LCNF mono) 0.528ms
+	congr simp thm 13.2ms
+	elaboration 89.5ms
+	fix level params 2.19ms
+	import 4.01s
+	initialization 37.7ms
+	instantiate metavars 33ms
+	interpretation 970ms
+	let-to-have transformation 0.157ms
+	linting 58ms
+	norm_num 13.3ms
+	parsing 16.4ms
+	process pre-definitions 29ms
+	ring 94.7ms
+	share common exprs 39.4ms
+	simp 176ms
+	tactic execution 269ms
+	type checking 87.5ms
+	typeclass inference 678ms

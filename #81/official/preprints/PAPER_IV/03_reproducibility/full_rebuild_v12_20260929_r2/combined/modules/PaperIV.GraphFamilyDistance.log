@@ -1,0 +1,7 @@
+$ c:\Users\jtraverso\.elan\toolchains\leanprover--lean4---v4.28.0\bin\lean.exe -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false PaperIV/GraphFamilyDistance.lean -o C:\Users\jtraverso\e81p4\piv_v12_full_rebuild_20260929\.lake\runner\lib\lean\PaperIV\GraphFamilyDistance.olean -i C:\Users\jtraverso\e81p4\piv_v12_full_rebuild_20260929\.lake\runner\lib\lean\PaperIV\GraphFamilyDistance.ilean
+PaperIV/GraphFamilyDistance.lean:24:8: warning: automatically included section variable(s) unused in theorem `PaperIV.GraphFamilyDistance.graphEdgeSupport_eq_edgeFinset`:
+  [DecidableEq V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`

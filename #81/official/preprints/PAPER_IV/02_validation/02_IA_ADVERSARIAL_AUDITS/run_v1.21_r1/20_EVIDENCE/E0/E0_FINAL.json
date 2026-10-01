@@ -1,0 +1,73 @@
+{
+ "run_at_utc": "2026-10-01T07:21:41.980305+00:00",
+ "checks": {
+  "target_sha256": "574352e89474badc59899db37aa48f1de362b086293b7d9a0043189787daf2a7",
+  "target_sidecar_match": true,
+  "request": {
+   "sha_match": true,
+   "bytes_match": true
+  },
+  "manuscript_manifest": {
+   "sha_match": true,
+   "bytes_match": true
+  },
+  "manuscript_zip": {
+   "sha_match": true,
+   "bytes_match": true
+  },
+  "source_manifest": {
+   "sha_match": true,
+   "bytes_match": true
+  },
+  "prior_evidence_binding": {
+   "sha_match": true,
+   "bytes_match": true
+  },
+  "ms_manifest_files": 88,
+  "ms_manifest_vs_dir_bad": [],
+  "ms_manifest_meta": {
+   "identity": "Paper-IV-v1.21-r1-editorial-revalidation",
+   "status": "PREPARED_FOR_REVALIDATION",
+   "release": false,
+   "lean_cut": "piv-v12-fb459343d234",
+   "source_manifest_sha256": "fb459343d234f968d7d32eff1491ea8a09aa2e135b313a80623012e7449042f5",
+   "audit_request": {
+    "path": "02_validation/02_IA_ADVERSARIAL_AUDITS/EXTERNAL_ADVERSARIAL_REVALIDATION_v1.21_r1.md",
+    "sha256": "b360c9675c9a953162acbe988b21f4b4245eb6832ae8ca9c83ce1e79041cc824"
+   },
+   "limits": "Editorial revalidation pending. Completed external E4 PASS may be reused after identity verification; no new Lean build authorized. No runtime fonts, caches, credentials or project objects included."
+  },
+  "ms_sidecar": true,
+  "zip_testzip": null,
+  "zip_members": 90,
+  "zip_unsafe": [],
+  "zip_only": [
+   "MANUSCRIPT_REVIEW_MANIFEST.json",
+   "MANUSCRIPT_REVIEW_MANIFEST.sha256"
+  ],
+  "manifest_only_not_in_zip": [],
+  "zip_hash_mismatch": [],
+  "r1_zip_sidecar": true,
+  "six": {
+   "PAPER_IV_preprint_v1.21_en.md": "61d227296f5f45c926ba474b9be1ae81ee2d84ef01e8d5d1626c08195eb8df34",
+   "PAPER_IV_preprint_v1.21_en.tex": "d61022a3599819791eb323d50299a0d072c1c841c0baa4106d1d4875a79abeef",
+   "PAPER_IV_preprint_v1.21_en.pdf": "6a30b3778ceb8317b6e1eb4b04d8fd32ccbc2de4876ad28a75fe31636920d16b",
+   "PAPER_IV_preprint_v1.21_es.md": "81794d5fd94336b691d53e47cb7f0195d01978924261bd9413d6db5ecd7a604e",
+   "PAPER_IV_preprint_v1.21_es.tex": "6295d4353072ce684792a578e510d3c3c597e9633567f09d020ce662c83c95e7",
+   "PAPER_IV_preprint_v1.21_es.pdf": "457e6c93eddb0b9a9d138c049e9ff0e996ff18433a55663a957af93de5b7abbb"
+  },
+  "six_in_manifest": true,
+  "source_manifest_sha": "fb459343d234f968d7d32eff1491ea8a09aa2e135b313a80623012e7449042f5",
+  "source_entries": 615,
+  "source_mismatch": [],
+  "source_dir_extra_files": [],
+  "source_zip_sha": "cb2741454380736ffe01b59933057b5079fa9f865d5bbdd3f67534bf808a62e6",
+  "binding_archive_match": true,
+  "binding_evidence_mismatch": [],
+  "prior_manifest_files": 1097,
+  "prior_manifest_changed_on_disk": [],
+  "prior_zip_sidecar": true,
+  "prior_zip_testzip": null,
+  "prior_zip_members": 1098
+ }
+}

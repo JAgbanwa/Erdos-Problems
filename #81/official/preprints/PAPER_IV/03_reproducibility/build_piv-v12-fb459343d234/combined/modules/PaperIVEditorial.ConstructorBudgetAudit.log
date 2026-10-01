@@ -1,0 +1,8 @@
+$ c:\Users\jtraverso\.elan\toolchains\leanprover--lean4---v4.28.0\bin\lean.exe -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false PaperIVEditorial/ConstructorBudgetAudit.lean -o C:\Users\jtraverso\e81p4\clean_stability_build_20260928\.lake\runner\lib\lean\PaperIVEditorial\ConstructorBudgetAudit.olean -i C:\Users\jtraverso\e81p4\clean_stability_build_20260928\.lake\runner\lib\lean\PaperIVEditorial\ConstructorBudgetAudit.ilean
+'PaperIV.Editorial.ConstructorBudget.cancel_budget' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PaperIV.Editorial.ConstructorBudget.partition_with_net_budget' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+PASS PaperIV.Editorial.ConstructorBudget.cancel_budget: 11767 transitive constants; axiom whitelist passed
+PASS PaperIV.Editorial.ConstructorBudget.partition_with_net_budget: 17001 transitive constants; axiom whitelist passed
+Constructor budget: constant-cone, axiom and historical-import checks PASSED.

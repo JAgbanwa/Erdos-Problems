@@ -1,0 +1,107 @@
+=================== defectTarget  (1 hit(s))
+--- PaperIV/DefectTargetArithmetic.lean:14  (namespaces opened before: ['PaperIV.DefectTargetArithmetic'], ended: [])
+def defectTarget (s n : ℕ) : ℕ := targetSize (n + s) - Nat.choose (s + 1) 2
+
+=================== targetSize  (2 hit(s))
+--- PaperIV/FarRounding.lean:667  (namespaces opened before: ['PaperIV.FarRounding'], ended: ['Integral', 'Partition', 'Certificates'])
+def targetSize (n : ℕ) : ℕ := n * (n + 1) / 6
+--- PaperIV/TargetEnvelope.lean:13  (namespaces opened before: ['PaperIV'], ended: [])
+def targetSize (n : ℕ) : ℕ := n * (n + 1) / 6
+
+=================== CliquePartition  (3 hit(s))
+--- PaperIV/FarRounding.lean:327  (namespaces opened before: ['PaperIV.FarRounding'], ended: ['Items', 'Fractional', 'Integral'])
+structure CliquePartition where
+--- PaperIV/FarRounding.lean:337  (namespaces opened before: ['PaperIV.FarRounding'], ended: ['Items', 'Fractional', 'Integral'])
+def CliquePartition.size (Q : CliquePartition G) : ℕ := Q.pieces.card
+--- PaperIV/FarRounding.lean:340  (namespaces opened before: ['PaperIV.FarRounding'], ended: ['Items', 'Fractional', 'Integral'])
+def CliquePartition.OrderAtMost (Q : CliquePartition G) (r : ℕ) : Prop :=
+
+=================== IsChordal  (16 hit(s))
+--- PaperIV/ChordalStructure.lean:65  (namespaces opened before: ['SimpleGraph'], ended: [])
+def IsChordal (G : SimpleGraph V) : Prop :=
+--- PaperIV/ChordalStructure.lean:82  (namespaces opened before: ['SimpleGraph'], ended: [])
+theorem IsChordal.comap {W : Type*} (hG : G.IsChordal) (f : W ↪ V)
+    (H : SimpleGraph W) (hf : ∀ a b, H.Adj a b ↔ G.Adj (f a) (f b)) : H.IsChordal := by
+--- PaperIV/ChordalStructure.lean:389  (namespaces opened before: ['SimpleGraph'], ended: [])
+theorem IsChordal.induce (hG : G.IsChordal) (W : Set V) : (G.induce W).IsChordal :=
+--- PaperIV/ChordalStructure.lean:758  (namespaces opened before: ['SimpleGraph'], ended: ['DiracPort'])
+theorem IsChordal.minimalSeparator_isClique [Fintype V] [DecidableEq V] (hG : G.IsChordal)
+    {S : Finset V} {a b : V} (hS : G.IsMinimalSeparator (S : Set V) a b) :
+    G.IsClique (S : Set V) :=
+--- PaperIV/ChordalStructure.lean:764  (namespaces opened before: ['SimpleGraph'], ended: ['DiracPort'])
+theorem IsChordal.exists_isSimplicial [Fintype V] [DecidableEq V] [Nonempty V]
+    (hG : G.IsChordal) : ∃ v : V, G.IsSimplicial v :=
+--- PaperIV/ChordalStructure.lean:780  (namespaces opened before: ['SimpleGraph'], ended: ['DiracPort'])
+theorem IsChordal.exists_two_nonadj_isSimplicial [Fintype V] [DecidableEq V]
+    (hG : G.IsChordal) (hconn : G.Connected) (hnc : ¬ ∀ u v : V, u ≠ v → G.Adj u v) :
+    ∃ x y : V, x ≠ y ∧ ¬ G.Adj x y ∧ G.IsSimplicial x ∧ G.IsSimplicial y := by
+--- PaperIV/FarRounding.lean:630  (namespaces opened before: ['PaperIV.FarRounding'], ended: ['Integral', 'Partition', 'Certificates'])
+abbrev IsChordal {V : Type*} (G : SimpleGraph V) : Prop :=
+--- RequestProject/AlonShapira.lean:57  (namespaces opened before: ['AlonShapira'], ended: [])
+def IsChordal {V : Type*} (G : SimpleGraph V) : Prop :=
+--- RequestProject/AlonShapira.lean:62  (namespaces opened before: ['AlonShapira'], ended: [])
+theorem IsChordal.of_embedding {V W : Type*} {G : SimpleGraph V} {G' : SimpleGraph W}
+    (hG : IsChordal G) (e : G' ↪g G) : IsChordal G' := by
+--- RequestProject/AlonShapira.lean:69  (namespaces opened before: ['AlonShapira'], ended: [])
+theorem IsChordal.induce {V : Type*} {G : SimpleGraph V} (hG : IsChordal G) (s : Set V) :
+    IsChordal (G.induce s) :=
+--- PaperIV/CliqueTree/Characterization.lean:93  (namespaces opened before: ['SimpleGraph'], ended: [])
+theorem IsChordal.of_nonempty_cliqueTree {ι : Type*} (T : CliqueTree G ι) : G.IsChordal := by
+--- PaperIV/CliqueTree/Maximal.lean:461  (namespaces opened before: ['SimpleGraph'], ended: ['Elimination'])
+theorem IsChordal.exists_maximalCliqueTree [Fintype V] (hG : G.IsChordal) :
+    ∃ (n : ℕ) (T : CliqueTree G (Fin n)),
+      (∀ i, G.IsMaximalCliqueOn Finset.univ (T.bag i)) ∧
+      (∀ K, G.IsMaximalCliqueOn Finset.univ K → ∃ i, T.bag i = K) ∧
+      Function.Injective T.bag := by
+--- PaperIV/CliqueTree/MaximalBridge.lean:162  (namespaces opened before: ['SimpleGraph', 'MaxCliqueForest', 'CliqueTree'], ended: ['MaxCliqueForest', 'CliqueTree'])
+theorem IsChordal.exists_maximalCliqueTree_card_le [Fintype V] [DecidableEq V] [Nonempty V]
+    (hG : G.IsChordal) :
+    ∃ (n : ℕ) (T : CliqueTree G (Fin n)),
+      n ≤ Fintype.card V ∧
+      (∀ i, G.IsMaximalCliqueOn Finset.univ (T.bag i)) ∧
+      (∀ K, G.IsMaximalCliqueOn Finset.univ K → ∃ i, T.bag i = K) ∧
+      Function.Injective T.bag := by
+--- PaperIV/CliqueTree/MaximalBridge.lean:174  (namespaces opened before: ['SimpleGraph', 'MaxCliqueForest', 'CliqueTree'], ended: ['MaxCliqueForest', 'CliqueTree'])
+theorem IsChordal.card_maximalCliques_le [Fintype V] [DecidableEq V] [Nonempty V]
+    [DecidablePred (G.IsMaximalCliqueOn Finset.univ)] (hG : G.IsChordal) :
+    (Finset.univ.powerset.filter fun K => G.IsMaximalCliqueOn Finset.univ K).card
+      ≤ Fintype.card V := by
+--- PaperIV/CliqueTree/PEO.lean:107  (namespaces opened before: ['SimpleGraph'], ended: [])
+theorem IsChordal.exists_isPEO [Fintype V] [DecidableEq V] (hG : G.IsChordal) :
+    ∃ ord : V → ℕ, G.IsPEO ord := by
+--- PaperIV/CliqueTree/PEO.lean:315  (namespaces opened before: ['SimpleGraph', 'IsPEO'], ended: ['IsPEO'])
+theorem IsChordal.nonempty_cliqueTree {V : Type*} [Fintype V] [DecidableEq V]
+    {G : SimpleGraph V} (hG : G.IsChordal) : Nonempty (CliqueTree G V) := by
+
+=================== defSplitGraph  (1 hit(s))
+--- PaperIV/DefectComparatorGraph.lean:50  (namespaces opened before: ['PaperIV.DefectComparatorGraph'], ended: [])
+def defSplitGraph (Core Def Hosts : Finset V) : SimpleGraph V where
+
+=================== edgeDist  (0 hit(s))
+
+
+=================== editDist  (3 hit(s))
+--- PaperIV/EditMetric.lean:37  (namespaces opened before: ['PaperIV.EditMetric'], ended: [])
+def editDist (A B : Finset V) : ℕ := (A ∆ B).card
+--- ThreeRegime/CompleteStateExtreme.lean:36  (namespaces opened before: ['ThreeRegime'], ended: [])
+def editDist (G H : SimpleGraph V) [DecidableRel G.Adj] [DecidableRel H.Adj] :
+    ℕ :=
+--- RequestProject/AS/Defs.lean:35  (namespaces opened before: ['AlonShapira'], ended: [])
+noncomputable def editDist {n : ℕ} (G G' : SimpleGraph (Fin n)) : ℕ :=
+
+=================== templateGraph  (0 hit(s))
+
+
+=================== defectTemplate  (0 hit(s))
+
+
+=================== badPieces  (0 hit(s))
+
+
+=================== nBad  (0 hit(s))
+
+
+=================== eBad  (0 hit(s))
+
+
+=================== isCanonical  (0 hit(s))

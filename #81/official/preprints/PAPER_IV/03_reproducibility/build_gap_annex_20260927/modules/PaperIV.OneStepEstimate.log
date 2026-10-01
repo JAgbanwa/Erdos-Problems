@@ -1,0 +1,50 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 PaperIV/OneStepEstimate.lean -o /workspace/request-project/.lake/runner/lib/lean/PaperIV/OneStepEstimate.olean -i /workspace/request-project/.lake/runner/lib/lean/PaperIV/OneStepEstimate.ilean
+PaperIV/OneStepEstimate.lean:66:0: warning: automatically included section variable(s) unused in theorem `PaperIV.OneStepEstimate.card_interedges_eq`:
+  [DecidableEq α]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq α] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+tactic execution of Mathlib.Tactic.nlinarith took 465ms
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_nlinarith_1._boxed took 118ms
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_nlinarith_1._boxed took 114ms
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_nlinarith_1._boxed took 222ms
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_nlinarith_1._boxed took 239ms
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_nlinarith_1._boxed took 240ms
+PaperIV/OneStepEstimate.lean:161:0: warning: automatically included section variable(s) unused in theorem `PaperIV.OneStepEstimate.DiscrepAt.mono`:
+  [DecidableEq α]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq α] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+PaperIV/OneStepEstimate.lean:189:0: warning: automatically included section variable(s) unused in theorem `PaperIV.OneStepEstimate.DiscrepAt.restrict`:
+  [DecidableEq α]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq α] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+import took 2.91s
+cumulative profiling times:
+	.olean serialization 62.1ms
+	attribute application 0.104ms
+	compilation (IR) 1.72ms
+	compilation (LCNF base) 1.83ms
+	compilation (LCNF mono) 0.768ms
+	congr simp thm 14.3ms
+	elaboration 60.6ms
+	fix level params 1.72ms
+	import 2.91s
+	initialization 46.2ms
+	instantiate metavars 9.83ms
+	interpretation 1.9s
+	let-to-have transformation 0.147ms
+	linting 32.4ms
+	norm_num 20.2ms
+	parsing 10.5ms
+	process pre-definitions 22.1ms
+	ring 75.8ms
+	share common exprs 12.5ms
+	simp 140ms
+	tactic execution 676ms
+	type checking 83.8ms
+	typeclass inference 863ms

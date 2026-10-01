@@ -1,0 +1,65 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{booktabs,longtable,array,calc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,microtype,amsmath,amssymb}
+\usepackage{xurl}
+\usepackage[hidelinks]{hyperref}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.5em}
+\setlength{\emergencystretch}{3em}
+\providecommand{\tightlist}{\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\begin{document}
+\section{B01: Modelo físico y certificado
+Certo}\label{b01-modelo-fuxedsico-y-certificado-certo}
+
+Corte Lean \nolinkurl{piv-v12-fb459343d234}; manuscritos
+\nolinkurl{piv-v12-manuscripts-2451d43bface}. Auditoría interna del lado
+del autor, no independiente. Fecha: 30 de septiembre de 2026.
+
+\subsection{Obligación e hipótesis}\label{obligaciuxf3n-e-hipuxf3tesis}
+
+Aristas reales, cobertura exacta, piezas de orden 2 a 4 y ganancia 2/5.
+Se separa gainOf mixto de la ganancia irrestricta.
+
+\subsection{Revisión y resultados}\label{revisiuxf3n-y-resultados}
+
+Se recorrieron 33 868 grafos etiquetados hasta seis vértices y se
+reconstruyeron las particiones literales. Certo certificó una cubierta
+de seis piezas de K3 join I3; un checker independiente del productor
+verificó sus doce aristas. Una cota inferior por pesos de cliques
+demuestra seis, por separado del certificado de cubierta.
+
+El cotejo matemático detallado está en
+\nolinkurl{G1_CLAIMS/MATHEMATICAL_REVIEW.md}; las declaraciones y tipos
+se vinculan en \nolinkurl{CLAIM_MAP.csv}.
+
+\subsection{Negativos e incidentes}\label{negativos-e-incidentes}
+
+Omisión, solapamiento, pieza no clique, orden indebido y universo
+incorrecto se rechazan. El replay independiente añade controles de
+tamaño declarado y no clique a la prueba tamper de Certo.
+
+\subsection{Reproducción y evidencia}\label{reproducciuxf3n-y-evidencia}
+
+Ejecutar con Python 3.12 \nolinkurl{scripts/literal_model_check.py}. Los
+JSON, stdout y stderr de \nolinkurl{results/} son la evidencia de
+ejecución. El runner guarda comandos, duración, límite y código de
+salida. Las ampliaciones exactas usan \nolinkurl{extension_checks.py}; no
+invocan Lean.
+
+Un solo proceso propio a la vez; las regresiones serializadas tienen
+límite de 2 GiB y 120 segundos, Certo 60 segundos por instancia. Se usan
+versiones registradas en \nolinkurl{ENVIRONMENT.json}, sin instalar
+dependencias.
+
+\subsection{Dictamen y límites}\label{dictamen-y-luxedmites}
+
+\textbf{PASS interno}, combinando evidencia formal registrada y
+regresión finita donde corresponde. La universalidad procede de las
+declaraciones formales. El certificado Certo por sí solo prueba
+factibilidad, no optimalidad; aquí la cota inferior es un argumento
+exacto adicional. Los archivos de entrada comunes se resuelven por
+\nolinkurl{TARGET.json}, no por otra carpeta mutable de trabajo.
+
+\end{document}

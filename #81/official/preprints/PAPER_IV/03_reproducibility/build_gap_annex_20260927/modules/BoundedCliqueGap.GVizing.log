@@ -1,0 +1,21 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 BoundedCliqueGap/GVizing.lean -o /workspace/request-project/.lake/runner/lib/lean/BoundedCliqueGap/GVizing.olean -i /workspace/request-project/.lake/runner/lib/lean/BoundedCliqueGap/GVizing.ilean
+import took 2.84s
+cumulative profiling times:
+	.olean serialization 45.4ms
+	attribute application 0.0491ms
+	congr simp thm 6.09ms
+	elaboration 30.9ms
+	fix level params 0.812ms
+	import 2.84s
+	initialization 40.5ms
+	instantiate metavars 12ms
+	interpretation 206ms
+	let-to-have transformation 0.0731ms
+	linting 25.2ms
+	parsing 8.34ms
+	process pre-definitions 5.8ms
+	share common exprs 2.05ms
+	simp 47.9ms
+	tactic execution 129ms
+	type checking 22.8ms
+	typeclass inference 115ms

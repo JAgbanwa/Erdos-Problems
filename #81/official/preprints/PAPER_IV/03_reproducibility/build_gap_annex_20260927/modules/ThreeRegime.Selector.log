@@ -1,0 +1,23 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 ThreeRegime/Selector.lean -o /workspace/request-project/.lake/runner/lib/lean/ThreeRegime/Selector.olean -i /workspace/request-project/.lake/runner/lib/lean/ThreeRegime/Selector.ilean
+import took 2.51s
+cumulative profiling times:
+	.olean serialization 26.3ms
+	attribute application 0.0746ms
+	congr simp thm 1.8ms
+	elaboration 24.7ms
+	fix level params 0.129ms
+	import 2.51s
+	initialization 44.8ms
+	instantiate metavars 0.439ms
+	interpretation 146ms
+	let-to-have transformation 0.0923ms
+	linting 5.33ms
+	norm_num 2.49ms
+	parsing 4.12ms
+	process pre-definitions 2.57ms
+	ring 3.16ms
+	share common exprs 0.726ms
+	simp 43ms
+	tactic execution 21.4ms
+	type checking 59.6ms
+	typeclass inference 43.7ms

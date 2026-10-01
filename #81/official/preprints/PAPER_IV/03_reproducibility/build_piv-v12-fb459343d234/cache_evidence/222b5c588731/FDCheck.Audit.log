@@ -1,0 +1,26 @@
+$ c:\Users\jtraverso\.elan\toolchains\leanprover--lean4---v4.28.0\bin\lean.exe -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false FDCheck/Audit.lean -o C:\Users\jtraverso\e81p4\clean_stability_build_20260928\.lake\runner\lib\lean\FDCheck\Audit.olean -i C:\Users\jtraverso\e81p4\clean_stability_build_20260928\.lake\runner\lib\lean\FDCheck\Audit.ilean
+'FixedDefectStability.normalized_stability' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FixedDefectStability.retainedTerminal_all' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FixedDefectStability.fixed_defect_stability_all' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FixedDefectStability.fixed_defect_edit_and_size' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FDCheck.retainedTerminalStability_all' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FDCheck.theoremCPrime_implies_ref15Theorem11' depends on axioms: [propext, Classical.choice, Quot.sound]
+PASS FixedDefectStability.normalized_stability: 17102 transitive constants; axioms [propext,
+ Classical.choice,
+ Quot.sound]; constants from PaperIV.Erdos81*: 0
+PASS FixedDefectStability.retainedTerminal_all: 28220 transitive constants; axioms [propext,
+ Classical.choice,
+ Quot.sound]; constants from PaperIV.Erdos81*: 0
+PASS FixedDefectStability.fixed_defect_stability_all: 41918 transitive constants; axioms [propext,
+ Classical.choice,
+ Quot.sound]; constants from PaperIV.Erdos81*: 0
+PASS FixedDefectStability.fixed_defect_edit_and_size: 41920 transitive constants; axioms [propext,
+ Classical.choice,
+ Quot.sound]; constants from PaperIV.Erdos81*: 0
+PASS FDCheck.retainedTerminalStability_all: 28223 transitive constants; axioms [propext,
+ Classical.choice,
+ Quot.sound]; constants from PaperIV.Erdos81*: 0
+PASS FDCheck.theoremCPrime_implies_ref15Theorem11: 41999 transitive constants; axioms [propext,
+ Classical.choice,
+ Quot.sound]; constants from PaperIV.Erdos81*: 0
+FDCheck audit PASSED: 6 targets; 10422 modules in the import closure, none forbidden.

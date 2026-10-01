@@ -1,0 +1,31 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 A4S1/HostAbsorption.lean -o /workspace/request-project/.lake/runner/lib/lean/A4S1/HostAbsorption.olean -i /workspace/request-project/.lake/runner/lib/lean/A4S1/HostAbsorption.ilean
+interpretation of Mathlib.Tactic.Tauto._aux_Mathlib_Tactic_Tauto___elabRules_Mathlib_Tactic_Tauto_tauto_1._boxed took 215ms
+interpretation of Mathlib.Tactic.Tauto._aux_Mathlib_Tactic_Tauto___elabRules_Mathlib_Tactic_Tauto_tauto_1._boxed took 168ms
+interpretation of Mathlib.Tactic.Tauto._aux_Mathlib_Tactic_Tauto___elabRules_Mathlib_Tactic_Tauto_tauto_1._boxed took 293ms
+interpretation of Mathlib.Tactic.Tauto._aux_Mathlib_Tactic_Tauto___elabRules_Mathlib_Tactic_Tauto_tauto_1._boxed took 270ms
+interpretation of Mathlib.Tactic.Tauto._aux_Mathlib_Tactic_Tauto___elabRules_Mathlib_Tactic_Tauto_tauto_1._boxed took 270ms
+instantiate metavars took 267ms
+import took 4.17s
+.olean serialization took 139ms
+cumulative profiling times:
+	.olean serialization 139ms
+	attribute application 0.169ms
+	compilation (IR) 1.65ms
+	compilation (LCNF base) 3.1ms
+	compilation (LCNF mono) 2.41ms
+	congr simp thm 9.69ms
+	elaboration 151ms
+	fix level params 8.2ms
+	import 4.17s
+	initialization 37.5ms
+	instantiate metavars 301ms
+	interpretation 1.81s
+	let-to-have transformation 0.204ms
+	linting 130ms
+	parsing 38.6ms
+	process pre-definitions 52.4ms
+	share common exprs 32ms
+	simp 160ms
+	tactic execution 2.61s
+	type checking 384ms
+	typeclass inference 488ms

@@ -1,0 +1,41 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 PaperIV/TriangleCover.lean -o /workspace/request-project/.lake/runner/lib/lean/PaperIV/TriangleCover.olean -i /workspace/request-project/.lake/runner/lib/lean/PaperIV/TriangleCover.ilean
+PaperIV/TriangleCover.lean:145:0: warning: automatically included section variable(s) unused in theorem `PaperIV.TriangleCover.exists_tri_subset`:
+  [Fintype V]
+  [DecidableEq V]
+  [DecidableRel G.Adj]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] [DecidableEq V] [DecidableRel G.Adj] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+PaperIV/TriangleCover.lean:192:8: warning: automatically included section variable(s) unused in theorem `PaperIV.TriangleCover.emptyPacking_gain`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+import took 2.66s
+cumulative profiling times:
+	.olean serialization 65.8ms
+	attribute application 0.84ms
+	blocked (unaccounted) 259ms
+	compilation (IR) 0.825ms
+	compilation (LCNF base) 1.26ms
+	compilation (LCNF mono) 0.722ms
+	congr simp thm 10.4ms
+	elaboration 118ms
+	fix level params 1.29ms
+	import 2.66s
+	initialization 37.1ms
+	instantiate metavars 5.06ms
+	interpretation 377ms
+	let-to-have transformation 0.213ms
+	linting 22.7ms
+	norm_num 4.17ms
+	parsing 13.1ms
+	process pre-definitions 14.8ms
+	ring 17.3ms
+	share common exprs 4.25ms
+	simp 51.3ms
+	tactic execution 140ms
+	type checking 87.8ms
+	typeclass inference 233ms

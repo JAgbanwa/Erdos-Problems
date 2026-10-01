@@ -1,0 +1,28 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 PaperIV/SimplicialReduction.lean -o /workspace/request-project/.lake/runner/lib/lean/PaperIV/SimplicialReduction.olean -i /workspace/request-project/.lake/runner/lib/lean/PaperIV/SimplicialReduction.ilean
+type checking took 116ms
+import took 2.94s
+.olean serialization took 155ms
+cumulative profiling times:
+	.olean serialization 155ms
+	attribute application 1.84ms
+	compilation (IR) 0.697ms
+	compilation (LCNF base) 1.52ms
+	compilation (LCNF mono) 1.11ms
+	congr simp thm 10.5ms
+	elaboration 114ms
+	fix level params 3.7ms
+	import 2.94s
+	initialization 36.9ms
+	instantiate metavars 35.7ms
+	interpretation 359ms
+	let-to-have transformation 0.369ms
+	linting 43.3ms
+	norm_num 1.89ms
+	parsing 21ms
+	process pre-definitions 38.5ms
+	ring 7.67ms
+	share common exprs 10.9ms
+	simp 209ms
+	tactic execution 508ms
+	type checking 704ms
+	typeclass inference 654ms

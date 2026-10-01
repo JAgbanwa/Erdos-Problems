@@ -1,0 +1,24 @@
+{
+  "checks": {
+    "initial_log_argument": true,
+    "initial_size": true,
+    "iteration_count_exact": true,
+    "h_at_least_two": true,
+    "gate_exponent_below_k0": true,
+    "alpha_le_2pow2000": true,
+    "beta_le_2pow2000": true,
+    "k0_le_2pow2000": true,
+    "decimal_coefficient_le_2pow2000": true,
+    "fourth_term_rational_bound": true,
+    "initial_tower_comparison": true,
+    "absorption_coefficients": true,
+    "tower_auxiliary_base": true,
+    "tower_auxiliary_induction": true,
+    "recurrence_sanity": true,
+    "negative_false_absorption_rejected": true,
+    "negative_false_tower_base_rejected": true,
+    "negative_wrong_iteration_rejected": true
+  },
+  "pass_count": 18,
+  "scope": "Exact rational arithmetic plus finite regression/negative controls; universal inequalities are justified in the manuscript by the existing Lean proof, not by this testing."
+}

@@ -1,0 +1,23 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 Nibble/Tight/SafeRoundCheb.lean -o /workspace/request-project/.lake/runner/lib/lean/Nibble/Tight/SafeRoundCheb.olean -i /workspace/request-project/.lake/runner/lib/lean/Nibble/Tight/SafeRoundCheb.ilean
+import took 4.21s
+cumulative profiling times:
+	.olean serialization 94.7ms
+	attribute application 0.0956ms
+	congr simp thm 4.56ms
+	elaboration 74.2ms
+	fix level params 1.3ms
+	import 4.21s
+	initialization 34.9ms
+	instantiate metavars 4ms
+	interpretation 498ms
+	let-to-have transformation 0.774ms
+	linting 16.7ms
+	norm_num 53.9ms
+	parsing 9.55ms
+	process pre-definitions 10.3ms
+	ring 29.5ms
+	share common exprs 8.24ms
+	simp 16.3ms
+	tactic execution 122ms
+	type checking 74.2ms
+	typeclass inference 327ms

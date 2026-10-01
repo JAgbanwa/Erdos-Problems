@@ -1,0 +1,30 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 RequestProject/AFKS/Refine.lean -o /workspace/request-project/.lake/runner/lib/lean/RequestProject/AFKS/Refine.olean -i /workspace/request-project/.lake/runner/lib/lean/RequestProject/AFKS/Refine.ilean
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_nlinarith_1._boxed took 160ms
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_nlinarith_1._boxed took 425ms
+import took 6.81s
+.olean serialization took 242ms
+cumulative profiling times:
+	.olean serialization 242ms
+	attribute application 0.0566ms
+	blocked (unaccounted) 175ms
+	compilation (IR) 15.9ms
+	compilation (LCNF base) 15ms
+	compilation (LCNF mono) 6.53ms
+	congr simp thm 8.39ms
+	elaboration 46.9ms
+	fix level params 1.61ms
+	import 6.81s
+	initialization 37.8ms
+	instantiate metavars 23.7ms
+	interpretation 1.38s
+	let-to-have transformation 0.0983ms
+	linting 20.9ms
+	norm_num 112ms
+	parsing 8.62ms
+	process pre-definitions 14.9ms
+	ring 26.2ms
+	share common exprs 13.3ms
+	simp 416ms
+	tactic execution 350ms
+	type checking 169ms
+	typeclass inference 1.02s

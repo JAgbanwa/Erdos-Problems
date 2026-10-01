@@ -1,0 +1,109 @@
+name = "PaperIV"
+version = "0.1.0"
+keywords = ["math", "erdos-81", "chordal-graphs", "clique-partitions"]
+defaultTargets = ["PaperIV"]
+
+[leanOptions]
+pp.unicode.fun = true
+relaxedAutoImplicit = false
+linter.unusedSimpArgs = false
+
+[[require]]
+name = "mathlib"
+scope = "leanprover-community"
+rev = "v4.28.0"
+
+[[lean_lib]]
+name = "PaperIV"
+moreLeanArgs = ["-s", "32768"]
+
+[[lean_lib]]
+name = "Nibble"
+globs = ["Nibble.+"]
+
+[[lean_lib]]
+name = "Contrib"
+globs = ["Contrib.+"]
+
+[[lean_lib]]
+name = "MixedRounding"
+moreLeanArgs = ["-s", "32768"]
+
+[[lean_lib]]
+name = "PaperI"
+moreLeanArgs = ["-s", "32768"]
+
+[[lean_lib]]
+name = "FarExploration"
+globs = ["FarExploration.+"]
+moreLeanArgs = ["-s", "32768"]
+
+[[lean_lib]]
+name = "ExactReduction"
+globs = ["ExactReduction.+"]
+moreLeanArgs = ["-s", "32768"]
+
+[[lean_lib]]
+name = "ThreeRegime"
+globs = ["ThreeRegime.+"]
+moreLeanArgs = ["-s", "32768"]
+
+[[lean_lib]]
+name = "BoundedCliqueGap"
+globs = ["BoundedCliqueGap.+"]
+moreLeanArgs = ["-s", "32768"]
+
+[[lean_lib]]
+name = "A4S1"
+moreLeanArgs = ["-s", "32768"]
+
+[[lean_lib]]
+name = "RequestProject"
+moreLeanArgs = ["-s", "32768"]
+
+[[lean_lib]]
+name = "E17"
+
+[[lean_lib]]
+name = "PaperV"
+
+[[lean_lib]]
+name = "E18"
+
+[[lean_lib]]
+name = "E19"
+
+[[lean_lib]]
+name = "PaperIVEditorial"
+globs = ["PaperIVEditorial.+"]
+moreLeanArgs = ["-s", "32768"]
+
+[[lean_lib]]
+name = "E32"
+globs = ["E32.+"]
+moreLeanArgs = ["-s", "32768"]
+
+[[lean_lib]]
+name = "E33"
+globs = ["E33.+"]
+moreLeanArgs = ["-s", "32768"]
+
+[[lean_lib]]
+name = "E34"
+globs = ["E34.+"]
+moreLeanArgs = ["-s", "32768"]
+
+[[lean_lib]]
+name = "E35"
+globs = ["E35.+"]
+moreLeanArgs = ["-s", "32768"]
+
+[[lean_lib]]
+name = "FDCheck"
+globs = ["FDCheck.+"]
+moreLeanArgs = ["-s", "32768"]
+
+[[lean_lib]]
+name = "StabilityPublication"
+roots = ["ArbitraryOrderSequences", "AsymptoticTools", "BaselineCapacity", "CliqueShiftArithmetic", "ComparatorResize", "CoreCliqueAlternative", "CoreRepair", "DualBudgetArithmetic", "E32Bridge", "EditRootRecovery", "ExplicitFixedStability", "ExtremalEditStability", "FixedDefectConclusion", "FixedDefectPieceEdges", "LargeCliqueCore", "NormalizedCliqueCore", "NormalizedDeficit", "NormalizedStability", "OptimalCoreDistance", "PieceEdgeStability", "PublicationStability", "RefinedFractionalBound", "RefinedRounding", "ResearchAudit", "ResidualExcess", "RootCliquePrices", "RootedCliqueRecovery", "RootPartition", "RootScore", "RootStepBudget", "SignedDualModel", "SignedElimination", "SmallOrderFractional", "StrictBudget", "StrictConstructor", "StrictParams", "StrictTerminal", "SublinearEdit", "SublinearLocalization", "SublinearPartitionBound", "SublinearSequences", "SublinearStability", "SublinearStabilityTransfer", "TemplateDistance", "TemplateShift", "UniformFractionalBound", "VertexEditBound"]
+moreLeanArgs = ["-s", "32768"]

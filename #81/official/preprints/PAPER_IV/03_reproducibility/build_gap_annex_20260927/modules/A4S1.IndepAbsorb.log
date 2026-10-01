@@ -1,0 +1,26 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 A4S1/IndepAbsorb.lean -o /workspace/request-project/.lake/runner/lib/lean/A4S1/IndepAbsorb.olean -i /workspace/request-project/.lake/runner/lib/lean/A4S1/IndepAbsorb.ilean
+import took 2.99s
+cumulative profiling times:
+	.olean serialization 62.1ms
+	attribute application 0.0524ms
+	compilation (IR) 1.51ms
+	compilation (LCNF base) 1.39ms
+	compilation (LCNF mono) 1.16ms
+	congr simp thm 5.87ms
+	elaboration 43.5ms
+	fix level params 1.68ms
+	import 2.99s
+	initialization 37.7ms
+	instantiate metavars 40.6ms
+	interpretation 355ms
+	let-to-have transformation 0.0896ms
+	linting 20.4ms
+	norm_num 1.84ms
+	parsing 12.3ms
+	process pre-definitions 11.8ms
+	ring 9.73ms
+	share common exprs 4.68ms
+	simp 95.8ms
+	tactic execution 263ms
+	type checking 155ms
+	typeclass inference 209ms

@@ -1,0 +1,39 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 ThreeRegime/TrianglePackingParity.lean -o /workspace/request-project/.lake/runner/lib/lean/ThreeRegime/TrianglePackingParity.olean -i /workspace/request-project/.lake/runner/lib/lean/ThreeRegime/TrianglePackingParity.ilean
+ThreeRegime/TrianglePackingParity.lean:54:0: warning: automatically included section variable(s) unused in theorem `ThreeRegime.TrianglePackingParity.filter_mem_pairs`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+ThreeRegime/TrianglePackingParity.lean:84:8: warning: automatically included section variable(s) unused in theorem `_private.ThreeRegime.TrianglePackingParity.0.ThreeRegime.TrianglePackingParity.pairs_mono`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_nlinarith_1._boxed took 243ms
+import took 3.14s
+cumulative profiling times:
+	.olean serialization 72.7ms
+	attribute application 0.0987ms
+	compilation (IR) 3.44ms
+	compilation (LCNF base) 3.46ms
+	compilation (LCNF mono) 1.53ms
+	congr simp thm 3.28ms
+	elaboration 42.1ms
+	fix level params 1.01ms
+	import 3.14s
+	initialization 35.5ms
+	instantiate metavars 4.24ms
+	interpretation 486ms
+	let-to-have transformation 0.15ms
+	linting 16ms
+	norm_num 2.04ms
+	parsing 9.03ms
+	process pre-definitions 10.9ms
+	ring 10.8ms
+	share common exprs 3.61ms
+	simp 89.3ms
+	tactic execution 195ms
+	type checking 299ms
+	typeclass inference 401ms

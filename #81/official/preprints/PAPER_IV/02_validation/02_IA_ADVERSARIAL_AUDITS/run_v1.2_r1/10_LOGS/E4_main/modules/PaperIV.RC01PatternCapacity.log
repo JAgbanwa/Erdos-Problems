@@ -1,0 +1,32 @@
+$ C:\Users\jtraverso\.elan\toolchains\leanprover--lean4---v4.28.0\bin\lean.exe -j 8 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false PaperIV/RC01PatternCapacity.lean -o C:\Users\jtraverso\e81p4-publish\preprints\PAPER_IV\02_validation\02_IA_ADVERSARIAL_AUDITS\run_v1.2_r1\05_BUILD\main\obj\PaperIV\RC01PatternCapacity.olean -i C:\Users\jtraverso\e81p4-publish\preprints\PAPER_IV\02_validation\02_IA_ADVERSARIAL_AUDITS\run_v1.2_r1\05_BUILD\main\obj\PaperIV\RC01PatternCapacity.ilean
+PaperIV/RC01PatternCapacity.lean:34:0: warning: automatically included section variable(s) unused in theorem `PaperIV.RC01PatternCapacity.slotMass_nonneg`:
+  [Fintype Pat]
+  [DecidableEq Pat]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype Pat] [DecidableEq Pat] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+PaperIV/RC01PatternCapacity.lean:46:0: warning: automatically included section variable(s) unused in theorem `PaperIV.RC01PatternCapacity.rawMass_nonneg`:
+  [Fintype Pat]
+  [DecidableEq Pat]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype Pat] [DecidableEq Pat] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+PaperIV/RC01PatternCapacity.lean:53:0: warning: automatically included section variable(s) unused in theorem `PaperIV.RC01PatternCapacity.sum_rawMass_le_pairVolume`:
+  [Fintype Pat]
+  [DecidableEq Pat]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype Pat] [DecidableEq Pat] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+PaperIV/RC01PatternCapacity.lean:54:35: warning: unused variable `ht`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+PaperIV/RC01PatternCapacity.lean:97:0: warning: automatically included section variable(s) unused in theorem `PaperIV.RC01PatternCapacity.sum_slotMass_le_density`:
+  [Fintype Pat]
+  [DecidableEq Pat]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype Pat] [DecidableEq Pat] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`

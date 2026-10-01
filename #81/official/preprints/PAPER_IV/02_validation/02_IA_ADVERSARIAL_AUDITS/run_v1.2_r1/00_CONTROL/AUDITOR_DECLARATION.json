@@ -1,0 +1,20 @@
+{
+  "run": "run_v1.2_r1",
+  "handoff_revision": "v1.2-r1",
+  "manuscript_version": "1.2",
+  "started_at_utc": "2026-09-30T12:21:44Z",
+  "owner_request": "Owner (jtraverso) requested execution in the Claude desktop app Code tab chat on 2026-09-30: 'ejecuta esta solicitud de auditoría externa' with the path to EXTERNAL_ADVERSARIAL_AUDIT_REQUEST_v1.2.md.",
+  "auditor_model": "Claude Opus 5.5 (model id claude-opus-5-5)",
+  "provider": "Anthropic, via Claude Agent SDK / Claude desktop app (Code tab)",
+  "operator": "Owner's machine, owner session; tools executed locally",
+  "model_family": "Anthropic Claude",
+  "cross_family_independence": false,
+  "independence_disclosure": "This is a fresh session of the Anthropic Claude family. The mandate prefers a different family from those involved in proof development, Aristotle formalization and editorial review. The auditor cannot verify from its own memory which families were involved; available skills on this machine (e.g. 'mathematical-paper-editor', 'adversarial-math-audit') indicate Claude sessions have been used in the project's editorial/audit workflow, and processes named ChatGPT/codex are running on this machine. Therefore NO cross-family independence is claimed. At most: fresh-session, same-family-as-possible-editorial-reviewers, no retained memory.",
+  "prior_participation": "None known to this session. The session's persistent memory directory was empty at start. No prior conversation context about Paper IV was loaded.",
+  "memory_context": "Fresh context; no project memories; skill 'adversarial-math-audit' loaded as audit protocol (a generic protocol, not project content).",
+  "exposure_to_earlier_discussions": "At intake the auditor read the mandate, AUDIT_TARGET_v1.2.json, LOCAL_INPUT_SCOPE_v1.2.json, the directory README.md (which states 'The new internal audit completed on 30 September 2026 with an author-side PASS') and run_v1.2_r1/00_CONTROL/PREPARATION.json and INTERNAL_BINDING_CHECK.json (which state author_reconstruction COMPLETE_VALIDATED, internal_audit COMPLETE_PASS_INTERNAL_AUTHOR_SIDE, all_bound_hashes_verified true). These author PASS statements are disclosed exposure, not evidence. The r2 v1.0.1 external findings are allowed intake inputs and will be read.",
+  "use_of_author_scripts": "Author scripts (bind_v12_*.py, verify_audit_target.py, rebuild runners) are not used to produce verdicts. Hashes are recomputed with the auditor's own scripts. Any later inspection of author runners (E8/E4) will be recorded.",
+  "subagents": "The auditor may delegate bounded sub-tasks to subagents of the same model family (Claude) inside this session; each such delegation is recorded in 00_CONTROL/DELEGATION_LOG.md with its reading restrictions. This does not add independence.",
+  "machine": "Author's machine (Windows 11 Pro 10.0.26200, 12 logical CPUs, 32 GB RAM), shared pinned dependency caches. Not separate-machine reproduction, not clean-room Mathlib.",
+  "prohibitions_acknowledged": ["no external job/service submission of target files", "no publish/push/tag/deposit", "no proof repair or target modification", "no second Mathlib / lake update / pin change", "no deletion of shared caches", "no stopping other processes"]
+}

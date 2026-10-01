@@ -1,0 +1,70 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 ThreeRegime/AxiomCheck.lean -o /workspace/request-project/.lake/runner/lib/lean/ThreeRegime/AxiomCheck.olean -i /workspace/request-project/.lake/runner/lib/lean/ThreeRegime/AxiomCheck.ilean
+'ThreeRegime.Selector.exists_le_of_weighted_aggregate' depends on axioms: [propext, Quot.sound]
+'ThreeRegime.Selector.aggregate_not_necessary' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ThreeRegime.Selector.weighted_aggregate_fails_of_one_expensive' depends on axioms: [propext, Quot.sound]
+'ThreeRegime.reserve_lt_missing' depends on axioms: [propext, Classical.choice, Quot.sound]
+elaboration took 239ms
+'ThreeRegime.extreme_route_fails_on_complete' depends on axioms: [propext, Classical.choice, Quot.sound]
+elaboration took 255ms
+'ThreeRegime.complete_state_has_no_separator' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ThreeRegime.centre_route_closes_on_small_complete' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ThreeRegime.centre_closes_of_triangle_packing' depends on axioms: [propext, Classical.choice, Quot.sound]
+elaboration took 273ms
+'ThreeRegime.clique_removal_over_budget' depends on axioms: [propext, Classical.choice, Quot.sound]
+elaboration took 252ms
+'ThreeRegime.AggregateRefutation.K4_picture' depends on axioms: [propext, Classical.choice, Quot.sound]
+elaboration took 257ms
+'ThreeRegime.AggregateRefutation.aggregate_fails_under_unavailability_pricing' depends on axioms: [propext, Quot.sound]
+'ThreeRegime.TrianglePackingParity.card_filter_mem_pairs' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ThreeRegime.TrianglePackingParity.two_mul_card_pieces_at_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ThreeRegime.TrianglePackingParity.six_mul_card_pieces_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ThreeRegime.TrianglePackingParity.not_triangle_obligation_of_four_mod_six' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ThreeRegime.TrianglePackingParity.centre_closes_of_gain' depends on axioms: [propext, Classical.choice, Quot.sound]
+elaboration took 274ms
+'ThreeRegime.Transport.gain_eq_two_mul_card_add_three_mul_card_four' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ThreeRegime.Owner.packingOfOwn' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ThreeRegime.Owner.six_mul_card_pieces_avoiding' depends on axioms: [propext, Classical.choice, Quot.sound]
+elaboration took 120ms
+'ThreeRegime.Latin.Frame.own_spec' depends on axioms: [propext, Classical.choice, Quot.sound]
+elaboration took 102ms
+'ThreeRegime.Latin.Frame.biUnion_eq_edgeFinset' depends on axioms: [propext, Classical.choice, Quot.sound]
+elaboration took 116ms
+'ThreeRegime.Latin.Frame.filter_card_four_card' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ThreeRegime.Latin.oddFrame' depends on axioms: [propext, Quot.sound]
+'ThreeRegime.Latin.evenFrame' depends on axioms: [propext, Quot.sound]
+'ThreeRegime.CompleteStateAllOrders.closes_zero_mod_six' depends on axioms: [propext, Classical.choice, Quot.sound]
+elaboration took 162ms
+'ThreeRegime.CompleteStateAllOrders.closes_one_mod_six' depends on axioms: [propext, Classical.choice, Quot.sound]
+elaboration took 152ms
+'ThreeRegime.CompleteStateAllOrders.closes_two_mod_six' depends on axioms: [propext, Classical.choice, Quot.sound]
+elaboration took 145ms
+'ThreeRegime.CompleteStateAllOrders.closes_three_mod_six' depends on axioms: [propext, Classical.choice, Quot.sound]
+elaboration took 145ms
+'ThreeRegime.CompleteStateAllOrders.closes_four_mod_six' depends on axioms: [propext, Classical.choice, Quot.sound]
+elaboration took 146ms
+'ThreeRegime.CompleteStateAllOrders.closes_five_mod_six' depends on axioms: [propext, Classical.choice, Quot.sound]
+elaboration took 152ms
+'ThreeRegime.CompleteStateAllOrders.exists_packing' depends on axioms: [propext, Classical.choice, Quot.sound]
+elaboration took 172ms
+'ThreeRegime.CompleteStateAllOrders.complete_state_closes' depends on axioms: [propext, Classical.choice, Quot.sound]
+elaboration took 325ms
+'ThreeRegime.TriplePackingBound.three_mul_card_pieces_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ThreeRegime.TriplePackingBound.six_mul_card_pieces_le_of_odd' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ThreeRegime.TriplePackingBound.six_mul_card_pieces_le_of_even' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+import took 3.45s
+cumulative profiling times:
+	.olean serialization 3ms
+	elaboration 4.31s
+	import 3.45s
+	initialization 37.3ms
+	interpretation 184ms
+	linting 4.21ms
+	parsing 2.84ms

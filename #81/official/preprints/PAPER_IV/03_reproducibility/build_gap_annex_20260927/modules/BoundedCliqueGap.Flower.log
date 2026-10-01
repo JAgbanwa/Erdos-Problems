@@ -1,0 +1,24 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 BoundedCliqueGap/Flower.lean -o /workspace/request-project/.lake/runner/lib/lean/BoundedCliqueGap/Flower.olean -i /workspace/request-project/.lake/runner/lib/lean/BoundedCliqueGap/Flower.ilean
+import took 3.43s
+cumulative profiling times:
+	.olean serialization 51ms
+	attribute application 0.493ms
+	compilation (IR) 0.64ms
+	compilation (LCNF base) 1.65ms
+	compilation (LCNF mono) 2.8ms
+	congr simp thm 0.834ms
+	elaboration 9.38ms
+	fix level params 0.0347ms
+	import 3.43s
+	initialization 41.1ms
+	instantiate metavars 0.0234ms
+	interpretation 181ms
+	let-to-have transformation 0.0269ms
+	linting 4.77ms
+	parsing 1.95ms
+	process pre-definitions 1.29ms
+	share common exprs 0.12ms
+	simp 7.87ms
+	tactic execution 1.11ms
+	type checking 1.11ms
+	typeclass inference 72.1ms

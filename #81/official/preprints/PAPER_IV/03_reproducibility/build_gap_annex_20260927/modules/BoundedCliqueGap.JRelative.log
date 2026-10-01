@@ -1,0 +1,26 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 BoundedCliqueGap/JRelative.lean -o /workspace/request-project/.lake/runner/lib/lean/BoundedCliqueGap/JRelative.olean -i /workspace/request-project/.lake/runner/lib/lean/BoundedCliqueGap/JRelative.ilean
+BoundedCliqueGap/JRelative.lean:42:8: warning: automatically included section variable(s) unused in theorem `_private.BoundedCliqueGap.JRelative.0.BoundedCliqueGap.card_le_card_of_meets`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+import took 3.11s
+cumulative profiling times:
+	.olean serialization 63.3ms
+	attribute application 0.0217ms
+	congr simp thm 0.529ms
+	elaboration 11.6ms
+	fix level params 0.386ms
+	import 3.11s
+	initialization 42.4ms
+	instantiate metavars 2.66ms
+	interpretation 203ms
+	let-to-have transformation 0.0271ms
+	linting 7.42ms
+	parsing 4.07ms
+	process pre-definitions 2.49ms
+	share common exprs 0.818ms
+	tactic execution 67.2ms
+	type checking 24.6ms
+	typeclass inference 65.7ms

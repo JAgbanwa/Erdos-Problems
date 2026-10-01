@@ -1,0 +1,53 @@
+{
+  "run": "run_2026-09-28_v1.0.1_r2",
+  "handoff_revision": "r2",
+  "manuscript_version": "1.0.1",
+  "source_cut": "piv-v1.0-f1769273dd2c",
+  "audit_date": "2026-09-28",
+  "auditor": {"model": "Claude Opus 5.5", "model_id": "claude-opus-5-5", "provider": "Anthropic", "session": "fresh Claude Code session", "operator": "author's account on author's machine"},
+  "overall_verdict": "FAIL",
+  "gates": {
+    "E0": "PASS",
+    "E1": "PASS",
+    "E2": "INCONCLUSIVE",
+    "E3": "INCONCLUSIVE",
+    "E4": "INCONCLUSIVE",
+    "E5": "INCONCLUSIVE",
+    "E6": "INCONCLUSIVE",
+    "E7": "FAIL",
+    "E8": "INCONCLUSIVE"
+  },
+  "findings_by_severity": {"CRITICAL": 0, "MAJOR": 1, "MODERATE": 1, "MINOR": 3, "OBSERVATION": 7, "INFO": 1, "CORRECTION": 1},
+  "blocking_findings": ["F-01"],
+  "stop_reason": "Confirmed material attribution defect F-01 (Theorem C's eventual maximum = [15, Theorem 1.1], uncited); PREBUILD_CHECKPOINT decision STOP per request §4.1-4.2",
+  "target_hashes": {
+    "LEAN_SOURCE_SNAPSHOT_v1.0.zip": "0a13c01cc4cf0198d5d138082d45b25df4c5ac0684c0ed85e7cc758575f8a7dd",
+    "LEAN_BOUNDED_GAP_ANNEX_v1.0.zip": "2847a422865e06880d457ea806aae5b9f749d22359eff325349c09c01cb4837d",
+    "PAPER_IV_preprint_v1.0.1_en.md": "71417794fef91b2f4a6ad88b9da5734b72b8237fa8c0ec2aa0a00baab588208e",
+    "PAPER_IV_preprint_v1.0.1_en.tex": "0b4b116d5644c81837cf4abc8e409857a0747a60fc317adbd07ecfeafe205236",
+    "PAPER_IV_preprint_v1.0.1_en.pdf": "0c17c7303419b2c1979133479370bbb475d1febe3f0921737eb50c291caa8d10",
+    "PAPER_IV_preprint_v1.0.1_es.md": "8448d14eaf6b3e42cc969ce1d4b66eca309b92cee9d2547da8b354e6dd31d208",
+    "PAPER_IV_preprint_v1.0.1_es.tex": "1b4c8be49b54e3663acc4cb080018b0a16f257a464453684ba73b083fa1e5cb3",
+    "PAPER_IV_preprint_v1.0.1_es.pdf": "84c49df8964dbe19dc3f07833fb771e31989443199bf1e4af5d9e48f9d4f5ca2",
+    "INTERNAL_AUDIT_piv-v1.0-f1769273dd2c.zip": "1911f29e1072accfe8df4fbec0a3b02d1cd9ef274a06bd1957f9b61034301847"
+  },
+  "target_hashes_rechecked_at_end": true,
+  "build_status": "NOT_RUN (stopped at pre-build checkpoint); environment pins verified read-only",
+  "axiom_footprint": "NOT_VERIFIED",
+  "dynamic_checks_deferred_to_E4": "see 00_CONTROL/PREBUILD_CHECKPOINT.json",
+  "reference_versions": {
+    "[15]": "arXiv:2609.20871v1 (only version listed on 2026-09-28)",
+    "[5]": "github.com/N0zoM1z0/erdos-81 commit cbde8a0a0563372b23b1b39a44180d2c0fb02f44 (= main HEAD on 2026-09-28)",
+    "[8]": "erdosproblems.com/81 retrieved 2026-09-28 (status OPEN, 4 proof claims)"
+  },
+  "read_scope_exceptions_or_exposure": "none; no excluded tree accessed; no internal/editorial verdict read",
+  "independence_limitations": [
+    "same model family (Claude) as manuscript's argument-checking/preparation assistance",
+    "same machine, account and dependency cache",
+    "operational (not OS-enforced) reading restriction",
+    "only author script used: verify_audit_target.py (mandated identity check)",
+    "report PDF rendered from Markdown with PyMuPDF; no TeX engine installed"
+  ],
+  "resumed_from": null,
+  "not_human_peer_review": true
+}

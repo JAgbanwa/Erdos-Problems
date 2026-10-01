@@ -1,0 +1,30 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 PaperIV/A4AllDefects.lean -o /workspace/request-project/.lake/runner/lib/lean/PaperIV/A4AllDefects.olean -i /workspace/request-project/.lake/runner/lib/lean/PaperIV/A4AllDefects.ilean
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_nlinarith_1._boxed took 229ms
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_nlinarith_1._boxed took 267ms
+interpretation of Batteries.Util.LibraryNote.libraryNoteExt took 110ms
+import took 8.68s
+.olean serialization took 263ms
+cumulative profiling times:
+	.olean serialization 263ms
+	attribute application 0.0261ms
+	compilation (IR) 1.53ms
+	compilation (LCNF base) 1.52ms
+	compilation (LCNF mono) 0.698ms
+	congr simp thm 6.59ms
+	elaboration 19.4ms
+	fix level params 0.4ms
+	import 8.68s
+	initialization 47.2ms
+	instantiate metavars 7.77ms
+	interpretation 1.01s
+	let-to-have transformation 0.0387ms
+	linting 6.44ms
+	norm_num 111ms
+	parsing 3.59ms
+	process pre-definitions 6.16ms
+	ring 43.4ms
+	share common exprs 18.3ms
+	simp 63.2ms
+	tactic execution 174ms
+	type checking 118ms
+	typeclass inference 563ms

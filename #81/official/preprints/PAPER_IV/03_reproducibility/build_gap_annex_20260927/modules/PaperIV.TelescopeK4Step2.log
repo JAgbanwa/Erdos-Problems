@@ -1,0 +1,32 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 PaperIV/TelescopeK4Step2.lean -o /workspace/request-project/.lake/runner/lib/lean/PaperIV/TelescopeK4Step2.olean -i /workspace/request-project/.lake/runner/lib/lean/PaperIV/TelescopeK4Step2.ilean
+PaperIV/TelescopeK4Step2.lean:78:0: warning: automatically included section variable(s) unused in theorem `PaperIV.TelescopeK4Step2.mem_books`:
+  [DecidableEq α]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq α] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+import took 2.88s
+cumulative profiling times:
+	.olean serialization 47.2ms
+	attribute application 0.499ms
+	compilation (IR) 0.705ms
+	compilation (LCNF base) 2.2ms
+	compilation (LCNF mono) 0.968ms
+	congr simp thm 6.22ms
+	elaboration 41.1ms
+	fix level params 1.31ms
+	import 2.88s
+	initialization 39.6ms
+	instantiate metavars 11.9ms
+	interpretation 350ms
+	let-to-have transformation 0.1ms
+	linting 15.6ms
+	norm_num 1.89ms
+	parsing 10.3ms
+	process pre-definitions 7.78ms
+	ring 4.67ms
+	share common exprs 3.18ms
+	simp 20.9ms
+	tactic execution 170ms
+	type checking 23.5ms
+	typeclass inference 147ms

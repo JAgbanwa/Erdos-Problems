@@ -1,0 +1,14 @@
+{
+  "run": "run_v1.21_r1",
+  "revision": "v1.21-r1",
+  "started_utc": "2026-09-30T23:02:58Z",
+  "owner_request": "Owner requested execution in chat on 2026-09-30 ('ejecuta esta revalidacion') with the path to EXTERNAL_ADVERSARIAL_REVALIDATION_v1.21_r1.md.",
+  "auditor_model": "Claude Opus 5.5 (claude-opus-5-5), Anthropic",
+  "session": "SAME Claude Code session that executed run_v1.2_r1 (context continues; not a fresh session). Everything the auditor learned in run_v1.2_r1 is prior exposure.",
+  "prior_exposure": "Full: this auditor produced run_v1.2_r1 (all gates, findings X-01..X-29, AUD-P1, C-01..C-08) and during it read the v1.2 manuscript, the Lean cut, [15], [22], [5] sources, the author build evidence, the internal audit report/FINDINGS/MATHEMATICAL_REVIEW and the Certo run. This revalidation is not blind and not independent of run_v1.2_r1; it re-examines the v1.21 text against the earlier findings.",
+  "cross_family_independence": false,
+  "execution_independence": "Same session and same model as the previous run; operational separation from research trees as before; same machine and shared dependency cache.",
+  "lean_policy": "No Lean, Lake, leanchecker, compilation or negative-control compilation in this cycle (mandate section 2). E4 evidence reused and re-verified from records.",
+  "use_of_author_scripts": "Author scripts (sorry_log_recheck.py etc.) are examined as E8 objects; verdicts come from auditor-written checks.",
+  "prohibitions_acknowledged": ["no build", "no target modification", "no publish/push/deposit/messages to third parties", "no reading of ar_*/handoff_*/b=0/Paper V/chats/credentials"]
+}

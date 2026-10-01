@@ -1,0 +1,21 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 PaperIV/FiniteHeavySelection.lean -o /workspace/request-project/.lake/runner/lib/lean/PaperIV/FiniteHeavySelection.olean -i /workspace/request-project/.lake/runner/lib/lean/PaperIV/FiniteHeavySelection.ilean
+import took 2.11s
+cumulative profiling times:
+	.olean serialization 23.1ms
+	attribute application 0.0276ms
+	congr simp thm 7.63ms
+	elaboration 11.8ms
+	fix level params 0.376ms
+	import 2.11s
+	initialization 38.5ms
+	instantiate metavars 1.73ms
+	interpretation 176ms
+	let-to-have transformation 0.0375ms
+	linting 8.48ms
+	parsing 3.92ms
+	process pre-definitions 5.33ms
+	share common exprs 1.87ms
+	simp 157ms
+	tactic execution 61.3ms
+	type checking 17.6ms
+	typeclass inference 419ms

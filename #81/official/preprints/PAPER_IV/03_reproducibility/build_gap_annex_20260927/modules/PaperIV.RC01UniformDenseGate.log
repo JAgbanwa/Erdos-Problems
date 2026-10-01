@@ -1,0 +1,42 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 PaperIV/RC01UniformDenseGate.lean -o /workspace/request-project/.lake/runner/lib/lean/PaperIV/RC01UniformDenseGate.olean -i /workspace/request-project/.lake/runner/lib/lean/PaperIV/RC01UniformDenseGate.ilean
+elaboration took 186ms
+tactic execution of Lean.Parser.Tactic.rewriteSeq took 143ms
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_nlinarith_1._boxed took 589ms
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_nlinarith_1._boxed took 658ms
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_nlinarith_1._boxed took 598ms
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_nlinarith_1._boxed took 678ms
+PaperIV/RC01UniformDenseGate.lean:41:50: warning: unused variable `hv`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+PaperIV/RC01UniformDenseGate.lean:43:9: warning: unused variable `hchoice3`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+PaperIV/RC01UniformDenseGate.lean:44:9: warning: unused variable `hchoice4`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+import took 4.49s
+.olean serialization took 126ms
+cumulative profiling times:
+	.olean serialization 126ms
+	attribute application 0.0228ms
+	compilation (IR) 4.49ms
+	compilation (LCNF base) 4.16ms
+	compilation (LCNF mono) 1.9ms
+	congr simp thm 4.95ms
+	elaboration 207ms
+	fix level params 2.15ms
+	import 4.49s
+	initialization 37.3ms
+	instantiate metavars 43.5ms
+	interpretation 2.93s
+	let-to-have transformation 0.113ms
+	linting 26.1ms
+	norm_num 8.82ms
+	parsing 7.61ms
+	process pre-definitions 21.1ms
+	ring 52ms
+	share common exprs 29.1ms
+	simp 33.6ms
+	tactic execution 448ms
+	type checking 83.3ms
+	typeclass inference 1.13s

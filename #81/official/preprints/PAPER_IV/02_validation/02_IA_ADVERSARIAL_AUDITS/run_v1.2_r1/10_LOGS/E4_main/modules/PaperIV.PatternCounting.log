@@ -1,0 +1,121 @@
+$ C:\Users\jtraverso\.elan\toolchains\leanprover--lean4---v4.28.0\bin\lean.exe -j 8 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false PaperIV/PatternCounting.lean -o C:\Users\jtraverso\e81p4-publish\preprints\PAPER_IV\02_validation\02_IA_ADVERSARIAL_AUDITS\run_v1.2_r1\05_BUILD\main\obj\PaperIV\PatternCounting.olean -i C:\Users\jtraverso\e81p4-publish\preprints\PAPER_IV\02_validation\02_IA_ADVERSARIAL_AUDITS\run_v1.2_r1\05_BUILD\main\obj\PaperIV\PatternCounting.ilean
+PaperIV/PatternCounting.lean:64:0: warning: automatically included section variable(s) unused in theorem `PaperIV.PatternCounting.adjInd_nonneg`:
+  [Fintype α]
+  [DecidableEq α]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype α] [DecidableEq α] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+PaperIV/PatternCounting.lean:67:0: warning: automatically included section variable(s) unused in theorem `PaperIV.PatternCounting.adjInd_le_one`:
+  [Fintype α]
+  [DecidableEq α]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype α] [DecidableEq α] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+PaperIV/PatternCounting.lean:85:0: warning: automatically included section variable(s) unused in theorem `PaperIV.PatternCounting.setTwo_left`:
+  [Fintype ι]
+  [Fintype α]
+  [DecidableEq α]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype ι] [Fintype α] [DecidableEq α] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+PaperIV/PatternCounting.lean:88:0: warning: automatically included section variable(s) unused in theorem `PaperIV.PatternCounting.setTwo_right`:
+  [Fintype ι]
+  [Fintype α]
+  [DecidableEq α]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype ι] [Fintype α] [DecidableEq α] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+PaperIV/PatternCounting.lean:92:0: warning: automatically included section variable(s) unused in theorem `PaperIV.PatternCounting.setTwo_other`:
+  [Fintype ι]
+  [Fintype α]
+  [DecidableEq α]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype ι] [Fintype α] [DecidableEq α] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+PaperIV/PatternCounting.lean:194:0: warning: automatically included section variable(s) unused in theorem `PaperIV.PatternCounting.ne_j_of_mem_touch`:
+  [Fintype ι]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype ι] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+PaperIV/PatternCounting.lean:282:0: warning: automatically included section variable(s) unused in theorem `PaperIV.PatternCounting.prod_adjInd_zero_or_one`:
+  [Fintype ι]
+  [DecidableEq ι]
+  [Fintype α]
+  [DecidableEq α]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype ι] [DecidableEq ι] [Fintype α] [DecidableEq α] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+PaperIV/PatternCounting.lean:292:0: warning: automatically included section variable(s) unused in theorem `PaperIV.PatternCounting.prod_adjInd_nonneg`:
+  [Fintype ι]
+  [DecidableEq ι]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype ι] [DecidableEq ι] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+PaperIV/PatternCounting.lean:294:26: warning: unused variable `e`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+PaperIV/PatternCounting.lean:296:0: warning: automatically included section variable(s) unused in theorem `PaperIV.PatternCounting.prod_adjInd_le_one`:
+  [Fintype ι]
+  [DecidableEq ι]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype ι] [DecidableEq ι] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+PaperIV/PatternCounting.lean:298:26: warning: unused variable `e`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+PaperIV/PatternCounting.lean:298:57: warning: unused variable `e`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+PaperIV/PatternCounting.lean:301:0: warning: automatically included section variable(s) unused in theorem `PaperIV.PatternCounting.sum_adjInd_eq_card_interedges`:
+  [Fintype α]
+  [DecidableEq α]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype α] [DecidableEq α] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+PaperIV/PatternCounting.lean:314:0: warning: automatically included section variable(s) unused in theorem `PaperIV.PatternCounting.sum_mul_indicator`:
+  [Fintype α]
+  [DecidableEq α]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype α] [DecidableEq α] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+PaperIV/PatternCounting.lean:326:0: warning: automatically included section variable(s) unused in theorem `PaperIV.PatternCounting.card_freeze_mul`:
+  [Fintype α]
+  [DecidableEq α]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype α] [DecidableEq α] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+PaperIV/PatternCounting.lean:364:5: warning: unused variable `hε`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+PaperIV/PatternCounting.lean:466:0: warning: automatically included section variable(s) unused in theorem `PaperIV.PatternCounting.patCount_empty`:
+  [Fintype α]
+  [DecidableEq α]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype α] [DecidableEq α] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+PaperIV/PatternCounting.lean:550:0: warning: automatically included section variable(s) unused in theorem `PaperIV.PatternCounting.patCount_eq_card`:
+  [Fintype α]
+  [DecidableEq α]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype α] [DecidableEq α] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+PaperIV/PatternCounting.lean:594:9: warning: unused variable `e`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+PaperIV/PatternCounting.lean:595:9: warning: unused variable `e`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`

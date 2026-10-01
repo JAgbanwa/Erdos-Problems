@@ -1,0 +1,340 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+\documentclass[
+]{article}
+\usepackage{xcolor}
+\usepackage{amsmath,amssymb}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math} % this also loads fontspec
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+\usepackage{lmodern}
+\ifPDFTeX\else
+  % xetex/luatex font selection
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{longtable,booktabs,array}
+\usepackage{caption}
+\captionsetup[table]{skip=6pt}
+\newcounter{none} % for unnumbered tables
+\usepackage{calc} % for calculating minipage widths
+% Correct order of tables after \paragraph or \subparagraph
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd\longtable{\par}{\if@noskipsec\mbox{}\fi\par}{}{}
+\makeatother
+% Allow footnotes in longtable head/foot
+\IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
+\makesavenoteenv{longtable}
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\usepackage{bookmark}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same}
+% fallback for those not using the hyperref driver hyperxmp:
+\makeatletter
+\@ifundefined{xmpquote}{\newcommand{\xmpquote}[1]{#1}}{}
+\makeatother
+\hypersetup{
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+
+\author{}
+\date{}
+
+\begin{document}
+
+\section{Consolidated claim map --- Paper IV
+v1.22-r3}\label{consolidated-claim-map--paper-iv-v122-r3}
+
+Columns: claim, Lean declaration, semantic verdict, origin of the
+verdict.
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Historical rows (H)} come from run\_v1.2\_r1
+  \texttt{20\_EVIDENCE/E1/E1\_RECORD.md} (21 rows). They are inherited
+  by identity: the statement text is unchanged across the v1.2→r3 diff
+  chain, and the Lean cut is 615/615.
+\item
+  \textbf{New rows (N, run\_v1.22\_r3)} are new. They were produced by a
+  static comparison of the literal frozen headers
+  (\texttt{20\_EVIDENCE/E1/E1E3\_HEADERS\_CHECK.json}) and the
+  definitions they use with the EN manuscript text, which is identical
+  to r2 outside the five status paragraphs.
+\item
+  The new rows \textbf{were not part of the original E1}. The Lean types
+  used are not newly elaborated: the headers are source text, and their
+  compilation is the run\_v1.2\_r1 build (module records PASS, exit 0,
+  logs hash-bound).
+\end{itemize}
+
+\subsection{H --- historical rows (run\_v1.2\_r1 E1, inherited by
+identity)}\label{h--historical-rows-run_v12_r1-e1-inherited-by-identity}
+
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}llll@{}}
+\toprule\noalign{}
+ID & Claim & Lean declaration & Verdict \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+A & Thm A, all-order additive &
+\texttt{Erdos81AllOrders.erdos81\_all\_orders\_additive};
+\texttt{ExplicitThreshold.erdos81\_all\_orders\_bounded\_additive} &
+MATCH \\
+B1 & Thm B (1.1) &
+\texttt{Erdos81Unconditional.erdos81\_cliquePartition} & MATCH \\
+B2 & Thm B (1.2) & \texttt{PaperTheorems.erdos81\_max\_eq} & MATCH \\
+C & Thm C &
+\texttt{DefectExplicitPublication.rooted\_defect\_eventual/\_maximum} &
+MATCH \\
+C′a--d & Thm C′ (6.12), (6.13); Cor 6.3 (6.17); (6.18) &
+\texttt{fixed\_defect\_joint\_stability\_real};
+\texttt{fixed\_defect\_exact\_extremal\_edit\_real};
+\texttt{E32.cp\_classification\_of\_theoremCPrimeC} +
+\texttt{FixedExplicit.fixed\_defect\_stability\_explicit} & MATCH (X-27
+for (6.18)) \\
+6.3a & Prop 6.3a & \texttt{OptimalTemplateObstruction.*} & MATCH; X-17
+(Lean existential) \\
+6.1 & Thm 6.1 & \texttt{IntegralStability…},
+\texttt{chordal\_joint\_stability\_real} & MATCH \\
+6.1a & Cor 6.1a & \texttt{chordal\_joint\_stability\_real} & MATCH; X-18
+(Lean real τ) \\
+6.2 & Cor 6.2 &
+\texttt{ExtremalClassification.chordal\_extremal\_classification} &
+MATCH \\
+6.4 & Prop 6.4 & \texttt{certified\_*\_fractional\_bound\_all\_orders},
+\texttt{uniform\_*\_partition\_bound} & MATCH \\
+6.5 & Thm 6.5 & \texttt{sequence\_arbitrary\_orders\_*} & MATCH \\
+6.6 & Cor 6.6 & \texttt{E35.theoremC\_tower*} & MATCH \\
+C.4 & (C.4) & \texttt{E35.NfarE\_le\_tower\_poly} & MATCH \\
+3.1 & Thm 3.1 & \texttt{RC01Final.rc01\_uniformRoundingTarget} &
+MATCH \\
+D.2 & Prop D.2 &
+\texttt{DefectSharpPublication.order\_three\_insufficient} & MATCH \\
+F.3a/b & Lemma F.3a, Cor F.3b &
+\texttt{exists\_clique\_additive\_defect},
+\texttt{recover\_clique\_from\_edit} & MATCH \\
+G.1 & (G.1) annex &
+\texttt{BoundedCliqueGap.chordal\_gap\_linear\_cliqueFree} & MATCH \\
+G.2 & Prop G.1 &
+\texttt{FarExploration.CleanupRigidVerdict.threshold\_gt\_exp} &
+\emph{historically "not re-extracted"}; now covered by row N10 \\
+\end{longtable}
+}
+
+\subsection{N --- new rows (run\_v1.22\_r3, static header
+comparison)}\label{n--new-rows-run_v122_r3-static-header-comparison}
+
+Common facts, verified for all 13 headers:
+
+\begin{itemize}
+\tightlist
+\item
+  The source sha256 equals both the manifest and the JSON.
+\item
+  The \texttt{theorem} line and the header text match an independent
+  re-extraction.
+\item
+  The namespace is the one stated.
+\item
+  The run\_v1.2\_r1 module log hash matches, and the module record is
+  PASS with exit 0.
+\item
+  In \texttt{RootPartitionStability}, \texttt{SplitMixedGap} and
+  \texttt{SplitCompleteSharpValue} the in-scope variables are only
+  \texttt{\{V\}\ {[}Fintype\ V{]}\ {[}DecidableEq\ V{]}}, plus
+  \texttt{\{G\}\ {[}DecidableRel\ G.Adj{]}}. There are no hidden
+  hypotheses.
+\end{itemize}
+
+Definitions read:
+
+\begin{itemize}
+\tightlist
+\item
+  \texttt{splitBaseline\ n\ p\ =\ p(n−p)\ −\ p(p−1)/2}, which is
+  B\_n(p).
+\item
+  \texttt{outsideEdges} = edges with both ends outside R, i.e. m =
+  e(G−R).
+\item
+  \texttt{missingIncidences} = Σ\_\{x∈R\} the exterior non-neighbours of
+  x, i.e. A.
+\item
+  \texttt{graphFamDistNorm\ F\ …\ n²} = min edit distance to the family
+  divided by n², i.e. d(G).
+\item
+  \texttt{allSplitSupports} = all S\_C = K\_C∨I\_\{V∖C\} with C ⊆ V.
+\item
+  \texttt{CertifiedFractionalOptimum\ G\ w} = a primal and a dual of
+  equal value w; therefore w = W*(G) and e − w = F₄(G).
+\item
+  \texttt{NearH1Calibration.eps\ =\ 10⁻¹²}, \texttt{eta\ =\ 10⁻¹⁶}.
+\item
+  The chordality predicates \texttt{PaperIV.IsChordal},
+  \texttt{FarRounding.IsChordal} and \texttt{SimpleGraph.IsChordal} are
+  equivalent by \texttt{Iff.rfl} (\texttt{ChordalBridge}).
+\end{itemize}
+
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}lllll@{}}
+\toprule\noalign{}
+ID & Claim (EN) & Declaration & Hypotheses and conclusion compared &
+Verdict \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+N1 & Thm 5.0, strengthened window (§5, (5.0)) &
+\texttt{PaperIV.NearH1LocalConstructor.exists\_near\_partition\_paid\_by\_root\_sharp}
+& Text: chordal, n ≥ 4·10¹², d(G) \textless{} ε₀, F₄ ≥ n²/6 − η₀n² ⇒ a
+clique R with \textbar3p−n\textbar{} ≤ n/50 and Q of order ≤ 4 with
+\textbar Q\textbar{} ≤ B\_n(p) − m/20 − A/2. Lean: identical hypotheses
+(\texttt{hdist} with scale n², \texttt{hnear} as e − w), identical
+conclusion. It is a local theorem; no global localization is included. &
+\textbf{MATCH} \\
+N2 & Thm 5.0, earlier interface ("the earlier window n/4 ≤ p ≤ n/2
+remains valid") & \texttt{…exists\_near\_partition\_paid\_by\_root} &
+Same hypotheses and conclusion with the window n/4 ≤
+\textbar R\textbar{} ≤ n/2. The text derives \textbar3p−n\textbar{} ≤
+n/50 from the ratios and attributes the stronger window to N1, not to
+this declaration. & \textbf{MATCH} \\
+N3 & Cor 5.4 (5.17), root geometry &
+\texttt{PaperIV.NearCriticalDichotomy.chordal\_far\_or\_criticalRoot} &
+∃N ∀n ≥ N ∀ chordal G ∀ certified w: F₄ \textless{} n²/6 − η₀n² (strict,
+as in the text) ∨ ∃ R, C with R a clique of G,
+\textbar3\textbar R\textbar−n\textbar{} ≤ n/50, C nonempty, d\_E(G,S\_C)
+≤ ε₀n², \textbar3\textbar C\textbar−n\textbar{} ≤ n/10⁴, and
+\textbar\textbar R\textbar−\textbar C\textbar\textbar{} ≤ n/100.
+\textbf{C is not asserted to be a clique of G} (the text calls it a
+"comparator core"; correct). The last conjunct is a difference of
+cardinalities, \textbf{not a symmetric difference}; the text does not
+assert it, so Lean is slightly stronger. & \textbf{MATCH} (Lean
+stronger) \\
+N4 & Cor 5.4 (5.18), density & \texttt{…chordal\_far\_or\_edge\_density}
+& Same regime and the same first disjunct ∨ \textbar e(G) −
+5n²/18\textbar{} ≤ n²/10⁴. The text states (5.17) and (5.18) "in the
+second branch". Since both theorems share the literal first disjunct,
+taking max(N, N′) yields both second-branch conclusions together. The
+text disclaims an exact density identity ("5/9 describes the asymptotic
+density"). & \textbf{MATCH} (with max of thresholds, which the text
+implies) \\
+N5 & Dichotomy (1.5) &
+\texttt{PaperIV.HybridDichotomy.chordal\_far\_or\_nearStructure} & far ∨
+\texttt{Nonempty\ (NearStructureWitness\ G)}. The structure fields are:
+\texttt{core} (nonempty) with the edit bound to S\_core (the
+complete-split comparator); \texttt{regularized\ :\ RegularizedRoot\ G},
+whose \texttt{isClique} field makes the root a clique of G;
+\texttt{packing} with \texttt{IsK34Packing\ G} (a packing of the
+original graph); and \texttt{accounts} with the physical ledger and the
+improved 117/1825, 12687/20000 bound. The text says "the alternatives
+are exhaustive; \ldots{} not asserted to be incompatible", and the
+disjunction is inclusive. & \textbf{MATCH} \\
+N6 & Optimal quadratic coefficient (6.5a), necessity &
+\texttt{PaperIV.SharpConstantOptimality.erdos81\_quadratic\_constant\_optimal}
+& For rational c, C and a chordal bound by unrestricted clique
+partitions (\texttt{CliquePartition}, no order bound; this matches "even
+when cliques of arbitrary order are allowed"), 1/6 ≤ c. The real
+extension in the text is valid: given real c \textless{} 1/6 and C,
+choose rational c′ ∈ (c, 1/6) and C′ ≥ C. Then cn² + Cn ≤ c′n² + C′n for
+n ≥ 0, which contradicts the rational theorem. The header does not
+quantify over reals, and the text says so. & \textbf{MATCH} (real case
+by rational enlargement, a valid one-line argument) \\
+N7 & Optimal quadratic coefficient, least element &
+\texttt{…erdos81\_quadratic\_constant\_isLeast} &
+\texttt{IsLeast\ \{c\ ∈\ ℚ\ \textbar{}\ ∃C\ N,\ bound\}} (1/6).
+Membership requires Theorem A (M(n)+b ≤ n²/6 + (1/6+b)n for n ≥ 1); the
+text says "combines it with Theorem A". The set is over rationals. &
+\textbf{MATCH} (rational set) \\
+N8 & Optimal linear coefficient (6.5) &
+\texttt{PaperIV.LinearCoefficient.linear\_coefficient\_optimal} & For
+rational c \textless{} 1/6 and rational B: ∃N ∀n ≥ N ∃ chordal G with
+every clique partition Q satisfying \textbar Q\textbar{} \textgreater{}
+n²/6 + cn + B. The real extension in the text (rational c′ ∈ (c, 1/6),
+B′ ≥ B₀) is valid. The header is \textbf{existential in G}; the text
+names the complete-split witness and writes cp(G) = M(n), which comes
+from (6.2)/Thm B, not from this header. This is the same nature as X-17.
+The additive constant is not minimized (the text says so). &
+\textbf{MATCH}; observation of X-17 type (existential witness) \\
+N9 & Identity (6.7b) &
+\texttt{PaperIV.RootPartitionStability.sum\_rootPieceDefect\_eq} &
+Finite V, R a clique, any clique partition Q (no order bound): Σ
+rootPieceDefect R K = \textbar Q\textbar{} −
+B\_\textbar V\textbar(\textbar R\textbar) + A + 3m.
+\texttt{rootPieceDefect\ R\ K\ =\ numericDefect(\textbar{}K∩R\textbar{},\ \textbar{}K∖R\textbar{})\ =\ 1\ +\ C(a,2)\ +\ 3C(b,2)\ −\ ab},
+which is d\_R(K) of (6.7a). It uses the actual root and unrestricted
+pieces, not the capped mixed gain. & \textbf{MATCH} \\
+N10 & Prop D.3 (D.6) & \texttt{PaperIV.SplitMixedGap.mixed\_gap\_zero}
+\textbf{and}
+\texttt{PaperIV.SplitCompleteSharpValue.exists\_sharp\_cliquePartition\_allParities}
+& Core ∩ Hosts = ∅, 2 ≤ k ≤ h. The first gives: every fractional packing
+has value ≤ 2C(k,2), and some clique partition has Σ gainOf = 2C(k,2).
+The first header alone \textbf{does not bound the piece order}, so its
+partition might contain pieces of order ≥ 5 and need not be a mixed
+packing. The second gives a partition Q′ of order ≤ 4 with
+\textbar Q′\textbar{} = kh − C(k,2) (also minimal). The edge-count
+identity (1.3a), g(Q′) + \textbar Q′\textbar{} = e(S) = C(k,2) + kh,
+gives g(Q′) = 2C(k,2) with K₂/K₃/K₄ pieces, i.e. an integral mixed
+packing of gain 2C(k,2). Hence W(S) = W*(S) = 2C(k,2). The text cites
+both declarations ("together with the bounded construction"). Equality
+of optimal values is not claimed as integrality of the polytope (the
+text says "it does not assert that every vertex \ldots{} is integral").
+& \textbf{MATCH} (needs both declarations plus (1.3a), all present) \\
+N11 & Prop G.1 (G.2) &
+\texttt{FarExploration.CleanupRigidVerdict.threshold\_gt\_exp} &
+\texttt{CleanupAtWith\ γ\ C\ (ε/30)\ (ε/4)\ N₀}, unfolded: ∀n ≥ N₀ ∀G ∀
+fractional x with triangle mass ≥ (ε/30)n² − 1, ∃y with weighted
+codegree ≤ γ, triangle mass ≥ C, and gain loss ≤ (ε/4)n². This is
+literally the contract in the text. With rational ε \textgreater{} 0,
+real γ ≤ 1/2, real t ≥ 4 and 7ε ≤ e\^{}\{−t\} ⇒ e\^{}\{t²/16\}
+\textless{} N₀. The text notes "the precision parameter is rational in
+the Lean declaration". It is a lower bound for this contract only, as
+the text states. & \textbf{MATCH} (closes historical G.2 "not
+re-extracted") \\
+N12 & Prop G.1, "in particular N₀ \textgreater{} e\^{}72" &
+\texttt{…threshold\_gt\_exp\_seventy\_two} & ε ≤ 1/(7e\^{}\{34\}) ⇒
+e\^{}\{72\} \textless{} N₀ (t = 34, t²/16 = 72.25 \textgreater{} 72). &
+\textbf{MATCH} \\
+\end{longtable}
+}
+
+The 13 headers map to the 12 N-rows; N10 uses two declarations.
+
+\textbf{Supplementary E1/E3 verdict:} 12/12 new rows MATCH. One new
+observation, of X-17 type, is recorded under N8 (existential witness in
+the linear-coefficient header; cp(G) = M(n) comes from other
+declarations). No translation in
+\texttt{SEMANTIC\_COVERAGE\_SUPPLEMENT.md} was found to be unjustified.
+Its four warnings --- C is not a clique of G; a size difference is not a
+symmetric difference; D.3 also needs the bounded constructor; real
+coefficients go through rational enlargement --- are all correct.
+
+\end{document}

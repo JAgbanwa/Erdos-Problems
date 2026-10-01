@@ -1,0 +1,1870 @@
+{
+  "source_sha256": "26cd86297512b9fa3ad00aa5be2f47ef438b05fa0f29a32d9ce1155960a83c92",
+  "elements": [
+    {
+      "id": "display-1",
+      "kind": "display",
+      "line": 21,
+      "text": "\\[\nM(n)=\\left\\lfloor\\frac{n(n+1)}6\\right\\rfloor,\\qquad\nQ_s(n)=M(n+s)-\\binom{s+1}{2}.\n\\]",
+      "sha256": "f9f70924a7d1bdc7b2d93485da697a424041969395c8a8fad763559f28bd664b",
+      "allowed_change": "O5 scoped variable renaming only"
+    },
+    {
+      "id": "display-2",
+      "kind": "display",
+      "line": 56,
+      "text": "\\[\n\\operatorname{cp}(G)\\le c_4(G)\\le M(n)+b\n\\le\\frac{n^2}{6}+\\frac n6+b.\n\\tag{A}\n\\]",
+      "sha256": "77e0ea440441568c151fd063898801d3448393c8dfa680908e05d026e589038e",
+      "allowed_change": "O5 scoped variable renaming only"
+    },
+    {
+      "id": "display-3",
+      "kind": "display",
+      "line": 66,
+      "text": "\\[\n\\operatorname{cp}(G)\\le c_4(G)\\le M(n).\n\\tag{1.1}\n\\]",
+      "sha256": "66c2c33c4f896701c51d6dda610db44117bbb678824619e052f9cef26bb9d1e6",
+      "allowed_change": "O5 scoped variable renaming only"
+    },
+    {
+      "id": "display-4",
+      "kind": "display",
+      "line": 71,
+      "text": "\\[\n\\max_{\\substack{|V(G)|=n\\\\G\\text{ chordal}}}\\operatorname{cp}(G)=M(n).\n\\tag{1.2}\n\\]",
+      "sha256": "7bedf5a51440799e30e9165d11cc68f4890c535a44949dd40a552a060aec5842",
+      "allowed_change": "O5 scoped variable renaming only"
+    },
+    {
+      "id": "display-5",
+      "kind": "display",
+      "line": 87,
+      "text": "\\[\n\\operatorname{cp}(G)\\le c_4(G)\\le Q_s(n),\n\\qquad\nQ_s(n):=M(n+s)-\\binom{s+1}{2}.\n\\tag{C}\n\\]",
+      "sha256": "70d5f3961d7964318f855d5f2806ece7a1ccd75823e94051db785a017a4b0740",
+      "allowed_change": "O5 scoped variable renaming only"
+    },
+    {
+      "id": "display-6",
+      "kind": "display",
+      "line": 102,
+      "text": "\\[\nd_E(G,T)\\le A_s\\delta,\\qquad\n0\\le Q_s(n)-\\left(k(n-k)-\\binom{k-s}{2}\\right)\\le(1+4A_s)\\delta,\n\\quad k=|C|+s.\n\\]",
+      "sha256": "94acf3772055ad3193167422f91810ad9ac207d126c0b4b7531caefe09430853",
+      "allowed_change": "O5 scoped variable renaming only"
+    },
+    {
+      "id": "display-7",
+      "kind": "display",
+      "line": 114,
+      "text": "\\[\nF_4(G)=e(G)-W^*(G),\\qquad \\Delta(G)=M(n)-F_4(G).\n\\]",
+      "sha256": "eb37320477374eb0828bb0565fa486d18b3e70d8d7a093430e66e860d43252ed",
+      "allowed_change": "O5 scoped variable renaming only"
+    },
+    {
+      "id": "display-8",
+      "kind": "display",
+      "line": 118,
+      "text": "\\[\n\\boxed{\ne(G)-g(\\mathcal P)\\le M(n)\n\\quad\\Longleftrightarrow\\quad\nW^*(G)-g(\\mathcal P)\\le\\Delta(G).\n}\n\\tag{1.3}\n\\]",
+      "sha256": "5d845c5d5becec5aa8b0cdc5625ea92cc2d554e3633f9d972ed35ab75e3b50fe",
+      "allowed_change": "O5 scoped variable renaming only"
+    },
+    {
+      "id": "display-9",
+      "kind": "display",
+      "line": 129,
+      "text": "\\[\ng(Q)=\\sum_{K\\in Q}\\left(\\binom{|K|}{2}-1\\right).\n\\]",
+      "sha256": "69fb2a87560e1ddc01779860e27c8fde433495c19b3dfe8332d5a601c7103c57",
+      "allowed_change": "O5 scoped variable renaming only"
+    },
+    {
+      "id": "display-10",
+      "kind": "display",
+      "line": 133,
+      "text": "\\[\ng(Q)+|Q|=e(G),\\qquad\n|Q|\\le T\\quad\\Longleftrightarrow\\quad e(G)\\le g(Q)+T.\n\\tag{1.3a}\n\\]",
+      "sha256": "2e98e99dd1b4577e3705cbe82fc59ff7292a994f67c151618b857b646c208202",
+      "allowed_change": "O5 scoped variable renaming only"
+    },
+    {
+      "id": "display-11",
+      "kind": "display",
+      "line": 141,
+      "text": "\\[\n\\Delta_{\\{3,4\\}}(G)\\le\\Delta_{\\{3,\\ldots,L\\}}(G)\n\\le\\Delta_{\\mathrm{cp}}(G),\n\\tag{1.3b}\n\\]",
+      "sha256": "63d57f6504946bd9629aa02193995ac8aefeac568f094fe2264acd7dd0389872",
+      "allowed_change": "O5 scoped variable renaming only"
+    },
+    {
+      "id": "display-12",
+      "kind": "display",
+      "line": 151,
+      "text": "\\[\ne(G)-g(\\mathcal P)\n\\le B_n(p)-\\frac m{20}-\\frac A2\n\\le M(n),\n\\tag{1.4}\n\\]",
+      "sha256": "3b60669b4512dfc93b4a946a6e7624600daf6d9eabb9fc67a5cb96b92867ec1f",
+      "allowed_change": "O5 scoped variable renaming only"
+    },
+    {
+      "id": "display-13",
+      "kind": "display",
+      "line": 164,
+      "text": "\\[\n\\boxed{\nF_4(G)<\\frac{n^2}{6}-\\eta_0n^2\n\\quad\\text{or}\\quad\n\\exists\\,\\text{near-structure witness for }G.\n}\n\\tag{1.5}\n\\]",
+      "sha256": "3d40ea14b8e51649d65972b154e8742dbce5e513780332121c5d5f2315f65eff",
+      "allowed_change": "O5 scoped variable renaming only"
+    },
+    {
+      "id": "display-14",
+      "kind": "display",
+      "line": 197,
+      "text": "\\[\ng(K)=\\binom{|K|}{2}-1,\\qquad\ng(\\mathcal P)=\\sum_{K\\in\\mathcal P}g(K).\n\\]",
+      "sha256": "955cad471e45412f03cbdfeb9e8e0aebb38abb1718fa1abc5245e49f97c78e93",
+      "allowed_change": "O5 scoped variable renaming only"
+    },
+    {
+      "id": "display-15",
+      "kind": "display",
+      "line": 213,
+      "text": "\\[\n|Q|=e(G)-g(\\mathcal P).\n\\tag{2.1}\n\\]",
+      "sha256": "e6af2a1bfd2325ee3b9608123236fe0845f9de68ac37fe805c07003812e8c44f",
+      "allowed_change": "O5 scoped variable renaming only"
+    },
+    {
+      "id": "display-16",
+      "kind": "display",
+      "line": 222,
+      "text": "\\[\n\\sum_{K:e\\in E(K)}x_K\\le1\\qquad(e\\in E(G)).\n\\tag{2.2}\n\\]",
+      "sha256": "167163f52f054414091b63be309b0c04093624c0e3adccfd3f9123082d2b2690",
+      "allowed_change": "O5 scoped variable renaming only"
+    },
+    {
+      "id": "display-17",
+      "kind": "display",
+      "line": 227,
+      "text": "\\[\n\\sum_{e\\in E(T)}y_e\\ge2,\\qquad\n\\sum_{e\\in E(Q)}y_e\\ge5.\n\\tag{2.3}\n\\]",
+      "sha256": "3a743d5e86be426750b6384fc09e1f76d2274248d6f9099807c00c22373e94f7",
+      "allowed_change": "O5 scoped variable renaming only"
+    },
+    {
+      "id": "display-18",
+      "kind": "display",
+      "line": 235,
+      "text": "\\[\nw(x)\\le\\frac56\\sum_K |E(K)|x_K\\le\\frac56e(G).\n\\tag{2.4}\n\\]",
+      "sha256": "16eeb993c56bfba8d59960ebdf2d903e980bce81d2ff07bc43d48e195d8053ff",
+      "allowed_change": "O5 scoped variable renaming only"
+    },
+    {
+      "id": "display-19",
+      "kind": "display",
+      "line": 244,
+      "text": "\\[\nW^*(G)\\ge2\\nu_3^*(G),\\qquad\nF_4(G)\\le e(G)-2\\nu_3^*(G).\n\\tag{2.5}\n\\]",
+      "sha256": "2a509b487384627f4403a406c91ed78bfde2b5459d90c929dad93a405bb0d64d",
+      "allowed_change": "O5 scoped variable renaming only"
+    },
+    {
+      "id": "display-20",
+      "kind": "display",
+      "line": 276,
+      "text": "\\[\nw(x)-g(\\mathcal P)\\le\\xi n^2.\n\\tag{3.1}\n\\]",
+      "sha256": "ee4f6528d64bfa1537ba6d4a3c1969b7e0c6bfc84518cbab845496536e3f559f",
+      "allowed_change": "O5 scoped variable renaming only"
+    },
+    {
+      "id": "display-21",
+      "kind": "display",
+      "line": 296,
+      "text": "\\[\nc_4(G)\\le e(G)-g(\\mathcal P)\n\\le F_4(G)+\\frac\\eta2n^2\n<\\frac{n^2}{6}-\\frac\\eta2n^2.\n\\]",
+      "sha256": "ffff21cc94fcc1e73950868e156e5efae2d68e03441f40efe4915e58228d0c35",
+      "allowed_change": "O5 scoped variable renaming only"
+    },
+    {
+      "id": "display-22",
+      "kind": "display",
+      "line": 310,
+      "text": "\\[\n\\varepsilon_0=10^{-12},\\qquad \\eta_0=10^{-16}.\n\\tag{4.1}\n\\]",
+      "sha256": "ffec03729bb0f252e3a070e4683d7461103706a77e81dad416c6516d399f543e",
+      "allowed_change": "O5 scoped variable renaming only"
+    },
+    {
+      "id": "display-23",
+      "kind": "display",
+      "line": 322,
+      "text": "\\[\nd(G)=\\frac1{n^2}\\min_C d_E(G,S_C).\n\\]",
+      "sha256": "a86730fdaaf49908496c3e534af9e8ddbb7e896e46cd94d50f1f2b433ad248b9",
+      "allowed_change": "O5 scoped variable renaming only"
+    },
+    {
+      "id": "display-24",
+      "kind": "display",
+      "line": 326,
+      "text": "\\[\n|d(G)-d(H)|\\le\\frac{d_E(G,H)}{n^2}.\n\\tag{4.2}\n\\]",
+      "sha256": "9a6650c5c3587c53fe48d6b4ed416e37e115cd16c382cc88358c0e58b666199e",
+      "allowed_change": "O5 scoped variable renaming only"
+    },
+    {
+      "id": "display-25",
+      "kind": "display",
+      "line": 335,
+      "text": "\\[\nF_4(G_i)\\le F_4(G_{i+1}),\\qquad\nd_E(G_i,G_{i+1})\\le n-1.\n\\tag{4.3}\n\\]",
+      "sha256": "e5e36d722a172360f6eff4c89dc74955631d86e5916049b7ebc1f9361131e12e",
+      "allowed_change": "O5 scoped variable renaming only"
+    },
+    {
+      "id": "display-26",
+      "kind": "display",
+      "line": 342,
+      "text": "\\[\nW^*(G_{u\\to v})+W^*(G_{v\\to u})\\le2W^*(G).\n\\tag{4.4}\n\\]",
+      "sha256": "898b28343377afc888a2c0634f9914545d36da2d2e89eae2b27e13f1445be4d2",
+      "allowed_change": "O5 scoped variable renaming only"
+    },
+    {
+      "id": "display-27",
+      "kind": "display",
+      "line": 355,
+      "text": "\\[\nd(X)\\le16D/n^2,\\qquad D=\\eta_0n^2+n/6+1/24.\n\\tag{4.5}\n\\]",
+      "sha256": "433f1df7a822bdc7cac4c2950ef4b33ff759a0d76f1ce68505e1880232a590f4",
+      "allowed_change": "O5 scoped variable renaming only"
+    },
+    {
+      "id": "display-28",
+      "kind": "display",
+      "line": 361,
+      "text": "\\[\nF_4(X)\\le |Q|\\le B_n(|R|)-\\frac{117}{1825}m-\\frac{12687}{20000}A.\n\\]",
+      "sha256": "da32f00b9c54c909edd3c7c774aafbef21196f25f99e57d622e7e98b4e25c760",
+      "allowed_change": "O5 scoped variable renaming only"
+    },
+    {
+      "id": "display-29",
+      "kind": "display",
+      "line": 365,
+      "text": "\\[\n\\frac{117}{1825}m+\\frac{12687}{20000}A\\le D.\n\\]",
+      "sha256": "94199193e4e7360358fde56023efb4270141d18aed424fefd42770eed0f6c10f",
+      "allowed_change": "O5 scoped variable renaming only"
+    },
+    {
+      "id": "display-30",
+      "kind": "display",
+      "line": 373,
+      "text": "\\[\nd(X)\\le\\frac{16D}{n^2}<\\varepsilon_0-\\frac1n,\\qquad\nD=\\eta_0n^2+\\frac n6+\\frac1{24}.\n\\tag{4.6}\n\\]",
+      "sha256": "44182b09a9e9368aa357ee83acb9167e947e775bcf95349997a9ab8ca4629fca",
+      "allowed_change": "O5 scoped variable renaming only"
+    },
+    {
+      "id": "display-31",
+      "kind": "display",
+      "line": 381,
+      "text": "\\[\n\\frac{16}{6n}+\\frac1n+\\frac{16}{24n^2}\n<\\varepsilon_0-16\\eta_0.\n\\tag{4.6a}\n\\]",
+      "sha256": "0c17ec642be89d7d99d144a589fa7bad9db288d81ea1dd0144131d0d401428cf",
+      "allowed_change": "O5 scoped variable renaming only"
+    },
+    {
+      "id": "display-32",
+      "kind": "display",
+      "line": 389,
+      "text": "\\[\nd(G_i)<\\varepsilon_0.\n\\]",
+      "sha256": "d452e3107518f4ff8d877b038b77d81f00604643d893f857215f9fd06bdb95cc",
+      "allowed_change": "O5 scoped variable renaming only"
+    },
+    {
+      "id": "display-33",
+      "kind": "display",
+      "line": 399,
+      "text": "\\[\n\\varepsilon=\\frac{\\alpha^4}{8B^2},\\qquad\n1280B^2\\eta\\le\\alpha^4,\\qquad\nn\\ge\\frac{1280B^2}{\\alpha^4}\n\\]",
+      "sha256": "f96bed3321921fac99f241e1b44e16285283af1168363ee3bf11feeebe7a74f7",
+      "allowed_change": "O5 scoped variable renaming only"
+    },
+    {
+      "id": "display-34",
+      "kind": "display",
+      "line": 409,
+      "text": "\\[\nF_4(G)\\ge n^2/6-\\eta_0n^2.\n\\]",
+      "sha256": "dec0152ea2da1290e9d17dd3a68cb809105f1948a2621099abfd577bb9cad07a",
+      "allowed_change": "O5 scoped variable renaming only"
+    },
+    {
+      "id": "display-35",
+      "kind": "display",
+      "line": 413,
+      "text": "\\[\nd_E(G,S_C)\\le\\varepsilon_0n^2,\n\\tag{4.7}\n\\]",
+      "sha256": "82ef6888cab8b85feda2cbd9ad457e3adcb75b75b13b43f543174a1c6816654b",
+      "allowed_change": "O5 scoped variable renaming only"
+    },
+    {
+      "id": "display-36",
+      "kind": "display",
+      "line": 417,
+      "text": "\\[\n(6|C|-2n-1)^2\n\\le24\\left((\\eta_0+6\\varepsilon_0)n^2+\\frac n6+\\frac1{24}\\right).\n\\tag{4.8}\n\\]",
+      "sha256": "b497f11a574ec43ab37d839a56b08b0caa294bff36c640dd42e5f6d4ae0f5cbd",
+      "allowed_change": "O5 scoped variable renaming only"
+    },
+    {
+      "id": "display-37",
+      "kind": "display",
+      "line": 430,
+      "text": "\\[\nd(G)<\\varepsilon_0,\\qquad F_4(G)\\ge n^2/6-\\eta_0n^2.\n\\]",
+      "sha256": "2d5f3f8b57408da725b0f9807c3dc540c6a5b9dfd38db0d514b87f18894325c1",
+      "allowed_change": "O5 scoped variable renaming only"
+    },
+    {
+      "id": "display-38",
+      "kind": "display",
+      "line": 434,
+      "text": "\\[\n|Q|\\le B_n(p)-\\frac m{20}-\\frac A2,\\qquad\nB_n(p)=p(n-p)-\\binom p2.\n\\tag{5.0}\n\\]",
+      "sha256": "091e36457df36a83e8dcd5184e565c9a6da5919a99f18149063e110613673387",
+      "allowed_change": "O5 scoped variable renaming only"
+    },
+    {
+      "id": "display-39",
+      "kind": "display",
+      "line": 447,
+      "text": "\\[\n\\begin{gathered}\na\\ge1024,\\qquad |n-3a|\\le a/64,\\\\\ne(G-P)+\\#\\{\\text{missing links between }P\\text{ and }V\\setminus P\\}\n\\le a^2/65536.\n\\end{gathered}\n\\tag{5.1}\n\\]",
+      "sha256": "b773b5c64c340a7e435575cd1ee640a69e5299f7ce84ff72d47684c12ab265cc",
+      "allowed_change": "O5 scoped variable renaming only"
+    },
+    {
+      "id": "display-40",
+      "kind": "display",
+      "line": 459,
+      "text": "\\[\nF_4(S_C)\\le\n\\begin{cases}\nb_0-a_0,&b_0\\ge2a_0,\\\\\n(2b_0-a_0)/3,&a_0\\le b_0\\le2a_0,\\\\\n(a_0+b_0)/6,&b_0\\le a_0.\n\\end{cases}\n\\tag{5.1a}\n\\]",
+      "sha256": "1eb3dffbdb897f6ecd66d6ba6d8de66769c7fc3b96db3f8f1cd8917efdeeef22",
+      "allowed_change": "O5 scoped variable renaming only"
+    },
+    {
+      "id": "display-41",
+      "kind": "display",
+      "line": 471,
+      "text": "\\[\n\\binom r2-\\left((a-1)r-\\binom a2\\right)\n=\\binom{u+1}{2}\n\\]",
+      "sha256": "792af780fce83a1435053d910bb6fddc3e0ecd4bf33108c774eb65e918de2f72",
+      "allowed_change": "O5 scoped variable renaming only"
+    },
+    {
+      "id": "display-42",
+      "kind": "display",
+      "line": 478,
+      "text": "\\[\n\\varepsilon_0n^2+un\\le(10^{-12}+1.5\\cdot10^{-6})n^2\n\\le\\frac{(33n/100)^2}{65536}\\le\\frac{a^2}{65536}.\n\\]",
+      "sha256": "1376500417b534f1440918d0516d73b4a9c700d0c9a9dfcebb47bf97e2faf769",
+      "allowed_change": "O5 scoped variable renaming only"
+    },
+    {
+      "id": "display-43",
+      "kind": "display",
+      "line": 485,
+      "text": "\\[\nR=(P\\setminus X)\\cup Y.\n\\tag{5.2}\n\\]",
+      "sha256": "e26b5f4c92c75cacdeaecef2a89f812101fd18864cf978c6399516230e36fd1c",
+      "allowed_change": "O5 scoped variable renaming only"
+    },
+    {
+      "id": "display-44",
+      "kind": "display",
+      "line": 490,
+      "text": "\\[\n16384|X|\\le |P|,\\qquad 57344|Y|\\le |P|.\n\\tag{5.3}\n\\]",
+      "sha256": "405159ee7c4021bbe316928220fcac91f1c64d3f3af660aec0638944a4d97e9c",
+      "allowed_change": "O5 scoped variable renaming only"
+    },
+    {
+      "id": "display-45",
+      "kind": "display",
+      "line": 495,
+      "text": "\\[\n\\begin{gathered}\n99a/100\\le p\\le101a/100,\\quad q\\ge p,\\quad\n44352q\\ge87947a,\\\\\n48(2p-q)_+\\le a,\\quad 3D\\le a,\\quad\n400m<a^2,\\quad2000(A+2m)\\le11a^2.\n\\end{gathered}\n\\tag{5.4}\n\\]",
+      "sha256": "01cfdc920eceb736b8f1ca987460ab4ec0a4ca4451ef213cb806916b63d53b77",
+      "allowed_change": "O5 scoped variable renaming only"
+    },
+    {
+      "id": "display-46",
+      "kind": "display",
+      "line": 510,
+      "text": "\\[\n64d_{\\max}(G-R)\\le113a+64|X|,\\qquad\n128\\omega(G-R)\\le a+128+128|X|.\n\\]",
+      "sha256": "64c6ce4baac82df2e10f7e946f4717c231f9ddd2f6f7da026d53d7967ac8a96b",
+      "allowed_change": "O5 scoped variable renaming only"
+    },
+    {
+      "id": "display-47",
+      "kind": "display",
+      "line": 531,
+      "text": "\\[\nB_n(p)=p(n-p)-\\binom p2.\n\\]",
+      "sha256": "78fd0341288b55147cba7652c38849f834f0c79aefbfdf95fe7a2cc06fc26981",
+      "allowed_change": "O5 scoped variable renaming only"
+    },
+    {
+      "id": "display-48",
+      "kind": "display",
+      "line": 545,
+      "text": "\\[\n|Q|=\\binom p2+pq+m-A-2\\left(f+\\binom p2-\\ell\\right)\n=B_n(p)+m-A-2f+2\\ell.\n\\tag{5.4a}\n\\]",
+      "sha256": "60060a740507e8825a136b4e2525649fe74c6788c4b43c71d9e856acbfd6e3c9",
+      "allowed_change": "O5 scoped variable renaming only"
+    },
+    {
+      "id": "display-49",
+      "kind": "display",
+      "line": 559,
+      "text": "\\[\nm_0\\ge\\frac pc\\,m.\n\\tag{5.5}\n\\]",
+      "sha256": "640c804a5c53ea73e648bf933ff203a328834b1453be8c07ad8e362e46e9ae23",
+      "allowed_change": "O5 scoped variable renaming only"
+    },
+    {
+      "id": "display-50",
+      "kind": "display",
+      "line": 566,
+      "text": "\\[\nf\\ge m_0-\\frac{w-1}{p}A\n\\ge\\frac pc\\,m-\\frac{w-1}{p}A.\n\\tag{5.6}\n\\]",
+      "sha256": "11886fc23f44b9511bbb7e584c1c25bb4ae5254181823a104dadfd64ad190479",
+      "allowed_change": "O5 scoped variable renaming only"
+    },
+    {
+      "id": "display-51",
+      "kind": "display",
+      "line": 572,
+      "text": "\\[\n40c\\le73p,\\qquad 40(w-1)\\le3p.\n\\tag{5.7}\n\\]",
+      "sha256": "693772f38b8957a79300e5c67d7013aa8ba30625e30d3027023cc714ee067f2f",
+      "allowed_change": "O5 scoped variable renaming only"
+    },
+    {
+      "id": "display-52",
+      "kind": "display",
+      "line": 581,
+      "text": "\\[\n\\sum_xa_x=A,\\quad \\sum_xu_x=2f,\\quad\na_x\\le D,\\quad u_x\\le2t,\\quad\nS:=\\sum_xd_x=A+2f,\n\\tag{5.8}\n\\]",
+      "sha256": "9b25f5f6ae318a58b95d49f9b560514bba211b9f7c8b3f0d68f68b7559bc5a3f",
+      "allowed_change": "O5 scoped variable renaming only"
+    },
+    {
+      "id": "display-53",
+      "kind": "display",
+      "line": 590,
+      "text": "\\[\n\\begin{aligned}\n\\sum_e b_e&\\le(p-1)S,\\\\\n\\sum_e b_e^2&\\le(p-2)\\sum_xd_x^2+S^2,\\\\\n\\sum_xd_x^2&\\le(D+4t)A+4tf.\n\\end{aligned}\n\\tag{5.9}\n\\]",
+      "sha256": "4876ea0e5bc5642f6b69ae8cc660fc940cb8bdead41b528173298cc75ce6aef8",
+      "allowed_change": "O5 scoped variable renaming only"
+    },
+    {
+      "id": "display-54",
+      "kind": "display",
+      "line": 599,
+      "text": "\\[\n(a_x+u_x)^2\\le Da_x+4ta_x+2tu_x,\n\\]",
+      "sha256": "69e5f0fed192273799e06c123eee6a6e84c186e4bc3f9f527d4adfae68333507",
+      "allowed_change": "O5 scoped variable renaming only"
+    },
+    {
+      "id": "display-55",
+      "kind": "display",
+      "line": 605,
+      "text": "\\[\n\\frac{s}{p}\\frac{b_e}{q}\n+\\left(1-\\frac{s}{p}\\right)\\frac{b_e(b_e-1)}{q(q-1)}.\n\\tag{5.10}\n\\]",
+      "sha256": "d3d512ed4da40103e04afa60d289f94ea6aacf93f21809058bbb85a0d1ed9ea3",
+      "allowed_change": "O5 scoped variable renaming only"
+    },
+    {
+      "id": "display-56",
+      "kind": "display",
+      "line": 611,
+      "text": "\\[\n\\ell\\le\\frac{s}{q}(A+2f)\n+\\frac{(p-2)((D+4t)A+4tf)+(A+2f)^2}{q(q-1)}.\n\\tag{5.11}\n\\]",
+      "sha256": "abadbd6bae355e13651f7393cd0b206ef4d1bedc7f20fc60517cc764a76acfc7",
+      "allowed_change": "O5 scoped variable renaming only"
+    },
+    {
+      "id": "display-57",
+      "kind": "display",
+      "line": 619,
+      "text": "\\[\n\\begin{gathered}\na\\ge1024,\\quad \\frac qa\\ge\\frac{87947}{44352},\\quad\n\\frac pa\\le\\frac{101}{100},\\quad \\frac Da\\le\\frac13,\\\\\n\\frac ta\\le\\frac1{256},\\quad \\frac sa\\le\\frac1{48},\\quad\n\\frac{A+2f}{a^2}\\le\\frac{11}{2000}.\n\\end{gathered}\n\\tag{5.12}\n\\]",
+      "sha256": "3dcff065247d095846023d140fe9b1ca26e3fed5210ee8edc6408a52571d4d6f",
+      "allowed_change": "O5 scoped variable renaming only"
+    },
+    {
+      "id": "display-58",
+      "kind": "display",
+      "line": 630,
+      "text": "\\[\n2p-q=2a-q_P-3|X|+3|Y|\n\\le a/64+3a/57344<a/48.\n\\tag{5.12a}\n\\]",
+      "sha256": "792e76839338daf083a6215c5672d39aa4a45d1c487b47b94fa87094e139088b",
+      "allowed_change": "O5 scoped variable renaming only"
+    },
+    {
+      "id": "display-59",
+      "kind": "display",
+      "line": 636,
+      "text": "\\[\n\\frac{q(q-1)}{a^2}\\ge\n\\left(\\frac{87947}{44352}\\right)^2\n-\\frac{87947}{44352\\cdot1024}\\ge\\frac{393}{100}.\n\\tag{5.13}\n\\]",
+      "sha256": "841e24ba941283f2c9c90a34bf27ef5f0460139137f11ca69f27f0458904cc50",
+      "allowed_change": "O5 scoped variable renaming only"
+    },
+    {
+      "id": "display-60",
+      "kind": "display",
+      "line": 644,
+      "text": "\\[\n\\begin{aligned}\n\\frac{1}{48Q_0}\n+\\frac{(101/100)(1/3+1/64)+11/2000}{R_0}\n&\\le\\frac{11}{100},\\\\\n\\frac{1}{24Q_0}\n+\\frac{(101/100)/64+11/1000}{R_0}\n&\\le\\frac{29}{1000}.\n\\end{aligned}\n\\tag{5.14}\n\\]",
+      "sha256": "dec31aebf18b6a8f8f80128e82a25cad33afe5d0d629e747d975970e2fd70b88",
+      "allowed_change": "O5 scoped variable renaming only"
+    },
+    {
+      "id": "display-61",
+      "kind": "display",
+      "line": 660,
+      "text": "\\[\n|Q|\\le B_n(p)-\\frac{117}{1825}m-\\frac{12687}{20000}A\n\\le B_n(p)-\\frac m{16}-\\frac A2.\n\\tag{5.15a}\n\\]",
+      "sha256": "aa4e4ebc393fc560a42b7ff19c0511cdf26131db2f5c4cf15b16bd3003ff8a18",
+      "allowed_change": "O5 scoped variable renaming only"
+    },
+    {
+      "id": "display-62",
+      "kind": "display",
+      "line": 666,
+      "text": "\\[\n|Q|\\le B_n(p)-\\frac{19}{365}m-\\frac{253}{500}A\n\\le B_n(p)-\\frac m{20}-\\frac A2.\n\\tag{5.15}\n\\]",
+      "sha256": "914900d72e65abea09826680ac44dbc9cb8be4d8e6ab003e469686a35ae40543",
+      "allowed_change": "O5 scoped variable renaming only"
+    },
+    {
+      "id": "display-63",
+      "kind": "display",
+      "line": 674,
+      "text": "\\[\n|Q|\\le B_n(p)+m-\\frac{13}{20}A-\\frac{48}{25}f.\n\\]",
+      "sha256": "9504514279d6d0ae7f8705a7377bfefbb25a0df390daffbcd1e4bbe2c171eb6d",
+      "allowed_change": "O5 scoped variable renaming only"
+    },
+    {
+      "id": "display-64",
+      "kind": "display",
+      "line": 678,
+      "text": "\\[\n1-\\frac{48}{25}\\frac{40}{73}=-\\frac{19}{365},\\qquad\n-\\frac{13}{20}+\\frac{48}{25}\\frac3{40}=-\\frac{253}{500}.\n\\]",
+      "sha256": "0eeda82c3beaa62ae44e8257dadca5620f4ad66a3612fd28c6547b0cb891e8f1",
+      "allowed_change": "O5 scoped variable renaming only"
+    },
+    {
+      "id": "display-65",
+      "kind": "display",
+      "line": 685,
+      "text": "\\[\n|Q|\\le B_n(p)+m-\\frac{39}{50}A-\\frac{971}{500}f.\n\\]",
+      "sha256": "275cd11357bb95da1d20f23dfc7c35beab8fa5c92e7e93e6ade6e8e080940b65",
+      "allowed_change": "O5 scoped variable renaming only"
+    },
+    {
+      "id": "display-66",
+      "kind": "display",
+      "line": 691,
+      "text": "\\[\nB_n(p)=\\frac{(2n+1)^2}{24}-\\frac{(6p-2n-1)^2}{24}.\n\\tag{5.16}\n\\]",
+      "sha256": "6a0d251100729859f142127690d98f438d2b1cad57a5cf2fc082f3795b741077",
+      "allowed_change": "O5 scoped variable renaming only"
+    },
+    {
+      "id": "display-67",
+      "kind": "display",
+      "line": 704,
+      "text": "\\[\n|3|R|-n|\\le\\frac n{50},\\qquad\n|3|C|-n|\\le\\frac n{10^4},\\qquad\nd_E(G,S_C)\\le\\varepsilon_0n^2,\n\\tag{5.17}\n\\]",
+      "sha256": "946f6e3a08fea61047c6c97d7b2c333cd68a8c22842ccd0168f87741770aaff5",
+      "allowed_change": "O5 scoped variable renaming only"
+    },
+    {
+      "id": "display-68",
+      "kind": "display",
+      "line": 711,
+      "text": "\\[\n\\left|e(G)-\\frac{5n^2}{18}\\right|\\le\\frac{n^2}{10^4}.\n\\tag{5.18}\n\\]",
+      "sha256": "1cd33e3a52c36ed4034a0eb4429945329d02177411af7db799463b4bf4957036",
+      "allowed_change": "O5 scoped variable renaming only"
+    },
+    {
+      "id": "display-69",
+      "kind": "display",
+      "line": 716,
+      "text": "\\[\ne(S_C)=\\binom k2+k(n-k)\n=\\frac{5n^2}{18}+\\frac{2nt}{3}-\\frac{t^2}{2}-\\frac{k}{2}.\n\\]",
+      "sha256": "dedfec79b73aa54e616a3b8eb6144c64d2b022e9196d8cb2c6e3d42454695d81",
+      "allowed_change": "O5 scoped variable renaming only"
+    },
+    {
+      "id": "display-70",
+      "kind": "display",
+      "line": 737,
+      "text": "\\[\ns-\\binom s2\\le1.\n\\]",
+      "sha256": "29d1530b5a439c33bd86e2958267e21f4d674756f8cc62503f008337eb299f55",
+      "allowed_change": "O5 scoped variable renaming only"
+    },
+    {
+      "id": "display-71",
+      "kind": "display",
+      "line": 741,
+      "text": "\\[\n|\\mathcal Q|\\ge kh-\\binom k2.\n\\tag{6.1}\n\\]",
+      "sha256": "371dc5441e8eb61df6ce0de768386db19f25130d285f8cbb971c85cd77fb02c0",
+      "allowed_change": "O5 scoped variable renaming only"
+    },
+    {
+      "id": "display-72",
+      "kind": "display",
+      "line": 747,
+      "text": "\\[\n\\binom k2+kh-2\\binom k2=kh-\\binom k2.\n\\]",
+      "sha256": "f1a2a442a8607f967ac95b1f372a5d25cebc6486bded37191449e040f46728ec",
+      "allowed_change": "O5 scoped variable renaming only"
+    },
+    {
+      "id": "display-73",
+      "kind": "display",
+      "line": 751,
+      "text": "\\[\n\\operatorname{cp}(S)=c_3(S)=c_4(S)=kh-\\binom k2.\n\\tag{6.2}\n\\]",
+      "sha256": "a96286b14ccc182a9a3fed15cbc9c0aa008003bb81da3314b8d28d7d489e7edc",
+      "allowed_change": "O5 scoped variable renaming only"
+    },
+    {
+      "id": "display-74",
+      "kind": "display",
+      "line": 760,
+      "text": "\\[\n6f(n,k)+(n-3k)(n-3k+1)=n(n+1).\n\\tag{6.3}\n\\]",
+      "sha256": "ab82d8c367c59c93f9b45d3dc74840a2abfde9181fb87afb7a6a705c7238308f",
+      "allowed_change": "O5 scoped variable renaming only"
+    },
+    {
+      "id": "display-75",
+      "kind": "display",
+      "line": 765,
+      "text": "\\[\n\\begin{cases}\nk=r,& n=3r,\\\\\nk=r\\text{ or }r+1,& n=3r+1,\\\\\nk=r+1,& n=3r+2.\n\\end{cases}\n\\tag{6.4}\n\\]",
+      "sha256": "48b6eb78acfa2f4555804977d9f8c0efe05f9381929aff016bcb4892a7ccb194",
+      "allowed_change": "O5 scoped variable renaming only"
+    },
+    {
+      "id": "display-76",
+      "kind": "display",
+      "line": 780,
+      "text": "\\[\ne(G)\\le\\binom n2\\le N^2\\le M(n)+b.\n\\]",
+      "sha256": "6f497d9c34abe4773a3e7c56d29ed54ef89efedf34ac4ea106bd10d027bbb915",
+      "allowed_change": "O5 scoped variable renaming only"
+    },
+    {
+      "id": "display-77",
+      "kind": "display",
+      "line": 786,
+      "text": "\\[\nh=4\\cdot8^5\\cdot2208^5\\cdot4500^{105}\\cdot(2\\cdot10^{16})^{105}.\n\\]",
+      "sha256": "a7afd076d893a73f66b74952abfccd57744b5ec9aaf3500c9e548e3aa4628c7e",
+      "allowed_change": "O5 scoped variable renaming only"
+    },
+    {
+      "id": "display-78",
+      "kind": "display",
+      "line": 790,
+      "text": "\\[\nN=T(h+7),\\qquad b=N^2\\le T(h+8).\n\\]",
+      "sha256": "f0ae06406c88234d00c6b9ee7e1270d17d3bbe18bc847ed4468771ba26b5fe66",
+      "allowed_change": "O5 scoped variable renaming only"
+    },
+    {
+      "id": "display-79",
+      "kind": "display",
+      "line": 798,
+      "text": "\\[\n\\frac{n^2+n}{6}-1\\le M(n)\\le cn^2+Cn.\n\\tag{6.5a}\n\\]",
+      "sha256": "b640e54b3a6cb1f3922d8d40da1bf9abaf4f3162092ccc0c27e2fbd08fb8a07a",
+      "allowed_change": "O5 scoped variable renaming only"
+    },
+    {
+      "id": "display-80",
+      "kind": "display",
+      "line": 805,
+      "text": "\\[\n\\operatorname{cp}(G)=M(n)\n\\ge\\frac{n^2}{6}+\\frac n6-1\n>\\frac{n^2}{6}+cn+B_0.\n\\tag{6.5}\n\\]",
+      "sha256": "ffe78925678f59138889c3956a39841fabff91d8ab244241b6ce9405a5a6d21f",
+      "allowed_change": "O5 scoped variable renaming only"
+    },
+    {
+      "id": "display-81",
+      "kind": "display",
+      "line": 818,
+      "text": "\\[\nd(C)=1+e_{\\rm int}(C)-e_{\\rm cruz}(C),\n\\]",
+      "sha256": "1b6b21cc9f1477348be6f969ac55ff87afe83296e740b6b96d253ee1df0507d5",
+      "allowed_change": "O5 scoped variable renaming only"
+    },
+    {
+      "id": "display-82",
+      "kind": "display",
+      "line": 822,
+      "text": "\\[\n|\\mathcal Q|-\\left(kh-\\binom k2\\right)\n=\\sum_{C\\in\\mathcal Q}d(C).\n\\tag{6.6}\n\\]",
+      "sha256": "35b8db139bf1f02d248433cee7a92c73af6187ec5c7b50bcbecfe6359ca9d22a",
+      "allowed_change": "O5 scoped variable renaming only"
+    },
+    {
+      "id": "display-83",
+      "kind": "display",
+      "line": 828,
+      "text": "\\[\nd(C)=1+\\binom s2-s=\\frac{(s-1)(s-2)}2\\ge0;\n\\]",
+      "sha256": "ff0b85690b99a5f3c505235579aa34a576b389ae4ff8e7e78e10a205e81b3083",
+      "allowed_change": "O5 scoped variable renaming only"
+    },
+    {
+      "id": "display-84",
+      "kind": "display",
+      "line": 838,
+      "text": "\\[\n\\bigl(M(n)-B_n(|R|)\\bigr)+\\frac m{16}+\\frac A2\\le\\delta,\n\\qquad\nd_E(G,S_R)=m+A\\le16\\delta.\n\\tag{6.7}\n\\]",
+      "sha256": "9bb18d2c1a91f0c35193517287339cd31c0274f01bd9a7cfdd2dc901ef0330ad",
+      "allowed_change": "O5 scoped variable renaming only"
+    },
+    {
+      "id": "display-85",
+      "kind": "display",
+      "line": 847,
+      "text": "\\[\n|Q|<\\frac{n^2}{6}-\\frac{\\eta_0}{2}n^2\n\\le M(n)-\\frac{\\eta_0}{2}n^2.\n\\]",
+      "sha256": "161a24098930ba3eea07570b912ace75bbaf8c598931876eef42acaf8bf5beac",
+      "allowed_change": "O5 scoped variable renaming only"
+    },
+    {
+      "id": "display-86",
+      "kind": "display",
+      "line": 852,
+      "text": "\\[\nM(n)-\\delta\\le |Q|\n\\le B_n(|R|)-\\frac m{16}-\\frac A2,\n\\]",
+      "sha256": "ec1f46f3af75d1d92a6bf11a8675f6338904a54cbe3aa77d893d8654a513ef16",
+      "allowed_change": "O5 scoped variable renaming only"
+    },
+    {
+      "id": "display-87",
+      "kind": "display",
+      "line": 857,
+      "text": "\\[\nm+A\\le16\\left(\\frac m{16}+\\frac A2\\right)\\le16\\delta.\n\\]",
+      "sha256": "f6f38ecb243a3aa58ecd5d7a8a93ac2ec41ffd8938f4125c9cd0357440d0da94",
+      "allowed_change": "O5 scoped variable renaming only"
+    },
+    {
+      "id": "display-88",
+      "kind": "display",
+      "line": 863,
+      "text": "\\[\nd_R(K)=1+\\binom{a_K}{2}+3\\binom{b_K}{2}-a_Kb_K\n=\\frac{(a_K-b_K)(a_K-b_K-1)}2+(b_K-1)^2.\n\\tag{6.7a}\n\\]",
+      "sha256": "374f9711316adfaf255f36e26d5cd37e459be9028cf156fe40a293fbb07b6265",
+      "allowed_change": "O5 scoped variable renaming only"
+    },
+    {
+      "id": "display-89",
+      "kind": "display",
+      "line": 873,
+      "text": "\\[\n\\sum_{K\\in Q}d_R(K)=|Q|-B_n(|R|)+A+3m.\n\\tag{6.7b}\n\\]",
+      "sha256": "e222c3885c42e0a0102f54644412b9c5f69aa175e3d16d298bd316dc26d7077c",
+      "allowed_change": "O5 scoped variable renaming only"
+    },
+    {
+      "id": "display-90",
+      "kind": "display",
+      "line": 882,
+      "text": "\\[\n6B_n(k)+(n-3k)(n-3k+1)=n(n+1)\n\\tag{6.8}\n\\]",
+      "sha256": "345091a984eee29bd45b2852a54a49468b59a4c009c129fd696c4d571abf6206",
+      "allowed_change": "O5 scoped variable renaming only"
+    },
+    {
+      "id": "display-91",
+      "kind": "display",
+      "line": 887,
+      "text": "\\[\n\\operatorname{cp}(G)=M(n)\n\\quad\\Longleftrightarrow\\quad\nc_4(G)=M(n)\n\\quad\\Longleftrightarrow\\quad\nG\\text{ is complete-split with an optimal core},\n\\tag{6.9}\n\\]",
+      "sha256": "d8b58aea6adc3d4eb2466f62c63f47edf77a2e2f06b37ca3411279a9b042fd7f",
+      "allowed_change": "O5 scoped variable renaming only"
+    },
+    {
+      "id": "display-92",
+      "kind": "display",
+      "line": 900,
+      "text": "\\[\nT(C,D,H)=(K_C\\sqcup I_D)\\vee I_H.\n\\]",
+      "sha256": "e4f7c5e93f88acedf338cbef1d0cb7187c506c4d382f2d01d619e2b47bd680bd",
+      "allowed_change": "O5 scoped variable renaming only"
+    },
+    {
+      "id": "display-93",
+      "kind": "display",
+      "line": 904,
+      "text": "\\[\nB_{s,n}(k)=k(n-k)-\\binom{k-s}{2}.\n\\tag{6.10}\n\\]",
+      "sha256": "38487837fcc0210862fb48d62f462819f518097b6a929111dabd420334ce3f64",
+      "allowed_change": "O5 scoped variable renaming only"
+    },
+    {
+      "id": "display-94",
+      "kind": "display",
+      "line": 911,
+      "text": "\\[\n\\epsilon_s=\\frac1{10^{41}(s+1)^8},\\qquad\nA_s=\\max\\{40000(s+1)^3,\\,2/\\epsilon_s\\}.\n\\tag{6.11}\n\\]",
+      "sha256": "2c73e8dbcae2827de15c7917e98e56455ac7180bf2a8d2381091a04f349e02e7",
+      "allowed_change": "O5 scoped variable renaming only"
+    },
+    {
+      "id": "display-95",
+      "kind": "display",
+      "line": 917,
+      "text": "\\[\nc_4(G)\\ge Q_s(n)-\\delta,\\qquad 0\\le\\delta\\le\\gamma_s n^2,\n\\]",
+      "sha256": "deca27ab8652bf43c12f45ff40a55bee4fc9d13a4b51229dc8f006efb5a78bf5",
+      "allowed_change": "O5 scoped variable renaming only"
+    },
+    {
+      "id": "display-96",
+      "kind": "display",
+      "line": 921,
+      "text": "\\[\n\\begin{aligned}\nd_E(G,T(C,D,H))&\\le A_s\\delta,\\\\\n0\\le Q_s(n)-B_{s,n}(k)&\\le(1+4A_s)\\delta.\n\\end{aligned}\n\\tag{6.12}\n\\]",
+      "sha256": "f69ecba4200059bd4de6353f06fc6fb039b238118dc90b774b3a13d48940a8cf",
+      "allowed_change": "O5 scoped variable renaming only"
+    },
+    {
+      "id": "display-97",
+      "kind": "display",
+      "line": 929,
+      "text": "\\[\n\\begin{aligned}\nN_{\\rm bad}(Q)&\\le\\tau+(1+7A_s)\\delta,\\\\\nE_{\\rm bad}(Q)&\\le10\\tau+10(1+7A_s)\\delta.\n\\end{aligned}\n\\tag{6.13}\n\\]",
+      "sha256": "e5c4f827a6798fe566d58eb3dd5b60db60b111ca5a57fecbd1fde2889373c3d0",
+      "allowed_change": "O5 scoped variable renaming only"
+    },
+    {
+      "id": "display-98",
+      "kind": "display",
+      "line": 945,
+      "text": "\\[\nE=e(G[S])-\\binom{|S|-s}{2}\\ge0.\n\\]",
+      "sha256": "cf2acbf25c94db6d438621dd7220b4ce8e88d28e6617f20988dd1de06053f451",
+      "allowed_change": "O5 scoped variable renaming only"
+    },
+    {
+      "id": "display-99",
+      "kind": "display",
+      "line": 949,
+      "text": "\\[\n\\begin{gathered}\na+\\frac{m}{2000(s+1)^2}+R_*\\le\\delta,\\qquad\nnw\\le800(s+1)^2R_*,\\\\\nE\\le R_*+nw,\\qquad rn\\le16sE,\\\\\nd_E(G,T(C,D,H))\\le a+m+E+2rn+2nw.\n\\end{gathered}\n\\tag{6.14}\n\\]",
+      "sha256": "b6063ef70ad2fde0f8735c9c5d9b5eaf56b41ecc5ba96cdc331d5f730e991769",
+      "allowed_change": "O5 scoped variable renaming only"
+    },
+    {
+      "id": "display-100",
+      "kind": "display",
+      "line": 961,
+      "text": "\\[\nd_E(G,T)\\le a+m+\n\\bigl(1+32s+800(3+32s)(s+1)^2\\bigr)R_*.\n\\]",
+      "sha256": "0a1081e87ea5f9ba8fde52f44b317a8def8e710c6c884a37edfbbf235aa1a331",
+      "allowed_change": "O5 scoped variable renaming only"
+    },
+    {
+      "id": "display-101",
+      "kind": "display",
+      "line": 968,
+      "text": "\\[\nu=Q_s(t)-Q_s(t-1),\\qquad\n\\delta'=\\delta+\\deg(v)-u.\n\\tag{6.15}\n\\]",
+      "sha256": "74f069c1a68a69a97bce0cdd1da99dd32bfc4ff217651fc91dee5b46e672aab1",
+      "allowed_change": "O5 scoped variable renaming only"
+    },
+    {
+      "id": "display-102",
+      "kind": "display",
+      "line": 974,
+      "text": "\\[\n\\delta'\\le\\delta-\\epsilon_s t+\\frac13.\n\\]",
+      "sha256": "ce98c48964333305fd56fb4f6cd46544fa65a2c6132158543791a70b3b80d382",
+      "allowed_change": "O5 scoped variable renaming only"
+    },
+    {
+      "id": "display-103",
+      "kind": "display",
+      "line": 982,
+      "text": "\\[\n\\begin{aligned}\nN_{\\rm bad}(Q)&\\le |Q|-B_{s,n}(k)+3d_E(G,T),\\\\\nE_{\\rm bad}(Q)&\\le10\\bigl(|Q|-B_{s,n}(k)+3d_E(G,T)\\bigr).\n\\end{aligned}\n\\tag{6.16}\n\\]",
+      "sha256": "3681d876c7f98bed481b61f48e7b97ad705bc95228880eb4a4c7c79d4fa3f1eb",
+      "allowed_change": "O5 scoped variable renaming only"
+    },
+    {
+      "id": "display-104",
+      "kind": "display",
+      "line": 992,
+      "text": "\\[\nd_E(G,T_*)\\le A_s\\delta+n\\sqrt{(1+4A_s)\\delta}.\n\\tag{6.17}\n\\]",
+      "sha256": "457df03a072fd4c753353259738c2e6c8f208b7e2ab87857a0632e7ab6cb9d89",
+      "allowed_change": "O5 scoped variable renaming only"
+    },
+    {
+      "id": "display-105",
+      "kind": "display",
+      "line": 997,
+      "text": "\\[\n\\operatorname{cp}(G)=Q_s(n)\n\\quad\\Longleftrightarrow\\quad c_4(G)=Q_s(n)\n\\quad\\Longleftrightarrow\\quad\nG\\cong(K_{k-s}\\sqcup I_s)\\vee I_{n-k},\n\\tag{6.18}\n\\]",
+      "sha256": "d6a6d667ac06001abe2e752c76fb5ca8a768a2fc430b5c0f6457324e2ede2d1a",
+      "allowed_change": "O5 scoped variable renaming only"
+    },
+    {
+      "id": "display-106",
+      "kind": "display",
+      "line": 1007,
+      "text": "\\[\n\\operatorname{dist}(k,\\mathcal K_{s,n})^2\n\\le Q_s(n)-B_{s,n}(k).\n\\tag{6.19}\n\\]",
+      "sha256": "ed3e3f36087216ef151741337ecda6fc3b9d4e33c70d8b316c60c2b06ebc8876",
+      "allowed_change": "O5 scoped variable renaming only"
+    },
+    {
+      "id": "display-107",
+      "kind": "display",
+      "line": 1017,
+      "text": "\\[\nG_{s,q,d}=(K_{q+d-s}\\sqcup I_s)\\vee I_{2q-s-d}\n\\]",
+      "sha256": "73c1cadc14a218f2ce0c187d65944015ecc7f631f10e45022249e2c33f18b833",
+      "allowed_change": "O5 scoped variable renaming only"
+    },
+    {
+      "id": "display-108",
+      "kind": "display",
+      "line": 1021,
+      "text": "\\[\n\\operatorname{cp}(G_{s,q,d})=c_4(G_{s,q,d})\n=Q_s(n)-\\delta_d,\\qquad\n\\delta_d=d^2+\\binom d2=\\frac{3d^2-d}{2}.\n\\tag{6.20}\n\\]",
+      "sha256": "d049d8c3f0a13c1cee01c77599121f6a8f5ae19f158e8953af6af6d917bb26da",
+      "allowed_change": "O5 scoped variable renaming only"
+    },
+    {
+      "id": "display-109",
+      "kind": "display",
+      "line": 1028,
+      "text": "\\[\nd_E(G_{s,q,d},T)\\ge\\frac{nd}{4}\n\\ge\\frac{n\\sqrt{\\delta_d}}8.\n\\tag{6.21}\n\\]",
+      "sha256": "d9e42b26f10da721b7c3c7a64572b1ea2561c8cb01301a7dc9dc0f3d5d9d128a",
+      "allowed_change": "O5 scoped variable renaming only"
+    },
+    {
+      "id": "display-110",
+      "kind": "display",
+      "line": 1037,
+      "text": "\\[\n2\\bigl(e(G_{s,q,d})-e(T)\\bigr)\n=d(4q-4s-d-1).\n\\]",
+      "sha256": "f64dc8e6332d598a849ebd4dade3ac2c79f7863fcdb2c43f8a39356c53b33573",
+      "allowed_change": "O5 scoped variable renaming only"
+    },
+    {
+      "id": "display-111",
+      "kind": "display",
+      "line": 1042,
+      "text": "\\[\n4\\bigl(e(G_{s,q,d})-e(T)\\bigr)-nd\n=d(5q-7s-2d-2)\\ge0.\n\\]",
+      "sha256": "c430db0933061703a1fe06cc58d59ff39035a2983e45e1327ec39ce234c87ba5",
+      "allowed_change": "O5 scoped variable renaming only"
+    },
+    {
+      "id": "display-112",
+      "kind": "display",
+      "line": 1059,
+      "text": "\\[\nF_4(G)\\le M(n-s)+ns.\n\\tag{6.22}\n\\]",
+      "sha256": "bcb1b20aa7d29f67fa0fa1ec08b01159977dbda33528b72730c9772b3116d1e2",
+      "allowed_change": "O5 scoped variable renaming only"
+    },
+    {
+      "id": "display-113",
+      "kind": "display",
+      "line": 1064,
+      "text": "\\[\nF_4(G)\\le M(n-s)+ns-\\binom{s+1}{2}.\n\\tag{6.23}\n\\]",
+      "sha256": "200c2f6d75148a5aced369d462d07cb178537f4ea4a1843ba14a0479b1d4e1e3",
+      "allowed_change": "O5 scoped variable renaming only"
+    },
+    {
+      "id": "display-114",
+      "kind": "display",
+      "line": 1073,
+      "text": "\\[\n\\max\\{0,|Q_j|-n_j^2/6\\}=o(n_j^2).\n\\tag{6.24}\n\\]",
+      "sha256": "2a71ca264cf10d917060604ec0efca0d78ccb94062d52963f0ec334e696793db",
+      "allowed_change": "O5 scoped variable renaming only"
+    },
+    {
+      "id": "display-115",
+      "kind": "display",
+      "line": 1078,
+      "text": "\\[\nc_4(G_j)\\ge n_j^2/6-\\delta_j,\\qquad \\delta_j=o(n_j^2).\n\\]",
+      "sha256": "c70968d0c7b0d2681eb6ed166a9e66abdf2ecaf26ad2d525c4613dcf2d96865b",
+      "allowed_change": "O5 scoped variable renaming only"
+    },
+    {
+      "id": "display-116",
+      "kind": "display",
+      "line": 1082,
+      "text": "\\[\n|R_j|=n_j/3+o(n_j),\\qquad\nd_E(G_j,S_{R_j})=o(n_j^2),\n\\tag{6.25}\n\\]",
+      "sha256": "fb6dd23cd81b3008d6676ab5ae61a4f2e6059827b21de02f87df670b2317a612",
+      "allowed_change": "O5 scoped variable renaming only"
+    },
+    {
+      "id": "display-117",
+      "kind": "display",
+      "line": 1088,
+      "text": "\\[\nN_{\\rm bad}(Q)\\le\\tau+e_j,\\qquad\nE_{\\rm bad}(Q)\\le10\\tau+10e_j.\n\\tag{6.26}\n\\]",
+      "sha256": "920de8ceb00901153ba170d076a869c5a9cf020d74e5f391d27fa584f298ebde",
+      "allowed_change": "O5 scoped variable renaming only"
+    },
+    {
+      "id": "display-118",
+      "kind": "display",
+      "line": 1098,
+      "text": "\\[\n\\mathcal S_G(R)=n\\bigl||R|-n/3\\bigr|\n +e(G-R)+A_R+\\bigl(M(n)-B_n(|R|)\\bigr),\n\\tag{6.27}\n\\]",
+      "sha256": "50c1215ead2d41a3169bc2a02a2c4d9f692a0cd369d80157f2ff8f1a33c2fee6",
+      "allowed_change": "O5 scoped variable renaming only"
+    },
+    {
+      "id": "display-119",
+      "kind": "display",
+      "line": 1106,
+      "text": "\\[\n\\begin{aligned}\nc_{\\rm poly}&=4\\cdot17664^5\\cdot9000^{105}+3006,\\\\\nc_{\\rm far}&=c_{\\rm poly}(128\\cdot10^{82})^{105},\\\\\nc_T&=h_{\\rm iter}+c_{\\rm far}+841780,\\qquad\nP(s)=c_T(s+1)^{1680},\n\\end{aligned}\n\\tag{6.28}\n\\]",
+      "sha256": "05d1635fbef6e0606401e6f7e7df5bc01706207743f3b13e97f8353fd2f8b9cb",
+      "allowed_change": "O5 scoped variable renaming only"
+    },
+    {
+      "id": "display-120",
+      "kind": "display",
+      "line": 1118,
+      "text": "\\[\ns_{\\max}(n)=\\max\\{S\\in\\mathbb N:S\\le n,\\ T(P(S))\\le n\\}.\n\\tag{6.29}\n\\]",
+      "sha256": "db5a7ca6b1422275ee6b214eb2375d9714cf59a36b981efc63a9657e559fb458",
+      "allowed_change": "O5 scoped variable renaming only"
+    },
+    {
+      "id": "display-121",
+      "kind": "display",
+      "line": 1218,
+      "text": "\\[\nW^*(G)-g(\\mathcal P)\n=\\bigl(e(G)-g(\\mathcal P)\\bigr)-F_4(G)\n\\le M(n)-F_4(G)=\\Delta(G).\n\\tag{8.1}\n\\]",
+      "sha256": "beb753b189238e058039848241041a82778aa0922b99798bf2c5e2d5348c1f2a",
+      "allowed_change": "O5 scoped variable renaming only"
+    },
+    {
+      "id": "display-122",
+      "kind": "display",
+      "line": 1392,
+      "text": "\\[\nd_{G[U]}(v)\\ge |U|/2+t\\qquad(v\\in U),\n\\tag{B.1}\n\\]",
+      "sha256": "6bf7bfdbdb9f12a0e06cc20aa09266979041da15438ca409cc9902531d47e3dc",
+      "allowed_change": "O5 scoped variable renaming only"
+    },
+    {
+      "id": "display-123",
+      "kind": "display",
+      "line": 1399,
+      "text": "\\[\n\\sum_{u\\in U}b(u,f(u))\n\\le\\frac1{t+1}\\sum_{u\\in U}\\sum_{v\\in U}b(u,v).\n\\tag{B.2}\n\\]",
+      "sha256": "91ab5ea4658cb2186eba727d2b157eb0f4a5b58e3a4c1a6ad5a870d05cba4e49",
+      "allowed_change": "O5 scoped variable renaming only"
+    },
+    {
+      "id": "display-124",
+      "kind": "display",
+      "line": 1407,
+      "text": "\\[\ng(\\mathcal P\\cup\\mathcal A)=g(\\mathcal P)+|U|.\n\\tag{B.3}\n\\]",
+      "sha256": "d3a01bc3a952ee812fc2d4889a3bc9d11c8011f6debfe8c4544fbc5f9206a328",
+      "allowed_change": "O5 scoped variable renaming only"
+    },
+    {
+      "id": "display-125",
+      "kind": "display",
+      "line": 1414,
+      "text": "\\[\n\\sum_{u\\in U}\\sum_{v\\in U}b(u,v)\\le(t+1)B_{\\rm abs},\n\\]",
+      "sha256": "4472120392a8e52f55872089e8fa931b23c42719f47b79b1429de1c366159acc",
+      "allowed_change": "O5 scoped variable renaming only"
+    },
+    {
+      "id": "display-126",
+      "kind": "display",
+      "line": 1424,
+      "text": "\\[\n|d_R(v)-\\theta d_F(v)|\\le2\\qquad(v\\in V(F)).\n\\tag{B.4}\n\\]",
+      "sha256": "03a4cc0727a6b6805416f15c35cfb6720db06294601e6441ced5afd8f6d2dd76",
+      "allowed_change": "O5 scoped variable renaming only"
+    },
+    {
+      "id": "display-127",
+      "kind": "display",
+      "line": 1447,
+      "text": "\\[\n\\sum_{H\\ni v}z_H\\le1,\\qquad\n\\sum_{H\\supseteq\\{v,w\\}}z_H\\le\\gamma\\quad(v\\ne w).\n\\tag{3.2}\n\\]",
+      "sha256": "f983fc9ba526467766f9937517cf6bb4c9665af062a2ccc62aa3fc57a0767238",
+      "allowed_change": "O5 scoped variable renaming only"
+    },
+    {
+      "id": "display-128",
+      "kind": "display",
+      "line": 1453,
+      "text": "\\[\n|\\mathcal M|\\ge(1-\\beta)\\sum_{H\\in\\mathcal H}z_H-\\beta|U|-C.\n\\tag{3.3}\n\\]",
+      "sha256": "00ffca322f1b58d6586fbc18676924c4b51b11c53afe407ed88aad5b8948f5b7",
+      "allowed_change": "O5 scoped variable renaming only"
+    },
+    {
+      "id": "display-129",
+      "kind": "display",
+      "line": 1462,
+      "text": "\\[\n\\begin{aligned}\n|\\mathcal M|&\\ge(1-\\beta)\\sum_{H\\in\\mathcal H}z_H-\\epsilon|U|-C,\\\\\n|\\mathcal M\\cap\\mathcal A|&\\ge(1-\\beta)\\sum_{H\\in\\mathcal A}z_H-\\epsilon|U|-C.\n\\end{aligned}\n\\tag{3.4}\n\\]",
+      "sha256": "ed615bbe08392068cb25cc9fe2b84133e62c242636e69f524cb41d5d1bb1ac51",
+      "allowed_change": "O5 scoped variable renaming only"
+    },
+    {
+      "id": "display-130",
+      "kind": "display",
+      "line": 1471,
+      "text": "\\[\np=\\max\\{\\lceil u\\rceil,k_0\\},\\qquad\nq=\\max\\{\\lceil a\\rceil,k_0\\}.\n\\]",
+      "sha256": "60bdb4eb09db8669a541a14fee5be3735eda2e5d5390dd46577d168659693533",
+      "allowed_change": "O5 scoped variable renaming only"
+    },
+    {
+      "id": "display-131",
+      "kind": "display",
+      "line": 1478,
+      "text": "\\[\nm\\ge(1-b)(u+a)-b(|U|+p+q)-C_0,\n\\qquad |\\mathcal M\\cap\\mathcal A|\\ge m-p.\n\\]",
+      "sha256": "80689bdff4ce479f5ad861cea14ba08d47a6dd9f60e2aec8867b780053a60071",
+      "allowed_change": "O5 scoped variable renaming only"
+    },
+    {
+      "id": "display-132",
+      "kind": "display",
+      "line": 1488,
+      "text": "\\[\n\\sum_{K:\\ e,f\\in E(K)}x_K\\le\\gamma\\qquad(e\\ne f).\n\\tag{3.5}\n\\]",
+      "sha256": "a485658a87b3916e06bd31caef402b2386e019e56cffb62743cc43af847e4d27",
+      "allowed_change": "O5 scoped variable renaming only"
+    },
+    {
+      "id": "display-133",
+      "kind": "display",
+      "line": 1493,
+      "text": "\\[\ng(\\mathcal P)\\ge(1-\\beta)(2t_3+5t_4-6)\n -5\\epsilon\\binom{n+1}{2}-5D.\n\\tag{3.6}\n\\]",
+      "sha256": "837841da2a4e495fc8d4895d00b5f5054b925fbe369532e9289590e55ac0227b",
+      "allowed_change": "O5 scoped variable renaming only"
+    },
+    {
+      "id": "display-134",
+      "kind": "display",
+      "line": 1513,
+      "text": "\\[\n(1-u-v)S-g(\\mathcal P)\\le\\zeta n^2,\n\\]",
+      "sha256": "2ce63b74411eb5d1276da6a5df38525598d577f25ac763b79c07deb3f44b05e8",
+      "allowed_change": "O5 scoped variable renaming only"
+    },
+    {
+      "id": "display-135",
+      "kind": "display",
+      "line": 1517,
+      "text": "\\[\nw(x)-g(\\mathcal P)\n\\le L+\\left(\\zeta+\\frac56(u+v)\\right)n^2.\n\\tag{3.7}\n\\]",
+      "sha256": "0fffed4f2283c9b9504623e1348a57b32d684bdd3d6ea49429c34212bdd5ad89",
+      "allowed_change": "O5 scoped variable renaming only"
+    },
+    {
+      "id": "display-136",
+      "kind": "display",
+      "line": 1523,
+      "text": "\\[\n\\begin{aligned}\nw(x)-g(\\mathcal P)\n={}&(w(x)-L-S)+((1-u-v)S-g(\\mathcal P))\\\\\n&+L+(u+v)S.\n\\end{aligned}\n\\]",
+      "sha256": "5401ee692c168bd0d94f97aa71b0a7d874b22e000cab111534275808ec18886f",
+      "allowed_change": "O5 scoped variable renaming only"
+    },
+    {
+      "id": "display-137",
+      "kind": "display",
+      "line": 1533,
+      "text": "\\[\n30C\\le\\xi n^2,\\qquad 2\\zeta\\le\\xi\n\\]",
+      "sha256": "fe49c39cb8ae105210cd7818e535cb06b10aabe6257e422258c1c18b812ecfbf",
+      "allowed_change": "O5 scoped variable renaming only"
+    },
+    {
+      "id": "display-138",
+      "kind": "display",
+      "line": 1539,
+      "text": "\\[\n(1-v)\\operatorname{vol}(H)\n\\le |\\operatorname{cleanFiber}(H)|.\n\\tag{3.8}\n\\]",
+      "sha256": "6d98f2c0fc29683d5ba8e52d2227662604562b35b17486cea08652c7adbc674d",
+      "allowed_change": "O5 scoped variable renaming only"
+    },
+    {
+      "id": "display-139",
+      "kind": "display",
+      "line": 1547,
+      "text": "\\[\n2(a-b)+5b=2a+3b.\n\\tag{3.9}\n\\]",
+      "sha256": "0309b93fcd7d90e6721fe92e738e7de683c42d9da474f1b13621970ba86b14c4",
+      "allowed_change": "O5 scoped variable renaming only"
+    },
+    {
+      "id": "display-140",
+      "kind": "display",
+      "line": 1556,
+      "text": "\\[\ns=\\min\\{\\xi/4500,1/10\\},\\qquad\nd=u=v=s,\\qquad \\delta=s^{21}/2208.\n\\]",
+      "sha256": "3d2d8c14d8c136b54ecef589fd828dc553318d98bb0b858b7b76fa73c6098d58",
+      "allowed_change": "O5 scoped variable renaming only"
+    },
+    {
+      "id": "display-141",
+      "kind": "display",
+      "line": 1567,
+      "text": "\\[\nS=\\sum_{H\\text{ active}}g(H)\\psi_H.\n\\]",
+      "sha256": "0b2356ea6f26c4ec86da83e1a30bd3c761880c8d2ae3e0459e6b8a53d37e0ac4",
+      "allowed_change": "O5 scoped variable renaming only"
+    },
+    {
+      "id": "display-142",
+      "kind": "display",
+      "line": 1573,
+      "text": "\\[\nw(x)-S\\le L,\\qquad\nL=3\\left(3\\delta+\\frac1{k_0}+d\\right)n^2\n  +(N_4+2N_3)\\theta.\n\\tag{3.10}\n\\]",
+      "sha256": "f9ae0ba5a8ca0c68f86333ea0e9526f695409ecd56d93a566ada52f6909a9301",
+      "allowed_change": "O5 scoped variable renaming only"
+    },
+    {
+      "id": "display-143",
+      "kind": "display",
+      "line": 1584,
+      "text": "\\[\n\\begin{aligned}\nw(x)-g(\\mathcal P)\\le{}&\n\\left(9\\delta+\\frac3{k_0}+3d+\\zeta\n             +\\frac56(u+v)\\right)n^2\\\\\n&+(N_4+2N_3)\\theta .\n\\end{aligned}\n\\tag{3.11}\n\\]",
+      "sha256": "5456de692706de32171d4b124291ac5c5a0a94e683b6d1f64c73284fa8f06836",
+      "allowed_change": "O5 scoped variable renaming only"
+    },
+    {
+      "id": "display-144",
+      "kind": "display",
+      "line": 1598,
+      "text": "\\[\na_3=d^3-3\\delta>0,\\qquad a_4=d^6-6\\delta>0,\n\\]",
+      "sha256": "94f2f3cb3d38a016c7b752e6c2381084a8e10656f185932bf85b2770ef2f39e8",
+      "allowed_change": "O5 scoped variable renaming only"
+    },
+    {
+      "id": "display-145",
+      "kind": "display",
+      "line": 1602,
+      "text": "\\[\nk_3a_4+k_4a_3\\le\\gamma a_3a_4t,\n\\tag{3.12}\n\\]",
+      "sha256": "ca238d1c6d1bb3797e44afa02f11370fbf7648c95f7c653f6149222edb9d2c92",
+      "allowed_change": "O5 scoped variable renaming only"
+    },
+    {
+      "id": "display-146",
+      "kind": "display",
+      "line": 1609,
+      "text": "\\[\n\\sum_{K:e,f\\in E(K)}x_K^{\\rm limpio}\n\\le\\frac{k_3}{a_3t}+\\frac{k_4}{a_4t}\n=\\frac{k_3a_4+k_4a_3}{a_3a_4t}\\le\\gamma.\n\\tag{3.13}\n\\]",
+      "sha256": "723d6053746b774718c709b97691dba3744291757908aac2544246cae3d45d95",
+      "allowed_change": "O5 scoped variable renaming only"
+    },
+    {
+      "id": "display-147",
+      "kind": "display",
+      "line": 1618,
+      "text": "\\[\n12+10D\\le\\zeta n^2,\n\\tag{3.14}\n\\]",
+      "sha256": "cec696fd648b9ddab1cb2311e44dfb97bf82fdded051fd84f9f45bcce31e3b05",
+      "allowed_change": "O5 scoped variable renaming only"
+    },
+    {
+      "id": "display-148",
+      "kind": "display",
+      "line": 1629,
+      "text": "\\[\na=\\min\\{\\xi/4500,1/10\\},\\quad\n\\delta=a^{21}/2208,\\quad z=\\min\\{\\xi/10,1\\},\\quad\nk_0=\\lceil1500/\\xi\\rceil+1.\n\\]",
+      "sha256": "6687d4ec573ed1a0f677ef33a028dddb145ff1b21ad3d7d98d99010a2ae410f3",
+      "allowed_change": "O5 scoped variable renaming only"
+    },
+    {
+      "id": "display-149",
+      "kind": "display",
+      "line": 1635,
+      "text": "\\[\n\\gamma=\\frac1{\\lceil1/\\gamma_*\\rceil},\\qquad C=\\lceil C_*\\rceil,\\qquad\na_3=a^3-3\\delta,\\quad a_4=a^6-6\\delta.\n\\]",
+      "sha256": "83102e7f9c6a9989b41a851031746954baf1eaf0014d37b73bce578f2013c065",
+      "allowed_change": "O5 scoped variable renaming only"
+    },
+    {
+      "id": "display-150",
+      "kind": "display",
+      "line": 1640,
+      "text": "\\[\n\\begin{split}\nN_E(\\xi)=1+\\max\\biggl\\{&\nk_0,\\ \\left\\lceil B/\\delta\\right\\rceil,\\\n\\left\\lceil(12+10D_*)/z\\right\\rceil,\\\\\n&\\left\\lceil\\frac{4B^5(a_3+a_4)}{\\gamma a_3a_4}\\right\\rceil,\\\n\\left\\lceil\\frac{50(1+2C)}{\\xi}\\right\\rceil\n\\biggr\\}.\n\\end{split}\n\\tag{C.1}\n\\]",
+      "sha256": "9fd2928b49abda7515a3708156d4baecd55beb68e2b777d720e2d1fcf65d3ca9",
+      "allowed_change": "O5 scoped variable renaming only"
+    },
+    {
+      "id": "display-151",
+      "kind": "display",
+      "line": 1654,
+      "text": "\\[\nw(x)-g(\\mathcal P)\\le\\xi n^2\n\\qquad(n\\ge N_E(\\xi))\n\\tag{C.2}\n\\]",
+      "sha256": "419666e35fea6de8744addc61819ab1d514dfb3dd1bd28bf34f022db7352f0ca",
+      "allowed_change": "O5 scoped variable renaming only"
+    },
+    {
+      "id": "display-152",
+      "kind": "display",
+      "line": 1662,
+      "text": "\\[\na=(9\\cdot10^{19})^{-1},\\qquad\n\\delta=\\frac1{2208(9\\cdot10^{19})^{21}},\\qquad\nz=(2\\cdot10^{17})^{-1},\\qquad k_0=3\\cdot10^{19}+1.\n\\]",
+      "sha256": "2710fb493f3a87db08bece27e3a1dc78fef75dfc6101901620d971860692f605",
+      "allowed_change": "O5 scoped variable renaming only"
+    },
+    {
+      "id": "display-153",
+      "kind": "display",
+      "line": 1668,
+      "text": "\\[\nG_1=\\lceil1/\\gamma_*\\rceil,\\quad G_2=\\lceil C_*\\rceil,\\quad\nG_3=\\lceil2\\cdot10^{17}(12+10D_*)\\rceil.\n\\]",
+      "sha256": "6f73e1d9aba46012c90e26c1f5968ac6dbee0e71c6e7dd19f97f60968d4678ef",
+      "allowed_change": "O5 scoped variable renaming only"
+    },
+    {
+      "id": "display-154",
+      "kind": "display",
+      "line": 1684,
+      "text": "\\[\nN_{\\rm lejano}(\\eta_0)\\le T(h+7).\n\\tag{C.3}\n\\]",
+      "sha256": "4504491877173c3e1aa0158b3712df90602066fd973d6de411f06c48603036c0",
+      "allowed_change": "O5 scoped variable renaming only"
+    },
+    {
+      "id": "display-155",
+      "kind": "display",
+      "line": 1691,
+      "text": "\\[\nN_{\\rm far}(\\eta)\\le\nT\\!\\left(\\left\\lceil\\frac{c_{\\rm poly}}{\\eta^{105}}\\right\\rceil\\right),\n\\qquad c_{\\rm poly}=4\\cdot17664^5\\cdot9000^{105}+3006.\n\\tag{C.4}\n\\]",
+      "sha256": "d92e2e4824ee50ba91d776d45156fd51a7411b8ed0e8f8266e3e2d65d04bb3cf",
+      "allowed_change": "O5 scoped variable renaming only"
+    },
+    {
+      "id": "display-156",
+      "kind": "display",
+      "line": 1708,
+      "text": "\\[\nn(n-2)\\le3g(\\mathcal P).\n\\tag{D.1}\n\\]",
+      "sha256": "9dba624690aa2bb3a830844bbd12e0db84e1f3d9474ca73b3a86a46589c89333",
+      "allowed_change": "O5 scoped variable renaming only"
+    },
+    {
+      "id": "display-157",
+      "kind": "display",
+      "line": 1713,
+      "text": "\\[\n|Q|=\\binom n2-g(\\mathcal P)\n\\le\\frac{n(n-1)}2-\\frac{n(n-2)}3\n=\\frac{n(n+1)}6.\n\\tag{D.2}\n\\]",
+      "sha256": "5c3e4429652ea3bfd1d47271676e0a2c8c212f53c22c7cfed8d9a2ee06a86044",
+      "allowed_change": "O5 scoped variable renaming only"
+    },
+    {
+      "id": "display-158",
+      "kind": "display",
+      "line": 1735,
+      "text": "\\[\n3g(\\mathcal P)=2|E_{\\rm cub}|+3b_4.\n\\tag{D.3}\n\\]",
+      "sha256": "656a736b385bec4343c26a88a06229c259b7856f760b40d4c7619af36ba301c0",
+      "allowed_change": "O5 scoped variable renaming only"
+    },
+    {
+      "id": "display-159",
+      "kind": "display",
+      "line": 1740,
+      "text": "\\[\n3g(\\mathcal P)=(3M+1)3M+3M=(3M+2)3M=n(n-2).\n\\tag{D.4}\n\\]",
+      "sha256": "0ef43fab1a0f0d9499b347cdd01c4d20989d94f4b27135b8ed74352f2f09edfa",
+      "allowed_change": "O5 scoped variable renaming only"
+    },
+    {
+      "id": "display-160",
+      "kind": "display",
+      "line": 1751,
+      "text": "\\[\na+3t=\\binom n2,\\qquad |Q|=a+t=\\frac{\\binom n2+2a}{3}.\n\\tag{D.5}\n\\]",
+      "sha256": "23a90b3160a75ccc6d1033528310fc2f7c19b4328702667af2ff7bf03d9fd3a1",
+      "allowed_change": "O5 scoped variable renaming only"
+    },
+    {
+      "id": "display-161",
+      "kind": "display",
+      "line": 1756,
+      "text": "\\[\n|Q|\\ge\\frac{\\binom n2+n}{3}=\\frac{n(n+1)}6.\n\\]",
+      "sha256": "d9b86402b37a19ba272c7c84b163d9759cb4cfa125561bbc8a6a49eafa196a34",
+      "allowed_change": "O5 scoped variable renaming only"
+    },
+    {
+      "id": "display-162",
+      "kind": "display",
+      "line": 1766,
+      "text": "\\[\nW^*(S)=W(S)=2\\binom k2.\n\\tag{D.6}\n\\]",
+      "sha256": "bb25ed21b19160d7d61c2e5e152d604afabb20ad10414d9b7355a3597ccfbc9b",
+      "allowed_change": "O5 scoped variable renaming only"
+    },
+    {
+      "id": "display-163",
+      "kind": "display",
+      "line": 1771,
+      "text": "\\[\n\\begin{aligned}\nw(x)&\\le2\\sum_K j(K)x_K\\\\\n&=2\\sum_{e\\in E(K_k)}\\sum_{K:e\\in E(K)}x_K\n\\le2\\binom k2.\n\\end{aligned}\n\\tag{D.7}\n\\]",
+      "sha256": "966471ac42fc7dc248352382ab6b2173180d7b9e5f35282338eec3da4786af76",
+      "allowed_change": "O5 scoped variable renaming only"
+    },
+    {
+      "id": "display-164",
+      "kind": "display",
+      "line": 1786,
+      "text": "\\[\nd_{n,k}=\\begin{cases}n-3k,&3k\\le n,\\\\3k-n-1,&3k>n.\\end{cases}\n\\]",
+      "sha256": "49a3c98869b618255278d146b08b5cd93ae35c6b9a92816a27964f3ade28b3fb",
+      "allowed_change": "O5 scoped variable renaming only"
+    },
+    {
+      "id": "display-165",
+      "kind": "display",
+      "line": 1790,
+      "text": "\\[\nM(n)=B_n(k)+M(d_{n,k}).\n\\tag{D.8}\n\\]",
+      "sha256": "d25606cdd578761287d02ea4b6199a0ea8096569bc89463758ffb87b7a1f082d",
+      "allowed_change": "O5 scoped variable renaming only"
+    },
+    {
+      "id": "display-166",
+      "kind": "display",
+      "line": 1811,
+      "text": "\\[\n\\begin{gathered}\nd_{\\max}(G[H])+1\\le k,\\quad |S|\\le k\\le2(|S|-2\\sigma),\\quad\nq\\ge\\left\\lceil e(G[H])/k\\right\\rceil,\\\\\n3\\lceil|S|/2\\rceil+2\\tau+4q\\le |H|+2.\n\\end{gathered}\n\\tag{E.1}\n\\]",
+      "sha256": "4a05fe552360d22e1b4cf51692847f60e03ad186632326b3d9f47d4f9fc25942",
+      "allowed_change": "O5 scoped variable renaming only"
+    },
+    {
+      "id": "display-167",
+      "kind": "display",
+      "line": 1820,
+      "text": "\\[\n|Q|+2\\left(\\sum_{w\\in W}|M_w|+t+e(G[S])\\right)=e(G).\n\\tag{E.2}\n\\]",
+      "sha256": "5977e0dc221b82a46edbb852e61dbdfb4657cb1330a3ae5f7fa6b605d889432f",
+      "allowed_change": "O5 scoped variable renaming only"
+    },
+    {
+      "id": "display-168",
+      "kind": "display",
+      "line": 1825,
+      "text": "\\[\nd_W=\\sum_{w\\in W}\\deg(w),\\qquad\nm_W=\\sum_{w\\in W}\\min(u_w,v_w).\n\\]",
+      "sha256": "9185a7974604a14570ca9c72187e488fa68bb71516582a124b67d367febe5c7c",
+      "allowed_change": "O5 scoped variable renaming only"
+    },
+    {
+      "id": "display-169",
+      "kind": "display",
+      "line": 1832,
+      "text": "\\[\n|Q|+e(G[S])+2m_W\\le cb+d_W+2r(L+r).\n\\tag{E.2a}\n\\]",
+      "sha256": "1eee4731c5b4e4134c03e3d3dd3c9878b04779b7d5a55754b22e7d7d5588b214",
+      "allowed_change": "O5 scoped variable renaming only"
+    },
+    {
+      "id": "display-170",
+      "kind": "display",
+      "line": 1838,
+      "text": "\\[\n\\begin{split}\n&d_W+2r(L+r)+\\binom c2+\\binom{s+1}2\\\\\n&\\hspace{1em}\\le e(G[S])+2m_W+sc+\\frac{r(c+b+s)}3.\n\\end{split}\n\\tag{E.2b}\n\\]",
+      "sha256": "7d01ad6521ea478a0a5dc61c4cc6d380b4ba7a01efd6e8635028e1f8ea23bfef",
+      "allowed_change": "O5 scoped variable renaming only"
+    },
+    {
+      "id": "display-171",
+      "kind": "display",
+      "line": 1846,
+      "text": "\\[\n|Q|+\\binom c2+\\binom{s+1}2\n\\le c(b+s)+\\frac{r(c+b+s)}3.\n\\tag{E.2c}\n\\]",
+      "sha256": "7b3ab7b8dfcbf5eedbb2ed35d675c7732ab190c4d57a24f02988fe53a670bc0c",
+      "allowed_change": "O5 scoped variable renaming only"
+    },
+    {
+      "id": "display-172",
+      "kind": "display",
+      "line": 1854,
+      "text": "\\[\n\\rho=\\frac{n}{(s+1)^2},\\qquad \\lambda=\\frac{n}{(s+1)^4}.\n\\]",
+      "sha256": "63bb1f863582bdacd37278faa7eaef36f4a1f213841260f258573b1f8a2f3f8b",
+      "allowed_change": "O5 scoped variable renaming only"
+    },
+    {
+      "id": "display-173",
+      "kind": "display",
+      "line": 1858,
+      "text": "\\[\nr\\le\\frac{4\\rho}{10^{27}},\\qquad\nL\\le\\frac{\\rho}{10^{13}}+1,\\qquad\n|\\mathcal L|-\\frac n3\\le c+\\frac{4\\lambda}{10^{31}}.\n\\]",
+      "sha256": "5a1aad8e5c1eebdb2529e529be47ba4bb348f5c1cf6f2c9b6067dd5d5e64669f",
+      "allowed_change": "O5 scoped variable renaming only"
+    },
+    {
+      "id": "display-174",
+      "kind": "display",
+      "line": 1866,
+      "text": "\\[\nM_S:=\\binom c2-e(G[S])\\le \\nu c-\\binom{\\nu+1}2.\n\\]",
+      "sha256": "48ba2c9a9464315f242a493e2588eaa6350c6768c32366eabc431a387992310b",
+      "allowed_change": "O5 scoped variable renaming only"
+    },
+    {
+      "id": "display-175",
+      "kind": "display",
+      "line": 1870,
+      "text": "\\[\n\\begin{split}\ng_w&=\\deg(w)-2\\min(u_w,v_w)+2(L+r)-\\frac{c+b+s}{3},\\\\\ne_1&=4r+2L+\\frac{4\\rho}{10^{27}}.\n\\end{split}\n\\]",
+      "sha256": "d55b5c517b324db882ca9ada2405f58bbb0e1768697489471bb90dc5d4b20b91",
+      "allowed_change": "O5 scoped variable renaming only"
+    },
+    {
+      "id": "display-176",
+      "kind": "display",
+      "line": 1879,
+      "text": "\\[\nX=\\{w\\in W:v_w-u_w>n/3-\\rho/400\\},\\qquad j=|X|.\n\\]",
+      "sha256": "a1b4f6abe1308b14161e3882ee3fa8acefbd5d99ad2f8279382812944f6e00e1",
+      "allowed_change": "O5 scoped variable renaming only"
+    },
+    {
+      "id": "display-177",
+      "kind": "display",
+      "line": 1885,
+      "text": "\\[\n\\sum_{w\\in X'}|N(w)\\cap\\mathcal L|\n\\le (s-\\nu)|\\mathcal L|+\\frac n9\n\\quad\\text{if }X'\\subseteq W,\\quad |X'|\\le2(s+1).\n\\tag{E.2d}\n\\]",
+      "sha256": "69cfccecb2389b97f7f494fb433edb1e48a1b52e199b572c38581f2b783a7142",
+      "allowed_change": "O5 scoped variable renaming only"
+    },
+    {
+      "id": "display-178",
+      "kind": "display",
+      "line": 1898,
+      "text": "\\[\n   sc-\\nu c-\\binom{s+1}2+\\binom{\\nu+1}2\n   =(s-\\nu)\\left(c-\\frac{s+\\nu+1}{2}\\right)\\ge0,\n   \\]",
+      "sha256": "579e7a866157480fac01c1d98c69389d8da4a8b345c93d9bc54a6b4db7270f3b",
+      "allowed_change": "O5 scoped variable renaming only"
+    },
+    {
+      "id": "display-179",
+      "kind": "display",
+      "line": 1904,
+      "text": "\\[\n   \\sum_{w\\in W}g_w+M_S+\\binom{s+1}2\n   \\le(j+\\nu)c-\\frac{j\\rho}{80}\n        -\\binom{\\nu+1}2+\\binom{s+1}2\\le sc.\n   \\]",
+      "sha256": "8a3a27c1668aa7c3ce98928251bca421c7d0a4fa30c224f2b7ce6e2c4890b761",
+      "allowed_change": "O5 scoped variable renaming only"
+    },
+    {
+      "id": "display-180",
+      "kind": "display",
+      "line": 1912,
+      "text": "\\[\n   \\sum_{w\\in W}g_w\n   \\le (s-\\nu)c-\\frac{2n}{9}\n      +\\frac{4(s+1)\\lambda}{10^{31}}+(s+1)e_1.\n   \\]",
+      "sha256": "ac630f631d4ace6a7819e44b6b3301a46c09954d530ec50a73caf98fa09531f7",
+      "allowed_change": "O5 scoped variable renaming only"
+    },
+    {
+      "id": "display-181",
+      "kind": "display",
+      "line": 1925,
+      "text": "\\[\n\\begin{gathered}\nc(b+s)\\le\\binom c2+M(c+b+s),\\\\\nQ_s(c+b)+rz\\le Q_s(c+b+r).\n\\end{gathered}\n\\tag{E.2e}\n\\]",
+      "sha256": "8777db8d98d171a30fa33fe351b6f9f15795470d0b6c6efb8ef667eafbd9908a",
+      "allowed_change": "O5 scoped variable renaming only"
+    },
+    {
+      "id": "display-182",
+      "kind": "display",
+      "line": 1947,
+      "text": "\\[\nQ_s(n)-Q_s(n-1)=\\left\\lfloor\\frac{n+s+1}{3}\\right\\rfloor.\n\\tag{E.3}\n\\]",
+      "sha256": "acfb5b5a447b2100c59b2987cdd1b241ddae2079d1808e8faf4f0aea458e6575",
+      "allowed_change": "O5 scoped variable renaming only"
+    },
+    {
+      "id": "display-183",
+      "kind": "display",
+      "line": 1954,
+      "text": "\\[\n\\deg(v)+K_s\\le\\left\\lfloor\\frac{n+s+1}{3}\\right\\rfloor,\n\\tag{E.4}\n\\]",
+      "sha256": "2dbf0c45ae1b8b712cf0c94a9966b530b82c0184274fae890ca2c7b28b0acce5",
+      "allowed_change": "O5 scoped variable renaming only"
+    },
+    {
+      "id": "display-184",
+      "kind": "display",
+      "line": 1967,
+      "text": "\\[\nk(n-k)-\\binom{k-s}{2}\n=M(n+s)-\\binom{s+1}{2}=Q_s(n)\n\\tag{E.5}\n\\]",
+      "sha256": "8cb09beaeeccafc08df4ed060ce43b2f058713e5998a1255e76097181cfebf45",
+      "allowed_change": "O5 scoped variable renaming only"
+    },
+    {
+      "id": "display-185",
+      "kind": "display",
+      "line": 1981,
+      "text": "\\[\n\\begin{aligned}\n\\gamma_s&=\\tfrac12\\min\\{1,\\eta_s/4,\\epsilon_s/4\\},\\\\\nN_s^{\\rm deg}&=\\lceil10^{50}(s+1)^8\\rceil+L_s+\n                    N_{\\rm far}(\\eta_s)+s+5,\\\\\nN_{0,s}&=N_s^{\\rm deg}+F_s+s+3+\n                 \\lceil1/\\epsilon_s\\rceil+\\lceil A_s\\rceil+1,\\\\\nN_s^{\\rm stab}&=2N_{0,s}+F_s+s+4.\n\\end{aligned}\n\\tag{F.1}\n\\]",
+      "sha256": "acdb8856eb3795bc0e39122e3027158d9d029d8be7ad428d6535dd2f13e5547d",
+      "allowed_change": "O5 scoped variable renaming only"
+    },
+    {
+      "id": "display-186",
+      "kind": "display",
+      "line": 1995,
+      "text": "\\[\n0\\le\\delta\\le\\gamma_0t(t-N_{0,s}),\\qquad\n\\gamma_0=\\min\\{1,\\eta_s/4,\\epsilon_s/4\\}.\n\\]",
+      "sha256": "eb4c4edf018cb1dcf70c676dd0c0ae5c41cda0069ebf8d90f3cec37a390cd790",
+      "allowed_change": "O5 scoped variable renaming only"
+    },
+    {
+      "id": "display-187",
+      "kind": "display",
+      "line": 2004,
+      "text": "\\[\n\\begin{aligned}\nF_4(G)&\\le(n-2c+1)\\alpha+\\binom c2+\n                \\sum_{j=0}^{n-c-1}\\min(s,j),\\\\\nF_4(G)&\\le(n-c)\\alpha+\\frac16\\binom c2+s(n-c)\n                   &&(c\\ge4).\n\\end{aligned}\n\\tag{F.2}\n\\]",
+      "sha256": "8e5757f6259c1e36fab391396ac3697ab3a9efdb05f33aaeec3ca9e077a5f811",
+      "allowed_change": "O5 scoped variable renaming only"
+    },
+    {
+      "id": "display-188",
+      "kind": "display",
+      "line": 2016,
+      "text": "\\[\ns(n-c)-\\binom{s+1}{2}.\n\\tag{F.3}\n\\]",
+      "sha256": "14d0d58ca50efaf2c2af327dc22396f7f7f52f62a831d12c167502f5b7e7c088",
+      "allowed_change": "O5 scoped variable renaming only"
+    },
+    {
+      "id": "display-189",
+      "kind": "display",
+      "line": 2021,
+      "text": "\\[\nF_4(G)\\le B_{n-s}(c)+ns-\\binom{s+1}{2}\n\\le M(n-s)+ns-\\binom{s+1}{2}.\n\\]",
+      "sha256": "a20f201ace9f576555e5e5bad332650051b40f375c960e1502e72f21b1dac137",
+      "allowed_change": "O5 scoped variable renaming only"
+    },
+    {
+      "id": "display-190",
+      "kind": "display",
+      "line": 2026,
+      "text": "\\[\nF_4(G)\\le\\frac{c(5n-4c-1)}{12}+s(n-c).\n\\tag{F.4}\n\\]",
+      "sha256": "f95d09d15b8819810805721de56882c1a68a0709b9d822640d5ad0ef3466aa20",
+      "allowed_change": "O5 scoped variable renaming only"
+    },
+    {
+      "id": "display-191",
+      "kind": "display",
+      "line": 2035,
+      "text": "\\[\n\\theta(\\xi)=\\frac1{16m^{m+1}+1},\\qquad N(\\xi)=\\max\\{m,1\\}.\n\\tag{F.5}\n\\]",
+      "sha256": "0e709972a8bdfa9e8fc597c90f8da5a5c4cb668caf91949fe8e0df7617599c0d",
+      "allowed_change": "O5 scoped variable renaming only"
+    },
+    {
+      "id": "display-192",
+      "kind": "display",
+      "line": 2042,
+      "text": "\\[\n\\begin{aligned}\ne(G-R)+A_R&\\le16\\delta+65t+n(s+u),\\\\\nM(n)-B_n(|R|)&\\le\\delta+4t+2n(s+u).\n\\end{aligned}\n\\tag{F.6}\n\\]",
+      "sha256": "ea39ccce9f268a0100bf173f775e921aac2161177bb43aad5bba94cfdb12e483",
+      "allowed_change": "O5 scoped variable renaming only"
+    },
+    {
+      "id": "display-193",
+      "kind": "display",
+      "line": 2079,
+      "text": "\\[\n\\operatorname{indCopies}(C_k,G)\\le2ks\\,n^{k-1}.\n\\tag{F.7}\n\\]",
+      "sha256": "496405d4bb3563b4ac3e731979d8da1e1e2441e975cfeecb469bd30142311dfc",
+      "allowed_change": "O5 scoped variable renaming only"
+    },
+    {
+      "id": "display-194",
+      "kind": "display",
+      "line": 2086,
+      "text": "\\[\nd_E(G,H)\\le2\\sqrt{s}\\,n\\sqrt n+n.\n\\tag{F.8}\n\\]",
+      "sha256": "8d96a7fa5a54e1694168541a7ae3f7450a75454bb30b9f486e4837977cdf2c9f",
+      "allowed_change": "O5 scoped variable renaming only"
+    },
+    {
+      "id": "display-195",
+      "kind": "display",
+      "line": 2093,
+      "text": "\\[\n(d-|C|)^2\\le2M,\\qquad |C|\\ge d-\\sqrt{2M}.\n\\tag{F.9}\n\\]",
+      "sha256": "16e774dce2e0c04569546c84840682ea61569c5b0635b8a2e84fb8f06774c44b",
+      "allowed_change": "O5 scoped variable renaming only"
+    },
+    {
+      "id": "display-196",
+      "kind": "display",
+      "line": 2100,
+      "text": "\\[\nd_E(G,H)\\le8\\sqrt{\\varepsilon}\\,n^2,\\qquad H[Y]=G[Y].\n\\tag{F.10}\n\\]",
+      "sha256": "a6e3ceb3b39786af9f01e4f6628b6c7ad84e7a491c241534d6c7ba35136472f7",
+      "allowed_change": "O5 scoped variable renaming only"
+    },
+    {
+      "id": "display-197",
+      "kind": "display",
+      "line": 2130,
+      "text": "\\[\n\\sum_T x_T\\le \\nu_3(G)+\\left(10+\\frac d2\\right)n.\n\\tag{G.1}\n\\]",
+      "sha256": "566b678fdc215e9942ebc5827d070a1264f3fc4390a63d0937a4dfa1a1a773c5",
+      "allowed_change": "O5 scoped variable renaming only"
+    },
+    {
+      "id": "display-198",
+      "kind": "display",
+      "line": 2147,
+      "text": "\\[\nN_0>\\exp(t^2/16).\n\\tag{G.2}\n\\]",
+      "sha256": "d397a001581e45d92e18531502696d63d89405ca408ad3ac811dc2c64cbb2cbe",
+      "allowed_change": "O5 scoped variable renaming only"
+    },
+    {
+      "id": "display-199",
+      "kind": "display",
+      "line": 2154,
+      "text": "\\[\n2(1-\\gamma)T\\le\\frac{\\varepsilon}{4}n^2.\n\\tag{G.3}\n\\]",
+      "sha256": "31276580e958bed3b051d7d607bb415d23e81ab6f134e3b89b14cd5869834e7e",
+      "allowed_change": "O5 scoped variable renaming only"
+    },
+    {
+      "id": "display-200",
+      "kind": "display",
+      "line": 2167,
+      "text": "\\[\ne(G)\\le2(n-2)+1=2n-3.\n\\tag{G.4}\n\\]",
+      "sha256": "41d8030717b4923daceb72dc9dfb68346721d0861c91b5a3b704cbb820659997",
+      "allowed_change": "O5 scoped variable renaming only"
+    },
+    {
+      "id": "display-201",
+      "kind": "display",
+      "line": 2172,
+      "text": "\\[\n\\frac{\\varepsilon n^2}{30}-1\n\\le T\\le\\frac{2n-3}{3}\n\\quad\\Longrightarrow\\quad n\\le\\frac{20}{\\varepsilon}.\n\\tag{G.5}\n\\]",
+      "sha256": "e1fdb179075c01ba3eb39c81a17f3fbe171d9568f4b4ab1e4f39839ed3e248fc",
+      "allowed_change": "O5 scoped variable renaming only"
+    },
+    {
+      "id": "lean-1",
+      "kind": "lean",
+      "line": 1303,
+      "text": "```lean\ndef IsChordal (G : SimpleGraph V) : Prop :=\n  ∀ ⦃v : V⦄ (c : G.Walk v v), c.IsCycle → 4 ≤ c.length →\n    ∃ x y : V, x ∈ c.support ∧ y ∈ c.support ∧ G.Adj x y ∧ s(x, y) ∉ c.edges\n```",
+      "sha256": "127db437f6d87fb222a352028d24617e2d014cf889c14484a52ba3835838891e",
+      "allowed_change": "none"
+    },
+    {
+      "id": "lean-2",
+      "kind": "lean",
+      "line": 1309,
+      "text": "```lean\ndef pairs (K : Finset V) : Finset (Sym2 V) := K.sym2.filter fun e => ¬ e.IsDiag\n\nstructure CliquePartition where\n  pieces : Finset (Finset V)\n  isClique : ∀ K ∈ pieces, ∀ a ∈ K, ∀ b ∈ K, a ≠ b → G.Adj a b\n  two_le_card : ∀ K ∈ pieces, 2 ≤ K.card\n  edgeDisjoint : ∀ K ∈ pieces, ∀ L ∈ pieces, K ≠ L → Disjoint (pairs K) (pairs L)\n  covers : pieces.biUnion pairs = G.edgeFinset\n\ndef CliquePartition.size (Q : CliquePartition G) : ℕ := Q.pieces.card\n\ndef CliquePartition.OrderAtMost (Q : CliquePartition G) (r : ℕ) : Prop :=\n  ∀ K ∈ Q.pieces, K.card ≤ r\n```",
+      "sha256": "b304dd7b6d607133aa58ec164ad3a5a4bca4abffc80b0d81e4007438fa6d75d2",
+      "allowed_change": "none"
+    },
+    {
+      "id": "lean-3",
+      "kind": "lean",
+      "line": 1325,
+      "text": "```lean\ndef targetSize (n : ℕ) : ℕ := n * (n + 1) / 6\n```",
+      "sha256": "fe5744f3ffb923957fa191fd2f82eb878a4550aaef279fab4025f040ce9933c1",
+      "allowed_change": "none"
+    },
+    {
+      "id": "lean-4",
+      "kind": "lean",
+      "line": 1333,
+      "text": "```lean\ntheorem erdos81_all_orders_additive :\n    ∃ b : ℕ, ∀ (n : ℕ) (G : SimpleGraph (Fin n)) [DecidableRel G.Adj],\n      PaperIV.FarRounding.IsChordal G →\n        ∃ Q : CliquePartition G, Q.OrderAtMost 4 ∧ Q.size ≤ PaperIV.targetSize n + b\n```",
+      "sha256": "3883d65f15282a1174406bfd46b4e7c2a06678088cb1c7ecd1ee5c938342b9a9",
+      "allowed_change": "none"
+    },
+    {
+      "id": "lean-5",
+      "kind": "lean",
+      "line": 1340,
+      "text": "```lean\ntheorem erdos81_cliquePartition :\n    ∃ N : ℕ, ∀ n : ℕ, N ≤ n → ∀ (G : SimpleGraph (Fin n)) [DecidableRel G.Adj],\n      PaperIV.FarRounding.IsChordal G →\n        ∃ Q : CliquePartition G, Q.OrderAtMost 4 ∧ Q.size ≤ targetSize n\n```",
+      "sha256": "8543132fba6fa26c326dfcb4309e12f21f82375833655053c11370cb6826bb4d",
+      "allowed_change": "none"
+    },
+    {
+      "id": "statement-1",
+      "kind": "statement",
+      "text": "### Theorem A. Bound for all orders\n\nThere is an absolute constant \\(b\\in\\mathbb N\\) such that, for every \\(n\\ge0\\) and every chordal graph \\(G\\) of order \\(n\\),\n\\[\n\\operatorname{cp}(G)\\le c_4(G)\\le M(n)+b\n\\le\\frac{n^2}{6}+\\frac n6+b.\n\\tag{A}\n\\]\nConsequently, there exists \\(C\\ge0\\) such that \\(c_4(G)\\le n^2/6+Cn\\) for all these graphs. This gives the bound asked in Erdős Problem 81 [1,8] for every order, with no exceptions; it also follows from the eventual bound of [5], as discussed in §8.1. The additive constant \\(b\\) is not claimed to be optimal.",
+      "sha256": "6b2682ce978df82a327c0d445a7aa9184c035c6bada85392b7f31c9d92a7cd80",
+      "allowed_change": "none"
+    },
+    {
+      "id": "statement-2",
+      "kind": "statement",
+      "text": "### Theorem B. Sharp bound and eventual maximum\n\nThere is an integer \\(N\\) such that every chordal graph \\(G\\) of order \\(n\\ge N\\) admits a partition into cliques of order at most four with at most \\(M(n)\\) pieces. In particular,\n\\[\n\\operatorname{cp}(G)\\le c_4(G)\\le M(n).\n\\tag{1.1}\n\\]\nFor the same orders, increasing \\(N\\) if necessary,\n\\[\n\\max_{\\substack{|V(G)|=n\\\\G\\text{ chordal}}}\\operatorname{cp}(G)=M(n).\n\\tag{1.2}\n\\]\n\nThe second assertion follows from the upper bound and a complete-split witness whose optimality is proved against all clique partitions, not merely those of bounded order. This argument alone does not classify all extremal graphs. Theorem B is more precise than the bound requested in the problem; Theorem A states its consequence valid for every order.\n\nThe example that fixes the scale is explicit: for \\(n\\ge6\\), take \\(k=\\lceil n/3\\rceil\\), \\(h=n-k\\) and \\(S=K_k\\vee I_h\\). Eliminating the independent hosts first and then the core gives a perfect elimination ordering, so \\(S\\) is chordal. Using one core base per triangle yields a partition of cost \\(kh-\\binom k2=M(n)\\); the weight argument in §6.1 shows that no partition, even one with larger cliques, costs less.\n\nThe construction gives more than the extremal value. Theorem 6.1 bounds the edits needed to reach a complete-split graph, while Corollary 6.1a uses the same root, chosen independently of the partition, to control the pieces of every near-optimal partition. Setting the deficit to zero also identifies the eventual extremal graphs.",
+      "sha256": "994f04758b3842c0678efa0418cbdc8abc3e4b4ab6db560e27524c8883864ebb",
+      "allowed_change": "none"
+    },
+    {
+      "id": "statement-3",
+      "kind": "statement",
+      "text": "### Theorem C. Fixed rooted simplicial defect\n\nFollowing Okechukwu [15, §1], we say that \\(G\\) has **rooted simplicial defect at most \\(s\\)** if it satisfies the following condition. Given an induced vertex set \\(U\\subseteq V(G)\\) and a prescribed clique \\(R\\subsetneq U\\), there is a vertex \\(v\\in U\\setminus R\\) whose neighborhood in \\(U\\) contains a clique omitting at most \\(s\\) of its neighbors. The empty root \\(R=\\varnothing\\) is allowed. Quantification over all prescribed roots is part of the definition, not a consequence of having a single elimination ordering. We also retain the notation \\(Q_s\\) from [15, (1.1)].\n\nFor each fixed integer \\(s\\ge0\\), there is \\(N_s\\) such that every graph \\(G\\) in this class of order \\(n\\ge N_s\\) satisfies\n\\[\n\\operatorname{cp}(G)\\le c_4(G)\\le Q_s(n),\n\\qquad\nQ_s(n):=M(n+s)-\\binom{s+1}{2}.\n\\tag{C}\n\\]\nMoreover, for each sufficiently large order there is a graph in the class with \\(\\operatorname{cp}(G)=Q_s(n)\\). Thus the eventual maximum is \\(Q_s(n)\\), also when cliques of arbitrary order are allowed.\n\nThis is an order-at-most-four strengthening of the eventual upper bound in [15, Theorem 1.1]. Proposition D.2 shows that four cannot be replaced by three uniformly over the classes in Theorem C: the obstruction already occurs for \\(s=0\\). It does not assert minimality separately for each positive defect.\n\nThe unrestricted maximum and equality family are those of [15, Theorem 1.1]; no priority is claimed for them. Every chordal graph belongs to the class \\(s=0\\), and \\(Q_0=M\\). Appendix E proves Theorem C through the explicit localization chain. Corollary 6.6 gives a tower bound for its threshold, uniform in the defect. The stability threshold below is specified separately; the exact bound and the stability bound must not be assigned the same threshold without a further comparison.",
+      "sha256": "025c675d7ea52461ba11016a69883e4b464a093ce1dc75a52289b1992ca9c67a",
+      "allowed_change": "none"
+    },
+    {
+      "id": "statement-4",
+      "kind": "statement",
+      "text": "### Theorem C′. Fixed-defect same-root stability\n\nFor each fixed \\(s\\ge0\\), there are explicit \\(N_s^{\\rm stab}\\), \\(\\gamma_s>0\\), and \\(A_s=2\\cdot10^{41}(s+1)^8\\) with the following property. Suppose \\(n\\ge N_s^{\\rm stab}\\), \\(\\operatorname{rsd}(G)\\le s\\), and \\(c_4(G)\\ge Q_s(n)-\\delta\\), where \\(0\\le\\delta\\le\\gamma_s n^2\\). Then \\(V(G)\\) has a partition \\(C\\sqcup D\\sqcup H\\), with \\(C\\) a clique of \\(G\\), \\(|D|=s\\), and \\(2\\le |C|\\le |H|\\), such that the template \\(T=(K_C\\sqcup I_D)\\vee I_H\\) satisfies\n\\[\nd_E(G,T)\\le A_s\\delta,\\qquad\n0\\le Q_s(n)-\\left(k(n-k)-\\binom{k-s}{2}\\right)\\le(1+4A_s)\\delta,\n\\quad k=|C|+s.\n\\]\nFor this same root, every unrestricted clique partition with at most \\(Q_s(n)+\\tau\\) pieces has at most \\(\\tau+(1+7A_s)\\delta\\) noncanonical pieces, containing at most \\(10\\tau+10(1+7A_s)\\delta\\) edges in total. Here the canonical pieces are the edges between \\(C\\cup D\\) and \\(H\\), and the triangles with two vertices in \\(C\\) and one in \\(H\\).\n\nSection 6.6 gives the parameters and proof. At zero deficit this recovers the equality classification; at positive deficit the core need not have optimal size. Corollary 6.3 quantifies the additional cost of imposing optimal size. Proposition 6.3a supplies examples at the square-root scale, including graphs of exact deficit one whose distance from every optimal-size template grows with the order. These fixed-defect constants are not substituted into a growing-\\(s\\) limit: §6.7 treats that limit separately.",
+      "sha256": "95141273532b2bad0d5f5501b177bc73eb8450164d995abcac16167c6081bfae",
+      "allowed_change": "none"
+    },
+    {
+      "id": "statement-5",
+      "kind": "statement",
+      "text": "### Lemma 2.1\n\nLet \\(Q\\) be the partition obtained by adding to \\(\\mathcal P\\) every uncovered edge as a \\(K_2\\) piece. Its number of pieces is exactly\n\\[\n|Q|=e(G)-g(\\mathcal P).\n\\tag{2.1}\n\\]",
+      "sha256": "5da843e8b83dfb1d7ba0fb0bc5eeb5fdfb9ca165067e049d70fffded202f57b3",
+      "allowed_change": "none"
+    },
+    {
+      "id": "statement-6",
+      "kind": "statement",
+      "text": "### Theorem 3.1\n\nFor every rational \\(\\xi>0\\), there exists \\(N_\\xi\\) such that, for every graph \\(G\\) of order \\(n\\ge N_\\xi\\) and every rational fractional mixed packing \\(x\\), there is a mixed packing \\(\\mathcal P\\) with\n\\[\nw(x)-g(\\mathcal P)\\le\\xi n^2.\n\\tag{3.1}\n\\]\nChordality is not required. The threshold is chosen after \\(\\xi\\), but before \\(G\\), \\(n\\) and \\(x\\).\n\nThis is a uniform transfer of weighted gain. The theorems of Haxell–Rödl and Yuster [6,7] provide the context of fractional-to-integral transfer. We specify below the input from Paper III and the two-quota adapter that preserves gains two and five.\n\n**Proof structure.** The bounded-rank lemma of Paper III, reproduced as Lemma 3.2 in Appendix C, rounds a family with loads at most one and sufficiently small codegree. By itself, it does not distinguish gains two and five. Lemma 3.3 adds marks and obtains two quotas for the same matching; Lemma 3.4 groups pairs of triangles and marks the \\(K_4\\) copies, so that the gain is recovered as four times the total quota plus the marked quota.\n\nTo apply that selector to an arbitrary graph, a regular partition and profile cleanup produce a system with controlled loads and codegrees. Removed mass is charged to its resources only once. First \\(\\xi\\) is fixed, then the selector and regularity parameters, and only at the end the threshold \\(N_\\xi\\), independently of the instance. The case of small triangular mass is treated separately. Appendix C retains the full estimates and parameter hierarchy; its numbering 3.2–3.14 belongs to the proof of this theorem.\n\nThus Theorem 3.1 is not cited as a black box from Paper III. That paper supplies the nibble; two-quota selection, its mixed realization and the uniform assembly are the steps of Paper IV. The fully proved statement (3.1) is all that is used below.",
+      "sha256": "24d88f0558215a2a21ff5c29b9bddfbd692682c55e57f3659d26b5a7f8530fbd",
+      "allowed_change": "none"
+    },
+    {
+      "id": "statement-7",
+      "kind": "statement",
+      "text": "### Corollary 3.5\n\nFor a fixed rational \\(\\eta>0\\), every sufficiently large graph with\n\\(F_4(G)<n^2/6-\\eta n^2\\) admits a partition of order at most four with at most \\(M(n)\\) pieces.",
+      "sha256": "12c3629a9f9f611fb0f28dbabd5bd1d119c24e03bc47e1d493781771c4487bba",
+      "allowed_change": "none"
+    },
+    {
+      "id": "statement-8",
+      "kind": "statement",
+      "text": "**Lemma 4.1 (admissible mixed path).** Every chordal graph \\(G\\) admits a finite sequence \\(G=G_0,\\ldots,G_\\ell\\) on the same vertex set such that \\(G_\\ell\\) is complete-split, every \\(G_i\\) is chordal, each step copies a single nonadjacent simplicial vertex, and\n\\[\nF_4(G_i)\\le F_4(G_{i+1}),\\qquad\nd_E(G_i,G_{i+1})\\le n-1.\n\\tag{4.3}\n\\]",
+      "sha256": "fa8e51c2ce688fdb3e88630eee3874bbdaff34dde4bd8f8ce9d2d1c8738c8ab9",
+      "allowed_change": "none"
+    },
+    {
+      "id": "statement-9",
+      "kind": "statement",
+      "text": "**Lemma 4.2 (accounting inside the window).** If \\(X\\) is chordal, \\(n\\ge4\\cdot10^{12}\\), \\(F_4(X)\\ge n^2/6-\\eta_0n^2\\) and \\(d(X)<\\varepsilon_0\\), then\n\\[\nd(X)\\le16D/n^2,\\qquad D=\\eta_0n^2+n/6+1/24.\n\\tag{4.5}\n\\]",
+      "sha256": "64f3b302388b5c512e921407bedd31341eef49952b4ce6560ec0b3b7bf8c0e6e",
+      "allowed_change": "none"
+    },
+    {
+      "id": "statement-10",
+      "kind": "statement",
+      "text": "### Proposition 4.3\n\nLet \\(G\\) be chordal of order \\(n\\ge4\\cdot10^{12}\\), and suppose\n\\[\nF_4(G)\\ge n^2/6-\\eta_0n^2.\n\\]\nThere is a nonempty set \\(C\\subseteq V(G)\\) such that\n\\[\nd_E(G,S_C)\\le\\varepsilon_0n^2,\n\\tag{4.7}\n\\]\n\\[\n(6|C|-2n-1)^2\n\\le24\\left((\\eta_0+6\\varepsilon_0)n^2+\\frac n6+\\frac1{24}\\right).\n\\tag{4.8}\n\\]\n\nThe preceding localization and the comparator estimate give (4.7)–(4.8). The set \\(C\\) is not asserted to be a clique of \\(G\\): it is a clique of the comparator \\(S_C\\). The next construction obtains a root that is a clique of the original graph. This distinction avoids transporting a partition through an edit set that may have quadratic size.",
+      "sha256": "7730286d0df5a5297499492b333ba8e44c34898a7fb5b680b2dc4a8bb75d629a",
+      "allowed_change": "none"
+    },
+    {
+      "id": "statement-11",
+      "kind": "statement",
+      "text": "### Theorem 5.0. Near constructor under local hypotheses\n\nLet \\(\\varepsilon_0=10^{-12}\\), \\(\\eta_0=10^{-16}\\), and let \\(G\\) be chordal of order \\(n\\ge4\\cdot10^{12}\\). Suppose\n\\[\nd(G)<\\varepsilon_0,\\qquad F_4(G)\\ge n^2/6-\\eta_0n^2.\n\\]\nThere are a clique \\(R\\) of \\(G\\) of size \\(p\\) with \\(|3p-n|\\le n/50\\), and a partition \\(Q\\) of order at most four such that, if \\(m=e(G-R)\\) and \\(A\\) counts missing links between \\(R\\) and its exterior,\n\\[\n|Q|\\le B_n(p)-\\frac m{20}-\\frac A2,\\qquad\nB_n(p)=p(n-p)-\\binom p2.\n\\tag{5.0}\n\\]\n\n**Proof and organization.** Lemma 5.1 extracts an actual clique; Proposition 5.2 regularizes it. The two phases in §§5.2–5.3 construct a packing on the same resources whose completion satisfies Table 2. Lemma 5.3 gives (5.0). For the size window, Lemma 5.1 gives \\(a\\ge33n/100\\). The regularization accounts give \\(99a\\le100p\\) and \\(48(2p-(n-p))\\le a\\), with the subtraction truncated before passing to the rational inequality. Together with \\(p+(n-p)=n\\), these imply \\(3267n\\le10000p\\) and \\(3539p\\le1188n\\), hence \\(|3p-n|\\le n/50\\). In particular, the earlier window \\(n/4\\le p\\le n/2\\) remains valid. None of these steps uses the global localization of Proposition 4.3. The present theorem can therefore be applied in Lemma 4.2, and localization obtained only afterwards. The following subsections prove each part of the statement.",
+      "sha256": "01560ea96e57134c30fd9bb622f3a53772af4da20ed9c4f505e0858b03c7f2f9",
+      "allowed_change": "none"
+    },
+    {
+      "id": "statement-12",
+      "kind": "statement",
+      "text": "**Lemma 5.1 (extraction of an actual clique).** Under these hypotheses and \\(n\\ge4\\cdot10^{12}\\), there is a clique \\(P\\) of \\(G\\) of size \\(a\\) such that\n\\[\n\\begin{gathered}\na\\ge1024,\\qquad |n-3a|\\le a/64,\\\\\ne(G-P)+\\#\\{\\text{missing links between }P\\text{ and }V\\setminus P\\}\n\\le a^2/65536.\n\\end{gathered}\n\\tag{5.1}\n\\]",
+      "sha256": "91249cacf01f9e5c49b6de417020c0bdac7e200aa44d620dcac3bb9a1ecb9c24",
+      "allowed_change": "none"
+    },
+    {
+      "id": "statement-13",
+      "kind": "statement",
+      "text": "**Proposition 5.2 (regularization).** The root \\(R\\) in (5.2) is a clique. If \\(p=|R|\\), \\(q=n-p\\), \\(m=e(G-R)\\), \\(A\\) is its cross defect and \\(D\\) is the maximum defect of a column, it satisfies the palette and width bounds in (5.7), and\n\\[\n\\begin{gathered}\n99a/100\\le p\\le101a/100,\\quad q\\ge p,\\quad\n44352q\\ge87947a,\\\\\n48(2p-q)_+\\le a,\\quad 3D\\le a,\\quad\n400m<a^2,\\quad2000(A+2m)\\le11a^2.\n\\end{gathered}\n\\tag{5.4}\n\\]",
+      "sha256": "0748ca428baf36573fdde8cefa0d99e483518576bdbf78105c325870fd049264",
+      "allowed_change": "none"
+    },
+    {
+      "id": "statement-14",
+      "kind": "statement",
+      "text": "### Lemma 5.3\n\nRetaining the stronger estimate in (5.14) for the same partition \\(Q\\) gives\n\\[\n|Q|\\le B_n(p)-\\frac{117}{1825}m-\\frac{12687}{20000}A\n\\le B_n(p)-\\frac m{16}-\\frac A2.\n\\tag{5.15a}\n\\]\nIn particular, the three accounts in Table 2 also imply the earlier form\n\\[\n|Q|\\le B_n(p)-\\frac{19}{365}m-\\frac{253}{500}A\n\\le B_n(p)-\\frac m{20}-\\frac A2.\n\\tag{5.15}\n\\]",
+      "sha256": "e71ac230e978abac6a7f4e81e53b3fae74a318eb80f58600b69f5d383eef1a0a",
+      "allowed_change": "none"
+    },
+    {
+      "id": "statement-15",
+      "kind": "statement",
+      "text": "**Corollary 5.4 (quantitative geometry of the critical branch).** For every sufficiently large chordal graph \\(G\\), either \\(F_4(G)<n^2/6-\\eta_0n^2\\), or there are a clique \\(R\\) of the original graph and a comparator core \\(C\\) such that\n\\[\n|3|R|-n|\\le\\frac n{50},\\qquad\n|3|C|-n|\\le\\frac n{10^4},\\qquad\nd_E(G,S_C)\\le\\varepsilon_0n^2,\n\\tag{5.17}\n\\]\nand, in the second branch,\n\\[\n\\left|e(G)-\\frac{5n^2}{18}\\right|\\le\\frac{n^2}{10^4}.\n\\tag{5.18}\n\\]\nFor (5.17), it suffices to take \\(n\\ge4\\cdot10^{12}\\) in addition to the threshold of the dichotomy. The actual clique follows from the three regularization ratios used in Theorem 5.0. The bound on \\(C\\) follows from (4.8) and the calibration. If \\(k=|C|=n/3+t\\), then \\(|t|\\le n/30000\\) and\n\\[\ne(S_C)=\\binom k2+k(n-k)\n=\\frac{5n^2}{18}+\\frac{2nt}{3}-\\frac{t^2}{2}-\\frac{k}{2}.\n\\]\nThe last bound follows by comparing this count with \\(e(G)\\) using (4.7). The constant \\(5/9\\) describes the *asymptotic* density relative to a complete graph; it is not an exact density identity at finite order. The corollary controls sizes, not uniqueness of \\(R\\) or \\(C\\) as vertex sets.",
+      "sha256": "42c00b87f470f4b8e5a60e403ffae2e30ec094467f65d3042fb1b141b1e5dd27",
+      "allowed_change": "none"
+    },
+    {
+      "id": "statement-16",
+      "kind": "statement",
+      "text": "**Theorem 6.1 (integral stability).** There exist \\(\\gamma>0\\) and a threshold \\(N_{\\rm est}\\) such that, if \\(n\\ge N_{\\rm est}\\), \\(G\\) is chordal, \\(0\\le\\delta\\le\\gamma n^2\\), and every partition of order at most four has at least \\(M(n)-\\delta\\) pieces, then there is a clique \\(R\\) of \\(G\\) for which\n\\[\n\\bigl(M(n)-B_n(|R|)\\bigr)+\\frac m{16}+\\frac A2\\le\\delta,\n\\qquad\nd_E(G,S_R)=m+A\\le16\\delta.\n\\tag{6.7}\n\\]\nHere \\(m=e(G-R)\\) and \\(A\\) is the number of missing links between \\(R\\) and \\(V(G)\\setminus R\\).\n\nWe explain the proof. Take \\(\\gamma=\\eta_0/4\\) and apply the dichotomy. In the far branch, RC01 retains at least \\(\\eta_0n^2/2\\) of margin and produces a partition with\n\\[\n|Q|<\\frac{n^2}{6}-\\frac{\\eta_0}{2}n^2\n\\le M(n)-\\frac{\\eta_0}{2}n^2.\n\\]\nThis contradicts \\(|Q|\\ge M(n)-\\delta\\), because \\(\\delta\\le\\eta_0n^2/4\\). Thus only the near branch can occur. There, the stronger account (5.15a), retained for the same physical witness, gives\n\\[\nM(n)-\\delta\\le |Q|\n\\le B_n(|R|)-\\frac m{16}-\\frac A2,\n\\]\nwhich yields the first inequality in (6.7). Since \\(B_n(|R|)\\le M(n)\\) and \\(A\\ge0\\),\n\\[\nm+A\\le16\\left(\\frac m{16}+\\frac A2\\right)\\le16\\delta.\n\\]\nFinally, the fact that \\(R\\) is a clique identifies exactly the edits needed to transform \\(G\\) into \\(S_R\\): delete the \\(m\\) exterior edges and add the \\(A\\) missing links. This proves the equality in (6.7).\n\nThe same root controls not only the graph but also its partitions close to the maximum. For any partition \\(Q\\), even when cliques of order greater than four are allowed, put \\(a_K=|K\\cap R|\\) and \\(b_K=|K\\setminus R|\\) for each piece \\(K\\). Define its defect relative to \\(R\\) by\n\\[\nd_R(K)=1+\\binom{a_K}{2}+3\\binom{b_K}{2}-a_Kb_K\n=\\frac{(a_K-b_K)(a_K-b_K-1)}2+(b_K-1)^2.\n\\tag{6.7a}\n\\]\nThe first term on the right is nonnegative for every integer \\(a_K-b_K\\). Thus \\(d_R(K)=0\\) exactly for root–exterior edges and triangles with two root vertices and one exterior vertex.",
+      "sha256": "90905196844218ce20482492fe0c97589550724adc078ff7073bbd23c328de30",
+      "allowed_change": "none"
+    },
+    {
+      "id": "statement-17",
+      "kind": "statement",
+      "text": "**Corollary 6.1a (stability of partitions).** Under the hypotheses of Theorem 6.1, the root \\(R\\) can be chosen so that every unrestricted clique partition \\(Q\\) with \\(|Q|\\le M(n)+\\tau\\), \\(\\tau\\ge0\\), has at most \\(\\tau+48\\delta\\) noncanonical pieces. The total number of edges in those pieces is at most \\(10\\tau+480\\delta\\). Both conclusions use the same root; there is no restriction on piece order.",
+      "sha256": "e08f8251c90004df09d8d7f91d9e7e4ad91375fbc658411241822f9ffaeb5e73",
+      "allowed_change": "none"
+    },
+    {
+      "id": "statement-18",
+      "kind": "statement",
+      "text": "**Corollary 6.2 (eventual classification).** Extremal chordal graphs of sufficiently large order are exactly the complete-split graphs with the core sizes in (6.4).",
+      "sha256": "c0084780a3baee66ea6d98bb138d4a0f8a24d2d19267f23b75c9539a437237df",
+      "allowed_change": "none"
+    },
+    {
+      "id": "statement-19",
+      "kind": "statement",
+      "text": "**Theorem C′ (fixed-defect same-root stability).** For each fixed integer \\(s\\ge0\\), there are explicit \\(\\gamma_s>0\\) and \\(N_s^{\\rm stab}\\) with the following property. Put\n\\[\n\\epsilon_s=\\frac1{10^{41}(s+1)^8},\\qquad\nA_s=\\max\\{40000(s+1)^3,\\,2/\\epsilon_s\\}.\n\\tag{6.11}\n\\]\nIf \\(n\\ge N_s^{\\rm stab}\\), \\(\\operatorname{rsd}(G)\\le s\\), and\n\\[\nc_4(G)\\ge Q_s(n)-\\delta,\\qquad 0\\le\\delta\\le\\gamma_s n^2,\n\\]\nthen there is a single root \\((C,D,H)\\) as above such that\n\\[\n\\begin{aligned}\nd_E(G,T(C,D,H))&\\le A_s\\delta,\\\\\n0\\le Q_s(n)-B_{s,n}(k)&\\le(1+4A_s)\\delta.\n\\end{aligned}\n\\tag{6.12}\n\\]\nFor this same root, every unrestricted clique partition \\(Q\\) with \\(|Q|\\le Q_s(n)+\\tau\\), \\(\\tau\\ge0\\), satisfies\n\\[\n\\begin{aligned}\nN_{\\rm bad}(Q)&\\le\\tau+(1+7A_s)\\delta,\\\\\nE_{\\rm bad}(Q)&\\le10\\tau+10(1+7A_s)\\delta.\n\\end{aligned}\n\\tag{6.13}\n\\]\nBoth \\(\\delta\\) and \\(\\tau\\) may be real. The root is chosen before \\(Q\\) and \\(\\tau\\).\n\nThe maximum in (6.11) equals \\(2\\cdot10^{41}(s+1)^8\\): its second term dominates the terminal constant \\(40000(s+1)^3\\) for every \\(s\\ge0\\). The coefficients are not asserted optimal. At \\(s=0\\), the specialized chordal argument remains preferable: it gives \\(16\\), \\(48\\), and \\(480\\), rather than the large constants in (6.11).\n\n![Proof structure for fixed-defect same-root stability.](figures_en/fig4_same_root_stability.png)\n\n**Figure 4.** Theorem C′: low-degree deletion reaches the controlled terminal, and reinsertion transports its root back to the original graph. The retained accounts then control every partition on that same root. Resizing to an optimal template is a separate step (Corollary 6.3), with the square-root cost illustrated by Proposition 6.3a. The diagram is schematic; Appendix F.1 supplies the induction window.",
+      "sha256": "59f6e248a389363ae1f254bada038fa4509137b4fef2360c85e849794ad2eb40",
+      "allowed_change": "none"
+    },
+    {
+      "id": "statement-20",
+      "kind": "statement",
+      "text": "**Corollary 6.3 (optimal-size comparison and equality).** Under the hypotheses of Theorem C′ there is an optimal-size extremal template \\(T_*\\) with\n\\[\nd_E(G,T_*)\\le A_s\\delta+n\\sqrt{(1+4A_s)\\delta}.\n\\tag{6.17}\n\\]\nAt \\(\\delta=0\\), for sufficiently large \\(n\\),\n\\[\n\\operatorname{cp}(G)=Q_s(n)\n\\quad\\Longleftrightarrow\\quad c_4(G)=Q_s(n)\n\\quad\\Longleftrightarrow\\quad\nG\\cong(K_{k-s}\\sqcup I_s)\\vee I_{n-k},\n\\tag{6.18}\n\\]\nwhere \\(k\\) is an integer nearest to \\((2(n+s)+1)/6\\).",
+      "sha256": "d898bfc4cf670f774ffca62bf795e018bca72244ad45f9abc71fb1acf24a6545",
+      "allowed_change": "none"
+    },
+    {
+      "id": "statement-21",
+      "kind": "statement",
+      "text": "**Proposition 6.3a (a square-root obstruction).** Fix \\(s\\ge0\\). Let \\(q,d\\) be integers with \\(2s+2\\le q\\) and \\(1\\le d\\le q/2\\), and put \\(n=3q-s\\). The graph\n\\[\nG_{s,q,d}=(K_{q+d-s}\\sqcup I_s)\\vee I_{2q-s-d}\n\\]\nhas rooted simplicial defect at most \\(s\\) and satisfies\n\\[\n\\operatorname{cp}(G_{s,q,d})=c_4(G_{s,q,d})\n=Q_s(n)-\\delta_d,\\qquad\n\\delta_d=d^2+\\binom d2=\\frac{3d^2-d}{2}.\n\\tag{6.20}\n\\]\nFor every optimal-size template \\(T\\) on the same vertex set, with any labelling,\n\\[\nd_E(G_{s,q,d},T)\\ge\\frac{nd}{4}\n\\ge\\frac{n\\sqrt{\\delta_d}}8.\n\\tag{6.21}\n\\]",
+      "sha256": "43acfd7066c6e76944e47487025d18b9f8b16b641a0fcaee428f80744c39d1bd",
+      "allowed_change": "none"
+    },
+    {
+      "id": "statement-22",
+      "kind": "statement",
+      "text": "**Proposition 6.4 (finite fractional bounds).** If \\(\\operatorname{rsd}(G)\\le s\\le n\\), then, at every order including zero,\n\\[\nF_4(G)\\le M(n-s)+ns.\n\\tag{6.22}\n\\]\nOn the band \\(4s\\le n\\), the stronger bound is\n\\[\nF_4(G)\\le M(n-s)+ns-\\binom{s+1}{2}.\n\\tag{6.23}\n\\]\nFor every \\(\\varepsilon>0\\), one threshold \\(N(\\varepsilon)\\), independent of \\(s\\), makes the corresponding bound valid for \\(c_4(G)\\) after adding \\(\\varepsilon n^2\\), whenever \\(n\\ge N(\\varepsilon)\\) and the respective band condition holds.\n\nThe signed-star argument follows [15, Lemma 3.1]; it is cited as a method used here, not as a new localization principle. Our calculation uses \\(L=4\\), retains the capped exception charge \\(\\sum_{j<q}\\min(s,j)\\), and bounds the result by the integer comparator rather than rounding down a fractional inequality. Appendix F describes the two star estimates and the small-order check. For the integral conclusion, choose the RC01 threshold from \\(\\varepsilon\\) first. Completion of the rounded packing costs at most \\(F_4(G)+\\varepsilon n^2\\); insert (6.22) or (6.23). The choice of \\(N\\) never depends on the graph or on \\(s\\).",
+      "sha256": "2585f1ce550ff2188957c73d2b0cf1c16afd895087db5853980ebd180c51289e",
+      "allowed_change": "none"
+    },
+    {
+      "id": "statement-23",
+      "kind": "statement",
+      "text": "**Theorem 6.5 (sublinear defect and a root for all partitions).** Let \\(n_j\\to\\infty\\), with no monotonicity assumption, and let \\(G_j\\) have order \\(n_j\\) and rooted defect at most \\(s_j=o(n_j)\\). There are partitions \\(Q_j\\) of order at most four such that\n\\[\n\\max\\{0,|Q_j|-n_j^2/6\\}=o(n_j^2).\n\\tag{6.24}\n\\]\nSuppose in addition that, eventually,\n\\[\nc_4(G_j)\\ge n_j^2/6-\\delta_j,\\qquad \\delta_j=o(n_j^2).\n\\]\nThe deficit sequence may be taken rational, as in the formal statement. There are cliques \\(R_j\\) of the original graphs and nonnegative errors \\(e_j=o(n_j^2)\\) such that\n\\[\n|R_j|=n_j/3+o(n_j),\\qquad\nd_E(G_j,S_{R_j})=o(n_j^2),\n\\tag{6.25}\n\\]\nand, for every \\(j\\), every unrestricted clique partition \\(Q\\) and every rational \\(\\tau\\) with \\(|Q|\\le M(n_j)+\\tau\\),\n\\[\nN_{\\rm bad}(Q)\\le\\tau+e_j,\\qquad\nE_{\\rm bad}(Q)\\le10\\tau+10e_j.\n\\tag{6.26}\n\\]\nHere the canonical pieces are those of Corollary 6.1a relative to \\(R_j\\). Neither the root nor \\(e_j\\) depends on \\(Q\\) or \\(\\tau\\).",
+      "sha256": "6a3c2896f9177f4dc0e0b369317e6cd7d14b34b3d25336b2011a4ad2d1c1f1e0",
+      "allowed_change": "none"
+    },
+    {
+      "id": "statement-24",
+      "kind": "statement",
+      "text": "**Corollary 6.6 (exact bound, uniform in the defect).** Let \\(T(0)=1\\), \\(T(j+1)=2^{T(j)}\\), as in §6.3, and define\n\\[\n\\begin{aligned}\nc_{\\rm poly}&=4\\cdot17664^5\\cdot9000^{105}+3006,\\\\\nc_{\\rm far}&=c_{\\rm poly}(128\\cdot10^{82})^{105},\\\\\nc_T&=h_{\\rm iter}+c_{\\rm far}+841780,\\qquad\nP(s)=c_T(s+1)^{1680},\n\\end{aligned}\n\\tag{6.28}\n\\]\nwhere \\(h_{\\rm iter}=h\\) is the explicit integer defined in §6.3. If \\(\\operatorname{rsd}(G)\\le s\\) and \\(n\\ge T(P(s))\\), then \\(c_4(G)\\le Q_s(n)\\). More generally, \\(n\\ge T(P(S))\\) suffices simultaneously for every \\(s\\le S\\).\n\nFor \\(n\\ge T(P(0))\\), the finite set below is nonempty, and we may put\n\\[\ns_{\\max}(n)=\\max\\{S\\in\\mathbb N:S\\le n,\\ T(P(S))\\le n\\}.\n\\tag{6.29}\n\\]\nThen the exact bound holds simultaneously for all \\(s\\le s_{\\max}(n)\\). The lower restriction on \\(n\\) is essential to this formulation: below it, the formal inverse returns zero even though its defining predicate may have no solution.",
+      "sha256": "9be48d435fe0dcfdbcf09abc3173454823d694f48aee032b1824f69407d13d3d",
+      "allowed_change": "none"
+    },
+    {
+      "id": "statement-25",
+      "kind": "statement",
+      "text": "### Lemma 3.2. Bounded-rank nibble with slack, input from Paper III\n\nFor every integer \\(r\\ge2\\) and every \\(\\beta>0\\), there exist \\(\\gamma,C>0\\) with the following property. Let \\(U\\) be a finite set, \\(\\mathcal H\\) a family of nonempty subsets of \\(U\\) of sizes at most \\(r\\), and \\(z_H\\ge0\\) weights such that\n\\[\n\\sum_{H\\ni v}z_H\\le1,\\qquad\n\\sum_{H\\supseteq\\{v,w\\}}z_H\\le\\gamma\\quad(v\\ne w).\n\\tag{3.2}\n\\]\nThere is a subfamily \\(\\mathcal M\\subseteq\\mathcal H\\) of pairwise disjoint members with\n\\[\n|\\mathcal M|\\ge(1-\\beta)\\sum_{H\\in\\mathcal H}z_H-\\beta|U|-C.\n\\tag{3.3}\n\\]\nThe constants are fixed before \\(U,\\mathcal H,z\\). No near-unit load or exceptional set is required. This is the slack form of the nibble from Paper III, not a new result of the present work. Appendix A identifies its declaration and the adapter, which only translates the matching predicate.",
+      "sha256": "9e7bed9ebbf086c4869bd470954b0fd37747381eb3d3f7d626be4c7c5f5ac9ea",
+      "allowed_change": "none"
+    },
+    {
+      "id": "statement-26",
+      "kind": "statement",
+      "text": "### Lemma 3.3. Simultaneous selection of total and marked mass\n\nLet \\(r\\ge2\\), \\(\\beta>0\\), and \\(\\epsilon>0\\). There exist \\(\\gamma,C>0\\) such that, for every \\(r\\)-uniform family \\(\\mathcal H\\) with nonnegative weights satisfying (3.2), and every marked subfamily \\(\\mathcal A\\subseteq\\mathcal H\\), there is **a single** matching \\(\\mathcal M\\) satisfying\n\\[\n\\begin{aligned}\n|\\mathcal M|&\\ge(1-\\beta)\\sum_{H\\in\\mathcal H}z_H-\\epsilon|U|-C,\\\\\n|\\mathcal M\\cap\\mathcal A|&\\ge(1-\\beta)\\sum_{H\\in\\mathcal A}z_H-\\epsilon|U|-C.\n\\end{aligned}\n\\tag{3.4}\n\\]",
+      "sha256": "ad685a8a462515ff5dc9a6b2b9f67a27d0d807cb9bd5c264ca6746ac8aae3c92",
+      "allowed_change": "none"
+    },
+    {
+      "id": "statement-27",
+      "kind": "statement",
+      "text": "### Lemma 3.4. Physical mixed selector\n\nFor \\(0<\\beta\\le1\\) and \\(\\epsilon>0\\), there exist \\(\\gamma,C,D>0\\) such that the following holds for any graph. Let \\(x\\) be a feasible fractional mixed packing, let \\(t_3=\\sum_Tx_T\\) and \\(t_4=\\sum_Qx_Q\\), and suppose that \\(t_3\\ge C\\) and\n\\[\n\\sum_{K:\\ e,f\\in E(K)}x_K\\le\\gamma\\qquad(e\\ne f).\n\\tag{3.5}\n\\]\nThen there is a physical packing \\(\\mathcal P\\) whose gain satisfies\n\\[\ng(\\mathcal P)\\ge(1-\\beta)(2t_3+5t_4-6)\n -5\\epsilon\\binom{n+1}{2}-5D.\n\\tag{3.6}\n\\]\nThe quantity \\(\\binom{n+1}{2}\\) is the size of the formal universe of unordered pairs, including zero-weight diagonal pairs. This bound may be used without identifying it with \\(e(G)\\).",
+      "sha256": "24ea451bdb837bb97a76cda8a1e09af116e90beb346de0255d309f99c03e083d",
+      "allowed_change": "none"
+    },
+    {
+      "id": "statement-28",
+      "kind": "statement",
+      "text": "**Proposition D.1.** For every integer \\(n\\ge0\\), there is a partition of \\(K_n\\) into pieces of order at most four with at most \\(M(n)\\) pieces.",
+      "sha256": "bf7d488ec241bdd15f2907669263da0d6e5d8713188531bfa83820d69dca3177",
+      "allowed_change": "none"
+    },
+    {
+      "id": "statement-29",
+      "kind": "statement",
+      "text": "**Proposition D.2.** If \\(n\\equiv4\\pmod6\\), every partition of \\(K_n\\) into pieces of order at most three has more than \\(M(n)\\) pieces.",
+      "sha256": "7aa7487bfc90de9b155ddd2651df59d07b73bf7053d5fd7270b740ecf4bd945d",
+      "allowed_change": "none"
+    },
+    {
+      "id": "statement-30",
+      "kind": "statement",
+      "text": "**Proposition D.3 (zero mixed gap in complete-split graphs).** Let \\(S=K_k\\vee I_h\\), with \\(2\\le k\\le h\\), and let \\(W(S)\\) be the maximum gain of a physical mixed packing. Then\n\\[\nW^*(S)=W(S)=2\\binom k2.\n\\tag{D.6}\n\\]\nTo justify the fractional bound, let \\(j(K)\\) count core edges contained in a mixed piece \\(K\\). A clique of \\(S\\) contains at most one host. A triangle with a host has \\(j(K)=1\\) and gain two; a \\(K_4\\) with a host has \\(j(K)=3\\) and gain five. Pieces lying entirely in the core also satisfy \\(g(K)\\le2j(K)\\). Thus, for every feasible fractional packing \\(x\\),\n\\[\n\\begin{aligned}\nw(x)&\\le2\\sum_K j(K)x_K\\\\\n&=2\\sum_{e\\in E(K_k)}\\sum_{K:e\\in E(K)}x_K\n\\le2\\binom k2.\n\\end{aligned}\n\\tag{D.7}\n\\]\nThe last inequality uses capacity one on each core edge. The construction in Section 6.1 contains one triangle per internal base and attains this gain. Since every integral packing defines a fractional one, both equalities in (D.6) follow. The formal result is `SplitMixedGap.mixed_gap_zero`, together with the bounded construction in `SplitCompleteSharpValue`.\n\nThe conclusion is an equality of optimal values in this family under \\(2\\le k\\le h\\). It does not assert that every vertex of the fractional polytope is integral, nor does it extend zero gap to arbitrary split graphs.",
+      "sha256": "28791082b07af310534dd77c853f7d3e3703b8a5e79630232c71b379f0a32f15",
+      "allowed_change": "none"
+    },
+    {
+      "id": "statement-31",
+      "kind": "statement",
+      "text": "**Proposition G.1 (limitation of this contract).** If \\(N_0\\) satisfies the preceding contract, \\(t\\ge4\\) and \\(7\\varepsilon\\le e^{-t}\\), then\n\\[\nN_0>\\exp(t^2/16).\n\\tag{G.2}\n\\]\nIn particular, if \\(\\varepsilon\\le1/(7e^{34})\\), then \\(N_0>e^{72}\\). The precision parameter is rational in the Lean declaration; exponential comparisons are made over the reals.",
+      "sha256": "5559611fb438306e256f0d9b80b69a9caa2c65f068a0ba5787767cf367f95f5a",
+      "allowed_change": "none"
+    }
+  ]
+}

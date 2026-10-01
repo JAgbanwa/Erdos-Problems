@@ -1,0 +1,113 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 PaperIV/DiracEngine.lean -o /workspace/request-project/.lake/runner/lib/lean/PaperIV/DiracEngine.olean -i /workspace/request-project/.lake/runner/lib/lean/PaperIV/DiracEngine.ilean
+PaperIV/DiracEngine.lean:71:0: warning: automatically included section variable(s) unused in theorem `PaperIV.isSimplicial_of_rsimplicial`:
+  [Fintype V]
+  [DecidableEq V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] [DecidableEq V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+simp took 239ms
+PaperIV/DiracEngine.lean:89:0: warning: automatically included section variable(s) unused in theorem `PaperIV.rstep_symm`:
+  [Fintype V]
+  [DecidableEq V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] [DecidableEq V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+PaperIV/DiracEngine.lean:104:0: warning: automatically included section variable(s) unused in theorem `PaperIV.rreach_mono`:
+  [Fintype V]
+  [DecidableEq V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] [DecidableEq V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+PaperIV/DiracEngine.lean:112:0: warning: automatically included section variable(s) unused in theorem `PaperIV.exists_radj_of_rreach_ne`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+PaperIV/DiracEngine.lean:124:0: warning: automatically included section variable(s) unused in theorem `PaperIV.rreach_erase`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+grind took 183ms
+PaperIV/DiracEngine.lean:153:0: warning: automatically included section variable(s) unused in theorem `PaperIV.rsimplicial_of_erase`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+simp took 106ms
+simp took 540ms
+simp took 968ms
+simp took 128ms
+simp took 995ms
+simp took 132ms
+aesop took 100ms
+simp took 115ms
+simp took 120ms
+simp took 121ms
+simp took 120ms
+PaperIV/DiracEngine.lean:208:52: warning: unused variable `hKS`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+PaperIV/DiracEngine.lean:292:0: warning: automatically included section variable(s) unused in theorem `PaperIV.rreach_univ_iff`:
+  [DecidableEq V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+simp took 313ms
+simp took 209ms
+simp took 209ms
+simp took 302ms
+simp took 208ms
+simp took 203ms
+PaperIV/DiracEngine.lean:334:53: warning: unused variable `huD`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+PaperIV/DiracEngine.lean:346:0: warning: automatically included section variable(s) unused in theorem `PaperIV.component_sep`:
+  [Fintype V]
+  [DecidableEq V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] [DecidableEq V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+import took 3.85s
+cumulative profiling times:
+	.olean serialization 86.2ms
+	aesop 354ms
+	attribute application 0.299ms
+	blocked (unaccounted) 22.3s
+	compilation (IR) 17.9ms
+	compilation (LCNF base) 22.4ms
+	compilation (LCNF mono) 8.4ms
+	congr simp thm 96.1ms
+	elaboration 105ms
+	fix level params 3.83ms
+	grind 300ms
+	grind ac 0.239ms
+	grind canon 58.7ms
+	grind cutsat 0.289ms
+	grind ematch 45.2ms
+	grind linarith 0.0901ms
+	grind mark subsingleton 26.4ms
+	grind ring 0.346ms
+	grind simp 198ms
+	grind typeclass inference 74.3ms
+	import 3.85s
+	initialization 39.1ms
+	instantiate metavars 53.8ms
+	interpretation 596ms
+	let-to-have transformation 0.262ms
+	linting 42.3ms
+	parsing 16.5ms
+	process pre-definitions 31.3ms
+	share common exprs 8.27ms
+	simp 9.73s
+	tactic execution 500ms
+	type checking 108ms
+	typeclass inference 11.2s

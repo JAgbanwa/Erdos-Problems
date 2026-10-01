@@ -1,0 +1,18 @@
+$ C:\Users\jtraverso\.elan\toolchains\leanprover--lean4---v4.28.0\bin\lean.exe -j 8 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false FDCheck/FinalAudit.lean -o C:\Users\jtraverso\e81p4-publish\preprints\PAPER_IV\02_validation\02_IA_ADVERSARIAL_AUDITS\run_v1.2_r1\05_BUILD\main\obj\FDCheck\FinalAudit.olean -i C:\Users\jtraverso\e81p4-publish\preprints\PAPER_IV\02_validation\02_IA_ADVERSARIAL_AUDITS\run_v1.2_r1\05_BUILD\main\obj\FDCheck\FinalAudit.ilean
+'E34.lemma11_V' depends on axioms: [propext, Classical.choice, Quot.sound]
+'E34.chordalEasyRemoval_final' depends on axioms: [propext, Classical.choice, Quot.sound]
+'E34.editApproxExplicit_final' depends on axioms: [propext, Classical.choice, Quot.sound]
+'E34.theoremC_fully_explicit_final' depends on axioms: [propext, Classical.choice, Quot.sound]
+'E34.theoremC_fully_explicit_uniform_final' depends on axioms: [propext, Classical.choice, Quot.sound]
+PASS E34.lemma11_V: 16765 transitive constants; axioms [propext, Classical.choice, Quot.sound]
+PASS E34.chordalEasyRemoval_final: 18727 transitive constants; axioms [propext, Classical.choice, Quot.sound]
+PASS E34.editApproxExplicit_final: 19701 transitive constants; axioms [propext, Classical.choice, Quot.sound]
+PASS E34.theoremC_fully_explicit_final: 42051 transitive constants; axioms [propext, Classical.choice, Quot.sound]
+PASS E34.theoremC_fully_explicit_uniform_final: 42059 transitive constants; axioms [propext,
+ Classical.choice,
+ Quot.sound]
+PASS E33.theoremC_explicit: 41123 transitive constants; axioms [propext, Classical.choice, Quot.sound]
+PASS FDCheck.theoremCPrime_implies_ref15Theorem11: 41999 transitive constants; axioms [propext,
+ Classical.choice,
+ Quot.sound]
+FINAL audit PASSED: 7 targets; 10466 modules, none forbidden.

@@ -1,0 +1,60 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 E17/SplitParent.lean -o /workspace/request-project/.lake/runner/lib/lean/E17/SplitParent.olean -i /workspace/request-project/.lake/runner/lib/lean/E17/SplitParent.ilean
+E17/SplitParent.lean:159:0: warning: automatically included section variable(s) unused in theorem `E17.SplitParent.card_linkPairs_add_missingLinks`:
+  [Fintype V]
+  [DecidableEq V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] [DecidableEq V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+E17/SplitParent.lean:163:0: warning: automatically included section variable(s) unused in theorem `E17.SplitParent.card_linkEdges`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+E17/SplitParent.lean:172:0: warning: automatically included section variable(s) unused in theorem `E17.SplitParent.mem_linkEdges`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+E17/SplitParent.lean:364:0: warning: automatically included section variable(s) unused in theorem `E17.SplitParent.pair_eq_of_mem`:
+  [DecidableEq V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+E17/SplitParent.lean:453:0: warning: automatically included section variable(s) unused in theorem `E17.SplitParent.card_toFinset_le_two`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_nlinarith_1._boxed took 335ms
+import took 2.93s
+.olean serialization took 110ms
+cumulative profiling times:
+	.olean serialization 110ms
+	attribute application 0.41ms
+	blocked (unaccounted) 386ms
+	compilation (IR) 5.19ms
+	compilation (LCNF base) 5.61ms
+	compilation (LCNF mono) 3.66ms
+	congr simp thm 12.3ms
+	elaboration 186ms
+	fix level params 7.49ms
+	import 2.93s
+	initialization 36.6ms
+	instantiate metavars 47.8ms
+	interpretation 856ms
+	let-to-have transformation 0.447ms
+	linting 91.2ms
+	norm_num 5.69ms
+	parsing 29.5ms
+	process pre-definitions 38.6ms
+	ring 24.4ms
+	share common exprs 16.1ms
+	simp 221ms
+	tactic execution 694ms
+	type checking 520ms
+	typeclass inference 596ms

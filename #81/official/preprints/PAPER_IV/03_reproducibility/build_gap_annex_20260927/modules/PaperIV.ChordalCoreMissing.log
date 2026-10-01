@@ -1,0 +1,28 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 PaperIV/ChordalCoreMissing.lean -o /workspace/request-project/.lake/runner/lib/lean/PaperIV/ChordalCoreMissing.olean -i /workspace/request-project/.lake/runner/lib/lean/PaperIV/ChordalCoreMissing.ilean
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_nlinarith_1._boxed took 181ms
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_nlinarith_1._boxed took 296ms
+import took 3.76s
+cumulative profiling times:
+	.olean serialization 69.6ms
+	attribute application 0.122ms
+	compilation (IR) 2.06ms
+	compilation (LCNF base) 2.11ms
+	compilation (LCNF mono) 0.951ms
+	congr simp thm 17.4ms
+	elaboration 91.9ms
+	fix level params 2.88ms
+	import 3.76s
+	initialization 38.4ms
+	instantiate metavars 10.4ms
+	interpretation 1.16s
+	let-to-have transformation 0.211ms
+	linting 45ms
+	norm_num 109ms
+	parsing 19.9ms
+	process pre-definitions 37.7ms
+	ring 28.3ms
+	share common exprs 10.9ms
+	simp 219ms
+	tactic execution 370ms
+	type checking 138ms
+	typeclass inference 883ms

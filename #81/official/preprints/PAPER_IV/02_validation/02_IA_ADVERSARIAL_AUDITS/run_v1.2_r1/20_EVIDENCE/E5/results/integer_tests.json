@@ -1,0 +1,192 @@
+{
+ "T07": {
+  "claim": "(6.3)/(6.8) 6f+(n-3k)(n-3k+1)=n(n+1); (6.4) optimal cores; k=ceil(n/3) optimal (n>=6); (D.8) M(n)=B_n(k)+M(d_{n,k}) and zero reserve iff d<=1; E.5 B_{s,n}(floor((n+s+1)/3))=Q_s(n) (n>=2s+2); (E.3) Q_s(n)-Q_s(n-1)=floor((n+s+1)/3); Q_s(n)>=B_{s,n}(k) all k",
+  "manuscript_lines": "692-695, 759-775, 881-895, 1785-1796, 1953-1956, 1969-1979",
+  "method": "exhaustive exact integer arithmetic",
+  "evidence_type": "finite exhaustive",
+  "parameters": {
+   "n": [
+    0,
+    400
+   ],
+   "k(6.3)": "[-n-2, 2n+2]",
+   "s": [
+    0,
+    60
+   ]
+  },
+  "details": {
+   "checked_counts": {
+    "6.3": 242605,
+    "6.4": 401,
+    "ceil": 395,
+    "D.8": 53868,
+    "D.8zero": 53868,
+    "E.5": 20679,
+    "E.3": 24400,
+    "Qs>=B": 4916600
+   },
+   "violations_first5": {
+    "6.3": [],
+    "6.4": [],
+    "ceil": [],
+    "D.8": [],
+    "D.8zero": [],
+    "E.5": [],
+    "E.3": [],
+    "Qs>=B": []
+   },
+   "note_E.3": "holds for every n>=1 in range, not only for sufficiently large n"
+  },
+  "result": "PASS",
+  "negative_control": {
+   "description": "corrupted (6.3) with (n-3k)(n-3k-1) and corrupted (E.3) floor((n+s)/3) must fail somewhere",
+   "corrupt_6.3_fails": true,
+   "corrupt_E.3_fails": true,
+   "result": "PASS (rejected)"
+  },
+  "runtime_s": 1.947,
+  "id": "T07"
+ },
+ "T08": {
+  "claim": "(6.7a) d_R=1+C(a,2)+3C(b,2)-ab=(a-b)(a-b-1)/2+(b-1)^2 >=0; zero iff canonical (a,b) in {(1,1),(2,1)}; C(a+b,2)<=10 d_R when d_R>0; sharp at (3,2)",
+  "manuscript_lines": "862-877, 2253",
+  "method": "exhaustive exact integers",
+  "evidence_type": "finite exhaustive",
+  "parameters": {
+   "a,b": [
+    0,
+    60
+   ]
+  },
+  "details": {
+   "violations": [],
+   "zero_defect_profiles": [
+    [
+     1,
+     1
+    ],
+    [
+     2,
+     1
+    ]
+   ],
+   "equality_profiles_C(a+b,2)=10d": [
+    [
+     3,
+     2
+    ]
+   ]
+  },
+  "result": "PASS",
+  "negative_control": {
+   "description": "factor 9 must fail somewhere",
+   "violating_profiles_factor9": [
+    [
+     3,
+     2
+    ]
+   ],
+   "result": "PASS (rejected)"
+  },
+  "runtime_s": 0.004,
+  "id": "T08"
+ },
+ "T09": {
+  "claim": "(6.19) dist(k,K_{s,n})^2 <= Q_s(n)-B_{s,n}(k), K_{s,n}=integers nearest (2(n+s)+1)/6",
+  "manuscript_lines": "1004-1012",
+  "method": "exhaustive exact integers; K computed with exact Fractions; also checked K = argmax_k B_{s,n}(k) and max = Q_s(n)",
+  "evidence_type": "finite exhaustive",
+  "parameters": {
+   "s": [
+    0,
+    20
+   ],
+   "n": [
+    0,
+    300
+   ],
+   "admissible_k": "s+2<=k, k-s<=n-k",
+   "also_all_k": "0<=k<=n"
+  },
+  "details": {
+   "checked_admissible": 435646,
+   "checked_all_k": 954471,
+   "violations_admissible": [],
+   "violations_all_k": [],
+   "argmax_mismatch": []
+  },
+  "result": "PASS",
+  "negative_control": {
+   "description": "corrupted 2*dist^2 <= Q_s-B must fail somewhere",
+   "violations_found": 3302,
+   "example": [
+    [
+     0,
+     6,
+     3
+    ],
+    [
+     0,
+     8,
+     2
+    ],
+    [
+     0,
+     9,
+     4
+    ]
+   ],
+   "result": "PASS (rejected)"
+  },
+  "runtime_s": 1.085,
+  "id": "T09"
+ },
+ "T20a": {
+  "claim": "(E.2e) c(b+s)<=C(c,2)+M(c+b+s) and Q_s(c+b)+t_W ceil((c+b+s)/3)<=Q_s(c+b+t_W) (c+b>=s+2); (E.13) r n<=16sE from c-s<=2E, c>=2s, n<=4c",
+  "manuscript_lines": "1931-1940, 2083-2086",
+  "method": "exhaustive integers (E.2e); z3 LRA per fixed s (E.13)",
+  "evidence_type": "finite exhaustive + exact (LRA)",
+  "parameters": {
+   "s": [
+    0,
+    15
+   ],
+   "c,b": [
+    0,
+    80
+   ],
+   "t_W": [
+    0,
+    30
+   ],
+   "E.13 s": [
+    0,
+    30
+   ]
+  },
+  "details": {
+   "E.2e_first_checked": 104976,
+   "E.2e_second_checked": 3224248,
+   "viol_first": [],
+   "viol_second": [],
+   "first_ineq_holds_without_side_condition": true,
+   "E.13_unsat_all_s": true
+  },
+  "result": "PASS",
+  "negative_control": {
+   "description": "constant 15 in (E.13) must be refutable for s>=1 (equality case c=2s, E=s/2, n=4c)",
+   "sat_for_s>=1": true,
+   "result": "PASS (rejected)"
+  },
+  "runtime_s": 1.396,
+  "id": "T20a"
+ },
+ "T23_G5": {
+  "claim": "(G.5) eps n^2/30-1 <= T <= (2n-3)/3 => n <= 20/eps",
+  "z3": "unsat",
+  "neg_19": "sat",
+  "neg_model": "[T = 31/32,\n ep = 13/2,\n nv = 3,\n /0 = [(19, 13/2) -> 38/13, else -> 0]]",
+  "runtime_s": 0.0
+ }
+}

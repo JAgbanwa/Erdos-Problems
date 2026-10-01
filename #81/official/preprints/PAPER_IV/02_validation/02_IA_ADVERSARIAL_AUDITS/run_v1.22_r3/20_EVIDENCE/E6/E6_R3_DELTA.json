@@ -1,0 +1,301 @@
+{
+ "en": {
+  "n_paragraphs_r2_r3": [
+   503,
+   503
+  ],
+  "changed_paragraph_groups": 5,
+  "changed": [
+   {
+    "op": "replace",
+    "r2": [
+     "**Paper IV in the series**  \n**Preprint:** version 1.22, editorial review candidate.\n**Date of this revision:** October 1, 2026.\n**Status:** editorial revision addressing the completed revalidation of version 1.21. The Lean source cut remains `piv-v12-fb459343d234`; this revision makes no source changes. The revalidation retained PASS for formal reproduction after checking the unchanged sources and earlier build evidence. Its overall verdict was INCONCLUSIVE because the final regularity-to-tower comparison required fuller exposition. That comparison is expanded in C.3 below; the new explanations and bilingual artifacts require their own review. This candidate has not been published or assigned its own DOI.\n**Series concept DOI:** <https://doi.org/10.5281/zenodo.21273143>. The version DOI for the deposit that will collect Papers I–IV has not yet been assigned."
+    ],
+    "r3": [
+     "**Paper IV in the series**  \n**Preprint:** version 1.22, editorial review candidate.\n**Date of this revision:** October 1, 2026.\n**Status:** the v1.22-r2 external review concluded PASS_WITH_OBSERVATIONS on October 1, 2026. It accepted the expanded C.3 argument and all seven derivations in A.2; no finding of severity MINOR or higher remained open. The Lean source cut remains `piv-v12-fb459343d234`, with formal PASS inherited from the verified external build. This r3 package updates audit-status information; its documentary delta awaits verification. No new Lean build is claimed. This candidate has not been published or assigned its own DOI.\n**Series concept DOI:** <https://doi.org/10.5281/zenodo.21273143>. The version DOI for the deposit that will collect Papers I–IV has not yet been assigned."
+    ],
+    "r2_para_index": [
+     2,
+     3
+    ],
+    "r3_para_index": [
+     2,
+     3
+    ]
+   },
+   {
+    "op": "replace",
+    "r2": [
+     "**Audit status of this editorial candidate.** The reconstruction evidence above predates the audits. Subsequently, the internal run `run_20260929_v1.2_fb459343d234_r1` recorded PASS for its declared scope. The completed external run `run_v1.2_r1` returned INCONCLUSIVE overall because four derivations required fuller exposition, but PASS for formal reproduction: 607 main modules, all 19 targets and the 50-module annex compiled successfully. All 607 main compiled objects were byte-identical to the author’s recorded objects. The subsequent `run_v1.21_r1` accepted six of the seven intermediate derivations in A.2 and retained formal PASS by rechecking the existing evidence, without recompilation. It remained INCONCLUSIVE on the final comparison in C.3. Version 1.22 expands that comparison and corrects the remaining presentation findings; those changes await revalidation. The Lean source identity has not changed, and no new Lean build is claimed for this editorial candidate."
+    ],
+    "r3": [
+     "**Audit status of this editorial candidate.** The internal run `run_20260929_v1.2_fb459343d234_r1` recorded PASS for its declared scope. The external build in `run_v1.2_r1` compiled 607 main modules, all 19 targets and the 50-module annex; the 607 main objects were byte-identical to the author’s objects. That review and `run_v1.21_r1` were INCONCLUSIVE overall because exposition remained incomplete. The expanded C.3 comparison was accepted in `run_v1.22_r1`, completing the seven A.2 derivations. The consolidated `run_v1.22_r2` returned PASS_WITH_OBSERVATIONS and closed the remaining Spanish corrections. Its observations and scope limitations are retained in the report. Revalidations used unchanged sources and existing build evidence, without recompilation. This r3 documentary update is submitted separately; it does not claim a new formal build or a verdict for its own changes."
+    ],
+    "r2_para_index": [
+     221,
+     222
+    ],
+    "r3_para_index": [
+     221,
+     222
+    ]
+   },
+   {
+    "op": "replace",
+    "r2": [
+     "The single audit command described in §7 executes all 19 targets, including the root, the individual audit targets and the export check. Lean and dependency revisions are recorded in lean-toolchain and lake-manifest.json. Compilation, public export, axiom inspection and semantic correspondence are distinct checks. The source freeze is unchanged. Its internal audit is complete; the external v1.2 build passed and was revalidated without recompilation in v1.21. The expanded C.3 comparison in v1.22 awaits a new mathematical and editorial review."
+    ],
+    "r3": [
+     "The single audit command described in §7 executes all 19 targets, including the root, the individual audit targets and the export check. Lean and dependency revisions are recorded in lean-toolchain and lake-manifest.json. Compilation, public export, axiom inspection and semantic correspondence are distinct checks. The source freeze is unchanged. The external build passed in v1.2 and its evidence was revalidated in subsequent revisions without recompilation. The consolidated v1.22-r2 report records the accepted C.3 expansion and distinguishes individual semantic comparisons from statements covered by the proof-component ledger and compiled declarations."
+    ],
+    "r2_para_index": [
+     260,
+     261
+    ],
+    "r3_para_index": [
+     260,
+     261
+    ]
+   },
+   {
+    "op": "replace",
+    "r2": [
+     "**Scope of the written proof.** The table below records derivations whose exposition requires particular scrutiny. Revision 1.21 expanded the bilateral fibre cleaning in C.2, the normalization counts and joint elimination in E.1, and the numerical schedule in C.3. Its revalidation accepted six of the seven rows, leaving the final tower comparison open. Revision 1.22 defines the regularity recurrence in C.3 and expands the lower bound for its iterate, the absorption of the five threshold terms and the upper tower comparison. The corresponding proofs already belong to the frozen Lean sources. A successful build checks formal derivations, not the completeness of their exposition; the new explanation requires review. These are review obligations, not additional hypotheses of the theorems."
+    ],
+    "r3": [
+     "**Scope of the written proof.** The table below records derivations that received particular scrutiny. Revision 1.21 expanded the bilateral fibre cleaning in C.2, the normalization counts and joint elimination in E.1, and the numerical schedule in C.3. Revision 1.22 then supplied the regularity recurrence and the final tower comparison. The consolidated v1.22-r2 report classifies all seven rows as ACCEPTABLE_SUMMARY. It retains the stated expository limit concerning the cited second-moment estimates in C.2. A successful build checks formal derivations, not completeness of exposition; the written-proof assessment remains distinct from compilation and from human peer review."
+    ],
+    "r2_para_index": [
+     274,
+     275
+    ],
+    "r3_para_index": [
+     274,
+     275
+    ]
+   },
+   {
+    "op": "replace",
+    "r2": [
+     "Appendix E.4 derives the retained terminal accounts used in §6.6, and F.3 proves clique recovery. Appendix F.5 explains the three-case assembly of the adapted pinned-sample bound. These additions expose the intermediate arguments for review; they are not a new audit verdict. A renewed audit must still check their correspondence with the formal producers and the lower-level removal lemmas. Local compilation is not a substitute for that review."
+    ],
+    "r3": [
+     "Appendix E.4 derives the retained terminal accounts used in §6.6, F.3 proves clique recovery, and F.5 explains the three-case assembly of the adapted pinned-sample bound. Their recorded checks are consolidated in the v1.22-r2 report, with the scope and limitations stated there. These checks compare the written accounts with the frozen formal development; they do not turn local compilation into a substitute for mathematical review."
+    ],
+    "r2_para_index": [
+     438,
+     439
+    ],
+    "r3_para_index": [
+     438,
+     439
+    ]
+   }
+  ],
+  "protected": {
+   "displays_equal": true,
+   "n_displays": 237,
+   "inline_math_equal": true,
+   "n_inline": 1989,
+   "code_blocks_equal": true,
+   "tags_equal": true,
+   "n_tags": 146,
+   "headings_equal": true,
+   "bold_leads_equal": true,
+   "table_rows_equal": true,
+   "n_table_rows": 159,
+   "images_equal": true,
+   "references_equal": true,
+   "inline_math_inside_changed_paragraphs_r2": 0,
+   "inline_math_inside_changed_paragraphs_r3": 0,
+   "code_spans_removed": [],
+   "code_spans_added": [
+    "`run_v1.22_r1`",
+    "`run_v1.22_r2`"
+   ],
+   "code_span_count": [
+    331,
+    333
+   ]
+  },
+  "editor_diff_equals_auditor_diff": false,
+  "editor_diff_len": 8729,
+  "auditor_diff_len": 8693,
+  "tex_preamble_equal": true,
+  "tex_changed_line_count": 10,
+  "tex_displays_equal": true,
+  "tex_equation_envs_equal": true,
+  "pdf_pages": [
+   72,
+   72
+  ],
+  "pdf_metadata_r3": {
+   "producer": "xdvipdfmx (0.1)",
+   "creator": "LaTeX with hyperref",
+   "creationDate": "D:20261001135626-00'00'"
+  },
+  "raster_changed_pages_72dpi": [
+   1,
+   33,
+   39,
+   40,
+   64
+  ],
+  "pdf_token_diff_regions": 56,
+  "pdf_token_diff_r3_text_total_tokens": 226,
+  "pdf_diff_regions_not_explained_by_changed_paragraphs": []
+ },
+ "es": {
+  "n_paragraphs_r2_r3": [
+   503,
+   503
+  ],
+  "changed_paragraph_groups": 5,
+  "changed": [
+   {
+    "op": "replace",
+    "r2": [
+     "**Paper IV de la serie**  \n**Preprint:** versión 1.22, candidata a revisión editorial.\n**Fecha de esta revisión:** 1 de octubre de 2026.\n**Estado:** revisión editorial que responde a la revalidación completada de la versión 1.21. El corte de fuentes Lean sigue siendo `piv-v12-fb459343d234`; esta revisión no cambia sus fuentes. La revalidación conservó PASS en reproducción formal tras comprobar las fuentes sin cambios y la evidencia del build anterior. Su veredicto global fue INCONCLUSIVE porque la comparación final entre regularidad y torre requería mayor desarrollo expositivo. Esa comparación se amplía en C.3; las nuevas explicaciones y los documentos bilingües requieren su propia revisión. Esta candidata no se ha publicado ni tiene DOI propio asignado.\n**DOI de concepto de la serie:** <https://doi.org/10.5281/zenodo.21273143>. El DOI de versión del depósito que reunirá Papers I–IV todavía no está asignado."
+    ],
+    "r3": [
+     "**Paper IV de la serie**  \n**Preprint:** versión 1.22, candidata a revisión editorial.\n**Fecha de esta revisión:** 1 de octubre de 2026.\n**Estado:** la revisión externa v1.22-r2 concluyó PASS_WITH_OBSERVATIONS el 1 de octubre de 2026. Aceptó la ampliación de C.3 y las siete derivaciones de A.2; no quedaron hallazgos abiertos de severidad MINOR o superior. El corte Lean sigue siendo `piv-v12-fb459343d234`, con PASS formal heredado del build externo verificado. Este paquete r3 actualiza la información de auditoría; su cambio documental espera verificación. No se afirma un nuevo build Lean. Esta candidata no se ha publicado ni tiene DOI propio asignado.\n**DOI de concepto de la serie:** <https://doi.org/10.5281/zenodo.21273143>. El DOI de versión del depósito que reunirá Papers I–IV todavía no está asignado."
+    ],
+    "r2_para_index": [
+     2,
+     3
+    ],
+    "r3_para_index": [
+     2,
+     3
+    ]
+   },
+   {
+    "op": "replace",
+    "r2": [
+     "**Estado de auditoría de esta candidata editorial.** La evidencia de reconstrucción anterior es previa a las auditorías. Posteriormente, la ejecución interna `run_20260929_v1.2_fb459343d234_r1` registró PASS para su alcance declarado. La ejecución externa completada `run_v1.2_r1` dio INCONCLUSIVE global por cuatro derivaciones que requerían mayor desarrollo expositivo, pero PASS en reproducción formal: se compilaron correctamente 607 módulos principales, los 19 objetivos y el anexo de 50 módulos. Los 607 objetos principales compilados fueron idénticos byte a byte a los registrados por el autor. La ejecución posterior `run_v1.21_r1` aceptó seis de las siete derivaciones intermedias de A.2 y conservó el PASS formal tras revisar la evidencia existente, sin recompilar. Mantuvo INCONCLUSIVE en la comparación final de C.3. La versión 1.22 amplía esa comparación y corrige los hallazgos de presentación restantes; esos cambios esperan revalidación. La identidad de fuentes Lean no ha cambiado y no se afirma un nuevo build Lean para esta candidata editorial."
+    ],
+    "r3": [
+     "**Estado de auditoría de esta candidata editorial.** La ejecución interna `run_20260929_v1.2_fb459343d234_r1` registró PASS para su alcance declarado. El build externo de `run_v1.2_r1` compiló 607 módulos principales, los 19 objetivos y el anexo de 50 módulos; los 607 objetos principales fueron idénticos byte a byte a los del autor. Esa revisión y `run_v1.21_r1` dieron INCONCLUSIVE global porque faltaba completar la exposición. La comparación ampliada de C.3 fue aceptada en `run_v1.22_r1`, completando las siete derivaciones de A.2. El informe consolidado `run_v1.22_r2` dio PASS_WITH_OBSERVATIONS y cerró las correcciones españolas restantes. Sus observaciones y límites de alcance se conservan en el informe. Las revalidaciones utilizaron las fuentes sin cambios y la evidencia del build existente, sin recompilar. Esta actualización documental r3 se presenta por separado; no afirma un nuevo build formal ni un veredicto sobre sus propios cambios."
+    ],
+    "r2_para_index": [
+     221,
+     222
+    ],
+    "r3_para_index": [
+     221,
+     222
+    ]
+   },
+   {
+    "op": "replace",
+    "r2": [
+     "El comando único de auditoría descrito en §7 ejecuta los 19 objetivos, incluidos la raíz, los objetivos individuales de auditoría y el control de exportación. Las revisiones de Lean y sus dependencias están registradas en lean-toolchain y lake-manifest.json. Compilación, exportación pública, inspección de axiomas y correspondencia semántica son controles distintos. El congelado de fuentes no cambia. Su auditoría interna está completada; el build externo de v1.2 pasó y fue revalidado sin recompilar en v1.21. La comparación ampliada de C.3 en v1.22 espera una nueva revisión matemática y editorial."
+    ],
+    "r3": [
+     "El comando único de auditoría descrito en §7 ejecuta los 19 objetivos, incluidos la raíz, los objetivos individuales de auditoría y el control de exportación. Las revisiones de Lean y sus dependencias están registradas en lean-toolchain y lake-manifest.json. Compilación, exportación pública, inspección de axiomas y correspondencia semántica son controles distintos. El congelado de fuentes no cambia. El build externo pasó en v1.2 y su evidencia se revalidó en las revisiones posteriores sin recompilar. El informe consolidado v1.22-r2 registra la aceptación de la ampliación de C.3 y distingue las comparaciones semánticas individuales de los enunciados cubiertos por el registro de componentes de prueba y las declaraciones compiladas."
+    ],
+    "r2_para_index": [
+     260,
+     261
+    ],
+    "r3_para_index": [
+     260,
+     261
+    ]
+   },
+   {
+    "op": "replace",
+    "r2": [
+     "**Alcance de la demostración escrita.** La tabla siguiente registra derivaciones cuya exposición requiere especial atención. La revisión 1.21 amplió la limpieza bilateral de fibras en C.2, las cuentas de normalización y la eliminación conjunta en E.1, y el calendario numérico en C.3. Su revalidación aceptó seis de las siete filas y dejó abierta la comparación final de torre. La revisión 1.22 define la recurrencia de regularidad en C.3 y desarrolla la cota inferior de su iteración, la absorción de los cinco términos del umbral y la comparación superior con la torre. Las pruebas correspondientes ya pertenecen a las fuentes Lean congeladas. Una compilación exitosa verifica derivaciones formales, no la suficiencia de su exposición; la nueva explicación requiere revisión. Son obligaciones de revisión, no hipótesis adicionales de los teoremas."
+    ],
+    "r3": [
+     "**Alcance de la prueba escrita.** La tabla siguiente registra las derivaciones que recibieron especial atención. La versión 1.21 amplió la limpieza bilateral de fibras de C.2, los conteos de normalización y la eliminación conjunta de E.1, y la programación numérica de C.3. La versión 1.22 añadió la recurrencia de regularidad y la comparación final con la torre. El informe consolidado v1.22-r2 clasifica las siete filas como ACCEPTABLE_SUMMARY. Conserva el límite expositivo declarado sobre las estimaciones de segundo momento citadas en C.2. Un build satisfactorio verifica derivaciones formales, no la integridad de su exposición; la evaluación de la prueba escrita sigue siendo distinta de la compilación y de la revisión humana por pares."
+    ],
+    "r2_para_index": [
+     274,
+     275
+    ],
+    "r3_para_index": [
+     274,
+     275
+    ]
+   },
+   {
+    "op": "replace",
+    "r2": [
+     "El Apéndice E.4 deduce las cuentas terminales conservadas utilizadas en §6.6, y F.3 demuestra la recuperación de clique. El Apéndice F.5 explica el ensamblaje de tres casos de la cota adaptada de muestras con anclajes. Estas adiciones exponen los argumentos intermedios para revisión; no son un nuevo veredicto de auditoría. Una nueva auditoría todavía debe comprobar su correspondencia con los productores formales y los lemas de remoción de nivel inferior. La compilación local no sustituye esa revisión."
+    ],
+    "r3": [
+     "El Apéndice E.4 desarrolla las cuentas terminales conservadas que se usan en §6.6, F.3 demuestra la recuperación de la clique y F.5 explica el ensamblaje de tres casos de la cota adaptada con muestra fijada. Sus comprobaciones registradas se consolidan en el informe v1.22-r2, con el alcance y los límites allí declarados. Esas comprobaciones contrastan las cuentas escritas con el desarrollo formal congelado; no convierten la compilación local en un sustituto de la revisión matemática."
+    ],
+    "r2_para_index": [
+     438,
+     439
+    ],
+    "r3_para_index": [
+     438,
+     439
+    ]
+   }
+  ],
+  "protected": {
+   "displays_equal": true,
+   "n_displays": 237,
+   "inline_math_equal": true,
+   "n_inline": 1989,
+   "code_blocks_equal": true,
+   "tags_equal": true,
+   "n_tags": 146,
+   "headings_equal": true,
+   "bold_leads_equal": false,
+   "table_rows_equal": true,
+   "n_table_rows": 159,
+   "images_equal": true,
+   "references_equal": true,
+   "inline_math_inside_changed_paragraphs_r2": 0,
+   "inline_math_inside_changed_paragraphs_r3": 0,
+   "code_spans_removed": [],
+   "code_spans_added": [
+    "`run_v1.22_r1`",
+    "`run_v1.22_r2`"
+   ],
+   "code_span_count": [
+    331,
+    333
+   ]
+  },
+  "editor_diff_equals_auditor_diff": false,
+  "editor_diff_len": 9421,
+  "auditor_diff_len": 9385,
+  "tex_preamble_equal": true,
+  "tex_changed_line_count": 10,
+  "tex_displays_equal": true,
+  "tex_equation_envs_equal": true,
+  "pdf_pages": [
+   73,
+   73
+  ],
+  "pdf_metadata_r3": {
+   "producer": "xdvipdfmx (0.1)",
+   "creator": "LaTeX with hyperref",
+   "creationDate": "D:20261001135459-00'00'"
+  },
+  "raster_changed_pages_72dpi": [
+   1,
+   2,
+   3,
+   4,
+   5,
+   6,
+   34,
+   35,
+   36,
+   39,
+   40,
+   66
+  ],
+  "pdf_token_diff_regions": 63,
+  "pdf_token_diff_r3_text_total_tokens": 279,
+  "pdf_diff_regions_not_explained_by_changed_paragraphs": []
+ }
+}

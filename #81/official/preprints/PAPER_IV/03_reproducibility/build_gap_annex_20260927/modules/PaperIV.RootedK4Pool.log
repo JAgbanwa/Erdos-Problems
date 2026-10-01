@@ -1,0 +1,30 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 PaperIV/RootedK4Pool.lean -o /workspace/request-project/.lake/runner/lib/lean/PaperIV/RootedK4Pool.olean -i /workspace/request-project/.lake/runner/lib/lean/PaperIV/RootedK4Pool.ilean
+elaboration took 155ms
+elaboration took 377ms
+tactic execution of Lean.Parser.Tactic.exact took 187ms
+linting took 122ms
+import took 3.39s
+cumulative profiling times:
+	.olean serialization 92.3ms
+	attribute application 0.212ms
+	compilation (IR) 0.502ms
+	compilation (LCNF base) 0.748ms
+	compilation (LCNF mono) 0.657ms
+	congr simp thm 7.06ms
+	elaboration 785ms
+	fix level params 1.83ms
+	import 3.39s
+	initialization 37.7ms
+	instantiate metavars 6.33ms
+	interpretation 504ms
+	let-to-have transformation 1.64ms
+	linting 179ms
+	norm_num 26.9ms
+	parsing 14.7ms
+	process pre-definitions 16.2ms
+	ring 33.7ms
+	share common exprs 10.8ms
+	simp 48ms
+	tactic execution 472ms
+	type checking 96ms
+	typeclass inference 496ms

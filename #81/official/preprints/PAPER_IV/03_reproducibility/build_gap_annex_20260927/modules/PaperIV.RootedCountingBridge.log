@@ -1,0 +1,38 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 PaperIV/RootedCountingBridge.lean -o /workspace/request-project/.lake/runner/lib/lean/PaperIV/RootedCountingBridge.olean -i /workspace/request-project/.lake/runner/lib/lean/PaperIV/RootedCountingBridge.ilean
+PaperIV/RootedCountingBridge.lean:62:0: warning: automatically included section variable(s) unused in theorem `PaperIV.RootedCountingBridge.sum_fiber_card`:
+  [DecidableEq κ]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq κ] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+PaperIV/RootedCountingBridge.lean:68:0: warning: automatically included section variable(s) unused in theorem `PaperIV.RootedCountingBridge.filter_product_eq`:
+  [DecidableEq κ]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq κ] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+import took 2.69s
+cumulative profiling times:
+	.olean serialization 43.6ms
+	attribute application 0.0564ms
+	compilation (IR) 0.247ms
+	compilation (LCNF base) 0.489ms
+	compilation (LCNF mono) 0.35ms
+	congr simp thm 2.33ms
+	elaboration 32.4ms
+	fix level params 0.34ms
+	import 2.69s
+	initialization 38.2ms
+	instantiate metavars 0.729ms
+	interpretation 193ms
+	let-to-have transformation 0.127ms
+	linting 5.91ms
+	norm_num 0.114ms
+	parsing 5.38ms
+	process pre-definitions 3.57ms
+	ring 1.9ms
+	share common exprs 0.912ms
+	simp 13.8ms
+	tactic execution 38ms
+	type checking 8.06ms
+	typeclass inference 46.9ms

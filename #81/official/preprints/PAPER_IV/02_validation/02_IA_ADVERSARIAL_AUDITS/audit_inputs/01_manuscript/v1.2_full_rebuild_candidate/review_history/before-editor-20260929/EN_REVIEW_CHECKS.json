@@ -1,0 +1,62 @@
+{
+  "scope": "English Markdown review only. Static checks, not mathematical certification.",
+  "baseline": "C:\\Users\\jtraverso\\e81p4-publish\\preprints\\PAPER_IV\\01_manuscript\\v1.0.1_candidate\\PAPER_IV_preprint_v1.0.1_en.md",
+  "candidate": "C:\\Users\\jtraverso\\e81p4-publish\\preprints\\PAPER_IV\\01_manuscript\\v1.2_candidate\\PAPER_IV_preprint_v1.2_en.md",
+  "baseline_sha256": "d2175d22d2388e718d00cee1cd09571d3075820cddae3af0b92ec3638abe03fb",
+  "candidate_sha256": "844bf4039fade38f5fe6203027fa8571b93b522647641f872b36fe70142082ba",
+  "baseline_unchanged": true,
+  "protected_counts": {
+    "display": 158,
+    "lean": 5,
+    "result_heading": 24
+  },
+  "baseline_elements_not_verbatim": [
+    {
+      "kind": "display",
+      "line": 19,
+      "text": "\\[\nc_4(G)\\le M(n)+b,\\qquad M(n)=\\left\\lfloor\\frac{n(n+1)}6\\right\\rfloor,\n\\]"
+    },
+    {
+      "kind": "result_heading",
+      "line": 859,
+      "text": "**Corollary 6.1a (stability of partitions).** Under the hypotheses of Theorem 6.1, the root \\(R\\) can be chosen so that, for every clique partition \\(Q\\) of \\(G\\), with no restriction on piece order, if \\(|Q|\\le M(n)+\\tau\\) with \\(\\tau\\ge0\\), then \\(Q\\) has at most \\(\\tau+48\\delta\\) pieces other than these two canonical forms."
+    }
+  ],
+  "only_declared_protected_changes": true,
+  "legacy_equation_tags_retained": true,
+  "duplicate_equation_tags": [],
+  "lean_blocks_verbatim": true,
+  "math_delimiters_balanced": true,
+  "needspace_absent": true,
+  "reference_numbers_contiguous": true,
+  "missing_local_images": [],
+  "new_tags": [
+    "6.13",
+    "6.14",
+    "6.15",
+    "6.16",
+    "6.17",
+    "6.18",
+    "6.19",
+    "6.20",
+    "6.21",
+    "6.22",
+    "6.23",
+    "6.24",
+    "6.25",
+    "6.26",
+    "6.27",
+    "6.28",
+    "F.1",
+    "F.2",
+    "F.3",
+    "F.4",
+    "F.5",
+    "F.6"
+  ],
+  "new_audits_performed": false,
+  "spanish_synchronized": false,
+  "tex_pdf_generated": false,
+  "editorial_verdict": "EDITORIAL_DRAFT_WITH_OPEN_GATES",
+  "static_check_status": "PASS"
+}

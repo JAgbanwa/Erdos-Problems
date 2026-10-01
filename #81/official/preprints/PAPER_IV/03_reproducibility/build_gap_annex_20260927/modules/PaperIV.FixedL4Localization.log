@@ -1,0 +1,31 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 PaperIV/FixedL4Localization.lean -o /workspace/request-project/.lake/runner/lib/lean/PaperIV/FixedL4Localization.olean -i /workspace/request-project/.lake/runner/lib/lean/PaperIV/FixedL4Localization.ilean
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_nlinarith_1._boxed took 126ms
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_nlinarith_1._boxed took 118ms
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_nlinarith_1._boxed took 577ms
+import took 3.71s
+.olean serialization took 106ms
+cumulative profiling times:
+	.olean serialization 106ms
+	attribute application 0.0863ms
+	blocked (unaccounted) 15.6ms
+	compilation (IR) 9.27ms
+	compilation (LCNF base) 9.4ms
+	compilation (LCNF mono) 4.15ms
+	congr simp thm 15.9ms
+	elaboration 52.9ms
+	fix level params 0.507ms
+	import 3.71s
+	initialization 42.6ms
+	instantiate metavars 6.47ms
+	interpretation 1.44s
+	let-to-have transformation 0.0763ms
+	linting 16.4ms
+	norm_num 147ms
+	parsing 7ms
+	process pre-definitions 16.7ms
+	ring 28.2ms
+	share common exprs 6.73ms
+	simp 247ms
+	tactic execution 153ms
+	type checking 200ms
+	typeclass inference 972ms

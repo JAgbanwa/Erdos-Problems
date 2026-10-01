@@ -1,0 +1,130 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+\documentclass[
+]{article}
+\usepackage{xcolor}
+\usepackage{amsmath,amssymb}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math} % this also loads fontspec
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+\usepackage{lmodern}
+\ifPDFTeX\else
+  % xetex/luatex font selection
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{longtable,booktabs,array}
+\usepackage{caption}
+\captionsetup[table]{skip=6pt}
+\newcounter{none} % for unnumbered tables
+\usepackage{calc} % for calculating minipage widths
+% Correct order of tables after \paragraph or \subparagraph
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd\longtable{\par}{\if@noskipsec\mbox{}\fi\par}{}{}
+\makeatother
+% Allow footnotes in longtable head/foot
+\IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
+\makesavenoteenv{longtable}
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\usepackage{bookmark}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same}
+% fallback for those not using the hyperref driver hyperxmp:
+\makeatletter
+\@ifundefined{xmpquote}{\newcommand{\xmpquote}[1]{#1}}{}
+\makeatother
+\hypersetup{
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+
+\author{}
+\date{}
+
+\begin{document}
+
+\section{Informe de puerta E8 --- run\_v1.22\_r2 (Paper IV
+v1.22-r2)}\label{informe-de-puerta-e8--run_v122_r2-paper-iv-v122-r2}
+
+Veredicto actual: \textbf{PASS\_WITH\_OBSERVATIONS}. Evidencia:
+\texttt{20\_EVIDENCE/E8/}. Auditor: Claude Opus 5.5, misma sesión que
+las ejecuciones anteriores; no se ejecutó Lean.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section{E8 --- Evidencia del autor, atribución del alcance y
+empaquetado
+(r2)}\label{e8--evidencia-del-autor-atribuciuxf3n-del-alcance-y-empaquetado-r2}
+
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}lll@{}}
+\toprule\noalign{}
+Ítem & r2 & Estado \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+X-28: detector \texttt{sorry} de los runners congelados & Los runners
+\texttt{tools/paperiv\_build.py} y \texttt{tools/audit\_publication.py}
+mantienen el hash del manifiesto (615/615). El parche no se aplicó.
+Repetí el detector externo (\texttt{e8\_detector\_check.py} →
+\texttt{E8\_DETECTOR\_RERUN.json}): 10/10 casos correctos, incluido el
+log negativo real capturado. & \textbf{MITIGADO} (vigente): los runners
+históricos conservan el patrón insuficiente \\
+1266 / 844 & El barrido del auditor cubre 1266 logs = 608 (auditor,
+principal) + 50 (auditor, anexo) + 422 (autor, segmento 1) + 186 (autor,
+segmento 2), con 0 hits. El barrido antiguo del autor cubría 844 = 1266
+− 422 logs: omitía los 422 del segmento 1 del autor (E8-01; desglose
+según el registro E8 de run\_v1.21\_r1). El resultado de r2 es idéntico
+al de run\_v1.21\_r1. Ese conjunto se cuenta una sola vez y el alcance
+de 1266 se atribuye al barrido del auditor de run\_v1.21\_r1, no al
+autor. & \textbf{Atribución correcta (E8-01 resuelto en r1)} \\
+E8-02 & El parche propuesto también añadía \texttt{re.I} a la rama
+\texttt{error}, lo que amplía el alcance. & OBSERVATION vigente (sin
+efecto mientras no se aplique) \\
+E8-03: paquete único & E0: el único ZIP del directorio r2 es
+\texttt{PAPER\_IV\_v1.22\_REVIEW\_PACKAGE\_r2.zip} (129 miembros = 127
+del manifiesto + el manifiesto + su sidecar; CRC correcto). & Resuelto
+(r1) y conservado (r2) \\
+Documentos del editor r2 & \texttt{ARTIFACT\_CHECKS.json},
+\texttt{SEMANTIC\_CHECKS.json}, \texttt{VISUAL\_REVIEW\_v1.22\_r2.md} y
+\texttt{prepare\_r2.py} se contrastaron con mi propia evidencia (E6):
+las 18 páginas, 11 + 1 + 1 sustituciones, inglés idéntico, 615 entradas
+y diff idéntico, todo coincide. No se usan como PASS heredado. &
+Coinciden \\
+NEW-03 & Rectificación explícita en
+\texttt{CORRECTIONS\_AND\_HANDOFF\_v1.22\_r2.md} más artefacto corregido
+(E6/NEW03\_RECORD.md). & \textbf{CERRADO} \\
+Errata X-20 (461 = 314 + 147) & Sin cambios. & Resuelto (v1.21) \\
+\end{longtable}
+}
+
+\textbf{Veredicto E8 (r2): PASS\_WITH\_OBSERVATIONS} (X-28 mitigado,
+E8-02).
+
+\end{document}

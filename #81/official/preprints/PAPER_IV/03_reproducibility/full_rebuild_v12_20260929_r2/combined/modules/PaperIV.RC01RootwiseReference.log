@@ -1,0 +1,51 @@
+$ c:\Users\jtraverso\.elan\toolchains\leanprover--lean4---v4.28.0\bin\lean.exe -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false PaperIV/RC01RootwiseReference.lean -o C:\Users\jtraverso\e81p4\piv_v12_full_rebuild_20260929\.lake\runner\lib\lean\PaperIV\RC01RootwiseReference.olean -i C:\Users\jtraverso\e81p4\piv_v12_full_rebuild_20260929\.lake\runner\lib\lean\PaperIV\RC01RootwiseReference.ilean
+PaperIV/RC01RootwiseReference.lean:44:0: warning: automatically included section variable(s) unused in theorem `PaperIV.RC01RootwiseReference.pairScale_pos`:
+  [DecidableEq V]
+  [Nonempty V]
+  [Fintype P]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq V] [Nonempty V] [Fintype P] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+PaperIV/RC01RootwiseReference.lean:48:0: warning: automatically included section variable(s) unused in theorem `PaperIV.RC01RootwiseReference.densT_eq_pairScale`:
+  [DecidableEq V]
+  [Nonempty V]
+  [Fintype P]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq V] [Nonempty V] [Fintype P] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+PaperIV/RC01RootwiseReference.lean:51:0: warning: automatically included section variable(s) unused in theorem `PaperIV.RC01RootwiseReference.profileVolume_nonneg`:
+  [Nonempty V]
+  [Fintype P]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Nonempty V] [Fintype P] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+PaperIV/RC01RootwiseReference.lean:80:0: warning: automatically included section variable(s) unused in theorem `PaperIV.RC01RootwiseReference.profileVolume_eq_card`:
+  [Nonempty V]
+  [Fintype P]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Nonempty V] [Fintype P] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+PaperIV/RC01RootwiseReference.lean:83:0: warning: automatically included section variable(s) unused in theorem `PaperIV.RC01RootwiseReference.profileVolume_pos_iff`:
+  [Nonempty V]
+  [Fintype P]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Nonempty V] [Fintype P] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+PaperIV/RC01RootwiseReference.lean:90:0: warning: automatically included section variable(s) unused in theorem `PaperIV.RC01RootwiseReference.crossPair_pair_eq_interedges_image`:
+  [Nonempty V]
+  [Fintype P]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Nonempty V] [Fintype P] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+PaperIV/RC01RootwiseReference.lean:136:0: warning: automatically included section variable(s) unused in theorem `PaperIV.RC01RootwiseReference.rootEdge_mem_crossPair_of_active`:
+  [Fintype P]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype P] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`

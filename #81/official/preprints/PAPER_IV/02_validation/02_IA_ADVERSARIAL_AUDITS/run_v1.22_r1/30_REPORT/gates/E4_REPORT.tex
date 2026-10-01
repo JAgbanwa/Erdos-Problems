@@ -1,0 +1,153 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+\documentclass[
+]{article}
+\usepackage{xcolor}
+\usepackage{amsmath,amssymb}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math} % this also loads fontspec
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+\usepackage{lmodern}
+\ifPDFTeX\else
+  % xetex/luatex font selection
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{longtable,booktabs,array}
+\usepackage{caption}
+\captionsetup[table]{skip=6pt}
+\newcounter{none} % for unnumbered tables
+\usepackage{calc} % for calculating minipage widths
+% Correct order of tables after \paragraph or \subparagraph
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd\longtable{\par}{\if@noskipsec\mbox{}\fi\par}{}{}
+\makeatother
+% Allow footnotes in longtable head/foot
+\IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
+\makesavenoteenv{longtable}
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\usepackage{bookmark}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same}
+% fallback for those not using the hyperref driver hyperxmp:
+\makeatletter
+\@ifundefined{xmpquote}{\newcommand{\xmpquote}[1]{#1}}{}
+\makeatother
+\hypersetup{
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+
+\author{}
+\date{}
+
+\begin{document}
+
+\section{Gate E4 report --- run\_v1.22\_r1 (Paper IV
+v1.22-r1)}\label{gate-e4-report--run_v122_r1-paper-iv-v122-r1}
+
+Verdict: \textbf{PASS --- reused\_verified\_external\_build}. Evidence:
+\texttt{20\_EVIDENCE/E4/}. Auditor: Claude Opus 5.5, same session as
+run\_v1.2\_r1/run\_v1.21\_r1; no Lean executed.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section{E4 --- Formal build: documentary confirmation (no
+recompilation)}\label{e4--formal-build-documentary-confirmation-no-recompilation}
+
+\textbf{Status: PASS --- reused\_verified\_external\_build.} No Lean,
+Lake, leanchecker or other build was run in this cycle (mandate §2). No
+pin, cache or compiled object was touched.
+
+\subsection{Why reuse is permitted
+(identity)}\label{why-reuse-is-permitted-identity}
+
+\begin{itemize}
+\tightlist
+\item
+  The source cut is identical to the one built in run\_v1.2\_r1: 615/615
+  SOURCE\_MANIFEST entries (fb459343\ldots) match, with no extra files
+  (E0 initial and final).
+\item
+  The Lean source ZIP (cb274145\ldots) and the annex ZIP
+  (2847a422\ldots) are unchanged (E0).
+\item
+  The run\_v1.2\_r1 evidence is intact: its 1097 manifest files are
+  unchanged on disk and the ZIP sidecar matches (E0).
+\item
+  v1.22 changes the manuscript only, not Lean (E3).
+\end{itemize}
+
+\subsection{Documentary
+re-verification}\label{documentary-re-verification}
+
+\texttt{e4\_reuse\_check.py} (the run\_v1.21\_r1 script, reused
+verbatim) → \texttt{E4\_REUSE\_CHECK.json}; the log is
+\texttt{10\_LOGS/E4\_reuse\_check.log} (see C2-06). By design it does
+\textbf{not} rely on \texttt{E4\_main/SUMMARY.json}. Its sources are
+\texttt{records.jsonl}, the console log, the 608 module logs, the annex
+records, \texttt{AuditorChecks.log}, \texttt{olean\_vs\_author.json},
+\texttt{cache\_diff.json} and the source manifest.
+
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}ll@{}}
+\toprule\noalign{}
+Required evidence & Found \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+607 main modules & records.jsonl: 607/607 cut modules PASS (608 records
+including AuditorChecks); console
+\texttt{modules\_planned\ 607,\ pass\ 607,\ fail\_or\_blocked\ {[}{]}};
+607 \texttt{PASS\ n\ 607} lines; \texttt{EXIT\ 0}; record source hashes
+equal the manifest for all 607 \\
+19 targets & console \texttt{targets\_status}: all 19 FREEZE\_SCOPE
+targets PASS \\
+224 export controls & \texttt{ReleaseExportCheck.lean} has 224
+\texttt{\#check}; its log has 0 error lines \\
+50 annex modules & annex records.jsonl: 50/50 PASS; BoundedCliqueGap
+axiom check: 633 declarations, axioms ⊆ \{propext, Classical.choice,
+Quot.sound\} \\
+Axioms and sorry & 461 axiom records, none non-standard; 0 module logs
+with sorry text; the 1266-log detector scan has 0 hits (E8) \\
+Byte identity and cache & 607/607 oleans identical to the
+author\textquotesingle s; auditor cone summary: 50 declarations,
+problems = 0; Mathlib cache unchanged (113821 files; no file changed,
+added or removed) \\
+\end{longtable}
+}
+
+The resulting JSON is \textbf{identical} to the run\_v1.21\_r1
+\texttt{E4\_REUSE\_CHECK.json}.
+
+I reread the run\_v1.2\_r1 \texttt{E4\_RECORD.md}. Its limitations
+remain in force: same machine and cache, a two-segment author build, and
+no kernel replay.
+
+\end{document}

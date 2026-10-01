@@ -1,0 +1,164 @@
+$ c:\Users\jtraverso\.elan\toolchains\leanprover--lean4---v4.28.0\bin\lean.exe -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false PaperIV/ConeAudit.lean -o C:\Users\jtraverso\e81p4\piv_v12_full_rebuild_20260929\.lake\runner\lib\lean\PaperIV\ConeAudit.olean -i C:\Users\jtraverso\e81p4\piv_v12_full_rebuild_20260929\.lake\runner\lib\lean\PaperIV\ConeAudit.ilean
+OK   PaperIV.Erdos81AllOrders.erdos81_all_orders
+      total 39684 | PaperIV 2597 | PaperI 41 | Nibble 496 | MixedRounding 52 | EXTERNO 0
+OK   PaperIV.Erdos81AllOrders.erdos81_all_orders_additive
+      total 39685 | PaperIV 2598 | PaperI 41 | Nibble 496 | MixedRounding 52 | EXTERNO 0
+OK   PaperIV.Erdos81Unconditional.erdos81_cliquePartition
+      total 39678 | PaperIV 2594 | PaperI 41 | Nibble 496 | MixedRounding 52 | EXTERNO 0
+OK   PaperIV.Erdos81Unconditional.erdos81_linear_form
+      total 39680 | PaperIV 2596 | PaperI 41 | Nibble 496 | MixedRounding 52 | EXTERNO 0
+OK   PaperIV.Erdos81Unconditional.erdos81_chordalTarget
+      total 39590 | PaperIV 2576 | PaperI 0 | Nibble 496 | MixedRounding 52 | EXTERNO 0
+OK   PaperIV.CertifiedOptimumExistence.exists_certifiedFractionalOptimum
+      total 13603 | PaperIV 44 | PaperI 41 | Nibble 0 | MixedRounding 0 | EXTERNO 0
+OK   PaperI.FiniteLP.exists_optimal_pair
+      total 13072 | PaperIV 0 | PaperI 39 | Nibble 0 | MixedRounding 0 | EXTERNO 0
+OK   PaperIV.RC01Final.rc01_uniformRoundingTarget
+      total 34189 | PaperIV 917 | PaperI 0 | Nibble 496 | MixedRounding 50 | EXTERNO 0
+OK   PaperIV.RC01FarAssembly.farRegime_cliquePartition
+      total 34262 | PaperIV 968 | PaperI 0 | Nibble 496 | MixedRounding 52 | EXTERNO 0
+OK   PaperIV.RC01FarAssembly.farRegime_cliquePartition_allGraphs
+      total 34237 | PaperIV 962 | PaperI 0 | Nibble 496 | MixedRounding 52 | EXTERNO 0
+OK   PaperIV.FarRegimeAllGraphs.farRegime_cliquePartition_allGraphs
+      total 36210 | PaperIV 1017 | PaperI 41 | Nibble 496 | MixedRounding 52 | EXTERNO 0
+OK   PaperIV.NearH1GlobalAssembly.nearRegimeAt
+      total 30424 | PaperIV 1675 | PaperI 0 | Nibble 0 | MixedRounding 0 | EXTERNO 0
+OK   PaperIV.NearH1GlobalAssembly.chordalTargetAt
+      total 39589 | PaperIV 2575 | PaperI 0 | Nibble 496 | MixedRounding 52 | EXTERNO 0
+OK   PaperIV.RootRegularizationBridge.exists_regularizedRoot_engineFree
+      total 13193 | PaperIV 131 | PaperI 0 | Nibble 0 | MixedRounding 0 | EXTERNO 0
+OK   PaperIV.NearH1LocalConstructor.exists_near_partition_paid_by_root
+      total 30052 | PaperIV 1466 | PaperI 0 | Nibble 0 | MixedRounding 0 | EXTERNO 0
+OK   PaperIV.NearH1LocalConstructor.exists_near_partition_paid_by_root_sharp
+      total 30051 | PaperIV 1465 | PaperI 0 | Nibble 0 | MixedRounding 0 | EXTERNO 0
+OK   PaperIV.NearRootWindow.regularizedRoot_card_window
+      total 3629 | PaperIV 13 | PaperI 0 | Nibble 0 | MixedRounding 0 | EXTERNO 0
+OK   PaperIV.NearRootWindow.regularizedRoot_card_near_third
+      total 12052 | PaperIV 15 | PaperI 0 | Nibble 0 | MixedRounding 0 | EXTERNO 0
+OK   PaperIV.NearRootWindow.core_residual_window
+      total 11813 | PaperIV 10 | PaperI 0 | Nibble 0 | MixedRounding 0 | EXTERNO 0
+OK   PaperIV.NearRootWindow.core_card_near_third
+      total 11814 | PaperIV 11 | PaperI 0 | Nibble 0 | MixedRounding 0 | EXTERNO 0
+OK   PaperIV.NearRootWindow.core_reserve_le_deltaCal
+      total 11812 | PaperIV 10 | PaperI 0 | Nibble 0 | MixedRounding 0 | EXTERNO 0
+OK   PaperIV.NearRootWindow.root_sub_core_le
+      total 12109 | PaperIV 28 | PaperI 0 | Nibble 0 | MixedRounding 0 | EXTERNO 0
+OK   PaperIV.NearRootWindow.core_card_sub_core_card_le
+      total 11821 | PaperIV 12 | PaperI 0 | Nibble 0 | MixedRounding 0 | EXTERNO 0
+OK   PaperIV.NearEdgeDensity.card_edgeFinset_near_five_eighteenths
+      total 12512 | PaperIV 53 | PaperI 0 | Nibble 0 | MixedRounding 0 | EXTERNO 0
+OK   PaperIV.NearCriticalDichotomy.chordal_far_or_criticalRoot
+      total 30388 | PaperIV 1640 | PaperI 0 | Nibble 0 | MixedRounding 0 | EXTERNO 0
+OK   PaperIV.NearCriticalDichotomy.chordal_far_or_cliqueNum_ge
+      total 30379 | PaperIV 1631 | PaperI 0 | Nibble 0 | MixedRounding 0 | EXTERNO 0
+OK   PaperIV.NearCriticalDichotomy.chordal_far_or_edge_density
+      total 30385 | PaperIV 1636 | PaperI 0 | Nibble 0 | MixedRounding 0 | EXTERNO 0
+OK   PaperIV.SharpConstantOptimality.erdos81_quadratic_constant_optimal
+      total 15091 | PaperIV 402 | PaperI 0 | Nibble 0 | MixedRounding 0 | EXTERNO 0
+OK   PaperIV.SharpConstantOptimality.erdos81_quadratic_constant_isLeast
+      total 39983 | PaperIV 2748 | PaperI 41 | Nibble 496 | MixedRounding 52 | EXTERNO 0
+OK   PaperIV.HybridDichotomy.chordal_far_or_nearStructure
+      total 30371 | PaperIV 1623 | PaperI 0 | Nibble 0 | MixedRounding 0 | EXTERNO 0
+OK   PaperIV.HybridDichotomy.chordal_near_extremal_stability
+      total 30370 | PaperIV 1622 | PaperI 0 | Nibble 0 | MixedRounding 0 | EXTERNO 0
+OK   PaperIV.HybridDichotomy.erdos81_of_structuralDichotomy
+      total 39673 | PaperIV 2589 | PaperI 41 | Nibble 496 | MixedRounding 52 | EXTERNO 0
+OK   PaperIV.PaperTheorems.erdos81_hybrid_linear_form
+      total 39675 | PaperIV 2591 | PaperI 41 | Nibble 496 | MixedRounding 52 | EXTERNO 0
+OK   PaperIV.PaperTheorems.splitGraph_isChordal
+      total 4739 | PaperIV 10 | PaperI 0 | Nibble 0 | MixedRounding 0 | EXTERNO 0
+OK   PaperIV.PaperTheorems.exists_chordal_extremal_witness
+      total 15034 | PaperIV 399 | PaperI 0 | Nibble 0 | MixedRounding 0 | EXTERNO 0
+OK   PaperIV.PaperTheorems.erdos81_max_eq
+      total 39974 | PaperIV 2742 | PaperI 41 | Nibble 496 | MixedRounding 52 | EXTERNO 0
+OK   PaperIV.SplitCompleteExactValue.exists_optimal_cliquePartition
+      total 13919 | PaperIV 299 | PaperI 0 | Nibble 0 | MixedRounding 0 | EXTERNO 0
+OK   PaperIV.SplitCompleteExactValueAllParities.exists_optimal_cliquePartition_allParities
+      total 14002 | PaperIV 364 | PaperI 0 | Nibble 0 | MixedRounding 0 | EXTERNO 0
+OK   PaperIV.SplitCompleteSharpLower.cliquePartition_size_ge_baseline_unrestricted
+      total 4879 | PaperIV 62 | PaperI 0 | Nibble 0 | MixedRounding 0 | EXTERNO 0
+OK   PaperIV.SplitCompleteSharpValue.exists_sharp_cliquePartition_allParities
+      total 14028 | PaperIV 382 | PaperI 0 | Nibble 0 | MixedRounding 0 | EXTERNO 0
+OK   PaperIV.SplitCompleteSharpLower.critical_baseline_eq_targetSize
+      total 11894 | PaperIV 7 | PaperI 0 | Nibble 0 | MixedRounding 0 | EXTERNO 0
+OK   PaperIV.SplitCompleteRigidity.baseline_eq_targetSize_iff
+      total 11674 | PaperIV 22 | PaperI 0 | Nibble 0 | MixedRounding 0 | EXTERNO 0
+OK   PaperIV.SplitCompleteRigidity.optimal_cores
+      total 11679 | PaperIV 27 | PaperI 0 | Nibble 0 | MixedRounding 0 | EXTERNO 0
+OK   PaperIV.SplitCompleteDefect.size_add_choose_eq_mul_add_sum_defect
+      total 4831 | PaperIV 63 | PaperI 0 | Nibble 0 | MixedRounding 0 | EXTERNO 0
+OK   PaperIV.SplitMixedGap.mixed_gap_zero
+      total 14588 | PaperIV 408 | PaperI 0 | Nibble 0 | MixedRounding 0 | EXTERNO 0
+OK   PaperIV.SimplicialReduction.sharpBoundAt_of_largeCliqueRegime
+      total 13810 | PaperIV 65 | PaperI 0 | Nibble 0 | MixedRounding 0 | EXTERNO 0
+OK   PaperIV.SimplicialReductionRefined.not_strongLoosePieceHypothesis
+      total 4987 | PaperIV 21 | PaperI 0 | Nibble 0 | MixedRounding 0 | EXTERNO 0
+OK   PaperIV.SplitCompleteDefect.card_paying_pieces_le_excess
+      total 5173 | PaperIV 65 | PaperI 0 | Nibble 0 | MixedRounding 0 | EXTERNO 0
+OK   PaperIV.LinearCoefficient.linear_coefficient_optimal
+      total 15071 | PaperIV 401 | PaperI 0 | Nibble 0 | MixedRounding 0 | EXTERNO 0
+OK   PaperIV.SpreadAbsorptionCompatibility.exists_budgeted_compatible_spread_absorber
+      total 12670 | PaperIV 85 | PaperI 0 | Nibble 0 | MixedRounding 0 | EXTERNO 0
+OK   PaperIV.BalancedReserve.exists_balanced_reserve
+      total 20014 | PaperIV 10 | PaperI 0 | Nibble 18 | MixedRounding 0 | EXTERNO 0
+OK   PaperIV.SpreadAbsorption.exists_certificate
+      total 5319 | PaperIV 3 | PaperI 0 | Nibble 0 | MixedRounding 0 | EXTERNO 0
+OK   PaperIV.SpreadAbsorption.exists_lowConflict_certificate
+      total 12404 | PaperIV 4 | PaperI 0 | Nibble 0 | MixedRounding 0 | EXTERNO 0
+OK   PaperIV.SpreadAbsorption.physical_triangle_absorber
+      total 4164 | PaperIV 54 | PaperI 0 | Nibble 0 | MixedRounding 0 | EXTERNO 0
+OK   PaperIV.SpreadAbsorption.exists_budgeted_physical_triangle_absorber
+      total 12653 | PaperIV 71 | PaperI 0 | Nibble 0 | MixedRounding 0 | EXTERNO 0
+OK   PaperIV.SpreadLedgerAbsorption.total_ledgerBad_le_paid_mass
+      total 13818 | PaperIV 12 | PaperI 0 | Nibble 0 | MixedRounding 0 | EXTERNO 0
+OK   PaperIV.SpreadLedgerAbsorption.exists_spread_absorber_count_add_cost_le_baseline
+      total 14885 | PaperIV 107 | PaperI 0 | Nibble 0 | MixedRounding 0 | EXTERNO 0
+OK   PaperIV.SpreadAbsorptionCompatibility.exists_compatible_spread_absorber
+      total 5791 | PaperIV 83 | PaperI 0 | Nibble 0 | MixedRounding 0 | EXTERNO 0
+OK   PaperIV.SeparationAbsorptionRoute.erdos81_of_dualSeparation_absorption
+      total 39682 | PaperIV 2598 | PaperI 41 | Nibble 496 | MixedRounding 52 | EXTERNO 0
+OK   PaperIV.SplitEditIdentity.editDist_split_eq
+      total 4802 | PaperIV 37 | PaperI 0 | Nibble 0 | MixedRounding 0 | EXTERNO 0
+OK   PaperIV.FarSlackQuantitative.farRegime_cliquePartition_slack
+      total 34257 | PaperIV 963 | PaperI 0 | Nibble 496 | MixedRounding 52 | EXTERNO 0
+OK   PaperIV.IntegralStability.chordal_linear_stability
+      total 39678 | PaperIV 2590 | PaperI 41 | Nibble 496 | MixedRounding 52 | EXTERNO 0
+OK   PaperIV.IntegralStability.chordal_linear_stability_sixteen
+      total 39677 | PaperIV 2589 | PaperI 41 | Nibble 496 | MixedRounding 52 | EXTERNO 0
+OK   PaperIV.RootPartitionStability.sum_rootPieceDefect_eq
+      total 13027 | PaperIV 45 | PaperI 0 | Nibble 0 | MixedRounding 0 | EXTERNO 0
+OK   PaperIV.RootPartitionStability.chordal_partition_stability
+      total 39724 | PaperIV 2611 | PaperI 41 | Nibble 496 | MixedRounding 52 | EXTERNO 0
+OK   PaperIV.ExtremalClassification.split_value
+      total 14038 | PaperIV 391 | PaperI 0 | Nibble 0 | MixedRounding 0 | EXTERNO 0
+OK   PaperIV.ExtremalClassification.chordal_extremal_classification
+      total 39906 | PaperIV 2796 | PaperI 41 | Nibble 496 | MixedRounding 52 | EXTERNO 0
+OK   PaperIV.NearThresholdSensitivity.eps_le_of_physical_budget
+      total 11734 | PaperIV 1 | PaperI 0 | Nibble 0 | MixedRounding 0 | EXTERNO 0
+OK   PaperIV.NearThresholdSensitivity.near_threshold_of_budget
+      total 11925 | PaperIV 2 | PaperI 0 | Nibble 0 | MixedRounding 0 | EXTERNO 0
+OK   PaperIV.NearThresholdSensitivity.edit_mass_of_budget
+      total 11802 | PaperIV 1 | PaperI 0 | Nibble 0 | MixedRounding 0 | EXTERNO 0
+OK   PaperIV.NearThresholdSensitivity.descent_threshold_maximal_barrier
+      total 11881 | PaperIV 1 | PaperI 0 | Nibble 0 | MixedRounding 0 | EXTERNO 0
+OK   PaperIV.NearThresholdSensitivity.near_threshold_binding
+      total 11894 | PaperIV 1 | PaperI 0 | Nibble 0 | MixedRounding 0 | EXTERNO 0
+OK   PaperIV.NearH1Localization.exists_localized_split_core
+      total 30360 | PaperIV 1612 | PaperI 0 | Nibble 0 | MixedRounding 0 | EXTERNO 0
+OK   PaperIV.NearH1Localization.exists_nearStructureWitness_of_nearRegime
+      total 30368 | PaperIV 1620 | PaperI 0 | Nibble 0 | MixedRounding 0 | EXTERNO 0
+OK   PaperIV.FourHostClosure.exists_fourHost_packing
+      total 8813 | PaperIV 75 | PaperI 0 | Nibble 0 | MixedRounding 0 | EXTERNO 0
+OK   PaperIV.ReserveIdentity.targetSize_eq_baseline_add_reserve
+      total 11673 | PaperIV 12 | PaperI 0 | Nibble 0 | MixedRounding 0 | EXTERNO 0
+OK   PaperIV.ReserveIdentity.baseline_eq_targetSize_iff_reserve
+      total 11696 | PaperIV 17 | PaperI 0 | Nibble 0 | MixedRounding 0 | EXTERNO 0
+OK   PaperIV.ReserveIdentity.residual_sq_le_iff
+      total 11803 | PaperIV 3 | PaperI 0 | Nibble 0 | MixedRounding 0 | EXTERNO 0
+OK   PaperIV.LossBudget.budget_iff
+      total 4637 | PaperIV 23 | PaperI 0 | Nibble 0 | MixedRounding 0 | EXTERNO 0
+OK   PaperIV.LossBudget.erdos81_cp_form
+      total 39679 | PaperIV 2595 | PaperI 41 | Nibble 496 | MixedRounding 52 | EXTERNO 0
+OK   PaperIV.LossBudget.erdos81_cp_form_all_orders
+      total 39686 | PaperIV 2599 | PaperI 41 | Nibble 496 | MixedRounding 52 | EXTERNO 0
+VEREDICTO: los 81 enunciados del paper no usan ninguna constante del espacio de nombres `Erdos81`.

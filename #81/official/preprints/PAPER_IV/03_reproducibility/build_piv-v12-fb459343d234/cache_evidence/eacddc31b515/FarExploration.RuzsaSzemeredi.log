@@ -1,0 +1,7 @@
+$ c:\Users\jtraverso\.elan\toolchains\leanprover--lean4---v4.28.0\bin\lean.exe -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false FarExploration/RuzsaSzemeredi.lean -o C:\Users\jtraverso\e81p4\opt_build_20260927\.lake\runner\lib\lean\FarExploration\RuzsaSzemeredi.olean -i C:\Users\jtraverso\e81p4\opt_build_20260927\.lake\runner\lib\lean\FarExploration\RuzsaSzemeredi.ilean
+FarExploration/RuzsaSzemeredi.lean:246:0: warning: automatically included section variable(s) unused in theorem `FarExploration.RuzsaSzemeredi.item_card_eq_three`:
+  [NeZero N]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [NeZero N] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`

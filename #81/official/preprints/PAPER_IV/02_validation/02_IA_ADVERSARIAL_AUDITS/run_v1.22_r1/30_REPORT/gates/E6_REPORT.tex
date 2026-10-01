@@ -1,0 +1,221 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+\documentclass[
+]{article}
+\usepackage{xcolor}
+\usepackage{amsmath,amssymb}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math} % this also loads fontspec
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+\usepackage{lmodern}
+\ifPDFTeX\else
+  % xetex/luatex font selection
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{longtable,booktabs,array}
+\usepackage{caption}
+\captionsetup[table]{skip=6pt}
+\newcounter{none} % for unnumbered tables
+\usepackage{calc} % for calculating minipage widths
+% Correct order of tables after \paragraph or \subparagraph
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd\longtable{\par}{\if@noskipsec\mbox{}\fi\par}{}{}
+\makeatother
+% Allow footnotes in longtable head/foot
+\IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
+\makesavenoteenv{longtable}
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\usepackage{bookmark}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same}
+% fallback for those not using the hyperref driver hyperxmp:
+\makeatletter
+\@ifundefined{xmpquote}{\newcommand{\xmpquote}[1]{#1}}{}
+\makeatother
+\hypersetup{
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+
+\author{}
+\date{}
+
+\begin{document}
+
+\section{Gate E6 report --- run\_v1.22\_r1 (Paper IV
+v1.22-r1)}\label{gate-e6-report--run_v122_r1-paper-iv-v122-r1}
+
+Verdict: \textbf{PASS\_WITH\_FINDINGS}. Evidence:
+\texttt{20\_EVIDENCE/E6/}. Auditor: Claude Opus 5.5, same session as
+run\_v1.2\_r1/run\_v1.21\_r1; no Lean executed.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section{E6 --- Bilingual parity, rendering and presentation
+(v1.22)}\label{e6--bilingual-parity-rendering-and-presentation-v122}
+
+The inputs are the final v1.22 MD, TeX and PDF files bound by the
+manifest (E0). No earlier renders were used.
+
+\subsection{Method}\label{method}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Automated parity} (\texttt{e6\_parity.py} →
+  \texttt{E6\_PARITY.json}), against v1.21 and between EN and ES:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    EN goes from 230 to 237 display formulas and ES from 230 to 237; 7
+    are added in each language and none removed.
+  \item
+    Equation tags and Lean code blocks are identical to v1.21 in both
+    languages. Theorem-heading lines are unchanged (33 EN, 34 ES).
+  \item
+    The EN and ES display sequences are equal (237 = 237; no mismatch
+    after normalising \texttt{\textbackslash{}text\{\}}).
+  \item
+    Reference titles differ only for {[}2{]}--{[}4{]}, the
+    author\textquotesingle s own Papers, which have legitimate Spanish
+    titles.
+  \end{itemize}
+\item
+  \textbf{Residual-term scan} (\texttt{scripts/e6\_x15\_new01\_scan.py}
+  → \texttt{E6\_X15\_NEW01\_SCAN.json}).
+\item
+  \textbf{Visual inspection of every page.}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \texttt{scripts/make\_pairs.py} renders the bound PDFs at 90 dpi as
+    2-up sheets (\texttt{pairs/}): EN 72 pages and ES 73 pages.
+  \item
+    All 145 pages are logged in \texttt{PAGE\_INSPECTION\_LOG.csv} (138
+    VIEWED\_OK, 7 VIEWED\_FINDING).
+  \item
+    Changed pages, identifiers, the stability figure and the
+    bibliography were also inspected at 130 dpi (\texttt{zoom/},
+    \texttt{ZOOM\_VIEW\_LOG.csv}).
+  \item
+    Coverage rule (see CORRECTIONS C2-02\ldots C2-05): a page is logged
+    only from a sheet that is visible to the auditor when the row is
+    written. Discarded and unconfirmed intermediate logs are kept for
+    transparency.
+  \end{itemize}
+\item
+  The author\textquotesingle s response and
+  \texttt{VISUAL\_REVIEW\_v1.22.md} were contrasted after the
+  inspection.
+\end{itemize}
+
+\subsection{Rendering}\label{rendering}
+
+No overlaps, clipping, empty pages, overflowing formulas, missing glyphs
+or undefined references were seen on any page. The new C.3 text (EN pp.
+48--51, ES pp. 49--52) is legible at 90 and 130 dpi, as is Table C.1.
+Long identifiers carry the typographic continuation arrow.
+
+\subsection{Mandated items}\label{mandated-items}
+
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}lll@{}}
+\toprule\noalign{}
+Item & Evidence & Result \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+C.3 formulas, ES/EN & Parity: the 7 added displays are identical in both
+languages. 130 dpi: EN p50--51 and ES p51--52 have the same chain,
+constants and tags (C.3), (C.4). & \textbf{OK} \\
+Statements, final constants, tags & Tags equal to v1.21; heading lines
+unchanged; the diff shows no change to a statement. &
+\textbf{Unchanged} \\
+X-12: \texttt{E34.lemma3}, \texttt{E34.transfer} & EN p65 "This is
+E34.lemma3." and Table 10 "E34.transfer" on p66, both monospaced (130
+dpi). ES p67, same (130 dpi). & \textbf{RESOLVED} \\
+NEW-01: Regularization/Nibble descriptive; \texttt{Model} as namespace &
+EN §5.1 heading (p13), A.2 row (p40) and the ES Lemma 3.2 heading (p44)
+are now plain text. EN §7.2 has "bounded gain function from
+\texttt{Model}" in code (p34). \textbf{ES §7.2 still has "función de
+ganancia acotada de Model" in roman type} (MD l.1203, TeX l.1084, PDF
+p35). In v1.2 the ES text had
+\texttt{\textasciigrave{}Model\textasciigrave{}}. & \textbf{PARTIAL}
+(MINOR). The ES residual was also missed by run\_v1.21\_r1 (CORRECTIONS
+C2-08). \\
+X-15: emparejamientos/empaquetamiento in prose; "valor base" in the
+figure; cited titles untranslated & Figure 3, ES p26 at 130 dpi: "Cotas
+de edición y valor base (6.12)". \textbf{Fixed.} Cited titles are kept
+({[}6{]}, {[}7{]}, {[}9{]}). \textbf{ES prose still contains 12 English
+terms}: "matchings" at MD l.526, 578, 746 (×2); "matching" at l.1892,
+1917, 1959, 2177, 2182 (×2), 2184; "packing" at l.688 ("ni otro
+packing"). These fall on PDF pp. 16, 18, 20, 21, 55, 56 and 61 and are
+also in the TeX. This is the same set of 12 + 1 listed by run\_v1.21\_r1
+(line numbers shifted by the C.3 insertion). & \textbf{PARTIAL} (MINOR).
+See the discrepancy below. \\
+NEW-02: original title of {[}6{]} & EN p71 and ES p72 (130 dpi):
+«Integer and fractional packings in dense graphs». &
+\textbf{RESOLVED} \\
+Preference Labs spelling & EN p71 "Jacobian at Preference Labs"; ES p72
+"Jacobian de Preference Labs". & \textbf{RESOLVED} (X-10 observation
+closed) \\
+X-27: dependency disclosure and real independence scope & EN p31 / ES
+p31: the E32 classification wrappers still use the historical
+Alon--Shapira chain, and the exclusion check is not extended to them.
+Table 9 keeps the E32 entry (EN p64 / ES p65). {[}23{]} keeps its use
+statement (EN p72). & \textbf{Preserved} \\
+Bibliography result of the earlier audit & Unchanged apart from NEW-02
+and the spelling fix. Not widened. & \textbf{OK} \\
+\end{longtable}
+}
+
+\subsection{Discrepancy with the author\textquotesingle s
+response}\label{discrepancy-with-the-authors-response}
+
+\texttt{RESPONSE\_TO\_REVALIDATION\_v1.22.md} (X-15 row) states that the
+matching/packing residues in Spanish prose are translated. In fact, only
+the figure label changed; none of the 13 prose occurrences was
+translated. The response\textquotesingle s NEW-01 row ("Se restaura el
+formato del namespace Model donde corresponde") holds for EN only.
+\texttt{VISUAL\_REVIEW\_v1.22.md} reports "valor base" and {[}6{]},
+which is correct, and does not claim the prose translation.
+\textbf{Severity: MINOR} (presentation; no mathematical content).
+
+\subsection{E6 verdict}\label{e6-verdict}
+
+\textbf{PASS\_WITH\_FINDINGS.} Everything renders, and parity of all
+formulas, tags and statements holds. X-12, NEW-02 and Preference Labs
+are resolved; X-27 is preserved. Two MINOR, non-blocking presentation
+residuals remain in the Spanish edition: X-15 (prose) and NEW-01 (ES
+§7.2 \texttt{Model}).
+
+\end{document}

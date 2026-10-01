@@ -1,0 +1,80 @@
+$ C:\Users\jtraverso\.elan\toolchains\leanprover--lean4---v4.28.0\bin\lean.exe -j 8 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false FarExploration/AxiomCheck.lean -o C:\Users\jtraverso\e81p4-publish\preprints\PAPER_IV\02_validation\02_IA_ADVERSARIAL_AUDITS\run_v1.2_r1\05_BUILD\main\obj\FarExploration\AxiomCheck.olean -i C:\Users\jtraverso\e81p4-publish\preprints\PAPER_IV\02_validation\02_IA_ADVERSARIAL_AUDITS\run_v1.2_r1\05_BUILD\main\obj\FarExploration\AxiomCheck.ilean
+'FarExploration.ThresholdCalculus.chordalTargetFrom_max' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FarExploration.ThresholdCalculus.chordalTargetAt_of_single_rounding' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'FarExploration.ThresholdCalculus.chordalTargetFrom_calibrated' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'FarExploration.TowerHeight.deltaFar_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FarExploration.TowerHeight.k0Far_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FarExploration.TowerHeight.heightFar_ge' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FarExploration.TowerHeight.tower_le_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FarExploration.TowerHeight.bound_ge_tower_of_height' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FarExploration.CodegreeCleanup.uniformRoundingTarget_of_codegreeCleanup' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'FarExploration.CleanupLP.abstractCleanupAt_of_scale' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FarExploration.CleanupBridge.codegreeCleanupAt_of_abstract' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FarExploration.CleanupDuality.not_feasible_of_dualCertificate' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'FarExploration.CleanupDuality.dualCertificate_of_not_feasible' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'FarExploration.CleanupDuality.cleanupFeasible_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FarExploration.CleanupObstruction.not_abstractCleanupAt' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FarExploration.CleanupCertificate.rigid_not_cleanupFeasible' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FarExploration.CleanupVerdict.codegreeCleanupAt_of_scale' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FarExploration.CleanupVerdict.abstractCleanup_dichotomy' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FarExploration.CleanupVerdict.obstruction_value_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FarExploration.CleanupVerdict.lp_route_insufficient' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FarExploration.CleanupVerdict.not_abstractCleanupAt_applicationParameters' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'FarExploration.CleanupThreshold.codegreeCleanupAt_iff_exists_threshold' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'FarExploration.CleanupThreshold.threshold_gt' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FarExploration.CleanupThreshold.application_threshold_gt' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FarExploration.RuzsaSzemeredi.item_card_eq_three' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FarExploration.RuzsaSzemeredi.item_eq_tri' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FarExploration.RuzsaSzemeredi.graphSystem_rigid' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FarExploration.RuzsaSzemeredi.card_supports_ge' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FarExploration.RigidThreshold.rigid_threshold_gt' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FarExploration.CleanupRigidVerdict.rs_rigid_mass_ge' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FarExploration.CleanupRigidVerdict.rs_threshold_gt' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FarExploration.CleanupRigidVerdict.application_threshold_gt' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FarExploration.CleanupRigidVerdict.application_threshold_gt_behrend' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'FarExploration.CleanupRigidVerdict.threshold_gt_exp' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FarExploration.CleanupRigidVerdict.threshold_superpolynomial' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'FarExploration.CleanupRigidVerdict.threshold_gt_exp_seventy_two' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'FarExploration.CleanupRigidVerdict.rigid_card_le_of_cleanup' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FarExploration.CleanupDense.value_le_edges' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FarExploration.CleanupDense.densePacking_mass' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FarExploration.CleanupDense.densePacking_value' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FarExploration.CleanupDense.densePacking_codeg_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FarExploration.CleanupDense.dense_cleanup' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FarExploration.CleanupTriangleRegular.value_le_two_thirds_edges' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'FarExploration.CleanupTriangleRegular.three_mul_card_items_eq_sum' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'FarExploration.CleanupTriangleRegular.three_mul_card_items' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FarExploration.CleanupTriangleRegular.three_mul_card_items_ge' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'FarExploration.CleanupTriangleRegular.uniform_codeg_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FarExploration.CleanupTriangleRegular.uniform_mass' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FarExploration.CleanupTriangleRegular.uniform_value' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FarExploration.CleanupTriangleRegular.triangleRegular_cleanup' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'FarExploration.CleanupTriangleRegular.nearRegular_cleanup' depends on axioms: [propext, Classical.choice, Quot.sound]

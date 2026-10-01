@@ -1,0 +1,29 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 PaperIV/NearH1SplitComparator.lean -o /workspace/request-project/.lake/runner/lib/lean/PaperIV/NearH1SplitComparator.olean -i /workspace/request-project/.lake/runner/lib/lean/PaperIV/NearH1SplitComparator.ilean
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_nlinarith_1._boxed took 273ms
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_nlinarith_1._boxed took 303ms
+import took 3.79s
+cumulative profiling times:
+	.olean serialization 86.3ms
+	attribute application 0.0436ms
+	compilation (IR) 2.15ms
+	compilation (LCNF base) 4.8ms
+	compilation (LCNF mono) 1.09ms
+	congr simp thm 10.7ms
+	dsimp 3.46ms
+	elaboration 37.8ms
+	fix level params 1.41ms
+	import 3.79s
+	initialization 38.2ms
+	instantiate metavars 6.19ms
+	interpretation 985ms
+	let-to-have transformation 0.187ms
+	linting 14.2ms
+	norm_num 142ms
+	parsing 4.17ms
+	process pre-definitions 12ms
+	ring 49ms
+	share common exprs 12ms
+	simp 136ms
+	tactic execution 87.9ms
+	type checking 80.9ms
+	typeclass inference 761ms

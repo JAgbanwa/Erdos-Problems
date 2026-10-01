@@ -1,0 +1,25 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 PaperIV/CertifiedOptimumExistence.lean -o /workspace/request-project/.lake/runner/lib/lean/PaperIV/CertifiedOptimumExistence.olean -i /workspace/request-project/.lake/runner/lib/lean/PaperIV/CertifiedOptimumExistence.ilean
+import took 3.31s
+cumulative profiling times:
+	.olean serialization 70.9ms
+	attribute application 0.225ms
+	compilation (IR) 1.27ms
+	compilation (LCNF base) 1.79ms
+	compilation (LCNF mono) 0.954ms
+	congr simp thm 12.1ms
+	elaboration 81.7ms
+	fix level params 0.373ms
+	import 3.31s
+	initialization 40.6ms
+	instantiate metavars 1.78ms
+	interpretation 291ms
+	let-to-have transformation 0.118ms
+	linting 15ms
+	norm_num 1.24ms
+	parsing 5.68ms
+	process pre-definitions 10.5ms
+	share common exprs 2.52ms
+	simp 304ms
+	tactic execution 245ms
+	type checking 53.1ms
+	typeclass inference 383ms

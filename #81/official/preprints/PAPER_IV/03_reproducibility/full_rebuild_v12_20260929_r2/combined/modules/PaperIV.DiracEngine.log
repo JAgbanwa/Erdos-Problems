@@ -1,0 +1,59 @@
+$ c:\Users\jtraverso\.elan\toolchains\leanprover--lean4---v4.28.0\bin\lean.exe -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false PaperIV/DiracEngine.lean -o C:\Users\jtraverso\e81p4\piv_v12_full_rebuild_20260929\.lake\runner\lib\lean\PaperIV\DiracEngine.olean -i C:\Users\jtraverso\e81p4\piv_v12_full_rebuild_20260929\.lake\runner\lib\lean\PaperIV\DiracEngine.ilean
+PaperIV/DiracEngine.lean:71:0: warning: automatically included section variable(s) unused in theorem `PaperIV.isSimplicial_of_rsimplicial`:
+  [Fintype V]
+  [DecidableEq V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] [DecidableEq V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+PaperIV/DiracEngine.lean:89:0: warning: automatically included section variable(s) unused in theorem `PaperIV.rstep_symm`:
+  [Fintype V]
+  [DecidableEq V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] [DecidableEq V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+PaperIV/DiracEngine.lean:104:0: warning: automatically included section variable(s) unused in theorem `PaperIV.rreach_mono`:
+  [Fintype V]
+  [DecidableEq V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] [DecidableEq V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+PaperIV/DiracEngine.lean:112:0: warning: automatically included section variable(s) unused in theorem `PaperIV.exists_radj_of_rreach_ne`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+PaperIV/DiracEngine.lean:124:0: warning: automatically included section variable(s) unused in theorem `PaperIV.rreach_erase`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+PaperIV/DiracEngine.lean:153:0: warning: automatically included section variable(s) unused in theorem `PaperIV.rsimplicial_of_erase`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+PaperIV/DiracEngine.lean:208:52: warning: unused variable `hKS`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+PaperIV/DiracEngine.lean:292:0: warning: automatically included section variable(s) unused in theorem `PaperIV.rreach_univ_iff`:
+  [DecidableEq V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+PaperIV/DiracEngine.lean:334:53: warning: unused variable `huD`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+PaperIV/DiracEngine.lean:346:0: warning: automatically included section variable(s) unused in theorem `PaperIV.component_sep`:
+  [Fintype V]
+  [DecidableEq V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] [DecidableEq V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`

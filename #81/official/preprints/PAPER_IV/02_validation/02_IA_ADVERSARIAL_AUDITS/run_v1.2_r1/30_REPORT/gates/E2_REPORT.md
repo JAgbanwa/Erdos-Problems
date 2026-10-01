@@ -1,0 +1,119 @@
+# Gate E2 report — run_v1.2_r1 (Paper IV v1.2)
+
+Verdict: **INCONCLUSIVE**. Evidence directory: `20_EVIDENCE/E2/`.
+
+---
+
+## E2 — Independent mathematics (first pass)
+
+Method: pen-and-paper rederivation by the lead auditor from the EN manuscript (no author derivation notes,
+internal reports or editorial reports were read); directed inspection of Lean sources only where the prose is
+a summary (recorded). Exact numerical sub-steps are cross-checked in E5 (tests T01–T24).
+Status legend: **R** = rederived by the auditor; **R*** = rederived given an explicitly stated intermediate
+estimate; **I** = imported with attribution (not re-proved); **F** = only formally inspected (Lean), no
+human derivation available/attempted; **X** = exposition gap (see A.2 table).
+
+## Component ledger
+
+| # | Component (EN lines) | Status | Notes |
+|---|---|---|---|
+| 1 | Loss budget (1.3), (1.3a), Lemma 2.1, (2.4), Table 1 | R | pure counting |
+| 2 | Finite LP duality / attained rational optimum (§2.2) | I/F | Paper I; `PaperI.FiniteLPDuality` (not re-proved) |
+| 3 | (2.5) Paper II bound ⌊(2n+1)²/24⌋ = M(n) | R (floor identity), I (Paper II theorem) | |
+| 4 | Lemma 3.2 bounded-rank nibble | I | Paper III, attributed |
+| 5 | Lemma 3.3 two quotas (l.1459-1483) | R | loads/codegrees of the auxiliary extension, projection, both quota constants C=C0+1+k0+b(2+2k0) rechecked |
+| 6 | Lemma 3.4 physical selector (l.1485-1504) | R | pair mass ≥ (t3−3)/2, load non-increase, codegree ≤ γ0/2+3/t3 (actual cross term ≤2/t3), gain 4m+b4, (3.6) |
+| 7 | (3.7) algebra; (3.9) | R | |
+| 8 | (3.10) charging (×3 per discarded edge; K4 with one bad edge keeps a face; light K4 → faces at x/2) | R | discard count (3δ+1/k0+d)n² is standard regularity bookkeeping, not derived (A2-2) |
+| 9 | (3.12)-(3.13) joint codegree | R* | given ψ_H ≤ t² and fibre lower bounds b_H ≥ a3 t³, a4 t⁴ (A2-3) |
+| 10 | Per-edge load of the cleaned system (l.1615 "A single edge is controlled in the same way") | X / F | **Following the stated recipe gives load ≤ 1/a3 ≫ 1, not ≤ 1.** The Lean development instead removes roots whose copy count deviates two-sidedly from the reference value (`RC01DeviationCleanup.deviationBad`, Chebyshev second-moment bound) and uses the resulting *upper* spread bound with budget (1+u)·A·pairVolume (`RC01CleanFiber` docstring). This essential step is not stated in the prose. See A2-3. |
+| 11 | C.3 schedule (C.1), (C.2), Table C.1, (C.3) | F | numeric domination with 2^{59516}-scale quantities; definitions of L_T, M_T, γ_T, T_T, D_S, γ_R are not in the manuscript (A2-4) |
+| 12 | Corollary 3.5 | R | uses M(n) ≥ n²/6 for n ≥ 6 |
+| 13 | Lemma 4.1 admissible mixed path | R | transport (4.4) (loads ≤2 before averaging, ≤1 after), existence of a non-twin step via Dirac + rooted Dirac, lexicographic potential, chordality preservation |
+| 14 | Lemma 4.2, (4.5)-(4.6a), descent, near-threshold 4·10^12 / failure at 3.6·10^12 | R | no circularity: Lemma 4.2 uses Thm 5.0, whose proof does not use Prop 4.3 |
+| 15 | Prop 4.3 (4.7)-(4.8) | R | from \|ΔF4\| ≤ 6 per edit (actually ≤4) and the first comparator branch |
+| 16 | (5.1a) three comparator branches | R (values of the branch maxima, e.g. (4n+1)²/120), F (existence of the explicit fractional packings of the middle/third branches) | |
+| 17 | Lemma 5.1 extraction | R | PEO edge bound (a−1)r−C(a,2); u ≤ √(2ε0)n; δ_C ≤ 6.1ε0n²; a ≥ 0.33n; budget 1.6617e-6 n² |
+| 18 | Prop 5.2 regularization, (5.2)-(5.4), (5.7) | R | incl. \|X\| ≤ a/16384, \|Y\| ≤ a/57344, exterior cliques ≤ a/128+1, Y clique, R clique; d_max: removed X-columns miss ≥ a/4 of ≤ 129a/64 exterior vertices ⇒ ≤ 113a/64 (the source of "113" is not stated in the prose); all (5.4) ratios and (5.7) with margin |
+| 19 | Phase I: equitable Vizing colouring, (5.5), PEO orientation, invalid incidences ≤ (w−1)A, cyclic averaging (5.6) | R | |
+| 20 | Phase II: (5.8)-(5.11) moments and averaging; compatibility with phase I | R | (a+u)² ≤ Da+4ta+2tu |
+| 21 | (5.12)-(5.14) calibration; Table 2; Lemma 5.3 (5.15), (5.15a); (5.16) | R | coefficients recomputed exactly (also E5 T03/T04) |
+| 22 | Corollary 5.4 | R* | given (4.8) |
+| 23 | Theorem B assembly; §6.1 weight argument; (6.2); §6.2 (6.3)-(6.4); §6.3 Thm A with b=N² | R | tower value T(h+7) is F (item 11) |
+| 24 | Quadratic/linear coefficient optimality (6.5a), (6.5) | R | |
+| 25 | §6.4 (6.6) piece identity | R | |
+| 26 | Thm 6.1, (6.7a)-(6.7b), Cor 6.1a (48, 480), Cor 6.2 | R | 48 = best from (6.7) (E5 T22); ≤10·d_R bound (E5 T08) |
+| 27 | Thm C′: deletion step (6.15), δ′ ≥ 0, δ′ ≤ δ−εt+1/3, reinsertion ≤ t−1 edits paid by A_s ≥ 2/ε_s; window invariant (F.1 l.2141-2146); repair bound B+4d_E; (6.16) | R | invariant algebra also E5 T19 |
+| 28 | Thm C′ terminal accounts (6.14) / E.4 combination | R | coefficient 1+32s+800(3+32s)(s+1)² ≤ 25632(s+1)³ ≤ 38000(s+1)³; total ≤ 40000(s+1)³ |
+| 29 | Cor 6.3 resize, (6.19) discrete parabola, (6.18) | R | parabola: Q_s−B = [(N−3k)(N−3k+1) − r_N]/6, N=n+s, r_N∈{0,2}; ≥ dist² (E5 T09) |
+| 30 | Prop 6.3a (6.20)-(6.21) | R | rsd ≤ s of G_{s,q,d} (hosts: omit \|D∩U\|; C, D vertices: host-clique argument), baseline deficit (3d²−d)/2 via increments −1−3j, edge-count difference d(4q−4s−d−1)/2, 4Δe − nd = d(5q−7s−2d−2) ≥ 0 |
+| 31 | Prop 6.4 (6.22)/(6.23) | R* (low-star branch: exact identity (n−2c+1)c+C(c,2) = B_{n−s}(c)+sc; (F.3)); I ([15, Lemma 3.1] signed-star estimate (F.2), attributed); F (high-star envelope (F.4), small orders n<8 in Lean) | independent finite check E5 T15 |
+| 32 | Thm 6.5 | R* | given SublinearEdit (from [22] via E34, I/F), Lemma F.3a (R), (F.6) (R* — my reconstruction gives 16δ+65t+n(s+u) and δ+4t+2n(s+u)), RootScore minimization (R) |
+| 33 | Lemma F.3a, Cor F.3b | R | both induction cases; also E5 T12 |
+| 34 | Cor 6.6, (C.4) | F | tower comparisons (E35) not rederived |
+| 35 | Appendix E.1 constructor: (E.2), (E.2a), (E.2c), (E.2e) | R | (E.2e) increments ⌊(N+s+1)/3⌋ ≥ ⌈(c+b+s)/3⌉ |
+| 36 | (E.1) capacity conditions, list hosting of all edges of G[S] (Galvin, dyadic) | F | only described |
+| 37 | (E.2b) three-case budget | R* | cases 1–3 arithmetic checked given (E.2d) and the normalization estimates |
+| 38 | (E.2d) joint defect bound | X | sketch only (A2-6) |
+| 39 | Normalization estimates (t_W, L, \|𝓛\|, \|c−n/3\|, σ, τ, m) | X / F | asserted, not derived (A2-5) |
+| 40 | E.2 min-degree reduction removing K_s; (E.3) | R | (E.3) holds for all N ≥ 1 |
+| 41 | E.3 lower witness, (E.5) | R | |
+| 42 | E.4 block by block: StrictParams (κ, q, capacity conditions) | R* (given normalization numbers) | κ ≥ 2n/3 − 0.021ρ; light/heavy host degree bounds ≤ κ; 3⌈c/2⌉+2τ+4q ≤ b+2 |
+| 43 | E.4 (E.7) θ_s-saving from cyclic averaging | R* | each H-edge has ≥ c−2σ valid hosts; z ≥ dm/κ ≥ θ_s m |
+| 44 | E.4 (E.8)-(E.9) | R | exact substitution of R_* and F; D_0 ≥ 0 from (E.2e) |
+| 45 | E.4 StrictBudget (E.10) | R* | depends on (E.2d)+normalization (items 38–39) |
+| 46 | E.4 ResidualExcess (E.11) | R | needs 2(L+t_W) ≤ (c+b+s)/3 |
+| 47 | E.4 missing-pair restriction (no_core_pairs) | R* | given \|U\| ≥ ρ/10⁴+s+2 from normalization |
+| 48 | E.4 CoreCliqueAlternative (E.12), (E.13) | R | induction on s; (4s+1)s missing-edge bound (4s−1 suffices); c ≥ 20(s+1)² |
+| 49 | E.4 TemplateDistance / RootPartition (E.14) | R | two successive comparisons |
+| 50 | F.5 case structure A/B1/B2 | R (assembly logic, exhaustiveness, (F.12) with δ11 ≤ ε/2, Kη = ε/2, prefix-extension counting) ; I/F (adapted set-colouring theorem thm2, claim5_count, gluing lemma — from [22] with modifications) | matches Lean `lemma11_V` |
+| 51 | (F.7)-(F.10) auxiliary lemmas | F (+ E5 finite tests for F.7, F.9) | |
+| 52 | Prop D.1, Table 8, (D.1)-(D.4) | R (counts, residue coverage), I (Bose/Skolem STS existence) | |
+| 53 | Prop D.2, D.3 (D.6)-(D.7), D.3 (D.8) | R | |
+| 54 | G.1 annex (G.1) | F (statement only) | |
+| 55 | Prop G.1 (G.2)-(G.5) | R | Behrend via Mathlib is I |
+| 56 | §8 (8.1) | R | |
+
+No mathematical error was found in any rederived step.
+
+## Appendix A.2 exposition verdicts (mandate §5.2)
+
+| Item | Manuscript location | Literal Lean declarations (located) | Independent derivation attempted | Evidence | Exposition verdict | Explanation |
+|---|---|---|---|---|---|---|
+| A2-1 | §5.1 (5.3), (5.4), (5.7) l.484-514 | `Regularization`, `RegularizationBounds`, `RegularizedRootGoal`, `RootRegularizationBridge` | Yes, complete (component 18) | this record; E5 T06 | **ACCEPTABLE_SUMMARY** | Every bound follows from (5.1), (5.3) and the displayed degree/width counts by rational comparison with wide margins; the one non-obvious input (removed X-columns miss ≥ a/4 exterior vertices, giving 113a/64) should be one sentence. |
+| A2-2 | C.2 (3.10), (3.8) l.1572-1581, l.1538-1544 | `E17.Cleanup`, `E17.FarBudget`, `RC01RootwiseCleanupBudget`, `RC01RootwiseRetention` | Partial: charging argument rederived; discard count reconstructed from standard regularity bookkeeping (exceptional class, irregular pairs, intra-class, sparse pairs) | component 8 | **ACCEPTABLE_SUMMARY** for the discard counts (3.10); retention (3.8) is covered under A2-3 | A referee familiar with regularity can reconstruct (3.10); the conventions (δ/8 in C.3, class-size t) are stated. |
+| A2-3 | §3.2, C.2 fibre bounds b_H ≥ a3t³, a4t⁴; (3.8); per-edge feasibility l.1606-1615 | `RC01CleanFiber`, `RC01DeviationCleanup`, `RC01RegularVolume`, `RC01PatternMassScale`, `RC01CleanedGate`, `RC01CleanedMixedCodegree` | Yes; the codegree bound (3.13) follows; the per-edge load bound does **not** follow from the text | component 10 | **REQUIRES_EXPANSION** | The feasibility (load ≤ 1) of the cleaned system needs a two-sided deviation cleanup of roots with a second-moment (Chebyshev) bound and an upper spread bound; the prose instead says "a single edge is controlled in the same way", which with the stated bounds yields only 1/a3. The retention (3.8) likewise depends on that cleanup and the counting lemma. This is an essential step of Theorem 3.1 absent from the human-readable proof (the formal proof contains it). |
+| A2-4 | C.3 Table C.1, (C.1)-(C.3) | `E19.ScheduleBounds`, `E19.ChainBounds`, `E19.GateBounds`, `E18.Numeric`, `E17.ExplicitFarAssembly` | No (definitions of the schedule functions are not given in the text) | — | **REQUIRES_EXPANSION** (minor impact) | Affects only the explicit tower values T(h+7), T(h+8) and (C.4)/(6.28), not the existence of thresholds. A human referee cannot check Table C.1 from the manuscript; either give the schedule definitions or label these values as formally verified numerics only. |
+| A2-5 | E.1 normalization l.1853-1863; E.4 l.1993-2003 | `A4S1.IndepAll*` (AllInput.params_strict, normalization producers), E33 localization | Arithmetic downstream checked (items 42–47); the normalization estimates themselves could not be derived from the text | components 39, 42–47 | **REQUIRES_EXPANSION** | These estimates (t_W ≤ 4ρ/10^27, L ≤ ρ/10^13+1, \|𝓛\|−n/3 ≤ c+4λ/10^31, \|c−n/3\|, σ, τ, m ≤ 2ρ²/10^31) carry the whole fixed-defect constructor, i.e. the proof of Theorem C for s>0 (the paper's order-four strengthening relative to [15]) and Theorem C′. They are asserted, with the localization input itself only named. |
+| A2-6 | E.1 (E.2b), (E.2d), three-case budget l.1837-1929 | `IndepAllPeel`, `IndepAllObstr`, `IndepAllBudget`, `IndepAllMain` | Cases 1–3 checked given (E.2d); (E.2d) itself only sketched | components 37–38 | **REQUIRES_EXPANSION** | (E.2d) is the key place where rooted defect is used jointly on up to 2s+2 exceptions; the text gives an outline ("the rooted condition, applied to the induced subgraphs determined by these pairs … bounds the joint contribution") that a referee cannot turn into a proof without substantial reconstruction. |
+| A2-7 | D.1 Table 8 l.1721-1744 | `HalvingFrames`, `ThreeRegime.CompleteStateAllOrders`, `exists_packing`, `complete_state_closes` | Yes: residue coverage and gain counts (D.1)-(D.4) rederived; STS existence classical | component 52 | **ACCEPTABLE_SUMMARY** | Classical Bose/Skolem Steiner triple systems with a standard parallel-class K4 augmentation; Proposition D.1 is a supplement not used by Theorems A–C. |
+
+## §5.1 obligations (v1.2-specific) — first-pass results
+- **E.4 block by block**: StrictParams R*; StrictBudget R* (conditional on A2-5/A2-6 items); ResidualExcess R;
+  CoreCliqueAlternative R; LargeCliqueCore / no_core_pairs R*; TemplateDistance R; RootPartition R.
+  Same witnesses: all accounts refer to one physical partition Q and one normalized triple (S,H,W); (E.9) uses the
+  constructed Q, not an optimizer. Fixed-s thresholds and windows: γ_s, N_s^stab match (F.1)/(6.11) term by term (E3).
+- **F.3a**: `exists_clique_additive_defect` — hypotheses rsd ≤ s on G, arbitrary D ⊆ V, output clique C ⊆ D of G with
+  (|D|−|C|−s)_+² ≤ ordNE(G,D): genuine clique recovery (not an induced-subgraph or template assertion). R.
+- **F.5**: l11_caseA / B1 / B2 conditions, exhaustiveness and common conclusion checked (E3 static; component 50).
+  Adaptation vs [22]: sequences with replacement, K = nodes, enlarged pinned class, constants m11, B, δ11; accurate
+  per E7 lead verification.
+- **Theorem C′ quantifier**: one root (C,D,H) chosen before every Q and τ (Lean ∃CDH … ∀Q τ). Linear bound is to an
+  actual-root template of arbitrary core size; optimal-size comparison carries n√((1+4A_s)δ) (Cor 6.3) and Prop 6.3a
+  shows the square-root scale is necessary along an explicit family for each fixed s. No growing s is substituted.
+- **Uniform/sublinear**: Prop 6.4 threshold independent of s; Thm 6.5 via SublinearEdit/[22] and RootScore; E35
+  uniform range ∀s ≤ S at n ≥ T(P(S)). Checked statically.
+- **Selected Theorem C chain**: `DefectExplicitPublication.rooted_defect_eventual` := ⟨E33.Fexp E34.NeditE s,
+  E34.theoremC_fully_explicit_final⟩; E34 chain uses `lemma11_V` (F.5). Alon–Shapira exclusion on the six public
+  cones is a dynamic check (E4).
+- **B7 / tower**: (3.11) link and (C.1)-(C.3) are formally stated; tower propagation not humanly rederivable from
+  the text (A2-4). Inverse threshold: `sMaxT` requires n ≥ T(P(0)) (stated).
+- **gainOf conventions**: `LossBudget.budget_iff` and `SplitMixedGap.mixed_gap_zero` use `FarRounding.gainOf`
+  (C(|K|,2)∸1); partition-stability arguments use edge/defect accounting. Matches §7.2.
+
+## Gate E2 first-pass verdict
+**INCONCLUSIVE** — no mathematical error found; all headline assemblies rederived; but four A.2 items
+(A2-3, A2-4, A2-5, A2-6) are essential or quantitative steps whose human-readable derivation is absent or only
+sketched, and one of them (A2-3) is stated in a way that does not by itself give the claimed feasibility.
+Their correctness therefore rests on the Lean development (to be confirmed in E4) and not on the manuscript.
+These are exposition findings, not counterexamples.

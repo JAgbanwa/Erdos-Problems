@@ -1,0 +1,24 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 PaperIV/TriangleNibblePort.lean -o /workspace/request-project/.lake/runner/lib/lean/PaperIV/TriangleNibblePort.olean -i /workspace/request-project/.lake/runner/lib/lean/PaperIV/TriangleNibblePort.ilean
+import took 3.39s
+cumulative profiling times:
+	.olean serialization 53ms
+	attribute application 0.0663ms
+	compilation (IR) 0.484ms
+	compilation (LCNF base) 0.802ms
+	compilation (LCNF mono) 0.705ms
+	congr simp thm 1.21ms
+	elaboration 22.4ms
+	fix level params 0.429ms
+	import 3.39s
+	initialization 38.7ms
+	instantiate metavars 1.05ms
+	interpretation 207ms
+	let-to-have transformation 0.0591ms
+	linting 9.7ms
+	parsing 3.65ms
+	process pre-definitions 5.39ms
+	share common exprs 0.988ms
+	simp 5.57ms
+	tactic execution 67.6ms
+	type checking 19.6ms
+	typeclass inference 41.2ms

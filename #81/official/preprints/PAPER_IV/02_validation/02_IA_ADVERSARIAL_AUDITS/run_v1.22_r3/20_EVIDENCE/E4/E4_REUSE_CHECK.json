@@ -1,0 +1,77 @@
+{
+ "records_total": 608,
+ "distinct_modules": 608,
+ "status_counts": {
+  "PASS": 608
+ },
+ "cut_modules": 607,
+ "cut_modules_with_PASS": 607,
+ "non_cut_records": [
+  "AuditorChecks"
+ ],
+ "exit_nonzero": [],
+ "sorry_flag": [],
+ "record_source_hash_mismatch_vs_manifest": [],
+ "console_summary": {
+  "modules_planned": 607,
+  "pass": 607,
+  "fail_or_blocked": [],
+  "finished_utc": "2026-09-30T21:33:08.984092+00:00"
+ },
+ "console_targets_all_PASS": true,
+ "console_EXIT": "EXIT 0",
+ "console_PASS_lines": 607,
+ "module_logs": 608,
+ "logs_with_sorry_text": [],
+ "axiom_records_author_rule": 461,
+ "print_axioms": 314,
+ "nonstandard": [],
+ "export_checks_in_source": 224,
+ "ReleaseExportCheck_error_lines": 0,
+ "annex_records": 50,
+ "annex_pass": 50,
+ "annex_audit_line": [
+  "BoundedCliqueGap: 633 declarations audited; axioms ⊆ [propext, Classical.choice, Quot.sound]; no `Erdos81*` name; `Vizing.PEC` declared once, in [PaperIV.Vizing]"
+ ],
+ "annex_axioms": [
+  [
+   "BoundedCliqueGap.chordal_gap_linear_cliqueFree",
+   "propext, Classical.choice, Quot.sound"
+  ],
+  [
+   "BoundedCliqueGap.chordal_gap_linear_of_cliqueTree_width",
+   "propext, Classical.choice, Quot.sound"
+  ],
+  [
+   "BoundedCliqueGap.exists_cliqueTree_width_le_iff_cliqueFree",
+   "propext, Classical.choice, Quot.sound"
+  ],
+  [
+   "BoundedCliqueGap.gap_linear_of_revPES",
+   "propext, Classical.choice, Quot.sound"
+  ],
+  [
+   "BoundedCliqueGap.exists_revPES_of_simpleGraph_isChordal",
+   "propext, Classical.choice, Quot.sound"
+  ]
+ ],
+ "olean_vs_author": {
+  "identical": 607,
+  "common": 607,
+  "differing": []
+ },
+ "auditor_cone_summary": [
+  "AUDITOR CONE SUMMARY: 50 declarations; problems=0"
+ ],
+ "cache_diff": {
+  "before": 113821,
+  "after": 113821,
+  "changed": [],
+  "n_changed": 0,
+  "added": [],
+  "n_added": 0,
+  "removed": [],
+  "n_removed": 0,
+  "Mathlib_olean_same": true
+ }
+}

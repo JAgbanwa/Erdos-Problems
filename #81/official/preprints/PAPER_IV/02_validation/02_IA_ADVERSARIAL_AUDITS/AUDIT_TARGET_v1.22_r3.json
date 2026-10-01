@@ -1,0 +1,75 @@
+{
+  "revision": "v1.22-r3",
+  "status": "PREPARED_NOT_STARTED",
+  "candidate_manifest": {
+    "path": "01_manuscript/v1.22_editorial_candidate_r3/MANUSCRIPT_REVIEW_MANIFEST.json",
+    "bytes": 38695,
+    "sha256": "82217fe36719f4d2373bd63d30eb4efdb68e70b3ad95ef2f98217d3a6a5765bb"
+  },
+  "candidate_package": {
+    "path": "01_manuscript/v1.22_editorial_candidate_r3/PAPER_IV_v1.22_REVIEW_PACKAGE_r3.zip",
+    "bytes": 40845292,
+    "sha256": "c1acd8669d6cbcd89f7835933130416ae716c407250c5e690e5cf64fa837d2ec"
+  },
+  "mandate": {
+    "path": "02_validation/02_IA_ADVERSARIAL_AUDITS/EXTERNAL_ADVERSARIAL_REVALIDATION_v1.22_r3.md",
+    "bytes": 8051,
+    "sha256": "abfcaec9ae3ce5759b4177e0152bcd570e7ee31bb15e3f3df53553e6fb50d92f"
+  },
+  "frozen_source_manifest": {
+    "path": "03_reproducibility/build_piv-v12-fb459343d234/SOURCE_MANIFEST.json",
+    "bytes": 82477,
+    "sha256": "fb459343d234f968d7d32eff1491ea8a09aa2e135b313a80623012e7449042f5"
+  },
+  "source_zip": {
+    "path": "05_formalization/LEAN_SOURCE_piv-v12-fb459343d234.zip",
+    "bytes": 1817716,
+    "sha256": "cb2741454380736ffe01b59933057b5079fa9f865d5bbdd3f67534bf808a62e6"
+  },
+  "annex_zip": {
+    "path": "05_formalization/LEAN_BOUNDED_GAP_ANNEX_v1.0.zip",
+    "bytes": 103055,
+    "sha256": "2847a422865e06880d457ea806aae5b9f749d22359eff325349c09c01cb4837d"
+  },
+  "earlier_evidence": [
+    {
+      "path": "02_validation/02_IA_ADVERSARIAL_AUDITS/run_v1.22_r2/40_PACKAGE/EXTERNAL_REVALIDATION_run_v1.22_r2.zip",
+      "bytes": 32490563,
+      "sha256": "626571be12839325a918109b446fe3e6f8d446d7f5c5911c6407af2f1e480684"
+    },
+    {
+      "path": "02_validation/02_IA_ADVERSARIAL_AUDITS/run_v1.22_r1/40_PACKAGE/EXTERNAL_REVALIDATION_run_v1.22_r1.zip",
+      "bytes": 34289568,
+      "sha256": "9c74d673206ab17a5b4586209ececca30536f1768fcc91ffdd39db551193a1fa"
+    },
+    {
+      "path": "02_validation/02_IA_ADVERSARIAL_AUDITS/run_v1.21_r1/40_PACKAGE/EXTERNAL_REVALIDATION_run_v1.21_r1.zip",
+      "bytes": 59792841,
+      "sha256": "11659a97b0a4f2bffadb6968159cc5b66562b4470053939a45c1e8a42db7a638"
+    },
+    {
+      "path": "02_validation/02_IA_ADVERSARIAL_AUDITS/run_v1.2_r1/40_PACKAGE/EXTERNAL_AUDIT_run_v1.2_r1.zip",
+      "bytes": 42489289,
+      "sha256": "886ed7f033bca42a530944d48f91ef45e79f6be4cb0d74080c5d8d6efc4f5e2b"
+    },
+    {
+      "path": "05_formalization/LEAN_SOURCE_piv-v12-fb459343d234.zip",
+      "bytes": 1817716,
+      "sha256": "cb2741454380736ffe01b59933057b5079fa9f865d5bbdd3f67534bf808a62e6"
+    },
+    {
+      "path": "05_formalization/LEAN_BOUNDED_GAP_ANNEX_v1.0.zip",
+      "bytes": 103055,
+      "sha256": "2847a422865e06880d457ea806aae5b9f749d22359eff325349c09c01cb4837d"
+    }
+  ],
+  "baseline_target": {
+    "path": "02_validation/02_IA_ADVERSARIAL_AUDITS/AUDIT_TARGET_v1.22_r2.json",
+    "bytes": 2654,
+    "sha256": "f931776370dcc101c637cb978273d8757b298ff79e99d50fff815104d4e00583"
+  },
+  "output_directory": "C:\\Users\\jtraverso\\e81p4-publish\\preprints\\PAPER_IV\\02_validation\\02_IA_ADVERSARIAL_AUDITS\\run_v1.22_r3",
+  "no_lean_build_authorized": true,
+  "no_publication_authorized": true,
+  "required_report": "FINAL_CONSOLIDATED_AUDIT_REPORT.md and .pdf; all E0-E8, with historical evidence and new semantic rows"
+}

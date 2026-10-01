@@ -1,0 +1,24 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 ThreeRegime/CompleteStateCentre.lean -o /workspace/request-project/.lake/runner/lib/lean/ThreeRegime/CompleteStateCentre.olean -i /workspace/request-project/.lake/runner/lib/lean/ThreeRegime/CompleteStateCentre.ilean
+import took 3.38s
+cumulative profiling times:
+	.olean serialization 55.6ms
+	attribute application 0.0557ms
+	compilation (IR) 0.214ms
+	compilation (LCNF base) 0.98ms
+	compilation (LCNF mono) 0.365ms
+	congr simp thm 7.58ms
+	elaboration 18.7ms
+	fix level params 0.345ms
+	import 3.38s
+	initialization 38.7ms
+	instantiate metavars 0.404ms
+	interpretation 189ms
+	let-to-have transformation 0.0741ms
+	linting 5ms
+	parsing 2.78ms
+	process pre-definitions 4.89ms
+	share common exprs 0.793ms
+	simp 80ms
+	tactic execution 21.4ms
+	type checking 8.78ms
+	typeclass inference 286ms

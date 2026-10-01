@@ -1,0 +1,27 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 E19/ChainBounds.lean -o /workspace/request-project/.lake/runner/lib/lean/E19/ChainBounds.olean -i /workspace/request-project/.lake/runner/lib/lean/E19/ChainBounds.ilean
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_nlinarith_1._boxed took 130ms
+import took 3.74s
+cumulative profiling times:
+	.olean serialization 95.3ms
+	attribute application 0.276ms
+	compilation (IR) 1.02ms
+	compilation (LCNF base) 2.14ms
+	compilation (LCNF mono) 0.869ms
+	congr simp thm 7.09ms
+	elaboration 49.5ms
+	fix level params 1.21ms
+	import 3.74s
+	initialization 39.5ms
+	instantiate metavars 2.26ms
+	interpretation 1s
+	let-to-have transformation 0.271ms
+	linting 9.91ms
+	norm_num 371ms
+	parsing 10.2ms
+	process pre-definitions 20.1ms
+	ring 86.3ms
+	share common exprs 20ms
+	simp 50.2ms
+	tactic execution 192ms
+	type checking 186ms
+	typeclass inference 702ms

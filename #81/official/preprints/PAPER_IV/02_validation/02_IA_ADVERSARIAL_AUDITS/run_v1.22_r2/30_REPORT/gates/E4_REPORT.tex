@@ -1,0 +1,199 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+\documentclass[
+]{article}
+\usepackage{xcolor}
+\usepackage{amsmath,amssymb}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math} % this also loads fontspec
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+\usepackage{lmodern}
+\ifPDFTeX\else
+  % xetex/luatex font selection
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\usepackage{bookmark}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same}
+% fallback for those not using the hyperref driver hyperxmp:
+\makeatletter
+\@ifundefined{xmpquote}{\newcommand{\xmpquote}[1]{#1}}{}
+\makeatother
+\hypersetup{
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+
+\author{}
+\date{}
+
+\begin{document}
+
+\section{Informe de puerta E4 --- run\_v1.22\_r2 (Paper IV
+v1.22-r2)}\label{informe-de-puerta-e4--run_v122_r2-paper-iv-v122-r2}
+
+Veredicto actual: \textbf{PASS --- reused\_verified\_external\_build}.
+Evidencia: \texttt{20\_EVIDENCE/E4/}. Auditor: Claude Opus 5.5, misma
+sesión que las ejecuciones anteriores; no se ejecutó Lean.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section{E4 --- Reproducción formal (r2): build externo heredado,
+confirmación
+documental}\label{e4--reproducciuxf3n-formal-r2-build-externo-heredado-confirmaciuxf3n-documental}
+
+\textbf{No se ejecutó un build nuevo ni un replay independiente del
+kernel.} Tampoco se ejecutaron lean, lake ni leanchecker.
+
+\subsection{Build original (run\_v1.2\_r1,
+2026-09-30)}\label{build-original-run_v12_r1-2026-09-30}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Runner.} \texttt{auditor\_build.py}, escrito por el auditor,
+  sin Lake; Lean v4.28.0 (commit 7e01a1bf).
+\item
+  \textbf{Entradas.} Extracción limpia de
+  \texttt{LEAN\_SOURCE\_piv-v12-fb459343d234.zip} (615/615 hashes) con
+  objetos solo en \texttt{05\_BUILD/main/obj}. Dependencias Mathlib y
+  paquetes compartidos en solo lectura; caché de 113 821 archivos sin
+  cambios.
+\item
+  \textbf{Intentos.} El intento 1 falló por un error propio del auditor
+  (C-04) y se conserva. El intento 2 corrió de 15:09 a 21:33 UTC.
+\item
+  \textbf{Registros originales:}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \texttt{10\_LOGS/E4\_main\_console.log} (sha256 ef5b01c7\ldots):
+    \texttt{modules\_planned\ 607,\ pass\ 607,\ fail\_or\_blocked\ {[}{]}},
+    607 líneas \texttt{PASS\ n\ 607}, última línea \texttt{EXIT\ 0}, y
+    los 19 targets de FREEZE\_SCOPE en PASS.
+  \item
+    \texttt{10\_LOGS/E4\_main/records.jsonl} (0f2d8495\ldots): 608
+    filas, 607 módulos del corte más AuditorChecks, todas PASS. El hash
+    de fuente de cada fila coincide con el manifiesto y ningún código de
+    salida es distinto de 0.
+  \item
+    608 logs de módulo, sin el texto «sorry» y con 0 líneas de error en
+    \texttt{ReleaseExportCheck.log}.
+  \item
+    \texttt{20\_EVIDENCE/E4/E4\_RECORD.md} (9ca125d2\ldots) y
+    \texttt{AuditorChecks.log} (3468cedd\ldots).
+  \end{itemize}
+\item
+  \textbf{Exportaciones.} \texttt{ReleaseExportCheck.lean} contiene 224
+  \texttt{\#check}.
+\item
+  \textbf{Anexo.} \texttt{10\_LOGS/E4\_annex/records.jsonl}
+  (57ce1895\ldots): 50/50 PASS. La auditoría de BoundedCliqueGap informa
+  633 declaraciones con axiomas ⊆ \{propext, Classical.choice,
+  Quot.sound\}.
+\item
+  \textbf{Identidad de objetos.} Los 607 \texttt{.olean} son idénticos
+  byte a byte a los del autor; una recompilación de 37 módulos confirmó
+  el determinismo.
+\item
+  \textbf{Huella de axiomas. No son recuentos de teoremas distintos:}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    461 \emph{registros} de axiomas según la regla del autor, de los
+    cuales 314 son salidas reales de \texttt{\#print\ axioms}; los demás
+    son líneas de auditoría que se repiten.
+  \item
+    En AuditorChecks: \texttt{\#print\ axioms} sobre 18 declaraciones
+    principales, todas exactamente con {[}propext, Classical.choice,
+    Quot.sound{]}.
+  \item
+    Recorrido propio de conos (tipo + valor) de 50 declaraciones
+    públicas: 0 axiomas no estándar, 0 \texttt{sorryAx}, 0 constantes
+    bajo \texttt{Erdos81}.
+  \end{itemize}
+\item
+  \textbf{SUMMARY sobrescrito.} \texttt{10\_LOGS/E4\_main/SUMMARY.json}
+  (6fbba41f\ldots) dice \texttt{modules\_planned\ 555},
+  \texttt{targets\_status\ \{AuditorChecks:\ PASS\}} y hora de fin
+  21:35:58: fue sobrescrito por la invocación de AuditorChecks (C-06).
+  \textbf{No se usa como evidencia del alcance.}
+\end{itemize}
+
+\subsection{Confirmación en r2}\label{confirmaciuxf3n-en-r2}
+
+\begin{itemize}
+\tightlist
+\item
+  \texttt{10\_SCRIPTS/e4\_reuse\_check.py} es idéntico al de
+  run\_v1.22\_r1 (sha256 db2eddb8\ldots). Lee la consola, records.jsonl,
+  los logs de módulo, los registros del anexo, AuditorChecks,
+  olean\_vs\_author y cache\_diff; no usa el SUMMARY.
+\item
+  Resultado: \texttt{E4\_REUSE\_CHECK.json}, \textbf{idéntico} al de
+  run\_v1.21\_r1 y al de run\_v1.22\_r1. Confirma 607 módulos, 19
+  targets, 224 exportaciones y 50 módulos del anexo.
+\end{itemize}
+
+\subsection{Por qué la validez se conserva en
+r2}\label{por-quuxe9-la-validez-se-conserva-en-r2}
+
+r2 solo modifica prosa española y una marca tipográfica, sin tocar Lean.
+E0 inicial confirma:
+
+\begin{itemize}
+\tightlist
+\item
+  las 615 entradas del manifiesto de fuentes y el directorio del corte,
+  sin extras;
+\item
+  el ZIP de fuentes con 615 miembros, CRC correcto e igual al
+  manifiesto;
+\item
+  el anexo;
+\item
+  el paquete y el manifiesto de run\_v1.2\_r1 sin cambios en disco (1097
+  archivos).
+\end{itemize}
+
+El objeto compilado y auditado es, por tanto, exactamente el corte que
+cita el manuscrito r2.
+
+\subsection{Límites}\label{luxedmites}
+
+Misma máquina y caché Mathlib compartida (no es un build de sala
+limpia), sin replay del kernel, y el build de run\_v1.2\_r1 lo hizo este
+mismo auditor y sesión.
+
+\textbf{Veredicto E4 (r2): PASS --- reused\_verified\_external\_build}
+(PASS heredado y revalidado por identidad).
+
+\end{document}

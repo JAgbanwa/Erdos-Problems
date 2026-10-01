@@ -1,0 +1,35 @@
+$ c:\Users\jtraverso\.elan\toolchains\leanprover--lean4---v4.28.0\bin\lean.exe -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false A4S1/IndepAllAudit.lean -o C:\Users\jtraverso\e81p4\piv_v12_full_rebuild_20260929\.lake\runner\lib\lean\A4S1\IndepAllAudit.olean -i C:\Users\jtraverso\e81p4\piv_v12_full_rebuild_20260929\.lake\runner\lib\lean\A4S1\IndepAllAudit.ilean
+'A4S1.IndepAll.a4Sharp_all_indep' depends on axioms: [propext, Classical.choice, Quot.sound]
+'A4S1.IndepAll.minDegTerminal_all_indep' depends on axioms: [propext, Classical.choice, Quot.sound]
+'A4S1.IndepAll.minDegTerminal_ge_two_indep' depends on axioms: [propext, Classical.choice, Quot.sound]
+'A4S1.IndepAll.AllInput.partition' depends on axioms: [propext, Classical.choice, Quot.sound]
+'A4S1.IndepAll.AllInput.params' depends on axioms: [propext, Classical.choice, Quot.sound]
+'A4S1.IndepAll.AllInput.hkey' depends on axioms: [propext, Classical.choice, Quot.sound]
+'A4S1.Indep.caseA_indep' depends on axioms: [propext, Classical.choice, Quot.sound]
+'A4S1.Indep.exists_absorption_matchings' depends on axioms: [propext, Classical.choice, Quot.sound]
+'A4S1.Indep.min_le_of_selection' depends on axioms: [propext, Classical.choice, Quot.sound]
+'A4S1.Indep.exists_shift_lift_ge' depends on axioms: [propext, Classical.choice, Quot.sound]
+'A4S1.Indep.shiftCost_phaseOneGain' depends on axioms: [propext, Classical.choice, Quot.sound]
+'A4S1.Indep.sum_phaseOneGain' depends on axioms: [propext, Classical.choice, Quot.sound]
+'A4S1.Indep.exists_partition_of_three_families' depends on axioms: [propext, Classical.choice, Quot.sound]
+'A4S1.Indep.card_absorptionTriangles' depends on axioms: [propext, Classical.choice, Quot.sound]
+'A4S1.Indep.absorptionTriangles_inter' depends on axioms: [propext, Classical.choice, Quot.sound]
+'A4S1.Indep.card_edgeFinset_le_parts' depends on axioms: [propext, Classical.choice, Quot.sound]
+'A4S1.Indep.maxDegree_rowGraph_add_one_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'A4S1.Indep.abs_inter_lift' depends on axioms: [propext, Classical.choice, Quot.sound]
+'A4S1.Indep.abs_inter_hosted' depends on axioms: [propext, Classical.choice, Quot.sound]
+'A4S1.Indep.lift_inter_hosted' depends on axioms: [propext, Classical.choice, Quot.sound]
+'A4S1.Indep.abs_inter_abs' depends on axioms: [propext, Classical.choice, Quot.sound]
+'A4S1.IndepAll.sum_card_filter_adj_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'A4S1.IndepAll.card_inEdges_union_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'A4S1.IndepAll.classCeiling_mul_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'A4S1.IndepAll.crossCount_singleton' depends on axioms: [propext, Classical.choice, Quot.sound]
+'A4S1.IndepAll.own_final_all' depends on axioms: [propext, Classical.choice, Quot.sound]
+modules in the import cone of A4S1.IndepAllAudit: 10387
+A4S1 modules in the cone (24): [A4S1.HostAbsorption, A4S1.DefectOneAbsorbedStability, A4S1.PerVertexAbsorption, A4S1.ApexChordalSharp, A4S1.DefectOneReduction, A4S1.CriticalReduction, A4S1.TerminalPacking, A4S1.MinDegreeTerminal, A4S1.MinDegreeAll, A4S1.IndepAbsorb, A4S1.IndepPhaseOne, A4S1.IndepHostingTools, A4S1.IndepLedger, A4S1.IndepConstructor, A4S1.IndepAllTools, A4S1.IndepAllArith, A4S1.IndepAllPairs, A4S1.IndepAllPeel, A4S1.IndepAllSetup, A4S1.IndepAllBounds, A4S1.IndepAllObstr, A4S1.IndepAllParams, A4S1.IndepAllBudget, A4S1.IndepAllMain]
+A4S1.TerminalPhaseOne in cone: false
+A4S1.TerminalColouring in cone: false
+A4S1.TerminalExactComparator in cone: false
+forbidden modules in the cone: []
+cone modules importing a forbidden module: []
+E14 cone check PASSED

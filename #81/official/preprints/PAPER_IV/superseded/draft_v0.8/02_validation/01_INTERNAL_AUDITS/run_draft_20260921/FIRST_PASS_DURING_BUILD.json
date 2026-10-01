@@ -1,0 +1,354 @@
+{
+  "audit_class": "internal author-side packaging, formal contracts and reproducibility; not independent mathematical review",
+  "checks": [
+    {
+      "check": "G0.archive_hash",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "G0.archive_crc",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "G0.archive_paths",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "G3.archive_source_identity",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "G3.extracted_source_identity",
+      "pass": true,
+      "detail": "479 frozen entries"
+    },
+    {
+      "check": "G3.no_unmanifested_lean",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "G3.token_sorry",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "G3.token_admit",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "G3.token_axiom",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "G3.token_native_decide",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "G3.token_implemented_by",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "G3.token_sorryAx",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "G3.scanner_rejects_live_token",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "G3.scanner_ignores_prose",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "G3.scanner_preserves_boundary",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "G3.manifest_hash",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "G3.toolchain",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "G3.pinned_git_dependencies",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "G3.only_local_series_package",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "G3.import_closure_complete",
+      "pass": true,
+      "detail": "[]"
+    },
+    {
+      "check": "G3.no_external_Erdos81_import",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "G3.root_exports_Erdos81Unconditional",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "G3.root_exports_Erdos81AllOrders",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "G3.root_exports_PaperTheorems",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "G1.manuscript_lean_excerpts_literal",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "G5.es_draft_status",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "G6.es_compiler_success",
+      "pass": false,
+      "detail": ""
+    },
+    {
+      "check": "G6.es_no_layout_errors",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "G6.es_figures_present",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "G6.es_balanced_displays",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "G6.es_qa_pdf_binding",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "G6.es_series_layout",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "G6.es_unique_labels",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "G0.en_md_baseline",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "G0.en_tex_baseline",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "G0.en_pdf_baseline",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "G5.en_draft_status",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "G6.en_compiler_success",
+      "pass": false,
+      "detail": ""
+    },
+    {
+      "check": "G6.en_no_layout_errors",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "G6.en_figures_present",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "G6.en_balanced_displays",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "G6.en_qa_pdf_binding",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "G6.en_series_layout",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "G6.en_unique_labels",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "G5.equations_identical",
+      "pass": false,
+      "detail": ""
+    },
+    {
+      "check": "G5.lean_blocks_identical",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "G5.heading_levels_identical",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "G5.references_20_each",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "G4.all_six_commands_completed",
+      "pass": false,
+      "detail": ""
+    },
+    {
+      "check": "G4.all_exit_codes_zero",
+      "pass": false,
+      "detail": ""
+    },
+    {
+      "check": "G4.sources_unchanged",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "G4.fresh_logs_bound",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "G4.axioms_footprints",
+      "pass": true,
+      "detail": "83"
+    },
+    {
+      "check": "G4.axioms_no_error",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "G4.supplement_footprints",
+      "pass": false,
+      "detail": "0"
+    },
+    {
+      "check": "G4.supplement_no_error",
+      "pass": false,
+      "detail": ""
+    },
+    {
+      "check": "G4.public_contracts_footprints",
+      "pass": false,
+      "detail": "0"
+    },
+    {
+      "check": "G4.public_contracts_no_error",
+      "pass": false,
+      "detail": ""
+    },
+    {
+      "check": "G4.bounded_footprints",
+      "pass": false,
+      "detail": "0"
+    },
+    {
+      "check": "G4.bounded_no_error",
+      "pass": false,
+      "detail": ""
+    },
+    {
+      "check": "G4.57_constant_cones",
+      "pass": false,
+      "detail": ""
+    },
+    {
+      "check": "G4.tampered_axiom_rejected",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "G0.tampered_hash_rejected",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "G8.no_cache_credentials_or_superseded_drafts",
+      "pass": true,
+      "detail": "[]"
+    },
+    {
+      "check": "G8.secret_scan",
+      "pass": true,
+      "detail": "[]"
+    },
+    {
+      "check": "G8.active_manuscripts_exactly_six",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "G8.document_README.md",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "G8.document_04_integrity/PROVENANCE_AND_TRUST.md",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "G8.document_03_reproducibility/README.md",
+      "pass": true,
+      "detail": ""
+    }
+  ],
+  "passed": 57,
+  "total": 69,
+  "source_entry_count": 479,
+  "lean_source_count": 474
+}

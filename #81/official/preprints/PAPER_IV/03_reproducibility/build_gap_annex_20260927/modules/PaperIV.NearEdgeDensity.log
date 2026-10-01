@@ -1,0 +1,29 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 PaperIV/NearEdgeDensity.lean -o /workspace/request-project/.lake/runner/lib/lean/PaperIV/NearEdgeDensity.olean -i /workspace/request-project/.lake/runner/lib/lean/PaperIV/NearEdgeDensity.ilean
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_nlinarith_1._boxed took 187ms
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_nlinarith_1._boxed took 176ms
+import took 3.67s
+cumulative profiling times:
+	.olean serialization 82.7ms
+	attribute application 0.0449ms
+	compilation (IR) 2.39ms
+	compilation (LCNF base) 5.63ms
+	compilation (LCNF mono) 1.06ms
+	congr simp thm 8.59ms
+	dsimp 2.15ms
+	elaboration 38.8ms
+	fix level params 1.09ms
+	import 3.67s
+	initialization 38ms
+	instantiate metavars 5.46ms
+	interpretation 767ms
+	let-to-have transformation 0.0893ms
+	linting 15.9ms
+	norm_num 123ms
+	parsing 5.58ms
+	process pre-definitions 10.7ms
+	ring 55.2ms
+	share common exprs 14.3ms
+	simp 79.2ms
+	tactic execution 240ms
+	type checking 89ms
+	typeclass inference 476ms

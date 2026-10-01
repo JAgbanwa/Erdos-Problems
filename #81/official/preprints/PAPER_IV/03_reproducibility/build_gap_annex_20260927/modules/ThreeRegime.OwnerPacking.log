@@ -1,0 +1,34 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 ThreeRegime/OwnerPacking.lean -o /workspace/request-project/.lake/runner/lib/lean/ThreeRegime/OwnerPacking.olean -i /workspace/request-project/.lake/runner/lib/lean/ThreeRegime/OwnerPacking.ilean
+ThreeRegime/OwnerPacking.lean:53:8: warning: automatically included section variable(s) unused in theorem `ThreeRegime.Owner.subPacking_pieces`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+ThreeRegime/OwnerPacking.lean:72:8: warning: automatically included section variable(s) unused in theorem `_private.ThreeRegime.OwnerPacking.0.ThreeRegime.Owner.pairs_mono'`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+import took 3.87s
+cumulative profiling times:
+	.olean serialization 59.6ms
+	attribute application 1.98ms
+	compilation (IR) 0.292ms
+	compilation (LCNF base) 1.07ms
+	compilation (LCNF mono) 0.264ms
+	elaboration 54.7ms
+	fix level params 0.712ms
+	import 3.87s
+	initialization 45.2ms
+	instantiate metavars 1.97ms
+	interpretation 225ms
+	let-to-have transformation 0.214ms
+	linting 15.8ms
+	parsing 7.43ms
+	process pre-definitions 9.18ms
+	share common exprs 1.7ms
+	tactic execution 98.2ms
+	type checking 88ms
+	typeclass inference 170ms

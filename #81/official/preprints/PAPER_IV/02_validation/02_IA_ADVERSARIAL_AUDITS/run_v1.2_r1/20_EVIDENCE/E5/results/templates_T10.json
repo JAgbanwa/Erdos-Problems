@@ -1,0 +1,276 @@
+{
+ "T10": {
+  "id": "T10",
+  "claim": "Prop 6.3a: G_{s,q,d}=(K_{q+d-s} u I_s) v I_{2q-s-d}, n=3q-s: rsd<=s; cp=c4=Q_s(n)-delta_d, delta_d=(3d^2-d)/2; d_E(G,T)>=nd/4>=n sqrt(delta_d)/8 for every optimal-size T",
+  "manuscript_lines": "1016-1052",
+  "method": "sympy identities; exhaustive integers s<=20, q<=200; brute-force rsd, CBC ILP cp/c4 with exact weight certificate, brute-force min d_E over all labelled optimal-size templates for tiny instances",
+  "evidence_type": "symbolic + finite exhaustive + exact (tiny instances)",
+  "parameters": {
+   "integer_scan": "s<=20, 2s+2<=q<=200, 1<=d<=q/2",
+   "instances": [
+    [
+     0,
+     2,
+     1
+    ],
+    [
+     0,
+     3,
+     1
+    ],
+    [
+     0,
+     4,
+     1
+    ],
+    [
+     0,
+     4,
+     2
+    ],
+    [
+     1,
+     4,
+     1
+    ],
+    [
+     1,
+     4,
+     2
+    ],
+    [
+     1,
+     5,
+     1
+    ],
+    [
+     1,
+     5,
+     2
+    ],
+    [
+     2,
+     6,
+     1
+    ],
+    [
+     2,
+     6,
+     2
+    ],
+    [
+     2,
+     6,
+     3
+    ]
+   ]
+  },
+  "details": {
+   "sympy_residuals": [
+    "0",
+    "0",
+    "0",
+    "0"
+   ],
+   "integer_cases": 206920,
+   "integer_violations": [],
+   "instances": [
+    {
+     "s": 0,
+     "q": 2,
+     "d": 1,
+     "n": 6,
+     "rsd": 0,
+     "cp": 6,
+     "c4": 6,
+     "Q_s(n)-delta_d": 6,
+     "certified": true,
+     "templates_checked": 15,
+     "min_dE_optimal_templates": 3,
+     "nd/4": "3/2",
+     "n*sqrt(delta)/8": 0.75,
+     "ok": true,
+     "sec": 0.45
+    },
+    {
+     "s": 0,
+     "q": 3,
+     "d": 1,
+     "n": 9,
+     "rsd": 0,
+     "cp": 14,
+     "c4": 14,
+     "Q_s(n)-delta_d": 14,
+     "certified": true,
+     "templates_checked": 84,
+     "min_dE_optimal_templates": 5,
+     "nd/4": "9/4",
+     "n*sqrt(delta)/8": 1.125,
+     "ok": true,
+     "sec": 0.36
+    },
+    {
+     "s": 0,
+     "q": 4,
+     "d": 1,
+     "n": 12,
+     "rsd": 0,
+     "cp": 25,
+     "c4": 25,
+     "Q_s(n)-delta_d": 25,
+     "certified": true,
+     "templates_checked": 495,
+     "min_dE_optimal_templates": 7,
+     "nd/4": "3",
+     "n*sqrt(delta)/8": 1.5,
+     "ok": true,
+     "sec": 0.67
+    },
+    {
+     "s": 0,
+     "q": 4,
+     "d": 2,
+     "n": 12,
+     "rsd": 0,
+     "cp": 21,
+     "c4": 21,
+     "Q_s(n)-delta_d": 21,
+     "certified": true,
+     "templates_checked": 495,
+     "min_dE_optimal_templates": 13,
+     "nd/4": "6",
+     "n*sqrt(delta)/8": 3.3541019662496847,
+     "ok": true,
+     "sec": 0.65
+    },
+    {
+     "s": 1,
+     "q": 4,
+     "d": 1,
+     "n": 11,
+     "rsd": 1,
+     "cp": 24,
+     "c4": 24,
+     "Q_s(n)-delta_d": 24,
+     "certified": true,
+     "templates_checked": 1320,
+     "min_dE_optimal_templates": 7,
+     "nd/4": "11/4",
+     "n*sqrt(delta)/8": 1.375,
+     "ok": true,
+     "sec": 0.47
+    },
+    {
+     "s": 1,
+     "q": 4,
+     "d": 2,
+     "n": 11,
+     "rsd": 1,
+     "cp": 20,
+     "c4": 20,
+     "Q_s(n)-delta_d": 20,
+     "certified": true,
+     "templates_checked": 1320,
+     "min_dE_optimal_templates": 13,
+     "nd/4": "11/2",
+     "n*sqrt(delta)/8": 3.074593469062211,
+     "ok": true,
+     "sec": 0.54
+    },
+    {
+     "s": 1,
+     "q": 5,
+     "d": 1,
+     "n": 14,
+     "rsd": 1,
+     "cp": 38,
+     "c4": 38,
+     "Q_s(n)-delta_d": 38,
+     "certified": true,
+     "templates_checked": 10010,
+     "min_dE_optimal_templates": 9,
+     "nd/4": "7/2",
+     "n*sqrt(delta)/8": 1.75,
+     "ok": true,
+     "sec": 2.11
+    },
+    {
+     "s": 1,
+     "q": 5,
+     "d": 2,
+     "n": 14,
+     "rsd": 1,
+     "cp": 34,
+     "c4": 34,
+     "Q_s(n)-delta_d": 34,
+     "certified": true,
+     "templates_checked": 10010,
+     "min_dE_optimal_templates": 17,
+     "nd/4": "7",
+     "n*sqrt(delta)/8": 3.913118960624632,
+     "ok": true,
+     "sec": 2.08
+    },
+    {
+     "s": 2,
+     "q": 6,
+     "d": 1,
+     "n": 16,
+     "rsd": 2,
+     "cp": 53,
+     "c4": 53,
+     "Q_s(n)-delta_d": 53,
+     "certified": true,
+     "templates_checked": 120120,
+     "min_dE_optimal_templates": 11,
+     "nd/4": "4",
+     "n*sqrt(delta)/8": 2.0,
+     "ok": true,
+     "sec": 15.0
+    },
+    {
+     "s": 2,
+     "q": 6,
+     "d": 2,
+     "n": 16,
+     "rsd": 2,
+     "cp": 49,
+     "c4": 49,
+     "Q_s(n)-delta_d": 49,
+     "certified": true,
+     "templates_checked": 120120,
+     "min_dE_optimal_templates": 21,
+     "nd/4": "8",
+     "n*sqrt(delta)/8": 4.47213595499958,
+     "ok": true,
+     "sec": 14.61
+    },
+    {
+     "s": 2,
+     "q": 6,
+     "d": 3,
+     "n": 16,
+     "rsd": 2,
+     "cp": 42,
+     "c4": 42,
+     "Q_s(n)-delta_d": 42,
+     "certified": true,
+     "templates_checked": 120120,
+     "min_dE_optimal_templates": 30,
+     "nd/4": "12",
+     "n*sqrt(delta)/8": 6.928203230275509,
+     "ok": true,
+     "sec": 14.57
+    }
+   ]
+  },
+  "result": "PASS",
+  "negative_control": {
+   "description": "corrupted delta_d=d^2 must be rejected on some d>=2 instance; rsd<=s-1 must fail on s>=1 instances",
+   "d^2_rejected_on_all_d>=2": true,
+   "rsd_equals_s_on_all_s>=1": true,
+   "result": "PASS (rejected)"
+  },
+  "runtime_s": 52.54
+ }
+}

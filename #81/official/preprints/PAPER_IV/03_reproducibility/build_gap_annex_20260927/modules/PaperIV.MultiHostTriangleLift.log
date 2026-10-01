@@ -1,0 +1,26 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 PaperIV/MultiHostTriangleLift.lean -o /workspace/request-project/.lake/runner/lib/lean/PaperIV/MultiHostTriangleLift.olean -i /workspace/request-project/.lake/runner/lib/lean/PaperIV/MultiHostTriangleLift.ilean
+type checking took 160ms
+import took 4.01s
+cumulative profiling times:
+	.olean serialization 63.1ms
+	attribute application 2.02ms
+	blocked (unaccounted) 3.56ms
+	compilation (IR) 1.41ms
+	compilation (LCNF base) 3.36ms
+	compilation (LCNF mono) 2.02ms
+	congr simp thm 3.64ms
+	elaboration 227ms
+	fix level params 2.3ms
+	import 4.01s
+	initialization 40.2ms
+	instantiate metavars 12.2ms
+	interpretation 396ms
+	let-to-have transformation 0.609ms
+	linting 43.1ms
+	parsing 18.8ms
+	process pre-definitions 18.7ms
+	share common exprs 5.68ms
+	simp 71ms
+	tactic execution 478ms
+	type checking 206ms
+	typeclass inference 321ms

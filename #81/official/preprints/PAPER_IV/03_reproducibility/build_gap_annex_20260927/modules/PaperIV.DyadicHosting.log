@@ -1,0 +1,22 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 PaperIV/DyadicHosting.lean -o /workspace/request-project/.lake/runner/lib/lean/PaperIV/DyadicHosting.olean -i /workspace/request-project/.lake/runner/lib/lean/PaperIV/DyadicHosting.ilean
+type checking took 155ms
+import took 2.15s
+cumulative profiling times:
+	.olean serialization 41.2ms
+	attribute application 0.0335ms
+	congr simp thm 3.05ms
+	elaboration 26.8ms
+	fix level params 2.25ms
+	import 2.15s
+	initialization 37.9ms
+	instantiate metavars 33.7ms
+	interpretation 195ms
+	let-to-have transformation 0.0512ms
+	linting 15ms
+	parsing 9.5ms
+	process pre-definitions 12.6ms
+	share common exprs 2.92ms
+	simp 90.2ms
+	tactic execution 297ms
+	type checking 354ms
+	typeclass inference 236ms

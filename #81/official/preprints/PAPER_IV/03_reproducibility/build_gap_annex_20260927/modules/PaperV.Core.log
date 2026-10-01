@@ -1,0 +1,31 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 PaperV/Core.lean -o /workspace/request-project/.lake/runner/lib/lean/PaperV/Core.olean -i /workspace/request-project/.lake/runner/lib/lean/PaperV/Core.ilean
+PaperV/Core.lean:47:0: warning: automatically included section variable(s) unused in theorem `PaperV.defectSet_nonempty`:
+  [DecidableEq V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+PaperV/Core.lean:47:56: warning: unused variable `hq`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+import took 2.58s
+cumulative profiling times:
+	.olean serialization 34.2ms
+	attribute application 0.0621ms
+	congr simp thm 4.1ms
+	elaboration 21.8ms
+	fix level params 0.538ms
+	import 2.58s
+	initialization 40.2ms
+	instantiate metavars 8.96ms
+	interpretation 185ms
+	let-to-have transformation 0.0554ms
+	linting 14.6ms
+	norm_num 0.81ms
+	parsing 5.2ms
+	process pre-definitions 6.14ms
+	share common exprs 1.76ms
+	simp 44.9ms
+	tactic execution 107ms
+	type checking 59.5ms
+	typeclass inference 110ms

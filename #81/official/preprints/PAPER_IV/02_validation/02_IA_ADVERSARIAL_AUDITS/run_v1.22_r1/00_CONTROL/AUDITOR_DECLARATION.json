@@ -1,0 +1,13 @@
+{
+  "run": "run_v1.22_r1",
+  "revision": "v1.22-r1",
+  "started_utc": "2026-10-01T09:53:47Z",
+  "owner_request": "Owner requested in chat: 'ejecuta esta revalidacion' with the path to EXTERNAL_ADVERSARIAL_REVALIDATION_v1.22_r1.md.",
+  "auditor_model": "Claude Opus 5.5 (claude-opus-5-5), Anthropic family",
+  "session": "Continuation of the SAME Claude Code session that produced run_v1.2_r1 and run_v1.21_r1 (context partially summarized/continued). Not a new session.",
+  "prior_exposure": "Full: this auditor produced run_v1.2_r1 and run_v1.21_r1, including findings X-05, NEW-01, NEW-02 that this cycle re-examines. Not blind.",
+  "cross_family_independence": false,
+  "lean_policy": "No Lean, Lake, leanchecker or build of any kind (mandate section 2). Reading pinned Mathlib SOURCE files (.lean) to compare definitions is read-only and is not a build.",
+  "machine": "Same machine and shared pinned dependency cache as previous runs.",
+  "prohibitions_acknowledged": ["no build", "no target or historical evidence modification", "no publish/push/tag/DOI/third-party data"]
+}

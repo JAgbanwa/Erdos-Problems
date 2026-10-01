@@ -1,0 +1,19 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 PaperIV/SplitCompleteSharpValue.lean -o /workspace/request-project/.lake/runner/lib/lean/PaperIV/SplitCompleteSharpValue.olean -i /workspace/request-project/.lake/runner/lib/lean/PaperIV/SplitCompleteSharpValue.ilean
+import took 3.44s
+cumulative profiling times:
+	.olean serialization 53ms
+	attribute application 0.0126ms
+	elaboration 10.6ms
+	fix level params 0.104ms
+	import 3.44s
+	initialization 37.2ms
+	instantiate metavars 0.249ms
+	interpretation 183ms
+	let-to-have transformation 0.0193ms
+	linting 1.73ms
+	parsing 0.797ms
+	process pre-definitions 0.353ms
+	share common exprs 0.248ms
+	tactic execution 6.06ms
+	type checking 1.13ms
+	typeclass inference 8.28ms

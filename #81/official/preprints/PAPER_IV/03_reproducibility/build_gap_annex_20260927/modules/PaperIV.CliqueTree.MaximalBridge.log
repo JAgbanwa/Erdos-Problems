@@ -1,0 +1,21 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 PaperIV/CliqueTree/MaximalBridge.lean -o /workspace/request-project/.lake/runner/lib/lean/PaperIV/CliqueTree/MaximalBridge.olean -i /workspace/request-project/.lake/runner/lib/lean/PaperIV/CliqueTree/MaximalBridge.ilean
+import took 3.31s
+cumulative profiling times:
+	.olean serialization 50.3ms
+	attribute application 0.0977ms
+	congr simp thm 5.54ms
+	elaboration 36.8ms
+	fix level params 0.784ms
+	import 3.31s
+	initialization 36ms
+	instantiate metavars 3.08ms
+	interpretation 260ms
+	let-to-have transformation 0.15ms
+	linting 17.4ms
+	parsing 9.48ms
+	process pre-definitions 7.28ms
+	share common exprs 1.84ms
+	simp 43.5ms
+	tactic execution 103ms
+	type checking 36ms
+	typeclass inference 159ms

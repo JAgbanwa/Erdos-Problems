@@ -1,0 +1,24 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 RequestProject/AS/Ramsey.lean -o /workspace/request-project/.lake/runner/lib/lean/RequestProject/AS/Ramsey.olean -i /workspace/request-project/.lake/runner/lib/lean/RequestProject/AS/Ramsey.ilean
+import took 6.91s
+.olean serialization took 223ms
+cumulative profiling times:
+	.olean serialization 223ms
+	attribute application 0.0262ms
+	congr simp thm 2.13ms
+	elaboration 19.8ms
+	fix level params 0.49ms
+	import 6.91s
+	initialization 35.7ms
+	instantiate metavars 10.6ms
+	interpretation 396ms
+	let-to-have transformation 0.043ms
+	linting 8.89ms
+	norm_num 2.46ms
+	parsing 7.15ms
+	process pre-definitions 5.39ms
+	ring 9.39ms
+	share common exprs 2.58ms
+	simp 19.6ms
+	tactic execution 166ms
+	type checking 111ms
+	typeclass inference 118ms

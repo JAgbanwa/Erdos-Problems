@@ -1,0 +1,35 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 E17/Conditional.lean -o /workspace/request-project/.lake/runner/lib/lean/E17/Conditional.olean -i /workspace/request-project/.lake/runner/lib/lean/E17/Conditional.ilean
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_nlinarith_1._boxed took 347ms
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_nlinarith_1._boxed took 613ms
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_nlinarith_1._boxed took 682ms
+interpretation of Mathlib.Meta.Positivity.evalDiv._lam_0._boxed took 118ms
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_nlinarith_1._boxed took 775ms
+E17/Conditional.lean:444:13: warning: unused variable `hΛ`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+import took 3.7s
+.olean serialization took 100ms
+cumulative profiling times:
+	.olean serialization 100ms
+	attribute application 0.245ms
+	compilation (IR) 5.59ms
+	compilation (LCNF base) 7.38ms
+	compilation (LCNF mono) 5.25ms
+	congr simp thm 40.2ms
+	elaboration 192ms
+	fix level params 5.43ms
+	import 3.7s
+	initialization 45.1ms
+	instantiate metavars 75.6ms
+	interpretation 4.14s
+	let-to-have transformation 0.591ms
+	linting 106ms
+	norm_num 702ms
+	parsing 26.8ms
+	process pre-definitions 60.3ms
+	ring 127ms
+	share common exprs 42.9ms
+	simp 519ms
+	tactic execution 718ms
+	type checking 216ms
+	typeclass inference 1.68s

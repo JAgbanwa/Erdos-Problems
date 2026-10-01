@@ -1,0 +1,153 @@
+--- /c/Users/jtraverso/e81p4-publish/preprints/PAPER_IV/01_manuscript/v1.21_editorial_candidate/PAPER_IV_preprint_v1.21_es.md	2026-09-30 19:51:59.109676300 -0300
++++ /c/Users/jtraverso/e81p4-publish/preprints/PAPER_IV/01_manuscript/v1.22_editorial_candidate/PAPER_IV_preprint_v1.22_es.md	2026-10-01 06:40:47.830321400 -0300
+@@ -6,9 +6,9 @@
+ [ORCID: 0009-0003-6068-4096](https://orcid.org/0009-0003-6068-4096)
+ 
+ **Paper IV de la serie**  
+-**Preprint:** versión 1.21, candidata a revisión editorial.
+-**Fecha de esta revisión:** 30 de septiembre de 2026.
+-**Estado:** revisión editorial que atiende la auditoría externa completada de la versión 1.2. El corte Lean sigue siendo `piv-v12-fb459343d234`; esta revisión no modifica sus fuentes. La versión 1.2 completó ambas auditorías: la reproducción formal externa obtuvo PASS, mientras que el veredicto global fue INCONCLUSIVE porque cuatro derivaciones requerían mayor desarrollo expositivo. Ninguno de esos veredictos se transfiere automáticamente a las explicaciones añadidas aquí. Las ediciones adjuntas en Markdown, TeX y PDF, en inglés y español, se presentan para una nueva revisión editorial, matemática y bilingüe. Esta candidata no se ha publicado ni tiene un DOI propio.
++**Preprint:** versión 1.22, candidata a revisión editorial.
++**Fecha de esta revisión:** 1 de octubre de 2026.
++**Estado:** revisión editorial que responde a la revalidación completada de la versión 1.21. El corte de fuentes Lean sigue siendo `piv-v12-fb459343d234`; esta revisión no cambia sus fuentes. La revalidación conservó PASS en reproducción formal tras comprobar las fuentes sin cambios y la evidencia del build anterior. Su veredicto global fue INCONCLUSIVE porque la comparación final entre regularidad y torre requería mayor desarrollo expositivo. Esa comparación se amplía en C.3; las nuevas explicaciones y los documentos bilingües requieren su propia revisión. Esta candidata no se ha publicado ni tiene DOI propio asignado.
+ **DOI de concepto de la serie:** <https://doi.org/10.5281/zenodo.21273143>. El DOI de versión del depósito que reunirá Papers I–IV todavía no está asignado.
+ 
+ **MSC 2020:** Primario 05C70; secundarios 05C35, 05C72.
+@@ -1182,7 +1182,7 @@
+ 
+ El corte anterior `piv-stability-fe9bb18343da` y las ejecuciones separadas de integración se conservan bajo sus identidades originales. El nuevo corte los sustituye como identidad fuente seleccionada; no reescribe su evidencia. Los cuatro módulos E35L y `FDCheck.TowerAudit` se retiraron del nuevo árbol porque E35 reemplaza sus estimaciones y ninguno pertenece al conjunto de dependencias seleccionado. Todos los módulos Lean locales restantes pertenecen al cierre de dependencias de los 19 objetivos seleccionados. Ese cierre incluye definiciones históricas y controles comparativos; no se afirma que sea la biblioteca de prueba más pequeña posible.
+ 
+-**Estado de auditoría de esta candidata editorial.** La evidencia de reconstrucción anterior es previa a las auditorías. Posteriormente, la ejecución interna `run_20260929_v1.2_fb459343d234_r1` registró PASS para su alcance declarado. La ejecución externa completada `run_v1.2_r1` dio INCONCLUSIVE global por cuatro derivaciones que requerían mayor desarrollo expositivo, pero PASS en reproducción formal: se compilaron correctamente 607 módulos principales, los 19 objetivos y el anexo de 50 módulos. Los 607 objetos principales compilados fueron idénticos byte a byte a los registrados por el autor. Ambas se refieren a la versión 1.2; las explicaciones ampliadas y las precisiones de dependencias de la versión 1.21 requieren una revisión separada de correspondencia con las fuentes y de paridad bilingüe. La identidad de fuentes Lean no ha cambiado.
++**Estado de auditoría de esta candidata editorial.** La evidencia de reconstrucción anterior es previa a las auditorías. Posteriormente, la ejecución interna `run_20260929_v1.2_fb459343d234_r1` registró PASS para su alcance declarado. La ejecución externa completada `run_v1.2_r1` dio INCONCLUSIVE global por cuatro derivaciones que requerían mayor desarrollo expositivo, pero PASS en reproducción formal: se compilaron correctamente 607 módulos principales, los 19 objetivos y el anexo de 50 módulos. Los 607 objetos principales compilados fueron idénticos byte a byte a los registrados por el autor. La ejecución posterior `run_v1.21_r1` aceptó seis de las siete derivaciones intermedias de A.2 y conservó el PASS formal tras revisar la evidencia existente, sin recompilar. Mantuvo INCONCLUSIVE en la comparación final de C.3. La versión 1.22 amplía esa comparación y corrige los hallazgos de presentación restantes; esos cambios esperan revalidación. La identidad de fuentes Lean no ha cambiado y no se afirma un nuevo build Lean para esta candidata editorial.
+ 
+ ### 7.1. Repositorios y contribuciones
+ 
+@@ -1300,7 +1300,7 @@
+ 
+ **Tabla 7.** Declaraciones finales. La tabla de módulos de la Sección 7 localiza la implementación; esta tabla identifica qué enunciado se audita.
+ 
+-El comando único de auditoría descrito en §7 ejecuta los 19 objetivos, incluidos la raíz, los objetivos individuales de auditoría y el control de exportación. Las revisiones de Lean y sus dependencias están registradas en lean-toolchain y lake-manifest.json. Compilación, exportación pública, inspección de axiomas y correspondencia semántica son controles distintos. El congelado de fuentes no cambia. Su auditoría interna está completada; la revisión externa de v1.2 concluyó con PASS en reproducción formal e INCONCLUSIVE en exposición matemática; la exposición revisada de v1.21 requiere su propia revisión.
++El comando único de auditoría descrito en §7 ejecuta los 19 objetivos, incluidos la raíz, los objetivos individuales de auditoría y el control de exportación. Las revisiones de Lean y sus dependencias están registradas en lean-toolchain y lake-manifest.json. Compilación, exportación pública, inspección de axiomas y correspondencia semántica son controles distintos. El congelado de fuentes no cambia. Su auditoría interna está completada; el build externo de v1.2 pasó y fue revalidado sin recompilar en v1.21. La comparación ampliada de C.3 en v1.22 espera una nueva revisión matemática y editorial.
+ 
+ **Definiciones literales.** Los fragmentos siguientes reproducen las definiciones y las cabeceras de los teoremas, omitiendo sus demostraciones, no sus hipótesis. En el primer fragmento el espacio es `SimpleGraph`; en los tres siguientes es `PaperIV.FarRounding`, con \(V\) finito, igualdad decidible y adyacencia decidible para \(G\). La última definición está en `PaperIV`. Los nombres de los espacios se conservan en el archivo complementario de extractos.
+ 
+@@ -1352,7 +1352,7 @@
+ 
+ ### A.2. Contratos intermedios de las pruebas
+ 
+-**Alcance de la demostración escrita.** La tabla siguiente registra derivaciones cuya exposición requiere especial atención. La revisión 1.21 desarrolla la limpieza bilateral de fibras en C.2, las cuentas de normalización y la eliminación conjunta en E.1, y las definiciones del calendario numérico en C.3. C.3 desarrolla también las estimaciones que llevan del calendario a la cota del selector; la iteración de torre restante es una comparación simbólica con la recurrencia de §6.3. Las fuentes Lean congeladas contienen las pruebas correspondientes; una compilación exitosa verifica derivaciones formales, no la suficiencia de su exposición. La primera auditoría externa dejó abierta la rederivación matemática independiente. Las explicaciones añadidas requieren revisión y no cierran por sí mismas esos hallazgos de auditoría. Son obligaciones de revisión, no hipótesis adicionales de los teoremas.
++**Alcance de la demostración escrita.** La tabla siguiente registra derivaciones cuya exposición requiere especial atención. La revisión 1.21 amplió la limpieza bilateral de fibras en C.2, las cuentas de normalización y la eliminación conjunta en E.1, y el calendario numérico en C.3. Su revalidación aceptó seis de las siete filas y dejó abierta la comparación final de torre. La revisión 1.22 define la recurrencia de regularidad en C.3 y desarrolla la cota inferior de su iteración, la absorción de los cinco términos del umbral y la comparación superior con la torre. Las pruebas correspondientes ya pertenecen a las fuentes Lean congeladas. Una compilación exitosa verifica derivaciones formales, no la suficiencia de su exposición; la nueva explicación requiere revisión. Son obligaciones de revisión, no hipótesis adicionales de los teoremas.
+ 
+ | Ubicación | Derivación por revisar, incluidas las cuentas desarrolladas |
+ |:--|:--|
+@@ -1445,7 +1445,7 @@
+ 
+ Los Lemas 3.2–3.4 y las ecuaciones 3.2–3.14 completan la prueba del Teorema 3.1. Se mantienen sus números para facilitar las referencias desde la rama L.
+ 
+-### Lema 3.2. `Nibble` de rango acotado con holgura, entrada de Paper III
++### Lema 3.2. Nibble de rango acotado con holgura, entrada de Paper III
+ 
+ Para cada entero \(r\ge2\) y cada \(\beta>0\), existen \(\gamma,C>0\) con la propiedad siguiente. Sean \(U\) un conjunto finito, \(\mathcal H\) una familia de subconjuntos no vacíos de \(U\), de tamaños a lo sumo \(r\), y \(z_H\ge0\) pesos tales que
+ \[
+@@ -1620,7 +1620,7 @@
+ 
+ Fijemos un perfil activo \(H\), llamemos \(\mathcal F_H\) a su fibra inicial y pongamos \(V_H=|\mathcal F_H|\). Para un par \(q\) de sus clases, sean \(E_q\) las aristas reales de ese par y \(d_q=\max\{1,|E_q|\}\). Si \(c_{H,q}(e)\) cuenta las copias iniciales que pasan por \(e\in E_q\), su valor de referencia es \(A_{H,q}=V_H/d_q\). Esta referencia depende del par. Retiramos toda copia que use una arista con \(|c_{H,q}(e)-A_{H,q}|>uA_{H,q}\), en cualquiera de los tres o seis pares del perfil.
+ 
+-Una arista eliminada por esta prueba no pertenece a ninguna copia superviviente. Por cualquier otra pasan a lo sumo \((1+u)A_{H,q}\) copias. Como cada copia superviviente recibe peso \(\psi_H/((1+u)V_H)\), el perfil contribuye a la carga de la arista a lo sumo \(\psi_H/d_q\). La restricción de capacidad transferida es \(\sum_{H\text{ que sirve }q}\psi_H\le d_q\); al sumar las contribuciones, la carga total es a lo sumo uno. El denominador es válido porque una fibra activa tiene volumen positivo. Ésta es la prueba de factibilidad de `RC01CleanFiber`, después del control bilateral de `RC01DeviationCleanup`.
++Una arista eliminada por esta prueba no pertenece a ninguna copia superviviente. Por cualquier otra pasan a lo sumo \((1+u)A_{H,q}\) copias. Como cada copia superviviente recibe peso \(\psi_H/((1+u)V_H)\), el perfil contribuye a la carga de la arista a lo sumo \(\psi_H/d_q\). La restricción de capacidad transferida es \(\sum_{H\text{ que sirve }q}\psi_H\le d_q\); la suma incluye todos los perfiles activos que contienen ambas clases de \(q\), no un único par elegido por perfil. Al sumar las contribuciones, la carga total es a lo sumo uno. El denominador es válido porque una fibra activa tiene volumen positivo. Ésta es la prueba de factibilidad de `RC01CleanFiber`, después del control bilateral de `RC01DeviationCleanup`.
+ 
+ Falta comprobar cuánto cuesta esta eliminación. Para un par, las cotas del segundo momento enraizado acotan el número \(B_q\) de raíces malas por \(B_qu^2a_3^2\le11\delta t^2\) en triángulos y \(B_qu^2a_4^2\le23\delta t^2\) en cliques de orden cuatro. Por una raíz pasan a lo sumo \(t\) triángulos iniciales o \(t^2\) cliques de orden cuatro. Sumando sobre los tres o seis pares, el número de copias retiradas es a lo sumo \(33\delta t^3/(u^2a_3^2)\) o \(138\delta t^4/(u^2a_4^2)\), respectivamente. Contar una copia más de una vez sólo aumenta estas cotas superiores. Al compararlas con las cotas inferiores de las fibras, la proporción retirada es a lo sumo \(v\) si \(33\delta\le vu^2a_3^3\) y \(138\delta\le vu^2a_4^3\).
+ 
+@@ -1643,7 +1643,17 @@
+ \delta=a^{21}/2208,\quad z=\min\{\xi/10,1\},\quad
+ k_0=\lceil1500/\xi\rceil+1.
+ \]
+-Sea \(B\) la cota del lema de regularidad con parámetros \(\delta/8,k_0\). El selector marcado, con precisión \(z\), proporciona constantes explícitas \(\gamma_*>0,C_*\ge0,D_*\ge0\). Escribamos
++Usamos la siguiente cota explícita de regularidad. Para \(\varepsilon>0\), denotemos por \(\lfloor\cdot\rfloor_+\) el piso entero no negativo y definamos
++\[
++\begin{gathered}
++I(\varepsilon,k_0)=\max\left\{7,k_0,
++\left\lfloor\frac{\log(100/\varepsilon^5)}{\log4}\right\rfloor_++1\right\},
++\qquad H(\varepsilon)=\lfloor4/\varepsilon^5\rfloor_+,\\
++t_0=I(\varepsilon,k_0),\qquad t_{j+1}=t_j4^{t_j},\qquad
++B(\varepsilon,k_0)=t_{H(\varepsilon)}16^{t_{H(\varepsilon)}}.
++\end{gathered}
++\]
++Son las definiciones `SzemerediRegularity.initialBound`, `stepBound` y `bound` de la dependencia Mathlib fijada. En (C.1) tomamos \(\varepsilon=\delta/8\) y \(B=B(\delta/8,k_0)\). El selector marcado, con precisión \(z\), proporciona constantes explícitas \(\gamma_*>0,C_*\ge0,D_*\ge0\). Escribamos
+ \[
+ \gamma=\frac1{\lceil1/\gamma_*\rceil},\qquad C=\lceil C_*\rceil,\qquad
+ a_3=a^3-3\delta,\quad a_4=a^6-6\delta.
+@@ -1719,7 +1729,44 @@
+ 
+ Para la escala retenida, escribamos \(x=6\gamma_T/7\le1/2\). Las desigualdades \(1-x\ge(1+2x)^{-1}\) y \(\gamma_TT_T\le M_T+\gamma_T\le5153+1/8\) dan \(2xT_T\le(12/7)(5153+1/8)\le12748\log2\). Por tanto, \(q_T^{T_T}\ge2^{-12748}\) y \(\ell_T\ge2^{-12749}\). Sustituyendo en las definiciones se obtiene \(D_{0,T}\le2^{a_0+146}\) y \(c_{0,T}\ge2^{-(Y+3a_0+220)}\). Sea \(Z=3a_0+220+12749=191424\). Cada una de las cuatro entradas que definen \(\mu_T\) es al menos \(2^{-(Y+Z)}\). También \(d_{0,T}\le2^{a_0+146+12749}\). Los términos con techo de \(D_S\) quedan así acotados por \(256\,2^{Y+Z}=2^U\), donde \(U=Y+191432\); esta cota incluye la unidad adicional de \(D_S\). Tanto \(1/D_S\) como \(\mu_T/4\) son al menos \(2^{-U}\), lo que prueba la fila del selector.
+ 
+-Por último, al sustituir esta cota inferior en las tres cantidades del selector se obtiene la última fila. Para su mayor entrada, el denominador intermedio es a lo sumo \(10\,2^U+28\); por ello, su techo es a lo sumo \(2\cdot10^{17}\cdot392\,2^U\le2^{U+67}\). Como \(U+67\le2^{59517}\), las cuatro filas implican \(G_i\le2^{\,2^{59517}}\). La recurrencia de regularidad, iterada \(h\) veces con el valor de §6.3, domina esas tres cantidades ya tras sus dos primeras iteraciones. Al absorber después los cinco términos de (C.1), resulta
++Por último, al sustituir esta cota inferior en las tres cantidades del selector se obtiene la última fila. Para su mayor entrada, el denominador intermedio es a lo sumo \(10\,2^U+28\); por ello, su techo es a lo sumo \(2\cdot10^{17}\cdot392\,2^U\le2^{U+67}\). Como \(U+67\le2^{59517}\), las cuatro filas implican \(G_i\le2^{\,2^{59517}}\). Desarrollamos ahora la comparación restante, siguiendo `E18.Numeric` y `E19.Main`.
++
++**La iteración de regularidad en la precisión elegida.** Para \(\eta_0=10^{-16}\), pongamos \(\varepsilon=\delta/8\). La desigualdad exacta \(100/\varepsilon^5\le4^{4000}\) implica que el piso en \(I(\varepsilon,k_0)\) es a lo sumo \(4000\). Como \(k_0=3\cdot10^{19}+1\), el máximo que define \(I\) es entonces \(k_0\). Además,
++\[
++H(\varepsilon)=4\cdot8^5\cdot2208^5(9\cdot10^{19})^{105}
++=4\cdot8^5\cdot2208^5\cdot4500^{105}(2\cdot10^{16})^{105}=h.
++\]
++El número de iteraciones es, por tanto, exactamente el entero de §6.3. Escribamos \(R=t_h\), de modo que \(B=R16^R\). Para todo entero \(x\ge1\), se tiene \(x4^x\ge2^x\). Las iteraciones no decrecen y, por ello,
++\[
++R\ge t_2\ge2^{2^{k_0}}\ge2^{2^{59517}}\ge G_i
++\qquad(i=1,2,3).
++\]
++En particular, \(R\ge2^{2000}\). La comparación tras dos iteraciones es una cota inferior para la iteración de regularidad, no una cota superior para el número de iteraciones que requiere la regularidad.
++
++**Absorción de los cinco términos.** En estos parámetros, (C.1) y las definiciones de \(G_i\) dan
++\[
++\begin{aligned}
++N_{\rm far}(\eta_0)\le{}& k_0+\alpha B+G_3+\beta G_1B^5
+++10^{18}(1+2G_2)+1,\\
++\alpha={}&2208(9\cdot10^{19})^{21},\qquad
++\beta=8(9\cdot10^{19})^6.
++\end{aligned}
++\]
++Aquí acotamos el máximo de (C.1) por la suma. El cuarto término utiliza \(a_3\ge a^3/2\), \(a_4\ge a^6/2\) y la sustitución directa más precisa \((a_3+a_4)/(a_3a_4)\le2(9\cdot10^{19})^6\); todos los coeficientes son racionales. Cada uno de \(k_0,\alpha,\beta,10^{18}\) es a lo sumo \(2^{2000}\), y por tanto a lo sumo \(R\). Como \(16^R\ge4R\), tenemos \(B\ge4R^2\) y \(B\ge4\). Se sigue que
++\[
++\beta G_1B^5\le R^2B^5\le B^6/4.
++\]
++Los demás términos, incluida la unidad final, suman a lo sumo \(7B^2\): las cotas para \(k_0,\alpha B,G_3,10^{18}(1+2G_2),1\) son respectivamente \(B^2,B^2,B^2,3B^2,B^2\). Además, \(B\ge4\) implica \(256B^2\le B^6\). En consecuencia,
++\[
++N_{\rm far}(\eta_0)\le B^6/4+7B^2
++\le(1/4+7/256)B^6\le B^6.
++\]
++
++**De la iteración a la torre.** Recordemos \(T(0)=1\), \(T(j+1)=2^{T(j)}\). La desigualdad \(4x\le4^x\), para enteros \(x\ge1\), da \(4(x4^x)\le2^{4x}\). Partiendo de \(4k_0\le2^{67}\le T(5)\), la inducción en \(j\) da \(4t_j\le T(j+5)\). Pongamos \(q=T(h+5)\); entonces \(4R\le q\) y \(q\ge6\). Por último, \(R\le2^R\) y \(8q\le2^q\) implican
++\[
++B^6=(R16^R)^6\le2^{30R}\le2^{2^q}=T(h+7),
++\]
++pues \(30R\le8q\le2^q\). La absorción y esta comparación de torre demuestran
+ \[
+ N_{\rm far}(\eta_0)\le T(h+7).
+ \tag{C.3}
+@@ -2338,13 +2385,13 @@
+ d_E(G,H)\le8\sqrt{\varepsilon}\,n^2,\qquad H[Y]=G[Y].
+ \tag{F.10}
+ \]
+-Éste es E34.lemma3. En comparación con [22, Lema 3], la constante es ocho en vez de seis, pero no se requiere la condición \(n\ge1/\varepsilon\). Ninguna versión se describe como uniformemente más fuerte: difieren las hipótesis y las constantes.
++Éste es `E34.lemma3`. En comparación con [22, Lema 3], la constante es ocho en vez de seis, pero no se requiere la condición \(n\ge1/\varepsilon\). Ninguna versión se describe como uniformemente más fuerte: difieren las hipótesis y las constantes.
+ 
+ El resto de la implementación cambia la representación y la elección numérica de parámetros de la siguiente manera.
+ 
+ | Paso de [22] | Implementación utilizada aquí |
+ |:--|:--|
+-| Muestreo | Las muestras son sucesiones con reemplazo. E34.transfer pasa de conteos de sucesiones a subconjuntos de vértices para la propiedad cerrada hacia arriba que se considera. |
++| Muestreo | Las muestras son sucesiones con reemplazo. `E34.transfer` pasa de conteos de sucesiones a subconjuntos de vértices para la propiedad cerrada hacia arriba que se considera. |
+ | Representaciones con anclajes | La definición permite una aplicación que preserva caminos desde el árbol prescrito hacia otro árbol enraizado. La prueba de conteo trata esta clase ampliada de representaciones; también cambia la cota de la muestra. |
+ | Modelo de árbol | Aplicaciones padre finitas y conjuntos de nodos reemplazan los árboles topológicos. El parámetro \(K\) cuenta nodos, no hojas. Las secciones se indexan por nodos, por lo que no se importa la Afirmación 1 correspondiente. |
+ | Conteo de coloraciones por conjuntos | Los vértices afectados se cuentan explícitamente. Los casos de parámetros pequeños y degenerados se separan en lugar de importar literalmente las cotas logarítmicas publicadas. |
+@@ -2479,9 +2526,9 @@
+ 
+ [4] J. P. Traverso Gianini, *Particiones de cliques con error lineal en grafos split mediante empaquetamiento estructurado de triángulos*, Paper III, preprint v1.5, 23 de agosto de 2026. Ediciones española e inglesa en el depósito conjunto v3 de esa fecha. DOI de la versión consultada: <https://doi.org/10.5281/zenodo.22064657>; DOI de concepto: <https://doi.org/10.5281/zenodo.21273143>. Material complementario: <https://github.com/jtraverso/erdos-81-chordal-clique-partitions/tree/main/preprints/PAPER_III>.
+ 
+-[5] Anonymous, *Clique partitions of chordal graphs with linear error*, preprint, 8 de septiembre de 2026. Versión consultada el 20 de septiembre de 2026, commit `cbde8a0a0563372b23b1b39a44180d2c0fb02f44`. Manuscrito: <https://github.com/N0zoM1z0/erdos-81/blob/cbde8a0a0563372b23b1b39a44180d2c0fb02f44/manuscript/main.pdf>. Se conserva la firma que figura en el documento. El README de ese mismo commit acredita a Morluto por la prueba matemática, a N0zoM1z0 por el manuscrito y la implementación Lean, y a Jacobian de PreferenceLabs como parte del proyecto: <https://github.com/N0zoM1z0/erdos-81/blob/cbde8a0a0563372b23b1b39a44180d2c0fb02f44/README.md>. Estos créditos del repositorio se distinguen de la firma impresa en el manuscrito.
++[5] Anonymous, *Clique partitions of chordal graphs with linear error*, preprint, 8 de septiembre de 2026. Versión consultada el 20 de septiembre de 2026, commit `cbde8a0a0563372b23b1b39a44180d2c0fb02f44`. Manuscrito: <https://github.com/N0zoM1z0/erdos-81/blob/cbde8a0a0563372b23b1b39a44180d2c0fb02f44/manuscript/main.pdf>. Se conserva la firma que figura en el documento. El README de ese mismo commit acredita a Morluto por la prueba matemática, a N0zoM1z0 por el manuscrito y la implementación Lean, y a Jacobian de Preference Labs como parte del proyecto: <https://github.com/N0zoM1z0/erdos-81/blob/cbde8a0a0563372b23b1b39a44180d2c0fb02f44/README.md>. Estos créditos del repositorio se distinguen de la firma impresa en el manuscrito.
+ 
+-[6] P. E. Haxell y V. Rödl, «Integer and fractional empaquetamientos in dense graphs», *Combinatorica* **21** (2001), 13–38.
++[6] P. E. Haxell y V. Rödl, «Integer and fractional packings in dense graphs», *Combinatorica* **21** (2001), 13–38.
+ 
+ [7] R. Yuster, «Integer and fractional packing of families of graphs», *Random Structures & Algorithms* **26** (2005), 110–118.
+ 

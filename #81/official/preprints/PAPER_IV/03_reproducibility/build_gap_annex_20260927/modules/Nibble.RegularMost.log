@@ -1,0 +1,19 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 Nibble/RegularMost.lean -o /workspace/request-project/.lake/runner/lib/lean/Nibble/RegularMost.olean -i /workspace/request-project/.lake/runner/lib/lean/Nibble/RegularMost.ilean
+import took 2.55s
+cumulative profiling times:
+	.olean serialization 33.2ms
+	attribute application 0.049ms
+	elaboration 37.6ms
+	fix level params 0.13ms
+	import 2.55s
+	initialization 47.3ms
+	instantiate metavars 0.804ms
+	interpretation 172ms
+	let-to-have transformation 0.0623ms
+	linting 4.79ms
+	parsing 6.17ms
+	process pre-definitions 4.38ms
+	share common exprs 0.766ms
+	tactic execution 12.8ms
+	type checking 4.71ms
+	typeclass inference 41.7ms

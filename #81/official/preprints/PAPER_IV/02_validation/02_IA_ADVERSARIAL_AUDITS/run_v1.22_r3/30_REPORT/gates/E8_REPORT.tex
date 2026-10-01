@@ -1,0 +1,223 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+\documentclass[
+]{article}
+\usepackage{xcolor}
+\usepackage{amsmath,amssymb}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math} % this also loads fontspec
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+\usepackage{lmodern}
+\ifPDFTeX\else
+  % xetex/luatex font selection
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\usepackage{bookmark}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same}
+% fallback for those not using the hyperref driver hyperxmp:
+\makeatletter
+\@ifundefined{xmpquote}{\newcommand{\xmpquote}[1]{#1}}{}
+\makeatother
+\hypersetup{
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+
+\author{}
+\date{}
+
+\begin{document}
+
+\section{Informe de puerta E8 --- run\_v1.22\_r3 (Paper IV
+v1.22-r3)}\label{informe-de-puerta-e8--run_v122_r3-paper-iv-v122-r3}
+
+Veredicto actual: \textbf{PASS\_WITH\_OBSERVATIONS}. Evidencia:
+\texttt{20\_EVIDENCE/E8/}. Auditor: Claude Opus 5.5, misma sesión que
+las ejecuciones anteriores; no se ejecutó Lean.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section{E8 --- Supplementary verifier, X-28, E8-02 and attribution
+(r3)}\label{e8--supplementary-verifier-x-28-e8-02-and-attribution-r3}
+
+\subsection{\texorpdfstring{Verifier inspection
+(\texttt{verify\_frozen\_logs.py}, sha256 in the r3
+manifest)}{Verifier inspection (verify\_frozen\_logs.py, sha256 in the r3 manifest)}}\label{verifier-inspection-verify_frozen_logspy-sha256-in-the-r3-manifest}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Fail-closed design.} It requires the inventory. A directory
+  whose \texttt{.log} set differs from the expected one (missing or
+  extra files) fails. A hash mismatch fails. An alert (sorry or error)
+  fails. A total count ≠ \texttt{expected\_total} fails. It writes its
+  output only to a new file
+  (\texttt{open(\textquotesingle{}x\textquotesingle{})}) and does not
+  run Lean. It checks logs, not mathematical validity or the kernel.
+\item
+  \textbf{Sorry rule.}
+  \texttt{\textbackslash{}bsorryAx\textbackslash{}b\textbar{}declaration\textbackslash{}s+uses\textbackslash{}s+{[}}\textquotesingle"`\,'\,``\,''{]}*sorry\textbackslash b\texttt{with}re.I`.
+  It is stronger than the frozen rules:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \texttt{audit\_publication.py:52} uses
+    \texttt{sorryAx\textbar{}declaration\ uses\ \textquotesingle{}sorry\textquotesingle{}}
+    and is case-sensitive;
+  \item
+    \texttt{paperiv\_build.py:400} uses the literal
+    \texttt{"declaration\ uses\ \textquotesingle{}sorry\textquotesingle{}"}.
+  \end{itemize}
+\item
+  \textbf{Error rule} (E8-02). Pattern
+  \texttt{\^{}.*error(?:\textbackslash{}(\textbar{}:)} with
+  \texttt{re.M} and \textbf{without \texttt{re.I}}. It is literally the
+  error alternative of the frozen \texttt{audit\_publication.py}. On the
+  probe table (\texttt{E8\_R3\_CHECK.json}), "ERROR:" and "Error:" are
+  not alerted by either rule, so \textbf{case sensitivity is identical}
+  to the historical rule. The sorry reinforcement uses a separate regex
+  and does not change the error rule. \textbf{E8-02 CLOSED} (the concern
+  about adding \texttt{re.I} to errors does not apply).
+\end{itemize}
+
+\subsection{Repetitions with the auditor\textquotesingle s own
+output}\label{repetitions-with-the-auditors-own-output}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \textbf{In place (read-only).}
+  \texttt{python\ verify\_frozen\_logs.py\ -\/-inventory\ LOG\_INVENTORY.json\ -\/-output\ \textless{}run\_v1.22\_r3\textgreater{}/20\_EVIDENCE/E8/rerun\_in\_place/VERIFY\_FROZEN\_LOGS\_AUDITOR\_OUTPUT.json}:
+  \textbf{PASS, 1266 logs checked, 0 errors}, exit 0. Running it wrote
+  nothing in the r3 folder; the pre-existing \texttt{\_\_pycache\_\_}
+  keeps its 10:56 timestamp.
+\item
+  \textbf{Test copy} (\texttt{20\_EVIDENCE/E8/testcopy/}). The verifier
+  and harness were copied. The only change is the Paper IV root path in
+  the copy of the verifier, documented in
+  \texttt{testcopy\_verifier\_patch.diff}; the harness is unchanged.
+  \texttt{test\_log\_verifier.py} reproduced:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \textbf{15/15 unit cases}: the real negative log; backtick, quote
+    and curly-quote variants; uppercase; line breaks;
+    \texttt{{[}sorryAx{]}}; 3 negatives (\texttt{no\_sorry\_used},
+    \texttt{sorryish}, clean axioms); 2 lowercase errors; and uppercase
+    \texttt{ERROR:} not alerted.
+  \item
+    \textbf{4/4 CLI corruptions} (sorry, error, changed hash, missing
+    file): exit 1 and FAIL in every case.
+  \item
+    The historical scan: PASS, 1266.
+  \item
+    Comparison with the sealed files: the regenerated inventory equals
+    \texttt{LOG\_INVENTORY.json}; the unit cases equal
+    \texttt{LOG\_VERIFIER\_TESTS.json}; the CLI outcomes and the
+    historical scan are identical. The sealed package was not
+    overwritten.
+  \end{itemize}
+\item
+  \textbf{Independent recount} (\texttt{10\_SCRIPTS/e8\_r3\_check.py}).
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Four groups: 608 + 50 + 422 + 186 = \textbf{1266}, with 0 duplicates
+    and 0 hash mismatches.
+  \item
+    These are the same four directories as the E8 scan of run\_v1.21\_r1
+    and run\_v1.22\_r2.
+  \item
+    The same 1266 files have now been scanned four times (v1.21, r2,
+    verifier in place, test copy). \textbf{They are counted once}: 1266
+    files, not 1266 proofs.
+  \end{itemize}
+\end{enumerate}
+
+\subsection{Historical nuance}\label{historical-nuance}
+
+The frozen \texttt{audit\_publication.py} rule does detect the real
+negative log, but only through \texttt{sorryAx} in an axiom printout
+(\texttt{\textquotesingle{}AuditorNeg.uses\_sorry\textquotesingle{}\ depends\ on\ axioms:\ {[}sorryAx{]}}).
+It does not detect the warning itself, which Lean 4.28 prints with
+backticks. \texttt{paperiv\_build.py} does not detect it at all.
+
+\subsection{X-28 decision}\label{x-28-decision}
+
+The supplementary verifier is designated as a \textbf{mandatory control}
+of the r3 reproduction profile
+(\texttt{CORRECTIONS\_AND\_HANDOFF\_v1.22\_r3.md}). It is fail-closed,
+pinned by hash and reproducible, and its tests pass.
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{The control action of the delivery is CLOSED.}
+\item
+  \textbf{The historical observation is kept:} the frozen runners still
+  carry their insufficient pattern; they were not patched and this is
+  not claimed.
+\item
+  The axiom and cone evidence (18 headline declarations, 50 public
+  cones) remains the substantive check against \texttt{sorryAx}.
+\item
+  X-28 → MITIGATED, with the control in place. \textbf{No action is
+  needed before publication}, provided the reproduction profile cites
+  the verifier as mandatory.
+\end{itemize}
+
+\subsection{Other items}\label{other-items}
+
+\begin{itemize}
+\tightlist
+\item
+  1266/844 attribution (E8-01): the auditor\textquotesingle s scan
+  covers 1266; the author\textquotesingle s old script covered 844 =
+  1266 − 422. Resolved in r1; kept.
+\item
+  Editor documents (ARTIFACT\_CHECKS, VISUAL\_REVIEW, STATUS\_DELTA,
+  EDITORIAL\_INTEGRITY\_REPORT, CORRECTIONS\_AND\_HANDOFF) were
+  contrasted with the auditor\textquotesingle s own evidence: the page
+  lists, diff, protected content, 615 entries and figures all agree.
+  They are not used as an inherited PASS.
+\item
+  The claim «Los párrafos de estado conservan paridad» is correct in
+  meaning; the ES terminology issue is NEW-05 (E6).
+\end{itemize}
+
+\textbf{E8 verdict (r3): PASS\_WITH\_OBSERVATIONS.}
+X-28\textquotesingle s historical observation is kept; the control is
+closed.
+
+\end{document}

@@ -1,0 +1,23 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 PaperIV/CriticalResidual.lean -o /workspace/request-project/.lake/runner/lib/lean/PaperIV/CriticalResidual.olean -i /workspace/request-project/.lake/runner/lib/lean/PaperIV/CriticalResidual.ilean
+import took 2.79s
+cumulative profiling times:
+	.olean serialization 37.8ms
+	attribute application 0.0311ms
+	congr simp thm 1ms
+	elaboration 9.92ms
+	fix level params 0.187ms
+	import 2.79s
+	initialization 41.1ms
+	instantiate metavars 0.451ms
+	interpretation 252ms
+	let-to-have transformation 0.0453ms
+	linting 3.7ms
+	norm_num 12.6ms
+	parsing 0.969ms
+	process pre-definitions 3.08ms
+	ring 12.3ms
+	share common exprs 2.38ms
+	simp 1.89ms
+	tactic execution 5.81ms
+	type checking 19.6ms
+	typeclass inference 67ms

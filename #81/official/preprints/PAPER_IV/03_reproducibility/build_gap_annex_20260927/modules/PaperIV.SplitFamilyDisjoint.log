@@ -1,0 +1,19 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 PaperIV/SplitFamilyDisjoint.lean -o /workspace/request-project/.lake/runner/lib/lean/PaperIV/SplitFamilyDisjoint.olean -i /workspace/request-project/.lake/runner/lib/lean/PaperIV/SplitFamilyDisjoint.ilean
+import took 2.96s
+cumulative profiling times:
+	.olean serialization 56.3ms
+	attribute application 0.0402ms
+	elaboration 10.8ms
+	fix level params 0.332ms
+	import 2.96s
+	initialization 38.3ms
+	instantiate metavars 0.534ms
+	interpretation 178ms
+	let-to-have transformation 0.0509ms
+	linting 9.58ms
+	parsing 2.2ms
+	process pre-definitions 1.66ms
+	share common exprs 0.596ms
+	tactic execution 24.6ms
+	type checking 17.5ms
+	typeclass inference 9.2ms

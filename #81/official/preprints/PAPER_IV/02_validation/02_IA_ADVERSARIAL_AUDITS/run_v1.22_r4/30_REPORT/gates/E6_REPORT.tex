@@ -1,0 +1,166 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+\documentclass[
+]{article}
+\usepackage{xcolor}
+\usepackage{amsmath,amssymb}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math} % this also loads fontspec
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+\usepackage{lmodern}
+\ifPDFTeX\else
+  % xetex/luatex font selection
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\usepackage{bookmark}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same}
+% fallback for those not using the hyperref driver hyperxmp:
+\makeatletter
+\@ifundefined{xmpquote}{\newcommand{\xmpquote}[1]{#1}}{}
+\makeatother
+\hypersetup{
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+
+\author{}
+\date{}
+
+\begin{document}
+
+\section{Informe de puerta E6 --- run\_v1.22\_r4 (Paper IV
+v1.22-r4)}\label{informe-de-puerta-e6--run_v122_r4-paper-iv-v122-r4}
+
+Veredicto actual: \textbf{PASS}. Evidencia: \texttt{20\_EVIDENCE/E6/}.
+Auditor: Claude Opus 5.5, misma sesión que las ejecuciones anteriores;
+no se ejecutó Lean.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section{E6 --- NEW-05 and parity
+(run\_v1.22\_r4)}\label{e6--new-05-and-parity-run_v122_r4}
+
+\subsection{Independent method}\label{independent-method}
+
+\texttt{10\_SCRIPTS/e6\_r4\_delta.py} produces
+\texttt{E6\_R4\_DELTA.json} and \texttt{auditor\_diff\_es\_md.diff}. The
+editor\textquotesingle s \texttt{check\_r4.py} was not run and not
+trusted.
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{MD.} 2565 → 2565 lines. Changed lines: \textbf{only l.1355
+  (A.2) and l.2356 (F.4)}.
+
+  \begin{itemize}
+  \tightlist
+  \item
+    A.2: «\textbf{la programación numérica} de C.3» → «\textbf{el
+    calendario numérico} de C.3». The article agreement also changes, so
+    the edit spans three tokens.
+  \item
+    F.4: «cota adaptada con \textbf{muestra fijada}» → «cota adaptada
+    con \textbf{muestras con anclajes}».
+  \end{itemize}
+\item
+  \textbf{TeX.} 2367 → 2367 lines. Only l.1317 and l.2159 change, with
+  the same substitutions. The preamble is identical.
+\item
+  \textbf{Editor\textquotesingle s diff.} The body of
+  \texttt{CHANGES\_es.diff} equals the auditor\textquotesingle s diff.
+\item
+  \textbf{Protected content r3 = r4.} Identical: displays, inline math,
+  code spans and blocks, tags, headings, bold leads, table rows, images
+  and references.
+\item
+  \textbf{Established terms, r4.}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    «calendario numérico» appears at l.1355 and l.1599, consistent with
+    the C.3 heading «Un calendario explícito» (l.1638).
+  \item
+    «muestras con anclajes» appears at l.2356 and in the F.5 heading at
+    l.2403; Table 10 has «Cota de muestra con anclajes» (l.2398).
+  \item
+    «programación numérica» and «muestra fijada»: 0 occurrences.
+  \end{itemize}
+\item
+  \textbf{PDF corresponds to TeX.} ES r4 has 73 pages (xdvipdfmx,
+  2026-10-01 15:39 UTC). The token diff against r3 has \textbf{exactly 2
+  regions}, the two substitutions, after joining hyphenated words. The
+  three line-break changes declared in \texttt{ARTIFACT\_CHECKS.json}
+  («conso-lidado», «declara-do», «ve-rifica») are line-wrap effects
+  only.
+\item
+  \textbf{Raster (72 dpi) vs. r3.} Only \textbf{pp. 40 and 66} change,
+  matching \texttt{ARTIFACT\_CHECKS.json}; 71 pages are
+  raster-identical. On pp. 40 and 66 the first line, the last line and
+  the line count are unchanged, so \textbf{pagination does not shift}.
+\item
+  \textbf{Visual check.}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Side-by-side r3\textbar r4 at 130 dpi (\texttt{cmp/}) and the
+    changed paragraphs at 160 dpi (\texttt{zoom/}), for pp. 40 and 66.
+    The image was displayed and the row logged at that moment.
+  \item
+    The new wording is legible, with no overflow; nothing else on those
+    pages changed.
+  \item
+    The other ES pages (raster-identical) and all EN pages
+    (byte-identical) are \textbf{inherited and revalidated by identity}
+    with the run\_v1.22\_r3 inspection
+    (\texttt{PAGE\_INSPECTION\_LOG.csv}, 145 rows).
+  \end{itemize}
+\end{itemize}
+
+\subsection{Result}\label{result}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{NEW-05: CLOSED in r4.}
+\item
+  NEW-04, X-15 and NEW-01 stay closed: the status paragraphs, prose and
+  \texttt{Model} are unchanged apart from the two substitutions.
+\item
+  Style note, not a finding: «con muestras con anclajes» repeats «con».
+  It is grammatical, and the term matches F.5.
+\end{itemize}
+
+\textbf{E6 verdict (r4): PASS.} Executed in r4 for the ES delta; EN
+inherited and revalidated by identity.
+
+\end{document}

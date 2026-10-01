@@ -1,0 +1,27 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 PaperIV/GraphFamilyDistance.lean -o /workspace/request-project/.lake/runner/lib/lean/PaperIV/GraphFamilyDistance.olean -i /workspace/request-project/.lake/runner/lib/lean/PaperIV/GraphFamilyDistance.ilean
+PaperIV/GraphFamilyDistance.lean:24:8: warning: automatically included section variable(s) unused in theorem `PaperIV.GraphFamilyDistance.graphEdgeSupport_eq_edgeFinset`:
+  [DecidableEq V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+import took 3.29s
+cumulative profiling times:
+	.olean serialization 39.1ms
+	attribute application 0.466ms
+	congr simp thm 0.578ms
+	elaboration 7.6ms
+	fix level params 0.059ms
+	import 3.29s
+	initialization 39.3ms
+	instantiate metavars 0.038ms
+	interpretation 158ms
+	let-to-have transformation 0.0314ms
+	linting 1.87ms
+	parsing 1.37ms
+	process pre-definitions 0.99ms
+	share common exprs 0.112ms
+	simp 2.35ms
+	tactic execution 6.07ms
+	type checking 1.29ms
+	typeclass inference 5.75ms

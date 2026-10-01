@@ -1,0 +1,28 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 ExactReduction/Arithmetic.lean -o /workspace/request-project/.lake/runner/lib/lean/ExactReduction/Arithmetic.olean -i /workspace/request-project/.lake/runner/lib/lean/ExactReduction/Arithmetic.ilean
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_nlinarith_1._boxed took 681ms
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_nlinarith_1._boxed took 671ms
+import took 2.9s
+cumulative profiling times:
+	.olean serialization 63.7ms
+	attribute application 0.107ms
+	compilation (IR) 10.8ms
+	compilation (LCNF base) 11.2ms
+	compilation (LCNF mono) 4.76ms
+	congr simp thm 4.65ms
+	elaboration 34.6ms
+	fix level params 0.686ms
+	import 2.9s
+	initialization 36.9ms
+	instantiate metavars 10.4ms
+	interpretation 1.65s
+	let-to-have transformation 0.116ms
+	linting 16.8ms
+	norm_num 14ms
+	parsing 7.33ms
+	process pre-definitions 16.9ms
+	ring 57.5ms
+	share common exprs 12.1ms
+	simp 247ms
+	tactic execution 182ms
+	type checking 455ms
+	typeclass inference 721ms

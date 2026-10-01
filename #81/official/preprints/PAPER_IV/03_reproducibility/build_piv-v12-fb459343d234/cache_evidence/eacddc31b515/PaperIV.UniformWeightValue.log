@@ -1,0 +1,34 @@
+$ c:\Users\jtraverso\.elan\toolchains\leanprover--lean4---v4.28.0\bin\lean.exe -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false PaperIV/UniformWeightValue.lean -o C:\Users\jtraverso\e81p4\opt_build_20260927\.lake\runner\lib\lean\PaperIV\UniformWeightValue.olean -i C:\Users\jtraverso\e81p4\opt_build_20260927\.lake\runner\lib\lean\PaperIV\UniformWeightValue.ilean
+PaperIV/UniformWeightValue.lean:19:0: warning: automatically included section variable(s) unused in theorem `PaperIV.UniformWeightValue.uniformWeight_nonneg`:
+  [DecidableEq V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+PaperIV/UniformWeightValue.lean:26:0: warning: automatically included section variable(s) unused in theorem `PaperIV.UniformWeightValue.uniformWeight_empty`:
+  [DecidableEq V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+PaperIV/UniformWeightValue.lean:29:0: warning: automatically included section variable(s) unused in theorem `PaperIV.UniformWeightValue.empty_family_weight_sum`:
+  [DecidableEq V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+PaperIV/UniformWeightValue.lean:38:7: warning: unused variable `K`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+PaperIV/UniformWeightValue.lean:39:9: warning: unused variable `K`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+PaperIV/UniformWeightValue.lean:40:9: warning: unused variable `K`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+PaperIV/UniformWeightValue.lean:48:76: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+PaperIV/UniformWeightValue.lean:48:76: warning: 'ring' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`

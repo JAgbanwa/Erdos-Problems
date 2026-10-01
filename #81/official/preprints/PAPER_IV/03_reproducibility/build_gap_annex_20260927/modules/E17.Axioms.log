@@ -1,0 +1,82 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 E17/Axioms.lean -o /workspace/request-project/.lake/runner/lib/lean/E17/Axioms.olean -i /workspace/request-project/.lake/runner/lib/lean/E17/Axioms.ilean
+'E17.SplitParent.split_value' depends on axioms: [propext, Classical.choice, Quot.sound]
+elaboration took 103ms
+'E17.SplitParent.auto_value' depends on axioms: [propext, Classical.choice, Quot.sound]
+elaboration took 273ms
+'E17.SplitParent.splitParent_not_saturated' depends on axioms: [propext, Classical.choice, Quot.sound]
+elaboration took 255ms
+'E17.LocalCredit.gamStar_nonneg' depends on axioms: [propext, Classical.choice, Quot.sound]
+'E17.LocalCredit.k4_table' depends on axioms: [propext, Classical.choice, Quot.sound]
+'E17.LocalCredit.k4_table_all' depends on axioms: [propext, Classical.choice, Quot.sound]
+'E17.LocalCredit.loss_K2' depends on axioms: [propext, Classical.choice, Quot.sound]
+'E17.LocalCredit.loss_K3' depends on axioms: [propext, Classical.choice, Quot.sound]
+'E17.LocalCredit.loss_K4' depends on axioms: [propext, Classical.choice, Quot.sound]
+'E17.LocalCredit.cutSum_K2' depends on axioms: [propext, Classical.choice, Quot.sound]
+'E17.LocalCredit.cutSum_K3' depends on axioms: [propext, Classical.choice, Quot.sound]
+'E17.LocalCredit.cutSum_K4' depends on axioms: [propext, Classical.choice, Quot.sound]
+'E17.Reconstruction.reconstruction' depends on axioms: [propext, Classical.choice, Quot.sound]
+elaboration took 259ms
+'E17.Budget.budget' depends on axioms: [propext, Classical.choice, Quot.sound]
+elaboration took 299ms
+'E17.Budget.budget_floor' depends on axioms: [propext, Classical.choice, Quot.sound]
+elaboration took 294ms
+'E17.Threshold.mu_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+elaboration took 256ms
+'E17.Threshold.list_cantelli' depends on axioms: [propext, Classical.choice, Quot.sound]
+elaboration took 255ms
+'E17.Threshold.list_cantelli_extreme' depends on axioms: [propext, Classical.choice, Quot.sound]
+elaboration took 249ms
+'E17.Threshold.degree_cantelli' depends on axioms: [propext, Classical.choice, Quot.sound]
+elaboration took 253ms
+'E17.Threshold.family_threshold' depends on axioms: [propext, Classical.choice, Quot.sound]
+elaboration took 249ms
+'E17.Threshold.coefficients' depends on axioms: [propext, Classical.choice, Quot.sound]
+elaboration took 216ms
+'E17.Conditional.near_branch_conditional' depends on axioms: [propext, Classical.choice, Quot.sound]
+elaboration took 381ms
+'E17.Cleanup.resources' depends on axioms: [propext, Classical.choice, Quot.sound]
+elaboration took 238ms
+'E17.Cleanup.r3_loss' depends on axioms: [propext, Classical.choice, Quot.sound]
+elaboration took 264ms
+'E17.Cleanup.r3_avoids' depends on axioms: [propext, Classical.choice, Quot.sound]
+elaboration took 256ms
+'E17.Cleanup.r3_tight' depends on axioms: [propext, Classical.choice, Quot.sound]
+elaboration took 241ms
+'E17.Cleanup.f1_loads' depends on axioms: [propext, Classical.choice, Quot.sound]
+elaboration took 246ms
+'E17.Cleanup.f1_value' depends on axioms: [propext, Classical.choice, Quot.sound]
+elaboration took 224ms
+'E17.Cleanup.f1_optimal' depends on axioms: [propext, Classical.choice, Quot.sound]
+elaboration took 264ms
+'E17.Cleanup.profile_loss' depends on axioms: [propext, Classical.choice, Quot.sound]
+elaboration took 249ms
+'E17.Cleanup.restrict_loss' depends on axioms: [propext, Classical.choice, Quot.sound]
+elaboration took 270ms
+'E17.Cleanup.cleanup_loss' depends on axioms: [propext, Classical.choice, Quot.sound]
+elaboration took 264ms
+'E17.Cleanup.cleanup_avoids' depends on axioms: [propext, Classical.choice, Quot.sound]
+elaboration took 256ms
+'E17.Cleanup.total_cleanup' depends on axioms: [propext, Classical.choice, Quot.sound]
+elaboration took 277ms
+'E17.Cleanup.selector_closure' depends on axioms: [propext, Classical.choice, Quot.sound]
+elaboration took 231ms
+'E17.Cleanup.c4_le_of_closure' depends on axioms: [propext, Classical.choice, Quot.sound]
+elaboration took 252ms
+'E17.FarBudget.improved_copy_budget' depends on axioms: [propext, Classical.choice, Quot.sound]
+elaboration took 277ms
+'E17.FarBudget.card_mixedPatterns' depends on axioms: [propext, Classical.choice, Quot.sound]
+'E17.FarBudget.improved_le_old' depends on axioms: [propext, Classical.choice, Quot.sound]
+elaboration took 240ms
+'E17.FarBudget.value_le_sq' depends on axioms: [propext, Classical.choice, Quot.sound]
+elaboration took 283ms
+'E17.FarBudget.improved_far_loss' depends on axioms: [propext, Classical.choice, Quot.sound]
+elaboration took 301ms
+import took 3.89s
+cumulative profiling times:
+	.olean serialization 2.95ms
+	elaboration 8.86s
+	import 3.89s
+	initialization 41.7ms
+	interpretation 275ms
+	linting 4.99ms
+	parsing 3.25ms

@@ -1,0 +1,21 @@
+$ c:\Users\jtraverso\.elan\toolchains\leanprover--lean4---v4.28.0\bin\lean.exe -j 1 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false E19/AxiomCheck.lean -o C:\Users\jtraverso\e81p4\opt_build_20260927\.lake\runner\lib\lean\E19\AxiomCheck.olean -i C:\Users\jtraverso\e81p4\opt_build_20260927\.lake\runner\lib\lean\E19\AxiomCheck.ilean
+constants under forbidden roots: 0
+modules under forbidden roots: 0; total modules in cone: 5216
+'E19.Sched.gamT_ge' depends on axioms: [propext, Classical.choice, Quot.sound]
+'E19.Sched.TT_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'E19.Sched.excT_ge' depends on axioms: [propext, Classical.choice, Quot.sound]
+'E19.Sched.lominT_ge' depends on axioms: [propext, Classical.choice, Quot.sound]
+'E19.Sched.muT_ge' depends on axioms: [propext, Classical.choice, Quot.sound]
+'E19.Sched.DS_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'E19.Sched.gamR_ge' depends on axioms: [propext, Classical.choice, Quot.sound]
+'E19.GateB.gamQ_ge' depends on axioms: [propext, Classical.choice, Quot.sound]
+'E19.G1_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'E19.G2_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'E19.G3_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'E19.stepBound_le_two_pow' depends on axioms: [propext]
+'E19.iterate_le_tower2' depends on axioms: [propext, Classical.choice, Quot.sound]
+'E19.iterate_le_tower2_explicit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'E19.NfarE_eta0_le_clean' depends on axioms: [propext, Classical.choice, Quot.sound]
+'E19.Tnum_le_tower2' depends on axioms: [propext, Classical.choice, Quot.sound]
+'E19.NfarE_eta0_le_tower' depends on axioms: [propext, Classical.choice, Quot.sound]
+'E19.farRegime_eta0_tower' depends on axioms: [propext, Classical.choice, Quot.sound]

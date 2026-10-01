@@ -1,0 +1,23 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 Nibble/Tight/PairWeightMean.lean -o /workspace/request-project/.lake/runner/lib/lean/Nibble/Tight/PairWeightMean.olean -i /workspace/request-project/.lake/runner/lib/lean/Nibble/Tight/PairWeightMean.ilean
+import took 4.23s
+cumulative profiling times:
+	.olean serialization 90.9ms
+	attribute application 0.0735ms
+	congr simp thm 3.91ms
+	elaboration 44.3ms
+	fix level params 0.822ms
+	import 4.23s
+	initialization 37.4ms
+	instantiate metavars 1.82ms
+	interpretation 367ms
+	let-to-have transformation 0.105ms
+	linting 11.9ms
+	norm_num 1.49ms
+	parsing 10.8ms
+	process pre-definitions 14.2ms
+	ring 9.64ms
+	share common exprs 3.25ms
+	simp 60.2ms
+	tactic execution 195ms
+	type checking 30.3ms
+	typeclass inference 239ms

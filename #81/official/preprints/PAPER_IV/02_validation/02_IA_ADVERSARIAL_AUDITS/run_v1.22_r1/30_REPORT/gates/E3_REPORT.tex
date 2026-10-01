@@ -1,0 +1,124 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+\documentclass[
+]{article}
+\usepackage{xcolor}
+\usepackage{amsmath,amssymb}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math} % this also loads fontspec
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+\usepackage{lmodern}
+\ifPDFTeX\else
+  % xetex/luatex font selection
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\usepackage{bookmark}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same}
+% fallback for those not using the hyperref driver hyperxmp:
+\makeatletter
+\@ifundefined{xmpquote}{\newcommand{\xmpquote}[1]{#1}}{}
+\makeatother
+\hypersetup{
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+
+\author{}
+\date{}
+
+\begin{document}
+
+\section{Gate E3 report --- run\_v1.22\_r1 (Paper IV
+v1.22-r1)}\label{gate-e3-report--run_v122_r1-paper-iv-v122-r1}
+
+Verdict: \textbf{PASS}. Evidence: \texttt{20\_EVIDENCE/E3/}. Auditor:
+Claude Opus 5.5, same session as run\_v1.2\_r1/run\_v1.21\_r1; no Lean
+executed.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section{E3 --- Formal correspondence and dependency disclosure
+(regression)}\label{e3--formal-correspondence-and-dependency-disclosure-regression}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Lean unchanged.} E0 shows that the cut
+  \texttt{lean\_piv-v12-fb459343d234} matches all 615 manifest entries,
+  with no extra files, at the start and at the end of the review. The
+  Lean code blocks in the manuscript are identical to v1.21
+  (E6\_PARITY). No Lean was run.
+\item
+  \textbf{New code identifiers} (\texttt{identifier\_check\_v122.py} →
+  \texttt{IDENTIFIER\_CHECK\_V122.json}; tokens new relative to v1.21):
+
+  \begin{itemize}
+  \tightlist
+  \item
+    EN has 9 new tokens and ES 8.
+  \item
+    \texttt{E18.Numeric}, \texttt{E19.Main}, \texttt{E34.lemma3}
+    (E34/NearlySimplicial.lean:462), \texttt{E34.transfer}
+    (E34/Sampling.lean:190) and \texttt{Model} resolve in the cut.
+  \item
+    \texttt{SzemerediRegularity.initialBound}, \texttt{stepBound} and
+    \texttt{bound} are not in the cut; they resolve in the pinned
+    Mathlib (Bound.lean: namespace \texttt{SzemerediRegularity}, l.38;
+    \texttt{stepBound} l.42; \texttt{initialBound} l.167; \texttt{bound}
+    l.190; Mathlib rev 8f9d9cff = lake-manifest).
+  \item
+    \texttt{run\_v1.21\_r1} is the name of the audit folder, which
+    exists.
+  \item
+    \textbf{No unresolved identifier.}
+  \end{itemize}
+\item
+  \textbf{C.3 ↔ Lean.} The prose matches
+  \texttt{E18.Numeric.NfarE\_eta0\_le} and the \texttt{E19.Main}
+  statements \texttt{absorb\_abstract},
+  \texttt{B6\_le\_two\_pow\_two\_pow}, \texttt{four\_mul\_Tnum\_le} and
+  \texttt{NfarE\_eta0\_le\_tower}, as read in the frozen sources (E2).
+\item
+  \textbf{X-27 preserved.} §7 (EN/ES p31) still states that
+  \texttt{E32.cp\_classification\_of\_theoremCPrimeC} and
+  \texttt{E32.ref15Theorem11\_of\_theoremCPrimeC} use the historical
+  chain through \texttt{E32.theoremC\_at} (the induced-removal lemmas of
+  {[}23{]}), and that the exclusion check is not extended to these
+  wrappers. Table 9 (EN p64 / ES p65) and {[}23{]} (EN p72) keep the
+  corresponding statements. The run\_v1.2\_r1 probe result
+  (AuditorASProbe.log) is inherited because the source is identical.
+\item
+  X-25 (annex README supplement) is unchanged; the annex ZIP is
+  unchanged (E0).
+\end{itemize}
+
+\textbf{E3 verdict: PASS.}
+
+\end{document}

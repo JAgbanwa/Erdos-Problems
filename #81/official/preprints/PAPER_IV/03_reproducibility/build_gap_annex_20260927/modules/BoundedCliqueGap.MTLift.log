@@ -1,0 +1,24 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 BoundedCliqueGap/MTLift.lean -o /workspace/request-project/.lake/runner/lib/lean/BoundedCliqueGap/MTLift.olean -i /workspace/request-project/.lake/runner/lib/lean/BoundedCliqueGap/MTLift.ilean
+import took 3.04s
+cumulative profiling times:
+	.olean serialization 52.7ms
+	attribute application 0.0403ms
+	compilation (IR) 0.351ms
+	compilation (LCNF base) 0.497ms
+	compilation (LCNF mono) 0.326ms
+	congr simp thm 2.4ms
+	elaboration 16.2ms
+	fix level params 0.118ms
+	import 3.04s
+	initialization 35.6ms
+	instantiate metavars 1.34ms
+	interpretation 190ms
+	let-to-have transformation 0.0426ms
+	linting 5.31ms
+	parsing 2.63ms
+	process pre-definitions 2.24ms
+	share common exprs 0.603ms
+	simp 166ms
+	tactic execution 18.7ms
+	type checking 4.47ms
+	typeclass inference 121ms

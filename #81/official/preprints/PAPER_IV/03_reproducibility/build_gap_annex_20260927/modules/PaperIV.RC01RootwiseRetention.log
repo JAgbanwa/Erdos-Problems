@@ -1,0 +1,25 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 PaperIV/RC01RootwiseRetention.lean -o /workspace/request-project/.lake/runner/lib/lean/PaperIV/RC01RootwiseRetention.olean -i /workspace/request-project/.lake/runner/lib/lean/PaperIV/RC01RootwiseRetention.ilean
+import took 4.01s
+.olean serialization took 116ms
+cumulative profiling times:
+	.olean serialization 116ms
+	attribute application 0.0689ms
+	congr simp thm 16.5ms
+	dsimp 3.9ms
+	elaboration 130ms
+	fix level params 1.3ms
+	import 4.01s
+	initialization 36.7ms
+	instantiate metavars 5.55ms
+	interpretation 868ms
+	let-to-have transformation 0.321ms
+	linting 31.9ms
+	norm_num 16.2ms
+	parsing 21.9ms
+	process pre-definitions 15.9ms
+	ring 22.6ms
+	share common exprs 7.72ms
+	simp 97.6ms
+	tactic execution 312ms
+	type checking 46.4ms
+	typeclass inference 1.04s

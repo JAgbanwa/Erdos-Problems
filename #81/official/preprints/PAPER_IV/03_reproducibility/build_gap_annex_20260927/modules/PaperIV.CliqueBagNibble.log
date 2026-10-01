@@ -1,0 +1,34 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 PaperIV/CliqueBagNibble.lean -o /workspace/request-project/.lake/runner/lib/lean/PaperIV/CliqueBagNibble.olean -i /workspace/request-project/.lake/runner/lib/lean/PaperIV/CliqueBagNibble.ilean
+PaperIV/CliqueBagNibble.lean:121:0: warning: automatically included section variable(s) unused in theorem `PaperIV.CliqueBagNibble.exists_packing_of_k4Family`:
+  [Fintype V]
+  [DecidableRel G.Adj]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] [DecidableRel G.Adj] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_nlinarith_1._boxed took 143ms
+import took 3.19s
+cumulative profiling times:
+	.olean serialization 62.8ms
+	attribute application 0.585ms
+	compilation (IR) 1.8ms
+	compilation (LCNF base) 3.19ms
+	compilation (LCNF mono) 0.964ms
+	congr simp thm 6.78ms
+	elaboration 50.2ms
+	fix level params 0.648ms
+	import 3.19s
+	initialization 45.7ms
+	instantiate metavars 2.35ms
+	interpretation 486ms
+	let-to-have transformation 0.136ms
+	linting 14.7ms
+	norm_num 80.9ms
+	parsing 6.8ms
+	process pre-definitions 9.57ms
+	ring 17.2ms
+	share common exprs 4.09ms
+	simp 45.6ms
+	tactic execution 55ms
+	type checking 54.6ms
+	typeclass inference 258ms

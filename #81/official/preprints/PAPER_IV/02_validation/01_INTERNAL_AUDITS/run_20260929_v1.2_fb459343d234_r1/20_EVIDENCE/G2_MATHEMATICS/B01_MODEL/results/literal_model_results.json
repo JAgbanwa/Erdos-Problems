@@ -1,0 +1,130 @@
+{
+  "domain": "all labelled graphs n=0..6",
+  "graphs": 33868,
+  "chordal": 19049,
+  "partition_checked": 33868,
+  "budget_checks": 19049,
+  "counterexamples": [],
+  "attaining_witnesses": {
+    "0": {
+      "edge_mask": 0,
+      "parts": []
+    },
+    "1": {
+      "edge_mask": 0,
+      "parts": []
+    },
+    "2": {
+      "edge_mask": 1,
+      "parts": [
+        [
+          0,
+          1
+        ]
+      ]
+    },
+    "3": {
+      "edge_mask": 3,
+      "parts": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ]
+      ]
+    },
+    "4": {
+      "edge_mask": 7,
+      "parts": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ]
+      ]
+    },
+    "5": {
+      "edge_mask": 127,
+      "parts": [
+        [
+          0,
+          1,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ]
+      ]
+    },
+    "6": {
+      "edge_mask": 511,
+      "parts": [
+        [
+          0,
+          1,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          1,
+          5
+        ]
+      ]
+    }
+  },
+  "negative_reasons": [
+    "edge_reused",
+    "edge_omitted",
+    "nonclique_piece",
+    "bad_piece_order_or_vertices",
+    "vertex_outside_graph"
+  ],
+  "gain_checks": {
+    "triangle": true,
+    "K4": true,
+    "order5_gain_formulas_diverge": true
+  },
+  "limit": "Finite regression only; no universal or threshold proof."
+}

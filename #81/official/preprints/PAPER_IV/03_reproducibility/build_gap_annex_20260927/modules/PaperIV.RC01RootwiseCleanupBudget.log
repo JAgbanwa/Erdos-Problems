@@ -1,0 +1,23 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 PaperIV/RC01RootwiseCleanupBudget.lean -o /workspace/request-project/.lake/runner/lib/lean/PaperIV/RC01RootwiseCleanupBudget.olean -i /workspace/request-project/.lake/runner/lib/lean/PaperIV/RC01RootwiseCleanupBudget.ilean
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_nlinarith_1._boxed took 144ms
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_nlinarith_1._boxed took 144ms
+import took 2.8s
+cumulative profiling times:
+	.olean serialization 40.5ms
+	attribute application 0.0347ms
+	elaboration 25.9ms
+	fix level params 0.322ms
+	import 2.8s
+	initialization 40.2ms
+	instantiate metavars 1.02ms
+	interpretation 557ms
+	let-to-have transformation 0.0593ms
+	linting 10.3ms
+	norm_num 3.98ms
+	parsing 3.67ms
+	process pre-definitions 7.25ms
+	ring 42.7ms
+	share common exprs 4.26ms
+	tactic execution 27.1ms
+	type checking 36.1ms
+	typeclass inference 351ms

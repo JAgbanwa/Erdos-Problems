@@ -1,0 +1,26 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 PaperIV/E01Ledger.lean -o /workspace/request-project/.lake/runner/lib/lean/PaperIV/E01Ledger.olean -i /workspace/request-project/.lake/runner/lib/lean/PaperIV/E01Ledger.ilean
+import took 3.02s
+cumulative profiling times:
+	.olean serialization 48.8ms
+	attribute application 0.0622ms
+	compilation (IR) 0.337ms
+	compilation (LCNF base) 0.465ms
+	compilation (LCNF mono) 0.175ms
+	congr simp thm 1.76ms
+	elaboration 27.2ms
+	fix level params 0.261ms
+	import 3.02s
+	initialization 37ms
+	instantiate metavars 6.46ms
+	interpretation 254ms
+	let-to-have transformation 0.0831ms
+	linting 5.62ms
+	norm_num 23.9ms
+	parsing 4.08ms
+	process pre-definitions 5.45ms
+	ring 9.62ms
+	share common exprs 2.55ms
+	simp 8.39ms
+	tactic execution 33ms
+	type checking 19.2ms
+	typeclass inference 79.1ms

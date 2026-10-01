@@ -1,0 +1,24 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 PaperIV/HybridDichotomy.lean -o /workspace/request-project/.lake/runner/lib/lean/PaperIV/HybridDichotomy.olean -i /workspace/request-project/.lake/runner/lib/lean/PaperIV/HybridDichotomy.ilean
+import took 4.3s
+.olean serialization took 104ms
+cumulative profiling times:
+	.olean serialization 104ms
+	attribute application 0.0389ms
+	congr simp thm 1.96ms
+	dsimp 0.566ms
+	elaboration 23.3ms
+	fix level params 0.0868ms
+	import 4.3s
+	initialization 37.3ms
+	instantiate metavars 0.832ms
+	interpretation 265ms
+	let-to-have transformation 0.0711ms
+	linting 3.49ms
+	norm_num 0.187ms
+	parsing 3.15ms
+	process pre-definitions 1.66ms
+	share common exprs 0.877ms
+	simp 23.6ms
+	tactic execution 23.5ms
+	type checking 8.39ms
+	typeclass inference 170ms

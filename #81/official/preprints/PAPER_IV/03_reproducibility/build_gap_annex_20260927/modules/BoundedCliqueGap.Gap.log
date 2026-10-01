@@ -1,0 +1,28 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 BoundedCliqueGap/Gap.lean -o /workspace/request-project/.lake/runner/lib/lean/BoundedCliqueGap/Gap.olean -i /workspace/request-project/.lake/runner/lib/lean/BoundedCliqueGap/Gap.ilean
+BoundedCliqueGap/Gap.lean:74:0: warning: automatically included section variable(s) unused in theorem `BoundedCliqueGap.cliqueFree_of_cliqueTree_width`:
+  [Fintype V]
+  [DecidableEq V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] [DecidableEq V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+import took 3.32s
+cumulative profiling times:
+	.olean serialization 71.2ms
+	attribute application 0.051ms
+	congr simp thm 1.74ms
+	elaboration 30.9ms
+	fix level params 0.247ms
+	import 3.32s
+	initialization 44.9ms
+	instantiate metavars 0.461ms
+	interpretation 211ms
+	let-to-have transformation 0.114ms
+	linting 6.42ms
+	parsing 3.72ms
+	process pre-definitions 1.64ms
+	share common exprs 0.74ms
+	simp 0.311ms
+	tactic execution 24.6ms
+	type checking 19.7ms
+	typeclass inference 35.2ms

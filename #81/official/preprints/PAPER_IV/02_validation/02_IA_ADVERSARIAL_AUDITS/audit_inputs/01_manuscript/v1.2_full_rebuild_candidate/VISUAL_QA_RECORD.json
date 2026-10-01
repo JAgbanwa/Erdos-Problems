@@ -1,0 +1,68 @@
+{
+  "scope": "Editorial visual QA of final PDFs, not mathematical or independent audit",
+  "status": "PASS_VISUAL_INSPECTION",
+  "reference": {
+    "paper": "Paper III v1.5",
+    "pages": [
+      1,
+      6,
+      12,
+      19,
+      46
+    ]
+  },
+  "en": {
+    "pdf_sha256": "76a9ff8e3d9a02b8e745bcdd101b8272ff15430e285fc403c18b958c7073e667",
+    "pages": 68,
+    "all_pages_inspected_on_contact_sheets": true,
+    "full_resolution_pages": [
+      1,
+      2,
+      26,
+      33,
+      34,
+      35,
+      48,
+      55,
+      57,
+      68
+    ],
+    "changed_or_reflowed_pages": [
+      1,
+      2,
+      33,
+      34,
+      35
+    ]
+  },
+  "es": {
+    "pdf_sha256": "bfa83e0e9fa50f9d391af462bb6b24a786c68e7d39d47cf78786f09d6aa7afc4",
+    "pages": 69,
+    "all_pages_inspected_on_contact_sheets": true,
+    "full_resolution_pages": [
+      1,
+      26,
+      33,
+      34,
+      35,
+      49,
+      56,
+      58,
+      69
+    ],
+    "changed_or_reflowed_pages": [
+      1,
+      33,
+      34,
+      35
+    ]
+  },
+  "findings": [
+    "No clipping, overlap, missing glyphs or unreadable formulas observed.",
+    "Existing marked breaks in long Lean identifiers and evidence paths retained.",
+    "Underfull warnings: English 11, Spanish 3; visually acceptable.",
+    "Existing nonfatal Fontconfig notice; fonts embedded or Type3 charprocs per artifact check."
+  ],
+  "internal_audit": "NOT_STARTED",
+  "external_audit": "NOT_STARTED"
+}

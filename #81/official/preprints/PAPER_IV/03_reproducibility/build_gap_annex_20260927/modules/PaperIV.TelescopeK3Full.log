@@ -1,0 +1,28 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 PaperIV/TelescopeK3Full.lean -o /workspace/request-project/.lake/runner/lib/lean/PaperIV/TelescopeK3Full.olean -i /workspace/request-project/.lake/runner/lib/lean/PaperIV/TelescopeK3Full.ilean
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_nlinarith_1._boxed took 1.51s
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_nlinarith_1._boxed took 1.49s
+import took 3.75s
+cumulative profiling times:
+	.olean serialization 70.6ms
+	attribute application 0.0676ms
+	compilation (IR) 0.533ms
+	compilation (LCNF base) 1.23ms
+	compilation (LCNF mono) 0.745ms
+	congr simp thm 10.5ms
+	elaboration 46.5ms
+	fix level params 1.89ms
+	import 3.75s
+	initialization 40.5ms
+	instantiate metavars 17.4ms
+	interpretation 3.35s
+	let-to-have transformation 0.103ms
+	linting 30.7ms
+	norm_num 8.41ms
+	parsing 7.1ms
+	process pre-definitions 18.9ms
+	ring 45.6ms
+	share common exprs 10.7ms
+	simp 116ms
+	tactic execution 150ms
+	type checking 59.8ms
+	typeclass inference 487ms

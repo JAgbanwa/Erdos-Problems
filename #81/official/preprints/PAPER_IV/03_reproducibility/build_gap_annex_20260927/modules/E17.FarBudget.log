@@ -1,0 +1,27 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 E17/FarBudget.lean -o /workspace/request-project/.lake/runner/lib/lean/E17/FarBudget.olean -i /workspace/request-project/.lake/runner/lib/lean/E17/FarBudget.ilean
+import took 4.82s
+.olean serialization took 122ms
+cumulative profiling times:
+	.olean serialization 122ms
+	attribute application 0.134ms
+	compilation (IR) 2.51ms
+	compilation (LCNF base) 2.46ms
+	compilation (LCNF mono) 1.01ms
+	congr simp thm 13.4ms
+	elaboration 94.4ms
+	fix level params 1.34ms
+	import 4.82s
+	initialization 43.3ms
+	instantiate metavars 3.13ms
+	interpretation 632ms
+	let-to-have transformation 0.193ms
+	linting 21.4ms
+	norm_num 78ms
+	parsing 9.97ms
+	process pre-definitions 15ms
+	ring 47.5ms
+	share common exprs 11.4ms
+	simp 45.9ms
+	tactic execution 112ms
+	type checking 80.2ms
+	typeclass inference 427ms

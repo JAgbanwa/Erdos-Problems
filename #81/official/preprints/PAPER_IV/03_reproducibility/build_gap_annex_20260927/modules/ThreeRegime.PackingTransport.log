@@ -1,0 +1,46 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 ThreeRegime/PackingTransport.lean -o /workspace/request-project/.lake/runner/lib/lean/ThreeRegime/PackingTransport.olean -i /workspace/request-project/.lake/runner/lib/lean/ThreeRegime/PackingTransport.ilean
+ThreeRegime/PackingTransport.lean:28:0: warning: automatically included section variable(s) unused in theorem `ThreeRegime.Transport.isItem_top_iff`:
+  [Fintype V]
+  [DecidableEq V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] [DecidableEq V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+ThreeRegime/PackingTransport.lean:49:0: warning: automatically included section variable(s) unused in theorem `ThreeRegime.Transport.pairs_map`:
+  [Fintype V]
+  [Fintype W]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] [Fintype W] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+ThreeRegime/PackingTransport.lean:150:8: warning: automatically included section variable(s) unused in theorem `_private.ThreeRegime.PackingTransport.0.ThreeRegime.Transport.map_preimage_eq`:
+  [Fintype V]
+  [DecidableEq V]
+  [Fintype W]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] [DecidableEq V] [Fintype W] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+import took 4.14s
+cumulative profiling times:
+	.olean serialization 76.2ms
+	attribute application 0.216ms
+	compilation (IR) 0.219ms
+	compilation (LCNF base) 0.914ms
+	compilation (LCNF mono) 0.322ms
+	congr simp thm 7.73ms
+	elaboration 99.6ms
+	fix level params 2.5ms
+	import 4.14s
+	initialization 40.4ms
+	instantiate metavars 14.3ms
+	interpretation 280ms
+	let-to-have transformation 0.447ms
+	linting 22.5ms
+	parsing 12.7ms
+	process pre-definitions 21.2ms
+	share common exprs 5.34ms
+	simp 56.2ms
+	tactic execution 179ms
+	type checking 46.4ms
+	typeclass inference 122ms

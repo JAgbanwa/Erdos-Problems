@@ -1,0 +1,49 @@
+{
+  "status": "PASS",
+  "targets": [
+    "PaperIV",
+    "PaperIV.Audit",
+    "PaperIV.ConeAudit",
+    "PaperIV.PublicationIncrementAudit",
+    "A4S1.IndepAllAudit",
+    "ThreeRegime.AxiomCheck",
+    "FarExploration.AxiomCheck",
+    "PaperIV.CliqueTreeAudit",
+    "E17.ImprovedFarRoundingAudit",
+    "E17.ExplicitFarAudit",
+    "PaperIV.ExplicitThresholdAudit",
+    "ReleaseExportCheck",
+    "PaperIVEditorial.ConstructorBudgetAudit",
+    "ResearchAudit",
+    "FDCheck.FinalAudit",
+    "E35.Audit",
+    "FDCheck.ASCheck",
+    "E34.Audit",
+    "PaperIV.OptimalTemplateObstructionAudit"
+  ],
+  "target_count": 19,
+  "modules": 607,
+  "axiom_records": 461,
+  "export_checks": 224,
+  "config_sha256": {
+    "lakefile.toml": "162d3b567187594b59687ed8eca8c55f9bda9e2e01d94872d1bf996fc1a95a5d",
+    "lake-manifest.json": "bac9b117fb6f817eb17a9dec751d91428b84775f3821546bbd085f691b4f3a8d",
+    "lean-toolchain": "db7bb24b756d745bbde83fe92718b51bd3625dae3701ba0f598d0eedcd3f3028",
+    "FREEZE_SCOPE.json": "cc9abf9a9d4ed113eab7bdf8262c225e9d84a266097bf74531880da518eafe49",
+    "tools/paperiv_build.py": "8247989347985ee5973fdc937e60bfa4be3d79880597d47bb257cf8f6f4178a9",
+    "tools/audit_publication.py": "0a7e66a2e3cd3c7e9d90ea6475fb9ac9f89e55cb17e6de8c14001a11714f02cb"
+  },
+  "build_summary": {
+    "modulesPlanned": 607,
+    "pass": 186,
+    "upToDate": 421,
+    "fail": [],
+    "blocked": [],
+    "notRun": 0,
+    "sourcesChangedDuringRun": [],
+    "sumModuleWallSeconds": 13975.62,
+    "runWallSeconds": 14019.14,
+    "status": "PASS"
+  },
+  "scope": "Local formal checks only; not a manuscript audit or release."
+}

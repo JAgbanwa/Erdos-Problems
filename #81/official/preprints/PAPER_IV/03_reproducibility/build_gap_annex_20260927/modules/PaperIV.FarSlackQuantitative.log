@@ -1,0 +1,28 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 PaperIV/FarSlackQuantitative.lean -o /workspace/request-project/.lake/runner/lib/lean/PaperIV/FarSlackQuantitative.olean -i /workspace/request-project/.lake/runner/lib/lean/PaperIV/FarSlackQuantitative.ilean
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_nlinarith_1._boxed took 105ms
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_nlinarith_1._boxed took 135ms
+import took 4.91s
+cumulative profiling times:
+	.olean serialization 97.8ms
+	attribute application 0.0306ms
+	compilation (IR) 6.04ms
+	compilation (LCNF base) 5.6ms
+	compilation (LCNF mono) 2.88ms
+	congr simp thm 5.58ms
+	elaboration 27.7ms
+	fix level params 0.37ms
+	import 4.91s
+	initialization 37.9ms
+	instantiate metavars 3.56ms
+	interpretation 584ms
+	let-to-have transformation 0.059ms
+	linting 8.41ms
+	norm_num 59.6ms
+	parsing 2.52ms
+	process pre-definitions 7.67ms
+	ring 27.5ms
+	share common exprs 5.96ms
+	simp 216ms
+	tactic execution 40.5ms
+	type checking 59.5ms
+	typeclass inference 322ms

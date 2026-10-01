@@ -1,0 +1,27 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 FarExploration/TowerHeight.lean -o /workspace/request-project/.lake/runner/lib/lean/FarExploration/TowerHeight.olean -i /workspace/request-project/.lake/runner/lib/lean/FarExploration/TowerHeight.ilean
+import took 4.28s
+.olean serialization took 113ms
+cumulative profiling times:
+	.olean serialization 113ms
+	attribute application 0.19ms
+	compilation (IR) 1.58ms
+	compilation (LCNF base) 4.48ms
+	compilation (LCNF mono) 1.65ms
+	congr simp thm 3.05ms
+	elaboration 42.8ms
+	fix level params 0.382ms
+	import 4.28s
+	initialization 43.2ms
+	instantiate metavars 0.667ms
+	interpretation 346ms
+	let-to-have transformation 0.212ms
+	linting 7.48ms
+	norm_num 28.7ms
+	parsing 10.4ms
+	process pre-definitions 11.4ms
+	ring 5.19ms
+	share common exprs 3.06ms
+	simp 44.5ms
+	tactic execution 80.7ms
+	type checking 41.4ms
+	typeclass inference 202ms

@@ -1,0 +1,22 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 ThreeRegime/AggregateRefutation.lean -o /workspace/request-project/.lake/runner/lib/lean/ThreeRegime/AggregateRefutation.olean -i /workspace/request-project/.lake/runner/lib/lean/ThreeRegime/AggregateRefutation.ilean
+import took 3.09s
+cumulative profiling times:
+	.olean serialization 51.7ms
+	attribute application 0.0397ms
+	congr simp thm 0.194ms
+	elaboration 18.6ms
+	fix level params 0.056ms
+	import 3.09s
+	initialization 40.2ms
+	instantiate metavars 0.0945ms
+	interpretation 178ms
+	let-to-have transformation 0.0683ms
+	linting 3.76ms
+	norm_num 0.82ms
+	parsing 2.68ms
+	process pre-definitions 1.17ms
+	share common exprs 0.381ms
+	simp 1.46ms
+	tactic execution 17.8ms
+	type checking 27.9ms
+	typeclass inference 26.5ms

@@ -1,0 +1,67 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 PaperIV/RootedVariance.lean -o /workspace/request-project/.lake/runner/lib/lean/PaperIV/RootedVariance.olean -i /workspace/request-project/.lake/runner/lib/lean/PaperIV/RootedVariance.ilean
+PaperIV/RootedVariance.lean:59:0: warning: automatically included section variable(s) unused in theorem `PaperIV.RootedVariance.card_pairs_eq_card_doubled`:
+  [Fintype α]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype α] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+interpretation of Mathlib.Meta.Positivity.evalMul._lam_3._boxed took 136ms
+interpretation of Mathlib.Meta.Positivity.evalMul._lam_3._boxed took 309ms
+PaperIV/RootedVariance.lean:205:26: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+PaperIV/RootedVariance.lean:230:26: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+PaperIV/RootedVariance.lean:205:26: warning: 'ring' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+PaperIV/RootedVariance.lean:230:26: warning: 'ring' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+PaperIV/RootedVariance.lean:282:0: warning: automatically included section variable(s) unused in theorem `PaperIV.RootedVariance.card_pairs_eq_card_doubledK4`:
+  [Fintype α]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype α] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+interpretation of Mathlib.Meta.Positivity.evalMul._lam_3._boxed took 524ms
+PaperIV/RootedVariance.lean:449:26: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+PaperIV/RootedVariance.lean:482:26: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+PaperIV/RootedVariance.lean:449:26: warning: 'ring' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+PaperIV/RootedVariance.lean:482:26: warning: 'ring' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+import took 3.28s
+.olean serialization took 102ms
+cumulative profiling times:
+	.olean serialization 102ms
+	attribute application 0.149ms
+	compilation (IR) 1.35ms
+	compilation (LCNF base) 2.38ms
+	compilation (LCNF mono) 2.23ms
+	congr simp thm 63.3ms
+	dsimp 3.77ms
+	elaboration 143ms
+	fix level params 7.55ms
+	import 3.28s
+	initialization 37.5ms
+	instantiate metavars 204ms
+	interpretation 2.44s
+	let-to-have transformation 0.378ms
+	linting 62.9ms
+	norm_num 26.4ms
+	parsing 36.5ms
+	process pre-definitions 74.9ms
+	ring 43.2ms
+	share common exprs 57ms
+	simp 1.57s
+	tactic execution 1.31s
+	type checking 302ms
+	typeclass inference 1.36s

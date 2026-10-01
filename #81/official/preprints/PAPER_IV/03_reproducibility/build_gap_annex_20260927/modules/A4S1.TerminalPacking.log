@@ -1,0 +1,29 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 A4S1/TerminalPacking.lean -o /workspace/request-project/.lake/runner/lib/lean/A4S1/TerminalPacking.olean -i /workspace/request-project/.lake/runner/lib/lean/A4S1/TerminalPacking.ilean
+tactic execution of Lean.Parser.Tactic.solveByElim took 114ms
+tactic execution of Lean.Parser.Tactic.solveByElim took 114ms
+interpretation of Mathlib.Tactic.Tauto._aux_Mathlib_Tactic_Tauto___elabRules_Mathlib_Tactic_Tauto_tauto_1._boxed took 212ms
+import took 3.41s
+cumulative profiling times:
+	.olean serialization 87.3ms
+	attribute application 0.226ms
+	compilation (IR) 0.749ms
+	compilation (LCNF base) 1.17ms
+	compilation (LCNF mono) 1.24ms
+	congr simp thm 8.33ms
+	elaboration 116ms
+	fix level params 4.68ms
+	import 3.41s
+	initialization 46.3ms
+	instantiate metavars 73.2ms
+	interpretation 978ms
+	let-to-have transformation 0.308ms
+	linting 60.5ms
+	norm_num 0.179ms
+	parsing 23.6ms
+	process pre-definitions 34.2ms
+	ring 2.21ms
+	share common exprs 10.4ms
+	simp 133ms
+	tactic execution 4.31s
+	type checking 142ms
+	typeclass inference 369ms

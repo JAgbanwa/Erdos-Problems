@@ -1,0 +1,98 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 PaperIV/SplitTriangleFactor.lean -o /workspace/request-project/.lake/runner/lib/lean/PaperIV/SplitTriangleFactor.olean -i /workspace/request-project/.lake/runner/lib/lean/PaperIV/SplitTriangleFactor.ilean
+PaperIV/SplitTriangleFactor.lean:75:0: warning: automatically included section variable(s) unused in theorem `PaperIV.SplitTriangleFactor.SplitFactorLabelling.cv_mem`:
+  [Fintype V]
+  [DecidableEq H]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] [DecidableEq H] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+PaperIV/SplitTriangleFactor.lean:78:0: warning: automatically included section variable(s) unused in theorem `PaperIV.SplitTriangleFactor.SplitFactorLabelling.hv_mem`:
+  [Fintype V]
+  [DecidableEq H]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] [DecidableEq H] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+PaperIV/SplitTriangleFactor.lean:100:8: warning: automatically included section variable(s) unused in theorem `PaperIV.SplitTriangleFactor.hubOf_apply`:
+  [Fintype V]
+  [DecidableEq V]
+  [Fintype H]
+  [DecidableEq H]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] [DecidableEq V] [Fintype H] [DecidableEq H] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+PaperIV/SplitTriangleFactor.lean:102:0: warning: automatically included section variable(s) unused in theorem `PaperIV.SplitTriangleFactor.baseOf_toFinset`:
+  [Fintype V]
+  [Fintype H]
+  [DecidableEq H]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] [Fintype H] [DecidableEq H] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+PaperIV/SplitTriangleFactor.lean:141:0: warning: automatically included section variable(s) unused in theorem `PaperIV.SplitTriangleFactor.SplitFactorLabelling.image_pair_disjoint`:
+  [Fintype V]
+  [DecidableEq H]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] [DecidableEq H] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+PaperIV/SplitTriangleFactor.lean:145:0: warning: automatically included section variable(s) unused in theorem `PaperIV.SplitTriangleFactor.SplitFactorLabelling.image_pair_inter_card_le_one`:
+  [Fintype V]
+  [DecidableEq H]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] [DecidableEq H] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+PaperIV/SplitTriangleFactor.lean:235:33: warning: unused variable `s`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+PaperIV/SplitTriangleFactor.lean:240:0: warning: automatically included section variable(s) unused in theorem `PaperIV.SplitTriangleFactor.SplitFactorLabelling.k3Indices_eq_univ`:
+  [Fintype V]
+  [DecidableEq V]
+  [DecidableEq H]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] [DecidableEq V] [DecidableEq H] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+PaperIV/SplitTriangleFactor.lean:245:0: warning: automatically included section variable(s) unused in theorem `PaperIV.SplitTriangleFactor.SplitFactorLabelling.k4Indices_eq_empty`:
+  [Fintype V]
+  [DecidableEq V]
+  [DecidableEq H]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] [DecidableEq V] [DecidableEq H] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+PaperIV/SplitTriangleFactor.lean:345:0: warning: automatically included section variable(s) unused in theorem `PaperIV.SplitTriangleFactor.exists_splitFactorLabelling`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+import took 4.21s
+.olean serialization took 109ms
+cumulative profiling times:
+	.olean serialization 109ms
+	attribute application 1.03ms
+	blocked (unaccounted) 3.08ms
+	compilation (IR) 1.52ms
+	compilation (LCNF base) 3.67ms
+	compilation (LCNF mono) 2.22ms
+	congr simp thm 9.13ms
+	elaboration 296ms
+	fix level params 3.12ms
+	import 4.21s
+	initialization 41.3ms
+	instantiate metavars 12.8ms
+	interpretation 467ms
+	let-to-have transformation 0.771ms
+	linting 52.7ms
+	norm_num 1.04ms
+	parsing 27.5ms
+	process pre-definitions 24.6ms
+	ring 7.9ms
+	share common exprs 9.85ms
+	simp 94.8ms
+	tactic execution 384ms
+	type checking 215ms
+	typeclass inference 822ms

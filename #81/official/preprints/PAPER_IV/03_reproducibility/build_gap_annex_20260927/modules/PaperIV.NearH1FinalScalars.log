@@ -1,0 +1,34 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 PaperIV/NearH1FinalScalars.lean -o /workspace/request-project/.lake/runner/lib/lean/PaperIV/NearH1FinalScalars.olean -i /workspace/request-project/.lake/runner/lib/lean/PaperIV/NearH1FinalScalars.ilean
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_nlinarith_1._boxed took 453ms
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_nlinarith_1._boxed took 401ms
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_nlinarith_1._boxed took 394ms
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_nlinarith_1._boxed took 409ms
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_nlinarith_1._boxed took 436ms
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_nlinarith_1._boxed took 426ms
+type checking took 119ms
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_nlinarith_1._boxed took 261ms
+import took 3.13s
+cumulative profiling times:
+	.olean serialization 68ms
+	attribute application 0.0282ms
+	compilation (IR) 5.51ms
+	compilation (LCNF base) 4.96ms
+	compilation (LCNF mono) 2.41ms
+	congr simp thm 3.52ms
+	elaboration 49.6ms
+	fix level params 2.23ms
+	import 3.13s
+	initialization 43.7ms
+	instantiate metavars 5.64ms
+	interpretation 3.15s
+	let-to-have transformation 0.0929ms
+	linting 37.6ms
+	norm_num 62.1ms
+	parsing 2.74ms
+	process pre-definitions 23.1ms
+	ring 170ms
+	share common exprs 63ms
+	simp 86.1ms
+	tactic execution 54ms
+	type checking 193ms
+	typeclass inference 645ms

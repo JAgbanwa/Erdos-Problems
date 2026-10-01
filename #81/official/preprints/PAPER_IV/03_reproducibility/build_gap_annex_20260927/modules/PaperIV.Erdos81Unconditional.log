@@ -1,0 +1,26 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 PaperIV/Erdos81Unconditional.lean -o /workspace/request-project/.lake/runner/lib/lean/PaperIV/Erdos81Unconditional.olean -i /workspace/request-project/.lake/runner/lib/lean/PaperIV/Erdos81Unconditional.ilean
+import took 4s
+cumulative profiling times:
+	.olean serialization 99.6ms
+	attribute application 0.0524ms
+	compilation (IR) 0.833ms
+	compilation (LCNF base) 0.863ms
+	compilation (LCNF mono) 0.347ms
+	congr simp thm 2.05ms
+	elaboration 19.4ms
+	fix level params 0.165ms
+	import 4s
+	initialization 34.9ms
+	instantiate metavars 1.34ms
+	interpretation 316ms
+	let-to-have transformation 0.0709ms
+	linting 3.01ms
+	norm_num 51ms
+	parsing 3.2ms
+	process pre-definitions 3.95ms
+	ring 13.1ms
+	share common exprs 1.69ms
+	simp 9.08ms
+	tactic execution 24.3ms
+	type checking 14.4ms
+	typeclass inference 84.5ms

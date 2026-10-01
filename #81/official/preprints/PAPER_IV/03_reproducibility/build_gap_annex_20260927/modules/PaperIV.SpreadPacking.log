@@ -1,0 +1,36 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 PaperIV/SpreadPacking.lean -o /workspace/request-project/.lake/runner/lib/lean/PaperIV/SpreadPacking.olean -i /workspace/request-project/.lake/runner/lib/lean/PaperIV/SpreadPacking.ilean
+PaperIV/SpreadPacking.lean:88:0: warning: automatically included section variable(s) unused in theorem `PaperIV.SpreadPacking.spreadWeight_nonneg`:
+  [Fintype P]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype P] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+PaperIV/SpreadPacking.lean:100:0: warning: automatically included section variable(s) unused in theorem `PaperIV.SpreadPacking.load_eq_sum_over_patterns`:
+  [Fintype P]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype P] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_nlinarith_1._boxed took 153ms
+import took 3.37s
+cumulative profiling times:
+	.olean serialization 69.2ms
+	attribute application 0.0834ms
+	congr simp thm 6.81ms
+	elaboration 62.3ms
+	fix level params 0.907ms
+	import 3.37s
+	initialization 38.7ms
+	instantiate metavars 2.47ms
+	interpretation 487ms
+	let-to-have transformation 0.141ms
+	linting 13.6ms
+	norm_num 9.03ms
+	parsing 10.2ms
+	process pre-definitions 11.8ms
+	ring 9.23ms
+	share common exprs 6.21ms
+	simp 14.1ms
+	tactic execution 137ms
+	type checking 28.8ms
+	typeclass inference 291ms

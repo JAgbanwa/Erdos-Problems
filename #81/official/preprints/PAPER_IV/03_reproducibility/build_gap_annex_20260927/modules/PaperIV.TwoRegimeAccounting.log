@@ -1,0 +1,41 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 PaperIV/TwoRegimeAccounting.lean -o /workspace/request-project/.lake/runner/lib/lean/PaperIV/TwoRegimeAccounting.olean -i /workspace/request-project/.lake/runner/lib/lean/PaperIV/TwoRegimeAccounting.ilean
+PaperIV/TwoRegimeAccounting.lean:72:0: warning: automatically included section variable(s) unused in theorem `PaperIV.TwoRegimeAccounting.loss_le_two_regimes`:
+  [Fintype V]
+  [DecidableRel G.Adj]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] [DecidableRel G.Adj] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+PaperIV/TwoRegimeAccounting.lean:72:39: warning: unused variable `hβ`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+PaperIV/TwoRegimeAccounting.lean:126:0: warning: automatically included section variable(s) unused in theorem `PaperIV.TwoRegimeAccounting.loss_eq_assignment_of_all_split`:
+  [Fintype V]
+  [DecidableRel G.Adj]
+  [DecidableEq ι]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] [DecidableRel G.Adj] [DecidableEq ι] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+import took 2.9s
+cumulative profiling times:
+	.olean serialization 52ms
+	attribute application 0.0435ms
+	congr simp thm 1.28ms
+	elaboration 34.6ms
+	fix level params 0.503ms
+	import 2.9s
+	initialization 35.5ms
+	instantiate metavars 1.05ms
+	interpretation 274ms
+	let-to-have transformation 0.077ms
+	linting 9.91ms
+	norm_num 27.1ms
+	parsing 3.92ms
+	process pre-definitions 5.11ms
+	ring 13.7ms
+	share common exprs 3.01ms
+	simp 2.51ms
+	tactic execution 37.7ms
+	type checking 30.7ms
+	typeclass inference 95ms

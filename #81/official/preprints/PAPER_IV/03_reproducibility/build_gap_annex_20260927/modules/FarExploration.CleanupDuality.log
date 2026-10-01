@@ -1,0 +1,29 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 FarExploration/CleanupDuality.lean -o /workspace/request-project/.lake/runner/lib/lean/FarExploration/CleanupDuality.olean -i /workspace/request-project/.lake/runner/lib/lean/FarExploration/CleanupDuality.ilean
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_nlinarith_1._boxed took 105ms
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_nlinarith_1._boxed took 117ms
+import took 3.02s
+cumulative profiling times:
+	.olean serialization 99.1ms
+	attribute application 0.199ms
+	blocked (unaccounted) 30.2ms
+	compilation (IR) 1.01ms
+	compilation (LCNF base) 1.96ms
+	compilation (LCNF mono) 0.964ms
+	congr simp thm 16.1ms
+	elaboration 129ms
+	fix level params 1.16ms
+	import 3.02s
+	initialization 40.5ms
+	instantiate metavars 34.5ms
+	interpretation 776ms
+	let-to-have transformation 0.159ms
+	linting 41.4ms
+	norm_num 3.68ms
+	parsing 24.8ms
+	process pre-definitions 26.5ms
+	ring 60.9ms
+	share common exprs 16.4ms
+	simp 202ms
+	tactic execution 499ms
+	type checking 110ms
+	typeclass inference 496ms

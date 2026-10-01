@@ -1,0 +1,38 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 A4S1/IndepAllObstr.lean -o /workspace/request-project/.lake/runner/lib/lean/A4S1/IndepAllObstr.olean -i /workspace/request-project/.lake/runner/lib/lean/A4S1/IndepAllObstr.ilean
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_nlinarith_1._boxed took 450ms
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_linarith_1._boxed took 105ms
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_nlinarith_1._boxed took 407ms
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_linarith_1._boxed took 113ms
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_linarith_1._boxed took 143ms
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_linarith_1._boxed took 194ms
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_linarith_1._boxed took 130ms
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_linarith_1._boxed took 154ms
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_linarith_1._boxed took 186ms
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_linarith_1._boxed took 210ms
+type checking took 134ms
+import took 8.81s
+.olean serialization took 306ms
+cumulative profiling times:
+	.olean serialization 306ms
+	attribute application 0.231ms
+	compilation (IR) 22ms
+	compilation (LCNF base) 20.7ms
+	compilation (LCNF mono) 9.03ms
+	congr simp thm 41ms
+	elaboration 204ms
+	fix level params 8.51ms
+	import 8.81s
+	initialization 50.9ms
+	instantiate metavars 120ms
+	interpretation 4.48s
+	let-to-have transformation 0.608ms
+	linting 95.4ms
+	norm_num 1.6s
+	parsing 28.9ms
+	process pre-definitions 77.3ms
+	ring 269ms
+	share common exprs 118ms
+	simp 860ms
+	tactic execution 892ms
+	type checking 359ms
+	typeclass inference 3.52s

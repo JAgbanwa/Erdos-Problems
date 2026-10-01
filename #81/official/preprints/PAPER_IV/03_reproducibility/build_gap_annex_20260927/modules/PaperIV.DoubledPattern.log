@@ -1,0 +1,23 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 PaperIV/DoubledPattern.lean -o /workspace/request-project/.lake/runner/lib/lean/PaperIV/DoubledPattern.olean -i /workspace/request-project/.lake/runner/lib/lean/PaperIV/DoubledPattern.ilean
+import took 3.98s
+cumulative profiling times:
+	.olean serialization 67.1ms
+	attribute application 0.0578ms
+	congr simp thm 5.52ms
+	elaboration 126ms
+	fix level params 0.911ms
+	import 3.98s
+	initialization 37ms
+	instantiate metavars 39.3ms
+	interpretation 642ms
+	let-to-have transformation 0.237ms
+	linting 28.6ms
+	norm_num 11.5ms
+	parsing 10.8ms
+	process pre-definitions 17.6ms
+	ring 78.2ms
+	share common exprs 17.6ms
+	simp 46.5ms
+	tactic execution 232ms
+	type checking 33.8ms
+	typeclass inference 250ms

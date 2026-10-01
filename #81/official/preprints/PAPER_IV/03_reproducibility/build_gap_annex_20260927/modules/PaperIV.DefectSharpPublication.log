@@ -1,0 +1,32 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 PaperIV/DefectSharpPublication.lean -o /workspace/request-project/.lake/runner/lib/lean/PaperIV/DefectSharpPublication.olean -i /workspace/request-project/.lake/runner/lib/lean/PaperIV/DefectSharpPublication.ilean
+simp took 103ms
+simp took 105ms
+simp took 103ms
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_nlinarith_1._boxed took 2.13s
+import took 9.24s
+.olean serialization took 291ms
+cumulative profiling times:
+	.olean serialization 291ms
+	attribute application 0.0711ms
+	compilation (IR) 10.3ms
+	compilation (LCNF base) 10.9ms
+	compilation (LCNF mono) 4.73ms
+	congr simp thm 24.6ms
+	dsimp 2.53ms
+	elaboration 34.5ms
+	fix level params 0.5ms
+	import 9.24s
+	initialization 34.6ms
+	instantiate metavars 9.72ms
+	interpretation 2.58s
+	let-to-have transformation 0.457ms
+	linting 15.5ms
+	norm_num 29.5ms
+	parsing 6.65ms
+	process pre-definitions 8.6ms
+	ring 41.2ms
+	share common exprs 8.5ms
+	simp 814ms
+	tactic execution 244ms
+	type checking 337ms
+	typeclass inference 1.24s

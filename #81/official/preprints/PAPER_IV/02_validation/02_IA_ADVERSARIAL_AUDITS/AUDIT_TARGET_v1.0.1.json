@@ -1,0 +1,184 @@
+{
+  "version": "1.0.1",
+  "handoff_revision": "r3",
+  "prepared": "2026-09-28",
+  "source_cut": "piv-v1.0-f1769273dd2c",
+  "status": "READY_FOR_EXTERNAL_AUDIT",
+  "external_audit": "NOT_STARTED",
+  "previous_external_audit": {
+    "revision": "r2",
+    "verdict": "FAIL",
+    "E4": "NOT_RUN",
+    "finding": "F-01 attribution; correction requires independent confirmation"
+  },
+  "paths_relative_to": "preprints/PAPER_IV",
+  "files": [
+    {
+      "path": "05_formalization/LEAN_SOURCE_SNAPSHOT_v1.0.zip",
+      "sha256": "0a13c01cc4cf0198d5d138082d45b25df4c5ac0684c0ed85e7cc758575f8a7dd",
+      "bytes": 1582166
+    },
+    {
+      "path": "05_formalization/LEAN_BOUNDED_GAP_ANNEX_v1.0.zip",
+      "sha256": "2847a422865e06880d457ea806aae5b9f749d22359eff325349c09c01cb4837d",
+      "bytes": 103055
+    },
+    {
+      "path": "02_validation/01_INTERNAL_AUDITS/run_20260927_v1.0_f1769273dd2c/30_PACKAGE/INTERNAL_AUDIT_piv-v1.0-f1769273dd2c.zip",
+      "sha256": "1911f29e1072accfe8df4fbec0a3b02d1cd9ef274a06bd1957f9b61034301847",
+      "bytes": 21326279
+    },
+    {
+      "path": "02_validation/02_IA_ADVERSARIAL_AUDITS/run_2026-09-28_v1.0.1_r2/40_PACKAGE/EXTERNAL_AUDIT_run_2026-09-28_v1.0.1_r2.zip",
+      "sha256": "06a31a2765a29028ca34159bb919ae29b43f0a08071be0bef14972bd1bbe9097",
+      "bytes": 25472709
+    },
+    {
+      "path": "01_manuscript/v1.0.1_candidate/PAPER_IV_preprint_v1.0.1_en.md",
+      "sha256": "d2175d22d2388e718d00cee1cd09571d3075820cddae3af0b92ec3638abe03fb",
+      "bytes": 157391
+    },
+    {
+      "path": "01_manuscript/v1.0.1_candidate/PAPER_IV_preprint_v1.0.1_en.tex",
+      "sha256": "8a197ec9565ad15126c3450b0bcfd37c80140eea33ec8d949bcdee3b1a7517b3",
+      "bytes": 198487
+    },
+    {
+      "path": "01_manuscript/v1.0.1_candidate/PAPER_IV_preprint_v1.0.1_en.pdf",
+      "sha256": "c88a3f7fe890e6e7d562a242aea1a625f02a80b761e2b7966c9b7f62a84a5f3f",
+      "bytes": 372313
+    },
+    {
+      "path": "01_manuscript/v1.0.1_candidate/PAPER_IV_preprint_v1.0.1_es.md",
+      "sha256": "4c2e28d6c0b443c1dcce88658ae45258b0aee93078a8406688d4896a342d952f",
+      "bytes": 166653
+    },
+    {
+      "path": "01_manuscript/v1.0.1_candidate/PAPER_IV_preprint_v1.0.1_es.tex",
+      "sha256": "55f9b39fd7375111cc946b5c715ac4a3279479d32bf0513728d18a4fbdaac1b4",
+      "bytes": 207966
+    },
+    {
+      "path": "01_manuscript/v1.0.1_candidate/PAPER_IV_preprint_v1.0.1_es.pdf",
+      "sha256": "7a0b9acaf71442b3cd45000b760c975628f711c5cf4a4a049f66bc7d54f663d2",
+      "bytes": 378616
+    },
+    {
+      "path": "03_reproducibility/build_v1.0_20260927/SOURCES.json",
+      "sha256": "f1769273dd2c5ba6d3e5f9cc50874aa292879b0e19952c387bf4908c52f5f07d",
+      "bytes": 84479
+    },
+    {
+      "path": "03_reproducibility/build_v1.0_20260927/RESULTS.json",
+      "sha256": "350f0a25c258c6398cfc71cee8ce52be998a262bbd248256b0951845e44ca830",
+      "bytes": 199864
+    },
+    {
+      "path": "03_reproducibility/build_v1.0_20260927/SUMMARY.json",
+      "sha256": "89ff24233146a41bdf141c514d5182153406d2aa0a834b9c177e0256df4a01b3",
+      "bytes": 225
+    },
+    {
+      "path": "03_reproducibility/build_v1.0_20260927/RUN_META.json",
+      "sha256": "b9a56836d3429d45d2d0580d5390799e6a7ea8fb29a299f70622f8cc7265d22e",
+      "bytes": 4056
+    },
+    {
+      "path": "03_reproducibility/build_v1.0_20260927/BUILD.exit",
+      "sha256": "c1e97067c5f479a44a6f57297a0a8f87a59d181c3c529910f8bf059094bc3abb",
+      "bytes": 13
+    },
+    {
+      "path": "01_manuscript/v1.0.1_candidate/MANIFEST.json",
+      "sha256": "9c23e63a125798b3bdd8de30dece13a66c9472f790d934686f568a29a1985a60",
+      "bytes": 26051
+    },
+    {
+      "path": "01_manuscript/v1.0.1_candidate/MANIFEST_SHA256.md",
+      "sha256": "4c5107e0aaa5cd1eff7232e966c9d12e7754af890303ddb50d14483f1acde929",
+      "bytes": 15719
+    },
+    {
+      "path": "04_integrity/MANUSCRIPT_CANDIDATE_v1.0.1.zip",
+      "sha256": "0ee5fed8c2f6f0f2e7554e11e40cd6d8dbcc5640b2dd491d941c1ae06d7ade7d",
+      "bytes": 27634702
+    },
+    {
+      "path": "04_integrity/MANUSCRIPT_CANDIDATE_v1.0.1.zip.sha256",
+      "sha256": "578bc0e9bdeb8e95e8f8b9ec954de56e5d396b6fde7301074c33df2040353307",
+      "bytes": 99
+    },
+    {
+      "path": "02_validation/02_IA_ADVERSARIAL_AUDITS/EXTERNAL_ADVERSARIAL_AUDIT_REQUEST_v1.0.1.md",
+      "sha256": "9d3bd0f7349e1a22bc7a9037935f7813433f1df71eb547fb7173f622d4257093",
+      "bytes": 24239
+    },
+    {
+      "path": "02_validation/02_IA_ADVERSARIAL_AUDITS/verify_audit_target.py",
+      "sha256": "78040a645d1fa75fc7ab9818819bed11599cf973895c05604ebe9cb12f0bcb16",
+      "bytes": 2159
+    },
+    {
+      "path": "02_validation/02_IA_ADVERSARIAL_AUDITS/LOCAL_INPUT_SCOPE_v1.0.1.json",
+      "sha256": "258c97e66a2e9901701a290e4a9352961bff7293dda734eefe76664a650e9919",
+      "bytes": 5061
+    },
+    {
+      "path": "04_integrity/seal_editorial_candidate.py",
+      "sha256": "d58bb0b073febdff9c58662c689e750ba25725555159d391aae746342d6f0052",
+      "bytes": 8554
+    },
+    {
+      "path": "04_integrity/revision_r3/AUTHOR_RESPONSE_r2.md",
+      "sha256": "1afeef0d21982d68d93de9ff8bee9d5dce887df0493a6417a841c53db47d149e",
+      "bytes": 7652
+    }
+  ],
+  "candidate_manifest": "01_manuscript/v1.0.1_candidate/MANIFEST.json",
+  "local_input_scope": "02_validation/02_IA_ADVERSARIAL_AUDITS/LOCAL_INPUT_SCOPE_v1.0.1.json",
+  "execution_order": [
+    "E0 + lightweight environment check",
+    "E7 attribution recheck + E1/E3 static + E2",
+    "E5 + E6 + preliminary E8",
+    "pre-build checkpoint",
+    "E4 full build + finish E3/E8 + recheck E0"
+  ],
+  "author_build": {
+    "modules": 504,
+    "targets": [
+      "PaperIV",
+      "PaperIV.Audit",
+      "PaperIV.ConeAudit",
+      "PaperIV.PublicationIncrementAudit",
+      "A4S1.IndepAllAudit",
+      "ThreeRegime.AxiomCheck",
+      "FarExploration.AxiomCheck",
+      "PaperIV.CliqueTreeAudit",
+      "E17.ImprovedFarRoundingAudit",
+      "E17.ExplicitFarAudit",
+      "PaperIV.ExplicitThresholdAudit",
+      "ReleaseExportCheck",
+      "PaperIVEditorial.ConstructorBudgetAudit"
+    ],
+    "export_checks": 195,
+    "verification_here": "Existing records and source identity only; no new Lean build"
+  },
+  "pdf_pages": {
+    "en": 52,
+    "es": 53
+  },
+  "archive_member_counts": {
+    "05_formalization/LEAN_SOURCE_SNAPSHOT_v1.0.zip": 508,
+    "05_formalization/LEAN_BOUNDED_GAP_ANNEX_v1.0.zip": 40,
+    "02_validation/01_INTERNAL_AUDITS/run_20260927_v1.0_f1769273dd2c/30_PACKAGE/INTERNAL_AUDIT_piv-v1.0-f1769273dd2c.zip": 2480,
+    "02_validation/02_IA_ADVERSARIAL_AUDITS/run_2026-09-28_v1.0.1_r2/40_PACKAGE/EXTERNAL_AUDIT_run_2026-09-28_v1.0.1_r2.zip": 198
+  },
+  "rules": [
+    "Do not install or clone another Mathlib.",
+    "Read only declared inputs; log additional access and model/agent overlap.",
+    "Defer the full build until the no-blocker pre-build checkpoint.",
+    "Stop on confirmed blockers; preserve partial reports and immutable targets.",
+    "Use an isolated project build, not author-built project oleans.",
+    "No publication, push, tag or deposit authorized."
+  ]
+}

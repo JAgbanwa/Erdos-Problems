@@ -1,0 +1,26 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 PaperIV/WeightedCoin.lean -o /workspace/request-project/.lake/runner/lib/lean/PaperIV/WeightedCoin.olean -i /workspace/request-project/.lake/runner/lib/lean/PaperIV/WeightedCoin.ilean
+import took 3.75s
+cumulative profiling times:
+	.olean serialization 65.6ms
+	attribute application 0.0869ms
+	compilation (IR) 0.268ms
+	compilation (LCNF base) 0.616ms
+	compilation (LCNF mono) 0.286ms
+	congr simp thm 4.3ms
+	elaboration 37ms
+	fix level params 0.527ms
+	import 3.75s
+	initialization 35.9ms
+	instantiate metavars 0.744ms
+	interpretation 242ms
+	let-to-have transformation 0.107ms
+	linting 8.74ms
+	norm_num 1.17ms
+	parsing 4.85ms
+	process pre-definitions 6.25ms
+	ring 5.28ms
+	share common exprs 1.48ms
+	simp 73.6ms
+	tactic execution 60.7ms
+	type checking 18.5ms
+	typeclass inference 125ms

@@ -1,0 +1,34 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 PaperIV/SeparationAbsorptionRoute.lean -o /workspace/request-project/.lake/runner/lib/lean/PaperIV/SeparationAbsorptionRoute.olean -i /workspace/request-project/.lake/runner/lib/lean/PaperIV/SeparationAbsorptionRoute.ilean
+PaperIV/SeparationAbsorptionRoute.lean:58:0: warning: automatically included section variable(s) unused in theorem `PaperIV.SeparationAbsorptionRoute.AbsorbableCriticalStructure.exists_target_partition`:
+  [LinearOrder V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [LinearOrder V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+import took 4.12s
+.olean serialization took 107ms
+cumulative profiling times:
+	.olean serialization 107ms
+	attribute application 0.0493ms
+	blocked (unaccounted) 15ms
+	compilation (IR) 1.16ms
+	compilation (LCNF base) 1.03ms
+	compilation (LCNF mono) 0.865ms
+	congr simp thm 1.35ms
+	dsimp 0.554ms
+	elaboration 45.3ms
+	fix level params 0.115ms
+	import 4.12s
+	initialization 37.5ms
+	instantiate metavars 0.543ms
+	interpretation 243ms
+	let-to-have transformation 0.0691ms
+	linting 4.28ms
+	norm_num 0.17ms
+	parsing 3.84ms
+	process pre-definitions 1.36ms
+	share common exprs 0.657ms
+	simp 0.664ms
+	tactic execution 17.3ms
+	type checking 14.1ms
+	typeclass inference 52.8ms

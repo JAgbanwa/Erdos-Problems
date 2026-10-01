@@ -1,0 +1,24 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 PaperIV/LiftedPieceBudget.lean -o /workspace/request-project/.lake/runner/lib/lean/PaperIV/LiftedPieceBudget.olean -i /workspace/request-project/.lake/runner/lib/lean/PaperIV/LiftedPieceBudget.ilean
+import took 3.46s
+cumulative profiling times:
+	.olean serialization 99.8ms
+	attribute application 0.32ms
+	compilation (IR) 1.66ms
+	compilation (LCNF base) 3.7ms
+	compilation (LCNF mono) 2.49ms
+	congr simp thm 7.16ms
+	elaboration 171ms
+	fix level params 3.22ms
+	import 3.46s
+	initialization 38.7ms
+	instantiate metavars 15.5ms
+	interpretation 432ms
+	let-to-have transformation 0.459ms
+	linting 49.7ms
+	parsing 26.4ms
+	process pre-definitions 23.4ms
+	share common exprs 7.82ms
+	simp 97ms
+	tactic execution 386ms
+	type checking 219ms
+	typeclass inference 396ms

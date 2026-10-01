@@ -1,0 +1,62 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 PaperIV/ChordalCopy.lean -o /workspace/request-project/.lake/runner/lib/lean/PaperIV/ChordalCopy.olean -i /workspace/request-project/.lake/runner/lib/lean/PaperIV/ChordalCopy.ilean
+PaperIV/ChordalCopy.lean:55:0: warning: automatically included section variable(s) unused in theorem `PaperIV.classCopy_neighbor_mem`:
+  [DecidableEq V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+PaperIV/ChordalCopy.lean:64:0: warning: automatically included section variable(s) unused in theorem `PaperIV.classCopy_adj_of_neighborFinset_ne`:
+  [DecidableEq V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+PaperIV/ChordalCopy.lean:75:0: warning: automatically included section variable(s) unused in theorem `PaperIV.path_edge_start_eq_getVert_one`:
+  [Fintype V]
+  [DecidableEq V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] [DecidableEq V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+tactic execution of Lean.Parser.Tactic.grind took 195ms
+grind canon took 104ms
+grind canon took 104ms
+grind canon took 233ms
+grind canon took 236ms
+import took 3.13s
+cumulative profiling times:
+	.olean serialization 33.3ms
+	aesop 132ms
+	attribute application 0.0968ms
+	blocked (unaccounted) 3.43s
+	compilation (IR) 22.8ms
+	compilation (LCNF base) 24.6ms
+	compilation (LCNF mono) 10.7ms
+	congr simp thm 50.1ms
+	elaboration 58.7ms
+	fix level params 3.08ms
+	grind 230ms
+	grind ac 0.0521ms
+	grind canon 1.36s
+	grind cutsat 0.48ms
+	grind ematch 47ms
+	grind linarith 0.0332ms
+	grind mark subsingleton 31.3ms
+	grind ring 0.273ms
+	grind simp 240ms
+	grind typeclass inference 147ms
+	import 3.13s
+	initialization 37.7ms
+	instantiate metavars 33.5ms
+	interpretation 432ms
+	let-to-have transformation 0.114ms
+	linting 28.8ms
+	norm_num 1.72ms
+	parsing 10.4ms
+	process pre-definitions 16.7ms
+	ring 9.98ms
+	share common exprs 7.78ms
+	simp 1.45s
+	tactic execution 712ms
+	type checking 88ms
+	typeclass inference 705ms

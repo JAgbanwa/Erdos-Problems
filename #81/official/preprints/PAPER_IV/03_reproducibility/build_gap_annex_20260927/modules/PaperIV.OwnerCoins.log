@@ -1,0 +1,37 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 PaperIV/OwnerCoins.lean -o /workspace/request-project/.lake/runner/lib/lean/PaperIV/OwnerCoins.olean -i /workspace/request-project/.lake/runner/lib/lean/PaperIV/OwnerCoins.ilean
+PaperIV/OwnerCoins.lean:56:0: warning: automatically included section variable(s) unused in theorem `PaperIV.OwnerCoins.ownerDist_nonneg`:
+  [Fintype π]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype π] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+PaperIV/OwnerCoins.lean:158:0: warning: automatically included section variable(s) unused in theorem `PaperIV.OwnerCoins.cond_all_owned`:
+  [Fintype ρ]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype ρ] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+import took 3.27s
+cumulative profiling times:
+	.olean serialization 78.9ms
+	attribute application 0.0988ms
+	compilation (IR) 0.852ms
+	compilation (LCNF base) 1.49ms
+	compilation (LCNF mono) 0.927ms
+	congr simp thm 6.25ms
+	elaboration 48.5ms
+	fix level params 0.701ms
+	import 3.27s
+	initialization 36.2ms
+	instantiate metavars 2.47ms
+	interpretation 304ms
+	let-to-have transformation 0.141ms
+	linting 11ms
+	norm_num 0.582ms
+	parsing 9.41ms
+	process pre-definitions 7.54ms
+	share common exprs 2.65ms
+	simp 50.7ms
+	tactic execution 103ms
+	type checking 30.6ms
+	typeclass inference 244ms

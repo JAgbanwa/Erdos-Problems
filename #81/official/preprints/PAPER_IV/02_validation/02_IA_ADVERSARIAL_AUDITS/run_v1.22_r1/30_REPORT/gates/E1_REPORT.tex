@@ -1,0 +1,100 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+\documentclass[
+]{article}
+\usepackage{xcolor}
+\usepackage{amsmath,amssymb}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math} % this also loads fontspec
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+\usepackage{lmodern}
+\ifPDFTeX\else
+  % xetex/luatex font selection
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\usepackage{bookmark}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same}
+% fallback for those not using the hyperref driver hyperxmp:
+\makeatletter
+\@ifundefined{xmpquote}{\newcommand{\xmpquote}[1]{#1}}{}
+\makeatother
+\hypersetup{
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+
+\author{}
+\date{}
+
+\begin{document}
+
+\section{Gate E1 report --- run\_v1.22\_r1 (Paper IV
+v1.22-r1)}\label{gate-e1-report--run_v122_r1-paper-iv-v122-r1}
+
+Verdict: \textbf{PASS}. Evidence: \texttt{20\_EVIDENCE/E1/}. Auditor:
+Claude Opus 5.5, same session as run\_v1.2\_r1/run\_v1.21\_r1; no Lean
+executed.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section{E1 --- Statements, constants and tags
+(regression)}\label{e1--statements-constants-and-tags-regression}
+
+The basis is the auditor\textquotesingle s own diff
+(\texttt{20\_EVIDENCE/E2/auditor\_diff\_*.diff}) and
+\texttt{E6\_PARITY.json}.
+
+\begin{itemize}
+\tightlist
+\item
+  No theorem, proposition, lemma or corollary statement changed in
+  either language; the theorem-heading line counts are unchanged (33 EN,
+  34 ES).
+\item
+  Equation tags are identical to v1.21 in both languages, and no display
+  formula was removed. The 7 added displays are the C.3 derivation (EN
+  and ES identical).
+\item
+  The final constants are unchanged: k₀ = 3·10¹⁹+1, h, N = T(h+7), b =
+  N² ≤ T(h+8), c\_poly, c\_far, c\_T, P(s), γ\_s, A\_s and the
+  thresholds of (F.1). C.3 now derives T(h+7) (E2), and the value is not
+  modified.
+\item
+  NEW-01 (EN 5.1 heading, A.2 row, ES Lemma 3.2 heading) is fixed. The
+  remaining ES §7.2 \texttt{Model} formatting residual is recorded under
+  E6.
+\item
+  X-17 and X-18 are kept as OBSERVATIONS (unchanged; the author made no
+  change).
+\end{itemize}
+
+\textbf{E1 verdict: PASS.}
+
+\end{document}

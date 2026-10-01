@@ -1,0 +1,24 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 A4S1/IndepLedger.lean -o /workspace/request-project/.lake/runner/lib/lean/A4S1/IndepLedger.olean -i /workspace/request-project/.lake/runner/lib/lean/A4S1/IndepLedger.ilean
+import took 3.39s
+cumulative profiling times:
+	.olean serialization 70.8ms
+	attribute application 0.0737ms
+	compilation (IR) 0.475ms
+	compilation (LCNF base) 0.736ms
+	compilation (LCNF mono) 0.862ms
+	congr simp thm 2.52ms
+	elaboration 98.9ms
+	fix level params 1.42ms
+	import 3.39s
+	initialization 38.5ms
+	instantiate metavars 16.1ms
+	interpretation 325ms
+	let-to-have transformation 0.148ms
+	linting 17.6ms
+	parsing 10.6ms
+	process pre-definitions 9.26ms
+	share common exprs 3.41ms
+	simp 40.4ms
+	tactic execution 149ms
+	type checking 24.7ms
+	typeclass inference 84.1ms

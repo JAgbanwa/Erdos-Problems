@@ -1,0 +1,24 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 PaperIV/SplitEdgeCount.lean -o /workspace/request-project/.lake/runner/lib/lean/PaperIV/SplitEdgeCount.olean -i /workspace/request-project/.lake/runner/lib/lean/PaperIV/SplitEdgeCount.ilean
+import took 3.26s
+cumulative profiling times:
+	.olean serialization 48.2ms
+	attribute application 0.536ms
+	compilation (IR) 0.83ms
+	compilation (LCNF base) 2.8ms
+	compilation (LCNF mono) 1.47ms
+	congr simp thm 1.41ms
+	elaboration 34.7ms
+	fix level params 0.706ms
+	import 3.26s
+	initialization 50.3ms
+	instantiate metavars 3.54ms
+	interpretation 244ms
+	let-to-have transformation 0.126ms
+	linting 12.7ms
+	parsing 5.54ms
+	process pre-definitions 5.98ms
+	share common exprs 1.48ms
+	simp 10.6ms
+	tactic execution 60.2ms
+	type checking 12.6ms
+	typeclass inference 39.4ms

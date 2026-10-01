@@ -1,0 +1,45 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 PaperIV/DiscardCounts.lean -o /workspace/request-project/.lake/runner/lib/lean/PaperIV/DiscardCounts.olean -i /workspace/request-project/.lake/runner/lib/lean/PaperIV/DiscardCounts.ilean
+PaperIV/DiscardCounts.lean:78:0: warning: automatically included section variable(s) unused in theorem `PaperIV.DiscardCounts.card_interedges_le_of_density`:
+  [DecidableEq α]
+  [Fintype α]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq α] [Fintype α] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+PaperIV/DiscardCounts.lean:89:0: warning: automatically included section variable(s) unused in theorem `PaperIV.DiscardCounts.card_biUnion_pairs_le`:
+  [Fintype α]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype α] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_nlinarith_1._boxed took 343ms
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_nlinarith_1._boxed took 484ms
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_nlinarith_1._boxed took 301ms
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_nlinarith_1._boxed took 395ms
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_nlinarith_1._boxed took 307ms
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_nlinarith_1._boxed took 117ms
+import took 3.28s
+cumulative profiling times:
+	.olean serialization 71.1ms
+	attribute application 0.148ms
+	compilation (IR) 5.77ms
+	compilation (LCNF base) 7.34ms
+	compilation (LCNF mono) 5.6ms
+	congr simp thm 14.7ms
+	elaboration 82ms
+	fix level params 2.24ms
+	import 3.28s
+	initialization 38.8ms
+	instantiate metavars 5.68ms
+	interpretation 2.63s
+	let-to-have transformation 0.215ms
+	linting 34.6ms
+	norm_num 65.6ms
+	parsing 15.4ms
+	process pre-definitions 21.2ms
+	ring 66.9ms
+	share common exprs 13.3ms
+	simp 74.6ms
+	tactic execution 271ms
+	type checking 166ms
+	typeclass inference 1.24s

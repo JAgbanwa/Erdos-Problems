@@ -1,0 +1,24 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 A4S1/IndepHostingTools.lean -o /workspace/request-project/.lake/runner/lib/lean/A4S1/IndepHostingTools.olean -i /workspace/request-project/.lake/runner/lib/lean/A4S1/IndepHostingTools.ilean
+import took 3.92s
+cumulative profiling times:
+	.olean serialization 86.4ms
+	attribute application 0.654ms
+	compilation (IR) 0.408ms
+	compilation (LCNF base) 1.13ms
+	compilation (LCNF mono) 0.482ms
+	congr simp thm 3.04ms
+	elaboration 83.1ms
+	fix level params 1.86ms
+	import 3.92s
+	initialization 39.9ms
+	instantiate metavars 21.8ms
+	interpretation 312ms
+	let-to-have transformation 0.193ms
+	linting 28.5ms
+	parsing 12.7ms
+	process pre-definitions 13.2ms
+	share common exprs 3.66ms
+	simp 31.1ms
+	tactic execution 284ms
+	type checking 77.8ms
+	typeclass inference 118ms

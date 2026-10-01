@@ -1,0 +1,49 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 Nibble/TightSchedule.lean -o /workspace/request-project/.lake/runner/lib/lean/Nibble/TightSchedule.olean -i /workspace/request-project/.lake/runner/lib/lean/Nibble/TightSchedule.ilean
+Nibble/TightSchedule.lean:40:22: warning: unused variable `hgam8`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+tactic execution of Mathlib.Tactic.nlinarith took 273ms
+tactic execution of Mathlib.Tactic.nlinarith took 289ms
+tactic execution of Mathlib.Tactic.nlinarith took 269ms
+tactic execution of Mathlib.Tactic.nlinarith took 266ms
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_nlinarith_1._boxed took 582ms
+Nibble/TightSchedule.lean:51:22: warning: unused variable `hgam8`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+tactic execution of Lean.Parser.Tactic.refine took 121ms
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_linarith_1._boxed took 175ms
+tactic execution of Lean.Parser.Tactic.rewriteSeq took 123ms
+tactic execution of Lean.Parser.Tactic.rewriteSeq took 208ms
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_linarith_1._boxed took 127ms
+tactic execution of Lean.Parser.Tactic.rewriteSeq took 107ms
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_linarith_1._boxed took 123ms
+tactic execution of Lean.Parser.Tactic.apply took 117ms
+instantiate metavars took 572ms
+share common exprs took 220ms
+type checking took 268ms
+import took 4.1s
+.olean serialization took 122ms
+cumulative profiling times:
+	.olean serialization 122ms
+	attribute application 0.0431ms
+	compilation (IR) 9.22ms
+	compilation (LCNF base) 8.53ms
+	compilation (LCNF mono) 3.57ms
+	congr simp thm 17.3ms
+	elaboration 144ms
+	fix level params 9.29ms
+	import 4.1s
+	initialization 42.2ms
+	instantiate metavars 585ms
+	interpretation 4.02s
+	let-to-have transformation 0.118ms
+	linting 73.1ms
+	norm_num 1.05s
+	parsing 24.4ms
+	process pre-definitions 115ms
+	ring 440ms
+	share common exprs 258ms
+	simp 165ms
+	tactic execution 2.9s
+	type checking 387ms
+	typeclass inference 3.46s

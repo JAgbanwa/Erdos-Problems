@@ -1,0 +1,61 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 PaperIV/RD09PaddedHostBase.lean -o /workspace/request-project/.lake/runner/lib/lean/PaperIV/RD09PaddedHostBase.olean -i /workspace/request-project/.lake/runner/lib/lean/PaperIV/RD09PaddedHostBase.ilean
+PaperIV/RD09PaddedHostBase.lean:140:0: warning: automatically included section variable(s) unused in theorem `PaperIV.RD09PaddedHostBase.mem_paddedHostBase`:
+  [Fintype V]
+  [DecidableEq I]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] [DecidableEq I] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+PaperIV/RD09PaddedHostBase.lean:146:0: warning: automatically included section variable(s) unused in theorem `PaperIV.RD09PaddedHostBase.card_paddedHostBase`:
+  [Fintype V]
+  [DecidableEq I]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] [DecidableEq I] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+PaperIV/RD09PaddedHostBase.lean:177:0: warning: automatically included section variable(s) unused in theorem `PaperIV.RD09PaddedHostBase.compatiblePaddedHostBase_subset`:
+  [DecidableEq I]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq I] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+PaperIV/RD09PaddedHostBase.lean:181:0: warning: automatically included section variable(s) unused in theorem `PaperIV.RD09PaddedHostBase.card_compatiblePaddedHostBase_add_incompat`:
+  [DecidableEq I]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq I] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+PaperIV/RD09PaddedHostBase.lean:200:0: warning: automatically included section variable(s) unused in theorem `PaperIV.RD09PaddedHostBase.isLiteralMatching_paddedHostBase`:
+  [Fintype V]
+  [DecidableEq I]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] [DecidableEq I] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+PaperIV/RD09PaddedHostBase.lean:208:0: warning: automatically included section variable(s) unused in theorem `PaperIV.RD09PaddedHostBase.disjoint_paddedHostBase`:
+  [Fintype V]
+  [DecidableEq I]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] [DecidableEq I] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+import took 2.82s
+cumulative profiling times:
+	.olean serialization 81.3ms
+	attribute application 0.331ms
+	congr simp thm 7.81ms
+	elaboration 198ms
+	fix level params 1.32ms
+	import 2.82s
+	initialization 37.5ms
+	instantiate metavars 1.44ms
+	interpretation 302ms
+	let-to-have transformation 0.792ms
+	linting 34.3ms
+	parsing 14.1ms
+	process pre-definitions 12.6ms
+	share common exprs 3.52ms
+	simp 64.1ms
+	tactic execution 112ms
+	type checking 30.7ms
+	typeclass inference 809ms

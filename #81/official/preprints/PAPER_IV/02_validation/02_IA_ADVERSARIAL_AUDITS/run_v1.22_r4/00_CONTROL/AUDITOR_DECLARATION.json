@@ -1,0 +1,8 @@
+{"run": "run_v1.22_r4", "revision": "v1.22-r4", "manuscript_version": "1.22", "started_utc": "2026-10-01T16:30:05Z",
+ "owner_request": "Owner requested in chat: 'ejecuta la rerevision' with the path to EXTERNAL_ADVERSARIAL_REVALIDATION_v1.22_r4.md.",
+ "auditor_model": "Claude Opus 5.5 (claude-opus-5-5)", "provider_family": "Anthropic (Claude)",
+ "session": "Continuation of the SAME Claude Code session that produced run_v1.2_r1, run_v1.21_r1 and run_v1.22_r1..r3 (with context compaction). Not a new session.",
+ "prior_exposure": "Full: this auditor wrote all prior reports, including NEW-05. Not blind.",
+ "cross_family_independence": false,
+ "dynamic_execution": "No lean, lake, leanchecker, kernel replay or build. Read-only Python scripts (hashing, CRC, diff, PyMuPDF), the author's log verifier with own output, and the pandoc+PyMuPDF report renderer.",
+ "prohibitions_acknowledged": ["no build", "no modification of inputs or prior runs", "no install", "no publish/external service", "write only under run_v1.22_r4", "at most one heavy process"]}

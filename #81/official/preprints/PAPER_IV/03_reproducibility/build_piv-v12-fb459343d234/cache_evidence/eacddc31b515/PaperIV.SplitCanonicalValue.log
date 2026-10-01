@@ -1,0 +1,19 @@
+$ c:\Users\jtraverso\.elan\toolchains\leanprover--lean4---v4.28.0\bin\lean.exe -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false PaperIV/SplitCanonicalValue.lean -o C:\Users\jtraverso\e81p4\opt_build_20260927\.lake\runner\lib\lean\PaperIV\SplitCanonicalValue.olean -i C:\Users\jtraverso\e81p4\opt_build_20260927\.lake\runner\lib\lean\PaperIV\SplitCanonicalValue.ilean
+PaperIV/SplitCanonicalValue.lean:24:0: warning: automatically included section variable(s) unused in theorem `PaperIV.SplitCanonicalValue.gainF_famK3`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+PaperIV/SplitCanonicalValue.lean:30:0: warning: automatically included section variable(s) unused in theorem `PaperIV.SplitCanonicalValue.gainF_famK4`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+PaperIV/SplitCanonicalValue.lean:37:0: warning: automatically included section variable(s) unused in theorem `PaperIV.SplitCanonicalValue.gainF_famK4core`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`

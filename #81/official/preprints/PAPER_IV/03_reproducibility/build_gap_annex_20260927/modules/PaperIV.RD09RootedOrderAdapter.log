@@ -1,0 +1,59 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 PaperIV/RD09RootedOrderAdapter.lean -o /workspace/request-project/.lake/runner/lib/lean/PaperIV/RD09RootedOrderAdapter.olean -i /workspace/request-project/.lake/runner/lib/lean/PaperIV/RD09RootedOrderAdapter.ilean
+PaperIV/RD09RootedOrderAdapter.lean:41:4: warning: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+PaperIV/RD09RootedOrderAdapter.lean:43:4: warning: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+PaperIV/RD09RootedOrderAdapter.lean:36:0: warning: automatically included section variable(s) unused in theorem `PaperIV.RD09RootedOrderAdapter.edge_eq_oriented`:
+  [Fintype A]
+  [DecidableEq A]
+  [DecidableRel G.Adj]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype A] [DecidableEq A] [DecidableRel G.Adj] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+PaperIV/RD09RootedOrderAdapter.lean:45:0: warning: automatically included section variable(s) unused in theorem `PaperIV.RD09RootedOrderAdapter.edgeEarlier_index_lt_edgeLater`:
+  [Fintype A]
+  [DecidableEq A]
+  [DecidableRel G.Adj]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype A] [DecidableEq A] [DecidableRel G.Adj] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+PaperIV/RD09RootedOrderAdapter.lean:62:8: warning: automatically included section variable(s) unused in theorem `PaperIV.RD09RootedOrderAdapter.mem_laterCoreNeighbors`:
+  [DecidableEq A]
+  [DecidableRel G.Adj]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq A] [DecidableRel G.Adj] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+PaperIV/RD09RootedOrderAdapter.lean:135:0: warning: automatically included section variable(s) unused in theorem `PaperIV.RD09RootedOrderAdapter.nesting_of_rooted_order`:
+  [DecidableEq A]
+  [Fintype I]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq A] [Fintype I] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+simp took 136ms
+simp took 148ms
+import took 3.26s
+cumulative profiling times:
+	.olean serialization 93ms
+	attribute application 1.98ms
+	congr simp thm 16.5ms
+	elaboration 131ms
+	fix level params 2.23ms
+	import 3.26s
+	initialization 38.7ms
+	instantiate metavars 3.71ms
+	interpretation 300ms
+	let-to-have transformation 0.302ms
+	linting 30.8ms
+	parsing 14.2ms
+	process pre-definitions 9.89ms
+	share common exprs 3.66ms
+	simp 329ms
+	tactic execution 135ms
+	type checking 47.5ms
+	typeclass inference 642ms

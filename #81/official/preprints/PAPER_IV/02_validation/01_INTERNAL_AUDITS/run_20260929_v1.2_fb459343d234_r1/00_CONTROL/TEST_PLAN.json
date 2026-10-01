@@ -1,0 +1,28 @@
+{
+  "blocks": [
+    "B01_MODEL",
+    "B02_LP",
+    "B03_ROUNDING",
+    "B04_CONSTANTS",
+    "B05_NEAR",
+    "B06_ASSEMBLY",
+    "B07_SPLIT",
+    "B08_STABILITY",
+    "B09_STRUCTURE",
+    "B10_REGRESSION"
+  ],
+  "gates": [
+    "G0_INTEGRITY",
+    "G1_CLAIMS",
+    "G2_MATHEMATICS",
+    "G3_FORMAL",
+    "G4_LEAN",
+    "G5_PARITY",
+    "G6_PDF",
+    "G7_PROVENANCE",
+    "G8_PACKAGE"
+  ],
+  "heavy_parallelism": 1,
+  "new_lean_build": false,
+  "limits": "2 GiB child process; finite suites <=120s; Certo <=60s per invocation. Exact extension checks do not use solvers."
+}

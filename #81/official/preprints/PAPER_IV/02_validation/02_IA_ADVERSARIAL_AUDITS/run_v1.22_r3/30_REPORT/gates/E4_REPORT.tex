@@ -1,0 +1,170 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+\documentclass[
+]{article}
+\usepackage{xcolor}
+\usepackage{amsmath,amssymb}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math} % this also loads fontspec
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+\usepackage{lmodern}
+\ifPDFTeX\else
+  % xetex/luatex font selection
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\usepackage{bookmark}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same}
+% fallback for those not using the hyperref driver hyperxmp:
+\makeatletter
+\@ifundefined{xmpquote}{\newcommand{\xmpquote}[1]{#1}}{}
+\makeatother
+\hypersetup{
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+
+\author{}
+\date{}
+
+\begin{document}
+
+\section{Informe de puerta E4 --- run\_v1.22\_r3 (Paper IV
+v1.22-r3)}\label{informe-de-puerta-e4--run_v122_r3-paper-iv-v122-r3}
+
+Veredicto actual: \textbf{PASS --- reused\_verified\_external\_build}.
+Evidencia: \texttt{20\_EVIDENCE/E4/}. Auditor: Claude Opus 5.5, misma
+sesión que las ejecuciones anteriores; no se ejecutó Lean.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section{E4 --- Formal reproduction (r3): external build inherited,
+documentary
+confirmation}\label{e4--formal-reproduction-r3-external-build-inherited-documentary-confirmation}
+
+\textbf{No new build, Lake run or kernel replay was performed. Lean was
+not executed.}
+
+\subsection{Original build (run\_v1.2\_r1, 2026-09-30, attempt 2,
+15:09--21:33
+UTC)}\label{original-build-run_v12_r1-2026-09-30-attempt-2-15092133-utc}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Runner.} The auditor\textquotesingle s own runner, without
+  Lake, Lean 4.28.0. Sources freshly extracted from the ZIP (615/615).
+  New objects; no author \texttt{.olean} used. Mathlib read-only; cache
+  of 113 821 files unchanged.
+\item
+  \textbf{Console} \texttt{10\_LOGS/E4\_main\_console.log}
+  (ef5b01c7\ldots):
+  \texttt{modules\_planned\ 607,\ pass\ 607,\ fail\_or\_blocked\ {[}{]}};
+  607 lines \texttt{PASS\ n\ 607}; \texttt{EXIT\ 0}; the 19
+  FREEZE\_SCOPE targets all PASS.
+\item
+  \textbf{\texttt{records.jsonl}} (0f2d8495\ldots): 608 rows (607 +
+  AuditorChecks), all PASS, exit 0; source hashes equal the manifest.
+\item
+  \textbf{Logs.} 608 module logs, none containing "sorry".
+  \texttt{ReleaseExportCheck} has 224 \texttt{\#check} and 0 errors.
+\item
+  \textbf{Annex.} 50/50 PASS (57ce1895\ldots); 633 declarations audited,
+  with axioms ⊆ \{propext, Classical.choice, Quot.sound\}.
+\item
+  \textbf{Byte identity.} All 607 \texttt{.olean} files are
+  byte-identical to the author\textquotesingle s.
+\item
+  \textbf{Axioms. These are records, not distinct theorems.}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    461 axiom records under the author\textquotesingle s rule, of which
+    314 are genuine \texttt{\#print\ axioms} outputs; the rest are
+    repeated audit lines.
+  \item
+    The exact scope: \texttt{\#print\ axioms} on \textbf{18 headline
+    declarations} = \{propext, Classical.choice, Quot.sound\}.
+  \item
+    The auditor\textquotesingle s own cone traversal over \textbf{50
+    public declarations}: 0 non-standard axioms, 0 \texttt{sorryAx}, 0
+    \texttt{Erdos81} constants.
+  \end{itemize}
+\item
+  \textbf{SUMMARY.json.} \texttt{E4\_main/SUMMARY.json} ("555 planned",
+  AuditorChecks only) was overwritten and \textbf{is not used}.
+\end{itemize}
+
+\subsection{Confirmation in r3}\label{confirmation-in-r3}
+
+\begin{itemize}
+\tightlist
+\item
+  \texttt{10\_SCRIPTS/e4\_reuse\_check.py} (sha256 db2eddb8\ldots,
+  identical to the r1 and r2 copies) produces
+  \texttt{E4\_REUSE\_CHECK.json}. Its result is \textbf{identical} to
+  r2: 607 modules, 19 targets, 224 exports, 50 annex modules, 461/314
+  axiom records, cones problems = 0.
+\item
+  The supplementary log verifier (E8) independently re-hashes and
+  re-scans the same 608 + 50 logs, plus the 608 author logs.
+\end{itemize}
+
+\subsection{Why validity carries over to
+r3}\label{why-validity-carries-over-to-r3}
+
+\begin{itemize}
+\tightlist
+\item
+  r3 changes only documentary prose in the manuscripts. Lean, its ZIP
+  and the annex are unchanged (E0 initial and final).
+\item
+  The run\_v1.2\_r1 evidence is intact: 1097 manifest files.
+\item
+  The compiled object is therefore exactly the cut cited by the r3
+  manuscripts.
+\end{itemize}
+
+\subsection{Limits}\label{limits}
+
+\begin{itemize}
+\tightlist
+\item
+  Same machine and shared cache; not a clean-room build.
+\item
+  No kernel replay.
+\item
+  The original build was made by this same auditor and session.
+\end{itemize}
+
+\textbf{E4 verdict (r3): PASS --- reused\_verified\_external\_build.}
+Inherited and revalidated by identity.
+
+\end{document}

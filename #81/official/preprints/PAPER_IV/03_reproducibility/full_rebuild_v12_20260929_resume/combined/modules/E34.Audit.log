@@ -1,0 +1,81 @@
+$ c:\Users\jtraverso\.elan\toolchains\leanprover--lean4---v4.28.0\bin\lean.exe -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false E34/Audit.lean -o C:\Users\jtraverso\e81p4\piv_v12_full_rebuild_20260929\.lake\runner\lib\lean\E34\Audit.olean -i C:\Users\jtraverso\e81p4\piv_v12_full_rebuild_20260929\.lake\runner\lib\lean\E34\Audit.ilean
+PASS E34.lemma11_V: 16765 transitive constants; axioms [propext,
+ Classical.choice,
+ Quot.sound]; constants from PaperIV.Erdos81* namespaces: 0
+PASS E34.chordalEasyRemoval_final: 18727 transitive constants; axioms [propext,
+ Classical.choice,
+ Quot.sound]; constants from PaperIV.Erdos81* namespaces: 0
+PASS E34.editApproxExplicit_final: 19701 transitive constants; axioms [propext,
+ Classical.choice,
+ Quot.sound]; constants from PaperIV.Erdos81* namespaces: 0
+PASS E34.theoremC_fully_explicit_final: 42051 transitive constants; axioms [propext,
+ Classical.choice,
+ Quot.sound]; constants from PaperIV.Erdos81* namespaces: 0
+PASS E34.theoremC_fully_explicit_uniform_final: 42059 transitive constants; axioms [propext,
+ Classical.choice,
+ Quot.sound]; constants from PaperIV.Erdos81* namespaces: 0
+PASS E34.indCopies_cycle_le: 5766 transitive constants; axioms [propext,
+ Classical.choice,
+ Quot.sound]; constants from PaperIV.Erdos81* namespaces: 0
+PASS E34.coBipartite_edit_le: 14950 transitive constants; axioms [propext,
+ Classical.choice,
+ Quot.sound]; constants from PaperIV.Erdos81* namespaces: 0
+PASS E34.lemma3: 16175 transitive constants; axioms [propext,
+ Classical.choice,
+ Quot.sound]; constants from PaperIV.Erdos81* namespaces: 0
+PASS E34.thm1_of_lemma11: 17278 transitive constants; axioms [propext,
+ Classical.choice,
+ Quot.sound]; constants from PaperIV.Erdos81* namespaces: 0
+PASS E34.chordalEasyRemoval_V: 18205 transitive constants; axioms [propext,
+ Classical.choice,
+ Quot.sound]; constants from PaperIV.Erdos81* namespaces: 0
+PASS E34.editApproxExplicit_V: 19210 transitive constants; axioms [propext,
+ Classical.choice,
+ Quot.sound]; constants from PaperIV.Erdos81* namespaces: 0
+PASS E34.theoremC_fully_explicit: 41755 transitive constants; axioms [propext,
+ Classical.choice,
+ Quot.sound]; constants from PaperIV.Erdos81* namespaces: 0
+PASS E34.theoremC_fully_explicit_uniform: 41763 transitive constants; axioms [propext,
+ Classical.choice,
+ Quot.sound]; constants from PaperIV.Erdos81* namespaces: 0
+PASS E34.SetColoring.thm2: 14786 transitive constants; axioms [propext,
+ Classical.choice,
+ Quot.sound]; constants from PaperIV.Erdos81* namespaces: 0
+PASS E34.thm6: 13244 transitive constants; axioms [propext,
+ Classical.choice,
+ Quot.sound]; constants from PaperIV.Erdos81* namespaces: 0
+PASS E34.properOn_of_pinned: 4568 transitive constants; axioms [propext,
+ Classical.choice,
+ Quot.sound]; constants from PaperIV.Erdos81* namespaces: 0
+PASS E34.claim5_count: 13817 transitive constants; axioms [propext,
+ Classical.choice,
+ Quot.sound]; constants from PaperIV.Erdos81* namespaces: 0
+PASS E34.glueGraph_chordal: 12840 transitive constants; axioms [propext,
+ Classical.choice,
+ Quot.sound]; constants from PaperIV.Erdos81* namespaces: 0
+PASS E34.editDist_glue_le: 5458 transitive constants; axioms [propext,
+ Classical.choice,
+ Quot.sound]; constants from PaperIV.Erdos81* namespaces: 0
+PASS E34.thm2_ineq: 14726 transitive constants; axioms [propext,
+ Classical.choice,
+ Quot.sound]; constants from PaperIV.Erdos81* namespaces: 0
+PASS E34.block_ineq: 14679 transitive constants; axioms [propext,
+ Classical.choice,
+ Quot.sound]; constants from PaperIV.Erdos81* namespaces: 0
+modules in the import cone of E34.Audit: 10430
+forbidden modules (roots Erdos81/GalvinRoute/RouteB, PaperV.B0*, A4S1.T1*, A4S1.TS*, A4S1.OwnAll*): []
+Paper IV modules whose name contains Erdos81 (informational): [PaperIV.Erdos81Unconditional, PaperIV.Erdos81AllOrders]
+E34 import-cone check PASSED
+'E34.lemma11_V' depends on axioms: [propext, Classical.choice, Quot.sound]
+'E34.chordalEasyRemoval_final' depends on axioms: [propext, Classical.choice, Quot.sound]
+'E34.editApproxExplicit_final' depends on axioms: [propext, Classical.choice, Quot.sound]
+'E34.theoremC_fully_explicit_final' depends on axioms: [propext, Classical.choice, Quot.sound]
+'E34.theoremC_fully_explicit_uniform_final' depends on axioms: [propext, Classical.choice, Quot.sound]
+'E34.indCopies_cycle_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'E34.coBipartite_edit_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'E34.lemma3' depends on axioms: [propext, Classical.choice, Quot.sound]
+'E34.thm1_of_lemma11' depends on axioms: [propext, Classical.choice, Quot.sound]
+'E34.SetColoring.thm2' depends on axioms: [propext, Classical.choice, Quot.sound]
+'E34.thm6' depends on axioms: [propext, Classical.choice, Quot.sound]
+'E34.glueGraph_chordal' depends on axioms: [propext, Classical.choice, Quot.sound]
+'E34.editDist_glue_le' depends on axioms: [propext, Classical.choice, Quot.sound]

@@ -1,0 +1,30 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 FarExploration/CleanupTriangleRegular.lean -o /workspace/request-project/.lake/runner/lib/lean/FarExploration/CleanupTriangleRegular.olean -i /workspace/request-project/.lake/runner/lib/lean/FarExploration/CleanupTriangleRegular.ilean
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_nlinarith_1._boxed took 126ms
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_nlinarith_1._boxed took 301ms
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_nlinarith_1._boxed took 416ms
+import took 4.23s
+.olean serialization took 122ms
+cumulative profiling times:
+	.olean serialization 122ms
+	attribute application 6.2ms
+	compilation (IR) 8.2ms
+	compilation (LCNF base) 9.27ms
+	compilation (LCNF mono) 5.11ms
+	congr simp thm 16.4ms
+	elaboration 130ms
+	fix level params 1.55ms
+	import 4.23s
+	initialization 41.6ms
+	instantiate metavars 8.81ms
+	interpretation 1.84s
+	let-to-have transformation 0.439ms
+	linting 61.1ms
+	norm_num 282ms
+	parsing 19.9ms
+	process pre-definitions 37ms
+	ring 77ms
+	share common exprs 17.7ms
+	simp 156ms
+	tactic execution 355ms
+	type checking 195ms
+	typeclass inference 1.22s

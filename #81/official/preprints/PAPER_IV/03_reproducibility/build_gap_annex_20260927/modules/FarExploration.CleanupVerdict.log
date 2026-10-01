@@ -1,0 +1,24 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 FarExploration/CleanupVerdict.lean -o /workspace/request-project/.lake/runner/lib/lean/FarExploration/CleanupVerdict.olean -i /workspace/request-project/.lake/runner/lib/lean/FarExploration/CleanupVerdict.ilean
+import took 5.08s
+.olean serialization took 122ms
+cumulative profiling times:
+	.olean serialization 122ms
+	attribute application 0.0846ms
+	congr simp thm 4.92ms
+	elaboration 43.1ms
+	fix level params 0.386ms
+	import 5.08s
+	initialization 35.4ms
+	instantiate metavars 1.07ms
+	interpretation 465ms
+	let-to-have transformation 0.134ms
+	linting 13.2ms
+	norm_num 41.9ms
+	parsing 6.45ms
+	process pre-definitions 10.6ms
+	ring 20ms
+	share common exprs 4.41ms
+	simp 49.8ms
+	tactic execution 123ms
+	type checking 54ms
+	typeclass inference 296ms

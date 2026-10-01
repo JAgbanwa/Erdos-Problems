@@ -1,0 +1,25 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 PaperIV/LiftedPieceGreedy.lean -o /workspace/request-project/.lake/runner/lib/lean/PaperIV/LiftedPieceGreedy.olean -i /workspace/request-project/.lake/runner/lib/lean/PaperIV/LiftedPieceGreedy.ilean
+interpretation of Mathlib.Tactic.Tauto._aux_Mathlib_Tactic_Tauto___elabRules_Mathlib_Tactic_Tauto_tauto_1._boxed took 396ms
+import took 3.2s
+cumulative profiling times:
+	.olean serialization 80.4ms
+	attribute application 0.123ms
+	compilation (IR) 0.919ms
+	compilation (LCNF base) 1.6ms
+	compilation (LCNF mono) 1.3ms
+	congr simp thm 6.8ms
+	elaboration 69.5ms
+	fix level params 2.26ms
+	import 3.2s
+	initialization 37.3ms
+	instantiate metavars 51ms
+	interpretation 726ms
+	let-to-have transformation 0.158ms
+	linting 36.5ms
+	parsing 14.6ms
+	process pre-definitions 19.3ms
+	share common exprs 7.16ms
+	simp 144ms
+	tactic execution 510ms
+	type checking 241ms
+	typeclass inference 273ms

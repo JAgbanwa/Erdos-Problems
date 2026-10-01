@@ -1,0 +1,34 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 FarExploration/RegularityCone.lean -o /workspace/request-project/.lake/runner/lib/lean/FarExploration/RegularityCone.olean -i /workspace/request-project/.lake/runner/lib/lean/FarExploration/RegularityCone.ilean
+LIBRE  Nibble.fracNibble_leUniform
+      total 31909 | regularidad 0
+LIBRE  PaperIV.RC01MarkedRounding.exists_packing_loss_le_of_slackMarkedQuota
+      total 32709 | regularidad 0
+LIBRE  PaperIV.RC01TriangleSchedule.lowTriangle_branch_free_scheduled
+      total 14616 | regularidad 0
+LIBRE  FarExploration.CodegreeCleanup.uniformRoundingTarget_of_codegreeCleanup
+      total 32801 | regularidad 0
+USA    PaperIV.RC01Final.rc01_uniformRoundingTarget
+      total 34189 | regularidad 139
+VEREDICTO: la regularidad no aparece en la puerta física, ni en el nibble, ni en la rama de pocos triángulos, ni en el contrato de redondeo concedida la limpieza de codegree; sólo aparece en la ruta que fabrica esa limpieza.
+interpretation of FarExploration.RegularityCone._aux_FarExploration_RegularityCone___elabRules_FarExploration_RegularityCone_commandRegularityCone_1._boxed took 5.56s
+import took 4.47s
+cumulative profiling times:
+	.olean serialization 9.76ms
+	attribute application 0.288ms
+	blocked (unaccounted) 81.4ms
+	compilation (IR) 6.58ms
+	compilation (LCNF base) 25ms
+	compilation (LCNF mono) 6.8ms
+	elaboration 59ms
+	fix level params 0.066ms
+	import 4.47s
+	initialization 40ms
+	instantiate metavars 0.041ms
+	interpretation 5.82s
+	let-to-have transformation 1.07ms
+	linting 3.82ms
+	parsing 3.41ms
+	process pre-definitions 3.6ms
+	share common exprs 0.556ms
+	type checking 1.91ms
+	typeclass inference 42.3ms

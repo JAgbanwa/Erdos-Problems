@@ -1,0 +1,98 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+\documentclass[
+]{article}
+\usepackage{xcolor}
+\usepackage{amsmath,amssymb}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math} % this also loads fontspec
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+\usepackage{lmodern}
+\ifPDFTeX\else
+  % xetex/luatex font selection
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\usepackage{bookmark}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same}
+% fallback for those not using the hyperref driver hyperxmp:
+\makeatletter
+\@ifundefined{xmpquote}{\newcommand{\xmpquote}[1]{#1}}{}
+\makeatother
+\hypersetup{
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+
+\author{}
+\date{}
+
+\begin{document}
+
+\section{Gate E0 report --- run\_v1.21\_r1 (Paper IV
+v1.21)}\label{gate-e0-report--run_v121_r1-paper-iv-v121}
+
+Verdict: \textbf{PASS}. Evidence: \texttt{20\_EVIDENCE/E0/}.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\subsection{E0 --- Identity
+(run\_v1.21\_r1)}\label{e0--identity-run_v121_r1}
+
+Script: \texttt{e0\_v121.py} (auditor-written, read-only). Runs:
+\texttt{E0\_INITIAL.json} at start (2026-09-30 \textasciitilde23:04 UTC)
+and \texttt{E0\_FINAL.json} at close --- \textbf{identical}.
+
+\begin{itemize}
+\tightlist
+\item
+  \texttt{AUDIT\_TARGET\_v1.21.json} sha256 574352e8\ldots af2a7 =
+  sidecar. Request b360c967\ldots, manuscript manifest abae830f\ldots,
+  review ZIP r1 5fc4099a\ldots, source manifest fb459343\ldots, evidence
+  binding efa96178\ldots: all sha and byte counts match.
+\item
+  MANUSCRIPT\_REVIEW\_MANIFEST: 88 files, all match the directory; ZIP
+  r1: 90 members (88 + manifest + its sidecar), CRC OK, no unsafe paths,
+  all member hashes equal; six manuscripts listed.
+\item
+  PDFs: EN 71 pages, ES 72 pages.
+\item
+  Lean cut: 615/615 manifest entries match the frozen directory, no
+  extra files; source ZIP cb274145\ldots{} unchanged.
+\item
+  Reused evidence: all 1097 files of
+  \texttt{run\_v1.2\_r1/40\_PACKAGE/RUN\_MANIFEST.json} unchanged on
+  disk; sealed ZIP 886ed7f0\ldots{} matches its sidecar (1098 members,
+  CRC OK); all 18 items and the archive of the author\textquotesingle s
+  \texttt{EXTERNAL\_EVIDENCE\_BINDING.json} match.
+\end{itemize}
+
+\textbf{E0 verdict: PASS.}
+
+\end{document}

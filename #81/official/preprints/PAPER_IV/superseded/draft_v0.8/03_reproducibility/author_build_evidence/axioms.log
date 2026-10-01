@@ -1,0 +1,131 @@
+'PaperIV.Erdos81AllOrders.erdos81_all_orders' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PaperIV.Erdos81AllOrders.erdos81_all_orders_additive' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PaperIV.Erdos81AllOrders.exists_trivial_cliquePartition' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PaperIV.Erdos81Unconditional.erdos81_cliquePartition' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PaperIV.Erdos81Unconditional.erdos81_linear_form' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PaperIV.Erdos81Unconditional.erdos81_chordalTarget' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PaperIV.CertifiedOptimumExistence.exists_certifiedFractionalOptimum' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PaperI.FiniteLP.exists_optimal_pair' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PaperIV.RC01Final.rc01_uniformRoundingTarget' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PaperIV.RC01FarAssembly.farRegime_cliquePartition' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PaperIV.NearH1GlobalAssembly.nearRegimeAt' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PaperIV.NearH1GlobalAssembly.chordalTargetAt' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PaperIV.RootRegularizationBridge.exists_regularizedRoot_engineFree' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PaperIV.HybridDichotomy.chordal_far_or_nearStructure' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PaperIV.HybridDichotomy.chordal_near_extremal_stability' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PaperIV.HybridDichotomy.erdos81_of_structuralDichotomy' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PaperIV.PaperTheorems.erdos81_hybrid_linear_form' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PaperIV.PaperTheorems.splitGraph_isChordal' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PaperIV.PaperTheorems.exists_chordal_extremal_witness' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PaperIV.PaperTheorems.erdos81_max_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PaperIV.SplitCompleteExactValue.exists_optimal_cliquePartition' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PaperIV.SplitCompleteExactValueAllParities.exists_optimal_cliquePartition_allParities' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PaperIV.SplitCompleteSharpLower.cliquePartition_size_ge_baseline_unrestricted' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PaperIV.SplitCompleteSharpValue.exists_sharp_cliquePartition_allParities' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PaperIV.SplitCompleteSharpLower.critical_baseline_eq_targetSize' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PaperIV.SplitCompleteRigidity.six_mul_baseline_add_sq' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PaperIV.SplitCompleteRigidity.baseline_le_targetSize' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PaperIV.SplitCompleteRigidity.baseline_eq_targetSize_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PaperIV.SplitCompleteRigidity.optimal_cores' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PaperIV.SplitCompleteDefect.size_add_choose_eq_mul_add_sum_defect' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PaperIV.SplitCompleteDefect.defect_eq_zero_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PaperIV.SplitCompleteDefect.defect_pos_of_no_host' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PaperIV.SplitCompleteDefect.card_paying_pieces_le_excess' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PaperIV.LinearCoefficient.linear_coefficient_optimal' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PaperIV.BalancedReserve.card_filter_edgeFamily' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PaperIV.BalancedReserve.exists_balanced_reserve' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PaperIV.SpreadAbsorption.exists_certificate' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PaperIV.SpreadAbsorption.exists_lowConflict_certificate' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PaperIV.SpreadAbsorption.physical_triangle_absorber' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PaperIV.SpreadAbsorption.totalGain_physical_triangle_absorber' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PaperIV.SpreadAbsorption.exists_budgeted_physical_triangle_absorber' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PaperIV.SpreadLedgerAbsorption.total_ledgerBad_le_two_accounts' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PaperIV.SpreadLedgerAbsorption.total_ledgerBad_le_paid_mass' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PaperIV.SpreadLedgerAbsorption.exists_spread_absorber_count_add_cost_le_baseline' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PaperIV.SpreadAbsorptionCompatibility.isPacking_union_absorber' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PaperIV.SpreadAbsorptionCompatibility.exists_compatible_spread_absorber' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PaperIV.SpreadAbsorptionCompatibility.exists_budgeted_compatible_spread_absorber' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PaperIV.SeparationAbsorptionRoute.chordal_dualSeparated_or_absorbable' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PaperIV.SeparationAbsorptionRoute.AbsorbableCriticalStructure.exists_target_partition' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PaperIV.SeparationAbsorptionRoute.erdos81_of_dualSeparation_absorption' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PaperIV.SplitEditIdentity.editDist_split_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PaperIV.FarSlackQuantitative.farRegime_cliquePartition_slack' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PaperIV.IntegralStability.chordal_linear_stability' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PaperIV.ExtremalClassification.split_value' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PaperIV.ExtremalClassification.chordal_extremal_classification' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PaperIV.SplitMixedGap.fracPacking_value_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PaperIV.SplitMixedGap.sum_gainOf_add_size' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PaperIV.SplitMixedGap.exists_integral_gain_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PaperIV.SplitMixedGap.mixed_gap_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PaperIV.SimplicialReduction.exists_cliquePartition_of_delete_vertex' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PaperIV.SimplicialReduction.targetSize_succ_sub_targetSize' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PaperIV.SimplicialReduction.sharpBound_of_degree_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PaperIV.SimplicialReduction.sharpBoundAt_of_largeCliqueRegime' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PaperIV.SimplicialReductionRefined.exists_cliquePartition_freeStar' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PaperIV.SimplicialReductionRefined.not_strongLoosePieceHypothesis' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PaperIV.NearThresholdSensitivity.eps_le_of_physical_budget' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PaperIV.NearThresholdSensitivity.descent_threshold' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PaperIV.NearThresholdSensitivity.near_threshold_of_budget' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PaperIV.NearThresholdSensitivity.edit_mass_of_budget' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PaperIV.FourHostClosure.colourClass_isLiteralMatching' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PaperIV.FourHostClosure.exists_fourHost_packing' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PaperIV.FourHostClosure.fourHost_saving' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PaperIV.ReserveIdentity.centreDefect_mul_succ' depends on axioms: [propext, Quot.sound]
+'PaperIV.ReserveIdentity.targetSize_eq_baseline_add_reserve' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PaperIV.ReserveIdentity.baseline_le_targetSize_of_reserve' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PaperIV.ReserveIdentity.baseline_eq_targetSize_iff_reserve' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PaperIV.ReserveIdentity.centreDefect_le_one_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PaperIV.ReserveIdentity.sq_residual_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PaperIV.ReserveIdentity.residual_sq_le_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PaperIV.LossBudget.budget_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PaperIV.LossBudget.size_add_gain_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PaperIV.LossBudget.erdos81_cp_form' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PaperIV.LossBudget.erdos81_cp_form_all_orders' depends on axioms: [propext, Classical.choice, Quot.sound]

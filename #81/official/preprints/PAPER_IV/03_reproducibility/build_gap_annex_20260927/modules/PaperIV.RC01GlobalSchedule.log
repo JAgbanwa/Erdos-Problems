@@ -1,0 +1,28 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 PaperIV/RC01GlobalSchedule.lean -o /workspace/request-project/.lake/runner/lib/lean/PaperIV/RC01GlobalSchedule.olean -i /workspace/request-project/.lake/runner/lib/lean/PaperIV/RC01GlobalSchedule.ilean
+tactic execution of Mathlib.Tactic.nlinarith took 236ms
+import took 4.17s
+.olean serialization took 118ms
+cumulative profiling times:
+	.olean serialization 118ms
+	attribute application 0.0427ms
+	compilation (IR) 0.691ms
+	compilation (LCNF base) 0.875ms
+	compilation (LCNF mono) 0.346ms
+	congr simp thm 3.85ms
+	elaboration 60.1ms
+	fix level params 0.493ms
+	import 4.17s
+	initialization 39.4ms
+	instantiate metavars 0.936ms
+	interpretation 416ms
+	let-to-have transformation 0.156ms
+	linting 11.7ms
+	norm_num 68.1ms
+	parsing 5.75ms
+	process pre-definitions 12.7ms
+	ring 27.5ms
+	share common exprs 3.95ms
+	simp 13.9ms
+	tactic execution 303ms
+	type checking 58.7ms
+	typeclass inference 437ms

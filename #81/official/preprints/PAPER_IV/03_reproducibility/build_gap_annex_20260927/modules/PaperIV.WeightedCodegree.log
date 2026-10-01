@@ -1,0 +1,43 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 PaperIV/WeightedCodegree.lean -o /workspace/request-project/.lake/runner/lib/lean/PaperIV/WeightedCodegree.olean -i /workspace/request-project/.lake/runner/lib/lean/PaperIV/WeightedCodegree.ilean
+tactic execution of Mathlib.Tactic.nlinarith took 213ms
+PaperIV/WeightedCodegree.lean:158:0: warning: automatically included section variable(s) unused in theorem `PaperIV.WeightedCodegree.index_unique`:
+  [Fintype ι]
+  [DecidableEq α]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype ι] [DecidableEq α] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+PaperIV/WeightedCodegree.lean:165:0: warning: automatically included section variable(s) unused in theorem `PaperIV.WeightedCodegree.three_le_card_union`:
+  [Fintype ι]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype ι] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+PaperIV/WeightedCodegree.lean:184:32: warning: unused variable `ht`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+import took 3.46s
+cumulative profiling times:
+	.olean serialization 77.5ms
+	attribute application 0.105ms
+	compilation (IR) 0.745ms
+	compilation (LCNF base) 0.866ms
+	compilation (LCNF mono) 0.328ms
+	congr simp thm 3.15ms
+	elaboration 58.8ms
+	fix level params 1.48ms
+	import 3.46s
+	initialization 35.7ms
+	instantiate metavars 8.1ms
+	interpretation 428ms
+	let-to-have transformation 0.176ms
+	linting 31.7ms
+	norm_num 2.43ms
+	parsing 15.4ms
+	process pre-definitions 18.3ms
+	ring 18.4ms
+	share common exprs 4.9ms
+	simp 46ms
+	tactic execution 470ms
+	type checking 109ms
+	typeclass inference 474ms

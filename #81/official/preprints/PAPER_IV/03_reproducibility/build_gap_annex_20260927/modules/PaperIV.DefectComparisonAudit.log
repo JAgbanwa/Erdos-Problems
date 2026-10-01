@@ -1,0 +1,23 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 PaperIV/DefectComparisonAudit.lean -o /workspace/request-project/.lake/runner/lib/lean/PaperIV/DefectComparisonAudit.olean -i /workspace/request-project/.lake/runner/lib/lean/PaperIV/DefectComparisonAudit.ilean
+'PaperIV.DefectTargetArithmetic.targetSize_le_defectTarget' depends on axioms: [propext, Classical.choice, Quot.sound]
+elaboration took 232ms
+'PaperIV.RootedSimplicialDefect.rootedDefectAt_mono' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PaperIV.RootedSimplicialDefect.rootedDefectAt_card' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PaperIV.RootedSimplicialDefect.exists_root_step_with_exceptional_budget' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PaperIV.RootedSimplicialDefect.chordal_rootedDefect_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+elaboration took 311ms
+'PaperIV.DefectFarComparison.farRegime_defectTarget_allGraphs' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+elaboration took 1.38s
+import took 4.36s
+cumulative profiling times:
+	.olean serialization 3.94ms
+	elaboration 2.03s
+	import 4.36s
+	initialization 37.3ms
+	interpretation 213ms
+	linting 0.667ms
+	parsing 0.456ms

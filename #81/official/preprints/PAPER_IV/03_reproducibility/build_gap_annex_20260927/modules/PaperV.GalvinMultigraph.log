@@ -1,0 +1,30 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 PaperV/GalvinMultigraph.lean -o /workspace/request-project/.lake/runner/lib/lean/PaperV/GalvinMultigraph.olean -i /workspace/request-project/.lake/runner/lib/lean/PaperV/GalvinMultigraph.ilean
+PaperV/GalvinMultigraph.lean:185:0: warning: automatically included section variable(s) unused in theorem `PaperV.Galvin.galvin_bkw_local`:
+  [Fintype R]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype R] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+import took 2.83s
+cumulative profiling times:
+	.olean serialization 80.1ms
+	attribute application 0.0537ms
+	compilation (IR) 0.553ms
+	compilation (LCNF base) 1.02ms
+	compilation (LCNF mono) 0.779ms
+	congr simp thm 4.23ms
+	elaboration 37.2ms
+	fix level params 0.887ms
+	import 2.83s
+	initialization 36.5ms
+	instantiate metavars 13ms
+	interpretation 301ms
+	let-to-have transformation 0.075ms
+	linting 19.9ms
+	parsing 17.7ms
+	process pre-definitions 10.2ms
+	share common exprs 2.99ms
+	simp 32.8ms
+	tactic execution 221ms
+	type checking 246ms
+	typeclass inference 149ms

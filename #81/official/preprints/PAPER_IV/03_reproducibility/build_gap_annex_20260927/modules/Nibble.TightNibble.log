@@ -1,0 +1,31 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 Nibble/TightNibble.lean -o /workspace/request-project/.lake/runner/lib/lean/Nibble/TightNibble.olean -i /workspace/request-project/.lake/runner/lib/lean/Nibble/TightNibble.ilean
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_nlinarith_1._boxed took 747ms
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_nlinarith_1._boxed took 1.33s
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_nlinarith_1._boxed took 873ms
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_nlinarith_1._boxed took 807ms
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_nlinarith_1._boxed took 841ms
+import took 4.36s
+cumulative profiling times:
+	.olean serialization 96.1ms
+	attribute application 0.0338ms
+	compilation (IR) 14.5ms
+	compilation (LCNF base) 14.3ms
+	compilation (LCNF mono) 6.19ms
+	congr simp thm 9.62ms
+	elaboration 23ms
+	fix level params 1.61ms
+	import 4.36s
+	initialization 35.8ms
+	instantiate metavars 87.8ms
+	interpretation 5.82s
+	let-to-have transformation 0.0218ms
+	linting 7.52ms
+	norm_num 354ms
+	parsing 10.3ms
+	process pre-definitions 31.1ms
+	ring 92.1ms
+	share common exprs 36.2ms
+	simp 107ms
+	tactic execution 401ms
+	type checking 90.2ms
+	typeclass inference 2s

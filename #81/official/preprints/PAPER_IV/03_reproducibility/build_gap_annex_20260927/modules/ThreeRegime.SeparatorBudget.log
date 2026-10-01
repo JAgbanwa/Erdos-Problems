@@ -1,0 +1,27 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 ThreeRegime/SeparatorBudget.lean -o /workspace/request-project/.lake/runner/lib/lean/ThreeRegime/SeparatorBudget.olean -i /workspace/request-project/.lake/runner/lib/lean/ThreeRegime/SeparatorBudget.ilean
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_nlinarith_1._boxed took 304ms
+import took 3.65s
+cumulative profiling times:
+	.olean serialization 57.9ms
+	attribute application 0.0319ms
+	compilation (IR) 3.21ms
+	compilation (LCNF base) 3.08ms
+	compilation (LCNF mono) 1.32ms
+	congr simp thm 2.35ms
+	elaboration 14.7ms
+	fix level params 0.374ms
+	import 3.65s
+	initialization 46.7ms
+	instantiate metavars 2.44ms
+	interpretation 508ms
+	let-to-have transformation 0.0404ms
+	linting 6.45ms
+	norm_num 5.12ms
+	parsing 1.89ms
+	process pre-definitions 7.52ms
+	ring 14.2ms
+	share common exprs 5.39ms
+	simp 61.7ms
+	tactic execution 54.3ms
+	type checking 159ms
+	typeclass inference 198ms

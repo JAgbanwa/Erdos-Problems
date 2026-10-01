@@ -1,0 +1,23 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 PaperIV/EditRouteUnconditional.lean -o /workspace/request-project/.lake/runner/lib/lean/PaperIV/EditRouteUnconditional.olean -i /workspace/request-project/.lake/runner/lib/lean/PaperIV/EditRouteUnconditional.ilean
+tactic execution of Lean.Parser.Tactic.congr took 188ms
+import took 9.29s
+.olean serialization took 236ms
+cumulative profiling times:
+	.olean serialization 236ms
+	attribute application 0.0403ms
+	congr simp thm 3.84ms
+	elaboration 11ms
+	fix level params 0.228ms
+	import 9.29s
+	initialization 37.5ms
+	instantiate metavars 1.53ms
+	interpretation 366ms
+	let-to-have transformation 0.0346ms
+	linting 4.86ms
+	parsing 3.8ms
+	process pre-definitions 4.43ms
+	share common exprs 1.7ms
+	simp 22ms
+	tactic execution 293ms
+	type checking 16.1ms
+	typeclass inference 74.7ms

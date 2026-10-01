@@ -1,0 +1,74 @@
+[
+  {
+    "id": "en-front",
+    "before": "**Preprint:** version 1.22, editorial review candidate.\n**Date of this revision:** October 1, 2026.\n**Status:** the v1.22-r2 external review concluded PASS_WITH_OBSERVATIONS on October 1, 2026. It accepted the expanded C.3 argument and all seven derivations in A.2; no finding of severity MINOR or higher remained open. The Lean source cut remains `piv-v12-fb459343d234`, with formal PASS inherited from the verified external build. This r3 package updates audit-status information; its documentary delta awaits verification. No new Lean build is claimed. This candidate has not been published or assigned its own DOI.\n**Series concept DOI:** <https://doi.org/10.5281/zenodo.21273143>. The version DOI for the deposit that will collect Papers I–IV has not yet been assigned.",
+    "after": "**Preprint:** version 1.23.  \n**Date:** October 1, 2026.",
+    "change_class": "STRUCTURAL_FORM"
+  },
+  {
+    "id": "en-1",
+    "before": "**Audit status of this editorial candidate.** The internal run `run_20260929_v1.2_fb459343d234_r1` recorded PASS for its declared scope. The external build in `run_v1.2_r1` compiled 607 main modules, all 19 targets and the 50-module annex; the 607 main objects were byte-identical to the author’s objects. That review and `run_v1.21_r1` were INCONCLUSIVE overall because exposition remained incomplete. The expanded C.3 comparison was accepted in `run_v1.22_r1`, completing the seven A.2 derivations. The consolidated `run_v1.22_r2` returned PASS_WITH_OBSERVATIONS and closed the remaining Spanish corrections. Its observations and scope limitations are retained in the report. Revalidations used unchanged sources and existing build evidence, without recompilation. This r3 documentary update is submitted separately; it does not claim a new formal build or a verdict for its own changes.",
+    "after": "**Verification evidence.** The frozen sources and the recorded external build support the formal claims above. The consolidated report for v1.22-r4 records PASS for gates E0–E8. The repository retains that report, its scope limitations and the complete audit history. Version 1.23 changes only editorial presentation; it uses the same Lean source cut and does not claim a new build or a new external audit. Human peer review remains a separate assessment.",
+    "change_class": "CLARITY"
+  },
+  {
+    "id": "en-2",
+    "before": "The series repository, available at <https://github.com/jtraverso/erdos-81-chordal-clique-partitions>, contains the manuscripts and materials for Papers I–III [2–4] and the public v0.8 draft of Paper IV, identified by commit `f783a792404a60983a7ef754d055fbe6c341188b`. That commit identifies only the earlier version. The new source freeze supporting this candidate is identified locally above; no repository commit or publication date has been assigned to this candidate.",
+    "after": "The series repository, available at <https://github.com/jtraverso/erdos-81-chordal-clique-partitions>, provides the bilingual manuscripts, frozen formal sources and verification evidence for Papers I–IV. The audited v1.22 package is preserved under the tag `paper-IV-v1.22` and in the audit backup directory. This editorial revision uses the same source cut identified above. The series concept DOI is <https://doi.org/10.5281/zenodo.21273143>; the repository README and changelog record version-specific publication and audit information.",
+    "change_class": "CLARITY"
+  },
+  {
+    "id": "en-3",
+    "before": "The single audit command described in §7 executes all 19 targets, including the root, the individual audit targets and the export check. Lean and dependency revisions are recorded in lean-toolchain and lake-manifest.json. Compilation, public export, axiom inspection and semantic correspondence are distinct checks. The source freeze is unchanged. The external build passed in v1.2 and its evidence was revalidated in subsequent revisions without recompilation. The consolidated v1.22-r2 report records the accepted C.3 expansion and distinguishes individual semantic comparisons from statements covered by the proof-component ledger and compiled declarations.",
+    "after": "The single audit command described in §7 executes all 19 targets, including the root, the individual audit targets and the export check. Lean and dependency revisions are recorded in lean-toolchain and lake-manifest.json. Compilation, public export, axiom inspection and semantic correspondence are distinct checks. The source freeze is unchanged. The consolidated external report and its evidence distinguish individual semantic comparisons from statements covered by the proof-component ledger and compiled declarations.",
+    "change_class": "CLARITY"
+  },
+  {
+    "id": "en-4",
+    "before": "**Scope of the written proof.** The table below records derivations that received particular scrutiny. Revision 1.21 expanded the bilateral fibre cleaning in C.2, the normalization counts and joint elimination in E.1, and the numerical schedule in C.3. Revision 1.22 then supplied the regularity recurrence and the final tower comparison. The consolidated v1.22-r2 report classifies all seven rows as ACCEPTABLE_SUMMARY. It retains the stated expository limit concerning the cited second-moment estimates in C.2. A successful build checks formal derivations, not completeness of exposition; the written-proof assessment remains distinct from compilation and from human peer review.",
+    "after": "**Scope of the written proof.** The table below records seven derivations examined in the consolidated external review. Its assessment, ACCEPTABLE_SUMMARY for each row, retains the stated expository limit concerning the cited second-moment estimates in C.2. A successful build checks formal derivations, not completeness of exposition; the written-proof assessment remains distinct from compilation and from human peer review. The audit history and detailed assessments are retained with the supplementary evidence.",
+    "change_class": "CLARITY"
+  },
+  {
+    "id": "en-5",
+    "before": "Appendix E.4 derives the retained terminal accounts used in §6.6, F.3 proves clique recovery, and F.5 explains the three-case assembly of the adapted pinned-sample bound. Their recorded checks are consolidated in the v1.22-r2 report, with the scope and limitations stated there. These checks compare the written accounts with the frozen formal development; they do not turn local compilation into a substitute for mathematical review.",
+    "after": "Appendix E.4 derives the retained terminal accounts used in §6.6, F.3 proves clique recovery, and F.5 explains the three-case assembly of the adapted pinned-sample bound. The consolidated external report records the corresponding checks and their scope limitations. These checks compare the written accounts with the frozen formal development; they do not turn local compilation into a substitute for mathematical review.",
+    "change_class": "CLARITY"
+  },
+  {
+    "id": "es-front",
+    "before": "**Preprint:** versión 1.22, candidata a revisión editorial.\n**Fecha de esta revisión:** 1 de octubre de 2026.\n**Estado:** la revisión externa v1.22-r2 concluyó PASS_WITH_OBSERVATIONS el 1 de octubre de 2026. Aceptó la ampliación de C.3 y las siete derivaciones de A.2; no quedaron hallazgos abiertos de severidad MINOR o superior. El corte Lean sigue siendo `piv-v12-fb459343d234`, con PASS formal heredado del build externo verificado. Este paquete r3 actualiza la información de auditoría; su cambio documental espera verificación. No se afirma un nuevo build Lean. Esta candidata no se ha publicado ni tiene DOI propio asignado.\n**DOI de concepto de la serie:** <https://doi.org/10.5281/zenodo.21273143>. El DOI de versión del depósito que reunirá Papers I–IV todavía no está asignado.",
+    "after": "**Preprint:** versión 1.23.  \n**Fecha:** 1 de octubre de 2026.",
+    "change_class": "STRUCTURAL_FORM"
+  },
+  {
+    "id": "es-1",
+    "before": "**Estado de auditoría de esta candidata editorial.** La ejecución interna `run_20260929_v1.2_fb459343d234_r1` registró PASS para su alcance declarado. El build externo de `run_v1.2_r1` compiló 607 módulos principales, los 19 objetivos y el anexo de 50 módulos; los 607 objetos principales fueron idénticos byte a byte a los del autor. Esa revisión y `run_v1.21_r1` dieron INCONCLUSIVE global porque faltaba completar la exposición. La comparación ampliada de C.3 fue aceptada en `run_v1.22_r1`, completando las siete derivaciones de A.2. El informe consolidado `run_v1.22_r2` dio PASS_WITH_OBSERVATIONS y cerró las correcciones españolas restantes. Sus observaciones y límites de alcance se conservan en el informe. Las revalidaciones utilizaron las fuentes sin cambios y la evidencia del build existente, sin recompilar. Esta actualización documental r3 se presenta por separado; no afirma un nuevo build formal ni un veredicto sobre sus propios cambios.",
+    "after": "**Evidencia de verificación.** Las fuentes congeladas y el build externo registrado respaldan las afirmaciones formales anteriores. El informe consolidado de v1.22-r4 registra PASS para las puertas E0–E8. El repositorio conserva ese informe, sus límites de alcance y el historial completo de auditoría. La versión 1.23 cambia únicamente la presentación editorial; utiliza el mismo corte Lean y no afirma un nuevo build ni una nueva auditoría externa. La revisión humana por pares sigue siendo una evaluación separada.",
+    "change_class": "CLARITY"
+  },
+  {
+    "id": "es-2",
+    "before": "El repositorio de la serie, disponible en <https://github.com/jtraverso/erdos-81-chordal-clique-partitions>, contiene los manuscritos y materiales de Papers I–III [2–4] y el borrador público v0.8 de Paper IV, identificado por el commit `f783a792404a60983a7ef754d055fbe6c341188b`. Ese commit identifica sólo la versión anterior. El nuevo congelado de fuentes que sostiene esta candidata se identifica localmente arriba; no se ha asignado a esta candidata un commit de repositorio ni una fecha de publicación.",
+    "after": "El repositorio de la serie, disponible en <https://github.com/jtraverso/erdos-81-chordal-clique-partitions>, ofrece los manuscritos bilingües, las fuentes formales congeladas y la evidencia de verificación de Papers I–IV. El paquete auditado v1.22 se conserva bajo la etiqueta `paper-IV-v1.22` y en el directorio de respaldo de auditoría. Esta revisión editorial utiliza el mismo corte de fuentes identificado arriba. El DOI de concepto de la serie es <https://doi.org/10.5281/zenodo.21273143>; el README y el changelog del repositorio registran la información de publicación y auditoría propia de cada versión.",
+    "change_class": "CLARITY"
+  },
+  {
+    "id": "es-3",
+    "before": "El comando único de auditoría descrito en §7 ejecuta los 19 objetivos, incluidos la raíz, los objetivos individuales de auditoría y el control de exportación. Las revisiones de Lean y sus dependencias están registradas en lean-toolchain y lake-manifest.json. Compilación, exportación pública, inspección de axiomas y correspondencia semántica son controles distintos. El congelado de fuentes no cambia. El build externo pasó en v1.2 y su evidencia se revalidó en las revisiones posteriores sin recompilar. El informe consolidado v1.22-r2 registra la aceptación de la ampliación de C.3 y distingue las comparaciones semánticas individuales de los enunciados cubiertos por el registro de componentes de prueba y las declaraciones compiladas.",
+    "after": "El comando único de auditoría descrito en §7 ejecuta los 19 objetivos, incluidos la raíz, los objetivos individuales de auditoría y el control de exportación. Las revisiones de Lean y sus dependencias están registradas en lean-toolchain y lake-manifest.json. Compilación, exportación pública, inspección de axiomas y correspondencia semántica son controles distintos. El congelado de fuentes no cambia. El informe externo consolidado y su evidencia distinguen las comparaciones semánticas individuales de los enunciados cubiertos por el registro de componentes de prueba y las declaraciones compiladas.",
+    "change_class": "CLARITY"
+  },
+  {
+    "id": "es-4",
+    "before": "**Alcance de la prueba escrita.** La tabla siguiente registra las derivaciones que recibieron especial atención. La versión 1.21 amplió la limpieza bilateral de fibras de C.2, los conteos de normalización y la eliminación conjunta de E.1, y el calendario numérico de C.3. La versión 1.22 añadió la recurrencia de regularidad y la comparación final con la torre. El informe consolidado v1.22-r2 clasifica las siete filas como ACCEPTABLE_SUMMARY. Conserva el límite expositivo declarado sobre las estimaciones de segundo momento citadas en C.2. Un build satisfactorio verifica derivaciones formales, no la integridad de su exposición; la evaluación de la prueba escrita sigue siendo distinta de la compilación y de la revisión humana por pares.",
+    "after": "**Alcance de la prueba escrita.** La tabla siguiente registra siete derivaciones examinadas en la revisión externa consolidada. Su evaluación, ACCEPTABLE_SUMMARY para cada fila, conserva el límite expositivo declarado sobre las estimaciones de segundo momento citadas en C.2. Un build satisfactorio verifica derivaciones formales, no la integridad de su exposición; la evaluación de la prueba escrita sigue siendo distinta de la compilación y de la revisión humana por pares. El historial de auditoría y las evaluaciones detalladas se conservan con la evidencia complementaria.",
+    "change_class": "CLARITY"
+  },
+  {
+    "id": "es-5",
+    "before": "El Apéndice E.4 desarrolla las cuentas terminales conservadas que se usan en §6.6, F.3 demuestra la recuperación de la clique y F.5 explica el ensamblaje de tres casos de la cota adaptada con muestras con anclajes. Sus comprobaciones registradas se consolidan en el informe v1.22-r2, con el alcance y los límites allí declarados. Esas comprobaciones contrastan las cuentas escritas con el desarrollo formal congelado; no convierten la compilación local en un sustituto de la revisión matemática.",
+    "after": "El Apéndice E.4 desarrolla las cuentas terminales conservadas que se usan en §6.6, F.3 demuestra la recuperación de la clique y F.5 explica el ensamblaje de tres casos de la cota adaptada con muestras con anclajes. El informe externo consolidado registra las comprobaciones correspondientes y sus límites de alcance. Esas comprobaciones contrastan las cuentas escritas con el desarrollo formal congelado; no convierten la compilación local en un sustituto de la revisión matemática.",
+    "change_class": "CLARITY"
+  }
+]

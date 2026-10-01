@@ -1,0 +1,27 @@
+$ c:\Users\jtraverso\.elan\toolchains\leanprover--lean4---v4.28.0\bin\lean.exe -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false MixedRounding/Defs.lean -o C:\Users\jtraverso\e81p4\opt_build_20260927\.lake\runner\lib\lean\MixedRounding\Defs.olean -i C:\Users\jtraverso\e81p4\opt_build_20260927\.lake\runner\lib\lean\MixedRounding\Defs.ilean
+MixedRounding/Defs.lean:46:0: warning: automatically included section variable(s) unused in theorem `MixedRounding.mem_pairs`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+MixedRounding/Defs.lean:50:0: warning: automatically included section variable(s) unused in theorem `MixedRounding.mk_mem_pairs`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+MixedRounding/Defs.lean:75:0: warning: automatically included section variable(s) unused in theorem `MixedRounding.gainF_le_five`:
+  [Fintype V]
+  [DecidableEq V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] [DecidableEq V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+MixedRounding/Defs.lean:82:0: warning: automatically included section variable(s) unused in theorem `MixedRounding.gainF_nonneg`:
+  [Fintype V]
+  [DecidableEq V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] [DecidableEq V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`

@@ -1,0 +1,36 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 PaperIV/SpreadAbsorptionCompatibility.lean -o /workspace/request-project/.lake/runner/lib/lean/PaperIV/SpreadAbsorptionCompatibility.olean -i /workspace/request-project/.lake/runner/lib/lean/PaperIV/SpreadAbsorptionCompatibility.ilean
+PaperIV/SpreadAbsorptionCompatibility.lean:50:0: warning: automatically included section variable(s) unused in theorem `PaperIV.SpreadAbsorptionCompatibility.absorber_piece_subset`:
+  [Fintype V]
+  [DecidableRel G.Adj]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] [DecidableRel G.Adj] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+PaperIV/SpreadAbsorptionCompatibility.lean:92:0: warning: automatically included section variable(s) unused in theorem `PaperIV.SpreadAbsorptionCompatibility.totalGain_union_absorber`:
+  [Fintype V]
+  [DecidableRel G.Adj]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] [DecidableRel G.Adj] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+PaperIV/SpreadAbsorptionCompatibility.lean:94:5: warning: unused variable `hNne`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+import took 3.08s
+cumulative profiling times:
+	.olean serialization 61.2ms
+	attribute application 0.0642ms
+	elaboration 42.4ms
+	fix level params 0.606ms
+	import 3.08s
+	initialization 35.5ms
+	instantiate metavars 2.95ms
+	interpretation 200ms
+	let-to-have transformation 0.118ms
+	linting 12.1ms
+	parsing 5.98ms
+	process pre-definitions 2.58ms
+	share common exprs 1.13ms
+	tactic execution 49.5ms
+	type checking 8.28ms
+	typeclass inference 46ms

@@ -1,0 +1,29 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 PaperIV/CountingTelescope.lean -o /workspace/request-project/.lake/runner/lib/lean/PaperIV/CountingTelescope.olean -i /workspace/request-project/.lake/runner/lib/lean/PaperIV/CountingTelescope.ilean
+PaperIV/CountingTelescope.lean:56:47: warning: unused variable `hε`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+PaperIV/CountingTelescope.lean:80:18: warning: unused variable `hd`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+import took 3.05s
+cumulative profiling times:
+	.olean serialization 43.7ms
+	attribute application 0.0652ms
+	congr simp thm 2.08ms
+	elaboration 22.4ms
+	fix level params 0.379ms
+	import 3.05s
+	initialization 41.7ms
+	instantiate metavars 2.47ms
+	interpretation 294ms
+	let-to-have transformation 0.0794ms
+	linting 12.4ms
+	norm_num 7.48ms
+	parsing 3.29ms
+	process pre-definitions 7.76ms
+	ring 26.4ms
+	share common exprs 5.03ms
+	simp 15.9ms
+	tactic execution 36.7ms
+	type checking 34.7ms
+	typeclass inference 141ms

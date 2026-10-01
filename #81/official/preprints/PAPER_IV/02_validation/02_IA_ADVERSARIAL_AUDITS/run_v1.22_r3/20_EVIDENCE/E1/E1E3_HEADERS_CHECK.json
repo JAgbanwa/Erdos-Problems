@@ -1,0 +1,282 @@
+[
+ {
+  "name": "PaperIV.NearH1LocalConstructor.exists_near_partition_paid_by_root_sharp",
+  "source": "PaperIV/NearH1LocalConstructor.lean",
+  "source_sha_eq_manifest": true,
+  "source_sha_eq_json": true,
+  "line_json": 36,
+  "line_found": 36,
+  "line_ok": true,
+  "header_eq_json": true,
+  "namespaces_in_scope": [
+   "PaperIV.NearH1LocalConstructor"
+  ],
+  "variables_in_scope": [],
+  "elaborated_name_guess": "PaperIV.NearH1LocalConstructor.exists_near_partition_paid_by_root_sharp",
+  "log_exists": true,
+  "log_sha_eq_json": true,
+  "module_record_PASS": true,
+  "module_exit": 0,
+  "log_mentions_error": false,
+  "header": "theorem exists_near_partition_paid_by_root_sharp {n : ℕ}\n    (hn : 4 * 10 ^ 12 ≤ n)\n    (G : SimpleGraph (Fin n)) [DecidableRel G.Adj]\n    (hG : PaperIV.IsChordal G) {w : ℚ}\n    (hw : CertifiedFractionalOptimum G w)\n    (hdist : graphFamDistNorm\n      (allSplitSupports (V := Fin n)) allSplitSupports_nonempty G\n        ((n : ℚ) ^ 2) < PaperIV.NearH1Calibration.eps)\n    (hnear : (n : ℚ) ^ 2 / 6 -\n        PaperIV.NearH1Calibration.eta * (n : ℚ) ^ 2 ≤\n      (G.edgeFinset.card : ℚ) - w) :\n    ∃ (R : Finset (Fin n)) (Q : CliquePartition G),\n      G.IsClique (R : Set (Fin n)) ∧\n      |3 * (R.card : ℚ) - (n : ℚ)| ≤ (n : ℚ) / 50 ∧\n      Q.OrderAtMost 4 ∧\n      (Q.size : ℚ) ≤\n        splitBaseline (n : ℚ) (R.card : ℚ) -\n          ((outsideEdges G R).card : ℚ) / 20 -\n          (missingIncidences G R : ℚ) / 2"
+ },
+ {
+  "name": "PaperIV.NearH1LocalConstructor.exists_near_partition_paid_by_root",
+  "source": "PaperIV/NearH1LocalConstructor.lean",
+  "source_sha_eq_manifest": true,
+  "source_sha_eq_json": true,
+  "line_json": 121,
+  "line_found": 121,
+  "line_ok": true,
+  "header_eq_json": true,
+  "namespaces_in_scope": [
+   "PaperIV.NearH1LocalConstructor"
+  ],
+  "variables_in_scope": [],
+  "elaborated_name_guess": "PaperIV.NearH1LocalConstructor.exists_near_partition_paid_by_root",
+  "log_exists": true,
+  "log_sha_eq_json": true,
+  "module_record_PASS": true,
+  "module_exit": 0,
+  "log_mentions_error": false,
+  "header": "theorem exists_near_partition_paid_by_root {n : ℕ}\n    (hn : 4 * 10 ^ 12 ≤ n)\n    (G : SimpleGraph (Fin n)) [DecidableRel G.Adj]\n    (hG : PaperIV.IsChordal G) {w : ℚ}\n    (hw : CertifiedFractionalOptimum G w)\n    (hdist : graphFamDistNorm\n      (allSplitSupports (V := Fin n)) allSplitSupports_nonempty G\n        ((n : ℚ) ^ 2) < PaperIV.NearH1Calibration.eps)\n    (hnear : (n : ℚ) ^ 2 / 6 -\n        PaperIV.NearH1Calibration.eta * (n : ℚ) ^ 2 ≤\n      (G.edgeFinset.card : ℚ) - w) :\n    ∃ (R : Finset (Fin n)) (Q : CliquePartition G),\n      G.IsClique (R : Set (Fin n)) ∧\n      (n : ℚ) / 4 ≤ (R.card : ℚ) ∧\n      (R.card : ℚ) ≤ (n : ℚ) / 2 ∧\n      Q.OrderAtMost 4 ∧\n      (Q.size : ℚ) ≤\n        splitBaseline (n : ℚ) (R.card : ℚ) -\n          ((outsideEdges G R).card : ℚ) / 20 -\n          (missingIncidences G R : ℚ) / 2"
+ },
+ {
+  "name": "PaperIV.NearCriticalDichotomy.chordal_far_or_criticalRoot",
+  "source": "PaperIV/NearCriticalDichotomy.lean",
+  "source_sha_eq_manifest": true,
+  "source_sha_eq_json": true,
+  "line_json": 41,
+  "line_found": 41,
+  "line_ok": true,
+  "header_eq_json": true,
+  "namespaces_in_scope": [
+   "PaperIV.NearCriticalDichotomy"
+  ],
+  "variables_in_scope": [],
+  "elaborated_name_guess": "PaperIV.NearCriticalDichotomy.chordal_far_or_criticalRoot",
+  "log_exists": true,
+  "log_sha_eq_json": true,
+  "module_record_PASS": true,
+  "module_exit": 0,
+  "log_mentions_error": false,
+  "header": "theorem chordal_far_or_criticalRoot :\n    ∃ N : ℕ, ∀ n : ℕ, N ≤ n → ∀ (G : SimpleGraph (Fin n)) [DecidableRel G.Adj],\n      PaperIV.FarRounding.IsChordal G → ∀ w : ℚ, CertifiedFractionalOptimum G w →\n        ((G.edgeFinset.card : ℚ) - w <\n            (n : ℚ) ^ 2 / 6 - PaperIV.NearH1Calibration.eta * (n : ℚ) ^ 2) ∨\n          ∃ R C : Finset (Fin n),\n            G.IsClique (R : Set (Fin n)) ∧\n            |3 * (R.card : ℚ) - (n : ℚ)| ≤ (n : ℚ) / 50 ∧\n            C.Nonempty ∧\n            (PaperIV.EditMetric.editDist G.edgeFinset\n                (graphEdgeSupport\n                  (PaperIV.SplitUniformIncidence.splitGraph C\n                    (Finset.univ \\ C))) : ℚ) ≤\n              PaperIV.NearH1Calibration.eps * (n : ℚ) ^ 2 ∧\n            |3 * (C.card : ℚ) - (n : ℚ)| ≤ (n : ℚ) / 10000 ∧\n            |(R.card : ℚ) - (C.card : ℚ)| ≤ (n : ℚ) / 100"
+ },
+ {
+  "name": "PaperIV.NearCriticalDichotomy.chordal_far_or_edge_density",
+  "source": "PaperIV/NearCriticalDichotomy.lean",
+  "source_sha_eq_manifest": true,
+  "source_sha_eq_json": true,
+  "line_json": 103,
+  "line_found": 103,
+  "line_ok": true,
+  "header_eq_json": true,
+  "namespaces_in_scope": [
+   "PaperIV.NearCriticalDichotomy"
+  ],
+  "variables_in_scope": [],
+  "elaborated_name_guess": "PaperIV.NearCriticalDichotomy.chordal_far_or_edge_density",
+  "log_exists": true,
+  "log_sha_eq_json": true,
+  "module_record_PASS": true,
+  "module_exit": 0,
+  "log_mentions_error": false,
+  "header": "theorem chordal_far_or_edge_density :\n    ∃ N : ℕ, ∀ n : ℕ, N ≤ n → ∀ (G : SimpleGraph (Fin n)) [DecidableRel G.Adj],\n      PaperIV.FarRounding.IsChordal G → ∀ w : ℚ, CertifiedFractionalOptimum G w →\n        ((G.edgeFinset.card : ℚ) - w <\n            (n : ℚ) ^ 2 / 6 - PaperIV.NearH1Calibration.eta * (n : ℚ) ^ 2) ∨\n          |(G.edgeFinset.card : ℚ) - 5 * (n : ℚ) ^ 2 / 18| ≤ (n : ℚ) ^ 2 / 10000"
+ },
+ {
+  "name": "PaperIV.HybridDichotomy.chordal_far_or_nearStructure",
+  "source": "PaperIV/HybridDichotomy.lean",
+  "source_sha_eq_manifest": true,
+  "source_sha_eq_json": true,
+  "line_json": 69,
+  "line_found": 69,
+  "line_ok": true,
+  "header_eq_json": true,
+  "namespaces_in_scope": [
+   "PaperIV.HybridDichotomy"
+  ],
+  "variables_in_scope": [],
+  "elaborated_name_guess": "PaperIV.HybridDichotomy.chordal_far_or_nearStructure",
+  "log_exists": true,
+  "log_sha_eq_json": true,
+  "module_record_PASS": true,
+  "module_exit": 0,
+  "log_mentions_error": false,
+  "header": "theorem chordal_far_or_nearStructure :\n    ∃ N : ℕ, ∀ n : ℕ, N ≤ n → ∀ (G : SimpleGraph (Fin n)) [DecidableRel G.Adj],\n      PaperIV.FarRounding.IsChordal G → ∀ w : ℚ, CertifiedFractionalOptimum G w →\n        ((G.edgeFinset.card : ℚ) - w <\n            (n : ℚ) ^ 2 / 6 - PaperIV.NearH1Calibration.eta * (n : ℚ) ^ 2) ∨\n          Nonempty (NearStructureWitness G)"
+ },
+ {
+  "name": "PaperIV.SharpConstantOptimality.erdos81_quadratic_constant_optimal",
+  "source": "PaperIV/SharpConstantOptimality.lean",
+  "source_sha_eq_manifest": true,
+  "source_sha_eq_json": true,
+  "line_json": 52,
+  "line_found": 52,
+  "line_ok": true,
+  "header_eq_json": true,
+  "namespaces_in_scope": [
+   "PaperIV.SharpConstantOptimality"
+  ],
+  "variables_in_scope": [],
+  "elaborated_name_guess": "PaperIV.SharpConstantOptimality.erdos81_quadratic_constant_optimal",
+  "log_exists": true,
+  "log_sha_eq_json": true,
+  "module_record_PASS": true,
+  "module_exit": 0,
+  "log_mentions_error": false,
+  "header": "theorem erdos81_quadratic_constant_optimal {c C : ℚ} {N : ℕ}\n    (h : ∀ n : ℕ, N ≤ n → ∀ (G : SimpleGraph (Fin n)) (_ : DecidableRel G.Adj),\n      SimpleGraph.IsChordal G → ∃ Q : CliquePartition G, (Q.size : ℚ) ≤ c * (n : ℚ) ^ 2 +\n        C * (n : ℚ)) :\n    1 / 6 ≤ c"
+ },
+ {
+  "name": "PaperIV.SharpConstantOptimality.erdos81_quadratic_constant_isLeast",
+  "source": "PaperIV/SharpConstantOptimality.lean",
+  "source_sha_eq_manifest": true,
+  "source_sha_eq_json": true,
+  "line_json": 93,
+  "line_found": 93,
+  "line_ok": true,
+  "header_eq_json": true,
+  "namespaces_in_scope": [
+   "PaperIV.SharpConstantOptimality"
+  ],
+  "variables_in_scope": [],
+  "elaborated_name_guess": "PaperIV.SharpConstantOptimality.erdos81_quadratic_constant_isLeast",
+  "log_exists": true,
+  "log_sha_eq_json": true,
+  "module_record_PASS": true,
+  "module_exit": 0,
+  "log_mentions_error": false,
+  "header": "theorem erdos81_quadratic_constant_isLeast :\n    IsLeast {c : ℚ | ∃ (C : ℚ) (N : ℕ), ∀ n : ℕ, N ≤ n →\n      ∀ (G : SimpleGraph (Fin n)) (_ : DecidableRel G.Adj), SimpleGraph.IsChordal G →\n        ∃ Q : CliquePartition G, (Q.size : ℚ) ≤ c * (n : ℚ) ^ 2 + C * (n : ℚ)}\n      (1 / 6)"
+ },
+ {
+  "name": "PaperIV.LinearCoefficient.linear_coefficient_optimal",
+  "source": "PaperIV/LinearCoefficient.lean",
+  "source_sha_eq_manifest": true,
+  "source_sha_eq_json": true,
+  "line_json": 49,
+  "line_found": 49,
+  "line_ok": true,
+  "header_eq_json": true,
+  "namespaces_in_scope": [
+   "PaperIV.LinearCoefficient"
+  ],
+  "variables_in_scope": [],
+  "elaborated_name_guess": "PaperIV.LinearCoefficient.linear_coefficient_optimal",
+  "log_exists": true,
+  "log_sha_eq_json": true,
+  "module_record_PASS": true,
+  "module_exit": 0,
+  "log_mentions_error": false,
+  "header": "theorem linear_coefficient_optimal (c B : ℚ) (hc : c < 1 / 6) :\n    ∃ N : ℕ, ∀ n : ℕ, N ≤ n →\n      ∃ (G : SimpleGraph (Fin n)) (_ : DecidableRel G.Adj),\n        SimpleGraph.IsChordal G ∧\n        ∀ Q : CliquePartition G, (n : ℚ) ^ 2 / 6 + c * (n : ℚ) + B < (Q.size : ℚ)"
+ },
+ {
+  "name": "PaperIV.RootPartitionStability.sum_rootPieceDefect_eq",
+  "source": "PaperIV/RootPartitionStability.lean",
+  "source_sha_eq_manifest": true,
+  "source_sha_eq_json": true,
+  "line_json": 200,
+  "line_found": 200,
+  "line_ok": true,
+  "header_eq_json": true,
+  "namespaces_in_scope": [
+   "PaperIV.RootPartitionStability"
+  ],
+  "variables_in_scope": [
+   "{V : Type*} [Fintype V] [DecidableEq V]",
+   "{G : SimpleGraph V} [DecidableRel G.Adj]"
+  ],
+  "elaborated_name_guess": "PaperIV.RootPartitionStability.sum_rootPieceDefect_eq",
+  "log_exists": true,
+  "log_sha_eq_json": true,
+  "module_record_PASS": true,
+  "module_exit": 0,
+  "log_mentions_error": false,
+  "header": "theorem sum_rootPieceDefect_eq (R : Finset V)\n    (hR : G.IsClique (R : Set V)) (Q : CliquePartition G) :\n    ∑ K ∈ Q.pieces, rootPieceDefect R K =\n      (Q.size : ℚ) - splitBaseline (Fintype.card V) R.card\n        + missingIncidences G R + 3 * (outsideEdges G R).card"
+ },
+ {
+  "name": "PaperIV.SplitMixedGap.mixed_gap_zero",
+  "source": "PaperIV/SplitMixedGap.lean",
+  "source_sha_eq_manifest": true,
+  "source_sha_eq_json": true,
+  "line_json": 167,
+  "line_found": 167,
+  "line_ok": true,
+  "header_eq_json": true,
+  "namespaces_in_scope": [
+   "PaperIV.SplitMixedGap"
+  ],
+  "variables_in_scope": [
+   "{V : Type*} [Fintype V] [DecidableEq V]"
+  ],
+  "elaborated_name_guess": "PaperIV.SplitMixedGap.mixed_gap_zero",
+  "log_exists": true,
+  "log_sha_eq_json": true,
+  "module_record_PASS": true,
+  "module_exit": 0,
+  "log_mentions_error": false,
+  "header": "theorem mixed_gap_zero {Core Hosts : Finset V} (hd : Disjoint Core Hosts)\n    (hcore : 2 ≤ Core.card) (hhosts : Core.card ≤ Hosts.card) :\n    (∀ x : FracPacking (splitGraph Core Hosts) ℚ,\n        x.value ≤ 2 * (Core.card.choose 2 : ℚ)) ∧\n      ∃ Q : CliquePartition (splitGraph Core Hosts),\n        ∑ K ∈ Q.pieces, FarRounding.gainOf K = 2 * Core.card.choose 2"
+ },
+ {
+  "name": "PaperIV.SplitCompleteSharpValue.exists_sharp_cliquePartition_allParities",
+  "source": "PaperIV/SplitCompleteSharpValue.lean",
+  "source_sha_eq_manifest": true,
+  "source_sha_eq_json": true,
+  "line_json": 14,
+  "line_found": 14,
+  "line_ok": true,
+  "header_eq_json": true,
+  "namespaces_in_scope": [
+   "PaperIV.SplitCompleteSharpValue"
+  ],
+  "variables_in_scope": [
+   "{V : Type*} [Fintype V] [DecidableEq V]"
+  ],
+  "elaborated_name_guess": "PaperIV.SplitCompleteSharpValue.exists_sharp_cliquePartition_allParities",
+  "log_exists": true,
+  "log_sha_eq_json": true,
+  "module_record_PASS": true,
+  "module_exit": 0,
+  "log_mentions_error": false,
+  "header": "theorem exists_sharp_cliquePartition_allParities\n    {Core Hosts : Finset V} (hd : Disjoint Core Hosts)\n    (hcore : 2 ≤ Core.card) (hhosts : Core.card ≤ Hosts.card) :\n    ∃ Q : CliquePartition (splitGraph Core Hosts),\n      Q.OrderAtMost 4 ∧\n      Q.size = Core.card * Hosts.card - Core.card.choose 2 ∧\n      ∀ R : CliquePartition (splitGraph Core Hosts), Q.size ≤ R.size"
+ },
+ {
+  "name": "FarExploration.CleanupRigidVerdict.threshold_gt_exp",
+  "source": "FarExploration/CleanupRigidVerdict.lean",
+  "source_sha_eq_manifest": true,
+  "source_sha_eq_json": true,
+  "line_json": 194,
+  "line_found": 194,
+  "line_ok": true,
+  "header_eq_json": true,
+  "namespaces_in_scope": [
+   "FarExploration.CleanupRigidVerdict"
+  ],
+  "variables_in_scope": [],
+  "elaborated_name_guess": "FarExploration.CleanupRigidVerdict.threshold_gt_exp",
+  "log_exists": true,
+  "log_sha_eq_json": true,
+  "module_record_PASS": true,
+  "module_exit": 0,
+  "log_mentions_error": false,
+  "header": "theorem threshold_gt_exp (eps : ℚ) (heps : 0 < eps) (gam Cst : ℝ) (hgam : gam ≤ 1 / 2) (N₀ : ℕ)\n    (hN : CleanupAtWith gam Cst (eps / 30) (eps / 4) N₀) (t : ℝ) (ht : 4 ≤ t)\n    (hteps : 7 * (eps : ℝ) ≤ Real.exp (-t)) :\n    Real.exp (t ^ 2 / 16) < (N₀ : ℝ)"
+ },
+ {
+  "name": "FarExploration.CleanupRigidVerdict.threshold_gt_exp_seventy_two",
+  "source": "FarExploration/CleanupRigidVerdict.lean",
+  "source_sha_eq_manifest": true,
+  "source_sha_eq_json": true,
+  "line_json": 271,
+  "line_found": 271,
+  "line_ok": true,
+  "header_eq_json": true,
+  "namespaces_in_scope": [
+   "FarExploration.CleanupRigidVerdict"
+  ],
+  "variables_in_scope": [],
+  "elaborated_name_guess": "FarExploration.CleanupRigidVerdict.threshold_gt_exp_seventy_two",
+  "log_exists": true,
+  "log_sha_eq_json": true,
+  "module_record_PASS": true,
+  "module_exit": 0,
+  "log_mentions_error": false,
+  "header": "theorem threshold_gt_exp_seventy_two (eps : ℚ) (heps : 0 < eps) (gam Cst : ℝ) (hgam : gam ≤ 1 / 2)\n    (N₀ : ℕ) (hN : CleanupAtWith gam Cst (eps / 30) (eps / 4) N₀)\n    (hsmall : (eps : ℝ) ≤ 1 / (7 * Real.exp 34)) :\n    Real.exp 72 < (N₀ : ℝ)"
+ }
+]

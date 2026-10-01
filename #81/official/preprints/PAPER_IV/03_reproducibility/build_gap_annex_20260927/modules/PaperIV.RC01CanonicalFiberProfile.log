@@ -1,0 +1,22 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 PaperIV/RC01CanonicalFiberProfile.lean -o /workspace/request-project/.lake/runner/lib/lean/PaperIV/RC01CanonicalFiberProfile.olean -i /workspace/request-project/.lake/runner/lib/lean/PaperIV/RC01CanonicalFiberProfile.ilean
+import took 3.92s
+.olean serialization took 121ms
+cumulative profiling times:
+	.olean serialization 121ms
+	attribute application 0.256ms
+	congr simp thm 0.588ms
+	elaboration 161ms
+	fix level params 1.5ms
+	import 3.92s
+	initialization 36.5ms
+	instantiate metavars 3.66ms
+	interpretation 347ms
+	let-to-have transformation 0.68ms
+	linting 48.3ms
+	parsing 15.5ms
+	process pre-definitions 11.7ms
+	share common exprs 3.41ms
+	simp 2.11ms
+	tactic execution 253ms
+	type checking 30.3ms
+	typeclass inference 216ms

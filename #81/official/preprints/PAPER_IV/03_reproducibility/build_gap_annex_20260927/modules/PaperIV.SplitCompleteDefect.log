@@ -1,0 +1,36 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 PaperIV/SplitCompleteDefect.lean -o /workspace/request-project/.lake/runner/lib/lean/PaperIV/SplitCompleteDefect.olean -i /workspace/request-project/.lake/runner/lib/lean/PaperIV/SplitCompleteDefect.ilean
+PaperIV/SplitCompleteDefect.lean:72:0: warning: automatically included section variable(s) unused in theorem `PaperIV.SplitCompleteDefect.defect_of_no_host`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+PaperIV/SplitCompleteDefect.lean:78:0: warning: automatically included section variable(s) unused in theorem `PaperIV.SplitCompleteDefect.defect_of_host`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+import took 3.5s
+cumulative profiling times:
+	.olean serialization 71.3ms
+	attribute application 0.115ms
+	compilation (IR) 0.28ms
+	compilation (LCNF base) 0.697ms
+	compilation (LCNF mono) 0.351ms
+	congr simp thm 4.09ms
+	elaboration 53.1ms
+	fix level params 0.606ms
+	import 3.5s
+	initialization 39.2ms
+	instantiate metavars 0.93ms
+	interpretation 253ms
+	let-to-have transformation 0.198ms
+	linting 15.4ms
+	parsing 8.29ms
+	process pre-definitions 5.83ms
+	share common exprs 1.68ms
+	simp 22.8ms
+	tactic execution 108ms
+	type checking 130ms
+	typeclass inference 120ms

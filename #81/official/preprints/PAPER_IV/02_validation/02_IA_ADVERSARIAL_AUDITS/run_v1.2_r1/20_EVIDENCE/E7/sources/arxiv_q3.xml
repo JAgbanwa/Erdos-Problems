@@ -1,0 +1,48 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/SxTdujxR2ZHWlve9erEuH072FPE</id>
+  <title>arXiv Query: search_query=all:"clique partition" AND all:stability&amp;id_list=&amp;start=0&amp;max_results=25</title>
+  <updated>2026-09-30T12:34:17Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=all:%22clique+partition%22+AND+all:stability&amp;start=0&amp;max_results=25&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>25</opensearch:itemsPerPage>
+  <opensearch:totalResults>2</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/2609.20871v1</id>
+    <title>Clique partitions and bounded simplicial defect</title>
+    <updated>2026-09-15T16:25:32Z</updated>
+    <link href="https://arxiv.org/abs/2609.20871v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2609.20871v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The clique partition number of a graph is the minimum number of complete subgraphs whose edge sets partition its edge set. We study graphs in which, in every induced subgraph and outside every prescribed clique, some vertex has a neighbourhood that becomes a clique after deleting at most $s$ vertices. The case $s=0$ is exactly the class of chordal graphs. For each fixed $s$, we prove that the maximum clique partition number at all sufficiently large orders $n$ is $\lfloor(n+s)(n+s+1)/6\rfloor-\binom{s+1}{2}$, and determine all equality graphs. The same expression is an upper bound up to an additive constant depending only on $s$ at every order. In particular, every chordal graph has clique partition number at most $n^2/6+n/6+O(1)$, answering a question of Erdős, Ordman and Zalcstein. We also prove structural stability for sublinear defect and a sharp finite-order theorem for integer signed clique functionals. The proof combines signed fractional localization with an edge-disjoint triangle construction; only a qualitative fractional-packing approximation is required.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-09-15T16:25:32Z</published>
+    <arxiv:comment>24 pages</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Obinna Okechukwu</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1408.2116v1</id>
+    <title>Self-stabilizing algorithms for Connected Vertex Cover and Clique decomposition problems</title>
+    <updated>2014-08-09T14:43:04Z</updated>
+    <link href="https://arxiv.org/abs/1408.2116v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1408.2116v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In many wireless networks, there is no fixed physical backbone nor centralized network management. The nodes of such a network have to self-organize in order to maintain a virtual backbone used to route messages. Moreover, any node of the network can be a priori at the origin of a malicious attack. Thus, in one hand the backbone must be fault-tolerant and in other hand it can be useful to monitor all network communications to identify an attack as soon as possible. We are interested in the minimum \emph{Connected Vertex Cover} problem, a generalization of the classical minimum Vertex Cover problem, which allows to obtain a connected backbone. Recently, Delbot et al.~\cite{DelbotLP13} proposed a new centralized algorithm with a constant approximation ratio of $2$ for this problem. In this paper, we propose a distributed and self-stabilizing version of their algorithm with the same approximation guarantee. To the best knowledge of the authors, it is the first distributed and fault-tolerant algorithm for this problem. The approach followed to solve the considered problem is based on the construction of a connected minimal clique partition. Therefore, we also design the first distributed self-stabilizing algorithm for this problem, which is of independent interest.</summary>
+    <category term="cs.DC" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2014-08-09T14:43:04Z</published>
+    <arxiv:primary_category term="cs.DC"/>
+    <author>
+      <name>François Delbot</name>
+      <arxiv:affiliation>LIP6</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Christian Laforest</name>
+      <arxiv:affiliation>LIMOS</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Stephane Rovedakis</name>
+      <arxiv:affiliation>CEDRIC</arxiv:affiliation>
+    </author>
+  </entry>
+</feed>

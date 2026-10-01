@@ -1,0 +1,742 @@
+--- C:/Users/jtraverso/e81p4-publish/preprints/PAPER_IV/01_manuscript/v1.2_full_rebuild_candidate/PAPER_IV_preprint_v1.2_es.md	2026-09-29 22:21:22.191202800 -0300
++++ C:/Users/jtraverso/e81p4-publish/preprints/PAPER_IV/01_manuscript/v1.21_editorial_candidate/PAPER_IV_preprint_v1.21_es.md	2026-09-30 19:51:59.109676300 -0300
+@@ -6,9 +6,9 @@
+ [ORCID: 0009-0003-6068-4096](https://orcid.org/0009-0003-6068-4096)
+ 
+ **Paper IV de la serie**  
+-**Preprint:** versión 1.2, candidata a revisión matemática.  
+-**Fecha de esta revisión:** 29 de septiembre de 2026.  
+-**Estado:** edición bilingüe preparada para una nueva auditoría. Las fuentes Lean están congeladas localmente como `piv-v12-fb459343d234`, tras la reconstrucción completa del proyecto en dos tramos verificados y la ejecución nueva de los 19 objetivos seleccionados. El corte incluye E35, el Teorema C público explícito y la obstrucción de raíz cuadrada. Las nuevas auditorías interna y adversarial externa del manuscrito ampliado permanecen pendientes. Los veredictos anteriores no certifican esta edición. No se ha publicado ni se le ha asignado un DOI propio.
++**Preprint:** versión 1.21, candidata a revisión editorial.
++**Fecha de esta revisión:** 30 de septiembre de 2026.
++**Estado:** revisión editorial que atiende la auditoría externa completada de la versión 1.2. El corte Lean sigue siendo `piv-v12-fb459343d234`; esta revisión no modifica sus fuentes. La versión 1.2 completó ambas auditorías: la reproducción formal externa obtuvo PASS, mientras que el veredicto global fue INCONCLUSIVE porque cuatro derivaciones requerían mayor desarrollo expositivo. Ninguno de esos veredictos se transfiere automáticamente a las explicaciones añadidas aquí. Las ediciones adjuntas en Markdown, TeX y PDF, en inglés y español, se presentan para una nueva revisión editorial, matemática y bilingüe. Esta candidata no se ha publicado ni tiene un DOI propio.
+ **DOI de concepto de la serie:** <https://doi.org/10.5281/zenodo.21273143>. El DOI de versión del depósito que reunirá Papers I–IV todavía no está asignado.
+ 
+ **MSC 2020:** Primario 05C70; secundarios 05C35, 05C72.
+@@ -22,7 +22,7 @@
+ M(n)=\left\lfloor\frac{n(n+1)}6\right\rfloor,\qquad
+ Q_s(n)=M(n+s)-\binom{s+1}{2}.
+ \]
+-Nuestra construcción alcanza la cota superior eventual \(Q_s(n)\) con piezas de orden a lo sumo cuatro y recupera la familia extremal irrestricta de Okechukwu [15, Teorema 1.1]. Para grafos cordales da una prueba formal de \(c_4(G)\le M(n)+b\) a todo orden y, por tanto, de la cota pedida en el problema 81 de Erdős. Esta conclusión para todos los órdenes también se deduce de la cota eventual de [5]. No se reclama prioridad del valor extremal.
++Nuestra construcción alcanza la cota superior eventual \(Q_s(n)\) con piezas de orden a lo sumo cuatro y recupera la familia extremal irrestricta de Okechukwu [15, Teorema 1.1]. Para grafos cordales da una prueba formal de \(c_4(G)\le M(n)+b\) a todo orden y, por tanto, de la cota pedida en el problema 81 de Erdős. La cota aditiva a todo orden para particiones en cliques sin restricción también se obtiene en [5] y [15, Corolario 1.2]. No se reclama prioridad del valor extremal.
+ 
+ Para defecto enraizado sublineal, obtenemos una aproximación de orden cuatro y estabilidad a lo largo de sucesiones arbitrarias de órdenes que tienden a infinito, de nuevo con una misma raíz que controla todas las particiones casi óptimas. La prueba combina el redondeo mixto de la infraestructura de los Papers I–III, las cuentas conservadas de los constructores y argumentos de localización y remoción con atribución explícita. Los enunciados están formalizados en Lean 4 usando sólo sus axiomas fundacionales estándar. Los umbrales son explícitos, pero no prácticos; no se afirma la optimalidad de las constantes de estabilidad ni \(b=0\) para todos los grafos cordales.
+ 
+@@ -34,7 +34,7 @@
+ 
+ El problema de Erdős, Ordman y Zalcstein [1,8] pide una cota de la forma \(n^2/6+O(n)\) para grafos cordales. Los ejemplos completo-split explican el coeficiente cuadrático. Sin embargo, una cota fraccional de ese orden no produce inmediatamente una partición con error lineal: el redondeo general permite una pérdida subcuadrática, que puede ser mucho mayor que \(n\).
+ 
+-Los tres papers anteriores de la serie separan aspectos de esta dificultad. Paper I [2] estudia perfiles de vecindario sobre una presentación split y reduce el problema residual a un politopo fijo. Paper II [3] determina el máximo exacto del déficit fraccional triangular sobre todos los cordales mediante copias de vértices. Paper III [4] construye particiones con error lineal para grafos split, distinguiendo los regímenes en que basta la holgura fraccional de aquellos que requieren una construcción más precisa. Su desarrollo formal aporta además la infraestructura de nibble y redondeo que se reutiliza en la Sección 3 y en el Apéndice B.
++Los tres papers anteriores de la serie separan aspectos de esta dificultad. Paper I [2] estudia perfiles de vecindario sobre una presentación split y reduce el problema residual a un politopo fijo. Paper II [3] determina el máximo exacto del déficit fraccional triangular sobre todos los cordales mediante copias de vértices. Paper III [4] construye particiones con error lineal para grafos split, distinguiendo los regímenes en que basta el margen fraccional de aquellos que requieren una construcción más precisa. Su desarrollo formal aporta además la infraestructura de nibble y redondeo que se reutiliza en la Sección 3 y en el Apéndice B.
+ 
+ Este trabajo forma parte de la serie: sus entradas se enuncian donde se aplican.
+ 
+@@ -58,7 +58,7 @@
+ \le\frac{n^2}{6}+\frac n6+b.
+ \tag{A}
+ \]
+-En consecuencia, existe \(C\ge0\) tal que \(c_4(G)\le n^2/6+Cn\) para todos esos grafos. Esto da la cota pedida en el problema 81 de Erdős [1,8] para todo orden, sin excepciones; también se deduce de la cota eventual de [5], como se discute en §8.1. La constante aditiva \(b\) no se afirma óptima.
++En consecuencia, existe \(C\ge0\) tal que \(c_4(G)\le n^2/6+Cn\) para todos esos grafos. Esto da la cota pedida en el problema 81 de Erdős [1,8] para todo orden, sin excepciones. La cota para particiones en cliques sin restricción también se obtiene en [5] y [15, Corolario 1.2], como se discute en §8.1. La constante aditiva \(b\) no se afirma óptima.
+ 
+ ### Teorema B. Cota aguda y máximo eventual
+ 
+@@ -147,7 +147,7 @@
+ 
+ Así, (1.3) es el caso mixto de una identidad de cuentas general. La dificultad sigue siendo producir una construcción que la cumpla para cada cordal. El resultado estructural siguiente proporciona esa cobertura en nuestra familia de piezas.
+ 
+-En esta investigación demostramos que el redondeo uniforme RC01 produce una pérdida menor que la holgura en el régimen lejano. Para el régimen crítico, el descenso localiza una raíz y la construcción H1/RD09 produce \(\mathcal P\) directamente en \(G\), sin escoger un índice de primera entrada. Sus cuentas físicas, desarrolladas en la Sección 5, demuestran
++En esta investigación demostramos que el redondeo uniforme RC01 produce una pérdida menor que el margen en el régimen lejano. Para el régimen crítico, el descenso localiza una raíz y la construcción H1/RD09 produce \(\mathcal P\) directamente en \(G\), sin escoger un índice de primera entrada. Sus cuentas físicas, desarrolladas en la Sección 5, demuestran
+ \[
+ e(G)-g(\mathcal P)
+ \le B_n(p)-\frac m{20}-\frac A2
+@@ -266,7 +266,7 @@
+ 
+ Los símbolos auxiliares del selector del Apéndice C se definen allí. En particular, \(\ell\) en §5 es un conteo de fallos y no una ganancia.
+ 
+-## 3. Redondeo mixto y régimen con holgura
++## 3. Redondeo mixto y régimen con margen
+ 
+ Ésta es la rama L de la Figura 1. Su entrada es un empaquetamiento fraccional; su salida es uno físico con pérdida subcuadrática uniforme. El Corolario 3.5 explicará cuándo esa pérdida cabe dentro del margen disponible.
+ 
+@@ -300,7 +300,7 @@
+ \]
+ Para \(n\ge6\), la desigualdad \(\lfloor t\rfloor\ge t-1\) da \(M(n)\ge n(n+1)/6-1\ge n^2/6\). La conclusión se sigue aumentando el umbral si hace falta.
+ 
+-El argumento no necesita una cota lineal universal para \(W^*(G)-W(G)\). Sólo requiere que la pérdida sea menor que la holgura de la instancia.
++El argumento no necesita una cota lineal universal para \(W^*(G)-W(G)\). Sólo requiere que la pérdida sea menor que el margen de la instancia.
+ 
+ ## 4. Localización del régimen crítico
+ 
+@@ -311,7 +311,7 @@
+ \varepsilon_0=10^{-12},\qquad \eta_0=10^{-16}.
+ \tag{4.1}
+ \]
+-El umbral cercano se ha reducido de \(10^{32}\) a \(4\cdot10^{12}\). Corresponde a la localización y al constructor cercano, no a toda la prueba: el redondeo de la Sección 3 puede imponer un umbral mayor. No se deduce de esa mejora un umbral global de \(4\cdot10^{12}\).
++Durante el desarrollo de nuestro constructor cercano, su umbral se redujo de \(10^{32}\) a \(4\cdot10^{12}\). La comparación es entre versiones de ese constructor, no entre los umbrales globales de distintos papers. Corresponde a la localización y al constructor cercano, no a toda la prueba: el redondeo de la Sección 3 puede imponer un umbral mayor. No se deduce de esa mejora un umbral global de \(4\cdot10^{12}\).
+ 
+ ### 4.1. Distancia a una familia fija
+ 
+@@ -511,7 +511,7 @@
+ 64d_{\max}(G-R)\le113a+64|X|,\qquad
+ 128\omega(G-R)\le a+128+128|X|.
+ \]
+-Las columnas retenidas parten de menos de \(a/4\) ausencias; las incorporadas se controlan con el mismo argumento de vecinos comunes. Sustituir (5.3), \(a\ge1024\) y \(127a\le64|V\setminus P|\le129a\) en estas cuentas da (5.4) y (5.7). Son las cotas que se consumen abajo: el defecto no se vuelve a elegir después de construir el empaquetamiento.
++El coeficiente \(113/64\) procede de las columnas retiradas: un vértice de \(X\) omite al menos \(a/4\) de los a lo sumo \(129a/64\) vértices del exterior anterior y, por tanto, tiene allí a lo sumo \(113a/64\) vecinos. Un vértice de ese exterior que no pertenezca a \(Y\) tiene allí grado menor que \(7a/4\le113a/64\). Trasladar \(X\) añade a lo sumo \(|X|\) vecinos en ambos casos. Las columnas retenidas parten de menos de \(a/4\) ausencias; las incorporadas se controlan con el mismo argumento de vecinos comunes. Sustituir (5.3), \(a\ge1024\) y \(127a\le64|V\setminus P|\le129a\) en estas cuentas da (5.4) y (5.7). Son las cotas que se consumen abajo: el defecto no se vuelve a elegir después de construir el empaquetamiento.
+ 
+ El objetivo de (5.2) no es minimizar una energía abstracta. Se separan los dos defectos que impedirían asignar anfitriones: columnas con demasiadas ausencias y vértices exteriores con demasiado grado residual. El resultado conserva cotas explícitas de tamaño, anchura exterior y disponibilidad de enlaces.
+ 
+@@ -723,8 +723,8 @@
+ 
+ ### Demostración del Teorema B: cota superior
+ 
+-Sea \(N_{\mathrm{lej}}\) el umbral del Corolario 3.5 con \(\eta=\eta_0\), y tomemos
+-\(N\ge\max\{N_{\mathrm{lej}},4\cdot10^{12},6\}\).
++Sea \(N_{\mathrm{far}}\) el umbral del Corolario 3.5 con \(\eta=\eta_0\), y tomemos
++\(N\ge\max\{N_{\mathrm{far}},4\cdot10^{12},6\}\).
+ Para un cordal \(G\) de orden \(n\ge N\), se construye un óptimo mixto certificado. Si \(F_4(G)<n^2/6-\eta_0n^2\), el Corolario 3.5 proporciona la partición. En caso contrario, las Secciones 4 y 5 producen el testigo cercano y la completación al objetivo. Los dos casos agotan los valores de \(F_4(G)\), y ambas salidas son particiones del mismo grafo original.
+ 
+ La elección del óptimo es interna al argumento. Tampoco queda pendiente elegir un parámetro de cercanía para cada grafo: \(\eta_0\), \(\varepsilon_0\) y todos los umbrales se fijan de antemano.
+@@ -816,7 +816,7 @@
+ 
+ Mantengamos el régimen \(2\le k\le h\) de la Sección 6.1. Su argumento de pesos admite una lectura pieza por pieza. Para una clique \(C\) de \(K_k\vee I_h\), definamos
+ \[
+-d(C)=1+e_{\rm int}(C)-e_{\rm cruz}(C),
++d(C)=1+e_{\rm int}(C)-e_{\rm cross}(C),
+ \]
+ donde se cuentan por separado las aristas internas del núcleo y las que unen núcleo y anfitrión. Entonces, para toda partición \(\mathcal Q\), sin restricción de orden,
+ \[
+@@ -834,7 +834,7 @@
+ 
+ El argumento de la cota superior conserva la cuenta cercana reforzada (5.15a), aunque el Teorema B sólo necesita (5.15). Un grafo cuyo número óptimo de piezas está cerca de \(M(n)\) no puede pertenecer a la rama lejana, donde el redondeo produce una partición bastante por debajo de ese objetivo. La cuenta conservada convierte entonces un déficit integral pequeño en cotas para las aristas exteriores y los enlaces ausentes. Una vez elegida la raíz, una identidad por piezas controla toda partición próxima al mismo objetivo; no se elige de nuevo la raíz para cada partición.
+ 
+-**Teorema 6.1 (estabilidad integral).** Existe \(\gamma>0\) y un umbral \(N_{\rm est}\) tales que, si \(n\ge N_{\rm est}\), \(G\) es cordal, \(0\le\delta\le\gamma n^2\) y toda partición de orden a lo sumo cuatro tiene al menos \(M(n)-\delta\) piezas, entonces existe una clique \(R\) de \(G\) para la cual
++**Teorema 6.1 (estabilidad integral).** Existen \(\gamma>0\) y un umbral \(N_{\rm est}\) tales que, si \(n\ge N_{\rm est}\), \(G\) es cordal, \(0\le\delta\le\gamma n^2\) y toda partición de orden a lo sumo cuatro tiene al menos \(M(n)-\delta\) piezas, entonces existe una clique \(R\) de \(G\) para la cual
+ \[
+ \bigl(M(n)-B_n(|R|)\bigr)+\frac m{16}+\frac A2\le\delta,
+ \qquad
+@@ -933,7 +933,7 @@
+ \end{aligned}
+ \tag{6.13}
+ \]
+-Tanto \(\delta\) como \(\tau\) pueden ser reales. La raíz se elige antes de \(Q\) y de \(\tau\).
++Tanto \(\delta\) como \(\tau\) pueden ser reales. La raíz se elige antes de \(Q\) y de \(\tau\). La Figura 3 resume la construcción y sus dos conclusiones.
+ 
+ El máximo de (6.11) es \(2\cdot10^{41}(s+1)^8\): su segundo término domina la constante terminal \(40000(s+1)^3\) para todo \(s\ge0\). No se afirma que los coeficientes sean óptimos. Para \(s=0\), sigue siendo preferible el argumento cordal especializado: da \(16\), \(48\) y \(480\), en lugar de las grandes constantes de (6.11).
+ 
+@@ -955,7 +955,7 @@
+ \end{gathered}
+ \tag{6.14}
+ \]
+-Aquí \(D,H\) en la última línea son las clases finales de la raíz, no necesariamente la clase intermedia de anfitriones. El Apéndice E.4 deduce las cinco cuentas: reducir la paleta de la primera fase conserva un múltiplo positivo de \(m\), el presupuesto estricto de los vértices excepcionales paga \(nt_W\), y se extrae una clique real de \(S\) antes de formar la plantilla final. En particular, los dos cargos \(rn\) tienen orígenes distintos: reducir el tamaño de la clique en la cuenta interior y trasladar los vértices restantes a la clase de anfitriones. Los productores estructurales son NormalizedDeficit, ResidualExcess, NormalizedCliqueCore y RootPartition; NormalizedStability los combina.
++Aquí \(D,H\) en la última línea son las clases finales de la raíz, no necesariamente la clase intermedia de anfitriones. El Apéndice E.4 deduce las cinco cuentas: reducir la paleta de la primera fase conserva un múltiplo positivo de \(m\), el presupuesto estricto de los vértices excepcionales paga \(nt_W\), y se extrae una clique real de \(S\) antes de formar la plantilla final. En particular, los dos cargos \(rn\) tienen orígenes distintos: reducir el tamaño de la clique en la cuenta interior y trasladar los vértices restantes a la clase de anfitriones. Los productores estructurales son `NormalizedDeficit`, `ResidualExcess`, `NormalizedCliqueCore` y `RootPartition`; `NormalizedStability` los combina.
+ 
+ Sustituir las cotas intermedias en la última da
+ \[
+@@ -1031,7 +1031,7 @@
+ \tag{6.21}
+ \]
+ 
+-**Demostración.** El argumento de defecto enraizado del Apéndice E.3 no requiere un núcleo de tamaño óptimo: se aplica a \(G_{s,q,d}\) y da \(\operatorname{rsd}(G_{s,q,d})\le s\). El núcleo clique tiene al menos dos vértices y no tiene más vértices que el conjunto de anfitriones. Por tanto, la construcción del comparador da una partición de orden a lo sumo cuatro con coste \(B_{s,n}(q+d)\). El argumento de pesos del Apéndice E.3 también se aplica a este núcleo de tamaño no óptimo: toda partición irrestricta tiene al menos ese número de piezas. Restar este baseline de \(Q_s(n)\) da (6.20).
++**Demostración.** El argumento de defecto enraizado del Apéndice E.3 no requiere un núcleo de tamaño óptimo: se aplica a \(G_{s,q,d}\) y da \(\operatorname{rsd}(G_{s,q,d})\le s\). El núcleo clique tiene al menos dos vértices y no tiene más vértices que el conjunto de anfitriones. Por tanto, la construcción del comparador da una partición de orden a lo sumo cuatro con coste \(B_{s,n}(q+d)\). El argumento de pesos del Apéndice E.3 también se aplica a este núcleo de tamaño no óptimo: toda partición irrestricta tiene al menos ese número de piezas. Restar este valor base de \(Q_s(n)\) da (6.20).
+ 
+ Como \(n+s=3q\), el único tamaño óptimo del núcleo combinado es \(q\). Toda plantilla óptima tiene, en consecuencia, el mismo número de aristas, independientemente de su etiquetado. Al contar las aristas del núcleo y los enlaces cruzados se obtiene
+ \[
+@@ -1067,7 +1067,7 @@
+ \]
+ Para cada \(\varepsilon>0\), un mismo umbral \(N(\varepsilon)\), independiente de \(s\), hace válida la cota correspondiente para \(c_4(G)\) tras añadir \(\varepsilon n^2\), siempre que \(n\ge N(\varepsilon)\) y se cumpla la respectiva condición de banda.
+ 
+-El argumento de estrella con pesos de ambos signos sigue [15, Lema 3.1]; se cita como método utilizado aquí, no como un principio nuevo de localización. Nuestro cálculo usa \(L=4\), conserva el cargo truncado por excepciones \(\sum_{j<q}\min(s,j)\) y acota mediante el comparador entero, sin redondear hacia abajo una desigualdad fraccional. El Apéndice F describe las dos estimaciones de estrella y el control de órdenes pequeños. Para la conclusión integral, primero se elige el umbral de RC01 a partir de \(\varepsilon\). Completar el empaquetamiento redondeado cuesta a lo sumo \(F_4(G)+\varepsilon n^2\); se inserta (6.22) o (6.23). La elección de \(N\) nunca depende del grafo ni de \(s\).
++El argumento de estrella con signos sigue [15, Lema 3.1]; se cita como método utilizado aquí, no como un principio nuevo de localización. Nuestro cálculo usa \(L=4\), conserva el cargo truncado por excepciones \(\sum_{j<q}\min(s,j)\) y acota mediante el comparador entero, sin redondear hacia abajo una desigualdad fraccional. El Apéndice F describe las dos estimaciones de estrella y el control de órdenes pequeños. Para la conclusión integral, primero se elige el umbral de RC01 a partir de \(\varepsilon\). Completar el empaquetamiento redondeado cuesta a lo sumo \(F_4(G)+\varepsilon n^2\); se inserta (6.22) o (6.23). La elección de \(N\) nunca depende del grafo ni de \(s\).
+ 
+ **Teorema 6.5 (defecto sublineal y una raíz para todas las particiones).** Sean \(n_j\to\infty\), sin hipótesis de monotonía, y \(G_j\) grafos de orden \(n_j\) y defecto enraizado a lo sumo \(s_j=o(n_j)\). Existen particiones \(Q_j\) de orden a lo sumo cuatro tales que
+ \[
+@@ -1121,7 +1121,7 @@
+ \]
+ Entonces la cota exacta vale simultáneamente para todos los \(s\le s_{\max}(n)\). La restricción inferior sobre \(n\) es esencial para esta formulación: por debajo de ella, la inversa formal devuelve cero aunque el predicado que la define pueda no tener solución.
+ 
+-**Demostración.** E35.Fexp_le_tower prueba \(F_s\le T(P(s))\) para el umbral explícito del Apéndice E.2. Su cuenta numérica combina la cota lejana uniforme (C.4), el umbral de edición hacia un cordal y los costes finitos de ensamblaje. Apliquemos el Teorema C con \(F_s\). Tanto \(P\) como \(T\) son no decrecientes, de modo que el mismo umbral para \(S\) cubre todos los \(s\le S\). Finalmente, el predicado que define \(s_{\max}\) se cumple porque el conjunto contiene cero. \(\square\)
++**Demostración.** `E35.Fexp_le_tower` prueba \(F_s\le T(P(s))\) para el umbral explícito del Apéndice E.2. Su cuenta numérica combina la cota lejana uniforme (C.4), el umbral de edición hacia un cordal y los costes finitos de ensamblaje. Apliquemos el Teorema C con \(F_s\). Tanto \(P\) como \(T\) son no decrecientes, de modo que el mismo umbral para \(S\) cubre todos los \(s\le S\). Finalmente, el predicado que define \(s_{\max}\) se cumple porque el conjunto contiene cero. \(\square\)
+ 
+ Ésta es una banda exacta uniforme, no una cota exacta para toda sucesión de defectos sublineales. Su altura es polinómica en \(s\), pero el umbral mismo es una torre. No se pretende utilidad numérica. Acota el umbral del Teorema C, no automáticamente el umbral de estabilidad \(N_s^{\rm stab}\) de (F.1).
+ 
+@@ -1133,11 +1133,13 @@
+ 
+ Los identificadores formales se imprimen con letra monoespaciada. Una flecha de continuación en un salto de línea es una marca tipográfica, no parte del identificador; las fuentes Markdown y Lean conservan su escritura literal.
+ 
+-La configuración declara Mathlib como paquete de terceros y una selección de módulos `Nibble` de Paper III como dependencia local de la serie. `ConeAudit` recorre los tipos y términos de prueba de las declaraciones seleccionadas y comprueba que sus dependencias transitivas no contengan nombres bajo la raíz `Erdos81`, utilizada por [5]. Nuestros módulos PaperIV.Erdos81Unconditional y PaperIV.Erdos81AllOrders tienen raíz de espacio de nombres PaperIV; no son la raíz excluida Erdos81 que usa [5]. La ausencia de estos nombres es un resultado de auditoría reproducible, no una inferencia de la lista de importaciones. Su alcance es preciso: certifica esa exclusión en el corte examinado; por sí sola no detectaría código trasladado y renombrado ni determinaría la procedencia histórica de cada argumento. La atribución de fuentes se documenta por separado. El mismo control de espacios de nombres no permite emitir un veredicto sobre [15]. La extensión utiliza el método de estrella con signos de [15, Lema 3.1] y el método de remoción de [22]; demostrar sus implementaciones en este suplemento no convierte esos métodos en nuevos.
++La configuración declara Mathlib como paquete de terceros y una selección de módulos `Nibble` de Paper III como dependencia local de la serie. `ConeAudit` recorre los tipos y términos de prueba de las declaraciones seleccionadas y comprueba que sus dependencias transitivas no contengan nombres bajo la raíz `Erdos81`, utilizada por [5]. Nuestros módulos `PaperIV.Erdos81Unconditional` y `PaperIV.Erdos81AllOrders` tienen raíz de espacio de nombres `PaperIV`; no son la raíz excluida Erdos81 que usa [5]. La ausencia de estos nombres es un resultado de auditoría reproducible, no una inferencia de la lista de importaciones. Su alcance es preciso: certifica esa exclusión en el corte examinado; por sí sola no detectaría código trasladado y renombrado ni determinaría la procedencia histórica de cada argumento. La atribución de fuentes se documenta por separado. El mismo control de espacios de nombres no permite emitir un veredicto sobre [15]. La extensión utiliza el método de estrella con signos de [15, Lema 3.1] y el método de remoción de [22]; demostrar sus implementaciones en este suplemento no convierte esos métodos en nuevos.
+ 
+-La interfaz pública del Teorema C en esta revisión es DefectExplicitPublication: utiliza E34.theoremC_fully_explicit_final y el testigo inferior irrestricto ya demostrado en DefectSharpPublication. El ensamblaje existencial anterior permanece como comparación histórica, no como la prueba seleccionada para el Teorema C. Su localización utiliza remoción inducida de Alon–Shapira [23]; el ensamblaje explícito seleccionado utiliza, en cambio, el desarrollo de remoción cordal polinómica de [22]. El control adicional FDCheck.ASCheck recorre términos de prueba y tipos para comprobar la exclusión de los resultados de remoción identificados en estas declaraciones seleccionadas. Esto no excluye el espacio de nombres AlonShapira: se siguen usando definiciones compartidas de cordalidad, distancia de edición y copias inducidas.
++La interfaz pública del Teorema C en esta revisión es `DefectExplicitPublication`: utiliza `E34.theoremC_fully_explicit_final` y el testigo inferior irrestricto ya demostrado en `DefectSharpPublication`. El ensamblaje existencial anterior no es la prueba seleccionada para el Teorema C. Su localización utiliza remoción inducida de Alon–Shapira [23]; el ensamblaje explícito seleccionado utiliza, en cambio, el desarrollo de remoción cordal polinómica de [22]. El control adicional `FDCheck.ASCheck` recorre términos de prueba y tipos para comprobar la exclusión de los resultados de remoción identificados en estas declaraciones seleccionadas. Esto no excluye el espacio de nombres `AlonShapira`: se siguen usando definiciones compartidas de cordalidad, distancia de edición y copias inducidas.
+ 
+-El punto único de ejecución es `python tools/audit_publication.py`. Lee los 19 objetivos de FREEZE_SCOPE.json, los ejecuta secuencialmente y conserva sus registros individuales; las dependencias sin cambios reutilizan la caché fijada. Se ejecutan de nuevo los objetivos de auditoría deliberadamente, porque importar un módulo de auditoría ya compilado no volvería a ejecutar todos sus comandos. PublicationIncrementAudit conserva los controles históricos; ResearchAudit y FDCheck.FinalAudit cubren las interfaces de la extensión; E34.Audit cubre remoción; E35.Audit cubre las nuevas cotas de umbral; OptimalTemplateObstructionAudit comprueba las seis declaraciones que sostienen la Proposición 6.3a. ReleaseExportCheck comprueba las exportaciones públicas sólo a través de PaperIV. La interfaz del constructor PaperIV.Editorial.ConstructorBudget conserva una misma partición en ambas conclusiones del Apéndice E. Las identidades de ejecución y la lista literal de objetivos especifican qué controles se ejecutaron; la auditoría interna histórica no reemplaza una nueva revisión de correspondencia entre fuentes y manuscrito para la versión 1.2.
++Hay una excepción concreta a esta comparación de dependencias. La clasificación irrestricta de la igualdad del Corolario 6.3, (6.18), se exporta mediante `E32.cp_classification_of_theoremCPrimeC`; esa declaración y `E32.ref15Theorem11_of_theoremCPrimeC` todavía utilizan el ensamblaje histórico a través de `E32.theoremC_at`. Sus pruebas incluyen, por tanto, la cadena de remoción inducida de [23]. Todos esos lemas están demostrados en las fuentes congeladas con axiomas estándar. El control de exclusión para el Teorema C explícito y las declaraciones de estabilidad seleccionadas no debe extenderse a estas interfaces de clasificación.
++
++El punto único de ejecución es `python tools/audit_publication.py`. Lee los 19 objetivos de `FREEZE_SCOPE.json`, los ejecuta secuencialmente y conserva sus registros individuales; las dependencias sin cambios reutilizan la caché fijada. Se ejecutan de nuevo los objetivos de auditoría deliberadamente, porque importar un módulo de auditoría ya compilado no volvería a ejecutar todos sus comandos. `PublicationIncrementAudit` conserva los controles históricos; `ResearchAudit` y `FDCheck.FinalAudit` cubren las interfaces de la extensión; `E34.Audit` cubre remoción; `E35.Audit` cubre las nuevas cotas de umbral; `OptimalTemplateObstructionAudit` comprueba las seis declaraciones que sostienen la Proposición 6.3a. `ReleaseExportCheck` comprueba las exportaciones públicas sólo a través de `PaperIV`. La interfaz del constructor `PaperIV.Editorial.ConstructorBudget` conserva una misma partición en ambas conclusiones del Apéndice E. Las identidades de ejecución y la lista literal de objetivos especifican qué controles se ejecutaron; la auditoría interna histórica no reemplaza una nueva revisión de correspondencia entre fuentes y manuscrito para la versión 1.2.
+ 
+ | Resultado en el texto | Módulo de referencia |
+ |:--|:--|
+@@ -1174,11 +1176,13 @@
+ 
+ Las comprobaciones locales del 27 de septiembre incluyen el agregado, la auditoría general de 81 declaraciones y la auditoría específica de nueve resultados del enlace B7 y su propagación. Esta última examina tipos y términos de prueba, exige que la construcción use las dos cuentas de limpieza mejorada y admite sólo `propext`, `Classical.choice` y `Quot.sound`. Los recuentos no son disjuntos y no deben sumarse. Reutilizar un teorema demostrado del nibble no equivale a introducirlo como hipótesis pendiente.
+ 
+-El control de exportación contiene 224 comandos literales `#check` sólo a través de `import PaperIV`. Todos pasaron en el nuevo corte. Esto establece el acceso a esa lista, no que toda declaración del suplemento pertenezca a la interfaz canónica. ResearchAudit recorre tipos y términos de prueba de 75 declaraciones seleccionadas de la extensión; OptimalTemplateObstructionAudit, con seis declaraciones, y los demás objetivos proporcionan sus propios controles de alcance delimitado. BoundedCliqueGap permanece como anexo separado, no como premisa del teorema principal.
++El control de exportación contiene 224 comandos literales `#check` sólo a través de `import PaperIV`. Todos pasaron en el nuevo corte. Esto establece el acceso a esa lista, no que toda declaración del suplemento pertenezca a la interfaz canónica. `ResearchAudit` recorre tipos y términos de prueba de 75 declaraciones seleccionadas de la extensión; `OptimalTemplateObstructionAudit`, con seis declaraciones, y los demás objetivos proporcionan sus propios controles de alcance delimitado. BoundedCliqueGap permanece como anexo separado, no como premisa del teorema principal.
++
++El corte fuente `piv-v12-fb459343d234` contiene 607 módulos Lean y 615 entradas de fuentes, configuración y documentación. La reconstrucción secuencial completa compiló los 607 módulos en dos tramos verificados. Tras un reinicio del equipo, se verificaron y reutilizaron 421 objetos recién compilados en el primer tramo; el tramo reanudado compiló 186 módulos. No se utilizaron objetos previos del proyecto y ningún módulo falló, quedó bloqueado ni fue omitido. Los 19 objetivos seleccionados se ejecutaron de nuevo con código de salida cero en el tramo reanudado. La salida contiene 461 registros de axiomas, cada uno restringido a `propext`, `Classical.choice`, `Quot.sound` o un subconjunto; estos registros no cuentan teoremas distintos. Las fuentes no cambiaron y los objetos reutilizados se contrastaron con sus registros de fuentes, dependencias y compilación. El SHA-256 del manifiesto es `fb459343d234f968d7d32eff1491ea8a09aa2e135b313a80623012e7449042f5`; el del archivo de sólo fuentes es `cb2741454380736ffe01b59933057b5079fa9f865d5bbdd3f67534bf808a62e6`. Los registros, la procedencia combinada y la validación final se conservan en `03_reproducibility/full_rebuild_v12_20260929_resume/`, con enlaces al primer tramo preservado. Estos registros establecen la compilación local y la identidad de fuentes; las auditorías interna y externa completadas son etapas separadas, descritas a continuación.
+ 
+-El corte fuente `piv-v12-fb459343d234` contiene 607 módulos Lean y 615 entradas de fuentes, configuración y documentación. La reconstrucción secuencial completa compiló los 607 módulos en dos tramos verificados. Tras un reinicio del equipo, se verificaron y reutilizaron 421 objetos recién compilados en el primer tramo; el tramo reanudado compiló 186 módulos. No se utilizaron objetos previos del proyecto y ningún módulo falló, quedó bloqueado ni fue omitido. Los 19 objetivos seleccionados se ejecutaron de nuevo con código de salida cero en el tramo reanudado. La salida contiene 461 registros de axiomas, cada uno restringido a `propext`, `Classical.choice`, `Quot.sound` o un subconjunto; estos registros no cuentan teoremas distintos. Las fuentes no cambiaron y los objetos reutilizados se contrastaron con sus registros de fuentes, dependencias y compilación. El SHA-256 del manifiesto es `fb459343d234f968d7d32eff1491ea8a09aa2e135b313a80623012e7449042f5`; el del archivo de sólo fuentes es `cb2741454380736ffe01b59933057b5079fa9f865d5bbdd3f67534bf808a62e6`. Los registros, la procedencia combinada y la validación final se conservan en `03_reproducibility/full_rebuild_v12_20260929_resume/`, con enlaces al primer tramo preservado. Éste es un control formal local y un congelado de fuentes, no una auditoría interna o independiente completada de la versión 1.2.
++El corte anterior `piv-stability-fe9bb18343da` y las ejecuciones separadas de integración se conservan bajo sus identidades originales. El nuevo corte los sustituye como identidad fuente seleccionada; no reescribe su evidencia. Los cuatro módulos E35L y `FDCheck.TowerAudit` se retiraron del nuevo árbol porque E35 reemplaza sus estimaciones y ninguno pertenece al conjunto de dependencias seleccionado. Todos los módulos Lean locales restantes pertenecen al cierre de dependencias de los 19 objetivos seleccionados. Ese cierre incluye definiciones históricas y controles comparativos; no se afirma que sea la biblioteca de prueba más pequeña posible.
+ 
+-El corte anterior `piv-stability-fe9bb18343da` y las ejecuciones separadas de integración se conservan bajo sus identidades originales. El nuevo corte los sustituye como identidad fuente seleccionada; no reescribe su evidencia. Los cuatro módulos E35L y FDCheck.TowerAudit se retiraron del nuevo árbol porque E35 reemplaza sus estimaciones y ninguno pertenece al conjunto de dependencias seleccionado. Todos los módulos Lean locales restantes pertenecen al cierre de dependencias de los 19 objetivos seleccionados. Ese cierre incluye definiciones históricas y controles comparativos; no se afirma que sea la biblioteca de prueba más pequeña posible.
++**Estado de auditoría de esta candidata editorial.** La evidencia de reconstrucción anterior es previa a las auditorías. Posteriormente, la ejecución interna `run_20260929_v1.2_fb459343d234_r1` registró PASS para su alcance declarado. La ejecución externa completada `run_v1.2_r1` dio INCONCLUSIVE global por cuatro derivaciones que requerían mayor desarrollo expositivo, pero PASS en reproducción formal: se compilaron correctamente 607 módulos principales, los 19 objetivos y el anexo de 50 módulos. Los 607 objetos principales compilados fueron idénticos byte a byte a los registrados por el autor. Ambas se refieren a la versión 1.2; las explicaciones ampliadas y las precisiones de dependencias de la versión 1.21 requieren una revisión separada de correspondencia con las fuentes y de paridad bilingüe. La identidad de fuentes Lean no ha cambiado.
+ 
+ ### 7.1. Repositorios y contribuciones
+ 
+@@ -1196,7 +1200,7 @@
+ 
+ El refinamiento de representación de la Figura 1 se verifica en `MixedRoundingAdapter`. El adaptador identifica las aristas de una pieza y el predicado de copia admisible, transporta las capacidades de un empaquetamiento fraccional y prueba la igualdad de valores mediante `value_toFarFrac`. Para un empaquetamiento entero, `gain_toFarPacking` conserva la ganancia. Por tanto, el Teorema 3.1 puede utilizarse a través de esta presentación neutral sin cambiar el presupuesto (1.3). Esto no constituye una nueva demostración del redondeo.
+ 
+-Hay dos funciones llamadas `gainOf` cuyo dominio de uso debe distinguirse. `Model.gainOf` vale dos en cardinal tres, cinco en cardinal cuatro y cero en los demás cardinales. `FarRounding.gainOf` vale \(\binom{|K|}{2}\mathbin{\dot-}1\), donde \(\dot-\) es la resta truncada en los naturales. Coinciden en cardinales de cero a cuatro, pero desde cinco dejan de coincidir. En los ítems mixtos, que tienen cardinal tres o cuatro, el transporte es legítimo. Para particiones irrestrictas, como las de la Sección 6.4, se usa la cuenta de aristas o `FarRounding.gainOf`; nunca se sustituye por la función de ganancia acotada de `Model`. Puesto que las piezas de una partición tienen al menos dos vértices, allí la resta truncada coincide con la resta ordinaria.
++Hay dos funciones llamadas `gainOf` cuyo dominio de uso debe distinguirse. `Model.gainOf` vale dos en cardinal tres, cinco en cardinal cuatro y cero en los demás cardinales. `FarRounding.gainOf` vale \(\binom{|K|}{2}\mathbin{\dot-}1\), donde \(\dot-\) es la resta truncada en los naturales. Coinciden en cardinales de cero a cuatro, pero desde cinco dejan de coincidir. En los ítems mixtos, que tienen cardinal tres o cuatro, el transporte es legítimo. Para particiones irrestrictas, como las de la Sección 6.4, se usa la cuenta de aristas o `FarRounding.gainOf`; nunca se sustituye por la función de ganancia acotada de Model. Puesto que las piezas de una partición tienen al menos dos vértices, allí la resta truncada coincide con la resta ordinaria.
+ 
+ ## 8. Comparación de mecanismos y alcance
+ 
+@@ -1207,7 +1211,7 @@
+ | Desarrollo | Piezas con ganancia positiva | Parámetro acotado | Margen del modelo |
+ |:--|:--|:--|:--|
+ | Preprint [5] | \(K_3,K_4\) en su construcción final | \(c_4\) | \(\Delta_{\{3,4\}}\) |
+-| Okechukwu [15] | \(K_3,\ldots,K_L\) en la transferencia lejana | \(\operatorname{cp}\), mediante \(q_L\) en esa rama | \(\Delta_{\{3,\ldots,L\}}\) |
++| Okechukwu [15] | \(K_3,\ldots,K_L\) en la aproximación usada para localizar | \(q_L\) en el Lema 3.4; \(\operatorname{cp}\) en el Teorema 1.1 | \(\Delta_{\{3,\ldots,L\}}\) para el modelo auxiliar |
+ | Esta investigación | \(K_3,K_4\) | \(c_4\) | \(\Delta_{\{3,4\}}\) |
+ 
+ **Tabla 4.** Instancias del presupuesto general. \(q_L\) es la notación de [15] para el mínimo con piezas de orden a lo sumo \(L\). Los márgenes se comparan para el mismo grafo; (1.3b) da una desigualdad débil, no una separación estricta universal.
+@@ -1254,11 +1258,11 @@
+ 
+ El corte de orden en [15] requiere cuidado. Su Teorema 3.3 elige \(L\) en función de la precisión de localización, y el argumento de estabilidad utilizado por la Proposición 5.4 y el Teorema 1.1 aplica ese corte mediante el Lema 3.4. No fija \(L=4\). La elección explícita \(L=4\) que sigue a la prueba de [15, Teorema 1.3] demuestra su aproximación separada (1.5), no la cota exacta del Teorema 1.1. Así, nuestra conclusión con orden fijo cuatro refuerza la cota superior exacta enunciada; no se afirma que toda adaptación posible del método de [15] necesite cliques mayores.
+ 
+-Para conectar su transferencia con la Tabla 4, [15, Lema 3.4] proporciona \(q_L(G)\le q_L^*(G)+\zeta n^2\). Su partición fraccional exacta es equivalente al modelo de ganancia de §1.1, luego \(q_L^*=F_{\{3,\ldots,L\}}\). Esa cota paga el presupuesto cuando \(\zeta n^2\le M(n)-q_L^*(G)\). El lema de aproximación aislado no garantiza esa última condición: se utiliza en la rama que dispone del margen correspondiente.
++Para el modelo auxiliar de la Tabla 4, [15, Lema 3.4] proporciona \(q_L(G)\le q_L^*(G)+\zeta n^2\). Su partición fraccional exacta es equivalente al modelo de ganancia de §1.1, luego \(q_L^*=F_{\{3,\ldots,L\}}\). Algebraicamente, esta estimación satisface el presupuesto de partición si \(\zeta n^2\le M(n)-q_L^*(G)\). Esa cuenta condicional no describe la construcción final de [15, Teorema 1.1]: su prueba usa el Lema 3.4 a través de la localización estructural, y después un argumento de contraejemplo mínimo y las construcciones triangulares de [15, §§4–5]. El corte auxiliar \(L\) no debe leerse como el orden de las piezas de esa construcción final.
+ 
+-El Teorema C′ da estabilidad lineal por ediciones hacia una plantilla de defecto cuyo núcleo no se exige de tamaño óptimo. La comparación con la familia óptima pertinente a [15, Corolario 5.5] es, en cambio, (6.17), que conserva el término de raíz cuadrada. Para \(s\) fijo y \(\delta=\alpha n^2\), la cota normalizada es \(A_s\alpha+\sqrt{(1+4A_s)\alpha}\), que tiende a cero con \(\alpha\). Esto da una cota superior explícita en dirección a la pregunta cuantitativa de [15, §7], bajo la hipótesis más fuerte de casi extremalidad sobre \(c_4\); también se aplica cuando la hipótesis se enuncia para \(\operatorname{cp}\), pues \(\operatorname{cp}\le c_4\). La Proposición 6.3a da la misma escala de raíz cuadrada a lo largo de una familia explícita, para cada \(s\) fijo. No establece constantes óptimas ni dependencia óptima respecto de \(s\).
++El Teorema C′ da estabilidad lineal por ediciones hacia una plantilla de defecto cuyo núcleo no se exige de tamaño óptimo. La comparación con la familia óptima pertinente a [15, Corolario 5.5] es, en cambio, (6.17), que conserva el término de raíz cuadrada. Para \(s\) fijo y \(\delta=\alpha n^2\), la cota normalizada es \(A_s\alpha+\sqrt{(1+4A_s)\alpha}\), que tiende a cero con \(\alpha\). Esto da una cota superior explícita en dirección a la pregunta cuantitativa de [15, §7], bajo la hipótesis más débil de casi extremalidad sobre \(c_4\): la cota inferior correspondiente sobre \(\operatorname{cp}\) la implica, pues \(\operatorname{cp}\le c_4\). La Proposición 6.3a da la misma escala de raíz cuadrada a lo largo de una familia explícita, para cada \(s\) fijo. No establece constantes óptimas ni dependencia óptima respecto de \(s\).
+ 
+-El Teorema 6.5 recupera la conclusión estructural de [15, Teorema 1.3] y añade control simultáneo de particiones. La Proposición 6.4 junto con (6.24) da la versión de orden cuatro de su aproximación (1.5), con la expresión finita \(M(n-s)+ns-\binom{s+1}{2}\) en la banda \(4s\le n\). Su argumento de estrella con signos se atribuye explícitamente a [15, Lema 3.1]. Estas conclusiones no dan distancia lineal a la familia de tamaño óptimo, constantes uniformes de estabilidad lineal para defecto creciente ni un reemplazo de [15, §6].
++El Teorema 6.5 recupera la conclusión estructural de [15, Teorema 1.3] y añade control simultáneo de particiones. La Proposición 6.4 junto con (6.24) recupera su aproximación (1.5) con una conclusión enunciada para \(c_4\), y conserva la expresión finita \(M(n-s)+ns-\binom{s+1}{2}\) en la banda \(4s\le n\). La prueba de (1.5) en [15] ya elige \(L=4\); esa elección no es un ingrediente nuevo aquí. Nuestro argumento de estrella con signos se atribuye explícitamente a [15, Lema 3.1]. Los añadidos aquí son el perfil finito retenido y su certificación formal. Estas conclusiones no dan distancia lineal a la familia de tamaño óptimo, constantes uniformes de estabilidad lineal para defecto creciente ni un reemplazo de [15, §6].
+ 
+ El término \(n/6+1/24\) de la prueba de [15, Teorema 3.3] también aparece en nuestra calibración: en ambos casos \((2n+1)^2/24=n^2/6+n/6+1/24\). Proviene de la envolvente cuadrática continua; por sí solo no es el error de piso de \(M(n)\). El perfil entero del Apéndice D.3 conserva también ese piso. Los núcleos óptimos de [15, Corolario 1.2], descritos por los enteros más cercanos a \((2n+1)/6\), coinciden con (6.4), incluido el empate cuando \(n\equiv1\pmod3\).
+ 
+@@ -1272,7 +1276,7 @@
+ 
+ ### A.1. Enunciados y comprobaciones
+ 
+-En la tabla siguiente se omite el prefijo común `PaperIV`. Las declaraciones anteriores se comprueban en `Audit.lean` y sus targets asociados; las nuevas interfaces de estabilidad y defecto sublineal tienen entradas separadas más abajo. La identidad de fuentes se fija en `03_reproducibility/build_piv-v12-fb459343d234/SOURCE_MANIFEST.json`. Los logs de targets registran tipos elaborados y controles de axiomas. Los mapas históricos no certifican las secciones nuevas; el mapa de revisión de la versión 1.2 acompaña estos manuscritos.
++En la tabla siguiente se omite el prefijo común `PaperIV`. Las declaraciones anteriores se comprueban en `Audit.lean` y sus objetivos asociados; las nuevas interfaces de estabilidad y defecto sublineal tienen entradas separadas más abajo. La identidad de fuentes se fija en `03_reproducibility/build_piv-v12-fb459343d234/SOURCE_MANIFEST.json`. Los registros de objetivos registran tipos elaborados y controles de axiomas. Los mapas históricos no certifican las secciones nuevas; el mapa de revisión de la versión 1.2 acompaña estos manuscritos.
+ 
+ | Resultado | Declaración Lean |
+ |:--|:--|
+@@ -1296,7 +1300,7 @@
+ 
+ **Tabla 7.** Declaraciones finales. La tabla de módulos de la Sección 7 localiza la implementación; esta tabla identifica qué enunciado se audita.
+ 
+-El comando único de auditoría descrito en §7 ejecuta los 19 objetivos, incluidos la raíz, los objetivos individuales de auditoría y el control de exportación. Las revisiones de Lean y sus dependencias están registradas en lean-toolchain y lake-manifest.json. Compilación, exportación pública, inspección de axiomas y correspondencia semántica son controles distintos. El nuevo congelado de fuentes se identifica localmente; las nuevas revisiones interna y adversarial de este par ampliado de fuentes y manuscritos siguen pendientes.
++El comando único de auditoría descrito en §7 ejecuta los 19 objetivos, incluidos la raíz, los objetivos individuales de auditoría y el control de exportación. Las revisiones de Lean y sus dependencias están registradas en lean-toolchain y lake-manifest.json. Compilación, exportación pública, inspección de axiomas y correspondencia semántica son controles distintos. El congelado de fuentes no cambia. Su auditoría interna está completada; la revisión externa de v1.2 concluyó con PASS en reproducción formal e INCONCLUSIVE en exposición matemática; la exposición revisada de v1.21 requiere su propia revisión.
+ 
+ **Definiciones literales.** Los fragmentos siguientes reproducen las definiciones y las cabeceras de los teoremas, omitiendo sus demostraciones, no sus hipótesis. En el primer fragmento el espacio es `SimpleGraph`; en los tres siguientes es `PaperIV.FarRounding`, con \(V\) finito, igualdad decidible y adyacencia decidible para \(G\). La última definición está en `PaperIV`. Los nombres de los espacios se conservan en el archivo complementario de extractos.
+ 
+@@ -1348,13 +1352,13 @@
+ 
+ ### A.2. Contratos intermedios de las pruebas
+ 
+-**Alcance de la demostración escrita.** Las derivaciones finitas de la tabla siguiente se resumen, sin desarrollarse por completo en este manuscrito. Las fuentes Lean congeladas contienen las pruebas correspondientes; un build exitoso verifica sus derivaciones formales, no la suficiencia de su exposición. La primera auditoría externa dejó abierta su rederivación matemática independiente. Siguen siendo obligaciones explícitas de revisión, no hipótesis adicionales de los teoremas.
++**Alcance de la demostración escrita.** La tabla siguiente registra derivaciones cuya exposición requiere especial atención. La revisión 1.21 desarrolla la limpieza bilateral de fibras en C.2, las cuentas de normalización y la eliminación conjunta en E.1, y las definiciones del calendario numérico en C.3. C.3 desarrolla también las estimaciones que llevan del calendario a la cota del selector; la iteración de torre restante es una comparación simbólica con la recurrencia de §6.3. Las fuentes Lean congeladas contienen las pruebas correspondientes; una compilación exitosa verifica derivaciones formales, no la suficiencia de su exposición. La primera auditoría externa dejó abierta la rederivación matemática independiente. Las explicaciones añadidas requieren revisión y no cierran por sí mismas esos hallazgos de auditoría. Son obligaciones de revisión, no hipótesis adicionales de los teoremas.
+ 
+-| Ubicación | Derivación no desarrollada por completo en la prosa |
++| Ubicación | Derivación por revisar, incluidas las cuentas desarrolladas |
+ |:--|:--|
+ | §5.1, (5.4) y (5.7) | Estimaciones de masa, grado, paleta y anchura tras regularizar |
+ | C.2, (3.8) y (3.10) | Conteos de descarte y retención con las convenciones de partición |
+-| §3.2 y C.2 | Cotas inferiores de fibras desde pares regulares y su normalización |
++| Lema 3.2 y C.1–C.2 | Cotas inferiores de fibras desde pares regulares y su normalización |
+ | C.3, Tabla C.1 | Dominación numérica de las constantes del nibble e iteraciones de la torre |
+ | E.1 | Cotas de normalización previas al constructor terminal |
+ | E.1, (E.2b) y (E.2d) | Estimaciones terminales y presupuesto de tres casos |
+@@ -1368,15 +1372,15 @@
+ 
+ La extracción de la clique y la calibración están en `ChordalCoreMissing` y `NearH1CalibratedRoot`. `Regularization`, `RegularizationBounds` y `RegularizedRootGoal` prueban las propiedades de la raíz que utiliza `RootRegularizationBridge`. Finalmente, `NearH1PhaseI`, `RD09FactorCandidateMoments` y `RD09FactorCandidateAverage` producen las dos cuentas; `NearH1FinalAssembly` las une usando la misma primera asignación y sus enlaces ocupados. No se aplica la segunda fase a una copia independiente de los recursos.
+ 
+-El Teorema 5.0 tiene una forma reforzada, `NearH1LocalConstructor.exists_near_partition_paid_by_root_sharp`, que añade \(|3|R|-n|\le n/50\) al constructor físico; la interfaz anterior `exists_near_partition_paid_by_root` se conserva como corolario. La reserva reforzada de (5.15a) se conserva para ese mismo testigo en `NearStructureWitness.accounts_count_le_improved`; `IntegralStability.chordal_linear_stability_sixteen` y `RootPartitionStability.chordal_partition_stability` la utilizan sin recombinar raíces ni packings. La selección cíclica de la fase I está en `RD09PaddedL1Mass`; la última evaluación de la fase II, en `H1ImprovedConstants.l10_of_raw_rd09L2`. Los regímenes del comparador de (5.1a) se comprueban en `SplitComparatorResidual.residual_sq_le_of_near_split_universal`. La reserva (D.8) es `ReserveIdentity.targetSize_eq_baseline_add_reserve`; la contracción mejorada corresponde a `NearThresholdSensitivity.descent_threshold_maximal_barrier` y `near_threshold_binding`. Los resultados de geometría crítica están en `NearRootWindow`, `NearEdgeDensity` y `NearCriticalDichotomy`.
++El Teorema 5.0 tiene una forma reforzada, `NearH1LocalConstructor.exists_near_partition_paid_by_root_sharp`, que añade \(|3|R|-n|\le n/50\) al constructor físico; la interfaz anterior `exists_near_partition_paid_by_root` se conserva como corolario. La reserva reforzada de (5.15a) se conserva para ese mismo testigo en `NearStructureWitness.accounts_count_le_improved`; `IntegralStability.chordal_linear_stability_sixteen` y `RootPartitionStability.chordal_partition_stability` la utilizan sin recombinar raíces ni empaquetamientos. La selección cíclica de la fase I está en `RD09PaddedL1Mass`; la última evaluación de la fase II, en `H1ImprovedConstants.l10_of_raw_rd09L2`. Los regímenes del comparador de (5.1a) se comprueban en `SplitComparatorResidual.residual_sq_le_of_near_split_universal`. La reserva (D.8) es `ReserveIdentity.targetSize_eq_baseline_add_reserve`; la contracción mejorada corresponde a `NearThresholdSensitivity.descent_threshold_maximal_barrier` y `near_threshold_binding`. Los resultados de geometría crítica están en `NearRootWindow`, `NearEdgeDensity` y `NearCriticalDichotomy`.
+ 
+-Las adiciones de esta revisión tienen puntos de entrada públicos separados. El Teorema C y su máximo son PaperIV.DefectExplicitPublication.rooted_defect_eventual y rooted_defect_maximum; el espacio de nombres histórico DefectSharpPublication conserva el testigo inferior y order_three_insufficient para la Proposición D.2. E35.theoremC_tower y sus variantes uniformes dan el Corolario 6.6. La cuenta completa (3.11) es E17Bridge.improved_far_loss_explicit. El Corolario 3.5 con umbral explícito es E17Bridge.ExplicitAssembly.farRegime_allGraphs_explicit. Finalmente, PaperIV.ExplicitThreshold.erdos81_sharp_explicit y erdos81_all_orders_bounded_additive dan el resultado global con la torre de §6.3. Estos nombres identifican declaraciones, no nuevas hipótesis.
++Las adiciones de esta revisión tienen puntos de entrada públicos separados. El Teorema C y su máximo son `PaperIV.DefectExplicitPublication.rooted_defect_eventual` y `rooted_defect_maximum`; el espacio de nombres histórico `DefectSharpPublication` conserva el testigo inferior y `order_three_insufficient` para la Proposición D.2. `E35.theoremC_tower` y sus variantes uniformes dan el Corolario 6.6. La cuenta completa (3.11) es `E17Bridge.improved_far_loss_explicit`. El Corolario 3.5 con umbral explícito es `E17Bridge.ExplicitAssembly.farRegime_allGraphs_explicit`. Finalmente, `PaperIV.ExplicitThreshold.erdos81_sharp_explicit` y `erdos81_all_orders_bounded_additive` dan el resultado global con la torre de §6.3. Estos nombres identifican declaraciones, no nuevas hipótesis.
+ 
+-El enlace B7 se audita mediante `E17.ExplicitFarAudit`. Reutiliza las constantes numéricas de `E18` y `E19`, pero construye el empaquetamiento mediante la limpieza mejorada: la auditoría exige sus dos cuentas en el cono y excluye los antiguos teoremas finales de existencia. Ese target pasó en la ejecución local combinada del corte identificado; la auditoría interna del autor revisó su log y sus hipótesis, con las limitaciones consignadas en el informe.
++El enlace B7 se audita mediante `E17.ExplicitFarAudit`. Reutiliza las constantes numéricas de `E18` y `E19`, pero construye el empaquetamiento mediante la limpieza mejorada: la auditoría exige sus dos cuentas en el cono y excluye los antiguos teoremas finales de existencia. Ese objetivo pasó en la ejecución local combinada del corte identificado; la auditoría interna del autor revisó su registro y sus hipótesis, con las limitaciones consignadas en el informe.
+ 
+ ### A.3. Límites del resultado
+ 
+-No se demuestra un gap fraccionario–integral \(O(n)\) para todo cordal. Tampoco se afirma que toda demostración deba pasar por copias, regularización o un constructor particular. La cota eventual no resuelve si \(b=0\) en el Teorema A: esa igualdad conservaría el término \(n/6\) contenido en \(M(n)\), no lo eliminaría.
++No se demuestra una brecha fraccionario–integral \(O(n)\) para todo cordal. Tampoco se afirma que toda demostración deba pasar por copias, regularización o un constructor particular. La cota eventual no resuelve si \(b=0\) en el Teorema A: esa igualdad conservaría el término \(n/6\) contenido en \(M(n)\), no lo eliminaría.
+ 
+ Las comprobaciones experimentales de órdenes pequeños no se usan como premisas. Su documentación, incluidos los requisitos de completitud y certificación, pertenece al registro de investigación separado.
+ 
+@@ -1441,7 +1445,7 @@
+ 
+ Los Lemas 3.2–3.4 y las ecuaciones 3.2–3.14 completan la prueba del Teorema 3.1. Se mantienen sus números para facilitar las referencias desde la rama L.
+ 
+-### Lema 3.2. Nibble de rango acotado con holgura, entrada de Paper III
++### Lema 3.2. `Nibble` de rango acotado con holgura, entrada de Paper III
+ 
+ Para cada entero \(r\ge2\) y cada \(\beta>0\), existen \(\gamma,C>0\) con la propiedad siguiente. Sean \(U\) un conjunto finito, \(\mathcal H\) una familia de subconjuntos no vacíos de \(U\), de tamaños a lo sumo \(r\), y \(z_H\ge0\) pesos tales que
+ \[
+@@ -1607,12 +1611,20 @@
+ 
+ El peso de cada copia limpia del perfil es \(\psi_H/b_H\), donde \(b_H=(1+u)\operatorname{vol}(H)\). Las estimaciones de conteo dan \(b_H\ge a_3t^3\) para triángulos y \(b_H\ge a_4t^4\) para \(K_4\). Fijemos dos aristas físicas distintas. En un perfil triangular hay a lo sumo una copia que las contiene. En un perfil de \(K_4\) hay a lo sumo \(t\): si las aristas comparten un extremo fijan tres vértices y sólo queda elegir el cuarto; si no, fijan los cuatro. Así, las contribuciones respectivas son a lo sumo \(1/(a_3t)\) y \(1/(a_4t)\). Sumando sobre todos los perfiles,
+ \[
+-\sum_{K:e,f\in E(K)}x_K^{\rm limpio}
++\sum_{K:e,f\in E(K)}x_K^{\rm clean}
+ \le\frac{k_3}{a_3t}+\frac{k_4}{a_4t}
+ =\frac{k_3a_4+k_4a_3}{a_3a_4t}\le\gamma.
+ \tag{3.13}
+ \]
+-Ésta es la condición conjunta del Lema 3.4. El control de una sola arista se obtiene del mismo modo, usando el conteo de copias que la contienen y la capacidad del par servido. Por otra parte, (3.8) retiene una proporción al menos \((1-v)/(1+u)\ge1-u-v\) de la masa transferida. Quedan comprobadas tanto la factibilidad como la masa y el codegrado del sistema limpio.
++Esto demuestra la condición conjunta de codegrado del Lema 3.4. La factibilidad en una arista física requiere otro argumento: una cota inferior para el volumen de la fibra no basta para acotar su carga por uno. La limpieza retira las copias que pasan por raíces con una desviación grande a cualquiera de los dos lados de su media. Aquí una raíz es una arista de un par de clases fijado, no la raíz clique de la construcción cercana.
++
++Fijemos un perfil activo \(H\), llamemos \(\mathcal F_H\) a su fibra inicial y pongamos \(V_H=|\mathcal F_H|\). Para un par \(q\) de sus clases, sean \(E_q\) las aristas reales de ese par y \(d_q=\max\{1,|E_q|\}\). Si \(c_{H,q}(e)\) cuenta las copias iniciales que pasan por \(e\in E_q\), su valor de referencia es \(A_{H,q}=V_H/d_q\). Esta referencia depende del par. Retiramos toda copia que use una arista con \(|c_{H,q}(e)-A_{H,q}|>uA_{H,q}\), en cualquiera de los tres o seis pares del perfil.
++
++Una arista eliminada por esta prueba no pertenece a ninguna copia superviviente. Por cualquier otra pasan a lo sumo \((1+u)A_{H,q}\) copias. Como cada copia superviviente recibe peso \(\psi_H/((1+u)V_H)\), el perfil contribuye a la carga de la arista a lo sumo \(\psi_H/d_q\). La restricción de capacidad transferida es \(\sum_{H\text{ que sirve }q}\psi_H\le d_q\); al sumar las contribuciones, la carga total es a lo sumo uno. El denominador es válido porque una fibra activa tiene volumen positivo. Ésta es la prueba de factibilidad de `RC01CleanFiber`, después del control bilateral de `RC01DeviationCleanup`.
++
++Falta comprobar cuánto cuesta esta eliminación. Para un par, las cotas del segundo momento enraizado acotan el número \(B_q\) de raíces malas por \(B_qu^2a_3^2\le11\delta t^2\) en triángulos y \(B_qu^2a_4^2\le23\delta t^2\) en cliques de orden cuatro. Por una raíz pasan a lo sumo \(t\) triángulos iniciales o \(t^2\) cliques de orden cuatro. Sumando sobre los tres o seis pares, el número de copias retiradas es a lo sumo \(33\delta t^3/(u^2a_3^2)\) o \(138\delta t^4/(u^2a_4^2)\), respectivamente. Contar una copia más de una vez sólo aumenta estas cotas superiores. Al compararlas con las cotas inferiores de las fibras, la proporción retirada es a lo sumo \(v\) si \(33\delta\le vu^2a_3^3\) y \(138\delta\le vu^2a_4^3\).
++
++El calendario de C.3 satisface ambas desigualdades: tomamos \(d=u=v=a\), usamos \(\delta=a^{21}/2208\) y observamos que \(a_3\ge a^3/2\), \(a_4\ge a^6/2\) para \(0<a\le1/10\). Por ejemplo, \(138\delta=a^{21}/16\le a^{21}/8\le vu^2a_4^3\). Quedan, por tanto, al menos \((1-v)V_H\) copias. Su peso total es al menos \((1-v)/(1+u)\ge1-u-v\) veces la masa transferida, como requiere (3.8). Así se verifican por separado la factibilidad, la masa retenida y el codegrado conjunto; ninguna de estas propiedades se deduce sólo de las otras dos.
+ 
+ El teorema marcado entrega entonces un empaquetamiento siempre que la masa triangular exceda una constante \(C\) y
+ \[
+@@ -1658,7 +1670,7 @@
+ \]
+ para todo grafo y todo empaquetamiento fraccional mixto factible. Éste es el enlace numérico que permite emplear la cuenta mejorada (3.11) sin mantener una hipótesis de realización pendiente.
+ 
+-Para el Corolario 3.5 se toma \(\xi=\eta/2\). Basta, por tanto, \(N_{\rm lejano}(\eta)=N_E(\eta/2)\). En la precisión usada por el ensamblaje cordal, \(\eta_0=10^{-16}\), los parámetros son
++Para el Corolario 3.5 se toma \(\xi=\eta/2\). Basta, por tanto, \(N_{\rm far}(\eta)=N_E(\eta/2)\). En la precisión usada por el ensamblaje cordal, \(\eta_0=10^{-16}\), los parámetros son
+ \[
+ a=(9\cdot10^{19})^{-1},\qquad
+ \delta=\frac1{2208(9\cdot10^{19})^{21}},\qquad
+@@ -1669,7 +1681,30 @@
+ G_1=\lceil1/\gamma_*\rceil,\quad G_2=\lceil C_*\rceil,\quad
+ G_3=\lceil2\cdot10^{17}(12+10D_*)\rceil.
+ \]
+-Para ver cómo se absorben, fijemos \(\beta_0=(64\cdot10^{18})^{-1}\). El calendario del nibble usa \(L_T(\beta)=-\log\beta\), el parámetro \(M_T(r,\beta)=16rL_T(\beta)+1\), un tamaño de paso \(\gamma_T\) y \(T_T=\lceil M_T/\gamma_T\rceil\) rondas. Los parámetros \(D_S,\gamma_R\) pasan de ese calendario al selector. La siguiente tabla recoge las desigualdades en la precisión \(\beta_0\) y rango siete usadas en el suplemento; no son aproximaciones decimales.
++Para ver cómo se absorben, fijemos \(\beta_0=(64\cdot10^{18})^{-1}\). Damos el calendario explícitamente, para precisar el significado de las constantes de la Tabla C.1. Para \(r\ge2\) y \(0<\beta\le1/2\), todas las cantidades siguientes se evalúan en \((r,\beta)\), salvo que se muestre otro argumento:
++\[
++\begin{gathered}
++a_T=(r-1)/r,\quad L_T=-\log\beta,\quad M_T=16rL_T+1,\\
++\gamma_T=\min\{1/8,e^{-8M_T-1}/32\},\quad
++\epsilon_T=4a_T\gamma_T,\quad q_T=1-a_T\gamma_T,\quad
++T_T=\lceil M_T/\gamma_T\rceil,\\
++G_T=(2+r/(\epsilon_T\gamma_T))^2,\quad
++\eta_T=\frac{\beta}{8(2G_T)^{T_T}},\quad
++\ell_T=\frac34q_T^{T_T}.
++\end{gathered}
++\]
++El número de rondas es \(T_T\); \(\eta_T\) acota la fracción excepcional y \(\ell_T\) es la escala de grado conservada. Para pasar al selector, definimos
++\[
++\begin{gathered}
++D_{0,T}=\frac{256r}{(\beta/2)^2\gamma_T}+\frac{96}{\epsilon_T}+4,\qquad
++c_{0,T}=\frac{\eta_T\epsilon_T^2\gamma_T(\beta/2)^2}{16384r},\\
++\mu_T=\min\{8\gamma_T,c_{0,T}\ell_T,[2(D_{0,T}+1)]^{-1},1/2\},\qquad
++d_{0,T}=\max\{1,D_{0,T}/\ell_T\},\\
++D_S(r,\beta)=1+\max\{\lceil d_{0,T}\rceil,\lceil4(1+r^2)/\mu_T\rceil\},\\
++\gamma_R(r-1,\beta)=\min\{1/D_S(r,\beta),\mu_T/4,1\}.
++\end{gathered}
++\]
++Son las definiciones de `E18.NibbleSchedule`, `NibbleOracle` y `NibbleChain`; los dos últimos usan \(\min\{\beta,1/2\}\) para una precisión positiva general, que coincide con \(\beta\) en el rango indicado. El rango aumenta de seis a siete al convertir el selector en la entrada del nibble. Sustituir \(r=7\) y \(\beta=\beta_0\) da las desigualdades registradas abajo. Son cotas demostradas para este calendario, no aproximaciones decimales ni elecciones libres de las constantes del selector.
+ 
+ | Paso | Cotas verificadas |
+ |:--|:--|
+@@ -1678,11 +1713,15 @@
+ | Selector | \(D_S(7,\beta_0)\le2^U,\quad \gamma_R(6,\beta_0)\ge2^{-U}\) |
+ | Tres enteros finales | \(G_1\le2^{U+2},\quad G_2\le2^{U+3},\quad G_3\le2^{U+67}\) |
+ 
+-**Tabla C.1.** Absorción numérica del selector. Aquí \(U=2^{59516}+191432\); las etapas corresponden a los módulos E19.ScheduleBounds, E19.ChainBounds y E19.GateBounds.
++**Tabla C.1.** Absorción numérica del selector. Aquí \(U=2^{59516}+191432\); las etapas corresponden a los módulos `E19.ScheduleBounds`, `E19.ChainBounds` y `E19.GateBounds`.
++
++La cadena numérica de la tabla se obtiene como sigue. Como \(\beta_0\ge2^{-66}\), tenemos \(L_T\le66\log2\le46\) y \(M_T\le5153\). La desigualdad \(8\cdot5153+1\le59480\log2\) da \(\gamma_T\ge2^{-59485}\). Pongamos \(a_0=59485\) e \(Y=2^{a_0+31}\); son auxiliares numéricos, no parámetros del grafo. Entonces \(\epsilon_T=(24/7)\gamma_T\ge2^{-a_0}\) y \(T_T\le5153\,2^{a_0}+1\le2^{a_0+13}\). Además, \(2G_T\le2^{4a_0+5}\) y \(4a_0+5\le2^{18}\), de modo que \((2G_T)^{T_T}\le2^Y\) y \(\eta_T\ge2^{-(Y+69)}\).
+ 
+-Como \(U+67\le2^{59517}\), las cuatro filas implican \(G_i\le2^{\,2^{59517}}\). La recurrencia de regularidad, iterada \(h\) veces con el valor de §6.3, domina esas tres cantidades ya tras sus dos primeras iteraciones. Al absorber después los cinco términos de (C.1), resulta
++Para la escala retenida, escribamos \(x=6\gamma_T/7\le1/2\). Las desigualdades \(1-x\ge(1+2x)^{-1}\) y \(\gamma_TT_T\le M_T+\gamma_T\le5153+1/8\) dan \(2xT_T\le(12/7)(5153+1/8)\le12748\log2\). Por tanto, \(q_T^{T_T}\ge2^{-12748}\) y \(\ell_T\ge2^{-12749}\). Sustituyendo en las definiciones se obtiene \(D_{0,T}\le2^{a_0+146}\) y \(c_{0,T}\ge2^{-(Y+3a_0+220)}\). Sea \(Z=3a_0+220+12749=191424\). Cada una de las cuatro entradas que definen \(\mu_T\) es al menos \(2^{-(Y+Z)}\). También \(d_{0,T}\le2^{a_0+146+12749}\). Los términos con techo de \(D_S\) quedan así acotados por \(256\,2^{Y+Z}=2^U\), donde \(U=Y+191432\); esta cota incluye la unidad adicional de \(D_S\). Tanto \(1/D_S\) como \(\mu_T/4\) son al menos \(2^{-U}\), lo que prueba la fila del selector.
++
++Por último, al sustituir esta cota inferior en las tres cantidades del selector se obtiene la última fila. Para su mayor entrada, el denominador intermedio es a lo sumo \(10\,2^U+28\); por ello, su techo es a lo sumo \(2\cdot10^{17}\cdot392\,2^U\le2^{U+67}\). Como \(U+67\le2^{59517}\), las cuatro filas implican \(G_i\le2^{\,2^{59517}}\). La recurrencia de regularidad, iterada \(h\) veces con el valor de §6.3, domina esas tres cantidades ya tras sus dos primeras iteraciones. Al absorber después los cinco términos de (C.1), resulta
+ \[
+-N_{\rm lejano}(\eta_0)\le T(h+7).
++N_{\rm far}(\eta_0)\le T(h+7).
+ \tag{C.3}
+ \]
+ La comparación es simbólica: no exige construir un entero con esa cantidad de cifras. Tampoco supone un resultado de diseños resolubles ni un régimen de separadores pequeños. Así, (C.3) vale para la rama lejana de **todo grafo**; la cordalidad se usa al unirla a la rama cercana en §6.
+@@ -1694,7 +1733,7 @@
+ \qquad c_{\rm poly}=4\cdot17664^5\cdot9000^{105}+3006.
+ \tag{C.4}
+ \]
+-Éste es E35.NfarE_le_tower_poly. Acota los parámetros de selección, regularidad y limpieza antes de elegir el grafo; no se permite que \(\eta\) dependa del grafo de entrada una vez fijado el umbral. La cota numérica especializada de §6.3 sigue siendo válida. La fórmula (C.4) es la comparación adicional necesaria para la banda exacta de defecto creciente del Corolario 6.6.
++Éste es `E35.NfarE_le_tower_poly`. Acota los parámetros de selección, regularidad y limpieza antes de elegir el grafo; no se permite que \(\eta\) dependa del grafo de entrada una vez fijado el umbral. La cota numérica especializada de §6.3 sigue siendo válida. La fórmula (C.4) es la comparación adicional necesaria para la banda exacta de defecto creciente del Corolario 6.6.
+ 
+ ## Apéndice D. Grafos completos e identidades del comparador
+ 
+@@ -1731,12 +1770,12 @@
+ 
+ **Tabla 8.** Construcciones para el caso completo. En la última fila el vértice añadido no participa en el empaquetamiento; no es un vértice aislado del grafo completo.
+ 
+-Verifiquemos la ganancia que necesita el ensamblaje. Para bloques mixtos disjuntos, si \(E_{\rm cub}\) es su conjunto de aristas cubiertas y \(b_4\) su número de \(K_4\), las contribuciones dos y cinco dan
++Verifiquemos la ganancia que necesita el ensamblaje. Para bloques mixtos disjuntos, si \(E_{\rm covered}\) es su conjunto de aristas cubiertas y \(b_4\) su número de \(K_4\), las contribuciones dos y cinco dan
+ \[
+-3g(\mathcal P)=2|E_{\rm cub}|+3b_4.
++3g(\mathcal P)=2|E_{\rm covered}|+3b_4.
+ \tag{D.3}
+ \]
+-Las filas que cubren \(K_n\) cumplen (D.1), pues \(2|E_{\rm cub}|=n(n-1)\ge n(n-2)\). Si se borra un vértice de una descomposición triangular de \(K_{n+1}\), ese vértice pertenece a \(n/2\) triángulos: sus \(n\) aristas incidentes se agrupan de dos en dos. Quedan \(n(n+1)/6-n/2=n(n-2)/6\) triángulos; su ganancia verifica (D.1) con igualdad. Finalmente, en la última fila se cubren las aristas de \(K_{3M+1}\) con \(M\) bloques \(K_4\), de modo que
++Las filas que cubren \(K_n\) cumplen (D.1), pues \(2|E_{\rm covered}|=n(n-1)\ge n(n-2)\). Si se borra un vértice de una descomposición triangular de \(K_{n+1}\), ese vértice pertenece a \(n/2\) triángulos: sus \(n\) aristas incidentes se agrupan de dos en dos. Quedan \(n(n+1)/6-n/2=n(n-2)/6\) triángulos; su ganancia verifica (D.1) con igualdad. Finalmente, en la última fila se cubren las aristas de \(K_{3M+1}\) con \(M\) bloques \(K_4\), de modo que
+ \[
+ 3g(\mathcal P)=(3M+1)3M+3M=(3M+2)3M=n(n-2).
+ \tag{D.4}
+@@ -1762,7 +1801,7 @@
+ 
+ ### D.2. Igualdad de óptimos mixtos en grafos completo-split
+ 
+-**Proposición D.3 (gap mixto nulo en completo-split).** Sea \(S=K_k\vee I_h\), con \(2\le k\le h\), y sea \(W(S)\) la máxima ganancia de un empaquetamiento mixto físico. Entonces
++**Proposición D.3 (brecha mixta nula en completo-split).** Sea \(S=K_k\vee I_h\), con \(2\le k\le h\), y sea \(W(S)\) la máxima ganancia de un empaquetamiento mixto físico. Entonces
+ \[
+ W^*(S)=W(S)=2\binom k2.
+ \tag{D.6}
+@@ -1778,7 +1817,7 @@
+ \]
+ La última desigualdad usa la capacidad uno de cada arista del núcleo. La construcción de la Sección 6.1 contiene un triángulo por base interna y alcanza esa ganancia. Como todo empaquetamiento entero define uno fraccional, quedan probadas las dos igualdades de (D.6). El resultado formal es `SplitMixedGap.mixed_gap_zero`, junto con la construcción acotada de `SplitCompleteSharpValue`.
+ 
+-La conclusión es una igualdad de valores óptimos en esta familia y bajo \(2\le k\le h\). No afirma que todos los vértices del politopo fraccional sean enteros, ni extiende el gap cero a cualquier grafo split.
++La conclusión es una igualdad de valores óptimos en esta familia y bajo \(2\le k\le h\). No afirma que todos los vértices del politopo fraccional sean enteros, ni extiende la brecha nula a cualquier grafo split.
+ 
+ ### D.3. Reserva exacta por desplazamiento del núcleo
+ 
+@@ -1860,7 +1899,15 @@
+ L\le\frac{\rho}{10^{13}}+1,\qquad
+ |\mathcal L|-\frac n3\le c+\frac{4\lambda}{10^{31}}.
+ \]
+-Estas estimaciones preceden a la ejecución del constructor. En particular, las reservas no se ajustan retrospectivamente al número de piezas.
++Desarrollemos las cuentas de estas estimaciones. Pongamos \(h=s+1\) y \(\varepsilon=1/(10^{41}h^8)\). La entrada de la normalización es una clique \(A\) con \(\bigl||A|-n/3\bigr|\le\varepsilon n\), a lo sumo \(\varepsilon n^2\) enlaces ausentes hacia su complemento y a lo sumo \(\varepsilon n^2\) aristas exteriores, junto con grado mínimo al menos \((1/3-\varepsilon)n\). Son las entradas localizadas, no consecuencias del defecto enraizado por sí solo. Observemos que \(\varepsilon n^2=\lambda^2/10^{41}\) y \(n\lambda=\rho^2\).
++
++Retiramos de \(A\) todo vértice que omita más de \(\lambda/10^{10}\) vecinos exteriores, y llamamos \(A_0\) al conjunto conservado. Contar los enlaces ausentes por su extremo en \(A\) da \(|A\setminus A_0|\le\lambda/10^{31}\). Por tanto, \(n/3-2\lambda/10^{31}\le|A_0|\le n/3+\lambda/10^{41}\). Trasladar un vértice al exterior añade a lo sumo \(n\) aristas exteriores; el nuevo exterior \(R_0=V\setminus A_0\) tiene entonces a lo sumo \(2\rho^2/10^{31}\) aristas. Su conjunto pesado \(Y\), definido por grado al menos \(\rho/10^4\) dentro de \(R_0\), tiene tamaño a lo sumo \(4\rho/10^{27}\), por la suma de grados. El conjunto ligero es \(\mathcal L=R_0\setminus Y\).
++
++Partimos \(Y\) en el siguiente orden. El conjunto \(Y_c\) consta de los vértices que omiten a lo sumo \(\rho/40\) vecinos en \(\mathcal L\). Entre los restantes, ponemos en \(Y_r\) los que omiten a lo sumo \(\rho/200\) vecinos en \(A_0\). Los demás forman \(W\). Así, \(S=A_0\cup Y_c\) y \(H=\mathcal L\cup Y_r\). En particular, \(t_W\le|Y|\), \(|c-n/3|\le\rho/10^{20}\) y \(m=e(G[H])\le2\rho^2/10^{31}\). Además, \(|\mathcal L|\le2n/3+2\lambda/10^{31}\) y \(c\ge n/3-2\lambda/10^{31}\), lo que da la cota mostrada para \(|\mathcal L|-n/3\).
++
++Para un vértice ligero, el grado mínimo y la cota de su grado exterior implican a lo sumo \(\rho/10^4+2\lambda/10^{41}<\rho/200\) vecinos ausentes en \(A_0\). La definición da la misma cota \(\rho/200\) para \(Y_r\). Añadir \(Y_c\) y los \(2t_W\) radios reservados da entonces \(\sigma\le\rho/200+12\rho/10^{27}\). Del otro lado, todo vértice de \(S\) omite a lo sumo \(\rho/40\) vecinos ligeros; añadir \(Y_r\) y las reservas da \(\tau\le\rho/40+12\rho/10^{27}\). Son las cotas por fila y columna que se vuelven a usar en E.4.
++
++Por último, sea \(D\) el número total de enlaces ausentes entre \(S\) y \(H\). Separarlos entre \(A_0\!:\!\mathcal L\), \(A_0\!:\!Y_r\) y \(Y_c\!:\!H\) da \(D\le\lambda^2/10^{41}+|Y_r|\rho/200+|Y_c|(\rho/40+|Y_r|)\le(\rho/10^{13})^2\). La elección \(L=\lfloor\sqrt D\rfloor+1\) da \(D<L^2\) y \(L\le\rho/10^{13}+1\). Estas estimaciones, demostradas en `IndepAllBounds` e `IndepAllParams`, preceden a la ejecución del constructor. En particular, las reservas no se ajustan retrospectivamente al número de piezas.
+ 
+ Sea \(\nu\) el máximo número de pares disjuntos de no-aristas dentro de \(S\). La condición de defecto enraizado, junto con las cotas normalizadas de vecinos comunes, implica \(\nu\le s\); el argumento se da en E.4. Es una propiedad del núcleo normalizado, no de todo subconjunto de vértices de un grafo de defecto enraizado a lo sumo \(s\). La cota extremal de matching aplicada al complemento de \(G[S]\) da
+ \[
+@@ -1895,7 +1942,16 @@
+ \quad\text{si }X'\subseteq W,\quad |X'|\le2(s+1).
+ \tag{E.2d}
+ \]
+-Para obtenerla se fijan \(\nu\) parejas disjuntas de no aristas en \(S\) y se asocian a las excepciones no vecinos distintos en la raíz conservada. La condición enraizada, aplicada a los inducidos determinados por esas parejas y los vecinos ligeros comunes, limita la contribución conjunta. Los vértices ligeros que no participan en ese inducido se cuentan mediante las ausencias de la normalización. Éste es el argumento de eliminación del módulo IndepAllPeel; IndepAllObstr lo convierte en (E.2d). Aplicarlo a \(2s+2\) excepciones grandes muestra además que \(j\le2s+1\).
++Para deducir (E.2d), escribamos \(x=|X'|\le2h\) y fijemos \(\nu\) parejas disjuntas de no aristas en \(S\), con conjunto de extremos \(B\). Cada \(w\in X'\subseteq W\) omite más de \(\rho/200\) vecinos en \(A_0\). Como \(\rho\ge10^{50}h^2\), podemos escoger sucesivamente no vecinos distintos \(a_w\in A_0\setminus B\). Sea \(U_0=B\cup\{a_w:w\in X'\}\), y sea \(Z\subseteq\mathcal L\) el conjunto de vecinos comunes de \(U_0\). Toda clique de \(\mathcal L\) tiene tamaño a lo sumo \(\omega=\lceil\rho/10^4\rceil\), por la cota de grado exterior ligero.
++
++Apliquemos el defecto enraizado con raíz vacía a inducidos sucesivos de \(U_0\cup X'\cup Z\), conservando \(U_0\). Hay tres posibilidades para el vértice que entrega esa condición. Si es \(z\in Z\), su vecindario contiene las \(\nu\) parejas ausentes fijadas y, por cada excepción vecina \(w\) que quede, la pareja ausente \(\{w,a_w\}\). Estas parejas son disjuntas. Una clique omite al menos un extremo de cada una, por lo que a \(z\) le quedan a lo sumo \(s-\nu\) excepciones vecinas. Retiramos esta fila y cargamos a lo sumo \(s-\nu\) incidencias. Si se escoge una excepción \(w\), tiene a lo sumo \(\omega+s\) vecinos en el conjunto ligero restante; la retiramos y cargamos esas incidencias. Si se escoge un vértice de \(U_0\), es vecino de todos los vértices restantes de \(Z\). Quedan entonces a lo sumo \(\omega+s\) filas y terminamos, cargando a lo sumo \((\omega+s)x\) incidencias. El procedimiento retira un vértice o se detiene, así que termina. Las tres cuentas dan \(e(Z,X')\le(s-\nu)|Z|+2(\omega+s)x\).
++
++Restituyamos los vértices ligeros omitidos. Cada extremo de \(B\) omite a lo sumo \(\rho/40\) de ellos, y cada \(a_w\in A_0\), a lo sumo \(\lambda/10^{10}\). Luego \(|\mathcal L\setminus Z|\le2\nu\rho/40+x\lambda/10^{10}\). Cada fila restituida aporta a lo sumo \(x\) incidencias, por lo que
++\[
++e(\mathcal L,X')\le(s-\nu)|\mathcal L|
++ +2(\omega+s)x+x\left(\frac{2\nu\rho}{40}+\frac{x\lambda}{10^{10}}\right).
++\]
++Para obtener el error \(n/9\) de (E.2d), usamos \(\nu\le s<h\), \(x\le2h\), \(h^2\rho=n\), \(h^2\lambda=\rho\) y \(h^2\le\rho/10^{50}\). El error mostrado es a lo sumo \(n/10+4n/10^4+4\rho/10^{10}+4\rho/10^{50}\le n/9\). Ésta es la estimación por eliminación de `IndepAllPeel` y su especialización numérica en `IndepAllObstr`. Aplicarla a \(2s+2\) excepciones grandes da además \(j\le2s+1\).
+ 
+ La prueba del presupuesto se divide entonces en tres casos.
+ 
+@@ -1924,7 +1980,7 @@
+    \(n=\rho(s+1)^2\) y \(\rho\ge10^{50}(s+1)^2\).
+    Junto con la cota de \(M_S\), se obtiene de nuevo (E.2b).
+ 
+-Estos tres casos son la desigualdad conjunta de IndepAllBudget. No afirman que la absorción, aislada del defecto enraizado, tenga siempre saldo favorable.
++Estos tres casos son la desigualdad conjunta de `IndepAllBudget`. No afirman que la absorción, aislada del defecto enraizado, tenga siempre saldo favorable.
+ 
+ Finalmente, pongamos \(z=\lceil(c+b+s)/3\rceil\). La parábola del comparador entero y la suma de sus incrementos dan, cuando \(c+b\ge s+2\),
+ \[
+@@ -1936,7 +1992,7 @@
+ \]
+ Insertar la primera desigualdad en (E.2c) da
+ \(|Q|\le Q_s(c+b)+t_W z\); la segunda da \(|Q|\le Q_s(n)\).
+-IndepAllMain combina la construcción con este paso aritmético. La interfaz adicional ConstructorBudget conserva tanto (E.2c) como la cota objetivo para una misma partición.
++`IndepAllMain` combina la construcción con este paso aritmético. La interfaz adicional `ConstructorBudget` conserva tanto (E.2c) como la cota objetivo para una misma partición.
+ 
+ El constructor formal utilizado no invoca los resultados de [15] ni los módulos históricos de la construcción sustituida. La cota de listas y la ventana de capacidad de la primera fase coinciden en forma con condiciones de [15, Lema 4.1 y (4.4)]. Aquí se justifican mediante hospedaje diádico, promedio de desplazamientos cíclicos y absorción equilibrada. Esta comparación identifica los mecanismos y sus coincidencias; no reclama prioridad para esas condiciones ni deduce independencia histórica del control de dependencias de §7.
+ 
+@@ -1946,7 +2002,7 @@
+ 
+ Para cada \(s\), el resultado terminal proporciona \(\epsilon_s>0\) y un umbral a partir del cual todo grafo de la clase con \(\delta(G)\ge(1/3-\epsilon_s)n\) admite una partición de coste \(Q_s(n)\). Si hay margen fraccional cuadrático, se aplica el Corolario 3.5, válido para todo grafo, y \(M(n)\le Q_s(n)\) en el rango considerado. Si no, la localización para defecto fijo da los datos normalizados de E.1. El umbral local \(\lceil10^{50}(s+1)^8\rceil\) de ese terminal no es el umbral global \(N_s\), que incluye localización y redondeo.
+ 
+-La prueba seleccionada aquí es E34.theoremC_fully_explicit_final, con \(N_s=F_s=\mathrm{Fexp}(\mathrm{NeditE},s)\). Su paso de edición hacia un cordal se formaliza a partir de [22], con las adaptaciones registradas en el Apéndice F.5. Un ensamblaje existencial anterior utilizaba el lema de remoción inducida de Alon–Shapira [23]. Se conserva por procedencia, pero no es la prueba pública elegida aquí. El Corolario 6.6 acota \(F_s\) por una torre explícita.
++La prueba seleccionada aquí es `E34.theoremC_fully_explicit_final`, con \(N_s=F_s=\mathrm{Fexp}(\mathrm{NeditE},s)\). Su paso de edición hacia un cordal se formaliza a partir de [22], con las adaptaciones registradas en el Apéndice F.5. Un ensamblaje existencial anterior utilizaba el lema de remoción inducida de Alon–Shapira [23]. No es la prueba seleccionada para el Teorema C público. Sigue utilizándose en las interfaces formales de clasificación irrestricta descritas en §7 y Tabla 9. El Corolario 6.6 acota \(F_s\) por una torre explícita.
+ 
+ Veamos por qué basta un terminal con grado mínimo. Para \(n\) suficientemente grande,
+ \[
+@@ -2005,7 +2061,7 @@
+ 
+ Como \(\kappa\ge n/2\) y \(\rho\le n\), la cota de aristas da \(q\le4\rho/10^{31}+1\). Las mismas estimaciones mostradas dan
+ \(3\lceil c/2\rceil+2\tau+4q\le b+2\).
+-Por tanto, todas las condiciones de capacidad y listas de (E.1) siguen cumpliéndose con esta paleta menor. Son las desigualdades establecidas en StrictParams; no se introduce una nueva hipótesis de coloración.
++Por tanto, todas las condiciones de capacidad y listas de (E.1) siguen cumpliéndose con esta paleta menor. Son las desigualdades establecidas en `StrictParams`; no se introduce una nueva hipótesis de coloración.
+ 
+ El paso de promedio cíclico conserva ahora \(t_I\) bases exteriores hospedadas con
+ \(\kappa t_I\ge m(c-2\sigma)\). Por ello, su ahorro entero \(z=2t_I-m\) satisface
+@@ -2055,7 +2111,7 @@
+ nt_W\le800(s+1)^2R_*.
+ \tag{E.10}
+ \]
+-Éste es el presupuesto estricto de StrictBudget, no una hipótesis adicional sobre el constructor.
++Éste es el presupuesto estricto de `StrictBudget`, no una hipótesis adicional sobre el constructor.
+ 
+ **El exceso restante del núcleo también queda pagado.** Las cotas de normalización implican
+ \(2(L+t_W)\le(c+b+s)/3\). Como el mínimo restado en \(g_w\) es no negativo, \(g_w\le\deg(w)\le n\). En consecuencia,
+@@ -2063,20 +2119,20 @@
+ E=R_*+\sum_{w\in W}g_w\le R_*+nt_W.
+ \tag{E.11}
+ \]
+-Ésta es la cuenta de ResidualExcess. Utiliza la cota del mismo \(L\) proporcionado por el constructor.
++Ésta es la cuenta de `ResidualExcess`. Utiliza la cota del mismo \(L\) proporcionado por el constructor.
+ 
+ **Una clique real, con desplazamiento pagado.** Primero justifiquemos la restricción de pares ausentes en \(S\). Supongamos que \(s+1\) pares disjuntos de no-aristas tienen extremos \(B\subseteq S\), y sean \(U\subseteq\mathcal L\) sus vecinos ligeros comunes. Las estimaciones normalizadas de enlaces ausentes y \(|B|=2(s+1)\) dan
+ \[
+ |U|\ge\rho/10^4+s+2.
+ \]
+-Toda clique de \(\mathcal L\) tiene a lo sumo \(\rho/10^4+1\) vértices, por la cota de grado exterior ligero. En el grafo inducido por \(B\cup U\), cada vértice de \(B\) tiene entonces más de \(s\) vecinos fuera de cualquier clique de su vecindario. Cada vértice de \(U\) tiene la misma propiedad: su vecindario contiene \(B\), y una clique puede contener a lo sumo un extremo de cada par ausente. Ningún vértice de este inducido satisface la condición de defecto enraizado con raíz vacía, una contradicción. Éste es el argumento de AllInput.no_core_pairs; las estimaciones de vecinos comunes son esenciales.
++Toda clique de \(\mathcal L\) tiene a lo sumo \(\rho/10^4+1\) vértices, por la cota de grado exterior ligero. En el grafo inducido por \(B\cup U\), cada vértice de \(B\) tiene entonces más de \(s\) vecinos fuera de cualquier clique de su vecindario. Cada vértice de \(U\) tiene la misma propiedad: su vecindario contiene \(B\), y una clique puede contener a lo sumo un extremo de cada par ausente. Ningún vértice de este inducido satisface la condición de defecto enraizado con raíz vacía, una contradicción. Éste es el argumento de `AllInput.no_core_pairs`; las estimaciones de vecinos comunes son esenciales.
+ 
+ Para completar la exposición, la alternativa finita del núcleo utilizada a continuación es la siguiente. Si \(c\ge20(s+1)^2\) y el complemento de \(G[S]\) no tiene un matching de tamaño \(s+1\), entonces \(S\) contiene una clique de tamaño \(c-s\), o bien
+ \[
+ c-s\le2\left(e(G[S])-\binom{c-s}{2}\right)=2E.
+ \tag{E.12}
+ \]
+-Se prueba por inducción en \(s\). Para \(s=0\), \(S\) es una clique. Si algún vértice tiene al menos \(2s+1\) no-vecinos en \(S\), eliminarlo deja un grafo sin matching de no-aristas de tamaño \(s\): tal matching ocuparía sólo \(2s\) vértices, dejando un no-vecino para extenderlo. Apliquemos la inducción con \(s-1\); el tamaño objetivo del núcleo sigue siendo \(c-s\), y toda cota inferior para las aristas del conjunto menor también vale en \(S\). En otro caso, el grafo de aristas ausentes tiene grado máximo a lo sumo \(2s\). Eliminar repetidamente los dos extremos de una arista ausente retira a lo sumo \(4s+1\) aristas ausentes por paso y termina tras a lo sumo \(s\) pasos. Por tanto, tiene a lo sumo \((4s+1)s\) aristas. Sustituir en \(E=e(G[S])-\binom{c-s}{2}\), usando \(c\ge20(s+1)^2\), da (E.12). Éste es CoreCliqueAlternative.
++Se prueba por inducción en \(s\). Para \(s=0\), \(S\) es una clique. Si algún vértice tiene al menos \(2s+1\) no-vecinos en \(S\), eliminarlo deja un grafo sin matching de no-aristas de tamaño \(s\): tal matching ocuparía sólo \(2s\) vértices, dejando un no-vecino para extenderlo. Apliquemos la inducción con \(s-1\); el tamaño objetivo del núcleo sigue siendo \(c-s\), y toda cota inferior para las aristas del conjunto menor también vale en \(S\). En otro caso, el grafo de aristas ausentes tiene grado máximo a lo sumo \(2s\). Eliminar repetidamente los dos extremos de una arista ausente retira a lo sumo \(4s+1\) aristas ausentes por paso y termina tras a lo sumo \(s\) pasos. Por tanto, tiene a lo sumo \((4s+1)s\) aristas. Sustituir en \(E=e(G[S])-\binom{c-s}{2}\), usando \(c\ge20(s+1)^2\), da (E.12). Éste es `CoreCliqueAlternative`.
+ 
+ En el primer caso, elijamos la clique \(C\) de tamaño \(c-s\) y pongamos \(r=0\). En el segundo, los extremos de un matching máximo de no-aristas tocan toda arista ausente. Su complemento es una clique de tamaño al menos \(c-2s\); reduzcámosla a ese tamaño y pongamos \(r=s\). Entonces \(|C|+s+r=c\). Como \(c\ge2s\), (E.12) da \(c\le4E\) y, por tanto, \(rc\le4sE\). La normalización también da \(n\le4c\), de modo que en ambos casos
+ \[
+@@ -2100,7 +2156,7 @@
+ d_E(G,T(C,D,J))\le a+m+E+2rn+2nt_W.
+ \tag{E.14}
+ \]
+-Un \(rn\) paga el tamaño reducido de la clique en la cuenta interior; el otro paga el cambio de clase de anfitrión. Análogamente, \(W\) primero se aísla y después se coloca en la clase de anfitriones. Son cotas superiores de dos ediciones sucesivas, no una afirmación de que todos los pares cargados sean distintos. TemplateDistance, RootPartition y CliqueShiftArithmetic formalizan estas comparaciones.
++Un \(rn\) paga el tamaño reducido de la clique en la cuenta interior; el otro paga el cambio de clase de anfitrión. Análogamente, \(W\) primero se aísla y después se coloca en la clase de anfitriones. Son cotas superiores de dos ediciones sucesivas, no una afirmación de que todos los pares cargados sean distintos. `TemplateDistance`, `RootPartition` y `CliqueShiftArithmetic` formalizan estas comparaciones.
+ 
+ **Combinar las cuentas.** Las ecuaciones (E.11), (E.13) y (E.14) implican
+ \[
+@@ -2120,7 +2176,7 @@
+ 
+ ### F.1. Parámetros explícitos para defecto fijo
+ 
+-Las funciones utilizadas aquí son las del módulo congelado ExplicitFixedStability. Reemplazan la elección existencial de un umbral terminal o de localización; ninguno es una entrada sin demostrar. Escribimos \(\eta_s=\mathrm{etaNF}(s)>0\), \(L_s=\mathrm{NLoc}(\mathrm{NeditE},s,\epsilon_s)\) y \(F_s=\mathrm{Fexp}(\mathrm{NeditE},s)\) para las funciones explícitas de E33.Assembly y E33.LocExplicit, con el umbral de edición cordal NeditE suministrado por E34.L11Main. El argumento de remoción formalizado en E34 sigue a de Joannis de Verclos [22]; la verificación formal no cambia su atribución matemática. La función \(N_{\rm far}\) es el umbral explícito de redondeo de E18, no un parámetro existencial adicional.
++Las funciones utilizadas aquí son las del módulo congelado `ExplicitFixedStability`. Reemplazan la elección existencial de un umbral terminal o de localización; ninguno es una entrada sin demostrar. Escribimos \(\eta_s=\mathrm{etaNF}(s)>0\), \(L_s=\mathrm{NLoc}(\mathrm{NeditE},s,\epsilon_s)\) y \(F_s=\mathrm{Fexp}(\mathrm{NeditE},s)\) para las funciones explícitas de `E33.Assembly` y `E33.LocExplicit`, con el umbral de edición cordal NeditE suministrado por `E34.L11Main`. El argumento de remoción formalizado en E34 sigue a de Joannis de Verclos [22]; la verificación formal no cambia su atribución matemática. La función \(N_{\rm far}\) es el umbral explícito de redondeo de E18, no un parámetro existencial adicional.
+ 
+ Con \(\epsilon_s,A_s\) como en (6.11), los parámetros efectivos de estabilidad son
+ \[
+@@ -2134,7 +2190,7 @@
+ \end{aligned}
+ \tag{F.1}
+ \]
+-Éstas son definiciones de funciones de umbral identificadas y demostradas, no cotas numéricamente útiles. El término local \(10^{50}(s+1)^8\) es sólo un sumando; no debe presentarse como el umbral global. La prueba de fixed_defect_stability_explicit invoca los resultados demostrados de remoción, localización, redondeo lejano y cuentas terminales conservadas. Así, (F.1) no contiene ningún realizador ni teorema de localización supuesto.
++Éstas son definiciones de funciones de umbral identificadas y demostradas, no cotas numéricamente útiles. El término local \(10^{50}(s+1)^8\) es sólo un sumando; no debe presentarse como el umbral global. La prueba de `fixed_defect_stability_explicit` invoca los resultados demostrados de remoción, localización, redondeo lejano y cuentas terminales conservadas. Así, (F.1) no contiene ningún realizador ni teorema de localización supuesto.
+ 
+ Para aclararlo, el invariante de borrado utilizado en §6.6 es
+ \[
+@@ -2167,16 +2223,16 @@
+ F_4(G)\le B_{n-s}(c)+ns-\binom{s+1}{2}
+ \le M(n-s)+ns-\binom{s+1}{2}.
+ \]
+-Esto utiliza una desigualdad del baseline entero antes de la comparación final, no un piso aplicado a un valor fraccional. En la rama de estrella alta, comparemos \(\alpha\) con \(5c/12\); se utiliza la segunda fila por debajo de ese valor y la primera por encima. Ambas dan la envolvente
++Esto utiliza una desigualdad del valor base entero antes de la comparación final, no un piso aplicado a un valor fraccional. En la rama de estrella alta, comparemos \(\alpha\) con \(5c/12\); se utiliza la segunda fila por debajo de ese valor y la primera por encima. Ambas dan la envolvente
+ \[
+ F_4(G)\le\frac{c(5n-4c-1)}{12}+s(n-c).
+ \tag{F.4}
+ \]
+-Las comparaciones racionales de RefinedFractionalBound y UniformFractionalBound establecen las dos bandas de la Proposición 6.4. Para \(n<8\), SmallOrderFractional comprueba dentro de Lean los rangos enteros de parámetros restantes contra esta misma envolvente. El grafo vacío y los casos que no requieren una restricción de \(K_4\) utilizan la primera fila o la cota de número de aristas. No se necesita enumeración de grafos pequeños, óptimos en punto flotante ni certificados de un solver externo para estos órdenes.
++Las comparaciones racionales de `RefinedFractionalBound` y `UniformFractionalBound` establecen las dos bandas de la Proposición 6.4. Para \(n<8\), `SmallOrderFractional` comprueba dentro de Lean los rangos enteros de parámetros restantes contra esta misma envolvente. El grafo vacío y los casos que no requieren una restricción de \(K_4\) utilizan la primera fila o la cota de número de aristas. No se necesita enumeración de grafos pequeños, óptimos en punto flotante ni certificados de un solver externo para estos órdenes.
+ 
+ ### F.3. Localización uniforme mediante edición hacia un cordal
+ 
+-La parte estructural del Teorema 6.5 no utiliza sólo (F.2). También necesita convertir un defecto enraizado pequeño en una edición cordal pequeña. Para cada precisión \(\xi>0\), E34 da un tamaño de muestra explícito \(m=m(\xi)\). El adaptador SublinearEdit utiliza
++La parte estructural del Teorema 6.5 no utiliza sólo (F.2). También necesita convertir un defecto enraizado pequeño en una edición cordal pequeña. Para cada precisión \(\xi>0\), E34 da un tamaño de muestra explícito \(m=m(\xi)\). El adaptador `SublinearEdit` utiliza
+ \[
+ \theta(\xi)=\frac1{16m^{m+1}+1},\qquad N(\xi)=\max\{m,1\}.
+ \tag{F.5}
+@@ -2217,7 +2273,7 @@
+ Apliquemos (F.5a); tomar raíces cuadradas no negativas da
+ \((|A|-|R|-s)_+\le u\), que es la estimación requerida.
+ 
+-Las interfaces formales son exists_clique_additive_defect y recover_clique_from_edit. La segunda toma \(u\) racional y supone explícitamente \(u\ge0\); la prueba mostrada también vale para \(u\) real. Cuando \(s=0\), (F.5a) se reduce a la estimación de extracción de clique cordal (F.9). La pérdida en \(s\) es aditiva, no un factor que multiplica el término de raíz cuadrada.
++Las interfaces formales son `exists_clique_additive_defect` y `recover_clique_from_edit`. La segunda toma \(u\) racional y supone explícitamente \(u\ge0\); la prueba mostrada también vale para \(u\) real. Cuando \(s=0\), (F.5a) se reduce a la estimación de extracción de clique cordal (F.9). La pérdida en \(s\) es aditiva, no un factor que multiplica el término de raíz cuadrada.
+ 
+ Sea ahora \(H\) el grafo cordal obtenido arriba y pongamos \(t=d_E(G,H)\). Reparar particiones de orden acotado transfiere la cota inferior integral con déficit a lo sumo \(\delta+4t\). Apliquemos el Teorema 6.1 en \(H\). Su clique no tiene por qué ser una clique de \(G\); el Corolario F.3b retira a lo sumo \(s+u\) vértices para cualquier \(u\ge0\) con \(2t\le u^2\), produciendo una clique \(R\) en el propio \(G\). Contar aristas modificadas e incidencias da
+ \[
+@@ -2227,24 +2283,24 @@
+ \end{aligned}
+ \tag{F.6}
+ \]
+-Éstas son las desigualdades de SublinearStabilityTransfer. Aquí \(\delta\) se mide respecto de \(M(n)\). Para partir de la hipótesis en \(n^2/6\) del Teorema 6.5, basta aumentar su déficit en \(n/6\), lo que conserva un error \(o(n^2)\). Elijamos \(\xi\), la razón de defecto y el margen de casi extremalidad suficientemente pequeños antes que \(n\) y \(G\); entonces se puede elegir \(u\) como un múltiplo pequeño de \(n\). La fórmula (F.6) prueba el control uniforme de ediciones y baseline. La parábola del comparador transforma este último en una ventana de tamaño, a una escala de precisión cuadrática. Minimizar (6.27) da entonces el enunciado secuencial con una raíz. Este orden de elecciones evita tanto un umbral oculto de \(s\) fijo como una raíz que dependa de la partición solicitada.
++Éstas son las desigualdades de `SublinearStabilityTransfer`. Aquí \(\delta\) se mide respecto de \(M(n)\). Para partir de la hipótesis en \(n^2/6\) del Teorema 6.5, basta aumentar su déficit en \(n/6\), lo que conserva un error \(o(n^2)\). Elijamos \(\xi\), la razón de defecto y el margen de casi extremalidad suficientemente pequeños antes que \(n\) y \(G\); entonces se puede elegir \(u\) como un múltiplo pequeño de \(n\). La fórmula (F.6) prueba el control uniforme de ediciones y valor base. La parábola del comparador transforma este último en una ventana de tamaño, a una escala de precisión cuadrática. Minimizar (6.27) da entonces el enunciado secuencial con una raíz. Este orden de elecciones evita tanto un umbral oculto de \(s\) fijo como una raíz que dependa de la partición solicitada.
+ 
+ ### F.4. Nuevas interfaces públicas y límites de esta revisión
+ 
+-En la tabla siguiente, el prefijo es PaperIV.SublinearResearch, salvo la entrada E32 nombrada explícitamente. Todos los archivos listados pertenecen al nuevo congelado de fuentes identificado en §7. ResearchAudit comprueba estas interfaces; FDCheck.FinalAudit y E34.Audit comprueban por separado el ensamblaje de defecto fijo y el desarrollo de remoción. E35, el adaptador público del Teorema C y la obstrucción de raíz cuadrada están incluidos en el mismo corte, con sus controles específicos indicados abajo.
++En la tabla siguiente, el prefijo es `PaperIV.SublinearResearch`, salvo la entrada E32 nombrada explícitamente. Todos los archivos listados pertenecen al nuevo congelado de fuentes identificado en §7. `ResearchAudit` comprueba estas interfaces; `FDCheck.FinalAudit` y `E34.Audit` comprueban por separado el ensamblaje de defecto fijo y el desarrollo de remoción. E35, el adaptador público del Teorema C y la obstrucción de raíz cuadrada están incluidos en el mismo corte, con sus controles específicos indicados abajo.
+ 
+ | Enunciado | Declaración |
+ |:--|:--|
+-| Cotas cordales reales con una misma raíz, incluida la masa de aristas | chordal_joint_stability_real |
+-| Teorema C′ y (6.12)–(6.13) | fixed_defect_joint_stability_real |
+-| Parámetros explícitos y clasificación | FixedExplicit.fixed_defect_stability_explicit |
+-| Cota de edición hacia tamaño óptimo (6.17) | fixed_defect_exact_extremal_edit_real |
+-| Clasificación irrestricta de la igualdad | E32.cp_classification_of_theoremCPrimeC, con la clasificación demostrada arriba |
+-| Cota finita (6.22) | certified_shifted_fractional_bound_all_orders |
+-| Cota finita (6.23) | certified_refined_fractional_bound_all_orders |
+-| Versiones integrales uniformes | uniform_shifted_partition_bound; uniform_refined_partition_bound |
+-| Aproximación secuencial con órdenes arbitrarios | sequence_arbitrary_orders_partition_bound |
+-| Estabilidad secuencial con una raíz | sequence_arbitrary_orders_stability |
++| Cotas cordales reales con una misma raíz, incluida la masa de aristas | `chordal_joint_stability_real` |
++| Teorema C′ y (6.12)–(6.13) | `fixed_defect_joint_stability_real` |
++| Parámetros explícitos y clasificación | `FixedExplicit.fixed_defect_stability_explicit` |
++| Cota de edición hacia tamaño óptimo (6.17) | `fixed_defect_exact_extremal_edit_real` |
++| Clasificación irrestricta de la igualdad | `E32.cp_classification_of_theoremCPrimeC`, con la clasificación demostrada arriba y el ensamblaje histórico de remoción inducida [23] (véase §7) |
++| Cota finita (6.22) | `certified_shifted_fractional_bound_all_orders` |
++| Cota finita (6.23) | `certified_refined_fractional_bound_all_orders` |
++| Versiones integrales uniformes | `uniform_shifted_partition_bound`; `uniform_refined_partition_bound` |
++| Aproximación secuencial con órdenes arbitrarios | `sequence_arbitrary_orders_partition_bound` |
++| Estabilidad secuencial con una raíz | `sequence_arbitrary_orders_stability` |
+ 
+ **Tabla 9.** Correspondencia de la extensión. Las interfaces finitas con una misma raíz toman déficits reales; la interfaz secuencial registra parámetros racionales de error y exceso. Esta última no se describe implícitamente como un tipo Lean elaborado distinto.
+ 
+@@ -2261,21 +2317,21 @@
+ \operatorname{indCopies}(C_k,G)\le2ks\,n^{k-1}.
+ \tag{F.7}
+ \]
+-Aquí indCopies cuenta inmersiones inducidas etiquetadas del ciclo de longitud \(k\), no conjuntos de vértices de ciclos sin etiquetar. Esta convención importa al utilizar (F.7) en la cota de la unión de eventos de la muestra. El resultado es E34.indCopies_cycle_le. Proporciona la entrada de conteo de ciclos directamente a partir del defecto enraizado.
++Aquí indCopies cuenta inmersiones inducidas etiquetadas del ciclo de longitud \(k\), no conjuntos de vértices de ciclos sin etiquetar. Esta convención importa al utilizar (F.7) en la cota de la unión de eventos de la muestra. El resultado es `E34.indCopies_cycle_le`. Proporciona la entrada de conteo de ciclos directamente a partir del defecto enraizado.
+ 
+ **Cota de edición co-bipartita.** Si el conjunto de vértices es la unión de dos cliques y \(\operatorname{rsd}(G)\le s\), existe un cordal \(H\) sobre los mismos vértices con
+ \[
+ d_E(G,H)\le2\sqrt{s}\,n\sqrt n+n.
+ \tag{F.8}
+ \]
+-La prueba formal, E34.coBipartite_edit_le, ordena una clique, acota las inversiones en las filas de adyacencia de la otra y reemplaza cada fila por una fila umbral. Los vecindarios cruzados anidados resultantes dan un grafo cordal. La estimación se refiere a distancia de edición, no a una partición en cliques del grafo original.
++La prueba formal, `E34.coBipartite_edit_le`, ordena una clique, acota las inversiones en las filas de adyacencia de la otra y reemplaza cada fila por una fila umbral. Los vecindarios cruzados anidados resultantes dan un grafo cordal. La estimación se refiere a distancia de edición, no a una partición en cliques del grafo original.
+ 
+ **Extracción de clique por eliminación.** Si \(G[D]\) es cordal, \(d=|D|\) y \(M\) es el número de no-aristas no ordenadas en \(D\), entonces \(D\) contiene una clique \(C\) que satisface
+ \[
+ (d-|C|)^2\le2M,\qquad |C|\ge d-\sqrt{2M}.
+ \tag{F.9}
+ \]
+-La prueba de E34.exists_large_clique es una inducción por eliminación simplicial. El lado derecho formal utiliza no-aristas ordenadas, de ahí el factor dos. Esto reemplaza el uso de [22, Lema 4] dentro de la reparación casi simplicial; no se presenta como una nueva versión del teorema completo citado allí.
++La prueba de `E34.exists_large_clique` es una inducción por eliminación simplicial. El lado derecho formal utiliza no-aristas ordenadas, de ahí el factor dos. Esto reemplaza el uso de [22, Lema 4] dentro de la reparación casi simplicial; no se presenta como una nueva versión del teorema completo citado allí.
+ 
+ **Reparación casi simplicial.** Particionemos \(V(G)=X\sqcup Y\), supongamos que \(G[Y]\) es cordal y sea \(p_G(x)\) el número de no-aristas no ordenadas dentro de \(N_G(x)\). Si \(\varepsilon\ge0\) y \(p_G(x)\le\varepsilon n^2\) para todo \(x\in X\), existe un cordal \(H\) con
+ \[
+@@ -2297,7 +2353,7 @@
+ 
+ **Tabla 10.** Adaptaciones de [22] pertinentes al umbral explícito. Las cotas de parámetros mayores no mejoran su exponente del tamaño muestral. La prueba sigue siendo una implementación de su estrategia de remoción, con estos reemplazos finitos y elecciones de parámetros.
+ 
+-**Ensamblaje de la cota adaptada para muestras con anclajes.** Damos los tres casos utilizados en E34.lemma11_V, pues cambiar la representación y la convención de muestreo exige comprobar el argumento de conteo, no sólo citar el lema publicado. Fijemos un árbol enraizado \(\Gamma\) con \(K\) nodos y un anclaje prescrito \(x_v\in V(\Gamma)\) para cada vértice de \(G\). Una muestra *admite los anclajes* si su grafo inducido tiene una representación por subárboles de otro árbol enraizado \(T\), junto con una aplicación que preserva caminos \(\iota:\Gamma\to T\), tal que el subárbol de \(v\) contiene \(\iota(x_v)\). Ésta es la noción ampliada de la Tabla 10.
++**Ensamblaje de la cota adaptada para muestras con anclajes.** Damos los tres casos utilizados en `E34.lemma11_V`, pues cambiar la representación y la convención de muestreo exige comprobar el argumento de conteo, no sólo citar el lema publicado. Fijemos un árbol enraizado \(\Gamma\) con \(K\) nodos y un anclaje prescrito \(x_v\in V(\Gamma)\) para cada vértice de \(G\). Una muestra *admite los anclajes* si su grafo inducido tiene una representación por subárboles de otro árbol enraizado \(T\), junto con una aplicación que preserva caminos \(\iota:\Gamma\to T\), tal que el subárbol de \(v\) contiene \(\iota(x_v)\). Ésta es la noción ampliada de la Tabla 10.
+ 
+ Supongamos que \(G\) está \(\varepsilon\)-lejos de ser cordal: todo grafo cordal sobre su conjunto de vértices tiene distancia de edición mayor que \(\varepsilon n^2\). La comparación con el grafo vacío fuerza \(n\ge1\) y \(\varepsilon<1/2\); la aplicación de anclajes fuerza entonces \(K\ge1\). Para \(\varepsilon>0\), elijamos
+ \[
+@@ -2313,18 +2369,18 @@
+ \]
+ Debemos mostrar que a lo sumo la mitad de las \(n^m\) muestras ordenadas de longitud \(m\), con reemplazo, admiten los anclajes.
+ 
+-Una coloración por conjuntos admisible asigna a \(v\) un subárbol \(\psi(v)\) de \(\Gamma\) que contiene \(x_v\). Para una arista \(uv\), la compatibilidad requiere que el camino de \(x_u\) a \(x_v\) esté contenido en \(\psi(u)\cup\psi(v)\); para una no-arista requiere \(\psi(u)\cap\psi(v)=\varnothing\). Sea \(\operatorname{conf}(\psi)\) el número de pares ordenados incompatibles de vértices distintos. Una muestra que admite los anclajes induce una coloración por conjuntos compatible sobre su conjunto de vértices (properOn_of_pinned).
++Una coloración por conjuntos admisible asigna a \(v\) un subárbol \(\psi(v)\) de \(\Gamma\) que contiene \(x_v\). Para una arista \(uv\), la compatibilidad requiere que el camino de \(x_u\) a \(x_v\) esté contenido en \(\psi(u)\cup\psi(v)\); para una no-arista requiere \(\psi(u)\cap\psi(v)=\varnothing\). Sea \(\operatorname{conf}(\psi)\) el número de pares ordenados incompatibles de vértices distintos. Una muestra que admite los anclajes induce una coloración por conjuntos compatible sobre su conjunto de vértices (`properOn_of_pinned`).
+ 
+-*Caso A: toda coloración admisible tiene al menos \(\delta_{11}n^2\) conflictos.* Apliquemos el teorema adaptado de conteo de coloraciones por conjuntos con tamaño muestral \(m\) y \(B\) rondas. Las condiciones numéricas son \(8K/\delta_{11}<B+1\) y la desigualdad thm2_ineq para los parámetros (F.11). Se sigue que a lo sumo la mitad de todas las muestras admiten una coloración por conjuntos compatible. Las muestras que admiten los anclajes forman un subconjunto, por lo que vale para ellas la misma cota.
++*Caso A: toda coloración admisible tiene al menos \(\delta_{11}n^2\) conflictos.* Apliquemos el teorema adaptado de conteo de coloraciones por conjuntos con tamaño muestral \(m\) y \(B\) rondas. Las condiciones numéricas son \(8K/\delta_{11}<B+1\) y la desigualdad `thm2_ineq` para los parámetros (F.11). Se sigue que a lo sumo la mitad de todas las muestras admiten una coloración por conjuntos compatible. Las muestras que admiten los anclajes forman un subconjunto, por lo que vale para ellas la misma cota.
+ 
+-*Caso B1: alguna \(\psi\) admisible tiene menos de \(\delta_{11}n^2\) conflictos, pero una sección está lejos de todo modelo de cadena.* Las secciones se indexan por los \(K\) nodos de \(\Gamma\); cada sección tiene dos clases de vértices y un modelo de rangos para sus adyacencias cruzadas. En este caso, una sección tiene más de \(\eta n^2\) discrepancias para toda asignación de rangos. El lema de conteo de secciones claim5_count acota el número de muestras de longitud \(y\) que inducen un grafo cordal por
++*Caso B1: alguna \(\psi\) admisible tiene menos de \(\delta_{11}n^2\) conflictos, pero una sección está lejos de todo modelo de cadena.* Las secciones se indexan por los \(K\) nodos de \(\Gamma\); cada sección tiene dos clases de vértices y un modelo de rangos para sus adyacencias cruzadas. En este caso, una sección tiene más de \(\eta n^2\) discrepancias para toda asignación de rangos. El lema de conteo de secciones `claim5_count` acota el número de muestras de longitud \(y\) que inducen un grafo cordal por
+ \[
+ (y+1)(1-\eta)^{y-1}n^y+
+ y^2\operatorname{conf}(\psi)n^{y-2}.
+ \]
+-La estimación de parámetros block_ineq da \((y+1)(1-\eta)^{y-1}\le1/4\). El segundo sumando es a lo sumo \(n^y/4\), pues \(y^2\delta_{11}=1/4\). Así, a lo sumo la mitad de las muestras de longitud \(y\) son cordales. Tenemos \(y\le m\); toda muestra de longitud \(m\) que admite los anclajes induce un cordal, y también su prefijo de longitud \(y\). Cada prefijo tiene \(n^{m-y}\) extensiones. Por tanto, a lo sumo \(n^m/2\) muestras completas admiten los anclajes. Todo el argumento usa sucesiones y no supone que sus entradas sean distintas.
++La estimación de parámetros `block_ineq` da \((y+1)(1-\eta)^{y-1}\le1/4\). El segundo sumando es a lo sumo \(n^y/4\), pues \(y^2\delta_{11}=1/4\). Así, a lo sumo la mitad de las muestras de longitud \(y\) son cordales. Tenemos \(y\le m\); toda muestra de longitud \(m\) que admite los anclajes induce un cordal, y también su prefijo de longitud \(y\). Cada prefijo tiene \(n^{m-y}\) extensiones. Por tanto, a lo sumo \(n^m/2\) muestras completas admiten los anclajes. Todo el argumento usa sucesiones y no supone que sus entradas sean distintas.
+ 
+-*Caso B2: toda sección tiene una asignación de rangos con a lo sumo \(\eta n^2\) discrepancias.* Normalicemos cada rango reemplazándolo por el número de vértices de rango estrictamente menor. Esto preserva todas las comparaciones estrictas de rangos y, por tanto, todas las discrepancias de las secciones, mientras acota cada rango por \(n\). Subdividamos el árbol prescrito usando esta cota común y peguemos los modelos de sección. El grafo resultante \(F\) es un grafo de intersección de subárboles y, por tanto, cordal. La estimación de pegado carga cada arista modificada a un conflicto o a una discrepancia de sección:
++*Caso B2: toda sección tiene una asignación de rangos con a lo sumo \(\eta n^2\) discrepancias.* Normalicemos cada rango reemplazándolo por el número de vértices de rango estrictamente menor. Esto preserva todas las comparaciones estrictas de rangos y, por tanto, todas las discrepancias de las secciones, mientras acota cada rango por \(n\). Subdividamos el árbol prescrito usando esta cota común y peguemos los modelos de sección. El grafo resultante \(F\) es un grafo de intersección de subárboles y, por tanto, cordal. Escribamos \(\operatorname{mis}_c\) para el número de discrepancias de la sección \(c\). La estimación de pegado carga cada arista modificada a un conflicto o a una de esas discrepancias:
+ \[
+ \begin{aligned}
+ d_E(G,F)&\le\operatorname{conf}(\psi)+
+@@ -2336,9 +2392,9 @@
+ \]
+ Aquí \(\delta_{11}\le\varepsilon/2\), por (F.11). Esto contradice la distancia supuesta a la clase cordal, luego el caso B2 no puede ocurrir.
+ 
+-Las alternativas son exhaustivas: o toda coloración tiene muchos conflictos, o alguna tiene pocos, y sus secciones incluyen una lejana o todas admiten modelos de rangos cercanos. Las pruebas formales son l11_caseA, l11_caseB1 y l11_caseB2 de E34.L11Main. El teorema de coloración por conjuntos, el lema de conteo de secciones y el lema de pegado de subárboles conservan sus papeles en la estrategia de remoción de [22]; el argumento anterior identifica cómo encajan sus versiones adaptadas. No afirma que el Lema 11 publicado originalmente tenga el enunciado o las constantes modificadas.
++Las alternativas son exhaustivas: o toda coloración tiene muchos conflictos, o alguna tiene pocos, y sus secciones incluyen una lejana o todas admiten modelos de rangos cercanos. Las pruebas formales son `l11_caseA`, `l11_caseB1` y `l11_caseB2` de `E34.L11Main`. El teorema de coloración por conjuntos, el lema de conteo de secciones y el lema de pegado de subárboles conservan sus papeles en la estrategia de remoción de [22]; el argumento anterior identifica cómo encajan sus versiones adaptadas. No afirma que el Lema 11 publicado originalmente tenga el enunciado o las constantes modificadas.
+ 
+-El nuevo congelado de fuentes incluye los cuatro lemas finitos anteriores y E35.theoremC_tower, theoremC_tower_uniform, theoremC_tower_uniform_sMax y NfarE_le_tower_poly para (6.28)–(6.29) y (C.4). El adaptador público es PaperIV.DefectExplicitPublication; FDCheck.ASCheck comprueba las dependencias de remoción seleccionadas. La Proposición 6.3a se apoya en PaperIV.OptimalTemplateObstruction.shifted_template_witness, shifted_template_sqrt_witness y no_linear_optimal_template_bound; optimal_family_nonempty verifica que la comparación no sea vacua. Sus resultados de auditoría ejecutados de nuevo y su identidad fuente se describen en §7.
++El nuevo congelado de fuentes incluye los cuatro lemas finitos anteriores y `E35.theoremC_tower`, `theoremC_tower_uniform`, `theoremC_tower_uniform_sMax` y `NfarE_le_tower_poly` para (6.28)–(6.29) y (C.4). El adaptador público es `PaperIV.DefectExplicitPublication`; `FDCheck.ASCheck` comprueba las dependencias de remoción seleccionadas. La Proposición 6.3a se apoya en `PaperIV.OptimalTemplateObstruction.shifted_template_witness`, `shifted_template_sqrt_witness` y `no_linear_optimal_template_bound`; `optimal_family_nonempty` verifica que la comparación no sea vacua. Sus resultados de auditoría ejecutados de nuevo y su identidad fuente se describen en §7.
+ 
+ ## Apéndice G. Brechas de empaquetamiento y límites de la limpieza
+ 
+@@ -2346,9 +2402,9 @@
+ 
+ ¿Vale \(c_4(G)\le M(n)\) para todo cordal y todo orden, es decir, puede tomarse \(b=0\) en el Teorema A? El umbral de esta prueba limita la demostración, no constituye evidencia de una excepción al enunciado. Para la familia completa sí se dispone de una construcción sin umbral: \(c_4(K_n)\le M(n)\) para todo \(n\ge0\), como se demuestra en el Apéndice D. A diferencia de \(\operatorname{cp}(K_n)=1\) para \(n\ge2\), esta afirmación exige controlar el tamaño de las piezas.
+ 
+-La demostración no necesita ni establece una cota lineal universal para el gap mixto \(W^*(G)-W(G)\), donde \(W(G)\) es la ganancia mixta entera óptima. Compara la pérdida de la construcción con el margen disponible en cada instancia. El orden de crecimiento general de ese gap se estudia por separado; no es una hipótesis de este paper.
++La demostración no necesita ni establece una cota lineal universal para la brecha mixta \(W^*(G)-W(G)\), donde \(W(G)\) es la ganancia mixta entera óptima. Compara la pérdida de la construcción con el margen disponible en cada instancia. El orden de crecimiento general de esa brecha se estudia por separado; no es una hipótesis de este paper.
+ 
+-Hay un resultado complementario para el **gap triangular** con número de clique acotado. Sean \(d\ge0\) entero y \(G\) cordal sin clique de orden \(d+2\). La biblioteca `BoundedCliqueGap`, incluida como anexo de fuentes separado y comprobada contra una compilación registrada distinta, demuestra que todo empaquetamiento fraccional triangular \(x\) satisface
++Hay un resultado complementario para la **brecha triangular** con número de clique acotado. Sean \(d\ge0\) entero y \(G\) cordal sin clique de orden \(d+2\). La biblioteca `BoundedCliqueGap`, incluida como anexo de fuentes separado y comprobada contra una compilación registrada distinta, demuestra que todo empaquetamiento fraccional triangular \(x\) satisface
+ \[
+ \sum_T x_T\le \nu_3(G)+\left(10+\frac d2\right)n.
+ \tag{G.1}
+@@ -2357,7 +2413,7 @@
+ 
+ El enunciado formal es `BoundedCliqueGap.chordal_gap_linear_cliqueFree`. Su prueba emplea una representación por subárboles y separa la masa de las piezas locales de la que atraviesa las uniones. Cada triángulo de esta última clase utiliza dos aristas de unión; sumar sus capacidades paga su masa con la mitad de la cuenta de esas aristas. La cota \(d\) controla esa cuenta y aporta el término \(dn/2\), además de la pérdida local \(10n\).
+ 
+-La misma biblioteca expresa la hipótesis mediante un árbol de cliques cuyas bolsas tienen a lo sumo \(d+1\) vértices. `exists_cliqueTree_width_le_iff_cliqueFree` demuestra, para cordales, la equivalencia con la exclusión de \(K_{d+2}\). Es la forma de anchura de árbol disponible en este desarrollo; no se afirma que Mathlib proporcione una definición general de *treewidth* utilizada aquí. El resultado (G.1) no acota el gap **mixto** de \(K_3/K_4\), ni sustituye el redondeo de la Sección 3.
++La misma biblioteca expresa la hipótesis mediante un árbol de cliques cuyas bolsas tienen a lo sumo \(d+1\) vértices. `exists_cliqueTree_width_le_iff_cliqueFree` demuestra, para cordales, la equivalencia con la exclusión de \(K_{d+2}\). Es la forma de anchura de árbol disponible en este desarrollo; no se afirma que Mathlib proporcione una definición general de *treewidth* utilizada aquí. El resultado (G.1) no acota la brecha **mixta** de \(K_3/K_4\), ni sustituye el redondeo de la Sección 3.
+ 
+ ### G.2. Una obstrucción cuantitativa a la limpieza de codegrado
+ 
+@@ -2399,7 +2455,7 @@
+ \]
+ La cancelación de los términos constantes explica el último umbral. Por encima de él, ningún cordal rígido satisface la hipótesis de masa. En particular, las instancias densas usadas para obtener la barrera superpolinómica no pueden ser cordales. No se afirma lo mismo de cada instancia pequeña o degenerada de la construcción tripartita.
+ 
+-Esta cuenta delimita el alcance de la obstrucción; no demuestra una limpieza cordal ni una cota superior \(O(1/\varepsilon)\) para su umbral. Tampoco se ha formalizado aquí una versión de la implicación limpieza–redondeo restringida a cordales. Estudiar ese contrato más débil es una cuestión distinta tanto de la barrera universal como del gap triangular con clique acotada de Apéndice G.1.
++Esta cuenta delimita el alcance de la obstrucción; no demuestra una limpieza cordal ni una cota superior \(O(1/\varepsilon)\) para su umbral. Tampoco se ha formalizado aquí una versión de la implicación limpieza–redondeo restringida a cordales. Estudiar ese contrato más débil es una cuestión distinta tanto de la barrera universal como de la brecha triangular con clique acotada del Apéndice G.1.
+ 
+ ## Agradecimientos
+ 
+@@ -2409,7 +2465,7 @@
+ 
+ Se utilizaron Claude, de Anthropic, y ChatGPT/Codex, de OpenAI, para explorar argumentos, comprobarlos y preparar el manuscrito. Aristotle, de Harmonic, participó en la exploración de caminos, la búsqueda de contraejemplos, la elaboración de pruebas y su formalización y revisión en Lean; no sólo tradujo pruebas terminadas.
+ 
+-Certo [13], <https://github.com/jtraverso/certo-math>, y Jacobian [14], <https://github.com/morluto/jacobian>, son las herramientas computacionales usadas para explorar instancias, comprobar identidades y evaluar candidatos. Los cálculos se revisaron según su alcance; una búsqueda finita no reemplaza una prueba universal.
++Certo [13], <https://github.com/jtraverso/certo-math>, y Jacobian [14], <https://github.com/morluto/jacobian>, son las herramientas computacionales usadas para explorar instancias, comprobar identidades y evaluar candidatos. El proyecto de [5] también acredita a Jacobian; su uso aquí se declara por separado de las dependencias lógicas de nuestra prueba formal. Los cálculos se revisaron según su alcance; una búsqueda finita no reemplaza una prueba universal.
+ 
+ El autor conserva la responsabilidad por los argumentos, las citas, el código y la presentación. Ningún sistema de IA figura como autor. El borrador queda sujeto a su revisión final.
+ 
+@@ -2423,9 +2479,9 @@
+ 
+ [4] J. P. Traverso Gianini, *Particiones de cliques con error lineal en grafos split mediante empaquetamiento estructurado de triángulos*, Paper III, preprint v1.5, 23 de agosto de 2026. Ediciones española e inglesa en el depósito conjunto v3 de esa fecha. DOI de la versión consultada: <https://doi.org/10.5281/zenodo.22064657>; DOI de concepto: <https://doi.org/10.5281/zenodo.21273143>. Material complementario: <https://github.com/jtraverso/erdos-81-chordal-clique-partitions/tree/main/preprints/PAPER_III>.
+ 
+-[5] Anonymous, *Clique partitions of chordal graphs with linear error*, preprint, 8 de septiembre de 2026. Versión consultada el 20 de septiembre de 2026, commit `cbde8a0a0563372b23b1b39a44180d2c0fb02f44`. Manuscrito: <https://github.com/N0zoM1z0/erdos-81/blob/cbde8a0a0563372b23b1b39a44180d2c0fb02f44/manuscript/main.pdf>. Se conserva la firma que figura en el documento; el nombre de la cuenta del repositorio no se sustituye por una atribución de autoría.
++[5] Anonymous, *Clique partitions of chordal graphs with linear error*, preprint, 8 de septiembre de 2026. Versión consultada el 20 de septiembre de 2026, commit `cbde8a0a0563372b23b1b39a44180d2c0fb02f44`. Manuscrito: <https://github.com/N0zoM1z0/erdos-81/blob/cbde8a0a0563372b23b1b39a44180d2c0fb02f44/manuscript/main.pdf>. Se conserva la firma que figura en el documento. El README de ese mismo commit acredita a Morluto por la prueba matemática, a N0zoM1z0 por el manuscrito y la implementación Lean, y a Jacobian de PreferenceLabs como parte del proyecto: <https://github.com/N0zoM1z0/erdos-81/blob/cbde8a0a0563372b23b1b39a44180d2c0fb02f44/README.md>. Estos créditos del repositorio se distinguen de la firma impresa en el manuscrito.
+ 
+-[6] P. E. Haxell y V. Rödl, «Integer and fractional packings in dense graphs», *Combinatorica* **21** (2001), 13–38.
++[6] P. E. Haxell y V. Rödl, «Integer and fractional empaquetamientos in dense graphs», *Combinatorica* **21** (2001), 13–38.
+ 
+ [7] R. Yuster, «Integer and fractional packing of families of graphs», *Random Structures & Algorithms* **26** (2005), 110–118.
+ 
+@@ -2459,4 +2515,4 @@
+ 
+ [22] R. de Joannis de Verclos, *Chordal graphs are easily testable*, arXiv:1902.06135v1, 16 de febrero de 2019. Disponible en <https://arxiv.org/abs/1902.06135v1>. El argumento de remoción que sostiene el Apéndice F.3 se atribuye a este trabajo; su implementación y adaptaciones se documentan en el Apéndice F.5.
+ 
+-[23] N. Alon y A. Shapira, *A characterization of the (natural) graph properties testable with one-sided error*, SIAM Journal on Computing **37** (2008), 1703–1727. DOI: <https://doi.org/10.1137/06064888X>. Utilizado por el ensamblaje existencial histórico discutido en el Apéndice E.2, no como el teorema de remoción seleccionado para el Teorema C público explícito.
++[23] N. Alon y A. Shapira, *A characterization of the (natural) graph properties testable with one-sided error*, SIAM Journal on Computing **37** (2008), 1703–1727. DOI: <https://doi.org/10.1137/06064888X>. Utilizado por el ensamblaje existencial histórico discutido en el Apéndice E.2 y por las interfaces de clasificación irrestricta identificadas en §7 y Tabla 9, no como el teorema de remoción seleccionado para el Teorema C público explícito.

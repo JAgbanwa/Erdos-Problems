@@ -1,0 +1,16 @@
+{
+  "status": "PASS_FINITE_REGRESSION",
+  "cases": [
+    "empty graph has the empty maximal clique: nonempty needed for maximal-clique count <= vertex count",
+    "two identical bags of K2: intersection is not a proper minimal separator",
+    "isolated tree node has no adjacent parent",
+    "leaf bag {0,1,2} has two private vertices relative to {2,3,4}"
+  ],
+  "negative_controls": [
+    "unique simplicial vertex per leaf rejected",
+    "drop Nonempty from count rejected"
+  ],
+  "limit": "Concrete models complement the compiled CliqueTree counterexamples; not a test of arbitrary trees.",
+  "script_sha256": "cf20f8ea12086b5978d7220118ce293e0626ed106039c8d3cab811418e6407eb",
+  "python": "3.12.10"
+}

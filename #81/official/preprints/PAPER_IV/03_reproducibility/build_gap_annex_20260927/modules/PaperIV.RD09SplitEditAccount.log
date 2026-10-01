@@ -1,0 +1,21 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 PaperIV/RD09SplitEditAccount.lean -o /workspace/request-project/.lake/runner/lib/lean/PaperIV/RD09SplitEditAccount.olean -i /workspace/request-project/.lake/runner/lib/lean/PaperIV/RD09SplitEditAccount.ilean
+import took 3.22s
+cumulative profiling times:
+	.olean serialization 55.9ms
+	attribute application 0.114ms
+	congr simp thm 6.14ms
+	elaboration 47.8ms
+	fix level params 0.942ms
+	import 3.22s
+	initialization 38.7ms
+	instantiate metavars 4.02ms
+	interpretation 247ms
+	let-to-have transformation 0.129ms
+	linting 22.1ms
+	parsing 9.58ms
+	process pre-definitions 6.97ms
+	share common exprs 2.1ms
+	simp 32.3ms
+	tactic execution 133ms
+	type checking 17.3ms
+	typeclass inference 325ms

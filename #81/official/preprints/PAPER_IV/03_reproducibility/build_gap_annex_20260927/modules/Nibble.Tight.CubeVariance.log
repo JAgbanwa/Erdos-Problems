@@ -1,0 +1,30 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 Nibble/Tight/CubeVariance.lean -o /workspace/request-project/.lake/runner/lib/lean/Nibble/Tight/CubeVariance.olean -i /workspace/request-project/.lake/runner/lib/lean/Nibble/Tight/CubeVariance.ilean
+simp took 113ms
+simp took 129ms
+simp took 137ms
+simp took 127ms
+import took 2.55s
+cumulative profiling times:
+	.olean serialization 71ms
+	attribute application 0.374ms
+	compilation (IR) 2.35ms
+	compilation (LCNF base) 5.5ms
+	compilation (LCNF mono) 3.15ms
+	congr simp thm 19.9ms
+	elaboration 162ms
+	fix level params 3.59ms
+	import 2.55s
+	initialization 36.9ms
+	instantiate metavars 10.7ms
+	interpretation 623ms
+	let-to-have transformation 0.766ms
+	linting 43.2ms
+	norm_num 12.8ms
+	parsing 24.9ms
+	process pre-definitions 37.2ms
+	ring 76.5ms
+	share common exprs 21.2ms
+	simp 1.2s
+	tactic execution 377ms
+	type checking 160ms
+	typeclass inference 1.25s

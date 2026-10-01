@@ -1,0 +1,199 @@
+=================== erdos81_all_orders_additive  (1 hit(s))
+--- PaperIV/Erdos81AllOrders.lean:142  (namespaces opened before: ['PaperIV.Erdos81AllOrders'], ended: [])
+theorem erdos81_all_orders_additive :
+    ∃ b : ℕ, ∀ (n : ℕ) (G : SimpleGraph (Fin n)) [DecidableRel G.Adj],
+      PaperIV.FarRounding.IsChordal G →
+        ∃ Q : CliquePartition G, Q.OrderAtMost 4 ∧ Q.size ≤ PaperIV.targetSize n + b := by
+
+=================== erdos81_cliquePartition  (1 hit(s))
+--- PaperIV/Erdos81Unconditional.lean:31  (namespaces opened before: ['PaperIV.Erdos81Unconditional'], ended: [])
+theorem erdos81_cliquePartition :
+    ∃ N : ℕ, ∀ n : ℕ, N ≤ n → ∀ (G : SimpleGraph (Fin n)) [DecidableRel G.Adj],
+      PaperIV.FarRounding.IsChordal G →
+        ∃ Q : CliquePartition G, Q.OrderAtMost 4 ∧ Q.size ≤ targetSize n := by
+
+=================== erdos81_max_eq  (1 hit(s))
+--- PaperIV/PaperTheorems.lean:183  (namespaces opened before: ['PaperIV.PaperTheorems'], ended: ['Chordal', 'Witness'])
+theorem erdos81_max_eq :
+    ∃ N : ℕ, ∀ n : ℕ, N ≤ n →
+      (∀ (G : SimpleGraph (Fin n)) [DecidableRel G.Adj], SimpleGraph.IsChordal G →
+          ∃ Q : CliquePartition G, Q.OrderAtMost 4 ∧ Q.size ≤ PaperIV.targetSize n)
+        ∧ (∃ (G : SimpleGraph (Fin n)) (_ : DecidableRel G.Adj),
+            SimpleGraph.IsChordal G ∧
+            ∃ Q : CliquePartition G, Q.OrderAtMost 4 ∧
+              Q.size = PaperIV.targetSize n ∧ ∀ R : CliquePartition G, Q.size ≤ R.size) := by
+
+=================== rc01_uniformRoundingTarget  (1 hit(s))
+--- PaperIV/RC01Final.lean:170  (namespaces opened before: ['PaperIV.RC01Final'], ended: ['Hierarchy'])
+theorem rc01_uniformRoundingTarget (ε : ℚ) (hε : 0 < ε) :
+    MixedRounding.UniformRoundingTarget ε := by
+
+=================== UniformRoundingTarget  (1 hit(s))
+--- MixedRounding/Defs.lean:135  (namespaces opened before: ['MixedRounding'], ended: [])
+def UniformRoundingTarget (ε : ℚ) : Prop :=
+
+=================== farRegime_cliquePartition_allGraphs  (2 hit(s))
+--- PaperIV/FarRegimeAllGraphs.lean:20  (namespaces opened before: ['PaperIV.FarRegimeAllGraphs'], ended: [])
+theorem farRegime_cliquePartition_allGraphs (η : ℚ) (hη : 0 < η) :
+    ∃ N : ℕ, ∀ n : ℕ, N ≤ n → ∀ (G : SimpleGraph (Fin n)) [DecidableRel G.Adj],
+      PaperIV.VertexCopyGate.F4' G < (n : ℝ) ^ 2 / 6 - (η : ℝ) * (n : ℝ) ^ 2 →
+        ∃ Q : CliquePartition G, Q.OrderAtMost 4 ∧ Q.size ≤ targetSize n := by
+--- PaperIV/RC01FarAssembly.lean:60  (namespaces opened before: ['PaperIV.RC01FarAssembly'], ended: [])
+theorem farRegime_cliquePartition_allGraphs (η : ℚ) (hη : 0 < η) :
+    ∃ N : ℕ, ∀ n : ℕ, N ≤ n → ∀ (G : SimpleGraph (Fin n)) [DecidableRel G.Adj],
+      ∀ w : ℚ, CertifiedFractionalOptimum G w →
+        (G.edgeFinset.card : ℚ) - w < (n : ℚ) ^ 2 / 6 - η * (n : ℚ) ^ 2 →
+          ∃ Q : CliquePartition G, Q.OrderAtMost 4 ∧ Q.size ≤ targetSize n := by
+
+=================== chordal_far_or_nearStructure  (1 hit(s))
+--- PaperIV/HybridDichotomy.lean:69  (namespaces opened before: ['PaperIV.HybridDichotomy'], ended: [])
+theorem chordal_far_or_nearStructure :
+    ∃ N : ℕ, ∀ n : ℕ, N ≤ n → ∀ (G : SimpleGraph (Fin n)) [DecidableRel G.Adj],
+      PaperIV.FarRounding.IsChordal G → ∀ w : ℚ, CertifiedFractionalOptimum G w →
+        ((G.edgeFinset.card : ℚ) - w <
+            (n : ℚ) ^ 2 / 6 - PaperIV.NearH1Calibration.eta * (n : ℚ) ^ 2) ∨
+          Nonempty (NearStructureWitness G) := by
+
+=================== exists_near_partition_paid_by_root_sharp  (1 hit(s))
+--- PaperIV/NearH1LocalConstructor.lean:36  (namespaces opened before: ['PaperIV.NearH1LocalConstructor'], ended: [])
+theorem exists_near_partition_paid_by_root_sharp {n : ℕ}
+    (hn : 4 * 10 ^ 12 ≤ n)
+    (G : SimpleGraph (Fin n)) [DecidableRel G.Adj]
+    (hG : PaperIV.IsChordal G) {w : ℚ}
+    (hw : CertifiedFractionalOptimum G w)
+    (hdist : graphFamDistNorm
+      (allSplitSupports (V := Fin n)) allSplitSupports_nonempty G
+
+=================== chordal_far_or_criticalRoot  (1 hit(s))
+--- PaperIV/NearCriticalDichotomy.lean:41  (namespaces opened before: ['PaperIV.NearCriticalDichotomy'], ended: [])
+theorem chordal_far_or_criticalRoot :
+    ∃ N : ℕ, ∀ n : ℕ, N ≤ n → ∀ (G : SimpleGraph (Fin n)) [DecidableRel G.Adj],
+      PaperIV.FarRounding.IsChordal G → ∀ w : ℚ, CertifiedFractionalOptimum G w →
+        ((G.edgeFinset.card : ℚ) - w <
+            (n : ℚ) ^ 2 / 6 - PaperIV.NearH1Calibration.eta * (n : ℚ) ^ 2) ∨
+          ∃ R C : Finset (Fin n),
+            G.IsClique (R : Set (Fin n)) ∧
+            |3 * (R.card : ℚ) - (n : ℚ)| ≤ (n : ℚ) / 50 ∧
+            C.Nonempty ∧
+            (PaperIV.EditMetric.editDist G.edgeFinset
+                (graphEdgeSupport
+                  (PaperIV.SplitUniformIncidence.splitGraph C
+                    (Finset.univ \ C))) : ℚ) ≤
+              PaperIV.NearH1Calibration.eps * (n : ℚ) ^ 2 ∧
+            |3 * (C.card : ℚ) - (n : ℚ)| ≤ (n : ℚ) / 10000 ∧
+            |(R.card : ℚ) - (C.card : ℚ)| ≤ (n : ℚ) / 100 := by
+
+=================== chordal_far_or_edge_density  (1 hit(s))
+--- PaperIV/NearCriticalDichotomy.lean:103  (namespaces opened before: ['PaperIV.NearCriticalDichotomy'], ended: [])
+theorem chordal_far_or_edge_density :
+    ∃ N : ℕ, ∀ n : ℕ, N ≤ n → ∀ (G : SimpleGraph (Fin n)) [DecidableRel G.Adj],
+      PaperIV.FarRounding.IsChordal G → ∀ w : ℚ, CertifiedFractionalOptimum G w →
+        ((G.edgeFinset.card : ℚ) - w <
+            (n : ℚ) ^ 2 / 6 - PaperIV.NearH1Calibration.eta * (n : ℚ) ^ 2) ∨
+          |(G.edgeFinset.card : ℚ) - 5 * (n : ℚ) ^ 2 / 18| ≤ (n : ℚ) ^ 2 / 10000 := by
+
+=================== erdos81_quadratic_constant_optimal  (1 hit(s))
+--- PaperIV/SharpConstantOptimality.lean:52  (namespaces opened before: ['PaperIV.SharpConstantOptimality'], ended: [])
+theorem erdos81_quadratic_constant_optimal {c C : ℚ} {N : ℕ}
+    (h : ∀ n : ℕ, N ≤ n → ∀ (G : SimpleGraph (Fin n)) (_ : DecidableRel G.Adj),
+      SimpleGraph.IsChordal G → ∃ Q : CliquePartition G, (Q.size : ℚ) ≤ c * (n : ℚ) ^ 2 +
+        C * (n : ℚ)) :
+    1 / 6 ≤ c := by
+
+=================== erdos81_quadratic_constant_isLeast  (1 hit(s))
+--- PaperIV/SharpConstantOptimality.lean:93  (namespaces opened before: ['PaperIV.SharpConstantOptimality'], ended: [])
+theorem erdos81_quadratic_constant_isLeast :
+    IsLeast {c : ℚ | ∃ (C : ℚ) (N : ℕ), ∀ n : ℕ, N ≤ n →
+      ∀ (G : SimpleGraph (Fin n)) (_ : DecidableRel G.Adj), SimpleGraph.IsChordal G →
+        ∃ Q : CliquePartition G, (Q.size : ℚ) ≤ c * (n : ℚ) ^ 2 + C * (n : ℚ)}
+      (1 / 6) := by
+
+=================== chordal_linear_stability_sixteen  (1 hit(s))
+--- PaperIV/IntegralStability.lean:94  (namespaces opened before: ['PaperIV.IntegralStability'], ended: [])
+theorem chordal_linear_stability_sixteen :
+    ∃ N : ℕ, ∀ n : ℕ, N ≤ n → ∀ (G : SimpleGraph (Fin n)) [DecidableRel G.Adj],
+      PaperIV.FarRounding.IsChordal G → ∀ δ : ℚ, 0 ≤ δ → δ ≤ gamma * (n : ℚ) ^ 2 →
+        (∀ Q : CliquePartition G, Q.OrderAtMost 4 →
+            (PaperIV.targetSize n : ℚ) - δ ≤ (Q.size : ℚ)) →
+          ∃ R : Finset (Fin n), G.IsClique (R : Set (Fin n)) ∧
+            2 ≤ R.card ∧ R.card ≤ (Finset.univ \ R).card ∧
+            PaperIV.splitBaseline (n : ℚ) R.card ≤
+              (PaperIV.targetSize n : ℚ) ∧
+            (117 : ℚ) / 1825 *
+                ((PaperIV.RootVocab.outsideEdges G R).card : ℚ) +
+              (12687 : ℚ) / 20000 *
+                (PaperIV.RootVocab.missingIncidences G R : ℚ) ≤ δ ∧
+            (PaperIV.targetSize n : ℚ) -
+                PaperIV.splitBaseline (n : ℚ) R.card +
+              ((PaperIV.RootVocab.outsideEdges G R).card : ℚ) / 16 +
+              (PaperIV.RootVocab.missingIncidences G R : ℚ) / 2 ≤ δ ∧
+            (PaperIV.EditMetric.editDist G.edgeFinset
+                (graphEdgeSupport (splitGraph R (Finset.univ \ R))) : ℚ) ≤ 16 * δ := by
+
+=================== chordal_partition_stability  (1 hit(s))
+--- PaperIV/RootPartitionStability.lean:339  (namespaces opened before: ['PaperIV.RootPartitionStability'], ended: [])
+theorem chordal_partition_stability :
+    ∃ N : ℕ, ∀ n : ℕ, N ≤ n →
+      ∀ (G : SimpleGraph (Fin n)) [DecidableRel G.Adj],
+        PaperIV.FarRounding.IsChordal G →
+        ∀ δ : ℚ, 0 ≤ δ →
+          δ ≤ PaperIV.IntegralStability.gamma * (n : ℚ) ^ 2 →
+          (∀ Q : CliquePartition G, Q.OrderAtMost 4 →
+              (PaperIV.targetSize n : ℚ) - δ ≤ (Q.size : ℚ)) →
+          ∃ R : Finset (Fin n), G.IsClique (R : Set (Fin n)) ∧
+            2 ≤ R.card ∧ R.card ≤ (Finset.univ \ R).card ∧
+            ∀ (Q : CliquePartition G) (τ : ℚ),
+              (Q.size : ℚ) ≤ PaperIV.targetSize n + τ →
+              ((noncanonicalPieces R Q).card : ℚ) ≤ τ + 48 * δ := by
+
+=================== sum_rootPieceDefect_eq  (1 hit(s))
+--- PaperIV/RootPartitionStability.lean:200  (namespaces opened before: ['PaperIV.RootPartitionStability'], ended: [])
+theorem sum_rootPieceDefect_eq (R : Finset V)
+    (hR : G.IsClique (R : Set V)) (Q : CliquePartition G) :
+    ∑ K ∈ Q.pieces, rootPieceDefect R K =
+      (Q.size : ℚ) - splitBaseline (Fintype.card V) R.card
+        + missingIncidences G R + 3 * (outsideEdges G R).card := by
+
+=================== chordal_extremal_classification  (1 hit(s))
+--- PaperIV/ExtremalClassification.lean:135  (namespaces opened before: ['PaperIV.ExtremalClassification'], ended: [])
+theorem chordal_extremal_classification :
+    ∃ N : ℕ, ∀ n : ℕ, N ≤ n → ∀ (G : SimpleGraph (Fin n)) [DecidableRel G.Adj],
+      PaperIV.FarRounding.IsChordal G →
+        (CliqueCoverEq G (PaperIV.targetSize n) ↔
+            CliqueCover4Eq G (PaperIV.targetSize n)) ∧
+          (CliqueCover4Eq G (PaperIV.targetSize n) ↔ IsOptimalCompleteSplit G) := by
+
+=================== mixed_gap_zero  (1 hit(s))
+--- PaperIV/SplitMixedGap.lean:167  (namespaces opened before: ['PaperIV.SplitMixedGap'], ended: [])
+theorem mixed_gap_zero {Core Hosts : Finset V} (hd : Disjoint Core Hosts)
+    (hcore : 2 ≤ Core.card) (hhosts : Core.card ≤ Hosts.card) :
+    (∀ x : FracPacking (splitGraph Core Hosts) ℚ,
+        x.value ≤ 2 * (Core.card.choose 2 : ℚ)) ∧
+      ∃ Q : CliquePartition (splitGraph Core Hosts),
+        ∑ K ∈ Q.pieces, FarRounding.gainOf K = 2 * Core.card.choose 2 :=
+
+=================== linear_coefficient_optimal  (1 hit(s))
+--- PaperIV/LinearCoefficient.lean:49  (namespaces opened before: ['PaperIV.LinearCoefficient'], ended: [])
+theorem linear_coefficient_optimal (c B : ℚ) (hc : c < 1 / 6) :
+    ∃ N : ℕ, ∀ n : ℕ, N ≤ n →
+      ∃ (G : SimpleGraph (Fin n)) (_ : DecidableRel G.Adj),
+        SimpleGraph.IsChordal G ∧
+        ∀ Q : CliquePartition G, (n : ℚ) ^ 2 / 6 + c * (n : ℚ) + B < (Q.size : ℚ) := by
+
+=================== budget_iff  (1 hit(s))
+--- PaperIV/LossBudget.lean:61  (namespaces opened before: ['PaperIV.LossBudget'], ended: [])
+theorem budget_iff {G : SimpleGraph V} [DecidableRel G.Adj] (Q : CliquePartition G) (T : ℕ) :
+    Q.size ≤ T ↔ G.edgeFinset.card ≤ ∑ K ∈ Q.pieces, FarRounding.gainOf K + T := by
+
+=================== erdos81_cp_form_all_orders  (1 hit(s))
+--- PaperIV/LossBudget.lean:100  (namespaces opened before: ['PaperIV.LossBudget'], ended: [])
+theorem erdos81_cp_form_all_orders :
+    ∃ b : ℕ, ∀ (n : ℕ) (G : SimpleGraph (Fin n)) [DecidableRel G.Adj],
+      PaperIV.FarRounding.IsChordal G →
+        ∃ Q : CliquePartition G, Q.size ≤ PaperIV.targetSize n + b := by
+
+=================== targetSize_eq_baseline_add_reserve  (1 hit(s))
+--- PaperIV/ReserveIdentity.lean:94  (namespaces opened before: ['PaperIV.ReserveIdentity'], ended: [])
+theorem targetSize_eq_baseline_add_reserve (n k : ℕ) (hk : k ≤ n)
+    (hle : k.choose 2 ≤ k * (n - k)) :
+    targetSize n = baseline n k + targetSize (centreDefect n k) := by

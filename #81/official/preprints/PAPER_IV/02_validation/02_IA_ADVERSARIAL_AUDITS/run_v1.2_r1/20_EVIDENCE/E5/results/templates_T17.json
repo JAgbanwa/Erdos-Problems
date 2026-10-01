@@ -1,0 +1,334 @@
+{
+ "T17": {
+  "id": "T17",
+  "claim": "Prop D.3: S=K_k v I_h, 2<=k<=h: W*(S)=W(S)=2C(k,2)",
+  "manuscript_lines": "1765-1781",
+  "method": "exact LP (HiGHS + exact primal/dual certificate); integral packing built from a 1-factorisation with distinct hosts and verified",
+  "evidence_type": "exact (small k,h)",
+  "parameters": {
+   "k": [
+    2,
+    7
+   ],
+   "h": "k..9, k+h<=13"
+  },
+  "details": {
+   "instances": [
+    {
+     "k": 2,
+     "h": 2,
+     "W*": "2",
+     "status": "exact",
+     "W_construction": 2,
+     "2C(k,2)": 2,
+     "ok": true
+    },
+    {
+     "k": 2,
+     "h": 3,
+     "W*": "2",
+     "status": "exact",
+     "W_construction": 2,
+     "2C(k,2)": 2,
+     "ok": true
+    },
+    {
+     "k": 2,
+     "h": 4,
+     "W*": "2",
+     "status": "exact",
+     "W_construction": 2,
+     "2C(k,2)": 2,
+     "ok": true
+    },
+    {
+     "k": 2,
+     "h": 5,
+     "W*": "2",
+     "status": "exact",
+     "W_construction": 2,
+     "2C(k,2)": 2,
+     "ok": true
+    },
+    {
+     "k": 2,
+     "h": 6,
+     "W*": "2",
+     "status": "exact",
+     "W_construction": 2,
+     "2C(k,2)": 2,
+     "ok": true
+    },
+    {
+     "k": 2,
+     "h": 7,
+     "W*": "2",
+     "status": "exact",
+     "W_construction": 2,
+     "2C(k,2)": 2,
+     "ok": true
+    },
+    {
+     "k": 2,
+     "h": 8,
+     "W*": "2",
+     "status": "exact",
+     "W_construction": 2,
+     "2C(k,2)": 2,
+     "ok": true
+    },
+    {
+     "k": 2,
+     "h": 9,
+     "W*": "2",
+     "status": "exact",
+     "W_construction": 2,
+     "2C(k,2)": 2,
+     "ok": true
+    },
+    {
+     "k": 3,
+     "h": 3,
+     "W*": "6",
+     "status": "exact",
+     "W_construction": 6,
+     "2C(k,2)": 6,
+     "ok": true
+    },
+    {
+     "k": 3,
+     "h": 4,
+     "W*": "6",
+     "status": "exact",
+     "W_construction": 6,
+     "2C(k,2)": 6,
+     "ok": true
+    },
+    {
+     "k": 3,
+     "h": 5,
+     "W*": "6",
+     "status": "exact",
+     "W_construction": 6,
+     "2C(k,2)": 6,
+     "ok": true
+    },
+    {
+     "k": 3,
+     "h": 6,
+     "W*": "6",
+     "status": "exact",
+     "W_construction": 6,
+     "2C(k,2)": 6,
+     "ok": true
+    },
+    {
+     "k": 3,
+     "h": 7,
+     "W*": "6",
+     "status": "exact",
+     "W_construction": 6,
+     "2C(k,2)": 6,
+     "ok": true
+    },
+    {
+     "k": 3,
+     "h": 8,
+     "W*": "6",
+     "status": "exact",
+     "W_construction": 6,
+     "2C(k,2)": 6,
+     "ok": true
+    },
+    {
+     "k": 3,
+     "h": 9,
+     "W*": "6",
+     "status": "exact",
+     "W_construction": 6,
+     "2C(k,2)": 6,
+     "ok": true
+    },
+    {
+     "k": 4,
+     "h": 4,
+     "W*": "12",
+     "status": "exact",
+     "W_construction": 12,
+     "2C(k,2)": 12,
+     "ok": true
+    },
+    {
+     "k": 4,
+     "h": 5,
+     "W*": "12",
+     "status": "exact",
+     "W_construction": 12,
+     "2C(k,2)": 12,
+     "ok": true
+    },
+    {
+     "k": 4,
+     "h": 6,
+     "W*": "12",
+     "status": "exact",
+     "W_construction": 12,
+     "2C(k,2)": 12,
+     "ok": true
+    },
+    {
+     "k": 4,
+     "h": 7,
+     "W*": "12",
+     "status": "exact",
+     "W_construction": 12,
+     "2C(k,2)": 12,
+     "ok": true
+    },
+    {
+     "k": 4,
+     "h": 8,
+     "W*": "12",
+     "status": "exact",
+     "W_construction": 12,
+     "2C(k,2)": 12,
+     "ok": true
+    },
+    {
+     "k": 4,
+     "h": 9,
+     "W*": "12",
+     "status": "exact",
+     "W_construction": 12,
+     "2C(k,2)": 12,
+     "ok": true
+    },
+    {
+     "k": 5,
+     "h": 5,
+     "W*": "20",
+     "status": "exact",
+     "W_construction": 20,
+     "2C(k,2)": 20,
+     "ok": true
+    },
+    {
+     "k": 5,
+     "h": 6,
+     "W*": "20",
+     "status": "exact",
+     "W_construction": 20,
+     "2C(k,2)": 20,
+     "ok": true
+    },
+    {
+     "k": 5,
+     "h": 7,
+     "W*": "20",
+     "status": "exact",
+     "W_construction": 20,
+     "2C(k,2)": 20,
+     "ok": true
+    },
+    {
+     "k": 5,
+     "h": 8,
+     "W*": "20",
+     "status": "exact",
+     "W_construction": 20,
+     "2C(k,2)": 20,
+     "ok": true
+    },
+    {
+     "k": 6,
+     "h": 6,
+     "W*": "30",
+     "status": "exact",
+     "W_construction": 30,
+     "2C(k,2)": 30,
+     "ok": true
+    },
+    {
+     "k": 6,
+     "h": 7,
+     "W*": "30",
+     "status": "exact",
+     "W_construction": 30,
+     "2C(k,2)": 30,
+     "ok": true
+    }
+   ],
+   "outside_range_k>h": [
+    {
+     "k": 3,
+     "h": 1,
+     "W*": "5",
+     "status": "exact",
+     "equals_2C(k,2)": false
+    },
+    {
+     "k": 4,
+     "h": 1,
+     "W*": "25/3",
+     "status": "exact",
+     "equals_2C(k,2)": false
+    },
+    {
+     "k": 4,
+     "h": 2,
+     "W*": "32/3",
+     "status": "exact",
+     "equals_2C(k,2)": false
+    },
+    {
+     "k": 4,
+     "h": 3,
+     "W*": "12",
+     "status": "exact",
+     "equals_2C(k,2)": true
+    },
+    {
+     "k": 5,
+     "h": 2,
+     "W*": "50/3",
+     "status": "exact",
+     "equals_2C(k,2)": false
+    },
+    {
+     "k": 5,
+     "h": 3,
+     "W*": "55/3",
+     "status": "exact",
+     "equals_2C(k,2)": false
+    },
+    {
+     "k": 5,
+     "h": 4,
+     "W*": "20",
+     "status": "exact",
+     "equals_2C(k,2)": true
+    },
+    {
+     "k": 6,
+     "h": 3,
+     "W*": "26",
+     "status": "exact",
+     "equals_2C(k,2)": false
+    },
+    {
+     "k": 6,
+     "h": 5,
+     "W*": "30",
+     "status": "exact",
+     "equals_2C(k,2)": true
+    }
+   ]
+  },
+  "result": "PASS",
+  "negative_control": {
+   "description": "outside the hypothesis (k>h) the equality must fail somewhere (only exact-status instances count)",
+   "result": "PASS (rejected)"
+  },
+  "runtime_s": 0.97
+ }
+}

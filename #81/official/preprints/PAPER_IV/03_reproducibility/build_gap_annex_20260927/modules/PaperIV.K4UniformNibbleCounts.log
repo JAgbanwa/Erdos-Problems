@@ -1,0 +1,29 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 PaperIV/K4UniformNibbleCounts.lean -o /workspace/request-project/.lake/runner/lib/lean/PaperIV/K4UniformNibbleCounts.olean -i /workspace/request-project/.lake/runner/lib/lean/PaperIV/K4UniformNibbleCounts.ilean
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_nlinarith_1._boxed took 878ms
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_nlinarith_1._boxed took 300ms
+import took 3.17s
+.olean serialization took 112ms
+cumulative profiling times:
+	.olean serialization 112ms
+	attribute application 0.498ms
+	compilation (IR) 25.1ms
+	compilation (LCNF base) 25.7ms
+	compilation (LCNF mono) 10.9ms
+	congr simp thm 36ms
+	elaboration 169ms
+	fix level params 3.42ms
+	import 3.17s
+	initialization 38.8ms
+	instantiate metavars 27.8ms
+	interpretation 2.42s
+	let-to-have transformation 0.747ms
+	linting 69.5ms
+	norm_num 219ms
+	parsing 35.2ms
+	process pre-definitions 52.1ms
+	ring 119ms
+	share common exprs 41.8ms
+	simp 794ms
+	tactic execution 680ms
+	type checking 445ms
+	typeclass inference 1.75s

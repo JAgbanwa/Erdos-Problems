@@ -1,0 +1,27 @@
+{
+  "command": "cover",
+  "status": "unsat",
+  "verdict": "proved",
+  "engine": "certo/counting",
+  "elapsed_ms": 0.13,
+  "detail": "an EXACT COVER: 6 parts, every one of the 12 elements in exactly one",
+  "meta": {
+    "parts": 6,
+    "universe": 12,
+    "missed": 0,
+    "doubled": 0
+  },
+  "certificate": {
+    "kind": "exact_cover",
+    "digest": "178ad3f9012dd87e",
+    "solver_free": true,
+    "bytes": 1177,
+    "summarised": true
+  }
+}
+{
+  "parts": 6,
+  "relaxation": "6",
+  "optimum": "6",
+  "stopped": null
+}

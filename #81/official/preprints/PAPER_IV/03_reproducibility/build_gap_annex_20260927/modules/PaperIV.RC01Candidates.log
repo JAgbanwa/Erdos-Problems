@@ -1,0 +1,56 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 PaperIV/RC01Candidates.lean -o /workspace/request-project/.lake/runner/lib/lean/PaperIV/RC01Candidates.olean -i /workspace/request-project/.lake/runner/lib/lean/PaperIV/RC01Candidates.ilean
+PaperIV/RC01Candidates.lean:32:0: warning: automatically included section variable(s) unused in theorem `PaperIV.RC01Candidates.mem_transversal`:
+  [Fintype α]
+  [DecidableEq α]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype α] [DecidableEq α] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+PaperIV/RC01Candidates.lean:43:0: warning: automatically included section variable(s) unused in theorem `PaperIV.RC01Candidates.mem_piece`:
+  [DecidableEq ι]
+  [Fintype α]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq ι] [Fintype α] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+PaperIV/RC01Candidates.lean:54:0: warning: automatically included section variable(s) unused in theorem `PaperIV.RC01Candidates.injective_of_mem_piFinset`:
+  [Fintype ι]
+  [Fintype α]
+  [DecidableEq α]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype ι] [Fintype α] [DecidableEq α] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+PaperIV/RC01Candidates.lean:84:0: warning: automatically included section variable(s) unused in theorem `PaperIV.RC01Candidates.mem_candidates`:
+  [Fintype α]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype α] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+tactic execution of Lean.Parser.Tactic.change took 409ms
+import took 3.78s
+.olean serialization took 106ms
+cumulative profiling times:
+	.olean serialization 106ms
+	attribute application 0.332ms
+	compilation (IR) 1.71ms
+	compilation (LCNF base) 2.8ms
+	compilation (LCNF mono) 2.68ms
+	congr simp thm 8.68ms
+	elaboration 174ms
+	fix level params 2.94ms
+	import 3.78s
+	initialization 40.9ms
+	instantiate metavars 53.7ms
+	interpretation 532ms
+	let-to-have transformation 0.581ms
+	linting 83.6ms
+	norm_num 0.749ms
+	parsing 22.8ms
+	process pre-definitions 34.4ms
+	ring 8.56ms
+	share common exprs 8.51ms
+	simp 60.1ms
+	tactic execution 836ms
+	type checking 132ms
+	typeclass inference 578ms

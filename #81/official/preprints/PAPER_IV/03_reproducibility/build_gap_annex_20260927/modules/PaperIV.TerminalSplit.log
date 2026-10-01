@@ -1,0 +1,31 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 PaperIV/TerminalSplit.lean -o /workspace/request-project/.lake/runner/lib/lean/PaperIV/TerminalSplit.olean -i /workspace/request-project/.lake/runner/lib/lean/PaperIV/TerminalSplit.ilean
+PaperIV/TerminalSplit.lean:31:0: warning: automatically included section variable(s) unused in theorem `PaperIV.TerminalSplit.simplicial_in_neighbor_or_eq`:
+  [Fintype V]
+  [DecidableEq V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] [DecidableEq V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+PaperIV/TerminalSplit.lean:43:5: warning: unused variable `hxy`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+import took 3.53s
+cumulative profiling times:
+	.olean serialization 52.3ms
+	attribute application 0.0743ms
+	congr simp thm 1.43ms
+	elaboration 30.8ms
+	fix level params 0.564ms
+	import 3.53s
+	initialization 40.3ms
+	instantiate metavars 4.58ms
+	interpretation 282ms
+	let-to-have transformation 0.0752ms
+	linting 19ms
+	parsing 10.8ms
+	process pre-definitions 8.41ms
+	share common exprs 1.31ms
+	simp 9.95ms
+	tactic execution 127ms
+	type checking 10.2ms
+	typeclass inference 94.6ms

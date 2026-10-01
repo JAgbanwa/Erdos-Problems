@@ -1,0 +1,23 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 Nibble/CoveredExpectation.lean -o /workspace/request-project/.lake/runner/lib/lean/Nibble/CoveredExpectation.olean -i /workspace/request-project/.lake/runner/lib/lean/Nibble/CoveredExpectation.ilean
+import took 4.17s
+cumulative profiling times:
+	.olean serialization 94.1ms
+	attribute application 0.113ms
+	congr simp thm 3.3ms
+	elaboration 54.7ms
+	fix level params 0.812ms
+	import 4.17s
+	initialization 36ms
+	instantiate metavars 1.01ms
+	interpretation 329ms
+	let-to-have transformation 0.162ms
+	linting 15.5ms
+	norm_num 0.842ms
+	parsing 8.06ms
+	process pre-definitions 9.86ms
+	ring 8.91ms
+	share common exprs 3.03ms
+	simp 41.8ms
+	tactic execution 147ms
+	type checking 63.7ms
+	typeclass inference 191ms

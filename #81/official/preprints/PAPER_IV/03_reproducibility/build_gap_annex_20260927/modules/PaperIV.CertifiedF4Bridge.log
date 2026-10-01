@@ -1,0 +1,21 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 PaperIV/CertifiedF4Bridge.lean -o /workspace/request-project/.lake/runner/lib/lean/PaperIV/CertifiedF4Bridge.olean -i /workspace/request-project/.lake/runner/lib/lean/PaperIV/CertifiedF4Bridge.ilean
+import took 4.04s
+cumulative profiling times:
+	.olean serialization 70ms
+	attribute application 0.0365ms
+	congr simp thm 0.932ms
+	elaboration 9.57ms
+	fix level params 0.0989ms
+	import 4.04s
+	initialization 38.6ms
+	instantiate metavars 0.13ms
+	interpretation 226ms
+	let-to-have transformation 0.0279ms
+	linting 2.83ms
+	parsing 1.47ms
+	process pre-definitions 0.836ms
+	share common exprs 0.247ms
+	simp 0.801ms
+	tactic execution 21.1ms
+	type checking 4.47ms
+	typeclass inference 19.9ms

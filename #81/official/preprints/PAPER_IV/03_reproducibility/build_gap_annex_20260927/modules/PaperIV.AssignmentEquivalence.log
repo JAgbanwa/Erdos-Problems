@@ -1,0 +1,23 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 PaperIV/AssignmentEquivalence.lean -o /workspace/request-project/.lake/runner/lib/lean/PaperIV/AssignmentEquivalence.olean -i /workspace/request-project/.lake/runner/lib/lean/PaperIV/AssignmentEquivalence.ilean
+import took 2.94s
+cumulative profiling times:
+	.olean serialization 47.3ms
+	attribute application 0.0299ms
+	congr simp thm 0.788ms
+	elaboration 12.5ms
+	fix level params 0.0685ms
+	import 2.94s
+	initialization 39ms
+	instantiate metavars 0.968ms
+	interpretation 169ms
+	let-to-have transformation 0.0384ms
+	linting 3.32ms
+	norm_num 0.16ms
+	parsing 1.69ms
+	process pre-definitions 1.43ms
+	ring 1.52ms
+	share common exprs 0.429ms
+	simp 7.74ms
+	tactic execution 9.26ms
+	type checking 3.73ms
+	typeclass inference 15ms

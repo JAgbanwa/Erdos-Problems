@@ -1,0 +1,23 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 PaperIV/NearRegimePackingInterface.lean -o /workspace/request-project/.lake/runner/lib/lean/PaperIV/NearRegimePackingInterface.olean -i /workspace/request-project/.lake/runner/lib/lean/PaperIV/NearRegimePackingInterface.ilean
+import took 4.19s
+.olean serialization took 104ms
+cumulative profiling times:
+	.olean serialization 104ms
+	attribute application 0.0805ms
+	congr simp thm 5.93ms
+	elaboration 39.9ms
+	fix level params 0.329ms
+	import 4.19s
+	initialization 35.5ms
+	instantiate metavars 0.748ms
+	interpretation 335ms
+	let-to-have transformation 0.105ms
+	linting 11.3ms
+	norm_num 4.75ms
+	parsing 5.22ms
+	process pre-definitions 4.33ms
+	share common exprs 1.02ms
+	simp 44.3ms
+	tactic execution 49.9ms
+	type checking 44.4ms
+	typeclass inference 140ms

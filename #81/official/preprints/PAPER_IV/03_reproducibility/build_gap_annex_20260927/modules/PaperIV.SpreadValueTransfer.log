@@ -1,0 +1,26 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 PaperIV/SpreadValueTransfer.lean -o /workspace/request-project/.lake/runner/lib/lean/PaperIV/SpreadValueTransfer.olean -i /workspace/request-project/.lake/runner/lib/lean/PaperIV/SpreadValueTransfer.ilean
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_nlinarith_1._boxed took 169ms
+interpretation of Mathlib.Tactic._aux_Mathlib_Tactic_Linarith_Frontend___elabRules_Mathlib_Tactic_nlinarith_1._boxed took 371ms
+import took 3.1s
+.olean serialization took 157ms
+cumulative profiling times:
+	.olean serialization 157ms
+	attribute application 0.262ms
+	congr simp thm 36.7ms
+	elaboration 209ms
+	fix level params 3.29ms
+	import 3.1s
+	initialization 37.5ms
+	instantiate metavars 10.9ms
+	interpretation 1.77s
+	let-to-have transformation 0.435ms
+	linting 79.3ms
+	norm_num 298ms
+	parsing 25.4ms
+	process pre-definitions 41.3ms
+	ring 102ms
+	share common exprs 28ms
+	simp 78.3ms
+	tactic execution 428ms
+	type checking 247ms
+	typeclass inference 1.34s

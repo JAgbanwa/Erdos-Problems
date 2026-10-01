@@ -1,0 +1,10 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 Nibble/Prelude.lean -o /workspace/request-project/.lake/runner/lib/lean/Nibble/Prelude.olean -i /workspace/request-project/.lake/runner/lib/lean/Nibble/Prelude.ilean
+import took 5.25s
+cumulative profiling times:
+	.olean serialization 3.39ms
+	elaboration 0.0518ms
+	import 5.25s
+	initialization 39ms
+	interpretation 224ms
+	linting 0.27ms
+	parsing 0.00217ms

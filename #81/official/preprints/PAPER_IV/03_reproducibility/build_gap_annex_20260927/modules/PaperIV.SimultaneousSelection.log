@@ -1,0 +1,33 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 PaperIV/SimultaneousSelection.lean -o /workspace/request-project/.lake/runner/lib/lean/PaperIV/SimultaneousSelection.olean -i /workspace/request-project/.lake/runner/lib/lean/PaperIV/SimultaneousSelection.ilean
+PaperIV/SimultaneousSelection.lean:39:0: warning: automatically included section variable(s) unused in theorem `PaperIV.SimultaneousSelection.prob_univ`:
+  [DecidableEq Ω]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq Ω] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+import took 3.04s
+cumulative profiling times:
+	.olean serialization 54.5ms
+	attribute application 0.039ms
+	compilation (IR) 0.374ms
+	compilation (LCNF base) 0.44ms
+	compilation (LCNF mono) 0.178ms
+	congr simp thm 0.744ms
+	dsimp 0.466ms
+	elaboration 17.6ms
+	fix level params 0.384ms
+	import 3.04s
+	initialization 38.2ms
+	instantiate metavars 0.446ms
+	interpretation 235ms
+	let-to-have transformation 0.0672ms
+	linting 6.27ms
+	norm_num 0.848ms
+	parsing 3.7ms
+	process pre-definitions 3.16ms
+	ring 7.39ms
+	share common exprs 1.46ms
+	simp 2.56ms
+	tactic execution 47.3ms
+	type checking 18.5ms
+	typeclass inference 81.8ms

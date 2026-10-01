@@ -1,0 +1,948 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 ReleaseExportCheck.lean -o /workspace/request-project/.lake/runner/lib/lean/ReleaseExportCheck.olean -i /workspace/request-project/.lake/runner/lib/lean/ReleaseExportCheck.ilean
+PaperIV.Erdos81AllOrders.erdos81_all_orders :
+  ∃ C,
+    0 ≤ C ∧
+      ∀ (n : ℕ) (G : SimpleGraph (Fin n)) [inst : DecidableRel G.Adj],
+        PaperIV.FarRounding.IsChordal G → ∃ Q, Q.OrderAtMost 4 ∧ ↑Q.size ≤ ↑n ^ 2 / 6 + C * ↑n
+PaperIV.Erdos81AllOrders.erdos81_all_orders_additive :
+  ∃ b,
+    ∀ (n : ℕ) (G : SimpleGraph (Fin n)) [inst : DecidableRel G.Adj],
+      PaperIV.FarRounding.IsChordal G → ∃ Q, Q.OrderAtMost 4 ∧ Q.size ≤ PaperIV.targetSize n + b
+PaperIV.Erdos81AllOrders.exists_trivial_cliquePartition.{u_1} {V : Type u_1} [Fintype V] [DecidableEq V]
+  (G : SimpleGraph V) [DecidableRel G.Adj] : ∃ Q, Q.OrderAtMost 4 ∧ Q.size = G.edgeFinset.card
+PaperIV.Erdos81Unconditional.erdos81_cliquePartition :
+  ∃ N,
+    ∀ (n : ℕ),
+      N ≤ n →
+        ∀ (G : SimpleGraph (Fin n)) [inst : DecidableRel G.Adj],
+          PaperIV.FarRounding.IsChordal G → ∃ Q, Q.OrderAtMost 4 ∧ Q.size ≤ PaperIV.targetSize n
+PaperIV.Erdos81Unconditional.erdos81_linear_form :
+  ∃ N,
+    ∀ (n : ℕ),
+      N ≤ n →
+        ∀ (G : SimpleGraph (Fin n)) [inst : DecidableRel G.Adj],
+          PaperIV.FarRounding.IsChordal G → ∃ Q, Q.OrderAtMost 4 ∧ ↑Q.size ≤ ↑n ^ 2 / 6 + ↑n / 6
+PaperIV.Erdos81Unconditional.erdos81_chordalTarget : PaperIV.RC01FarAssembly.ChordalTargetAt
+PaperIV.CertifiedOptimumExistence.exists_certifiedFractionalOptimum {V : Type} [Fintype V] [DecidableEq V]
+  (G : SimpleGraph V) [DecidableRel G.Adj] : ∃ w, PaperIV.FarRounding.CertifiedFractionalOptimum G w
+PaperI.FiniteLP.exists_optimal_pair {Item Resource : Type} [Fintype Item] [Fintype Resource]
+  (incidence : Item → Resource → ℚ) (gain : Item → ℚ) (hinc : ∀ (i : Item) (e : Resource), 0 ≤ incidence i e)
+  (hcol : ∀ (i : Item), ∃ e, 0 < incidence i e) :
+  ∃ p d,
+    PaperI.FiniteLP.primalValue gain p = PaperI.FiniteLP.dualValue d ∧
+      (∀ (p' : PaperI.FiniteLP.PrimalFeasible incidence),
+          PaperI.FiniteLP.primalValue gain p' ≤ PaperI.FiniteLP.primalValue gain p) ∧
+        ∀ (d' : PaperI.FiniteLP.DualFeasible incidence gain), PaperI.FiniteLP.dualValue d ≤ PaperI.FiniteLP.dualValue d'
+PaperIV.RC01Final.rc01_uniformRoundingTarget (ε : ℚ) (hε : 0 < ε) : MixedRounding.UniformRoundingTarget ε
+PaperIV.RC01FarAssembly.farRegime_cliquePartition (η : ℚ) (hη : 0 < η) :
+  ∃ N,
+    ∀ (n : ℕ),
+      N ≤ n →
+        ∀ (G : SimpleGraph (Fin n)) [inst : DecidableRel G.Adj],
+          PaperIV.FarRounding.IsChordal G →
+            ∀ (w : ℚ),
+              PaperIV.FarRounding.CertifiedFractionalOptimum G w →
+                ↑G.edgeFinset.card - w < ↑n ^ 2 / 6 - η * ↑n ^ 2 → ∃ Q, Q.OrderAtMost 4 ∧ Q.size ≤ PaperIV.targetSize n
+PaperIV.RC01FarAssembly.farRegime_cliquePartition_allGraphs (η : ℚ) (hη : 0 < η) :
+  ∃ N,
+    ∀ (n : ℕ),
+      N ≤ n →
+        ∀ (G : SimpleGraph (Fin n)) [inst : DecidableRel G.Adj] (w : ℚ),
+          PaperIV.FarRounding.CertifiedFractionalOptimum G w →
+            ↑G.edgeFinset.card - w < ↑n ^ 2 / 6 - η * ↑n ^ 2 → ∃ Q, Q.OrderAtMost 4 ∧ Q.size ≤ PaperIV.targetSize n
+PaperIV.FarRegimeAllGraphs.farRegime_cliquePartition_allGraphs (η : ℚ) (hη : 0 < η) :
+  ∃ N,
+    ∀ (n : ℕ),
+      N ≤ n →
+        ∀ (G : SimpleGraph (Fin n)) [inst : DecidableRel G.Adj],
+          PaperIV.VertexCopyGate.F4' G < ↑n ^ 2 / 6 - ↑η * ↑n ^ 2 → ∃ Q, Q.OrderAtMost 4 ∧ Q.size ≤ PaperIV.targetSize n
+PaperIV.NearH1GlobalAssembly.nearRegimeAt : PaperIV.RC01FarAssembly.NearRegimeAt PaperIV.NearH1Calibration.eta
+PaperIV.NearH1GlobalAssembly.chordalTargetAt : PaperIV.RC01FarAssembly.ChordalTargetAt
+PaperIV.RootRegularizationBridge.exists_regularizedRoot_engineFree.{u_1} {V : Type u_1} [Fintype V] [DecidableEq V]
+  {G : SimpleGraph V} [DecidableRel G.Adj] (hchordal : G.IsChordal) (P : Finset V) (hP : G.IsClique ↑P)
+  (hp : 1024 ≤ P.card) (hbalanceLower : 127 * P.card ≤ 64 * (PaperIV.RootVocab.outsideVertices P).card)
+  (hbalanceUpper : 64 * (PaperIV.RootVocab.outsideVertices P).card ≤ 129 * P.card)
+  (hdefect :
+    65536 * ((PaperIV.RootVocab.outsideEdges G P).card + PaperIV.RootVocab.missingIncidences G P) ≤ P.card * P.card) :
+  Nonempty (PaperIV.NearH1RootRegularization.RegularizedRoot G)
+PaperIV.NearH1LocalConstructor.exists_near_partition_paid_by_root {n : ℕ} (hn : 4 * 10 ^ 12 ≤ n)
+  (G : SimpleGraph (Fin n)) [DecidableRel G.Adj] (hG : G.IsChordal) {w : ℚ}
+  (hw : PaperIV.FarRounding.CertifiedFractionalOptimum G w)
+  (hdist :
+    PaperIV.GraphFamilyDistance.graphFamDistNorm PaperIV.SplitComparatorFamily.allSplitSupports ⋯ G (↑n ^ 2) <
+      PaperIV.NearH1Calibration.eps)
+  (hnear : ↑n ^ 2 / 6 - PaperIV.NearH1Calibration.eta * ↑n ^ 2 ≤ ↑G.edgeFinset.card - w) :
+  ∃ R Q,
+    G.IsClique ↑R ∧
+      ↑n / 4 ≤ ↑R.card ∧
+        ↑R.card ≤ ↑n / 2 ∧
+          Q.OrderAtMost 4 ∧
+            ↑Q.size ≤
+              PaperIV.splitBaseline ↑n ↑R.card - ↑(PaperIV.RootVocab.outsideEdges G R).card / 20 -
+                ↑(PaperIV.RootVocab.missingIncidences G R) / 2
+PaperIV.NearH1LocalConstructor.exists_near_partition_paid_by_root_sharp {n : ℕ} (hn : 4 * 10 ^ 12 ≤ n)
+  (G : SimpleGraph (Fin n)) [DecidableRel G.Adj] (hG : G.IsChordal) {w : ℚ}
+  (hw : PaperIV.FarRounding.CertifiedFractionalOptimum G w)
+  (hdist :
+    PaperIV.GraphFamilyDistance.graphFamDistNorm PaperIV.SplitComparatorFamily.allSplitSupports ⋯ G (↑n ^ 2) <
+      PaperIV.NearH1Calibration.eps)
+  (hnear : ↑n ^ 2 / 6 - PaperIV.NearH1Calibration.eta * ↑n ^ 2 ≤ ↑G.edgeFinset.card - w) :
+  ∃ R Q,
+    G.IsClique ↑R ∧
+      |3 * ↑R.card - ↑n| ≤ ↑n / 50 ∧
+        Q.OrderAtMost 4 ∧
+          ↑Q.size ≤
+            PaperIV.splitBaseline ↑n ↑R.card - ↑(PaperIV.RootVocab.outsideEdges G R).card / 20 -
+              ↑(PaperIV.RootVocab.missingIncidences G R) / 2
+PaperIV.HybridDichotomy.chordal_far_or_nearStructure :
+  ∃ N,
+    ∀ (n : ℕ),
+      N ≤ n →
+        ∀ (G : SimpleGraph (Fin n)) [inst : DecidableRel G.Adj],
+          PaperIV.FarRounding.IsChordal G →
+            ∀ (w : ℚ),
+              PaperIV.FarRounding.CertifiedFractionalOptimum G w →
+                ↑G.edgeFinset.card - w < ↑n ^ 2 / 6 - PaperIV.NearH1Calibration.eta * ↑n ^ 2 ∨
+                  Nonempty (PaperIV.NearH1StructureWitness.NearStructureWitness G)
+PaperIV.HybridDichotomy.chordal_near_extremal_stability :
+  ∃ N,
+    ∀ (n : ℕ),
+      N ≤ n →
+        ∀ (G : SimpleGraph (Fin n)) [inst : DecidableRel G.Adj],
+          PaperIV.FarRounding.IsChordal G →
+            ∀ (w : ℚ),
+              PaperIV.FarRounding.CertifiedFractionalOptimum G w →
+                ¬↑G.edgeFinset.card - w < ↑n ^ 2 / 6 - PaperIV.NearH1Calibration.eta * ↑n ^ 2 →
+                  Nonempty (PaperIV.NearH1StructureWitness.NearStructureWitness G)
+PaperIV.HybridDichotomy.erdos81_of_structuralDichotomy :
+  ∃ N,
+    ∀ (n : ℕ),
+      N ≤ n →
+        ∀ (G : SimpleGraph (Fin n)) [inst : DecidableRel G.Adj],
+          PaperIV.FarRounding.IsChordal G → ∃ Q, Q.OrderAtMost 4 ∧ Q.size ≤ PaperIV.targetSize n
+PaperIV.NearRootWindow.regularizedRoot_card_window.{u_1} {V : Type u_1} [Fintype V] [DecidableEq V] {G : SimpleGraph V}
+  [DecidableRel G.Adj] (R : PaperIV.NearH1RootRegularization.RegularizedRoot G) :
+  3267 * Fintype.card V ≤ 10000 * R.root.card ∧ 3539 * R.root.card ≤ 1188 * Fintype.card V
+PaperIV.NearRootWindow.regularizedRoot_card_near_third.{u_1} {V : Type u_1} [Fintype V] [DecidableEq V]
+  {G : SimpleGraph V} [DecidableRel G.Adj] (R : PaperIV.NearH1RootRegularization.RegularizedRoot G) :
+  |3 * ↑R.root.card - ↑(Fintype.card V)| ≤ ↑(Fintype.card V) / 50
+PaperIV.NearRootWindow.core_residual_window.{u_1} {V : Type u_1} [Fintype V] [DecidableEq V] {G : SimpleGraph V}
+  [DecidableRel G.Adj] [LinearOrder V] (W : PaperIV.NearH1StructureWitness.NearStructureWitness G)
+  (hn : 4 * 10 ^ 12 ≤ ↑(Fintype.card V)) : |6 * ↑W.core.card - 2 * ↑(Fintype.card V) - 1| ≤ ↑(Fintype.card V) / 10000
+PaperIV.NearRootWindow.core_card_near_third.{u_1} {V : Type u_1} [Fintype V] [DecidableEq V] {G : SimpleGraph V}
+  [DecidableRel G.Adj] [LinearOrder V] (W : PaperIV.NearH1StructureWitness.NearStructureWitness G)
+  (hn : 4 * 10 ^ 12 ≤ ↑(Fintype.card V)) : |3 * ↑W.core.card - ↑(Fintype.card V)| ≤ ↑(Fintype.card V) / 10000
+PaperIV.NearRootWindow.core_reserve_le_deltaCal.{u_1} {V : Type u_1} [Fintype V] [DecidableEq V] {G : SimpleGraph V}
+  [DecidableRel G.Adj] [LinearOrder V] (W : PaperIV.NearH1StructureWitness.NearStructureWitness G) :
+  PaperIV.ReserveIdentity.Mq (↑(Fintype.card V) - 3 * ↑W.core.card) + 1 / 24 ≤
+    PaperIV.NearH1SplitComparator.deltaCal ↑(Fintype.card V)
+PaperIV.NearRootWindow.root_sub_core_le.{u_1} {V : Type u_1} [Fintype V] [DecidableEq V] {G : SimpleGraph V}
+  [DecidableRel G.Adj] [LinearOrder V] (W : PaperIV.NearH1StructureWitness.NearStructureWitness G)
+  (hn : 4 * 10 ^ 12 ≤ ↑(Fintype.card V)) : |↑W.regularized.root.card - ↑W.core.card| ≤ ↑(Fintype.card V) / 100
+PaperIV.NearRootWindow.core_card_sub_core_card_le.{u_1} {V : Type u_1} [Fintype V] [DecidableEq V]
+  {G G' : SimpleGraph V} [DecidableRel G.Adj] [DecidableRel G'.Adj] [LinearOrder V]
+  (W : PaperIV.NearH1StructureWitness.NearStructureWitness G)
+  (W' : PaperIV.NearH1StructureWitness.NearStructureWitness G') (hn : 4 * 10 ^ 12 ≤ ↑(Fintype.card V)) :
+  |↑W.core.card - ↑W'.core.card| ≤ ↑(Fintype.card V) / 15000
+PaperIV.NearEdgeDensity.card_edgeFinset_near_five_eighteenths.{u_1} {V : Type u_1} [Fintype V] [DecidableEq V]
+  {G : SimpleGraph V} [DecidableRel G.Adj] [LinearOrder V] (W : PaperIV.NearH1StructureWitness.NearStructureWitness G)
+  (hn : 4 * 10 ^ 12 ≤ ↑(Fintype.card V)) :
+  |↑G.edgeFinset.card - 5 * ↑(Fintype.card V) ^ 2 / 18| ≤ ↑(Fintype.card V) ^ 2 / 10000
+PaperIV.NearCriticalDichotomy.chordal_far_or_criticalRoot :
+  ∃ N,
+    ∀ (n : ℕ),
+      N ≤ n →
+        ∀ (G : SimpleGraph (Fin n)) [inst : DecidableRel G.Adj],
+          PaperIV.FarRounding.IsChordal G →
+            ∀ (w : ℚ),
+              PaperIV.FarRounding.CertifiedFractionalOptimum G w →
+                ↑G.edgeFinset.card - w < ↑n ^ 2 / 6 - PaperIV.NearH1Calibration.eta * ↑n ^ 2 ∨
+                  ∃ R C,
+                    G.IsClique ↑R ∧
+                      |3 * ↑R.card - ↑n| ≤ ↑n / 50 ∧
+                        C.Nonempty ∧
+                          ↑(PaperIV.EditMetric.editDist G.edgeFinset
+                                  (PaperIV.GraphFamilyDistance.graphEdgeSupport
+                                    (PaperIV.SplitUniformIncidence.splitGraph C (Finset.univ \ C)))) ≤
+                              PaperIV.NearH1Calibration.eps * ↑n ^ 2 ∧
+                            |3 * ↑C.card - ↑n| ≤ ↑n / 10000 ∧ |↑R.card - ↑C.card| ≤ ↑n / 100
+PaperIV.NearCriticalDichotomy.chordal_far_or_cliqueNum_ge :
+  ∃ N,
+    ∀ (n : ℕ),
+      N ≤ n →
+        ∀ (G : SimpleGraph (Fin n)) [inst : DecidableRel G.Adj],
+          PaperIV.FarRounding.IsChordal G →
+            ∀ (w : ℚ),
+              PaperIV.FarRounding.CertifiedFractionalOptimum G w →
+                ↑G.edgeFinset.card - w < ↑n ^ 2 / 6 - PaperIV.NearH1Calibration.eta * ↑n ^ 2 ∨
+                  3267 * n ≤ 10000 * G.cliqueNum
+PaperIV.NearCriticalDichotomy.chordal_far_or_edge_density :
+  ∃ N,
+    ∀ (n : ℕ),
+      N ≤ n →
+        ∀ (G : SimpleGraph (Fin n)) [inst : DecidableRel G.Adj],
+          PaperIV.FarRounding.IsChordal G →
+            ∀ (w : ℚ),
+              PaperIV.FarRounding.CertifiedFractionalOptimum G w →
+                ↑G.edgeFinset.card - w < ↑n ^ 2 / 6 - PaperIV.NearH1Calibration.eta * ↑n ^ 2 ∨
+                  |↑G.edgeFinset.card - 5 * ↑n ^ 2 / 18| ≤ ↑n ^ 2 / 10000
+PaperIV.NearH1Localization.exists_localized_split_core {n : ℕ} (hn : 4 * 10 ^ 12 ≤ n) (G : SimpleGraph (Fin n))
+  [DecidableRel G.Adj] (hG : G.IsChordal) {w : ℚ} (hw : PaperIV.FarRounding.CertifiedFractionalOptimum G w)
+  (hnear : ¬↑G.edgeFinset.card - w < ↑n ^ 2 / 6 - PaperIV.NearH1Calibration.eta * ↑n ^ 2) :
+  ∃ C,
+    C.Nonempty ∧
+      ↑(PaperIV.EditMetric.editDist G.edgeFinset
+              (PaperIV.GraphFamilyDistance.graphEdgeSupport
+                (PaperIV.SplitUniformIncidence.splitGraph C (Finset.univ \ C)))) ≤
+          PaperIV.NearH1Calibration.eps * ↑n ^ 2 ∧
+        (6 * ↑C.card - 2 * ↑n - 1) ^ 2 ≤ 24 * PaperIV.NearH1SplitComparator.deltaCal ↑n
+PaperIV.NearH1Localization.exists_nearStructureWitness_of_nearRegime {n : ℕ} (hn : 4 * 10 ^ 12 ≤ n)
+  (G : SimpleGraph (Fin n)) [DecidableRel G.Adj] (hG : G.IsChordal) {w : ℚ}
+  (hw : PaperIV.FarRounding.CertifiedFractionalOptimum G w)
+  (hnear : ¬↑G.edgeFinset.card - w < ↑n ^ 2 / 6 - PaperIV.NearH1Calibration.eta * ↑n ^ 2) :
+  Nonempty (PaperIV.NearH1StructureWitness.NearStructureWitness G)
+PaperIV.PaperTheorems.erdos81_hybrid_linear_form :
+  ∃ N,
+    ∀ (n : ℕ),
+      N ≤ n →
+        ∀ (G : SimpleGraph (Fin n)) [inst : DecidableRel G.Adj],
+          PaperIV.FarRounding.IsChordal G → ∃ Q, Q.OrderAtMost 4 ∧ ↑Q.size ≤ ↑n ^ 2 / 6 + ↑n / 6
+PaperIV.PaperTheorems.splitGraph_isChordal.{u_1} {V : Type u_1} [Fintype V] [DecidableEq V] (Core Hosts : Finset V) :
+  (PaperIV.SplitUniformIncidence.splitGraph Core Hosts).IsChordal
+PaperIV.PaperTheorems.exists_chordal_extremal_witness {n : ℕ} (hn : 6 ≤ n) :
+  ∃ G x,
+    G.IsChordal ∧
+      ∃ Q,
+        Q.OrderAtMost 4 ∧ Q.size = PaperIV.targetSize n ∧ ∀ (R : PaperIV.FarRounding.CliquePartition G), Q.size ≤ R.size
+PaperIV.PaperTheorems.erdos81_max_eq :
+  ∃ N,
+    ∀ (n : ℕ),
+      N ≤ n →
+        (∀ (G : SimpleGraph (Fin n)) [inst : DecidableRel G.Adj],
+            G.IsChordal → ∃ Q, Q.OrderAtMost 4 ∧ Q.size ≤ PaperIV.targetSize n) ∧
+          ∃ G x,
+            G.IsChordal ∧
+              ∃ Q,
+                Q.OrderAtMost 4 ∧
+                  Q.size = PaperIV.targetSize n ∧ ∀ (R : PaperIV.FarRounding.CliquePartition G), Q.size ≤ R.size
+PaperIV.SharpConstantOptimality.erdos81_quadratic_constant_optimal {c C : ℚ} {N : ℕ}
+  (h :
+    ∀ (n : ℕ),
+      N ≤ n → ∀ (G : SimpleGraph (Fin n)) (x : DecidableRel G.Adj), G.IsChordal → ∃ Q, ↑Q.size ≤ c * ↑n ^ 2 + C * ↑n) :
+  1 / 6 ≤ c
+PaperIV.SharpConstantOptimality.erdos81_quadratic_constant_isLeast :
+  IsLeast
+    {c |
+      ∃ C N,
+        ∀ (n : ℕ),
+          N ≤ n →
+            ∀ (G : SimpleGraph (Fin n)) (x : DecidableRel G.Adj), G.IsChordal → ∃ Q, ↑Q.size ≤ c * ↑n ^ 2 + C * ↑n}
+    (1 / 6)
+PaperIV.SplitCompleteExactValue.exists_optimal_cliquePartition.{u_1} {V : Type u_1} [Fintype V] [DecidableEq V]
+  {Core Hosts : Finset V} (hd : Disjoint Core Hosts) {n : ℕ} (hk : Core.card = 2 * n + 2)
+  (hh : 2 * n + 1 ≤ Hosts.card) :
+  ∃ Q,
+    Q.OrderAtMost 4 ∧
+      Q.size = Core.card * Hosts.card - Core.card.choose 2 ∧
+        ∀ (R : PaperIV.FarRounding.CliquePartition (PaperIV.SplitUniformIncidence.splitGraph Core Hosts)),
+          R.OrderAtMost 4 → Q.size ≤ R.size
+PaperIV.SplitCompleteExactValueAllParities.exists_optimal_cliquePartition_allParities.{u_1} {V : Type u_1} [Fintype V]
+  [DecidableEq V] {Core Hosts : Finset V} (hd : Disjoint Core Hosts) (hcore : 2 ≤ Core.card)
+  (hhosts : Core.card ≤ Hosts.card) :
+  ∃ Q,
+    Q.OrderAtMost 4 ∧
+      Q.size = Core.card * Hosts.card - Core.card.choose 2 ∧
+        ∀ (R : PaperIV.FarRounding.CliquePartition (PaperIV.SplitUniformIncidence.splitGraph Core Hosts)),
+          R.OrderAtMost 4 → Q.size ≤ R.size
+PaperIV.SplitCompleteSharpLower.cliquePartition_size_ge_baseline_unrestricted.{u_1} {V : Type u_1} [Fintype V]
+  [DecidableEq V] {Core Hosts : Finset V} (hd : Disjoint Core Hosts)
+  (Q : PaperIV.FarRounding.CliquePartition (PaperIV.SplitUniformIncidence.splitGraph Core Hosts)) :
+  Core.card * Hosts.card - Core.card.choose 2 ≤ Q.size
+PaperIV.SplitCompleteSharpValue.exists_sharp_cliquePartition_allParities.{u_1} {V : Type u_1} [Fintype V]
+  [DecidableEq V] {Core Hosts : Finset V} (hd : Disjoint Core Hosts) (hcore : 2 ≤ Core.card)
+  (hhosts : Core.card ≤ Hosts.card) :
+  ∃ Q,
+    Q.OrderAtMost 4 ∧
+      Q.size = Core.card * Hosts.card - Core.card.choose 2 ∧
+        ∀ (R : PaperIV.FarRounding.CliquePartition (PaperIV.SplitUniformIncidence.splitGraph Core Hosts)),
+          Q.size ≤ R.size
+PaperIV.SplitCompleteSharpLower.critical_baseline_eq_targetSize (n : ℕ) (hn : 2 ≤ n) :
+  have k := (n + 1) / 3;
+  k * (n - k) - k.choose 2 = PaperIV.targetSize n
+PaperIV.SplitCompleteRigidity.six_mul_baseline_add_sq (n k : ℕ) (hk : k ≤ n) (hle : k.choose 2 ≤ k * (n - k)) :
+  6 * ↑(PaperIV.SplitCompleteRigidity.baseline n k) + (↑n - 3 * ↑k) * (↑n - 3 * ↑k + 1) = ↑n * (↑n + 1)
+PaperIV.SplitCompleteRigidity.baseline_le_targetSize (n k : ℕ) (hk : k ≤ n) :
+  PaperIV.SplitCompleteRigidity.baseline n k ≤ PaperIV.targetSize n
+PaperIV.SplitCompleteRigidity.baseline_eq_targetSize_iff (n k : ℕ) (hn : 2 ≤ n) (hk : k ≤ n) :
+  PaperIV.SplitCompleteRigidity.baseline n k = PaperIV.targetSize n ↔ k = (n + 1) / 3 ∨ 3 * k = n + 2
+PaperIV.SplitCompleteRigidity.optimal_cores (n : ℕ) (hn : 2 ≤ n) :
+  (n % 3 ≠ 1 → ∀ k ≤ n, PaperIV.SplitCompleteRigidity.baseline n k = PaperIV.targetSize n ↔ k = (n + 1) / 3) ∧
+    (n % 3 = 1 →
+      ∀ k ≤ n,
+        PaperIV.SplitCompleteRigidity.baseline n k = PaperIV.targetSize n ↔ k = (n + 1) / 3 ∨ k = (n + 1) / 3 + 1)
+PaperIV.SplitCompleteDefect.size_add_choose_eq_mul_add_sum_defect.{u_1} {V : Type u_1} [Fintype V] [DecidableEq V]
+  {Core Hosts : Finset V} (hd : Disjoint Core Hosts)
+  (Q : PaperIV.FarRounding.CliquePartition (PaperIV.SplitUniformIncidence.splitGraph Core Hosts)) :
+  Q.size + Core.card.choose 2 = Core.card * Hosts.card + ∑ K ∈ Q.pieces, PaperIV.SplitCompleteDefect.defect Core Hosts K
+PaperIV.SplitCompleteDefect.defect_eq_zero_iff.{u_1} {V : Type u_1} [Fintype V] [DecidableEq V]
+  {Core Hosts K : Finset V} {z : V} (hd : Disjoint Core Hosts) (hz : K ∩ Hosts = {z}) :
+  PaperIV.SplitCompleteDefect.defect Core Hosts K = 0 ↔ (K ∩ Core).card = 1 ∨ (K ∩ Core).card = 2
+PaperIV.SplitCompleteDefect.defect_pos_of_no_host.{u_1} {V : Type u_1} [Fintype V] [DecidableEq V]
+  {Core Hosts K : Finset V} (hz : K ∩ Hosts = ∅) : 0 < PaperIV.SplitCompleteDefect.defect Core Hosts K
+PaperIV.SplitCompleteDefect.card_paying_pieces_le_excess.{u_1} {V : Type u_1} [Fintype V] [DecidableEq V]
+  {Core Hosts : Finset V} {t : ℕ} (hd : Disjoint Core Hosts)
+  (Q : PaperIV.FarRounding.CliquePartition (PaperIV.SplitUniformIncidence.splitGraph Core Hosts))
+  (hbase : Core.card.choose 2 ≤ Core.card * Hosts.card)
+  (hexcess : Q.size ≤ Core.card * Hosts.card - Core.card.choose 2 + t) :
+  {K ∈ Q.pieces | 0 < PaperIV.SplitCompleteDefect.defect Core Hosts K}.card ≤ t
+PaperIV.LinearCoefficient.linear_coefficient_optimal (c B : ℚ) (hc : c < 1 / 6) :
+  ∃ N,
+    ∀ (n : ℕ),
+      N ≤ n → ∃ G x, G.IsChordal ∧ ∀ (Q : PaperIV.FarRounding.CliquePartition G), ↑n ^ 2 / 6 + c * ↑n + B < ↑Q.size
+PaperIV.BalancedReserve.card_filter_edgeFamily.{u_1} {V : Type u_1} [Fintype V] [DecidableEq V] {F : SimpleGraph V}
+  [DecidableRel F.Adj] (x : V) : {t ∈ PaperIV.BalancedReserve.edgeFamily F | x ∈ t}.card = F.degree x
+PaperIV.BalancedReserve.exists_balanced_reserve.{u_1} {V : Type u_1} [Fintype V] [DecidableEq V] {F : SimpleGraph V}
+  [DecidableRel F.Adj] (θ : ℝ) (h0 : 0 ≤ θ) (h1 : θ ≤ 1) :
+  ∃ R ⊆ F.edgeFinset, ∀ (x : V), |↑{e ∈ R | x ∈ e}.card - θ * ↑(F.degree x)| ≤ 2
+PaperIV.SpreadAbsorption.exists_certificate.{u_1} {V : Type u_1} [Fintype V] [DecidableEq V] {G : SimpleGraph V}
+  [DecidableRel G.Adj] {N : Finset V} {t : ℕ} (heven : Even N.card)
+  (hdeg : ∀ v ∈ N, N.card / 2 + t ≤ {z ∈ N | G.Adj v z}.card) : ∃ C, True
+PaperIV.SpreadAbsorption.exists_lowConflict_certificate.{u_1} {V : Type u_1} [Fintype V] [DecidableEq V]
+  {G : SimpleGraph V} [DecidableRel G.Adj] {N : Finset V} {t : ℕ} (heven : Even N.card)
+  (hdeg : ∀ v ∈ N, N.card / 2 + t ≤ {z ∈ N | G.Adj v z}.card) (bad : V → V → ℝ) (hbad : ∀ (y z : V), 0 ≤ bad y z) :
+  ∃ C, ∑ y ∈ N, bad y (C.partner y) ≤ 1 / (↑t + 1) * ∑ y ∈ N, ∑ z ∈ N, bad y z
+PaperIV.SpreadAbsorption.physical_triangle_absorber.{u_1} {V : Type u_1} [Fintype V] [DecidableEq V] {G : SimpleGraph V}
+  [DecidableRel G.Adj] {N : Finset V} (C : PaperIV.SpreadAbsorption.Certificate G N) {z : V} (hz : ∀ a ∈ N, G.Adj z a) :
+  PaperIV.Model.IsPacking G (PaperIV.SpreadAbsorption.physicalTriangleAbsorber C z)
+PaperIV.SpreadAbsorption.totalGain_physical_triangle_absorber.{u_1} {V : Type u_1} [Fintype V] [DecidableEq V]
+  {G : SimpleGraph V} [DecidableRel G.Adj] {N : Finset V} (C : PaperIV.SpreadAbsorption.Certificate G N) {z : V}
+  (hz : ∀ a ∈ N, G.Adj z a) : PaperIV.Model.totalGain (PaperIV.SpreadAbsorption.physicalTriangleAbsorber C z) = N.card
+PaperIV.SpreadAbsorption.exists_budgeted_physical_triangle_absorber.{u_1} {V : Type u_1} [Fintype V] [DecidableEq V]
+  {G : SimpleGraph V} [DecidableRel G.Adj] {N : Finset V} {t : ℕ} (heven : Even N.card)
+  (hdeg : ∀ v ∈ N, N.card / 2 + t ≤ {z ∈ N | G.Adj v z}.card) (bad : V → V → ℝ) (hbad : ∀ (y z : V), 0 ≤ bad y z)
+  (budget : ℝ) (hmass : ∑ y ∈ N, ∑ x ∈ N, bad y x ≤ (↑t + 1) * budget) {z : V} (hz : ∀ a ∈ N, G.Adj z a) :
+  ∃ C,
+    PaperIV.Model.IsPacking G (PaperIV.SpreadAbsorption.physicalTriangleAbsorber C z) ∧
+      PaperIV.Model.totalGain (PaperIV.SpreadAbsorption.physicalTriangleAbsorber C z) = N.card ∧
+        ∑ y ∈ N, bad y (C.partner y) ≤ budget
+PaperIV.SpreadLedgerAbsorption.total_ledgerBad_le_two_accounts.{u_1} {V : Type u_1} [Fintype V] [DecidableEq V]
+  {G : SimpleGraph V} [DecidableRel G.Adj] {P : Finset (Finset V)}
+  (acc : PaperIV.RD09PhysicalLedger.PhysicalAccounts G P) (N : Finset V) :
+  ∑ y ∈ N, ∑ x ∈ N, PaperIV.SpreadLedgerAbsorption.ledgerBad acc y x ≤
+    2 * (↑acc.missingEdges.card + ↑acc.rootLossEdges.card)
+PaperIV.SpreadLedgerAbsorption.total_ledgerBad_le_paid_mass.{u_1} {V : Type u_1} [Fintype V] [DecidableEq V]
+  {G : SimpleGraph V} [DecidableRel G.Adj] {P : Finset (Finset V)}
+  (acc : PaperIV.RD09PhysicalLedger.PhysicalAccounts G P) (N : Finset V) {t : ℕ} (ht : 40 ≤ t + 1) :
+  ∑ y ∈ N, ∑ x ∈ N, PaperIV.SpreadLedgerAbsorption.ledgerBad acc y x ≤
+    (↑t + 1) * (↑acc.missingEdges.card / 20 + ↑acc.rootLossEdges.card / 2)
+PaperIV.SpreadLedgerAbsorption.exists_spread_absorber_count_add_cost_le_baseline.{u_1} {V : Type u_1} [Fintype V]
+  [DecidableEq V] {G : SimpleGraph V} [DecidableRel G.Adj] {P : Finset (Finset V)}
+  (acc : PaperIV.RD09PhysicalLedger.PhysicalAccounts G P) {N : Finset V} {t : ℕ} (heven : Even N.card)
+  (hdeg : ∀ v ∈ N, N.card / 2 + t ≤ {z ∈ N | G.Adj v z}.card) (ht : 40 ≤ t + 1) {z : V} (hz : ∀ a ∈ N, G.Adj z a) :
+  ∃ C,
+    PaperIV.Model.IsPacking G (PaperIV.SpreadAbsorption.physicalTriangleAbsorber C z) ∧
+      PaperIV.Model.totalGain (PaperIV.SpreadAbsorption.physicalTriangleAbsorber C z) = N.card ∧
+        ↑(PaperIV.PhysicalCompletion.completion G P).card +
+            ∑ y ∈ N, PaperIV.SpreadLedgerAbsorption.ledgerBad acc y (C.partner y) ≤
+          ↑(PaperIV.splitBaseline acc.order acc.split)
+PaperIV.SpreadAbsorptionCompatibility.isPacking_union_absorber.{u_1} {V : Type u_1} [Fintype V] [DecidableEq V]
+  {G : SimpleGraph V} [DecidableRel G.Adj] {P : Finset (Finset V)} {N : Finset V}
+  (C : PaperIV.SpreadAbsorption.Certificate G N) {z : V} (hP : PaperIV.Model.IsPacking G P) (hz : ∀ a ∈ N, G.Adj z a)
+  (hfree : ∀ e ∈ PaperIV.Model.coveredEdges P, ¬∀ v ∈ e, v ∈ insert z N) :
+  PaperIV.Model.IsPacking G (P ∪ PaperIV.SpreadAbsorption.physicalTriangleAbsorber C z)
+PaperIV.SpreadAbsorptionCompatibility.exists_compatible_spread_absorber.{u_1} {V : Type u_1} [Fintype V] [DecidableEq V]
+  {G : SimpleGraph V} [DecidableRel G.Adj] {P : Finset (Finset V)} {N : Finset V} {t : ℕ}
+  (hP : PaperIV.Model.IsPacking G P) (heven : Even N.card) (hdeg : ∀ v ∈ N, N.card / 2 + t ≤ {z ∈ N | G.Adj v z}.card)
+  {z : V} (hz : ∀ a ∈ N, G.Adj z a) (hNne : N.Nonempty)
+  (hfree : ∀ e ∈ PaperIV.Model.coveredEdges P, ¬∀ v ∈ e, v ∈ insert z N) :
+  ∃ C,
+    PaperIV.Model.IsPacking G (P ∪ PaperIV.SpreadAbsorption.physicalTriangleAbsorber C z) ∧
+      PaperIV.Model.totalGain (P ∪ PaperIV.SpreadAbsorption.physicalTriangleAbsorber C z) =
+        PaperIV.Model.totalGain P + N.card
+PaperIV.SpreadAbsorptionCompatibility.exists_budgeted_compatible_spread_absorber.{u_1} {V : Type u_1} [Fintype V]
+  [DecidableEq V] {G : SimpleGraph V} [DecidableRel G.Adj] {P : Finset (Finset V)} {N : Finset V} {t : ℕ}
+  (hP : PaperIV.Model.IsPacking G P) (heven : Even N.card) (hdeg : ∀ v ∈ N, N.card / 2 + t ≤ {z ∈ N | G.Adj v z}.card)
+  (bad : V → V → ℝ) (hbad : ∀ (y z : V), 0 ≤ bad y z) (budget : ℝ)
+  (hmass : ∑ y ∈ N, ∑ x ∈ N, bad y x ≤ (↑t + 1) * budget) {z : V} (hz : ∀ a ∈ N, G.Adj z a) (hNne : N.Nonempty)
+  (hfree : ∀ e ∈ PaperIV.Model.coveredEdges P, ¬∀ v ∈ e, v ∈ insert z N) :
+  ∃ C,
+    PaperIV.Model.IsPacking G (P ∪ PaperIV.SpreadAbsorption.physicalTriangleAbsorber C z) ∧
+      PaperIV.Model.totalGain (P ∪ PaperIV.SpreadAbsorption.physicalTriangleAbsorber C z) =
+          PaperIV.Model.totalGain P + N.card ∧
+        ∑ y ∈ N, bad y (C.partner y) ≤ budget
+PaperIV.SeparationAbsorptionRoute.chordal_dualSeparated_or_absorbable :
+  ∃ N,
+    ∀ (n : ℕ),
+      N ≤ n →
+        ∀ (G : SimpleGraph (Fin n)) [inst : DecidableRel G.Adj],
+          PaperIV.FarRounding.IsChordal G →
+            ∀ (w : ℚ),
+              PaperIV.FarRounding.CertifiedFractionalOptimum G w →
+                ↑G.edgeFinset.card - w < ↑n ^ 2 / 6 - PaperIV.NearH1Calibration.eta * ↑n ^ 2 ∨
+                  Nonempty (PaperIV.SeparationAbsorptionRoute.AbsorbableCriticalStructure G)
+PaperIV.SeparationAbsorptionRoute.AbsorbableCriticalStructure.exists_target_partition.{u_1} {V : Type u_1} [Fintype V]
+  [DecidableEq V] [LinearOrder V] {G : SimpleGraph V} [DecidableRel G.Adj]
+  (A : PaperIV.SeparationAbsorptionRoute.AbsorbableCriticalStructure G) :
+  ∃ Q, Q.OrderAtMost 4 ∧ Q.size ≤ PaperIV.targetSize (Fintype.card V)
+PaperIV.SeparationAbsorptionRoute.erdos81_of_dualSeparation_absorption :
+  ∃ N,
+    ∀ (n : ℕ),
+      N ≤ n →
+        ∀ (G : SimpleGraph (Fin n)) [inst : DecidableRel G.Adj],
+          PaperIV.FarRounding.IsChordal G → ∃ Q, Q.OrderAtMost 4 ∧ Q.size ≤ PaperIV.targetSize n
+PaperIV.SplitEditIdentity.editDist_split_eq.{u_1} {V : Type u_1} [Fintype V] [DecidableEq V] (G : SimpleGraph V)
+  [DecidableRel G.Adj] {R : Finset V} (hR : G.IsClique ↑R) :
+  PaperIV.EditMetric.editDist G.edgeFinset
+      (PaperIV.GraphFamilyDistance.graphEdgeSupport (PaperIV.SplitUniformIncidence.splitGraph R (Finset.univ \ R))) =
+    (PaperIV.RootVocab.outsideEdges G R).card + PaperIV.RootVocab.missingIncidences G R
+PaperIV.FarSlackQuantitative.farRegime_cliquePartition_slack (η : ℚ) (hη : 0 < η) :
+  ∃ N,
+    ∀ (n : ℕ),
+      N ≤ n →
+        ∀ (G : SimpleGraph (Fin n)) [inst : DecidableRel G.Adj],
+          PaperIV.FarRounding.IsChordal G →
+            ∀ (w : ℚ),
+              PaperIV.FarRounding.CertifiedFractionalOptimum G w →
+                ↑G.edgeFinset.card - w < ↑n ^ 2 / 6 - η * ↑n ^ 2 →
+                  ∃ Q, Q.OrderAtMost 4 ∧ ↑Q.size < ↑n ^ 2 / 6 - η * ↑n ^ 2 / 2
+PaperIV.IntegralStability.chordal_linear_stability :
+  ∃ N,
+    ∀ (n : ℕ),
+      N ≤ n →
+        ∀ (G : SimpleGraph (Fin n)) [inst : DecidableRel G.Adj],
+          PaperIV.FarRounding.IsChordal G →
+            ∀ (δ : ℚ),
+              0 ≤ δ →
+                δ ≤ PaperIV.IntegralStability.gamma * ↑n ^ 2 →
+                  (∀ (Q : PaperIV.FarRounding.CliquePartition G),
+                      Q.OrderAtMost 4 → ↑(PaperIV.targetSize n) - δ ≤ ↑Q.size) →
+                    ∃ R,
+                      G.IsClique ↑R ∧
+                        2 ≤ R.card ∧
+                          R.card ≤ (Finset.univ \ R).card ∧
+                            ↑(PaperIV.RootVocab.outsideEdges G R).card / 20 +
+                                  ↑(PaperIV.RootVocab.missingIncidences G R) / 2 ≤
+                                δ ∧
+                              ↑(PaperIV.EditMetric.editDist G.edgeFinset
+                                    (PaperIV.GraphFamilyDistance.graphEdgeSupport
+                                      (PaperIV.SplitUniformIncidence.splitGraph R (Finset.univ \ R)))) ≤
+                                20 * δ
+PaperIV.IntegralStability.chordal_linear_stability_sixteen :
+  ∃ N,
+    ∀ (n : ℕ),
+      N ≤ n →
+        ∀ (G : SimpleGraph (Fin n)) [inst : DecidableRel G.Adj],
+          PaperIV.FarRounding.IsChordal G →
+            ∀ (δ : ℚ),
+              0 ≤ δ →
+                δ ≤ PaperIV.IntegralStability.gamma * ↑n ^ 2 →
+                  (∀ (Q : PaperIV.FarRounding.CliquePartition G),
+                      Q.OrderAtMost 4 → ↑(PaperIV.targetSize n) - δ ≤ ↑Q.size) →
+                    ∃ R,
+                      G.IsClique ↑R ∧
+                        2 ≤ R.card ∧
+                          R.card ≤ (Finset.univ \ R).card ∧
+                            PaperIV.splitBaseline ↑n ↑R.card ≤ ↑(PaperIV.targetSize n) ∧
+                              117 / 1825 * ↑(PaperIV.RootVocab.outsideEdges G R).card +
+                                    12687 / 20000 * ↑(PaperIV.RootVocab.missingIncidences G R) ≤
+                                  δ ∧
+                                ↑(PaperIV.targetSize n) - PaperIV.splitBaseline ↑n ↑R.card +
+                                        ↑(PaperIV.RootVocab.outsideEdges G R).card / 16 +
+                                      ↑(PaperIV.RootVocab.missingIncidences G R) / 2 ≤
+                                    δ ∧
+                                  ↑(PaperIV.EditMetric.editDist G.edgeFinset
+                                        (PaperIV.GraphFamilyDistance.graphEdgeSupport
+                                          (PaperIV.SplitUniformIncidence.splitGraph R (Finset.univ \ R)))) ≤
+                                    16 * δ
+PaperIV.ExtremalClassification.split_value {n : ℕ} (G : SimpleGraph (Fin n)) [DecidableRel G.Adj] {R : Finset (Fin n)}
+  (hG : G = PaperIV.SplitUniformIncidence.splitGraph R (Finset.univ \ R)) (hk2 : 2 ≤ R.card)
+  (hk : R.card ≤ (Finset.univ \ R).card) :
+  (∃ Q, Q.OrderAtMost 4 ∧ Q.size = PaperIV.SplitCompleteRigidity.baseline n R.card) ∧
+    ∀ (Q : PaperIV.FarRounding.CliquePartition G), PaperIV.SplitCompleteRigidity.baseline n R.card ≤ Q.size
+PaperIV.ExtremalClassification.chordal_extremal_classification :
+  ∃ N,
+    ∀ (n : ℕ),
+      N ≤ n →
+        ∀ (G : SimpleGraph (Fin n)) [inst : DecidableRel G.Adj],
+          PaperIV.FarRounding.IsChordal G →
+            (PaperIV.ExtremalClassification.CliqueCoverEq G (PaperIV.targetSize n) ↔
+                PaperIV.ExtremalClassification.CliqueCover4Eq G (PaperIV.targetSize n)) ∧
+              (PaperIV.ExtremalClassification.CliqueCover4Eq G (PaperIV.targetSize n) ↔
+                PaperIV.ExtremalClassification.IsOptimalCompleteSplit G)
+PaperIV.SplitMixedGap.fracPacking_value_le.{u_1} {V : Type u_1} [Fintype V] [DecidableEq V] {Core Hosts : Finset V}
+  (hd : Disjoint Core Hosts)
+  (x : PaperIV.FarRounding.FracPacking (PaperIV.SplitUniformIncidence.splitGraph Core Hosts) ℚ) :
+  x.value ≤ 2 * ↑(Core.card.choose 2)
+PaperIV.SplitMixedGap.sum_gainOf_add_size.{u_1} {V : Type u_1} [Fintype V] [DecidableEq V] {G : SimpleGraph V}
+  [DecidableRel G.Adj] (Q : PaperIV.FarRounding.CliquePartition G) :
+  ∑ K ∈ Q.pieces, PaperIV.FarRounding.gainOf K + Q.size = G.edgeFinset.card
+PaperIV.SplitMixedGap.exists_integral_gain_eq.{u_1} {V : Type u_1} [Fintype V] [DecidableEq V] {Core Hosts : Finset V}
+  (hd : Disjoint Core Hosts) (hcore : 2 ≤ Core.card) (hhosts : Core.card ≤ Hosts.card) :
+  ∃ Q, ∑ K ∈ Q.pieces, PaperIV.FarRounding.gainOf K = 2 * Core.card.choose 2
+PaperIV.SplitMixedGap.mixed_gap_zero.{u_1} {V : Type u_1} [Fintype V] [DecidableEq V] {Core Hosts : Finset V}
+  (hd : Disjoint Core Hosts) (hcore : 2 ≤ Core.card) (hhosts : Core.card ≤ Hosts.card) :
+  (∀ (x : PaperIV.FarRounding.FracPacking (PaperIV.SplitUniformIncidence.splitGraph Core Hosts) ℚ),
+      x.value ≤ 2 * ↑(Core.card.choose 2)) ∧
+    ∃ Q, ∑ K ∈ Q.pieces, PaperIV.FarRounding.gainOf K = 2 * Core.card.choose 2
+PaperIV.SimplicialReduction.exists_cliquePartition_of_delete_vertex.{u_1} {V : Type u_1} [Fintype V] [DecidableEq V]
+  (G : SimpleGraph V) [DecidableRel G.Adj] (v : V) {r : ℕ} (hr : 2 ≤ r)
+  (Q : PaperIV.FarRounding.CliquePartition (SimpleGraph.induce {u | u ≠ v} G)) (hQ : Q.OrderAtMost r) :
+  ∃ P, P.OrderAtMost r ∧ P.size ≤ Q.size + G.degree v
+PaperIV.SimplicialReduction.targetSize_succ_sub_targetSize (n : ℕ) :
+  PaperIV.FarRounding.targetSize (n + 1) - PaperIV.FarRounding.targetSize n = (n + 2) / 3
+PaperIV.SimplicialReduction.sharpBound_of_degree_le.{u} {V : Type u} [Fintype V] [DecidableEq V] {n : ℕ}
+  (hn : PaperIV.SimplicialReduction.SharpBoundAt n) (G : SimpleGraph V) [DecidableRel G.Adj]
+  (hcard : Fintype.card V = n + 1) (hG : G.IsChordal) (v : V)
+  (hdeg : G.degree v ≤ PaperIV.FarRounding.targetSize (n + 1) - PaperIV.FarRounding.targetSize n) :
+  ∃ Q, Q.OrderAtMost 4 ∧ Q.size ≤ PaperIV.FarRounding.targetSize (n + 1)
+PaperIV.SimplicialReduction.sharpBoundAt_of_largeCliqueRegime.{u}
+  (H :
+    ∀ (n : ℕ) (W : Type u) [inst : Fintype W] [inst_1 : DecidableEq W] (K : SimpleGraph W)
+      [inst_2 : DecidableRel K.Adj],
+      Fintype.card W = n + 1 →
+        K.IsChordal →
+          PaperIV.FarRounding.targetSize (n + 1) - PaperIV.FarRounding.targetSize n + 1 < K.cliqueNum →
+            ∃ Q, Q.OrderAtMost 4 ∧ Q.size ≤ PaperIV.FarRounding.targetSize (n + 1))
+  (n : ℕ) : PaperIV.SimplicialReduction.SharpBoundAt n
+PaperIV.SimplicialReductionRefined.exists_cliquePartition_freeStar.{u_1} {V : Type u_1} [Fintype V] [DecidableEq V]
+  (G : SimpleGraph V) [DecidableRel G.Adj] (v : V) (hv : G.IsSimplicial v)
+  (Q : PaperIV.FarRounding.CliquePartition (SimpleGraph.induce {u | u ≠ v} G)) (hQ4 : Q.OrderAtMost 4)
+  (chunks : Finset (Finset V)) (hcard3 : ∀ C ∈ chunks, C.card = 3)
+  (hdisj : ∀ C ∈ chunks, ∀ D ∈ chunks, C ≠ D → Disjoint C D) (hcov : (chunks.biUnion fun C ↦ C) = G.neighborFinset v)
+  (hpiece : ∀ C ∈ chunks, ∃ K ∈ Q.pieces, Finset.image Subtype.val K = C) : ∃ P, P.OrderAtMost 4 ∧ P.size ≤ Q.size
+PaperIV.SimplicialReductionRefined.not_strongLoosePieceHypothesis :
+  ¬PaperIV.SimplicialReductionRefined.StrongLoosePieceHypothesis
+PaperIV.NearThresholdSensitivity.eps_le_of_physical_budget {n u a eps B : ℚ} (hB : 0 < B) (hBn : B ≤ n) (hu : 0 ≤ u)
+  (ha0 : 0 ≤ a) (ha : a ≤ n) (hsat : eps * n ^ 2 ≤ u * (u + 1)) (hfit : B * (eps * n ^ 2 + u * n) ≤ a ^ 2) :
+  eps * B ^ 2 ≤ 2
+PaperIV.NearThresholdSensitivity.descent_threshold {n eps eta : ℚ} (hetaSmall : 160 * eta ≤ eps) (hn1 : 1 ≤ n)
+  (hn : 160 ≤ eps * n) : 20 * (eta * n ^ 2 + n / 6 + 1 / 24) < eps / 4 * n ^ 2
+PaperIV.NearThresholdSensitivity.near_threshold_of_budget {B alpha eta n : ℚ} (hB : 1 ≤ B) (halpha : 0 < alpha)
+  (halpha1 : alpha ≤ 1) (hetaSmall : 1280 * B ^ 2 * eta ≤ alpha ^ 4) (hn : 1280 * B ^ 2 ≤ alpha ^ 4 * n) :
+  20 * (eta * n ^ 2 + n / 6 + 1 / 24) < alpha ^ 4 / (8 * B ^ 2) / 4 * n ^ 2
+PaperIV.NearThresholdSensitivity.edit_mass_of_budget {n u a mA alpha B eps : ℚ} (hB : 1 ≤ B) (halpha : 0 < alpha)
+  (halpha1 : alpha ≤ 1) (hn : 0 ≤ n) (hu : 0 ≤ u) (heps0 : 0 ≤ eps) (hfit : 8 * eps * B ^ 2 ≤ alpha ^ 4)
+  (hmissing : u * (u + 1) / 2 ≤ eps * n ^ 2) (ha : alpha * n ≤ a) (hedit : mA ≤ eps * n ^ 2 + u * n) : B * mA ≤ a ^ 2
+PaperIV.NearThresholdSensitivity.descent_threshold_maximal_barrier {n eps eta K : ℚ} (hK : 0 ≤ K) (hn1 : 1 ≤ n)
+  (hn : K / 6 + 1 + K / 24 < (eps - K * eta) * n) : K * (eta * n ^ 2 + n / 6 + 1 / 24) < (eps - 1 / n) * n ^ 2
+PaperIV.NearThresholdSensitivity.near_threshold_binding {n : ℚ} (hn0 : 0 < n) (hle : n ≤ 36 * 10 ^ 11) :
+  ¬16 * (1 / 10 ^ 16 * n ^ 2 + n / 6 + 1 / 24) < (1 / 10 ^ 12 - 1 / n) * n ^ 2
+PaperIV.FourHostClosure.colourClass_isLiteralMatching.{u_1, u_2} {V : Type u_1} [Fintype V] [DecidableEq V]
+  {C : Type u_2} [DecidableEq C] [Inhabited C] {H : SimpleGraph V} [DecidableRel H.Adj] (c : Vizing.PEC H C)
+  (htot : ∀ (u v : V), H.Adj u v → c.col u v ≠ none) (γ : C) :
+  PaperIV.ExteriorTriangleLift.IsLiteralMatching ({e ∈ H.edgeFinset | c.edgeColor e = γ})
+PaperIV.FourHostClosure.exists_fourHost_packing.{u_1} {V : Type u_1} [Fintype V] [DecidableEq V] {G : SimpleGraph V}
+  [DecidableRel G.Adj] (H : SimpleGraph V) [DecidableRel H.Adj] (hdeg : H.maxDegree ≤ 3)
+  (hsub : ∀ e ∈ H.edgeFinset, e ∈ PaperIV.Model.graphEdges G) (z : Fin 4 → V) (hinj : Function.Injective z)
+  (hhub : ∀ (i : Fin 4), ∀ e ∈ H.edgeFinset, ∀ a ∈ e, G.Adj (z i) a)
+  (hext : ∀ (j : Fin 4), ∀ e ∈ H.edgeFinset, ∀ a ∈ e, a ≠ z j) :
+  ∃ P,
+    PaperIV.Model.IsPacking G P ∧
+      P.card = H.edgeFinset.card ∧
+        PaperIV.Model.totalGain P = 2 * H.edgeFinset.card ∧ H.edgeFinset ⊆ PaperIV.Model.coveredEdges P
+PaperIV.FourHostClosure.fourHost_saving.{u_1} {V : Type u_1} [Fintype V] [DecidableEq V] {G : SimpleGraph V}
+  [DecidableRel G.Adj] (H : SimpleGraph V) [DecidableRel H.Adj] (hdeg : H.maxDegree ≤ 3)
+  (hsub : ∀ e ∈ H.edgeFinset, e ∈ PaperIV.Model.graphEdges G) (z : Fin 4 → V) (hinj : Function.Injective z)
+  (hhub : ∀ (i : Fin 4), ∀ e ∈ H.edgeFinset, ∀ a ∈ e, G.Adj (z i) a)
+  (hext : ∀ (j : Fin 4), ∀ e ∈ H.edgeFinset, ∀ a ∈ e, a ≠ z j) :
+  ∃ P, PaperIV.Model.IsPacking G P ∧ PaperIV.Model.totalGain P = 2 * P.card ∧ P.card = H.edgeFinset.card
+PaperIV.ReserveIdentity.centreDefect_mul_succ (n k : ℕ) :
+  ↑(PaperIV.ReserveIdentity.centreDefect n k) * (↑(PaperIV.ReserveIdentity.centreDefect n k) + 1) =
+    (↑n - 3 * ↑k) * (↑n - 3 * ↑k + 1)
+PaperIV.ReserveIdentity.targetSize_eq_baseline_add_reserve (n k : ℕ) (hk : k ≤ n) (hle : k.choose 2 ≤ k * (n - k)) :
+  PaperIV.targetSize n =
+    PaperIV.SplitCompleteRigidity.baseline n k + PaperIV.targetSize (PaperIV.ReserveIdentity.centreDefect n k)
+PaperIV.ReserveIdentity.baseline_le_targetSize_of_reserve (n k : ℕ) (hk : k ≤ n) (hle : k.choose 2 ≤ k * (n - k)) :
+  PaperIV.SplitCompleteRigidity.baseline n k ≤ PaperIV.targetSize n
+PaperIV.ReserveIdentity.baseline_eq_targetSize_iff_reserve (n k : ℕ) (hk : k ≤ n) (hle : k.choose 2 ≤ k * (n - k)) :
+  PaperIV.SplitCompleteRigidity.baseline n k = PaperIV.targetSize n ↔ PaperIV.ReserveIdentity.centreDefect n k ≤ 1
+PaperIV.ReserveIdentity.centreDefect_le_one_iff (n k : ℕ) :
+  PaperIV.ReserveIdentity.centreDefect n k ≤ 1 ↔ k = (n + 1) / 3 ∨ n % 3 = 1 ∧ k = (n + 1) / 3 + 1
+PaperIV.ReserveIdentity.sq_residual_eq (n k : ℚ) :
+  (6 * k - 2 * n - 1) ^ 2 = 24 * PaperIV.ReserveIdentity.Mq (n - 3 * k) + 1
+PaperIV.ReserveIdentity.residual_sq_le_iff (n k delta : ℚ) :
+  (6 * k - 2 * n - 1) ^ 2 ≤ 24 * delta ↔ PaperIV.ReserveIdentity.Mq (n - 3 * k) + 1 / 24 ≤ delta
+PaperIV.LossBudget.budget_iff.{u_1} {V : Type u_1} [Fintype V] [DecidableEq V] {G : SimpleGraph V} [DecidableRel G.Adj]
+  (Q : PaperIV.FarRounding.CliquePartition G) (T : ℕ) :
+  Q.size ≤ T ↔ G.edgeFinset.card ≤ ∑ K ∈ Q.pieces, PaperIV.FarRounding.gainOf K + T
+PaperIV.LossBudget.size_add_gain_eq.{u_1} {V : Type u_1} [Fintype V] [DecidableEq V] {G : SimpleGraph V}
+  [DecidableRel G.Adj] (Q : PaperIV.FarRounding.CliquePartition G) :
+  Q.size + ∑ K ∈ Q.pieces, PaperIV.FarRounding.gainOf K = G.edgeFinset.card
+PaperIV.LossBudget.erdos81_cp_form :
+  ∃ N,
+    ∀ (n : ℕ),
+      N ≤ n →
+        ∀ (G : SimpleGraph (Fin n)) [inst : DecidableRel G.Adj],
+          PaperIV.FarRounding.IsChordal G → ∃ Q, Q.size ≤ PaperIV.targetSize n
+PaperIV.LossBudget.erdos81_cp_form_all_orders :
+  ∃ b,
+    ∀ (n : ℕ) (G : SimpleGraph (Fin n)) [inst : DecidableRel G.Adj],
+      PaperIV.FarRounding.IsChordal G → ∃ Q, Q.size ≤ PaperIV.targetSize n + b
+PaperIV.RootPartitionStability.sum_rootPieceDefect_eq.{u_1} {V : Type u_1} [Fintype V] [DecidableEq V]
+  {G : SimpleGraph V} [DecidableRel G.Adj] (R : Finset V) (hR : G.IsClique ↑R)
+  (Q : PaperIV.FarRounding.CliquePartition G) :
+  ∑ K ∈ Q.pieces, PaperIV.RootPartitionStability.rootPieceDefect R K =
+    ↑Q.size - PaperIV.splitBaseline ↑(Fintype.card V) ↑R.card + ↑(PaperIV.RootVocab.missingIncidences G R) +
+      3 * ↑(PaperIV.RootVocab.outsideEdges G R).card
+PaperIV.RootPartitionStability.chordal_partition_stability :
+  ∃ N,
+    ∀ (n : ℕ),
+      N ≤ n →
+        ∀ (G : SimpleGraph (Fin n)) [inst : DecidableRel G.Adj],
+          PaperIV.FarRounding.IsChordal G →
+            ∀ (δ : ℚ),
+              0 ≤ δ →
+                δ ≤ PaperIV.IntegralStability.gamma * ↑n ^ 2 →
+                  (∀ (Q : PaperIV.FarRounding.CliquePartition G),
+                      Q.OrderAtMost 4 → ↑(PaperIV.targetSize n) - δ ≤ ↑Q.size) →
+                    ∃ R,
+                      G.IsClique ↑R ∧
+                        2 ≤ R.card ∧
+                          R.card ≤ (Finset.univ \ R).card ∧
+                            ∀ (Q : PaperIV.FarRounding.CliquePartition G) (τ : ℚ),
+                              ↑Q.size ≤ ↑(PaperIV.targetSize n) + τ →
+                                ↑(PaperIV.RootPartitionStability.noncanonicalPieces R Q).card ≤ τ + 48 * δ
+SimpleGraph.IsChordal.exists_isPEO.{u_1} {V : Type u_1} {G : SimpleGraph V} [Fintype V] [DecidableEq V]
+  (hG : G.IsChordal) : ∃ ord, G.IsPEO ord
+SimpleGraph.IsChordal.nonempty_cliqueTree.{u_2} {V : Type u_2} [Fintype V] [DecidableEq V] {G : SimpleGraph V}
+  (hG : G.IsChordal) : Nonempty (G.CliqueTree V)
+SimpleGraph.IsPEO.cliqueTree.{u_1} {V : Type u_1} {G : SimpleGraph V} [Fintype V] [DecidableEq V] [DecidableRel G.Adj]
+  {ord : V → ℕ} (h : G.IsPEO ord) : G.CliqueTree V
+SimpleGraph.IsPEO.peoBag_isClique.{u_1} {V : Type u_1} {G : SimpleGraph V} [Fintype V] [DecidableEq V]
+  [DecidableRel G.Adj] {ord : V → ℕ} (h : G.IsPEO ord) (v : V) : G.IsClique ↑(G.peoBag ord v)
+SimpleGraph.IsPEO.exists_peoBag_of_adj.{u_1} {V : Type u_1} {G : SimpleGraph V} [Fintype V] [DecidableEq V]
+  [DecidableRel G.Adj] {ord : V → ℕ} (h : G.IsPEO ord) {u v : V} (hadj : G.Adj u v) :
+  ∃ w, u ∈ G.peoBag ord w ∧ v ∈ G.peoBag ord w
+SimpleGraph.IsPEO.card_edgeFinset_eq_sum_card_laterNbrs.{u_1} {V : Type u_1} {G : SimpleGraph V} [Fintype V]
+  [DecidableEq V] [DecidableRel G.Adj] {ord : V → ℕ} (h : G.IsPEO ord) :
+  G.edgeFinset.card = ∑ v, (G.laterNbrs ord v).card
+SimpleGraph.IsPEO.card_edgeFinset_add_card_eq_sum_card_peoBag.{u_1} {V : Type u_1} {G : SimpleGraph V} [Fintype V]
+  [DecidableEq V] [DecidableRel G.Adj] {ord : V → ℕ} (h : G.IsPEO ord) :
+  G.edgeFinset.card + Fintype.card V = ∑ v, (G.peoBag ord v).card
+SimpleGraph.CliqueTree.isAncestor_top_of_mem_bag.{u_1, u_2} {V : Type u_1} {G : SimpleGraph V} {ι : Type u_2}
+  {T : G.CliqueTree ι} {i : ι} {v : V} (h : v ∈ T.bag i) : T.IsAncestor i (T.top v)
+SimpleGraph.CliqueTree.mem_bag_of_isAncestor.{u_1, u_2} {V : Type u_1} {G : SimpleGraph V} {ι : Type u_2}
+  {T : G.CliqueTree ι} {i j : ι} {v : V} (hv : v ∈ T.bag i) (hij : T.IsAncestor i j) (hj : T.IsAncestor j (T.top v)) :
+  v ∈ T.bag j
+SimpleGraph.CliqueTree.branch_separator.{u_1, u_2} {V : Type u_1} {G : SimpleGraph V} {ι : Type u_2}
+  {T : G.CliqueTree ι} {i j : ι} (hp : T.parent i = some j) {x y : V} (hadj : G.Adj x y) (hx : x ∈ T.branch i)
+  (hy : y ∉ T.branch i) : x ∈ T.bag i ∧ x ∈ T.bag j
+SimpleGraph.CliqueTree.not_adj_of_branch_separator.{u_1, u_2} {V : Type u_1} {G : SimpleGraph V} {ι : Type u_2}
+  {T : G.CliqueTree ι} [DecidableEq V] {i j : ι} (hp : T.parent i = some j) {x y : V} (hx : x ∈ T.branch i)
+  (hxs : x ∉ T.bag i ∩ T.bag j) (hy : y ∉ T.branch i) : ¬G.Adj x y
+SimpleGraph.CliqueTree.exists_isLeaf.{u_1, u_2} {V : Type u_1} {G : SimpleGraph V} {ι : Type u_2} [Fintype ι]
+  [Nonempty ι] (T : G.CliqueTree ι) : ∃ i, T.IsLeaf i
+SimpleGraph.CliqueTree.isSimplicial_of_mem_privateVerts.{u_1, u_2} {V : Type u_1} {G : SimpleGraph V} {ι : Type u_2}
+  {T : G.CliqueTree ι} {i : ι} {v : V} (hv : v ∈ T.privateVerts i) : G.IsSimplicial v
+SimpleGraph.CliqueTree.exists_bag_ne_of_isLeaf.{u_1, u_2} {V : Type u_1} {G : SimpleGraph V} {ι : Type u_2}
+  {T : G.CliqueTree ι} {i : ι} (hleaf : T.IsLeaf i) {x y : V} (hadj : G.Adj x y) (hx : x ∉ T.privateVerts i)
+  (hy : y ∉ T.privateVerts i) : ∃ k, k ≠ i ∧ x ∈ T.bag k ∧ y ∈ T.bag k
+SimpleGraph.CliqueTree.existsUnique_edgeBag.{u_1, u_2} {V : Type u_1} {G : SimpleGraph V} {ι : Type u_2}
+  {T : G.CliqueTree ι} {x y : V} (hadj : G.Adj x y) :
+  ∃! i, x ∈ T.bag i ∧ y ∈ T.bag i ∧ ∀ (k : ι), x ∈ T.bag k → y ∈ T.bag k → T.IsAncestor k i
+SimpleGraph.CliqueTree.mem_bag_edgeBag.{u_1, u_2} {V : Type u_1} {G : SimpleGraph V} {ι : Type u_2} {T : G.CliqueTree ι}
+  {x y : V} (hadj : G.Adj x y) : x ∈ T.bag (T.edgeBag s(x, y)) ∧ y ∈ T.bag (T.edgeBag s(x, y))
+SimpleGraph.CliqueTree.card_edgeFinset_eq_sum_fiber.{u_1, u_2} {V : Type u_1} {G : SimpleGraph V} {ι : Type u_2}
+  [Fintype V] [DecidableEq V] [DecidableRel G.Adj] [Fintype ι] [DecidableEq ι] (T : G.CliqueTree ι) :
+  G.edgeFinset.card = ∑ i, {e ∈ G.edgeFinset | T.edgeBag e = i}.card
+SimpleGraph.CliqueTree.subset_bag_of_mem_fiber.{u_1, u_2} {V : Type u_1} {G : SimpleGraph V} {ι : Type u_2} [Fintype V]
+  [DecidableEq V] [DecidableRel G.Adj] [DecidableEq ι] (T : G.CliqueTree ι) {i : ι} {e : Sym2 V}
+  (he : e ∈ {e' ∈ G.edgeFinset | T.edgeBag e' = i}) (v : V) : v ∈ e → v ∈ T.bag i
+SimpleGraph.exists_isMaximalCliqueOn.{u_1} {V : Type u_1} {G : SimpleGraph V} [DecidableEq V] [Fintype V]
+  {S K : Finset V} (hKS : K ⊆ S) (hK : G.IsClique ↑K) : ∃ M, K ⊆ M ∧ G.IsMaximalCliqueOn S M
+SimpleGraph.exists_maxCliqueForest.{u_1} {V : Type u_1} {G : SimpleGraph V} [DecidableEq V] [Fintype V]
+  (hG : G.IsChordal) (n : ℕ) (S : Finset V) : S.card = n → Nonempty (G.MaxCliqueForest S)
+SimpleGraph.IsChordal.exists_maximalCliqueTree.{u_1} {V : Type u_1} {G : SimpleGraph V} [DecidableEq V] [Fintype V]
+  (hG : G.IsChordal) :
+  ∃ n T,
+    (∀ (i : Fin n), G.IsMaximalCliqueOn Finset.univ (T.bag i)) ∧
+      (∀ (K : Finset V), G.IsMaximalCliqueOn Finset.univ K → ∃ i, T.bag i = K) ∧ Function.Injective T.bag
+SimpleGraph.IsPEO.exists_eq_peoBag_of_isMaximalCliqueOn.{u_1} {V : Type u_1} {G : SimpleGraph V} [DecidableEq V]
+  [Fintype V] [DecidableRel G.Adj] {ord : V → ℕ} (h : G.IsPEO ord) {K : Finset V}
+  (hK : G.IsMaximalCliqueOn Finset.univ K) (hne : K.Nonempty) : ∃ v ∈ K, K = G.peoBag ord v
+SimpleGraph.CliqueTree.top_comparable_of_mem_bag.{u_1, u_2} {V : Type u_1} {G : SimpleGraph V} {ι : Type u_2}
+  {T : G.CliqueTree ι} {k : ι} {u v : V} (hu : u ∈ T.bag k) (hv : v ∈ T.bag k) :
+  T.IsAncestor (T.top u) (T.top v) ∨ T.IsAncestor (T.top v) (T.top u)
+SimpleGraph.CliqueTree.isAncestor_top_of_rank_le.{u_1, u_2} {V : Type u_1} {G : SimpleGraph V} {ι : Type u_2}
+  {T : G.CliqueTree ι} {k : ι} {u v : V} (hu : u ∈ T.bag k) (hv : v ∈ T.bag k)
+  (hrank : T.rank (T.top v) ≤ T.rank (T.top u)) : T.IsAncestor (T.top u) (T.top v)
+SimpleGraph.CliqueTree.mem_bag_top_of_rank_le.{u_1, u_2} {V : Type u_1} {G : SimpleGraph V} {ι : Type u_2}
+  {T : G.CliqueTree ι} {k : ι} {u v : V} (hu : u ∈ T.bag k) (hv : v ∈ T.bag k)
+  (hrank : T.rank (T.top v) ≤ T.rank (T.top u)) : v ∈ T.bag (T.top u)
+SimpleGraph.CliqueTree.exists_subset_bag.{u_1, u_2} {V : Type u_1} {G : SimpleGraph V} {ι : Type u_2}
+  (T : G.CliqueTree ι) {K : Finset V} (hK : K.Nonempty) (hKc : G.IsClique ↑K) : ∃ i, K ⊆ T.bag i
+SimpleGraph.CliqueTree.exists_subset_bag_set.{u_1, u_2} {V : Type u_1} {G : SimpleGraph V} {ι : Type u_2} [Fintype V]
+  [DecidableEq V] [Nonempty ι] (T : G.CliqueTree ι) {K : Set V} (hKc : G.IsClique K) : ∃ i, K ⊆ ↑(T.bag i)
+SimpleGraph.CliqueTree.cliqueNum_eq_sup_card_bag.{u_1, u_2} {V : Type u_1} {G : SimpleGraph V} {ι : Type u_2}
+  [Fintype V] [DecidableEq V] [Fintype ι] [Nonempty ι] (T : G.CliqueTree ι) :
+  G.cliqueNum = Finset.univ.sup fun i ↦ (T.bag i).card
+SimpleGraph.CliqueTree.exists_isMaximumClique_bag.{u_1, u_2} {V : Type u_1} {G : SimpleGraph V} {ι : Type u_2}
+  [Fintype V] [DecidableEq V] [Fintype ι] [Nonempty ι] (T : G.CliqueTree ι) : ∃ i, G.IsMaximumClique (T.bag i)
+SimpleGraph.IsPEO.cliqueNum_eq_sup_card_peoBag.{u_1} {V : Type u_1} {G : SimpleGraph V} [Fintype V] [DecidableEq V]
+  [DecidableRel G.Adj] [Nonempty V] {ord : V → ℕ} (h : G.IsPEO ord) :
+  G.cliqueNum = Finset.univ.sup fun v ↦ (G.peoBag ord v).card
+SimpleGraph.isMaximalCliqueOn_univ_iff.{u_1} {V : Type u_1} {G : SimpleGraph V} [Fintype V] [DecidableEq V]
+  {K : Finset V} : G.IsMaximalCliqueOn Finset.univ K ↔ Maximal G.IsClique ↑K
+SimpleGraph.MaxCliqueForest.exists_top_eq.{u_1} {V : Type u_1} {G : SimpleGraph V} {S : Finset V}
+  (F : G.MaxCliqueForest S) {i : ℕ} (hi : i < F.size) (hne : (F.bag i).Nonempty) : ∃ v ∈ F.bag i, F.top v = i
+SimpleGraph.MaxCliqueForest.bag_nonempty.{u_1} {V : Type u_1} {G : SimpleGraph V} {S : Finset V}
+  (F : G.MaxCliqueForest S) {i : ℕ} (hi : i < F.size) (hS : S.Nonempty) : (F.bag i).Nonempty
+SimpleGraph.MaxCliqueForest.size_le_card.{u_1} {V : Type u_1} {G : SimpleGraph V} {S : Finset V}
+  (F : G.MaxCliqueForest S) (hS : S.Nonempty) : F.size ≤ S.card
+SimpleGraph.MaxCliqueForest.size_le.{u_1} {V : Type u_1} {G : SimpleGraph V} {S : Finset V} (F : G.MaxCliqueForest S) :
+  F.size ≤ S.card + 1
+SimpleGraph.CliqueTree.exists_top_eq.{u_1, u_2} {V : Type u_1} {G : SimpleGraph V} {ι : Type u_2} [Fintype V]
+  [DecidableEq V] [Nonempty V] (T : G.CliqueTree ι) (hmax : ∀ (i : ι), G.IsMaximalCliqueOn Finset.univ (T.bag i))
+  (hinj : Function.Injective T.bag) (i : ι) : ∃ v, T.top v = i
+SimpleGraph.CliqueTree.card_le_card_of_isMaximalCliqueOn.{u_1, u_2} {V : Type u_1} {G : SimpleGraph V} {ι : Type u_2}
+  [Fintype V] [DecidableEq V] [Nonempty V] [Fintype ι] (T : G.CliqueTree ι)
+  (hmax : ∀ (i : ι), G.IsMaximalCliqueOn Finset.univ (T.bag i)) (hinj : Function.Injective T.bag) :
+  Fintype.card ι ≤ Fintype.card V
+SimpleGraph.IsChordal.exists_maximalCliqueTree_card_le.{u_1} {V : Type u_1} {G : SimpleGraph V} [Fintype V]
+  [DecidableEq V] [Nonempty V] (hG : G.IsChordal) :
+  ∃ n T,
+    n ≤ Fintype.card V ∧
+      (∀ (i : Fin n), G.IsMaximalCliqueOn Finset.univ (T.bag i)) ∧
+        (∀ (K : Finset V), G.IsMaximalCliqueOn Finset.univ K → ∃ i, T.bag i = K) ∧ Function.Injective T.bag
+SimpleGraph.IsChordal.card_maximalCliques_le.{u_1} {V : Type u_1} {G : SimpleGraph V} [Fintype V] [DecidableEq V]
+  [Nonempty V] [DecidablePred (G.IsMaximalCliqueOn Finset.univ)] (hG : G.IsChordal) :
+  {K ∈ Finset.univ.powerset | G.IsMaximalCliqueOn Finset.univ K}.card ≤ Fintype.card V
+SimpleGraph.IsChordal.of_nonempty_cliqueTree.{u_1, u_2} {V : Type u_1} {G : SimpleGraph V} {ι : Type u_2}
+  (T : G.CliqueTree ι) : G.IsChordal
+SimpleGraph.isChordal_iff_nonempty_cliqueTree.{u_1} {V : Type u_1} {G : SimpleGraph V} [Fintype V] [DecidableEq V] :
+  G.IsChordal ↔ Nonempty (G.CliqueTree V)
+SimpleGraph.IsPEO.isChordal.{u_1} {V : Type u_1} {G : SimpleGraph V} [Fintype V] [DecidableEq V] {ord : V → ℕ}
+  (h : G.IsPEO ord) : G.IsChordal
+SimpleGraph.isChordal_iff_exists_isPEO.{u_1} {V : Type u_1} {G : SimpleGraph V} [Fintype V] [DecidableEq V] :
+  G.IsChordal ↔ ∃ ord, G.IsPEO ord
+SimpleGraph.CliqueTree.separates_bag_inter.{u_1, u_2} {V : Type u_1} {G : SimpleGraph V} {ι : Type u_2}
+  {T : G.CliqueTree ι} [DecidableEq V] {i j : ι} (hp : T.parent i = some j) {a b : V} (ha : a ∈ T.branch i)
+  (hb : b ∉ T.branch i) (haS : a ∉ T.bag i ∩ T.bag j) (hbS : b ∉ T.bag i ∩ T.bag j) :
+  G.Separates (↑(T.bag i ∩ T.bag j)) a b
+SimpleGraph.CliqueTree.isMinimalSeparator_bag_inter.{u_1, u_2} {V : Type u_1} {G : SimpleGraph V} {ι : Type u_2}
+  [Fintype V] [DecidableEq V] (T : G.CliqueTree ι) (hmax : ∀ (i : ι), G.IsMaximalCliqueOn Finset.univ (T.bag i))
+  (hinj : Function.Injective T.bag) {i j : ι} (hp : T.parent i = some j) :
+  ∃ a b, G.IsMinimalSeparator (↑(T.bag i ∩ T.bag j)) a b
+SimpleGraph.CliqueTree.exists_parent_eq_of_isMinimalSeparator.{u_1, u_2} {V : Type u_1} {G : SimpleGraph V}
+  {ι : Type u_2} [Fintype V] [DecidableEq V] (T : G.CliqueTree ι) {S : Set V} {a b : V}
+  (hS : G.IsMinimalSeparator S a b) (hreach : G.Reachable a b) : ∃ i j, T.parent i = some j ∧ S = ↑(T.bag i ∩ T.bag j)
+SimpleGraph.CliqueTree.not_exists_isMinimalSeparator_dupBagTree :
+  (∀ (i : Bool), ⊥.IsMaximalCliqueOn Finset.univ (SimpleGraph.CliqueTree.dupBagTree.bag i)) ∧
+    SimpleGraph.CliqueTree.dupBagTree.parent true = some false ∧
+      ¬∃ a b,
+          ⊥.IsMinimalSeparator
+            (↑(SimpleGraph.CliqueTree.dupBagTree.bag true ∩ SimpleGraph.CliqueTree.dupBagTree.bag false)) a b
+SimpleGraph.CliqueTree.not_exists_parent_eq_isolatedTree :
+  (∀ (i : Bool), ⊥.IsMaximalCliqueOn Finset.univ (SimpleGraph.CliqueTree.isolatedTree.bag i)) ∧
+    ⊥.IsMinimalSeparator ∅ true false ∧
+      ¬∃ i j,
+          SimpleGraph.CliqueTree.isolatedTree.parent i = some j ∧
+            ∅ = ↑(SimpleGraph.CliqueTree.isolatedTree.bag i ∩ SimpleGraph.CliqueTree.isolatedTree.bag j)
+SimpleGraph.CliqueTree.mem_parentSep_iff.{u_1, u_2} {V : Type u_1} {G : SimpleGraph V} {ι : Type u_2} [DecidableEq V]
+  {T : G.CliqueTree ι} {i : ι} {v : V} : v ∈ T.parentSep i ↔ v ∈ T.bag i ∧ i ≠ T.top v
+SimpleGraph.CliqueTree.card_parentSep.{u_1, u_2} {V : Type u_1} {G : SimpleGraph V} {ι : Type u_2} [DecidableEq V]
+  (T : G.CliqueTree ι) (i : ι) : (T.parentSep i).card = (T.parent i).elim 0 fun j ↦ (T.bag i ∩ T.bag j).card
+SimpleGraph.CliqueTree.card_eq_sum_card_bag_sub_sum_card_inter.{u_1, u_2} {V : Type u_1} {G : SimpleGraph V}
+  {ι : Type u_2} [Fintype V] [DecidableEq V] [Fintype ι] [DecidableEq ι] (T : G.CliqueTree ι) :
+  (Fintype.card V + ∑ i, (T.parent i).elim 0 fun j ↦ (T.bag i ∩ T.bag j).card) = ∑ i, (T.bag i).card
+SimpleGraph.CliqueTree.card_add_sum_card_parentSep.{u_1, u_2} {V : Type u_1} {G : SimpleGraph V} {ι : Type u_2}
+  [Fintype V] [DecidableEq V] [Fintype ι] [DecidableEq ι] (T : G.CliqueTree ι) :
+  Fintype.card V + ∑ i with (T.parent i).isSome = true, (T.parentSep i).card = ∑ i, (T.bag i).card
+PaperIV.DefectSharpPublication.rooted_defect_eventual (s : ℕ) :
+  ∃ N,
+    ∀ (n : ℕ),
+      N ≤ n →
+        ∀ (G : SimpleGraph (Fin n)) [inst : DecidableRel G.Adj],
+          PaperIV.RootedSimplicialDefect.RootedDefectAt G s →
+            ∃ Q, Q.OrderAtMost 4 ∧ Q.size ≤ PaperIV.DefectTargetArithmetic.defectTarget s n
+PaperIV.DefectSharpPublication.comparator_baseline_eq_target (n s : ℕ) (hn : 2 * s + 2 ≤ n) :
+  have k := (n + s + 1) / 3;
+  k * (n - k) - (k - s).choose 2 = PaperIV.DefectTargetArithmetic.defectTarget s n
+PaperIV.DefectSharpPublication.exists_defect_lower_witness (s n : ℕ) (hn : 2 * s + 2 ≤ n) :
+  ∃ G x,
+    PaperIV.RootedSimplicialDefect.RootedDefectAt G s ∧
+      ∀ (Q : PaperIV.FarRounding.CliquePartition G), PaperIV.DefectTargetArithmetic.defectTarget s n ≤ Q.size
+PaperIV.DefectSharpPublication.rooted_defect_maximum (s : ℕ) :
+  ∃ N,
+    ∀ (n : ℕ),
+      N ≤ n →
+        (∀ (G : SimpleGraph (Fin n)) [inst : DecidableRel G.Adj],
+            PaperIV.RootedSimplicialDefect.RootedDefectAt G s →
+              ∃ Q, Q.OrderAtMost 4 ∧ Q.size ≤ PaperIV.DefectTargetArithmetic.defectTarget s n) ∧
+          ∃ G x,
+            PaperIV.RootedSimplicialDefect.RootedDefectAt G s ∧
+              ∃ Q,
+                Q.OrderAtMost 4 ∧
+                  Q.size = PaperIV.DefectTargetArithmetic.defectTarget s n ∧
+                    ∀ (R : PaperIV.FarRounding.CliquePartition G), Q.size ≤ R.size
+PaperIV.DefectSharpPublication.order_three_insufficient (n : ℕ) (hn : n % 6 = 4)
+  (Q : PaperIV.FarRounding.CliquePartition ⊤) (hQ : Q.OrderAtMost 3) : PaperIV.targetSize n < Q.size
+PaperIV.RootedDefectZero.rootedDefect_zero_iff_isChordal.{u_1} {V : Type u_1} [DecidableEq V] {G : SimpleGraph V}
+  [DecidableRel G.Adj] [Fintype V] : PaperIV.RootedSimplicialDefect.RootedDefectAt G 0 ↔ G.IsChordal
+PaperIV.DefectComparatorLower.cliquePartition_size_ge_defect_baseline.{u_1} {V : Type u_1} [DecidableEq V] [Fintype V]
+  {Core Def Hosts : Finset V} (hCD : Disjoint Core Def) (hDH : Disjoint Def Hosts) (hd : Disjoint (Core ∪ Def) Hosts)
+  (Q : PaperIV.FarRounding.CliquePartition (PaperIV.DefectComparatorGraph.defSplitGraph Core Def Hosts)) :
+  (Core.card + Def.card) * Hosts.card - Core.card.choose 2 ≤ Q.size
+PaperIV.DefectComparatorRootedDefect.rootedDefectAt_defSplitGraph.{u_1} {V : Type u_1} [DecidableEq V]
+  {Core Def Hosts : Finset V} (hCD : Disjoint Core Def) (hDH : Disjoint Def Hosts) (hCH : Disjoint Core Hosts)
+  (hcover : ∀ (x : V), x ∈ Core ∨ x ∈ Def ∨ x ∈ Hosts) {s : ℕ} (hs : Def.card ≤ s) :
+  PaperIV.RootedSimplicialDefect.RootedDefectAt (PaperIV.DefectComparatorGraph.defSplitGraph Core Def Hosts) s
+PaperIV.ExplicitThreshold.erdos81_sharp_explicit (n : ℕ) (hn : PaperIV.ExplicitThreshold.sharpThreshold ≤ n)
+  (G : SimpleGraph (Fin n)) [DecidableRel G.Adj] (hG : G.IsChordal) :
+  ∃ Q, Q.OrderAtMost 4 ∧ Q.size ≤ PaperIV.targetSize n
+PaperIV.ExplicitThreshold.erdos81_all_orders_bounded_additive :
+  ∃ b ≤ E19.tower2 (E18.Numeric.hIter + 8),
+    ∀ (n : ℕ) (G : SimpleGraph (Fin n)) [inst : DecidableRel G.Adj],
+      G.IsChordal → ∃ Q, Q.OrderAtMost 4 ∧ Q.size ≤ PaperIV.targetSize n + b
+E17Bridge.ExplicitSchedule.uniformRoundingTarget_explicit (ε : ℚ) (hε : 0 < ε) (n : ℕ) :
+  E18.NE ε ≤ n →
+    ∀ (G : SimpleGraph (Fin n)) [inst : DecidableRel G.Adj] (x : MixedRounding.FracPacking G),
+      ∃ P, x.value - ↑P.gain ≤ ε * ↑n ^ 2
+E17Bridge.ExplicitAssembly.farRegime_allGraphs_explicit (η : ℚ) (hη : 0 < η) (n : ℕ) :
+  E18.NfarE η ≤ n →
+    ∀ (G : SimpleGraph (Fin n)) [inst : DecidableRel G.Adj],
+      PaperIV.VertexCopyGate.F4' G < ↑n ^ 2 / 6 - ↑η * ↑n ^ 2 →
+        ∃ Q, Q.OrderAtMost 4 ∧ Q.size ≤ PaperIV.FarRounding.targetSize n
+E19.NfarE_eta0_le_tower : E18.NfarE E18.Numeric.eta0 ≤ E19.tower2 (E18.Numeric.hIter + 7)
+PaperIV.ExplicitThreshold.nearThreshold_le : 4 * 10 ^ 12 ≤ PaperIV.ExplicitThreshold.sharpThreshold
+PaperIV.ExplicitThreshold.additiveConstant_le_tower :
+  PaperIV.ExplicitThreshold.additiveConstant ≤ E19.tower2 (E18.Numeric.hIter + 8)
+PaperIV.ExplicitThreshold.erdos81_all_orders_explicit (n : ℕ) (G : SimpleGraph (Fin n)) [DecidableRel G.Adj]
+  (hG : G.IsChordal) : ∃ Q, Q.OrderAtMost 4 ∧ Q.size ≤ PaperIV.targetSize n + PaperIV.ExplicitThreshold.additiveConstant
+E17Bridge.improved_far_loss_explicit (ζ : ℚ) (hζ : 0 < ζ) (n : ℕ) :
+  n ≥ E18.NE ζ →
+    ∀ (G : SimpleGraph (Fin n)) [inst : DecidableRel G.Adj] {δ : ℚ} (hδ : 0 ≤ δ)
+      (R : PaperIV.RegularityFormat.EqualRegularity G δ) (x : PaperIV.FarRounding.FracPacking G ℚ) (d θ u v : ℚ),
+      0 ≤ d →
+        0 ≤ θ →
+          0 ≤ u + v →
+            ∀ (k₀ : ℕ),
+              0 < k₀ →
+                k₀ ≤ R.parts.card →
+                  ∃ P,
+                    x.value - ↑P.gain ≤
+                      3 * ((3 * δ + 1 / ↑k₀ + d) * ↑n ^ 2) + (↑(E17.FarBudget.N4 R) + 2 * ↑(E17.FarBudget.N3 R)) * θ +
+                        (ζ + 5 / 6 * (u + v)) * ↑n ^ 2
+E17Bridge.exists_improvedGateGap_explicit (ζ : ℚ) (hζ : 0 < ζ) (n : ℕ) :
+  n ≥ E18.NE ζ →
+    ∀ (G : SimpleGraph (Fin n)) [inst : DecidableRel G.Adj] {δ : ℚ} (R : PaperIV.RegularityFormat.EqualRegularity G δ)
+      (x : PaperIV.FarRounding.FracPacking G ℚ) (d θ u v : ℚ),
+      0 ≤ θ → 0 ≤ u + v → ∃ P, E17.FarBudget.ImprovedGateGap R x P d θ u v ζ
+E17Bridge.ExplicitAssembly.uniformTransferAt_explicit (ζ : ℚ) (hζ : 0 < ζ) (n : ℕ) :
+  E18.NE ζ ≤ n →
+    ∀ (G : SimpleGraph (Fin n)) [inst : DecidableRel G.Adj] (w : ℚ),
+      PaperIV.FarRounding.CertifiedFractionalOptimum G w → ∃ P, w - ↑P.gain ≤ ζ * ↑n ^ 2
+E17Bridge.ExplicitAssembly.farRegime_eta0_tower (n : ℕ) :
+  E19.tower2 (E18.Numeric.hIter + 7) ≤ n →
+    ∀ (G : SimpleGraph (Fin n)) [inst : DecidableRel G.Adj],
+      PaperIV.VertexCopyGate.F4' G < ↑n ^ 2 / 6 - ↑E18.Numeric.eta0 * ↑n ^ 2 →
+        ∃ Q, Q.OrderAtMost 4 ∧ Q.size ≤ PaperIV.FarRounding.targetSize n
+E17Bridge.faceTransfer_loss.{u_1} {V : Type u_1} [Fintype V] [DecidableEq V] {G : SimpleGraph V} [DecidableRel G.Adj]
+  (S : Finset (Finset V)) (hS : ∀ K ∈ S, K.card = 4) (hSi : S ⊆ PaperIV.FarRounding.items G)
+  (x : PaperIV.FarRounding.FracPacking G ℚ) :
+  x.value - ((E17Bridge.faceTransfer S hS).apply x).value = ∑ K ∈ S, x.weight K
+E17Bridge.faceTransfer_weight_four.{u_1} {V : Type u_1} [Fintype V] [DecidableEq V] {G : SimpleGraph V}
+  [DecidableRel G.Adj] (S : Finset (Finset V)) (hS : ∀ K ∈ S, K.card = 4) (x : PaperIV.FarRounding.FracPacking G ℚ)
+  {T : Finset V} (hTi : T ∈ PaperIV.FarRounding.items G) (hT : T.card = 4) :
+  ((E17Bridge.faceTransfer S hS).apply x).weight T = if T ∈ S then 0 else x.weight T
+E17Bridge.profileCleanup_loss.{u_1} {V : Type u_1} [Fintype V] [DecidableEq V] {G : SimpleGraph V} [DecidableRel G.Adj]
+  {δ : ℚ} (R : PaperIV.RegularityFormat.EqualRegularity G δ) (x : PaperIV.FarRounding.FracPacking G ℚ) (θ : ℚ)
+  (hθ : 0 ≤ θ) :
+  x.value - (E17Bridge.profileCleanup R x θ).value ≤ (↑(E17.FarBudget.N4 R) + 2 * ↑(E17.FarBudget.N3 R)) * θ
+E17Bridge.profileCleanup_zero_or_heavy.{u_1} {V : Type u_1} [Fintype V] [DecidableEq V] {G : SimpleGraph V}
+  [DecidableRel G.Adj] {δ : ℚ} (R : PaperIV.RegularityFormat.EqualRegularity G δ)
+  (x : PaperIV.FarRounding.FracPacking G ℚ) (θ : ℚ) {σ : PaperIV.RC01MixedPatterns.MixedPattern V}
+  (hσ : σ ∈ PaperIV.RC01MixedPatterns.mixedPatterns R) :
+  PaperIV.RC01PatternCapacity.rawMass (E17Bridge.profileCleanup R x θ) (PaperIV.RC01MixedPatterns.mixedFiber R) σ = 0 ∨
+    θ ≤ PaperIV.RC01PatternCapacity.rawMass (E17Bridge.profileCleanup R x θ) (PaperIV.RC01MixedPatterns.mixedFiber R) σ
+E17Bridge.profileCleanup_offCanonical_zero.{u_1} {V : Type u_1} [Fintype V] [DecidableEq V] {G : SimpleGraph V}
+  [DecidableRel G.Adj] {δ : ℚ} (R : PaperIV.RegularityFormat.EqualRegularity G δ)
+  (x : PaperIV.FarRounding.FracPacking G ℚ) (d θ : ℚ)
+  (hx :
+    ∀ K ∈ PaperIV.FarRounding.items G,
+      x.weight K ≠ 0 →
+        Disjoint (PaperIV.FarRounding.pairs K)
+          (PaperIV.RC01ResidualCoverage.discardEdges G R (PaperIV.RC01ResidualCoverage.garbage R) d)) :
+  PaperIV.RC01CanonicalValueAccounting.offCanonicalValue R (E17Bridge.profileCleanup R x θ)
+      (PaperIV.RC01ResidualCoverage.denseHeavyPatterns R (E17Bridge.profileCleanup R x θ) d θ) =
+    0
+E17Bridge.profileCleanup_triangleMass_loss.{u_1} {V : Type u_1} [Fintype V] [DecidableEq V] {G : SimpleGraph V}
+  [DecidableRel G.Adj] {δ : ℚ} (R : PaperIV.RegularityFormat.EqualRegularity G δ)
+  (x : PaperIV.FarRounding.FracPacking G ℚ) (θ : ℚ) (hθ : 0 ≤ θ) :
+  E17Bridge.triangleMassF x - E17Bridge.triangleMassF (E17Bridge.profileCleanup R x θ) ≤ ↑(E17.FarBudget.N3 R) * θ
+E17Bridge.exists_improvedGateGap_of_high_mass (ζ : ℚ) (hζ : 0 < ζ) (hζ1 : ζ ≤ 1) :
+  ∃ gam,
+    0 < gam ∧
+      ∃ Cst,
+        0 < Cst ∧
+          ∃ D,
+            0 < D ∧
+              ∀ (n : ℕ) [inst : NeZero n] (G : SimpleGraph (Fin n)) [inst_1 : DecidableRel G.Adj] {δ d θ u v gamma : ℚ}
+                (R : PaperIV.RegularityFormat.EqualRegularity G δ) (x : PaperIV.FarRounding.FracPacking G ℚ)
+                (hδ : 0 ≤ δ) (hd : 0 ≤ d),
+                0 ≤ θ →
+                  ∀ (hu : 0 < u),
+                    0 ≤ v →
+                      u + v ≤ 1 →
+                        ∀ (hc3 : 0 < d ^ 3 - 3 * δ) (hc4 : 0 < d ^ 6 - 6 * δ),
+                          33 * δ ≤ v * u ^ 2 * (d ^ 3 - 3 * δ) ^ 3 →
+                            138 * δ ≤ v * u ^ 2 * (d ^ 6 - 6 * δ) ^ 3 →
+                              have z := PaperIV.MixedRoundingAdapter.ofFarFrac (E17Bridge.cleanedR3 R x d θ);
+                              ↑(PaperIV.RC01ResidualTransferClosure.denseActiveProfiles R z d θ).card *
+                                      (d ^ 6 - 6 * δ) +
+                                    ↑(PaperIV.RC01ResidualTransferClosure.denseActiveProfiles R z d θ).card *
+                                      (d ^ 3 - 3 * δ) ≤
+                                  gamma * (d ^ 3 - 3 * δ) * (d ^ 6 - 6 * δ) * ↑R.size →
+                                ↑gamma ≤ gam →
+                                  12 + 10 * D ≤ ↑ζ * ↑n ^ 2 →
+                                    Cst ≤
+                                        PaperIV.JointTwoQuotaPhysical.triangleMass
+                                          (PaperIV.RC01CleanedGate.cleanedPacking z (PaperIV.PartitionBridge.partOf R)
+                                            (PaperIV.RC01ResidualTransferClosure.denseActiveProfiles R z d θ)
+                                            (PaperIV.RC01RootwiseReference.rootwiseReference
+                                              (PaperIV.PartitionBridge.partOf R))
+                                            (PaperIV.RC01RootwiseReference.profileVolume
+                                              (PaperIV.PartitionBridge.partOf R))
+                                            u ⋯ ⋯ ⋯) →
+                                      ∃ P, E17.FarBudget.ImprovedGateGap R x P d θ u v ζ
+E17Bridge.cleanedR3_loss {n : ℕ} {G : SimpleGraph (Fin n)} [DecidableRel G.Adj] {δ : ℚ}
+  (R : PaperIV.RegularityFormat.EqualRegularity G δ) (x : PaperIV.FarRounding.FracPacking G ℚ) (d θ : ℚ) (hδ : 0 ≤ δ)
+  (hd : 0 ≤ d) (hθ : 0 ≤ θ) {k₀ : ℕ} (hk₀ : 0 < k₀) (hk : k₀ ≤ R.parts.card) :
+  x.value - (E17Bridge.cleanedR3 R x d θ).value ≤
+    3 * ((3 * δ + 1 / ↑k₀ + d) * ↑n ^ 2) + (↑(E17.FarBudget.N4 R) + 2 * ↑(E17.FarBudget.N3 R)) * θ
+E17Bridge.UniformSchedule.uniformRoundingTarget_via_r3_f1 (ε : ℚ) (hε : 0 < ε) : MixedRounding.UniformRoundingTarget ε
+E17Bridge.exists_improvedGateGap_eventually (ζ : ℚ) (hζ : 0 < ζ) :
+  ∃ N,
+    ∀ n ≥ N,
+      ∀ (G : SimpleGraph (Fin n)) [inst : DecidableRel G.Adj] {δ : ℚ} (R : PaperIV.RegularityFormat.EqualRegularity G δ)
+        (x : PaperIV.FarRounding.FracPacking G ℚ) (d θ u v : ℚ),
+        0 ≤ θ → 0 ≤ u + v → ∃ P, E17.FarBudget.ImprovedGateGap R x P d θ u v ζ
+E17Bridge.improved_far_loss_eventually (ζ : ℚ) (hζ : 0 < ζ) :
+  ∃ N,
+    ∀ n ≥ N,
+      ∀ (G : SimpleGraph (Fin n)) [inst : DecidableRel G.Adj] {δ : ℚ},
+        0 ≤ δ →
+          ∀ (R : PaperIV.RegularityFormat.EqualRegularity G δ) (x : PaperIV.FarRounding.FracPacking G ℚ) (d θ u v : ℚ),
+            0 ≤ d →
+              0 ≤ θ →
+                0 ≤ u + v →
+                  ∀ (k₀ : ℕ),
+                    0 < k₀ →
+                      k₀ ≤ R.parts.card →
+                        ∃ P,
+                          x.value - ↑P.gain ≤
+                            3 * ((3 * δ + 1 / ↑k₀ + d) * ↑n ^ 2) +
+                                (↑(E17.FarBudget.N4 R) + 2 * ↑(E17.FarBudget.N3 R)) * θ +
+                              (ζ + 5 / 6 * (u + v)) * ↑n ^ 2
+E19.G1_le : E18.Numeric.G1 ≤ 2 ^ 2 ^ E19.K1
+E19.G2_le : E18.Numeric.G2 ≤ 2 ^ 2 ^ E19.K2
+E19.G3_le : E18.Numeric.G3 ≤ 2 ^ 2 ^ E19.K3
+import took 10.6s
+cumulative profiling times:
+	.olean serialization 3.92ms
+	elaboration 5.24ms
+	import 10.6s
+	initialization 37.9ms
+	interpretation 912ms
+	linting 25.4ms
+	parsing 2.58ms

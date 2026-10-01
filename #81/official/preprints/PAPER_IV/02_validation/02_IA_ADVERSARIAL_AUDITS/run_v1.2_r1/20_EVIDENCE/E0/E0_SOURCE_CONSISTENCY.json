@@ -1,0 +1,309 @@
+{
+ "manifest_entries": 615,
+ "manifest_vs_zip_missing_in_zip": [],
+ "manifest_vs_zip_extra_in_zip": [],
+ "manifest_vs_zip_hash_mismatch": [],
+ "non_lean_entries": [
+  "FREEZE_SCOPE.json",
+  "docs/PUBLICATION_AUDIT.md",
+  "lake-manifest.json",
+  "lakefile.toml",
+  "lean-toolchain",
+  "tools/audit_publication.py",
+  "tools/freeze_publication.py",
+  "tools/paperiv_build.py"
+ ],
+ "config_files_present": [
+  "lakefile.toml",
+  "lean-toolchain",
+  "lake-manifest.json"
+ ],
+ "lean_toolchain": "leanprover/lean4:v4.28.0",
+ "lake_manifest_packages": [
+  {
+   "name": "mathlib",
+   "rev": "8f9d9cff6bd728b17a24e163c9402775d9e6a365",
+   "inputRev": "v4.28.0",
+   "url": "https://github.com/leanprover-community/mathlib4.git",
+   "type": "git",
+   "scope": ""
+  },
+  {
+   "name": "plausible",
+   "rev": "55c8532eb21ec9f6d565d51d96b8ca50bd1fbef3",
+   "inputRev": "main",
+   "url": "https://github.com/leanprover-community/plausible",
+   "type": "git",
+   "scope": "leanprover-community"
+  },
+  {
+   "name": "LeanSearchClient",
+   "rev": "c5d5b8fe6e5158def25cd28eb94e4141ad97c843",
+   "inputRev": "main",
+   "url": "https://github.com/leanprover-community/LeanSearchClient",
+   "type": "git",
+   "scope": "leanprover-community"
+  },
+  {
+   "name": "importGraph",
+   "rev": "85b59af46828c029a9168f2f9c35119bd0721e6e",
+   "inputRev": "main",
+   "url": "https://github.com/leanprover-community/import-graph",
+   "type": "git",
+   "scope": "leanprover-community"
+  },
+  {
+   "name": "proofwidgets",
+   "rev": "be3b2e63b1bbf496c478cef98b86972a37c1417d",
+   "inputRev": "v0.0.87",
+   "url": "https://github.com/leanprover-community/ProofWidgets4",
+   "type": "git",
+   "scope": "leanprover-community"
+  },
+  {
+   "name": "aesop",
+   "rev": "f642a64c76df8ba9cb53dba3b919425a0c2aeaf1",
+   "inputRev": "master",
+   "url": "https://github.com/leanprover-community/aesop",
+   "type": "git",
+   "scope": "leanprover-community"
+  },
+  {
+   "name": "Qq",
+   "rev": "b8f98e9087e02c8553945a2c5abf07cec8e798c3",
+   "inputRev": "master",
+   "url": "https://github.com/leanprover-community/quote4",
+   "type": "git",
+   "scope": "leanprover-community"
+  },
+  {
+   "name": "batteries",
+   "rev": "495c008c3e3f4fb4256ff5582ddb3abf3198026f",
+   "inputRev": "main",
+   "url": "https://github.com/leanprover-community/batteries",
+   "type": "git",
+   "scope": "leanprover-community"
+  },
+  {
+   "name": "Cli",
+   "rev": "4f10f47646cb7d5748d6f423f4a07f98f7bbcc9e",
+   "inputRev": "v4.28.0",
+   "url": "https://github.com/leanprover/lean4-cli",
+   "type": "git",
+   "scope": "leanprover"
+  }
+ ],
+ "lakefile_text": "name = \"PaperIV\"\nversion = \"0.1.0\"\nkeywords = [\"math\", \"erdos-81\", \"chordal-graphs\", \"clique-partitions\"]\ndefaultTargets = [\"PaperIV\"]\n\n[leanOptions]\npp.unicode.fun = true\nrelaxedAutoImplicit = false\nlinter.unusedSimpArgs = false\n\n[[require]]\nname = \"mathlib\"\nscope = \"leanprover-community\"\nrev = \"v4.28.0\"\n\n[[lean_lib]]\nname = \"PaperIV\"\nmoreLeanArgs = [\"-s\", \"32768\"]\n\n[[lean_lib]]\nname = \"Nibble\"\nglobs = [\"Nibble.+\"]\n\n[[lean_lib]]\nname = \"Contrib\"\nglobs = [\"Contrib.+\"]\n\n[[lean_lib]]\nname = \"MixedRounding\"\nmoreLeanArgs = [\"-s\", \"32768\"]\n\n[[lean_lib]]\nname = \"PaperI\"\nmoreLeanArgs = [\"-s\", \"32768\"]\n\n[[lean_lib]]\nname = \"FarExploration\"\nglobs = [\"FarExploration.+\"]\nmoreLeanArgs = [\"-s\", \"32768\"]\n\n[[lean_lib]]\nname = \"ExactReduction\"\nglobs = [\"ExactReduction.+\"]\nmoreLeanArgs = [\"-s\", \"32768\"]\n\n[[lean_lib]]\nname = \"ThreeRegime\"\nglobs = [\"ThreeRegime.+\"]\nmoreLeanArgs = [\"-s\", \"32768\"]\n\n[[lean_lib]]\nname = \"BoundedCliqueGap\"\nglobs = [\"BoundedCliqueGap.+\"]\nmoreLeanArgs = [\"-s\", \"32768\"]\n\n[[lean_lib]]\nname = \"A4S1\"\nmoreLeanArgs = [\"-s\", \"32768\"]\n\n[[lean_lib]]\nname = \"RequestProject\"\nmoreLeanArgs = [\"-s\", \"32768\"]\n\n[[lean_lib]]\nname = \"E17\"\n\n[[lean_lib]]\nname = \"PaperV\"\n\n[[lean_lib]]\nname = \"E18\"\n\n[[lean_lib]]\nname = \"E19\"\n\n[[lean_lib]]\nname = \"PaperIVEditorial\"\nglobs = [\"PaperIVEditorial.+\"]\nmoreLeanArgs = [\"-s\", \"32768\"]\n\n[[lean_lib]]\nname = \"E32\"\nglobs = [\"E32.+\"]\nmoreLeanArgs = [\"-s\", \"32768\"]\n\n[[lean_lib]]\nname = \"E33\"\nglobs = [\"E33.+\"]\nmoreLeanArgs = [\"-s\", \"32768\"]\n\n[[lean_lib]]\nname = \"E34\"\nglobs = [\"E34.+\"]\nmoreLeanArgs = [\"-s\", \"32768\"]\n\n[[lean_lib]]\nname = \"E35\"\nglobs = [\"E35.+\"]\nmoreLeanArgs = [\"-s\", \"32768\"]\n\n[[lean_lib]]\nname = \"FDCheck\"\nglobs = [\"FDCheck.+\"]\nmoreLeanArgs = [\"-s\", \"32768\"]\n\n[[lean_lib]]\nname = \"StabilityPublication\"\nroots = [\"ArbitraryOrderSequences\", \"AsymptoticTools\", \"BaselineCapacity\", \"CliqueShiftArithmetic\", \"ComparatorResize\", \"CoreCliqueAlternative\", \"CoreRepair\", \"DualBudgetArithmetic\", \"E32Bridge\", \"EditRootRecovery\", \"ExplicitFixedStability\", \"ExtremalEditStability\", \"FixedDefectConclusion\", \"FixedDefectPieceEdges\", \"LargeCliqueCore\", \"NormalizedCliqueCore\", \"NormalizedDeficit\", \"NormalizedStability\", \"OptimalCoreDistance\", \"PieceEdgeStability\", \"PublicationStability\", \"RefinedFractionalBound\", \"RefinedRounding\", \"ResearchAudit\", \"ResidualExcess\", \"RootCliquePrices\", \"RootedCliqueRecovery\", \"RootPartition\", \"RootScore\", \"RootStepBudget\", \"SignedDualModel\", \"SignedElimination\", \"SmallOrderFractional\", \"StrictBudget\", \"StrictConstructor\", \"StrictParams\", \"StrictTerminal\", \"SublinearEdit\", \"SublinearLocalization\", \"SublinearPartitionBound\", \"SublinearSequences\", \"SublinearStability\", \"SublinearStabilityTransfer\", \"TemplateDistance\", \"TemplateShift\", \"UniformFractionalBound\", \"VertexEditBound\"]\nmoreLeanArgs = [\"-s\", \"32768\"]\n",
+ "own_module_count": 607,
+ "targets": [
+  "PaperIV",
+  "PaperIV.Audit",
+  "PaperIV.ConeAudit",
+  "PaperIV.PublicationIncrementAudit",
+  "A4S1.IndepAllAudit",
+  "ThreeRegime.AxiomCheck",
+  "FarExploration.AxiomCheck",
+  "PaperIV.CliqueTreeAudit",
+  "E17.ImprovedFarRoundingAudit",
+  "E17.ExplicitFarAudit",
+  "PaperIV.ExplicitThresholdAudit",
+  "ReleaseExportCheck",
+  "PaperIVEditorial.ConstructorBudgetAudit",
+  "ResearchAudit",
+  "FDCheck.FinalAudit",
+  "E35.Audit",
+  "FDCheck.ASCheck",
+  "E34.Audit",
+  "PaperIV.OptimalTemplateObstructionAudit"
+ ],
+ "targets_missing_as_modules": [],
+ "per_target_own_closure_size": {
+  "PaperIV": 553,
+  "PaperIV.Audit": 463,
+  "PaperIV.ConeAudit": 463,
+  "PaperIV.PublicationIncrementAudit": 413,
+  "A4S1.IndepAllAudit": 408,
+  "ThreeRegime.AxiomCheck": 23,
+  "FarExploration.AxiomCheck": 206,
+  "PaperIV.CliqueTreeAudit": 11,
+  "E17.ImprovedFarRoundingAudit": 187,
+  "E17.ExplicitFarAudit": 342,
+  "PaperIV.ExplicitThresholdAudit": 343,
+  "ReleaseExportCheck": 554,
+  "PaperIVEditorial.ConstructorBudgetAudit": 409,
+  "ResearchAudit": 512,
+  "FDCheck.FinalAudit": 487,
+  "E35.Audit": 459,
+  "FDCheck.ASCheck": 512,
+  "E34.Audit": 451,
+  "PaperIV.OptimalTemplateObstructionAudit": 422
+ },
+ "union_closure_size": 607,
+ "modules_not_in_any_target_closure": [],
+ "external_import_roots": [
+  "Lean",
+  "Mathlib"
+ ],
+ "text_scan_counts": {
+  "sorry": 36,
+  "admit": 4,
+  "axiom_decl": 0,
+  "unsafe": 0,
+  "implemented_by": 3,
+  "extern": 0,
+  "native_decide": 3,
+  "opaque": 0,
+  "debug_skipKernelTC": 0,
+  "ofReduceBool": 1
+ },
+ "text_scan": {
+  "sorry": [
+   "Nibble/AdaptiveAssembly.lean:28: sorry-free reductions",
+   "Nibble/AdaptiveRounds.lean:12: This file performs the two *architectural* reductions of that demand, both sorry-free:",
+   "Nibble/AdaptiveRounds.lean:31: Must be sorry-free and axiom-clean `[propext, Classical.choice, Quot.sound]`.",
+   "Nibble/Assemble.lean:11: Must be sorry-free and axiom-clean `[propext, Classical.choice, Quot.sound]`.",
+   "Nibble/Assembly.lean:16: Must be sorry-free and axiom-clean `[propext, Classical.choice, Quot.sound]`.",
+   "Nibble/Basic.lean:12: Everything here must be sorry-free and axiom-clean `[propext, Classical.choice, Quot.sound]`.",
+   "Nibble/BernoulliSpace.lean:13: Must be sorry-free and axiom-clean `[propext, Classical.choice, Quot.sound]`.",
+   "Nibble/Conflict.lean:16: Must be sorry-free and axiom-clean `[propext, Classical.choice, Quot.sound]`.",
+   "Nibble/Convergence.lean:15: Must be sorry-free and axiom-clean `[propext, Classical.choice, Quot.sound]`.",
+   "Nibble/Covered.lean:17: Must be sorry-free and axiom-clean `[propext, Classical.choice, Quot.sound]`.",
+   "Nibble/CoveredExpectation.lean:12: Must be sorry-free and axiom-clean `[propext, Classical.choice, Quot.sound]`.",
+   "Nibble/DischargeSeq.lean:14: Must be sorry-free and axiom-clean `[propext, Classical.choice, Quot.sound]`.",
+   "Nibble/FracNibbleLE.lean:25: Must be sorry-free and axiom-clean `[propext, Classical.choice, Quot.sound]`.",
+   "Nibble/Greedy.lean:14: Must be sorry-free and axiom-clean `[propext, Classical.choice, Quot.sound]`.",
+   "Nibble/Iteration.lean:18: Definitions come from `Nibble.Basic` / `Nibble.Round`. Must be sorry-free and axiom-clean",
+   "Nibble/IterationSeq.lean:21: Must be sorry-free and axiom-clean `[propext, Classical.choice, Quot.sound]`.",
+   "Nibble/Measurable.lean:11: Must be sorry-free and axiom-clean `[propext, Classical.choice, Quot.sound]`.",
+   "Nibble/Regular.lean:14: Must be sorry-free and axiom-clean `[propext, Classical.choice, Quot.sound]`.",
+   "Nibble/RegularMost.lean:16: Must be sorry-free and axiom-clean `[propext, Classical.choice, Quot.sound]`.",
+   "Nibble/Round.lean:24: `Nibble.Greedy`. Must be sorry-free and axiom-clean `[propext, Classical.choice, Quot.sound]`.",
+   "Nibble/RoundConflict.lean:11: Definitions come from `Nibble.Basic`, `Nibble.Round`, `Nibble.Conflict`. Must be sorry-free and",
+   "Nibble/Survival.lean:12: `conflicts` comes from `Nibble.Conflict`. Must be sorry-free and axiom-clean",
+   "Nibble/TightAssembly.lean:32: Must be sorry-free and axiom-clean `[propext, Classical.choice, Quot.sound]`.",
+   "Nibble/TightNibble.lean:22: Must be sorry-free and axiom-clean `[propext, Classical.choice, Quot.sound]`.",
+   "Nibble/TightSchedule.lean:27: Must be sorry-free and axiom-clean `[propext, Classical.choice, Quot.sound]`.",
+   "PaperIV/ChordalStructure.lean:16: sorry-free, `import Mathlib`), tra\u00eddo a Paper IV **sin cambios matem\u00e1ticos**.  Se porta y",
+   "PaperIV/CliqueBagNibble.lean:48: **demostrado para todo `r \u2265 2`**, sin `sorry`, y cuya cadena a AX1 audita",
+   "PaperIV/E01Ledger.lean:38: (`Nibble.fracNibbleWeighted_nearPerfect`, `r`-gen\u00e9rico, sin `sorry`). Falta el porte, y",
+   "PaperIV/FarRounding.lean:17: any historical aggregate source, and it contains no `axiom`, `sorry`, `admit` or",
+   "PaperIV/FarRoundingBatchBridge.lean:11: It contains three things, all `Mathlib`-only and `sorry`-free, and it makes **no",
+   "PaperIV/NibblePort.lean:28: III**, para todo `r \u2265 2`, sin `sorry`, con la cadena a AX1 auditando",
+   "PaperIV/NibblePort.lean:100: **\u00c9sta es la que Paper III demuestra**, sin `sorry`, para todo `r \u2265 2`.  `WeightedNibbleAt`",
+   "PaperIV/RegularizedRootGoal.lean:43: 2. **Sin `sorry`, sin `admit`, sin `axiom` propio, sin `native_decide`.** El resultado tiene que",
+   "PaperIV/SplitUniformIncidence.lean:15: and it uses no `sorry`, `admit`, `axiom`, `@[implemented_by]` or",
+   "ThreeRegime/AxiomCheck.lean:12: `[propext, Classical.choice, Quot.sound]`: ni `sorry`, ni axiomas propios, ni",
+   "Nibble/Tight/SharpRound.lean:95: Nothing in this file is proved; it is a specification.  The assembly is COMPLETE and sorry-free:"
+  ],
+  "admit": [
+   "E34/Theorem2.lean:14: that still admit a proper extension.  Splitting on the first vertex `v`: if `v` is not",
+   "PaperIV/FarRounding.lean:17: any historical aggregate source, and it contains no `axiom`, `sorry`, `admit` or",
+   "PaperIV/RegularizedRootGoal.lean:43: 2. **Sin `sorry`, sin `admit`, sin `axiom` propio, sin `native_decide`.** El resultado tiene que",
+   "PaperIV/SplitUniformIncidence.lean:15: and it uses no `sorry`, `admit`, `axiom`, `@[implemented_by]` or"
+  ],
+  "axiom_decl": [],
+  "unsafe": [],
+  "implemented_by": [
+   "PaperIV/FarRounding.lean:18: `implemented_by`.",
+   "PaperIV/SplitUniformIncidence.lean:15: and it uses no `sorry`, `admit`, `axiom`, `@[implemented_by]` or",
+   "ThreeRegime/AxiomCheck.lean:13: `native_decide`, ni `implemented_by`."
+  ],
+  "extern": [],
+  "native_decide": [
+   "PaperIV/RegularizedRootGoal.lean:43: 2. **Sin `sorry`, sin `admit`, sin `axiom` propio, sin `native_decide`.** El resultado tiene que",
+   "PaperIV/SplitUniformIncidence.lean:16: `native_decide`.",
+   "ThreeRegime/AxiomCheck.lean:13: `native_decide`, ni `implemented_by`."
+  ],
+  "opaque": [],
+  "debug_skipKernelTC": [],
+  "ofReduceBool": [
+   "A4S1/IndepAllAudit.lean:7: `Lean.ofReduceBool`, no new axiom)."
+  ]
+ },
+ "packages_root": "C:\\Users\\jtraverso\\e81p4\\preprints\\PAPER_IV\\05_formalization\\lean\\.lake\\packages",
+ "packages_root_resolved": "C:\\Users\\jtraverso\\e81p4\\preprints\\PAPER_IV\\05_formalization\\lean\\.lake\\packages",
+ "dependencies": [
+  {
+   "name": "mathlib",
+   "manifest_rev": "8f9d9cff6bd728b17a24e163c9402775d9e6a365",
+   "exists": true,
+   "resolved": "C:\\Users\\jtraverso\\e81p4\\preprints\\PAPER_IV\\05_formalization\\lean\\.lake\\packages\\mathlib",
+   "head": "8f9d9cff6bd728b17a24e163c9402775d9e6a365",
+   "tracked_changes": 0,
+   "head_match": true
+  },
+  {
+   "name": "plausible",
+   "manifest_rev": "55c8532eb21ec9f6d565d51d96b8ca50bd1fbef3",
+   "exists": true,
+   "resolved": "C:\\Users\\jtraverso\\e81p4\\preprints\\PAPER_IV\\05_formalization\\lean\\.lake\\packages\\plausible",
+   "head": "55c8532eb21ec9f6d565d51d96b8ca50bd1fbef3",
+   "tracked_changes": 0,
+   "head_match": true
+  },
+  {
+   "name": "LeanSearchClient",
+   "manifest_rev": "c5d5b8fe6e5158def25cd28eb94e4141ad97c843",
+   "exists": true,
+   "resolved": "C:\\Users\\jtraverso\\e81p4\\preprints\\PAPER_IV\\05_formalization\\lean\\.lake\\packages\\LeanSearchClient",
+   "head": "c5d5b8fe6e5158def25cd28eb94e4141ad97c843",
+   "tracked_changes": 0,
+   "head_match": true
+  },
+  {
+   "name": "importGraph",
+   "manifest_rev": "85b59af46828c029a9168f2f9c35119bd0721e6e",
+   "exists": true,
+   "resolved": "C:\\Users\\jtraverso\\e81p4\\preprints\\PAPER_IV\\05_formalization\\lean\\.lake\\packages\\importGraph",
+   "head": "85b59af46828c029a9168f2f9c35119bd0721e6e",
+   "tracked_changes": 0,
+   "head_match": true
+  },
+  {
+   "name": "proofwidgets",
+   "manifest_rev": "be3b2e63b1bbf496c478cef98b86972a37c1417d",
+   "exists": true,
+   "resolved": "C:\\Users\\jtraverso\\e81p4\\preprints\\PAPER_IV\\05_formalization\\lean\\.lake\\packages\\proofwidgets",
+   "head": "be3b2e63b1bbf496c478cef98b86972a37c1417d",
+   "tracked_changes": 0,
+   "head_match": true
+  },
+  {
+   "name": "aesop",
+   "manifest_rev": "f642a64c76df8ba9cb53dba3b919425a0c2aeaf1",
+   "exists": true,
+   "resolved": "C:\\Users\\jtraverso\\e81p4\\preprints\\PAPER_IV\\05_formalization\\lean\\.lake\\packages\\aesop",
+   "head": "f642a64c76df8ba9cb53dba3b919425a0c2aeaf1",
+   "tracked_changes": 0,
+   "head_match": true
+  },
+  {
+   "name": "Qq",
+   "manifest_rev": "b8f98e9087e02c8553945a2c5abf07cec8e798c3",
+   "exists": true,
+   "resolved": "C:\\Users\\jtraverso\\e81p4\\preprints\\PAPER_IV\\05_formalization\\lean\\.lake\\packages\\Qq",
+   "head": "b8f98e9087e02c8553945a2c5abf07cec8e798c3",
+   "tracked_changes": 0,
+   "head_match": true
+  },
+  {
+   "name": "batteries",
+   "manifest_rev": "495c008c3e3f4fb4256ff5582ddb3abf3198026f",
+   "exists": true,
+   "resolved": "C:\\Users\\jtraverso\\e81p4\\preprints\\PAPER_IV\\05_formalization\\lean\\.lake\\packages\\batteries",
+   "head": "495c008c3e3f4fb4256ff5582ddb3abf3198026f",
+   "tracked_changes": 0,
+   "head_match": true
+  },
+  {
+   "name": "Cli",
+   "manifest_rev": "4f10f47646cb7d5748d6f423f4a07f98f7bbcc9e",
+   "exists": true,
+   "resolved": "C:\\Users\\jtraverso\\e81p4\\preprints\\PAPER_IV\\05_formalization\\lean\\.lake\\packages\\Cli",
+   "head": "4f10f47646cb7d5748d6f423f4a07f98f7bbcc9e",
+   "tracked_changes": 0,
+   "head_match": true
+  }
+ ],
+ "elan_toolchains": "leanprover/lean4:v4.28.0\nleanprover/lean4:v4.31.0\n"
+}

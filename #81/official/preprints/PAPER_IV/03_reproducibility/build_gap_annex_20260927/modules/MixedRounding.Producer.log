@@ -1,0 +1,23 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 MixedRounding/Producer.lean -o /workspace/request-project/.lake/runner/lib/lean/MixedRounding/Producer.olean -i /workspace/request-project/.lake/runner/lib/lean/MixedRounding/Producer.ilean
+import took 2.94s
+cumulative profiling times:
+	.olean serialization 51.8ms
+	attribute application 0.103ms
+	congr simp thm 3.8ms
+	elaboration 38.1ms
+	fix level params 0.722ms
+	import 2.94s
+	initialization 35.3ms
+	instantiate metavars 1.72ms
+	interpretation 253ms
+	let-to-have transformation 0.135ms
+	linting 15.6ms
+	norm_num 1.14ms
+	parsing 7.92ms
+	process pre-definitions 5.19ms
+	ring 1.41ms
+	share common exprs 1.77ms
+	simp 30.5ms
+	tactic execution 107ms
+	type checking 17.9ms
+	typeclass inference 143ms

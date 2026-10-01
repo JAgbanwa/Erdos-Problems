@@ -1,0 +1,24 @@
+$ /root/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean -j 1 -s 32768 -D pp.unicode.fun=true -D relaxedAutoImplicit=false -D linter.unusedSimpArgs=false -D profiler=true -D profiler.threshold=100 PaperIV/GalvinRectangle.lean -o /workspace/request-project/.lake/runner/lib/lean/PaperIV/GalvinRectangle.olean -i /workspace/request-project/.lake/runner/lib/lean/PaperIV/GalvinRectangle.ilean
+import took 2.11s
+cumulative profiling times:
+	.olean serialization 37.1ms
+	attribute application 0.371ms
+	compilation (IR) 0.676ms
+	compilation (LCNF base) 1.82ms
+	compilation (LCNF mono) 0.976ms
+	congr simp thm 2.29ms
+	elaboration 60.2ms
+	fix level params 1.53ms
+	import 2.11s
+	initialization 41.1ms
+	instantiate metavars 15.2ms
+	interpretation 264ms
+	let-to-have transformation 0.148ms
+	linting 25.4ms
+	parsing 14ms
+	process pre-definitions 11.8ms
+	share common exprs 3.49ms
+	simp 21.6ms
+	tactic execution 252ms
+	type checking 139ms
+	typeclass inference 147ms

@@ -1,0 +1,44 @@
+{
+  "run": "run_2026-09-28_v1.0.1_r2",
+  "handoff_revision": "r2",
+  "manuscript_version": "1.0.1",
+  "source_cut": "piv-v1.0-f1769273dd2c",
+  "recorded_at": "2026-09-28T11:24-03:00",
+  "target_hashes_verified_at_intake": true,
+  "target_hashes": {
+    "LEAN_SOURCE_SNAPSHOT_v1.0.zip": "0a13c01cc4cf0198d5d138082d45b25df4c5ac0684c0ed85e7cc758575f8a7dd",
+    "LEAN_BOUNDED_GAP_ANNEX_v1.0.zip": "2847a422865e06880d457ea806aae5b9f749d22359eff325349c09c01cb4837d",
+    "PAPER_IV_preprint_v1.0.1_en.md": "71417794fef91b2f4a6ad88b9da5734b72b8237fa8c0ec2aa0a00baab588208e",
+    "PAPER_IV_preprint_v1.0.1_en.tex": "0b4b116d5644c81837cf4abc8e409857a0747a60fc317adbd07ecfeafe205236",
+    "PAPER_IV_preprint_v1.0.1_en.pdf": "0c17c7303419b2c1979133479370bbb475d1febe3f0921737eb50c291caa8d10",
+    "PAPER_IV_preprint_v1.0.1_es.md": "8448d14eaf6b3e42cc969ce1d4b66eca309b92cee9d2547da8b354e6dd31d208",
+    "PAPER_IV_preprint_v1.0.1_es.tex": "1b4c8be49b54e3663acc4cb080018b0a16f257a464453684ba73b083fa1e5cb3",
+    "PAPER_IV_preprint_v1.0.1_es.pdf": "84c49df8964dbe19dc3f07833fb771e31989443199bf1e4af5d9e48f9d4f5ca2",
+    "INTERNAL_AUDIT_piv-v1.0-f1769273dd2c.zip": "1911f29e1072accfe8df4fbec0a3b02d1cd9ef274a06bd1957f9b61034301847"
+  },
+  "completed_obligations": {
+    "E0": "intake identity complete (hashes, CRC, members, traversal, hidden bytes, SOURCES.json vs ZIP, pins)",
+    "E1": "claim map complete (20_EVIDENCE/E1/CLAIM_MAP_AUDITOR.csv)",
+    "E3_static": "headline types/definitions extracted and compared; textual escape-hatch sweep",
+    "E7": "sources retrieved; attribution comparison complete",
+    "E2": "rederivation complete for human-reviewable steps; LEAN_ONLY steps listed",
+    "E5": "exact arithmetic (74 checks) + bounded ILP/LP searches",
+    "E6": "automated checks only"
+  },
+  "reserved_dynamic_checks_for_E4": [
+    "isolated project rebuild of 504 modules against shared verified Mathlib (no author oleans)",
+    "13 target exits",
+    "#print axioms for Table 7 declarations and Theorem C / Prop D.2 / explicit threshold",
+    "#check of elaborated headline types vs static headers",
+    "195 ReleaseExportCheck exports",
+    "ConeAudit / PublicationIncrementAudit / ExplicitFarAudit / ExplicitThresholdAudit / ConstructorBudgetAudit logs",
+    "annex overlay build and BoundedCliqueGap.AxiomCheck"
+  ],
+  "findings": [
+    {"id": "F-01", "severity": "MAJOR", "gate": "E7", "status": "CONFIRMED", "blocking": true,
+     "summary": "Theorem C's eventual maximum Q_s(n) coincides in statement with [15, Theorem 1.1] (same class, same Q_s, same extremal family); the manuscript (EN and ES) never cites [15, Theorem 1.1] and §8.1's attribution does not state the coincidence."}
+  ],
+  "resolutions": [],
+  "decision": "STOP",
+  "reason": "Confirmed material attribution defect (request §4.1: 'No unresolved blocker, including a material attribution problem, permits PROCEED_TO_BUILD'; §4.2: do not run the full build merely to finish the checklist). The build is deferred to a corrected target (new revision ID and hashes)."
+}
